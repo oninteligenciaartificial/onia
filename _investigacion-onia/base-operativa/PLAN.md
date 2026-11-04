@@ -20,6 +20,8 @@ Las rutas abarcan marketing, video, desarrollo, automatizaciones, organización 
 
 ## 3. Usar el harness para una primera entrega comercial
 
+Por la actualización de Sergio, después de las pruebas se prepara primero su rutina personal y el seguimiento privado en Organización. Los primeros chats de área fueron pruebas acotadas; sus ejemplos comerciales no son ofertas adoptadas. El siguiente trabajo real se encaja en esa disponibilidad.
+
 Preparar una oferta de taller con un resultado demostrable, temario y demo. Los datos pendientes se identifican dentro de ese entregable, aprovechando lo que Sergio ya contó. Con la oferta, preparar un guion y una pieza vertical con HyperFrames.
 
 **Cierre:** oferta revisable y demo reproducible; una pieza con imagen, texto y audio verificados; archivo final recuperable fuera de la VM. Medir cuánto trabajo manual y tiempo de producción necesita antes de aumentar la frecuencia. La venta, publicación y cobro conservan sus estados propios.

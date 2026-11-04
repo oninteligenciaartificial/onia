@@ -17,6 +17,7 @@ El repositorio privado [oninteligenciaartificial/onia](https://github.com/oninte
 | Distribución entre Codex, archivos, n8n y producto | [Arquitectura](arquitectura.md) |
 | Instalación e inicio del entorno | [Configuración cloud](cloud/CONFIGURAR-ONIA.md) |
 | Encargos, subagentes y continuidad | [Orquestación](ORQUESTACION.md) |
+| Chats cloud por área | [Sesiones](SESIONES.md) |
 | Cuenta, alcance y ubicación de cada acceso | [Accesos](accesos.md) |
 | Materiales de Sergio y entregables | [Carga inicial](cloud/CARGA-INICIAL.md) |
 | Nueve skills por área y decisión sobre los treinta candidatos | [Skills por área](SKILLS-POR-AREA.md) |
