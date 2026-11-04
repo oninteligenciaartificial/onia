@@ -32,9 +32,11 @@ El primer comando prepara enlaces locales hacia las skills versionadas, sin copi
 
 Guardar y publicar el setup desde el entorno `onia` cuando las comprobaciones estén completas. Las modificaciones hechas dentro de una tarea no actualizan automáticamente el entorno reutilizable.
 
+Para Playwright, el helper de n8n y la configuración completa, usar [la preparación cloud](_investigacion-onia/base-operativa/cloud/CONFIGURAR-ONIA.md). Scripts, dependencias fijadas y lockfile viven en `base-operativa/cloud/`; los secretos se guardan en la configuración del entorno.
+
 ## Primera prueba
 
-La tarea de aceptación debe comprobar repo/HEAD, las siete skills, los cinco tests y un recorrido crear → completar con evidencia → retomar desde otro proceso. Crear su evidencia bajo `operacion/` de la base; conservar el resultado por un medio autorizado antes de descartar la VM, pues esos registros no se suben automáticamente.
+La tarea de aceptación debe comprobar repo/HEAD, las siete skills, los doce tests Python y un recorrido crear → completar con evidencia → retomar desde otro proceso. Crear su evidencia bajo `operacion/`; versionar una entrega mínima saneada en ESTADO.md y conservar los artefactos antes de descartar la VM, pues esos registros no se suben automáticamente.
 
 La prueba histórica en ONIA Platform aprobó el registro, pero fue detenida por entorno equivocado y no certifica el nuevo `onia`.
 

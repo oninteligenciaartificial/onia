@@ -1,100 +1,59 @@
-**Arquitectura inicial de operación: Codex, n8n y ONIA**
+# Arquitectura vigente de ONIA
 
-**Corrección que prevalece sobre las secciones históricas:** el harness tendrá repositorio privado propio desde la base vigente de esta carpeta y usará el entorno limpio `onia` creado por Sergio. La prueba en ONIA Platform fue detenida por ámbito equivocado; no seguir configurando ese entorno para coordinación. ONIA Platform conserva sólo el producto. El setup y la prueba de aceptación de `onia` siguen pendientes de vincular el repositorio.
+3 de noviembre de 2026, America/Caracas. Esta versión ordena las decisiones actuales de Sergio. Las [reglas comunes](reglas-comunes.md) son la fuente de permisos y prioridades; [ESTADO.md](ESTADO.md) conserva la entrega vigente. Los errores y decisiones sustituidas permanecen en el [registro de errores](registro-de-errores.md), no como alternativas operativas de este documento.
 
-## Requisito actualizado: operación en nube
+## Distribución del trabajo
 
-**Última precisión de Sergio:** evitar llenar el VPS porque aloja ONIA Platform. No instalar allí navegador remoto, modelos locales, render de video ni workers de agentes. Codex Cloud asume desarrollo y pruebas. n8n ya existe; no se migra ni amplía su carga sin inspeccionar recursos y necesidad. Para administrarlo sin depender del control de Chrome local, comprobar API desde Codex Cloud. Un navegador remoto, si llega a ser necesario, requeriría un entorno separado y costo/alcance comprobados; no está elegido ni instalado. Esta decisión reemplaza la alternativa previa de instalar navegador en este VPS.
-
-URL n8n recibida y comprobada hasta Sign in: https://n8n-sergio-n8n.hqdqgh.easypanel.host/ . Recursos y servicios observados en [inspección inicial del VPS](operacion/evidencias/vps-inspeccion-2026-11-03.md). El acceso autenticado y la API siguen pendientes; no pedir claves en el chat.
-
-Sergio aclaró el 3 de noviembre de 2026 que quiere operar Meta y las automatizaciones sin depender de su PC. n8n permanece en el VPS existente. Las credenciales de los flujos se guardarán en esa instancia y se comprobarán con operaciones acotadas; falta recibir su URL HTTPS e inspeccionar versión y configuración. La integración de Meta mediante API es la ruta propuesta, sujeta a permisos y endpoints necesarios. La documentación actual de n8n describe OAuth2 y tokens para Facebook Graph API, con una app de Meta; no se ha creado ni conectado ninguna app por este encargo. [Credenciales Facebook Graph API](https://docs.n8n.io/integrations/builtin/credentials/facebookgraph/).
-
-Chrome local está conectado y permitió ver Meta Business Suite con Onia/oniahq. Esa comprobación sólo acredita acceso local: no copia sesiones a Codex Cloud ni al VPS. Un navegador remoto en VPS queda como alternativa por evaluar para tareas que requieran UI y no tengan API adecuada; no está instalado ni se propone exportar el perfil personal de Chrome.
-
-La primera tarea en Codex Cloud ya fue creada en el entorno existente ONIA Platform: `01a1a3e6-50ac-7052-9243-cafe9e8a200c`, host `durable`. Su primer estado fue `active/inProgress`; los resultados se consultan en el registro `cloud-001`. Preparación y pruebas en ese chat no equivalen a actualizar el entorno reutilizable. La sección siguiente conserva la preparación previa, no el estado actual de ejecución.
-
-## Preparación de nube registrada — 3 de noviembre de 2026
-
-Pedido de Sergio: dejar anotada la creación/preparación del entorno en nube y aclarar dónde ejecutarlo. Tarea: `cloud-001`. Recomendación: **Codex Cloud para encargos de desarrollo; el VPS existente para los servicios y automatizaciones persistentes**. La preparación de Codex Cloud no depende de esperar el acceso SSH al VPS.
-
-**Estado observado hoy:** la herramienta de cuenta devuelve `ONIA Platform` como `ready`, `runnable: true`, vinculado a `github-1208814283`, ref `master`. Identificador de configuración: `d8e8a883-9403-432a-b1f6-de5023890a92~asenvcfg_a1a0b45437488191b47bc0d72b6d29f3`. Es una configuración guardada, no prueba de un agente trabajando o de que los tests pasen. Se recomienda revisar y aprovechar este entorno antes de crear otro duplicado. No se creó ni modificó un entorno con esta anotación.
-
-### Distribución propuesta
-
-| Lugar | Trabajo asignado | Qué falta comprobar |
-|---|---|---|
-| Codex Cloud | Cambios de código, pruebas y entregables del repositorio en tareas remotas. | Setup, reglas/skills presentes y una ejecución real. |
-| VPS Hostinger existente | n8n, aplicación, base y automatizaciones del negocio que deban permanecer disponibles. | Acceso, recursos, servicios, backups y capacidad libre. |
-| PC local, por ahora | Edición y render HyperFrames, ya probado aquí. | Portar el render al VPS sólo después de comprobar recursos y dependencias. |
-
-Codex Cloud permite continuar tareas con la computadora dormida. Las skills del repositorio pueden usarse allí; las personales locales no se sincronizan automáticamente. La documentación actual indica que la superficie cloud no soporta uso de computadora/navegador. Por eso no damos por portable la prueba visual local de HyperFrames. [Documentación de entornos cloud](https://learn.chatgpt.com/docs/environments/cloud-environments).
-
-### Trabajo anotado para cloud-001
-
-1. Abrir el entorno existente en Codex: `Work in > Cloud > Select environment`. Revisar su setup y acceso al repositorio; crear uno sólo si el existente no sirve. La ruta para uno nuevo es `Create environment` desde ese selector.
-2. Preparar la entrega versionada de las reglas y skills pertinentes al producto. Las junctions de Windows apuntan a archivos locales y no son una distribución cloud. No subir todo C:/dev/proyectos, credenciales, historial personal ni datos privados para resolverlo.
-3. Cotejar instalación y comandos de prueba con la versión real del repositorio. Conservar las reglas comunes de esta conversación como fuente; no importar ONIA-CENTRAL.
-4. Preparar variables/secretos mínimos para el encargo y comprobar acceso sin imprimir sus valores. No es requisito compartir todas las cuentas.
-5. Preparar y verificar el entorno; publicar/actualizar su configuración dentro del alcance autorizado. Después ejecutar una tarea pequeña que lea las reglas/skill, produzca un resultado verificable y deje una entrega retomable. Revisar disponibilidad y límites efectivos de la cuenta antes de depender de ejecución recurrente.
-
-Cada tarea cloud mantiene sus propios archivos; cambiar un archivo durante una tarea no actualiza por sí solo el entorno reutilizable. La configuración de futuras tareas se actualiza y vuelve a publicar por separado. [Modos y preparación de entornos](https://learn.chatgpt.com/docs/environments/modes).
-
-**Criterio de terminado:** una tarea remota ejecutada con las reglas previstas, resultado y comprobaciones accesibles, y un estado que pueda retomarse. No basta el indicador `runnable`. La conexión n8n → ejecutor, el scheduler y un worker en el VPS son trabajos posteriores que requieren pruebas y límites de consumo; no se presuponen activos ni incluidos sin límite en la suscripción.
-
----
-
-**Procedencia corregida:** Sergio excluyó explícitamente el repositorio ONIA-CENTRAL como referencia. Este diseño se debe desarrollar desde sus instrucciones en esta conversación, el código vigente de ONIA Platform y las fuentes externas pertinentes. La propuesta hecha dentro de ONIA-CENTRAL queda sin adoptar. Las integraciones de este documento siguen siendo propuestas salvo evidencia explícita de ejecución.
-
-Estado al 3 de noviembre de 2026: diseño y preparación. Los servicios del VPS fueron declarados por Sergio; no se inspeccionó ni modificó producción. Los entornos Codex Cloud se consultaron mediante herramienta de cuenta.
-
-El objetivo inmediato es que Codex pueda completar tareas de desarrollo con continuidad, mientras n8n conecta procesos repetibles del negocio. Grok Bot queda como colaborador futuro cuando vuelva su cuota. La organización debe permitir a Sergio ver qué entró, qué se ejecutó, qué resultado existe y qué decisión queda pendiente.
+El harness vive en el repositorio privado [oninteligenciaartificial/onia](https://github.com/oninteligenciaartificial/onia) y usa el entorno limpio **onia**. La decisión más reciente de Sergio es trabajar **sólo con Codex por ahora**, aprovechando n8n existente. ONIA Platform conserva su repositorio de producto y su producción. El VPS existente aloja la startup y n8n; no se le asignan navegadores, render de video, modelos locales ni workers de agentes.
 
 ```mermaid
 flowchart TD
-    S["Sergio: objetivos y decisiones"] --> T["Tareas, contexto y resultados persistentes"]
-    T --> C["Codex Cloud: entorno existente a verificar"]
-    N["n8n existente: horarios y eventos"] --> T
-    C --> E["Evidencia: cambios, validaciones y entregables"]
-    E --> T
-    T -. "Integración posterior" .-> W["Worker Codex aislado, si hace falta"]
-    W -. "Resultado" .-> E
-    G["Grok Bot al recuperar cuota"] -. "Trabajo complementario" .-> T
-    N --> O["Operaciones de negocio autorizadas"]
-    O --> P["ONIA y Supabase: producción separada del desarrollo"]
+    S[Sergio: objetivos y decisiones] --> R[Repo onia: reglas, skills y entrega saneada]
+    R --> C[Codex Cloud onia: tareas y comprobaciones]
+    C --> E[Entregables y evidencia]
+    E --> R
+    C -. API de lectura en validación .-> N[n8n existente: eventos y horarios]
+    C -. Conexión pendiente .-> A[Almacén privado: medios y contexto sensible]
+    N -. Integraciones por comprobar .-> O[Operaciones autorizadas]
+    P[ONIA Platform: repo y producción propios]
 ```
 
-Las flechas punteadas representan componentes o integraciones propuestos, no conectados. No se verificó un endpoint que permita a n8n enviar trabajo a este chat ni una conexión nativa entre Codex y Grok Bot.
+Las líneas punteadas son conexiones pendientes. n8n no tiene acreditada una conexión que despache tareas a Codex Cloud; no existe un scheduler de agentes habilitado por este esquema.
 
-| Componente | Responsabilidad propuesta | Estado |
+| Componente y ubicación | Estado observado | Próxima comprobación |
 |---|---|---|
-| Codex Cloud | Desarrollar y comprobar cambios en el repositorio correcto. | `ONIA Platform` corresponde al repositorio identificado y a `master`; falta probar su ejecución. |
-| n8n | Recibir eventos, encadenar operaciones definidas, registrar y notificar. | Instalación declarada existente; falta inspección. |
-| Registro de trabajo | Mantener objetivo, estado, evidencia, dueño y próximo paso. | Esta base conserva contexto; el registro automatizado se elegirá tras revisar lo existente. |
-| Supabase | Conservar datos del producto y, si corresponde, registros operativos con permisos separados. | No se propone ninguna migración hasta inspeccionar estructura y versión. |
-| Worker propio | Consumir tareas autorizadas y ejecutar Codex CLI/SDK cuando la vía cloud nativa no cubra el flujo. | Alternativa por evaluar, no creada. |
-| Grok Bot | Tareas remotas complementarias, con entregables y acceso acotados. | Sin cuota según Sergio; no condiciona el comienzo. |
+| Reglas, código y skills en el repo privado `onia` | Repo creado; siete fuentes de skills versionadas. | Integrar los cambios preparados en la tarea cloud y actualizar la entrega vigente. |
+| Setup reutilizable de Codex Cloud `onia` | Entorno ejecutable y repo correcto. Los cambios de preparación hechos dentro de la tarea aún no acreditan un setup republicado. | Publicar la preparación y verificar una tarea nueva. |
+| Desarrollo y pruebas en Codex Cloud | Doce tests aprobados: siete bootstrap y cinco continuidad. | Retomar un encargo desde otra tarea con fuentes y resultado verificables. |
+| Skills en Codex Cloud | Siete enlaces creados; no aparecían en el catálogo inicial de la tarea. | Comprobar descubrimiento y uso en una tarea nueva. |
+| Playwright en Codex Cloud | Una prueba sintética interactiva aprobó con Chromium del sistema. La descarga del navegador fijado fue bloqueada por red. | Verificar instalación reproducible con la política de red del entorno. |
+| HyperFrames en Codex Cloud | Prueba de render local existente; no acredita instalación ni render cloud. | Preparar dependencias y renderizar una pieza técnica allí; después validar grabación y audio reales. |
+| n8n en el VPS existente | Sergio confirmó secreto guardado. La instancia cloud aún usa revisión 1 sin secreto ni host permitido; helper exit 2, sin autenticación. | Aplicar/publicar configuración y probar GET desde una tarea nueva. |
+| Almacén privado de archivos/contexto | Ninguna conexión cloud comprobada para esta función. | Acceder al mismo archivo desde dos tareas y recuperar un entregable. |
+| Cuenta de investigación y navegador remoto | Cuenta no creada; navegador interactivo con sesión persistente no acreditado. | Resolver una superficie cloud compatible y completar registro con intervención de Sergio. |
+| Meta, calendario y otras aplicaciones | Acceso local o herramientas presentes en este chat no prueban acceso desde `onia`. | Inventariar capacidades dentro de Cloud y probar la lectura necesaria por servicio. |
+| ONIA Platform | Producto separado del harness. | Cotejar instrucciones y estado del producto al recibir un encargo específico. |
 
-Para la continuidad, una tarea necesita identificador, objetivo, fuentes, ámbito de escritura, resultado esperado, criterio de terminación, límite de tiempo/consumo y estado. Al terminar o interrumpirse se registra lo efectivamente hecho, evidencia, fallos y siguiente paso. Una tarea iniciada o un comando lanzado no equivalen a resultado validado.
+## Persistencia y contexto
 
-La documentación oficial indica que Codex Cloud tiene espacios por tarea, puede trabajar con la computadora personal apagada y dispone de secretos personales. Las skills locales no se sincronizan automáticamente: las del repositorio pueden viajar al entorno. Actualmente esa superficie no incluye uso de navegador/computadora. [Entornos cloud](https://learn.chatgpt.com/docs/environments/cloud-environments).
+`operacion/` y `privado/` están excluidos de Git. Los registros locales de tareas, evidencia y contexto personal no llegan a nuevas tareas cloud por subir el repo. La solución inicial es mantener una **entrega mínima saneada y versionada en ESTADO.md**: objetivo, estado comprobado, archivos, evidencia accesible y siguiente paso. Los detalles privados y archivos grandes irán al almacén privado que se conecte y pruebe.
 
-La primera preparación cloud debería cotejar repositorio y rama, leer sus instrucciones, reproducir instalación y ejecutar una comprobación de desarrollo. El resultado esperado es un cambio pequeño revisable o un informe técnico reproducible. Un entorno marcado `runnable` no demuestra que la aplicación funcione.
+Cada tarea debe guardar sus cambios útiles en el repo o exportar sus entregables al almacén elegido antes de descartarse. No existe sincronización automática de esos registros privados. La documentación de Codex distingue el estado de cada tarea de la preparación publicada para tareas nuevas; las skills personales locales tampoco se sincronizan automáticamente. [Entornos cloud](https://learn.chatgpt.com/docs/environments/cloud-environments).
 
-Si después hace falta un ejecutor conectado a n8n, la opción a evaluar es un worker que consuma trabajos de una cola o servicio interno autenticado, ejecute Codex y devuelva estado y resultados. Codex documenta ejecución por scripts con `codex exec` y salida estructurada. La integración, el método de autenticación y su consumo deberán probarse; la suscripción no se considera un presupuesto API ilimitado. [Modo no interactivo](https://learn.chatgpt.com/docs/non-interactive-mode), [Codex SDK](https://learn.chatgpt.com/docs/codex-sdk).
+El CLI `scripts/trabajo.py` guarda y recupera registros; no ejecuta agentes ni programa trabajo. Su continuidad entre procesos está probada. La continuidad entre tareas con acceso al mismo estado persistente todavía requiere la comprobación indicada arriba.
 
-En el VPS, el ejecutor de desarrollo necesitaría usuario, carpetas, límites y accesos propios. Evitar montar los volúmenes de producción o entregar control irrestricto del daemon de Docker a tareas abiertas. Los cambios de producto se preparan como entregables revisables; el despliegue usa el flujo y la autorización correspondientes. El control del daemon tiene implicaciones sobre el host. [Seguridad de Docker](https://docs.docker.com/engine/security/).
+## Navegador, cuentas y conexiones
 
-Las áreas personales, comerciales y de clientes mantienen datos y permisos separados. Un espacio de coordinación puede mostrar estados sin contener todas las credenciales o datos sensibles. Los cobros y permisos del producto se basan en confirmaciones y reglas del backend. La [revisión de ONIA Platform](revision-onia-platform.md) identificó código de QR BCP para cobrar la suscripción y activar el plan; la configuración bancaria, el despliegue y un cobro real siguen sin comprobarse.
+La documentación actual de Codex Cloud no incluye uso interactivo de computadora/navegador. La prueba de Playwright por código demuestra ejecución de un test; no demuestra un navegador con inicio de sesión, handoff o persistencia de cuentas. [Limitaciones de Codex Cloud](https://learn.chatgpt.com/docs/environments/cloud-environments#current-limitations).
 
-La operación debe tolerar interrupciones y cuota agotada: conservar estado, limitar reintentos, reconocer tareas duplicadas y permitir detener trabajo. Las notificaciones se reservan para resultados, fallos y decisiones accionables. Los límites exactos se fijarán con consumo medido, no con una promesa de funcionamiento continuo sin costo.
+La cuenta de investigación y su uso interactivo en nube quedan pendientes de resolver esta limitación dentro del alcance elegido. No se conectan Work Cloud, dots ni otros ejecutores ahora. Grok Bot queda como opción futura: Sergio confirma que no tiene cuota y dará acceso después. No hay integración Codex–Grok ni rutina acreditada. El estado del registro y los accesos se mantiene en [accesos.md](accesos.md).
 
-Los primeros criterios de aceptación propuestos son:
+Un MCP es una posible interfaz, no un requisito por cada servicio. Para el piloto n8n alcanza la API de lectura preparada. Antes de incorporar otro MCP se comprobarán sus herramientas, autenticación y necesidad real. Los plugins disponibles en este chat no se consideran automáticamente disponibles en Cloud.
 
-1. Una tarea de desarrollo conserva contexto y entrega una evidencia revisable.
-2. Otra sesión puede retomar esa tarea sin reconstruir toda la historia.
-3. Repetir una entrada no duplica una acción externa.
-4. Falta de cuota o acceso produce un estado claro sin anunciar éxito.
-5. Los permisos del trabajo permiten la operación necesaria y rechazan una operación fuera de su alcance.
+## Skills, sesiones y mejora
 
-El repositorio vigente quedó identificado como `oninteligenciaartificial/onia-platform`, rama `master`, asociado al entorno cloud `ONIA Platform`. Ya contiene protocolos, backlog y 16 skills versionadas. Se propone reutilizarlos con un índice de contexto vigente, sin instalar duplicados. La revisión del servidor determinará las integraciones siguientes. No se agregaron contenedores, claves, integraciones o tareas programadas.
+Las siete skills actuales y las ocho capacidades pendientes están descritas en [selección y recorrido](seleccion-y-recorrido.md); sus fuentes editables viven en `compartibles/skills/`. El setup crea los enlaces de descubrimiento. Cada capacidad nueva se desarrolla con un caso de trabajo real y una prueba de aceptación, siguiendo las reglas comunes.
+
+Este chat coordina. Marketing y ventas, desarrollo/infraestructura y ONIA Platform reciben encargos delimitados cuando haya entradas y entregables; no se abre un chat por skill. Los subagentes reciben alcance y resultado concreto, y sus cambios se integran con revisión y evidencia.
+
+El aprendizaje consiste en convertir resultados o correcciones en mejoras versionadas de instrucciones, comprobarlas y conservar la posibilidad de revertirlas. No hay entrenamiento automático del modelo ni proceso autónomo continuo acreditado. La recurrencia se habilitará para una tarea concreta con estado compartido, límites medidos, manejo de duplicados y una prueba real de ejecución.
