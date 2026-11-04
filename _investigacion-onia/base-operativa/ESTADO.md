@@ -25,22 +25,24 @@ Sergio autorizó en el encargo actual **subir al repo información verificada y 
 | Producto | Lectura de onia-platform a0488f0 e instrucciones; no ejecutar código, migraciones, cobros o despliegues por esta consolidación. |
 | Panel | [Sergio · Hoy](https://app.notion.com/p/40e2eb20bdfd81658111cf3e4d854964) existe y fue revalidado por conector: vida, contenido, ventas, actualidad y decisiones. Informes técnicos archivados fuera de portada. Apariencia móvil y notificaciones no verificadas. |
 | Continuidad | Dos chats recuperaron/actualizaron una entrada sintética desde Space sin recibir valores en el prompt. Desarrollo también recuperó biblioteca, catálogo ampliado y fuentes públicas desde cloud. Esto no sincroniza archivos o revisiones Git automáticamente. |
-| Navegador | Corregido en Desarrollo: base NSS original de sólo lectura. Base temporal escribible con la misma CA oficial verificada y TLS activo: HTTP 200, título/captura y reproducción pública hasta 4,67 s. Audio no escuchado. Bootstrap en integración y prueba desde repo; [operación cloud](cloud/OPERAR.md). No acredita login persistente o acceso universal. |
+| Navegador | Bootstrap versionado aceptado en **2b1f9ab**: dos procesos crearon bases NSS distintas con la CA real verificada; ambos HTTP 200, título/captura inspeccionados, Play hasta 4,46 s y limpieza de ambos perfiles. TLS/proxy activos. Ocho tests Node y diez tests harness aprobados en Linux; doctor sin errores. Audio no escuchado, login persistente no probado. [Operación cloud](cloud/OPERAR.md). |
 
 ## Versiones y accesos
 
 N8N_API_KEY y META_ADS_ACCESS_TOKEN están en secretos de red del entorno, limitados a sus dominios. No pedir sus valores ni duplicarlas. [Inventario](accesos.md).
 
-- VM Desarrollo inspeccionada: HEAD **9972d26**, versión de entorno **6aeaa015725c81a3b2c5e7817fca85a6**; nació antes de cargar Meta.
+- VM Desarrollo: versión de entorno **6aeaa015725c81a3b2c5e7817fca85a6**; nació antes de cargar Meta. Su checkout avanzó de 9972d26 a **2b1f9ab** para aceptar el arreglo del navegador.
 - Meta se comprobó en editor posterior **6aeaa134fa1881a3abd0f72ea0bd00f4**.
 - El checkout de coordinación estaba en **ec62c9e** antes de esta consolidación. El commit de entrega se consulta en Git; un push no actualiza una VM existente.
+- Editor preparado en **2b1f9ab**, borrador revisión 2: install/start, doctor, 28 pruebas Python, ocho NSS y una de navegador aprobados. La interfaz confirmó **«Entorno publicado»** y **«Publicado · Probar»** el 4 de noviembre, tras guardar y publicar la preparación.
+- Nueva versión publicada confirmada por metadata: **6aeb5d2767cc81a3aee4674cf6485f5d**. Nuevo borrador revisión 1 conserva OPERAR.md; la conexión de su runtime seguía starting/offline en esa lectura, sin prueba de una nueva tarea posterior a publicar.
 - El catálogo oficial actual muestra entorno **onia** listo y ejecutable, repo asociado y rama master. Usar versión actual para nuevos encargos que dependan de sus secretos.
 
 ## Próximo resultado concreto
 
-1. Reproducir desde el bootstrap versionado la corrección del navegador ya probada en VM, con directorio de confianza nuevo, TLS activo y evidencia de página/interacción/captura. [OPERAR.md](cloud/OPERAR.md). Sin servicios nuevos en el VPS del producto.
-2. Publicar esta consolidación y comprobar que un ejecutor cloud lee el commit y las fuentes pertinentes; no cargar toda la biblioteca en cada tarea.
-3. Ejecutar el [lote de seis piezas](investigacion/2026-11-04/formatos-onia.md) con material real y medir tiempo humano, render y revisiones. Ensayar la demo antes de ofrecer el taller.
+1. Retomar en onia publicado el análisis de una fuente pública concreta de Hormozi y otra de Iman, con cobertura audiovisual explícita y fichas existentes. GitHub y Desarrollo ya leyeron 2b1f9ab; cargar sólo contexto del encargo. No instalar servicios en el VPS.
+2. Ejecutar el [lote de seis piezas](investigacion/2026-11-04/formatos-onia.md) con material real y medir tiempo humano, render y revisiones. Ensayar la demo antes de ofrecer el taller.
+3. Aceptar por separado el acceso autenticado y los permisos necesarios para publicación/mensajería de Instagram; el navegador público y ads_read no acreditan esas capacidades.
 
 Los seis chats existentes están en [SESIONES.md](SESIONES.md). Notion contiene lo cotidiano; [CEREBRO-DIARIO.md](CEREBRO-DIARIO.md) define fuentes y responsable.
 

@@ -30,4 +30,14 @@ La corrección no cambia confianza global, proxy, credenciales o cookies. No rep
 
 ## Límites de continuidad
 
+Aceptación del bootstrap versionado: Desarrollo actualizó por fast-forward a **2b1f9ab7b95537d82553c6a60e1030b374410c66**, checkout limpio. Ocho pruebas Node, diez tests del harness y doctor aprobados en Linux. Dos procesos independientes importaron la CA real en directorios NSS nuevos con buildLaunchOptions(); ambos HTTP 200, título y captura comprobados. Play público avanzó 4,46 s; cleanup eliminó ambos directorios. No se reutilizaron los lanzadores temporales del diagnóstico. Informe cloud, secuencia 5. En Windows la prueba de symlink del harness se omitió por privilegios; en Linux pasaron las diez.
+
 El repo recibido por otra VM debe cotejarse por SHA. Un commit/push prueba entrega a GitHub; leerlo y ejecutar el bootstrap en cloud prueba algo distinto. Una tarea Cloud iniciada puede continuar con la PC principal apagada; no se creó un planificador permanente ni un flujo n8n→Codex.
+
+## Preparación reutilizable del entorno
+
+El editor de onia también actualizó a 2b1f9ab con checkout limpio. Completó install.sh y start.sh; doctor, 28 pruebas Python, ocho del módulo NSS y una de navegador aprobados. Acquisition respondió HTTP 200 con una base NSS nueva y captura inspeccionada. Chromium 156.0.8078.4, Playwright 1.64.1. El primer start se adelantó a la descarga del navegador y falló por ejecutable ausente; luego de terminar install se repitió y pasó.
+
+Se guardó el borrador revisión 2, que añade la lectura de cloud/OPERAR.md al inicio y conserva INICIO-SESION.md. Sin cambios en secretos, permisos o política de red. Tras guardar y publicar desde la interfaz nativa, ésta mostró «Entorno publicado» y «Publicado · Probar» con confirmación verde el 4 de noviembre. Las pruebas anteriores pertenecen a las VMs de Desarrollo/editor; esta publicación no equivale a haber repetido las pruebas en una nueva tarea de usuario.
+
+La metadata oficial del editor confirmó la nueva versión publicada **6aeb5d2767cc81a3aee4674cf6485f5d**, con nuevo borrador revisión 1 basado en ella y OPERAR.md conservado. En esa comprobación el runtime se encontraba starting/offline: publicación completada y conexión de esa VM son estados distintos.
