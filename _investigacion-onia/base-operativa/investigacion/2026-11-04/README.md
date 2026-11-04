@@ -16,7 +16,7 @@ Consolidación autorizada por Sergio. Esta carpeta es la fuente mantenida en Git
 | Justin Welsh | Simplificación, procesos y reutilización de estructuras | [Justin](justin-welsh.md) |
 | Ali Abdaal | Flujo editorial y grabación por tandas | [Ali](ali-abdaal.md) |
 | Víctor Heras | Necesidad, separación formación/servicio y recorrido a consultoría | [Víctor](victor-heras.md) |
-| Pedro Buerbaum | Identidad, textos de contenido y rutas públicas; revisión audiovisual en recuperación | [Ficha única en MARCA-EVIDENCIA-001](https://chatgpt.com/space/page_0cb0c62e49cc8191ae94a767efb4dc44) |
+| Pedro Buerbaum | Identidad, rutas públicas y un reel inspeccionado visualmente en Cloud | [Ficha única en MARCA-EVIDENCIA-001](https://chatgpt.com/space/page_0cb0c62e49cc8191ae94a767efb4dc44) |
 
 Prioridad solicitada: Hormozi e Iman. El objetivo es aprender su forma de operar y adaptar capacidades propias; sus precios y notoriedad no prueban demanda para ONIA.
 
@@ -48,6 +48,10 @@ Lectura mínima: índice → ficha que necesita el encargo → fuente concreta. 
 
 La ficha comercial de Pedro quedó guardada y releída: bio, captions de webinar y rutas distintas de newsletter, Creator Founder, Escala y masterclass. Cada afirmación distingue observación, interpretación y desconocido. No hubo comentario, DM, inscripción, compra ni validación de conversiones.
 
-La [prueba audiovisual cloud](https://chatgpt.com/space/page_3559f542705c8191b44d8d31326e6de4) descargó el reel Dd6oC4EkRX1 de 90,32 s y generó 542 muestras a 6 fps en 19 láminas, según comandos terminados del ejecutor. El servicio falló al verificar acceso al modelo antes de entregar las láminas. Extracción no equivale a inspección: el coordinador todavía no las vio; análisis visual y audio no se declaran completos. La recuperación consiste en entregar esos archivos existentes y revisarlos, sin otra descarga ni nueva infraestructura. La parada local por verificación de URL se respetó.
+La [prueba audiovisual cloud](https://chatgpt.com/space/page_3559f542705c8191b44d8d31326e6de4) recuperó y conservó el MP4 público de Dd6oC4EkRX1 (720×1280, 25 fps, 90,32 s), sus 19 láminas y hojas.json. Coordinación y QA inspeccionaron conjuntamente las 542 muestras a 6 fps entre 0 y 90,167 s. Se observaron plano frontal con micrófono, subtítulos blancos progresivos, énfasis tipográfico y cinco números grandes semitransparentes. La enseñanza pasa por destinatario/problema, escasez real, plazo, diferenciación y complementos de valor. No se observó B-roll ni una llamada explícita a comentar, enlace o compra en las muestras del cierre. Los keywords de otras publicaciones no pertenecen a este cierre.
+
+El fallo anterior de acceso al modelo quedó superado para esta recuperación; no hizo falta retomar Chrome local ni instalar servicios en el VPS. La revisión a 6 fps deja intervalos y 0,153 s tras la última muestra; no equivale a reproducción continua. Audio presente, no oído; cortes exactos, música y sincronía no evaluados. La ficha vigente reúne el análisis con los recorridos comerciales, sin inferir conversiones o backend.
+
+Práctica propia propuesta: aplicar numeración y énfasis a la demostración existente de fecha inventada → dato ausente → instrucción corregida. Mostrar captura real y comprobar si un principiante puede explicar y reproducir la corrección; el CTA al Kit sería decisión propia, no un patrón demostrado por este reel. El ensayo sigue sin publicar ni realizarse con alumnos. Para cerrar el análisis sonoro se conserva la pista original y se requiere escucha en una herramienta que la admita; no sustituirla por lectura de subtítulos.
 
 Corrección aplicada a este encargo: estudiar conectados público, posicionamiento, formatos, historia, demostración, edición, sonido, presentación, distribución, CTA, destino, oferta y entrega. Los efectos comerciales y sistemas privados permanecen desconocidos sin evidencia. No se deduce montaje desde captions ni se trata un muestreo breve como visionado integral. Esta documentación no añade reglas ni skills ni modifica los 35 borradores.
