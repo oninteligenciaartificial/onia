@@ -9,7 +9,7 @@ Este inventario registra todos los accesos; no implica entregar todos sus secret
 | Servicio | Ubicación y mecanismo | Estado | Prueba pendiente |
 |---|---|---|---|
 | GitHub `oninteligenciaartificial/onia` | Conexión del entorno Codex Cloud `onia`; repo privado del harness. | Checkout correcto y lectura comprobados. | Integrar la entrega cloud y comprobar preparación desde una nueva tarea. |
-| n8n API | Ubicación elegida con Sergio: `N8N_API_KEY` como Secreto de red del propio entorno `onia`, dominio `n8n-sergio-n8n.hqdqgh.easypanel.host`. No duplicarlo en la bóveda personal. | Cargado y probado en «Editar onia»: secreto ready, GET HTTP 200; diez flujos en la página y siete activos, con paginación restante. | Repetir aceptación desde una tarea nueva del entorno preparado; no ampliar permisos para esta lectura. |
+| n8n API | Ubicación elegida con Sergio: `N8N_API_KEY` como Secreto de red del propio entorno `onia`, dominio `n8n-sergio-n8n.hqdqgh.easypanel.host`. No duplicarlo en la bóveda personal. | GET HTTP 200 en preparación y en la nueva «onia · aceptación cloud»: diez flujos en la página y siete activos, con paginación restante. | Para un flujo concreto, comprobar los permisos requeridos; esta prueba sólo acredita lectura. |
 | Credenciales de flujos n8n | Almacén `Credentials` de la instancia existente. | No se han creado ni verificado las conexiones del nuevo recorrido comercial. | Probar cada servicio con la operación necesaria y datos sintéticos. |
 | Meta del negocio | Conexión oficial/API apropiada a los activos y operación elegidos. | Onia/oniahq observado en navegador local; ningún acceso API cloud acreditado. | Identificar activos y permisos, conectar y realizar una lectura. |
 | Instagram de investigación | Cuenta separada y sesión en una superficie cloud compatible, pendiente de resolver bajo la decisión de usar sólo Codex ahora. | Nombre elegido por delegación de Sergio: **ONIA Research**. Usuario candidato: **onia.research**. Correo Gmail candidato: **onia.research.sergio@gmail.com**. Disponibilidad no comprobada; correo y cuenta no creados. | Resolver navegador cloud interactivo; crear correo y cuenta con verificación directa de Sergio. Comprobar lectura de un reel y persistencia de sesión. |
@@ -22,7 +22,7 @@ Este inventario registra todos los accesos; no implica entregar todos sus secret
 
 ## n8n: configuración del piloto
 
-La interfaz observada de n8n 2.43.7 permitió preparar la clave **onia-cloud-piloto**, con sólo el permiso `workflow:list` y siete días de vigencia. Ese alcance observado reemplaza la advertencia genérica anterior sobre claves sin restricciones. Tras la carga confirmada por Sergio, «Editar onia» obtuvo HTTP 200 con el helper. La prueba anterior sin clave pertenecía a otra revisión. La lectura exitosa no verifica por sí sola todos los permisos ni la fecha de expiración; falta la aceptación desde una tarea nueva.
+La interfaz observada de n8n 2.43.7 permitió preparar la clave **onia-cloud-piloto**, con sólo el permiso `workflow:list` y siete días de vigencia. Ese alcance observado reemplaza la advertencia genérica anterior sobre claves sin restricciones. El helper obtuvo HTTP 200 en «Editar onia» y en una sesión nueva después de republicar. La prueba anterior sin clave pertenecía a otra revisión. La lectura exitosa no verifica por sí sola todos los permisos ni la fecha de expiración.
 
 El helper preparado llama únicamente a:
 

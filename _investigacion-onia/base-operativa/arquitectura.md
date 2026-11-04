@@ -24,12 +24,12 @@ Las líneas punteadas son conexiones pendientes. n8n no tiene acreditada una con
 | Componente y ubicación | Estado observado | Próxima comprobación |
 |---|---|---|
 | Reglas, código y skills en el repo privado `onia` | Repo creado; siete fuentes de skills, manifiesto de seis áreas y CLI de encargos. | Resultado vigente y pruebas en ESTADO.md. |
-| Setup reutilizable de Codex Cloud `onia` | Entorno ejecutable y repo correcto. Los cambios de preparación hechos dentro de la tarea aún no acreditan un setup republicado. | Publicar la preparación y verificar una tarea nueva. |
+| Setup reutilizable de Codex Cloud `onia` | Republicado por Sergio; nueva tarea con repo/HEAD correctos, veinte tests, navegador y API aprobados. | Resolver/comprobar catálogo nativo de skills cuando el runtime exponga ese control. |
 | Desarrollo y pruebas en Codex Cloud | Veinte tests aprobados: siete bootstrap, cinco continuidad y ocho del harness, sin skips. | Retomar un encargo desde otra tarea con fuentes y resultado verificables. |
-| Skills en Codex Cloud | Siete enlaces creados; no aparecían en el catálogo inicial de la tarea. | Comprobar descubrimiento y uso en una tarea nueva. |
-| Playwright en Codex Cloud | Instalador y prueba con Chromium fijado 156.0.8078.4 aprobados en «Editar onia». | Comprobar la preparación guardada desde una tarea nueva. |
+| Skills en Codex Cloud | Siete fuentes/enlaces válidos en tarea nueva; desarrollar-y-verificar usada por archivo. Catálogo inicial sin skills propias; API nativa no expuesta. | Usar carga explícita desde manifiesto; autodetección sigue sin verificar. |
+| Playwright en Codex Cloud | Instalador y test aprobados en preparación; clic/estado/captura aprobados en una tarea nueva. | Usar ejecución autorizada con red cuando el sandbox del comando lo requiera. |
 | HyperFrames en Codex Cloud | Prueba de render local existente; no acredita instalación ni render cloud. | Preparar dependencias y renderizar una pieza técnica allí; después validar grabación y audio reales. |
-| n8n en el VPS existente | Clave cargada; GET HTTP 200 probado desde «Editar onia». | Repetir aceptación desde tarea nueva; definir un flujo antes de habilitar escrituras. |
+| n8n en el VPS existente | GET HTTP 200 en preparación y tarea nueva, sin escrituras. | Definir un flujo y comprobar sus permisos antes de implementarlo. |
 | Archivos en Drive | Carpeta ONIA archivos creada; la tarea onia cloud leyó sus cuatro hijos directos. Referencia y permisos en accesos.md. | Descargar una entrada real y recuperar una salida desde otra tarea; contexto privado aún no migrado. |
 | Cuenta de investigación y navegador remoto | Cuenta no creada; navegador interactivo con sesión persistente no acreditado. | Resolver una superficie cloud compatible y completar registro con intervención de Sergio. |
 | Meta, calendario y otras aplicaciones | Acceso local o herramientas presentes en este chat no prueban acceso desde `onia`. | Inventariar capacidades dentro de Cloud y probar la lectura necesaria por servicio. |

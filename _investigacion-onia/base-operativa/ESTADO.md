@@ -20,9 +20,21 @@ Ahora se trabaja con Codex y n8n existente. La captura de Grok Bot muestra Premi
 - **Preparación guardada:** «Editar onia» confirmó borrador revisión 2 persistido, con Install/Start conservados y ampliados con doctor y test_harness.py. Runtime conectado/running, revisión efectiva/observada 1. No cambió red ni secretos y no publicó. Catálogo executor de skills vacío en ese turno; siete enlaces ready.
 - Drive: ONIA archivos y cuatro carpetas creadas; metadatos leídos desde cloud. Descarga de un medio real y recuperación de entregable entre tareas pendientes.
 
+### Aceptación en una sesión nueva después de publicar
+
+Sergio confirmó la republicación y pidió crear una sesión nueva. Se creó **«onia · aceptación cloud»**, `01a1a464-5362-775d-acf1-a24ec01f600f`, host durable, entorno onia. Checkout `/workspace/onia`, HEAD `aa89a1618b59888d6b9960401cfe595e50e23469`, rama de tarea `work`, remoto correcto; revisión efectiva reportada 1 de esa instancia. No confundir ese número de revisión con el del borrador del editor.
+
+- Doctor, comprobación de siete enlaces y veinte tests pasaron sin reparaciones ni reinstalación.
+- Chromium pasó clic, cambio de estado y captura inspeccionada. n8n devolvió HTTP 200, diez flujos en página, siete activos y más páginas, sin cambios en workflows.
+- Los primeros intentos de navegador/API encontraron restricciones del sandbox (PermissionError/errno 1). Pasaron al usar el mecanismo oficial `with_additional_permissions` con red habilitada, sin modificar TLS ni el sandbox.
+- Las siete fuentes/enlaces son accesibles. Se aplicó `desarrollar-y-verificar` por archivo. No llegaron skills propias en el catálogo inicial observado y `skills.list(authority=executor)` devolvió vacío; esta herramienta lista paquetes por autoridad, no se acreditó equivalencia con la API nativa de proyecto `skills/list`.
+- La API nativa `skills/list({cwds,forceReload})` y el control del CWD de sesión no están expuestos allí. Cambiar workdir de un comando no cambia el CWD del agente. Autodetección sin verificar; carga explícita por área disponible mediante orquestacion.json. No se hicieron copias ni se alteró la publicación para ocultar el límite.
+
+Informe de esa VM: `operacion/evidencias/aceptacion-cloud.md`, ignorado por Git; este resumen conserva la evidencia accesible del resultado. La sesión nueva queda disponible para trabajo cloud. Aceptación técnica de código, navegador y API aprobada; aceptación de autodetección pendiente.
+
 ## Siguiente acción
 
-El código y las reglas de esta entrega ya están subidos y probados en la preparación. En «Editar onia», revisar el borrador guardado y pulsar **Republish/Volver a publicar**. Verificar después una tarea nueva con HEAD actual, descubrimiento de las siete skills, veinte tests, navegador y GET n8n. La publicación realizada durante el diagnóstico no incluía necesariamente esta preparación posterior. La actualización final de este documento sólo registra resultados; no cambia ejecutables.
+Continuar el primer encargo concreto en «onia · aceptación cloud», cargando la skill pertinente por su ruta del manifiesto. No pedir republicar de nuevo por esta actualización documental. La autodetección requiere comprobar el catálogo nativo cuando el runtime exponga ese control; no reemplazar esa comprobación por archivos presentes ni repetir el diagnóstico sin cambios de acceso. Conservar en Git la entrega saneada y los medios reales en el almacén acordado.
 
 La tarea antigua `01a1a3fb-7203-7626-895f-9059c93cc01c` observaba revisión 1 sin secreto. Ese resultado no describe el editor actual, donde la lectura HTTP 200 ya pasó.
 
@@ -32,7 +44,7 @@ Los errores sobre navegador, checkout y ubicaciones de la clave se conservan en 
 
 | Frente | Próximo resultado verificable |
 |---|---|
-| Setup cloud | Guardar la preparación corregida y aceptarla desde una tarea nueva. |
+| Setup cloud | Código, navegador y n8n aprobados en sesión nueva; catálogo nativo de skills aún sin verificar. |
 | Persistencia | Recuperar desde otra tarea una entrega saneada en Git y un archivo real; operacion/ y privado/ no viajan con Git. |
 | Video | HyperFrames instalado y probado en cloud; después pieza con grabación y audio reales. |
 | Marketing | Oferta y demo concretas; luego guion y pieza. Conectar activos Meta y comprobar lectura. |
