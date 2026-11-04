@@ -39,11 +39,15 @@ python3 _investigacion-onia/base-operativa/scripts/test_trabajo.py -v
 python3 _investigacion-onia/base-operativa/scripts/harness.py doctor
 python3 _investigacion-onia/base-operativa/scripts/test_harness.py -v
 Como comprobación de arranque ejecutá:
-python3 _investigacion-onia/base-operativa/scripts/preparar-cloud.py --check
+python3 _investigacion-onia/base-operativa/scripts/preparar-cloud.py --check --discovery-root /workspace
 bash _investigacion-onia/base-operativa/cloud/start.sh
 Verificá presencia de N8N_API_KEY sin mostrar valor ni placeholder y ejecutá:
 python3 _investigacion-onia/base-operativa/cloud/n8n-inventory.py
-Conservá estos comandos como Install script y comprobación de Start skill
+Conservá estos comandos como Install script y comprobación de Start skill.
+La habilidad de inicio debe leer cloud/INICIO-SESION.md desde la base operativa
+y aplicar la skill pertinente por orquestacion.json al primer encargo, incluso
+si el catálogo nativo no la anuncia. Comprobá por separado el catálogo inicial.
+Guardá la configuración
 mediante las capacidades oficiales de setup. Verificá red, secretos y resultado;
 si falta algo, indicá el ajuste exacto sin eludir la política.
 No instalar servicios en el VPS, modificar flujos n8n ni conectar otras cuentas.
@@ -52,7 +56,7 @@ Entregá resultados y configuración listos para republicar.
 
 ## Aceptación después de republicar
 
-Una tarea nueva debe identificar repo, HEAD y revisión del entorno; leer esta base; descubrir las siete skills; pasar los veinte tests Python y una prueba real de Playwright. La API debe devolver HTTP 200 y conteos sin imprimir datos de flujos ni secretos. Exit 2 indica clave ausente; un error de red o HTTP no acredita autenticación.
+Una tarea nueva debe identificar repo, HEAD y revisión del entorno; leer esta base; comprobar los nueve enlaces en ambos niveles y la skill aplicada al encargo; pasar los veintiocho tests Python y una prueba real de Playwright. Registrar aparte si las nueve skills aparecen en el catálogo nativo inicial. La API debe devolver HTTP 200 y conteos sin imprimir datos de flujos ni secretos. Exit 2 indica clave ausente; un error de red o HTTP no acredita autenticación.
 
 Conservar resultados saneados en ESTADO.md y guardar cambios útiles en Git. Los registros privados ignorados y el estado de una VM no sustituyen persistencia compartida. No incluir sesiones/cookies de cuentas en el snapshot reutilizable.
 

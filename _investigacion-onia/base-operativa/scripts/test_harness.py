@@ -85,7 +85,7 @@ class HarnessTests(unittest.TestCase):
     def test_routes_and_product_scope(self):
         expected = {"marketing": "preparar-oferta-y-embudo", "video": "producir-video",
                     "desarrollo": "desarrollar-y-verificar", "automatizaciones": "automatizar-n8n",
-                    "organizacion": "continuidad-de-trabajo", "producto": "desarrollar-y-verificar"}
+                    "organizacion": "planificar-dia", "producto": "desarrollar-y-verificar"}
         for area, skill in expected.items():
             with self.subTest(area=area):
                 result = self.prepare(task_id="ruta-" + area, area=area)
@@ -93,9 +93,37 @@ class HarnessTests(unittest.TestCase):
                 text = (self.base / result["briefing"]).read_text(encoding="utf-8")
                 self.assertIn("../../reglas-comunes.md", text)
                 self.assertIn("../../" + self.data["skills"][skill], text)
+                for support in self.data["areas"][area].get("skills_apoyo", []):
+                    self.assertIn("../../" + self.data["skills"][support], text)
                 if area == "producto":
                     self.assertEqual(result["modo"], "briefing")
                     self.assertIn("Sólo briefing hasta identificar y leer", text)
+
+    def test_cli_selects_continuity_without_loading_agenda_as_director(self):
+        script = str(Path(harness.__file__).resolve())
+        prepared = subprocess.run([sys.executable, script, "--base", str(self.base),
+                                  "preparar", "entrega-1", "--area", "organizacion",
+                                  "--skill", "continuidad-de-trabajo", "--objetivo", "Retomar un proyecto",
+                                  "--entregable", "Entrega de continuidad", "--aceptacion", "Estado verificable"],
+                                  capture_output=True, text=True, encoding="utf-8", check=True)
+        result = json.loads(prepared.stdout)
+        self.assertEqual(result["skill_directora"], "continuidad-de-trabajo")
+        self.assertIn("planificar-dia", result["skills_apoyo"])
+        self.assertNotIn("continuidad-de-trabajo", result["skills_apoyo"])
+        text = (self.base / result["briefing"]).read_text(encoding="utf-8")
+        self.assertIn("Skill directora: continuidad-de-trabajo", text)
+        context = text.split("## Contexto mínimo", 1)[1].split("## Skills de apoyo disponibles", 1)[0]
+        self.assertIn("continuidad-de-trabajo/SKILL.md", context)
+        self.assertNotIn("planificar-dia/SKILL.md", context)
+        supports = text.split("## Skills de apoyo disponibles", 1)[1]
+        self.assertIn("No cargarlas automáticamente", supports)
+        self.assertIn("planificar-dia/SKILL.md", supports)
+
+    def test_skill_from_another_area_is_rejected_without_writes(self):
+        with self.assertRaisesRegex(ValueError, "Skill no habilitada"):
+            harness.prepare(self.base, "entrega-1", "organizacion", "Objetivo", "Entrega", "Prueba",
+                            skill="producir-video")
+        self.assertFalse((self.base / "operacion").exists())
 
     def test_invalid_id_and_private_paths_are_rejected(self):
         with self.assertRaises(ValueError):

@@ -23,12 +23,26 @@ def present(path):
     return os.path.lexists(path)
 
 
-def inspect(root):
+def discovery_parent(root, requested):
+    """El alias opcional sólo pertenece al workspace que contiene este checkout."""
+    if requested is None:
+        return None
+    requested = Path(requested)
+    if not requested.is_absolute():
+        raise ValueError("La raíz de descubrimiento debe ser absoluta.")
+    resolved = requested.resolve()
+    if requested != resolved or resolved != root.resolve().parent or resolved == resolved.parent:
+        raise ValueError("La raíz de descubrimiento debe ser el padre directo real del checkout, sin enlaces.")
+    return resolved
+
+
+def inspect(root, destination_root=None):
     root = root.resolve()
+    destination_root = root if destination_root is None else discovery_parent(root, destination_root)
     source = root / SOURCE
     if not source.is_dir() or not source.resolve().is_relative_to(root):
         raise ValueError("La fuente canónica no existe dentro del repositorio.")
-    for parent in (root / ".agents", root / DESTINATION):
+    for parent in (destination_root / ".agents", destination_root / DESTINATION):
         if present(parent) and (not parent.is_dir() or parent.resolve() != parent):
             raise ValueError(f"Destino padre ajeno o no regular: {parent}")
     entries = []
@@ -41,7 +55,7 @@ def inspect(root):
             raise ValueError(f"Skill fuera de la fuente canónica: {skill.name}")
         if not (skill / "SKILL.md").resolve().is_relative_to(source.resolve()):
             raise ValueError(f"SKILL.md fuera de la fuente canónica: {skill.name}")
-        destination = root / DESTINATION / skill.name
+        destination = destination_root / DESTINATION / skill.name
         if not present(destination):
             state = "missing"
         elif destination.is_dir() and destination.resolve() == skill.resolve():
@@ -50,40 +64,48 @@ def inspect(root):
             state = "conflict"
         entries.append({"name": skill.name, "state": state,
                         "source": skill.relative_to(root).as_posix(),
-                        "destination": destination.relative_to(root).as_posix()})
+                        "destination": Path(os.path.relpath(destination, root)).as_posix()})
     if not entries:
         raise ValueError("La fuente canónica no contiene skills.")
     return entries
 
 
-def prepare(root, install=False):
+def prepare(root, install=False, discovery_root=None):
     root = root.resolve()
+    discovery_root = discovery_parent(root, discovery_root)
     entries = inspect(root)
+    discovery_entries = inspect(root, discovery_root) if discovery_root is not None else []
     result = {"mode": "install" if install else "check", "root": str(root),
               "skills": entries, "created": [], "errors": [],
+              "discovery_root": str(discovery_root) if discovery_root is not None else None,
+              "discovery_skills": discovery_entries,
               "note": "El descubrimiento debe comprobarse en una nueva sesión; no hay recarga automática garantizada."}
-    if any(entry["state"] == "conflict" for entry in entries):
+    all_entries = entries + discovery_entries
+    # Comprobar ambos destinos antes de escribir: un conflicto del workspace
+    # tampoco debe instalar parcialmente los enlaces del repositorio.
+    if any(entry["state"] == "conflict" for entry in all_entries):
         result["errors"].append("Hay destinos ajenos. No se creó ni reemplazó ningún enlace.")
         return result, 2
     if install:
-        destination_root = root / DESTINATION
         try:
-            destination_root.mkdir(parents=True, exist_ok=True)
-            for entry in entries:
+            for entry in all_entries:
                 if entry["state"] == "ready":
                     continue
                 source = root / entry["source"]
                 destination = root / entry["destination"]
+                destination.parent.mkdir(parents=True, exist_ok=True)
                 # El enlace relativo sigue funcionando al mover el checkout.
                 target = os.path.relpath(source, destination.parent)
                 os.symlink(target, destination, target_is_directory=True)
                 result["created"].append(entry["destination"])
             result["skills"] = inspect(root)
+            if discovery_root is not None:
+                result["discovery_skills"] = inspect(root, discovery_root)
         except OSError as exc:
             # No borrar destinos ni hacer fallback a copias o enlaces distintos.
             result["errors"].append(f"No se pudo crear el enlace: {exc}")
             return result, 2
-    ready = all(entry["state"] == "ready" for entry in result["skills"])
+    ready = all(entry["state"] == "ready" for entry in result["skills"] + result["discovery_skills"])
     return result, 0 if ready else 1
 
 
@@ -94,9 +116,11 @@ def main(argv=None):
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--check", action="store_true", help="Sólo leer; salida 1 si faltan enlaces.")
     mode.add_argument("--install", action="store_true", help="Crear únicamente enlaces faltantes, sin sobrescribir.")
+    parser.add_argument("--discovery-root", type=Path,
+                        help="Raíz absoluta opcional del workspace padre; crea también aliases allí.")
     args = parser.parse_args(argv)
     try:
-        result, code = prepare(repository_root(), install=args.install)
+        result, code = prepare(repository_root(), install=args.install, discovery_root=args.discovery_root)
     except (OSError, ValueError) as exc:
         result, code = {"errors": [str(exc)]}, 2
     print(json.dumps(result, ensure_ascii=False, indent=2))

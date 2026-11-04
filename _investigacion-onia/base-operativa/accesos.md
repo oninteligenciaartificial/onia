@@ -8,17 +8,20 @@ Este inventario registra todos los accesos; no implica entregar todos sus secret
 
 | Servicio | Ubicación y mecanismo | Estado | Prueba pendiente |
 |---|---|---|---|
-| GitHub `oninteligenciaartificial/onia` | Conexión del entorno Codex Cloud `onia`; repo privado del harness. | Checkout correcto y lectura comprobados. | Integrar la entrega cloud y comprobar preparación desde una nueva tarea. |
+| GitHub `oninteligenciaartificial/onia` | Conexión del entorno Codex Cloud `onia`; repo privado del harness. | Checkout correcto y lectura comprobados también en la nueva «onia · aceptación cloud». | Conservar los cambios útiles y comprobar la revisión necesaria para cada encargo. |
 | n8n API | Ubicación elegida con Sergio: `N8N_API_KEY` como Secreto de red del propio entorno `onia`, dominio `n8n-sergio-n8n.hqdqgh.easypanel.host`. No duplicarlo en la bóveda personal. | GET HTTP 200 en preparación y en la nueva «onia · aceptación cloud»: diez flujos en la página y siete activos, con paginación restante. | Para un flujo concreto, comprobar los permisos requeridos; esta prueba sólo acredita lectura. |
 | Credenciales de flujos n8n | Almacén `Credentials` de la instancia existente. | No se han creado ni verificado las conexiones del nuevo recorrido comercial. | Probar cada servicio con la operación necesaria y datos sintéticos. |
-| Meta del negocio | Conexión oficial/API apropiada a los activos y operación elegidos. | Onia/oniahq observado en navegador local; ningún acceso API cloud acreditado. | Identificar activos y permisos, conectar y realizar una lectura. |
+| Meta del negocio | App existente **ONIA Marketing API**; secreto previsto `META_ADS_ACCESS_TOKEN` en Secretos de red del propio entorno `onia`, dominio `graph.facebook.com`. | App inspeccionada; token con `ads_read` pendiente de ingreso directo por Sergio. No hay lectura API cloud acreditada. | Cargar el secreto en esa única ubicación y comprobar una lectura de los activos autorizados; verificar permisos y expiración efectivos. |
 | Instagram de investigación | Cuenta separada y sesión en una superficie cloud compatible, pendiente de resolver bajo la decisión de usar sólo Codex ahora. | Nombre elegido por delegación de Sergio: **ONIA Research**. Usuario candidato: **onia.research**. Correo Gmail candidato: **onia.research.sergio@gmail.com**. Disponibilidad no comprobada; correo y cuenta no creados. | Resolver navegador cloud interactivo; crear correo y cuenta con verificación directa de Sergio. Comprobar lectura de un reel y persistencia de sesión. |
-| Archivos | [ONIA archivos en Drive](https://drive.google.com/drive/folders/1eON_RgRbSN3Yz_qmudo5-dNBomDDIufu), cuatro carpetas de entrada, marca, productos y entregables. | Creación y permisos de propietario comprobados; tarea onia cloud leyó los cuatro hijos directos. | Leer/descargar un archivo real y recuperar un entregable desde otra tarea. |
+| Archivos | [ONIA archivos en Drive](https://drive.google.com/drive/folders/1eON_RgRbSN3Yz_qmudo5-dNBomDDIufu), cuatro carpetas de entrada, marca, productos y entregables. | Creación y permisos de propietario comprobados; la nueva sesión cloud volvió a listar los cuatro hijos directos. | Leer/descargar un archivo real y recuperar un entregable desde otra tarea. |
 | Contexto privado | La conexión Drive está disponible; no se migró el contexto privado local. | Continuidad mínima saneada en ESTADO.md. | Preparar el contexto necesario y verificar su lectura cloud sin trasladar secretos. |
-| Calendario y organización | Conexión de la cuenta elegida, disponible en el ejecutor cloud. | Sin prueba en `onia`. | Lectura de disponibilidad; cambios sólo dentro del encargo correspondiente. |
-| Higgsfield y otros proveedores | Conexión del proveedor con acceso y cuota comprobados. | La suscripción o un plugin visible aquí no acreditan acceso API/cloud. | Comprobar cuenta, función y consumo antes de una operación que use créditos. |
+| Gmail | Conexión oficial disponible en el ejecutor cloud. | Perfil válido comprobado en la nueva sesión; no se leyeron correos. | Lectura o preparación de un correo sólo para un encargo concreto. |
+| Calendario y organización | Conexión oficial disponible en el ejecutor cloud. | Perfil y listado de tres calendarios comprobados en la nueva sesión; no se leyeron eventos. | Elegir calendario y comprobar disponibilidad del día solicitado; el listado no acredita una agenda revisada. |
+| Higgsfield | Conexión del proveedor disponible en el ejecutor cloud. | Perfil y workspace válidos comprobados en la nueva sesión: plan Pro, 585 créditos observados. No se generó contenido ni se consumieron créditos en esta prueba. | Comprobar herramienta, materiales y costo de una generación concreta; la cuota observada puede cambiar. |
 | VPS y producción | Acceso administrativo separado del piloto de lectura n8n. | Inspección parcial por panel; acceso SSH no probado. | Sólo la inspección necesaria para un encargo de infraestructura. |
 | Grok Bot | Conexión futura, fuera del alcance operativo actual. | Captura aportada por Sergio el 3-nov-2026: Premium, 100 % usado. Conserva esta herramienta; ahora se trabaja sólo con Codex y n8n existente. | Retomar cuando haya cuota y Sergio lo habilite. Fecha de renovación e integración no verificadas. Los mensajes históricos de sus bots no certifican despliegues actuales. |
+
+Las nuevas comprobaciones de perfiles y listados se realizaron en «onia · aceptación cloud», después de publicar el entorno. Acreditan esas operaciones de lectura, no todas las funciones de cada servicio. No se conservan aquí correos personales, IDs de calendarios ni identificadores privados de los perfiles.
 
 ## n8n: configuración del piloto
 
@@ -38,7 +41,7 @@ Un secreto de red de Codex entrega un marcador al proceso y sustituye la credenc
 
 ## Lista de custodia y carga
 
-Los nombres de entradas de esta tabla son etiquetas organizativas; sólo `N8N_API_KEY` es una clave de configuración ya consumida por el helper actual. Las demás claves API se nombrarán cuando exista una integración que las necesite. No son credenciales creadas ni solicitudes de entregar sus valores.
+Los nombres de entradas de esta tabla son etiquetas organizativas. `N8N_API_KEY` ya fue consumida por el helper; `META_ADS_ACCESS_TOKEN` identifica la próxima carga pendiente. Las demás claves API se nombrarán cuando exista una integración que las necesite. El listado no implica que se hayan creado credenciales ni solicita entregar sus valores por chat.
 
 | Entrada o cuenta | Qué se conserva y dónde | Cuándo se habilita para operar |
 |---|---|---|
@@ -48,10 +51,10 @@ Los nombres de entradas de esta tabla son etiquetas organizativas; sólo `N8N_AP
 | Easypanel — cuenta | Acceso al panel en el gestor personal; URL identificada sin secretos. | Para el encargo específico de administración de servicios. |
 | VPS — SSH | Clave privada dedicada y frase de paso en custodia protegida; entrega al cliente SSH por mecanismo específico. Clave pública en servidor. | Después de verificar usuario técnico, red, puerto y huella; sin acceso SSH probado aún. |
 | GitHub | Conexión existente del repo; contraseña y recuperación en gestor personal. | Checkout ya probado. No crear PAT adicional por defecto. |
-| Google — Drive, Gmail y Calendar | Conexiones oficiales/OAuth por servicio; contraseña y recuperación en gestor personal. | Drive: metadatos cloud comprobados. Gmail/calendario: pruebas específicas pendientes. |
-| Meta — Facebook, Instagram y Ads | Cuentas y recuperación en gestor personal; permisos sobre Página/Instagram/cuenta publicitaria mediante conexión oficial. | Elegir activo y operación. Tokens de una integración sólo en su ejecutor (n8n o Codex), con alcance definido. |
+| Google — Drive, Gmail y Calendar | Conexiones oficiales/OAuth por servicio; contraseña y recuperación en gestor personal. | Perfiles de Gmail/Calendar y listados de calendarios/Drive comprobados desde cloud. Contenido de correos, eventos y archivos aún no probado en este recorrido. |
+| Meta — Facebook, Instagram y Ads | `META_ADS_ACCESS_TOKEN` sólo en Secretos de red de `onia`, dominio `graph.facebook.com`; ingreso directo de Sergio. Cuentas y recuperación en gestor personal. | App ONIA Marketing API inspeccionada; token `ads_read` pendiente. La conexión API se acreditará con una lectura, sin campañas nuevas. |
 | ONIA Research — correo e Instagram | Futuras cuentas separadas; candidatos en el inventario superior. | No creadas; navegador cloud interactivo y registro pendientes. |
-| Higgsfield | Conexión del proveedor; contraseña/recuperación personales. API key sólo si se verifica acceso y necesidad. | Probar cuenta, herramienta y cuota antes de generar. |
+| Higgsfield | Conexión del proveedor ya comprobada; contraseña/recuperación personales. No hace falta otra API key para repetir la consulta de perfil. | Perfil/workspace y cuota observada en la tabla superior; generación concreta pendiente. |
 | Vercel | Conexión oficial si se utiliza para el producto; contraseña/recuperación personales. | Encargo de despliegue correspondiente; acceso no verificado en este piloto. |
 | Supabase / base de datos ONIA | Clave privilegiada, contraseña DB y firma JWT en el backend/despliegue correspondiente, con respaldo protegido. | Trabajo del producto, separado del harness. Versiones/formatos autoalojados por comprobar. |
 | Credenciales de workflows | Google, Meta, SMTP u otros proveedores en `Credentials` de n8n cuando el flujo los use. | Sólo para los flujos concretos que se implementen. |

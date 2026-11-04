@@ -7,4 +7,4 @@ Las instrucciones actuales de Sergio prevalecen sobre propuestas históricas. ON
 
 Consultá `privado/contexto.md` sólo si la tarea necesita datos personales, horarios o recursos de Sergio; no incluirlo en paquetes públicos. Para código del producto, leer además las instrucciones técnicas aplicables en onia-platform y cotejar el estado real antes de editar. No extender estas decisiones comerciales a proyectos ajenos al encargo.
 
-Las skills propias están enlazadas en `.agents/skills`; sus fuentes editables únicas están en `base-operativa/compartibles/skills`. Cargar sólo las pertinentes. La existencia de instrucciones no acredita conexiones, tareas cloud o resultados.
+Las skills propias están enlazadas en `.agents/skills`; sus fuentes editables únicas están en `base-operativa/compartibles/skills`. Al iniciar un encargo, aplicar la selección y carga por área definida en `base-operativa/ORQUESTACION.md`; cargar sólo las pertinentes. La existencia de instrucciones no acredita conexiones, tareas cloud o resultados.

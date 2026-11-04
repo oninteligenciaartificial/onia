@@ -14,12 +14,15 @@
     "desarrollar-y-verificar": "compartibles/skills/desarrollar-y-verificar/SKILL.md",
     "evaluar-catalogo-skills": "compartibles/skills/evaluar-catalogo-skills/SKILL.md",
     "mejorar-sistema": "compartibles/skills/mejorar-sistema/SKILL.md",
+    "planificar-dia": "compartibles/skills/planificar-dia/SKILL.md",
+    "preparar-campana-meta": "compartibles/skills/preparar-campana-meta/SKILL.md",
     "preparar-oferta-y-embudo": "compartibles/skills/preparar-oferta-y-embudo/SKILL.md",
     "producir-video": "compartibles/skills/producir-video/SKILL.md"
   },
   "areas": {
     "marketing": {
       "skill_directora": "preparar-oferta-y-embudo",
+      "skills_apoyo": ["preparar-campana-meta"],
       "contexto": [],
       "salidas": ["Oferta y recorrido de venta", "Borradores de las piezas del encargo"],
       "alcance": "Preparar una oferta, embudo, webinar o brief de contenido.",
@@ -47,10 +50,11 @@
       "modo": "encargo"
     },
     "organizacion": {
-      "skill_directora": "continuidad-de-trabajo",
+      "skill_directora": "planificar-dia",
+      "skills_apoyo": ["continuidad-de-trabajo", "mejorar-sistema", "evaluar-catalogo-skills"],
       "contexto": [],
-      "salidas": ["Estado y entrega para retomar un encargo", "Próximo paso y evidencia accesible"],
-      "alcance": "Organizar encargos y continuidad; no incorpora automáticamente una agenda personal.",
+      "salidas": ["Agenda viable con compromisos y tareas", "Estado y entrega para retomar un encargo"],
+      "alcance": "Planificar con datos vigentes; usar la skill de apoyo correspondiente para continuidad o mejora. No presupone sincronización del calendario.",
       "modo": "encargo"
     },
     "producto": {

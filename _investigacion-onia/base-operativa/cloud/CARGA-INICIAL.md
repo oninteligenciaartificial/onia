@@ -25,7 +25,7 @@ La carpeta es privada según los permisos consultados. La tarea cloud comprobó 
 
 Las cuentas se **conectan**, no se cargan como archivos. Para Meta, calendario o un proveedor, primero identificar cuenta/activo y operación, luego completar su conexión oficial. La contraseña y las verificaciones se introducen directamente en el proveedor. No subir contraseñas, tokens ni perfiles de Chrome a Drive o Git.
 
-La clave n8n ya fue guardada por Sergio: no crear otra por este fallo. Falta que llegue a la configuración publicada de onia. Usar [CONFIGURAR-ONIA.md](CONFIGURAR-ONIA.md). Inventario vigente y resultados en [accesos](../accesos.md).
+La clave n8n ya fue guardada por Sergio y probada con HTTP 200 desde una sesión cloud nueva. No crear otra para repetir esa comprobación. Higgsfield, Gmail, Calendar y el listado de Drive también pasaron sus lecturas acotadas; Meta sigue pendiente. Inventario vigente y límites en [accesos](../accesos.md).
 
 ## Contexto y decisiones
 
@@ -33,9 +33,9 @@ No pedir a Sergio otra vez su historia, horarios, recursos o metas ya descritos.
 
 ## Orden de activación
 
-1. Aplicar y republicar setup onia; comprobar n8n y descubrimiento de skills.
+1. Aplicar la carga de las nueve skills por área y comprobarla al iniciar las sesiones; n8n ya fue probado.
 2. Leer el primer paquete desde una tarea cloud y confirmar archivos y permisos.
 3. Probar una entrega completa —por ejemplo una pieza de video— y guardar el resultado en Drive.
-4. Conectar Meta/calendario/proveedores cuando el primer encargo requiera esas cuentas.
+4. Completar Meta y comprobar la operación concreta de cada conexión cuando el encargo la requiera.
 
 Las conexiones, publicaciones y automatizaciones se marcan operativas sólo después de una prueba real. Grok Bot y la cuenta de investigación de reels siguen pendientes según la decisión vigente.

@@ -40,13 +40,16 @@ def manifest(base):
     if data.get("schema") != 1 or data.get("reglas") != "reglas-comunes.md":
         raise ValueError("Manifest incompatible: se requiere schema 1 y reglas-comunes.md.")
     skills, areas = data.get("skills"), data.get("areas")
-    if not isinstance(skills, dict) or len(skills) != 7 or not isinstance(areas, dict):
-        raise ValueError("Manifest inválido: se esperan las siete skills y el mapa de áreas.")
+    if not isinstance(skills, dict) or not skills or not isinstance(areas, dict) or not areas:
+        raise ValueError("Manifest inválido: se requieren skills y áreas declaradas.")
     paths = [data["reglas"], *data.get("contexto_comun", []),
              *data.get("archivos_cloud", []), *skills.values()]
     for name, route in areas.items():
         if not isinstance(route, dict) or route.get("skill_directora") not in skills:
             raise ValueError("Área sin skill directora válida: " + name)
+        support = route.get("skills_apoyo", [])
+        if not isinstance(support, list) or any(item not in skills for item in support):
+            raise ValueError("Área con skill de apoyo desconocida: " + name)
         if route.get("modo") not in {"encargo", "briefing"}:
             raise ValueError("Área sin modo válido: " + name)
         if not isinstance(route.get("salidas"), list) or not route["salidas"]:
@@ -96,7 +99,7 @@ def task_paths(base, task_id):
     return task, brief
 
 
-def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None):
+def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None, skill=None):
     base = base.resolve()
     task, brief = task_paths(base, task_id)
     data = manifest(base)
@@ -107,10 +110,14 @@ def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None):
     if os.path.lexists(task) or os.path.lexists(brief):
         raise ValueError("El encargo ya existe. Usar retomar; no se sobrescribió ningún archivo.")
     route = data["areas"][area]
-    skill = route["skill_directora"]
+    allowed_skills = list(dict.fromkeys([route["skill_directora"], *route.get("skills_apoyo", [])]))
+    skill = route["skill_directora"] if skill is None else skill
+    if skill not in allowed_skills:
+        raise ValueError("Skill no habilitada para el área " + area + ". Elegir: " + ", ".join(allowed_skills))
+    support = [name for name in allowed_skills if name != skill]
     context = list(dict.fromkeys([data["reglas"], *data["contexto_comun"],
                                  *route["contexto"], data["skills"][skill]]))
-    for relative in context:
+    for relative in [*context, *[data["skills"][name] for name in support]]:
         if not safe_path(base, relative).is_file():
             raise ValueError("Falta contexto " + relative + ". Ejecutar doctor y revisar checkout.")
     lines = ["# Encargo " + task_id, "", "Área: " + area,
@@ -122,6 +129,11 @@ def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None):
     lines.extend(["", "## Contexto mínimo", "",
                   "Leer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.", ""])
     lines.extend("- [" + relative + "](../../" + relative + ")" for relative in context)
+    if support:
+        lines.extend(["", "## Skills de apoyo disponibles", "",
+                      "No cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada "
+                      "del encargo; no reemplazan la skill directora elegida.", ""])
+        lines.extend("- [" + name + "](../../" + data["skills"][name] + ")" for name in support)
     lines.extend(["", "## Salidas de referencia del área", ""])
     lines.extend("- " + item for item in route["salidas"])
     lines.extend(["", "## Registro", "", "Estado: [registro de trabajo](../tareas/" + task_id + ".json).",
@@ -137,7 +149,8 @@ def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None):
         brief.unlink()
         raise
     return {"tarea": record, "briefing": brief.relative_to(base).as_posix(),
-            "area": area, "skill_directora": skill, "modo": route["modo"], "nota": LIMITACION}
+            "area": area, "skill_directora": skill, "skills_apoyo": support,
+            "modo": route["modo"], "nota": LIMITACION}
 
 
 def resume(base, task_id):
@@ -159,6 +172,7 @@ def main(argv=None):
     p = commands.add_parser("preparar", help="Guardar un encargo sin ejecutarlo.")
     p.add_argument("id")
     p.add_argument("--area", required=True)
+    p.add_argument("--skill", help="Skill directora para este encargo, entre las declaradas para el área.")
     p.add_argument("--objetivo", required=True)
     p.add_argument("--entregable", required=True)
     p.add_argument("--aceptacion", required=True)
@@ -172,7 +186,7 @@ def main(argv=None):
             code = 0 if result["ok"] else 1
         elif args.command == "preparar":
             result = prepare(args.base, args.id, args.area, args.objetivo,
-                             args.entregable, args.aceptacion, args.entrada)
+                             args.entregable, args.aceptacion, args.entrada, skill=args.skill)
             code = 0
         else:
             result, code = resume(args.base, args.id), 0

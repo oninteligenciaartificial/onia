@@ -34,7 +34,11 @@ Informe de esa VM: `operacion/evidencias/aceptacion-cloud.md`, ignorado por Git;
 
 ## Siguiente acción
 
-Continuar el primer encargo concreto en «onia · aceptación cloud», cargando la skill pertinente por su ruta del manifiesto. No pedir republicar de nuevo por esta actualización documental. La autodetección requiere comprobar el catálogo nativo cuando el runtime exponga ese control; no reemplazar esa comprobación por archivos presentes ni repetir el diagnóstico sin cambios de acceso. Conservar en Git la entrega saneada y los medios reales en el almacén acordado.
+Sergio pidió carga automática y chats cloud por área. Se integraron nueve skills propias, seleccionadas entre las referencias y tareas reales; el detalle de los treinta candidatos está en SKILLS-POR-AREA.md. Las dos nuevas (agenda y preparación Meta) pasaron validación y cuatro casos textuales con revisión independiente. No se instalaron treinta paquetes.
+
+El instalador prepara enlaces a una única fuente tanto en el checkout como en `/workspace/.agents/skills`, porque el CWD inicial observado del agente es `/workspace`. `cloud/INICIO-SESION.md` define la selección y lectura de la skill por encargo incluso si el catálogo nativo no la anuncia. Código preparado; aplicación al entorno y aceptación en nuevos chats todavía en curso. La suite ampliada contiene veintiocho pruebas, incluida elección de directora por `--skill` dentro de su área. La revisión detectó y corrigió una directora de agenda que no correspondía a continuidad/mejora. No dar por aprobada toda la suite por el resultado histórico de veinte; Linux debe comprobar los enlaces.
+
+En la sesión de aceptación se comprobaron adicionalmente perfiles de Higgsfield y Gmail, perfil y listado de tres calendarios, y las cuatro carpetas de Drive. No se generó contenido ni se escribieron correos o eventos. Meta: app existente inspeccionada en el Chrome autenticado de Sergio; no se leyeron claves, no hay API cloud conectada aún. El inventario en accesos.md distingue cada prueba.
 
 La tarea antigua `01a1a3fb-7203-7626-895f-9059c93cc01c` observaba revisión 1 sin secreto. Ese resultado no describe el editor actual, donde la lectura HTTP 200 ya pasó.
 

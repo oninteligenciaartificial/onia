@@ -20,7 +20,11 @@ python3 _investigacion-onia/base-operativa/scripts/harness.py preparar oferta-pi
 
 El comando crea el briefing en `operacion/encargos/oferta-piloto-001.md` y el registro usado por `scripts/trabajo.py`. Un ID ya existente se retoma; no se sobrescribe. En Windows puede usarse `python` en lugar de `python3`.
 
-Las seis áreas son `marketing`, `video`, `desarrollo`, `automatizaciones`, `organizacion` y `producto`. Sus skills directoras y contexto mínimo se mantienen en [orquestacion.json](orquestacion.json). Son rutas de trabajo, no seis chats ni seis procesos permanentes. En producto se cotejan primero las instrucciones y el estado de ONIA Platform.
+Las seis áreas son `marketing`, `video`, `desarrollo`, `automatizaciones`, `organizacion` y `producto`. Sus skills directoras y contexto mínimo se mantienen en [orquestacion.json](orquestacion.json). Sergio pidió abrir chats cloud por área; su registro se conserva en ESTADO.md. Un chat no es un proceso permanente. En producto se cotejan primero las instrucciones y el estado de ONIA Platform.
+
+Al iniciar un encargo, el agente selecciona el área por su resultado y lee automáticamente el cuerpo de la skill pertinente desde la ruta del manifiesto. Las skills de apoyo se cargan sólo cuando hacen falta. Si el catálogo nativo no las anuncia, leer la fuente canónica permite aplicar sus instrucciones; registrar esa diferencia sin pedir a Sergio que pegue la skill ni afirmar que el descubrimiento nativo pasó. El arranque cloud usa [INICIO-SESION.md](cloud/INICIO-SESION.md).
+
+`preparar --skill` permite elegir la directora entre las declaradas del área: por ejemplo `--area organizacion --skill continuidad-de-trabajo` para un traspaso o `--area marketing --skill preparar-campana-meta` para anuncios. Sin esa opción se usa la directora predeterminada. El briefing señala las restantes como apoyos opcionales.
 
 ## Ejecutar con subagentes
 

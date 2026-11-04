@@ -19,7 +19,7 @@ El repositorio privado [oninteligenciaartificial/onia](https://github.com/oninte
 | Encargos, subagentes y continuidad | [Orquestación](ORQUESTACION.md) |
 | Cuenta, alcance y ubicación de cada acceso | [Accesos](accesos.md) |
 | Materiales de Sergio y entregables | [Carga inicial](cloud/CARGA-INICIAL.md) |
-| Siete skills existentes y capacidades pendientes | [Selección y recorrido](seleccion-y-recorrido.md) |
+| Nueve skills por área y decisión sobre los treinta candidatos | [Skills por área](SKILLS-POR-AREA.md) |
 | Procedencia de candidatos y decisiones | [Auditoría de repositorios](auditoria-30-repos.md) |
 | Fallos observados y correcciones | [Registro de errores](registro-de-errores.md) |
 
