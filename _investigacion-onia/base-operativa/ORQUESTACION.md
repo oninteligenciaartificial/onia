@@ -2,7 +2,7 @@
 
 Este procedimiento usa las [reglas comunes](reglas-comunes.md), la [arquitectura](arquitectura.md) y el [estado vigente](ESTADO.md). El coordinador es el agente que recibe el encargo de Sergio. El CLI prepara el encargo y su registro; la ejecución y la delegación las realiza ese agente con las herramientas disponibles.
 
-Para la operación cotidiana, **ONIA · Organización diaria** mantiene el registro privado compartido según [CEREBRO-DIARIO.md](CEREBRO-DIARIO.md). El coordinador de un encargo entrega allí su resultado mediante el escritor designado; el CLI local no sincroniza varias VMs. Los controles de agenda permiten revisar trabajo y no restringen cuándo Sergio puede mandar tareas.
+Para la operación cotidiana, **ONIA · Organización diaria** mantiene los registros privados definidos en [CEREBRO-DIARIO.md](CEREBRO-DIARIO.md): Notion para el día a día y fuentes históricas sólo cuando hacen falta. El coordinador entrega resultado y evidencia mediante el escritor designado; el CLI local no sincroniza varias VMs. El repo conserva documentación aprobada; cada área recupera sólo su contexto. Los controles de agenda no restringen cuándo Sergio puede mandar tareas.
 
 ## Preparar el trabajo
 
@@ -49,7 +49,7 @@ Si el encargo usa un registro local del CLI, actualizarlo con `scripts/trabajo.p
 python3 _investigacion-onia/base-operativa/scripts/harness.py retomar oferta-piloto-001
 ```
 
-Cuando cambien capacidades o hitos del sistema, dejar en [ESTADO.md](ESTADO.md) una entrega mínima saneada: resultado comprobado, commit o archivos relevantes, ubicación accesible de la evidencia y siguiente acción. Las prioridades y cierres diarios permanecen en la página privada, sin repetirlos en ESTADO.md. Los cambios útiles de código e instrucciones se versionan en el repositorio. Los medios y datos privados conservan la ubicación definida en [accesos.md](accesos.md).
+Cuando cambien capacidades o hitos, actualizar [ESTADO.md](ESTADO.md) con resultado comprobado, revisión, evidencia y siguiente acción. Las prioridades y cierres diarios permanecen en Notion, sin copiarlos al repo. Los cambios de código, reglas y skills requieren la autorización aplicable de Sergio; la incorporación de investigación no los activa. Los medios y datos privados conservan la ubicación definida en [accesos.md](accesos.md).
 
 `operacion/` está ignorado por Git: un briefing o registro guardado allí no aparece automáticamente en otra VM. La sesión receptora lee la entrega versionada, comprueba el checkout y recupera sólo los materiales necesarios. Una nueva conversación se abre cuando Sergio la pide y hay un encargo delimitado; los subagentes sirven para partes del encargo actual.
 

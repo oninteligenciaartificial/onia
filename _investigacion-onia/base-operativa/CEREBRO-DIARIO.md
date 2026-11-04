@@ -7,12 +7,14 @@ El cerebro es un registro compartido y un procedimiento de trabajo. Se ejecuta c
 | Dato | Fuente única |
 |---|---|
 | Reglas, permisos y skills | [Reglas comunes](reglas-comunes.md) y [manifiesto](orquestacion.json) |
-| Prioridades, contexto personal, encargos y siguiente paso | [ONIA · Cerebro diario, página privada](https://chatgpt.com/space/page_9891b23df62081918a4bcf61eadb0fc4) |
+| Vida, publicaciones, ventas, actualidad y decisiones cotidianas | [Sergio · Hoy, Notion privado](https://app.notion.com/p/40e2eb20bdfd81658111cf3e4d854964) |
+| Contexto personal histórico todavía no consolidado | [Página privada anterior](https://chatgpt.com/space/page_9891b23df62081918a4bcf61eadb0fc4); recuperar sólo lo necesario y comprobar vigencia, sin mantener otra cola diaria |
+| Investigación adoptada y fuentes | [Índice en Git](investigacion/2026-11-04/README.md); biblioteca cloud como procedencia e historial |
 | Compromisos y horarios guardados | Google Calendar personal; leer el día solicitado antes de modificarlo |
 | Ejecución y evidencia de cada área | Chat correspondiente de [SESIONES.md](SESIONES.md) y sus artefactos accesibles |
 | Capacidad comprobada del sistema | [ESTADO.md](ESTADO.md) |
 
-La página se lee con el conector oficial ChatGPT Space y no se comparte públicamente. Su ID identifica el recurso, no da acceso. El repositorio sólo conserva este enlace y el procedimiento; no copiar el perfil, finanzas, hábitos ni credenciales al código, paquetes de skills o evidencia pública. Consultar sólo las secciones pertinentes a cada encargo.
+Los registros privados se leen con el conector oficial correspondiente, Notion o ChatGPT Space. Sus IDs identifican recursos, no conceden acceso. El repositorio conserva referencias y procedimiento; no copiar perfil, finanzas, hábitos ni credenciales al código, paquetes de skills o evidencia pública. Consultar sólo las secciones pertinentes. Una consolidación documental no prueba migración total de datos personales ni sincronización automática.
 
 ## Entrada durante el día
 
@@ -29,7 +31,7 @@ Como límite inicial de atención, mantener hasta dos encargos activos que requi
 
 ## Coordinación y registro
 
-**ONIA · Organización diaria** coordina la operación cotidiana. Este chat de configuración mantiene las decisiones del sistema. El agente que recibe un pedido puede resolverlo dentro de su alcance; los cambios al registro compartido pasan por el coordinador designado, con un único escritor a la vez. Los demás chats devuelven resultado y evidencia sin editar simultáneamente el tablero.
+**ONIA · Organización diaria** coordina la operación cotidiana. El repo mantiene las decisiones aprobadas del sistema y cada chat carga la parte necesaria. El agente que recibe un pedido puede resolverlo dentro de su alcance; los cambios al registro compartido pasan por el coordinador designado, con un único escritor a la vez. Los demás chats devuelven resultado y evidencia sin editar simultáneamente el tablero.
 
 Cada encargo contiene ID estable, área, objetivo, entregable, criterio de aceptación, estado, referencia al chat/artefacto, resultado, comprobación y siguiente paso. Reutilizar los estados de `scripts/trabajo.py`:
 
@@ -40,7 +42,7 @@ Cada encargo contiene ID estable, área, objetivo, entregable, criterio de acept
 | en_espera | Falta una entrada, una decisión o resolver un bloqueo; indicar responsable y próximo paso |
 | terminado | Resultado obtenido y comprobado, con evidencia accesible |
 
-Antes de actualizar la página, leer su versión y el bloque actual. Usar ID y hash devueltos por esa lectura para una edición protegida; comprobar el recibo y releer el resultado. Ante conflicto, volver a leer y conciliar; no sobrescribir cambios ajenos. Un resultado externo incierto se consulta antes de repetir la acción.
+Antes de actualizar un registro, leer su versión y bloque actuales. Usar las operaciones del conector: en Space, IDs y hashes de la lectura; en Notion, IDs y propiedades reales. Comprobar recibo y releer el resultado. Ante conflicto, conciliar sin sobrescribir cambios ajenos. Consultar un resultado externo incierto antes de repetirlo.
 
 Los registros de `operacion/` son apoyo local de la ejecución. El bloqueo de archivo de `trabajo.py` sólo protege esa VM; no coordina varias máquinas. No crear una segunda cola global allí ni atribuirle sincronización automática. Si se usa el CLI, conservar el mismo ID y reflejar únicamente el resultado comprobado en la página.
 

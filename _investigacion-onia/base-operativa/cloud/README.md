@@ -13,7 +13,7 @@ python3 _investigacion-onia/base-operativa/scripts/harness.py doctor
 python3 -m unittest discover -s _investigacion-onia/base-operativa/scripts -p 'test_*.py' -v
 ```
 
-El instalador enlaza las siete skills versionadas, ejecuta npm ci e instala Chromium headless shell. package.json y el lock fijan Playwright 1.64.1. El arranque ejecuta un clic y verifica el cambio de estado en una página sintética; la captura queda bajo operacion/cloud-002/ (ignorado por Git).
+El instalador enlaza las nueve skills versionadas, ejecuta npm ci e instala Chromium completo. package.json y el lock fijan Playwright 1.64.1. La configuración usa [browser-runtime.cjs](browser-runtime.cjs) para reconstruir la confianza aislada del navegador con la CA oficial verificada. El arranque ejecuta un clic y verifica el cambio de estado en una página sintética; la captura queda bajo operacion/cloud-002/ (ignorado por Git). Probar el módulo con `node --test _investigacion-onia/base-operativa/cloud/browser-runtime.test.cjs` desde la raíz. La prueba pública y el uso del módulo están en [OPERAR.md](OPERAR.md).
 
 El fallo de scripts ausentes se reprodujo con HEAD 4de11bb. Estaban publicados desde 66674eb; el avance a f81a5b9 resolvió la ausencia y permitió instalar Chromium 156.0.8078.4. Consultar ESTADO para las verificaciones posteriores y la aceptación del entorno publicado.
 

@@ -1,10 +1,10 @@
 # Skills por área de ONIA
 
-3 de noviembre de 2026. Este mapa usa la [auditoría de los 30 repositorios](auditoria-30-repos.md) y su [registro con revisiones y licencias](catalogo-repos-2026-11-03.json). No es una nueva auditoría íntegra ni instala esos paquetes. Las [reglas comunes](reglas-comunes.md) siguen siendo la fuente de decisiones; [orquestacion.json](orquestacion.json) es el registro ejecutable de rutas y [ESTADO.md](ESTADO.md) conserva las pruebas del entorno.
+Mapa preparado el 3 de noviembre de 2026; actualizado el 4 de noviembre. Usa la [auditoría de los 30 repositorios](auditoria-30-repos.md) y su [registro con revisiones y licencias](catalogo-repos-2026-11-03.json). No es una nueva auditoría íntegra ni instala esos paquetes. Las [reglas comunes](reglas-comunes.md) siguen siendo la fuente de decisiones; [orquestacion.json](orquestacion.json) es el registro ejecutable de rutas y [ESTADO.md](ESTADO.md) conserva las pruebas del entorno.
 
 ## Qué usamos para cada encargo
 
-Las siete skills previas siguen siendo la base. Se agregan dos fuentes propias acotadas: `planificar-dia` y `preparar-campana-meta`. Su presencia en archivos debe distinguirse de enlaces, carga por un agente y uso con cuentas reales.
+El catálogo vigente contiene nueve skills propias: las siete iniciales más `planificar-dia` y `preparar-campana-meta`, incorporadas el 3 de noviembre. Esta actualización documental no instala ni modifica skills. Su presencia en archivos debe distinguirse de enlaces, carga por un agente y uso con cuentas reales.
 
 | Área | Skill que dirige según el resultado pedido | Referencias útiles y límites |
 |---|---|---|
@@ -58,13 +58,13 @@ Esta selección conserva las decisiones del catálogo. Copiar material de tercer
 
 ## Huecos que sí faltan
 
-- **Organización:** Calendar ya respondió al perfil y al listado de tres calendarios desde la nueva sesión cloud; Gmail respondió al perfil, sin leer correos. Faltan disponibilidad/eventos del día concreto y registro de caja. La planificación no sincroniza eventos por escribir un archivo.
-- **Meta:** la app existente ONIA Marketing API está inspeccionada; falta que Sergio ingrese `META_ADS_ACCESS_TOKEN` con `ads_read` en Secretos de red de `onia`, dominio `graph.facebook.com`, y comprobar la lectura. La skill puede preparar el borrador mientras faltan conexión, activos verificados, piezas y medición; no se declara Meta conectado.
-- **Contenido:** `preparar-contenido` sigue pendiente. Higgsfield ya tiene perfil/workspace válidos comprobados, sin generar; Drive volvió a listar las cuatro carpetas de ONIA. Cuota y custodia quedan en [accesos.md](accesos.md). Faltan una muestra de voz, oferta y medios reales para probar guion → planos → CTA → edición y recuperar el entregable desde otra tarea. `producir-video` no inventa esa estrategia ni vivencias.
+- **Organización:** las consultas de Calendar y el estado del panel se conservan en [ESTADO.md](ESTADO.md); las fuentes del trabajo cotidiano, en [CEREBRO-DIARIO.md](CEREBRO-DIARIO.md). La planificación no sincroniza eventos por escribir un archivo. Un registro de caja necesita datos reales conciliados, no otra skill instalada por defecto.
+- **Meta:** la lectura de cuentas publicitarias ya pasó con HTTP 200 en la versión publicada comprobada del entorno. La ubicación del secreto y el límite de las VMs anteriores están en [accesos.md](accesos.md) y [ESTADO.md](ESTADO.md); no volver a solicitarlo para corregir una instancia antigua. La campaña concreta aún necesita activos de destino, piezas y medición; la lectura no acredita publicación ni gasto.
+- **Contenido:** no se incorporó una skill `preparar-contenido`. El catálogo de formatos y las fichas de referentes son investigación, no producción real. Capacidades probadas y próximo trabajo en [ESTADO.md](ESTADO.md); cuota y custodia en [accesos.md](accesos.md). Falta probar el recorrido con medios reales: guion → planos → CTA → edición y recuperación del entregable desde otra tarea. `producir-video` no inventa estrategia ni vivencias.
 - **Taller y producto:** la oferta ya puede definir temario y recorrido; una skill específica de taller se justificará con el primer caso. La revisión UI necesita el producto real, no otra instalación del catálogo.
 
 ## Comprobación de las dos incorporaciones
 
 Ambas pasaron `quick_validate.py`. Un agente independiente aplicó las instrucciones a cuatro casos sintéticos: agenda con 270 minutos de tareas y 180 disponibles; retraso con trabajo parcial; campaña sin presupuesto asignado ni conexión; y pedido posterior de publicación. Priorizó una agenda realizable, conservó el descanso, dejó presupuesto/acceso pendientes y distinguió autorización de publicación efectiva.
 
-La prueba detectó una ambigüedad útil: tiempo trabajado no equivale a resultado terminado. Se explicitó esa distinción en planificación. También se aclaró que un pedido posterior de lanzamiento se reenruta conservando la autorización, en lugar de usar el alcance de preparación como rechazo absoluto. Son comprobaciones textuales, no ejecuciones de calendario, API o campañas; los casos con cuentas reales siguen pendientes.
+La prueba detectó una ambigüedad útil: tiempo trabajado no equivale a resultado terminado. Se explicitó esa distinción en planificación. También se aclaró que un pedido posterior de lanzamiento se reenruta conservando la autorización, en lugar de usar el alcance de preparación como rechazo absoluto. Estas comprobaciones del 3 de noviembre fueron textuales, no ejecuciones de calendario, API o campañas; las pruebas posteriores con cuentas reales y sus límites se consultan en ESTADO.md.

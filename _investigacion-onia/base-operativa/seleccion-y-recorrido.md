@@ -1,6 +1,8 @@
-# Selección y recorrido para Sergio y ONIA
+# Selección y recorrido iniciales para Sergio y ONIA
 
-3 de noviembre de 2026. Selección basada en esta conversación y en la [revisión de 30 repositorios](auditoria-30-repos.md). No utiliza ONIA-CENTRAL. Actualización: siete skills enlazadas y primera prueba técnica local terminada; el estado operativo se consulta en [ESTADO.md](ESTADO.md). Los elementos pendientes de la tabla no se consideran implementados.
+Documento histórico del 3 de noviembre de 2026, basado en esta conversación y en la [revisión de 30 repositorios](auditoria-30-repos.md). No utiliza ONIA-CENTRAL. Conserva la selección, recomendaciones y estado de aquella revisión: siete skills enlazadas y primera prueba técnica local terminada.
+
+Nota de vigencia del 4 de noviembre: el catálogo actual tiene nueve skills propias y está en [SKILLS-POR-AREA.md](SKILLS-POR-AREA.md). [ESTADO.md](ESTADO.md) sustituye las cifras de producción, conexiones y pendientes de este documento; [CEREBRO-DIARIO.md](CEREBRO-DIARIO.md) identifica las fuentes de coordinación cotidiana. Las tablas y propuestas siguientes no son una nueva cola de ejecución ni una autorización para crear skills.
 
 ## Decisiones recomendadas
 
@@ -12,11 +14,11 @@
 - Continuidad: archivos breves por proyecto y encargo, no un chat infinito. Last30Days queda opcional para investigación que lo justifique.
 - Aprendizaje: propuestas trazables a resultados y pruebas, con reversión. Nada modifica automáticamente precios, permisos o reglas comunes.
 
-## Catálogo funcional propio: qué crear y qué conservar
+## Catálogo funcional de la revisión inicial
 
 Estas son capacidades para el trabajo real. No hace falta convertir cada referencia externa en otra skill ni instalar todo el catálogo al comienzo.
 
-| Skill propia | Entrada → entrega | Fuente útil | Estado actual |
+| Skill o capacidad propuesta | Entrada → entrega | Fuente útil | Estado en la revisión inicial del 3-nov |
 |---|---|---|---|
 | evaluar-catalogo-skills | Candidatos → decisiones con evidencia y límites | Procedimiento propio | Archivo existente; usado en esta revisión |
 | continuidad-de-trabajo | Tarea y resultados → estado verificable y próximo paso | Propia; referencia de context-engineering de Addy | Enlazada; persistencia entre procesos probada, traspaso entre chats pendiente |
@@ -107,7 +109,7 @@ La meta de Bs3.000 nuevos requiere **60 pagos de Bs50** si todo se obtiene con e
 
 Preparar un guion ligado a esa oferta y un video vertical con material propio. Probar importación, edición, subtítulos, render, audio y exportación. Medir tiempo de Sergio, tiempo de edición y costo.
 
-La meta de tres videos diarios queda como aspiración a validar: primero una pieza que salga de principio a fin. Después reutilizar grabación en varias piezas y aumentar frecuencia si el trabajo cabe junto al colegio y descanso.
+La propuesta inicial de tres videos diarios era una aspiración a validar; fue sustituida por el objetivo vigente registrado en [ESTADO.md](ESTADO.md). La comprobación de producción sigue exigiendo una pieza que salga de principio a fin, medir el trabajo y reutilizar grabaciones sin confundir objetivos con videos terminados.
 
 ### 3. Registrar la demanda y el cobro
 
@@ -127,4 +129,4 @@ Primera prueba: cerrar un encargo y retomarlo con los documentos en otra sesión
 
 ## Criterio de terminado de esta fase
 
-Un recorrido real — oferta, contenido, registro y entrega — funciona; sabemos qué hizo la IA, qué necesita Sergio y cuánto costó. La arquitectura crece a partir de ese recorrido. El [informe de revisión](auditoria-30-repos.md) ya está escrito; la instalación y estas pruebas siguen pendientes.
+El criterio propuesto fue que un recorrido real — oferta, contenido, registro y entrega — funcionara, con evidencia de qué hizo la IA, qué necesita Sergio y cuánto costó. La arquitectura crece a partir de ese recorrido. El [informe de revisión](auditoria-30-repos.md) quedó escrito; los resultados posteriores de instalación y pruebas se conservan en [ESTADO.md](ESTADO.md).

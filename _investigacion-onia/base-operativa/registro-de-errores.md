@@ -1,5 +1,13 @@
 # Registro de error y corrección — 3 de noviembre de 2026
 
+## Corrección del 4 de noviembre: diagnóstico sin salida operativa
+
+Sergio volvió a señalar que el cierre describía un bloqueo sin resolver cómo operar. La investigación textual avanzaba, pero se repetían pruebas y se dejaba la corrección del navegador como trabajo futuro. Además, la documentación del repo seguía contradiciendo Notion y pruebas cloud posteriores.
+
+Corrección ejecutada: aislar el problema de la base NSS de sólo lectura, conservar la misma CA oficial y TLS, reconstruir confianza en un directorio escribible por proceso y comprobar página, clic y reproducción real. El resultado y límites están en [evidencia del día](EVIDENCIA-2026-11-04.md) y [operación cloud](cloud/OPERAR.md). No hizo falta contratar infraestructura nueva. Las alternativas se compararon antes de decidir.
+
+Sergio autorizó subir la información útil verificada. Se consolidaron las fichas, fuentes y estado, manteniendo propuestas como propuestas y Notion para lo cotidiano. El cambio corrige este caso; no agrega una skill, no entrena el modelo ni permite eludir bloqueos legítimos de terceros. El cierre exige commit remoto y aceptación cloud identificables, no sólo un documento escrito.
+
 Solicitud de Sergio: «Una leida mas a todo lo que hablamos y anotas tu error».
 
 Revisión: mensajes de Sergio disponibles en esta conversación y contraste con contexto, reglas, corrección de procedencia, catálogo y recorrido documentados. No se consultó ONIA-CENTRAL.

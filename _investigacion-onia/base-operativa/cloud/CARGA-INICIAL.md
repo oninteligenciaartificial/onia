@@ -1,6 +1,6 @@
 # Empezar a cargar ONIA
 
-Trabajamos sólo con Codex por ahora. Las [reglas](../reglas-comunes.md), [skills](../seleccion-y-recorrido.md) y [arquitectura](../arquitectura.md) ya están en el repo privado. No volver a adjuntarlas ni copiar sus reglas a Drive.
+Actualizado el 4 de noviembre de 2026. Trabajamos sólo con Codex por ahora. Las [reglas](../reglas-comunes.md), [skills vigentes](../SKILLS-POR-AREA.md) y [arquitectura](../arquitectura.md) ya están en el repo privado. No volver a adjuntarlas ni copiar sus reglas a Drive.
 
 ## Primer paquete
 
@@ -19,23 +19,23 @@ No hace falta ordenar todo antes de empezar. Conservar los originales. Una tarea
 | 03 Productos y ofertas | Demos, temarios y materiales comerciales. |
 | 04 Entregables | Exportaciones y resultados para revisar. |
 
-La carpeta es privada según los permisos consultados. La tarea cloud comprobó sus cuatro hijos directos; aún no hay una prueba de descarga, render o recuperación de un medio real. El contexto privado y los registros locales no se migraron automáticamente.
+La carpeta es privada según los permisos consultados. La tarea cloud comprobó sus cuatro hijos directos; aún no hay una prueba de descarga, render o recuperación de un medio real. El contexto compartido tiene las fuentes señaladas en [CEREBRO-DIARIO.md](../CEREBRO-DIARIO.md); los archivos privados y registros locales no se migran automáticamente.
 
 ## Cuentas y credenciales
 
 Las cuentas se **conectan**, no se cargan como archivos. Para Meta, calendario o un proveedor, primero identificar cuenta/activo y operación, luego completar su conexión oficial. La contraseña y las verificaciones se introducen directamente en el proveedor. No subir contraseñas, tokens ni perfiles de Chrome a Drive o Git.
 
-La clave n8n ya fue guardada por Sergio y probada con HTTP 200 desde una sesión cloud nueva. No crear otra para repetir esa comprobación. Higgsfield, Gmail, Calendar y el listado de Drive también pasaron sus lecturas acotadas; Meta sigue pendiente. Inventario vigente y límites en [accesos](../accesos.md).
+Las claves n8n y Meta ya fueron guardadas por Sergio y consumidas en sus pruebas de lectura HTTP 200. No crear otras para repetir esas comprobaciones. Higgsfield, Gmail, Calendar y el listado de Drive también pasaron lecturas acotadas. El ejecutor, la versión y los límites de cada resultado están en [ESTADO.md](../ESTADO.md) y el inventario en [accesos](../accesos.md); una VM anterior no recibe automáticamente secretos o cambios posteriores.
 
 ## Contexto y decisiones
 
-No pedir a Sergio otra vez su historia, horarios, recursos o metas ya descritos. Pedir sólo correcciones y datos que falten para la tarea concreta: qué oferta trabajar primero y cuáles son sus materiales. La entrega mínima de coordinación vive en [ESTADO.md](../ESTADO.md). Su contexto privado necesita una ubicación cloud explícita; no se presupone disponible por existir en este chat o en archivos locales.
+No pedir a Sergio otra vez su historia, horarios, recursos o metas ya descritos. Pedir sólo correcciones y datos que falten para la tarea concreta: qué oferta trabajar primero y cuáles son sus materiales. La entrega mínima de coordinación vive en [ESTADO.md](../ESTADO.md). [CEREBRO-DIARIO.md](../CEREBRO-DIARIO.md) identifica las fuentes compartidas y sus responsabilidades; consultar la parte pertinente y comprobar el acceso desde el ejecutor del encargo.
 
 ## Orden de activación
 
 1. Aplicar la carga de las nueve skills por área y comprobarla al iniciar las sesiones; n8n ya fue probado.
 2. Leer el primer paquete desde una tarea cloud y confirmar archivos y permisos.
 3. Probar una entrega completa —por ejemplo una pieza de video— y guardar el resultado en Drive.
-4. Completar Meta y comprobar la operación concreta de cada conexión cuando el encargo la requiera.
+4. Comprobar los activos y la operación concreta de cada conexión cuando el encargo la requiera; las lecturas previas no acreditan escritura, publicación o gasto.
 
 Las conexiones, publicaciones y automatizaciones se marcan operativas sólo después de una prueba real. Grok Bot y la cuenta de investigación de reels siguen pendientes según la decisión vigente.
