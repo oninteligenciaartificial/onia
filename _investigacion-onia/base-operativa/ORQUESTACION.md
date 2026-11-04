@@ -2,6 +2,8 @@
 
 Este procedimiento usa las [reglas comunes](reglas-comunes.md), la [arquitectura](arquitectura.md) y el [estado vigente](ESTADO.md). El coordinador es el agente que recibe el encargo de Sergio. El CLI prepara el encargo y su registro; la ejecución y la delegación las realiza ese agente con las herramientas disponibles.
 
+Para la operación cotidiana, **ONIA · Organización diaria** mantiene el registro privado compartido según [CEREBRO-DIARIO.md](CEREBRO-DIARIO.md). El coordinador de un encargo entrega allí su resultado mediante el escritor designado; el CLI local no sincroniza varias VMs. Los controles de agenda permiten revisar trabajo y no restringen cuándo Sergio puede mandar tareas.
+
 ## Preparar el trabajo
 
 Desde la raíz del checkout, comprobar los archivos que necesita el harness:
@@ -41,13 +43,13 @@ El coordinador integra las entregas, revisa el resultado completo y ejecuta la c
 
 ## Cerrar y entregar a otra sesión
 
-Actualizar el registro con `scripts/trabajo.py actualizar`, incluyendo resultado, comprobación, siguiente paso y evidencia. Para recuperar el registro y el briefing de una tarea:
+Si el encargo usa un registro local del CLI, actualizarlo con `scripts/trabajo.py actualizar`, incluyendo resultado, comprobación, siguiente paso y evidencia. Los encargos cotidianos privados se cierran en la página compartida según CEREBRO-DIARIO.md; no necesitan un registro local duplicado ni exportar su evidencia personal al repositorio. Para recuperar el registro y el briefing de una tarea que sí usa el CLI:
 
 ```sh
 python3 _investigacion-onia/base-operativa/scripts/harness.py retomar oferta-piloto-001
 ```
 
-Antes de terminar, dejar en [ESTADO.md](ESTADO.md) una entrega mínima saneada: encargo activo, resultado comprobado, commit o archivos relevantes, ubicación accesible de la evidencia y siguiente acción. Los cambios útiles de código e instrucciones se versionan en el repositorio. Los medios y datos privados conservan la ubicación definida en [accesos.md](accesos.md).
+Cuando cambien capacidades o hitos del sistema, dejar en [ESTADO.md](ESTADO.md) una entrega mínima saneada: resultado comprobado, commit o archivos relevantes, ubicación accesible de la evidencia y siguiente acción. Las prioridades y cierres diarios permanecen en la página privada, sin repetirlos en ESTADO.md. Los cambios útiles de código e instrucciones se versionan en el repositorio. Los medios y datos privados conservan la ubicación definida en [accesos.md](accesos.md).
 
 `operacion/` está ignorado por Git: un briefing o registro guardado allí no aparece automáticamente en otra VM. La sesión receptora lee la entrega versionada, comprueba el checkout y recupera sólo los materiales necesarios. Una nueva conversación se abre cuando Sergio la pide y hay un encargo delimitado; los subagentes sirven para partes del encargo actual.
 
