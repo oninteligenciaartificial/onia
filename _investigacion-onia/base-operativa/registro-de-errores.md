@@ -1,5 +1,17 @@
 # Registro de error y corrección — 3 de noviembre de 2026
 
+## Corrección del 4 de noviembre: cerrar video sin resolver el audio
+
+Caso observado: la entrega del reel de Pedro Buerbaum declaró cerrada la prueba cloud, aunque sólo había revisión visual y el audio seguía sin escucharse. Se informó el límite, pero se dejó como pendiente sin pedir la capacidad concreta ni completar una vía de resolución en esa tanda. La recuperación de archivos sí funcionó; no completó el análisis audiovisual solicitado por Sergio.
+
+Sergio ordenó explícitamente una regla nueva: analizar todo lo enviado y, ante una función ausente, pedirle la acción necesaria, recomendar alternativas y resolver lo autorizado en la misma tanda. Se incorporó en la sección «Análisis integral del material» de [reglas-comunes](reglas-comunes.md), fuente única; no se creó otra skill ni se duplicó la regla en cada proyecto.
+
+Comprobación documental: un video con sonido exige imagen, guion, voz, música, efectos, ambiente, silencios, ritmo, sincronía y cierre; fotogramas, ASR o métricas de amplitud no acreditan escucha. Un PDF sin medios no necesita una evaluación de audio inventada. Si falta una capacidad, el agente obtiene primero lo que puede (por ejemplo, extraer la pista existente) y pide sólo el acceso o acto personal restante; no devuelve a Sergio una extracción que puede ejecutar por sí mismo. No se declara completa una revisión parcial.
+
+Aplicación en curso: Video cloud recibió el mismo MP4 ya conservado para extraer la pista, comprobar recursos y análisis acústico disponible. Coordinación verificó herramientas y documentación: Gemini Apps admite audio/video con cuenta personal y límites gratuitos; necesita sesión y prueba efectiva. Higgsfield está conectado, pero su herramienta de análisis por escenas no acredita por sí sola comprensión sonora ni gratuidad. No se autorizaron gastos ni se creó una API key. Resultados técnicos y estado auditivo se mantienen en la [evidencia única de Video](https://chatgpt.com/space/page_3559f542705c8191b44d8d31326e6de4); no afirmar escucha hasta tenerla acreditada.
+
+Estado: instrucción autorizada y versionada, aplicación documental revisada; resolver acceso/modelo auditivo sigue siendo parte del encargo. La regla no agrega capacidad por sí sola ni entrena el modelo. Acotar su aplicación si induce revisión irrelevante fuera de los materiales y finalidad del encargo, manteniendo visibles los componentes que realmente faltan.
+
 ## Corrección del 4 de noviembre: diagnóstico sin salida operativa
 
 Sergio volvió a señalar que el cierre describía un bloqueo sin resolver cómo operar. La investigación textual avanzaba, pero se repetían pruebas y se dejaba la corrección del navegador como trabajo futuro. Además, la documentación del repo seguía contradiciendo Notion y pruebas cloud posteriores.
