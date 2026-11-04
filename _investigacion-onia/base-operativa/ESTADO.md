@@ -14,7 +14,7 @@ Sergio autorizó en el encargo actual **subir al repo información verificada y 
 |---|---|
 | Harness | Arranque y sesión nueva en 9a3d4ce: doctor y 28 tests Python. Helper Meta en 9972d26: seis pruebas adicionales. No se repiten por cambios documentales. |
 | Skills | Nueve fuentes y enlaces idempotentes. Los seis chats las leyeron por archivo. El catálogo nativo inicial no las anunció; no declarar autodetección comprobada. |
-| n8n | Nuevo flujo real de 17 nodos DRY_RUN inactivo: 23 casos HTTP y dos escenarios concurrentes. Carrera event_id produjo dos filas; sin atomicidad/exactly-once. BAJA domina HUMANO mediante controles append-only. Cero nodos de envío, sin Meta; SQL posterior probado sólo en PostgreSQL temporal aislado: 15 tests según coordinación, sin integración; nuevo E2E en curso. [Evidencia viva](https://chatgpt.com/space/page_d43d9736e728819191c34648bd68dc75). Ensayo anterior de cinco casos queda histórico. |
+| n8n | [Cierre integrado sintético](https://chatgpt.com/space/page_fc4f62e97618819190780105757ffbaf), secuencia 1: contenido/aprobación, comentario PLAN/lead y stub; tres workflows inactivos. 60 verificaciones HTTP con mismo run_id; Meta/publicación/recurso/interés simulados, pago/acceso manual. Carrera genera dos filas: atomicidad runtime FALLIDA. Quince tests SQL aislados no integrados; no listo para activar. |
 | Despacho cloud | [CLI real](https://chatgpt.com/space/page_8aec522aeac8819185bf697166227f5f): 0.166.0-alpha.1, list remoto HTTP 401 pese a login local ChatGPT; cero tareas creadas, ENV_ID no identificado. n8n→Codex no probado. Recomendado device auth en lanzador dedicado, sin exportar auth de PC. |
 | Meta Ads | Editor comprobó `/me/permissions` y `/me/accounts`: HTTP 401, OAuth 190/463, token vencido. El GET 200 anterior es histórico. Conservar la entrada Ads para su función; sin renovación ni campañas modificadas. |
 | Higgsfield/Google | Perfil y créditos Higgsfield observados, sin generación. Gmail perfil sin leer correo. Calendar consultado sin eventos creados. Drive con carpeta ONIA; transferencia de medios reales entre VMs pendiente. |
@@ -44,6 +44,10 @@ Sergio autorizó en el encargo actual **subir al repo información verificada y 
 
 [Cierre fechado del 4 de noviembre](EVIDENCIA-2026-11-04.md#entrega-de-cierre-semana-formatos-y-flujo-privado): fuentes y revisiones leídas, paquete semanal cloud, home, formatos y DRY_RUN; qué puede usar Sergio y qué bloquea salidas autónomas. Repo mantiene índice/estado; cloud conserva artefactos versionados y Notion la vista diaria.
 
+## Prioridad y reparto actuales
+
+Sergio pidió investigar evidencia de referentes y un plan verificado antes de expandir guiones, web o chatbot. Marketing cloud está trabajando en ello; no hay resultados nuevos acreditados. Coordinación actual conserva marca/workshop. Platform/SaaS corresponde a la sesión «Analizar errores de la otra sesión»; el backlog leído en a0488f0 es referencia, no ejecución ni estado de otro checkout local. Este cierre no toca producto ni sus seis tareas.
+
 ## Próximo resultado concreto
 
 1. Retomar en onia publicado el análisis de una fuente pública concreta de Hormozi y otra de Iman, con cobertura audiovisual explícita y fichas existentes. GitHub y Desarrollo ya leyeron 2b1f9ab; cargar sólo contexto del encargo. No instalar servicios en el VPS.
@@ -57,7 +61,7 @@ Sergio autorizó en el encargo actual **subir al repo información verificada y 
 | Autenticación IG | Autorizar Instagram Login en OnIA Social API y guardar entrada IG para graph.instagram.com; publicar onia y validar lectura después según accesos.md. | Sergio para autorización personal; ejecutor para comprobación posterior. Sin publicación ni DMs mientras tanto. |
 | Autenticación de producción | Evaluar Unified Login antes de producción y compatibilidad de credenciales con producto/login/host; el piloto usa Instagram Login existente. Registrar vencimiento y acceso a datos tras autorizar. | Ejecutor revisa la ruta, sin cambiar redirects ni n8n ahora; Sergio autoriza personalmente. Renovación automática y aviso con scheduler no comprobados. [Detalle](accesos.md#instagram-operativo-y-continuidad-de-autenticación). |
 | Meta Ads vencido | Conservar su entrada y renovar por la ruta oficial cuando se retome Ads; registrar vencimiento y nueva lectura. | Sergio para renovación personal; ejecutor para validación. |
-| Resultado n8n | SQL temporal aislado: 15 tests PostgreSQL confirmados por coordinación; nuevo E2E continúa en pruebas, sin integración runtime acreditada. Conectar claim y frontera segura antes de salidas reales. | Automatizaciones conserva evidencia; no asumir resultado final ni nuevos IDs. Autorización IG sigue pendiente. |
+| Resultado n8n | Ensayo integrado cerrado con adaptadores simulados; corregir claim runtime y frontera segura antes de salidas reales. Atomicidad actual FALLIDA pese al SQL aislado aprobado. | Automatizaciones conserva el cierre privado; no activar ni presentar como producción. Autorización IG sigue pendiente. |
 | Investigación Víctor Heras y redes | Fichas incorporadas con fuentes, límites y plan propuesto; preparar demo y ensayo sin adoptar promesas comerciales. | Escritor Git consolida la entrega; marketing/video continúan preparación autorizada. |
 | Producción real | Ejecutar seis piezas y medir con clips autorizados; avanzar preparación independiente dentro del encargo. | Sergio aporta material personal; área de video ejecuta lo disponible. |
 | Entrega documental | Cierre fechado con enlaces a paquetes cloud y límites, sin copiar guiones/JSON ni datos privados. | Escritor Git único publica sólo ESTADO y registro del día; las versiones creativas se recuperan por sus enlaces estables. |
