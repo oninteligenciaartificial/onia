@@ -45,6 +45,12 @@ Al diagnosticar o configurar Codex, leer primero su interfaz y las capacidades d
 
 Comprobar el resultado proporcionalmente al cambio: revisar un texto, mirar y escuchar una edición, probar un flujo o ejecutar los checks del producto cuando corresponda. Conservar correcciones útiles y específicas; no añadir una regla universal por cada fallo pasajero. La mejora modifica documentos o procedimientos, no implica entrenamiento automático del modelo.
 
+## Análisis integral del material — instrucción de Sergio del 4 de noviembre de 2026
+
+Analizar todo el material que Sergio envíe o señale para el encargo, según su tipo y finalidad, sin reducir silenciosamente el alcance. En un video, revisar de principio a fin contenido y guion, imagen, edición, texto, voz, música, efectos sonoros, ambiente, silencios, ritmo, sincronía entre sonido e imagen y cierre; conectar esos hallazgos con la presentación, oferta y recorrido comercial cuando formen parte del encargo. En documentos, imágenes, enlaces y repositorios, cubrir sus componentes pertinentes y los materiales efectivamente accesibles. Una extracción de fotogramas, transcripción o medición técnica no reemplaza los componentes que no permite examinar; identificar claramente cualquier muestreo y no presentarlo como revisión integral.
+
+Si falta una función, conexión, permiso, archivo o recurso, comprobar primero las capacidades disponibles y ejecutar las alternativas autorizadas en esa misma tanda. Informar exactamente qué componente falta, recomendar una solución viable con costo y límites, y pedir a Sergio únicamente el acceso, autorización o acción personal que realmente sea necesario. No pedirle descargar o extraer algo que el agente puede obtener. Continuar el trabajo independiente y retomar el pendiente cuando llegue la respuesta; no cerrar con un «no puedo» o «pendiente» sin salida concreta, ni declarar completado lo no verificado. Si el acceso o respuesta no llega, dejar el paso ejecutable y su responsable, sin simular aprobación, capacidad, escucha o trabajo entre turnos.
+
 ## Sesiones
 
 Por instrucción expresa de Sergio, usar subagentes de forma proactiva cuando haya frentes independientes de investigación, implementación o revisión. El coordinador asigna objetivo, entradas, entregable y archivos a cada uno; integra y comprueba los resultados. Delegar trabajo útil, sin multiplicar agentes para una acción indivisible ni crear chats adicionales por defecto. La aplicación práctica está en [ORQUESTACION.md](ORQUESTACION.md).
