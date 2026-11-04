@@ -16,3 +16,10 @@ Sergio acotó la primera tanda a **pruebas concretas completamente cloud**. Los 
 La selección ejecutable y apoyos están en [orquestacion.json](orquestacion.json); los resultados y pendientes en [ESTADO.md](ESTADO.md). El chat de edición del entorno y el de aceptación anterior conservan sus funciones técnicas; no reemplazan estas áreas.
 
 Cada chat recibe un encargo delimitado, usa subagentes cuando aportan trabajo independiente y cierra con resultado y evidencia. La creación de chats no inicia un servicio permanente ni un calendario de tareas. `operacion/` en cada VM guarda artefactos de prueba locales a esa VM; la recuperación desde otra tarea requiere exportación o entrega compartida comprobada.
+
+
+## Organización cloud del 4 de noviembre de 2026
+
+Por petición expresa de Sergio se crearon las secciones de sidebar **Marca personal · Cloud** y **ONIA Platform · Cloud**, agrupando los chats existentes. Se añadió **Marca personal · Plan y resultados**, ID `01a1a843-4afb-75f9-aa95-f35833fcb002`, host durable, entorno **onia**, según confirmación de coordinación. Es continuidad de planificación y resultados de marca, no un worker permanente ni otra fuente de reglas. Platform/SaaS permanece en su coordinación separada; no se abren tareas de producto en este cierre.
+
+Fuente normativa: repo onia. [Biblioteca Marca · Evidencia, pruebas y resultados](https://chatgpt.com/space/page_66e12de902408191a926153866f6ca39) aporta seis secciones de evidencia y ejercicios privados; [Notion Sergio · Hoy](https://app.notion.com/p/40e2eb20bdfd81658111cf3e4d854964) mantiene la vista diaria. La existencia del chat, doce checks sintéticos o una agrupación del sidebar no acredita integración, cron o ejecución 24/7.

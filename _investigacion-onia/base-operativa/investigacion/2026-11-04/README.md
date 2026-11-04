@@ -24,7 +24,7 @@ Prioridad solicitada: Hormozi e Iman. El objetivo es aprender su forma de operar
 - [Cómo operan: contenido, oferta y entrega](como-operan.md): evidencia pública, inferencias y proceso propio propuesto.
 - [Funcionamiento de redes](funcionamiento-redes.md): fuentes primarias, límites históricos y prueba editorial con medición a 24/72 horas.
 - [Formatos, edición y tandas](formatos-onia.md): 16 recetas, escenario semanal, banco de clips, QA y primer lote de seis piezas.
-- [Workshop piloto](workshop-piloto.md): único borrador comercial vigente de esta investigación. Sigue por ensayar y aprobar, sin demanda o cobros comprobados.
+- [Workshop piloto histórico](workshop-piloto.md): antecedente de esta investigación, no otra oferta activa. Propuesta y versiones vigentes se recuperan por el [paquete cloud](https://chatgpt.com/space/page_0722a12b4a988191b8835391a4bed17a), sin elección comercial o cobros acreditados.
 
 Las hipótesis y ejemplos sintéticos permanecen rotulados. Un estático o carrusel no cuenta como video. Reutilizar B-roll no convierte un suceso antiguo en el diario de hoy.
 
@@ -35,3 +35,10 @@ Fuentes, fecha y límites figuran por ficha. La cobertura audiovisual es parcial
 Mantener una ficha por referente; añadir evidencia y fecha a la existente. Para adoptar una regla o skill se prepara el cambio exacto y se obtiene autorización aplicable. Esta consolidación no instala skills ni cambia permisos comerciales.
 
 Lectura mínima: índice → ficha que necesita el encargo → fuente concreta. No adjuntar todas las fichas a cada sesión. Estado de capacidades en [ESTADO](../../ESTADO.md); mapa en [MAPA](../../MAPA.md).
+
+
+## Ampliación de evidencia y ejercicios privados
+
+[MARCA-EVIDENCIA-001](https://chatgpt.com/space/page_0cb0c62e49cc8191ae94a767efb4dc44), releída en secuencia 2: Hormozi con muestras visuales de reel/caption y lección por puntos, Heras con tres muestras VSL y canales verificados desde su web, Iman con rutas/textos propios y YouTube bloqueado. No se escuchó audio ni se auditó el negocio o la causalidad de ventas. Los límites y enlaces exactos permanecen en el informe, sin copiar el paquete ni sobrescribir la historia de las diez fichas.
+
+[Marca · Evidencia, pruebas y resultados](https://chatgpt.com/space/page_66e12de902408191a926153866f6ca39) organiza aprender, practicar y medir en seis secciones. D1 ficha→tres respuestas→revisión, W1 wireframe y B1 conversación de ensayo son propuestas, no una oferta nueva ni prácticas humanas realizadas. Los 35 borradores permanecen intactos. Repo normativo, biblioteca de evidencia/ejercicios y Notion diario conservan funciones distintas.
