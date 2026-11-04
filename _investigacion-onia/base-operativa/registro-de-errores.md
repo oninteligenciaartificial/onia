@@ -51,3 +51,20 @@ Cerrar cada unidad con el cambio realizado, comprobación, pendiente concreto y 
 ## Estado de esta corrección
 
 Error registrado y enlazado desde el índice; criterio de cumplimiento incorporado a reglas-comunes.md. La eficacia de la corrección se comprobará en el próximo encargo mediante un resultado terminado y verificable. Este registro no significa que el autoaprendizaje, la distribución de reglas o el harness ya estén desplegados.
+
+## Corrección de configuración y navegador — 3 de noviembre de 2026
+
+Sergio pidió configurar accesos, corregir los scripts ausentes y avanzar con el harness. Volvió a señalar que se repetían explicaciones y que la interfaz sí mostraba un navegador.
+
+| Error observado | Causa identificada | Corrección aplicada y evidencia |
+|---|---|---|
+| Afirmar categóricamente que no había navegador cloud. | Trasladar una limitación documental general a la interfaz de Sergio, sin inspeccionar antes su capacidad efectiva. | Captura de Sergio: pestaña de navegador junto al entorno. «Editar onia» comprobó Chromium 156.0.8078.4 en la VM con clic y captura; remote_desktop habilitado, estado unknown, sin herramienta de control interactivo expuesta. El control de esa pestaña y el login persistente quedan sin probar, no descartados. |
+| Tratar los scripts como ausentes sin cerrar el diagnóstico de versión. | La preparación conservaba HEAD 4de11bb; GitHub ya incluía los scripts desde 66674eb. | Se leyó el chat «Editar onia» y ambos archivos de master; avance fast-forward a f81a5b9. install.sh y start.sh terminaron, doce tests Python y uno de navegador aprobaron. No hizo falta recrear archivos. |
+| Alternar bóveda personal y secretos del entorno. | Presentar dos mecanismos válidos como pasos sucesivos, generando confusión y posible duplicación. | Ubicación elegida: N8N_API_KEY en Secretos de red del entorno onia. Sergio la cargó allí; el helper dio HTTP 200, diez flujos en la página y siete activos. Ningún valor o contenido de flujo se exportó. |
+| Repetir comprobaciones de la tarea antigua y listas en vez de operar la preparación. | Usar su revisión 1 como si describiera el editor actual y no inspeccionar el chat de setup disponible. | Se continuó el chat correcto. La desconexión proxy/exec-server se informó como fallo de acceso; tras recuperarse se actualizó y probó el checkout real. Las partes independientes del harness avanzaron con subagentes. |
+
+Fuente: chat de coordinación y «Editar onia» (`01a1a428-996b-77af-9f4d-cacf78486021`, turno de recuperación `01a1a443-92d1-72f3-8e88-82b108cfae03`). El resultado describe esa instancia de preparación; no acredita la aceptación de una tarea nueva ni la publicación de sus archivos actualizados.
+
+Cambio de procedimiento: reglas-comunes exige comprobar evidencia real cuando contradice una afirmación; CONFIGURAR-ONIA ahora comprueba HEAD y rutas antes de ejecutar. El diagnóstico `harness.py doctor` detecta un script faltante, pero informa expresamente que presencia no equivale a runtime operativo. Su prueba cubre el archivo ausente y el caso cercano con archivos presentes, sin afirmar una conexión.
+
+La instrucción no obliga a explorar todas las fuentes posibles ni convierte una captura en prueba de control. Si no existe herramienta o sesión habilitada, registrar ese límite concreto y continuar lo independiente. Revertir o acotar el procedimiento si deriva en revisiones repetidas sin evidencia nueva. Este cambio mejora instrucciones persistentes; no entrena los pesos del modelo.

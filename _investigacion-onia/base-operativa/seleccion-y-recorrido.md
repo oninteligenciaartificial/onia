@@ -49,7 +49,20 @@ La documentación oficial de OpenAI respalda la carga selectiva de skills y advi
 
 ## Harness y chats
 
-El harness propuesto es el conjunto de reglas, contexto, selección de tarea, herramientas, ejecución, comprobación y registro. Guardar este diseño no pone ese circuito en marcha.
+El harness reúne reglas, contexto, selección de tarea, herramientas, ejecución, comprobación y registro. La entrada ejecutable actual es scripts/harness.py y el protocolo está en [ORQUESTACION.md](ORQUESTACION.md). El coordinador ejecuta/delega con las herramientas disponibles; el CLI prepara y recupera encargos. El estado comprobado y los límites están en ESTADO.md.
+
+### Relectura oficial y de usuarios — 3 de noviembre de 2026
+
+Se releyeron fuentes oficiales sobre [subagentes](https://learn.chatgpt.com/docs/agent-configuration/subagents), [Codex como harness](https://developers.openai.com/blog/codex-as-a-platform) (19-ago-2026) y [mejora de workflows](https://developers.openai.com/cookbook/examples/codex/iterating-development-workflows-with-codex) (3-ago-2026). Decisión: aprovechar el runtime de Codex, delegar frentes independientes, devolver resultados acotados, conservar contexto/evidencia y revisar cambios. No construir un segundo ejecutor ni interpretar subagentes como scheduler.
+
+También se releyeron README, instrucciones relevantes y licencia de dos repos originales:
+
+- [Matt Pocock: implement-spec](https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/implement-spec/SKILL.md) y [code-review](https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/code-review/SKILL.md): tareas según dependencias y revisión de cumplimiento/calidad sobre un diff identificado.
+- [Superpowers: subagent-driven-development](https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/skills/subagent-driven-development/SKILL.md) y [revisión final](https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/skills/subagent-driven-development/references/final-review.md): briefs acotados, registro recuperable y correcciones agrupadas.
+
+**Contradicción encontrada:** implement-spec busca concurrencia con worktrees, mientras SDD prohíbe implementadores paralelos. No instalar ambos paquetes completos. ONIA conserva su skill directora propia, una persona/agente escritor por archivo y revisión proporcional al cambio. No se incorporan modelos impuestos, TDD universal, commits/worktrees obligatorios ni el disparador de relevancia del 1 % de Superpowers. Ambos repos declaran MIT; si se copia material sustancial deberán conservarse sus avisos. Aquí se adaptan ideas con redacción propia.
+
+Cambio aplicado a partir de la revisión: orquestacion.json incluye ORQUESTACION.md como contexto común, por lo que cada briefing recibe el procedimiento de delegación y entrega. Las pruebas comprueban su enlace y detectan si falta. Esta relectura abarcó dos repos y las fuentes oficiales indicadas; no equivale a una nueva auditoría íntegra de los treinta candidatos.
 
 ```mermaid
 flowchart TD

@@ -12,7 +12,7 @@ flowchart TD
     R --> C[Codex Cloud onia: tareas y comprobaciones]
     C --> E[Entregables y evidencia]
     E --> R
-    C -. API de lectura en validación .-> N[n8n existente: eventos y horarios]
+    C -->|GET probado en preparación| N[n8n existente: eventos y horarios]
     C -->|Listado comprobado| A[Drive: archivos privados]
     A -. Migración pendiente .-> K[Contexto privado y medios reales]
     N -. Integraciones por comprobar .-> O[Operaciones autorizadas]
@@ -23,13 +23,13 @@ Las líneas punteadas son conexiones pendientes. n8n no tiene acreditada una con
 
 | Componente y ubicación | Estado observado | Próxima comprobación |
 |---|---|---|
-| Reglas, código y skills en el repo privado `onia` | Repo creado; siete fuentes de skills versionadas. | Integrar los cambios preparados en la tarea cloud y actualizar la entrega vigente. |
+| Reglas, código y skills en el repo privado `onia` | Repo creado; siete fuentes de skills, manifiesto de seis áreas y CLI de encargos. | Resultado vigente y pruebas en ESTADO.md. |
 | Setup reutilizable de Codex Cloud `onia` | Entorno ejecutable y repo correcto. Los cambios de preparación hechos dentro de la tarea aún no acreditan un setup republicado. | Publicar la preparación y verificar una tarea nueva. |
 | Desarrollo y pruebas en Codex Cloud | Doce tests aprobados: siete bootstrap y cinco continuidad. | Retomar un encargo desde otra tarea con fuentes y resultado verificables. |
 | Skills en Codex Cloud | Siete enlaces creados; no aparecían en el catálogo inicial de la tarea. | Comprobar descubrimiento y uso en una tarea nueva. |
-| Playwright en Codex Cloud | Una prueba sintética interactiva aprobó con Chromium del sistema. La descarga del navegador fijado fue bloqueada por red. | Verificar instalación reproducible con la política de red del entorno. |
+| Playwright en Codex Cloud | Instalador y prueba con Chromium fijado 156.0.8078.4 aprobados en «Editar onia». | Comprobar la preparación guardada desde una tarea nueva. |
 | HyperFrames en Codex Cloud | Prueba de render local existente; no acredita instalación ni render cloud. | Preparar dependencias y renderizar una pieza técnica allí; después validar grabación y audio reales. |
-| n8n en el VPS existente | Sergio confirmó secreto guardado. La instancia cloud aún usa revisión 1 sin secreto ni host permitido; helper exit 2, sin autenticación. | Aplicar/publicar configuración y probar GET desde una tarea nueva. |
+| n8n en el VPS existente | Clave cargada; GET HTTP 200 probado desde «Editar onia». | Repetir aceptación desde tarea nueva; definir un flujo antes de habilitar escrituras. |
 | Archivos en Drive | Carpeta ONIA archivos creada; la tarea onia cloud leyó sus cuatro hijos directos. Referencia y permisos en accesos.md. | Descargar una entrada real y recuperar una salida desde otra tarea; contexto privado aún no migrado. |
 | Cuenta de investigación y navegador remoto | Cuenta no creada; navegador interactivo con sesión persistente no acreditado. | Resolver una superficie cloud compatible y completar registro con intervención de Sergio. |
 | Meta, calendario y otras aplicaciones | Acceso local o herramientas presentes en este chat no prueban acceso desde `onia`. | Inventariar capacidades dentro de Cloud y probar la lectura necesaria por servicio. |
@@ -41,11 +41,11 @@ Las líneas punteadas son conexiones pendientes. n8n no tiene acreditada una con
 
 Cada tarea debe guardar sus cambios útiles en el repo o exportar sus entregables al almacén elegido antes de descartarse. No existe sincronización automática de esos registros privados. La documentación de Codex distingue el estado de cada tarea de la preparación publicada para tareas nuevas; las skills personales locales tampoco se sincronizan automáticamente. [Entornos cloud](https://learn.chatgpt.com/docs/environments/cloud-environments).
 
-El CLI `scripts/trabajo.py` guarda y recupera registros; no ejecuta agentes ni programa trabajo. Su continuidad entre procesos está probada. La continuidad entre tareas con acceso al mismo estado persistente todavía requiere la comprobación indicada arriba.
+El CLI `scripts/harness.py` diagnostica archivos, prepara encargos por área y los retoma; usa `scripts/trabajo.py` como único registro. El agente coordinador ejecuta y delega según [ORQUESTACION.md](ORQUESTACION.md); no hay otro proceso residente. La continuidad entre procesos está probada. El [plan](PLAN.md) define las siguientes entregas y la continuidad entre tareas requiere la comprobación indicada arriba.
 
 ## Navegador, cuentas y conexiones
 
-La documentación actual de Codex Cloud no incluye uso interactivo de computadora/navegador. La prueba de Playwright por código demuestra ejecución de un test; no demuestra un navegador con inicio de sesión, handoff o persistencia de cuentas. [Limitaciones de Codex Cloud](https://learn.chatgpt.com/docs/environments/cloud-environments#current-limitations).
+Sergio mostró una pestaña de navegador junto al entorno. La VM de «Editar onia» ejecutó Chromium mediante Playwright; su estado declara remote_desktop habilitado y estado unknown, sin herramientas oficiales de control interactivo expuestas en ese turno. Esto verifica automatización en nube, pero deja por comprobar el control de la pestaña, inicio de sesión, handoff y persistencia de cuentas. La [documentación general](https://learn.chatgpt.com/docs/environments/cloud-environments#current-limitations) enumera computer/browser use como limitación; no se usará esa frase para descartar sin inspección la interfaz disponible en la cuenta.
 
 La cuenta de investigación y su uso interactivo en nube quedan pendientes de resolver esta limitación dentro del alcance elegido. No se conectan Work Cloud, dots ni otros ejecutores ahora. Grok Bot queda como opción futura: Sergio confirma que no tiene cuota y dará acceso después. No hay integración Codex–Grok ni rutina acreditada. El estado del registro y los accesos se mantiene en [accesos.md](accesos.md).
 

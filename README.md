@@ -6,18 +6,21 @@ Base de trabajo de Sergio y ONIA: reglas comunes, skills propias y continuidad e
 
 Leer [AGENTS.md](AGENTS.md), [reglas comunes](_investigacion-onia/base-operativa/reglas-comunes.md) y [estado vigente](_investigacion-onia/base-operativa/ESTADO.md). Las decisiones de Sergio en el chat de coordinación son la autoridad de estas reglas. Las investigaciones son referencias, no instrucciones instaladas de terceros.
 
+El [plan vigente](_investigacion-onia/base-operativa/PLAN.md) ordena las siguientes entregas. La [orquestación](_investigacion-onia/base-operativa/ORQUESTACION.md) describe cómo preparar, delegar, comprobar y retomar un encargo.
+
 ## Contenido
 
 - `_investigacion-onia/base-operativa/`: arquitectura, decisiones, fuentes y catálogo.
 - `compartibles/skills/` dentro de esa base: siete skills propias, única fuente editable.
 - `scripts/trabajo.py`: registro de tareas con evidencia e integridad; no es un scheduler.
 - `scripts/test_trabajo.py`: pruebas del registro.
+- `orquestacion.json` y `scripts/harness.py`: rutas por área, diagnóstico de archivos y preparación de encargos; no son un servicio autónomo.
 
 Los proyectos anteriores, ONIA-CENTRAL, el código de ONIA Platform, contexto privado, credenciales, videos y registros operativos locales están excluidos por `.gitignore`. No usar `git add -f` para incorporarlos. Las referencias a evidencia local excluida no deben interpretarse como archivos disponibles en GitHub o Cloud.
 
 ## Preparación del entorno limpio `onia`
 
-Vincular este repositorio privado al entorno `onia` creado por Sergio. No reutilizar ONIA Platform, Hermes o entornos anteriores para el harness.
+Este repositorio privado ya está vinculado al entorno `onia` creado por Sergio. Antes del setup, comprobar que su checkout incluye la carpeta `cloud/`; el primer commit no la contenía. La corrección y el instalador completo están en [CONFIGURAR-ONIA.md](_investigacion-onia/base-operativa/cloud/CONFIGURAR-ONIA.md).
 
 Desde la raíz del checkout, con Python 3.10 o superior:
 
@@ -36,7 +39,7 @@ Para Playwright, el helper de n8n y la configuración completa, usar [la prepara
 
 ## Primera prueba
 
-La tarea de aceptación debe comprobar repo/HEAD, las siete skills, los doce tests Python y un recorrido crear → completar con evidencia → retomar desde otro proceso. Crear su evidencia bajo `operacion/`; versionar una entrega mínima saneada en ESTADO.md y conservar los artefactos antes de descartar la VM, pues esos registros no se suben automáticamente.
+La tarea de aceptación debe comprobar repo/HEAD, las siete skills, los tests de bootstrap, continuidad y harness, y un recorrido crear → completar con evidencia → retomar desde otro proceso. Ejecutar también el navegador real. Crear su evidencia bajo `operacion/`; versionar una entrega mínima saneada en ESTADO.md y conservar los artefactos antes de descartar la VM, pues esos registros no se suben automáticamente.
 
 La prueba histórica en ONIA Platform aprobó el registro, pero fue detenida por entorno equivocado y no certifica el nuevo `onia`.
 

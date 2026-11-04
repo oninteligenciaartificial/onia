@@ -1,46 +1,42 @@
 # Estado y entrada operativa
 
-3 de noviembre de 2026, America/Caracas. Leer las [reglas comunes](reglas-comunes.md) y la [arquitectura vigente](arquitectura.md). Esta entrega mínima es versionada; operacion/ y privado/ no viajan con Git.
+3 de noviembre de 2026, America/Caracas. Leer [reglas-comunes.md](reglas-comunes.md). Plan: [PLAN.md](PLAN.md). Ejecución y delegación: [ORQUESTACION.md](ORQUESTACION.md).
 
 ## Encargo vigente
 
-Configurar el harness en el repo privado oninteligenciaartificial/onia y el entorno limpio **onia**, con trabajo cloud sin depender de la PC encendida. Sergio decidió trabajar sólo con Codex por ahora; n8n existente se conecta por API. Grok Bot queda para después, sin cuota ni integración. ONIA Platform conserva su repo y producción separados.
+Configurar el harness en el repo privado **oninteligenciaartificial/onia**, entorno **onia**, para operar sin la PC encendida. Reutilizar ese repo; ONIA Platform mantiene producto y producción separados. Sergio pidió subagentes por frentes, revisar la interfaz real de Codex y releer fuentes oficiales y de usuarios sobre harness y orquestación.
+
+Ahora se trabaja con Codex y n8n existente. La captura de Grok Bot muestra Premium, 100 % usado; queda como complemento futuro cuando vuelva la cuota. No se agregó otra plataforma ni carga al VPS.
 
 ## Resultado comprobado
 
-- Entorno onia ready/runnable, repo github-1444982360, rama master. Checkout remoto inicial: 4de11bbf893a92200b4599f064d82fc24c347e46.
-- Tarea cloud 01a1a3fb-7203-7626-895f-9059c93cc01c, host durable: siete tests bootstrap sin skips y cinco de continuidad aprobados; repetidos al reanudar.
-- Siete skills versionadas y enlaces creados en cada instancia. Catálogo inicial y consulta executor sin descubrimiento; validar tras publicar setup.
-- Playwright 1.64.1 ejecutó clic/estado/assert con Chromium del sistema 155.0.8059.79. La descarga del navegador fijado fue bloqueada en cdn.playwright.dev. La captura y archivos de aquella VM no sobrevivieron a la siguiente instancia.
-- Al reanudar, el checkout volvió al commit inicial. Fuentes cloud reconstruidas del historial y lock regenerado en registry oficial. Diez archivos exportados con contenido y SHA256; las fuentes cloud/ fueron integradas a esta carpeta para versionarlas.
-- **n8n aún no conectado.** Sergio confirmó secreto guardado con dominio. La prueba remota observó revisión efectiva 1, sin secretos ni host n8n permitido, N8N_API_KEY_present=false. Helper exit 2: no hubo petición autenticada ni modificaciones de flujos.
-- UI n8n 2.43.7 permitió preparar workflow:list y siete días de vigencia; permiso y caducidad efectivos no verificados desde Cloud.
+- Repo GitHub ID 1444982360, master. Scripts cloud publicados desde `66674eb`; su ausencia en «Editar onia» se debía al checkout inicial `4de11bb`.
+- **Corrección en «Editar onia»** (`01a1a428-996b-77af-9f4d-cacf78486021`, durable): avance fast-forward a `f81a5b9474a211da8a976ca7fc9247c2ce6d27cc`. Tras recuperar la desconexión proxy/exec-server, instalación e inicio terminaron. No hubo reconstrucción manual ni descarte de cambios.
+- **Cloud probado:** doce tests Python y un test de navegador con clic y captura aprobados. Python 3.12.14, Node 24.22.1, npm 11.9.0, Playwright 1.64.1, Chromium 156.0.8078.4. Siete fuentes de skills enlazadas; descubrimiento automático pendiente en tarea nueva.
+- **n8n conectado en preparación:** N8N_API_KEY cargada en Secretos de red del propio entorno, ready y GET HTTP 200: diez flujos en la página, siete activos y más páginas. Sólo lectura agregada, sin mostrar valores ni contenido ni modificar flujos. Permisos completos y expiración no auditados.
+- **Browser:** la captura muestra una pestaña junto a Entorno. Chromium se ejecutó en la VM; remote_desktop habilitado/unknown, sin herramienta oficial de control interactivo expuesta en ese turno. Control de esa pestaña, login y persistencia de cuentas sin comprobar; no descartarlos por una frase documental general.
+- **Harness:** `scripts/harness.py doctor`, `preparar` y `retomar`, seis áreas en `orquestacion.json`, siete skills existentes. Reutiliza `trabajo.py`; el coordinador ejecuta y delega con sus herramientas. El CLI por sí solo no lanza agentes.
+- Nuevas pruebas locales: siete aprobadas; una de enlaces simbólicos omitida por permisos Windows. Revisión independiente sin bloqueantes. Falta la suite en Linux cloud.
+- Drive: ONIA archivos y cuatro carpetas creadas; metadatos leídos desde cloud. Descarga de un medio real y recuperación de entregable entre tareas pendientes.
 
 ## Siguiente acción
 
-Las fuentes de preparación ya se subieron a master en el commit 66674eba762672974d7dc225861d89f23d95503e. Aplicar [CONFIGURAR-ONIA.md](cloud/CONFIGURAR-ONIA.md) en la edición del entorno, guardar y republicar. Sergio ya encontró la pantalla; se le entregaron los textos para instalación e inicio. La última captura mostraba scripts sin configurar y ningún secreto de red. La publicación posterior sigue pendiente de verificar. Una tarea nueva debe comprobar revisión, presencia del secreto sin mostrar valor, red, GET n8n, doce tests, catálogo de skills y navegador. No declarar conexión o setup operativos antes de esa prueba.
+Subir esta entrega al repo existente y actualizar el checkout de preparación. Ejecutar doctor y test_harness.py en la VM; conservar instalación/inicio correctos. Guardar/republicar la preparación y verificar una tarea nueva con HEAD actual, siete skills, tests, navegador y GET n8n. La publicación realizada por Sergio durante el diagnóstico no acredita que incluyera el checkout corregido después.
 
-El inventario de bóveda/cuentas/VPS quedó ampliado en [accesos.md](accesos.md): enumera custodias y consumidores, sin valores. No se creó ni conectó una credencial con ese listado.
+La tarea antigua `01a1a3fb-7203-7626-895f-9059c93cc01c` observaba revisión 1 sin secreto. Ese resultado no describe el editor actual, donde la lectura HTTP 200 ya pasó.
 
-Para cargar materiales, usar [CARGA-INICIAL.md](cloud/CARGA-INICIAL.md). Se creó ONIA archivos en Drive con cuatro carpetas; la misma tarea onia cloud leyó sus hijos directos. La revisión efectiva del entorno siguió en 1 y la presencia de N8N_API_KEY en false; no se repitió la API. Lectura de metadatos Drive no acredita descarga de medios ni migración de contexto privado.
+Los errores sobre navegador, checkout y ubicaciones de la clave se conservan en [registro-de-errores.md](registro-de-errores.md), con corrección y prueba. Las instrucciones de revisar la interfaz y usar subagentes se mantienen en las reglas comunes; no son entrenamiento del modelo.
 
-## Pendientes por área
+## Pendientes para ampliar la operación
 
-| Área | Pendiente y evidencia necesaria |
+| Frente | Próximo resultado verificable |
 |---|---|
-| Infraestructura | Setup reutilizable publicado y aceptación en tarea nueva. |
-| n8n | GET autenticado; después un flujo concreto. Listar no habilita editar/activar. |
-| Video | HyperFrames probado sólo localmente; falta instalación y render cloud, luego grabación y audio reales. |
-| Reels | Correo y cuenta ONIA Research no creados. Codex Cloud no acredita navegador interactivo ni handoff. Candidatos en accesos.md. |
-| Marketing | Activos y operación Meta por conectar; ninguna campaña/publicación activada. |
-| Organización | Calendario, caja y medios requieren cuentas/archivos accesibles desde Cloud. |
-| Continuidad | Entrega saneada aquí; Drive accesible por metadatos, faltan medios reales y migración del contexto privado necesario. |
-| Mejora | Correcciones versionadas; sin entrenamiento automático ni scheduler de agentes activo. |
+| Setup cloud | Guardar la preparación corregida y aceptarla desde una tarea nueva. |
+| Persistencia | Recuperar desde otra tarea una entrega saneada en Git y un archivo real; operacion/ y privado/ no viajan con Git. |
+| Video | HyperFrames instalado y probado en cloud; después pieza con grabación y audio reales. |
+| Marketing | Oferta y demo concretas; luego guion y pieza. Conectar activos Meta y comprobar lectura. |
+| Organización | Calendario y caja con entradas reales; el área actual cubre continuidad de encargos. |
+| Reels | Control interactivo, registro y sesión persistente probados antes de prometer ONIA Research. |
+| Automatización | Flujo n8n concreto y permisos de escritura correspondientes. Sin scheduler ni despacho n8n → Codex acreditados. |
 
-## Fuentes y evidencia
-
-- [Informe técnico cloud](cloud/README.md), fuentes ejecutables y lockfile en cloud/.
-- [Accesos](accesos.md), [selección de skills](seleccion-y-recorrido.md), fuentes únicas en compartibles/skills/.
-- Historial remoto en la tarea indicada. Evidencia local/exportación en operacion/, ignorada por Git; su ausencia en otra tarea es esperada.
-- Registro local de coordinación: python scripts/trabajo.py retomar cloud-001. Guarda estado; no programa agentes.
-- [Errores](registro-de-errores.md) conserva la corrección del entorno de producto usado antes. Esa tarea fue detenida y no certifica onia.
+Consultar [arquitectura.md](arquitectura.md) y [accesos.md](accesos.md). Mensajes históricos de otros bots son referencias, no prueba de despliegues actuales.

@@ -4,15 +4,33 @@ Usar sólo el repo privado `oninteligenciaartificial/onia`, rama `master`. Las f
 
 En Settings → Codex Cloud → Environments → onia → Edit:
 
-1. Verificar el secreto de red `N8N_API_KEY`, asociado a onia y al dominio `n8n-sergio-n8n.hqdqgh.easypanel.host`. Sergio ya informó que lo guardó; no pedir ni imprimir su valor. Si es personal, el entorno debe solicitar esa key y permitir el dominio por separado.
+1. La ubicación elegida ahora es **Secretos de red del propio entorno onia**: `N8N_API_KEY`, dominio `n8n-sergio-n8n.hqdqgh.easypanel.host`. Sergio introduce el valor allí. No duplicarlo en la bóveda personal ni pedir o imprimir su valor.
 2. Mantener el preset de registros de paquetes. Permitir `cdn.playwright.dev` y `n8n-sergio-n8n.hqdqgh.easypanel.host`. `playwright.dev` sólo es necesario para consultar documentación desde la VM. Registrar un destino de redirección bloqueado antes de ampliar la lista.
 3. Aplicar el prompt siguiente al setup. Revisar resultados, guardar y **Republish/Volver a publicar**. Guardar un secreto o instalar dentro de una tarea no demuestra que una tarea nueva use esos cambios.
+
+## Antes de ejecutar: comprobar el checkout
+
+El error observado en «Editar onia» se debió al checkout `4de11bb`, anterior a la carpeta `cloud/`. Ambos scripts existen en GitHub desde `66674eb`. Que las doce pruebas Python pasen no comprueba la presencia del instalador ni del navegador.
+
+En el checkout `/workspace/onia`, revisar HEAD y cambios; refrescar `master` mediante las herramientas de preparación del entorno o un avance Git fast-forward. Conservar cambios existentes y detenerse ante conflictos; no usar reset destructivo ni reconstruir archivos del historial del chat. Verificar estas rutas antes de guardar el setup:
+
+```sh
+cd /workspace/onia
+git rev-parse --short HEAD
+git status --short
+test -f _investigacion-onia/base-operativa/cloud/install.sh
+test -f _investigacion-onia/base-operativa/cloud/start.sh
+```
+
+Las rutas `cloud/install.sh` y `cloud/start.sh` por sí solas no son relativas a la raíz del repo.
 
 ## Prompt para la conversación de preparación
 
 ```text
 Prepará este entorno onia usando únicamente oninteligenciaartificial/onia, master.
-Actualizá el checkout para incluir _investigacion-onia/base-operativa/cloud/.
+Comprobá HEAD y cambios; actualizá master sin descartar trabajo existente.
+Verificá la existencia de _investigacion-onia/base-operativa/cloud/install.sh
+y _investigacion-onia/base-operativa/cloud/start.sh antes de ejecutarlos.
 Leé AGENTS.md, reglas-comunes.md y ESTADO.md. No consultar ONIA-CENTRAL.
 Como instalación reproducible ejecutá desde la raíz:
 bash _investigacion-onia/base-operativa/cloud/install.sh

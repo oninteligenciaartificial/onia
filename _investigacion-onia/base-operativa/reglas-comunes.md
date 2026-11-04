@@ -39,9 +39,13 @@ Cuando Sergio pida construir o configurar, una propuesta o catálogo no completa
 
 Distinguir escrito, probado, publicado, vendido y cobrado. Un test de formato no demuestra que una skill resuelva su tarea. Un contacto o comprobante sin conciliar no se registra como dinero cobrado.
 
+Al diagnosticar o configurar Codex, leer primero su interfaz y las capacidades de la sesión mediante las herramientas disponibles o las capturas aportadas; contrastar después con la documentación correspondiente. Es una instrucción expresa de Sergio. Si falta acceso a una superficie, decirlo sin inventar lo que muestra. Si una captura o resultado contradice una afirmación, comprobar el entorno efectivo antes de sostenerla. Separar lo visible, lo controlable por el agente y lo ejecutado en nube. Para errores cloud de archivos ausentes, comprobar repo, HEAD y rutas antes de reescribir scripts; una tarea antigua no describe por sí sola el borrador o publicación actual. Usar las herramientas disponibles para resolver el paso y reservar la intervención de Sergio para lo que realmente deba introducir o accionar él.
+
 Comprobar el resultado proporcionalmente al cambio: revisar un texto, mirar y escuchar una edición, probar un flujo o ejecutar los checks del producto cuando corresponda. Conservar correcciones útiles y específicas; no añadir una regla universal por cada fallo pasajero. La mejora modifica documentos o procedimientos, no implica entrenamiento automático del modelo.
 
 ## Sesiones
+
+Por instrucción expresa de Sergio, usar subagentes de forma proactiva cuando haya frentes independientes de investigación, implementación o revisión. El coordinador asigna objetivo, entradas, entregable y archivos a cada uno; integra y comprueba los resultados. Delegar trabajo útil, sin multiplicar agentes para una acción indivisible ni crear chats adicionales por defecto. La aplicación práctica está en [ORQUESTACION.md](ORQUESTACION.md).
 
 Por ahora este chat conserva coordinación, reglas y prioridad comercial. Cuando haya un encargo delimitado, puede abrirse una sesión de Marketing y ventas; video, funnels y webinars pertenecen inicialmente a esa área. Desarrollo/infraestructura y ONIA Platform se separan cuando tengan tareas concretas. No abrir una sesión por cada skill ni lanzar trabajo paralelo sin entradas y entregables claros.
 
