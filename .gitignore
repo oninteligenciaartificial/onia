@@ -1,0 +1,23 @@
+# Este repo versiona sólo el harness vigente. El resto del workspace es ajeno.
+/*
+!/.gitignore
+!/AGENTS.md
+!/README.md
+!/_investigacion-onia/
+/_investigacion-onia/*
+!/_investigacion-onia/base-operativa/
+
+# Artefactos, contexto privado y secretos no se publican, tampoco en repo privado.
+**/privado/
+**/operacion/
+**/__pycache__/
+**/*.pyc
+**/node_modules/
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.key
+
+# .agents/skills se genera a partir de las fuentes versionadas en cada entorno.
+/.agents/
