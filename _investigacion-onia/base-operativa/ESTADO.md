@@ -35,7 +35,7 @@ N8N_API_KEY y META_ADS_ACCESS_TOKEN están en secretos de red del entorno, limit
 - Meta se comprobó en editor posterior **6aeaa134fa1881a3abd0f72ea0bd00f4**.
 - El checkout de coordinación estaba en **ec62c9e** antes de esta consolidación. El commit de entrega se consulta en Git; un push no actualiza una VM existente.
 - Editor preparado en **2b1f9ab**, borrador revisión 2: install/start, doctor, 28 pruebas Python, ocho NSS y una de navegador aprobados. La interfaz confirmó **«Entorno publicado»** y **«Publicado · Probar»** el 4 de noviembre, tras guardar y publicar la preparación.
-- Nueva versión publicada confirmada por metadata: **6aeb5d2767cc81a3aee4674cf6485f5d**. Nuevo borrador revisión 1 conserva OPERAR.md; la conexión de su runtime seguía starting/offline en esa lectura, sin prueba de una nueva tarea posterior a publicar.
+- Nueva versión publicada confirmada por metadata: **6aeb5d2767cc81a3aee4674cf6485f5d**. Nuevo borrador revisión 1 conserva OPERAR.md. La comprobación final del editor confirmó **running/connected**, directorio /workspace/onia y HEAD **2b1f9ab**. Se comprobó disponibilidad; no se repitió la suite en una nueva tarea de usuario.
 - El catálogo oficial actual muestra entorno **onia** listo y ejecutable, repo asociado y rama master. Usar versión actual para nuevos encargos que dependan de sus secretos.
 
 ## Próximo resultado concreto
