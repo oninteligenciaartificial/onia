@@ -18,7 +18,9 @@ Configurar el harness en el repo privado oninteligenciaartificial/onia y el ento
 
 ## Siguiente acción
 
-Versionar las fuentes de esta entrega, aplicar [CONFIGURAR-ONIA.md](cloud/CONFIGURAR-ONIA.md) en la edición del entorno, guardar y republicar. Una tarea nueva debe verificar revisión, presencia del secreto sin mostrar valor, red, GET n8n, doce tests, catálogo de skills y navegador. No declarar conexión o setup operativos antes de esa prueba.
+Las fuentes de preparación ya se subieron a master en el commit 66674eba762672974d7dc225861d89f23d95503e. Aplicar [CONFIGURAR-ONIA.md](cloud/CONFIGURAR-ONIA.md) en la edición del entorno, guardar y republicar. Sergio no encuentra todavía la pantalla de edición. Una tarea nueva debe verificar revisión, presencia del secreto sin mostrar valor, red, GET n8n, doce tests, catálogo de skills y navegador. No declarar conexión o setup operativos antes de esa prueba.
+
+Para cargar materiales, usar [CARGA-INICIAL.md](cloud/CARGA-INICIAL.md). Se creó ONIA archivos en Drive con cuatro carpetas; la misma tarea onia cloud leyó sus hijos directos. La revisión efectiva del entorno siguió en 1 y la presencia de N8N_API_KEY en false; no se repitió la API. Lectura de metadatos Drive no acredita descarga de medios ni migración de contexto privado.
 
 ## Pendientes por área
 
@@ -30,7 +32,7 @@ Versionar las fuentes de esta entrega, aplicar [CONFIGURAR-ONIA.md](cloud/CONFIG
 | Reels | Correo y cuenta ONIA Research no creados. Codex Cloud no acredita navegador interactivo ni handoff. Candidatos en accesos.md. |
 | Marketing | Activos y operación Meta por conectar; ninguna campaña/publicación activada. |
 | Organización | Calendario, caja y medios requieren cuentas/archivos accesibles desde Cloud. |
-| Continuidad | Entrega saneada aquí; contexto privado y medios necesitan almacén compartido por conectar. |
+| Continuidad | Entrega saneada aquí; Drive accesible por metadatos, faltan medios reales y migración del contexto privado necesario. |
 | Mejora | Correcciones versionadas; sin entrenamiento automático ni scheduler de agentes activo. |
 
 ## Fuentes y evidencia
