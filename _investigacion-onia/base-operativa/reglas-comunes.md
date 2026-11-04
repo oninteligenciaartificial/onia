@@ -47,6 +47,6 @@ Comprobar el resultado proporcionalmente al cambio: revisar un texto, mirar y es
 
 Por instrucción expresa de Sergio, usar subagentes de forma proactiva cuando haya frentes independientes de investigación, implementación o revisión. El coordinador asigna objetivo, entradas, entregable y archivos a cada uno; integra y comprueba los resultados. Delegar trabajo útil, sin multiplicar agentes para una acción indivisible ni crear chats adicionales por defecto. La aplicación práctica está en [ORQUESTACION.md](ORQUESTACION.md).
 
-Por ahora este chat conserva coordinación, reglas y prioridad comercial. Cuando haya un encargo delimitado, puede abrirse una sesión de Marketing y ventas; video, funnels y webinars pertenecen inicialmente a esa área. Desarrollo/infraestructura y ONIA Platform se separan cuando tengan tareas concretas. No abrir una sesión por cada skill ni lanzar trabajo paralelo sin entradas y entregables claros.
+Este chat conserva coordinación, reglas y prioridad comercial. Sergio autorizó ahora sesiones cloud por área: marketing, video, desarrollo, automatizaciones, organización y producto. Cada una empieza con un encargo delimitado; las fuentes y permisos comunes permanecen aquí. No abrir una sesión por cada skill ni lanzar trabajo paralelo sin entradas y entregables claros.
 
-No se abrió ninguna sesión nueva ni se programó una automatización con este documento.
+Escribir este documento no abre sesiones ni programa automatizaciones. Su ejecución y registro se comprueban por separado en ESTADO.md.

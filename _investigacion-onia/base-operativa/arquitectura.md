@@ -23,16 +23,16 @@ Las líneas punteadas son conexiones pendientes. n8n no tiene acreditada una con
 
 | Componente y ubicación | Estado observado | Próxima comprobación |
 |---|---|---|
-| Reglas, código y skills en el repo privado `onia` | Repo creado; siete fuentes de skills, manifiesto de seis áreas y CLI de encargos. | Resultado vigente y pruebas en ESTADO.md. |
-| Setup reutilizable de Codex Cloud `onia` | Republicado por Sergio; nueva tarea con repo/HEAD correctos, veinte tests, navegador y API aprobados. | Resolver/comprobar catálogo nativo de skills cuando el runtime exponga ese control. |
-| Desarrollo y pruebas en Codex Cloud | Veinte tests aprobados: siete bootstrap, cinco continuidad y ocho del harness, sin skips. | Retomar un encargo desde otra tarea con fuentes y resultado verificables. |
-| Skills en Codex Cloud | Siete fuentes/enlaces válidos en tarea nueva; desarrollar-y-verificar usada por archivo. Catálogo inicial sin skills propias; API nativa no expuesta. | Usar carga explícita desde manifiesto; autodetección sigue sin verificar. |
+| Reglas, código y skills en el repo privado `onia` | Fuentes propias, manifiesto de seis áreas y CLI de encargos. Catálogo vigente en SKILLS-POR-AREA.md. | Resultado y pruebas en ESTADO.md. |
+| Setup reutilizable de Codex Cloud `onia` | Instalación y habilidad de inicio configurables; cada cambio se prepara, prueba y publica antes de aceptar una sesión nueva. | La revisión y aceptación vigente se registran en ESTADO.md. |
+| Desarrollo y pruebas en Codex Cloud | Suites de bootstrap, continuidad y selección de área, más navegador. | Retomar un encargo desde otra tarea con fuentes y resultado verificables. |
+| Skills en Codex Cloud | Fuentes únicas enlazadas; inicio selecciona la skill por orquestacion.json. | Separar lectura por archivo de anuncio en catálogo nativo y comprobar ambos en la nueva sesión. |
 | Playwright en Codex Cloud | Instalador y test aprobados en preparación; clic/estado/captura aprobados en una tarea nueva. | Usar ejecución autorizada con red cuando el sandbox del comando lo requiera. |
 | HyperFrames en Codex Cloud | Prueba de render local existente; no acredita instalación ni render cloud. | Preparar dependencias y renderizar una pieza técnica allí; después validar grabación y audio reales. |
 | n8n en el VPS existente | GET HTTP 200 en preparación y tarea nueva, sin escrituras. | Definir un flujo y comprobar sus permisos antes de implementarlo. |
 | Archivos en Drive | Carpeta ONIA archivos creada; la tarea onia cloud leyó sus cuatro hijos directos. Referencia y permisos en accesos.md. | Descargar una entrada real y recuperar una salida desde otra tarea; contexto privado aún no migrado. |
 | Cuenta de investigación y navegador remoto | Cuenta no creada; navegador interactivo con sesión persistente no acreditado. | Resolver una superficie cloud compatible y completar registro con intervención de Sergio. |
-| Meta, calendario y otras aplicaciones | Acceso local o herramientas presentes en este chat no prueban acceso desde `onia`. | Inventariar capacidades dentro de Cloud y probar la lectura necesaria por servicio. |
+| Meta, calendario y otras aplicaciones | Cada conexión se prueba desde `onia`; perfiles válidos no acreditan todas las operaciones. El inventario vigente está en accesos.md. | Completar las operaciones pendientes del encargo, sin duplicar autenticaciones probadas. |
 | ONIA Platform | Producto separado del harness. | Cotejar instrucciones y estado del producto al recibir un encargo específico. |
 
 ## Persistencia y contexto
@@ -53,7 +53,7 @@ Un MCP es una posible interfaz, no un requisito por cada servicio. Para el pilot
 
 ## Skills, sesiones y mejora
 
-Las siete skills actuales y las ocho capacidades pendientes están descritas en [selección y recorrido](seleccion-y-recorrido.md); sus fuentes editables viven en `compartibles/skills/`. El setup crea los enlaces de descubrimiento. Cada capacidad nueva se desarrolla con un caso de trabajo real y una prueba de aceptación, siguiendo las reglas comunes.
+Las skills vigentes, selección entre treinta referencias y capacidades pendientes están en [SKILLS-POR-AREA.md](SKILLS-POR-AREA.md); sus fuentes editables viven en `compartibles/skills/`. El setup crea los enlaces de descubrimiento y configura la lectura por área. Cada capacidad nueva se desarrolla con un caso de trabajo real y una prueba de aceptación, siguiendo las reglas comunes.
 
 Este chat coordina. Marketing y ventas, desarrollo/infraestructura y ONIA Platform reciben encargos delimitados cuando haya entradas y entregables; no se abre un chat por skill. Los subagentes reciben alcance y resultado concreto, y sus cambios se integran con revisión y evidencia.
 

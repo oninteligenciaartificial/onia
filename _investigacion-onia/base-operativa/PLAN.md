@@ -6,17 +6,17 @@ Plan preparado el 3 de noviembre de 2026 para ejecutar el encargo de Sergio. [ES
 
 Actualizar el checkout antiguo usado por «Editar onia» y ejecutar los scripts publicados de `cloud/` mediante sus rutas completas. Guardar la preparación corregida y comprobar el entorno publicado en una tarea nueva.
 
-**Cierre:** repo y commit identificados; instalación, inicio y suites de pruebas aprobados; navegador realiza un clic con estado esperado y captura; siete skills disponibles para la nueva tarea. Distinguir esta prueba Playwright de un navegador interactivo con cuentas persistentes.
+**Cierre:** repo y commit identificados; instalación, inicio y suites de pruebas aprobados; navegador realiza un clic con estado esperado y captura; las skills declaradas disponibles para la nueva tarea. Distinguir esta prueba Playwright de un navegador interactivo con cuentas persistentes.
 
 La carga de n8n puede avanzar en paralelo. Su autenticación tiene una aceptación propia y no bloquea desarrollar el resto del harness.
 
 ## 2. Completar la entrada y el recorrido de encargos
 
-Completar la entrada breve del repositorio, el mapa de áreas, el diagnóstico de archivos y la creación de briefings con registro. Reutilizar las siete skills existentes y `trabajo.py`.
+Completar la entrada breve del repositorio, el mapa de áreas, el diagnóstico de archivos y la creación de briefings con registro. Reutilizar las skills vigentes y `trabajo.py`.
 
 **Cierre:** el diagnóstico detecta un script ausente; se crea un encargo y se retoma desde otro proceso; los IDs repetidos no destruyen trabajo; un agente recibe una parte independiente y devuelve una entrega que el coordinador verifica. Conservar la entrega saneada en Git y comprobar su lectura desde Cloud.
 
-Las rutas abarcan marketing, video, desarrollo, automatizaciones, organización y producto. El procedimiento completo está en [ORQUESTACION.md](ORQUESTACION.md); no exige abrir un chat por cada área.
+Las rutas abarcan marketing, video, desarrollo, automatizaciones, organización y producto. Sergio pidió ahora abrir los chats cloud correspondientes, con un primer encargo concreto para cada uno. El procedimiento está en [ORQUESTACION.md](ORQUESTACION.md).
 
 ## 3. Usar el harness para una primera entrega comercial
 
