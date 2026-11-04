@@ -1,15 +1,17 @@
 # Mapa del repositorio ONIA
 
-4 de noviembre de 2026. Incluye 82 rutas de la entrega consolidada. Nueve skills propias; ninguna skill nueva por referente. El commit de entrega se consulta en Git. Los datos privados, medios, credenciales, dependencias y perfiles de navegador están excluidos.
+4 de noviembre de 2026. Incluye 84 rutas de la entrega consolidada. Nueve skills propias; ninguna skill nueva por referente. El commit de entrega se consulta en Git. Los datos privados, medios, credenciales, dependencias y perfiles de navegador están excluidos.
 
 ## Entrada por necesidad
 
 - [Estado real y siguiente acción](ESTADO.md).
 - [Cómo ejecutar y delegar](ORQUESTACION.md), con una skill directora por área.
 - [Operar navegador y tareas cloud](cloud/OPERAR.md).
-- [Investigación curada: nueve referentes y producción](investigacion/2026-11-04/README.md).
+- [Investigación curada: diez referentes y producción](investigacion/2026-11-04/README.md), con [Víctor Heras](investigacion/2026-11-04/victor-heras.md) y [funcionamiento de redes](investigacion/2026-11-04/funcionamiento-redes.md).
 - [Fuentes del día a día](CEREBRO-DIARIO.md) y [panel de Notion](PANEL-DIARIO.md).
 - [Evidencia del 4 de noviembre](EVIDENCIA-2026-11-04.md).
+
+Ensayo n8n real: cinco casos y persistencia secuencial comprobados, workflow finalmente inactivo; no automatización comercial, concurrencia, timeout real ni Meta. Resultado en [ESTADO](ESTADO.md), alcance en [accesos](accesos.md) y artefactos en la [evidencia privada](https://chatgpt.com/space/page_381ee668401481918e7e45c87921e82d).
 
 ## Árbol de esta entrega
 
@@ -97,11 +99,13 @@ _investigacion-onia/
         enrique-rocha.md
         erik-taveras.md
         formatos-onia.md
+        funcionamiento-redes.md
         iman-gadzhi.md
         jeff-nippard.md
         justin-welsh.md
         nick-bare.md
         san-munoz.md
+        victor-heras.md
         workshop-piloto.md
     orquestacion.json
     recorrido-comercial-inicial.md

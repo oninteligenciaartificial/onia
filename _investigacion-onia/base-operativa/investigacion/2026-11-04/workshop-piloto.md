@@ -9,7 +9,7 @@ Propuesta para revisar, 4 de noviembre de 2026. Derivada de la investigación p�
 **De idea a reel: armá con IA un guion de 30 segundos listo para grabar.**
 Comprador provisional: principiante con un producto, servicio o proyecto que quiere explicarlo en cámara.
 Resultado: un guion breve, cinco planos, descripción con un CTA y una revisión escrita del mismo guion.
-Precio: Bs 50. Duración: 55 min. Capacidad: 12 alumnos, por revisión individual, no escasez ficticia.
+Precio propuesto: Bs 50. Duración propuesta: 55 min. Capacidad propuesta: 12 alumnos, por revisión individual, no escasez ficticia.
 Incluye plantilla de brief, tres prompts, ejemplo y checklist. Una ronda de revisión en 24 horas, máximo 80 palabras y cinco planos. Presupuesto interno 72 min de revisión si cada una lleva 6 min; comprobar en ensayo.
 Fecha sugerida: 7-nov-2026, 16:00–16:55 Santa Cruz; no anunciada/reservada.
 Requisitos: idea concreta, conexión, notas y asistente de texto gratuito. Notebook recomendada; celular puede exigir alternar apps. No Codex, APIs ni nuevas suscripciones.
@@ -20,7 +20,7 @@ Condición propuesta: devolución completa si Sergio cancela. Condiciones finale
 
 Un curso “IA de 0 a 100” no delimita un resultado. Una semana completa de contenido añade demasiadas entregas al primer piloto. Un guion grabable permite demostrar antes/después, practicar y revisar. El problema del comprador sigue siendo hipótesis; no confundir interés, registro y pago.
 
-Aplicamos [oferta concreta de Hormozi](https://www.acquisition.com/files/offer-creation-checklist.pdf) y la separación entre etapas visible en [Consulting](https://consulting.com/), sin importar promesas de ingresos o autoridad.
+Aplicamos [oferta concreta de Hormozi](https://www.acquisition.com/files/offer-creation-checklist.pdf), priorizando valor frente a esfuerzo de entrega, y la secuencia de implementación/soporte visible en [Monetise de Consulting](https://consulting.com/monetise), sin importar precios o promesas de ingresos o autoridad.
 
 ## Herramienta de reunión
 
@@ -70,6 +70,8 @@ Plan: 0–5 persona/cuaderno; 5–11 tapa/tamaño; 11–18 separadores; 18–24 
 
 Datos coinciden con brief; una situación/demostración/CTA; lectura natural de 25–35 segundos; planos posibles; sin pruebas o promesas inventadas. Ensayar pantalla/audio/acceso y que una persona principiante pueda seguir los pasos. Pendiente de ejecución con Sergio.
 
+Antes de vender, producir una demo explicativa de 35–45 segundos y realizar el ensayo de principiante. Esa demo muestra el método; el entregable del alumno sigue siendo el guion de unos 30 segundos. No requiere un plan pago del alumno.
+
 ## Mensajes en borrador
 
 **Demo sin venta:** “Le pedí a la IA ‘haceme un guion’ y salió algo que podría usar cualquier negocio. Cambié qué vendo, para quién, qué puedo demostrar, qué datos son reales, qué quiero que haga la persona y qué no debe inventar. Te muestro cómo cambia.”
@@ -83,6 +85,8 @@ Datos coinciden con brief; una situación/demostración/CTA; lectura natural de 
 Demo pública → interesado inicia conversación → ficha y encaje → pago conciliado → acceso → clase → revisión. Una imagen de comprobante no confirma cobro.
 Estados: interesado, ficha enviada, pago pendiente, pago confirmado, acceso enviado, asistió, entrega revisada.
 Sergio enseña/decide y confirma cobro; IA prepara materiales/respuestas y registra evidencia. Ningún mensaje está enviado o programado.
+
+Puede atenderse manualmente una consulta entrante mientras el acceso Meta esté pendiente; no se necesita activar una automatización para preparar la ficha. Esta propuesta no autoriza publicar la demo, enviar invitaciones ni responder a personas reales sin autorización aplicable.
 
 ## Caja y decisión
 

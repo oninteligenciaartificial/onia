@@ -15,12 +15,14 @@ Consolidación autorizada por Sergio. Esta carpeta es la fuente mantenida en Git
 | Jeff Nippard | Explicación visual y divulgación | [Jeff](jeff-nippard.md) |
 | Justin Welsh | Simplificación, procesos y reutilización de estructuras | [Justin](justin-welsh.md) |
 | Ali Abdaal | Flujo editorial y grabación por tandas | [Ali](ali-abdaal.md) |
+| Víctor Heras | Necesidad, separación formación/servicio y recorrido a consultoría | [Víctor](victor-heras.md) |
 
 Prioridad solicitada: Hormozi e Iman. El objetivo es aprender su forma de operar y adaptar capacidades propias; sus precios y notoriedad no prueban demanda para ONIA.
 
 ## Aplicación propia
 
 - [Cómo operan: contenido, oferta y entrega](como-operan.md): evidencia pública, inferencias y proceso propio propuesto.
+- [Funcionamiento de redes](funcionamiento-redes.md): fuentes primarias, límites históricos y prueba editorial con medición a 24/72 horas.
 - [Formatos, edición y tandas](formatos-onia.md): 16 recetas, escenario semanal, banco de clips, QA y primer lote de seis piezas.
 - [Workshop piloto](workshop-piloto.md): único borrador comercial vigente de esta investigación. Sigue por ensayar y aprobar, sin demanda o cobros comprobados.
 
