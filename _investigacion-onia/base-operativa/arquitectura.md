@@ -25,7 +25,7 @@ Las líneas punteadas son conexiones pendientes. n8n no tiene acreditada una con
 |---|---|---|
 | Reglas, código y skills en el repo privado `onia` | Repo creado; siete fuentes de skills, manifiesto de seis áreas y CLI de encargos. | Resultado vigente y pruebas en ESTADO.md. |
 | Setup reutilizable de Codex Cloud `onia` | Entorno ejecutable y repo correcto. Los cambios de preparación hechos dentro de la tarea aún no acreditan un setup republicado. | Publicar la preparación y verificar una tarea nueva. |
-| Desarrollo y pruebas en Codex Cloud | Doce tests aprobados: siete bootstrap y cinco continuidad. | Retomar un encargo desde otra tarea con fuentes y resultado verificables. |
+| Desarrollo y pruebas en Codex Cloud | Veinte tests aprobados: siete bootstrap, cinco continuidad y ocho del harness, sin skips. | Retomar un encargo desde otra tarea con fuentes y resultado verificables. |
 | Skills en Codex Cloud | Siete enlaces creados; no aparecían en el catálogo inicial de la tarea. | Comprobar descubrimiento y uso en una tarea nueva. |
 | Playwright en Codex Cloud | Instalador y prueba con Chromium fijado 156.0.8078.4 aprobados en «Editar onia». | Comprobar la preparación guardada desde una tarea nueva. |
 | HyperFrames en Codex Cloud | Prueba de render local existente; no acredita instalación ni render cloud. | Preparar dependencias y renderizar una pieza técnica allí; después validar grabación y audio reales. |

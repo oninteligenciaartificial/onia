@@ -16,16 +16,17 @@ Ahora se trabaja con Codex y n8n existente. La captura de Grok Bot muestra Premi
 - **n8n conectado en preparación:** N8N_API_KEY cargada en Secretos de red del propio entorno, ready y GET HTTP 200: diez flujos en la página, siete activos y más páginas. Sólo lectura agregada, sin mostrar valores ni contenido ni modificar flujos. Permisos completos y expiración no auditados.
 - **Browser:** la captura muestra una pestaña junto a Entorno. Chromium se ejecutó en la VM; remote_desktop habilitado/unknown, sin herramienta oficial de control interactivo expuesta en ese turno. Control de esa pestaña, login y persistencia de cuentas sin comprobar; no descartarlos por una frase documental general.
 - **Harness:** `scripts/harness.py doctor`, `preparar` y `retomar`, seis áreas en `orquestacion.json`, siete skills existentes. Reutiliza `trabajo.py`; el coordinador ejecuta y delega con sus herramientas. El CLI por sí solo no lanza agentes.
-- Nuevas pruebas locales: siete aprobadas; una de enlaces simbólicos omitida por permisos Windows. Revisión independiente sin bloqueantes. Falta la suite en Linux cloud.
+- **Entrega 3d22878868c4e106266ff9439e732e7123c1ee6d verificada en cloud:** doctor y veinte tests aprobados sin skips, incluidos enlaces simbólicos Linux y preparar/retomar entre procesos. Revisión independiente sin bloqueantes. El resultado local de siete pruebas y una omitida queda superado para esta suite por la ejecución Linux.
+- **Preparación guardada:** «Editar onia» confirmó borrador revisión 2 persistido, con Install/Start conservados y ampliados con doctor y test_harness.py. Runtime conectado/running, revisión efectiva/observada 1. No cambió red ni secretos y no publicó. Catálogo executor de skills vacío en ese turno; siete enlaces ready.
 - Drive: ONIA archivos y cuatro carpetas creadas; metadatos leídos desde cloud. Descarga de un medio real y recuperación de entregable entre tareas pendientes.
 
 ## Siguiente acción
 
-Subir esta entrega al repo existente y actualizar el checkout de preparación. Ejecutar doctor y test_harness.py en la VM; conservar instalación/inicio correctos. Guardar/republicar la preparación y verificar una tarea nueva con HEAD actual, siete skills, tests, navegador y GET n8n. La publicación realizada por Sergio durante el diagnóstico no acredita que incluyera el checkout corregido después.
+El código y las reglas de esta entrega ya están subidos y probados en la preparación. En «Editar onia», revisar el borrador guardado y pulsar **Republish/Volver a publicar**. Verificar después una tarea nueva con HEAD actual, descubrimiento de las siete skills, veinte tests, navegador y GET n8n. La publicación realizada durante el diagnóstico no incluía necesariamente esta preparación posterior. La actualización final de este documento sólo registra resultados; no cambia ejecutables.
 
 La tarea antigua `01a1a3fb-7203-7626-895f-9059c93cc01c` observaba revisión 1 sin secreto. Ese resultado no describe el editor actual, donde la lectura HTTP 200 ya pasó.
 
-Los errores sobre navegador, checkout y ubicaciones de la clave se conservan en [registro-de-errores.md](registro-de-errores.md), con corrección y prueba. Las instrucciones de revisar la interfaz y usar subagentes se mantienen en las reglas comunes; no son entrenamiento del modelo.
+Los errores sobre navegador, checkout y ubicaciones de la clave se conservan en [registro-de-errores.md](registro-de-errores.md), con corrección y prueba. Las instrucciones de revisar la interfaz y usar subagentes se mantienen en las reglas comunes; no son entrenamiento del modelo. La relectura oficial y de Matt Pocock/Superpowers, con fuentes fijadas y decisiones, está en [seleccion-y-recorrido.md](seleccion-y-recorrido.md). Registro local del encargo: harness-002; su briefing se recupera con scripts/harness.py retomar harness-002 sólo donde exista operacion/.
 
 ## Pendientes para ampliar la operación
 

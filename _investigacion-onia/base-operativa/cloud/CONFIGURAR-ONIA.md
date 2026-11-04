@@ -36,6 +36,8 @@ Como instalación reproducible ejecutá desde la raíz:
 bash _investigacion-onia/base-operativa/cloud/install.sh
 python3 _investigacion-onia/base-operativa/scripts/test_preparar_cloud.py -v
 python3 _investigacion-onia/base-operativa/scripts/test_trabajo.py -v
+python3 _investigacion-onia/base-operativa/scripts/harness.py doctor
+python3 _investigacion-onia/base-operativa/scripts/test_harness.py -v
 Como comprobación de arranque ejecutá:
 python3 _investigacion-onia/base-operativa/scripts/preparar-cloud.py --check
 bash _investigacion-onia/base-operativa/cloud/start.sh
@@ -50,7 +52,7 @@ Entregá resultados y configuración listos para republicar.
 
 ## Aceptación después de republicar
 
-Una tarea nueva debe identificar repo, HEAD y revisión del entorno; leer esta base; encontrar las siete skills; pasar los doce tests Python y una prueba real de Playwright. La API debe devolver HTTP 200 y conteos sin imprimir datos de flujos ni secretos. Exit 2 indica clave ausente; un error de red o HTTP no acredita autenticación.
+Una tarea nueva debe identificar repo, HEAD y revisión del entorno; leer esta base; descubrir las siete skills; pasar los veinte tests Python y una prueba real de Playwright. La API debe devolver HTTP 200 y conteos sin imprimir datos de flujos ni secretos. Exit 2 indica clave ausente; un error de red o HTTP no acredita autenticación.
 
 Conservar resultados saneados en ESTADO.md y guardar cambios útiles en Git. Los registros privados ignorados y el estado de una VM no sustituyen persistencia compartida. No incluir sesiones/cookies de cuentas en el snapshot reutilizable.
 
