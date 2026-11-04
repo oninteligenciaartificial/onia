@@ -16,6 +16,7 @@ Consolidación autorizada por Sergio. Esta carpeta es la fuente mantenida en Git
 | Justin Welsh | Simplificación, procesos y reutilización de estructuras | [Justin](justin-welsh.md) |
 | Ali Abdaal | Flujo editorial y grabación por tandas | [Ali](ali-abdaal.md) |
 | Víctor Heras | Necesidad, separación formación/servicio y recorrido a consultoría | [Víctor](victor-heras.md) |
+| Pedro Buerbaum | Identidad, textos de contenido y rutas públicas; revisión audiovisual en recuperación | [Ficha única en MARCA-EVIDENCIA-001](https://chatgpt.com/space/page_0cb0c62e49cc8191ae94a767efb4dc44) |
 
 Prioridad solicitada: Hormozi e Iman. El objetivo es aprender su forma de operar y adaptar capacidades propias; sus precios y notoriedad no prueban demanda para ONIA.
 
@@ -42,3 +43,11 @@ Lectura mínima: índice → ficha que necesita el encargo → fuente concreta. 
 [MARCA-EVIDENCIA-001](https://chatgpt.com/space/page_0cb0c62e49cc8191ae94a767efb4dc44), releída en secuencia 2: Hormozi con muestras visuales de reel/caption y lección por puntos, Heras con tres muestras VSL y canales verificados desde su web, Iman con rutas/textos propios y YouTube bloqueado. No se escuchó audio ni se auditó el negocio o la causalidad de ventas. Los límites y enlaces exactos permanecen en el informe, sin copiar el paquete ni sobrescribir la historia de las diez fichas.
 
 [Marca · Evidencia, pruebas y resultados](https://chatgpt.com/space/page_66e12de902408191a926153866f6ca39) organiza aprender, practicar y medir en seis secciones. D1 ficha→tres respuestas→revisión, W1 wireframe y B1 conversación de ensayo son propuestas, no una oferta nueva ni prácticas humanas realizadas. Los 35 borradores permanecen intactos. Repo normativo, biblioteca de evidencia/ejercicios y Notion diario conservan funciones distintas.
+
+## Pedro Buerbaum y corrección de cobertura · 4 de noviembre
+
+La ficha comercial de Pedro quedó guardada y releída: bio, captions de webinar y rutas distintas de newsletter, Creator Founder, Escala y masterclass. Cada afirmación distingue observación, interpretación y desconocido. No hubo comentario, DM, inscripción, compra ni validación de conversiones.
+
+La [prueba audiovisual cloud](https://chatgpt.com/space/page_3559f542705c8191b44d8d31326e6de4) descargó el reel Dd6oC4EkRX1 de 90,32 s y generó 542 muestras a 6 fps en 19 láminas, según comandos terminados del ejecutor. El servicio falló al verificar acceso al modelo antes de entregar las láminas. Extracción no equivale a inspección: el coordinador todavía no las vio; análisis visual y audio no se declaran completos. La recuperación consiste en entregar esos archivos existentes y revisarlos, sin otra descarga ni nueva infraestructura. La parada local por verificación de URL se respetó.
+
+Corrección aplicada a este encargo: estudiar conectados público, posicionamiento, formatos, historia, demostración, edición, sonido, presentación, distribución, CTA, destino, oferta y entrega. Los efectos comerciales y sistemas privados permanecen desconocidos sin evidencia. No se deduce montaje desde captions ni se trata un muestreo breve como visionado integral. Esta documentación no añade reglas ni skills ni modifica los 35 borradores.
