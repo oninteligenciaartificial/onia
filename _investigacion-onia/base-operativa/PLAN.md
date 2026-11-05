@@ -1,24 +1,26 @@
 # Plan continuo de ONIA
 
-**Fuente oficial: repositorio privado `oninteligenciaartificial/onia`. Consolidación del 4 de noviembre de 2026, America/La_Paz.** Sergio autorizó subir el contenido útil al repo para que la sesión cloud no dependa de la computadora. Este archivo mantiene la dirección y el plan por áreas; [ESTADO.md](ESTADO.md) mantiene la capacidad comprobada y [reglas-comunes.md](reglas-comunes.md) los permisos comunes. Los programas y pruebas propuestos no se convierten en funciones activas por quedar documentados.
+**Fuente oficial: repositorio privado `oninteligenciaartificial/onia`. Consolidación del 5 de noviembre de 2026, America/Caracas.** Sergio estableció el repo como única autoridad de decisiones, reglas, estado y handoff; las áreas continúan en local. Medios, credenciales y contexto personal privado mantienen su tratamiento separado. Este archivo mantiene la dirección y el plan por áreas; [ESTADO.md](ESTADO.md) mantiene la capacidad comprobada y [reglas-comunes.md](reglas-comunes.md) los permisos comunes. Los programas y pruebas propuestos no se convierten en funciones activas por quedar documentados.
 
 Procedencia: [plan y resultados, snapshot de secuencia 12](continuidad/2026-11-04/fuentes-cloud/plan-y-resultados.md) y [referentes, snapshot de secuencia 10](continuidad/2026-11-04/fuentes-cloud/referentes.md). Las Pages enlazadas conservan procedencia y artefactos; este plan en Git es la autoridad para continuar. Los resultados fechados de JEF-BASE-001 se atribuyen a la entrega del Jefe: esta consolidación no repitió sus pruebas. Las secciones históricas de STOP de la Page no forman parte de la dirección vigente.
 
-## Coordinación vigente: despacho local y ejecución cloud
+## Coordinación vigente: áreas locales y relevo de jefa
 
-**Decisión posterior de Sergio, tras las pruebas COORD-PROBE-20261104 y COORD-LOCAL-CLOUD-20261104:** la coordinación y el despacho operativo quedan en la sesión local `01a1a29c-3a3d-7b50-aef6-41305ce5faae`; las áreas existentes ejecutan en cloud, host `durable`, entorno `onia`. **ONIA · Jefe** conserva planificación y síntesis cloud, sin atribuirle capacidad de iniciar los chats de área. [Prueba y alcance](continuidad/2026-11-04/coordinacion-local-cloud.md).
+**Decisión del 5 de noviembre:** siete áreas locales y una sola jefa que delega, revisa y entrega. Sergio ordenó reemplazar la anterior por **ONIA · Jefa v2**, `01a1ab9c-15b2-7a03-9588-2daab62a93eb`, host local. Está designada y en espera de commit/recepción; aún no tiene rol operativo activo. La anterior cierra el traspaso; su archivo fue ordenado, no confirmado. [SESIONES](SESIONES.md) identifica responsables y orígenes; [HANDOFF-JEFA](continuidad/2026-11-05/HANDOFF-JEFA.md) define recepción, evidencia y primera tarea.
 
-En los catálogos comprobados de Jefe y Desarrollo cloud están `read_thread` y `wait_threads`, pero no `send_message_to_thread` ni `create_thread`. La sesión local sí despachó la prueba a Desarrollo y recuperó su resultado; Desarrollo leyó SESIONES del commit `1884335` por HTTP 200 y devolvió el ID correcto de Aprendizaje. Jefe confirmó también la recuperación de esa consolidación. Es evidencia de esos hosts y operaciones, no una imposibilidad universal de Codex ni una prueba de despacho entre todos los entornos.
+**Alcance actual:** piloto D1 silencioso terminado como prueba privada, sin publicación ni comprensión humana/locución acreditadas. Preparación n8n inactiva terminada y recuperable en el [bundle versionable](continuidad/2026-11-05/n8n-reserva-local/README.md): 13/13 controles estáticos, sin ejecutar Code/SQL/importación/carrera/runtime. Integración, STOP/takeover y conciliación siguen pendientes. Producto y demás producción, campañas, publicaciones, mensajes y gasto necesitan alcance aplicable; el plan de programas no los activa.
 
-Los subagentes internos de un encargo son distintos de los chats de área: los frentes históricos JEF-BASE-001 siguen siendo válidos, pero no prueban envío entre chats. La PC debe estar disponible para nuevas órdenes y revisiones desde la coordinación local. La ejecución de la tarea de prueba fue remota; **no se hizo una prueba física con la PC apagada**. Este ajuste no crea servicios, chats ni automatizaciones y no cambia la preferencia de modelos registrada.
+**Primera prioridad tras la recepción de Jefa v2:** encargar a Video/Desarrollo una prueba del audio real con controles y evaluación de voz, música, SFX, silencios y sincronía. Resolver el límite con alternativas abiertas/autorizadas antes de pedir a Sergio la intervención indispensable. Sin Gemini ni API paga por defecto. Este traspaso sólo deja el contrato; no ejecuta esa investigación.
 
-## Dirección de trabajo y tanda JEF-BASE-001
+Las continuaciones documentales no trasladan VMs, historial completo ni secretos. VPS conserva n8n/startup; los orígenes cloud se conservan. Los subagentes internos apoyan encargos concretos, no crean otra jefa. La PC sostiene órdenes/revisiones locales; no hay scheduler acreditado. La [prueba local→cloud del 4/11](continuidad/2026-11-04/coordinacion-local-cloud.md), con capacidades distintas entre catálogos y recuperación de `1884335`, permanece como antecedente, no reparto vigente ni prueba física con la PC apagada.
 
-**JEF-BASE-001 v1 · instrucción vigente registrada por el Jefe.** Sergio autorizó lanzar frentes y subagentes para preparar la base compartida, conectar después sus MCP/cuentas y avanzar hacia panel, avisos diarios, automatizaciones, marca, workshop semanal, contenido/Ads y Platform. Esta instrucción reemplaza el STOP de lanzamiento y la condición «sólo recepción» anteriores. Autoriza esta tanda de preparación y comprobación; las propuestas específicas de gasto, publicación, envíos y producción se concretan antes de su autorización aplicable.
+## Antecedente de dirección: tanda JEF-BASE-001 · 4 de noviembre
+
+**JEF-BASE-001 v1 · instrucción histórica registrada por el Jefe.** Sergio autorizó lanzar frentes y subagentes para preparar la base compartida, conectar después sus MCP/cuentas y avanzar hacia panel, avisos diarios, automatizaciones, marca, workshop semanal, contenido/Ads y Platform. En aquel corte reemplazó el STOP de lanzamiento y la condición «sólo recepción» anteriores. Autorizó aquella tanda de preparación y comprobación; las propuestas específicas de gasto, publicación, envíos y producción se concretan antes de su autorización aplicable.
 
 **Meta:** Bs 3.000 de cobros nuevos conciliados al 14 de noviembre. Un workshop semanal es la cadencia objetivo solicitada, todavía sin capacidad, demanda o ingresos semanales demostrados. Jefatura recomienda preparar oferta/demo en paralelo a la base técnica para no postergar caja hasta completar todas las automatizaciones.
 
-## Frentes y orden de avance
+## Frentes históricos y orden de avance de JEF-BASE-001
 
 | Frente | Responsable y modelo de esta tanda | Resultado y prueba de cierre |
 | --- | --- | --- |
@@ -33,11 +35,11 @@ Según el cierre JEF-BASE-001, los cuatro subagentes fueron lanzados mediante he
 
 ## Fuentes y memoria compartida
 
-«Cerebro listo» significa recuperar evidencia, aplicarla, reconocer límites y dejar una decisión comprobable; no entrenamiento automático del modelo ni conocimiento completo de los referentes. Una fuente por dato: reglas, permisos y este plan en el repo onia; capacidad fechada en ESTADO; Pages para procedencia y artefactos; prioridades y resultados cotidianos en Notion; compromisos en Calendar. Organización conserva escritura Notion/Calendar; la coordinación local integra el plan canónico mediante el escritor Git designado y Jefe aporta planificación/síntesis cloud; cada ejecutor entrega evidencia sin sobrescribir fuentes de otro.
+«Cerebro listo» significa recuperar evidencia, aplicarla, reconocer límites y dejar una decisión comprobable; no entrenamiento automático del modelo ni conocimiento completo de los referentes. El repo onia es autoridad única de reglas, permisos, decisiones, plan, estado y handoff. Notion es proyección; Pages conserva medios/procedencia, sin mantener otra autoridad operativa. Datos personales y diarios privados no se exportan a paquetes públicos. Organización escribe las proyecciones con alcance aplicable; la única jefa local integra mediante el escritor Git designado. Cada ejecutor entrega evidencia sin sobrescribir fuentes de otro ni dejar la decisión vigente sólo en operacion ignorado.
 
 Cada entrega incluye ID, objetivo, estado, enlace/revisión, observado/inferido/propuesto/probado/activo, resultado, comprobación, bloqueo, solución recomendada, responsable y siguiente paso. Leer versión/hash antes de editar, comprobar recibo y releer. Los demás frentes recuperan la fuente; no reciben resúmenes divergentes como nueva autoridad.
 
-## Comprobaciones y pendientes de esta tanda
+## Comprobaciones y pendientes históricos de JEF-BASE-001
 
 **F2 observado en JEF-BASE-001:** lectura autenticada de Pages, Notion Sergio Hoy, perfil Calendar y perfil Higgsfield. Sólo acredita esas lecturas. El subagente recuperó dos datos del plan/biblioteca sin recibir sus valores: lectura independiente comprobada. En el catálogo de aquella sesión no se identificaron herramientas nativas de X, Instagram, Facebook, WhatsApp, YouTube ni n8n; eso no demuestra ausencia en otros entornos. n8n tiene lectura HTTP histórica comprobada en onia, pendiente de nueva validación funcional cuando se use. El STOP visible entonces en Notion estaba desactualizado frente a la dirección del Jefe; Organización debe cotejar y proyectar la decisión vigente, sin crear otra cola ni recrear los seis eventos eliminados.
 
@@ -81,7 +83,7 @@ No hace falta reconectar Notion, Calendar o Higgsfield para repetir las lecturas
 
 ## Programas continuos y forma de trabajo
 
-**Plan de trabajo consolidado.** La estructura siguiente reemplaza la lista inicial de puesta en marcha: cada programa conserva objetivos, aprendizaje, implementación, operación recurrente por comprobar, métricas, pendientes y criterios para elegir el siguiente trabajo. JEF-BASE-001 autoriza la tanda de preparación y comprobación descrita arriba. Las propuestas de cada programa siguen identificadas como tales; esta consolidación no activa reglas nuevas, skills, campañas, servicios ni vigilancia permanente.
+**Plan de trabajo consolidado.** La estructura siguiente reemplaza la lista inicial de puesta en marcha: cada programa conserva objetivos, aprendizaje, implementación, operación recurrente por comprobar, métricas, pendientes y criterios para elegir el siguiente trabajo. JEF-BASE-001 fue la tanda de preparación y comprobación histórica; el alcance vigente está al inicio de este plan. Las propuestas de cada programa siguen identificadas como tales; esta consolidación no activa reglas nuevas, skills, campañas, servicios ni vigilancia permanente.
 
 **Objetivo sostenido:** empresa de una persona con IA que produce contenido, vende y entrega formación/servicios y desarrolla ONIA Platform bajo decisiones de Sergio. La autonomía se acepta por función probada. Las hipótesis comerciales no se convierten en garantías de ingresos.
 
@@ -91,21 +93,21 @@ Cada área conserva una ficha viva: resultado buscado; situación y evidencia ac
 
 Ciclo: observar → investigar una duda concreta → proponer/priorizar → ejecutar dentro del alcance autorizado → comprobar → medir → corregir o elegir siguiente hipótesis. Al cerrar un trabajo, registrar resultado, evidencia, aprendizaje y siguiente acción. Si ésta pertenece al alcance autorizado, continuar; si cambia presupuesto, promesa, cuenta, reglas o producción, preparar el cambio concreto para decisión. No fabricar tareas para mantener agentes ocupados. Si no hay un siguiente paso útil, dejarlo explícito.
 
-El plan es continuo; cada ejecución tiene un límite. Dos ciclos de corrección por encargo como propuesta inicial, después diagnóstico y solución. Reintentos de eventos con deduplicación y conciliación de efectos inciertos. Un escritor por recurso; Organización mantiene Notion y Calendar. La coordinación local integra prioridades, despacho y aceptación, apoyada por la planificación/síntesis de Jefe cloud, con máximo dos entregas simultáneas que requieran revisión de Sergio.
+El plan es continuo; cada ejecución tiene un límite. Dos ciclos de corrección por encargo como propuesta inicial, después diagnóstico y solución. Reintentos de eventos con deduplicación y conciliación de efectos inciertos. Un escritor por recurso; Organización mantiene Notion y Calendar. Una sola jefa local integra prioridades, despacho y aceptación, con máximo dos entregas simultáneas que requieran revisión de Sergio. El relevo sólo se completa con commit y recepción confirmados. Los cierres son compactos: resultado, evidencia/enlace, prueba realizada, bloqueo con solución y siguiente acción; se recupera contexto adicional por enlace, sin pegar grandes lecturas.
 
 **Forma de informar un problema:** evidencia → impacto → solución recomendada → alternativa real cuando exista → paso exacto de Sergio si indispensable → prueba que demuestra cierre. No cerrar con sólo «pendiente» ni convertir «trabajo continuo» en una afirmación de ejecución entre turnos.
 
-## 1. Jefatura, coordinación local y ejecución cloud
+## 1. Jefatura y ejecución por áreas locales
 
 **Resultado:** Sergio sabe qué está pasando, qué debe decidir y qué resultado se está buscando.
 
-**Arranque y continuidad del traspaso:** el chat cloud «Marca personal · Plan y resultados» fue renombrado **ONIA · Jefe**, ID `01a1a843-4afb-75f9-aa95-f35833fcb002`, host durable, entorno onia. Conserva planificación y síntesis; la sesión local identificada arriba despacha a las áreas cloud y recupera sus entregas. Recuperar este archivo y ESTADO desde Git, identificar la revisión y reconciliar prioridades/IDs sin duplicados. El nombre del chat y el envío de un mensaje no prueban por sí solos recuperación del checkout ni lectura de todos los artefactos. El registro de chats está en [SESIONES.md](SESIONES.md).
+**Arranque y continuidad del traspaso:** Jefa v2 recupera el commit y el [handoff](continuidad/2026-11-05/HANDOFF-JEFA.md), identifica evidencia, límites y alcance antes de asumir. Los roles/IDs están en [SESIONES.md](SESIONES.md). El antiguo ONIA · Jefe cloud conserva su procedencia histórica; no hay una segunda jefa operativa. El nombre de un chat y el envío de un mensaje no prueban recepción del checkout ni aceptación.
 
 **Continuidad:** revisión breve del estado al empezar cada tanda; recibir cierres; resolver dependencias; priorizar por utilidad comercial, evidencia, urgencia, esfuerzo y capacidad. Revisión semanal para añadir, quitar o reorganizar trabajo. Contenido de otro chat no modifica automáticamente decisiones comunes.
 
 **Entregas y control:** una prioridad vigente, encargos delimitados, evidencias y lista de decisiones. Medir tareas bloqueadas, retrabajo, tiempo esperando a Sergio y cuota empleada por resultado útil. Subagentes para partes independientes o QA; no otro coordinador por cada tarea.
 
-**Sergio:** dirección y excepciones. **Aceptación del traspaso a Git:** Jefe confirmó recuperación de la consolidación `1884335`; Desarrollo recuperó SESIONES del mismo commit en la prueba despachada desde local. No acredita lectura de todas las entregas ni autonomía entre chats. Nuevas tandas se concretan en la coordinación local, se envían al área cloud y se cierran con resultado recuperado. La prueba de lectura de Pages de JEF-BASE-001 es evidencia distinta.
+**Sergio:** dirección y excepciones. **Aceptación actual pendiente:** Jefa v2 debe confirmar recuperación del commit y del alcance, sin heredar la aceptación del antiguo Jefe a `1884335`. Las tandas se envían a áreas locales y se cierran con evidencia recuperada. La recuperación cloud de `1884335` y la prueba de Pages de JEF-BASE-001 son antecedentes distintos.
 
 ## 2. Marca personal, contenido orgánico y redes
 
@@ -135,7 +137,7 @@ El plan es continuo; cada ejecución tiene un límite. Dos ciclos de corrección
 | Recursos generativos | Imagen/video, B-roll, fondos, movimientos de cámara, transiciones, cambios de aspecto, mejoras de calidad y audio cuando la función esté disponible. | Recurso que cumple un brief, con consistencia visual/sonora y coste comprobados. |
 | Creatividades para Ads | UGC/talking head sintético cuando corresponda, demostraciones, producto, POV, tutorial, estáticos y variantes. | Misma oferta y evidencia; diferenciar variantes para probar una hipótesis. Una escena o testimonio generado no se presenta como cliente/resultado real. |
 | Edición programada | Montaje, motion graphics, tipografía, subtítulos, máscaras, transiciones, layouts y variantes por parámetros. | Proyecto editable, dependencias y recursos identificados; cambio de parámetros y rerender comprobados. |
-| 3D | Modelos, materiales, luces, cámaras, animación y composición; distinguir malla/escena 3D real de video con apariencia CGI. Evaluar motor programable compatible, sin dar por integrada esa capacidad en HyperFrames. | Primera escena corta con archivo 3D editable o recurso generado claramente identificado, prueba de render cloud y coste/tiempo medidos. |
+| 3D | Modelos, materiales, luces, cámaras, animación y composición; distinguir malla/escena 3D real de video con apariencia CGI. Evaluar motor programable compatible, sin dar por integrada esa capacidad en HyperFrames. | Primera escena corta con archivo 3D editable o recurso generado claramente identificado, prueba de render en ejecutor autorizado y coste/tiempo medidos. |
 | Formatos enviados por Sergio | Conservar enlace/archivo y analizar historia, imagen, audio, ritmo, objetivo y CTA según la cobertura disponible. | Ficha de formato → adaptación propia → storyboard → borrador → QA → receta reusable, sin confundir referencia con pieza ya implementada. |
 
 **Acceso observado y registrado el 4 de noviembre:** la consulta de balance del workspace conectado devolvió plan Pro y 585 créditos; sin cupo ilimitado activo. La consulta de Marketing Studio devolvió 26 formatos, incluidos UGC, Direct-to-Camera, Camera POV, Product Showcase, Tutorial, Hyper Motion y Wild Card. La búsqueda 3D devolvió modelos Tripo de texto e imagen/multivista a GLB. Son capacidades de catálogo, no pruebas de calidad, visionado de presets ni integración terminada. En esa comprobación no se ejecutó ninguna generación ni se gastaron créditos. Saldo y catálogo deben revalidarse al usarlos. La fecha de renovación no fue devuelta por balance: comprobarla en el panel cuando se planifique uso; no inventarla.
@@ -150,7 +152,7 @@ El plan es continuo; cada ejecución tiene un límite. Dos ciclos de corrección
 
 **Entregas y control:** proyecto editable, MP4, variantes, miniatura y checklist audiovisual; tiempo de Sergio, tiempo de render, retrabajo y resultado por pieza. Probar primero una, después un día de cinco y luego ritmo semanal; no confundir 35 borradores con 35 publicaciones.
 
-**Sergio:** grabar/voz y revisar ambigüedades que las herramientas no resuelven. **Salida ante audio pendiente:** entregar fragmentos concretos para escucha, sin pedirle extracción ni inventar efectos.
+**Sergio:** grabar/voz y resolver sólo la intervención indispensable que quede tras probar alternativas abiertas/autorizadas. **Salida ante audio pendiente:** Video/Desarrollo prueban audio real y controles según HANDOFF; no reiteran el límite como cierre. YAMNet/CLAP y ASR son evidencia parcial, no prosodia/escucha certificadas. Si aún hace falta juicio personal, entregar fragmento y pregunta exactos, sin pedir extracción ni inventar efectos.
 
 ## 4. Meta Ads: plan propio dentro de Marketing
 
@@ -192,7 +194,7 @@ Fuentes oficiales con ficha y temario revisados, no cursos completados: [presupu
 
 **Aprender:** webhooks, autenticación, permisos, idempotencia, persistencia, estados de conversación, aprobación, reintentos, monitoreo y fallos. n8n ejecuta procesos; el LLM se usa donde aporte criterio y haya integración comprobada.
 
-**Arranque:** corregir TR-CLAIM y probar simultaneidad/reinicio; completar TR-IG; recurso TR-STORAGE; recepción → lead → respuesta aprobada → entrega/derivación. Preservar oferta única. La intervención de Sergio pausa el bot hasta devolución expresa.
+**Arranque siguiente, todavía sin habilitación runtime:** conservar la preparación TR-CLAIM terminada; acreditar destino/rol exclusivo antes de integrar y probar simultaneidad/reinicio. TR-IG, TR-STORAGE y recepción → lead → respuesta aprobada → entrega/derivación permanecen en el programa, sin activarse por el bundle. Preservar oferta única. La intervención de Sergio pausa el bot hasta devolución expresa.
 
 **Continuidad:** entradas/salidas, pendientes, tokens, errores, vencimientos y cambios de APIs. Métricas: eventos únicos, duplicados evitados, errores, tiempo de respuesta, conversaciones derivadas y efecto real de cada salida.
 
@@ -202,17 +204,17 @@ Fuentes oficiales con ficha y temario revisados, no cursos completados: [presupu
 
 ## 7. Desarrollo, web, panel y harness
 
-**Resultado:** infraestructura mínima que permite operar y ver resultados desde cloud.
+**Resultado:** herramientas mínimas que permiten a las áreas locales operar y recuperar resultados con evidencia.
 
 **Aprender:** estado real del entorno, pruebas, manejo de secretos, contratos, seguridad del panel, despliegue y recuperación. Mantener las nueve skills existentes; revisar candidatos sólo cuando cubran un fallo/capacidad concreta.
 
-**Arranque:** descubrimiento de skills en sesión nueva; corregir launcher TR-LAUNCH; recuperar artefactos entre VMs; web de venta y panel privado leyendo datos reales. Verificar almacenamiento y permisos antes de exponer endpoints.
+**Arranque:** apoyar la prueba de audio real y la continuidad desde Git; comprobar herramientas locales dentro del encargo autorizado. TR-LAUNCH y recuperación entre VMs son pendientes remotos históricos, no requisitos para operar las áreas locales. Web/panel con datos reales y endpoints requieren su alcance y permisos propios.
 
 **Continuidad:** atender bugs con reproducción; aplicar cambio aislado; pruebas pertinentes; revisión; entrega/despliegue autorizado; monitoreo y revisión de dependencias. Reglas y skills cambian sólo ante causa específica y con la autorización aplicable.
 
-**Entregas y control:** diff, prueba, evidencia cloud y límites; errores, retrabajo, cuota, recursos y tiempo hasta resultado. n8n y producto siguen en VPS; no incorporar allí render/modelos pesados. Homelab diferido.
+**Entregas y control:** diff, prueba, evidencia del ejecutor real y límites; errores, retrabajo, cuota, recursos y tiempo hasta resultado. n8n/startup siguen en VPS; no incorporar allí render/modelos pesados. Homelab diferido.
 
-**Sergio:** accesos personales indispensables y decisiones de producción. **Solución ante launcher401:** autenticar ruta soportada y verificar ID remoto→resultado→callback; mientras tanto, encargos cloud supervisados siguen disponibles.
+**Sergio:** accesos personales indispensables y decisiones de producción. **Pendiente histórico launcher401:** si se vuelve a autorizar un lanzador remoto, autenticar una ruta soportada y verificar ID remoto→resultado→callback. La continuidad local actual no depende de resolverlo.
 
 ## 8. ONIA Platform
 
@@ -240,9 +242,9 @@ Fuentes oficiales con ficha y temario revisados, no cursos completados: [presupu
 
 **Sergio:** cambios de disponibilidad, notas del día y decisiones. **Prueba:** sin dobles reservas; vistas coherentes entre tarea, contenido y calendario. Organización conserva la escritura cotidiana.
 
-## 10. Sesión cloud «ONIA · Aprendizaje y criterio»
+## 10. ONIA · Aprendizaje y criterio local
 
-Creada por solicitud explícita de Sergio en el entorno onia: thread 01a1a935-c691-72d5-b055-e39970f5703e, host durable; agrupada en «Marca personal · Cloud». Primer encargo COMPLETADO y respuesta releída por coordinación: cinco módulos, ocho fuentes con cobertura/acceso declarado, plantilla de diario y microlección con ejercicio sintético sin gasto. Es una propuesta curricular, no prueba de aprendizaje de Sergio. Videos/audiolibro no se declaran vistos/escuchados; algunas actividades requieren login y su acceso sigue por verificar. D1 aporta el ejercicio interno y la demo candidata del brief JEF-BASE-001; no acredita oferta comercial aprobada ni aprendizaje humano. Ese primer encargo no activó recurrencia ni modificó Notion/repo.
+El área actual es local según SESIONES. **Antecedente:** su origen cloud fue creado por solicitud explícita de Sergio en el entorno onia: thread 01a1a935-c691-72d5-b055-e39970f5703e, host durable; agrupada en «Marca personal · Cloud». Primer encargo COMPLETADO y respuesta releída por coordinación: cinco módulos, ocho fuentes con cobertura/acceso declarado, plantilla de diario y microlección con ejercicio sintético sin gasto. Es una propuesta curricular, no prueba de aprendizaje de Sergio. Videos/audiolibro no se declaran vistos/escuchados; algunas actividades requieren login y su acceso sigue por verificar. D1 aporta el ejercicio interno y la demo candidata del brief JEF-BASE-001; no acredita oferta comercial aprobada ni aprendizaje humano. Ese primer encargo no activó recurrencia ni modificó Notion/repo.
 
 **Resultado:** Sergio entiende, aplica y explica lo aprendido sin depender de un guion.
 
@@ -268,7 +270,7 @@ Sergio confirmó que «HN» se refería a n8n. El radar se diseñará con n8n co
 
 **Flujo:** horario → RSS/API/web permitida → normalizar fecha/autor/URL → deduplicar → comprobar fuente/afirmaciones → priorizar → resumir → Notion → registrar ejecución. Guardar fecha de publicación, fecha del hecho cuando exista y fecha de consulta; una corrección actualiza el registro. Un anuncio de la institución se atribuye a esa institución.
 
-**Frecuencias propuestas:** recolección dos veces al día, resumen matutino de hasta 3–5 novedades; detección diaria de referentes y análisis comparativo semanal. No rellenar si no hay novedades útiles. Alertas fuera del resumen sólo por cambios accionables. Los horarios exactos se fijarán en America/La_Paz al activar.
+**Frecuencias propuestas:** recolección dos veces al día, resumen matutino de hasta 3–5 novedades; detección diaria de referentes y análisis comparativo semanal. No rellenar si no hay novedades útiles. Alertas fuera del resumen sólo por cambios accionables. Los horarios exactos y la zona del destino se cotejarán al autorizar la activación; el contexto actual de la sesión es America/Caracas.
 
 **Cada noticia:** qué pasó, fecha/fuente, por qué importa a ONIA o Sergio, acción propuesta o «sólo informativa». La noticia puede sugerir una tarea; la jefa la prioriza, no la lanza automáticamente por ser nueva.
 
@@ -282,7 +284,7 @@ Fuentes del diseño: [n8n Schedule Trigger](https://docs.n8n.io/integrations/bui
 
 - **Notion móvil:** Hoy; contenido; ventas y decisiones; Aprender hoy; diario; noticias. Usar vistas breves y enlaces; informes técnicos fuera de portada.
 
-- **Panel web cloud para PC:** leads, entradas/salidas, intervención humana, piezas, ejecuciones, errores, permisos y métricas con actualización real.
+- **Panel web para PC, propuesta pendiente:** leads, entradas/salidas, intervención humana, piezas, ejecuciones, errores, permisos y métricas; no se acredita actualización real por este plan.
 
 - **Biblioteca cloud:** procedencia, evidencias, medios y materiales de estudio/producción. Los snapshots documentales de esta consolidación quedan en Git. Las Pages no mantienen una segunda versión autorizada de este plan.
 
@@ -292,9 +294,9 @@ Fuentes del diseño: [n8n Schedule Trigger](https://docs.n8n.io/integrations/bui
 
 Mapa de sesiones: jefa + seis áreas existentes + Aprendizaje. Ads y workshops tienen planes completos separados dentro de Marketing, no un chat adicional por concepto. El radar se construye en Automatizaciones; Marketing/Aprendizaje consumen sus resultados y Organización muestra el resumen. No aumentar el catálogo de skills para reflejar cada sección.
 
-## Primera tanda y lo que viene después
+## Tanda actual y lo que viene después
 
-**Tanda vigente:** JEF-BASE-001 articula capacidad audiovisual, memoria/conexiones, criterio/caja y panel/radar/mensajería. Reutilizar sus entregas, la matriz de referentes/formatos/venta, WS-W01/02 y D1 antes de lanzar otra investigación equivalente. La siguiente ejecución concreta se selecciona por dependencia resuelta y prueba definida. La corrección de duplicados y el brief/demo pueden avanzar en paralelo dentro del alcance autorizado; el primer piloto de noticias conserva salida privada y supervisada hasta demostrar el flujo.
+**Tanda vigente:** revisión local cerrada y piloto D1 visual entregable como prueba, sin publicar. La preparación n8n inactiva terminó con 13/13 controles estáticos y su bundle está incorporado a esta entrega; no es integración runtime. El relevo a Jefa v2 espera commit/recepción. Después, la primera prioridad es la prueba del audio real; la siguiente unidad de n8n exige destino/rol aislados acreditados antes de cualquier importación o ejecución. Contenido y automatizaciones pueden avanzar como frentes independientes dentro de encargos definidos; Producto y demás producción no se activan automáticamente.
 
 **Al terminar:** revisar evidencia, métricas y dificultad; elegir siguiente experimento por área; actualizar cola y decidir qué mantener, corregir, quitar o añadir. El plan no termina al completar una lista. La ejecución recurrente exige disparador probado; hasta entonces la continuidad ocurre dentro de encargos iniciados, sin simular trabajo permanente.
 
@@ -302,6 +304,6 @@ Mapa de sesiones: jefa + seis áreas existentes + Aprendizaje. Ads y workshops t
 
 ## Cierre y recuperación desde otra sesión
 
-La coordinación local y los ejecutores cloud recuperan este plan por su ruta en Git, cotejan la revisión y leen ESTADO antes de ejecutar. Jefe lo usa para planificación/síntesis, sin asumir despacho entre chats. Después de cada entrega, conservar el mismo ID, resultado, evidencia, aprendizaje, pendiente, solución y responsable. La continuidad usa los chats registrados en SESIONES; las partes independientes se delegan con las skills pertinentes de ORQUESTACION. Los documentos son recuperables desde cloud cuando la sesión tiene acceso y revisión comprobados; un push no actualiza automáticamente VMs existentes.
+La jefa confirmada y las áreas locales recuperan este plan y ESTADO desde Git, cotejan la revisión y cargan sólo los enlaces pertinentes. Conservar ID, resultado, evidencia, prueba, bloqueo con solución y siguiente acción. Los chats están registrados en SESIONES y las skills en ORQUESTACION. Los medios pueden permanecer fuera de Git con ruta/hash/ubicación recuperable; estado y decisiones no quedan sólo en operacion ignorado. Un commit o push no acredita recepción del handoff.
 
-Para la consolidación documental: verificar enlaces y revisión remota, pedir al Jefe una recuperación independiente y registrar el resultado real. La escritura del plan no resuelve acceso audiovisual, atomicidad n8n, autenticación Instagram/Ads, launcher, credencial runtime de Notion ni despliegue del panel. Sus próximas acciones y responsables permanecen en los programas anteriores y el estado canónico.
+Para esta consolidación: verificar enlaces e integridad; la jefa saliente gestiona el commit/publicación y Jefa v2 confirma recepción del commit antes de asumir. Este encargo no hace commit/push ni certifica archivo o aceptación. La escritura del plan no resuelve acceso audiovisual, atomicidad n8n, autenticación Instagram/Ads, launcher, credencial runtime de Notion ni despliegue del panel. Sus próximas acciones y responsables permanecen en los programas anteriores y el estado canónico.

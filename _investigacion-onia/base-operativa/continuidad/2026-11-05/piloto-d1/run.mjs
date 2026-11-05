@@ -1,0 +1,28 @@
+import { existsSync, readFileSync, mkdirSync, writeFileSync, openSync, closeSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+import { spawnSync } from 'node:child_process';
+import { performance } from 'node:perf_hooks';
+
+const root = dirname(fileURLToPath(import.meta.url));
+const engine = 'C:/Users/PC/AppData/Local/npm-cache/_npx/020dad40ade292f2/node_modules/hyperframes';
+if (JSON.parse(readFileSync(join(engine, 'package.json'), 'utf8')).version !== '0.9.9') throw new Error('Se requiere el motor existente 0.9.9.');
+const browser = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
+if (!existsSync(browser)) throw new Error('Chrome existente no encontrado.');
+const scratch = join(root, '.work');
+mkdirSync(scratch, { recursive: true });
+const args = process.argv.slice(2);
+const command = args[0];
+if (!['check', 'render', 'lint'].includes(command)) throw new Error('Comando no autorizado en este ejecutor.');
+const logPath = join(root, `${command}.log`);
+const logFd = openSync(logPath, 'w');
+const env = { ...process.env, CI: '1', HYPERFRAMES_SKIP_SKILLS: '1', HYPERFRAMES_NO_UPDATE_CHECK: '1', HYPERFRAMES_NO_TELEMETRY: '1', HYPERFRAMES_BROWSER_PATH: browser, HYPERFRAMES_HISTORY_ROOT: join(scratch, 'history'), HYPERFRAMES_CACHE_DIR: join(scratch, 'cache'), NODE_COMPILE_CACHE: join(scratch, 'node-compile'), TEMP: scratch, TMP: scratch, HYPERFRAMES_EXTRACT_CACHE_DIR: join(scratch, 'frames') };
+const startedAt = new Date().toISOString();
+const start = performance.now();
+const run = spawnSync(process.execPath, [join(engine, 'bin/hyperframes.mjs'), ...args], { cwd: root, env, stdio: ['ignore', logFd, logFd] });
+closeSync(logFd);
+const result = { command: [process.execPath, join(engine, 'bin/hyperframes.mjs'), ...args], hyperframes: '0.9.9', browser, startedAt, finishedAt: new Date().toISOString(), elapsedSeconds: Number(((performance.now() - start) / 1000).toFixed(3)), exitCode: run.status, error: run.error?.message || null, logPath };
+writeFileSync(join(root, `${command}-result.json`), JSON.stringify(result, null, 2) + '\n');
+console.log(JSON.stringify(result, null, 2));
+if (run.error) throw run.error;
+process.exit(run.status ?? 1);

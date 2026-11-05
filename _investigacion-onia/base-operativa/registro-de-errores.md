@@ -1,4 +1,16 @@
-# Registro de error y corrección — 3 de noviembre de 2026
+# Registro de errores y correcciones — iniciado el 3 de noviembre de 2026
+
+## Corrección del 5 de noviembre: audio sin solución, autoridad ignorada y contexto excesivo
+
+**Caso y evidencia.** Sergio señaló que se repetía el límite acústico sin cerrar una solución. Las [revisiones locales](continuidad/2026-11-05/README.md) conservan la cobertura: muestreo visual, texto y etiquetas; Qwen alucinó sonidos sobre silencio, YAMNet/CLAP no confirmaron efectos ni prosodia. El [piloto D1](continuidad/2026-11-05/piloto-d1/reporte.md) sí produjo una prueba visual silenciosa, sin resolver el audio de referentes. Declarar el límite repetidamente fue insuficiente frente al pedido de resolverlo.
+
+**Corrección autorizada.** Primera tarea de Jefa v2 tras commit/recepción: encargar a Video/Desarrollo [audio real con controles](continuidad/2026-11-05/HANDOFF-JEFA.md#primera-tarea-tras-la-recepción-audio-real), evaluar voz/música/SFX/silencios/sincronía y probar alternativas abiertas/autorizadas antes de pedir la intervención personal mínima. ASR no certifica prosodia. Sin Gemini ni API paga por defecto. La investigación no se ejecuta en este handoff y no se presenta como resuelta.
+
+**Error de continuidad.** El reparto local, el alcance y los cierres vigentes quedaron sólo en `operacion/`, ignorado por Git, mientras las fuentes versionadas seguían indicando cloud o pausas anteriores. Se consolidan siete revisiones, brief/reporte D1 y bundle n8n con sus límites; ESTADO, PLAN, SESIONES y ORQUESTACION apuntan a una sola fuente en el repo. Notion es proyección; Pages conserva medios/procedencia. Medios y secretos permanecen fuera de Git, con referencias apropiadas. Preparar esta entrega no equivale a commit, recepción del relevo o archivo de la jefa anterior.
+
+**Error de comunicación.** Lecturas extensas y repetidas trasladaron contexto innecesario entre áreas. La corrección mantiene cierres compactos: resultado, evidencia/enlace, prueba realizada, bloqueo con solución y siguiente acción. Se conserva la cobertura en la fuente enlazada; no se recorta silenciosamente el material del encargo.
+
+**Comprobación y límite.** Revisión documental del caso: una fuente con sonido exige una prueba acústica y una salida viable; caso cercano: un animatic intencionalmente silencioso no requiere inventar locución para aceptar sólo su alcance visual. Validar enlaces y hashes comprueba recuperación e integridad, no escucha, runtime n8n ni eficacia futura de la regla. La recepción de Jefa v2 y su prueba quedan pendientes de ejecución verificable. Si el cierre compacto oculta evidencia necesaria, ampliar ese enlace/sección sin volver a importar historiales completos. No se cambian skills ni se entrenan modelos por esta corrección.
 
 ## Corrección del 4 de noviembre: cerrar video sin resolver el audio
 

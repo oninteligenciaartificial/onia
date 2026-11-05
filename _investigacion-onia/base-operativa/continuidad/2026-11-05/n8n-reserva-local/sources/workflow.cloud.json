@@ -1,0 +1,155 @@
+{
+  "name": "TANDA-01 CLAIM reserva PostgreSQL BORRADOR",
+  "active": false,
+  "nodes": [
+    {
+      "id": "1",
+      "name": "Inicio manual",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "parameters": {},
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Fixture sintetico",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "return [{json:{synthetic:true,account:'IG_TEST_SYMBOLIC',event_id:'SYNTH_001',conversation_id:'SYNTH_CHAT_1',text:'PLAN'}}];"
+      },
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Normalizar",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "const r=$input.first().json;\nif(r.synthetic!==true||r.account!=='IG_TEST_SYMBOLIC'||typeof r.event_id!=='string'||!/^SYNTH_[A-Za-z0-9_-]{1,80}$/.test(r.event_id)||typeof r.conversation_id!=='string'||!/^SYNTH_[A-Za-z0-9_-]{1,80}$/.test(r.conversation_id)||typeof r.text!=='string'||!r.text.trim()||r.text.length>500)throw new Error('FIXTURE_INVALID');\nconst event={conversation_id:r.conversation_id,text:r.text.trim().toUpperCase(),synthetic:true};\nreturn [{json:{account:r.account,event_id:r.event_id,payload_json:JSON.stringify(event),draft_only:true}}];"
+      },
+      "position": [
+        440,
+        0
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Reservar transaccional",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT onia_automation.reserve($1::text,$2::text,$3::jsonb) AS inbox_id;",
+        "options": {
+          "queryReplacement": "={{ [$json.account, $json.event_id, $json.payload_json] }}"
+        }
+      },
+      "position": [
+        660,
+        0
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "REEMPLAZAR_CREDENCIAL_DB_PRUEBA",
+          "name": "PostgreSQL aislado de prueba"
+        }
+      },
+      "onError": "continueErrorOutput",
+      "retryOnFail": false
+    },
+    {
+      "id": "5",
+      "name": "Solo revision",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "const r=$input.first().json;if(!r.inbox_id)throw new Error('RESERVA_NO_VERIFICADA');return [{json:{status:'RESERVADO_REVISION',inbox_id:r.inbox_id,dry_run:true,auto_send:false}}];"
+      },
+      "position": [
+        900,
+        -100
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Resultado incierto",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "return [{json:{status:'INCIERTO_O_CONFLICTO',dry_run:true,auto_send:false,accion:'Consultar reserva por clave antes de reintentar; revisar posible conflicto'}}];"
+      },
+      "position": [
+        900,
+        120
+      ]
+    }
+  ],
+  "connections": {
+    "Inicio manual": {
+      "main": [
+        [
+          {
+            "node": "Fixture sintetico",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fixture sintetico": {
+      "main": [
+        [
+          {
+            "node": "Normalizar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalizar": {
+      "main": [
+        [
+          {
+            "node": "Reservar transaccional",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reservar transaccional": {
+      "main": [
+        [
+          {
+            "node": "Solo revision",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Resultado incierto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveDataErrorExecution": "none",
+    "saveManualExecutions": false,
+    "saveExecutionProgress": false
+  },
+  "pinData": {}
+}

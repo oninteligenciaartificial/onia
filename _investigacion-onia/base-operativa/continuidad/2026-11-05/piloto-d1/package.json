@@ -1,0 +1,9 @@
+{
+  "name": "onia-d1-animatic-privado",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node run.mjs check --at 0,4,8,13,18,22,27,32,37,40,42.958333 --snapshots --json",
+    "render": "node run.mjs render --output d1-piloto-silencioso.mp4 --fps 24 --quality standard --workers 1 --low-memory-mode"
+  }
+}

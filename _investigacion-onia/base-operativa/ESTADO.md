@@ -1,22 +1,28 @@
 # Estado operativo de ONIA
 
-**4 de noviembre de 2026, America/La_Paz.** Fuente oficial: este repositorio privado. [PLAN](PLAN.md) mantiene la dirección y los programas vigentes; [reglas comunes](reglas-comunes.md), la autoridad y permisos. Los reportes históricos no se volvieron a ejecutar por esta consolidación documental.
+**5 de noviembre de 2026, America/Caracas.** Fuente oficial: este repositorio privado. [PLAN](PLAN.md) mantiene la dirección y los programas vigentes; [reglas comunes](reglas-comunes.md), la autoridad y permisos. Los reportes históricos no se volvieron a ejecutar por esta consolidación documental.
 
-## Decisión vigente y recuperación
+## Estado vigente y relevo local · 5 de noviembre
 
-Sergio autorizó: **«Pero subi todo para que sea la fuente oficial, avisale a la sesion»**. Se incorpora el cuerpo documental útil de esta sesión y sus entregas cloud, además de índices: [consolidación](continuidad/2026-11-04/README.md), quince Pages y [currículo](continuidad/2026-11-04/aprendizaje.md). La decisión anterior de conservar sólo en biblioteca queda sustituida para este material. Credenciales, perfiles de navegador, medios binarios y configuración runtime privada permanecen fuera de Git.
+Sergio decidió que **el repo es la única fuente de verdad para decisiones, reglas, estado y handoff**. Notion proyecta lo vigente y Pages conserva medios/procedencia. [Entrega del 5/11](continuidad/2026-11-05/README.md) incorpora las siete revisiones locales, el brief D1 y su reporte; `operacion/` queda como ubicación de artefactos privados, no autoridad documental. Credenciales, perfiles, binarios y datos personales siguen fuera de Git.
 
-Harness: **oninteligenciaartificial/onia**, entorno **onia** en Codex Cloud. Producto: repo independiente **onia-platform**. ONIA-CENTRAL excluido. VPS conserva startup y n8n, sin navegador, render pesado o nuevos modelos. Grok Bot diferido por falta de cuota.
+**Siete áreas locales; una sola jefa.** Sergio ordenó reemplazar la jefa anterior por **ONIA · Jefa v2**, chat `01a1ab9c-15b2-7a03-9588-2daab62a93eb`, host local. Está designada y en espera de commit/recepción, sin rol operativo activo todavía. La anterior `01a1a29c-3a3d-7b50-aef6-41305ce5faae` cierra el relevo; su archivo fue ordenado, **no confirmado**. No afirmar handoff aceptado ni mantener dos jefas operativas. Roles y orígenes en [SESIONES](SESIONES.md); condiciones de recepción en [HANDOFF-JEFA](continuidad/2026-11-05/HANDOFF-JEFA.md).
 
-**Coordinación operativa local; ejecución por áreas en cloud.** Tras las pruebas COORD-PROBE-20261104 y COORD-LOCAL-CLOUD-20261104, esta sesión local despacha encargos y recupera resultados. Jefe y Desarrollo cloud tienen lectura/consulta de chats, pero no send_message_to_thread/create_thread en sus catálogos actuales. ONIA · Jefe conserva planificación/síntesis cloud; Organización diaria escribe Notion/Calendar. [Prueba y reparto](continuidad/2026-11-04/coordinacion-local-cloud.md). La instrucción posterior de Sergio autoriza preparar frentes y avanzar por áreas, sustituyendo el STOP histórico; no autoriza por sí sola gasto, publicaciones, mensajes reales o producción. [SESIONES](SESIONES.md) registra roles e IDs.
+Las continuaciones locales recuperan documentos; no equivalen a trasladar VMs, historial completo ni secretos. Los orígenes cloud se conservan, reportados idle al traspaso, sin borrado ni reactivación acreditados aquí. Harness: repo `oninteligenciaartificial/onia`; producto: repo independiente `onia-platform`. VPS conserva n8n/startup; sin mover secretos, render pesado o modelos allí. ONIA-CENTRAL excluido.
 
-## Última tanda y prueba local
+## Última entrega y alcance autorizado
 
-[TANDA-01](continuidad/2026-11-04/tanda-01/README.md): workshop preparado para ensayo humano y W1 corregida probada en cloud; n8n sin atomicidad runtime, D1 sin MP4 y producto sin E2E. Se cerraron los encargos delimitados; no presentar esos bloqueos como ejecución continua. Sergio pidió evaluar local y apagar Linux: 11 contenedores locales, Docker Desktop y Ubuntu/WSL detenidos conservando datos. HyperFrames 0.9.9 renderizó una muestra técnica local de 6 s, un trabajador; decodificación y fotogramas comprobados. Archivo disponible en Page Video. No acredita audio, D1 ni migración de todas las sesiones.
+- **Revisión:** siete notas recibidas y revisadas por la jefa anterior. QA independiente reportado sin hallazgos críticos de falsa atribución/ejecución. Eso acepta la revisión, no prueba integración o producción. [Índice de revisiones](continuidad/2026-11-05/README.md).
+- **D1:** [brief corregido](continuidad/2026-11-05/d1-piloto.md) y [reporte del piloto silencioso](continuidad/2026-11-05/piloto-d1/reporte.md). MP4 de 43 s, 1080×1920 H.264/24 fps; 1032 frames decodificados sin error, 29/29 contrastes, render 21,071 s/un trabajador, cero audio. SHA-256 `c41798b0c33c1d42232aba8a542696748b548b1ba327560d3ff148edc5f1c71c`, cotejado con el archivo local durante esta consolidación. Hubo muestreo visual y revisión editorial de la prueba silenciosa; no escucha, comprensión humana, locución ni retención probadas. Borrador privado, no publicación. El antecedente «D1 sin MP4» de TANDA-01 queda superado sólo por este nuevo piloto de tarjetas, no por recuperar el ZIP cloud.
+- **n8n:** preparación local de copia/patch **INACTIVO terminada**, turno `01a1ab95-0a78-7643-ab62-6ec96bb69730` confirmado completed por la jefa. [Bundle recuperable en repo](continuidad/2026-11-05/n8n-reserva-local/README.md), con fuentes, SQL, patch, preparación/verificador, matriz y manifiestos. [13/13 controles estáticos](continuidad/2026-11-05/n8n-reserva-local/validation-results.json): no ejecutaron nodos Code/SQL, importación, carrera ni runtime. Texto exacto y correlación de error conservados; STOP/takeover/conciliación siguen propuestos. Sin conexión VPS/DB/servicios ni activación. La consolidación sólo coteja hashes y copia textos, sin cambiar lógica.
+- **Notion:** lectura local de home/cola confirmó 20 IDs únicos y textos desactualizados; 35 borradores declarados aparte. [Hallazgos de Organización](continuidad/2026-11-05/revisiones/organizacion.md). No se modificaron paneles o Calendar.
+- **Producto:** [revisión local](continuidad/2026-11-05/revisiones/producto.md) identificó worktree limpio `a0488f0` y desfase estático de QA; E2E dental de suscripción/reentrada sigue sin comprobar. No se iniciaron servicios ni cambios del producto.
 
-Próximo trabajo recomendado: una pieza completa desde referente hasta borrador revisado, usando el ejecutor que pase la prueba; conservar el objetivo de automatización después de validar el recorrido. La base de prueba de n8n requiere verificar/provisionar destino y rol exclusivos con acceso administrativo seguro. Ninguna credencial visible acredita ese aislamiento.
+La pausa general tuvo una excepción expresa para D1 como prueba y para la preparación n8n descrita; ambas unidades delimitadas están cerradas. Producto y demás producción, publicaciones, campañas, mensajes, gasto e infraestructura requieren alcance aplicable. La prioridad de Jefa v2 tras recepción es encargar la prueba del **audio real** a Video/Desarrollo; este handoff no la ejecuta. No hay scheduler ni continuidad automática acreditada.
 
-## Evidencia y límites
+## Evidencia histórica recuperada · 3–4 de noviembre
+
+[TANDA-01](continuidad/2026-11-04/tanda-01/README.md) conserva workshop listo para ensayo humano, W1 corregida en cloud, fallos de n8n y E2E del producto, y la prueba local inicial de 6 s. Allí constan parada de 11 contenedores, Docker Desktop y Ubuntu/WSL con datos conservados; no se revalidó su estado actual en esta consolidación. Los reportes siguientes son antecedentes fechados, no instrucciones de lanzar nuevas tareas ni pruebas repetidas hoy.
 
 | Componente | Resultado observado o reportado | Límite |
 |---|---|---|
@@ -45,24 +51,22 @@ Pedro: MP4 público y 19 láminas en cloud; 542 muestras a 6 fps inspeccionadas 
 
 Hormozi: reel 89 s por seis fotogramas/caption SALES y lección larga por puntos; Heras: VSL por tres muestras/canales desde web; Iman: textos/rutas propios con YouTube bloqueado. Nombres nuevos y dudas de identidad en [índice](investigacion/2026-11-04/README.md).
 
-## Entorno, secretos y revisiones
+## Entorno, secretos y revisiones históricas
 
 - onia observado listo/ejecutable, repo onia/rama master; versión publicada reportada **6aeb5d2767cc81a3aee4674cf6485f5d**. Un push documental no republica ni actualiza automáticamente VMs existentes.
 - Editor: running/connected, /workspace/onia, checkout **6ca7762**, n8n listado 200 y Meta 401 en último reporte. Desarrollo antiguo es otra VM; no heredar secretos/estado entre sesiones.
 - N8N_API_KEY y META_ADS_ACCESS_TOKEN están como entradas de secretos de red; segunda vencida. META_IG_ACCESS_TOKEN pendiente según evidencia. Valores nunca en Git; [inventario](accesos.md).
 - Consolidación desde master **14c786d** en checkout aislado, preservando cambios remotos anteriores. Consultar commit en historial Git; este cierre no ejecutó nuevas APIs.
 
-## Próximas acciones
+## Próximas acciones dentro del relevo
 
-| Trabajo | Responsable y solución concreta | Criterio de cierre |
+| Trabajo | Responsable y acción | Criterio de cierre |
 |---|---|---|
-| Fuente oficial | **Completado:** Jefe recuperó PLAN/ESTADO/SESIONES/consolidación desde Git en 1884335 y explicó el hito comercial/límite. Coordinación local integra nuevas decisiones; cada área preserva su trabajo al actualizar. | Se verificaron29 textos remotos sin diferencias y15 hashes. Mantener la revisión leída sin duplicar frentes. |
-| YouTube | Desarrollo revisa túnel/política; Video contrasta imagen/audio/transcripción. Alternativa si bloqueo persiste: archivo autorizado en cloud y revisión humana puntual. | Fuente reproducida, tiempos/cobertura/audio contrastados y fallo recuperable. |
-| n8n | Automatizaciones integra reserva transaccional con destino/rol acotados; prueba carrera, reinicio, conflicto, takeover, STOP, timeout incierto. | Mismo evento no duplica efectos en workflow real; SQL aislado no basta. |
-| Workshop | Marketing retoma WS-W01/02 con D1 y ficha de PLAN; ensayo humano previo a condiciones/preventa. | Resultado, error/corrección, ayuda/tiempo reales; oferta revisable sin inventar demanda. |
-| Panel/aprendizaje | Organización proyecta dirección actual en home existente; Aprendizaje prepara práctica ligada al trabajo. | Una cola, fuentes/fechas y explicación real de Sergio. |
-| Radar/canales | Ejecutar programas de PLAN por función, aprovechando accesos comprobados. | Duplicado/corrección/caída, ejecución cloud, permisos y salida revisada antes de activación. |
+| Recepción del handoff | Jefa saliente cierra publicación documental; Jefa v2 recupera el commit y confirma lectura antes de asumir. | Commit identificable, recepción real y estado del archivo de la anterior comprobados; nada de ello se certifica aquí. |
+| Primera prioridad: audio real | Jefa v2 encarga Video/Desarrollo después de la recepción, conforme al [contrato de prueba](continuidad/2026-11-05/HANDOFF-JEFA.md#primera-tarea-tras-la-recepción-audio-real). | Controles y evaluación de voz, música, SFX, silencios y sincronía; solución probada o intervención personal mínima respaldada por alternativas ensayadas. |
+| Próxima unidad n8n | Jefa v2 conserva el bundle terminado; antes de un ensayo runtime, el administrador acredita destino PostgreSQL exclusivo y referencia de credencial restringida. | Aislamiento y acceso mínimos demostrados, sin tocar producto ni compartir secretos; provisión/importación/activación no autorizadas por esta preparación. |
+| Proyección y demás programas | Organización y áreas retoman sólo el alcance que corresponda a la decisión siguiente. | Una fuente versionada, proyecciones conciliadas cuando se autoricen; sin activar Producto, publicación o gasto por este documento. |
 
-**No hay evidencia de scheduler diario, publicación social, chatbot real, disparador n8n→Codex ni resúmenes de voz activos.** Las propuestas no son esas operaciones; los objetivos no son cobros.
+**No hay evidencia de scheduler diario, publicación social, chatbot real, disparador n8n→Codex ni resúmenes de voz activos.** Una edición documental no ejecuta esas funciones ni demuestra cobros.
 
-[Consolidación y procedencia](continuidad/2026-11-04/README.md) · [Sesiones](SESIONES.md) · [Mapa](MAPA.md) · [Cerebro diario](CEREBRO-DIARIO.md). Git conserva documentos/decisiones; cloud medios/descargas; Notion vista cotidiana; Calendar compromisos. Las instrucciones actuales de Sergio prevalecen.
+[Continuidad del 5/11](continuidad/2026-11-05/README.md) · [Sesiones](SESIONES.md) · [Plan](PLAN.md). Las referencias antiguas que todavía describan áreas cloud o autoridad de `operacion/` son históricas frente a este estado y las reglas vigentes.

@@ -1,39 +1,45 @@
 # Chats de trabajo por área
 
-Creados por pedido de Sergio desde el 3 de noviembre de 2026 y actualizados en la consolidación del 4 de noviembre. Los chats de área usan **Codex Cloud, entorno onia**, repo del harness `oninteligenciaartificial/onia`, host `durable`. La coordinación y el despacho operativo quedan en la sesión local registrada abajo, por decisión posterior de Sergio y prueba de capacidades. Sus instrucciones comparten esta base; no se duplican reglas por proyecto. El código del producto permanece en su repo independiente.
+**5 de noviembre de 2026 · America/Caracas.** Reparto vigente decidido por Sergio: siete áreas locales y una sola jefa que delega, revisa y entrega. El repo conserva decisiones/estado/handoff; los chats ejecutan encargos delimitados. [Estado](ESTADO.md) · [Handoff del relevo](continuidad/2026-11-05/HANDOFF-JEFA.md).
 
-La primera tanda de seis áreas fue de **pruebas concretas completamente cloud**. Es un antecedente, no la lista de trabajo vigente. El [plan continuo](PLAN.md) conserva JEF-BASE-001 y la decisión posterior de coordinación local con ejecución cloud. El [estado](ESTADO.md) separa resultados comprobados, propuestas y pendientes.
+## Jefatura y condición del relevo
 
-## Coordinación y aprendizaje
-
-| Chat | ID | Función |
+| Chat | ID / host | Estado y función |
 |---|---|---|
-| Coordinación operativa local (esta sesión) | `01a1a29c-3a3d-7b50-aef6-41305ce5faae` | Concreta prioridades con Sergio, despacha encargos a los chats cloud existentes y recupera/revisa resultados. La PC debe estar disponible para esas nuevas órdenes y revisiones locales. |
-| ONIA · Jefe | `01a1a843-4afb-75f9-aa95-f35833fcb002` | Planificación y síntesis cloud; recupera el plan oficial en Git. Puede leer/esperar chats en el catálogo comprobado, sin herramienta expuesta para iniciarles turnos. Antes se llamaba «Marca personal · Plan y resultados»; es el mismo chat. |
-| ONIA · Aprendizaje y criterio | `01a1a935-c691-72d5-b055-e39970f5703e` | Organiza fuentes y ejercicios para explicar y practicar lo aprendido; entrega evidencia al Jefe y a Organización. [Currículo y primer encargo](continuidad/2026-11-04/aprendizaje.md). |
+| ONIA · Jefa v2 | `01a1ab9c-15b2-7a03-9588-2daab62a93eb` · local | Designada por Sergio; en espera de commit/recepción. Todavía sin rol operativo activo ni aceptación certificada. Asumirá delegación, revisión y entrega tras recepción comprobada. |
+| ONIA · Jefa local, saliente | `01a1a29c-3a3d-7b50-aef6-41305ce5faae` · local | Cierra el relevo y la publicación documental; Sergio ordenó reemplazarla y archivarla. Archivo aún no confirmado. No mantener dos jefas operativas simultáneas. |
+| ONIA · Jefe, antecedente cloud | `01a1a843-4afb-75f9-aa95-f35833fcb002` · durable | Planificación/síntesis del reparto del 4/11, conservada como historia. No es segunda jefa activa del reparto local. |
 
-Preferencia de Sergio: **Astra para Jefatura y Sol/Terra para ejecución**. La selección Sol/Terra de los subagentes de JEF-BASE-001 quedó registrada; el modelo efectivo del chat Jefe no fue comprobado ni cambiado por esta consolidación. Una preferencia escrita no modifica el selector del chat.
+Esta consolidación no hace commit/push, no confirma recepción y no archiva chats. La nueva jefa comprobará la revisión recibida; crear o renombrar un chat no acredita ese relevo.
 
-**Prueba de coordinación:** Jefe y Desarrollo cloud identificaron `read_thread`/`wait_threads`, sin `send_message_to_thread`/`create_thread` en sus catálogos. Local despachó COORD-LOCAL-CLOUD-20261104 a Desarrollo y recuperó su resultado; Jefe confirmó lectura de la consolidación `1884335`. Alcance y evidencia en [coordinación local/cloud](continuidad/2026-11-04/coordinacion-local-cloud.md). Esta observación no se generaliza a todos los hosts; subagentes internos y chats persistentes son mecanismos distintos. No se ensayó apagar físicamente la PC.
+## Áreas locales y orígenes conservados
 
-## Áreas ejecutoras y pruebas iniciales históricas
+Sección comunicada por la jefa: **ONIA · Equipo local**, `fe5471f9-55ec-4127-bb68-2ea4aa00994a`. Todos los ejecutores actuales de esta tabla usan host **local**; los orígenes usan **durable**.
 
-| Chat | ID | Skill del área | Prueba inicial |
+| Área / chat local | ID local | Origen cloud | Función / evidencia |
 |---|---|---|---|
-| ONIA · Desarrollo cloud | `01a1a484-065a-76bc-94a2-9b2b148d6021` | desarrollar-y-verificar | Arranque, 28 tests, navegador y n8n; luego lectura Meta. |
-| ONIA · Marketing y ventas | `01a1a484-2da0-7440-8502-dfae74ab901f` | preparar-oferta-y-embudo; preparar-campana-meta para anuncios | Leer la skill y producir ficha/guion ficticios, sin publicación. |
-| ONIA · Video y contenido | `01a1a484-560e-72bb-8d5d-e64733c22027` | producir-video | Render sintético vertical de seis segundos con HyperFrames dentro de la VM. |
-| ONIA · Automatizaciones n8n | `01a1a484-81ca-7605-ab7e-243b8e1f4001` | automatizar-n8n | Ejemplo sintético de validación/idempotencia; distinguirlo de ejecución real de workflow. |
-| ONIA · Organización diaria | `01a1a484-ad47-72a9-9684-18557087d01f` | planificar-dia; continuidad/mejora/evaluación según encargo | Leer calendario del próximo día sin escribir eventos. |
-| ONIA Platform · Producto | `01a1a484-d46a-7028-8b80-93f0349f4031` | desarrollar-y-verificar | Comprobar lectura GitHub del producto y sus instrucciones, sin desplegar. |
+| ONIA · Marketing y ventas local | `01a1ab81-c60d-7612-8b9f-36c033453287` | `01a1a484-2da0-7440-8502-dfae74ab901f` | Oferta, guion y revisión editorial; [revisión](continuidad/2026-11-05/revisiones/marketing.md). |
+| ONIA · Video y contenido local | `01a1ab81-da97-7bc1-a52d-44d255fd0ec3` | `01a1a484-560e-72bb-8d5d-e64733c22027` | Producción y evaluación audiovisual; [revisión](continuidad/2026-11-05/revisiones/video.md). |
+| ONIA · Desarrollo y QA local | `01a1ab81-e9b4-7d03-b29e-c11ff1945553` | `01a1a484-065a-76bc-94a2-9b2b148d6021` | Harness, herramientas y pruebas; [revisión](continuidad/2026-11-05/revisiones/desarrollo.md). |
+| ONIA · Automatizaciones n8n local | `01a1ab82-3161-76e0-963f-e9ae53ff156b` | `01a1a484-81ca-7605-ab7e-243b8e1f4001` | Workflows y reservas con pruebas; [revisión](continuidad/2026-11-05/revisiones/automatizaciones.md). n8n permanece en VPS. |
+| ONIA · Organización diaria local | `01a1ab82-445b-7f53-9a57-ad68c5ac6926` | `01a1a484-ad47-72a9-9684-18557087d01f` | Continuidad documental y proyecciones con alcance aplicable; [revisión](continuidad/2026-11-05/revisiones/organizacion.md). Único escritor documental de este relevo. |
+| ONIA Platform · Producto local | `01a1ab82-5531-78c2-8529-52c939967af9` | `01a1a484-d46a-7028-8b80-93f0349f4031` | Producto/QA en su repo independiente; [revisión](continuidad/2026-11-05/revisiones/producto.md). Sin nuevo alcance productivo por este handoff. |
+| ONIA · Aprendizaje y criterio local | `01a1ab82-67b4-7963-b529-dcb5816a90fd` | `01a1a935-c691-72d5-b055-e39970f5703e` | Fuentes, práctica y criterio; [revisión](continuidad/2026-11-05/revisiones/aprendizaje.md). No acredita aprendizaje de Sergio. |
 
-La selección ejecutable y apoyos están en [orquestacion.json](orquestacion.json); los resultados y pendientes en [ESTADO.md](ESTADO.md). Jefatura y Aprendizaje no añaden áreas al CLI ni skills por el hecho de tener un chat. El chat de edición del entorno y el de aceptación anterior conservan sus funciones técnicas; no reemplazan estas áreas.
+Los orígenes cloud quedaron idle según el inventario reportado por la jefa al traspaso y se conservan; no se borraron ni se certifica su estado actual mediante esta edición. Son continuaciones documentales, no traslado integral de VMs, archivos runtime, historial o secretos. No se migran VPS/n8n/startup. La existencia de chats/sección no prueba servicios, scheduler ni ejecución continua.
 
-Cada chat recibe un encargo delimitado, usa subagentes cuando aportan trabajo independiente y cierra con resultado y evidencia. La creación de chats no inicia un servicio permanente ni un calendario de tareas. `operacion/` en cada VM guarda artefactos de prueba locales a esa VM; la recuperación desde otra tarea requiere exportación o entrega compartida comprobada.
+Las siete revisiones fueron recibidas y revisadas por la jefa saliente. D1 terminó como piloto visual silencioso; la preparación inactiva n8n terminó con 13/13 controles estáticos. Alcance, evidencia y siguientes pasos están en ESTADO y HANDOFF; no se mantiene aquí otra cola.
 
+## Skills y modelos
 
-## Organización cloud del 4 de noviembre de 2026
+El [manifiesto](orquestacion.json) mantiene seis claves de CLI: marketing, video, desarrollo, automatizaciones, organización y producto. Aprendizaje y Jefatura no añaden claves/skills por tener chat. Usar las directoras existentes por resultado; continuidad-de-trabajo dirige este relevo y mejorar-sistema apoya la corrección acotada. Las skills no cambian en este encargo.
 
-Por petición expresa de Sergio se crearon las secciones de sidebar **Marca personal · Cloud** y **ONIA Platform · Cloud**, agrupando los chats existentes. Jefe y Aprendizaje están en la primera; Producto, en la segunda. La coordinación local despacha al conjunto; Jefe conserva planificación/síntesis cloud, Organización la escritura de Notion/Calendar y Producto su alcance técnico separado. Los chats son lugares de continuidad, no workers permanentes.
+Preferencia histórica de Sergio: Astra para Jefatura y Sol/Terra para ejecución. La selección explícita de subagentes de JEF-BASE-001 no acredita el modelo efectivo de estos chats; no se comprobó ni modificó el selector por esta consolidación.
 
-Fuente oficial de reglas, plan, decisiones y documentación: **repo onia**. La [consolidación del 4 de noviembre](continuidad/2026-11-04/README.md) incorpora las entregas documentales que estaban en Pages, con procedencia y límites. La [biblioteca cloud](https://chatgpt.com/space/page_66e12de902408191a926153866f6ca39) conserva medios, referencias e historial; [Notion Sergio · Hoy](https://app.notion.com/p/40e2eb20bdfd81658111cf3e4d854964) mantiene la vista diaria. La existencia del chat o una agrupación del sidebar no acredita integración, cron o ejecución 24/7. Un push no actualiza el checkout de un chat existente: al retomar, comprobar la revisión leída.
+## Antecedentes cloud del 3–4 de noviembre
+
+La primera tanda usó entorno `onia`, repo del harness `oninteligenciaartificial/onia`, host durable. Desarrollo reportó arranque/28 tests/navegador/n8n y posterior lectura Meta; Marketing preparó ficha/guion ficticios; Video probó render sintético; Automatizaciones validó ejemplo sintético; Organización leyó agenda sin escribir; Producto leyó GitHub sin despliegue. Cada prueba conserva sus límites en la [consolidación del 4/11](continuidad/2026-11-04/README.md).
+
+Jefe y Desarrollo cloud mostraron read_thread/wait_threads, sin envío/creación de chats en sus catálogos observados. La coordinación local despachó COORD-LOCAL-CLOUD-20261104 y recuperó el resultado; Jefe confirmó lectura de `1884335`. [Prueba histórica](continuidad/2026-11-04/coordinacion-local-cloud.md). No acredita apagado físico de la PC, capacidad universal de otros hosts ni aceptación de Jefa v2.
+
+Las secciones «Marca personal · Cloud» y «ONIA Platform · Cloud» agruparon esos chats el 4/11. Se conservan como procedencia del reparto anterior. La [biblioteca](https://chatgpt.com/space/page_66e12de902408191a926153866f6ca39) aloja medios/procedencia; [Notion Sergio · Hoy](https://app.notion.com/p/40e2eb20bdfd81658111cf3e4d854964) es proyección cotidiana. Los medios locales de `operacion/` se recuperan por ruta/hash; las decisiones y el contexto útil del relevo están versionados en este repo.

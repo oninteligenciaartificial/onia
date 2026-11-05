@@ -1,0 +1,69 @@
+{
+  "checked_at_utc": "2026-11-05T12:10:58.860Z",
+  "node": "v24.13.0",
+  "scope": "STATIC_LOCAL_ONLY",
+  "checks": [
+    {
+      "name": "source_files_sha256_match_remote",
+      "passed": true
+    },
+    {
+      "name": "json_patch_reproduces_workflow",
+      "passed": true
+    },
+    {
+      "name": "inactive_no_workflow_or_version_identity",
+      "passed": true
+    },
+    {
+      "name": "unique_logical_nodes_preserved",
+      "passed": true
+    },
+    {
+      "name": "graph_all_nodes_reachable_no_dangling_edges",
+      "passed": true
+    },
+    {
+      "name": "node_allowlist_no_sender_http_webhook_scheduler",
+      "passed": true
+    },
+    {
+      "name": "no_credential_bindings_or_embedded_connection_material",
+      "passed": true
+    },
+    {
+      "name": "code_syntax_compiles_no_network_process_or_dynamic_execution",
+      "passed": true
+    },
+    {
+      "name": "parameterized_reserve_without_retry_or_claim",
+      "passed": true
+    },
+    {
+      "name": "payload_retains_exact_text_no_volatile_fields",
+      "passed": true
+    },
+    {
+      "name": "stub_terminal_has_no_dispatch_and_errors_preserve_key",
+      "passed": true
+    },
+    {
+      "name": "execution_data_and_pinned_data_disabled",
+      "passed": true
+    },
+    {
+      "name": "historical_sql_report_not_runtime_proof",
+      "passed": true
+    }
+  ],
+  "passed": 13,
+  "total": 13,
+  "n8n_import_tested": false,
+  "n8n_runtime_tested": false,
+  "sql_executed": false,
+  "atomicity_proven": false,
+  "notes": [
+    "No Code node executed; syntax compilation only.",
+    "Credential check is structural plus recognizable-pattern scan, not a universal secret detector."
+  ]
+}

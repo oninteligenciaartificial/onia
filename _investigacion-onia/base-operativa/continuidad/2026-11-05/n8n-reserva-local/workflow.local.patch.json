@@ -1,0 +1,46 @@
+[
+  {
+    "op": "test",
+    "path": "/active",
+    "value": false
+  },
+  {
+    "op": "test",
+    "path": "/nodes/3/name",
+    "value": "Reservar transaccional"
+  },
+  {
+    "op": "replace",
+    "path": "/name",
+    "value": "ONIA reserva LOCAL_STUB · BORRADOR INACTIVO"
+  },
+  {
+    "op": "replace",
+    "path": "/nodes/1/parameters/jsCode",
+    "value": "return [{json:{synthetic:true,account:'IG_TEST_SYMBOLIC',event_id:'SYNTH_TANDA01_001',conversation_id:'SYNTH_CHAT_1',text:'PLAN'}}];"
+  },
+  {
+    "op": "replace",
+    "path": "/nodes/2/parameters/jsCode",
+    "value": "const r=$input.first().json;\nif(r.synthetic!==true||r.account!=='IG_TEST_SYMBOLIC'||typeof r.event_id!=='string'||!/^SYNTH_[A-Za-z0-9_-]{1,80}$/.test(r.event_id)||typeof r.conversation_id!=='string'||!/^SYNTH_[A-Za-z0-9_-]{1,80}$/.test(r.conversation_id)||typeof r.text!=='string'||!r.text.trim()||r.text.length>500)throw new Error('FIXTURE_INVALID');\n// Preserve the exact text for conflict detection; normalization belongs to classification.\nconst payload={schema_version:1,conversation_id:r.conversation_id,text:r.text,synthetic:true};\nreturn [{json:{account:r.account,event_id:r.event_id,payload_json:JSON.stringify(payload),mode:'LOCAL_STUB',draft_only:true}}];"
+  },
+  {
+    "op": "replace",
+    "path": "/nodes/3/parameters/query",
+    "value": "SELECT onia_automation.reserve($1::text,$2::text,$3::jsonb)::text AS inbox_id;"
+  },
+  {
+    "op": "remove",
+    "path": "/nodes/3/credentials"
+  },
+  {
+    "op": "replace",
+    "path": "/nodes/4/parameters/jsCode",
+    "value": "const r=$input.first().json;\nif(typeof r.inbox_id!=='string'||!/^[1-9][0-9]*$/.test(r.inbox_id))throw new Error('RESERVA_NO_VERIFICADA');\nconst key=$('Normalizar').first().json;\nreturn [{json:{status:'RESERVA_CONFIRMADA_REVISION',account:key.account,event_id:key.event_id,inbox_id:String(r.inbox_id),mode:'LOCAL_STUB',dry_run:true,auto_send:false,sent:false,stub_result:'NOT_DISPATCHED',outbox_state_verification:'PENDIENTE_RUNTIME'}}];"
+  },
+  {
+    "op": "replace",
+    "path": "/nodes/5/parameters/jsCode",
+    "value": "const key=$('Normalizar').first().json;\n// Never echo a database error, connection string or driver metadata.\nreturn [{json:{status:'INCIERTO_O_CONFLICTO',account:key.account,event_id:key.event_id,payload_json:key.payload_json,mode:'LOCAL_STUB',dry_run:true,auto_send:false,sent:false,retry_allowed:false,action:'Conservar este resultado sintetico; consultar inbox/outbox por clave y comparar payload_json; no repetir a ciegas'}}];"
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "status": "PASSED_POSTGRESQL_TEMPORARY",
+  "engine": "PostgreSQL17.11 Debian13",
+  "source_sha256": "2ff539a27337335b2dae2647ae3170f8d0c140e2b7bec9bbb708f198557d08c0",
+  "cases": [
+    {
+      "case": "sql_source_applied_unchanged",
+      "passed": true
+    },
+    {
+      "case": "default_review_pending",
+      "passed": true
+    },
+    {
+      "case": "eight_concurrent_reserves_one_inbox_one_outbox",
+      "passed": true
+    },
+    {
+      "case": "payload_conflict_no_new_outbox",
+      "passed": true
+    },
+    {
+      "case": "rollback_removes_both_inbox_outbox",
+      "passed": true
+    },
+    {
+      "case": "review_pending_not_claimable",
+      "passed": true
+    },
+    {
+      "case": "skip_locked_concurrent_workers_claim_distinct",
+      "passed": true
+    },
+    {
+      "case": "wrong_token_cannot_complete",
+      "passed": true
+    },
+    {
+      "case": "uncertain_not_automatically_claimed",
+      "passed": true
+    },
+    {
+      "case": "same_token_reconciles_uncertain",
+      "passed": true
+    },
+    {
+      "case": "delivered_not_completed_twice",
+      "passed": true
+    },
+    {
+      "case": "manual_reclaim_rotates_token",
+      "passed": true
+    },
+    {
+      "case": "old_worker_fenced_after_reclaim",
+      "passed": true
+    },
+    {
+      "case": "new_token_can_complete",
+      "passed": true
+    },
+    {
+      "case": "empty_provider_refused",
+      "passed": true
+    }
+  ],
+  "concurrent_reserve_outputs": [
+    "BEGIN\n1\n\nCOMMIT\n",
+    "BEGIN\n1\n\nCOMMIT\n",
+    "BEGIN\n1\n\nCOMMIT\n",
+    "BEGIN\n1\n\nCOMMIT\n",
+    "BEGIN\n1\n\nCOMMIT\n",
+    "BEGIN\n1\n\nCOMMIT\n",
+    "BEGIN\n1\n\nCOMMIT\n",
+    "BEGIN\n1\n\nCOMMIT\n"
+  ],
+  "concurrent_claim_outputs": [
+    "BEGIN\n11|a50c1dca-570f-484a-88d4-5515e7d447b1\n\nCOMMIT\n",
+    "BEGIN\n1|fad40126-0754-4e95-8ca6-62fb4fea2f94\n\nCOMMIT\n"
+  ],
+  "n8n_atomicity_proven": false,
+  "external_exactly_once_proven": false,
+  "network": "unix socket only, listen_addresses empty",
+  "download_bytes": 18749536,
+  "server_stopped": true
+}

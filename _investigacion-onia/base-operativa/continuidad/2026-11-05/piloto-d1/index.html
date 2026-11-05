@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es" data-resolution="portrait">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>D1 · animatic silencioso · ejemplo hipotético</title>
+  <script src="assets/gsap-3.15.0.min.js"></script>
+  <style>
+    @font-face { font-family: D1Sans; src: url('assets/segoeui.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: D1Sans; src: url('assets/segoeuisb.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: D1Sans; src: url('assets/segoeuib.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: block; }
+    * { box-sizing: border-box; margin: 0; }
+    html, body { width: 1080px; height: 1920px; overflow: hidden; background: #f4f1e8; }
+    body { font-family: D1Sans, sans-serif; color: #163832; }
+    #main { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #f4f1e8; }
+    #identity { position: absolute; top: 158px; left: 100px; width: 880px; z-index: 10; }
+    #hypothetical { display: inline-block; border: 2px solid #163832; padding: 17px 23px 19px; font-size: 31px; line-height: 1.1; font-weight: 650; letter-spacing: 2px; }
+    #identity-rule { margin-top: 44px; height: 2px; width: 880px; background: #bbc6bc; }
+    .clip { position: absolute; inset: 0; width: 1080px; height: 1920px; opacity: 0; }
+    .number { position: absolute; top: 332px; left: 104px; color: #4b6259; font-size: 31px; font-variant-numeric: tabular-nums; letter-spacing: 3px; }
+    .content { position: absolute; left: 100px; top: 440px; width: 880px; }
+    .eyebrow { font-size: 36px; line-height: 1.3; font-weight: 500; margin-bottom: 35px; }
+    .card { border: 2px solid #bbc6bc; border-radius: 24px; padding: 52px; background: #fffdf8; }
+    .question { font-size: 75px; line-height: 1.19; font-weight: 650; letter-spacing: -2px; }
+    .question .prefix { display: block; font-size: 37px; line-height: 1.3; letter-spacing: 0; font-weight: 400; margin-bottom: 26px; }
+    .date { margin-top: 42px; background: #d4ebd5; border: 2px solid #abc9b0; border-radius: 24px; padding: 42px 48px; font-size: 56px; line-height: 1.3; }
+    .date strong { font-weight: 700; border-bottom: 4px solid #166249; padding-bottom: 5px; }
+    #scene2 .content { top: 440px; }
+    #scene2 .date { margin-top: 0; margin-bottom: 55px; }
+    #scene2 .card { padding-top: 43px; padding-bottom: 52px; }
+    .instruction { font-size: 63px; line-height: 1.32; letter-spacing: -1.1px; font-weight: 600; }
+    .instruction .second { text-decoration-line: underline; text-decoration-color: #166249; text-decoration-thickness: 4px; text-underline-offset: 10px; }
+    #scene3 .content { top: 477px; }
+    .draft { font-size: 66px; line-height: 1.32; letter-spacing: -1.15px; font-weight: 600; }
+    #scene3 .card { border-left: 8px solid #166249; padding: 48px 48px 56px; }
+    #scene4 .content { top: 440px; }
+    .compare { font-size: 53px; line-height: 1.3; letter-spacing: -0.7px; padding: 33px 40px 40px; margin-bottom: 25px; }
+    .compare .label { display: block; font-size: 34px; font-weight: 400; margin-bottom: 10px; letter-spacing: 0; }
+    mark { color: #163832; background: #d4ebd5; padding: 0 4px 4px; box-decoration-break: clone; }
+    .origin { font-size: 43px; line-height: 1.3; margin: 41px 0 45px; color: #334f45; }
+    .lesson { border-top: 3px solid #163832; padding-top: 34px; font-size: 54px; line-height: 1.27; font-weight: 650; letter-spacing: -0.9px; }
+    #scene5 .content { top: 555px; }
+    .cta { font-size: 78px; line-height: 1.18; letter-spacing: -2.4px; font-weight: 650; }
+    .cta .reply { display: block; font-size: 51px; line-height: 1.3; letter-spacing: -0.5px; font-weight: 450; margin-top: 60px; padding-top: 44px; border-top: 3px solid #163832; }
+    #footer { position: absolute; left: 100px; bottom: 160px; width: 880px; z-index: 10; }
+    #footer-rule { height: 4px; background: #166249; width: 880px; margin-bottom: 32px; }
+    #silent { color: #4b6259; font-size: 30px; line-height: 1.2; font-weight: 500; letter-spacing: 1.2px; }
+  </style>
+</head>
+<body>
+  <main id="main" data-composition-id="main" data-start="0" data-duration="43" data-width="1080" data-height="1920" data-fps="24">
+    <header id="identity"><div id="hypothetical">EJEMPLO HIPOTÉTICO</div><div id="identity-rule" aria-hidden="true"></div></header>
+
+    <section id="scene1" class="clip" data-start="0" data-duration="8" data-track-index="0">
+      <div class="number">01 / 05</div>
+      <div class="content">
+        <h1 class="eyebrow">Taller de ejemplo</h1>
+        <div class="card question" data-copy="consulta"><span class="prefix">Consulta:</span> ¿Es este viernes?</div>
+        <div class="date" id="date-reveal" data-copy="ficha">Fecha: <strong>por confirmar</strong></div>
+      </div>
+    </section>
+
+    <section id="scene2" class="clip" data-start="8" data-duration="10" data-track-index="0">
+      <div class="number">02 / 05</div>
+      <div class="content">
+        <div class="date" data-copy="ficha">Fecha: <strong>por confirmar</strong></div>
+        <div class="card">
+          <h2 class="eyebrow">Instrucción para la IA</h2>
+          <p class="instruction" data-copy="instruccion">Respondé sólo con lo confirmado. <span class="second">Si falta un dato, decilo</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="scene3" class="clip" data-start="18" data-duration="9" data-track-index="0">
+      <div class="number">03 / 05</div>
+      <div class="content">
+        <h2 class="eyebrow">Borrador propuesto</h2>
+        <div class="card"><p class="draft" data-copy="borrador">La fecha todavía no está confirmada; no puedo confirmar que sea este viernes</p></div>
+      </div>
+    </section>
+
+    <section id="scene4" class="clip" data-start="27" data-duration="10" data-track-index="0">
+      <div class="number">04 / 05</div>
+      <div class="content">
+        <div class="card compare" data-copy="comparacion-ficha"><span class="label">Ficha:</span> <mark>fecha por confirmar</mark></div>
+        <div class="card compare" data-copy="comparacion-borrador"><span class="label">Borrador:</span> <mark>fecha no confirmada</mark></div>
+        <p class="origin" data-copy="origen">“Este viernes” viene de la pregunta</p>
+        <p class="lesson" data-copy="ensenanza">Antes de usar la respuesta, revisá qué información la respalda</p>
+      </div>
+    </section>
+
+    <section id="scene5" class="clip" data-start="37" data-duration="6" data-track-index="0">
+      <div class="number">05 / 05</div>
+      <div class="content"><p class="cta" data-copy="cta">¿Qué consulta de tu trabajo probarías? <span class="reply">Contámela en comentarios</span></p></div>
+    </section>
+
+    <footer id="footer"><div id="footer-rule" aria-hidden="true"></div><div id="silent">ANIMATIC SILENCIOSO · PRUEBA PRIVADA</div></footer>
+  </main>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+    const cuts = [[0, '#scene1'], [8, '#scene2'], [18, '#scene3'], [27, '#scene4'], [37, '#scene5']];
+    for (const [at, selector] of cuts) {
+      tl.set('.clip', { opacity: 0 }, at);
+      tl.set(selector, { opacity: 1 }, at);
+    }
+    tl.fromTo('#date-reveal', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, 2);
+    tl.to({}, { duration: 0.001 }, 42.999);
+    window.__timelines.main = tl;
+    tl.seek(0);
+  </script>
+</body>
+</html>

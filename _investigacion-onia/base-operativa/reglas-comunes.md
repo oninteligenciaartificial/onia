@@ -1,6 +1,6 @@
-# Reglas comunes de trabajo — primera versión
+# Reglas comunes de trabajo
 
-3 de noviembre de 2026. Fuente: instrucciones de Sergio en esta conversación. Documento de trabajo para el nuevo sistema; no se importaron reglas de ONIA-CENTRAL. Su escritura no las instala automáticamente en otros repositorios o entornos.
+Origen: 3 de noviembre de 2026; actualización autorizada del 5 de noviembre, America/Caracas. Fuente: instrucciones de Sergio. Documento de trabajo para el nuevo sistema; no se importaron reglas de ONIA-CENTRAL. Su escritura no las instala automáticamente en otros repositorios o entornos.
 
 ## Prioridad y alcance
 
@@ -15,7 +15,7 @@ Antes de incorporar una herramienta o automatización, identificar la tarea real
 - Las decisiones vigentes de Sergio prevalecen sobre propuestas y documentos anteriores. Esta base las registra; el chat por sí solo no garantiza que otra sesión reciba el contexto.
 - El código y los contratos técnicos de ONIA Platform se consultan en el repositorio que Sergio identificó. No convertir notas históricas en estado actual de producción.
 - Cada tarea tiene objetivo, responsable, entradas necesarias, resultado esperado y criterio de terminación. Al cerrar, dejar evidencia, estado y próximo paso en su registro existente.
-- Una fuente por dato o decisión compartida. Los documentos de cada área la enlazan; no mantienen copias independientes del precio, alcance o autorización.
+- **Autoridad única: el repo.** Decisiones, reglas, estado y handoff útiles se conservan versionados aquí; Notion es proyección y Pages sólo medios/procedencia. `operacion/` ignorado contiene artefactos/auxiliares, nunca la única autoridad del estado vigente. Los documentos de área enlazan la fuente; no mantienen copias independientes del precio, alcance o autorización. Datos personales, credenciales y medios binarios quedan fuera de paquetes públicos; los binarios se referencian por ruta/hash/ubicación.
 
 ## Autonomía
 
@@ -53,10 +53,16 @@ Analizar todo el material que Sergio envíe o señale para el encargo, según su
 
 Si falta una función, conexión, permiso, archivo o recurso, comprobar primero las capacidades disponibles y ejecutar las alternativas autorizadas en esa misma tanda. Informar exactamente qué componente falta, recomendar una solución viable con costo y límites, y pedir a Sergio únicamente el acceso, autorización o acción personal que realmente sea necesario. No pedirle descargar o extraer algo que el agente puede obtener. Continuar el trabajo independiente y retomar el pendiente cuando llegue la respuesta; no cerrar con un «no puedo» o «pendiente» sin salida concreta, ni declarar completado lo no verificado. Si el acceso o respuesta no llega, dejar el paso ejecutable y su responsable, sin simular aprobación, capacidad, escucha o trabajo entre turnos.
 
+### Corrección de audio y continuidad · 5 de noviembre
+
+Repetir «audio no comprobado» no cierra el encargo audiovisual. Video/Desarrollo deben completar una prueba acotada de audio real con controles conocidos, incluido silencio, y registrar qué pudieron evaluar de voz, música, SFX, silencios y sincronía. Qwen falló el control de silencio; sus etiquetas no son evidencia. YAMNet/CLAP aportan candidatos y ASR contenido verbal, sin certificar prosodia ni sustituir escucha. Probar primero alternativas abiertas/autorizadas y pedir a Sergio sólo el acceso o juicio indispensable que reste, con fragmento y pregunta concretos. Sin Gemini ni API paga por defecto. Una pieza silenciosa autorizada puede cerrar su prueba visual; no cierra el faltante acústico de otra fuente. El [handoff](continuidad/2026-11-05/HANDOFF-JEFA.md) delimita la primera tarea, aún no ejecutada en la consolidación.
+
+Los cierres enlazan evidencia y contienen resultado, prueba realizada, bloqueo con solución y siguiente acción. Evitar grandes lecturas e historiales innecesarios; ampliar sólo la fuente requerida para decidir o comprobar. La concisión no autoriza omitir cobertura o límites materiales.
+
 ## Sesiones
 
 Por instrucción expresa de Sergio, usar subagentes de forma proactiva cuando haya frentes independientes de investigación, implementación o revisión. El coordinador asigna objetivo, entradas, entregable y archivos a cada uno; integra y comprueba los resultados. Delegar trabajo útil, sin multiplicar agentes para una acción indivisible ni crear chats adicionales por defecto. La aplicación práctica está en [ORQUESTACION.md](ORQUESTACION.md).
 
-El repositorio conserva las reglas, decisiones aprobadas y documentación del sistema; los chats coordinan su ejecución. Las instrucciones actuales de Sergio prevalecen y se consolidan aquí cuando corresponde. Las sesiones cloud por área son marketing, video, desarrollo, automatizaciones, organización y producto. Cada una empieza con un encargo delimitado y carga sólo las fuentes necesarias. No abrir una sesión por cada skill ni lanzar trabajo paralelo sin entradas y entregables claros.
+El repositorio conserva las reglas, decisiones aprobadas y documentación del sistema; los chats coordinan su ejecución. Las instrucciones actuales de Sergio prevalecen y se consolidan aquí cuando corresponde. Las áreas vigentes son locales: marketing, video, desarrollo, automatizaciones, organización, producto y aprendizaje. Una única jefa local delega, revisa y entrega; no dos jefas simultáneas. Jefa v2 está designada y en espera de commit/recepción según ESTADO/SESIONES; no atribuirle actividad ni aceptación todavía. Los orígenes cloud se conservan como procedencia, sin traslado automático de VMs o secretos. Cada una empieza con un encargo delimitado y carga sólo las fuentes necesarias. No abrir una sesión por cada skill ni lanzar trabajo paralelo sin entradas y entregables claros.
 
 Escribir este documento no abre sesiones ni programa automatizaciones. Su ejecución y registro se comprueban por separado en ESTADO.md.
