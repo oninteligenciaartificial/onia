@@ -1,8 +1,8 @@
 # Ejecutar y retomar encargos
 
-Este procedimiento usa las [reglas comunes](reglas-comunes.md), la [arquitectura](arquitectura.md) y el [estado vigente](ESTADO.md). El coordinador es el agente que recibe el encargo de Sergio. El CLI prepara el encargo y su registro; la ejecución y la delegación las realiza ese agente con las herramientas disponibles.
+Este procedimiento usa las [reglas comunes](reglas-comunes.md), la [arquitectura](arquitectura.md), el [plan oficial](PLAN.md) y el [estado vigente](ESTADO.md). **ONIA · Jefe** integra estrategia, prioridades y entregas entre áreas; el agente que recibe un encargo coordina su ejecución concreta dentro del alcance autorizado. El CLI prepara el encargo y su registro; la ejecución y la delegación las realiza ese agente con las herramientas disponibles.
 
-Para la operación cotidiana, **ONIA · Organización diaria** mantiene los registros privados definidos en [CEREBRO-DIARIO.md](CEREBRO-DIARIO.md): Notion para el día a día y fuentes históricas sólo cuando hacen falta. El coordinador entrega resultado y evidencia mediante el escritor designado; el CLI local no sincroniza varias VMs. El repo conserva documentación aprobada; cada área recupera sólo su contexto. Los controles de agenda no restringen cuándo Sergio puede mandar tareas.
+Para la operación cotidiana, **ONIA · Organización diaria** conserva la escritura de Notion/Calendar y los registros privados definidos en [CEREBRO-DIARIO.md](CEREBRO-DIARIO.md). El coordinador entrega resultado y evidencia mediante el escritor designado; el CLI local no sincroniza varias VMs. El repo es la fuente oficial del plan, decisiones y documentación; Pages conserva procedencia, historial y medios. Cada área recupera sólo su contexto, comprobando revisión. Los controles de agenda no restringen cuándo Sergio puede mandar tareas.
 
 ## Preparar el trabajo
 
@@ -22,7 +22,7 @@ python3 _investigacion-onia/base-operativa/scripts/harness.py preparar oferta-pi
 
 El comando crea el briefing en `operacion/encargos/oferta-piloto-001.md` y el registro usado por `scripts/trabajo.py`. Un ID ya existente se retoma; no se sobrescribe. En Windows puede usarse `python` en lugar de `python3`.
 
-Las seis áreas son `marketing`, `video`, `desarrollo`, `automatizaciones`, `organizacion` y `producto`. Sus skills directoras y contexto mínimo se mantienen en [orquestacion.json](orquestacion.json). Sergio pidió abrir chats cloud por área; su registro se conserva en ESTADO.md. Un chat no es un proceso permanente. En producto se cotejan primero las instrucciones y el estado de ONIA Platform.
+Las seis áreas ejecutables del CLI son `marketing`, `video`, `desarrollo`, `automatizaciones`, `organizacion` y `producto`. Sus skills directoras y contexto mínimo se mantienen en [orquestacion.json](orquestacion.json). Los once programas del plan continuo se distribuyen entre esas áreas; Jefatura y Aprendizaje no añaden claves al manifiesto ni skills automáticamente. El registro de chats cloud está en [SESIONES.md](SESIONES.md). Un chat no es un proceso permanente. En producto se cotejan primero las instrucciones y el estado de ONIA Platform.
 
 Al iniciar un encargo, el agente selecciona el área por su resultado y lee automáticamente el cuerpo de la skill pertinente desde la ruta del manifiesto. Las skills de apoyo se cargan sólo cuando hacen falta. Si el catálogo nativo no las anuncia, leer la fuente canónica permite aplicar sus instrucciones; registrar esa diferencia sin pedir a Sergio que pegue la skill ni afirmar que el descubrimiento nativo pasó. El arranque cloud usa [INICIO-SESION.md](cloud/INICIO-SESION.md).
 
@@ -49,7 +49,7 @@ Si el encargo usa un registro local del CLI, actualizarlo con `scripts/trabajo.p
 python3 _investigacion-onia/base-operativa/scripts/harness.py retomar oferta-piloto-001
 ```
 
-Cuando cambien capacidades o hitos, actualizar [ESTADO.md](ESTADO.md) con resultado comprobado, revisión, evidencia y siguiente acción. Las prioridades y cierres diarios permanecen en Notion, sin copiarlos al repo. Los cambios de código, reglas y skills requieren la autorización aplicable de Sergio; la incorporación de investigación no los activa. Los medios y datos privados conservan la ubicación definida en [accesos.md](accesos.md).
+Cuando cambien capacidades o hitos, actualizar [ESTADO.md](ESTADO.md) con resultado comprobado, revisión, evidencia y siguiente acción. Consolidar cambios de dirección en [PLAN.md](PLAN.md), conservando la procedencia; las prioridades personales y cierres diarios permanecen en Notion, sin copiarlos al repo. Los cambios de código, reglas y skills requieren la autorización aplicable de Sergio; la incorporación de investigación no los activa. Los medios y datos privados conservan la ubicación definida en [accesos.md](accesos.md). Al entregar a otro chat, indicar el commit o revisión recuperable: subir Git no actualiza por sí solo una VM ni demuestra que el receptor leyó el cambio.
 
 `operacion/` está ignorado por Git: un briefing o registro guardado allí no aparece automáticamente en otra VM. La sesión receptora lee la entrega versionada, comprueba el checkout y recupera sólo los materiales necesarios. Una nueva conversación se abre cuando Sergio la pide y hay un encargo delimitado; los subagentes sirven para partes del encargo actual.
 

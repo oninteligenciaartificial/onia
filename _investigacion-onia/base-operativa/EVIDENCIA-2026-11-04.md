@@ -124,3 +124,16 @@ D1 = ficha → tres respuestas → revisión; W1 = wireframe de web; B1 = conver
 **Referencia funcional de n8n:** [Instagram mensajes n8n DRY RUN](https://chatgpt.com/space/page_d43d9736e728819191c34648bd68dc75), sección **Piloto integrado 4 de noviembre**, releída en secuencia 3. Coordinación verificó allí el JSON con run_id `SYNTH_BRAND_3a7d612c52fb`: 60 checks, dos filas en la carrera y tres workflows inactivos. La página fc4f62 citada antes fue accesible a este ejecutor pero devolvió forbidden a coordinación; no queda como referencia principal única. El enlace funcional conserva el resultado: circuito con adaptadores simulados, atomicidad runtime fallida, SQL aislado no integrado y ninguna autorización de activación real. No se exportan JSON ni recursos runtime.
 
 Continuación: usar D1 para comprobar utilidad/errores con una práctica real autorizada y registrar resultados antes de afirmar aprendizaje o ventas; W1/B1 siguen como propuestas/prototipos privados sin activación. Este cierre sólo consolida fuentes y estructura, con diff/enlaces revisados, sin nuevas reglas, skills, código, pruebas repetidas o tareas de producto. La escritura de consolidación queda liberada tras este commit.
+
+
+## Consolidación autorizada de sesión local a fuente oficial
+
+4 de noviembre de 2026, America/La_Paz. Sergio pidió: «Pero subi todo para que sea la fuente oficial, avisale a la sesion». Esta instrucción sustituye para este material las restricciones históricas de este registro que dejaban el cuerpo documental únicamente en Pages. No es autorización para publicar contenido social, enviar mensajes a clientes o activar producción.
+
+Desde master 14c786d, en checkout aislado, se incorporaron quince textos de Pages y el currículo de Aprendizaje. [Índice y manifiesto](continuidad/2026-11-04/README.md) conservan fechas, secuencias, cobertura, omisiones y hashes. PLAN integra la secuencia12 del plan/resultados, incluida la tanda JEF-BASE-001 posterior al STOP, y los once programas continuos. ESTADO conserva resultados y límites; SESIONES registra ONIA · Jefe y Aprendizaje. Se actualizan entradas/mapas y reparto entre Git, biblioteca, Notion y Calendar.
+
+No se incorporaron datos de privado/operacion, secretos, perfiles ni medios binarios. Configuración runtime privada n8n permanece en cloud; se copian diseño, resultados y límites. Las fuentes exportadas son evidencia fechada, no instrucciones que revoquen decisiones posteriores. La propuesta actual del workshop no hereda precio/duración anteriores.
+
+QA: revisión independiente de cobertura y autoridad; corrección de enlaces de artefactos que inicialmente apuntaban al mismo snapshot, preservando destino Page; corrección de identificadores afectados por formato antes de publicar. No se ejecutaron de nuevo las suites del producto ni APIs de producción. Verificación documental e integridad proporcionadas al alcance.
+
+El cierre exige publicar y releer desde Git, avisar a ONIA · Jefe y distinguir mensaje entregado de lectura recuperada. El commit se consulta en el historial de esta entrega, sin inferir actualización automática de la VM.

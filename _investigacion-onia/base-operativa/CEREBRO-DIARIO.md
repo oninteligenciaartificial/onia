@@ -7,14 +7,15 @@ El cerebro es un registro compartido y un procedimiento de trabajo. Se ejecuta c
 | Dato | Fuente única |
 |---|---|
 | Reglas, permisos y skills | [Reglas comunes](reglas-comunes.md) y [manifiesto](orquestacion.json) |
+| Dirección, decisiones y planes por área | [PLAN.md](PLAN.md), mantenido por ONIA · Jefe; [consolidación documental](continuidad/2026-11-04/README.md) para procedencia |
 | Vida, publicaciones, ventas, actualidad y decisiones cotidianas | [Sergio · Hoy, Notion privado](https://app.notion.com/p/40e2eb20bdfd81658111cf3e4d854964) |
 | Contexto personal histórico todavía no consolidado | [Página privada anterior](https://chatgpt.com/space/page_9891b23df62081918a4bcf61eadb0fc4); recuperar sólo lo necesario y comprobar vigencia, sin mantener otra cola diaria |
-| Investigación adoptada y fuentes | [Índice en Git](investigacion/2026-11-04/README.md); biblioteca cloud como procedencia e historial |
+| Investigación, entregas documentales y fuentes | [Índice en Git](investigacion/2026-11-04/README.md) y [entregas consolidadas](continuidad/2026-11-04/README.md); biblioteca cloud como procedencia, historial y medios |
 | Compromisos y horarios guardados | Google Calendar personal; leer el día solicitado antes de modificarlo |
 | Ejecución y evidencia de cada área | Chat correspondiente de [SESIONES.md](SESIONES.md) y sus artefactos accesibles |
 | Capacidad comprobada del sistema | [ESTADO.md](ESTADO.md) |
 
-Los registros privados se leen con el conector oficial correspondiente, Notion o ChatGPT Space. Sus IDs identifican recursos, no conceden acceso. El repositorio conserva referencias y procedimiento; no copiar perfil, finanzas, hábitos ni credenciales al código, paquetes de skills o evidencia pública. Consultar sólo las secciones pertinentes. Una consolidación documental no prueba migración total de datos personales ni sincronización automática.
+Los registros privados se leen con el conector oficial correspondiente, Notion o ChatGPT Space. Sus IDs identifican recursos, no conceden acceso. **Git es la fuente oficial del plan, decisiones y documentación consolidada**; Pages conserva procedencia, medios y registros privados que no pertenecen al repositorio. No copiar perfil, finanzas, hábitos ni credenciales al código, paquetes de skills o evidencia pública. Consultar sólo las secciones pertinentes. Una consolidación documental no prueba migración total de datos personales ni sincronización automática.
 
 ## Entrada durante el día
 
@@ -31,7 +32,7 @@ Como límite inicial de atención, mantener hasta dos encargos activos que requi
 
 ## Coordinación y registro
 
-**ONIA · Organización diaria** coordina la operación cotidiana. El repo mantiene las decisiones aprobadas del sistema y cada chat carga la parte necesaria. El agente que recibe un pedido puede resolverlo dentro de su alcance; los cambios al registro compartido pasan por el coordinador designado, con un único escritor a la vez. Los demás chats devuelven resultado y evidencia sin editar simultáneamente el tablero.
+**ONIA · Jefe** coordina estrategia, prioridades y entregas entre áreas, con [PLAN.md](PLAN.md) como fuente documental vigente. **ONIA · Organización diaria** mantiene la operación cotidiana y es la escritora designada de Notion/Calendar. El repo mantiene las decisiones del sistema; cada chat carga la parte necesaria. El agente que recibe un pedido puede resolverlo dentro de su alcance; los cambios a cada registro compartido pasan por su responsable, con un único escritor a la vez. Los demás chats devuelven resultado y evidencia sin editar simultáneamente el tablero. La sesión Aprendizaje aporta fuentes y práctica, sin duplicar la agenda ni el registro diario.
 
 Cada encargo contiene ID estable, área, objetivo, entregable, criterio de aceptación, estado, referencia al chat/artefacto, resultado, comprobación y siguiente paso. Reutilizar los estados de `scripts/trabajo.py`:
 
@@ -42,7 +43,7 @@ Cada encargo contiene ID estable, área, objetivo, entregable, criterio de acept
 | en_espera | Falta una entrada, una decisión o resolver un bloqueo; indicar responsable y próximo paso |
 | terminado | Resultado obtenido y comprobado, con evidencia accesible |
 
-Antes de actualizar un registro, leer su versión y bloque actuales. Usar las operaciones del conector: en Space, IDs y hashes de la lectura; en Notion, IDs y propiedades reales. Comprobar recibo y releer el resultado. Ante conflicto, conciliar sin sobrescribir cambios ajenos. Consultar un resultado externo incierto antes de repetirlo.
+Antes de actualizar un registro, leer su versión actual: revisión Git para documentación, IDs y hashes en Space, IDs y propiedades reales en Notion. Comprobar recibo y releer el resultado. Las exportaciones de Pages son instantáneas fechadas de procedencia; una actualización posterior se concilia en el documento canónico, no crea un plan oficial paralelo. Ante conflicto, conciliar sin sobrescribir cambios ajenos. Consultar un resultado externo incierto antes de repetirlo.
 
 Los registros de `operacion/` son apoyo local de la ejecución. El bloqueo de archivo de `trabajo.py` sólo protege esa VM; no coordina varias máquinas. No crear una segunda cola global allí ni atribuirle sincronización automática. Si se usa el CLI, conservar el mismo ID y reflejar únicamente el resultado comprobado en la página.
 

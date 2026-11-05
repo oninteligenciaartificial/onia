@@ -1,17 +1,21 @@
 # Mapa del repositorio ONIA
 
-4 de noviembre de 2026. Incluye 84 rutas de la entrega consolidada. Nueve skills propias; ninguna skill nueva por referente. El commit de entrega se consulta en Git. Los datos privados, medios, credenciales, dependencias y perfiles de navegador están excluidos.
+4 de noviembre de 2026. Mapa documental de la fuente oficial; el listado exacto de archivos y el commit se consultan en Git. Nueve skills propias; ninguna skill nueva por referente. Los datos privados, medios, credenciales, dependencias y perfiles de navegador están excluidos.
 
 ## Entrada por necesidad
 
 - [Estado real y siguiente acción](ESTADO.md).
+- [Plan continuo oficial por áreas y dirección del Jefe](PLAN.md).
+- [Consolidación documental de la sesión local y cloud](continuidad/2026-11-04/README.md), con fuentes, versiones y límites.
+- [Jefe, Aprendizaje y chats ejecutores](SESIONES.md).
 - [Cómo ejecutar y delegar](ORQUESTACION.md), con una skill directora por área.
 - [Operar navegador y tareas cloud](cloud/OPERAR.md).
-- [Investigación curada: diez referentes y producción](investigacion/2026-11-04/README.md), con [Víctor Heras](investigacion/2026-11-04/victor-heras.md) y [funcionamiento de redes](investigacion/2026-11-04/funcionamiento-redes.md).
+- [Investigación, referentes, pendientes y producción](investigacion/2026-11-04/README.md), con [Víctor Heras](investigacion/2026-11-04/victor-heras.md), [ampliación consolidada](continuidad/2026-11-04/fuentes-cloud/referentes.md) y [funcionamiento de redes](investigacion/2026-11-04/funcionamiento-redes.md).
+- [Aprendizaje: fuentes y ejercicios](continuidad/2026-11-04/aprendizaje.md).
 - [Fuentes del día a día](CEREBRO-DIARIO.md) y [panel de Notion](PANEL-DIARIO.md).
 - [Evidencia del 4 de noviembre](EVIDENCIA-2026-11-04.md).
 
-Ensayo n8n real: cinco casos y persistencia secuencial comprobados, workflow finalmente inactivo; no automatización comercial, concurrencia, timeout real ni Meta. Resultado en [ESTADO](ESTADO.md), alcance en [accesos](accesos.md) y artefactos en la [evidencia privada](https://chatgpt.com/space/page_381ee668401481918e7e45c87921e82d).
+Para capacidades y fallos de n8n, navegador, cuentas y modelos, leer [ESTADO](ESTADO.md). El mapa remite a esa fuente y no mantiene un resumen técnico paralelo que pueda quedar desactualizado.
 
 ## Árbol de esta entrega
 
@@ -88,6 +92,22 @@ _investigacion-onia/
           SKILL.md
           agents/
             openai.yaml
+    continuidad/
+      2026-11-04/
+        README.md
+        aprendizaje.md
+        manifiesto.json
+        fuentes-cloud/
+          plan-y-resultados.md
+          referentes.md
+          biblioteca.md
+          guiones-y-workshop.md
+          demo-d1.md
+          video-y-audio.md
+          n8n-piloto.md
+          launcher-cloud.md
+          producto.md
+          workshop-ensayo.md
     correccion-procedencia.md
     fuentes.md
     investigacion/
@@ -125,4 +145,4 @@ _investigacion-onia/
     seleccion-y-recorrido.md
 ```
 
-Este árbol es una instantánea fechada; el listado vigente se obtiene con `git ls-files`. Los chats por área están en SESIONES.md. Leer el índice pertinente y luego los archivos necesarios, sin cargar el árbol completo como instrucciones de cada tarea.
+Este árbol es una guía fechada; el listado vigente se obtiene con `git ls-files`. Las exportaciones de `fuentes-cloud/` conservan procedencia e historial, incluidas propuestas sustituidas; [PLAN.md](PLAN.md) y [ESTADO.md](ESTADO.md) dirigen el trabajo actual. Los medios enlazados permanecen en sus almacenes cloud. Leer el índice pertinente y luego los archivos necesarios, sin cargar todos los históricos como instrucciones de cada tarea.

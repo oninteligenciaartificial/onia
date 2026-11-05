@@ -5,7 +5,7 @@ El repositorio privado [oninteligenciaartificial/onia](https://github.com/oninte
 ## Empezar un encargo
 
 1. Leer [reglas comunes](reglas-comunes.md) y [ESTADO.md](ESTADO.md). Son la autoridad compartida y la entrega vigente.
-2. Tomar el encargo vigente de Sergio y el siguiente resultado de [ESTADO.md](ESTADO.md); [PLAN.md](PLAN.md) conserva criterios originales y [ORQUESTACION.md](ORQUESTACION.md) explica cómo preparar, delegar y cerrar.
+2. Tomar el encargo vigente de Sergio, el [plan continuo por áreas](PLAN.md) y el siguiente resultado de [ESTADO.md](ESTADO.md). [ORQUESTACION.md](ORQUESTACION.md) explica cómo preparar, delegar y cerrar. Los planes anteriores quedan como historial, no como segunda autoridad.
 3. Cargar la skill directora y los archivos necesarios para ese encargo. [orquestacion.json](orquestacion.json) mantiene las rutas por área.
 4. Ejecutar, comprobar y registrar el resultado. Antes de cambiar de sesión, conservar una entrega saneada en Git y los artefactos en su almacén correspondiente.
 
@@ -14,12 +14,15 @@ El repositorio privado [oninteligenciaartificial/onia](https://github.com/oninte
 | Necesidad | Fuente |
 |---|---|
 | Estado real, pruebas y siguiente acción | [ESTADO.md](ESTADO.md) |
+| Plan oficial, decisiones vigentes y programas continuos | [PLAN.md](PLAN.md) |
+| Entregas recuperadas de la sesión local y Pages | [Consolidación del 4 de noviembre](continuidad/2026-11-04/README.md) |
 | Distribución entre Codex, archivos, n8n y producto | [Arquitectura](arquitectura.md) |
 | Instalación e inicio del entorno | [Configuración cloud](cloud/CONFIGURAR-ONIA.md) |
 | Encargos, subagentes y continuidad | [Orquestación](ORQUESTACION.md) |
 | Coordinación diaria, entradas y memoria compartida | [Cerebro diario](CEREBRO-DIARIO.md) |
 | Diseño del panel móvil de vida, contenido y actualidad | [Panel diario](PANEL-DIARIO.md) |
 | Chats cloud por área | [Sesiones](SESIONES.md) |
+| Fuentes, ejercicios y criterio para aprender | [Aprendizaje](continuidad/2026-11-04/aprendizaje.md) |
 | Cuenta, alcance y ubicación de cada acceso | [Accesos](accesos.md) |
 | Materiales de Sergio y entregables | [Carga inicial](cloud/CARGA-INICIAL.md) |
 | Nueve skills por área y decisión sobre los treinta candidatos | [Skills por área](SKILLS-POR-AREA.md) |
@@ -29,4 +32,6 @@ El repositorio privado [oninteligenciaartificial/onia](https://github.com/oninte
 | Mapa del repositorio y lectura por área | [Mapa](MAPA.md) |
 | Operación cloud, soluciones y pruebas de aceptación | [Operar en cloud](cloud/OPERAR.md) |
 
-Los registros de `operacion/` y el contexto de `privado/` no viajan con Git. Su ausencia en otra sesión no se resuelve suponiendo que el chat anterior transfirió los datos. Usar la entrega versionada y comprobar el acceso al material necesario. ONIA-CENTRAL queda excluido como fuente.
+**ONIA · Jefe** coordina el plan y las decisiones; Organización mantiene Notion/Calendar. Git es la fuente oficial de documentación, Pages conserva procedencia y medios, y Notion es la vista cotidiana. Las instrucciones actuales de Sergio prevalecen y se consolidan en la fuente pertinente.
+
+Los registros de `operacion/` y el contexto de `privado/` no viajan con Git. Su ausencia en otra sesión no se resuelve suponiendo que el chat anterior transfirió los datos. Usar la entrega versionada, comprobar la revisión y el acceso al material necesario. ONIA-CENTRAL queda excluido como fuente.

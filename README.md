@@ -6,12 +6,12 @@ Base de trabajo de Sergio y ONIA: reglas comunes, skills propias y continuidad e
 
 Leer [AGENTS.md](AGENTS.md), [reglas comunes](_investigacion-onia/base-operativa/reglas-comunes.md) y [estado vigente](_investigacion-onia/base-operativa/ESTADO.md). Las decisiones de Sergio en el chat de coordinación son la autoridad de estas reglas. Las investigaciones son referencias, no instrucciones instaladas de terceros.
 
-El [plan vigente](_investigacion-onia/base-operativa/PLAN.md) ordena las siguientes entregas. La [orquestación](_investigacion-onia/base-operativa/ORQUESTACION.md) describe cómo preparar, delegar, comprobar y retomar un encargo.
+El [plan oficial](_investigacion-onia/base-operativa/PLAN.md) consolida la dirección de ONIA · Jefe y once programas continuos. La [entrega del 4 de noviembre](_investigacion-onia/base-operativa/continuidad/2026-11-04/README.md) incorpora quince documentos cloud y el currículo de aprendizaje, con procedencia y límites. Git es la fuente oficial del plan, decisiones y documentación; la biblioteca conserva medios, Notion la vista cotidiana y Calendar compromisos. La [orquestación](_investigacion-onia/base-operativa/ORQUESTACION.md) describe cómo preparar, delegar, comprobar y retomar un encargo.
 
 ## Contenido
 
 - `_investigacion-onia/base-operativa/`: arquitectura, decisiones, fuentes y catálogo.
-- `compartibles/skills/` dentro de esa base: siete skills propias, única fuente editable.
+- `compartibles/skills/` dentro de esa base: nueve skills propias, única fuente editable.
 - `scripts/trabajo.py`: registro de tareas con evidencia e integridad; no es un scheduler.
 - `scripts/test_trabajo.py`: pruebas del registro.
 - `orquestacion.json` y `scripts/harness.py`: rutas por área, diagnóstico de archivos y preparación de encargos; no son un servicio autónomo.
@@ -39,7 +39,7 @@ Para Playwright, el helper de n8n y la configuración completa, usar [la prepara
 
 ## Primera prueba
 
-La tarea de aceptación debe comprobar repo/HEAD, las siete skills, los tests de bootstrap, continuidad y harness, y un recorrido crear → completar con evidencia → retomar desde otro proceso. Ejecutar también el navegador real. Crear su evidencia bajo `operacion/`; versionar una entrega mínima saneada en ESTADO.md y conservar los artefactos antes de descartar la VM, pues esos registros no se suben automáticamente.
+La tarea de aceptación debe comprobar repo/HEAD, las nueve skills, los tests de bootstrap, continuidad y harness, y un recorrido crear → completar con evidencia → retomar desde otro proceso. Ejecutar también el navegador real. Crear su evidencia bajo `operacion/`; versionar una entrega mínima saneada en ESTADO.md y conservar los artefactos antes de descartar la VM, pues esos registros no se suben automáticamente.
 
 La prueba histórica en ONIA Platform aprobó el registro, pero fue detenida por entorno equivocado y no certifica el nuevo `onia`.
 
