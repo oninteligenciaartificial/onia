@@ -10,6 +10,12 @@ Harness: **oninteligenciaartificial/onia**, entorno **onia** en Codex Cloud. Pro
 
 **Coordinación operativa local; ejecución por áreas en cloud.** Tras las pruebas COORD-PROBE-20261104 y COORD-LOCAL-CLOUD-20261104, esta sesión local despacha encargos y recupera resultados. Jefe y Desarrollo cloud tienen lectura/consulta de chats, pero no send_message_to_thread/create_thread en sus catálogos actuales. ONIA · Jefe conserva planificación/síntesis cloud; Organización diaria escribe Notion/Calendar. [Prueba y reparto](continuidad/2026-11-04/coordinacion-local-cloud.md). La instrucción posterior de Sergio autoriza preparar frentes y avanzar por áreas, sustituyendo el STOP histórico; no autoriza por sí sola gasto, publicaciones, mensajes reales o producción. [SESIONES](SESIONES.md) registra roles e IDs.
 
+## Última tanda y prueba local
+
+[TANDA-01](continuidad/2026-11-04/tanda-01/README.md): workshop preparado para ensayo humano y W1 corregida probada en cloud; n8n sin atomicidad runtime, D1 sin MP4 y producto sin E2E. Se cerraron los encargos delimitados; no presentar esos bloqueos como ejecución continua. Sergio pidió evaluar local y apagar Linux: 11 contenedores locales, Docker Desktop y Ubuntu/WSL detenidos conservando datos. HyperFrames 0.9.9 renderizó una muestra técnica local de 6 s, un trabajador; decodificación y fotogramas comprobados. Archivo disponible en Page Video. No acredita audio, D1 ni migración de todas las sesiones.
+
+Próximo trabajo recomendado: una pieza completa desde referente hasta borrador revisado, usando el ejecutor que pase la prueba; conservar el objetivo de automatización después de validar el recorrido. La base de prueba de n8n requiere verificar/provisionar destino y rol exclusivos con acceso administrativo seguro. Ninguna credencial visible acredita ese aislamiento.
+
 ## Evidencia y límites
 
 | Componente | Resultado observado o reportado | Límite |
@@ -29,7 +35,7 @@ Harness: **oninteligenciaartificial/onia**, entorno **onia** en Codex Cloud. Pro
 | Contenido | [Paquete editorial v2.0](continuidad/2026-11-04/fuentes-cloud/guiones-y-workshop.md), secuencia 16: mismos 35 IDs, 29 guiones concretos y 6 plantillas de diario; Kit PLAN incluido. | Borradores en revisión. V1.2 rechazada; fechas no son programación. Cinco videos/día y diario 20:00 son objetivos sin capacidad medida. |
 | Oferta y demo | [D1](continuidad/2026-11-04/fuentes-cloud/demo-d1.md): ficha→tres respuestas→contraste, ensayo textual cloud con QA independiente. | Sin alumnos, demanda, venta o cobro validados. Brief vigente sólo en PLAN; Bs 50/55 min y ofertas anteriores son históricos, no condiciones actuales. |
 | Producto | [Platform](continuidad/2026-11-04/fuentes-cloud/producto.md): lectura a0488f0/seis tareas; recorrido dental ADMIN→cita→QR manual→reentrada recomendado. Configuración de ocho servicios sin puertos publicados. | Diferencia estática QA/checkout, no bug runtime/E2E. Sin código, migración o despliegue de producto en este cierre. |
-| Panel y cola | [Sergio·Hoy](https://app.notion.com/p/40e2eb20bdfd81658111cf3e4d854964) y [cola](https://app.notion.com/p/40e2eb20bdfd81259c44e8328cd52171): 20 tareas (WS-W01–05, MP-M01–05, P01–06, cuatro transversales); 35 borradores aparte. | No son 55 tareas activas. Última lectura del Jefe aún vio STOP desactualizado; Organización debe proyectar dirección actual sin duplicar IDs. |
+| Panel y cola | [Sergio·Hoy](https://app.notion.com/p/40e2eb20bdfd81658111cf3e4d854964) y [cola](https://app.notion.com/p/40e2eb20bdfd81259c44e8328cd52171): 20 tareas (WS-W01–05, MP-M01–05, P01–06, cuatro transversales); 35 borradores aparte. | No son 55 tareas activas. Organización actualizó y releyó el home con TANDA-01, resultados reales y tres acciones personales; conserva IDs y no creó Calendar. |
 | Calendar | Por orden «Eliminalos», eliminados seis eventos antiguos «Claude de 0 a 100» de 4/5/6 noviembre; relectura sin esos eventos. | Sin eventos de reemplazo o nuevas reservas. Este cierre no vuelve a modificar Calendar. |
 | Memoria y aprendizaje | Jefe leyó GitHub y plan cloud. Otro subagente recuperó actualización de Page secuencia 9→11 sin recibir valores en el encargo. Aprendizaje entregó currículo y ejercicio. | Acredita recuperación de esa Page, no sincronización global, memoria ilimitada ni servicio 24/7. |
 

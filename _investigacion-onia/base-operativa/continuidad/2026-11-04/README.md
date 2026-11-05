@@ -68,3 +68,7 @@ Revisión independiente del plan y snapshots, comprobación de enlaces relativos
 
 Para consultar la publicación usar el historial de esta carpeta en GitHub. Las entregas del Jefe posteriores al corte inicial se integran por su responsable, sin atribuirlas a los snapshots.
 
+
+## Ejecución posterior: TANDA-01
+
+[Resultados, bloqueos y prueba local](tanda-01/README.md), con guía de ensayo y hojas separadas para participantes. No sustituye los snapshots históricos: documenta nuevas comprobaciones y la parada de Linux local pedida por Sergio. El render técnico local no acredita aún D1/audio ni el circuito completo.
