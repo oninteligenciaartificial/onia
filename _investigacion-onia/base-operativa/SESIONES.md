@@ -1,17 +1,20 @@
 # Chats de trabajo por área
 
-Creados por pedido de Sergio desde el 3 de noviembre de 2026 y actualizados en la consolidación del 4 de noviembre. Los chats registrados usan **Codex Cloud, entorno onia**, repo del harness `oninteligenciaartificial/onia`, host `durable`. Sus instrucciones comparten esta base; no se duplican reglas por proyecto. El código del producto permanece en su repo independiente.
+Creados por pedido de Sergio desde el 3 de noviembre de 2026 y actualizados en la consolidación del 4 de noviembre. Los chats de área usan **Codex Cloud, entorno onia**, repo del harness `oninteligenciaartificial/onia`, host `durable`. La coordinación y el despacho operativo quedan en la sesión local registrada abajo, por decisión posterior de Sergio y prueba de capacidades. Sus instrucciones comparten esta base; no se duplican reglas por proyecto. El código del producto permanece en su repo independiente.
 
-La primera tanda de seis áreas fue de **pruebas concretas completamente cloud**. Es un antecedente, no la lista de trabajo vigente. **ONIA · Jefe** mantiene ahora la dirección del [plan continuo](PLAN.md), incluida la preparación autorizada JEF-BASE-001. El [estado](ESTADO.md) separa resultados comprobados, propuestas y pendientes.
+La primera tanda de seis áreas fue de **pruebas concretas completamente cloud**. Es un antecedente, no la lista de trabajo vigente. El [plan continuo](PLAN.md) conserva JEF-BASE-001 y la decisión posterior de coordinación local con ejecución cloud. El [estado](ESTADO.md) separa resultados comprobados, propuestas y pendientes.
 
 ## Coordinación y aprendizaje
 
 | Chat | ID | Función |
 |---|---|---|
-| ONIA · Jefe | `01a1a843-4afb-75f9-aa95-f35833fcb002` | Integra estrategia, prioridades, entregas y decisiones de Sergio; conserva el plan oficial en Git y delega encargos delimitados. Antes se llamaba «Marca personal · Plan y resultados»; es el mismo chat. |
+| Coordinación operativa local (esta sesión) | `01a1a29c-3a3d-7b50-aef6-41305ce5faae` | Concreta prioridades con Sergio, despacha encargos a los chats cloud existentes y recupera/revisa resultados. La PC debe estar disponible para esas nuevas órdenes y revisiones locales. |
+| ONIA · Jefe | `01a1a843-4afb-75f9-aa95-f35833fcb002` | Planificación y síntesis cloud; recupera el plan oficial en Git. Puede leer/esperar chats en el catálogo comprobado, sin herramienta expuesta para iniciarles turnos. Antes se llamaba «Marca personal · Plan y resultados»; es el mismo chat. |
 | ONIA · Aprendizaje y criterio | `01a1a935-c691-72d5-b055-e39970f5703e` | Organiza fuentes y ejercicios para explicar y practicar lo aprendido; entrega evidencia al Jefe y a Organización. [Currículo y primer encargo](continuidad/2026-11-04/aprendizaje.md). |
 
 Preferencia de Sergio: **Astra para Jefatura y Sol/Terra para ejecución**. La selección Sol/Terra de los subagentes de JEF-BASE-001 quedó registrada; el modelo efectivo del chat Jefe no fue comprobado ni cambiado por esta consolidación. Una preferencia escrita no modifica el selector del chat.
+
+**Prueba de coordinación:** Jefe y Desarrollo cloud identificaron `read_thread`/`wait_threads`, sin `send_message_to_thread`/`create_thread` en sus catálogos. Local despachó COORD-LOCAL-CLOUD-20261104 a Desarrollo y recuperó su resultado; Jefe confirmó lectura de la consolidación `1884335`. Alcance y evidencia en [coordinación local/cloud](continuidad/2026-11-04/coordinacion-local-cloud.md). Esta observación no se generaliza a todos los hosts; subagentes internos y chats persistentes son mecanismos distintos. No se ensayó apagar físicamente la PC.
 
 ## Áreas ejecutoras y pruebas iniciales históricas
 
@@ -31,6 +34,6 @@ Cada chat recibe un encargo delimitado, usa subagentes cuando aportan trabajo in
 
 ## Organización cloud del 4 de noviembre de 2026
 
-Por petición expresa de Sergio se crearon las secciones de sidebar **Marca personal · Cloud** y **ONIA Platform · Cloud**, agrupando los chats existentes. Jefe y Aprendizaje están en la primera; Producto, en la segunda. Jefe coordina el conjunto; Organización conserva la escritura de Notion/Calendar y Producto su alcance técnico separado. Los chats son lugares de continuidad, no workers permanentes.
+Por petición expresa de Sergio se crearon las secciones de sidebar **Marca personal · Cloud** y **ONIA Platform · Cloud**, agrupando los chats existentes. Jefe y Aprendizaje están en la primera; Producto, en la segunda. La coordinación local despacha al conjunto; Jefe conserva planificación/síntesis cloud, Organización la escritura de Notion/Calendar y Producto su alcance técnico separado. Los chats son lugares de continuidad, no workers permanentes.
 
 Fuente oficial de reglas, plan, decisiones y documentación: **repo onia**. La [consolidación del 4 de noviembre](continuidad/2026-11-04/README.md) incorpora las entregas documentales que estaban en Pages, con procedencia y límites. La [biblioteca cloud](https://chatgpt.com/space/page_66e12de902408191a926153866f6ca39) conserva medios, referencias e historial; [Notion Sergio · Hoy](https://app.notion.com/p/40e2eb20bdfd81658111cf3e4d854964) mantiene la vista diaria. La existencia del chat o una agrupación del sidebar no acredita integración, cron o ejecución 24/7. Un push no actualiza el checkout de un chat existente: al retomar, comprobar la revisión leída.

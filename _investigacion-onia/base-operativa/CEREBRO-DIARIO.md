@@ -7,7 +7,7 @@ El cerebro es un registro compartido y un procedimiento de trabajo. Se ejecuta c
 | Dato | Fuente única |
 |---|---|
 | Reglas, permisos y skills | [Reglas comunes](reglas-comunes.md) y [manifiesto](orquestacion.json) |
-| Dirección, decisiones y planes por área | [PLAN.md](PLAN.md), mantenido por ONIA · Jefe; [consolidación documental](continuidad/2026-11-04/README.md) para procedencia |
+| Dirección, decisiones y planes por área | [PLAN.md](PLAN.md), integrado por la coordinación local con planificación/síntesis de ONIA · Jefe cloud; [consolidación documental](continuidad/2026-11-04/README.md) para procedencia |
 | Vida, publicaciones, ventas, actualidad y decisiones cotidianas | [Sergio · Hoy, Notion privado](https://app.notion.com/p/40e2eb20bdfd81658111cf3e4d854964) |
 | Contexto personal histórico todavía no consolidado | [Página privada anterior](https://chatgpt.com/space/page_9891b23df62081918a4bcf61eadb0fc4); recuperar sólo lo necesario y comprobar vigencia, sin mantener otra cola diaria |
 | Investigación, entregas documentales y fuentes | [Índice en Git](investigacion/2026-11-04/README.md) y [entregas consolidadas](continuidad/2026-11-04/README.md); biblioteca cloud como procedencia, historial y medios |
@@ -32,7 +32,9 @@ Como límite inicial de atención, mantener hasta dos encargos activos que requi
 
 ## Coordinación y registro
 
-**ONIA · Jefe** coordina estrategia, prioridades y entregas entre áreas, con [PLAN.md](PLAN.md) como fuente documental vigente. **ONIA · Organización diaria** mantiene la operación cotidiana y es la escritora designada de Notion/Calendar. El repo mantiene las decisiones del sistema; cada chat carga la parte necesaria. El agente que recibe un pedido puede resolverlo dentro de su alcance; los cambios a cada registro compartido pasan por su responsable, con un único escritor a la vez. Los demás chats devuelven resultado y evidencia sin editar simultáneamente el tablero. La sesión Aprendizaje aporta fuentes y práctica, sin duplicar la agenda ni el registro diario.
+La **sesión local `01a1a29c-3a3d-7b50-aef6-41305ce5faae`** coordina prioridades, despacho y revisión de entregas; las áreas ejecutan en cloud. **ONIA · Jefe** conserva planificación/síntesis cloud, con [PLAN.md](PLAN.md) como fuente documental vigente; no se le atribuye inicio de chats de área. **ONIA · Organización diaria** mantiene la operación cotidiana y es la escritora designada de Notion/Calendar. El repo mantiene las decisiones del sistema; cada chat carga la parte necesaria. El agente que recibe un pedido puede resolverlo dentro de su alcance; los cambios a cada registro compartido pasan por su responsable, con un único escritor a la vez. Los demás chats devuelven resultado y evidencia sin editar simultáneamente el tablero. La sesión Aprendizaje aporta fuentes y práctica, sin duplicar la agenda ni el registro diario.
+
+El despacho local y la recuperación de una entrega de Desarrollo quedaron comprobados; en Jefe/Desarrollo cloud se observaron herramientas para leer/esperar chats, pero no para enviarles nuevas órdenes. [Alcance de la prueba](continuidad/2026-11-04/coordinacion-local-cloud.md). La coordinación local requiere la PC disponible para nuevas órdenes/revisiones. La ejecución remota se comprobó sin ensayar un apagado físico de la PC; no declarar continuidad permanente por esa prueba ni confundir subagentes internos con chats de área.
 
 Cada encargo contiene ID estable, área, objetivo, entregable, criterio de aceptación, estado, referencia al chat/artefacto, resultado, comprobación y siguiente paso. Reutilizar los estados de `scripts/trabajo.py`:
 
@@ -51,7 +53,7 @@ Los registros de `operacion/` son apoyo local de la ejecución. El bloqueo de ar
 
 1. Leer fuentes vigentes y la parte necesaria del registro privado. Si el acceso falla, informar la diferencia y continuar con trabajo independiente; no inventar memoria recuperada.
 2. Elegir área y una skill directora mediante el manifiesto. Preparar entradas, resultado y comprobación. Delegar partes independientes conforme a [ORQUESTACION.md](ORQUESTACION.md).
-3. Ejecutar en el entorno cloud vigente, o enviar al chat de área existente cuando la autorización del usuario abarque esa coordinación. Confirmar el lanzamiento antes de registrar `en_curso`.
+3. Ejecutar el encargo en cloud. Para iniciarlo en otro chat de área, la coordinación local envía la orden cuando la autorización del usuario abarque esa coordinación; Jefe cloud no asume disponer de esa herramienta. Confirmar el lanzamiento antes de registrar `en_curso`.
 4. Consultar la entrega, revisar la evidencia y actualizar el registro. Una prueba sintética no acredita una campaña, venta, publicación o hábito real.
 5. Dejar siguiente paso y un resumen breve para Sergio. Reutilizar su autorización vigente; los documentos no amplían permisos para gastos, mensajes o producción.
 

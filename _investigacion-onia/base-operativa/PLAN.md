@@ -4,7 +4,15 @@
 
 Procedencia: [plan y resultados, snapshot de secuencia 12](continuidad/2026-11-04/fuentes-cloud/plan-y-resultados.md) y [referentes, snapshot de secuencia 10](continuidad/2026-11-04/fuentes-cloud/referentes.md). Las Pages enlazadas conservan procedencia y artefactos; este plan en Git es la autoridad para continuar. Los resultados fechados de JEF-BASE-001 se atribuyen a la entrega del Jefe: esta consolidación no repitió sus pruebas. Las secciones históricas de STOP de la Page no forman parte de la dirección vigente.
 
-## Dirección vigente y tanda JEF-BASE-001
+## Coordinación vigente: despacho local y ejecución cloud
+
+**Decisión posterior de Sergio, tras las pruebas COORD-PROBE-20261104 y COORD-LOCAL-CLOUD-20261104:** la coordinación y el despacho operativo quedan en la sesión local `01a1a29c-3a3d-7b50-aef6-41305ce5faae`; las áreas existentes ejecutan en cloud, host `durable`, entorno `onia`. **ONIA · Jefe** conserva planificación y síntesis cloud, sin atribuirle capacidad de iniciar los chats de área. [Prueba y alcance](continuidad/2026-11-04/coordinacion-local-cloud.md).
+
+En los catálogos comprobados de Jefe y Desarrollo cloud están `read_thread` y `wait_threads`, pero no `send_message_to_thread` ni `create_thread`. La sesión local sí despachó la prueba a Desarrollo y recuperó su resultado; Desarrollo leyó SESIONES del commit `1884335` por HTTP 200 y devolvió el ID correcto de Aprendizaje. Jefe confirmó también la recuperación de esa consolidación. Es evidencia de esos hosts y operaciones, no una imposibilidad universal de Codex ni una prueba de despacho entre todos los entornos.
+
+Los subagentes internos de un encargo son distintos de los chats de área: los frentes históricos JEF-BASE-001 siguen siendo válidos, pero no prueban envío entre chats. La PC debe estar disponible para nuevas órdenes y revisiones desde la coordinación local. La ejecución de la tarea de prueba fue remota; **no se hizo una prueba física con la PC apagada**. Este ajuste no crea servicios, chats ni automatizaciones y no cambia la preferencia de modelos registrada.
+
+## Dirección de trabajo y tanda JEF-BASE-001
 
 **JEF-BASE-001 v1 · instrucción vigente registrada por el Jefe.** Sergio autorizó lanzar frentes y subagentes para preparar la base compartida, conectar después sus MCP/cuentas y avanzar hacia panel, avisos diarios, automatizaciones, marca, workshop semanal, contenido/Ads y Platform. Esta instrucción reemplaza el STOP de lanzamiento y la condición «sólo recepción» anteriores. Autoriza esta tanda de preparación y comprobación; las propuestas específicas de gasto, publicación, envíos y producción se concretan antes de su autorización aplicable.
 
@@ -25,7 +33,7 @@ Según el cierre JEF-BASE-001, los cuatro subagentes fueron lanzados mediante he
 
 ## Fuentes y memoria compartida
 
-«Cerebro listo» significa recuperar evidencia, aplicarla, reconocer límites y dejar una decisión comprobable; no entrenamiento automático del modelo ni conocimiento completo de los referentes. Una fuente por dato: reglas, permisos y este plan en el repo onia; capacidad fechada en ESTADO; Pages para procedencia y artefactos; prioridades y resultados cotidianos en Notion; compromisos en Calendar. Organización conserva escritura Notion/Calendar; Jefe mantiene el plan canónico mediante el escritor Git designado; cada ejecutor entrega evidencia sin sobrescribir fuentes de otro.
+«Cerebro listo» significa recuperar evidencia, aplicarla, reconocer límites y dejar una decisión comprobable; no entrenamiento automático del modelo ni conocimiento completo de los referentes. Una fuente por dato: reglas, permisos y este plan en el repo onia; capacidad fechada en ESTADO; Pages para procedencia y artefactos; prioridades y resultados cotidianos en Notion; compromisos en Calendar. Organización conserva escritura Notion/Calendar; la coordinación local integra el plan canónico mediante el escritor Git designado y Jefe aporta planificación/síntesis cloud; cada ejecutor entrega evidencia sin sobrescribir fuentes de otro.
 
 Cada entrega incluye ID, objetivo, estado, enlace/revisión, observado/inferido/propuesto/probado/activo, resultado, comprobación, bloqueo, solución recomendada, responsable y siguiente paso. Leer versión/hash antes de editar, comprobar recibo y releer. Los demás frentes recuperan la fuente; no reciben resúmenes divergentes como nueva autoridad.
 
@@ -83,21 +91,21 @@ Cada área conserva una ficha viva: resultado buscado; situación y evidencia ac
 
 Ciclo: observar → investigar una duda concreta → proponer/priorizar → ejecutar dentro del alcance autorizado → comprobar → medir → corregir o elegir siguiente hipótesis. Al cerrar un trabajo, registrar resultado, evidencia, aprendizaje y siguiente acción. Si ésta pertenece al alcance autorizado, continuar; si cambia presupuesto, promesa, cuenta, reglas o producción, preparar el cambio concreto para decisión. No fabricar tareas para mantener agentes ocupados. Si no hay un siguiente paso útil, dejarlo explícito.
 
-El plan es continuo; cada ejecución tiene un límite. Dos ciclos de corrección por encargo como propuesta inicial, después diagnóstico y solución. Reintentos de eventos con deduplicación y conciliación de efectos inciertos. Un escritor por recurso; Organización mantiene Notion y Calendar. La jefa mantiene prioridades y aceptación, con máximo dos entregas simultáneas que requieran revisión de Sergio.
+El plan es continuo; cada ejecución tiene un límite. Dos ciclos de corrección por encargo como propuesta inicial, después diagnóstico y solución. Reintentos de eventos con deduplicación y conciliación de efectos inciertos. Un escritor por recurso; Organización mantiene Notion y Calendar. La coordinación local integra prioridades, despacho y aceptación, apoyada por la planificación/síntesis de Jefe cloud, con máximo dos entregas simultáneas que requieran revisión de Sergio.
 
 **Forma de informar un problema:** evidencia → impacto → solución recomendada → alternativa real cuando exista → paso exacto de Sergio si indispensable → prueba que demuestra cierre. No cerrar con sólo «pendiente» ni convertir «trabajo continuo» en una afirmación de ejecución entre turnos.
 
-## 1. Jefatura y coordinación cloud
+## 1. Jefatura, coordinación local y ejecución cloud
 
 **Resultado:** Sergio sabe qué está pasando, qué debe decidir y qué resultado se está buscando.
 
-**Arranque y continuidad del traspaso:** el chat cloud «Marca personal · Plan y resultados» fue renombrado **ONIA · Jefe**, ID `01a1a843-4afb-75f9-aa95-f35833fcb002`, host durable, entorno onia. Recuperar este archivo y ESTADO desde Git, identificar la revisión y reconciliar prioridades/IDs sin duplicados. El nombre del chat y el envío de un mensaje no prueban por sí solos recuperación del checkout ni lectura de todos los artefactos. El registro de chats está en [SESIONES.md](SESIONES.md).
+**Arranque y continuidad del traspaso:** el chat cloud «Marca personal · Plan y resultados» fue renombrado **ONIA · Jefe**, ID `01a1a843-4afb-75f9-aa95-f35833fcb002`, host durable, entorno onia. Conserva planificación y síntesis; la sesión local identificada arriba despacha a las áreas cloud y recupera sus entregas. Recuperar este archivo y ESTADO desde Git, identificar la revisión y reconciliar prioridades/IDs sin duplicados. El nombre del chat y el envío de un mensaje no prueban por sí solos recuperación del checkout ni lectura de todos los artefactos. El registro de chats está en [SESIONES.md](SESIONES.md).
 
 **Continuidad:** revisión breve del estado al empezar cada tanda; recibir cierres; resolver dependencias; priorizar por utilidad comercial, evidencia, urgencia, esfuerzo y capacidad. Revisión semanal para añadir, quitar o reorganizar trabajo. Contenido de otro chat no modifica automáticamente decisiones comunes.
 
 **Entregas y control:** una prioridad vigente, encargos delimitados, evidencias y lista de decisiones. Medir tareas bloqueadas, retrabajo, tiempo esperando a Sergio y cuota empleada por resultado útil. Subagentes para partes independientes o QA; no otro coordinador por cada tarea.
 
-**Sergio:** dirección y excepciones. **Aceptación del traspaso a Git:** el Jefe recupera la revisión publicada del plan y devuelve la siguiente tanda coherente sin depender de archivos locales; la prueba de lectura de Pages de JEF-BASE-001 es evidencia distinta.
+**Sergio:** dirección y excepciones. **Aceptación del traspaso a Git:** Jefe confirmó recuperación de la consolidación `1884335`; Desarrollo recuperó SESIONES del mismo commit en la prueba despachada desde local. No acredita lectura de todas las entregas ni autonomía entre chats. Nuevas tandas se concretan en la coordinación local, se envían al área cloud y se cierran con resultado recuperado. La prueba de lectura de Pages de JEF-BASE-001 es evidencia distinta.
 
 ## 2. Marca personal, contenido orgánico y redes
 
@@ -294,6 +302,6 @@ Mapa de sesiones: jefa + seis áreas existentes + Aprendizaje. Ads y workshops t
 
 ## Cierre y recuperación desde otra sesión
 
-El Jefe debe recuperar este plan por su ruta en Git, cotejar la revisión y leer ESTADO antes de ejecutar. Después de cada entrega, conservar el mismo ID, resultado, evidencia, aprendizaje, pendiente, solución y responsable. La continuidad usa los chats registrados en SESIONES; las partes independientes se delegan con las skills pertinentes de ORQUESTACION. Los documentos son recuperables desde cloud cuando la sesión tiene acceso y revisión comprobados; un push no actualiza automáticamente VMs existentes.
+La coordinación local y los ejecutores cloud recuperan este plan por su ruta en Git, cotejan la revisión y leen ESTADO antes de ejecutar. Jefe lo usa para planificación/síntesis, sin asumir despacho entre chats. Después de cada entrega, conservar el mismo ID, resultado, evidencia, aprendizaje, pendiente, solución y responsable. La continuidad usa los chats registrados en SESIONES; las partes independientes se delegan con las skills pertinentes de ORQUESTACION. Los documentos son recuperables desde cloud cuando la sesión tiene acceso y revisión comprobados; un push no actualiza automáticamente VMs existentes.
 
 Para la consolidación documental: verificar enlaces y revisión remota, pedir al Jefe una recuperación independiente y registrar el resultado real. La escritura del plan no resuelve acceso audiovisual, atomicidad n8n, autenticación Instagram/Ads, launcher, credencial runtime de Notion ni despliegue del panel. Sus próximas acciones y responsables permanecen en los programas anteriores y el estado canónico.

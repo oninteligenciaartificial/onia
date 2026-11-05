@@ -1,10 +1,12 @@
 # Ejecutar y retomar encargos
 
-Este procedimiento usa las [reglas comunes](reglas-comunes.md), la [arquitectura](arquitectura.md), el [plan oficial](PLAN.md) y el [estado vigente](ESTADO.md). **ONIA · Jefe** integra estrategia, prioridades y entregas entre áreas; el agente que recibe un encargo coordina su ejecución concreta dentro del alcance autorizado. El CLI prepara el encargo y su registro; la ejecución y la delegación las realiza ese agente con las herramientas disponibles.
+Este procedimiento usa las [reglas comunes](reglas-comunes.md), la [arquitectura](arquitectura.md), el [plan oficial](PLAN.md) y el [estado vigente](ESTADO.md). La **sesión local `01a1a29c-3a3d-7b50-aef6-41305ce5faae`** coordina prioridades, despacho a las áreas cloud y revisión de entregas. **ONIA · Jefe** conserva planificación/síntesis cloud, sin asumir capacidad de iniciar chats de área. El agente que recibe un encargo coordina su ejecución concreta dentro del alcance autorizado. El CLI prepara el encargo y su registro; la ejecución y la delegación las realiza ese agente con las herramientas disponibles.
 
 Para la operación cotidiana, **ONIA · Organización diaria** conserva la escritura de Notion/Calendar y los registros privados definidos en [CEREBRO-DIARIO.md](CEREBRO-DIARIO.md). El coordinador entrega resultado y evidencia mediante el escritor designado; el CLI local no sincroniza varias VMs. El repo es la fuente oficial del plan, decisiones y documentación; Pages conserva procedencia, historial y medios. Cada área recupera sólo su contexto, comprobando revisión. Los controles de agenda no restringen cuándo Sergio puede mandar tareas.
 
 ## Preparar el trabajo
+
+**Despacho entre chats, decisión posterior de Sergio:** en Jefe y Desarrollo cloud se comprobaron `read_thread` y `wait_threads`, sin `send_message_to_thread` ni `create_thread` expuestos. La coordinación local envía el encargo delimitado al chat existente, confirma recepción y recupera el resultado mediante lectura/espera; los ejecutores trabajan en host `durable`, entorno `onia`. La prueba local→Desarrollo→resultado y recuperación del repo está en [coordinación local/cloud](continuidad/2026-11-04/coordinacion-local-cloud.md). Es el alcance observado de esos hosts, no una imposibilidad universal de Codex. Mantener la PC disponible para nuevas órdenes/revisiones locales; no se verificó apagado físico durante ejecución remota.
 
 Desde la raíz del checkout, comprobar los archivos que necesita el harness:
 
@@ -29,6 +31,8 @@ Al iniciar un encargo, el agente selecciona el área por su resultado y lee auto
 `preparar --skill` permite elegir la directora entre las declaradas del área: por ejemplo `--area organizacion --skill continuidad-de-trabajo` para un traspaso o `--area marketing --skill preparar-campana-meta` para anuncios. Sin esa opción se usa la directora predeterminada. El briefing señala las restantes como apoyos opcionales.
 
 ## Ejecutar con subagentes
+
+Los subagentes internos son partes de un encargo y no equivalen a enviar mensajes a los chats persistentes de área. JEF-BASE-001 conserva evidencia de sus cuatro frentes; esa prueba no acredita despacho cloud→otros chats. Comprobar la herramienta disponible para cada mecanismo, sin crear sesiones nuevas para suplirlo.
 
 El coordinador lee el briefing y resuelve el encargo dentro de su alcance. Cuando una parte independiente permita ahorrar tiempo o mejorar la comprobación, la delega con estos datos:
 

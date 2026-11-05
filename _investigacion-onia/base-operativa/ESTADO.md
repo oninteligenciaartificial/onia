@@ -8,7 +8,7 @@ Sergio autorizó: **«Pero subi todo para que sea la fuente oficial, avisale a l
 
 Harness: **oninteligenciaartificial/onia**, entorno **onia** en Codex Cloud. Producto: repo independiente **onia-platform**. ONIA-CENTRAL excluido. VPS conserva startup y n8n, sin navegador, render pesado o nuevos modelos. Grok Bot diferido por falta de cuota.
 
-**ONIA · Jefe** coordina estrategia y prioridades cloud; **Organización diaria** escribe Notion/Calendar. La instrucción posterior de Sergio al Jefe autoriza preparar frentes y avanzar por áreas, sustituyendo el STOP histórico y «sólo recepción». No autoriza por sí sola gasto, publicaciones, mensajes reales o producción. [SESIONES](SESIONES.md) registra roles e IDs.
+**Coordinación operativa local; ejecución por áreas en cloud.** Tras las pruebas COORD-PROBE-20261104 y COORD-LOCAL-CLOUD-20261104, esta sesión local despacha encargos y recupera resultados. Jefe y Desarrollo cloud tienen lectura/consulta de chats, pero no send_message_to_thread/create_thread en sus catálogos actuales. ONIA · Jefe conserva planificación/síntesis cloud; Organización diaria escribe Notion/Calendar. [Prueba y reparto](continuidad/2026-11-04/coordinacion-local-cloud.md). La instrucción posterior de Sergio autoriza preparar frentes y avanzar por áreas, sustituyendo el STOP histórico; no autoriza por sí sola gasto, publicaciones, mensajes reales o producción. [SESIONES](SESIONES.md) registra roles e IDs.
 
 ## Evidencia y límites
 
@@ -16,9 +16,9 @@ Harness: **oninteligenciaartificial/onia**, entorno **onia** en Codex Cloud. Pro
 |---|---|---|
 | Harness | Arranque y sesión nueva en 9a3d4ce: doctor y 28 tests Python. Helper Meta 9972d26: seis tests. | Pruebas históricas; no repetidas por editar documentos. |
 | Skills | Nueve fuentes y enlaces idempotentes; seis chats iniciales las leyeron por archivo. | Descubrimiento nativo automático no acreditado. Carga por área según ORQUESTACION. |
-| Navegador | Bootstrap 2b1f9ab: dos bases NSS separadas/CA, HTTP200, captura y Play hasta 4,46 s; ocho tests Node y diez harness aprobados. | No acredita login persistente ni reproducción integral de toda fuente. |
+| Navegador | Bootstrap 2b1f9ab: dos bases NSS separadas/CA, HTTP 200, captura y Play hasta 4,46 s; ocho tests Node y diez harness aprobados. | No acredita login persistente ni reproducción integral de toda fuente. |
 | YouTube/audio · JEF-BASE-001 | Prueba nueva del Jefe: CONNECT tunnel 403 / HTTP 000 antes del reproductor, conservando proxy/TLS. Pages rechazó WAV por formato no soportado. | Causa exacta sin determinar; no atribuir Error 153 ni nueva escucha/ASR. Revisar túnel/política y repetir al cambiar la condición. |
-| n8n | Lectura HTTP200 histórica. [Piloto](continuidad/2026-11-04/fuentes-cloud/n8n-piloto.md): tres workflows inactivos y 60 verificaciones HTTP del circuito, con Meta/publicación/recurso/interés simulados y pago/acceso manual. | **Atomicidad runtime fallida:** carrera produce dos filas. Quince pruebas PostgreSQL temporales aisladas pasan, sin integración al workflow. No activar. |
+| n8n | Lectura HTTP 200 histórica. [Piloto](continuidad/2026-11-04/fuentes-cloud/n8n-piloto.md): tres workflows inactivos y 60 verificaciones HTTP del circuito, con Meta/publicación/recurso/interés simulados y pago/acceso manual. | **Atomicidad runtime fallida:** carrera produce dos filas. Quince pruebas PostgreSQL temporales aisladas pasan, sin integración al workflow. No activar. |
 | n8n → Codex | [CLI 0.166.0-alpha.1](continuidad/2026-11-04/fuentes-cloud/launcher-cloud.md): list remoto 401 pese a login ChatGPT local; cero tareas creadas, ENV_ID no identificado. | Despacho/callback/recuperación no probados. Evaluar device auth en lanzador dedicado, sin copiar auth de la PC. |
 | Meta Ads | Editor reportó /me/permissions y /me/accounts: 401, OAuth 190/463 por token vencido. GET 200 anterior histórico. | Renovación y lectura posterior pendientes; ninguna campaña modificada. |
 | Instagram | Cuenta objetivo @sergiourcullo; OnIA Social API con Instagram Login seleccionada. | Cuenta/token IG no conectados según última evidencia; comentarios necesita permiso propio. Lectura pública/ads_read no acredita publicar o enviar. [Accesos](accesos.md). |
@@ -50,7 +50,7 @@ Hormozi: reel 89 s por seis fotogramas/caption SALES y lección larga por puntos
 
 | Trabajo | Responsable y solución concreta | Criterio de cierre |
 |---|---|---|
-| Fuente oficial | Jefe recupera PLAN/ESTADO/SESIONES/consolidación desde Git; actualiza checkout preservando trabajo propio o usa GitHub. | Lectura de versión publicada y decisión vigente desde fuente, sin duplicar frentes. |
+| Fuente oficial | **Completado:** Jefe recuperó PLAN/ESTADO/SESIONES/consolidación desde Git en 1884335 y explicó el hito comercial/límite. Coordinación local integra nuevas decisiones; cada área preserva su trabajo al actualizar. | Se verificaron29 textos remotos sin diferencias y15 hashes. Mantener la revisión leída sin duplicar frentes. |
 | YouTube | Desarrollo revisa túnel/política; Video contrasta imagen/audio/transcripción. Alternativa si bloqueo persiste: archivo autorizado en cloud y revisión humana puntual. | Fuente reproducida, tiempos/cobertura/audio contrastados y fallo recuperable. |
 | n8n | Automatizaciones integra reserva transaccional con destino/rol acotados; prueba carrera, reinicio, conflicto, takeover, STOP, timeout incierto. | Mismo evento no duplica efectos en workflow real; SQL aislado no basta. |
 | Workshop | Marketing retoma WS-W01/02 con D1 y ficha de PLAN; ensayo humano previo a condiciones/preventa. | Resultado, error/corrección, ayuda/tiempo reales; oferta revisable sin inventar demanda. |

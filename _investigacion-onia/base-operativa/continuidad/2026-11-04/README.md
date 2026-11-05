@@ -62,5 +62,9 @@ Este trabajo es una **consolidación documental**: no cambia scripts, skills, ma
 
 Revisión independiente del plan y snapshots, comprobación de enlaces relativos, integridad SHA-256, ausencia de patrones comunes de secretos y diff documental. El commit y la lectura remota cierran la publicación. Después se avisa al Jefe para que recupere el plan desde Git y continúe sus frentes existentes; un push no actualiza por sí solo su checkout.
 
-Para consultar la publicación usar el historial de esta carpeta en GitHub. Las nuevas entregas del Jefe posteriores a este corte se integran por su responsable, sin atribuirlas a esta instantánea.
+**Publicación y recepción comprobadas:** commit 1884335,29 archivos comparados con remoto sin diferencias y15 hashes de snapshots. Jefe recuperó PLAN/ESTADO/SESIONES/README desde Git y respondió con el hito comercial vigente y su límite. Las cuatro Pages principales tienen referencia de autoridad a Git, releída.
+
+**Decisión posterior de Sergio:** [coordinación local y áreas cloud](coordinacion-local-cloud.md), con dos pruebas reales de capacidades y despacho. Este documento adicional registra qué puede hacer cada host y la dependencia de la PC para la coordinación local.
+
+Para consultar la publicación usar el historial de esta carpeta en GitHub. Las entregas del Jefe posteriores al corte inicial se integran por su responsable, sin atribuirlas a los snapshots.
 
