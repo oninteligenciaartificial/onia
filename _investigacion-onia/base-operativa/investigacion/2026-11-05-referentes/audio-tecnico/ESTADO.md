@@ -2,6 +2,11 @@
 
 ## Estado vigente · decisión open source
 
+**Cormac en VPS:** un reel real de 37,754 s procesado con ASR-VAD; contraste automático: 154 unidades en cada salida y una sustitución respecto a otro ASR, no verificación humana. Sólo un reel, sin aceptación de escucha acústica. [Resultado y límites](vps-faster-whisper.md#reel-real-cormac--prueba-en-vps).
+
+
+**ASR VPS:** faster-whisper instalado en entorno aislado; silencio sin VAD produjo texto inventado. Una configuración con VAD superó controles sintéticos y una muestra pública con límites pendientes; no acredita percepción acústica. [Evidencia](vps-faster-whisper.md).
+
 **Demo comunitaria acotada:** el código publicado de una candidata carga Qwen3-Omni abierto, pero sólo admite transcripción con instrucción fija; no permite la consigna neutral de los controles. No se enviaron audios ni se verificó inferencia anónima. [Evidencia y límites](demo-comunitaria-20261105.md).
 
 **Unidad de ensayo cerrada con rechazo semántico; goal integral abierto.** La tanda localizada de Eureka respondió al silencio digital inventando un cantante y música; es fallo excluyente. La ejecución propia se detuvo por instrucción de Jefa, sin completar el patrón. No se aplican etiquetas acústicas al corpus. [Resultado literal y evaluación](ruta-abierta-20261105.md#tanda-localizada-cd--rechazo-por-silencio), [salida cruda](eureka-resultados-cd.json), [recursos e interrupción](eureka-recursos-cd-interrupcion.json). Las tres matrices de cabeza/embeddings tienen SHA-256 idéntico en el checkpoint; las demás claves no usadas y la ligadura efectiva siguen sin explicación demostrada: [contraste](eureka-claves-no-usadas.md). No hay inferencia activa ni siguiente prueba autorizada por esta unidad.

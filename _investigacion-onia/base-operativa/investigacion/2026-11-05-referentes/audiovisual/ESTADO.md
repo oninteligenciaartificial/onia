@@ -4,6 +4,20 @@
 
 ## Resultado y evidencia revisable
 
+- [Evaluación independiente del lote](ruta-integral-vps.md#evaluación-independiente-del-lote-retenido--una-pasada-congelada):8/8 hashes/rangos/rutas comprobados; gate2/2 ceros y conservación6/6 no-ceros. Semántica temporal falla: orden voz/pulsos0/2, una inversión y una omisión; ambas captions de voz añaden atribución “man” no respaldada. Rasgos acústicos parciales no aceptan integral ni corpus. Una pasada congelada terminada; sin tuning/nueva inferencia, aceptación parcial en Jefa.
+
+- [Consulta SenseVoiceSmall](ruta-integral-vps.md#consulta-documental-sensevoicesmall--componente-parcial-no-ejecutado): ruta ONNX CPU verificada en código, etiquetas acústicas/emoción por entrada sin intervalos en wrapper. Español no acreditado; código MIT/pesos con acuerdo propio, adopción pendiente de revisión central. Sin instalación/pesos/inferencia/exportación ni cambio al pipeline o lote congelados; no aceptación de prosodia integral.
+
+- [Lote retenido independiente](ruta-integral-vps.md#lote-retenido-independiente--preparado-no-entregado-al-ejecutor):8 WAV/46s,2.944.352bytes,32kHz mono; validación independiente FFmpeg/ffprobe. Inputs/verdad separados en `operacion/referentes-20261105/video/lote-retenido-01/`; verdad sólo Jefa/evaluador. Preparado localmente, sin enviar; espera freeze/hash de Desarrollo antes de entregar inputs. Un lote/una ejecución, sin nuevos modelos ni aceptación de raw.
+
+- [Demo remota adicional MERaLiON](ruta-integral-vps.md#demo-remota-adicional-meralion--cierre-sin-inferencia): código/modelo público y licencia revisados; playground usa proxy sin carga/revisión del backend acreditada, API documentada exige clave. Validación vacía400 guardada, sin audio/inferencia ni cuota conocida. No solución operativa aceptada. Jefa comunicó además rechazo real de CoNeTTE por atribuir motor al silencio; no aplicar al corpus.
+
+- [Inventario privado para autorización de transferencia](ruta-integral-vps.md#transferencia-propuesta-inventario-privado-sin-envío):40 originales+Cormac separado,41/41 presentes y hashes cotejados,2.949.254.316 bytes,3 lotes secuenciales. Manifiesto privado en `operacion/referentes-20261105/video/transferencia-propuesta/manifiesto-privado.json`; sin envío/copia ni destino creado. Rechazo automático previo preservado; Jefa decide solicitud central, no se presume autorización.
+
+- [Semántica acústica: ampliación acotada](ruta-integral-vps.md#búsqueda-adicional-semántica-acústica-dos-opciones-nuevas): CoNeTTE MIT, demo CPU y fuente0.3.1 inspeccionados; propuesta exacta de silencio nativo primero, sin gate. Compatible documentalmente, RAM e inferencia aún sin medir; entorno aislado requerido. Pengi CPU/CC BY4.0 como segunda opción, sin memoria acreditada en presupuesto. Sin pesos descargados, inferencia remota/local o corpus enviado. Desarrollo ejecuta sólo si Jefa asigna; instrumental no completa percepción.
+
+- [Ruta integral para VPS](ruta-integral-vps.md): investigación acotada de dos rutas. Qwen2.5-Omni3B GGUF no se adopta por licencia research/no comercial y video no acreditado en esa conversión. FFmpeg/OpenCV/librosa ofrecen ruta CPU sin pesos para controles instrumentales, con revisiones y protocolo por atributo; no acreditan percepción integral. Desarrollo recibe propuesta de control tras ASR, con reserva host6GiB y tarea≤3GiB/1CPU. Video no operó VPS, descargó modelos ni aplicó al corpus.
+
 - [Guiones: cierre puntual Hormozi](guiones-faltantes.md): DfTSZcnovSg, DfS9tS4IcP6 y DfSV88LohWW carecían de cuerpo verbal completo; tres ASR locales existentes ejecutados y leídos, con tiempos/dudas y comparación con notas de subtítulos. Total de esta serie:16; sin cola activa. CTA SALES sigue documental, sin certificación de escucha/prosodia ni aceptación de B/C.
 
 - [Pendientes visuales finitos](pendientes-visuales-finitos.md): acciones estáticas concretas completadas;7 grupos perceptuales que cubren40medios; dependencia acústica de39pistas. Es la lista vigente, no cuarenta repeticiones deV+A.
