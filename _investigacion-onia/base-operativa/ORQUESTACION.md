@@ -1,12 +1,16 @@
 # Ejecutar y retomar encargos
 
-Este procedimiento usa las [reglas comunes](reglas-comunes.md), el [plan oficial](PLAN.md) y el [estado vigente](ESTADO.md). **Una jefa local delega, revisa y entrega; las siete áreas locales ejecutan sus encargos.** ONIA · Jefa v2 (`01a1ab9c-15b2-7a03-9588-2daab62a93eb`) está designada, todavía en espera de commit/recepción y sin rol operativo activo. La anterior cierra el relevo; no se confirma su archivo ni el handoff por escribir estas líneas. [Contrato de relevo](continuidad/2026-11-05/HANDOFF-JEFA.md). El CLI prepara registros auxiliares; no inicia ni sincroniza agentes por sí solo.
+Este procedimiento usa las [reglas comunes](reglas-comunes.md), el [plan oficial](PLAN.md) y el [estado vigente](ESTADO.md). **Una jefa local delega, revisa y entrega; las siete áreas locales ejecutan sus encargos.** La jefa vigente se identifica en [SESIONES](SESIONES.md); [ESTADO](ESTADO.md) mantiene el resultado del relevo y los pendientes de archivo. [Contrato de relevo](continuidad/2026-11-05/HANDOFF-JEFA.md). El CLI prepara registros auxiliares; no inicia ni sincroniza agentes por sí solo.
 
 El repo es la única autoridad para decisiones, reglas, estado y handoff. Organización mantiene la proyección cotidiana en Notion/Calendar sólo con alcance aplicable; Pages conserva medios y procedencia. Para reparto y autoridad, este procedimiento y ESTADO prevalecen sobre pasajes anteriores de [CEREBRO-DIARIO.md](CEREBRO-DIARIO.md) y arquitectura. Los datos personales permanecen privados, sin exportarlos a paquetes públicos. Cada área carga sólo el contexto pertinente y enlaza evidencia en cierres compactos.
 
+## Entrada de lecciones por área
+
+Al iniciar un encargo similar, cargar sólo el caso pertinente del [registro de errores](registro-de-errores.md#lecciones-del-511--referentes-acceso-y-coordinación): Jefa/Organización roles, contexto/cuota y solicitudes; Video/Aprendizaje percepción, control decisivo y contador; Desarrollo/infraestructura VPS, Computer Use y acceso/secretos. Automatizaciones/Producto consultan aislamiento y bases por uso sólo si el encargo los afecta, sin iniciar trabajo nuevo. Aplicar la regla y su contraejemplo, dejando prueba/límite; no cargar el historial completo ni duplicarlo por área. Las preferencias de disponibilidad permanecen privadas.
+
 ## Preparar el trabajo
 
-**Despacho vigente:** la jefa operativa confirmada envía un encargo delimitado al área local existente de [SESIONES](SESIONES.md), confirma recepción y recupera el resultado; no abre otra jefa simultánea. Durante el relevo no se atribuyen lanzamientos a Jefa v2 antes de su recepción. El alcance actual distingue piloto D1 terminado como prueba, preparación n8n inactiva terminada con 13/13 controles estáticos, sin runtime, y el resto de la producción en pausa según ESTADO. Mantener la PC disponible para órdenes y revisiones locales; no hay scheduler acreditado.
+**Despacho vigente:** la jefa operativa confirmada envía un encargo delimitado al área local existente de [SESIONES](SESIONES.md), confirma recepción y recupera el resultado; no abre otra jefa simultánea. La recepción y cualquier lanzamiento se acreditan por separado en ESTADO. El alcance actual distingue piloto D1 terminado como prueba, preparación n8n inactiva terminada con 13/13 controles estáticos, sin runtime, y el resto de la producción en pausa según ESTADO. Mantener la PC disponible para órdenes y revisiones locales; no hay scheduler acreditado.
 
 **Antecedente del 4/11:** Jefe y Desarrollo cloud expusieron lectura/espera, sin envío/creación de chats en aquellos catálogos. La [prueba local→cloud](continuidad/2026-11-04/coordinacion-local-cloud.md) documenta ese reparto anterior en host durable/entorno onia. Se conserva como evidencia fechada; no fija el ejecutor actual ni acredita migración de VMs o secretos.
 
@@ -31,6 +35,10 @@ Las seis áreas ejecutables del CLI son `marketing`, `video`, `desarrollo`, `aut
 Al iniciar un encargo, el agente selecciona el área por su resultado y lee automáticamente el cuerpo de la skill pertinente desde la ruta del manifiesto. Las skills de apoyo se cargan sólo cuando hacen falta. Si el catálogo nativo no las anuncia, leer la fuente canónica permite aplicar sus instrucciones; registrar esa diferencia sin pedir a Sergio que pegue la skill ni afirmar que el descubrimiento nativo pasó. Sólo un encargo cloud explícito usa [INICIO-SESION.md](cloud/INICIO-SESION.md); no es el arranque habitual de las áreas locales.
 
 `preparar --skill` permite elegir la directora entre las declaradas del área: por ejemplo `--area organizacion --skill continuidad-de-trabajo` para un traspaso o `--area marketing --skill preparar-campana-meta` para anuncios. Sin esa opción se usa la directora predeterminada. El briefing señala las restantes como apoyos opcionales.
+
+## Solicitudes a Sergio y canal móvil
+
+Instrucción directa de Sergio comunicada por Jefa: las áreas entregan a Jefa sus preguntas, decisiones y bloqueos con evidencia; **Jefa presenta las solicitudes a Sergio en el chat de Jefa**, sin duplicarlas en cada área. Las autorizaciones nativas de la app pueden permanecer ancladas al chat que invoca la herramienta: no se promete reubicarlas, no se aprueban por Sergio y una respuesta textual no equivale a accionar el botón de autorización. Sergio pidió notificaciones por el móvil; Automatizaciones verifica capacidades y el canal está por confirmar. No hay push configurado ni programación acreditados por esta instrucción.
 
 ## Ejecutar con subagentes
 

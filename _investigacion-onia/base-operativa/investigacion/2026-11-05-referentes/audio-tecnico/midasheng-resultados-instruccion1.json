@@ -1,0 +1,38 @@
+{
+  "revision": "3969e451d1c62618089c1135fe4c58ed33af2457",
+  "prompt": "Describe the sounds audible in this audio clip, if any.",
+  "device": "cpu",
+  "threads": 4,
+  "dtype": "audio_encoder/projector float32; decoder float16",
+  "vad": false,
+  "cases": [
+    {
+      "case": "a",
+      "source_after_blind_run": "control-tono440.wav",
+      "raw_full": "A series of tones are being played.",
+      "answer": "",
+      "seconds": 4.25
+    },
+    {
+      "case": "b",
+      "source_after_blind_run": "control-voz.wav",
+      "raw_full": "No distinct environmental or non-musical sounds are present.",
+      "answer": "",
+      "seconds": 2.906
+    },
+    {
+      "case": "c",
+      "source_after_blind_run": "control-silencio.wav",
+      "raw_full": "No distinct sound events are present in the recording.",
+      "answer": "",
+      "seconds": 2.5
+    },
+    {
+      "case": "d",
+      "source_after_blind_run": "control-patron.wav",
+      "raw_full": "A siren sound",
+      "answer": "",
+      "seconds": 1.203
+    }
+  ]
+}

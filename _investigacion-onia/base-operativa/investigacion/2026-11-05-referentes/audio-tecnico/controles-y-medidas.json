@@ -1,0 +1,87 @@
+{
+  "scope": "PCM measurements, not listening",
+  "expected": {
+    "silence": "all PCM zero",
+    "tone": "6s 440Hz amplitude .2",
+    "pattern": "2s silence + 2s tone + 2s silence"
+  },
+  "controls": {
+    "control-silencio.wav": {
+      "file": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\control-silencio.wav",
+      "bytes": 192044,
+      "sha256": "47b589098cc9e4b92774cd5b6a57ccca0713c02396bf755b2318f7e81cdc534e",
+      "sample_rate": 16000,
+      "frames": 96000,
+      "channels": 1,
+      "duration_s": 6.0,
+      "peak": 0.0,
+      "rms": 0.0,
+      "rms_dbfs": null,
+      "all_zero": true,
+      "dominant_fft_hz": null
+    },
+    "control-tono440.wav": {
+      "file": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\control-tono440.wav",
+      "bytes": 192044,
+      "sha256": "d49b97c927f4099e4cb29df926f683e27e025f1306588c86664ab632f57221e5",
+      "sample_rate": 16000,
+      "frames": 96000,
+      "channels": 1,
+      "duration_s": 6.0,
+      "peak": 0.199981689453125,
+      "rms": 0.14141676131653078,
+      "rms_dbfs": -16.989982261154086,
+      "all_zero": false,
+      "dominant_fft_hz": 440.0
+    },
+    "control-patron.wav": {
+      "file": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\control-patron.wav",
+      "bytes": 192044,
+      "sha256": "65a4657c3236a6bcb43d0e7b3b508554d83ece268a0b77d6af3dcce2c79d0688",
+      "sample_rate": 16000,
+      "frames": 96000,
+      "channels": 1,
+      "duration_s": 6.0,
+      "peak": 0.199981689453125,
+      "rms": 0.08164700521402411,
+      "rms_dbfs": -21.76119480835071,
+      "all_zero": false,
+      "dominant_fft_hz": 440.0
+    }
+  },
+  "assertions": {
+    "silencio_todas_muestras_cero": true,
+    "tono_frecuencia_440": true,
+    "tono_rms_esperado": true,
+    "patron_intervalos_exacto": true
+  },
+  "pass": true,
+  "real_asr": {
+    "file": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\pedro-asr-16k.wav",
+    "bytes": 2891212,
+    "sha256": "d3fddfc3562aa94f9b2d592830041c6495291c1edf2911fc2e6a987df8d96fe5",
+    "sample_rate": 16000,
+    "frames": 1445567,
+    "channels": 1,
+    "duration_s": 90.3479375,
+    "peak": 0.92779541015625,
+    "rms": 0.1477085119012625,
+    "rms_dbfs": -16.61188954328925,
+    "all_zero": false,
+    "dominant_fft_hz": 282.48569592415987
+  },
+  "original_pcm": {
+    "file": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\pedro-original-pcm24.wav",
+    "bytes": 26020314,
+    "sha256": "8325d3ffddd2c2d536feac848a853a8473d7c3ef16cff53b289cddb70cd37112",
+    "sample_rate": 48000,
+    "frames": 4336702,
+    "channels": 2,
+    "duration_s": 90.34795833333334,
+    "peak": 0.9404314756393433,
+    "rms": 0.1488821344979256,
+    "rms_dbfs": -16.543148268525695,
+    "all_zero": false,
+    "dominant_fft_hz": 282.4856307857907
+  }
+}

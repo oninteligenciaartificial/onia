@@ -1,0 +1,38 @@
+{
+  "revision": "3969e451d1c62618089c1135fe4c58ed33af2457",
+  "prompt": "Write a detailed caption about this audio within 1-2 sentences.",
+  "device": "cpu",
+  "threads": 4,
+  "dtype": "audio_encoder/projector float32; decoder float16",
+  "vad": false,
+  "cases": [
+    {
+      "case": "a",
+      "source_after_blind_run": "control-tono440.wav",
+      "raw_full": "A series of short, high-pitched tones are being made by a telephone.",
+      "answer": "A series of short, high-pitched tones are being made by a telephone.",
+      "seconds": 4.079
+    },
+    {
+      "case": "b",
+      "source_after_blind_run": "control-voz.wav",
+      "raw_full": "A female speaker delivers a controlled audio test with a number 'seven' in a neutral tone.",
+      "answer": "A female speaker delivers a controlled audio test with a number 'seven' in a neutral tone.",
+      "seconds": 3.063
+    },
+    {
+      "case": "c",
+      "source_after_blind_run": "control-silencio.wav",
+      "raw_full": "A recording of a person speaking clearly and calmly, with a slight background noise that doesn't obscure the speech. The audio quality is moderate, with some background interference but overall clear.",
+      "answer": "A recording of a person speaking clearly and calmly, with a slight background noise that doesn't obscure the speech. The audio quality is moderate, with some background interference but overall clear.",
+      "seconds": 5.703
+    },
+    {
+      "case": "d",
+      "source_after_blind_run": "control-patron.wav",
+      "raw_full": "A phone rings repeatedly, indicating a possible call or message.",
+      "answer": "A phone rings repeatedly, indicating a possible call or message.",
+      "seconds": 2.188
+    }
+  ]
+}

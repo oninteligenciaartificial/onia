@@ -1,0 +1,23 @@
+{
+  "revision": "219761da53c9c6c5900a84a723d88ccc29db66d3",
+  "prompt": "Describe the audio.",
+  "device": "cpu",
+  "threads": 4,
+  "vad": false,
+  "dtype": "float32",
+  "adaptation": "SDPA; Accelerate CPU 2GiB/disk; local numpy BF16 loader; WAV via soundfile",
+  "cases": [
+    {
+      "case": "a",
+      "source_after_blind_run": "control-tono440.wav",
+      "answer": "The audio consists of a single, continuous, and steady electronic tone that persists without variation for the entire duration of the clip. This sound is characterized by a pure, synthetic timbre with no harmonic complexity or natural decay, resembling a standard 1 kHz sine wave often used in broadcasting as a test signal or a censorship bleep. The pitch remains constant at a fixed frequency, creating a monotonous",
+      "elapsed_s": 436.296
+    },
+    {
+      "case": "b",
+      "source_after_blind_run": "control-voz.wav",
+      "answer": "The audio clip presents a brief, isolated vocal event set against a completely silent background with no discernible noise floor or environmental ambience. A single voice, characterized by a neutral and informative tone, clearly articulates the phrase \"This is a controlled audio test.\" The delivery is steady and deliberate, suggesting a scripted or instructional context rather than spontaneous speech. Following a negligible pause, the speaker continues with the",
+      "elapsed_s": 434.656
+    }
+  ]
+}

@@ -1,16 +1,19 @@
 # Plan continuo de ONIA
 
+**Decisión vigente de Sergio ·5/11:** terminar referentes antes del siguiente frente; app audiovisual deseada en VPS con bases de datos distintas por uso. Descarga/prueba de repositorios abiertos gratuitos autorizada, condicionada a comprobar acceso, recursos, aislamiento y controles; no app operativa ni VPS resuelto. [Lecciones y casos](registro-de-errores.md#lecciones-del-511--referentes-acceso-y-coordinación) y [entrada por área](ORQUESTACION.md#entrada-de-lecciones-por-área). [Diseño de Desarrollo](investigacion/2026-11-05-referentes/audio-tecnico/vps-arquitectura.md) aceptado por Jefa como arquitectura condicionada al inventario; no acredita capacidad, acceso ni instalación en VPS. Acceso personal pendiente, preferencias/tiempos sólo en privado. Esta documentación no activa producción, scheduler ni notificaciones.
+
+
 **Fuente oficial: repositorio privado `oninteligenciaartificial/onia`. Consolidación del 5 de noviembre de 2026, America/Caracas.** Sergio estableció el repo como única autoridad de decisiones, reglas, estado y handoff; las áreas continúan en local. Medios, credenciales y contexto personal privado mantienen su tratamiento separado. Este archivo mantiene la dirección y el plan por áreas; [ESTADO.md](ESTADO.md) mantiene la capacidad comprobada y [reglas-comunes.md](reglas-comunes.md) los permisos comunes. Los programas y pruebas propuestos no se convierten en funciones activas por quedar documentados.
 
 Procedencia: [plan y resultados, snapshot de secuencia 12](continuidad/2026-11-04/fuentes-cloud/plan-y-resultados.md) y [referentes, snapshot de secuencia 10](continuidad/2026-11-04/fuentes-cloud/referentes.md). Las Pages enlazadas conservan procedencia y artefactos; este plan en Git es la autoridad para continuar. Los resultados fechados de JEF-BASE-001 se atribuyen a la entrega del Jefe: esta consolidación no repitió sus pruebas. Las secciones históricas de STOP de la Page no forman parte de la dirección vigente.
 
 ## Coordinación vigente: áreas locales y relevo de jefa
 
-**Decisión del 5 de noviembre:** siete áreas locales y una sola jefa que delega, revisa y entrega. Sergio ordenó reemplazar la anterior por **ONIA · Jefa v2**, `01a1ab9c-15b2-7a03-9588-2daab62a93eb`, host local. Está designada y en espera de commit/recepción; aún no tiene rol operativo activo. La anterior cierra el traspaso; su archivo fue ordenado, no confirmado. [SESIONES](SESIONES.md) identifica responsables y orígenes; [HANDOFF-JEFA](continuidad/2026-11-05/HANDOFF-JEFA.md) define recepción, evidencia y primera tarea.
+**Decisión del 5 de noviembre:** siete áreas locales y una sola jefa que delega, revisa y entrega. [SESIONES](SESIONES.md) identifica a la jefa vigente, responsables y orígenes; [ESTADO](ESTADO.md) conserva el cierre factual del relevo. [HANDOFF-JEFA](continuidad/2026-11-05/HANDOFF-JEFA.md) mantiene evidencia, alcance y primera tarea.
 
 **Alcance actual:** piloto D1 silencioso terminado como prueba privada, sin publicación ni comprensión humana/locución acreditadas. Preparación n8n inactiva terminada y recuperable en el [bundle versionable](continuidad/2026-11-05/n8n-reserva-local/README.md): 13/13 controles estáticos, sin ejecutar Code/SQL/importación/carrera/runtime. Integración, STOP/takeover y conciliación siguen pendientes. Producto y demás producción, campañas, publicaciones, mensajes y gasto necesitan alcance aplicable; el plan de programas no los activa.
 
-**Primera prioridad tras la recepción de Jefa v2:** encargar a Video/Desarrollo una prueba del audio real con controles y evaluación de voz, música, SFX, silencios y sincronía. Resolver el límite con alternativas abiertas/autorizadas antes de pedir a Sergio la intervención indispensable. Sin Gemini ni API paga por defecto. Este traspaso sólo deja el contrato; no ejecuta esa investigación.
+**Primera prioridad de la jefa vigente:** encargar a Video/Desarrollo una prueba del audio real con controles y evaluación de voz, música, SFX, silencios y sincronía. Resolver el límite con alternativas abiertas/autorizadas antes de pedir a Sergio la intervención indispensable. Sin Gemini ni API paga por defecto. Este traspaso sólo deja el contrato; no ejecuta esa investigación.
 
 Las continuaciones documentales no trasladan VMs, historial completo ni secretos. VPS conserva n8n/startup; los orígenes cloud se conservan. Los subagentes internos apoyan encargos concretos, no crean otra jefa. La PC sostiene órdenes/revisiones locales; no hay scheduler acreditado. La [prueba local→cloud del 4/11](continuidad/2026-11-04/coordinacion-local-cloud.md), con capacidades distintas entre catálogos y recuperación de `1884335`, permanece como antecedente, no reparto vigente ni prueba física con la PC apagada.
 
@@ -93,7 +96,7 @@ Cada área conserva una ficha viva: resultado buscado; situación y evidencia ac
 
 Ciclo: observar → investigar una duda concreta → proponer/priorizar → ejecutar dentro del alcance autorizado → comprobar → medir → corregir o elegir siguiente hipótesis. Al cerrar un trabajo, registrar resultado, evidencia, aprendizaje y siguiente acción. Si ésta pertenece al alcance autorizado, continuar; si cambia presupuesto, promesa, cuenta, reglas o producción, preparar el cambio concreto para decisión. No fabricar tareas para mantener agentes ocupados. Si no hay un siguiente paso útil, dejarlo explícito.
 
-El plan es continuo; cada ejecución tiene un límite. Dos ciclos de corrección por encargo como propuesta inicial, después diagnóstico y solución. Reintentos de eventos con deduplicación y conciliación de efectos inciertos. Un escritor por recurso; Organización mantiene Notion y Calendar. Una sola jefa local integra prioridades, despacho y aceptación, con máximo dos entregas simultáneas que requieran revisión de Sergio. El relevo sólo se completa con commit y recepción confirmados. Los cierres son compactos: resultado, evidencia/enlace, prueba realizada, bloqueo con solución y siguiente acción; se recupera contexto adicional por enlace, sin pegar grandes lecturas.
+El plan es continuo; cada ejecución tiene un límite. Dos ciclos de corrección por encargo como propuesta inicial, después diagnóstico y solución. Reintentos de eventos con deduplicación y conciliación de efectos inciertos. Un escritor por recurso; Organización mantiene Notion y Calendar. Una sola jefa local integra prioridades, despacho y aceptación, con máximo dos entregas simultáneas que requieran revisión de Sergio. El resultado factual del relevo se consulta en ESTADO. Los cierres son compactos: resultado, evidencia/enlace, prueba realizada, bloqueo con solución y siguiente acción; se recupera contexto adicional por enlace, sin pegar grandes lecturas.
 
 **Forma de informar un problema:** evidencia → impacto → solución recomendada → alternativa real cuando exista → paso exacto de Sergio si indispensable → prueba que demuestra cierre. No cerrar con sólo «pendiente» ni convertir «trabajo continuo» en una afirmación de ejecución entre turnos.
 
@@ -101,13 +104,13 @@ El plan es continuo; cada ejecución tiene un límite. Dos ciclos de corrección
 
 **Resultado:** Sergio sabe qué está pasando, qué debe decidir y qué resultado se está buscando.
 
-**Arranque y continuidad del traspaso:** Jefa v2 recupera el commit y el [handoff](continuidad/2026-11-05/HANDOFF-JEFA.md), identifica evidencia, límites y alcance antes de asumir. Los roles/IDs están en [SESIONES.md](SESIONES.md). El antiguo ONIA · Jefe cloud conserva su procedencia histórica; no hay una segunda jefa operativa. El nombre de un chat y el envío de un mensaje no prueban recepción del checkout ni aceptación.
+**Continuidad del traspaso:** la jefa vigente recupera el contexto necesario del [handoff](continuidad/2026-11-05/HANDOFF-JEFA.md), con evidencia, límites y alcance. Los roles/IDs están en [SESIONES.md](SESIONES.md) y el resultado de recepción en [ESTADO](ESTADO.md). El antiguo ONIA · Jefe cloud conserva su procedencia histórica; no hay una segunda jefa operativa. El nombre de un chat y el envío de un mensaje no prueban recepción del checkout ni aceptación.
 
 **Continuidad:** revisión breve del estado al empezar cada tanda; recibir cierres; resolver dependencias; priorizar por utilidad comercial, evidencia, urgencia, esfuerzo y capacidad. Revisión semanal para añadir, quitar o reorganizar trabajo. Contenido de otro chat no modifica automáticamente decisiones comunes.
 
 **Entregas y control:** una prioridad vigente, encargos delimitados, evidencias y lista de decisiones. Medir tareas bloqueadas, retrabajo, tiempo esperando a Sergio y cuota empleada por resultado útil. Subagentes para partes independientes o QA; no otro coordinador por cada tarea.
 
-**Sergio:** dirección y excepciones. **Aceptación actual pendiente:** Jefa v2 debe confirmar recuperación del commit y del alcance, sin heredar la aceptación del antiguo Jefe a `1884335`. Las tandas se envían a áreas locales y se cierran con evidencia recuperada. La recuperación cloud de `1884335` y la prueba de Pages de JEF-BASE-001 son antecedentes distintos.
+**Sergio:** dirección y excepciones. **Aceptación del relevo:** consultar el registro vigente de ESTADO, distinto de la aceptación histórica del antiguo Jefe a `1884335`. Las tandas se envían a áreas locales y se cierran con evidencia recuperada. La recuperación cloud de `1884335` y la prueba de Pages de JEF-BASE-001 son antecedentes distintos.
 
 ## 2. Marca personal, contenido orgánico y redes
 
@@ -212,7 +215,7 @@ Fuentes oficiales con ficha y temario revisados, no cursos completados: [presupu
 
 **Continuidad:** atender bugs con reproducción; aplicar cambio aislado; pruebas pertinentes; revisión; entrega/despliegue autorizado; monitoreo y revisión de dependencias. Reglas y skills cambian sólo ante causa específica y con la autorización aplicable.
 
-**Entregas y control:** diff, prueba, evidencia del ejecutor real y límites; errores, retrabajo, cuota, recursos y tiempo hasta resultado. n8n/startup siguen en VPS; no incorporar allí render/modelos pesados. Homelab diferido.
+**Entregas y control:** diff, prueba, evidencia del ejecutor real y límites; errores, retrabajo, cuota, recursos y tiempo hasta resultado. n8n/startup siguen en VPS; no incorporar allí render/modelos sin medición y aislamiento; la autorización actual de prueba audiovisual en VPS prevalece sobre el límite histórico. Homelab diferido.
 
 **Sergio:** accesos personales indispensables y decisiones de producción. **Pendiente histórico launcher401:** si se vuelve a autorizar un lanzador remoto, autenticar una ruta soportada y verificar ID remoto→resultado→callback. La continuidad local actual no depende de resolverlo.
 
@@ -296,7 +299,7 @@ Mapa de sesiones: jefa + seis áreas existentes + Aprendizaje. Ads y workshops t
 
 ## Tanda actual y lo que viene después
 
-**Tanda vigente:** revisión local cerrada y piloto D1 visual entregable como prueba, sin publicar. La preparación n8n inactiva terminó con 13/13 controles estáticos y su bundle está incorporado a esta entrega; no es integración runtime. El relevo a Jefa v2 espera commit/recepción. Después, la primera prioridad es la prueba del audio real; la siguiente unidad de n8n exige destino/rol aislados acreditados antes de cualquier importación o ejecución. Contenido y automatizaciones pueden avanzar como frentes independientes dentro de encargos definidos; Producto y demás producción no se activan automáticamente.
+**Tanda vigente:** revisión local cerrada y piloto D1 visual entregable como prueba, sin publicar. La preparación n8n inactiva terminó con 13/13 controles estáticos y su bundle está incorporado a esta entrega; no es integración runtime. El estado del relevo está en ESTADO y la jefa vigente en SESIONES. La primera prioridad es la prueba del audio real; la siguiente unidad de n8n exige destino/rol aislados acreditados antes de cualquier importación o ejecución. Contenido y automatizaciones pueden avanzar como frentes independientes dentro de encargos definidos; Producto y demás producción no se activan automáticamente.
 
 **Al terminar:** revisar evidencia, métricas y dificultad; elegir siguiente experimento por área; actualizar cola y decidir qué mantener, corregir, quitar o añadir. El plan no termina al completar una lista. La ejecución recurrente exige disparador probado; hasta entonces la continuidad ocurre dentro de encargos iniciados, sin simular trabajo permanente.
 
@@ -306,4 +309,4 @@ Mapa de sesiones: jefa + seis áreas existentes + Aprendizaje. Ads y workshops t
 
 La jefa confirmada y las áreas locales recuperan este plan y ESTADO desde Git, cotejan la revisión y cargan sólo los enlaces pertinentes. Conservar ID, resultado, evidencia, prueba, bloqueo con solución y siguiente acción. Los chats están registrados en SESIONES y las skills en ORQUESTACION. Los medios pueden permanecer fuera de Git con ruta/hash/ubicación recuperable; estado y decisiones no quedan sólo en operacion ignorado. Un commit o push no acredita recepción del handoff.
 
-Para esta consolidación: verificar enlaces e integridad; la jefa saliente gestiona el commit/publicación y Jefa v2 confirma recepción del commit antes de asumir. Este encargo no hace commit/push ni certifica archivo o aceptación. La escritura del plan no resuelve acceso audiovisual, atomicidad n8n, autenticación Instagram/Ads, launcher, credencial runtime de Notion ni despliegue del panel. Sus próximas acciones y responsables permanecen en los programas anteriores y el estado canónico.
+La publicación y recepción de esta consolidación se registran en ESTADO; SESIONES mantiene la jefa vigente. No duplicar estados transitorios ni atribuir archivo de chats o nuevas ejecuciones sin comprobación. La escritura del plan no resuelve acceso audiovisual, atomicidad n8n, autenticación Instagram/Ads, launcher, credencial runtime de Notion ni despliegue del panel. Sus próximas acciones y responsables permanecen en los programas anteriores y el estado canónico.

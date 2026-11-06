@@ -1,0 +1,597 @@
+{
+  "schema_version": 1,
+  "purpose": "Inventario exacto de investigación y clasificación separada de continuidad para revisar un futuro commit local; no autoriza add, commit o publicación",
+  "cut_date": "2026-11-05",
+  "timezone": "America/Caracas",
+  "repository_relative_root": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes",
+  "status": "preparado; sin git add, commit o push",
+  "scope_note": "Corte de Organización al retomar desde la integración guardada por Jefa: incorpora la entrega documental de Aprendizaje y clasifica los cambios de continuidad. No acredita recepción de esa entrega ni cierre acústico. Revisar cambios posteriores contra este corte antes de decidir el conjunto final.",
+  "counts": {
+    "candidates": 119,
+    "excluded_local_auxiliaries": 17,
+    "known_files": 136,
+    "candidates_by_folder": {
+      ".": 2,
+      "audio-tecnico": 16,
+      "audiovisual": 21,
+      "criterio": 7,
+      "marketing": 10,
+      "recuperacion-secundaria": 56,
+      "reel-identidad": 7
+    },
+    "other_non_candidate_files": 0,
+    "continuity_changes_separate": 9
+  },
+  "candidate_paths": [
+    "README.md",
+    "audio-tecnico/ESTADO.md",
+    "audio-tecnico/README.md",
+    "audio-tecnico/alternativas.md",
+    "audio-tecnico/cerrar_evidencia.py",
+    "audio-tecnico/controles-video.json",
+    "audio-tecnico/controles-y-medidas.json",
+    "audio-tecnico/energia-100ms.json",
+    "audio-tecnico/fragmentos.json",
+    "audio-tecnico/loudnorm-medicion.txt",
+    "audio-tecnico/manifest.json",
+    "audio-tecnico/preparar_controles_video.py",
+    "audio-tecnico/probar_audio.py",
+    "audio-tecnico/qa-controles-video.json",
+    "audio-tecnico/tramos-medidos.json",
+    "audio-tecnico/verificacion.json",
+    "audio-tecnico/verificar_controles_video.py",
+    "audiovisual/ESTADO.md",
+    "audiovisual/LECTURA-COMPARADA.md",
+    "audiovisual/alex-carrera.md",
+    "audiovisual/bastian-alvaro.md",
+    "audiovisual/enrique-rocha.md",
+    "audiovisual/erik.md",
+    "audiovisual/gonzalo-alternativa.md",
+    "audiovisual/gonzalo-beltran.md",
+    "audiovisual/heras-candidata.md",
+    "audiovisual/heras-vsl.md",
+    "audiovisual/hormozi.md",
+    "audiovisual/iman-estado.md",
+    "audiovisual/iman.md",
+    "audiovisual/jeff-ali.md",
+    "audiovisual/nick.md",
+    "audiovisual/pedro-procedencia.md",
+    "audiovisual/pedro.md",
+    "audiovisual/san.md",
+    "audiovisual/toto.md",
+    "audiovisual/verificacion.json",
+    "audiovisual/voltra.md",
+    "criterio/ESTADO.md",
+    "criterio/alex-carrera.md",
+    "criterio/bastian-alvaro-voltra.md",
+    "criterio/comparacion.md",
+    "criterio/gonzalo-beltran-toto.md",
+    "criterio/nick-jeff-ali.md",
+    "criterio/verificacion.json",
+    "inventario-commit-local.json",
+    "marketing/ESTADO.md",
+    "marketing/alex-hormozi.md",
+    "marketing/comparacion.md",
+    "marketing/enrique-rocha.md",
+    "marketing/erik-taveras.md",
+    "marketing/iman-gadzhi.md",
+    "marketing/justin-welsh.md",
+    "marketing/pedro-buerbaum.md",
+    "marketing/san-munoz.md",
+    "marketing/victor-heras.md",
+    "recuperacion-secundaria/4jWLq8Gn_4Y-download.log",
+    "recuperacion-secundaria/4jWLq8Gn_4Y-media-download.log",
+    "recuperacion-secundaria/ESTADO.md",
+    "recuperacion-secundaria/SVHKZkD1r_A-download.log",
+    "recuperacion-secundaria/SVHKZkD1r_A-media-download.log",
+    "recuperacion-secundaria/anrAaNvbp4M-download.log",
+    "recuperacion-secundaria/anrAaNvbp4M-media-download.log",
+    "recuperacion-secundaria/asr_erik.py",
+    "recuperacion-secundaria/c4S0EJAdL5I-download.log",
+    "recuperacion-secundaria/cerrar_recuperacion.py",
+    "recuperacion-secundaria/erik/ESTADO.md",
+    "recuperacion-secundaria/erik/manifest.json",
+    "recuperacion-secundaria/erik/recuperar_erik.py",
+    "recuperacion-secundaria/erik/web-metadata.json",
+    "recuperacion-secundaria/idiomas-pistas.json",
+    "recuperacion-secundaria/manifest.json",
+    "recuperacion-secundaria/nick-original-subtitle.log",
+    "recuperacion-secundaria/oFYznV9EYPg-download.log",
+    "recuperacion-secundaria/oFYznV9EYPg-media-download.log",
+    "recuperacion-secundaria/oZ9UKXve3Dk-download.log",
+    "recuperacion-secundaria/qa-medios/4jWLq8Gn_4Y.decode.progress.txt",
+    "recuperacion-secundaria/qa-medios/4jWLq8Gn_4Y.decode.stderr.txt",
+    "recuperacion-secundaria/qa-medios/4jWLq8Gn_4Y.ffprobe.json",
+    "recuperacion-secundaria/qa-medios/4jWLq8Gn_4Y.qa.json",
+    "recuperacion-secundaria/qa-medios/ESTADO.md",
+    "recuperacion-secundaria/qa-medios/SVHKZkD1r_A.decode.progress.txt",
+    "recuperacion-secundaria/qa-medios/SVHKZkD1r_A.decode.stderr.txt",
+    "recuperacion-secundaria/qa-medios/SVHKZkD1r_A.ffprobe.json",
+    "recuperacion-secundaria/qa-medios/SVHKZkD1r_A.qa.json",
+    "recuperacion-secundaria/qa-medios/anrAaNvbp4M.decode.progress.txt",
+    "recuperacion-secundaria/qa-medios/anrAaNvbp4M.decode.stderr.txt",
+    "recuperacion-secundaria/qa-medios/anrAaNvbp4M.ffprobe.json",
+    "recuperacion-secundaria/qa-medios/anrAaNvbp4M.qa.json",
+    "recuperacion-secundaria/qa-medios/c4S0EJAdL5I.decode.progress.txt",
+    "recuperacion-secundaria/qa-medios/c4S0EJAdL5I.decode.stderr.txt",
+    "recuperacion-secundaria/qa-medios/c4S0EJAdL5I.ffprobe.json",
+    "recuperacion-secundaria/qa-medios/c4S0EJAdL5I.qa.json",
+    "recuperacion-secundaria/qa-medios/cotejo-frames.json",
+    "recuperacion-secundaria/qa-medios/oFYznV9EYPg.decode.progress.txt",
+    "recuperacion-secundaria/qa-medios/oFYznV9EYPg.decode.stderr.txt",
+    "recuperacion-secundaria/qa-medios/oFYznV9EYPg.ffprobe.json",
+    "recuperacion-secundaria/qa-medios/oFYznV9EYPg.qa.json",
+    "recuperacion-secundaria/qa-medios/oZ9UKXve3Dk.decode.progress.txt",
+    "recuperacion-secundaria/qa-medios/oZ9UKXve3Dk.decode.stderr.txt",
+    "recuperacion-secundaria/qa-medios/oZ9UKXve3Dk.ffprobe.json",
+    "recuperacion-secundaria/qa-medios/oZ9UKXve3Dk.qa.json",
+    "recuperacion-secundaria/qa-medios/preservacion.json",
+    "recuperacion-secundaria/qa-medios/resultados.json",
+    "recuperacion-secundaria/qa-medios/resumir_qa.py",
+    "recuperacion-secundaria/qa-medios/verificar_medios.py",
+    "recuperacion-secundaria/recuperar_youtube.py",
+    "recuperacion-secundaria/subtitulos-cobertura.json",
+    "recuperacion-secundaria/subtitulos.py",
+    "recuperacion-secundaria/verificar_idioma.py",
+    "recuperacion-secundaria/youtube-downloads.json",
+    "recuperacion-secundaria/youtube-media-downloads.json",
+    "reel-identidad/README.md",
+    "reel-identidad/metadata.json",
+    "reel-identidad/voltra/README.md",
+    "reel-identidad/voltra/descargar_muestra.py",
+    "reel-identidad/voltra/page-media.json",
+    "reel-identidad/voltra/recuperar_voltra.py",
+    "reel-identidad/voltra/sample-manifest.json"
+  ],
+  "excluded_local_auxiliaries": [
+    {
+      "path": "audio-tecnico/asr-resultados.json",
+      "sha256": "a5899c9a09c0cae776bd0f4c5f21e190b2ef1296631eac52999fe7587f753fe0",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 55989
+    },
+    {
+      "path": "audio-tecnico/asr-vad-resultados.json",
+      "sha256": "fb8bca5012331f1d9dacda21e6e01861798dc72efc7e1c59373329d5e80d640c",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 54407
+    },
+    {
+      "path": "recuperacion-secundaria/4jWLq8Gn_4Y-subtitulos.json",
+      "sha256": "955c0ca3a6e986b182f6912cca001fa19636bfecc8d6efa2a86d473e017e0b89",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 179893
+    },
+    {
+      "path": "recuperacion-secundaria/4jWLq8Gn_4Y-texto-derivado.txt",
+      "sha256": "cb62026c04c918354057b4753c308b0bb6066eed25bc9160d8b9a1a91b0f1c2f",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 24430
+    },
+    {
+      "path": "recuperacion-secundaria/anrAaNvbp4M-subtitulos.json",
+      "sha256": "3c4e161f3a42856ca21c1806c2cb606af0f9af04142cfb64798707bb41613d01",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 159526
+    },
+    {
+      "path": "recuperacion-secundaria/anrAaNvbp4M-texto-derivado.txt",
+      "sha256": "b081656423a677f327fdbeb7af1d0abb85b64ede5e006f0b4e8648fd80b087cf",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 21586
+    },
+    {
+      "path": "recuperacion-secundaria/c4S0EJAdL5I-subtitulos.json",
+      "sha256": "aaef2855870fe6d77d88758721cddce355f340f76cd7e218c1f93c4d3a30e897",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 228616
+    },
+    {
+      "path": "recuperacion-secundaria/c4S0EJAdL5I-texto-derivado.txt",
+      "sha256": "47c5cb618f887a683913ee0866b344a909e71e14f72286a92160a32efce27dec",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 30538
+    },
+    {
+      "path": "recuperacion-secundaria/erik-asr.json",
+      "sha256": "6f17998b62ad5c0097e2106b88a5ba94cc4fc250d9868731e31051211fbf8575",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 30435
+    },
+    {
+      "path": "recuperacion-secundaria/erik-asr.txt",
+      "sha256": "6068db2924fd17876740d6f40d92de4df21b0e69543f8a8bedf2a91bb8cb39ea",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 1192
+    },
+    {
+      "path": "recuperacion-secundaria/oFYznV9EYPg-subtitulos.json",
+      "sha256": "44f7f141bf2bac87d1ece82a8aaf4a137aa450ee2c0b4601f3d674f15d62252a",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 148503
+    },
+    {
+      "path": "recuperacion-secundaria/oFYznV9EYPg-texto-derivado.txt",
+      "sha256": "4184c13c1b0ef2908b364c1ca767515982f3231b22e79a19c6fb3f4b4ce99ed0",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 20050
+    },
+    {
+      "path": "recuperacion-secundaria/oZ9UKXve3Dk-subtitulos.json",
+      "sha256": "22df52b9b3d2fcbe10277ef81a1052eb49e7c2287108043abf8796bd314eacc6",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 169366
+    },
+    {
+      "path": "recuperacion-secundaria/oZ9UKXve3Dk-texto-derivado.txt",
+      "sha256": "6644d4e1f7d790356de51a35ffab06276343999ad424c749c9736aee33f4fd8d",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 21739
+    },
+    {
+      "path": "recuperacion-secundaria/SVHKZkD1r_A-subtitulos.json",
+      "sha256": "0c872c67b38cf171ec0b4d3c3dfa69f020a9a842109ea99210fc4710814d40a1",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 125208
+    },
+    {
+      "path": "recuperacion-secundaria/SVHKZkD1r_A-texto-derivado.txt",
+      "sha256": "06fdff2bc4f3f64499bd4514410cb28be9e9a9dd690d1d0ae27d599563371b43",
+      "reason": "Copia extensa de transcripción automática o texto derivado; auxiliar local de lectura",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 14055
+    },
+    {
+      "path": "recuperacion-secundaria/youtube-metadata.json",
+      "sha256": "51bb40d5c7202c15338ec4b2642f8e4af64553d8ba7fb826dfa662dfc95478f7",
+      "reason": "Seis descripciones extensas completas; conservar URL, autor y título en análisis propios",
+      "action": "preservar en su ubicación local; no borrar, mover ni modificar mientras haya lectores",
+      "bytes": 147051
+    }
+  ],
+  "included_compact_source_evidence": {
+    "path": "reel-identidad/metadata.json",
+    "reason": "CTA breve necesario como evidencia directa de identidad y llamada a la acción; no es una transcripción extensa"
+  },
+  "scope_boundaries": {
+    "included": "Análisis propios, scripts y evidencia técnica compacta; formatos Markdown, Python, JSON, TXT y logs de texto",
+    "outside_this_commit": [
+      "medios/binarios",
+      "operacion/",
+      "credenciales",
+      ".agents/",
+      ".codex/",
+      "cachés"
+    ],
+    "not_general_policy": "Esta clasificación corresponde únicamente al presente encargo; no crea reglas o ignores generales",
+    "media_note": "Las referencias y hashes de medios ignorados conservan procedencia sin incorporar sus binarios; no se promete un paquete autocontenido",
+    "continuity_note": "Los nueve cambios comunes se enumeran y clasifican aparte: no se incorporan automáticamente a candidate_paths del estudio. Su conjunto final requiere cotejar el diff de continuidad, especialmente archivos compartidos que pueden cambiar después del corte."
+  },
+  "previous_limited_scan": "No encontró valores de credencial ni URLs firmadas con los patrones comprobados en el corte. Revisar el diff final si cambia el contenido; no es certificación universal de ausencia de secretos.",
+  "pending_reference_adjustments": {
+    "status": "propuesta para después de que terminen los lectores; no ejecutada",
+    "documents": [
+      {
+        "document": "audio-tecnico/ESTADO.md",
+        "targets": [
+          "audio-tecnico/asr-resultados.json",
+          "audio-tecnico/asr-vad-resultados.json"
+        ]
+      },
+      {
+        "document": "audio-tecnico/README.md",
+        "targets": [
+          "audio-tecnico/asr-resultados.json",
+          "audio-tecnico/asr-vad-resultados.json"
+        ]
+      },
+      {
+        "document": "audiovisual/erik.md",
+        "targets": [
+          "recuperacion-secundaria/erik-asr.txt"
+        ]
+      },
+      {
+        "document": "recuperacion-secundaria/ESTADO.md",
+        "targets": [
+          "recuperacion-secundaria/4jWLq8Gn_4Y-subtitulos.json",
+          "recuperacion-secundaria/4jWLq8Gn_4Y-texto-derivado.txt",
+          "recuperacion-secundaria/anrAaNvbp4M-subtitulos.json",
+          "recuperacion-secundaria/anrAaNvbp4M-texto-derivado.txt",
+          "recuperacion-secundaria/c4S0EJAdL5I-subtitulos.json",
+          "recuperacion-secundaria/c4S0EJAdL5I-texto-derivado.txt",
+          "recuperacion-secundaria/erik-asr.json",
+          "recuperacion-secundaria/erik-asr.txt",
+          "recuperacion-secundaria/oFYznV9EYPg-subtitulos.json",
+          "recuperacion-secundaria/oFYznV9EYPg-texto-derivado.txt",
+          "recuperacion-secundaria/oZ9UKXve3Dk-subtitulos.json",
+          "recuperacion-secundaria/oZ9UKXve3Dk-texto-derivado.txt",
+          "recuperacion-secundaria/SVHKZkD1r_A-subtitulos.json",
+          "recuperacion-secundaria/SVHKZkD1r_A-texto-derivado.txt",
+          "recuperacion-secundaria/youtube-metadata.json"
+        ]
+      },
+      {
+        "document": "recuperacion-secundaria/erik/ESTADO.md",
+        "targets": [
+          "recuperacion-secundaria/erik-asr.json",
+          "recuperacion-secundaria/erik-asr.txt"
+        ]
+      }
+    ],
+    "action": "Distinguir enlaces locales auxiliares de evidencia incluida; conservar ruta/hash o apuntar al análisis propio antes de presentar un checkout remoto como autosuficiente. No cambiar ubicaciones o fichas ahora."
+  },
+  "execution_limits": [
+    "No acredita cierre acústico integral ni visionado continuo",
+    "No certifica cierre del turno padre de Aprendizaje",
+    "No autoriza subir controles a Higgsfield ni ejecutar análisis externo",
+    "No ejecuta git add, commit o push"
+  ],
+  "integration_source": {
+    "video_turn": "01a1abde-e67f-7cf3-87f8-960284c8f76b",
+    "video_status": "completed, confirmado por Jefa",
+    "visual_textual_scope": "28 medios de 17 sujetos audiovisuales; muestreo y texto disponible terminados; no visionado continuo ni escucha",
+    "global_corpus": "17 personas más Voltra; Justin Welsh es documental/gráfico",
+    "audio_status": "pendiente; Higgsfield y respuesta humana sin autorización/respuesta; sin ejecución externa",
+    "learning_status": "Integración documental/comercial terminada y cobertura visual de Video integrada, según criterio/ESTADO.md. Recepción de Jefa y estado del turno no corroborados por esos archivos; audio pendiente."
+  },
+  "other_non_candidate_paths": [],
+  "limited_scan_at_cut": {
+    "checked_research_candidates": 119,
+    "checked_continuity_changes": 9,
+    "nul_or_binary_flags": [],
+    "utf8_decode_failures": [],
+    "credential_or_signed_url_pattern_flags": [],
+    "pattern_categories": [
+      "private_key",
+      "provider_key",
+      "url_credential",
+      "signed_url",
+      "assigned_secret"
+    ],
+    "personal_data_scope": "No se abrió ni incorporó privado/contexto.md, perfiles, credenciales ni operacion/. Los informes de referentes contienen sólo contexto público y de trabajo en las rutas clasificadas.",
+    "limit": "Escaneo acotado de patrones, no certificación universal de ausencia de secretos o datos personales; revisar el diff final si cambian archivos."
+  },
+  "cut_at_utc": "2026-11-05T16:50:05+00:00",
+  "continuity_changes_separate": [
+    {
+      "repository_path": "_investigacion-onia/base-operativa/ESTADO.md",
+      "git_status_at_cut": " M",
+      "classification": "Estado del relevo y tanda; registro del nuevo chat pedido por Sergio.",
+      "sha256_at_cut": "c78dd7fcdb26b7baa2ae7e2e763b38120237197858e400826a4e3016dcbd83c1"
+    },
+    {
+      "repository_path": "_investigacion-onia/base-operativa/ORQUESTACION.md",
+      "git_status_at_cut": " M",
+      "classification": "Referencias al relevo aceptado; continuidad documental previa.",
+      "sha256_at_cut": "7327e77f28197573fda0e8462142b37024cd29375a599205c015861df9facd23"
+    },
+    {
+      "repository_path": "_investigacion-onia/base-operativa/PLAN.md",
+      "git_status_at_cut": " M",
+      "classification": "Dirección y referencias al estado vigente del relevo; cambio previo.",
+      "sha256_at_cut": "ccacf307c9ee54b7443b00a4a4e0c44ddcfd745ece369d5a03c3fe681e11b020"
+    },
+    {
+      "repository_path": "_investigacion-onia/base-operativa/SESIONES.md",
+      "git_status_at_cut": " M",
+      "classification": "Jefatura/archivo confirmados; registro de Reels e ideas pedido por Sergio.",
+      "sha256_at_cut": "e7438d43538b7b154470728ad2649060141f95caa0951c98f7ffb00c857cc32b"
+    },
+    {
+      "repository_path": "_investigacion-onia/base-operativa/reglas-comunes.md",
+      "git_status_at_cut": " M",
+      "classification": "Enlace a la jefatura vigente; cambio previo del relevo.",
+      "sha256_at_cut": "1181fca464a0c37f76ee62c930c5bee232b8337559096e9660e17d85b7c30739"
+    },
+    {
+      "repository_path": "_investigacion-onia/base-operativa/continuidad/2026-11-05/HANDOFF-JEFA.md",
+      "git_status_at_cut": " M",
+      "classification": "Recepción y archivo confirmados; cambio previo.",
+      "sha256_at_cut": "f9570ef4786a560605fa21265a55d222a0a6efbbd6694abb7dcaf29ffb5a724e"
+    },
+    {
+      "repository_path": "_investigacion-onia/base-operativa/continuidad/2026-11-05/PUBLICACION.md",
+      "git_status_at_cut": " M",
+      "classification": "Evidencia histórica del primer commit de 49 archivos; no reutilizar como inventario nuevo.",
+      "sha256_at_cut": "5ebf6457bc18aa2b899792232728d1b2c98ba18458e29ec054670596baf20770"
+    },
+    {
+      "repository_path": "_investigacion-onia/base-operativa/continuidad/2026-11-05/README.md",
+      "git_status_at_cut": " M",
+      "classification": "Estado y enlaces de la entrega del relevo; cambio previo.",
+      "sha256_at_cut": "bf74d3cbbfa14a6e51a6a714cfa20c1a259e10c4a78a9740292eea78f9be1497"
+    },
+    {
+      "repository_path": "_investigacion-onia/base-operativa/continuidad/2026-11-05/RECEPCION-JEFA.md",
+      "git_status_at_cut": "??",
+      "classification": "Recibo del relevo a Jefa v2; archivo nuevo de continuidad.",
+      "sha256_at_cut": "415a12aa2aac6fe69757b75cae4361cd0398c6a40038b76f0c503a77ff457a7b"
+    }
+  ],
+  "other_worktree_changes_excluded": [
+    {
+      "repository_path": "_investigacion-onia/base-operativa/investigacion/reels-e-ideas/README.md",
+      "git_status_at_cut": "??",
+      "classification": "Otro encargo: entrada Reels e ideas y recepción a cargo de Jefa/receptor; preservar, no incluir automáticamente."
+    },
+    {
+      "repository_path": "_investigacion-onia/base-operativa/investigacion/reels-e-ideas/RECEPCION.md",
+      "git_status_at_cut": "??",
+      "classification": "Otro encargo: entrada Reels e ideas y recepción a cargo de Jefa/receptor; preservar, no incluir automáticamente."
+    }
+  ],
+  "candidate_classification": [
+    {
+      "folder": ".",
+      "owner": "Organización / integración previa de Jefa",
+      "content": "Índice e inventario de esta unidad."
+    },
+    {
+      "folder": "marketing",
+      "owner": "Marketing",
+      "content": "Fichas, comparación y evidencia documental del estudio; preservar autoría y límites."
+    },
+    {
+      "folder": "criterio",
+      "owner": "Aprendizaje",
+      "content": "Integración documental/comercial, comparación y verificación local; no acredita recepción de Jefa."
+    },
+    {
+      "folder": "audiovisual",
+      "owner": "Video",
+      "content": "Informes y verificación del muestreo visual/textual; no escucha."
+    },
+    {
+      "folder": "audio-tecnico",
+      "owner": "Desarrollo/QA",
+      "content": "Scripts, mediciones y controles técnicos; preparar no equivale a análisis acústico aceptado."
+    },
+    {
+      "folder": "recuperacion-secundaria",
+      "owner": "Desarrollo/QA",
+      "content": "Scripts, procedencia y evidencia técnica compacta; transcripciones extensas excluidas explícitamente."
+    },
+    {
+      "folder": "reel-identidad",
+      "owner": "Jefa/QA de recuperación",
+      "content": "Identidad, procedencia y verificaciones de Alex y Voltra; sin binarios."
+    }
+  ],
+  "candidate_sha256_at_cut": {
+    "README.md": "f1d24755beb26b097cd0d6e17a7380eb3c2e4f1b24e1af79b1d13d2cd6783eab",
+    "audio-tecnico/ESTADO.md": "b1c2550d4c254e2dea26f3a5e686d9da50ca46cda2395c8ba786b83a02a0a070",
+    "audio-tecnico/README.md": "76da309c56e5e2669e87be4ca383d207dd0ef13e918380ed42174c58ce5cb7fc",
+    "audio-tecnico/alternativas.md": "a3f86e0c2aa54d4d3918712ea851f9cfabfd985c7e6f8689193f0ae87024f77b",
+    "audio-tecnico/cerrar_evidencia.py": "fb730cfd1ced370edb7159bcbcc1de5a21447cdc574c853b57476dbdc46f416c",
+    "audio-tecnico/controles-video.json": "156354cf2f363e2144e62ded4d6cf1d6edb5afcba677a97f8937fafb24491339",
+    "audio-tecnico/controles-y-medidas.json": "8c2ccfede227c54b05a10e627e3ddbf232711f46c8f010a36b13b744c747d922",
+    "audio-tecnico/energia-100ms.json": "eb1b744cd15d22a9ca874e62328ab332f7347711c2ad4fd75edbac80af6635bd",
+    "audio-tecnico/fragmentos.json": "f908192034e62015f5eb1dc9a221c9f54aa978ca13a5ea066f7fe8b13c154853",
+    "audio-tecnico/loudnorm-medicion.txt": "d5e1c88b98908e3e8f220ef2a08dd257ce3f3a1c757699bd4d66a1bbf3f0f48a",
+    "audio-tecnico/manifest.json": "be0bfe537cf022cf483a42bc3e5679c507059e87ef8540f7b223450feecace95",
+    "audio-tecnico/preparar_controles_video.py": "73a8702d202fb75782ab77d0831dd21730fd2a2f935f43fa6c216f0b3aba5efc",
+    "audio-tecnico/probar_audio.py": "8d76496b8e26f0753033c6a143405c193d611a5c5c587b81056201a455fd92b4",
+    "audio-tecnico/qa-controles-video.json": "485f41ed00964b8d0a895ba54ebaf029c2360af850718c432877bc63a7901319",
+    "audio-tecnico/tramos-medidos.json": "06ad69e4f58f46ffb2a0ec64e3ac1f1fada8142cdc3cc5d1c16fdabd9cbcd50f",
+    "audio-tecnico/verificacion.json": "1d051c305f8d8462d2a539f94a3ff81ada3aa2c7485052b85580d45830431218",
+    "audio-tecnico/verificar_controles_video.py": "79c38c79e157b33e06c570f1340a4ba23211d2f21cb98d3d977e9c0a03e7a0e0",
+    "audiovisual/ESTADO.md": "6f59d4a8233622de1ee1edf996b9b3e1613370f9be380ba06751fa7477040504",
+    "audiovisual/LECTURA-COMPARADA.md": "4201d52ccb2ab8cad2c02e818de6bdeb6fa24325593119dc5761f82479243bf9",
+    "audiovisual/alex-carrera.md": "272a67c758aae4b15e432a0286c08da695d0bd90bb802df567b9474c2532bef3",
+    "audiovisual/bastian-alvaro.md": "31a7b022a74197fd9191620e0d4594c15bb6cd41e8b070157bcbb54784414a1f",
+    "audiovisual/enrique-rocha.md": "cec01e8fa56e8626ed0887c483db37b652e38d59241af26eccb968bbb80d4600",
+    "audiovisual/erik.md": "c5122bebc1c5c08e029ec732a5493c969dc567dd7db9a4e46e47157f48bffebe",
+    "audiovisual/gonzalo-alternativa.md": "b6afb438f98ec354e0c22579bf8934a5b8940265e1852d50af4ffaa15a892ef0",
+    "audiovisual/gonzalo-beltran.md": "540788fa54fae31182464a72e947cc16c64de13d6b8a259a7b82f3a88bb09b8d",
+    "audiovisual/heras-candidata.md": "8c626ef27d58a387a1f480452742c09c1846c713d883acf45c6c83b52fb9a9b5",
+    "audiovisual/heras-vsl.md": "9d74b0232b54c997ccd2b790a55663c25882c4d28cf51212376ba7459347a223",
+    "audiovisual/hormozi.md": "6321ca18f2c778573501a60f6f4b6ecc9d23a786de87dc6bd87ac71e4acbf61d",
+    "audiovisual/iman-estado.md": "b393ff466605768411b48ff014b82aa55a98cb51808e4248c76b698a9dc89864",
+    "audiovisual/iman.md": "20c6d7063c1025929fb99572aff04b819155209e3169b7f123e12ee08d5132de",
+    "audiovisual/jeff-ali.md": "73ef6dce96e36e11c55735815b8e1f16f2d69982b50ad9e9efe89c71fe6d668f",
+    "audiovisual/nick.md": "4f836d151c9fe79a23df3f6e3b8195982dd42395953c095cb65c96696460972b",
+    "audiovisual/pedro-procedencia.md": "21a00ea49d302aafef2af2d9deab9aaddb7e37935ef94521a2c9a352c4437ba4",
+    "audiovisual/pedro.md": "1e2c2c25bed0903b008740e25e93cd7714f814e876798d6754facf0b7689b5a3",
+    "audiovisual/san.md": "ed544c148b3e5aeb65b3c2973b69c7a8e64cb53c45f736bff2b81b0a2bcc110e",
+    "audiovisual/toto.md": "bdd8c69cdebb7859050983e4e1af6851aedfbb0f7d7727182302fc8e79b4a8d8",
+    "audiovisual/verificacion.json": "5344829874f902bd00411f3635a2761cab670fa2d8fae87b3e0c1edc0534e9ff",
+    "audiovisual/voltra.md": "400bd2c7e13efc930dd8ce0e1ef944986651cf89203b3139d2d76041a6a8f765",
+    "criterio/ESTADO.md": "cc48c8b45fafffabe0c665e8eb796bf4ce63610022cd9fe20c89f7ef321f02c1",
+    "criterio/alex-carrera.md": "31b1142d166f4d9f6191f8d30ec75b39a3857feba218781d347f068448bb4de4",
+    "criterio/bastian-alvaro-voltra.md": "09ed76aaf7d58a5eb6cabc4d9a1585d22a078dbebf9de3645139b169930e70d0",
+    "criterio/comparacion.md": "a8014aa522f3471d9a3b029f91c8b99361b42310ca1df8e14fac70046f968c4e",
+    "criterio/gonzalo-beltran-toto.md": "39918703abfdeda2846e44d87af174547834d33267d142d978985227871acb8c",
+    "criterio/nick-jeff-ali.md": "9cc0dd2c63e6a9ea819f1c807402f8a7be840041bfe99263e59072229537418e",
+    "criterio/verificacion.json": "0a71c4b2a78625e339d1f5c6cbe321847a7803d82b87b111d3567d00d3fccdf5",
+    "marketing/ESTADO.md": "76fecc4507efe877d55271dd4352d0e9a491e8834a5608e9f880bb6910c6a46a",
+    "marketing/alex-hormozi.md": "c7a4eea3536bec8d1458a4e996e5023479b6ba175a1ffe6267d9ba09f5350dc9",
+    "marketing/comparacion.md": "9b818236464cb6373b4d42d6c1cf9a6ae77c152039574b3c07af07f8280c0555",
+    "marketing/enrique-rocha.md": "69244b36fb80f90e02de6f995fefb25173e1984e148f94f75f51c700d4c536a6",
+    "marketing/erik-taveras.md": "65d9d37c84e1902361b094d378922bb959860ae67a34d75c2e642cfdcdc4ebe7",
+    "marketing/iman-gadzhi.md": "039c3a16569dcf97efb450a5e84929516ab022c897c856e61255ae0bdfbe9364",
+    "marketing/justin-welsh.md": "75ab9dde81c456dcb2ec1b9b75ffcf03dc4c2d498803f64cea03d11ea09ec402",
+    "marketing/pedro-buerbaum.md": "2f480d91861796597bee8ecbca137bc38ed23091fab9733bf802f84219e7e326",
+    "marketing/san-munoz.md": "90b245970c28fe856bd0a74ce5d59c3b7e9506185917b671a82dab857c1917bb",
+    "marketing/victor-heras.md": "7e504a288ad4801e39c55bacf4d9abd5c33064b5c244ecf07858bcae6b7fe325",
+    "recuperacion-secundaria/4jWLq8Gn_4Y-download.log": "13858af84f2ba931f695dc986945e03c1e3c64ddf1bd8b7bbe6c0aa22d5895b3",
+    "recuperacion-secundaria/4jWLq8Gn_4Y-media-download.log": "d92035233dc5afe8e3cad237187f6d5cc60b8f0f2bd28f256e37cb8ba04bfbbc",
+    "recuperacion-secundaria/ESTADO.md": "102112b5b03637905d4f17a1c03c6fac752e6bbe91765fbee9d85f393dcf68b7",
+    "recuperacion-secundaria/SVHKZkD1r_A-download.log": "f3057a85889643903ca8bd4832241e3ce54a816768b2d149a589840997e07d83",
+    "recuperacion-secundaria/SVHKZkD1r_A-media-download.log": "9c3ecc6a98bc30de031dace85dc1ae4747d729b6997abb74b717eba82b594d8f",
+    "recuperacion-secundaria/anrAaNvbp4M-download.log": "d961030f33c4022751791b408a3541ba28e0b80ecd656fc59f14838f99086676",
+    "recuperacion-secundaria/anrAaNvbp4M-media-download.log": "33ec88b3bfba50ae33f4a932c01718ad12ca82d73b2096bb51893681671b29f9",
+    "recuperacion-secundaria/asr_erik.py": "204121999965722dd332eab915e4a2a5f2c27e8cf9a38f968000548fea513d55",
+    "recuperacion-secundaria/c4S0EJAdL5I-download.log": "04850c6de05c5f7bd4773acd35a7c1c7efc614de90d53140b78f6c79b53326be",
+    "recuperacion-secundaria/cerrar_recuperacion.py": "2f7448a409154f88c0d38504b106529fbf494ea228035b62c5aaf209c4502915",
+    "recuperacion-secundaria/erik/ESTADO.md": "450686025cd3f72b90488d3e95490ee4ced3f58a7bfbb373ee6ba04610fd16f2",
+    "recuperacion-secundaria/erik/manifest.json": "ac13a35c174d5b668466d64b6f49f1a80595f1bd16edb95d8f6d98f4058b972b",
+    "recuperacion-secundaria/erik/recuperar_erik.py": "c08279a5ffc5f2bc4e49af91308ed34cf8feaceab7fb337c47ccb5eb4f9bbc5e",
+    "recuperacion-secundaria/erik/web-metadata.json": "c84b753d370480e7ef104db44f264523fb6871b8697e13e4f8014671f6a27839",
+    "recuperacion-secundaria/idiomas-pistas.json": "b9ab5be9cccec3f8f755c6bf72b6247cd4ac6a678542e0978cd13fb90cf71462",
+    "recuperacion-secundaria/manifest.json": "a194807cd7299d2572989174db80e5ad8d498aadfe877e19eabd393146f182dd",
+    "recuperacion-secundaria/nick-original-subtitle.log": "83df0df7283b5d8857f4df85bfba40fa7b4b6afd5f566896dd5a047733138423",
+    "recuperacion-secundaria/oFYznV9EYPg-download.log": "1096c14f0d8680e9138d4f398af6f4874ace11964970b86264404aa820d23eb5",
+    "recuperacion-secundaria/oFYznV9EYPg-media-download.log": "d7a49c1cd26ce5e264fac73d4a1f84c52e92b7d7764618d3956923c69ad0a4fc",
+    "recuperacion-secundaria/oZ9UKXve3Dk-download.log": "3fd47b757908583023b8b0150d62cd664c1c222860d968d8b7625abe44bdc4d5",
+    "recuperacion-secundaria/qa-medios/4jWLq8Gn_4Y.decode.progress.txt": "3157d031947d91547a7d3a2c00983e546614831399e849c146e4591fec627bcd",
+    "recuperacion-secundaria/qa-medios/4jWLq8Gn_4Y.decode.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recuperacion-secundaria/qa-medios/4jWLq8Gn_4Y.ffprobe.json": "2b8ed2c97d72cffa727733fc1cdea4ed7957e147adda16fa5a871482fe6f7f53",
+    "recuperacion-secundaria/qa-medios/4jWLq8Gn_4Y.qa.json": "999b97805a7197ef89202b9992227c8bf8369853d92bb9b30304a37e79da58c8",
+    "recuperacion-secundaria/qa-medios/ESTADO.md": "3c2fb74e93f4722639ff680e17d92ac4c2950d5bfdce6796360596643c91d7b9",
+    "recuperacion-secundaria/qa-medios/SVHKZkD1r_A.decode.progress.txt": "342dfafc61b7bbc56d91e5bbce6cfc3be8a1bd84533dcfe5697b274d30a86553",
+    "recuperacion-secundaria/qa-medios/SVHKZkD1r_A.decode.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recuperacion-secundaria/qa-medios/SVHKZkD1r_A.ffprobe.json": "d25a52a13e8101297a9bebd576b9573ae6473f2e7e06d6f1e2a18a9f00c66ba2",
+    "recuperacion-secundaria/qa-medios/SVHKZkD1r_A.qa.json": "5521c57eda9ed19cbc6de8e42242eb2038352ba272ceeb1f68957f367d57babb",
+    "recuperacion-secundaria/qa-medios/anrAaNvbp4M.decode.progress.txt": "48a6ce733f3949b6e3b203ca9642d28e6188fca638827becdb02fae308bda157",
+    "recuperacion-secundaria/qa-medios/anrAaNvbp4M.decode.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recuperacion-secundaria/qa-medios/anrAaNvbp4M.ffprobe.json": "cf20fe25c4473608b2fda0ffe3b7cbdc5ff8a4855b7f5f64b91f065ddbee440a",
+    "recuperacion-secundaria/qa-medios/anrAaNvbp4M.qa.json": "7d391f0551d632b653f196b5f4016eb080b8e48507abd7aff0d26522e785b726",
+    "recuperacion-secundaria/qa-medios/c4S0EJAdL5I.decode.progress.txt": "d038cd38ada86fedbe20e60be629161b86ab6e384443a7c56a94a6cda80c5d93",
+    "recuperacion-secundaria/qa-medios/c4S0EJAdL5I.decode.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recuperacion-secundaria/qa-medios/c4S0EJAdL5I.ffprobe.json": "01124e276dbacfdec0a2cbad8b7732adfba78001acfb34b5c6470e411a82b577",
+    "recuperacion-secundaria/qa-medios/c4S0EJAdL5I.qa.json": "2a6ee98b9c69f153fc9ea72beb671f9a25dfb9eb452b69d865c4ce02cdf14b10",
+    "recuperacion-secundaria/qa-medios/cotejo-frames.json": "438b26a6981f14d992e124a4717fcdb0420f5d6da2083fedf56053529f2ca488",
+    "recuperacion-secundaria/qa-medios/oFYznV9EYPg.decode.progress.txt": "02f4e1013a2d5929c0baca8ea3c956e01bf9d5b2623efa306dd4b1f480a6ec70",
+    "recuperacion-secundaria/qa-medios/oFYznV9EYPg.decode.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recuperacion-secundaria/qa-medios/oFYznV9EYPg.ffprobe.json": "46aa2c57f48ccbd1d068d0c4a318da904bc5d82b2a878526eb5d01f940c63384",
+    "recuperacion-secundaria/qa-medios/oFYznV9EYPg.qa.json": "98585a29544614df27f465781bcaf46170d4524a567b71a4d58d51cd35eae4aa",
+    "recuperacion-secundaria/qa-medios/oZ9UKXve3Dk.decode.progress.txt": "cacad73a6d49e841315d75b38777ee24848dcba66cb58fd046b05c4cb3a71709",
+    "recuperacion-secundaria/qa-medios/oZ9UKXve3Dk.decode.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recuperacion-secundaria/qa-medios/oZ9UKXve3Dk.ffprobe.json": "9881ee16e3489c8677bc82ea0cb99b20da58f9fbcbe23010f0d0be26a632dd15",
+    "recuperacion-secundaria/qa-medios/oZ9UKXve3Dk.qa.json": "aa7c9a7d181b4af9a27c76f528c1e83f9e8a85353ea58e3aa4e041993ae6b73e",
+    "recuperacion-secundaria/qa-medios/preservacion.json": "54ffacaa66d86a9fb7f74a9ef7878ebbdf7bc5aa17f6c22aa9bd5113fc0f0dec",
+    "recuperacion-secundaria/qa-medios/resultados.json": "64fa0b26796effa72a76e272401f0f3527747423c1a78c21c297236e0d188b6b",
+    "recuperacion-secundaria/qa-medios/resumir_qa.py": "f2c0aaff180a52155b281b0548283433226af94d588c15195ce1463f5ecc5c40",
+    "recuperacion-secundaria/qa-medios/verificar_medios.py": "7e7dde685cd041a48554bc430a125e86645d09f5151fd645ee9dbf309b94318f",
+    "recuperacion-secundaria/recuperar_youtube.py": "9233dbc1a348fe9e3f969e6809d294dfddb94c7e83284527644b383406aec71c",
+    "recuperacion-secundaria/subtitulos-cobertura.json": "23cc2e942aeb05db7ab7a22a12cd2736a84febf399640e4087c2276294353a3b",
+    "recuperacion-secundaria/subtitulos.py": "3271e63f0fda86f818abd62784acb350e693e548f09705ad0af6dcaa993a704b",
+    "recuperacion-secundaria/verificar_idioma.py": "32c3dd65251f49d4affa46503ddb96827990eb0997c3702227b823a38759dbc2",
+    "recuperacion-secundaria/youtube-downloads.json": "bdd174ba7a91926c2dd12051202dffef37d15ed3ff216211276281833e1fcbb0",
+    "recuperacion-secundaria/youtube-media-downloads.json": "5db960e666e48ad6291fdf6ee67e0a5d7aea106e30050ee1d084fe5bf33b6427",
+    "reel-identidad/README.md": "f99c946b39f60113799aa86e417dcdb8632d84b5fea0eb5fd7a9ca08bd874f27",
+    "reel-identidad/metadata.json": "d6aa359a32ed285d05f0049b7d434ce50b00323a03a5a3d9537d553feebfae9f",
+    "reel-identidad/voltra/README.md": "d26027f4646c9c0b3d18bb9e5a47fe8ddb2c65ef48dd1069c9cbdf38d711b94e",
+    "reel-identidad/voltra/descargar_muestra.py": "1250dda6deb0eae550956db39a41fee153591074e3e5601a23727dce17bf6fcb",
+    "reel-identidad/voltra/page-media.json": "ec3f2dcb0ae93353ccb26eaf3d7b7174073057cac654b300cdbe62046c17a94c",
+    "reel-identidad/voltra/recuperar_voltra.py": "8abc8d331710e962dde2ffba930a5c6bf744533b72a76f563b6c932596fd686d",
+    "reel-identidad/voltra/sample-manifest.json": "7d912047b5d30f5467e0c423c93897599deca7eb03697906e67c4ea66b9a77f0"
+  },
+  "self_hash_note": "Este inventario no incluye su propio hash para evitar una referencia circular; los demás candidatos sí tienen SHA-256 del corte."
+}

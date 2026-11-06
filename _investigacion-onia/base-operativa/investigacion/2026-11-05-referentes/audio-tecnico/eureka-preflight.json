@@ -1,0 +1,18 @@
+{
+  "scope": "constructor con configuración reducida y sin pesos; no inferencia acústica",
+  "source": "https://huggingface.co/cslys1999/Eureka-Audio-Instruct",
+  "revision": "219761da53c9c6c5900a84a723d88ccc29db66d3",
+  "outcome": "constructor failed",
+  "error_type": "ImportError",
+  "error": "FlashAttention2 has been toggled on, but it cannot be used due to the following error: the package flash_attn seems to be not installed. Please refer to the documentation of https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2 to install Flash Attention 2.",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\investigacion\\2026-11-05-referentes\\audio-tecnico\\verificar_eureka.py\", line 17, in <module>\n    WhisperEncoder(cfg)\n  File \"C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\midasheng-venv\\Lib\\site-packages\\transformers\\models\\whisper\\modeling_whisper.py\", line 598, in __init__\n    super().__init__(config)\n  File \"C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\midasheng-venv\\Lib\\site-packages\\transformers\\modeling_utils.py\", line 2076, in __init__\n    self.config._attn_implementation_internal = self._check_and_adjust_attn_implementation(\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\midasheng-venv\\Lib\\site-packages\\transformers\\modeling_utils.py\", line 2686, in _check_and_adjust_attn_implementation\n    applicable_attn_implementation = self.get_correct_attn_implementation(\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\midasheng-venv\\Lib\\site-packages\\transformers\\modeling_utils.py\", line 2714, in get_correct_attn_implementation\n    self._flash_attn_2_can_dispatch(is_init_check)\n  File \"C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\midasheng-venv\\Lib\\site-packages\\transformers\\modeling_utils.py\", line 2422, in _flash_attn_2_can_dispatch\n    raise ImportError(f\"{preface} the package flash_attn seems to be not installed. {install_message}\")\nImportError: FlashAttention2 has been toggled on, but it cannot be used due to the following error: the package flash_attn seems to be not installed. Please refer to the documentation of https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2 to install Flash Attention 2.\n",
+  "sdpa_alternative": {
+    "status": "small synthetic encoder forward succeeded",
+    "shape": [
+      1,
+      1500,
+      64
+    ],
+    "scope": "untrained tiny encoder; not Eureka weights, not acoustic inference"
+  }
+}

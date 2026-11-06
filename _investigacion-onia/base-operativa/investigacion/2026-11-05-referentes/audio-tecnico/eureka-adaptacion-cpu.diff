@@ -1,0 +1,46 @@
+--- modeling_eureka_audio.py.original
++++ modeling_eureka_audio.py.cpu
+@@ -55,7 +55,7 @@
+     def __init__(self, config: dict):
+         super().__init__()
+         whisper_config = WhisperConfig(**config)
+-        whisper_config._attn_implementation = 'flash_attention_2'
++        whisper_config._attn_implementation = 'sdpa'
+         self.speech_encoder = TransformersWhisperEncoder(whisper_config)
+ 
+     def forward(
+@@ -207,10 +207,10 @@
+         # Create config directly from dict
+         config_obj = AutoConfig.for_model(**llm_config)
+ 
+-        # Create model with bfloat16 dtype to support flash_attention_2
++        # Create model with bfloat16 dtype to support sdpa
+         backbone = AutoModelForCausalLM.from_config(
+             config_obj,
+-            attn_implementation="flash_attention_2",
++            attn_implementation="sdpa",
+         ).to(torch.bfloat16)
+         return backbone
+ 
+--- config.json.original
++++ config.json.cpu
+@@ -139,7 +139,7 @@
+     "architectures": [
+       "Qwen3ForCausalLM"
+     ],
+-    "attn_implementation": "flash_attention_2",
++    "attn_implementation": "sdpa",
+     "attention_bias": false,
+     "attention_dropout": 0.0,
+     "bad_words_ids": null,
+--- eureka.py.original
++++ eureka.py.cpu
+@@ -269,7 +269,7 @@
+                     eos_token_id.extend(token_ids)
+ 
+         # Generate
+-        with torch.amp.autocast(device_type='cuda', dtype=torch.bfloat16):
++        with torch.amp.autocast(device_type='cpu', dtype=torch.bfloat16):
+             outputs = self.model.generate(
+                 input_ids=input_ids,
+                 token_type_ids=token_type_ids,

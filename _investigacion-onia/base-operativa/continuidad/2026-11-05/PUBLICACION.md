@@ -1,10 +1,10 @@
-# Publicación documental preparada · 5 de noviembre de 2026
+# Inventario histórico de la primera publicación · 5 de noviembre de 2026
 
-Cambios preparados y comprobados para el repo privado. Sin commit/push, recepción de Jefa v2 o archivo de la jefa anterior confirmados. Esta lista es inventario de entrega, no cola de tareas.
+Este inventario conserva los 49 archivos del corte preparado y su validación, publicados en `1119f5e94b24eaa7d8448319d8b7f424612db27d`. Publicación y aceptación posteriores constan en [RECEPCION-JEFA](RECEPCION-JEFA.md). La confirmación posterior del archivo de la anterior se registra en el recibo, atribuida a Jefa v2. La lista no incluye esta actualización factual posterior ni es una cola de tareas.
 
 ## Archivos exactos
 
-Se modificaron 6 archivos existentes y se incorporan 43 archivos nuevos. Rutas relativas a la raíz del repo `C:/dev/proyectos`.
+En aquel primer commit se modificaron 6 archivos existentes y se incorporaron 43 archivos nuevos. Rutas relativas a la raíz del repo `C:/dev/proyectos`.
 
 ### Existentes modificados
 
@@ -63,7 +63,7 @@ Se modificaron 6 archivos existentes y se incorporan 43 archivos nuevos. Rutas r
 
 ## Validación y límites
 
-- Comprobados 188 enlaces locales y sus anclas en 22 documentos Markdown: cero faltantes. 16 archivos JSON parseados y manifiestos de ambos paquetes válidos. git diff --check sin errores; 49 rutas dentro del alcance, sin cambios staged y HEAD f39466f sin commit nuevo. Los enlaces externos se conservan como procedencia y no se revalidaron por red.
+- Validación histórica del corte preparado: comprobados 188 enlaces locales y sus anclas en 22 documentos Markdown: cero faltantes. 16 archivos JSON parseados y manifiestos de ambos paquetes válidos. git diff --check sin errores; 49 rutas dentro del alcance, sin cambios staged y HEAD f39466f sin commit nuevo. Los enlaces externos se conservan como procedencia y no se revalidaron por red.
 - Los 12 hashes del manifiesto fuente n8n coincidieron antes de copiar. El paquete conserva byte a byte código/SQL/JSON; sólo se ajustó un enlace del README. Manifiesto fuente intacto y manifiesto de paquete con procedencia/14 entradas verificadas; no incluye su propio hash.
 - D1: 14 entradas de procedencia verificadas. Código/configuración/JSON conservados byte a byte; reporte con enlaces/procedencia y logs check/render compactados sin progreso ni trazas repetitivas, conservando resultados/advertencias y hash original. MP4 local cotejado con SHA c41798b0c33c1d42232aba8a542696748b548b1ba327560d3ff148edc5f1c71c.
 - Ningún MP4, PNG/JPG, tipografía, dependencia o directorio .work incorporado. Los dos .gitattributes preservan los bytes de los paquetes textuales en futuros checkouts. D1 no es autocontenido ni se probó como paquete portable.

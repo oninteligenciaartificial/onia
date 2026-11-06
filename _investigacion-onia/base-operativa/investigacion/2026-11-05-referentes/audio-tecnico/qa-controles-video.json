@@ -1,0 +1,236 @@
+{
+  "scope": "Local codec/container/waveform QA only; no external submission, model or acoustic perception test.",
+  "checks": {
+    "a_encoding": true,
+    "a_six_seconds": true,
+    "a_video": true,
+    "a_no_unexpected_gain": true,
+    "a_source_unchanged": true,
+    "b_encoding": true,
+    "b_six_seconds": true,
+    "b_video": true,
+    "b_no_unexpected_gain": true,
+    "b_source_unchanged": true,
+    "c_encoding": true,
+    "c_six_seconds": true,
+    "c_video": true,
+    "c_no_unexpected_gain": true,
+    "c_source_unchanged": true,
+    "d_encoding": true,
+    "d_six_seconds": true,
+    "d_video": true,
+    "d_no_unexpected_gain": true,
+    "d_source_unchanged": true,
+    "identical_video_decoded": true,
+    "original_gray_video_preserved": true,
+    "silence_decodes_to_exact_zero": true,
+    "tone_approximately_440hz": true,
+    "mono_duplicated_exactly_before_lossy_aac": true,
+    "other_media_unchanged": true
+  },
+  "pass": true,
+  "tone_fft_peak_hz_per_channel": [
+    440.0,
+    440.0
+  ],
+  "cases": [
+    {
+      "probe": "probe-a.mp4",
+      "audio_codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "channel_layout": "stereo",
+      "target_bitrate_bps": 128000,
+      "reported_bitrate_bps": 2301,
+      "container_duration_s": 6.0,
+      "full_decoded_audio_frames_per_channel": 288768,
+      "evaluated_frames_per_channel": 288000,
+      "trailing_codec_padding_frames_excluded": 768,
+      "decoded_video_hash": "SHA256=fa9492bcd213ea4a8af1b636b383acd03e8651595bdb5ef86f91ecae97a5c4d0",
+      "decoded_aac_first6s": {
+        "rms_per_channel": [
+          0.0,
+          0.0
+        ],
+        "rms_dbfs_per_channel": [
+          null,
+          null
+        ],
+        "peak_per_channel": [
+          0.0,
+          0.0
+        ]
+      },
+      "reference_resampled_pcm_first6s": {
+        "rms_per_channel": [
+          0.0,
+          0.0
+        ],
+        "rms_dbfs_per_channel": [
+          null,
+          null
+        ],
+        "peak_per_channel": [
+          0.0,
+          0.0
+        ]
+      },
+      "decoded_lr_difference_peak": 0.0,
+      "decoded_lr_difference_rms": 0.0,
+      "rms_delta_db_per_channel": [
+        null,
+        null
+      ]
+    },
+    {
+      "probe": "probe-b.mp4",
+      "audio_codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "channel_layout": "stereo",
+      "target_bitrate_bps": 128000,
+      "reported_bitrate_bps": 127930,
+      "container_duration_s": 6.0,
+      "full_decoded_audio_frames_per_channel": 288768,
+      "evaluated_frames_per_channel": 288000,
+      "trailing_codec_padding_frames_excluded": 768,
+      "decoded_video_hash": "SHA256=fa9492bcd213ea4a8af1b636b383acd03e8651595bdb5ef86f91ecae97a5c4d0",
+      "decoded_aac_first6s": {
+        "rms_per_channel": [
+          0.14135453516309704,
+          0.14135453523072117
+        ],
+        "rms_dbfs_per_channel": [
+          -16.993805064364878,
+          -16.993805060209542
+        ],
+        "peak_per_channel": [
+          0.21006280183792114,
+          0.21006280183792114
+        ]
+      },
+      "reference_resampled_pcm_first6s": {
+        "rms_per_channel": [
+          0.14141769762259593,
+          0.14141769762259593
+        ],
+        "rms_dbfs_per_channel": [
+          -16.98992475294819,
+          -16.98992475294819
+        ],
+        "peak_per_channel": [
+          0.199984610080719,
+          0.199984610080719
+        ]
+      },
+      "decoded_lr_difference_peak": 0.0010661780834197998,
+      "decoded_lr_difference_rms": 7.861873920808849e-06,
+      "rms_delta_db_per_channel": [
+        -0.003880311416686766,
+        -0.0038803072613511347
+      ]
+    },
+    {
+      "probe": "probe-c.mp4",
+      "audio_codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "channel_layout": "stereo",
+      "target_bitrate_bps": 128000,
+      "reported_bitrate_bps": 66180,
+      "container_duration_s": 6.0,
+      "full_decoded_audio_frames_per_channel": 288768,
+      "evaluated_frames_per_channel": 288000,
+      "trailing_codec_padding_frames_excluded": 768,
+      "decoded_video_hash": "SHA256=fa9492bcd213ea4a8af1b636b383acd03e8651595bdb5ef86f91ecae97a5c4d0",
+      "decoded_aac_first6s": {
+        "rms_per_channel": [
+          0.0760049599463638,
+          0.07600495994660116
+        ],
+        "rms_dbfs_per_channel": [
+          -22.383161310423855,
+          -22.38316131039673
+        ],
+        "peak_per_channel": [
+          0.6536544561386108,
+          0.6536544561386108
+        ]
+      },
+      "reference_resampled_pcm_first6s": {
+        "rms_per_channel": [
+          0.07605459378168491,
+          0.07605459378168491
+        ],
+        "rms_dbfs_per_channel": [
+          -22.377490979022056,
+          -22.377490979022056
+        ],
+        "peak_per_channel": [
+          0.6591679453849792,
+          0.6591679453849792
+        ]
+      },
+      "decoded_lr_difference_peak": 3.6153942346572876e-05,
+      "decoded_lr_difference_rms": 4.2798194127289226e-07,
+      "rms_delta_db_per_channel": [
+        -0.005670331401798734,
+        -0.005670331374673765
+      ]
+    },
+    {
+      "probe": "probe-d.mp4",
+      "audio_codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "channel_layout": "stereo",
+      "target_bitrate_bps": 128000,
+      "reported_bitrate_bps": 130628,
+      "container_duration_s": 6.0,
+      "full_decoded_audio_frames_per_channel": 288768,
+      "evaluated_frames_per_channel": 288000,
+      "trailing_codec_padding_frames_excluded": 768,
+      "decoded_video_hash": "SHA256=fa9492bcd213ea4a8af1b636b383acd03e8651595bdb5ef86f91ecae97a5c4d0",
+      "decoded_aac_first6s": {
+        "rms_per_channel": [
+          0.15785094172714226,
+          0.1578195281167309
+        ],
+        "rms_dbfs_per_channel": [
+          -16.035056455900104,
+          -16.03678519000819
+        ],
+        "peak_per_channel": [
+          0.898099422454834,
+          0.8653469085693359
+        ]
+      },
+      "reference_resampled_pcm_first6s": {
+        "rms_per_channel": [
+          0.1582594617482249,
+          0.1582317953705489
+        ],
+        "rms_dbfs_per_channel": [
+          -16.01260631345331,
+          -16.01412488370374
+        ],
+        "peak_per_channel": [
+          0.9063562154769897,
+          0.8600975275039673
+        ]
+      },
+      "decoded_lr_difference_peak": 0.19801944494247437,
+      "decoded_lr_difference_rms": 0.038920229358152786,
+      "rms_delta_db_per_channel": [
+        -0.02245014244679311,
+        -0.022660306304448596
+      ]
+    }
+  ],
+  "level_method": "No loudness/peak normalization, compressor, volume or limiter. Mono is copied at unity gain to each channel; stereo stays stereo. Per-channel RMS is compared to uncompressed resampling, before AAC. Small encoding/resampling changes are measured, not gain adjustments.",
+  "stereo_power_note": "Duplicating mono adds a second equal channel; summed two-channel power is twice mono (+3.01dB), while each channel retains its original amplitude. Do not compare channel-summed power to mono as if normalization were applied.",
+  "lossy_channel_note": "An initial sample-exact L/R check after AAC failed (25/26 checks). That expectation is not valid for lossy AAC. Exact duplication is now checked in the uncompressed reference; decoded channel differences are measured explicitly, not concealed or treated as perception.",
+  "duration_limit": "Evaluate only [0,6) container seconds; exclude trailing AAC decoding padding from timed questions.",
+  "blind_protocol": "Three known controls plus one real sample without validated semantic ground truth. Future submission: same neutral instruction for every clip, varied order, anonymous filenames only; do not send expectations, source identities, scripts or manifests. Accept continuous tone without demanding an exact 440Hz estimate.",
+  "acceptance_limit": "Passing controls does not certify prosody, specific SFX, music accuracy or fine audiovisual sync; external authorization remains pending."
+}

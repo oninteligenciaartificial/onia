@@ -1,0 +1,15 @@
+--- cpu
++++ cpu-offload
+@@ -75,8 +75,11 @@
+             cache_path,
+             torch_dtype=torch.bfloat16,
+             trust_remote_code=True,
++            device_map="auto", max_memory={"cpu": "4GiB"},
++            offload_folder=os.environ["ONIA_OFFLOAD_DIR"], offload_state_dict=True,
+         )
+-        self.model = self.model.to(device)
++        # Accelerate administra CPU y disco; no mover el modelo completo.
++
+         self.model.eval()
+ 
+         # Load processor for tokenization and chat template

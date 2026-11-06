@@ -1,0 +1,67 @@
+2026-11-05 15:33:16.020 | INFO     | eureka_infer.api.eureka:__init__:62 - Loading Eureka-Audio model from C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\eureka-preflight
+2026-11-05 15:33:16.020 | INFO     | eureka_infer.api.eureka:__init__:70 - Looking for resources in C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\eureka-preflight
+2026-11-05 15:33:16.020 | INFO     | eureka_infer.api.eureka:__init__:73 - Loading Eureka-Audio model...
+`torch_dtype` is deprecated! Use `dtype` instead!
+C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\transformers\configuration_utils.py:335: UserWarning: Passing `gradient_checkpointing` to a config initialization is deprecated and will be removed in v5 Transformers. Using `model.gradient_checkpointing_enable()` instead, or if you are using the `Trainer` API, pass `gradient_checkpointing=True` in your `TrainingArguments`.
+  warnings.warn(
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<?, ?it/s]
+Some weights of the model checkpoint at C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\eureka-preflight were not used when initializing EurekaAudioForCausalLM: ['audio_embed.weight', 'audio_ffn_adaptor.0.bias', 'audio_ffn_adaptor.0.weight', 'audio_ffn_adaptor.1.bias', 'audio_ffn_adaptor.1.weight', 'audio_ffn_adaptor.3.bias', 'audio_ffn_adaptor.3.weight', 'audio_ffn_adaptor.4.bias', 'audio_ffn_adaptor.4.weight', 'audio_head.weight', 'audio_out_projection.0.bias', 'audio_out_projection.0.weight', 'audio_out_projection.1.bias', 'audio_out_projection.1.weight', 'audio_out_projection.3.bias', 'audio_out_projection.3.weight', 'lm_head.weight']
+- This IS expected if you are initializing EurekaAudioForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing EurekaAudioForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some parameters are on the meta device because they were offloaded to the disk.
+2026-11-05 15:33:16.300 | INFO     | eureka_infer.api.eureka:__init__:86 - Loading processor...
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+2026-11-05 15:33:17.130 | INFO     | eureka_infer.api.eureka:__init__:102 - Eureka-Audio model loaded successfully
+The following generation flags are not valid and may be ignored: ['temperature', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\transformers\generation\utils.py:2534: UserWarning: You are calling .generate() with the `input_ids` being on a device type different than your model's device. `input_ids` is on cpu, whereas the model is on meta. You may experience unexpected behaviors or slower generation. Please make sure that you have put `input_ids` to the correct device by calling for example input_ids = input_ids.to('meta') before running `.generate()`.
+  warnings.warn(
+Windows fatal exception: access violation
+
+Thread 0x00007438 (most recent call first):
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 359 in wait
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 655 in wait
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\tqdm\_monitor.py", line 69 in run
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\PC\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1032 in _bootstrap
+
+Current thread 0x00004968 (most recent call first):
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\storage.py", line 480 in __getitem__
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\accelerate\utils\offload.py", line 180 in __getitem__
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\accelerate\utils\offload.py", line 127 in __getitem__
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\accelerate\hooks.py", line 371 in pre_forward
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\_dynamo\eval_frame.py", line 1552 in _fn
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\accelerate\hooks.py", line 50 in wrapper
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\accelerate\hooks.py", line 187 in new_forward
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\nn\modules\module.py", line 1798 in _call_impl
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _wrapped_call_impl
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\transformers\models\qwen3\modeling_qwen3.py", line 258 in forward
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\transformers\utils\deprecation.py", line 172 in wrapped_func
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\accelerate\hooks.py", line 192 in new_forward
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\transformers\utils\generic.py", line 1031 in wrapped_forward
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\nn\modules\module.py", line 1798 in _call_impl
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _wrapped_call_impl
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\transformers\modeling_layers.py", line 94 in __call__
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\transformers\models\qwen3\modeling_qwen3.py", line 410 in forward
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\transformers\utils\generic.py", line 1072 in wrapper
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\accelerate\hooks.py", line 192 in new_forward
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\nn\modules\module.py", line 1798 in _call_impl
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _wrapped_call_impl
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\transformers\models\qwen3\modeling_qwen3.py", line 480 in forward
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\transformers\utils\generic.py", line 918 in wrapper
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\accelerate\hooks.py", line 192 in new_forward
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\nn\modules\module.py", line 1798 in _call_impl
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _wrapped_call_impl
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-tmp\hf-eureka-fp32\modules\transformers_modules\eureka_hyphen_preflight\modeling_eureka_audio.py", line 475 in forward
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\accelerate\hooks.py", line 192 in new_forward
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\nn\modules\module.py", line 1798 in _call_impl
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _wrapped_call_impl
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\transformers\generation\utils.py", line 2789 in _sample
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\transformers\generation\utils.py", line 2566 in generate
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\utils\_contextlib.py", line 158 in no_grad
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\eureka-source-cpu\eureka_infer\api\eureka.py", line 276 in generate
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\midasheng-venv\Lib\site-packages\torch\utils\_contextlib.py", line 158 in inference_mode
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\investigacion\2026-11-05-referentes\audio-tecnico\probar_eureka.py", line 42 in worker
+  File "C:\dev\proyectos\_investigacion-onia\base-operativa\investigacion\2026-11-05-referentes\audio-tecnico\probar_eureka.py", line 84 in <module>
+{"exit": 3221225477, "stop_reason": null, "elapsed_s": 73.17, "rss_peak_bytes": 2369970176, "minimum_available_bytes": 6313709568, "before_available_bytes": 8659079168, "limits": "CPU weights <=2GiB plus disk offload; initial >=7.5GiB; available >=2GiB; RSS <=5.5GiB; <=900s"}

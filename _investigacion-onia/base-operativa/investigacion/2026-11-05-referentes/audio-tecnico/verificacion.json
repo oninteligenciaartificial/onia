@@ -1,0 +1,17 @@
+{
+  "scope": "technical extraction, controls and ASR only; no acoustic listening acceptance",
+  "checks": {
+    "pcm_controls_pass": true,
+    "five_clips_pcm_exact": true,
+    "vad_silence_empty": true,
+    "vad_tone_empty": true,
+    "known_speech_matches_normalized": true,
+    "real_90s_passed_to_asr": true,
+    "raw_tone_failure_preserved": true,
+    "full_decode_exit0_no_errors": true
+  },
+  "technical_pass": true,
+  "decode_stderr": "",
+  "acoustic_listening_complete": false,
+  "native_audio_input_error": "audio content omitted because you do not support audio input"
+}

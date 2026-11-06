@@ -6,11 +6,11 @@
 
 | Chat | ID / host | Estado y función |
 |---|---|---|
-| ONIA · Jefa v2 | `01a1ab9c-15b2-7a03-9588-2daab62a93eb` · local | Designada por Sergio; en espera de commit/recepción. Todavía sin rol operativo activo ni aceptación certificada. Asumirá delegación, revisión y entrega tras recepción comprobada. |
-| ONIA · Jefa local, saliente | `01a1a29c-3a3d-7b50-aef6-41305ce5faae` · local | Cierra el relevo y la publicación documental; Sergio ordenó reemplazarla y archivarla. Archivo aún no confirmado. No mantener dos jefas operativas simultáneas. |
+| ONIA · Jefa v2 | `01a1ab9c-15b2-7a03-9588-2daab62a93eb` · local | Jefa vigente; recepción del commit aceptada en turno COMPLETED. Asume delegación, revisión y entrega de las siete áreas locales; coordina la [tanda de referentes en curso](investigacion/2026-11-05-referentes/README.md). |
+| ONIA · Jefa local, saliente | `01a1a29c-3a3d-7b50-aef6-41305ce5faae` · local | Relevo entregado y aceptado; deja la coordinación operativa a Jefa v2. Archivada según list_archived_threads comprobado y comunicado por Jefa v2; evidencia atribuida en RECEPCION-JEFA. |
 | ONIA · Jefe, antecedente cloud | `01a1a843-4afb-75f9-aa95-f35833fcb002` · durable | Planificación/síntesis del reparto del 4/11, conservada como historia. No es segunda jefa activa del reparto local. |
 
-Esta consolidación no hace commit/push, no confirma recepción y no archiva chats. La nueva jefa comprobará la revisión recibida; crear o renombrar un chat no acredita ese relevo.
+Publicación y recepción confirmadas: [RECEPCION-JEFA](continuidad/2026-11-05/RECEPCION-JEFA.md) conserva commit, turno y fuentes leídas. Esta actualización no hace commit/push ni archiva chats.
 
 ## Áreas locales y orígenes conservados
 
@@ -30,11 +30,33 @@ Los orígenes cloud quedaron idle según el inventario reportado por la jefa al 
 
 Las siete revisiones fueron recibidas y revisadas por la jefa saliente. D1 terminó como piloto visual silencioso; la preparación inactiva n8n terminó con 13/13 controles estáticos. Alcance, evidencia y siguientes pasos están en ESTADO y HANDOFF; no se mantiene aquí otra cola.
 
+## Entrada de referencias pedida por Sergio
+
+**ONIA · Reels e ideas**, `01a1ac99-eb3b-71a2-96ce-39942950bc63`, host **local**, proyecto **Onia 03/11**. Jefa confirmó su creación y ubicación en **ONIA · Equipo local** el 5 de noviembre, por pedido explícito de Sergio. Recibe reels e ideas, analiza sus aportes y los conecta con trabajos concretos de ONIA desde su [punto de entrada](investigacion/reels-e-ideas/README.md).
+
+Creación y [recepción](investigacion/reels-e-ideas/RECEPCION.md) comprobadas por Jefa: arranque terminado en turno `01a1ac99-ec54-7810-8562-3904603a7a44`, estado COMPLETED. El receptor confirmó las fuentes y verificó 13 enlaces locales. Es una entrada de referencias complementaria a las siete áreas, bajo la única Jefa vigente; no añade jefatura, área ejecutora del CLI ni scheduler. El audio conserva sus dependencias y la decisión vigente de Sergio en el índice de referentes.
+
 ## Skills y modelos
 
 El [manifiesto](orquestacion.json) mantiene seis claves de CLI: marketing, video, desarrollo, automatizaciones, organización y producto. Aprendizaje y Jefatura no añaden claves/skills por tener chat. Usar las directoras existentes por resultado; continuidad-de-trabajo dirige este relevo y mejorar-sistema apoya la corrección acotada. Las skills no cambian en este encargo.
 
-Preferencia histórica de Sergio: Astra para Jefatura y Sol/Terra para ejecución. La selección explícita de subagentes de JEF-BASE-001 no acredita el modelo efectivo de estos chats; no se comprobó ni modificó el selector por esta consolidación.
+Instrucción vigente de Sergio comunicada por Jefa para el goal: **Astra exclusivamente Jefa; Sol para Marketing, Video, Organización, Aprendizaje y Reels; Terra para Desarrollo, Automatizaciones y Producto.** No heredar Astra a subagentes: usar Sol o Terra adecuados con contexto acotado cuando se delegue. La [matriz de aceptación](investigacion/2026-11-05-referentes/GOAL-REFERENTES.md) mantiene el reparto del goal.
+
+**Comprobación efectiva comunicada por Jefa, 5/11/2026:** lectura acotada de `model`, `effort` y `timestamp` del último `turn_context` de los rollouts locales, con acceso de lectura compartida. Organización registra esa evidencia atribuida; no repite la lectura de historiales. Los horarios siguientes son UTC y describen esos turnos, no garantizan configuraciones futuras.
+
+| Chat | Modelo / esfuerzo observado | Hora del turno (UTC) |
+|---|---|---|
+| Jefa | `gpt-6-astra` / ultra | Hora no comunicada en este cotejo |
+| Marketing | `gpt-6.1-sol` / medium | 18:31:39Z |
+| Aprendizaje | `gpt-6.1-sol` / medium | 18:31:38Z |
+| Video | `gpt-6.1-sol` / medium | 18:31:41Z |
+| Desarrollo | `gpt-6.1-terra` / medium | 18:31:42Z |
+| Organización | `gpt-6.1-sol` / medium | 18:28:20Z |
+| Reels e ideas | `gpt-6.1-sol` / low | 18:32:25Z |
+| Automatizaciones | `gpt-6.1-terra` / low | 18:32:30.519Z |
+| Producto | `gpt-6.1-terra` / low | 18:32:29.705Z |
+
+El último cotejo de `turn_context` comunicado por Jefa confirma también Terra/low para Automatizaciones y Producto en los turnos indicados. Las siete áreas locales y Reels tienen evidencia Sol/Terra; Jefa conserva Astra. No se acredita modificación de chats cloud. Esta comprobación de configuración no inicia trabajo n8n/producto. **Corte inicial histórico:** Jefa había despachado investigación a Marketing, Aprendizaje, Video y Desarrollo, con propiedad exclusiva de subcarpetas. La unidad documental inicial fue recibida entonces. Ese despacho no describe su ejecución actual; [ESTADO](ESTADO.md) registra entregas, bloqueo y próxima condición vigentes. Se conserva una única matriz común.
 
 ## Antecedentes cloud del 3–4 de noviembre
 

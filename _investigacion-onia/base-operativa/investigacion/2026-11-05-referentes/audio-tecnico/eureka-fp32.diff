@@ -1,0 +1,48 @@
+--- modeling_eureka_audio.py.bf16
++++ modeling_eureka_audio.py.fp32
+@@ -211,14 +211,14 @@
+         backbone = AutoModelForCausalLM.from_config(
+             config_obj,
+             attn_implementation="sdpa",
+-        ).to(torch.bfloat16)
++        ).to(torch.float32)
+         return backbone
+ 
+     def _build_audio_encoder(self) -> nn.Module:
+         """Build Whisper audio encoder."""
+         audio_encoder_config = self.config.audio_encoder_config
+         audio_encoder = WhisperEncoder(config=audio_encoder_config)
+-        return audio_encoder.to(torch.bfloat16)
++        return audio_encoder.to(torch.float32)
+ 
+     def get_input_embeddings(self):
+         return self.backbone.model.embed_tokens
+--- eureka.py.bf16
++++ eureka.py.fp32
+@@ -73,7 +73,7 @@
+         logger.info("Loading Eureka-Audio model...")
+         self.model = AutoModelForCausalLM.from_pretrained(
+             cache_path,
+-            torch_dtype=torch.bfloat16,
++            torch_dtype=torch.float32,
+             trust_remote_code=True,
+             device_map="auto", max_memory={"cpu": "4GiB"},
+             offload_folder=os.environ["ONIA_OFFLOAD_DIR"], offload_state_dict=True,
+@@ -261,7 +261,7 @@
+         token_type_ids = inputs["token_type_ids"].to(self.device)
+         mels = inputs["mels"]
+         if mels is not None:
+-            mels = mels.to(self.device).to(torch.bfloat16)
++            mels = mels.to(self.device).to(torch.float32)
+ 
+         # Build eos_token_id list
+         eos_token_id = [self.tokenizer.eos_token_id]
+@@ -272,7 +272,7 @@
+                     eos_token_id.extend(token_ids)
+ 
+         # Generate
+-        with torch.amp.autocast(device_type='cpu', dtype=torch.bfloat16):
++        with torch.no_grad():
+             outputs = self.model.generate(
+                 input_ids=input_ids,
+                 token_type_ids=token_type_ids,

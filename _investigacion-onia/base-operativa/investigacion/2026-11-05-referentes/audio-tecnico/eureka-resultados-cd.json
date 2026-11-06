@@ -1,0 +1,17 @@
+{
+  "revision": "219761da53c9c6c5900a84a723d88ccc29db66d3",
+  "prompt": "Describe the audio.",
+  "device": "cpu",
+  "threads": 4,
+  "vad": false,
+  "dtype": "float32",
+  "adaptation": "SDPA; Accelerate CPU 2GiB/disk; local numpy BF16 loader; WAV via soundfile",
+  "cases": [
+    {
+      "case": "c",
+      "source_after_blind_run": "control-silencio.wav",
+      "answer": "The audio clip presents a high-fidelity, studio-quality recording of a solo male vocalist performing a classical operatic aria in the *bel canto* style. The singer possesses a rich, resonant baritone timbre with a warm, velvety texture and precise, controlled vibrato. He sings the Italian phrase \"O Dio, o Dio\" with profound emotional weight, utilizing a slow,",
+      "elapsed_s": 436.187
+    }
+  ]
+}

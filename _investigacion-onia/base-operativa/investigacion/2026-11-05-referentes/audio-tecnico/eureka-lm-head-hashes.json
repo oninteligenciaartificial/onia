@@ -1,0 +1,39 @@
+{
+  "scope": "bytes completos de tres tensores de checkpoint; no prueba alias runtime",
+  "equal_all": true,
+  "tensors": [
+    {
+      "key": "lm_head.weight",
+      "shard": "model-00002-of-00002.safetensors",
+      "dtype": "BF16",
+      "shape": [
+        151936,
+        2048
+      ],
+      "bytes": 622329856,
+      "sha256": "d200b8770469e60f5ed0ee9a76ef6f7b6f836881c905ab3093b730cd0a51f4c6"
+    },
+    {
+      "key": "backbone.lm_head.weight",
+      "shard": "model-00001-of-00002.safetensors",
+      "dtype": "BF16",
+      "shape": [
+        151936,
+        2048
+      ],
+      "bytes": 622329856,
+      "sha256": "d200b8770469e60f5ed0ee9a76ef6f7b6f836881c905ab3093b730cd0a51f4c6"
+    },
+    {
+      "key": "backbone.model.embed_tokens.weight",
+      "shard": "model-00001-of-00002.safetensors",
+      "dtype": "BF16",
+      "shape": [
+        151936,
+        2048
+      ],
+      "bytes": 622329856,
+      "sha256": "d200b8770469e60f5ed0ee9a76ef6f7b6f836881c905ab3093b730cd0a51f4c6"
+    }
+  ]
+}

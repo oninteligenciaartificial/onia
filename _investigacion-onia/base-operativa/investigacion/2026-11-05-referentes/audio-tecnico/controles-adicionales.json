@@ -1,0 +1,37 @@
+{
+  "scope": "controles conocidos para usar sólo después de superar básicos",
+  "spanish_voice": "Windows OneCore Microsoft Helena es-ES; texto introducido: Hola, esta es una prueba de audio. El número es siete.",
+  "click": "un pulso de 1 muestra a 2,0s sobre 6s de silencio",
+  "melody": "6 notas senoidales sintetizadas de 1s, sin instrumentos reales",
+  "mix": "voz sintética española y melodía sintética, sin VAD; ganancias .5 y .35",
+  "files": [
+    {
+      "name": "control-voz-es.wav",
+      "sha256": "64d5bc60e307c535043eaee02c75fc5679cb3bb10bbfc8f804d2918ad50ac208",
+      "sample_rate": 22050,
+      "channels": 1,
+      "duration_s": 4.683038548752834
+    },
+    {
+      "name": "control-click.wav",
+      "sha256": "8bee176f94aa783b7290ba361b7a6def6623d726824c5101080aeddfe9161cf6",
+      "sample_rate": 16000,
+      "channels": 1,
+      "duration_s": 6.0
+    },
+    {
+      "name": "control-melodia.wav",
+      "sha256": "f2708621a98139e43cf7feabd74a2071fa2c6db2e09141c62ac44d09c20db093",
+      "sample_rate": 16000,
+      "channels": 1,
+      "duration_s": 6.0
+    },
+    {
+      "name": "control-mezcla.wav",
+      "sha256": "a6b1a1c561cffdb5d5f2d5477659750ab6ea90b49092b0b9721219309489c688",
+      "sample_rate": 16000,
+      "channels": 1,
+      "duration_s": 6.0
+    }
+  ]
+}

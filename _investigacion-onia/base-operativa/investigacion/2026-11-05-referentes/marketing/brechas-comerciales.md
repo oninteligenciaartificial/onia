@@ -1,0 +1,28 @@
+# Brechas comerciales · corte del goal ampliado
+5/11/2026. Se conserva el límite público y la intervención mínima. Audio/continuidad pertenece a Video/Desarrollo en todos los medios; sus informes se reutilizan, no se declara escucha en Marketing.
+
+| Referente | Brecha que resta / solución comprobada y próxima intervención |
+|---|---|
+| Hormozi | SALES→DM no solicitado; cursos/PDF/workshop públicos leídos. Ads: lector/búsqueda/GET fallaron inicialmente; IAB después recuperó tarjeta Skool ID1417431913538180, inactiva25/7–2/9/2026 y relacionada por texto con formación Hormozi. Anunciante Skool, no campaña personal atribuida; creativo audiovisual no revisado. Para seguir privado: enlace ya recibido o autorización específica centralizada por Jefa. |
+| Iman | Registro/email/WhatsApp/sesiones privados no ejecutados. Shorteners/modal y recurso público ya recuperados; no pedir credenciales. Cuerpo técnico de10 prompts sólo desplegado y parcialmente leído; no necesario para describir venta, no audita formación. |
+| Heras | Encuesta no enviada/precio de consultoría no público. Puente descripción→Viralidad resuelto; comentario fijado no observado. Marketing conserva esa diferencia. |
+| Pedro | Tres captions revalidados; DM/webinar/oferta final no recibidos. Navegador ya mostró diagnóstico/primera pregunta y checkout200EUR con224,67USD en iframe. Quedan respuestas, transacción, condiciones finales y discrepancia monetaria; no falta abrir esos destinos. |
+| Erik | Curso/servicios/comunidad privados; preview y guías accesibles. Horarios discordantes. Video ya amplió preview/final/ASR, audio pendiente allí. No comprar para completar descripción de oferta. |
+| Enrique | Short ya recuperado por Video; guía de comentario no recibida, V15 sin revalidar. Luma/guía editorial/tienda/consultas públicas leídas; acceder a parte privada exige prueba autorizada concreta. |
+| San | Tres videos ya tienen captions/muestreo, fallo inicial superado; no entrega keyword ni membresía. Precio/urgencia contradictorios en landings; mantener versiones hasta evidencia coherente. |
+| Justin | Tres ensayos completos (dos principales y potential como complemento) y dos imágenes inspeccionadas; cuentas/precios de productos discordantes, no compra. Sin requisito de audio para ensayos. Ads no demostrados por archivo o botón Promote. |
+| Nick | Checkout público resuelto; cancelación/renovación real no ejecutadas; contradicción mes1$ vs7d gratis preservada. No alta de prueba por investigación. |
+| Jeff | Quiz inicia con dato personal; no responder inventando perfil. Producto/precios/variantes públicos resueltos, impuesto/cobro/entrega sin transacción. |
+| Ali | Pack/PT YA checkout visibles; Academy expone13 preguntas y datos iniciales sin contestar. Precio de admisión no publicado; Jefa sólo solicita entrevista si autoriza comunicación específica. |
+| Gonzalo | Lector + navegador cargado/DOM tras cookies no exponen registro. Alternativa identidad/sitio/reel oficial revisada. Verificación acotada adicional: HTML enlaza script Lenus lead-form; GET público directo devuelve404. Registro no recuperable en las rutas probadas: problema concreto de destino, sin exigir cuenta ni tarea indefinida. |
+| Beltrán | ML ya muestra precio/vendedor/stock/garantía; coste final depende destino/transacción. Charlas tienen formulario, no tarifa/fecha comprometidas. Sin intervención para documentar superficie pública. |
+| Toto | Libros Notion404 en dos variantes; Marz auth es límite sin cuenta y demo ahora muestra horarios sin reserva. HTML actual del portfolio conserva tres veces ese mismo enlace; no expone sustituto. Recurso404 registrado como problema finito, sin obligación de pedir enlace nuevo para cerrar el estudio público. |
+| Bastian | XuFilms502; ContentProject/formulario resuelven alternativa. Puente entre handles aún no corroborado; masterclass fecha sin año, confirmación postregistro no ejecutada. No atribuir edición del anfitrión. |
+| Álvaro | Identidad/relación tienda cruzadas; título del vlog no audita ventas ni ingreso. No curso encontrado; ninguna compra/intervención necesaria. |
+| Alex | Clase posterior aCLASE y vínculo con Exposure desconocidos. Búsqueda/Exposure no resuelven DM; enlace ya recibido o autorización específica de comentario es paso indispensable centralizado por Jefa. |
+| Voltra | Navegador ya contrastó pack1/pack2 y En Stock anunciado; persisten textos30/50% y3/6cuotas simultáneos. Ficha/instrucciones/políticas públicas leídas; pedido/cobro/garantía ejecutada quedan fuera. |
+
+**Actualización posterior de los últimos destinos:** diagnóstico Pedro ya expone primera pregunta/sector y checkout200EUR con representación224,67USD en iframe; ficha Voltra confirma precio/stock anunciados y contradicciones30/50%,3/6cuotas. Las alternativas de navegador propuestas en esas dos filas ya fueron ejecutadas: quedan respuestas personales, transacción y condiciones finales, no falta de acceso a página. Meta ahora devuelve tarjeta Skool ID1417431913538180 en búsqueda Hormozi; se identifica anunciante/fechas/estado, sin atribuirla a la persona ni revisar el video creativo. Evidencia en [pruebas de navegador](navegador-verificacion.md).
+
+No hay evidencia de frecuencia completa de todos los feeds ni resultados privados. Las fichas delimitan redes y piezas señaladas frente a ejemplos nuevos. Ads de otros sujetos conserva intentos y límites por ficha; no se amplía a18 auditorías de anuncios sin pertinencia. Jefa acepta la unidad comercial con estos límites o concreta una de las superficies pendientes; no corresponde pedir a Sergio que descargue medios recuperables.
+

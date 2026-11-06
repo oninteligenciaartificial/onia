@@ -1,10 +1,10 @@
 # Handoff para ONIA · Jefa v2
 
-**5 de noviembre de 2026 · America/Caracas. Estado: preparado para versionar; sin commit/push ni recepción confirmada.** Este documento consolida el contexto útil de la tanda. El repo es la autoridad única; Notion es proyección y Pages sólo medios/procedencia. Los originales privados de `operacion/` son artefactos de origen, no una segunda autoridad.
+**5 de noviembre de 2026 · America/Caracas. Corte original: preparado para versionar. Publicación y recepción posteriores confirmadas en [RECEPCION-JEFA](RECEPCION-JEFA.md).** Este documento consolida el contexto útil de la tanda. El repo es la autoridad única; Notion es proyección y Pages sólo medios/procedencia. Los originales privados de `operacion/` son artefactos de origen, no una segunda autoridad.
 
 ## Relevo y roles
 
-Sergio ordenó reemplazar a la jefa anterior y archivarla. **Nueva jefa designada:** `01a1ab9c-15b2-7a03-9588-2daab62a93eb`, host local, «ONIA · Jefa v2». Está en espera del commit y la recepción; **todavía no tiene rol operativo activo**. **Saliente:** `01a1a29c-3a3d-7b50-aef6-41305ce5faae`; su archivo está ordenado, no confirmado. No hay aceptación de handoff por crear este documento ni dos jefas operativas simultáneas.
+Sergio ordenó reemplazar a la jefa anterior y archivarla. [SESIONES](../../SESIONES.md) identifica a Jefa v2 como única jefa vigente y conserva los IDs de ambas; [ESTADO](../../ESTADO.md) registra el relevo aceptado. La [recepción](RECEPCION-JEFA.md) acredita la lectura del commit. El archivo de la anterior fue confirmado por Jefa v2 mediante list_archived_threads, según el recibo; no hay dos jefas operativas.
 
 La única jefa confirmada delega, revisa y entrega. Las siete áreas locales realizan el trabajo: Marketing/ventas, Video/contenido, Desarrollo/QA, Automatizaciones, Organización, Producto y Aprendizaje. [SESIONES](../../SESIONES.md#áreas-locales-y-orígenes-conservados) es el mapa canónico de roles, IDs locales y orígenes cloud; no duplicar ese registro. Organización es el único escritor documental de esta consolidación. El código de Producto conserva su repo y alcance propios.
 
@@ -52,6 +52,6 @@ No repetir la preparación terminada ni la revisión completa. La próxima unida
 
 ## Recepción y cierre compacto
 
-La jefa saliente gestiona commit/publicación por separado. Jefa v2 debe recuperar ese commit y confirmar fuente, alcance, evidencia, límites y primera tarea antes de asumir. Registrar entonces la aceptación real y comprobar el archivo de la anterior mediante la herramienta correspondiente; ninguno está certificado aquí.
+El corte preparado de este handoff fue publicado y recibido: [RECEPCION-JEFA](RECEPCION-JEFA.md) registra la confirmación de fuente, alcance, evidencia, límites y primera tarea por Jefa v2. El recibo incorpora la confirmación posterior de archivo de la anterior, atribuida a Jefa v2. El alcance activo posterior se consulta en el [índice de referentes](../../investigacion/2026-11-05-referentes/README.md); esta actualización documental no ejecuta su investigación.
 
 Cada área cierra con **resultado; evidencia/enlace; prueba realizada; bloqueo con solución; siguiente acción**. Cargar fuentes adicionales sólo si hacen falta para comprobar o decidir. No pegar historiales completos ni repetir grandes lecturas, y no reducir silenciosamente la cobertura del encargo.

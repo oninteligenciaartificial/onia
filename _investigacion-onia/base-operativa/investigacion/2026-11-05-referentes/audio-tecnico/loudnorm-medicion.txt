@@ -1,0 +1,34 @@
+Input #0, wav, from 'C:\dev\proyectos\_investigacion-onia\base-operativa\operacion\referentes-20261105\audio\pedro-original-pcm24.wav':
+  Metadata:
+    encoder         : Lavf62.12.101
+  Duration: 00:01:30.35, bitrate: 2304 kb/s
+  Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s24le (native) -> pcm_s16le (native))
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf62.12.101
+  Stream #0:0: Audio: pcm_s16le, 192000 Hz, stereo, s16, 6144 kb/s
+    Metadata:
+      encoder         : Lavc62.28.101 pcm_s16le
+size=N/A time=00:00:12.60 bitrate=N/A speed=24.9x elapsed=0:00:00.50    
+size=N/A time=00:00:25.80 bitrate=N/A speed=25.2x elapsed=0:00:01.02    
+size=N/A time=00:00:39.90 bitrate=N/A speed=  26x elapsed=0:00:01.53    
+size=N/A time=00:00:54.00 bitrate=N/A speed=26.3x elapsed=0:00:02.05    
+size=N/A time=00:01:07.40 bitrate=N/A speed=26.2x elapsed=0:00:02.56    
+size=N/A time=00:01:21.20 bitrate=N/A speed=26.3x elapsed=0:00:03.08    
+[Parsed_loudnorm_0 @ 0000018791c54580] 
+{
+	"input_i" : "-14.21",
+	"input_tp" : "-0.53",
+	"input_lra" : "2.60",
+	"input_thresh" : "-24.34",
+	"output_i" : "-16.34",
+	"output_tp" : "-2.64",
+	"output_lra" : "2.30",
+	"output_thresh" : "-26.48",
+	"normalization_type" : "dynamic",
+	"target_offset" : "0.34"
+}
+[out#0/null @ 0000018791c54380] video:0KiB audio:67761KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:01:30.40 bitrate=N/A speed=26.7x elapsed=0:00:03.39    

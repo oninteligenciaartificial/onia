@@ -1,0 +1,9 @@
+# VPS y repositorio · 5/11/2026
+
+**Bloqueado por identificación de acceso; responsable: Desarrollo.** El inventario `accesos.md` indica que el host fue visto históricamente en un panel, pero no acredita puerto, identidad, huella ni acceso SSH. La configuración SSH local no contiene un host configurado; se encontraron dos archivos de identidad con nombres relacionados con VPS/n8n, sin asociación verificable con destino o usuario. `ssh-add -l` devolvió `Error connecting to agent: Permission denied`. Una búsqueda de esos nombres en el área de proyectos, excluyendo ONIA-CENTRAL, Git, dependencias y operación, no produjo una asociación. El inventario de superficies no mostró navegadores ni sesión de panel del proveedor. No se intentó usar claves contra hosts no confirmados.
+
+No se pudo confirmar VPS, medir recursos ni servicios, ni seleccionar responsablemente un repositorio acorde; no se instaló ni ejecutó nada en el servidor. La existencia de archivos de identidad no demuestra autorización o acceso funcional. Siguiente paso personal mínimo: Sergio abre la consola autenticada del proveedor del VPS correcto en una superficie de navegador accesible para esta sesión; después Desarrollo verifica identidad, capacidad y cargas antes de instalar. No enviar claves ni contraseñas al chat.
+
+## Comprobación adicional del panel
+
+Se intentó abrir https://hpanel.hostinger.com/ en el navegador IAB visible: la herramienta devolvió literalmente `Browser is not available: iab`. El inventario no ofreció Chrome ni otro navegador. Por tanto no se pudo dejar una página de login abierta ni comprobar sesión. La revisión focalizada de accesos.md, arquitectura.md y EVIDENCIA-2026-11-03.md no identificó dirección, usuario, puerto o huella verificables; accesos.md sólo afirma que el host fue observado históricamente en un panel. Siguiente paso: habilitar una superficie de navegador compatible y abrir el panel autenticado; no compartir credenciales en chat.

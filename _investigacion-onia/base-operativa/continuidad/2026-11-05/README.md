@@ -1,6 +1,6 @@
 # Continuidad local · 5 de noviembre de 2026
 
-**Fuente oficial: este repo privado.** Consolidación autorizada de revisiones, decisiones y artefactos textuales existentes. Las siete revisiones fueron recibidas y cotejadas por la jefa saliente; no acreditan funcionamiento integral. Jefa v2 está designada, en espera de commit/recepción, sin rol operativo activo. Este encargo prepara cambios sin commit/push, archivo de chats ni aceptación del relevo.
+**Fuente oficial: este repo privado.** Consolidación autorizada de revisiones, decisiones y artefactos textuales existentes. Las siete revisiones fueron recibidas y cotejadas por la jefa saliente; no acreditan funcionamiento integral. El corte preparado fue publicado y Jefa v2 confirmó su recepción; [RECEPCION-JEFA](RECEPCION-JEFA.md) conserva el resultado factual. El recibo incorpora también el archivo de la anterior confirmado por Jefa v2 mediante list_archived_threads.
 
 **Entrada para continuar:** [HANDOFF-JEFA](HANDOFF-JEFA.md). Estado actual en [ESTADO](../../ESTADO.md); roles/IDs en [SESIONES](../../SESIONES.md); dirección en [PLAN](../../PLAN.md). No crear otra cola. Notion proyecta esas fuentes y Pages conserva medios/procedencia.
 
@@ -16,6 +16,6 @@ D1 fue aprobado editorialmente sólo como prueba silenciosa, según el cierre co
 
 El bundle n8n mantiene los bytes del código/SQL/JSON originales; se ajustó un vínculo de Markdown y se recalculó el manifiesto de paquete conservando el manifiesto y hashes fuente. `.gitattributes` evita conversión de saltos de línea en ese bundle. Los scripts copiados no se ejecutaron en esta consolidación. Es material para repo privado, sin secretos, medios ni dependencias incorporados; no es un paquete público.
 
-La consolidación no investigó audio ni inició servicios, SQL, modelos, renders, campañas o publicaciones. La primera tarea de Jefa v2 será la prueba acotada de audio real definida en el handoff, después de confirmar recepción.
+La consolidación no investigó audio ni inició servicios, SQL, modelos, renders, campañas o publicaciones. La [tanda posterior de referentes](../../investigacion/2026-11-05-referentes/README.md) está en curso bajo Jefa v2 e incluye el audio real; esta actualización documental no ejecuta esa investigación.
 
 [Lista exacta de archivos y validación de publicación](PUBLICACION.md).
