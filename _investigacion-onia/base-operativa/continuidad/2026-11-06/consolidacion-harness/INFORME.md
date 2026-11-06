@@ -8,7 +8,7 @@ Sergio pidió usar onia, una integradora y otra revisora, sin perder lo existent
 
 onia/master es la base operativa; onia-harness se conserva como referencia, HEAD f0fd20d, sin modificaciones de esta unidad. La revisora cotejó repetidamente los 21 archivos ajenos inicialmente sucios: hashes intactos. Un directorio nuevo ajeno investigacion/2026-11-06-agentes-harness también quedó fuera de nuestros commits. Los tres snapshots previos conservan sus bytes CRLF y hashes en [HISTORICO](HISTORICO.md).
 
-Cambios: reglas generales separadas de contextos fechados; mapa de seis áreas, nueve directoras propias y nueve apoyos preservado; mismo CLI con registro único local o compartible, migración v1 explícita, revisión esperada, evidencia acumulativa en rutas inmutables, briefing canónico recuperable y aceptación separada de entrega.
+Cambios: reglas generales separadas de contextos fechados; mapa de seis áreas, nueve skills propias y nueve apoyos preservado; mismo CLI con registro único local o compartible, migración v1 explícita, revisión esperada, evidencia acumulativa en rutas inmutables, briefing canónico recuperable y aceptación separada de entrega.
 
 ## Revisiones y pruebas de código
 
