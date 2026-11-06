@@ -40,7 +40,7 @@ Este archivo es el punto de entrada y el índice del chat. El identificador de c
 
 - Chat **ONIA · Reels e ideas** creado mediante create_thread: `01a1ac99-eb3b-71a2-96ce-39942950bc63`, host `local`, proyecto `Onia 03/11`, el 5 de noviembre de 2026.
 - [Recepción del contexto](RECEPCION.md) escrita por el nuevo chat y comprobada por Jefa: fuentes leídas, límites y modo de trabajo registrados. Arranque documental recibido; la carpeta queda a cargo del chat receptor para las próximas referencias.
-- Primera acción: recibir el próximo reel de Sergio y devolver un análisis conectado con un trabajo concreto, con la cobertura realmente alcanzada.
+- Recepción al 5/11: dos referencias nuevas enviadas por Sergio y analizadas con los límites de sus fichas; ambas versionadas en `381c959`. No se recibieron otros enlaces, archivos ni medios nuevos desde el arranque en el historial disponible de este chat.
 
 ### Referencias nuevas
 
@@ -48,3 +48,12 @@ Este archivo es el punto de entrada y el índice del chat. El identificador de c
 - [tomiibuschiazzo · Claude como agencia — DfX6X6sGn5a](DfX6X6sGn5a.md). Recibido el 5/11: siete imágenes accesibles revisadas, numeradas 1–6 y 8; configuración ofrecida no obtenida. Paneles ilustrados sin operación o rentabilidad verificadas. Adaptación preparada: vista de tres resultados reales con límites, fuentes y condición siguiente; por probar con un lector.
 
 El corpus anterior permanece enlazado arriba y no se vuelve a cargar como entradas nuevas. Para audio y condiciones de reanudación prevalece el [estado operativo vigente](../../ESTADO.md): open source, sin Higgsfield; el texto del arranque conserva su fecha y no amplía permisos.
+
+### Incorporación documental complementaria aceptada por Jefa
+
+Estas dos entradas son complementarias al estudio de referentes: no amplían por sí solas el alcance finito ni la aceptación de su goal. Los mensajes de arranque, configuración de modelos y coordinación documental no son nuevas piezas del corpus.
+
+- **DfWLWspIruU → marca personal:** candidato para un brief de demostración propia con encargo, ejecución, resultado y cotejo visibles. **Operación:** ensayo de escritorio con D1 preparado en su ficha. Integración actual: análisis e instrucción escritos aquí; incorporación documental al cerebro de marca personal aceptada por Jefa en la [síntesis de Aprendizaje](../2026-11-05-referentes/criterio/sintesis-integral.md#entrantes-complementarios-de-reels--incorporación-documental-del-5-de-noviembre); prueba y producción siguen pendientes.
+- **DfX6X6sGn5a → marca personal:** candidato para un carrusel legible con un recorrido y evidencia por resultado. **Operación:** vista mínima de D1, n8n y referentes, ya escrita en su ficha y enlazada al panel previsto en PLAN. Integración actual: borrador documental; incorporación documental aceptada por Jefa en esa síntesis; prueba con lector y panel implementado pendientes. Organización sería responsable de la proyección cuando Jefa delimite su encargo.
+
+Esta actualización registra la incorporación documental de ambas referencias a la síntesis de marca personal, aceptada por Jefa. Las hipótesis y pruebas siguen sin ejecutar; no acredita panel operativo, producción, escucha ni avisos automáticos/scheduler configurados.
