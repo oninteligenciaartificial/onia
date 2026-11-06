@@ -1,0 +1,53 @@
+{
+  "fork": "none",
+  "brazos": {
+    "brazo-02": "candidato",
+    "brazo-01": "baseline"
+  },
+  "caso": "producto",
+  "modelo": "gpt-6.1-terra",
+  "criterio": ">=16 y mejora>=3 sin criticos; rubrica original prevalece",
+  "fuentes": [
+    {
+      "fuente": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\reglas-comunes.md",
+      "copia": "reglas-congeladas.md",
+      "sha256": "fdf2ea05aa1eda5e49c44c8afb5d7c0647c42c115a2263df82b07c6a935d3f61"
+    },
+    {
+      "fuente": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\compartibles\\skills\\desarrollar-y-verificar\\SKILL.md",
+      "copia": "directora-congelada.md",
+      "sha256": "621d4b28de3c631173825cace67a2834a826d533dd3f4a5ec9b3141c9e29866e"
+    },
+    {
+      "fuente": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\compartibles\\terceros\\visual\\19-ui-ux-pro-max\\USO-ONIA.md",
+      "copia": "apoyo-uso.md",
+      "sha256": "af11c06707a2562ac66287d7f41ff8bbfabc2f312f900485cdecf36dc0e811ff"
+    },
+    {
+      "fuente": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\compartibles\\terceros\\visual\\19-ui-ux-pro-max\\SKILL.md",
+      "copia": "apoyo-original.md",
+      "sha256": "1bdfb422c97d5e813768af422750882b71ff1554978da0b8a43c95de242765f7"
+    },
+    {
+      "fuente": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\compartibles\\terceros\\visual\\19-ui-ux-pro-max\\references\\quick-reference.md",
+      "copia": "apoyo-quick-reference.md",
+      "sha256": "0609bc7c89dacb40472465d8fc14257b56b2c43439660fc8d6fa3b8c022e1876"
+    }
+  ],
+  "fixture": [
+    {
+      "ruta": "ENTRADA.md",
+      "sha256": "f17e5e6f04cfa192c9e4b677b768af02a5764a114abaa543be49f09f615de1ea"
+    },
+    {
+      "ruta": "RUBRICA-EVALUADOR.md",
+      "sha256": "d795c99f4889cf0276444640915a7ed1851b195b328314b395f65d9c127f4fbe"
+    },
+    {
+      "ruta": "fixture.html",
+      "sha256": "1e65bcc6f1063a9b68256b584c821720edd5f76061fe616efa5f0f337266085c"
+    }
+  ],
+  "generaciones": 0,
+  "esfuerzo": "medium"
+}

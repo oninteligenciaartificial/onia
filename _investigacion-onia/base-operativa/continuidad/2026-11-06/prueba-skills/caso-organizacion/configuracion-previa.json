@@ -1,0 +1,29 @@
+{
+  "esfuerzo": "medium",
+  "brazos": {
+    "brazo-02": "candidato",
+    "brazo-01": "baseline"
+  },
+  "fork": "none",
+  "nota": "Estado/ORQUESTACION excluidos del tratamiento por edición concurrente; sólo reglas/directora congeladas. Delegación constante entre condiciones, incluso research. No rúbrica resuelta a generadores.",
+  "fuentes": [
+    {
+      "fuente": "reglas-comunes.md",
+      "copia": "reglas-congeladas.md",
+      "sha256": "fdf2ea05aa1eda5e49c44c8afb5d7c0647c42c115a2263df82b07c6a935d3f61"
+    },
+    {
+      "fuente": "compartibles/skills/continuidad-de-trabajo/SKILL.md",
+      "copia": "directora-congelada.md",
+      "sha256": "501d9e48e8862d69f70a40f48c29fb7655cb466b44a9567ab933e9941de20c2b"
+    },
+    {
+      "fuente": "compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md",
+      "copia": "apoyo-congelado.md",
+      "sha256": "a1b0c8557305fb3b7b0e47a0e2601482f52987b6c0bedc8c77e74b8df8faee81"
+    }
+  ],
+  "modelo_solicitado": "gpt-6.1-sol",
+  "generaciones": 0,
+  "caso": "organizacion"
+}

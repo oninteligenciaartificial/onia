@@ -1,0 +1,525 @@
+{
+  "scope": "Metadatos originales de 16 brazos y 8 jueces; mensajes exactos NO recuperados",
+  "source_rollout": "rollout-2026-11-05T07-40-12-01a1ab82-67b4-7963-b529-dcb5816a90fd.jsonl",
+  "source_thread_id": "01a1ab82-67b4-7963-b529-dcb5816a90fd",
+  "source_turn_id": "01a1af1b-06a9-7a83-b039-b9322a159068",
+  "source_line_range": [
+    983,
+    1469
+  ],
+  "filter": "Sólo response_item/function_call spawn_agent y lista cerrada de task_name; no prompts de sistema ni historia anterior",
+  "retrieval_attempts": [
+    "JSONL acotado: message cifrado con prefijo gAAAAA",
+    "read_thread del coordinador, dos turnos: se filtró sólo turno piloto y subAgentActivity started, recuperando 24 IDs",
+    "read_thread de g01, un turno del piloto: no prompt inicial; no se amplió a otros agentes"
+  ],
+  "records": [
+    {
+      "task_name": "g01",
+      "agent": "/root/g01",
+      "agent_thread_id": "01a1af1c-3258-7c52-9b60-52bc5808c23d",
+      "case": "general",
+      "condition": "baseline",
+      "source_line": 1003,
+      "timestamp": "2026-11-06T04:27:03.119Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_0897bf5308aa459b898fca68502a70cb",
+      "configuration_recovered": {
+        "task_name": "g01",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "6c4c95e8a539a651a6ef4474fe65d3ed2563167f2a2613d33f66e49a1775e07d",
+      "stored_message_ciphertext_sha256": "a099c4a99a0f3f98dbf3e1ef7b64bc58cdb3158aa5018159bf83f7413ceaf7d1"
+    },
+    {
+      "task_name": "g02",
+      "agent": "/root/g02",
+      "agent_thread_id": "01a1af1c-5747-75c1-a16b-a8dc275ad5b1",
+      "case": "general",
+      "condition": "candidato",
+      "source_line": 1009,
+      "timestamp": "2026-11-06T04:27:12.573Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_724249a9cdfd4013ad9d23c763ed4cbb",
+      "configuration_recovered": {
+        "task_name": "g02",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "3e5ab93909c7b52691a9b351e6f0df42fb403df8511dfa43db56edcc170ee53b",
+      "stored_message_ciphertext_sha256": "21cf71dc275d807a515f6048d0d7901a7bf31ae9a747f244ce5ff4df6f76aa25"
+    },
+    {
+      "task_name": "d01",
+      "agent": "/root/d01",
+      "agent_thread_id": "01a1af1c-7f0b-75b2-a8b3-1e992dfa79f3",
+      "case": "desarrollo",
+      "condition": "baseline",
+      "source_line": 1017,
+      "timestamp": "2026-11-06T04:27:22.748Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_0f58b491147644829558f4ec1a645ea7",
+      "configuration_recovered": {
+        "task_name": "d01",
+        "model": "gpt-6.1-terra",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "63e9601109b03b11b99fc1a9f598817065e2dc9912fbaed22ae4455b2679e3f8",
+      "stored_message_ciphertext_sha256": "d058b6fcab6380117a12fcac730dee5ab87c9b2ddb8e6d78063adb96cd990d66"
+    },
+    {
+      "task_name": "d02",
+      "agent": "/root/d02",
+      "agent_thread_id": "01a1af1d-0e17-7463-b86c-05afdfde5ed2",
+      "case": "desarrollo",
+      "condition": "candidato",
+      "source_line": 1041,
+      "timestamp": "2026-11-06T04:27:59.368Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_4bc7eef69e004727bfa103b8cefcf78d",
+      "configuration_recovered": {
+        "task_name": "d02",
+        "model": "gpt-6.1-terra",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "906d566d70ef08e4e3d5974faa3390464313f380d261ecf0e1cd4274f4b319e5",
+      "stored_message_ciphertext_sha256": "7424c8a3e37eb39518bd065299b31c8085b6e6a4a1c23b1fb28d2ba7df657afc"
+    },
+    {
+      "task_name": "jg",
+      "agent": "/root/jg",
+      "agent_thread_id": "01a1af1d-7757-70a3-ab8b-42ccc84514de",
+      "case": "general",
+      "condition": "juez ciego",
+      "source_line": 1060,
+      "timestamp": "2026-11-06T04:28:26.313Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_9c71abf04f744a68b9f87491af6021e5",
+      "configuration_recovered": {
+        "task_name": "jg",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "7a1f835ae7d0af6eaa8163faf13aba5b3dba9f86c73e24b85e2aafd8705356bb",
+      "stored_message_ciphertext_sha256": "18a0ecf55e0bbc1e46be6b2219d7e6c3162780a593abf446b3385ff562bb42e7"
+    },
+    {
+      "task_name": "a01",
+      "agent": "/root/a01",
+      "agent_thread_id": "01a1af1d-a4ab-7ef0-a3e4-bd51b433e903",
+      "case": "automatizaciones",
+      "condition": "baseline",
+      "source_line": 1069,
+      "timestamp": "2026-11-06T04:28:37.912Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_ff58198109bf41cab2043060384d2800",
+      "configuration_recovered": {
+        "task_name": "a01",
+        "model": "gpt-6.1-terra",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "6b269b21c24ba5dae9966196412c4054c282aa6bdcd8207917d1799634cc6d19",
+      "stored_message_ciphertext_sha256": "e6787933f4dccb562c758a7230c1b6d7f6713d699d5064c0de685e8467186451"
+    },
+    {
+      "task_name": "a02",
+      "agent": "/root/a02",
+      "agent_thread_id": "01a1af1d-d274-7b30-b371-da74744944fe",
+      "case": "automatizaciones",
+      "condition": "candidato",
+      "source_line": 1081,
+      "timestamp": "2026-11-06T04:28:49.633Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_26c5df9db6c64183b881d0c100321ba0",
+      "configuration_recovered": {
+        "task_name": "a02",
+        "model": "gpt-6.1-terra",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "4d5adc373251d6d19d423d8871fed94e834334e6cf4807230f8731a043d854d1",
+      "stored_message_ciphertext_sha256": "52c2c6df220ff2e7feb480c1ed9be930cef75648e873f88cafd2112bcc865f1a"
+    },
+    {
+      "task_name": "o01",
+      "agent": "/root/o01",
+      "agent_thread_id": "01a1af1e-80f5-7782-9dda-0282ed0068d5",
+      "case": "organizacion",
+      "condition": "baseline",
+      "source_line": 1120,
+      "timestamp": "2026-11-06T04:29:34.295Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_3b0188159bd747179487427f52cb0a5f",
+      "configuration_recovered": {
+        "task_name": "o01",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "f13b64c92e09715933ca1c96a82c5b8141e4a63a1c86ec4bfbe7651a95cb472f",
+      "stored_message_ciphertext_sha256": "5342aebbc4b500c1a00f407e17b7d9d6dc0d6e51f0f46548c1865dafc49ae625"
+    },
+    {
+      "task_name": "jd",
+      "agent": "/root/jd",
+      "agent_thread_id": "01a1af1f-7996-7553-9d9b-7e17676a0478",
+      "case": "desarrollo",
+      "condition": "juez ciego",
+      "source_line": 1156,
+      "timestamp": "2026-11-06T04:30:37.959Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_146a4914a9e2438cbeafdb2c84a4565f",
+      "configuration_recovered": {
+        "task_name": "jd",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "1d697546573ffa16650aa802cb86edfa952d23ee623b0e5135c98d82d0bed712",
+      "stored_message_ciphertext_sha256": "4b215c8644e47cd774a9a72a768e95b5fd8f44825b6875bb1c199674b081025a"
+    },
+    {
+      "task_name": "o02",
+      "agent": "/root/o02",
+      "agent_thread_id": "01a1af1f-9a92-7c52-bf89-28d54ea98f48",
+      "case": "organizacion",
+      "condition": "candidato",
+      "source_line": 1162,
+      "timestamp": "2026-11-06T04:30:46.403Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_232f7acdec2047eca3dc4d0bda23d6ee",
+      "configuration_recovered": {
+        "task_name": "o02",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "ed1bbd3d28a99d69b6d84bc6bf515f04504b65bb6a575a339990d5501b302a2c",
+      "stored_message_ciphertext_sha256": "0b046852b38d22f2c70fe26afbf2d3ecaffd3ccd0c2b06d397016cccfb9ada05"
+    },
+    {
+      "task_name": "l01",
+      "agent": "/root/l01",
+      "agent_thread_id": "01a1af1f-bd6d-7351-a4d3-6a4d491c42d8",
+      "case": "aprendizaje",
+      "condition": "baseline",
+      "source_line": 1168,
+      "timestamp": "2026-11-06T04:30:55.322Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_8c4a2ae7dfc9433b883c53c8062834b8",
+      "configuration_recovered": {
+        "task_name": "l01",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "36e8bca3a8581ab73bb1ec39b29668389339b662d8d553b405484adbf7ebd7dd",
+      "stored_message_ciphertext_sha256": "08a8fc94cccbf764d018190db704364bc06a13f8d3346df14578089c2215dd6f"
+    },
+    {
+      "task_name": "l02",
+      "agent": "/root/l02",
+      "agent_thread_id": "01a1af20-6ec2-7453-902f-25d4dfce1edd",
+      "case": "aprendizaje",
+      "condition": "candidato",
+      "source_line": 1189,
+      "timestamp": "2026-11-06T04:31:40.714Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_0b22cc9222bb475193acf12a442c4eda",
+      "configuration_recovered": {
+        "task_name": "l02",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "cb7fdd84c6e3c54cbe3c9f8bb214a453276105b220c5db17c7a640351444f248",
+      "stored_message_ciphertext_sha256": "2e108395e7a7ac4027ead94a4e561583073425ac15d262dad717242ed441dc30"
+    },
+    {
+      "task_name": "ja",
+      "agent": "/root/ja",
+      "agent_thread_id": "01a1af20-c640-7d51-95d3-421abbe4692d",
+      "case": "automatizaciones",
+      "condition": "juez ciego",
+      "source_line": 1206,
+      "timestamp": "2026-11-06T04:32:03.121Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_fbb3ca263cfc4f0b826ccbeaf7c28de3",
+      "configuration_recovered": {
+        "task_name": "ja",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "474deefb53352180e53c89cf8a874fdc4f0aa70cb7ae4c253a2ea7ec29733498",
+      "stored_message_ciphertext_sha256": "132e358de53c9bd0fb3ade0123da549a697fc26c7f38d49adb131d54cb7bb7f4"
+    },
+    {
+      "task_name": "jo",
+      "agent": "/root/jo",
+      "agent_thread_id": "01a1af20-e26d-76f2-be08-3186f51f6a68",
+      "case": "organizacion",
+      "condition": "juez ciego",
+      "source_line": 1212,
+      "timestamp": "2026-11-06T04:32:10.328Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_a839436ba0604c1ea1a1aafbeee18ffc",
+      "configuration_recovered": {
+        "task_name": "jo",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "5c9283a6a998ee7113c0e716873f9d189575d26304051766cfbe9142dc83ed25",
+      "stored_message_ciphertext_sha256": "6da6b576e51ff2b20fe263a8a7b5d810f99b21fdc506f549ff992653e8451c08"
+    },
+    {
+      "task_name": "m01",
+      "agent": "/root/m01",
+      "agent_thread_id": "01a1af21-5ef8-7820-95b2-d6f788830827",
+      "case": "marketing",
+      "condition": "baseline",
+      "source_line": 1232,
+      "timestamp": "2026-11-06T04:32:42.218Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_548aaabd5a1f4ee29018d60cc5e3ce3e",
+      "configuration_recovered": {
+        "task_name": "m01",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "15436b3403a9413519427576574d27e60aab32a1db7abd5a5b7157856168c69c",
+      "stored_message_ciphertext_sha256": "a28bafd02e244150cf3795e8dd001a48e79946ac3fdce76e3b7c4d5f1ed4ea80"
+    },
+    {
+      "task_name": "m02",
+      "agent": "/root/m02",
+      "agent_thread_id": "01a1af21-f91d-7a70-8b8a-09ff2dd39243",
+      "case": "marketing",
+      "condition": "candidato",
+      "source_line": 1263,
+      "timestamp": "2026-11-06T04:33:21.679Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_8da03ea74b054b9ca9c8bc82af1a962f",
+      "configuration_recovered": {
+        "task_name": "m02",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "11e4564fff61adaf65340e06a6539723d4a2f0f7ba6652c3a909594593696c88",
+      "stored_message_ciphertext_sha256": "478f5f65462223792566d898dd815ac8211911a859b99a4bbc8ecd69ff11e3b3"
+    },
+    {
+      "task_name": "jl",
+      "agent": "/root/jl",
+      "agent_thread_id": "01a1af22-15e5-74d0-bff7-77d5ebebe8a8",
+      "case": "aprendizaje",
+      "condition": "juez ciego",
+      "source_line": 1272,
+      "timestamp": "2026-11-06T04:33:29.045Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_4e53a7d647c945d1ab122efd5821fb19",
+      "configuration_recovered": {
+        "task_name": "jl",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "8fa243d9101bf670bf6d5e67aff3aea7473739be219d4f3746b25fed0492357c",
+      "stored_message_ciphertext_sha256": "81ab6aca76a8c5a189694149502f3d1edb33f670e9d379ac748794aa3838e675"
+    },
+    {
+      "task_name": "v01",
+      "agent": "/root/v01",
+      "agent_thread_id": "01a1af22-45a7-7dd3-b787-2989ce705817",
+      "case": "video",
+      "condition": "baseline",
+      "source_line": 1282,
+      "timestamp": "2026-11-06T04:33:41.273Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_69268ad295ce45a2b8d2d3aba8bc2a81",
+      "configuration_recovered": {
+        "task_name": "v01",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "e1f3e821fb4ab54325a2abcb96a76099d19cc3d2ed28c5bdd4efe7fa9aa9dbf0",
+      "stored_message_ciphertext_sha256": "f51ab929fb010248128a66337cd64446930bf3863c42af088af62012589f0a11"
+    },
+    {
+      "task_name": "v02",
+      "agent": "/root/v02",
+      "agent_thread_id": "01a1af22-ef3e-79f2-a724-f4d120361828",
+      "case": "video",
+      "condition": "candidato",
+      "source_line": 1307,
+      "timestamp": "2026-11-06T04:34:24.687Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_545c1803ee7f47bf98f87641df6cf29a",
+      "configuration_recovered": {
+        "task_name": "v02",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "ebe845584036496a5485c2ea0e77a6a137885e68cfcd9e7cc2b9ac8ab2776be0",
+      "stored_message_ciphertext_sha256": "1879f325acce8d72342a33bd9ce9e5b0415b3a9a9d439ef904783674c9a842db"
+    },
+    {
+      "task_name": "p01",
+      "agent": "/root/p01",
+      "agent_thread_id": "01a1af23-167f-7a70-b460-e9155a0c7455",
+      "case": "producto",
+      "condition": "baseline",
+      "source_line": 1317,
+      "timestamp": "2026-11-06T04:34:34.731Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_ba90de9ca1e54ba4a13107f2477561dd",
+      "configuration_recovered": {
+        "task_name": "p01",
+        "model": "gpt-6.1-terra",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "acebc03b85f5d4b5f05951f7350ffa6eb145bc3b4f6f881ab15f2dd393d5c85b",
+      "stored_message_ciphertext_sha256": "f9edec415f867892af4fa3861c7804498bce8c50d819f19fe88227a6838badbc"
+    },
+    {
+      "task_name": "jm",
+      "agent": "/root/jm",
+      "agent_thread_id": "01a1af23-a740-7203-ae82-c2e68da9786a",
+      "case": "marketing",
+      "condition": "juez ciego",
+      "source_line": 1337,
+      "timestamp": "2026-11-06T04:35:11.791Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_79fc491df1b2499ab62aab85aa59d012",
+      "configuration_recovered": {
+        "task_name": "jm",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "738aff862f33058e61302c6ef8d0d494dbbd6103aa172378c99af31a8a7a7600",
+      "stored_message_ciphertext_sha256": "a1f6b823fcf4653bb4a85ba48ccedb598081048cb722c5fe60cff2bc38a8e8c8"
+    },
+    {
+      "task_name": "p02",
+      "agent": "/root/p02",
+      "agent_thread_id": "01a1af23-fdf1-7623-88f5-e2de9c533f95",
+      "case": "producto",
+      "condition": "candidato",
+      "source_line": 1353,
+      "timestamp": "2026-11-06T04:35:33.975Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_fbcc2b3768a8406caa37fd3cc297a551",
+      "configuration_recovered": {
+        "task_name": "p02",
+        "model": "gpt-6.1-terra",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "68409e2b511a5904110308ada4bdea00ef242a91a49b5a806cb589e60939e46e",
+      "stored_message_ciphertext_sha256": "be69f7ebdffac933f843a4e19219b651927a0e2c998cce913a8ad5b5a62ef80b"
+    },
+    {
+      "task_name": "jv",
+      "agent": "/root/jv",
+      "agent_thread_id": "01a1af24-71f2-78a2-8390-f6018cd57a17",
+      "case": "video",
+      "condition": "juez ciego",
+      "source_line": 1373,
+      "timestamp": "2026-11-06T04:36:03.685Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_70c6f86f4b3b4f7ea6fad15286b52c03",
+      "configuration_recovered": {
+        "task_name": "jv",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "7f442fe11aeabca52ae597795e4263e69b6205e8f7a41e9616b5b98b709c47c2",
+      "stored_message_ciphertext_sha256": "cf96f34b90ccbf211e6c7741e420964e977660e2f50b9db763ba6ce9ff91a2ae"
+    },
+    {
+      "task_name": "jp",
+      "agent": "/root/jp",
+      "agent_thread_id": "01a1af25-588d-7ce2-9dcc-815ade828514",
+      "case": "producto",
+      "condition": "juez ciego",
+      "source_line": 1398,
+      "timestamp": "2026-11-06T04:37:02.714Z",
+      "tool_name": "spawn_agent",
+      "call_id": "call_a9f22a6b544145b49db311c6f94839c9",
+      "configuration_recovered": {
+        "task_name": "jp",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none"
+      },
+      "message_exact": null,
+      "message_status": "desconocido: campo message cifrado en rollout; lector de chat no expone prompt de lanzamiento",
+      "stored_arguments_ciphertext_sha256": "8a2f71a3fc083b0f8a15f5c598ed79a94f85704859f367e4485931fbe7700466",
+      "stored_message_ciphertext_sha256": "ae002bf83eeab62781c7f5f41c216df7164dd37c116386228d427330d016b004"
+    }
+  ],
+  "unknown_prompts": 24,
+  "plaintext_prompts_recovered": 0,
+  "reconstruction": "No se reconstruyeron mensajes desde memoria ni se redactaron sustitutos"
+}

@@ -1,0 +1,29 @@
+{
+  "area": "organizacion",
+  "maximo": 20,
+  "puntajes_por_criterio": {
+    "X": { "C1": 4, "C2": 4, "C3": 3, "C4": 3, "C5": 4 },
+    "Y": { "C1": 4, "C2": 4, "C3": 3, "C4": 4, "C5": 4 }
+  },
+  "totales": { "X": 18, "Y": 19 },
+  "criticos": { "X": [], "Y": [] },
+  "observaciones": {
+    "X": [
+      "La ubicación absoluta de fixture.md no está acreditada en entrada.md.",
+      "La atribución a Jefa de canalizar la entrega no está respaldada por las fuentes."
+    ],
+    "Y": [
+      "La ubicación ../fixture.md no está acreditada en entrada.md."
+    ]
+  },
+  "umbral": {
+    "diferencia_minima": 2,
+    "diferencia_observada": 1,
+    "alcanzado": false,
+    "caida_de_criterio_esencial_en_Y_respecto_de_X": false,
+    "critico_nuevo": false,
+    "nota": "La rúbrica no enumera criterios esenciales por separado; se compararon los cinco criterios."
+  },
+  "conclusion": "empate",
+  "motivo": "Y supera a X por 1/20, por debajo de la diferencia mínima de 2/20; ninguno presenta error crítico."
+}

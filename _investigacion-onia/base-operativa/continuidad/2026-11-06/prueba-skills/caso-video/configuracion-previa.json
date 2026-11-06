@@ -1,0 +1,59 @@
+{
+  "fork": "none",
+  "brazos": {
+    "brazo-02": "candidato",
+    "brazo-01": "baseline"
+  },
+  "caso": "video",
+  "modelo": "gpt-6.1-sol",
+  "criterio": ">=16 y mejora>=3 sin criticos; rubrica original prevalece",
+  "fuentes": [
+    {
+      "fuente": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\reglas-comunes.md",
+      "copia": "reglas-congeladas.md",
+      "sha256": "fdf2ea05aa1eda5e49c44c8afb5d7c0647c42c115a2263df82b07c6a935d3f61"
+    },
+    {
+      "fuente": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\compartibles\\skills\\producir-video\\SKILL.md",
+      "copia": "directora-congelada.md",
+      "sha256": "bef869f4f5a11b1d900af2b9476e550c6de6cb95d881337a8dfba912663400bb"
+    },
+    {
+      "fuente": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\compartibles\\terceros\\visual\\27-hyperframes\\USO-ONIA.md",
+      "copia": "apoyo-uso.md",
+      "sha256": "b7d4c68d0a18c501df318f99a234d30dc60b13185b2f09e4bec8d9f3ab85740e"
+    },
+    {
+      "fuente": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\compartibles\\terceros\\visual\\27-hyperframes\\SKILL.md",
+      "copia": "apoyo-original.md",
+      "sha256": "85ea4a4158acc1d4ca87ab1a6c93521aae77f16023e381561da66c9dd0c37517"
+    },
+    {
+      "fuente": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\compartibles\\terceros\\visual\\27-hyperframes\\references\\story.md",
+      "copia": "apoyo-story.md",
+      "sha256": "3c2b96bb7f262652f4bf5efdef1ae806b47fd259c6704cb131938c5254965f22"
+    },
+    {
+      "fuente": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\compartibles\\terceros\\visual\\27-hyperframes\\references\\spec.md",
+      "copia": "apoyo-spec.md",
+      "sha256": "6fa0658c5cf5c23058f70a6549cc952d683979052a0934760ba748bbec88fbc0"
+    },
+    {
+      "fuente": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\compartibles\\terceros\\visual\\27-hyperframes\\references\\format.md",
+      "copia": "apoyo-format.md",
+      "sha256": "babb5d4bfeffa8422c8e3474833a827a2a3dd95d234e8a37c130c4973d360533"
+    }
+  ],
+  "fixture": [
+    {
+      "ruta": "ENTRADA.md",
+      "sha256": "caee142630ba4dbd1c932286afc9377397c42e7e15b0280abd77893667162f4e"
+    },
+    {
+      "ruta": "RUBRICA-EVALUADOR.md",
+      "sha256": "55b0777b7a116ee65e7512b16cea717df84a496983eecffd5acaa9ef819ae781"
+    }
+  ],
+  "generaciones": 0,
+  "esfuerzo": "medium"
+}

@@ -1,0 +1,5 @@
+# Caso sintético P1 · revisión UI de inscripción
+
+Revisar `fixture.html` únicamente como código. Producto de ficción: inscripción gratuita a una sesión técnica; objetivo completar correo y tema, con confirmación o error accionable. Audiencia en móvil360px y escritorio1280px, teclado y lector de pantalla. Diseño existente claro/verde; conservar identidad y contenido factual. Fecha aún pendiente. No es onia-platform.
+
+Entregar hasta10hallazgos priorizados con selector/fragmento, evidencia, efecto, arreglo concreto y comprobación posterior; distinguir problema observable del código de hipótesis que requiere render. Máximo900palabras. No editar código, renderizar, instalar, hacer búsquedas web o ejecutar scripts. No probar backend: es un fixture sin red. Incluir estado de envío/recuperación y responsive/accesibilidad, sin rediseño ornamental ni métricas inventadas. Describir si “sin cupos” puede resolverse con la información suministrada. No afirmar cumplimiento WCAG ni accesibilidad completa desde lectura estática.

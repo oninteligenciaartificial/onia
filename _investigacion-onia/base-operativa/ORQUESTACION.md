@@ -20,6 +20,8 @@ Desde la raíz del checkout, comprobar los archivos que necesita el harness:
 python3 _investigacion-onia/base-operativa/scripts/harness.py doctor
 ```
 
+Antes de despachar una prueba candidata, Jefa debe declararla como ensayo al preparar el encargo: `--ensayo --investigacion RUTA --capacidad TEXTO --hipotesis TEXTO --control TEXTO --leccion TEXTO`. La ruta enlaza la investigación existente, que debe cubrir fuentes, licencia, compatibilidad, recursos y límites; no hace falta duplicarla. El CLI comprueba presencia y ruta, no la relevancia o validez de la investigación: Jefa revisa su contenido. Tampoco identifica automáticamente un ensayo mal clasificado ni ejecuta la prueba.
+
 El diagnóstico comprueba archivos y referencias. Las pruebas de navegador, conexiones, publicación del entorno y descubrimiento de skills se realizan por separado. Si falta un archivo publicado, comprobar repo, `HEAD` y ruta antes de reconstruirlo o cambiar la arquitectura.
 
 Preparar un encargo con un resultado verificable:
@@ -35,6 +37,8 @@ Las seis áreas ejecutables del CLI son `marketing`, `video`, `desarrollo`, `aut
 Al iniciar un encargo, el agente selecciona el área por su resultado y lee automáticamente el cuerpo de la skill pertinente desde la ruta del manifiesto. Las skills de apoyo se cargan sólo cuando hacen falta. Si el catálogo nativo no las anuncia, leer la fuente canónica permite aplicar sus instrucciones; registrar esa diferencia sin pedir a Sergio que pegue la skill ni afirmar que el descubrimiento nativo pasó. Sólo un encargo cloud explícito usa [INICIO-SESION.md](cloud/INICIO-SESION.md); no es el arranque habitual de las áreas locales.
 
 `preparar --skill` permite elegir la directora entre las declaradas del área: por ejemplo `--area organizacion --skill continuidad-de-trabajo` para un traspaso o `--area marketing --skill preparar-campana-meta` para anuncios. Sin esa opción se usa la directora predeterminada. El briefing señala las restantes como apoyos opcionales.
+
+Para cargar un apoyo pertinente del área en el contexto del briefing, usar `--apoyo CLAVE`; se puede repetir. Sin ese argumento los apoyos sólo se enumeran y no se cargan. Las claves `tercero-` sólo pueden elegirse como apoyo, no como directora. Las fuentes externas de `compartibles/terceros` se conservan con sus licencias y precedencia de las instrucciones vigentes de Sergio y ONIA; las referencias a otras skills no instalan ni activan bootstrap. El handoff de Matt usa el adaptador ONIA, que remite a continuidad-de-trabajo en vez del temporal exclusivo. Jefatura y Aprendizaje usan estas referencias por su encargo, sin crear áreas CLI, chats ni servicios.
 
 ## Solicitudes a Sergio y canal móvil
 

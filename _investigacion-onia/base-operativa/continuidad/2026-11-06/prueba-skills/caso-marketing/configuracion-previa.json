@@ -1,0 +1,29 @@
+{
+  "esfuerzo": "medium",
+  "brazos": {
+    "brazo-02": "candidato",
+    "brazo-01": "baseline"
+  },
+  "fork": "none",
+  "nota": "Estado/ORQUESTACION excluidos del tratamiento por edición concurrente; sólo reglas/directora congeladas. Delegación constante entre condiciones, incluso research. No rúbrica resuelta a generadores.",
+  "fuentes": [
+    {
+      "fuente": "reglas-comunes.md",
+      "copia": "reglas-congeladas.md",
+      "sha256": "fdf2ea05aa1eda5e49c44c8afb5d7c0647c42c115a2263df82b07c6a935d3f61"
+    },
+    {
+      "fuente": "compartibles/skills/preparar-oferta-y-embudo/SKILL.md",
+      "copia": "directora-congelada.md",
+      "sha256": "1b1127d8bd06610c65c24078b7c7b16f21b8c6e615a5771b7b989b90ec725717"
+    },
+    {
+      "fuente": "compartibles/terceros/marketing/humanizer/SKILL.md",
+      "copia": "apoyo-congelado.md",
+      "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+    }
+  ],
+  "modelo_solicitado": "gpt-6.1-sol",
+  "generaciones": 0,
+  "caso": "marketing"
+}

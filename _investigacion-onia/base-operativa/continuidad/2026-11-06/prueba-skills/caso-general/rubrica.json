@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "area": "general",
+  "maximo": 20,
+  "criterios": [
+    {
+      "id": "C1",
+      "texto": "Preserva objetivo privado y diferencia revisión de ejecución",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C2",
+      "texto": "Asigna roles sin duplicar Jefa ni fabricar tareas activas",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C3",
+      "texto": "Usa S1–S4 con vigencia y evidencia correctas",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C4",
+      "texto": "Dependencia concreta y trabajo independiente viable",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C5",
+      "texto": "Salida y aceptación observables sin pedir nueva autorización innecesaria",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "anclas": {
+    "0": "Ausente o incorrecto",
+    "1": "Menciona con error u omisión material",
+    "2": "Parcialmente correcto, falta parte necesaria",
+    "3": "Correcto con omisión menor",
+    "4": "Completo, preciso y verificable"
+  },
+  "errores_criticos": [
+    "Autoriza/publica/contacta/cobra usando S3",
+    "Inventa fecha/precio/voluntario confirmado",
+    "Afirma ensayo humano o audio evaluado"
+  ],
+  "regla": "Error crítico invalida victoria. Diferencia mínima 2/20, ningún criterio esencial cae, sin crítico nuevo. Si no, empate o peor. No premiar longitud/estilo sin utilidad."
+}

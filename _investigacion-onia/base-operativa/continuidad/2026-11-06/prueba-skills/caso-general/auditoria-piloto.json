@@ -1,0 +1,776 @@
+{
+  "scope": "lectura declarada con hashes y artefactos; no certifica memoria interna ni ausencia absoluta de herramientas no registradas",
+  "cases": 8,
+  "arms": 16,
+  "repeats": 0,
+  "max_worker_generations_concurrent": 3,
+  "results": [
+    {
+      "case": "general",
+      "arms": [
+        {
+          "arm": "brazo-01",
+          "agent": "/root/g01",
+          "requested_model": "gpt-6.1-sol",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "0caf1bdab8736c8163258c0f75c699c023bb2bc30b6de7a231d8b56888df7a1d",
+          "receipt_sha256": "d3554cae95933f0c8e83b8af04e93de3bd0cb4a6352cb5a3fc4eed72c1a4c1e8",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-general\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-general\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-general\\fixture.md",
+              "match": true
+            }
+          ],
+          "expected_sources": 3,
+          "source_count_matches": true
+        },
+        {
+          "arm": "brazo-02",
+          "agent": "/root/g02",
+          "requested_model": "gpt-6.1-sol",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "6e5c3fbeeac9a3555c5083c77ec866c6a92ff8bb13190ac94f4dacbf1e0ecceb",
+          "receipt_sha256": "a86137fa56ab2449aa024791b7328c8de5c2591f78480e5ece792fa37a1c2db2",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-general\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-general\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-general\\apoyo-congelado.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-general\\fixture.md",
+              "match": true
+            }
+          ],
+          "expected_sources": 4,
+          "source_count_matches": true
+        }
+      ],
+      "blind": [
+        {
+          "label": "X",
+          "identical_to_raw": true,
+          "sha256": "6e5c3fbeeac9a3555c5083c77ec866c6a92ff8bb13190ac94f4dacbf1e0ecceb"
+        },
+        {
+          "label": "Y",
+          "identical_to_raw": true,
+          "sha256": "0caf1bdab8736c8163258c0f75c699c023bb2bc30b6de7a231d8b56888df7a1d"
+        }
+      ],
+      "frozen": [
+        {
+          "file": "fixture.md",
+          "match": true
+        },
+        {
+          "file": "rubrica.json",
+          "match": true
+        }
+      ],
+      "judge_id": "/root/jg",
+      "judge_saved": true,
+      "judge_sha256": "6e659059193bb1d8e8700599134ee4c1dbb00a551c622adf0bf2057ca379ce9d"
+    },
+    {
+      "case": "desarrollo",
+      "arms": [
+        {
+          "arm": "brazo-01",
+          "agent": "/root/d01",
+          "requested_model": "gpt-6.1-terra",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "0a46920bf23862b9d659f92073556da2043f993e53a3c783502efe00b0feaef0",
+          "receipt_sha256": "560fa1fe7447569ecfecef94032ce47867cc7195383ee5031e2830edf4b794eb",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-desarrollo\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-desarrollo\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-desarrollo\\fixture.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-desarrollo\\brazo-01\\fixture.py",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-desarrollo\\brazo-01\\check_funcional.py",
+              "match": true
+            }
+          ],
+          "expected_sources": 5,
+          "source_count_matches": true
+        },
+        {
+          "arm": "brazo-02",
+          "agent": "/root/d02",
+          "requested_model": "gpt-6.1-terra",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "1abe5ebf5354267e3878e46a47acc07ce69c75db0b47b27009f973a962c55ea2",
+          "receipt_sha256": "d5a0601b912d8339bf1245fc1997d02742b1c47837ab6f9221e7a5e7ba0af7f3",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-desarrollo\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-desarrollo\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-desarrollo\\apoyo-congelado.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-desarrollo\\fixture.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-desarrollo\\brazo-02\\fixture.py",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-desarrollo\\brazo-02\\check_funcional.py",
+              "match": true
+            }
+          ],
+          "expected_sources": 6,
+          "source_count_matches": true
+        }
+      ],
+      "blind": [
+        {
+          "label": "X",
+          "identical_to_raw": true,
+          "sha256": "0a46920bf23862b9d659f92073556da2043f993e53a3c783502efe00b0feaef0"
+        },
+        {
+          "label": "Y",
+          "identical_to_raw": true,
+          "sha256": "1abe5ebf5354267e3878e46a47acc07ce69c75db0b47b27009f973a962c55ea2"
+        }
+      ],
+      "frozen": [
+        {
+          "file": "fixture.md",
+          "match": true
+        },
+        {
+          "file": "rubrica.json",
+          "match": true
+        },
+        {
+          "file": "fixture.py",
+          "match": true
+        },
+        {
+          "file": "check_funcional.py",
+          "match": true
+        },
+        {
+          "file": "brazo-01/fixture.py",
+          "match": true
+        },
+        {
+          "file": "brazo-01/check_funcional.py",
+          "match": true
+        },
+        {
+          "file": "brazo-02/fixture.py",
+          "match": true
+        },
+        {
+          "file": "brazo-02/check_funcional.py",
+          "match": true
+        }
+      ],
+      "judge_id": "/root/jd",
+      "judge_saved": true,
+      "judge_sha256": "a0d8440cba94a2af80d592a5b6737f3d086965a1b8e02de93ab52209e8b6d128"
+    },
+    {
+      "case": "automatizaciones",
+      "arms": [
+        {
+          "arm": "brazo-01",
+          "agent": "/root/a01",
+          "requested_model": "gpt-6.1-terra",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "daa52e6b6481f085bb831214d8ed8d883040c3956fd2033b5693c482448d29bd",
+          "receipt_sha256": "54ca311c0ed2fe8187d0ab41841cf406a1c410fca4977ce41c1192ed62f2f85b",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-automatizaciones\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-automatizaciones\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-automatizaciones\\fixture.md",
+              "match": true
+            }
+          ],
+          "expected_sources": 3,
+          "source_count_matches": true
+        },
+        {
+          "arm": "brazo-02",
+          "agent": "/root/a02",
+          "requested_model": "gpt-6.1-terra",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "0abdafbff6f017d5b296c304ecbd9191d3f66c94d0e05fc77f810790fd57a204",
+          "receipt_sha256": "5170c40e44c48b1afd48495ce9e0313229fa8d55b525250be28a29eec4279a6b",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-automatizaciones\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-automatizaciones\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-automatizaciones\\apoyo-congelado.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-automatizaciones\\fixture.md",
+              "match": true
+            }
+          ],
+          "expected_sources": 4,
+          "source_count_matches": true
+        }
+      ],
+      "blind": [
+        {
+          "label": "X",
+          "identical_to_raw": true,
+          "sha256": "0abdafbff6f017d5b296c304ecbd9191d3f66c94d0e05fc77f810790fd57a204"
+        },
+        {
+          "label": "Y",
+          "identical_to_raw": true,
+          "sha256": "daa52e6b6481f085bb831214d8ed8d883040c3956fd2033b5693c482448d29bd"
+        }
+      ],
+      "frozen": [
+        {
+          "file": "fixture.md",
+          "match": true
+        },
+        {
+          "file": "rubrica.json",
+          "match": true
+        }
+      ],
+      "judge_id": "/root/ja",
+      "judge_saved": true,
+      "judge_sha256": "91e0181990f47cce63bc189f56bae546458bf4c5ed40c93e9abd8bfe95c71a7f"
+    },
+    {
+      "case": "organizacion",
+      "arms": [
+        {
+          "arm": "brazo-01",
+          "agent": "/root/o01",
+          "requested_model": "gpt-6.1-sol",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "284bb15b7e0f6aad5b2bbaad96c210ac8c3140274eb4176bfba27cf6b3feaba2",
+          "receipt_sha256": "b4aaebcdb05a0c530c3a7eaaac55b546e87be44e858c5938cd27fe7b057c1890",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-organizacion\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-organizacion\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-organizacion\\fixture.md",
+              "match": true
+            }
+          ],
+          "expected_sources": 3,
+          "source_count_matches": true
+        },
+        {
+          "arm": "brazo-02",
+          "agent": "/root/o02",
+          "requested_model": "gpt-6.1-sol",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "6fb5eb5182a2bada46b34ec29b4e206a81d5921e5e9d5e6c474907930262d9d2",
+          "receipt_sha256": "110be0728e2692619913b0ec886928bfa39d5c94ef701aa2490afc0fc5d40bc6",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-organizacion\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-organizacion\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-organizacion\\apoyo-congelado.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-organizacion\\fixture.md",
+              "match": true
+            }
+          ],
+          "expected_sources": 4,
+          "source_count_matches": true
+        }
+      ],
+      "blind": [
+        {
+          "label": "X",
+          "identical_to_raw": true,
+          "sha256": "284bb15b7e0f6aad5b2bbaad96c210ac8c3140274eb4176bfba27cf6b3feaba2"
+        },
+        {
+          "label": "Y",
+          "identical_to_raw": true,
+          "sha256": "6fb5eb5182a2bada46b34ec29b4e206a81d5921e5e9d5e6c474907930262d9d2"
+        }
+      ],
+      "frozen": [
+        {
+          "file": "fixture.md",
+          "match": true
+        },
+        {
+          "file": "rubrica.json",
+          "match": true
+        }
+      ],
+      "judge_id": "/root/jo",
+      "judge_saved": true,
+      "judge_sha256": "43b5fb18448a44b7676aa4b7e583f4ebc74d568f2662f19cabd132db283358b8"
+    },
+    {
+      "case": "aprendizaje",
+      "arms": [
+        {
+          "arm": "brazo-01",
+          "agent": "/root/l01",
+          "requested_model": "gpt-6.1-sol",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "583f5542dfb7673f4c1f100a18aced329e6bd9b198c604b572a20f9f7cb056d9",
+          "receipt_sha256": "6afb546484713a8a568c289535e687d79f1ab1cc07a6ca024fd2a41de1b6470c",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-aprendizaje\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-aprendizaje\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-aprendizaje\\fixture.md",
+              "match": true
+            }
+          ],
+          "expected_sources": 3,
+          "source_count_matches": true
+        },
+        {
+          "arm": "brazo-02",
+          "agent": "/root/l02",
+          "requested_model": "gpt-6.1-sol",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "c378d25fb0bfecb0702a8aab7e2ab8a941c086e9642924395133cc274163a765",
+          "receipt_sha256": "ec9e366427acb80d3c5d1244fbb9986920aa3b8e2ed1785b1f3981bc8a54b369",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-aprendizaje\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-aprendizaje\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-aprendizaje\\apoyo-congelado.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-aprendizaje\\fixture.md",
+              "match": true
+            }
+          ],
+          "expected_sources": 4,
+          "source_count_matches": true
+        }
+      ],
+      "blind": [
+        {
+          "label": "X",
+          "identical_to_raw": true,
+          "sha256": "c378d25fb0bfecb0702a8aab7e2ab8a941c086e9642924395133cc274163a765"
+        },
+        {
+          "label": "Y",
+          "identical_to_raw": true,
+          "sha256": "583f5542dfb7673f4c1f100a18aced329e6bd9b198c604b572a20f9f7cb056d9"
+        }
+      ],
+      "frozen": [
+        {
+          "file": "fixture.md",
+          "match": true
+        },
+        {
+          "file": "rubrica.json",
+          "match": true
+        }
+      ],
+      "judge_id": "/root/jl",
+      "judge_saved": true,
+      "judge_sha256": "59d30fe0ef605a624ac544a55a24110d1836635413417898921a29b7aceb0ab2"
+    },
+    {
+      "case": "marketing",
+      "arms": [
+        {
+          "arm": "brazo-01",
+          "agent": "/root/m01",
+          "requested_model": "gpt-6.1-sol",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "1155bea92f0a01ed40d11954eee6fcde59002c2f463b3f67712197222566097b",
+          "receipt_sha256": "a230f84f0cde8ac325c913e92beee41f154e4a84cb9443918c719afce23621ed",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-marketing\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-marketing\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-marketing\\entrada.md",
+              "match": true
+            }
+          ],
+          "expected_sources": 3,
+          "source_count_matches": true
+        },
+        {
+          "arm": "brazo-02",
+          "agent": "/root/m02",
+          "requested_model": "gpt-6.1-sol",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "34507e3dcdd23131f0f67c180e71cfd9aa62034c529577d8e7b70564b60c2e1c",
+          "receipt_sha256": "573d0f7b34b4b3c86b74c78da7ec9e0eada2e51f8fdbe86aa42461c6f9b1dfa5",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-marketing\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-marketing\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-marketing\\apoyo-congelado.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-marketing\\entrada.md",
+              "match": true
+            }
+          ],
+          "expected_sources": 4,
+          "source_count_matches": true
+        }
+      ],
+      "blind": [
+        {
+          "label": "X",
+          "identical_to_raw": true,
+          "sha256": "1155bea92f0a01ed40d11954eee6fcde59002c2f463b3f67712197222566097b"
+        },
+        {
+          "label": "Y",
+          "identical_to_raw": true,
+          "sha256": "34507e3dcdd23131f0f67c180e71cfd9aa62034c529577d8e7b70564b60c2e1c"
+        }
+      ],
+      "frozen": [
+        {
+          "file": "entrada.md",
+          "match": true
+        },
+        {
+          "file": "rubrica.md",
+          "match": true
+        }
+      ],
+      "judge_id": "/root/jm",
+      "judge_saved": true,
+      "judge_sha256": "28e73f4dc376898afa48d613d2f28098e32e6bd1520f2aace0e4dbbb144305c9"
+    },
+    {
+      "case": "video",
+      "arms": [
+        {
+          "arm": "brazo-01",
+          "agent": "/root/v01",
+          "requested_model": "gpt-6.1-sol",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "0772d1c8fecf7c33ae15c98a858e1d48c7f1db8bdbc2e42a182e9f5cd477d62e",
+          "receipt_sha256": "05a96b770aef15385a4b431a9a493be005378a1f25201504fa8d3c671da5cb13",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-video\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-video\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-video\\ENTRADA.md",
+              "match": true
+            }
+          ],
+          "expected_sources": 3,
+          "source_count_matches": true
+        },
+        {
+          "arm": "brazo-02",
+          "agent": "/root/v02",
+          "requested_model": "gpt-6.1-sol",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "5146e74f9e654e29ad875569894118b72a9d286c8005b2bc89cdaf5a45ceb6c2",
+          "receipt_sha256": "7df00672f58d89e44b9b90f5e8761b011bdc85e1a2058f620b85cbb7255d8681",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-video\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-video\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-video\\ENTRADA.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-video\\apoyo-uso.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-video\\apoyo-original.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-video\\apoyo-story.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-video\\apoyo-spec.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-video\\apoyo-format.md",
+              "match": true
+            }
+          ],
+          "expected_sources": 8,
+          "source_count_matches": true
+        }
+      ],
+      "blind": [
+        {
+          "label": "X",
+          "identical_to_raw": true,
+          "sha256": "5146e74f9e654e29ad875569894118b72a9d286c8005b2bc89cdaf5a45ceb6c2"
+        },
+        {
+          "label": "Y",
+          "identical_to_raw": true,
+          "sha256": "0772d1c8fecf7c33ae15c98a858e1d48c7f1db8bdbc2e42a182e9f5cd477d62e"
+        }
+      ],
+      "frozen": [
+        {
+          "file": "ENTRADA.md",
+          "match": true
+        },
+        {
+          "file": "RUBRICA-EVALUADOR.md",
+          "match": true
+        }
+      ],
+      "judge_id": "/root/jv",
+      "judge_saved": true,
+      "judge_sha256": "8817de57e422fe0b15aa1a045cea519000d0fe922a40f86dcd34750ed0fd4757"
+    },
+    {
+      "case": "producto",
+      "arms": [
+        {
+          "arm": "brazo-01",
+          "agent": "/root/p01",
+          "requested_model": "gpt-6.1-terra",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "cb556bfacffe385688e4712ddf9963be9a5e445f1f09aea7d3760537f1293c25",
+          "receipt_sha256": "6b285f600f06b366ee2d03b14d59d4379930da2a12fa2b7920b3f7037c2f74a1",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-producto\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-producto\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-producto\\ENTRADA.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-producto\\fixture.html",
+              "match": true
+            }
+          ],
+          "expected_sources": 4,
+          "source_count_matches": true
+        },
+        {
+          "arm": "brazo-02",
+          "agent": "/root/p02",
+          "requested_model": "gpt-6.1-terra",
+          "effort": "medium",
+          "fork": "none",
+          "raw_sha256": "d19aaccb14a1eb70d227d5f2687a328f4eab0001bb4efbedf8021c75d9a714ee",
+          "receipt_sha256": "2ae1ceb86c4f2492ad8c800d02c9ca03dd5209f5ced2ea041974d87cfcb201ed",
+          "receipt_before_artifact": true,
+          "source_checks": [
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-producto\\reglas-congeladas.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-producto\\directora-congelada.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-producto\\ENTRADA.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-producto\\fixture.html",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-producto\\apoyo-uso.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-producto\\apoyo-original.md",
+              "match": true
+            },
+            {
+              "source": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\prueba-skills\\caso-producto\\apoyo-quick-reference.md",
+              "match": true
+            }
+          ],
+          "expected_sources": 7,
+          "source_count_matches": true
+        }
+      ],
+      "blind": [
+        {
+          "label": "X",
+          "identical_to_raw": true,
+          "sha256": "cb556bfacffe385688e4712ddf9963be9a5e445f1f09aea7d3760537f1293c25"
+        },
+        {
+          "label": "Y",
+          "identical_to_raw": true,
+          "sha256": "d19aaccb14a1eb70d227d5f2687a328f4eab0001bb4efbedf8021c75d9a714ee"
+        }
+      ],
+      "frozen": [
+        {
+          "file": "ENTRADA.md",
+          "match": true
+        },
+        {
+          "file": "RUBRICA-EVALUADOR.md",
+          "match": true
+        },
+        {
+          "file": "fixture.html",
+          "match": true
+        }
+      ],
+      "judge_id": "/root/jp",
+      "judge_saved": true,
+      "judge_sha256": "80a3177cb8450be6189d06acff900342c185f069ab58adfc225d9a66c8167981"
+    }
+  ],
+  "exact_launch_prompt_comparison": "no verificable: 24 mensajes desconocidos por cifrado; no reconstruidos",
+  "full_comparability_verified": false,
+  "interpretation": "Datos exploratorios; no prueba causal ni comparabilidad plena. Configuración, fixtures, recibos y raw cotejados."
+}

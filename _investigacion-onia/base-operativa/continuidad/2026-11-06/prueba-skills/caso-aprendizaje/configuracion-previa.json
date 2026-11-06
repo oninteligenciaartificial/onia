@@ -1,0 +1,29 @@
+{
+  "esfuerzo": "medium",
+  "brazos": {
+    "brazo-02": "candidato",
+    "brazo-01": "baseline"
+  },
+  "fork": "none",
+  "nota": "Estado/ORQUESTACION excluidos del tratamiento por edición concurrente; sólo reglas/directora congeladas. Delegación constante entre condiciones, incluso research. No rúbrica resuelta a generadores.",
+  "fuentes": [
+    {
+      "fuente": "reglas-comunes.md",
+      "copia": "reglas-congeladas.md",
+      "sha256": "fdf2ea05aa1eda5e49c44c8afb5d7c0647c42c115a2263df82b07c6a935d3f61"
+    },
+    {
+      "fuente": "compartibles/skills/evaluar-catalogo-skills/SKILL.md",
+      "copia": "directora-congelada.md",
+      "sha256": "af1e42eacebf31fc80f6400c2cc63643b2dab4fda1540b4dc9375d1dae9b6cfd"
+    },
+    {
+      "fuente": "compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md",
+      "copia": "apoyo-congelado.md",
+      "sha256": "1f629e18ab899412683bc6a1c4efb4339999e27c2fdac328f26ee10a8c031d33"
+    }
+  ],
+  "modelo_solicitado": "gpt-6.1-sol",
+  "generaciones": 0,
+  "caso": "aprendizaje"
+}

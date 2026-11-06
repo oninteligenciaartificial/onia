@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "area": "desarrollo",
+  "maximo": 20,
+  "criterios": [
+    {
+      "id": "C1",
+      "texto": "Causa reproducible ligada al código y contrato",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C2",
+      "texto": "Máximo numérico correcto y manejo de vacío",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C3",
+      "texto": "Desempate por última aparición",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C4",
+      "texto": "No mutación de entrada",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C5",
+      "texto": "Evidencia funcional y cambio acotado sin dependencias",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "anclas": {
+    "0": "Ausente o incorrecto",
+    "1": "Menciona con error u omisión material",
+    "2": "Parcialmente correcto, falta parte necesaria",
+    "3": "Correcto con omisión menor",
+    "4": "Completo, preciso y verificable"
+  },
+  "errores_criticos": [
+    "Salida incorrecta en caso reportado o vacío",
+    "Modifica código fuera del sandbox propio del brazo",
+    "Declara checks pasados sin ejecutarlos"
+  ],
+  "regla": "Error crítico invalida victoria. Diferencia mínima 2/20, ningún criterio esencial cae, sin crítico nuevo. Si no, empate o peor. No premiar longitud/estilo sin utilidad."
+}

@@ -99,7 +99,9 @@ def task_paths(base, task_id):
     return task, brief
 
 
-def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None, skill=None):
+def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None, skill=None,
+            ensayo=False, investigacion=None, capacidad=None, hipotesis=None, control=None, leccion=None,
+            apoyos=None):
     base = base.resolve()
     task, brief = task_paths(base, task_id)
     data = manifest(base)
@@ -107,6 +109,16 @@ def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None, ski
         raise ValueError("Área inválida. Elegir: " + ", ".join(data["areas"]))
     if not all(isinstance(value, str) and value.strip() for value in (goal, deliverable, acceptance)):
         raise ValueError("Objetivo, entregable y aceptación deben tener contenido.")
+    datos_ensayo = (investigacion, capacidad, hipotesis, control, leccion)
+    if ensayo:
+        if not all(isinstance(value, str) and value.strip() for value in datos_ensayo):
+            raise ValueError("Ensayo requiere investigación, capacidad/fuente, hipótesis, control/criterio y lección previa.")
+        fuente = safe_path(base, investigacion.strip())
+        if not fuente.is_file():
+            raise ValueError("La investigación debe enlazar un archivo existente dentro de la base.")
+        investigacion = fuente.relative_to(base).as_posix()
+    elif any(value is not None for value in datos_ensayo):
+        raise ValueError("Los datos de investigación requieren declarar --ensayo.")
     if os.path.lexists(task) or os.path.lexists(brief):
         raise ValueError("El encargo ya existe. Usar retomar; no se sobrescribió ningún archivo.")
     route = data["areas"][area]
@@ -114,9 +126,15 @@ def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None, ski
     skill = route["skill_directora"] if skill is None else skill
     if skill not in allowed_skills:
         raise ValueError("Skill no habilitada para el área " + area + ". Elegir: " + ", ".join(allowed_skills))
+    if skill.startswith("tercero-"):
+        raise ValueError("Las referencias de terceros se seleccionan como apoyo, no como directora.")
     support = [name for name in allowed_skills if name != skill]
+    selected_support = list(dict.fromkeys(apoyos or []))
+    if any(name not in support for name in selected_support):
+        raise ValueError("Apoyo no habilitado para el área o elegido como directora.")
     context = list(dict.fromkeys([data["reglas"], *data["contexto_comun"],
-                                 *route["contexto"], data["skills"][skill]]))
+                                 *route["contexto"], data["skills"][skill],
+                                 *[data["skills"][name] for name in selected_support]]))
     for relative in [*context, *[data["skills"][name] for name in support]]:
         if not safe_path(base, relative).is_file():
             raise ValueError("Falta contexto " + relative + ". Ejecutar doctor y revisar checkout.")
@@ -126,6 +144,13 @@ def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None, ski
              "", "## Criterio de aceptación", "", acceptance.strip(), "",
              "## Entrada y alcance", "", route["alcance"], ""]
     lines.extend("- " + item for item in (inputs or ["Sin entradas adicionales indicadas."]))
+    if ensayo:
+        lines.extend(["", "## Investigación previa al ensayo", "",
+                      "- Investigación: [fuente](../../" + investigacion + ")",
+                      "- Capacidad y fuente: " + capacidad.strip(),
+                      "- Hipótesis: " + hipotesis.strip(),
+                      "- Control y criterio que cambia la decisión: " + control.strip(),
+                      "- Lección previa: " + leccion.strip()])
     lines.extend(["", "## Contexto mínimo", "",
                   "Leer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.", ""])
     lines.extend("- [" + relative + "](../../" + relative + ")" for relative in context)
@@ -150,7 +175,7 @@ def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None, ski
         raise
     return {"tarea": record, "briefing": brief.relative_to(base).as_posix(),
             "area": area, "skill_directora": skill, "skills_apoyo": support,
-            "modo": route["modo"], "nota": LIMITACION}
+            "apoyos_seleccionados": selected_support, "modo": route["modo"], "nota": LIMITACION}
 
 
 def resume(base, task_id):
@@ -177,6 +202,13 @@ def main(argv=None):
     p.add_argument("--entregable", required=True)
     p.add_argument("--aceptacion", required=True)
     p.add_argument("--entrada", action="append", default=[])
+    p.add_argument("--apoyo", action="append", default=[], help="Apoyo pertinente del área; se puede repetir.")
+    p.add_argument("--ensayo", action="store_true", help="Declarar un ensayo que requiere investigación previa.")
+    p.add_argument("--investigacion", help="Archivo existente relativo a la base, con investigación previa.")
+    p.add_argument("--capacidad", help="Capacidad relevante y fuente en la investigación.")
+    p.add_argument("--hipotesis", help="Hipótesis e incertidumbre a resolver.")
+    p.add_argument("--control", help="Control y resultado que cambia la decisión.")
+    p.add_argument("--leccion", help="Lección previa aplicable.")
     p = commands.add_parser("retomar")
     p.add_argument("id")
     args = parser.parse_args(argv)
@@ -186,7 +218,10 @@ def main(argv=None):
             code = 0 if result["ok"] else 1
         elif args.command == "preparar":
             result = prepare(args.base, args.id, args.area, args.objetivo,
-                             args.entregable, args.aceptacion, args.entrada, skill=args.skill)
+                             args.entregable, args.aceptacion, args.entrada, skill=args.skill,
+                             ensayo=args.ensayo, investigacion=args.investigacion,
+                             capacidad=args.capacidad, hipotesis=args.hipotesis,
+                             control=args.control, leccion=args.leccion, apoyos=args.apoyo)
             code = 0
         else:
             result, code = resume(args.base, args.id), 0

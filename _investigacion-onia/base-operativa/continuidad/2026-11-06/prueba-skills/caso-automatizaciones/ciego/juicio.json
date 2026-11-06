@@ -1,0 +1,27 @@
+{
+  "tipo_evaluacion": "auditoria_estatica",
+  "fuentes": ["entrada.md", "rubrica.json", "X.md", "Y.md"],
+  "runtime_ejecutado": false,
+  "maximo": 20,
+  "X": {
+    "puntajes_por_criterio": {"C1": 4, "C2": 4, "C3": 4, "C4": 4, "C5": 2},
+    "total": 18,
+    "criticos": [],
+    "omision_principal": "Falta control explicito de caida y reinicio con recuperacion de reservas y efectos inciertos persistidos."
+  },
+  "Y": {
+    "puntajes_por_criterio": {"C1": 4, "C2": 4, "C3": 4, "C4": 4, "C5": 2},
+    "total": 18,
+    "criticos": [],
+    "omision_principal": "Falta control explicito de caida y reinicio con recuperacion de reservas y efectos inciertos persistidos."
+  },
+  "umbral": {
+    "diferencia_minima": 2,
+    "diferencia_observada": 0,
+    "alcanzado": false,
+    "caida_de_criterio_entre_respuestas": false,
+    "critico_nuevo": false
+  },
+  "conclusion": "empate",
+  "motivo": "Mismos puntajes; diferencia inferior a 2/20 y omision compartida de reinicio en C5. Ningun error critico observado."
+}

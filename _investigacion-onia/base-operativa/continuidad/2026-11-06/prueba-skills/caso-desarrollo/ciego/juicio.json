@@ -1,0 +1,22 @@
+{
+  "tipo": "juicio_ciego_textual",
+  "fuentes": ["entrada.md", "rubrica.json", "X.md", "Y.md"],
+  "ejecucion_observada": false,
+  "criterios": [
+    {"id":"C1","X":4,"Y":4,"fundamento":"Ambas identifican conversión a texto, ordenamiento in situ y caso 9/10; reproducción declarada, no observada."},
+    {"id":"C2","X":4,"Y":4,"fundamento":"Ambas comparan seq como entero y retornan None para vacío según el código presentado."},
+    {"id":"C3","X":4,"Y":4,"fundamento":"Ambas actualizan con >=, por lo que la última aparición del máximo prevalece."},
+    {"id":"C4","X":4,"Y":4,"fundamento":"Ambas sólo leen la entrada y asignan referencias locales."},
+    {"id":"C5","X":3,"Y":4,"fundamento":"Ambas acotan el cambio y no añaden dependencias. X omite comando y lista completa de escenarios; Y proporciona comando, objetivo, cinco escenarios y límite de cobertura. No se certifican los checks declarados."}
+  ],
+  "totales": {"X":19,"Y":20,"maximo":20},
+  "diferencia": 1,
+  "criticos": {
+    "X": {"demostrados":[],"salida_incorrecta":"No indicada por el código; ejecución no observada","fuera_sandbox":"No determinable con los textos","checks_sin_ejecucion":"No determinable; contrastar declaración con registros"},
+    "Y": {"demostrados":[],"salida_incorrecta":"No indicada por el código; ejecución no observada","fuera_sandbox":"No determinable con los textos","checks_sin_ejecucion":"No determinable; contrastar declaración con registros"}
+  },
+  "omisiones": {"X":["Falta comando y enumeración completa de escenarios en la evidencia textual"],"Y":[]},
+  "acciones_viables": {"X":["Añadir comando y cinco escenarios concretos"],"ambas":["Coordinador: verificar solution.py, checks.stdout.txt y ejecución declarada por separado"]},
+  "conclusion":"empate",
+  "motivo":"Diferencia 1/20, menor al mínimo 2/20. Ningún criterio esencial empeora y no se demuestra crítico en las fuentes permitidas."
+}

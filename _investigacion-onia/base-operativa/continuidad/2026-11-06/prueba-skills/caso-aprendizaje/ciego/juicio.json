@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "area": "aprendizaje",
+  "maximo": 20,
+  "puntajes_por_criterio": {
+    "X": {"C1": 4, "C2": 4, "C3": 4, "C4": 4, "C5": 4},
+    "Y": {"C1": 4, "C2": 4, "C3": 4, "C4": 4, "C5": 4}
+  },
+  "totales": {"X": 20, "Y": 20},
+  "criticos": {"X": [], "Y": []},
+  "errores_u_omisiones_puntuables": {"X": [], "Y": []},
+  "umbral": {
+    "diferencia_minima": 2,
+    "diferencia_observada": 0,
+    "ningun_criterio_esencial_cae": true,
+    "sin_critico_nuevo": true,
+    "cumple_diferencia_para_victoria": false
+  },
+  "conclusion": "empate",
+  "fundamento": "Ambas respuestas cumplen íntegramente C1–C5 y no contienen errores críticos. Diferencia 0/20; no alcanza el umbral de 2/20. La extensión adicional no justifica ventaja."
+}

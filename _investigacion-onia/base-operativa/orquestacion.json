@@ -1,7 +1,10 @@
 {
   "schema": 1,
   "reglas": "reglas-comunes.md",
-  "contexto_comun": ["ESTADO.md", "ORQUESTACION.md"],
+  "contexto_comun": [
+    "ESTADO.md",
+    "ORQUESTACION.md"
+  ],
   "archivos_cloud": [
     "cloud/install.sh",
     "cloud/start.sh",
@@ -19,52 +22,134 @@
     "planificar-dia": "compartibles/skills/planificar-dia/SKILL.md",
     "preparar-campana-meta": "compartibles/skills/preparar-campana-meta/SKILL.md",
     "preparar-oferta-y-embudo": "compartibles/skills/preparar-oferta-y-embudo/SKILL.md",
-    "producir-video": "compartibles/skills/producir-video/SKILL.md"
+    "producir-video": "compartibles/skills/producir-video/SKILL.md",
+    "tercero-matt-research": "compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md",
+    "tercero-matt-writing-agents": "compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md",
+    "tercero-matt-handoff-onia": "compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md",
+    "tercero-addy-context": "compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md",
+    "tercero-superpowers-debug": "compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md",
+    "tercero-superpowers-verify": "compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md",
+    "tercero-marketing-humanizer": "compartibles/terceros/marketing/humanizer/SKILL.md",
+    "tercero-visual-hyperframes-plan": "compartibles/terceros/visual/27-hyperframes/USO-ONIA.md",
+    "tercero-visual-uiux": "compartibles/terceros/visual/19-ui-ux-pro-max/USO-ONIA.md"
   },
   "areas": {
     "marketing": {
       "skill_directora": "preparar-oferta-y-embudo",
-      "skills_apoyo": ["preparar-campana-meta"],
+      "skills_apoyo": [
+        "preparar-campana-meta",
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-marketing-humanizer"
+      ],
       "contexto": [],
-      "salidas": ["Oferta y recorrido de venta", "Borradores de las piezas del encargo"],
+      "salidas": [
+        "Oferta y recorrido de venta",
+        "Borradores de las piezas del encargo"
+      ],
       "alcance": "Preparar una oferta, embudo, webinar o brief de contenido.",
       "modo": "encargo"
     },
     "video": {
       "skill_directora": "producir-video",
       "contexto": [],
-      "salidas": ["Composición editable en HyperFrames", "Video y verificación audiovisual"],
+      "salidas": [
+        "Composición editable en HyperFrames",
+        "Video y verificación audiovisual"
+      ],
       "alcance": "Producir una pieza con los materiales indicados en el encargo.",
-      "modo": "encargo"
+      "modo": "encargo",
+      "skills_apoyo": [
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-visual-hyperframes-plan"
+      ]
     },
     "desarrollo": {
       "skill_directora": "desarrollar-y-verificar",
-      "contexto": ["arquitectura.md"],
-      "salidas": ["Cambio acotado de código", "Comprobación del comportamiento solicitado"],
+      "contexto": [
+        "arquitectura.md"
+      ],
+      "salidas": [
+        "Cambio acotado de código",
+        "Comprobación del comportamiento solicitado"
+      ],
       "alcance": "Desarrollo del harness y herramientas del encargo.",
-      "modo": "encargo"
+      "modo": "encargo",
+      "skills_apoyo": [
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-superpowers-debug",
+        "tercero-superpowers-verify"
+      ]
     },
     "automatizaciones": {
       "skill_directora": "automatizar-n8n",
-      "contexto": ["accesos.md"],
-      "salidas": ["Flujo n8n con referencias a credenciales", "Pruebas y manejo de fallos"],
+      "contexto": [
+        "accesos.md"
+      ],
+      "salidas": [
+        "Flujo n8n con referencias a credenciales",
+        "Pruebas y manejo de fallos"
+      ],
       "alcance": "Un evento y resultado definido para la instancia existente de n8n.",
-      "modo": "encargo"
+      "modo": "encargo",
+      "skills_apoyo": [
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-superpowers-debug",
+        "tercero-superpowers-verify"
+      ]
     },
     "organizacion": {
       "skill_directora": "planificar-dia",
-      "skills_apoyo": ["continuidad-de-trabajo", "mejorar-sistema", "evaluar-catalogo-skills"],
-      "contexto": ["CEREBRO-DIARIO.md"],
-      "salidas": ["Agenda viable con compromisos y tareas", "Estado y entrega para retomar un encargo"],
+      "skills_apoyo": [
+        "continuidad-de-trabajo",
+        "mejorar-sistema",
+        "evaluar-catalogo-skills",
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context"
+      ],
+      "contexto": [
+        "CEREBRO-DIARIO.md"
+      ],
+      "salidas": [
+        "Agenda viable con compromisos y tareas",
+        "Estado y entrega para retomar un encargo"
+      ],
       "alcance": "Planificar con datos vigentes; usar la skill de apoyo correspondiente para continuidad o mejora. No presupone sincronización del calendario.",
       "modo": "encargo"
     },
     "producto": {
       "skill_directora": "desarrollar-y-verificar",
-      "contexto": ["arquitectura.md"],
-      "salidas": ["Briefing para ONIA Platform", "Repo e instrucciones técnicas que falta verificar"],
+      "contexto": [
+        "arquitectura.md"
+      ],
+      "salidas": [
+        "Briefing para ONIA Platform",
+        "Repo e instrucciones técnicas que falta verificar"
+      ],
       "alcance": "Sólo briefing hasta identificar y leer el repositorio e instrucciones técnicas de ONIA Platform.",
-      "modo": "briefing"
+      "modo": "briefing",
+      "skills_apoyo": [
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-superpowers-debug",
+        "tercero-superpowers-verify",
+        "tercero-visual-uiux"
+      ]
     }
   }
 }

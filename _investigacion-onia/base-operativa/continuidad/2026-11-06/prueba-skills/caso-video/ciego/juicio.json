@@ -1,0 +1,26 @@
+{
+  "tipo": "juicio_ciego_textual",
+  "puntajes_por_criterio": {
+    "X": {"verdad": 4, "tiempo": 4, "lectura": 4, "sincronia_propuesta": 3, "accion_qa": 4},
+    "Y": {"verdad": 4, "tiempo": 4, "lectura": 3, "sincronia_propuesta": 3, "accion_qa": 4}
+  },
+  "totales": {"X": 19, "Y": 18},
+  "criticos": {"X": [], "Y": []},
+  "omisiones": {
+    "X": ["Tabla 13–18 s: no explicita que 17,6 s precede a la exportacion de 18 s."],
+    "Y": ["Tabla 13–18 y 18–22 s: faltan holds minimos o regla de ajuste para rotulos sucesivos.", "Tabla 13–18 s: no explicita que 17,6 s precede a la exportacion de 18 s."]
+  },
+  "conclusion_X": "19/20; supera 16, sin descalificadores; ventaja de 1 punto en lectura; no acredita mejora sustantiva >=3.",
+  "conclusion_Y": "18/20; supera 16, sin descalificadores; no acredita mejora sustantiva >=3.",
+  "empate": true,
+  "alcance_empate": "Utilidad sustantiva: verdad, tiempo y accion suman 12/12 en ambos; no empate numerico total.",
+  "diferencia_X_menos_Y": 1,
+  "diferencia_sustantiva_X_menos_Y": 0,
+  "umbral_original": {"minimo_total": 16, "mejora_sustantiva_minima": 3, "sin_regresion_verdad": true},
+  "mejora_requerida_acreditada": false,
+  "techo": "Ambos totales >=18; interpretar techo basal solo tras mapeo.",
+  "mapeo_conocido": false,
+  "render_certificado": false,
+  "audio_certificado": false,
+  "evidencia_detallada": "juicio.raw.md"
+}

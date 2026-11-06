@@ -1,0 +1,155 @@
+{
+  "fecha": "2026-11-06",
+  "cases": 8,
+  "arms": 16,
+  "repeticiones": 0,
+  "mejoras_umbral": 0,
+  "modelo_jueces": "gpt-6.1-sol",
+  "esfuerzo_jueces": "medium",
+  "casos": [
+    {
+      "area": "general",
+      "apoyo": "writing-for-agents",
+      "basal": 20,
+      "candidato": 20,
+      "delta": 0,
+      "hallazgo": "Empate; ambas preservan alcance/roles/permisos. Techo 20.",
+      "agentes": {
+        "basal": "/root/g01",
+        "candidato": "/root/g02",
+        "juez": "/root/jg"
+      },
+      "decision": "limitar",
+      "mejora_acreditada": false,
+      "criticos_demostrados": 0,
+      "umbral": 2,
+      "nota_modelo": "Solicitado explícitamente; no se verifica memoria interna/igualdad cognitiva ni ahorro"
+    },
+    {
+      "area": "desarrollo",
+      "apoyo": "systematic-debugging",
+      "basal": 19,
+      "candidato": 20,
+      "delta": 1,
+      "hallazgo": "Misma solución funcional; apoyo documenta mejor comando y escenarios. Ambos 5/5 checks, sin mutación.",
+      "agentes": {
+        "basal": "/root/d01",
+        "candidato": "/root/d02",
+        "juez": "/root/jd"
+      },
+      "decision": "limitar",
+      "mejora_acreditada": false,
+      "criticos_demostrados": 0,
+      "umbral": 2,
+      "nota_modelo": "Solicitado explícitamente; no se verifica memoria interna/igualdad cognitiva ni ahorro"
+    },
+    {
+      "area": "automatizaciones",
+      "apoyo": "verification-before-completion",
+      "basal": 18,
+      "candidato": 18,
+      "delta": 0,
+      "hallazgo": "Ambas omiten control explícito de reinicio/recuperación. Auditoría estática, no n8n runtime.",
+      "agentes": {
+        "basal": "/root/a01",
+        "candidato": "/root/a02",
+        "juez": "/root/ja"
+      },
+      "decision": "limitar",
+      "mejora_acreditada": false,
+      "criticos_demostrados": 0,
+      "umbral": 2,
+      "nota_modelo": "Solicitado explícitamente; no se verifica memoria interna/igualdad cognitiva ni ahorro"
+    },
+    {
+      "area": "organizacion",
+      "apoyo": "handoff-onia",
+      "basal": 18,
+      "candidato": 19,
+      "delta": 1,
+      "hallazgo": "Mejora menor de próxima acción; juez señala rutas no acreditadas por la entrada ciega. Sin recepción externa.",
+      "agentes": {
+        "basal": "/root/o01",
+        "candidato": "/root/o02",
+        "juez": "/root/jo"
+      },
+      "decision": "limitar",
+      "mejora_acreditada": false,
+      "criticos_demostrados": 0,
+      "umbral": 2,
+      "nota_modelo": "Solicitado explícitamente; no se verifica memoria interna/igualdad cognitiva ni ahorro"
+    },
+    {
+      "area": "aprendizaje",
+      "apoyo": "research",
+      "basal": 20,
+      "candidato": 20,
+      "delta": 0,
+      "hallazgo": "Ambas distinguen evidencia/inferencia y límites. Techo 20; delegación constante.",
+      "agentes": {
+        "basal": "/root/l01",
+        "candidato": "/root/l02",
+        "juez": "/root/jl"
+      },
+      "decision": "limitar",
+      "mejora_acreditada": false,
+      "criticos_demostrados": 0,
+      "umbral": 2,
+      "nota_modelo": "Solicitado explícitamente; no se verifica memoria interna/igualdad cognitiva ni ahorro"
+    },
+    {
+      "area": "marketing",
+      "apoyo": "Humanizer",
+      "basal": 20,
+      "candidato": 19,
+      "delta": -1,
+      "hallazgo": "Apoyo omite identificar explícitamente hispanohablantes; sin críticos. Cegamiento parcial por nombres en rúbrica.",
+      "agentes": {
+        "basal": "/root/m01",
+        "candidato": "/root/m02",
+        "juez": "/root/jm"
+      },
+      "decision": "limitar",
+      "mejora_acreditada": false,
+      "criticos_demostrados": 0,
+      "umbral": 2,
+      "nota_modelo": "Solicitado explícitamente; no se verifica memoria interna/igualdad cognitiva ni ahorro"
+    },
+    {
+      "area": "video",
+      "apoyo": "paquete HyperFrames",
+      "basal": 18,
+      "candidato": 19,
+      "delta": 1,
+      "hallazgo": "Mejor detalle de holds/lectura, sin mejora sustantiva en verdad/tiempo/acción; ambos omiten explicitar cue 17,6 antes de exportar18.",
+      "agentes": {
+        "basal": "/root/v01",
+        "candidato": "/root/v02",
+        "juez": "/root/jv"
+      },
+      "decision": "limitar",
+      "mejora_acreditada": false,
+      "criticos_demostrados": 0,
+      "umbral": 3,
+      "nota_modelo": "Solicitado explícitamente; no se verifica memoria interna/igualdad cognitiva ni ahorro"
+    },
+    {
+      "area": "producto",
+      "apoyo": "paquete UI UX Pro Max",
+      "basal": 19,
+      "candidato": 19,
+      "delta": 0,
+      "hallazgo": "Ambos omiten prevención explícita de duplicados en envío pendiente. Sólo revisión de HTML.",
+      "agentes": {
+        "basal": "/root/p01",
+        "candidato": "/root/p02",
+        "juez": "/root/jp"
+      },
+      "decision": "limitar",
+      "mejora_acreditada": false,
+      "criticos_demostrados": 0,
+      "umbral": 3,
+      "nota_modelo": "Solicitado explícitamente; no se verifica memoria interna/igualdad cognitiva ni ahorro"
+    }
+  ]
+}

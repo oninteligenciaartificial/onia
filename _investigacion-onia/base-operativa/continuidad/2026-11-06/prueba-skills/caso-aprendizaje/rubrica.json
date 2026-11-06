@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "area": "aprendizaje",
+  "maximo": 20,
+  "criterios": [
+    {
+      "id": "C1",
+      "texto": "Clasifica F1/F2 con límites de modalidad y capacidad",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C2",
+      "texto": "Clasifica F3 como hipótesis plausible, no mejora probada",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C3",
+      "texto": "Clasifica F4 sin confundir panel con resultado",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C4",
+      "texto": "Clasifica F5 con cobertura exacta y lámina faltante",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C5",
+      "texto": "Redacciones corregidas trazables y decisión proporcionada",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "anclas": {
+    "0": "Ausente o incorrecto",
+    "1": "Menciona con error u omisión material",
+    "2": "Parcialmente correcto, falta parte necesaria",
+    "3": "Correcto con omisión menor",
+    "4": "Completo, preciso y verificable"
+  },
+  "errores_criticos": [
+    "Atribuye escucha/reproducción continua",
+    "Afirma autonomía/rentabilidad probadas",
+    "Llama F3 mejora medida o aprendizaje de Sergio"
+  ],
+  "regla": "Error crítico invalida victoria. Diferencia mínima 2/20, ningún criterio esencial cae, sin crítico nuevo. Si no, empate o peor. No premiar longitud/estilo sin utilidad."
+}

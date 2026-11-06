@@ -17,7 +17,57 @@
       "readme": "https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/README.md",
       "entrada": "skills/using-superpowers/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "desarrollo",
+        "areas_apoyo": [
+          "producto",
+          "automatizaciones",
+          "general"
+        ],
+        "decision": "disponible para encargo pertinente; no requisito general ni carga automática por este piloto",
+        "motivo": "Diagnóstico y verificación puntuales; no importar bootstrap/TDD obligatorio para todo encargo.",
+        "estado": "disponible; comparación terminada para ocho apoyos, Addy sin comparación propia",
+        "rutas_modulo": [
+          "compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md",
+          "compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md"
+        ],
+        "disponible_en_repo": "Sí, archivos fuente presentes y selección confirmada por Jefa; congelación generales comunicada por Desarrollo, Humanizer liberado por Marketing.",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "Recibos/cargas y hashes auditados para los módulos ensayados; no garantía de memoria interna. Addy sin comparación propia.",
+        "aprobado_piloto": false,
+        "evidencia_piloto": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md",
+        "modulos_runtime": [
+          "tercero-superpowers-debug",
+          "tercero-superpowers-verify"
+        ],
+        "areas_runtime_confirmadas": {
+          "tercero-superpowers-debug": [
+            "desarrollo",
+            "automatizaciones",
+            "producto"
+          ],
+          "tercero-superpowers-verify": [
+            "desarrollo",
+            "automatizaciones",
+            "producto"
+          ]
+        },
+        "resultado_por_modulo": [
+          {
+            "modulo": "tercero-superpowers-debug",
+            "caso": "desarrollo",
+            "estado": "ensayado; no alcanza umbral; limitar al encargo pertinente",
+            "evidencia": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md"
+          },
+          {
+            "modulo": "tercero-superpowers-verify",
+            "caso": "automatizaciones",
+            "estado": "ensayado; no alcanza umbral; limitar al encargo pertinente",
+            "evidencia": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md"
+          }
+        ]
+      }
     },
     {
       "id": 2,
@@ -33,7 +83,79 @@
       "readme": "https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/README.md",
       "entrada": "skills/engineering/implement/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "general",
+        "areas_apoyo": [
+          "desarrollo",
+          "organizacion",
+          "aprendizaje"
+        ],
+        "decision": "disponible para encargo pertinente; no requisito general ni carga automática por este piloto",
+        "motivo": "Research, escritura para agentes y handoff: fuentes primarias/contexto/cierre; adaptar destino al registro existente, no duplicar coordinación.",
+        "estado": "disponible; comparación terminada para ocho apoyos, Addy sin comparación propia",
+        "rutas_modulo": [
+          "compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md",
+          "compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md",
+          "compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md"
+        ],
+        "disponible_en_repo": "Sí, archivos fuente presentes y selección confirmada por Jefa; congelación generales comunicada por Desarrollo, Humanizer liberado por Marketing.",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "Recibos/cargas y hashes auditados para los módulos ensayados; no garantía de memoria interna. Addy sin comparación propia.",
+        "aprobado_piloto": false,
+        "evidencia_piloto": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md",
+        "modulos_runtime": [
+          "tercero-matt-research",
+          "tercero-matt-writing-agents",
+          "tercero-matt-handoff-onia"
+        ],
+        "areas_runtime_confirmadas": {
+          "tercero-matt-research": [
+            "marketing",
+            "video",
+            "desarrollo",
+            "automatizaciones",
+            "organizacion",
+            "producto"
+          ],
+          "tercero-matt-writing-agents": [
+            "marketing",
+            "video",
+            "desarrollo",
+            "automatizaciones",
+            "organizacion",
+            "producto"
+          ],
+          "tercero-matt-handoff-onia": [
+            "marketing",
+            "video",
+            "desarrollo",
+            "automatizaciones",
+            "organizacion",
+            "producto"
+          ]
+        },
+        "resultado_por_modulo": [
+          {
+            "modulo": "tercero-matt-research",
+            "caso": "aprendizaje",
+            "estado": "ensayado; no alcanza umbral; limitar al encargo pertinente",
+            "evidencia": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md"
+          },
+          {
+            "modulo": "tercero-matt-writing-agents",
+            "caso": "general",
+            "estado": "ensayado; no alcanza umbral; limitar al encargo pertinente",
+            "evidencia": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md"
+          },
+          {
+            "modulo": "tercero-matt-handoff-onia",
+            "caso": "organizacion",
+            "estado": "ensayado; no alcanza umbral; limitar al encargo pertinente",
+            "evidencia": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md"
+          }
+        ]
+      }
     },
     {
       "id": 3,
@@ -49,7 +171,23 @@
       "readme": "https://github.com/affaan-m/ECC/blob/b38be6a7f6350964d59328b52f0624e1d1d552d1/README.md",
       "entrada": "skills/continuous-learning-v2/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "aprendizaje",
+        "areas_apoyo": [
+          "general",
+          "desarrollo"
+        ],
+        "decision": "referencia; observador diferido",
+        "motivo": "Aprendizaje con evidencia por proyecto; observador continuous-learning-v2 no soporta Windows nativo según revisión local.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 4,
@@ -65,7 +203,23 @@
       "readme": "https://github.com/multica-ai/andrej-karpathy-skills/blob/2c606141936f1eeef17fa3043a72095b4765b9c2/README.md",
       "entrada": "skills/karpathy-guidelines/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "desarrollo",
+        "areas_apoyo": [
+          "producto",
+          "automatizaciones"
+        ],
+        "decision": "referencia breve propuesta",
+        "motivo": "Supuestos/cambios pequeños; solapa guía propia, no requiere activar otro director.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 5,
@@ -81,7 +235,22 @@
       "readme": "https://github.com/DietrichGebert/ponytail/blob/96608e078b2d5ea607c5c3b8b5a54d1c1fba6846/README.md",
       "entrada": "skills/ponytail/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "desarrollo",
+        "areas_apoyo": [
+          "producto"
+        ],
+        "decision": "referencia breve propuesta",
+        "motivo": "Reutilización/simplicidad para revisión de código; sin modo persistente ni hooks.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 6,
@@ -97,7 +266,45 @@
       "readme": "https://github.com/addyosmani/agent-skills/blob/301b02b12bff98e4688e6984af6556802322bbde/README.md",
       "entrada": "skills/context-engineering/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "general",
+        "areas_apoyo": [
+          "organizacion",
+          "aprendizaje"
+        ],
+        "decision": "disponible para encargo pertinente; no requisito general ni carga automática por este piloto",
+        "motivo": "Context-engineering para contexto pertinente; correspondencia Addy con el reel sigue provisional.",
+        "estado": "disponible; comparación terminada para ocho apoyos, Addy sin comparación propia",
+        "rutas_modulo": [
+          "compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md"
+        ],
+        "disponible_en_repo": "Sí, archivos fuente presentes y selección confirmada por Jefa; congelación generales comunicada por Desarrollo, Humanizer liberado por Marketing.",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "Disponibilidad estructural; sin comparación propia en esta tanda.",
+        "aprobado_piloto": false,
+        "evidencia_piloto": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md",
+        "modulos_runtime": [
+          "tercero-addy-context"
+        ],
+        "cobertura_piloto": "Addycontext disponible para uso acotado, sin comparación propia en esta tanda; no atribuir mejora.",
+        "areas_runtime_confirmadas": {
+          "tercero-addy-context": [
+            "marketing",
+            "video",
+            "desarrollo",
+            "automatizaciones",
+            "organizacion",
+            "producto"
+          ]
+        },
+        "resultado_por_modulo": [
+          {
+            "modulo": "tercero-addy-context",
+            "estado": "disponible sin comparación propia; no atribuir mejora"
+          }
+        ]
+      }
     },
     {
       "id": 7,
@@ -113,7 +320,22 @@
       "readme": "https://github.com/Graphify-Labs/graphify/blob/59b5ab1151e031fb42e39cfc9a50bf96f2d57ae0/README.md",
       "entrada": "graphify/skill-codex.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "desarrollo",
+        "areas_apoyo": [
+          "producto"
+        ],
+        "decision": "diferido",
+        "motivo": "Grafo de dependencias sólo si navegar el código bloquea una tarea; evitar análisis/modelo completo sin necesidad.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 8,
@@ -129,7 +351,22 @@
       "readme": "https://github.com/Panniantong/Agent-Reach/blob/7a38047acf26a729cbb27851e3cb81639da86b29/README.md",
       "entrada": "agent_reach/skill/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "aprendizaje",
+        "areas_apoyo": [
+          "marketing"
+        ],
+        "decision": "diferido",
+        "motivo": "Acceso adicional por canal sólo ante fuente no cubierta por conectores; sesiones/dependencias no son necesarias por defecto.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 9,
@@ -145,7 +382,22 @@
       "readme": "https://github.com/Egonex-AI/Understand-Anything/blob/4e6d3299017a7432da15957874992837a315c5b4/README.md",
       "entrada": "understand-anything-plugin/skills/understand/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "producto",
+        "areas_apoyo": [
+          "desarrollo"
+        ],
+        "decision": "diferido",
+        "motivo": "Mapa visual del producto exige análisis inicial y hooks; no duplicar Graphify sin una pregunta de arquitectura.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 10,
@@ -161,7 +413,22 @@
       "readme": "https://github.com/mvanhorn/last30days-skill/blob/e9c31b868ab9d284c1a988e528c3391c51ebf944/README.md",
       "entrada": "skills/last30days/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "marketing",
+        "areas_apoyo": [
+          "aprendizaje"
+        ],
+        "decision": "bajo demanda propuesto",
+        "motivo": "Tendencias/problemas recientes con pregunta/fechas/fuentes; acceso/cookies/API variables y popularidad no es demanda.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 11,
@@ -177,7 +444,20 @@
       "readme": "https://github.com/career-ops-hq/career-ops/blob/7d8feb6d5fcf9f225eb2dd8839ae4b131b703bf3/README.md",
       "entrada": ".agents/skills/career-ops/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "organizacion",
+        "areas_apoyo": [],
+        "decision": "fuera del frente actual",
+        "motivo": "CareerOps se orienta a empleo/CV/entrevistas; no existe encargo de empleo, no convertirlo en CRM.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 12,
@@ -193,7 +473,20 @@
       "readme": "https://github.com/morluto/rea/blob/c3647ade1e557c4179a8b825a37e0c2193cd2526/README.md",
       "entrada": ".agents/skills/reverse-engineer-anything/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "desarrollo",
+        "areas_apoyo": [],
+        "decision": "fuera del frente actual",
+        "motivo": "REA resuelve ingeniería inversa de binarios; ONIA tiene fuentes y no hay demanda de reversing acreditada.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 13,
@@ -209,7 +502,22 @@
       "readme": "https://github.com/garrytan/gstack/blob/e9b40bbd82aa7e53e973f2790aa485a0d4debd3b/README.md",
       "entrada": "SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "producto",
+        "areas_apoyo": [
+          "desarrollo"
+        ],
+        "decision": "diferido",
+        "motivo": "QA de software ante defecto concreto; suite de roles no sustituye reparto actual ni investiga referentes.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 14,
@@ -225,7 +533,22 @@
       "readme": "https://github.com/JuliusBrussee/caveman/blob/2e068f735253cce28256744804785f01887d9646/README.md",
       "entrada": "skills/caveman/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "general",
+        "areas_apoyo": [
+          "organizacion"
+        ],
+        "decision": "diferido como modo global",
+        "motivo": "Concisión puede perder números/negaciones; no imponer estilo Caveman a toda explicación.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 15,
@@ -241,7 +564,22 @@
       "readme": "https://github.com/thedotmack/claude-mem/blob/02584c4ac9d92fea45adf5c61e22c546b5738621/README.md",
       "entrada": "plugin/skills/mem-search/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "organizacion",
+        "areas_apoyo": [
+          "general"
+        ],
+        "decision": "diferido",
+        "motivo": "Memoria/servicios de sesión agregan operación; primero probar continuidad explícita y recuperación existentes.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 16,
@@ -257,7 +595,22 @@
       "readme": "https://github.com/headroomlabs-ai/headroom/blob/038af599e1a3c5e7e6b3047781aaf9ba2bbbf8bd/README.md",
       "entrada": "wiki/learn.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "general",
+        "areas_apoyo": [
+          "desarrollo"
+        ],
+        "decision": "diferido",
+        "motivo": "Proxy/MCP/compresión añaden infraestructura; learn no equivale necesariamente a proxy continuo, elegir sólo tarea real.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 17,
@@ -273,7 +626,22 @@
       "readme": "https://github.com/gsd-build/get-shit-done/blob/bdcaab2c752d9a33a1a1ca9acf3a3c81fb991815/README.md",
       "entrada": "README.md (redirige al nuevo repositorio)",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "desarrollo",
+        "areas_apoyo": [
+          "producto"
+        ],
+        "decision": "diferido",
+        "motivo": "Framework por fases y destino oficial descargado aparte; revisar instalador Codex antes de adoptar segunda coordinación.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 18,
@@ -289,7 +657,22 @@
       "readme": "https://github.com/bmad-code-org/BMAD-METHOD/blob/022be9314e4facd16826104a9f8033e1c5ed4fdc/README.md",
       "entrada": "skills/bmad-build/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "producto",
+        "areas_apoyo": [
+          "desarrollo"
+        ],
+        "decision": "diferido",
+        "motivo": "BMAD V7alpha añade metodología amplia; no instalar framework completo para una mejora acotada.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 19,
@@ -305,7 +688,40 @@
       "readme": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/713eef51b04efc98d6fa565323b495f7c9c89fd4/README.md",
       "entrada": ".claude/skills/ui-ux-pro-max/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "producto",
+        "areas_apoyo": [
+          "video"
+        ],
+        "decision": "disponible para encargo pertinente; no requisito general ni carga automática por este piloto",
+        "motivo": "UIUX wrapper de revisión estática sólo asignado a Producto en runtime;47archivosMIT/PROVENANCE/hash, no implementación automática.",
+        "estado": "disponible; comparación terminada para ocho apoyos, Addy sin comparación propia",
+        "rutas_modulo": [
+          "compartibles/terceros/visual/19-ui-ux-pro-max/USO-ONIA.md"
+        ],
+        "disponible_en_repo": "Sí; selección confirmada por Jefa, wrapper y fuente/recursos versionables conPROVENANCE/hash.",
+        "descubierto_nativo": "No demostrado en catálogo nativo de app; ruta repo y --apoyo documentados.",
+        "invocado_cargado": "Recibos/cargas y hashes auditados para los módulos ensayados; no garantía de memoria interna. Addy sin comparación propia.",
+        "aprobado_piloto": false,
+        "evidencia_piloto": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md",
+        "modulos_runtime": [
+          "tercero-visual-uiux"
+        ],
+        "areas_runtime_confirmadas": {
+          "tercero-visual-uiux": [
+            "producto"
+          ]
+        },
+        "resultado_por_modulo": [
+          {
+            "modulo": "tercero-visual-uiux",
+            "caso": "producto",
+            "estado": "ensayado; no alcanza umbral; limitar al encargo pertinente",
+            "evidencia": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md"
+          }
+        ]
+      }
     },
     {
       "id": 20,
@@ -321,7 +737,22 @@
       "readme": "https://github.com/Leonxlnx/taste-skill/blob/12af471f627f866411b4bd785b19646d3672784c/README.md",
       "entrada": "skills/taste-skill/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "producto",
+        "areas_apoyo": [
+          "video"
+        ],
+        "decision": "diferido para operación de este caso",
+        "motivo": "Taste:apoyo puntual diferido por proceso y solapamiento; no imposibilidad técnica.",
+        "estado": "clasificado; sin módulo seleccionado en estos pilotos",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 21,
@@ -337,7 +768,23 @@
       "readme": "https://github.com/tt-a1i/archify/blob/a4065941f12be7967436261d9934784e381d423c/README.md",
       "entrada": "archify/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "video",
+        "areas_apoyo": [
+          "producto",
+          "aprendizaje"
+        ],
+        "decision": "diferido para operación de este caso",
+        "motivo": "ArchifyCLI/diagramas fuera del caso de estos pilotos; reconsiderar con entrega de diagramas concreta.",
+        "estado": "clasificado; sin módulo seleccionado en estos pilotos",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 22,
@@ -353,7 +800,22 @@
       "readme": "https://github.com/pbakaus/impeccable/blob/9fadc41729c38fd47d7ae622b501558653f9d2e9/README.md",
       "entrada": ".agents/skills/impeccable/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "producto",
+        "areas_apoyo": [
+          "video"
+        ],
+        "decision": "diferido para operación de este caso",
+        "motivo": "Impeccable:apoyo puntual diferido por proceso y solapamiento; no imposibilidad ni falta de licencia inferida.",
+        "estado": "clasificado; sin módulo seleccionado en estos pilotos",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 23,
@@ -369,7 +831,23 @@
       "readme": "https://github.com/hugohe3/ppt-master/blob/4a68cddaf40dc87891e6b64c6a69ef46adc1110c/README.md",
       "entrada": "skills/ppt-master/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "video",
+        "areas_apoyo": [
+          "marketing",
+          "aprendizaje"
+        ],
+        "decision": "diferido para operación de este caso",
+        "motivo": "PPTMaster diferido hasta encargoPPTXreal que lo justifique.",
+        "estado": "clasificado; sin módulo seleccionado en estos pilotos",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 24,
@@ -385,7 +863,23 @@
       "readme": "https://github.com/cathrynlavery/diagram-design/blob/f24d98b05e2d7a5e68c2dedfe46e5b7173f50118/README.md",
       "entrada": "skills/diagram-design/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "video",
+        "areas_apoyo": [
+          "producto",
+          "aprendizaje"
+        ],
+        "decision": "diferido para operación de este caso",
+        "motivo": "DiagramDesign queda soporte de diagramas, sin operación en este caso.",
+        "estado": "clasificado; sin módulo seleccionado en estos pilotos",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 25,
@@ -401,7 +895,23 @@
       "readme": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/README.md",
       "entrada": "skills/doc-coauthoring/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "general",
+        "areas_apoyo": [
+          "organizacion",
+          "video"
+        ],
+        "decision": "módulos revisados no seleccionados; doc-coauthoring diferido",
+        "motivo": "frontend/theme/canvas tienenApache2 observado, pero no se seleccionaron. Doc-coauthoring conserva licencia exacta sin verificar y flujo interactivo innecesario; no heredar su licencia de esos otros módulos.",
+        "estado": "clasificado; sin módulo seleccionado en estos pilotos",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 26,
@@ -417,7 +927,22 @@
       "readme": "https://github.com/calesthio/OpenMontage/blob/d21f5d4eaa08422b09c7091757a05affcbabb35b/README.md",
       "entrada": ".agents/skills/create-video/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "video",
+        "areas_apoyo": [
+          "desarrollo"
+        ],
+        "decision": "diferido para operación de este caso",
+        "motivo": "OpenMontage requiere clave/cupoHeyGen y duplica motor elegido; paquete diferido.",
+        "estado": "clasificado; sin módulo seleccionado en estos pilotos",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 27,
@@ -433,7 +958,40 @@
       "readme": "https://github.com/heygen-com/hyperframes/blob/3dc82f18e3f99350f9a0c0f1738bcee8d1e44741/README.md",
       "entrada": "skills/hyperframes/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "video",
+        "areas_apoyo": [
+          "marketing"
+        ],
+        "decision": "disponible para encargo pertinente; no requisito general ni carga automática por este piloto",
+        "motivo": "Sólo planificación mediante wrapper USO-ONIA→original/ref;24archivosApache2 conPROVENANCE/hash; no render/modelo/servicio por seleccionarlo.",
+        "estado": "disponible; comparación terminada para ocho apoyos, Addy sin comparación propia",
+        "rutas_modulo": [
+          "compartibles/terceros/visual/27-hyperframes/USO-ONIA.md"
+        ],
+        "disponible_en_repo": "Sí; selección confirmada por Jefa, wrapper y fuente/recursos versionables conPROVENANCE/hash.",
+        "descubierto_nativo": "No demostrado en catálogo nativo de app; ruta repo y --apoyo documentados.",
+        "invocado_cargado": "Recibos/cargas y hashes auditados para los módulos ensayados; no garantía de memoria interna. Addy sin comparación propia.",
+        "aprobado_piloto": false,
+        "evidencia_piloto": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md",
+        "modulos_runtime": [
+          "tercero-visual-hyperframes-plan"
+        ],
+        "areas_runtime_confirmadas": {
+          "tercero-visual-hyperframes-plan": [
+            "video"
+          ]
+        },
+        "resultado_por_modulo": [
+          {
+            "modulo": "tercero-visual-hyperframes-plan",
+            "caso": "video",
+            "estado": "ensayado; no alcanza umbral; limitar al encargo pertinente",
+            "evidencia": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md"
+          }
+        ]
+      }
     },
     {
       "id": 28,
@@ -449,7 +1007,41 @@
       "readme": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/README.md",
       "entrada": "SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "marketing",
+        "areas_apoyo": [
+          "video",
+          "organizacion"
+        ],
+        "decision": "disponible para encargo pertinente; no requisito general ni carga automática por este piloto",
+        "motivo": "Humanizer revisa texto con voz y hechos reales suministrados; no conoce biografía ni debe inventar resultados.",
+        "estado": "disponible; comparación terminada para ocho apoyos, Addy sin comparación propia",
+        "rutas_modulo": [
+          "compartibles/terceros/marketing/humanizer/SKILL.md"
+        ],
+        "disponible_en_repo": "Sí, archivos fuente presentes y selección confirmada por Jefa; congelación generales comunicada por Desarrollo, Humanizer liberado por Marketing.",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "Recibos/cargas y hashes auditados para los módulos ensayados; no garantía de memoria interna. Addy sin comparación propia.",
+        "aprobado_piloto": false,
+        "evidencia_piloto": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md",
+        "modulos_runtime": [
+          "tercero-marketing-humanizer"
+        ],
+        "areas_runtime_confirmadas": {
+          "tercero-marketing-humanizer": [
+            "marketing"
+          ]
+        },
+        "resultado_por_modulo": [
+          {
+            "modulo": "tercero-marketing-humanizer",
+            "caso": "marketing",
+            "estado": "ensayado; no alcanza umbral; limitar al encargo pertinente",
+            "evidencia": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md"
+          }
+        ]
+      }
     },
     {
       "id": 29,
@@ -465,7 +1057,22 @@
       "readme": "https://github.com/ayghri/i-have-adhd/blob/1ecea1993b7fce257ffbd686c070948b5e07eda6/README.md",
       "entrada": "skills/i-have-adhd/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "organizacion",
+        "areas_apoyo": [
+          "aprendizaje"
+        ],
+        "decision": "referencia acotada propuesta",
+        "motivo": "Próxima acción y continuidad sin diagnóstico TDAH ni modo obligatorio; conservar compromisos reales en privado.",
+        "estado": "mapeado; entrega de módulos y selección final pendientes de confirmación de Jefa",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     },
     {
       "id": 30,
@@ -481,7 +1088,66 @@
       "readme": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/README.md",
       "entrada": "skills/events/SKILL.md",
       "alcance": "Lectura documental dirigida de README, entrada y secciones pertinentes; inventario del árbol. No auditoría completa de código ni prueba de ejecución.",
-      "instalado_en_esta_revision": false
+      "instalado_en_esta_revision": false,
+      "integracion_por_areas_2026_11_06": {
+        "area_principal": "marketing",
+        "areas_apoyo": [
+          "video"
+        ],
+        "decision": "copywriting/offers pospuestos para este piloto",
+        "motivo": "Encaje/carga y proyección de ofertas sin datos disponibles. Citas o atribuciones no prueban incompatibilidad de licencia; no usar ese argumento como causa de exclusión.",
+        "estado": "diferido en módulos copywriting/offers; no invalida otras tareas pertinentes del catálogo",
+        "rutas_modulo": [],
+        "disponible_en_repo": "no acreditado para el módulo propuesto en este corte; ZIP ignorado no prueba portabilidad",
+        "descubierto_nativo": "no acreditado para módulo propuesto; Research tiene observación local específica en auditoría",
+        "invocado_cargado": "pendiente de evidencia del piloto de esta tanda",
+        "aprobado_piloto": false,
+        "evidencia_piloto": null
+      }
     }
-  ]
+  ],
+  "actualizacion_por_areas": {
+    "fecha": "2026-11-06",
+    "encargo": "habilidades-areas-20261106",
+    "estado": "Unidad de integración y piloto terminada con límites:9apoyos disponibles,8comparaciones; ninguna mejora alcanzó umbral previo. No carga automática ni requisito general.",
+    "tabla_decisiones": "auditoria-30-repos.md#decisión-por-candidato",
+    "mapa_por_seccion": "SKILLS-POR-AREA.md",
+    "nota": "Se conservan date/source/repository/revision/decision originales; campos fechados de integración no equivalen a instalación o uso. General y Aprendizaje son roles fuera de6clavesCLI. No adopción de permisos o reglas de terceros.",
+    "limite": "Archivos presentes y23tests del harness sólo acreditan integración estructural; no mejora ni piloto aprobado.",
+    "cobertura_pilotos": {
+      "integracion_estructural_apoyos": 9,
+      "comparaciones_conductuales_predefinidas": 8,
+      "secciones": "7áreas+general; no todo el potencial del catálogo",
+      "modulos_comparados": [
+        "tercero-matt-writing-agents",
+        "tercero-superpowers-debug",
+        "tercero-superpowers-verify",
+        "tercero-matt-handoff-onia",
+        "tercero-matt-research",
+        "tercero-marketing-humanizer",
+        "tercero-visual-hyperframes-plan",
+        "tercero-visual-uiux"
+      ],
+      "disponible_sin_comparacion_propia": [
+        "tercero-addy-context"
+      ],
+      "criterio": "Conservar negativos/empates; no añadir ensayo tras ver resultados para aumentar cobertura; no afirmar9skills probadas.",
+      "estado": "terminado con resultados conservados; ninguna mejora alcanzó umbral",
+      "evidencia": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md"
+    },
+    "evidencia_integracion": [
+      "compartibles/terceros/INTEGRACION.md",
+      "compartibles/terceros/MANIFIESTO.json"
+    ],
+    "resultado_piloto": {
+      "informe": "continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md",
+      "casos": 8,
+      "brazos": 16,
+      "repeticiones": 0,
+      "mejoras_umbral": 0,
+      "decision_jefa": "Ocho ensayados limitados al encargo pertinente; no aprobados como mejora general ni declarados inútiles. Addy disponible sin comparación propia.",
+      "limites": "Techo basal18–20, una pareja/caso; sin tokens/latencia comparables. Marketing cegamiento parcial:−1 no demuestra daño causal. Organización juez sin rutas conocidas por generadores; sin recalificación.",
+      "trazabilidad": "Exploratorio:24prompts exactos (16brazos+8jueces) desconocidos; rollout/API no permitieron recuperar texto. No auditable igualdad literal ni diferencias de instrucciones. Fixtures/configuración declarada, recibos/hashes yraw sí cotejados. Sin reconstruir/repetir/recalificar."
+    }
+  }
 }

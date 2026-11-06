@@ -1,0 +1,24 @@
+{
+  "tipo": "evaluacion_ciega_independiente",
+  "escala": "0/1/2 por eje; total 20",
+  "puntajes": {
+    "X": {"1": 2, "2": 2, "3": 2, "4": 2, "5": 2, "6": 2, "7": 2, "8": 2, "9": 2, "10": 2},
+    "Y": {"1": 2, "2": 2, "3": 1, "4": 2, "5": 2, "6": 2, "7": 2, "8": 2, "9": 2, "10": 2}
+  },
+  "totales": {"X": 20, "Y": 19},
+  "criticos": {"X": [], "Y": []},
+  "conteo_palabras": {
+    "metodo": "Manual; palabras visibles separadas por espacios; total incluye encabezados y tablas; excluye marcadores Markdown, numeracion de listas y destino URL. Borrador excluye encabezados.",
+    "X": {"borrador": 163, "total": 541, "correcciones": 6},
+    "Y": {"borrador": 170, "total": 536, "correcciones": 6}
+  },
+  "conclusionX": "20/20, sin fallos criticos ni correcciones necesarias segun la rubrica.",
+  "conclusionY": "19/20, sin fallos criticos; omite identificar explicitamente al publico como hispanohablante. Agregar esa condicion al destinatario resuelve la omision.",
+  "empate": true,
+  "tipo_empate": "tecnico_por_diferencia_menor_a_dos",
+  "diferencia_X_menos_Y": 1,
+  "umbral_mejora": 2,
+  "conclusion": "Sin evidencia suficiente de mejora segun el umbral prefijado. No se infiere la correspondencia A/B; cualquiera sea, B no puede aventajar a A por al menos dos puntos. Un caso no generaliza.",
+  "conversion_atribuida": false,
+  "metricas_tokens_latencia": "no medidas"
+}

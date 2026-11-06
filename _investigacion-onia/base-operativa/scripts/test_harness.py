@@ -48,6 +48,53 @@ class HarnessTests(unittest.TestCase):
             self.prepare(area="inexistente")
         self.assertFalse((self.base / "operacion").exists())
 
+    def test_ensayo_incompleto_no_crea_archivos(self):
+        with self.assertRaisesRegex(ValueError, "Ensayo requiere"):
+            harness.prepare(self.base, "ensayo-1", "desarrollo", "Evaluar", "Informe", "Control",
+                            ensayo=True, investigacion="reglas-comunes.md",
+                            capacidad="Audio y fuente documentada", control="Silencio decide",
+                            leccion="No inferir RAM de pesos")
+        self.assertFalse((self.base / "operacion").exists())
+        result = subprocess.run([sys.executable, str(Path(harness.__file__).resolve()),
+                                 "--base", str(self.base), "preparar", "ensayo-2",
+                                 "--area", "desarrollo", "--objetivo", "Evaluar",
+                                 "--entregable", "Informe", "--aceptacion", "Control", "--ensayo"],
+                                capture_output=True, text=True, encoding="utf-8")
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("Ensayo requiere", json.loads(result.stdout)["error"])
+        self.assertFalse((self.base / "operacion").exists())
+
+    def test_ensayo_exige_fuente_existente_y_no_privada(self):
+        fields = dict(ensayo=True, capacidad="Audio; fuente documentada", hipotesis="Cabe con RAM por medir",
+                      control="Silencio: detener si inventa eventos", leccion="No inferir RAM de pesos")
+        for source in ("inexistente.md", "privado/contexto.md", "../fuera.md"):
+            with self.subTest(source=source), self.assertRaises(ValueError):
+                harness.prepare(self.base, "ensayo-1", "desarrollo", "Evaluar", "Informe", "Control",
+                                investigacion=source, **fields)
+        self.assertFalse((self.base / "operacion").exists())
+
+    def test_cli_ensayo_completo_guarda_contexto_y_retoma(self):
+        source = self.base / "investigacion.md"
+        source.write_text("Licencia, compatibilidad, recursos y límites consultados.\n", encoding="utf-8")
+        command = [sys.executable, str(Path(harness.__file__).resolve()), "--base", str(self.base),
+                   "preparar", "ensayo-1", "--area", "desarrollo", "--objetivo", "Evaluar audio",
+                   "--entregable", "Informe", "--aceptacion", "Control informado", "--ensayo",
+                   "--investigacion", "investigacion.md", "--capacidad", "Audio y fuente oficial",
+                   "--hipotesis", "RAM pico desconocida; medir", "--control", "Silencio: detener si inventa",
+                   "--leccion", "No confundir pesos en disco con RAM"]
+        result = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", check=True)
+        brief = (self.base / json.loads(result.stdout)["briefing"]).read_text(encoding="utf-8")
+        for item in ("../../investigacion.md", "Audio y fuente oficial", "RAM pico desconocida",
+                     "Silencio: detener", "No confundir pesos"):
+            self.assertIn(item, brief)
+        self.assertEqual(harness.resume(self.base, "ensayo-1")["tarea"]["estado"], "preparado")
+
+    def test_datos_ensayo_sin_declaracion_se_rechazan(self):
+        with self.assertRaisesRegex(ValueError, "declarar --ensayo"):
+            harness.prepare(self.base, "ensayo-1", "desarrollo", "Objetivo", "Entrega", "Control",
+                            investigacion="reglas-comunes.md")
+        self.assertFalse((self.base / "operacion").exists())
+
     def test_duplicates_preserve_both_files(self):
         result = self.prepare()
         brief = self.base / result["briefing"]
@@ -98,6 +145,81 @@ class HarnessTests(unittest.TestCase):
                 if area == "producto":
                     self.assertEqual(result["modo"], "briefing")
                     self.assertIn("Sólo briefing hasta identificar y leer", text)
+
+    def test_apoyo_explicito_solo_en_contexto_del_area(self):
+        research = "tercero-matt-research"
+        for area in self.data["areas"]:
+            with self.subTest(area=area):
+                result = harness.prepare(self.base, "apoyo-" + area, area, "Objetivo", "Entrega", "Prueba",
+                                         apoyos=[research, research])
+                self.assertEqual(result["apoyos_seleccionados"], [research])
+                brief = (self.base / result["briefing"]).read_text(encoding="utf-8")
+                context = brief.split("## Contexto mínimo", 1)[1].split("## Skills de apoyo disponibles", 1)[0]
+                self.assertIn(self.data["skills"][research], context)
+                self.assertNotIn(self.data["skills"]["tercero-addy-context"], context)
+                self.assertIn(self.data["skills"][research], harness.resume(self.base, "apoyo-" + area)["briefing"])
+
+    def test_apoyo_ajeno_no_escribe_encargo(self):
+        with self.assertRaisesRegex(ValueError, "Apoyo no habilitado"):
+            harness.prepare(self.base, "apoyo-invalido", "marketing", "Objetivo", "Entrega", "Prueba",
+                            apoyos=["tercero-superpowers-debug"])
+        self.assertFalse((self.base / "operacion").exists())
+
+    def test_referencia_tercera_no_sustituye_directora(self):
+        with self.assertRaisesRegex(ValueError, "como apoyo"):
+            harness.prepare(self.base, "director-ajeno", "video", "Objetivo", "Entrega", "Prueba",
+                            skill="tercero-matt-research")
+        self.assertFalse((self.base / "operacion").exists())
+
+    def test_todas_las_referencias_terceras_son_solo_apoyo(self):
+        for name, path in self.data["skills"].items():
+            if not path.startswith("compartibles/terceros/"):
+                continue
+            self.assertTrue(name.startswith("tercero-"), name)
+            for area, route in self.data["areas"].items():
+                if name in route.get("skills_apoyo", []):
+                    with self.subTest(area=area, apoyo=name), self.assertRaisesRegex(ValueError, "como apoyo"):
+                        harness.prepare(self.base, "tercero-" + area, area, "Objetivo", "Entrega", "Prueba",
+                                        skill=name)
+        self.assertFalse((self.base / "operacion").exists())
+
+    def test_humanizer_limitado_a_apoyo_marketing(self):
+        result = harness.prepare(self.base, "humanizer-marketing", "marketing", "Revisar texto",
+                                 "Borrador", "Criterio comprobable",
+                                 apoyos=["tercero-marketing-humanizer"])
+        brief = (self.base / result["briefing"]).read_text(encoding="utf-8")
+        context = brief.split("## Contexto mínimo", 1)[1].split("## Skills de apoyo disponibles", 1)[0]
+        self.assertIn(self.data["skills"]["tercero-marketing-humanizer"], context)
+        with self.assertRaisesRegex(ValueError, "Apoyo no habilitado"):
+            harness.prepare(self.base, "humanizer-video", "video", "Objetivo", "Entrega", "Prueba",
+                            apoyos=["tercero-marketing-humanizer"])
+        self.assertFalse((self.base / "operacion/encargos/humanizer-video.md").exists())
+
+    def test_apoyos_visuales_cargan_solo_su_area(self):
+        for area, key in (("video", "tercero-visual-hyperframes-plan"),
+                          ("producto", "tercero-visual-uiux")):
+            with self.subTest(area=area):
+                result = harness.prepare(self.base, "visual-" + area, area, "Objetivo", "Entrega", "Prueba",
+                                         apoyos=[key])
+                brief = (self.base / result["briefing"]).read_text(encoding="utf-8")
+                context = brief.split("## Contexto mínimo", 1)[1].split("## Skills de apoyo disponibles", 1)[0]
+                self.assertIn(self.data["skills"][key], context)
+        with self.assertRaisesRegex(ValueError, "Apoyo no habilitado"):
+            harness.prepare(self.base, "ui-desarrollo", "desarrollo", "Objetivo", "Entrega", "Prueba",
+                            apoyos=["tercero-visual-uiux"])
+        self.assertFalse((self.base / "operacion/encargos/ui-desarrollo.md").exists())
+
+    def test_cli_apoyo_seleccionado_se_recupera(self):
+        script = str(Path(harness.__file__).resolve())
+        command = [sys.executable, script, "--base", str(self.base)]
+        result = subprocess.run(command + ["preparar", "apoyo-cli", "--area", "video",
+                                "--objetivo", "Objetivo", "--entregable", "Entrega", "--aceptacion", "Revisado",
+                                "--apoyo", "tercero-matt-research"], capture_output=True,
+                                text=True, encoding="utf-8", check=True)
+        self.assertEqual(json.loads(result.stdout)["apoyos_seleccionados"], ["tercero-matt-research"])
+        resumed = subprocess.run(command + ["retomar", "apoyo-cli"], capture_output=True,
+                                 text=True, encoding="utf-8", check=True)
+        self.assertIn(self.data["skills"]["tercero-matt-research"], json.loads(resumed.stdout)["briefing"])
 
     def test_cli_selects_continuity_without_loading_agenda_as_director(self):
         script = str(Path(harness.__file__).resolve())

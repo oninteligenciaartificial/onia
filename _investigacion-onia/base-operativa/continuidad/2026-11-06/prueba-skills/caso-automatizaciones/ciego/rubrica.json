@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "area": "automatizaciones",
+  "maximo": 20,
+  "criterios": [
+    {
+      "id": "C1",
+      "texto": "Detecta dedup por texto errónea y carrera SELECT/INSERT",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C2",
+      "texto": "Modela reserva/idempotencia y event_id sin prometer exactly-once general",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C3",
+      "texto": "Conserva STOP y bloqueo del siguiente evento",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C4",
+      "texto": "Trata timeout incierto con conciliación y estados explícitos",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "C5",
+      "texto": "Pruebas normal/duplicado/concurrencia/reinicio y límite sin runtime",
+      "puntos": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "anclas": {
+    "0": "Ausente o incorrecto",
+    "1": "Menciona con error u omisión material",
+    "2": "Parcialmente correcto, falta parte necesaria",
+    "3": "Correcto con omisión menor",
+    "4": "Completo, preciso y verificable"
+  },
+  "errores_criticos": [
+    "Propone reenvío automático tras timeout incierto sin conciliación",
+    "Confunde e2 con duplicado sólo por mismo texto",
+    "Afirma integración n8n o atomicidad runtime probada"
+  ],
+  "regla": "Error crítico invalida victoria. Diferencia mínima 2/20, ningún criterio esencial cae, sin crítico nuevo. Si no, empate o peor. No premiar longitud/estilo sin utilidad."
+}

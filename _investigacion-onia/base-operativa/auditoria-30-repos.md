@@ -1,5 +1,32 @@
 # Revisión de los 30 repositorios y selección para ONIA
 
+## Integración por áreas ·6/11/2026 ·integración estructural terminada
+
+Pedido vigente de Sergio: incorporar fuentes útiles por sección y probar si mejoran resultados. Organización mantiene el [mapa de carga](SKILLS-POR-AREA.md), la tabla30de abajo y los [campos de integración fechados](catalogo-repos-2026-11-03.json); no repite auditoría ni instala fuentes. Desarrollo/Marketing/Video entregan módulos versionables bajo `compartibles/terceros`; Jefa confirma selección. Aprendizaje prepara8pares (7áreas+general) con fixtures/rúbrica previos y juez ciego. Jefa confirmó9apoyos copiados:6generales,Humanizer y2visuales. Son módulos, no9repositorios. Integración6paquetes/9apoyos terminada. Los8juicios, informe/auditoría y decisión de Jefa están terminados; ninguna mejora alcanzó umbral. UIUX sólo Producto, HyperFrames-plan Video; General/Aprendizaje usan apoyos por rol. Fuentes nativas de app no demostradas; rutasrepo/--apoyo sí documentados. No confundir existencia/23tests estructurales del harness con mejora. Investigación archivada localmente, descubrimiento nativo, carga y mejora comprobada son estados distintos. No staging/commit/push autorizados por esta unidad.
+
+## Actualización local · 6 de noviembre de 2026
+
+Sergio pidió descargar los 30 repositorios del catálogo y elegir una skill para mejorar el análisis. Las decisiones de selección anteriores son un corte histórico: «posponer» no bloquea esta descarga autorizada ni describe su estado actual. **Descarga y extracción 30/30 terminadas** en `operacion/catalogo-30-skills`, más el destino oficial documentado de GSD: 31 ZIP, 696.451.168 bytes comprimidos, integridad CRC comprobada por Desarrollo y SHA-256/tamaño cotejados independientemente por Jefa. [Índice local](operacion/catalogo-30-skills/INDICE.md) y [manifiesto](operacion/catalogo-30-skills/manifiesto.json) recuperan fuentes, revisiones y rutas; estos artefactos ignorados no se publicaron ni viajan con Git. La asociación de Agent Skills con Addy Osmani sigue siendo provisional. No se ejecutaron las herramientas descargadas.
+
+Se eligió [Research de Matt Pocock](https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/research/SKILL.md), revisión `4ae2317ddb22b046e26455e4f9c9b3aaaf62212d`: exige fuentes primarias y hallazgos citados en el registro existente. Fue instalada en `C:/Users/PC/.codex/skills/mattpocock-research`, con `SKILL.md`, `agents/openai.yaml` y [licencia MIT original](https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/LICENSE). Root comprobó que el blob de `SKILL.md`, normalizado a LF, coincide con la fuente: `ffc9eb89849cc4cf74962ce93d786ffd17c6a5dc`. El catálogo nativo de esta sesión ya anuncia Research y su archivo local fue leído; resta comprobar descubrimiento en una sesión nueva.
+
+Requiere un agente de investigación disponible; no declara credenciales, gasto, hooks ni otro coordinador. Instalar instrucciones no acredita percepción audiovisual ni calidad de sus resultados. Este cambio es local; no acredita publicación privada autorizada.
+
+### Selección general propuesta · 6/11
+
+Todos están descargados; sólo Research está instalada por este encargo. Lo siguiente propone usos: no acredita adopción aceptada por Sergio ni nuevas instalaciones.
+
+- **[Matt Pocock](https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/README.md#L19), base por módulos:** Research para fuentes primarias; `writing-for-agents` para contexto pertinente y cierres comprobables; `handoff` para continuidad sin duplicar artefactos, adaptando su destino temporal al registro existente. No imponer issues/TDD a toda tarea.
+- **[Superpowers](https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/README.md#L308), apoyo puntual:** diagnóstico/verificación; su metodología obligatoria de desarrollo no dirige todos los encargos.
+- **Addy, apoyo:** `context-engineering` para recortar contexto; identidad del reel provisional.
+- **[Ponytail](https://github.com/DietrichGebert/ponytail/blob/96608e078b2d5ea607c5c3b8b5a54d1c1fba6846/skills/ponytail/SKILL.md#L15), revisión de simplicidad en código:** sin activación persistente ni hooks. **[Karpathy](https://github.com/multica-ai/andrej-karpathy-skills/blob/2c606141936f1eeef17fa3043a72095b4765b9c2/skills/karpathy-guidelines/SKILL.md#L9), referencia breve:** solapa simplicidad y verificación; no añade coordinación.
+- **ECC:** conservar lecciones con evidencia; posponer observador: Windows nativo no soportado según `continuous-learning-v2`, líneas 243–246.
+- **GSD:** alternativa real para proyectos software por fases; posponer adopción hasta evaluar instalador Codex. **gstack:** QA ante encargo software, no base para referentes. **BMAD:** posponer instalación general del snapshot V7 alpha.
+- **Claude-Mem y Headroom:** posponer servicios/análisis de memoria por requisitos adicionales; no afirmar que `learn` de Headroom exige proxy continuo.
+- **Caveman:** sin activación general; concisión preservando números y negaciones. **I Have ADHD:** sólo claridad de próxima acción, sin diagnóstico.
+
+Selección documental, sin prueba comparativa de rendimiento.
+
 > Informe de la fase de selección. La implementación local posterior y sus pruebas se consultan en [ESTADO.md](ESTADO.md); las declaraciones de no instalación de este informe corresponden al momento de la revisión documental.
 
 Fecha: 3 de noviembre de 2026. Responsable de la decisión final: Sergio. Esta revisión sustituye la cobertura parcial del catálogo anterior. ONIA-CENTRAL no se consultó ni se utilizó para esta selección.
@@ -20,40 +47,48 @@ Los números de ahorro, tokens y conversiones publicados por los autores no se t
 
 El [registro estructurado](catalogo-repos-2026-11-03.json) conserva URL, revisión consultada, entrada y decisión. Los enlaces de archivo siguientes fijan la revisión examinada.
 
+**Cobertura fijada antes de resultados:**9apoyos disponibles/integrados estructuralmente frente a8comparaciones conductuales predefinidas:Mattwriting,Superdebug,Superverify,Matthandoff,Mattresearch,Humanizer,HyperFrames-plan yUIUX. Addycontext queda disponible para uso acotado **sin comparación propia**; no atribuirle mejora ni afirmar «9skills probadas». Los8pares cubren7áreas+general, no todo el potencial del catálogo. Conservar negativos y empates; no añadir ensayo después de ver resultados para aumentar cobertura.
+
+**Cierre aceptado por Jefa:** integración6paquetes/9apoyos disponible; piloto8casos/16brazos terminado, ninguna mejora alcanzó el umbral previo. Los ocho ensayados se limitan al encargo pertinente, sin requisito general/carga automática; no significa inutilidad. Addy sin comparación propia. [Tabla única de resultados e informe](continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md) conserva puntajes/umbrales, recibos y auditoría, sin duplicar raw aquí. Techo basal18–20, una pareja/caso y sin tokens/latencia comparables. Marketing tuvo cegamiento parcial por Humanizer/protocoloA/B en rúbrica:−1 no demuestra daño causal. Organización: juez sin rutas que generadores conocían; límite conservado, sin recalificar ni repetir.
+
+**Trazabilidad exploratoria limitada:**los16mensajes exactos de brazos y8de jueces no se exportaron antes;24prompts desconocidos, sin texto recuperable en rollout/API según cotejo de Jefa. No puede auditarse igualdad literal de encargos, ni afirmar diferencias verificadas de instrucciones. Sí se cotejaron fixtures/configuración declarada, recibos/hashes yraw; esto no reemplaza los prompts. Puntajes intactos, ninguna mejora sobre umbral y ningún requisito general justificado. [Informe](continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md).
+
 ## Decisión por candidato
 
-| # | Candidato | Decisión | Para qué sirve en nuestro caso |
-|---|---|---|---|
-| 1 | [Superpowers](https://github.com/obra/superpowers) | Referencia | Diagnóstico de bugs y comprobación de resultados. |
-| 2 | [Matt Pocock Skills](https://github.com/mattpocock/skills) | Adaptar ahora | Proceso propio de desarrollo: encargo acotado → implementación → verificación → revisión. |
-| 3 | [ECC](https://github.com/affaan-m/ECC) | Referencia | Aprendizaje por proyecto, evidencias y separación de patrones locales/globales. |
-| 4 | [Karpathy Skills](https://github.com/multica-ai/andrej-karpathy-skills) | Referencia | Cambios pequeños, supuestos explícitos y criterio de éxito. |
-| 5 | [Ponytail](https://github.com/DietrichGebert/ponytail) | Referencia | Reutilizar lo existente y reducir código innecesario sin quitar validación. |
-| 6 | [Agent Skills (Addy Osmani)](https://github.com/addyosmani/agent-skills) | Referencia | Continuidad y selección del contexto pertinente. |
-| 7 | [Graphify](https://github.com/Graphify-Labs/graphify) | Posponer | Mapa estructural local y consultas sobre dependencias de ONIA. |
-| 8 | [Agent Reach](https://github.com/Panniantong/Agent-Reach) | Posponer | Lectura de plataformas que las herramientas disponibles no cubran. |
-| 9 | [Understand Anything](https://github.com/Egonex-AI/Understand-Anything) | Posponer | Mapa visual del producto con explicaciones de componentes. |
-| 10 | [Last30Days](https://github.com/mvanhorn/last30days-skill) | Adaptar bajo demanda | Investigar problemas, conversaciones y temas de contenido recientes. |
-| 11 | [CareerOps](https://github.com/career-ops-hq/career-ops) | Fuera de esta etapa | Evaluación de empleos, CV, postulaciones e entrevistas. |
-| 12 | [REA](https://github.com/morluto/rea) | Fuera de esta etapa | Ingeniería inversa de binarios, aplicaciones y ejecución. |
-| 13 | [gstack](https://github.com/garrytan/gstack) | Posponer | Suite de roles de producto, revisión, QA y entrega. |
-| 14 | [Caveman](https://github.com/JuliusBrussee/caveman) | Fuera de esta etapa | Estilo de respuesta y reducción de contexto mediante otros componentes. |
-| 15 | [Claude-Mem](https://github.com/thedotmack/claude-mem) | Posponer | Memoria de sesiones y recuperación por búsqueda → contexto → detalles. |
-| 16 | [Headroom](https://github.com/headroomlabs-ai/headroom) | Posponer | Compresión de contexto, proxy/MCP y aprendizaje de sesiones. |
-| 17 | [GSD](https://github.com/gsd-build/get-shit-done) | Posponer | Fases, estados persistentes y ejecución con contextos separados. |
-| 18 | [BMAD Method](https://github.com/bmad-code-org/BMAD-METHOD) | Posponer | Briefs, arquitectura, historias, implementación y revisión. |
-| 19 | [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Referencia | Biblioteca local de patrones UI, accesibilidad y estilos. |
-| 20 | [Taste](https://github.com/Leonxlnx/taste-skill) | Referencia | Dirección visual y revisión de páginas mediante navegador. |
-| 21 | [Archify](https://github.com/tt-a1i/archify) | Posponer | Diagramas de arquitectura y explicaciones HTML. |
-| 22 | [Impeccable](https://github.com/pbakaus/impeccable) | Adaptar ahora | Revisión visual de landing y producto: jerarquía, móvil, accesibilidad y estados. |
-| 23 | [PPT Master](https://github.com/hugohe3/ppt-master) | Posponer | Presentaciones PPTX editables para talleres/webinars. |
-| 24 | [Diagram Design](https://github.com/cathrynlavery/diagram-design) | Referencia | Diagramas HTML/SVG con marca y exportación. |
-| 25 | [Skills by Anthropic](https://github.com/anthropics/skills) | Referencia | Patrones de documentación, pruebas de lectura y skills específicas. |
-| 26 | [OpenMontage](https://github.com/calesthio/OpenMontage) | Posponer paquete completo | Producción de video con pipelines, herramientas locales y proveedores generativos. |
-| 27 | [HyperFrames](https://github.com/heygen-com/hyperframes) | Adaptar ahora | Motor elegido por Sergio para videos, overlays, subtítulos y piezas verticales. |
-| 28 | [Humanizer](https://github.com/blader/humanizer) | Adaptar ahora | Editar guiones y textos para conservar la voz de Sergio y quitar relleno. |
-| 29 | [I Have ADHD](https://github.com/ayghri/i-have-adhd) | Referencia | Próxima acción clara y continuidad visible. |
-| 30 | [Marketing Skills](https://github.com/coreyhaines31/marketingskills) | Adaptar ahora | Oferta, embudo, webinars, contenido, anuncios y medición. |
+**Corte vigente de organización,6/11:**30/30con área principal y apoyos. Selección actual y diferidos específicos; rutas confirmadas de9módulos en mapa/JSON, uso/pilotos todavía pendientes. Revisión original y decisiones del3/11 se conservan en cada ficha posterior y campos originales del JSON; no son el estado de integración actual. Ésta es la única tabla30de decisiones; [mapa por sección](SKILLS-POR-AREA.md) no duplica el catálogo.
+
+| # | Candidato/fuente | Área principal | Apoyos | Decisión actual del corte | Motivo / condición específica |
+|---|---|---|---|---|---|
+| 1 | [Superpowers](https://github.com/obra/superpowers) | desarrollo | producto, automatizaciones, general | Disponible; comparación sin umbral de mejora, uso acotado | Diagnóstico y verificación puntuales; no importar bootstrap/TDD obligatorio para todo encargo. Módulos integrados estructuralmente; comparación terminada sin alcanzar umbral; limitar al encargo pertinente, sin carga automática. |
+| 2 | [Matt Pocock Skills](https://github.com/mattpocock/skills) | general | desarrollo, organizacion, aprendizaje | Disponible; comparación sin umbral de mejora, uso acotado | Research, escritura para agentes y handoff: fuentes primarias/contexto/cierre; adaptar destino al registro existente, no duplicar coordinación. Módulos integrados estructuralmente; comparación terminada sin alcanzar umbral; limitar al encargo pertinente, sin carga automática. |
+| 3 | [ECC](https://github.com/affaan-m/ECC) | aprendizaje | general, desarrollo | referencia; observador diferido | Aprendizaje con evidencia por proyecto; observador continuous-learning-v2 no soporta Windows nativo según revisión local. |
+| 4 | [Karpathy Skills](https://github.com/multica-ai/andrej-karpathy-skills) | desarrollo | producto, automatizaciones | referencia breve propuesta | Supuestos/cambios pequeños; solapa guía propia, no requiere activar otro director. |
+| 5 | [Ponytail](https://github.com/DietrichGebert/ponytail) | desarrollo | producto | referencia breve propuesta | Reutilización/simplicidad para revisión de código; sin modo persistente ni hooks. |
+| 6 | [Agent Skills (Addy Osmani)](https://github.com/addyosmani/agent-skills) | general | organizacion, aprendizaje | Disponible; limitar al encargo pertinente (Addy sin comparación propia) | Context-engineering para contexto pertinente; correspondencia Addy con el reel sigue provisional. Módulos integrados estructuralmente; comparación terminada sin alcanzar umbral; limitar al encargo pertinente, sin carga automática. |
+| 7 | [Graphify](https://github.com/Graphify-Labs/graphify) | desarrollo | producto | diferido | Grafo de dependencias sólo si navegar el código bloquea una tarea; evitar análisis/modelo completo sin necesidad. |
+| 8 | [Agent Reach](https://github.com/Panniantong/Agent-Reach) | aprendizaje | marketing | diferido | Acceso adicional por canal sólo ante fuente no cubierta por conectores; sesiones/dependencias no son necesarias por defecto. |
+| 9 | [Understand Anything](https://github.com/Egonex-AI/Understand-Anything) | producto | desarrollo | diferido | Mapa visual del producto exige análisis inicial y hooks; no duplicar Graphify sin una pregunta de arquitectura. |
+| 10 | [Last30Days](https://github.com/mvanhorn/last30days-skill) | marketing | aprendizaje | bajo demanda propuesto | Tendencias/problemas recientes con pregunta/fechas/fuentes; acceso/cookies/API variables y popularidad no es demanda. |
+| 11 | [CareerOps](https://github.com/career-ops-hq/career-ops) | organizacion | — | fuera del frente actual | CareerOps se orienta a empleo/CV/entrevistas; no existe encargo de empleo, no convertirlo en CRM. |
+| 12 | [REA](https://github.com/morluto/rea) | desarrollo | — | fuera del frente actual | REA resuelve ingeniería inversa de binarios; ONIA tiene fuentes y no hay demanda de reversing acreditada. |
+| 13 | [gstack](https://github.com/garrytan/gstack) | producto | desarrollo | diferido | QA de software ante defecto concreto; suite de roles no sustituye reparto actual ni investiga referentes. |
+| 14 | [Caveman](https://github.com/JuliusBrussee/caveman) | general | organizacion | diferido como modo global | Concisión puede perder números/negaciones; no imponer estilo Caveman a toda explicación. |
+| 15 | [Claude-Mem](https://github.com/thedotmack/claude-mem) | organizacion | general | diferido | Memoria/servicios de sesión agregan operación; primero probar continuidad explícita y recuperación existentes. |
+| 16 | [Headroom](https://github.com/headroomlabs-ai/headroom) | general | desarrollo | diferido | Proxy/MCP/compresión añaden infraestructura; learn no equivale necesariamente a proxy continuo, elegir sólo tarea real. |
+| 17 | [GSD](https://github.com/gsd-build/get-shit-done) | desarrollo | producto | diferido | Framework por fases y destino oficial descargado aparte; revisar instalador Codex antes de adoptar segunda coordinación. |
+| 18 | [BMAD Method](https://github.com/bmad-code-org/BMAD-METHOD) | producto | desarrollo | diferido | BMAD V7alpha añade metodología amplia; no instalar framework completo para una mejora acotada. |
+| 19 | [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | producto | video | Disponible; comparación sin umbral de mejora, uso acotado | UIUX wrapper de revisión estática sólo asignado a Producto en runtime;47archivosMIT/PROVENANCE/hash, no implementación automática. |
+| 20 | [Taste](https://github.com/Leonxlnx/taste-skill) | producto | video | diferido para operación de este caso | Taste:apoyo puntual diferido por proceso y solapamiento; no imposibilidad técnica. |
+| 21 | [Archify](https://github.com/tt-a1i/archify) | video | producto, aprendizaje | diferido para operación de este caso | ArchifyCLI/diagramas fuera del caso de estos pilotos; reconsiderar con entrega de diagramas concreta. |
+| 22 | [Impeccable](https://github.com/pbakaus/impeccable) | producto | video | diferido para operación de este caso | Impeccable:apoyo puntual diferido por proceso y solapamiento; no imposibilidad ni falta de licencia inferida. |
+| 23 | [PPT Master](https://github.com/hugohe3/ppt-master) | video | marketing, aprendizaje | diferido para operación de este caso | PPTMaster diferido hasta encargoPPTXreal que lo justifique. |
+| 24 | [Diagram Design](https://github.com/cathrynlavery/diagram-design) | video | producto, aprendizaje | diferido para operación de este caso | DiagramDesign queda soporte de diagramas, sin operación en este caso. |
+| 25 | [Skills by Anthropic](https://github.com/anthropics/skills) | general | organizacion, video | módulos revisados no seleccionados; doc-coauthoring diferido | frontend/theme/canvas tienenApache2 observado, pero no se seleccionaron. Doc-coauthoring conserva licencia exacta sin verificar y flujo interactivo innecesario; no heredar su licencia de esos otros módulos. |
+| 26 | [OpenMontage](https://github.com/calesthio/OpenMontage) | video | desarrollo | diferido para operación de este caso | OpenMontage requiere clave/cupoHeyGen y duplica motor elegido; paquete diferido. |
+| 27 | [HyperFrames](https://github.com/heygen-com/hyperframes) | video | marketing | Disponible; comparación sin umbral de mejora, uso acotado | Sólo planificación mediante wrapper USO-ONIA→original/ref;24archivosApache2 conPROVENANCE/hash; no render/modelo/servicio por seleccionarlo. |
+| 28 | [Humanizer](https://github.com/blader/humanizer) | marketing | video, organizacion | Disponible; comparación sin umbral de mejora, uso acotado | Humanizer revisa texto con voz y hechos reales suministrados; no conoce biografía ni debe inventar resultados. Módulos integrados estructuralmente; comparación terminada sin alcanzar umbral; limitar al encargo pertinente, sin carga automática. |
+| 29 | [I Have ADHD](https://github.com/ayghri/i-have-adhd) | organizacion | aprendizaje | referencia acotada propuesta | Próxima acción y continuidad sin diagnóstico TDAH ni modo obligatorio; conservar compromisos reales en privado. |
+| 30 | [Marketing Skills](https://github.com/coreyhaines31/marketingskills) | marketing | video | copywriting/offers pospuestos para este piloto | Encaje/carga y proyección de ofertas sin datos disponibles. Citas o atribuciones no prueban incompatibilidad de licencia; no usar ese argumento como causa de exclusión. |
 
 ## Evidencia y condiciones por repositorio
 

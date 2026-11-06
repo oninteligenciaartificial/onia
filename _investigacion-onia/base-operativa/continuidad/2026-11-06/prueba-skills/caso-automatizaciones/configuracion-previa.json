@@ -1,0 +1,29 @@
+{
+  "esfuerzo": "medium",
+  "brazos": {
+    "brazo-02": "candidato",
+    "brazo-01": "baseline"
+  },
+  "fork": "none",
+  "nota": "Estado/ORQUESTACION excluidos del tratamiento por edición concurrente; sólo reglas/directora congeladas. Delegación constante entre condiciones, incluso research. No rúbrica resuelta a generadores.",
+  "fuentes": [
+    {
+      "fuente": "reglas-comunes.md",
+      "copia": "reglas-congeladas.md",
+      "sha256": "fdf2ea05aa1eda5e49c44c8afb5d7c0647c42c115a2263df82b07c6a935d3f61"
+    },
+    {
+      "fuente": "compartibles/skills/automatizar-n8n/SKILL.md",
+      "copia": "directora-congelada.md",
+      "sha256": "0e089586a9873c89f3fa10d8bf8fd9c11b0b02cd6b84db2badfdeaf364cfbf43"
+    },
+    {
+      "fuente": "compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md",
+      "copia": "apoyo-congelado.md",
+      "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+    }
+  ],
+  "modelo_solicitado": "gpt-6.1-terra",
+  "generaciones": 0,
+  "caso": "automatizaciones"
+}

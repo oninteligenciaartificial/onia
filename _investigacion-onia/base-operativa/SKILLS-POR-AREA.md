@@ -1,5 +1,57 @@
 # Skills por área de ONIA
 
+## Mapa vigente de integración ·6/11 ·integración terminada
+
+Encargo `habilidades-areas-20261106`: ejecutar integración y comparación, sin afirmar mejora por descargar archivos. [Tabla única30](auditoria-30-repos.md#decisión-por-candidato) asigna cada candidato a principal/apoyos con motivo; el [JSON](catalogo-repos-2026-11-03.json) conserva revisión original y estados fechados. Jefa confirmó6apoyos generales congelados y Humanizer liberado; sus rutas figuran abajo. Video liberó2apoyos:HyperFrames sólo planificación para Video yUIUX revisión estática sólo para Producto, mediante wrappers. Disponibilidad de archivos no acredita carga ni piloto. Las directoras propias ya tienen fuente; se carga sólo la pertinente al resultado, sin duplicar precios/permisos/reglas.
+
+**G** agrupa MattResearch, MattWriting, MattHandoffONIA yAddyContext; claves y rutas exactas en el registro de nueve módulos inferior. El reparto siguiente refleja `orquestacion.json` leído, no instala apoyos nuevos por sugerencia.
+
+| Sección | Directora / entrada | Apoyos/ruta confirmados | Disparador y salida |
+|---|---|---|---|
+| General/Jefatura (fuera deCLI) | continuidad-de-trabajo / mejorar-sistema según resultado | G por rol; rutas confirmadas abajo | Investigación, relevo o corrección concreta; fuente recuperable y decisión. |
+| Marketing | preparar-oferta-y-embudo | preparar-campana-meta +G +tercero-marketing-humanizer | Oferta/copy según encargo; hechos yCTA conservados, sin publicar. |
+| Video | producir-video | G +tercero-visual-hyperframes-plan | Planificar pieza; sin render por el wrapper. **UIUX no está asignado a Video**. |
+| Desarrollo | desarrollar-y-verificar | G +tercero-superpowers-debug +tercero-superpowers-verify | Diagnóstico/verificación del cambio acotado. |
+| Automatizaciones | automatizar-n8n | G +tercero-superpowers-debug +tercero-superpowers-verify | Definir evento/resultado y comprobar sin activar servicios. |
+| Organización | planificar-dia; alternativas por resultado entre apoyos propios | continuidad-de-trabajo,mejorar-sistema,evaluar-catalogo-skills +G; rutas confirmadas | Agenda/relevo/selección; cargar sólo lo pertinente. |
+| Producto | desarrollar-y-verificar +instrucciones de repo producto | G +tercero-superpowers-debug +tercero-superpowers-verify +tercero-visual-uiux | Revisión estática UI; wrapperUIUX disponible **sólo Producto**, sin implementación por seleccionarlo. |
+| Aprendizaje (fuera deCLI) | evaluar-catalogo-skills / continuidad según resultado | G por rol con rutas confirmadas; sin nueva claveCLI | Contraste de8pares y registro de límites, no aprendizaje de Sergio inferido. |
+
+
+**Cierre aceptado por Jefa:** integración6paquetes/9apoyos disponible; piloto8casos/16brazos terminado, ninguna mejora alcanzó el umbral previo. Los ocho ensayados se limitan al encargo pertinente, sin requisito general/carga automática; no significa inutilidad. Addy sin comparación propia. [Tabla única de resultados e informe](continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md) conserva puntajes/umbrales, recibos y auditoría, sin duplicar raw aquí. Techo basal18–20, una pareja/caso y sin tokens/latencia comparables. Marketing tuvo cegamiento parcial por Humanizer/protocoloA/B en rúbrica:−1 no demuestra daño causal. Organización: juez sin rutas que generadores conocían; límite conservado, sin recalificar ni repetir.
+
+**Trazabilidad exploratoria limitada:**los16mensajes exactos de brazos y8de jueces no se exportaron antes;24prompts desconocidos, sin texto recuperable en rollout/API según cotejo de Jefa. No puede auditarse igualdad literal de encargos, ni afirmar diferencias verificadas de instrucciones. Sí se cotejaron fixtures/configuración declarada, recibos/hashes yraw; esto no reemplaza los prompts. Puntajes intactos, ninguna mejora sobre umbral y ningún requisito general justificado. [Informe](continuidad/2026-11-06/prueba-skills/caso-general/INFORME-COMPARATIVO.md).
+
+### Estados y aceptación
+
+1. **Disponible en repo:** módulo exacto, revisión, licencia/avisos y recursos necesarios bajo `compartibles/terceros`; ZIP/archivo grande ignorado no acredita portabilidad. No copiar datos personales o secretos.
+2. **Descubierto nativo:** observar catálogo de la sesión; no inferirlo por una ruta en manifiesto. Research tiene observación local específica del corte anterior, no extensible a los30.
+3. **Invocado/cargado:** evidencia de lectura/selección del módulo en el piloto; descubrirlo no prueba uso.
+4. **Aprobado piloto:** rúbrica/fixtures congelados antes, par comparable sin/con apoyo, juez ciego y resultados con límites. No presuponer que todos mejoran; diferir o ajustar sólo con razón registrada, sin convertir un resultado sintético en servicio operativo.
+5. **Diferido:** conservar fuente y razón/condición de reconsideración de la tabla única; CareerOps/REA sin demanda actual. No desplegar servicios, publicar, gastar o alterar producto por elegir módulo.
+
+**Integración terminada:**6paquetes/9apoyos en repo; reparto/runtime alineados. [INTEGRACION](compartibles/terceros/INTEGRACION.md) y [MANIFIESTO](compartibles/terceros/MANIFIESTO.json) conservan evidencia estructural/portabilidad. Addy sigue sin comparación propia. Informe/auditoría terminados y decisión de Jefa registrada por enlace; ninguna mejora alcanzó umbral. No convertir pruebas estructurales en mejora.
+
+### Rutas confirmadas por Jefa ·9módulos
+
+Disponible en repo significa archivo recuperable, no descubrimiento nativo ni invocación/aprobación de piloto. La fuente de cada revisión/licencia permanece junto al módulo; no se copia aquí su contenido. Los seis generales fueron congelados por Desarrollo; Humanizer liberado conMIT/procedencia por Marketing; Video liberóHyperFrames-plan24archivosApache2 yUIUXestático47archivosMIT, conPROVENANCE/hash y wrapper→original/recursos. [Selección visual](continuidad/2026-11-06/prueba-skills/seleccion-visual.md) conserva límites sin copiar el informe. La ruta Humanizer ya aparece al leer el manifiesto actual, sin que esa observación certifique uso.
+
+| Clave | Ruta fuente | Disparador |
+|---|---|---|
+| `tercero-superpowers-debug` | [fuente](compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md) | Defecto concreto que requiere diagnóstico |
+| `tercero-superpowers-verify` | [fuente](compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md) | Comprobar afirmación de funcionamiento |
+| `tercero-matt-research` | [fuente](compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md) | Pregunta que necesita fuentes primarias |
+| `tercero-matt-writing-agents` | [fuente](compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md) | Texto de contexto/instrucciones para agente |
+| `tercero-matt-handoff-onia` | [fuente](compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md) | Retomar/traspasar; adaptador propio separado de upstream |
+| `tercero-addy-context` | [fuente](compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md) | Seleccionar contexto pertinente |
+| `tercero-marketing-humanizer` | [fuente](compartibles/terceros/marketing/humanizer/SKILL.md) | Revisar copy conservando hechos/voz suministrados |
+| `tercero-visual-hyperframes-plan` | [wrapper](compartibles/terceros/visual/27-hyperframes/USO-ONIA.md) | Planificar pieza HyperFrames; no render/servicios |
+| `tercero-visual-uiux` | [wrapper](compartibles/terceros/visual/19-ui-ux-pro-max/USO-ONIA.md) | Revisión estática UI; no implementación/producto |
+
+#25doc-coauthoring:licencia exacta sin verificar y flujo interactivo innecesario para el piloto. #30copywriting/offers:pospuestos por encaje/carga y proyección sin datos; citas/atribución no prueban incompatibilidad de licencia. Estas razones prevalecen para el corte actual sobre la selección histórica siguiente.
+
+## Antecedentes de selección y pruebas ·3–4/11
+
 Mapa preparado el 3 de noviembre de 2026; actualizado el 4 de noviembre. Usa la [auditoría de los 30 repositorios](auditoria-30-repos.md) y su [registro con revisiones y licencias](catalogo-repos-2026-11-03.json). No es una nueva auditoría íntegra ni instala esos paquetes. Las [reglas comunes](reglas-comunes.md) siguen siendo la fuente de decisiones; [orquestacion.json](orquestacion.json) es el registro ejecutable de rutas y [ESTADO.md](ESTADO.md) conserva las pruebas del entorno.
 
 ## Qué usamos para cada encargo
@@ -17,44 +69,9 @@ El catálogo vigente contiene nueve skills propias: las siete iniciales más `pl
 
 Las fuentes editables están en [compartibles/skills](compartibles/skills/). Una referencia no se convierte en otra skill instalada: se consulta sólo cuando cambia una decisión de la tarea.
 
-## Decisión sobre los treinta candidatos
+## Decisiones de los treinta
 
-**Adopta** significa seleccionar el motor o adaptar criterios dentro de las skills propias, no importar el paquete completo. **Referencia** aporta una idea puntual. **Diferido** no se incorpora ahora; incluye los ajenos a esta etapa. Versiones, procedencia y licencias detalladas permanecen en el catálogo enlazado.
-
-| # | Candidato | Decisión | Uso concreto o motivo |
-|---|---|---|---|
-| 1 | Superpowers | Referencia | Diagnóstico, evidencia, briefs y revisión; sin bootstrap universal. |
-| 2 | Matt Pocock Skills | Adopta selectivamente | Desarrollo acotado, dependencias y revisión; skill propia. |
-| 3 | ECC | Referencia | Mejoras trazables; sin hooks o memoria automáticos. |
-| 4 | Karpathy Skills | Referencia | Supuestos explícitos y cambios pequeños. |
-| 5 | Ponytail | Referencia | Reutilizar código y limitar complejidad. |
-| 6 | Agent Skills / Addy Osmani | Referencia | Contexto pertinente y continuidad; correspondencia del reel provisional. |
-| 7 | Graphify | Diferido | Mapa del código cuando un encargo lo justifique. |
-| 8 | Agent Reach | Diferido | Acceso a plataformas todavía no necesario para la tarea actual. |
-| 9 | Understand Anything | Diferido | Evitar otra capa de análisis y visualización ahora. |
-| 10 | Last30Days | Adopta bajo demanda | Investigación con pregunta y fuentes concretas; integración pendiente. |
-| 11 | CareerOps | Diferido | Búsqueda de empleo fuera del objetivo actual. |
-| 12 | REA | Diferido | Ingeniería inversa fuera de alcance. |
-| 13 | gstack | Diferido | Duplica la coordinación de desarrollo. |
-| 14 | Caveman | Diferido | No adoptar un modo global de escritura. |
-| 15 | Claude-Mem | Diferido | Primero comprobar continuidad explícita existente. |
-| 16 | Headroom | Diferido | No añadir proxy ni reescritura automática de reglas. |
-| 17 | GSD | Diferido | No añadir un segundo framework por fases. |
-| 18 | BMAD Method | Diferido | No añadir otra metodología completa. |
-| 19 | UI UX Pro Max | Referencia | Patrones UI puntuales; sin duplicar dirección visual. |
-| 20 | Taste | Referencia | Composición subordinada a la marca del encargo. |
-| 21 | Archify | Diferido | Herramienta extra sin una entrega que la requiera. |
-| 22 | Impeccable | Adopta en encargo UI | Revisar primero lo existente en ONIA Platform; adaptación pendiente. |
-| 23 | PPT Master | Diferido | Usar herramientas de presentación disponibles cuando haya taller. |
-| 24 | Diagram Design | Referencia | Legibilidad y marca de diagramas. |
-| 25 | Skills by Anthropic | Referencia | Patrones; licencias por módulo, sin redistribución general. |
-| 26 | OpenMontage | Diferido | Segunda dirección de video y licencia AGPL; motor actual HyperFrames. |
-| 27 | HyperFrames | Adopta | Motor para `producir-video`, con nuestra guía y versión comprobada. |
-| 28 | Humanizer | Adopta selectivamente | Revisar guiones con voz y hechos reales; módulo propio pendiente. |
-| 29 | I Have ADHD | Referencia | Próxima acción y organización, sin atribuir un diagnóstico. |
-| 30 | Marketing Skills | Adopta selectivamente | Oferta, webinar, copy, anuncios y medición por encargo. |
-
-Esta selección conserva las decisiones del catálogo. Copiar material de terceros requeriría conservar los avisos aplicables; elegir una referencia no autoriza empaquetarla como propia.
+Consultar únicamente la [tabla de decisiones por candidato](auditoria-30-repos.md#decisión-por-candidato) y sus campos estructurados en [JSON](catalogo-repos-2026-11-03.json). Este mapa no conserva otra lista paralela. Las decisiones y pruebas siguientes del3–4/11 son antecedentes, no aprobación de los pilotos del6/11.
 
 ## Huecos que sí faltan
 
