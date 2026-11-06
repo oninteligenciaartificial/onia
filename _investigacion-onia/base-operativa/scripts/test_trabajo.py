@@ -41,6 +41,14 @@ class ContinuityTests(unittest.TestCase):
         self.assertEqual(row["estado"], "aceptado")
         self.assertEqual(row["revision"], 3)
         self.assertEqual(len(row["historial"]), 2)
+        self.assertEqual(row["proximo_paso"], trabajo.CLOSED_NEXT)
+        self.assertEqual(row["historial"][-1]["proximo_paso"], "Seguir")
+
+    def test_acceptance_records_next_step_without_repeating_review_instruction(self):
+        self.ready()
+        row = trabajo.accept(self.base, "caso-1", 2, "Revisor", "Cotejado", "Consultar resultado desde el móvil")
+        self.assertEqual(trabajo.resume(self.base, "caso-1")["tarea"]["proximo_paso"],
+                         "Consultar resultado desde el móvil")
 
     def test_resume_in_new_process_and_reject_corruption(self):
         self.ready()

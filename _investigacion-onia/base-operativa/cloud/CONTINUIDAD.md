@@ -36,6 +36,8 @@ python3 _investigacion-onia/base-operativa/scripts/trabajo.py aceptar demo-001 -
 
 Para registrar un bloqueo o continuar, retomar y usar su revisión actual con `en_espera` o `en_curso`. Omitir `--evidencia` conserva las referencias existentes. Añadir una nueva evidencia amplía el inventario; no elimina las anteriores. Para mejorar v1, crear `informe-v2.txt`, cotejarlo y registrarlo con revisión esperada: v1 y v2 deben seguir accesibles. No sobrescribir v1.
 
+Al aceptar, `--siguiente` permite indicar un seguimiento autorizado. Si se omite, el registro deja el encargo cerrado sin iniciar otra ejecución. El paso previo de revisión queda en el historial, no como una orden pendiente que deba repetirse.
+
 ## Traspaso entre sesiones
 
 1. El escritor comprueba estado y evidencia. Revisa que los archivos de la tarea, su Markdown y sus evidencias estén incluidos en Git y saneados. `.gitattributes` conserva sus bytes.

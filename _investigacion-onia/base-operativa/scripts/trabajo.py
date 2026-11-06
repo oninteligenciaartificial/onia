@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 BASE = Path(__file__).resolve().parents[1]
 STATES = {"preparado", "en_curso", "en_espera", "para_revision", "aceptado"}
 CHECKS = {"pendiente", "fallo", "correcta"}
+CLOSED_NEXT = "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo."
 
 
 def now():
@@ -293,11 +294,12 @@ def update(base, task_id, status, result, check, next_step, files, revision=None
     return mutate(base, task_id, revision, transform)
 
 
-def accept(base, task_id, revision, reviewer, criterion):
+def accept(base, task_id, revision, reviewer, criterion, next_step=CLOSED_NEXT):
     def transform(row):
         if row["estado"] != "para_revision":
             raise ValueError("Sólo una entrega para_revision puede aceptarse.")
-        row.update(estado="aceptado", aceptacion={"revisor": reviewer, "criterio": criterion, "fecha": now()})
+        row.update(estado="aceptado", proximo_paso=next_step,
+                   aceptacion={"revisor": reviewer, "criterio": criterion, "fecha": now()})
         return row
     return mutate(base, task_id, revision, transform)
 
@@ -377,6 +379,7 @@ def main(argv=None):
     p.add_argument("--revision-esperada", type=int, required=True)
     p.add_argument("--revisor", required=True)
     p.add_argument("--criterio", required=True)
+    p.add_argument("--siguiente", default=CLOSED_NEXT, help="Próximo paso después de aceptar; por defecto cierra el encargo.")
     for command in ("recuperar", "migrar"):
         p = sub.add_parser(command)
         p.add_argument("id")
@@ -389,7 +392,7 @@ def main(argv=None):
         data = update(base, args.id, args.estado, args.resultado, args.comprobacion, args.siguiente,
                       args.evidencia, args.revision_esperada, args.verificacion)
     elif args.command == "aceptar":
-        data = accept(base, args.id, args.revision_esperada, args.revisor, args.criterio)
+        data = accept(base, args.id, args.revision_esperada, args.revisor, args.criterio, args.siguiente)
     elif args.command in {"recuperar", "migrar"}:
         data = (recover if args.command == "recuperar" else migrate)(base, args.id, args.revision_esperada)
     elif args.command == "retomar":
