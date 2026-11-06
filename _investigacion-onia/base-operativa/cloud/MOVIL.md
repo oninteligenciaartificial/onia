@@ -15,3 +15,5 @@ El agente se ocupa de los comandos y de leer el mapa y la skill pertinente. Una 
 Podés consultar avances, pedir correcciones y revisar la entrega desde el teléfono. Las tareas Cloud pueden trabajar con la PC dormida; eso no crea ejecución 24/7 ni garantiza notificaciones push. Crear o republicar entornos se hace en web o escritorio. Esta ruta no necesita SSH, claves PEM ni conectar la PC.
 
 **Comprobación en el teléfono:** abrir Codex, elegir onia, abrir la tarea del piloto y pedir su estado. Sólo después de observar ese recorrido se puede afirmar uso móvil probado. Este documento describe la ruta oficial; no acredita que se haya usado ya el iPhone.
+
+Para ver el piloto concreto, abrí [ONIA · Prueba de continuidad B](https://chatgpt.com/local/01a1b251-c3f8-7781-9fcf-1874844c401f) y pedí: «Consultá la versión publicada de onia/master y mostrame el estado y la evidencia de continuidad-cloud-001, sin modificar archivos». Su workspace conserva su propio estado; el registro publicado puede tener una aceptación posterior. El agente debe comprobarlo en Git conservando los cambios locales.

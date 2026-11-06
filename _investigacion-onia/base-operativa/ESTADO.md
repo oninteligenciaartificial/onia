@@ -8,13 +8,13 @@ Sergio decidió usar `onia`, con una sesión integradora y otra revisora, conser
 
 Repositorio operativo: `oninteligenciaartificial/onia`, rama `master`, entorno Cloud `onia`. `onia-harness` se conserva como referencia; no se migran sus borradores ni se mantiene otro CLI operativo. ONIA Platform sigue separado.
 
-Estado de esta unidad: **implementación local en revisión; todavía sin publicar ni acreditar continuidad A→B del código nuevo**. Los controles nuevos y la guía se describen en [CONTINUIDAD](cloud/CONTINUIDAD.md) y [MOVIL](cloud/MOVIL.md). La evidencia final debe actualizar este párrafo después de revisión y prueba reales.
+Estado de esta unidad: **implementación publicada y continuidad real A→Git→B aprobada técnicamente por revisión independiente**. Código final 706bf5eadb13abb7b97dfb286c3df1d546ac71bb: 54/54 tests en preparación Cloud, cero omisiones. El registro único continuidad-cloud-001 conserva evidencia y aceptación técnica, con próximo paso de consultar el resultado desde iPhone. [Informe, commits, sesiones y límites](continuidad/2026-11-06/consolidacion-harness/INFORME.md). Los controles y guía están en [CONTINUIDAD](cloud/CONTINUIDAD.md) y [MOVIL](cloud/MOVIL.md).
 
-## Último arranque comprobado
+## Arranques y recuperación comprobados
 
 La prueba Cloud `01a1b238-b446-777a-93c0-e31f4034301f` arrancó en `7d26f84d82c138335727735e158df7b904e91582`, Git limpio. Verificó 9 enlaces propios en repo y 9 aliases del workspace, 9 skills propias y 9 apoyos externos resueltos, y doctor 30/30. Leyó reglas, mapa y desarrollar-y-verificar desde archivos.
 
-**No anunció nativamente instrucciones de inicio ni skills ONIA.** La lectura explícita funcionó; no se acredita carga automática de Start skill. La prueba no ejecutó start.sh ni repitió los 39 tests que habían pasado en preparación. Tampoco acreditó traspaso a otra VM, móvil ni ejecución permanente.
+**No anunció nativamente instrucciones de inicio ni skills ONIA.** La lectura explícita funcionó; no se acredita carga automática de Start skill. La prueba no ejecutó start.sh ni repitió los 39 tests que habían pasado en preparación. Por sí sola esa prueba no acreditó traspaso a otra VM, móvil ni ejecución permanente. El traspaso posterior A→B sí pasó, según el informe de consolidación.
 
 ## Contextos conservados por encargo
 
@@ -25,3 +25,5 @@ La prueba Cloud `01a1b238-b446-777a-93c0-e31f4034301f` arrancó en `7d26f84d82c1
 - Contexto personal, credenciales, sesiones autenticadas y medios privados siguen fuera de Git.
 
 No hay scheduler distribuido ni actividad 24/7 acreditados. Paperclip es un tablero de seguimiento; su configuración y estado efectivo se comprueban al actualizar la tarea correspondiente.
+
+B (01a1b251-c3f8-7781-9fcf-1874844c401f) arrancó desde el snapshot 9cf3e40 y recuperó por Git la entrega c3ac631; continuó de revisión 2 a 3 con siete controles aislados. Persistió el límite de anuncio nativo, aunque leyó las fuentes y aplicó la directora. La entrega B está publicada en 955e981. El snapshot de cierre se prepara con el código final y esta evidencia; comprobar su confirmación de publicación en el chat editor 01a1b22d-9f2c-72df-8a57-4c1ccb0c800a. Uso real de iPhone y ejecución permanente siguen sin acreditar.
