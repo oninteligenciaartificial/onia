@@ -1,12 +1,15 @@
 # Chats de trabajo por área
 
+Recepción confirmada por wait_threads comunicado por saliente: turno `01a1aeec-e73f-7e00-92b1-ba063efe30fe` inProgress, cursor `fda4a4ab-7da2-4462-8673-0faad1d52604:1`; la nueva Jefa recibió el relevo, leyó fuentes y comenzó unidad harness. Ejecución activa, no terminada; modelo efectivo de turn_context pendiente de cotejo por receptora.
+
 **5 de noviembre de 2026 · America/Caracas.** Reparto vigente decidido por Sergio: siete áreas locales y una sola jefa que delega, revisa y entrega. El repo conserva decisiones/estado/handoff; los chats ejecutan encargos delimitados. [Estado](ESTADO.md) · [Handoff del relevo](continuidad/2026-11-05/HANDOFF-JEFA.md).
 
 ## Jefatura y condición del relevo
 
 | Chat | ID / host | Estado y función |
 |---|---|---|
-| ONIA · Jefa v2 | `01a1ab9c-15b2-7a03-9588-2daab62a93eb` · local | Jefa vigente; recepción del commit aceptada en turno COMPLETED. Asume delegación, revisión y entrega de las siete áreas locales; coordina la [tanda de referentes en curso](investigacion/2026-11-05-referentes/README.md). |
+| ONIA · Jefa Sol 6.1 ultra | `01a1aeec-e579-75c2-a6c3-1326337b3cbc` · local | Creación comprobada, parámetros Sol6.1/ultra aceptados por create_thread; recepción confirmada, unidad harness activa sin terminar. Coordina unidad harness; [relevo](continuidad/2026-11-05/RELEVO-SOL-ULTRA.md). |
+| ONIA · Jefa v2, saliente | `01a1ab9c-15b2-7a03-9588-2daab62a93eb` · local | Sólo entrega y cierre de esta publicación; recepción anterior de su relevo conservada como historia, sin nueva investigación. |
 | ONIA · Jefa local, saliente | `01a1a29c-3a3d-7b50-aef6-41305ce5faae` · local | Relevo entregado y aceptado; deja la coordinación operativa a Jefa v2. Archivada según list_archived_threads comprobado y comunicado por Jefa v2; evidencia atribuida en RECEPCION-JEFA. |
 | ONIA · Jefe, antecedente cloud | `01a1a843-4afb-75f9-aa95-f35833fcb002` · durable | Planificación/síntesis del reparto del 4/11, conservada como historia. No es segunda jefa activa del reparto local. |
 
@@ -40,9 +43,9 @@ Creación y [recepción](investigacion/reels-e-ideas/RECEPCION.md) comprobadas p
 
 El [manifiesto](orquestacion.json) mantiene seis claves de CLI: marketing, video, desarrollo, automatizaciones, organización y producto. Aprendizaje y Jefatura no añaden claves/skills por tener chat. Usar las directoras existentes por resultado; continuidad-de-trabajo dirige este relevo y mejorar-sistema apoya la corrección acotada. Las skills no cambian en este encargo.
 
-Instrucción vigente de Sergio comunicada por Jefa para el goal: **Astra exclusivamente Jefa; Sol para Marketing, Video, Organización, Aprendizaje y Reels; Terra para Desarrollo, Automatizaciones y Producto.** No heredar Astra a subagentes: usar Sol o Terra adecuados con contexto acotado cuando se delegue. La [matriz de aceptación](investigacion/2026-11-05-referentes/GOAL-REFERENTES.md) mantiene el reparto del goal.
+**Instrucción actual:** Sergio pidió Jefa GPT6.1 Sol/ultra; creación aceptó esos parámetros, recepción confirmada; modelo efectivo pendiente. La preferencia anterior «Astra exclusivamente Jefa» es antecedente superado para esta nueva Jefa. Ejecutores permanecen: Sol para Marketing, Video, Organización, Aprendizaje y Reels; Terra para Desarrollo, Automatizaciones y Producto. No heredar Astra a subagentes: usar Sol o Terra adecuados con contexto acotado cuando se delegue. La [matriz de aceptación](investigacion/2026-11-05-referentes/GOAL-REFERENTES.md) mantiene el reparto del goal.
 
-**Comprobación efectiva comunicada por Jefa, 5/11/2026:** lectura acotada de `model`, `effort` y `timestamp` del último `turn_context` de los rollouts locales, con acceso de lectura compartida. Organización registra esa evidencia atribuida; no repite la lectura de historiales. Los horarios siguientes son UTC y describen esos turnos, no garantizan configuraciones futuras.
+**Comprobación histórica efectiva comunicada por Jefa, 5/11/2026, previa al relevo Sol/ultra:** lectura acotada de `model`, `effort` y `timestamp` del último `turn_context` de los rollouts locales, con acceso de lectura compartida. Organización registra esa evidencia atribuida; no repite la lectura de historiales. Los horarios siguientes son UTC y describen esos turnos, no garantizan configuraciones futuras.
 
 | Chat | Modelo / esfuerzo observado | Hora del turno (UTC) |
 |---|---|---|
@@ -56,7 +59,7 @@ Instrucción vigente de Sergio comunicada por Jefa para el goal: **Astra exclusi
 | Automatizaciones | `gpt-6.1-terra` / low | 18:32:30.519Z |
 | Producto | `gpt-6.1-terra` / low | 18:32:29.705Z |
 
-El último cotejo de `turn_context` comunicado por Jefa confirma también Terra/low para Automatizaciones y Producto en los turnos indicados. Las siete áreas locales y Reels tienen evidencia Sol/Terra; Jefa conserva Astra. No se acredita modificación de chats cloud. Esta comprobación de configuración no inicia trabajo n8n/producto. **Corte inicial histórico:** Jefa había despachado investigación a Marketing, Aprendizaje, Video y Desarrollo, con propiedad exclusiva de subcarpetas. La unidad documental inicial fue recibida entonces. Ese despacho no describe su ejecución actual; [ESTADO](ESTADO.md) registra entregas, bloqueo y próxima condición vigentes. Se conserva una única matriz común.
+El último cotejo de `turn_context` comunicado por Jefa confirma también Terra/low para Automatizaciones y Producto en los turnos indicados. Las siete áreas locales y Reels tienen evidencia Sol/Terra; La Jefa saliente usaba Astra en aquel corte; nueva designación Sol/ultra indicada arriba. No se acredita modificación de chats cloud. Esta comprobación de configuración no inicia trabajo n8n/producto. **Corte inicial histórico:** Jefa había despachado investigación a Marketing, Aprendizaje, Video y Desarrollo, con propiedad exclusiva de subcarpetas. La unidad documental inicial fue recibida entonces. Ese despacho no describe su ejecución actual; [ESTADO](ESTADO.md) registra entregas, bloqueo y próxima condición vigentes. Se conserva una única matriz común.
 
 ## Antecedentes cloud del 3–4 de noviembre
 
