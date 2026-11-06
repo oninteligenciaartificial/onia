@@ -1,5 +1,7 @@
 # Preparación cloud de onia
 
+Entrada actual del agente: [INICIO-SESION](INICIO-SESION.md). [CONTINUIDAD](CONTINUIDAD.md) define el registro compartible y [MOVIL](MOVIL.md) la ruta del teléfono. La preparación, el anuncio nativo y la lectura efectiva se comprueban por separado.
+
 El estado operativo único está en [ESTADO.md](../ESTADO.md). Los campos del entorno y la recuperación del checkout están en [CONFIGURAR-ONIA.md](CONFIGURAR-ONIA.md). Este directorio contiene fuentes reproducibles, sin credenciales ni sesiones.
 
 ## Instalación y arranque

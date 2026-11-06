@@ -271,6 +271,18 @@ class HarnessTests(unittest.TestCase):
             self.prepare()
         self.assertEqual(list(outside.iterdir()), [])
 
+    def test_shared_brief_uses_one_canonical_record_and_rejects_changes(self):
+        result = harness.prepare(self.base, "compartido", "desarrollo", "Objetivo", "Entrega", "Control",
+                                 shared=True)
+        record = trabajo.task_path(self.base, "compartido")
+        self.assertEqual(record.relative_to(self.base).as_posix(), "continuidad/tareas/compartido.json")
+        self.assertFalse((self.base / "operacion/tareas/compartido.json").exists())
+        path = self.base / result["briefing"]
+        self.assertEqual(harness.resume(self.base, "compartido")["briefing"], path.read_text(encoding="utf-8"))
+        path.write_text("Brief alterado", encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Briefing cambió"):
+            harness.resume(self.base, "compartido")
+
 
 if __name__ == "__main__":
     unittest.main()

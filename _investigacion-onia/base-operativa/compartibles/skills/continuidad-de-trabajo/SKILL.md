@@ -9,7 +9,9 @@ Dejá una entrega breve que permita continuar el trabajo autorizado con su estad
 
 ## Reconstruir el estado
 
-Si el proyecto ya tiene un registro ejecutable de tareas, usalo como fuente del estado. En la base ONIA, `python scripts/trabajo.py retomar ID` devuelve objetivo, resultado, siguiente acción y advertencias de integridad. Revisá esas advertencias antes de depender de una evidencia; no dupliques el mismo estado en otra nota. En otros proyectos, no supongas que ese script existe.
+Si el proyecto ya tiene un registro ejecutable de tareas, usalo como fuente del estado. Desde la raíz de ONIA, `python _investigacion-onia/base-operativa/scripts/trabajo.py retomar ID` devuelve objetivo, resultado y siguiente acción, y falla si la evidencia vigente no conserva su integridad. En ese mismo directorio scripts, `harness.py retomar ID` recupera además el briefing comprobado. No dupliques ese estado en otra nota. En otros proyectos, no supongas que esos scripts existen.
+
+Para una tarea ONIA compartible, consultá [el contrato de continuidad](../../../cloud/CONTINUIDAD.md): un registro por ID, revisión esperada al modificar y evidencia acumulativa en rutas nuevas por versión. No sobrescribas una evidencia registrada ni recalcules su hash para ocultar un fallo. Los registros schema 1 siguen legibles como historia y requieren migración explícita antes de editar; un `terminado` histórico no se convierte en aceptación. Una entrega `para_revision` requiere comprobación correcta y la aceptación es un paso separado.
 
 - Localizá la nota de continuidad y las fuentes canónicas indicadas por el usuario o por el trabajo existente. Reutilizá el registro pertinente en vez de crear varias versiones paralelas del mismo estado.
 - Conservá el objetivo, las restricciones y las autorizaciones vigentes que consten en el contexto accesible. No amplíes el alcance ni agregues una aprobación universal para pasos ya autorizados.

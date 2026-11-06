@@ -1,5 +1,7 @@
 # Chats de trabajo por área
 
+Nota de alcance, 6/11: este documento conserva el reparto y modelos de los encargos fechados abajo. No impone esos chats ni una jefa local a todo encargo Cloud nuevo. Para la consolidación actual, el reparto de integradora y revisora está en ESTADO; aplicar ORQUESTACION y la instrucción vigente de Sergio.
+
 Modelo efectivo cotejado por la nueva Jefa extrayendo sólo model/effort/timestamp del último turn_context local: `model=gpt-6.1-sol`, `effort=ultra`, `timestamp=2026-11-06T03:35:25.035Z` (5/11,23:35:25 Caracas). Recepción y asunción confirmadas; unidad harness aceptada técnicamente con los límites de su evidencia.
 
 **5 de noviembre de 2026 · America/Caracas.** Reparto vigente decidido por Sergio: siete áreas locales y una sola jefa que delega, revisa y entrega. El repo conserva decisiones/estado/handoff; los chats ejecutan encargos delimitados. [Estado](ESTADO.md) · [Handoff del relevo](continuidad/2026-11-05/HANDOFF-JEFA.md).

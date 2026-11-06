@@ -1,5 +1,7 @@
 # Empezar a cargar ONIA
 
+Antecedente fechado del 4/11. Para un encargo nuevo usar [INICIO-SESION](INICIO-SESION.md) y el estado vigente; no ejecutar automáticamente las tareas históricas descritas abajo.
+
 Actualizado el 4 de noviembre de 2026. Trabajamos sólo con Codex por ahora. Las [reglas](../reglas-comunes.md), [skills vigentes](../SKILLS-POR-AREA.md) y [arquitectura](../arquitectura.md) ya están en el repo privado. No volver a adjuntarlas ni copiar sus reglas a Drive.
 
 ## Primer paquete

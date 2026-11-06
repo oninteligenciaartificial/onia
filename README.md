@@ -1,50 +1,33 @@
 # onia
 
-Base de trabajo de Sergio y ONIA: reglas comunes, skills propias y continuidad entre tareas. Este repositorio nace de la carpeta de coordinación `C:/dev/proyectos`; sólo versiona la base vigente. El producto ONIA Platform mantiene su repositorio y despliegue separados.
+Base operativa de Sergio y ONIA: reglas comunes, skills y continuidad de tareas. Repositorio privado operativo: oninteligenciaartificial/onia, rama master, entorno Cloud onia. ONIA Platform conserva su repo de producto; onia-harness queda como referencia.
 
-## Entrada
+## Empezar
 
-Leer [AGENTS.md](AGENTS.md), [reglas comunes](_investigacion-onia/base-operativa/reglas-comunes.md) y [estado vigente](_investigacion-onia/base-operativa/ESTADO.md). Las decisiones de Sergio en el chat de coordinación son la autoridad de estas reglas. Las investigaciones son referencias, no instrucciones instaladas de terceros.
+Leer [AGENTS.md](AGENTS.md), [reglas comunes](_investigacion-onia/base-operativa/reglas-comunes.md) y [ESTADO](_investigacion-onia/base-operativa/ESTADO.md). [ORQUESTACION](_investigacion-onia/base-operativa/ORQUESTACION.md) selecciona área y skill pertinente. El contexto histórico se consulta por encargo, sin reactivar objetivos anteriores.
 
-El [plan oficial](_investigacion-onia/base-operativa/PLAN.md) consolida la dirección de ONIA · Jefe y once programas continuos. La [entrega del 4 de noviembre](_investigacion-onia/base-operativa/continuidad/2026-11-04/README.md) incorpora quince documentos cloud y el currículo de aprendizaje, con procedencia y límites. Git es la fuente oficial del plan, decisiones y documentación; la biblioteca conserva medios, Notion la vista cotidiana y Calendar compromisos. La [orquestación](_investigacion-onia/base-operativa/ORQUESTACION.md) describe cómo preparar, delegar, comprobar y retomar un encargo.
+- [Inicio Cloud](_investigacion-onia/base-operativa/cloud/INICIO-SESION.md): comprobar entorno y leer fuentes; separar lectura de descubrimiento nativo.
+- [Continuidad](_investigacion-onia/base-operativa/cloud/CONTINUIDAD.md): crear, retomar, revisar y compartir una tarea con el CLI existente.
+- [Uso desde iPhone](_investigacion-onia/base-operativa/cloud/MOVIL.md): iniciar y continuar en Cloud.
+- [Informe de consolidación](_investigacion-onia/base-operativa/continuidad/2026-11-06/consolidacion-harness/INFORME.md): pruebas, revisiones y límites.
 
-## Contenido
+## Qué conserva el repo
 
-- `_investigacion-onia/base-operativa/`: arquitectura, decisiones, fuentes y catálogo.
-- `compartibles/skills/` dentro de esa base: nueve skills propias, única fuente editable.
-- `scripts/trabajo.py`: registro de tareas con evidencia e integridad; no es un scheduler.
-- `scripts/test_trabajo.py`: pruebas del registro.
-- `orquestacion.json` y `scripts/harness.py`: rutas por área, diagnóstico de archivos y preparación de encargos; no son un servicio autónomo.
+Las nueve skills propias tienen una única fuente editable en base-operativa/compartibles/skills. El manifiesto mantiene seis áreas y nueve apoyos externos opcionales. harness.py prepara briefings y trabajo.py mantiene el registro; no son agentes residentes ni un scheduler.
 
-Los proyectos anteriores, ONIA-CENTRAL, el código de ONIA Platform, contexto privado, credenciales, videos y registros operativos locales están excluidos por `.gitignore`. No usar `git add -f` para incorporarlos. Las referencias a evidencia local excluida no deben interpretarse como archivos disponibles en GitHub o Cloud.
+Una tarea compartible usa un registro saneado bajo continuidad/tareas y evidencia versionada. Los auxiliares de operacion, datos personales, credenciales, sesiones, medios privados y ONIA-CENTRAL quedan fuera de Git. No usar git add -f para incorporarlos. La presencia de una referencia local no acredita disponibilidad Cloud.
 
-## Preparación del entorno limpio `onia`
+## Preparar y comprobar Cloud
 
-Este repositorio privado ya está vinculado al entorno `onia` creado por Sergio. Antes del setup, comprobar que su checkout incluye la carpeta `cloud/`; el primer commit no la contenía. La corrección y el instalador completo están en [CONFIGURAR-ONIA.md](_investigacion-onia/base-operativa/cloud/CONFIGURAR-ONIA.md).
+El setup reproducible y sus dependencias están en [CONFIGURAR-ONIA](_investigacion-onia/base-operativa/cloud/CONFIGURAR-ONIA.md). El instalador prepara los enlaces de skills; comprobarlos no prueba anuncio nativo. Las skills personales del equipo no se trasladan por esos enlaces.
 
-Desde la raíz del checkout, con Python 3.10 o superior:
+Desde la raíz, con Python 3.10 o superior:
 
 ```sh
-python3 _investigacion-onia/base-operativa/scripts/preparar-cloud.py --install
-python3 _investigacion-onia/base-operativa/scripts/preparar-cloud.py --check
-python3 _investigacion-onia/base-operativa/scripts/test_preparar_cloud.py -v
-python3 _investigacion-onia/base-operativa/scripts/test_trabajo.py -v
+python3 -B -m unittest discover -s _investigacion-onia/base-operativa/scripts -p 'test_*.py' -v
+python3 _investigacion-onia/base-operativa/scripts/harness.py doctor
 ```
 
-El primer comando prepara enlaces locales hacia las skills versionadas, sin copiar su contenido. No instala dependencias, servicios, agentes persistentes o navegadores. Ejecutarlo durante el setup cloud; comprobar el descubrimiento de skills en una nueva tarea. Un archivo SKILL.md leído manualmente no acredita descubrimiento automático.
+Cambiar el repo no actualiza por sí solo el snapshot reusable. Tras revisión, publicar Git y preparar/republicar el entorno cuando corresponda; comprobar después una sesión nueva. Una tarea existente conserva su propio estado.
 
-Guardar y publicar el setup desde el entorno `onia` cuando las comprobaciones estén completas. Las modificaciones hechas dentro de una tarea no actualizan automáticamente el entorno reutilizable.
-
-Para Playwright, el helper de n8n y la configuración completa, usar [la preparación cloud](_investigacion-onia/base-operativa/cloud/CONFIGURAR-ONIA.md). Scripts, dependencias fijadas y lockfile viven en `base-operativa/cloud/`; los secretos se guardan en la configuración del entorno.
-
-## Primera prueba
-
-La tarea de aceptación debe comprobar repo/HEAD, las nueve skills, los tests de bootstrap, continuidad y harness, y un recorrido crear → completar con evidencia → retomar desde otro proceso. Ejecutar también el navegador real. Crear su evidencia bajo `operacion/`; versionar una entrega mínima saneada en ESTADO.md y conservar los artefactos antes de descartar la VM, pues esos registros no se suben automáticamente.
-
-La prueba histórica en ONIA Platform aprobó el registro, pero fue detenida por entorno equivocado y no certifica el nuevo `onia`.
-
-## Operación y accesos
-
-Codex Cloud se usa para desarrollo y pruebas. El VPS de la startup no recibe navegadores remotos, modelos locales, render de video ni workers de agentes. n8n ya existe allí; la vía a evaluar es su API desde Cloud. Los permisos y resultados se verifican antes de dar por conectada una cuenta. Las claves se introducen en el almacén de secretos correspondiente, nunca en Git, prompts o skills.
-
-Sin autoaprendizaje, scheduler o integración Meta activados por crear este repositorio. Ver [accesos](_investigacion-onia/base-operativa/accesos.md) y [arquitectura](_investigacion-onia/base-operativa/arquitectura.md).
+Las cuentas, servicios y operaciones externas se prueban sólo si el encargo las necesita y tiene autorización aplicable. Las claves se obtienen de su integración o almacén correspondiente. Los servicios VPS, n8n y producto mantienen sus alcances propios; esta consolidación no los instala ni activa.

@@ -1,10 +1,10 @@
 # Arquitectura vigente de ONIA
 
-Preparada el 3 de noviembre de 2026; actualizada el 4 de noviembre, UTC−4. Esta versión ordena la distribución del trabajo. Las [reglas comunes](reglas-comunes.md) son la fuente de permisos y prioridades; [ESTADO.md](ESTADO.md) conserva la entrega vigente. Los errores y decisiones sustituidas permanecen en el [registro de errores](registro-de-errores.md), no como alternativas operativas de este documento.
+Preparada el 3 de noviembre de 2026; continuidad y alcance consolidados el 6 de noviembre, America/Caracas. Las observaciones de servicios de las tablas conservan sus pruebas fechadas; consultar ESTADO para vigencia. Esta versión ordena la distribución del trabajo. Las [reglas comunes](reglas-comunes.md) son la fuente de permisos y prioridades; [ESTADO.md](ESTADO.md) conserva la entrega vigente. Los errores y decisiones sustituidas permanecen en el [registro de errores](registro-de-errores.md), no como alternativas operativas de este documento.
 
 ## Distribución del trabajo
 
-El harness vive en el repositorio privado [oninteligenciaartificial/onia](https://github.com/oninteligenciaartificial/onia) y usa el entorno limpio **onia**. La decisión más reciente de Sergio es trabajar **sólo con Codex por ahora**, aprovechando n8n existente. ONIA Platform conserva su repositorio de producto y su producción. El VPS existente aloja la startup y n8n; no se le asignan navegadores, render de video, modelos locales ni workers de agentes.
+El harness vive en el repositorio privado [oninteligenciaartificial/onia](https://github.com/oninteligenciaartificial/onia) y usa el entorno limpio **onia**. La decisión más reciente de Sergio es trabajar **sólo con Codex por ahora**, aprovechando n8n existente. ONIA Platform conserva su repositorio de producto y su producción. El VPS existente aloja la startup y n8n. Cualquier prueba audiovisual o instalación allí depende del encargo y autorización aplicables; esta consolidación no instala servicios ni agentes externos. Paperclip sólo refleja el seguimiento.
 
 ```mermaid
 flowchart TD
@@ -39,11 +39,11 @@ Las líneas punteadas son conexiones pendientes. n8n no tiene acreditada una con
 
 ## Persistencia y contexto
 
-`operacion/` y `privado/` están excluidos de Git. Los registros locales de tareas, evidencia y contexto personal no llegan a nuevas tareas cloud por subir el repo. La **entrega mínima saneada y versionada vive en ESTADO.md**: objetivo, estado comprobado, archivos, evidencia accesible y siguiente paso. [CEREBRO-DIARIO.md](CEREBRO-DIARIO.md) identifica las fuentes compartidas y quién mantiene cada una; la continuidad comprobada allí no implica transferencia de archivos entre VMs. Drive tiene lectura de metadatos comprobada desde Cloud; descarga y entrega de medios reales conservan su prueba independiente pendiente.
+`operacion/` y `privado/` están excluidos de Git. Los registros locales de tareas, evidencia y contexto personal no llegan a nuevas tareas cloud por subir el repo. Las tareas compartibles tienen un único registro en continuidad/tareas, briefing derivado y evidencia saneada conforme a [CONTINUIDAD](cloud/CONTINUIDAD.md). ESTADO enlaza capacidades e informes y no duplica el estado mutable de cada tarea. [CEREBRO-DIARIO.md](CEREBRO-DIARIO.md) identifica las fuentes compartidas y quién mantiene cada una; la continuidad comprobada allí no implica transferencia de archivos entre VMs. Drive tiene lectura de metadatos comprobada desde Cloud; descarga y entrega de medios reales conservan su prueba independiente pendiente.
 
 Cada tarea debe guardar sus cambios útiles en el repo o exportar sus entregables al almacén elegido antes de descartarse. No existe sincronización automática de esos registros privados. La documentación de Codex distingue el estado de cada tarea de la preparación publicada para tareas nuevas; las skills personales locales tampoco se sincronizan automáticamente. [Entornos cloud](https://learn.chatgpt.com/docs/environments/cloud-environments).
 
-El CLI `scripts/harness.py` diagnostica archivos, prepara encargos por área y los retoma; usa `scripts/trabajo.py` como registro local de esos encargos. El agente coordinador ejecuta y delega según [ORQUESTACION.md](ORQUESTACION.md); no hay otro proceso residente. La continuidad entre procesos y la recuperación de contexto compartido tienen evidencias distintas en ESTADO.md. El [plan](PLAN.md) conserva los criterios de entrega; el estado vigente determina qué falta comprobar.
+El CLI `scripts/harness.py` diagnostica archivos, prepara encargos por área y los retoma; usa `scripts/trabajo.py` como registro único local o compartible de esos encargos. El agente coordinador ejecuta y delega según [ORQUESTACION.md](ORQUESTACION.md); no hay otro proceso residente. La continuidad entre procesos y la recuperación de contexto compartido tienen evidencias distintas en ESTADO.md. El [plan](PLAN.md) conserva los criterios de entrega; el estado vigente determina qué falta comprobar.
 
 ## Navegador, cuentas y conexiones
 

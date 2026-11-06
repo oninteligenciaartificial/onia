@@ -1,0 +1,43 @@
+{
+  "origen": "git show 7d26f84:_investigacion-onia/base-operativa/scripts/trabajo.py",
+  "registro": {
+    "schema": 1,
+    "id": "legacy-v1",
+    "objetivo": "Entregar informe",
+    "estado": "terminado",
+    "proximo_paso": "Revisar entrega",
+    "resultado": "Segunda",
+    "comprobacion": "Revisada",
+    "evidencias": [
+      {
+        "archivo": "informe.txt",
+        "sha256": "fcffdf85733d58ab621b7e88c1ad8fa6e5bbae82bdf20a0158a62b965a0f1235"
+      }
+    ],
+    "actualizado": "2026-11-06T19:09:20.129025+00:00",
+    "historial": [
+      {
+        "actualizado": "2026-11-06T19:09:20.123911+00:00",
+        "estado": "preparado",
+        "resultado": "",
+        "comprobacion": "",
+        "evidencias": [],
+        "proximo_paso": "Preparar"
+      },
+      {
+        "actualizado": "2026-11-06T19:09:20.127058+00:00",
+        "estado": "en_curso",
+        "resultado": "Primera",
+        "comprobacion": "Revisada",
+        "evidencias": [
+          {
+            "archivo": "informe.txt",
+            "sha256": "c5e23502b5aa9b94510d29224de5fe254960e282f1fcbcd0c7631b0edbd18f8a"
+          }
+        ],
+        "proximo_paso": "Mejorar"
+      }
+    ]
+  },
+  "evidencia_actual": "Segunda version\n"
+}

@@ -9,8 +9,8 @@ import trabajo
 
 BASE = Path(__file__).resolve().parents[1]
 LIMITACION = ("Este comando no crea agentes, abre chats, ejecuta encargos ni usa la red. "
-              "El registro y briefing quedan en operacion/, ignorado por Git; "
-              "no se sincronizan automáticamente entre entornos.")
+              "Sólo --compartible guarda un registro saneado versionable en continuidad/. "
+              "Los registros privados quedan en operacion/. Git requiere publicación y recuperación explícitas.")
 
 
 def safe_path(base, relative):
@@ -83,11 +83,12 @@ def doctor(base):
     return result
 
 
-def task_paths(base, task_id):
+def task_paths(base, task_id, shared=None):
     # Reutiliza la validación de ID del registro existente antes de construir rutas.
     base = base.resolve()
-    task = trabajo.task_path(base, task_id)
-    brief = base / "operacion" / "encargos" / (task_id + ".md")
+    task = trabajo.task_path(base, task_id, shared)
+    shared = task == trabajo.task_path(base, task_id, True)
+    brief = trabajo.brief_path(base, task_id, shared)
     for path in (task, task.with_suffix(".lock"), brief):
         safe_path(base, path.relative_to(base).as_posix())
         # No reemplazar enlaces ni escribir registros a través de un padre enlazado.
@@ -101,9 +102,9 @@ def task_paths(base, task_id):
 
 def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None, skill=None,
             ensayo=False, investigacion=None, capacidad=None, hipotesis=None, control=None, leccion=None,
-            apoyos=None):
+            apoyos=None, shared=False):
     base = base.resolve()
-    task, brief = task_paths(base, task_id)
+    task, brief = task_paths(base, task_id, shared)
     data = manifest(base)
     if area not in data["areas"]:
         raise ValueError("Área inválida. Elegir: " + ", ".join(data["areas"]))
@@ -119,7 +120,9 @@ def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None, ski
         investigacion = fuente.relative_to(base).as_posix()
     elif any(value is not None for value in datos_ensayo):
         raise ValueError("Los datos de investigación requieren declarar --ensayo.")
-    if os.path.lexists(task) or os.path.lexists(brief):
+    if any(os.path.lexists(p) for p in (*trabajo.paths(base, task_id),
+                                       trabajo.brief_path(base, task_id, False),
+                                       trabajo.brief_path(base, task_id, True))):
         raise ValueError("El encargo ya existe. Usar retomar; no se sobrescribió ningún archivo.")
     route = data["areas"][area]
     allowed_skills = list(dict.fromkeys([route["skill_directora"], *route.get("skills_apoyo", [])]))
@@ -162,26 +165,23 @@ def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None, ski
     lines.extend(["", "## Salidas de referencia del área", ""])
     lines.extend("- " + item for item in route["salidas"])
     lines.extend(["", "## Registro", "", "Estado: [registro de trabajo](../tareas/" + task_id + ".json).",
-                  "Consultar el registro al retomar; este briefing no duplica su estado.", "", LIMITACION, ""])
-    brief.parent.mkdir(parents=True, exist_ok=True)
-    # Creación exclusiva: un segundo proceso no reemplaza este briefing.
-    with brief.open("x", encoding="utf-8", newline="\n") as handle:
-        handle.write("\n".join(lines))
-    try:
-        record = trabajo.create(base, task_id, goal.strip(),
-                                "Leer operacion/encargos/" + task_id + ".md y ejecutar el encargo dentro de su alcance.")
-    except Exception:
-        brief.unlink()
-        raise
+                  "El JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.",
+                  "No editar la proyección ni rehashear evidencia alterada para continuar.", "", LIMITACION, ""])
+    record = trabajo.create(base, task_id, goal.strip(),
+                            "Leer " + brief.relative_to(base).as_posix() + " y ejecutar el encargo dentro de su alcance.",
+                            shared=shared, briefing="\n".join(lines))
     return {"tarea": record, "briefing": brief.relative_to(base).as_posix(),
             "area": area, "skill_directora": skill, "skills_apoyo": support,
             "apoyos_seleccionados": selected_support, "modo": route["modo"], "nota": LIMITACION}
 
 
 def resume(base, task_id):
-    _, brief = task_paths(base, task_id)
+    task_paths(base, task_id)
     result = trabajo.resume(base.resolve(), task_id)
-    result["briefing"] = brief.read_text(encoding="utf-8")
+    brief = result["tarea"].get("briefing")
+    if brief is None:
+        raise ValueError("Sin briefing íntegro registrado. Para schema 1, revisar y migrar explícitamente antes de continuar.")
+    result["briefing"] = brief["contenido"]
     result["nota_harness"] = LIMITACION
     return result
 
@@ -202,6 +202,7 @@ def main(argv=None):
     p.add_argument("--entregable", required=True)
     p.add_argument("--aceptacion", required=True)
     p.add_argument("--entrada", action="append", default=[])
+    p.add_argument("--compartible", action="store_true", help="Registro único saneado y versionable en continuidad/.")
     p.add_argument("--apoyo", action="append", default=[], help="Apoyo pertinente del área; se puede repetir.")
     p.add_argument("--ensayo", action="store_true", help="Declarar un ensayo que requiere investigación previa.")
     p.add_argument("--investigacion", help="Archivo existente relativo a la base, con investigación previa.")
@@ -221,7 +222,7 @@ def main(argv=None):
                              args.entregable, args.aceptacion, args.entrada, skill=args.skill,
                              ensayo=args.ensayo, investigacion=args.investigacion,
                              capacidad=args.capacidad, hipotesis=args.hipotesis,
-                             control=args.control, leccion=args.leccion, apoyos=args.apoyo)
+                             control=args.control, leccion=args.leccion, apoyos=args.apoyo, shared=args.compartible)
             code = 0
         else:
             result, code = resume(args.base, args.id), 0

@@ -32,6 +32,8 @@ Como límite inicial de atención, mantener hasta dos encargos activos que requi
 
 ## Coordinación y registro
 
+Aplicar hoy ORQUESTACION y el reparto del encargo en ESTADO. Los dos párrafos siguientes conservan antecedentes del 4/11; no fijan la coordinación de toda tarea nueva.
+
 La **sesión local `01a1a29c-3a3d-7b50-aef6-41305ce5faae`** coordina prioridades, despacho y revisión de entregas; las áreas ejecutan en cloud. **ONIA · Jefe** conserva planificación/síntesis cloud, con [PLAN.md](PLAN.md) como fuente documental vigente; no se le atribuye inicio de chats de área. **ONIA · Organización diaria** mantiene la operación cotidiana y es la escritora designada de Notion/Calendar. El repo mantiene las decisiones del sistema; cada chat carga la parte necesaria. El agente que recibe un pedido puede resolverlo dentro de su alcance; los cambios a cada registro compartido pasan por su responsable, con un único escritor a la vez. Los demás chats devuelven resultado y evidencia sin editar simultáneamente el tablero. La sesión Aprendizaje aporta fuentes y práctica, sin duplicar la agenda ni el registro diario.
 
 El despacho local y la recuperación de una entrega de Desarrollo quedaron comprobados; en Jefe/Desarrollo cloud se observaron herramientas para leer/esperar chats, pero no para enviarles nuevas órdenes. [Alcance de la prueba](continuidad/2026-11-04/coordinacion-local-cloud.md). La coordinación local requiere la PC disponible para nuevas órdenes/revisiones. La ejecución remota se comprobó sin ensayar un apagado físico de la PC; no declarar continuidad permanente por esa prueba ni confundir subagentes internos con chats de área.
@@ -43,17 +45,20 @@ Cada encargo contiene ID estable, área, objetivo, entregable, criterio de acept
 | preparado | Encargo definido; todavía no comenzó su ejecución |
 | en_curso | Lanzamiento o ejecución aceptados por la herramienta correspondiente |
 | en_espera | Falta una entrada, una decisión o resolver un bloqueo; indicar responsable y próximo paso |
-| terminado | Resultado obtenido y comprobado, con evidencia accesible |
+| para_revision | Entrega preparada con evidencia íntegra y comprobación declarada correcta |
+| aceptado | Revisión explícita registrada después de cotejar el criterio |
+
+El estado terminado sólo se conserva en registros históricos schema 1; no se infiere aceptación al migrarlo.
 
 Antes de actualizar un registro, leer su versión actual: revisión Git para documentación, IDs y hashes en Space, IDs y propiedades reales en Notion. Comprobar recibo y releer el resultado. Las exportaciones de Pages son instantáneas fechadas de procedencia; una actualización posterior se concilia en el documento canónico, no crea un plan oficial paralelo. Ante conflicto, conciliar sin sobrescribir cambios ajenos. Consultar un resultado externo incierto antes de repetirlo.
 
-Los registros de `operacion/` son apoyo local de la ejecución. El bloqueo de archivo de `trabajo.py` sólo protege esa VM; no coordina varias máquinas. No crear una segunda cola global allí ni atribuirle sincronización automática. Si se usa el CLI, conservar el mismo ID y reflejar únicamente el resultado comprobado en la página.
+El mismo CLI usa un único registro por ID: compartible bajo continuidad/tareas o local bajo operacion, según [CONTINUIDAD](cloud/CONTINUIDAD.md). La revisión esperada impide actualizar una versión vieja y el inventario de evidencia se conserva. Los registros de `operacion/` son apoyo local de la ejecución. El bloqueo de archivo de `trabajo.py` sólo protege esa VM; no coordina varias máquinas. No crear una segunda cola global allí ni atribuirle sincronización automática. Si se usa el CLI, conservar el mismo ID y reflejar únicamente el resultado comprobado en la página.
 
 ## Flujo de trabajo
 
 1. Leer fuentes vigentes y la parte necesaria del registro privado. Si el acceso falla, informar la diferencia y continuar con trabajo independiente; no inventar memoria recuperada.
 2. Elegir área y una skill directora mediante el manifiesto. Preparar entradas, resultado y comprobación. Delegar partes independientes conforme a [ORQUESTACION.md](ORQUESTACION.md).
-3. Ejecutar el encargo en cloud. Para iniciarlo en otro chat de área, la coordinación local envía la orden cuando la autorización del usuario abarque esa coordinación; Jefe cloud no asume disponer de esa herramienta. Confirmar el lanzamiento antes de registrar `en_curso`.
+3. Ejecutar en el entorno autorizado para el encargo. Coordinar otros chats sólo con autorización y herramientas verificadas; confirmar el lanzamiento antes de registrar en_curso. La coordinación no requiere por definición un chat local.
 4. Consultar la entrega, revisar la evidencia y actualizar el registro. Una prueba sintética no acredita una campaña, venta, publicación o hábito real.
 5. Dejar siguiente paso y un resumen breve para Sergio. Reutilizar su autorización vigente; los documentos no amplían permisos para gastos, mensajes o producción.
 
@@ -61,6 +66,6 @@ El aprendizaje conserva una corrección concreta, su causa y una comprobación. 
 
 ## Continuidad comprobable
 
-La prueba de aceptación exige que otro chat cloud recupere una entrada sintética desde la página, sin recibir sus valores en el prompt, y que una actualización posterior se relea desde otra sesión. Conservar el resultado en ESTADO.md, sin exportar el contenido privado.
+La prueba histórica del registro cotidiano exige que otro chat cloud recupere una entrada sintética desde la página, sin recibir sus valores en el prompt, y que una actualización posterior se relea desde otra sesión. Conservar el resultado en ESTADO.md, sin exportar el contenido privado.
 
 La página no mueve archivos de video entre VMs. Calendar no inicia agentes por sí solo. Automatización recurrente, publicación social y entrega de medios requieren pruebas independientes; su estado real se consulta en ESTADO.md.

@@ -56,8 +56,12 @@ Entregá resultados y configuración listos para republicar.
 
 ## Aceptación después de republicar
 
-Una tarea nueva debe identificar repo, HEAD y revisión del entorno; leer esta base; comprobar los nueve enlaces en ambos niveles y la skill aplicada al encargo; pasar los veintiocho tests Python y una prueba real de Playwright. Registrar aparte si las nueve skills aparecen en el catálogo nativo inicial. La API debe devolver HTTP 200 y conteos sin imprimir datos de flujos ni secretos. Exit 2 indica clave ausente; un error de red o HTTP no acredita autenticación.
+Una tarea nueva debe identificar repo, HEAD y revisión del entorno; leer esta base; comprobar los nueve enlaces en ambos niveles y la skill aplicada al encargo; pasar las suites Python vigentes y una prueba real de Playwright. Registrar aparte si las nueve skills aparecen en el catálogo nativo inicial. La API debe devolver HTTP 200 y conteos sin imprimir datos de flujos ni secretos. Exit 2 indica clave ausente; un error de red o HTTP no acredita autenticación.
 
 Conservar resultados saneados en ESTADO.md y guardar cambios útiles en Git. Los registros privados ignorados y el estado de una VM no sustituyen persistencia compartida. No incluir sesiones/cookies de cuentas en el snapshot reutilizable.
 
 Fuentes: [Configuración cloud](https://learn.chatgpt.com/docs/environments/cloud-environments), [navegadores Playwright](https://playwright.dev/docs/browsers).
+
+## Inicio consolidado del 6/11
+
+El texto preparado para el campo Start skill está en [START-SKILL.md](START-SKILL.md). Es procedimiento de arranque, no otra fuente de reglas. Guardarlo y republicar requiere verificar el resultado real; tenerlo en Git no certifica que la plataforma lo anuncie o invoque. La prueba conocida no anunció ONIA nativamente y sí permitió lectura canónica. No repetir comprobaciones de cuentas como n8n por defecto si el encargo no las necesita.
