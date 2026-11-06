@@ -1,0 +1,332 @@
+{
+  "tipo": "onia-piloto-b-veredicto",
+  "task_id": "continuidad-cloud-001",
+  "head": "c3ac63174815b78c0b371b6c6ad52c8a1ef3c03f",
+  "head_inicial": "9cf3e40643f8cbf41cfdf9d38c4a0fcb0afe0e41",
+  "checkout_inicial_limpio": true,
+  "revision_recuperada": 2,
+  "catalogo_nativo_inicial": {
+    "instrucciones_inicio_ONIA": false,
+    "skills_ONIA": false,
+    "registrado_antes_de_explorar": true
+  },
+  "lectura_canonica": [
+    "AGENTS.md",
+    "_investigacion-onia/base-operativa/AGENTS.md",
+    "reglas-comunes.md",
+    "ESTADO.md",
+    "ORQUESTACION.md",
+    "orquestacion.json",
+    "cloud/INICIO-SESION.md",
+    "cloud/CONTINUIDAD.md",
+    "compartibles/skills/continuidad-de-trabajo/SKILL.md",
+    "compartibles/skills/desarrollar-y-verificar/SKILL.md",
+    "arquitectura.md"
+  ],
+  "directora_checkpoint": "desarrollar-y-verificar",
+  "resultado_recuperado": {
+    "tabla": [
+      {
+        "articulo": "demo-a",
+        "unidades": 3,
+        "precio_unitario": "12.50",
+        "subtotal": "37.50"
+      },
+      {
+        "articulo": "demo-b",
+        "unidades": 4,
+        "precio_unitario": "2.25",
+        "subtotal": "9.00"
+      },
+      {
+        "articulo": "demo-c",
+        "unidades": 2,
+        "precio_unitario": "5.00",
+        "subtotal": "10.00"
+      }
+    ],
+    "total": "56.50",
+    "unidades": 9
+  },
+  "resultado_recalculado": {
+    "tabla": [
+      {
+        "articulo": "demo-a",
+        "unidades": 3,
+        "precio_unitario": "12.50",
+        "subtotal": "37.50"
+      },
+      {
+        "articulo": "demo-b",
+        "unidades": 4,
+        "precio_unitario": "2.25",
+        "subtotal": "9.00"
+      },
+      {
+        "articulo": "demo-c",
+        "unidades": 2,
+        "precio_unitario": "5.00",
+        "subtotal": "10.00"
+      }
+    ],
+    "total": "56.50",
+    "unidades": 9
+  },
+  "coincide": true,
+  "integridad": {
+    "refs": [
+      {
+        "archivo": "continuidad/evidencias/continuidad-cloud-001/entrada-v1.csv",
+        "sha256": "43e9030909367e3bb1ba1102c41516fd5c08aafb8d6577084083a9f0f47bf78c",
+        "bytes": 77
+      },
+      {
+        "archivo": "continuidad/evidencias/continuidad-cloud-001/informe-a-v1.json",
+        "sha256": "d2c9c2dba5f5fba5cab96515b9509bb2ebab13e44837c1c0e9d31c20614b2458",
+        "bytes": 845
+      },
+      {
+        "archivo": "continuidad/encargos/continuidad-cloud-001.md",
+        "sha256": "81a9306987e894f3c17c422762f1cb89c9f6cc9840ac2155f0b6f74fcd7adbba",
+        "bytes": 2617
+      }
+    ],
+    "correcta": true,
+    "registro_original_sha256": "ec330cb12cca837697cd0ab3d974b912ae563d55408a637495d50def91c8eafa",
+    "original_intacto_tras_controles": true
+  },
+  "controles_negativos": [
+    {
+      "caso": "evidencia_alterada",
+      "correcto": true,
+      "registro_intacto": true
+    },
+    {
+      "caso": "briefing_alterado",
+      "correcto": true,
+      "registro_intacto": true
+    },
+    {
+      "caso": "revision_vieja",
+      "correcto": true,
+      "registro_intacto": true
+    },
+    {
+      "caso": "verificacion_fallida_actualizar",
+      "correcto": true,
+      "registro_intacto": true
+    },
+    {
+      "caso": "verificacion_fallida_aceptar",
+      "correcto": true,
+      "registro_intacto": true
+    },
+    {
+      "caso": "briefing_ausente",
+      "correcto": true,
+      "registro_intacto": true
+    },
+    {
+      "caso": "briefing_parcial",
+      "correcto": true,
+      "registro_intacto": true
+    }
+  ],
+  "comandos_controles": [
+    {
+      "comando": [
+        "python3",
+        "/workspace/onia/_investigacion-onia/base-operativa/scripts/harness.py",
+        "--base",
+        "<TEMP_AISLADO>/evidencia_alterada",
+        "retomar",
+        "continuidad-cloud-001"
+      ],
+      "exit_code": 2,
+      "stdout": "{\n  \"error\": \"Evidencia cambió: continuidad/evidencias/continuidad-cloud-001/entrada-v1.csv\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "comando": [
+        "python3",
+        "/workspace/onia/_investigacion-onia/base-operativa/scripts/harness.py",
+        "--base",
+        "<TEMP_AISLADO>/briefing_alterado",
+        "retomar",
+        "continuidad-cloud-001"
+      ],
+      "exit_code": 2,
+      "stdout": "{\n  \"error\": \"Briefing cambió; no se actualizó su hash automáticamente.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "comando": [
+        "python3",
+        "/workspace/onia/_investigacion-onia/base-operativa/scripts/trabajo.py",
+        "--base",
+        "<TEMP_AISLADO>/revision_vieja",
+        "actualizar",
+        "continuidad-cloud-001",
+        "--revision-esperada",
+        "1",
+        "--estado",
+        "para_revision",
+        "--resultado",
+        "Control sintético",
+        "--comprobacion",
+        "Control negativo",
+        "--verificacion",
+        "correcta",
+        "--siguiente",
+        "Revisión externa"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "{\"error\": \"Revisión obsoleta o ausente: esperada 1, actual 2.\"}\n"
+    },
+    {
+      "comando": [
+        "python3",
+        "/workspace/onia/_investigacion-onia/base-operativa/scripts/trabajo.py",
+        "--base",
+        "<TEMP_AISLADO>/revision_vieja",
+        "aceptar",
+        "continuidad-cloud-001",
+        "--revision-esperada",
+        "1",
+        "--revisor",
+        "Revisor ficticio de copia aislada",
+        "--criterio",
+        "Control negativo; no aceptación original"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "{\"error\": \"Revisión obsoleta o ausente: esperada 1, actual 2.\"}\n"
+    },
+    {
+      "comando": [
+        "python3",
+        "/workspace/onia/_investigacion-onia/base-operativa/scripts/trabajo.py",
+        "--base",
+        "<TEMP_AISLADO>/briefing_ausente",
+        "recuperar",
+        "continuidad-cloud-001",
+        "--revision-esperada",
+        "2"
+      ],
+      "exit_code": 0,
+      "stdout": "JSON válido; salida comprobada por aserciones",
+      "stderr": ""
+    },
+    {
+      "comando": [
+        "python3",
+        "/workspace/onia/_investigacion-onia/base-operativa/scripts/trabajo.py",
+        "--base",
+        "<TEMP_AISLADO>/briefing_ausente",
+        "recuperar",
+        "continuidad-cloud-001",
+        "--revision-esperada",
+        "2"
+      ],
+      "exit_code": 0,
+      "stdout": "JSON válido; salida comprobada por aserciones",
+      "stderr": ""
+    },
+    {
+      "comando": [
+        "python3",
+        "/workspace/onia/_investigacion-onia/base-operativa/scripts/trabajo.py",
+        "--base",
+        "<TEMP_AISLADO>/briefing_parcial",
+        "recuperar",
+        "continuidad-cloud-001",
+        "--revision-esperada",
+        "2"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "{\"error\": \"Briefing cambió; no se actualizó su hash automáticamente.\"}\n"
+    },
+    {
+      "comando": [
+        "python3",
+        "/workspace/onia/_investigacion-onia/base-operativa/scripts/trabajo.py",
+        "--base",
+        "<TEMP_AISLADO>/actualizar",
+        "actualizar",
+        "continuidad-cloud-001",
+        "--revision-esperada",
+        "2",
+        "--estado",
+        "para_revision",
+        "--resultado",
+        "Control sintético",
+        "--comprobacion",
+        "Fallo sintético",
+        "--verificacion",
+        "fallo",
+        "--siguiente",
+        "Revisión externa"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "{\"error\": \"Entrega requiere comprobación correcta, resultado y evidencia.\"}\n"
+    },
+    {
+      "comando": [
+        "python3",
+        "/workspace/onia/_investigacion-onia/base-operativa/scripts/trabajo.py",
+        "--base",
+        "<TEMP_AISLADO>/aceptar",
+        "aceptar",
+        "continuidad-cloud-001",
+        "--revision-esperada",
+        "2",
+        "--revisor",
+        "Revisor ficticio aislado",
+        "--criterio",
+        "Control negativo"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "{\"error\": \"Sólo una entrega para_revision puede aceptarse.\"}\n"
+    }
+  ],
+  "comandos_previos": [
+    {
+      "comando": "git status --short; git rev-parse HEAD; git remote -v",
+      "resultado": "Limpio; HEAD inicial registrado; origin oninteligenciaartificial/onia"
+    },
+    {
+      "comando": "git cat-file -t c3ac63174815b78c0b371b6c6ad52c8a1ef3c03f",
+      "resultado": "fatal: git cat-file: could not get object info"
+    },
+    {
+      "comando": "git fetch origin c3ac63174815b78c0b371b6c6ad52c8a1ef3c03f",
+      "resultado": "exit 0; FETCH_HEAD recuperado"
+    },
+    {
+      "comando": "git switch --detach c3ac63174815b78c0b371b6c6ad52c8a1ef3c03f",
+      "resultado": "exit 0; sin descartar trabajo"
+    },
+    {
+      "comando": "python3 _investigacion-onia/base-operativa/scripts/preparar-cloud.py --check --discovery-root /workspace",
+      "resultado": "exit 0; 9 enlaces repo y 9 aliases ready; sin errores ni instalaciones"
+    },
+    {
+      "comando": "python3 _investigacion-onia/base-operativa/scripts/harness.py retomar continuidad-cloud-001",
+      "resultado": "exit 0; integridad comprobada; revisión 2"
+    }
+  ],
+  "veredicto": "Cálculo e integridad conformes; entrega B para revisión externa, sin aceptación propia.",
+  "limites": [
+    "Datos enteramente ficticios; sin clientes, dinero ni operaciones reales.",
+    "Controles ejecutados con CLI existente y --base en copias temporales; ninguna alteración al original.",
+    "No se repitieron suites completas de preparación.",
+    "Lectura canónica explícita y enlaces presentes no acreditan anuncio nativo ni carga automática.",
+    "Sin prueba de teléfono ni sincronización automática.",
+    "Sin commit ni push; integración y aceptación pendientes de coordinación.",
+    "El valor CLI de verificación fallida es fallo. Aceptar se probó con fixture aislado en_curso y fallo: rechazado por no ser para_revision. Actualizar a para_revision con fallo también se rechazó. Los intentos iniciales con fallida sólo probaron validación de enumeración; se corrigieron y no se cuentan como controles de transición."
+  ]
+}

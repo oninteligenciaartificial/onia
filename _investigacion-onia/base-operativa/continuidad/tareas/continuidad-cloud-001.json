@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "continuidad-cloud-001",
-  "revision": 2,
+  "revision": 3,
   "compartible": true,
   "objetivo": "Comprobar un resumen de un pedido enteramente ficticio.",
   "estado": "para_revision",
-  "proximo_paso": "B: retomar este ID desde el commit publicado, recalcular independientemente desde CSV, comparar informe A y emitir veredicto con evidencia nueva, sin aceptarse a sí mismo.",
-  "resultado": "Informe A v1 preparado con tabla de subtotales, total y unidades del pedido ficticio.",
-  "comprobacion": "CSV UTF-8 e informe JSON releídos; filas, unidades, precios, subtotales y total cotejados con Decimal exacto.",
+  "proximo_paso": "Coordinación: revisar e integrar los dos archivos de B; revisor independiente debe cotejar y decidir aceptación explícita con revisión 3. B no se acepta.",
+  "resultado": "B recalculó independientemente el pedido ficticio: subtotales 37.50, 9.00 y 10.00; total 56.50 y 9 unidades. Coincide con A.",
+  "comprobacion": "Decimal desde CSV; integridad SHA-256 y bytes cotejados; siete controles aislados conformes, con límites y errores exactos en veredicto B.",
   "verificacion": "correcta",
   "evidencias": [
     {
@@ -19,9 +19,14 @@
       "archivo": "continuidad/evidencias/continuidad-cloud-001/informe-a-v1.json",
       "sha256": "d2c9c2dba5f5fba5cab96515b9509bb2ebab13e44837c1c0e9d31c20614b2458",
       "bytes": 845
+    },
+    {
+      "archivo": "continuidad/evidencias/continuidad-cloud-001/veredicto-b-v1.json",
+      "sha256": "3d4be8f00faa795c72d91020a36232ac7e9815bc2ec7c46560a3caa81ec642b5",
+      "bytes": 10034
     }
   ],
-  "actualizado": "2026-11-06T19:21:39.218417+00:00",
+  "actualizado": "2026-11-06T19:27:20.840765+00:00",
   "historial": [
     {
       "revision": 1,
@@ -32,6 +37,28 @@
       "verificacion": "pendiente",
       "evidencias": [],
       "proximo_paso": "Leer continuidad/encargos/continuidad-cloud-001.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-06T19:21:39.218417+00:00",
+      "estado": "para_revision",
+      "resultado": "Informe A v1 preparado con tabla de subtotales, total y unidades del pedido ficticio.",
+      "comprobacion": "CSV UTF-8 e informe JSON releídos; filas, unidades, precios, subtotales y total cotejados con Decimal exacto.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "continuidad/evidencias/continuidad-cloud-001/entrada-v1.csv",
+          "sha256": "43e9030909367e3bb1ba1102c41516fd5c08aafb8d6577084083a9f0f47bf78c",
+          "bytes": 77
+        },
+        {
+          "archivo": "continuidad/evidencias/continuidad-cloud-001/informe-a-v1.json",
+          "sha256": "d2c9c2dba5f5fba5cab96515b9509bb2ebab13e44837c1c0e9d31c20614b2458",
+          "bytes": 845
+        }
+      ],
+      "proximo_paso": "B: retomar este ID desde el commit publicado, recalcular independientemente desde CSV, comparar informe A y emitir veredicto con evidencia nueva, sin aceptarse a sí mismo.",
       "aceptacion": null
     }
   ],
