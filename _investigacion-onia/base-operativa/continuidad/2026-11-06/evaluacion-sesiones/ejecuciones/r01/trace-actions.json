@@ -1,0 +1,32 @@
+{
+  "actions": [
+    {
+      "timestamp": "2026-11-06T21:00:55.815Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_4528c69a9bcc40fb946edd4d3c2dd0b5",
+      "arguments": "text(await tools.exec_command({cmd:\"Get-Content -LiteralPath 'C:\\\\dev\\\\proyectos\\\\_investigacion-onia\\\\base-operativa\\\\continuidad\\\\2026-11-06\\\\evaluacion-sesiones\\\\ejecuciones\\\\r01\\\\workspace\\\\ENCARGO.md'; if (Test-Path -LiteralPath 'C:\\\\dev\\\\proyectos\\\\_investigacion-onia\\\\base-operativa\\\\continuidad\\\\2026-11-06\\\\evaluacion-sesiones\\\\ejecuciones\\\\r01\\\\workspace\\\\AGENTS.md') { Get-Content -LiteralPath 'C:\\\\dev\\\\proyectos\\\\_investigacion-onia\\\\base-operativa\\\\continuidad\\\\2026-11-06\\\\evaluacion-sesiones\\\\ejecuciones\\\\r01\\\\workspace\\\\AGENTS.md' }\",\"max_output_tokens\":6000}));\n"
+    },
+    {
+      "timestamp": "2026-11-06T21:00:59.988Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_7889c9e891834318a292c16bc62246e2",
+      "arguments": "text(await tools.exec_command({cmd:\"Get-ChildItem -Force; Get-Content -LiteralPath resumen.py; if (Test-Path tests) { Get-ChildItem tests -Recurse }\",\"workdir\":\"C:\\\\dev\\\\proyectos\\\\_investigacion-onia\\\\base-operativa\\\\continuidad\\\\2026-11-06\\\\evaluacion-sesiones\\\\ejecuciones\\\\r01\\\\workspace\",\"max_output_tokens\":4000}));\n"
+    },
+    {
+      "timestamp": "2026-11-06T21:01:33.067Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_c837edab21054d7e943952884230c170",
+      "arguments": "text(await tools.exec_command({cmd:\"@'\\n\\\"\\\"\\\"Cálculo decimal del subtotal de pedidos.\\\"\\\"\\\"\\n\\nfrom decimal import Decimal, InvalidOperation, ROUND_HALF_UP, localcontext\\n\\n\\ndef subtotal(pedido):\\n    filas = []\\n    for fila in pedido:\\n        unidades = fila[\\\"unidades\\\"]\\n        if isinstance(unidades, bool) or not isinstance(unidades, int) or unidades < 0:\\n            raise ValueError(\\\"Las unidades deben ser enteras no negativas\\\")\\n        try:\\n            precio = Decimal(fila[\\\"precio\\\"])\\n        except (InvalidOperation, TypeError, ValueError) as exc:\\n            raise ValueError(\\\"El precio debe ser decimal no negativo\\\") from exc\\n        if not precio.is_finite() or precio < 0:\\n            raise ValueError(\\\"El precio debe ser decimal no negativo\\\")\\n        estado = fila[\\\"estado\\\"]\\n        if estado not in (\\\"activo\\\", \\\"anulado\\\"):\\n            raise ValueError(\\\"Estado desconocido\\\")\\n        if estado == \\\"activo\\\":\\n            filas.append((unidades, precio))\\n\\n    # Cubrir todos los dígitos de los productos y la suma antes de redondear.\\n    escala = min([-2] + [p.as_tuple().exponent for _, p in filas])\\n    enteros = max([1] + [p.adjusted() + len(str(u)) + 1 for u, p in filas])\\n    with localcontext() as contexto:\\n        contexto.prec = max(28, enteros - escala + len(str(len(filas) + 1)))\\n        total = sum((u * p for u, p in filas), Decimal(0))\\n        return format(total.quantize(Decimal(\\\"0.01\\\"), rounding=ROUND_HALF_UP), \\\".2f\\\")\\n'@ | Set-Content -LiteralPath resumen.py -Encoding utf8\\n@'\\nimport copy\\nimport unittest\\n\\nfrom resumen import subtotal\\n\\n\\ndef fila(unidades=1, precio=\\\"1.00\\\", estado=\\\"activo\\\"):\\n    return dict(unidades=unidades, precio=precio, estado=estado)\\n\\n\\nclass SubtotalTests(unittest.TestCase):\\n    def test_normales_y_entrada_intacta(self):\\n        pedido = [fila(2, \\\"1.25\\\"), fila(3, \\\"0.10\\\"), fila(8, \\\"10\\\", \\\"anulado\\\")]\\n        original = copy.deepcopy(pedido)\\n        self.assertEqual(subtotal(pedido), \\\"2.80\\\")\\n        self.assertEqual(pedido, original)\\n\\n    def test_vacios_y_ceros(self):\\n        for pedido in ([], [fila(0, \\\"15\\\")], [fila(2, \\\"10\\\", \\\"anulado\\\")]):\\n            with self.subTest(pedido=pedido):\\n                self.assertEqual(subtotal(pedido), \\\"0.00\\\")\\n\\n    def test_half_up(self):\\n        self.assertEqual(subtotal([fila(precio=\\\"1.005\\\")]), \\\"1.01\\\")\\n        self.assertEqual(subtotal([fila(precio=\\\"2.675\\\")]), \\\"2.68\\\")\\n\\n    def test_redondea_al_final(self):\\n        self.assertEqual(subtotal([fila(precio=\\\"0.004\\\"), fila(precio=\\\"0.004\\\")]), \\\"0.01\\\")\\n\\n    def test_precision_decimal(self):\\n        self.assertEqual(subtotal([fila(precio=\\\"123456789012345678901234567890.005\\\")]),\\n                         \\\"123456789012345678901234567890.01\\\")\\n\\n    def test_fallos_incluso_en_anulados(self):\\n        for estado in (\\\"activo\\\", \\\"anulado\\\"):\\n            for invalida in (fila(-1, estado=estado), fila(precio=\\\"-0.01\\\", estado=estado),\\n                             fila(precio=\\\"NaN\\\", estado=estado), fila(precio=\\\"Infinity\\\", estado=estado),\\n                             fila(precio=\\\"texto\\\", estado=estado), fila(1.5, estado=estado)):\\n                with self.subTest(fila=invalida):\\n                    with self.assertRaises(ValueError):\\n                        subtotal([invalida])\\n        with self.assertRaises(ValueError):\\n            subtotal([fila(estado=\\\"desconocido\\\")])\\n\\n\\nif __name__ == \\\"__main__\\\":\\n    unittest.main()\\n'@ | Set-Content -LiteralPath test_resumen.py -Encoding utf8\\npython -B -m unittest -v\",\"workdir\":\"C:\\\\dev\\\\proyectos\\\\_investigacion-onia\\\\base-operativa\\\\continuidad\\\\2026-11-06\\\\evaluacion-sesiones\\\\ejecuciones\\\\r01\\\\workspace\",\"max_output_tokens\":3000}));\n"
+    }
+  ],
+  "assistant_messages": [
+    {
+      "timestamp": "2026-11-06T21:01:38.090Z",
+      "phase": "final_answer",
+      "text": "Corregido `resumen.py` dentro de la copia aislada: suma únicamente filas activas, usa `Decimal`, redondea HALF_UP al final y devuelve dos decimales sin modificar la entrada. Valida unidades, precios y estados, incluso en filas anuladas.\n\nAgregué `test_resumen.py`. Verificación: `python -B -m unittest -v`, 6 pruebas aprobadas, incluyendo casos normales, fallos, precisión y conservación de la entrada.\n\nNo cambié `README.md`, agregué dependencias, usé red ni modifiqué archivos fuera de la copia. El resultado quedó local; no se publicó."
+    }
+  ]
+}

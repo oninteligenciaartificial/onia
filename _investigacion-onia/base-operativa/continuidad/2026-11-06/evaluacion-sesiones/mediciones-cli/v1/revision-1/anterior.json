@@ -1,0 +1,28 @@
+{
+  "tarea": {
+    "schema": 2,
+    "id": "medicion",
+    "revision": 1,
+    "compartible": false,
+    "objetivo": "Resumir datos suministrados",
+    "estado": "preparado",
+    "proximo_paso": "Calcular y verificar",
+    "resultado": "",
+    "comprobacion": "",
+    "verificacion": "pendiente",
+    "evidencias": [],
+    "actualizado": "2026-11-06T21:09:00.565875+00:00",
+    "historial": [],
+    "briefing": {
+      "archivo": "operacion/encargos/medicion.md",
+      "sha256": "a63847351d81dfc3129f0fa044c5d3a5fbf9841827ac7ababadcea1868f41cb5",
+      "bytes": 269,
+      "contenido": "# Encargo sintético\nObjetivo: resumir datos suministrados.\nRestricciones: no red, no datos externos, conservar entradas, no autoaceptarse.\nDecisión vigente de esta medición: sólo filas activas.\nSiguiente paso: calcular y verificar antes de entregar para revisión.\n"
+    },
+    "aceptacion": null
+  },
+  "advertencias": [],
+  "nota": "Integridad comprobada; comprobación y revisor son declaraciones, no identidad autenticada ni garantía de calidad.",
+  "briefing": "# Encargo sintético\nObjetivo: resumir datos suministrados.\nRestricciones: no red, no datos externos, conservar entradas, no autoaceptarse.\nDecisión vigente de esta medición: sólo filas activas.\nSiguiente paso: calcular y verificar antes de entregar para revisión.\n",
+  "nota_harness": "Este comando no crea agentes, abre chats, ejecuta encargos ni usa la red. Sólo --compartible guarda un registro saneado versionable en continuidad/. Los registros privados quedan en operacion/. Git requiere publicación y recuperación explícitas."
+}

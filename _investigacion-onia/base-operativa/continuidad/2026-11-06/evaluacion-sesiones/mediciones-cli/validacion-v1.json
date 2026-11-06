@@ -1,0 +1,63 @@
+{
+  "tipo": "Resumen de ejecuciones observadas y cotejadas por revisora; no transcripcion completa de stdout",
+  "fecha": "2026-11-06",
+  "suite": "-B -m unittest discover -s _investigacion-onia/base-operativa/scripts -p test_*.py -q",
+  "pruebas_definidas": 75,
+  "windows": {
+    "exit_code": 0,
+    "ejecutadas": 67,
+    "omisiones": 8,
+    "motivo": "Privilegio de symlink WinError1314",
+    "duracion_suite_segundos": 9.454,
+    "command_item_revisor": "exec-dd60c6ae"
+  },
+  "linux_wsl": {
+    "exit_code": 0,
+    "ejecutadas": 74,
+    "omisiones": 1,
+    "motivo": "Junctions exclusivamente Windows",
+    "duracion_suite_segundos": 12.043,
+    "command_item_revisor": "exec-564384e8"
+  },
+  "limites": [
+    "Cobertura complementaria local; no prueba Cloud de esta version",
+    "No demuestra compaccion nativa ni conducta general de un LLM",
+    "Las reservas son locales y los nombres no autentican actores"
+  ],
+  "correcciones_revision": [
+    "Rechazo de ID de decision no canonico tambien al importar",
+    "Normalizacion de revisor antes de comparar con ejecutor",
+    "Rechazo de autorreferencias al JSON mutable antes de guardar"
+  ],
+  "preparacion_local": {
+    "antes": {
+      "ready": 7,
+      "missing": 2,
+      "conflict": 0
+    },
+    "error_reproducido": "WinError1314 al crear symlink",
+    "accion": "--install --junctions-windows",
+    "creados": [
+      "planificar-dia",
+      "preparar-campana-meta"
+    ],
+    "despues": {
+      "ready": 9,
+      "missing": 0,
+      "conflict": 0
+    },
+    "anuncio_nativo": "Pendiente de observacion independiente, no inferido de ready"
+  },
+  "fuentes_sha256": {
+    "scripts/trabajo.py": "6333fb5e5acf8ee7ba7000214316750056733d466e0d6124178d762c81d1768f",
+    "scripts/harness.py": "cc08834debf81c792b55b3823bbb148a8c5cae51f5b0cd3b93d240f4b3127486",
+    "scripts/preparar-cloud.py": "20b54cc0de6c452a5b4ee4026dc3a59b1e08fbc98648cfefc9ae60074f2a572b",
+    "scripts/test_trabajo.py": "aa3af83925468fbb427deec081e7705b5ddfdbf4a64609e2cef5ca1a651f5aed",
+    "scripts/test_harness.py": "5d6857e7134e87b456094596e945a0c227c4974955bcb3732c4f9b5c8b95fb47",
+    "scripts/test_preparar_cloud.py": "738ad221e412c6f93435fbb83473327b6ff88086200adaf63561bdfd3eeddb69",
+    "scripts/test_evaluacion_sesiones.py": "023afd4fa5786a9a8921c463cc8e7bdc7c4de57951df86f9ec14a187b97f75af",
+    "orquestacion.json": "bf929707a6bfc753374d651a229dfa87a7173214abe6cf92eeecc96448789d77"
+  },
+  "congelacion_casos_sha256": "df959a85f2a89ec55398bc110aecc3f7cd94e93bc2fd564bb797ec649383d5b0",
+  "mediciones": "mediciones-cli/v1/resultados.json"
+}

@@ -1,0 +1,49 @@
+{
+  "results": [
+    {
+      "timestamp": "2026-11-06T21:00:56.286Z",
+      "type": "custom_tool_call_output",
+      "call_id": "call_4528c69a9bcc40fb946edd4d3c2dd0b5",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\"chunk_id\":\"51b2e7\",\"wall_time_seconds\":0.2548423,\"exit_code\":0,\"original_token_count\":146,\"output\":\"Corregí resumen.py en esta copia aislada. subtotal(pedido) recibe una lista de filas con unidades enteras no negativas, precio decimal como texto y estado activo o anulado. Debe devolver el total sólo de filas activas como texto con dos decimales y redondeo decimal HALF_UP al final, sin modificar la entrada. Unidades negativas, precio negativo o estado desconocido deben producir ValueError. No agregues dependencias, no uses red ni cambies README.md. Podés escribir tests locales. Verificá casos normales y de fallo; entregá el cambio y evidencia sin afirmar publicación.\\r\\n\"}"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-11-06T21:01:00.478Z",
+      "type": "custom_tool_call_output",
+      "call_id": "call_7889c9e891834318a292c16bc62246e2",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\"chunk_id\":\"46ccf7\",\"wall_time_seconds\":0.3045993,\"exit_code\":0,\"original_token_count\":150,\"output\":\"\\r\\n    Directory: C:\\\\dev\\\\proyectos\\\\_investigacion-onia\\\\base-operativa\\\\continuidad\\\\2026-11-06\\\\evaluacion-sesiones\\\\ejecucion\\r\\nes\\\\r01\\\\workspace\\r\\n\\r\\nMode                 LastWriteTime         Length Name\\r\\n----                 -------------         ------ ----\\r\\n-a---       06/11/2026 05:00 p. m.            581 ENCARGO.md\\r\\n-a---       06/11/2026 04:57 p. m.             75 README.md\\r\\n-a---       06/11/2026 04:57 p. m.            152 resumen.py\\r\\ndef subtotal(pedido):\\r\\n    total = 0.0\\r\\n    for fila in pedido:\\r\\n        total += fila[\\\"unidades\\\"] * float(fila[\\\"precio\\\"])\\r\\n    return str(round(total, 2))\\r\\n\\r\\n\"}"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-11-06T21:01:33.601Z",
+      "type": "custom_tool_call_output",
+      "call_id": "call_c837edab21054d7e943952884230c170",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\"chunk_id\":\"9c6986\",\"wall_time_seconds\":0.3354406,\"exit_code\":0,\"original_token_count\":153,\"output\":\"test_fallos_incluso_en_anulados (test_resumen.SubtotalTests.test_fallos_incluso_en_anulados) ... ok\\r\\ntest_half_up (test_resumen.SubtotalTests.test_half_up) ... ok\\r\\ntest_normales_y_entrada_intacta (test_resumen.SubtotalTests.test_normales_y_entrada_intacta) ... ok\\r\\ntest_precision_decimal (test_resumen.SubtotalTests.test_precision_decimal) ... ok\\r\\ntest_redondea_al_final (test_resumen.SubtotalTests.test_redondea_al_final) ... ok\\r\\ntest_vacios_y_ceros (test_resumen.SubtotalTests.test_vacios_y_ceros) ... ok\\r\\n\\r\\n----------------------------------------------------------------------\\r\\nRan 6 tests in 0.001s\\r\\n\\r\\nOK\\r\\n\"}"
+        }
+      ]
+    }
+  ]
+}

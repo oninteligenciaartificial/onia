@@ -1,9 +1,11 @@
 """Enlaza las skills canónicas del repositorio; no descarga ni instala paquetes."""
 import argparse
+import base64
 import json
 import os
 from pathlib import Path
 import sys
+import subprocess
 
 SOURCE = Path("_investigacion-onia/base-operativa/compartibles/skills")
 DESTINATION = Path(".agents/skills")
@@ -70,9 +72,23 @@ def inspect(root, destination_root=None):
     return entries
 
 
-def prepare(root, install=False, discovery_root=None):
+def create_junction(source, destination):
+    """Alternativa explícita Windows, sin privilegio de symlink ni copia de la skill."""
+    if os.name != "nt":
+        raise ValueError("Las junctions sólo están disponibles en Windows.")
+    quote = lambda value: "'" + str(value).replace("'", "''") + "'"
+    command = ("$ErrorActionPreference='Stop'; New-Item -ItemType Junction -Path " + quote(destination)
+               + " -Target " + quote(source) + " | Out-Null")
+    encoded = base64.b64encode(command.encode("utf-16-le")).decode("ascii")
+    subprocess.run(["powershell.exe", "-NoProfile", "-NonInteractive", "-EncodedCommand", encoded],
+                   check=True, capture_output=True, creationflags=subprocess.CREATE_NO_WINDOW)
+
+
+def prepare(root, install=False, discovery_root=None, windows_junctions=False):
     root = root.resolve()
     discovery_root = discovery_parent(root, discovery_root)
+    if windows_junctions and (not install or os.name != "nt"):
+        raise ValueError("--junctions-windows requiere --install en Windows.")
     entries = inspect(root)
     discovery_entries = inspect(root, discovery_root) if discovery_root is not None else []
     result = {"mode": "install" if install else "check", "root": str(root),
@@ -96,12 +112,15 @@ def prepare(root, install=False, discovery_root=None):
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 # El enlace relativo sigue funcionando al mover el checkout.
                 target = os.path.relpath(source, destination.parent)
-                os.symlink(target, destination, target_is_directory=True)
+                if windows_junctions:
+                    create_junction(source, destination)
+                else:
+                    os.symlink(target, destination, target_is_directory=True)
                 result["created"].append(entry["destination"])
             result["skills"] = inspect(root)
             if discovery_root is not None:
                 result["discovery_skills"] = inspect(root, discovery_root)
-        except OSError as exc:
+        except (OSError, subprocess.CalledProcessError) as exc:
             # No borrar destinos ni hacer fallback a copias o enlaces distintos.
             result["errors"].append(f"No se pudo crear el enlace: {exc}")
             return result, 2
@@ -118,9 +137,12 @@ def main(argv=None):
     mode.add_argument("--install", action="store_true", help="Crear únicamente enlaces faltantes, sin sobrescribir.")
     parser.add_argument("--discovery-root", type=Path,
                         help="Raíz absoluta opcional del workspace padre; crea también aliases allí.")
+    parser.add_argument("--junctions-windows", action="store_true",
+                        help="Usar junctions explícitas si Windows no permite symlinks. Destino absoluto; no portable al mover checkout.")
     args = parser.parse_args(argv)
     try:
-        result, code = prepare(repository_root(), install=args.install, discovery_root=args.discovery_root)
+        result, code = prepare(repository_root(), install=args.install, discovery_root=args.discovery_root,
+                               windows_junctions=args.junctions_windows)
     except (OSError, ValueError) as exc:
         result, code = {"errors": [str(exc)]}, 2
     print(json.dumps(result, ensure_ascii=False, indent=2))

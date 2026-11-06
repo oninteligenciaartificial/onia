@@ -1,0 +1,55 @@
+{
+  "results": [
+    {
+      "timestamp": "2026-11-06T21:01:02.802Z",
+      "type": "custom_tool_call_output",
+      "call_id": "call_2c76c9d09722475284d6cb1b7e9dcce0",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.6 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Corregí resumen.py en esta copia aislada. subtotal(pedido) recibe una lista de filas con unidades enteras no negativas, precio decimal como texto y estado activo o anulado. Debe devolver el total sólo de filas activas como texto con dos decimales y redondeo decimal HALF_UP al final, sin modificar la entrada. Unidades negativas, precio negativo o estado desconocido deben producir ValueError. No agregues dependencias, no uses red ni cambies README.md. Podés escribir tests locales. Verificá casos normales y de fallo; entregá el cambio y evidencia sin afirmar publicación.\n\r\n\r\nName       Mode\r\n----       ----\r\nENCARGO.md -a---\r\nREADME.md  -a---\r\nresumen.py -a---\r\n\r\n"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-11-06T21:01:07.255Z",
+      "type": "custom_tool_call_output",
+      "call_id": "call_10f5344f6d9542bf89f6003e6595d733",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "def subtotal(pedido):\n    total = 0.0\n    for fila in pedido:\n        total += fila[\"unidades\"] * float(fila[\"precio\"])\n    return str(round(total, 2))\n\r\nFixture sintético de código acotado. Conservar este archivo sin cambios.\n\r\n"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-11-06T21:01:21.598Z",
+      "type": "custom_tool_call_output",
+      "call_id": "call_c46547ceb45640ca9e8a2a56a614678d",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Casos normales, redondeo final, inmutabilidad y fallos: OK\r\n"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-11-06T21:01:27.058Z",
+      "type": "function_call_output",
+      "call_id": "call_89fc0e1643a7434f89c3a9e3e09cfa93",
+      "output": ""
+    }
+  ]
+}

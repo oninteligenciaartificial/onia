@@ -124,9 +124,10 @@ class HarnessTests(unittest.TestCase):
                                  text=True, encoding="utf-8", check=True)
         result = json.loads(resumed.stdout)
         self.assertEqual(result["tarea"]["estado"], "preparado")
-        self.assertIn("Demo disponible", result["briefing"])
-        self.assertIn("Ficha y embudo", result["briefing"])
-        self.assertIn("../../ORQUESTACION.md", result["briefing"])
+        self.assertIn("Demo disponible", result["tarea"]["briefing"]["contenido"])
+        self.assertIn("Ficha y embudo", result["tarea"]["briefing"]["contenido"])
+        self.assertIn("../../ORQUESTACION.md", result["tarea"]["briefing"]["contenido"])
+        self.assertNotIn("briefing", result)
         self.assertIn("no crea agentes", result["nota_harness"])
 
     def test_routes_and_product_scope(self):
@@ -157,7 +158,7 @@ class HarnessTests(unittest.TestCase):
                 context = brief.split("## Contexto mínimo", 1)[1].split("## Skills de apoyo disponibles", 1)[0]
                 self.assertIn(self.data["skills"][research], context)
                 self.assertNotIn(self.data["skills"]["tercero-addy-context"], context)
-                self.assertIn(self.data["skills"][research], harness.resume(self.base, "apoyo-" + area)["briefing"])
+                self.assertIn(self.data["skills"][research], harness.resume(self.base, "apoyo-" + area)["tarea"]["briefing"]["contenido"])
 
     def test_apoyo_ajeno_no_escribe_encargo(self):
         with self.assertRaisesRegex(ValueError, "Apoyo no habilitado"):
@@ -219,7 +220,7 @@ class HarnessTests(unittest.TestCase):
         self.assertEqual(json.loads(result.stdout)["apoyos_seleccionados"], ["tercero-matt-research"])
         resumed = subprocess.run(command + ["retomar", "apoyo-cli"], capture_output=True,
                                  text=True, encoding="utf-8", check=True)
-        self.assertIn(self.data["skills"]["tercero-matt-research"], json.loads(resumed.stdout)["briefing"])
+        self.assertIn(self.data["skills"]["tercero-matt-research"], json.loads(resumed.stdout)["tarea"]["briefing"]["contenido"])
 
     def test_cli_selects_continuity_without_loading_agenda_as_director(self):
         script = str(Path(harness.__file__).resolve())
@@ -278,10 +279,35 @@ class HarnessTests(unittest.TestCase):
         self.assertEqual(record.relative_to(self.base).as_posix(), "continuidad/tareas/compartido.json")
         self.assertFalse((self.base / "operacion/tareas/compartido.json").exists())
         path = self.base / result["briefing"]
-        self.assertEqual(harness.resume(self.base, "compartido")["briefing"], path.read_text(encoding="utf-8"))
+        self.assertEqual(harness.resume(self.base, "compartido")["tarea"]["briefing"]["contenido"], path.read_text(encoding="utf-8"))
         path.write_text("Brief alterado", encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "Briefing cambió"):
             harness.resume(self.base, "compartido")
+
+    def test_cli_views_are_explicit_and_briefing_is_not_duplicated(self):
+        self.prepare()
+        trabajo.update(self.base, "pieza-1", "en_curso", "Avance", "", "Seguir", [], revision=1)
+        script = str(Path(harness.__file__).resolve())
+        command = [sys.executable, script, "--base", str(self.base)]
+        brief = json.loads(subprocess.check_output(command + ["retomar", "pieza-1"], encoding="utf-8"))
+        full = json.loads(subprocess.check_output(command + ["retomar", "pieza-1", "--completo"], encoding="utf-8"))
+        history = json.loads(subprocess.check_output(command + ["historial", "pieza-1", "--revision", "1"], encoding="utf-8"))
+        self.assertNotIn("historial", brief["tarea"])
+        self.assertNotIn("briefing", brief)
+        self.assertNotIn("briefing", full)
+        self.assertEqual(full["tarea"], trabajo.read_task(self.base, "pieza-1"))
+        self.assertEqual(history["historial"][0]["estado"], "preparado")
+        self.assertIn("Audio y dimensiones revisados", brief["tarea"]["briefing"]["contenido"])
+
+    def test_profile_recommends_without_claiming_requested_or_effective_model(self):
+        result = harness.prepare(self.base, "perfil-1", "desarrollo", "Objetivo", "Entrega", "Prueba", profile="cambio-acotado")
+        execution = result["tarea"]["ejecucion"]
+        self.assertEqual(execution["recomendado"]["modelo"], "gpt-6.1-terra")
+        self.assertIsNone(execution["solicitado"])
+        self.assertIsNone(execution["observado"])
+        with self.assertRaisesRegex(ValueError, "Perfil"):
+            harness.prepare(self.base, "perfil-2", "desarrollo", "Objetivo", "Entrega", "Prueba", profile="inventado")
+        self.assertFalse(trabajo.task_path(self.base, "perfil-2").exists())
 
 
 if __name__ == "__main__":

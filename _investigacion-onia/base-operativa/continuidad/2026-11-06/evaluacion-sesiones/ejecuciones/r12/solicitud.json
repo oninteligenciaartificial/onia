@@ -1,0 +1,65 @@
+{
+  "run_id": "r12",
+  "case": "recuperacion",
+  "repetition": 2,
+  "model_requested": "gpt-6.1-terra",
+  "effort_requested": "medium",
+  "freeze_sha256": "df959a85f2a89ec55398bc110aecc3f7cd94e93bc2fd564bb797ec649383d5b0",
+  "runtime_sha256": {
+    "trabajo.py": "6333fb5e5acf8ee7ba7000214316750056733d466e0d6124178d762c81d1768f",
+    "harness.py": "cc08834debf81c792b55b3823bbb148a8c5cae51f5b0cd3b93d240f4b3127486"
+  },
+  "workspace": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\evaluacion-sesiones\\ejecuciones\\r12\\workspace",
+  "agent": "/root/ensayo_r12",
+  "prompt_normalized_sha256": "506ece8dec0c2cd3b85cb630e779b2f15600c2c989b052d36713dbb8b31191ee",
+  "input_manifest": {
+    "AGENTS.md": {
+      "sha256": "fe6e9817b956cb29543f5521c689349f483f3e9336c1b9666b8d668337281a98",
+      "bytes": 525
+    },
+    "continuidad/encargos/pedido-incompleto.md": {
+      "sha256": "17e78d83b593929979059e48b90e39421f27c62c479e7bdfa00fec05c8bea219",
+      "bytes": 838
+    },
+    "continuidad/evidencias/pedido-completo/decision-v1.md": {
+      "sha256": "c0b0a403dd3eb339f610b7f0b91ede2762a909d33ae58083e2b7e019c614e525",
+      "bytes": 73
+    },
+    "continuidad/evidencias/pedido-completo/decision-v2.md": {
+      "sha256": "d9f21a2f37b0c14d804af2c26df5a782a5ca31dbdd23046269c2e90c7a82fe2e",
+      "bytes": 119
+    },
+    "continuidad/evidencias/pedido-incompleto/decision-v1.md": {
+      "sha256": "c0b0a403dd3eb339f610b7f0b91ede2762a909d33ae58083e2b7e019c614e525",
+      "bytes": 73
+    },
+    "continuidad/evidencias/pedido-incompleto/decision-v2.md": {
+      "sha256": "56abef803eda6fb93ff7680f8f893d7efd1e066b3dae90ecb918783120a878da",
+      "bytes": 136
+    },
+    "continuidad/tareas/pedido-completo.json": {
+      "sha256": "a1a948ae93292d3533d92b94ed733b7b7e787c63a048b50aaa905bb01a453c3a",
+      "bytes": 5101
+    },
+    "continuidad/tareas/pedido-incompleto.json": {
+      "sha256": "412fa4bb5aadb8961de0c2ffaa2ea9169bc4cb1dea1e5d005d9b030cca47af7a",
+      "bytes": 5155
+    },
+    "ENCARGO.md": {
+      "sha256": "870c4f8dd95ca4fee7003ba7a57ecbd4e89c81c9431eab1c49ead51578619757",
+      "bytes": 810
+    },
+    "pedido.csv": {
+      "sha256": "e880a43d5f92eadfe792d8b4121fbeea66d5249efebde55e3d85af1dcf51620d",
+      "bytes": 77
+    },
+    "scripts/harness.py": {
+      "sha256": "cc08834debf81c792b55b3823bbb148a8c5cae51f5b0cd3b93d240f4b3127486",
+      "bytes": 15216
+    },
+    "scripts/trabajo.py": {
+      "sha256": "6333fb5e5acf8ee7ba7000214316750056733d466e0d6124178d762c81d1768f",
+      "bytes": 31537
+    }
+  }
+}

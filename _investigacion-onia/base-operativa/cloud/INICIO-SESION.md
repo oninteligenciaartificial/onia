@@ -12,3 +12,7 @@ Registrar antes de explorar archivos si ONIA y la instrucción de inicio fueron 
 6. Si el encargo necesita navegador, usar `cloud/browser-runtime.cjs` y el procedimiento de `cloud/OPERAR.md`. La confianza de Chromium debe reconstruirse en un directorio temporal escribible con la CA oficial verificada; no heredar un arreglo de /tmp de otra tarea ni desactivar TLS. El módulo no conserva cuentas entre VMs.
 
 La preparación del entorno debe guardar esta lectura como parte de la habilidad de inicio. Un texto versionado sin configurar el inicio no acredita que se ejecute. La prueba de aceptación de carga es una nueva sesión: registrar catálogo inicial, skill seleccionada y ruta leída antes de ejecutar su primer encargo.
+
+El recibo de inicio distingue checkout/HEAD, enlaces comprobados, catálogo inicialmente observado, entrada recibida y fuentes realmente leídas. Para catálogo/recepción usar observado, no observado o desconocido según evidencia; no deducirlos de ready. No cargar todos los cuerpos de skills ni historial por costumbre.
+
+La retoma vigente es breve por defecto: briefing único en tarea.briefing.contenido, decisiones vigentes y siguiente paso. Consultar --completo o historial ID --revision N cuando haga falta. Comprobar asignación, actor y revisión antes de mutar. El perfil LLM recomendado no cambia la configuración; registrar solicitado y observado por separado, sin completar lo desconocido.

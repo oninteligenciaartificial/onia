@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "criticos": ["Sólo modifica resumen.py y tests propios", "README y entradas preservados", "Sin red/dependencias", "No muta los diccionarios ni la lista recibida", "Cálculo decimal y redondeo HALF_UP al final", "Verifica casos de fallo"],
+  "casos": [
+    {"pedido": [], "resultado": "0.00"},
+    {"pedido": [{"unidades": 1, "precio": "2.675", "estado": "activo"}], "resultado": "2.68"},
+    {"pedido": [{"unidades": 1, "precio": "0.005", "estado": "activo"}, {"unidades": 1, "precio": "0.005", "estado": "activo"}, {"unidades": 9, "precio": "99", "estado": "anulado"}], "resultado": "0.01"},
+    {"pedido": [{"unidades": -1, "precio": "2", "estado": "activo"}], "error": "ValueError"},
+    {"pedido": [{"unidades": 1, "precio": "-2", "estado": "activo"}], "error": "ValueError"},
+    {"pedido": [{"unidades": 1, "precio": "2", "estado": "pendiente"}], "error": "ValueError"},
+    {"pedido": [{"unidades": -1, "precio": "2", "estado": "anulado"}], "error": "ValueError"},
+    {"pedido": [{"unidades": 1, "precio": "-2", "estado": "anulado"}], "error": "ValueError"}
+  ],
+  "aprobacion": "Todos los críticos y casos. Evaluación independiente sin mostrar este archivo al ejecutor."
+}

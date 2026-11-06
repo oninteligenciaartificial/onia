@@ -1,0 +1,43 @@
+{
+  "fecha": "2026-11-06T21:11:17.394054+00:00",
+  "motivo": "Incertidumbre concreta detectada por revisión independiente: precisión Decimal global en r02; el contrato no limita la magnitud.",
+  "alcance": "Comprobación suplementaria sobre las mismas cuatro entregas, sin nuevas corridas LLM ni cambio de rúbrica congelada.",
+  "entrada": [
+    {
+      "unidades": 1,
+      "precio": "1234567890123456789012345678.995",
+      "estado": "activo"
+    }
+  ],
+  "esperado": "1234567890123456789012345679.00",
+  "resultados": [
+    {
+      "run_id": "r01",
+      "resultado": "1234567890123456789012345679.00",
+      "error": null,
+      "sin_mutacion": true,
+      "correcto": true
+    },
+    {
+      "run_id": "r02",
+      "resultado": null,
+      "error": "InvalidOperation",
+      "sin_mutacion": true,
+      "correcto": false
+    },
+    {
+      "run_id": "r03",
+      "resultado": "1234567890123456789012345679.00",
+      "error": null,
+      "sin_mutacion": true,
+      "correcto": true
+    },
+    {
+      "run_id": "r04",
+      "resultado": "1234567890123456789012345679.00",
+      "error": null,
+      "sin_mutacion": true,
+      "correcto": true
+    }
+  ]
+}

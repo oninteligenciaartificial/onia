@@ -234,6 +234,171 @@ class ContinuityTests(unittest.TestCase):
                 self.change()
         self.assertEqual(before, trabajo.task_path(self.base, "caso-1").read_bytes())
 
+    def test_brief_and_complete_views_preserve_canonical_bytes_and_history(self):
+        self.change()
+        path = trabajo.task_path(self.base, "caso-1")
+        before = path.read_bytes()
+        brief = trabajo.resume(self.base, "caso-1")
+        full = trabajo.resume(self.base, "caso-1", complete=True)
+        self.assertNotIn("historial", brief["tarea"])
+        self.assertEqual(brief["contexto"]["entradas_historial"], 1)
+        self.assertEqual(full["tarea"], json.loads(before))
+        self.assertEqual(trabajo.history(self.base, "caso-1", 1)["historial"][0]["estado"], "preparado")
+        with self.assertRaises(ValueError):
+            trabajo.history(self.base, "caso-1", 99)
+        self.assertEqual(before, path.read_bytes())
+
+    def decision(self, ident="d1", revision=1, replaces=None):
+        return trabajo.decide(self.base, "caso-1", revision, ident, "Decisión " + ident,
+                              "pieza.txt", "Responsable", replaces=replaces)
+
+    def test_decision_chain_keeps_provenance_and_only_active_in_brief(self):
+        self.decision()
+        self.decision("d2", 2, "d1")
+        self.decision("d3", 3, "d2")
+        row = trabajo.resume(self.base, "caso-1")["tarea"]
+        self.assertEqual([d["id"] for d in row["decisiones"]], ["d3"])
+        self.assertEqual(row["decisiones"][0]["sustituye"], "d2")
+        self.assertEqual(row["decisiones"][0]["fuente"]["sha256"], trabajo.digest((self.base / "pieza.txt").read_bytes()))
+        history = trabajo.history(self.base, "caso-1", 2)["historial"][0]
+        self.assertEqual([d["id"] for d in history["decisiones"]], ["d1"])
+        self.assertEqual(len(trabajo.resume(self.base, "caso-1", complete=True)["tarea"]["decisiones"]), 3)
+
+    def test_decisions_reject_duplicate_missing_replaced_and_stale_without_write(self):
+        self.decision()
+        self.decision("d2", 2, "d1")
+        before = trabajo.task_path(self.base, "caso-1").read_bytes()
+        for args in (("d2", 3, None), ("d3", 3, "d1"), ("d3", 3, "ausente"), ("d3", 2, "d2")):
+            with self.subTest(args=args), self.assertRaises(ValueError):
+                self.decision(*args)
+        self.assertEqual(before, trabajo.task_path(self.base, "caso-1").read_bytes())
+
+    def test_noncanonical_decision_id_rejected_on_write_and_import(self):
+        before = trabajo.task_path(self.base, "caso-1").read_bytes()
+        with self.assertRaisesRegex(ValueError, "Identificador"):
+            self.decision(" d1 ")
+        self.assertEqual(before, trabajo.task_path(self.base, "caso-1").read_bytes())
+        row = self.decision()
+        row["decisiones"][0]["id"] = " d1 "
+        with self.assertRaisesRegex(ValueError, "Identificador"):
+            trabajo.validate(row, "caso-1")
+
+    def test_corrupt_decision_source_blocks_every_view_and_new_mutations(self):
+        self.decision()
+        before = trabajo.task_path(self.base, "caso-1").read_bytes()
+        (self.base / "pieza.txt").write_bytes(b"alterado")
+        for action in (lambda: trabajo.resume(self.base, "caso-1"),
+                       lambda: trabajo.resume(self.base, "caso-1", complete=True),
+                       lambda: trabajo.history(self.base, "caso-1"),
+                       lambda: trabajo.assign(self.base, "caso-1", 2, "A", ["salida"])):
+            with self.assertRaisesRegex(ValueError, "Evidencia cambió"):
+                action()
+        self.assertEqual(before, trabajo.task_path(self.base, "caso-1").read_bytes())
+
+    def test_execution_requested_never_becomes_observed_and_observation_has_source(self):
+        ficha = {"recomendado": {"modelo": "gpt-6.1-sol", "esfuerzo": "medium"},
+                 "solicitado": {"modelo": "gpt-6.1-terra", "esfuerzo": "high"},
+                 "observado": None, "criterio": "Cambio acotado", "escalamiento": "Fallo identificado"}
+        row = trabajo.set_execution(self.base, "caso-1", 1, ficha)
+        self.assertIsNone(row["ejecucion"]["observado"])
+        self.assertNotEqual(row["ejecucion"]["recomendado"], row["ejecucion"]["solicitado"])
+        ficha["observado"] = {"modelo": "gpt-6.1-sol", "esfuerzo": "low", "fuente": "pieza.txt"}
+        row = trabajo.set_execution(self.base, "caso-1", 2, ficha)
+        self.assertIsNone(row["historial"][-1]["ejecucion"]["observado"])
+        self.assertEqual(row["ejecucion"]["observado"]["modelo"], "gpt-6.1-sol")
+        (self.base / "pieza.txt").write_bytes(b"alterado")
+        with self.assertRaisesRegex(ValueError, "Evidencia cambió"):
+            trabajo.resume(self.base, "caso-1")
+
+    def test_invalid_model_profiles_fail_without_mutating_record(self):
+        before = trabajo.task_path(self.base, "caso-1").read_bytes()
+        for observed in (["modelo"], {"modelo": "gpt-6.1-sol", "esfuerzo": "high"},
+                         {"modelo": "gpt-6.1-sol", "esfuerzo": "inventado", "fuente": "pieza.txt"}):
+            with self.subTest(observed=observed), self.assertRaises(ValueError):
+                trabajo.set_execution(self.base, "caso-1", 1, {"criterio": "Criterio", "escalamiento": "Condición", "observado": observed})
+        self.assertEqual(before, trabajo.task_path(self.base, "caso-1").read_bytes())
+
+    def test_self_references_rejected_before_write_for_evidence_decision_and_model(self):
+        source = "operacion/tareas/caso-1.json"
+        before = trabajo.task_path(self.base, "caso-1").read_bytes()
+        actions = (
+            lambda: self.change(files=[source]),
+            lambda: trabajo.decide(self.base, "caso-1", 1, "d1", "Texto", source, "Autor"),
+            lambda: trabajo.set_execution(self.base, "caso-1", 1, {"criterio": "Criterio", "escalamiento": "Condición",
+                    "observado": {"modelo": "gpt-6.1-sol", "esfuerzo": "medium", "fuente": source}}))
+        for action in actions:
+            with self.assertRaisesRegex(ValueError, "propia evidencia"):
+                action()
+            self.assertEqual(before, trabajo.task_path(self.base, "caso-1").read_bytes())
+            self.assertEqual(trabajo.resume(self.base, "caso-1")["tarea"]["revision"], 1)
+
+    def test_metadata_cannot_silently_change_reviewed_delivery(self):
+        self.ready()
+        with self.assertRaisesRegex(ValueError, "Reabrir"):
+            self.decision(revision=2)
+        trabajo.accept(self.base, "caso-1", 2, "Revisor", "Cotejado")
+        with self.assertRaisesRegex(ValueError, "Reabrir"):
+            trabajo.assign(self.base, "caso-1", 3, "A", ["salida"])
+        self.change(revision=3)
+        self.assertIsNone(trabajo.read_task(self.base, "caso-1")["aceptacion"])
+        self.decision(revision=4)
+
+    def test_assignment_rejects_overlaps_but_allows_neighbours_and_explicit_release(self):
+        trabajo.assign(self.base, "caso-1", 1, "A", ["salidas/uno"])
+        trabajo.create(self.base, "caso-2", "Otro", "Seguir")
+        before = trabajo.task_path(self.base, "caso-2").read_bytes()
+        for route in ("salidas/uno", "salidas", "salidas/uno/dos.txt", "SALIDAS/UNO"):
+            with self.subTest(route=route), self.assertRaisesRegex(ValueError, "Colisión"):
+                trabajo.assign(self.base, "caso-2", 1, "B", [route])
+        self.assertEqual(before, trabajo.task_path(self.base, "caso-2").read_bytes())
+        trabajo.assign(self.base, "caso-2", 1, "B", ["salidas/unodos"])
+        trabajo.assign(self.base, "caso-1", 2, actor="A", release=True)
+        trabajo.assign(self.base, "caso-2", 2, "B", ["salidas/uno"], actor="B", replace=True)
+        self.assertIsNone(trabajo.read_task(self.base, "caso-1")["asignacion"])
+
+    def test_assignment_actor_and_reassignment_preserve_previous_claim(self):
+        trabajo.assign(self.base, "caso-1", 1, "A", ["salida"])
+        before = trabajo.task_path(self.base, "caso-1").read_bytes()
+        for action in (lambda: self.change(revision=2), lambda: self.change(revision=2, actor="B"),
+                       lambda: trabajo.assign(self.base, "caso-1", 2, "B", ["otro"], actor="A"),
+                       lambda: trabajo.assign(self.base, "caso-1", 1, "B", ["otro"], actor="A", replace=True)):
+            with self.assertRaises(ValueError):
+                action()
+        self.assertEqual(before, trabajo.task_path(self.base, "caso-1").read_bytes())
+        row = trabajo.assign(self.base, "caso-1", 2, "B", ["otro"], actor="A", replace=True)
+        self.assertEqual(row["historial"][-1]["asignacion"]["responsable"], "A")
+        self.change(revision=3, actor="B")
+
+    def test_assignment_paths_reject_escape_private_and_aliases(self):
+        for route in (".", "../fuera", "privado/x", "c:/fuera", "salida.", "salida ", "foo:bar", ".env/x"):
+            with self.subTest(route=route), self.assertRaises(ValueError):
+                trabajo.assign(self.base, "caso-1", 1, "A", [route])
+        row = trabajo.assign(self.base, "caso-1", 1, "A", ["salida/./uno", "salida/uno"])
+        self.assertEqual(row["asignacion"]["rutas"], ["salida/uno"])
+
+    def test_assigned_executor_cannot_self_accept_but_reviewer_can(self):
+        trabajo.assign(self.base, "caso-1", 1, "A", ["salida"])
+        self.change(revision=2, actor="A", status="para_revision", result="Listo", check="Comprobado",
+                    files=["pieza.txt"], verification="correcta")
+        for reviewer in ("A", "A ", " A"):
+            with self.subTest(reviewer=reviewer), self.assertRaisesRegex(ValueError, "autoaceptar"):
+                trabajo.accept(self.base, "caso-1", 3, reviewer, "Mismo ejecutor")
+        trabajo.accept(self.base, "caso-1", 3, "B", "Revisión independiente")
+        trabajo.assign(self.base, "caso-1", 4, actor="A", release=True)
+        self.assertEqual(trabajo.read_task(self.base, "caso-1")["estado"], "aceptado")
+
+    def test_two_processes_cannot_reserve_same_path_for_different_tasks(self):
+        trabajo.create(self.base, "caso-2", "Otro", "Seguir")
+        prefix = [sys.executable, str(Path(trabajo.__file__)), "--base", str(self.base), "asignar"]
+        children = [subprocess.Popen(prefix + [ident, "--revision-esperada", "1", "--responsable", ident,
+                    "--ruta", "compartida"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    for ident in ("caso-1", "caso-2")]
+        for child in children:
+            child.communicate(timeout=20)
+        self.assertEqual(sorted(c.returncode for c in children), [0, 2])
+        self.assertEqual(sum(trabajo.read_task(self.base, ident).get("asignacion") is not None
+                             for ident in ("caso-1", "caso-2")), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

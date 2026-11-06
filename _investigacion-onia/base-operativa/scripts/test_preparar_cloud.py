@@ -60,6 +60,24 @@ class CloudBootstrapTests(unittest.TestCase):
         self.assertTrue(result["errors"])
         self.assertEqual(list((self.root / bootstrap.DESTINATION).iterdir()), [])
 
+    @unittest.skipUnless(os.name == "nt", "Junctions requieren Windows")
+    def test_explicit_windows_junctions_keep_one_source_and_are_idempotent(self):
+        result, code = bootstrap.prepare(self.root, install=True, windows_junctions=True)
+        self.assertEqual(code, 0, result)
+        self.assertEqual(len(result["created"]), 2)
+        (self.source / "alpha/SKILL.md").write_text("fuente única", encoding="utf-8")
+        link = self.root / bootstrap.DESTINATION / "alpha"
+        self.assertEqual(link.resolve(), self.source / "alpha")
+        self.assertEqual((link / "SKILL.md").read_text(encoding="utf-8"), "fuente única")
+        repeated, code = bootstrap.prepare(self.root, install=True, windows_junctions=True)
+        self.assertEqual(code, 0)
+        self.assertEqual(repeated["created"], [])
+
+    def test_windows_junctions_are_explicit_and_not_a_check_side_effect(self):
+        with self.assertRaises(ValueError):
+            bootstrap.prepare(self.root, windows_junctions=True)
+        self.assertFalse((self.root / ".agents").exists())
+
     def test_invalid_source_does_not_create_destination(self):
         (self.source / "invalid").mkdir()
         with self.assertRaises(ValueError):

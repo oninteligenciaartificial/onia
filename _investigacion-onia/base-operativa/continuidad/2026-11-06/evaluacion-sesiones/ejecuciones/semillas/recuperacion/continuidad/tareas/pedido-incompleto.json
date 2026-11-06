@@ -1,0 +1,130 @@
+{
+  "schema": 2,
+  "id": "pedido-incompleto",
+  "revision": 4,
+  "compartible": true,
+  "objetivo": "Resumir el pedido ficticio según decisiones vigentes",
+  "estado": "preparado",
+  "proximo_paso": "Recuperar el encargo y completar lo autorizado",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-06T21:09:54.984069+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-06T21:09:54.876653+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Recuperar el encargo y completar lo autorizado",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-06T21:09:54.908047+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Recuperar el encargo y completar lo autorizado",
+      "aceptacion": null,
+      "decisiones": [
+        {
+          "id": "decision-v1",
+          "texto": "Incluir todas las filas",
+          "fuente": {
+            "archivo": "continuidad/evidencias/pedido-incompleto/decision-v1.md",
+            "sha256": "c0b0a403dd3eb339f610b7f0b91ede2762a909d33ae58083e2b7e019c614e525",
+            "bytes": 73
+          },
+          "autor": "responsable del caso",
+          "sustituye": null,
+          "fecha": "2026-11-06T21:09:54.908047+00:00"
+        }
+      ]
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-06T21:09:54.934785+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Recuperar el encargo y completar lo autorizado",
+      "aceptacion": null,
+      "decisiones": [
+        {
+          "id": "decision-v1",
+          "texto": "Incluir todas las filas",
+          "fuente": {
+            "archivo": "continuidad/evidencias/pedido-incompleto/decision-v1.md",
+            "sha256": "c0b0a403dd3eb339f610b7f0b91ede2762a909d33ae58083e2b7e019c614e525",
+            "bytes": 73
+          },
+          "autor": "responsable del caso",
+          "sustituye": null,
+          "fecha": "2026-11-06T21:09:54.908047+00:00"
+        },
+        {
+          "id": "decision-v2",
+          "texto": "Decisión vigente del responsable del caso: sustituir decision-v1. Incluir sólo filas activas. Moneda aún no decidida; no inferirla.",
+          "fuente": {
+            "archivo": "continuidad/evidencias/pedido-incompleto/decision-v2.md",
+            "sha256": "56abef803eda6fb93ff7680f8f893d7efd1e066b3dae90ecb918783120a878da",
+            "bytes": 136
+          },
+          "autor": "responsable del caso",
+          "sustituye": "decision-v1",
+          "fecha": "2026-11-06T21:09:54.934785+00:00"
+        }
+      ]
+    }
+  ],
+  "briefing": {
+    "archivo": "continuidad/encargos/pedido-incompleto.md",
+    "sha256": "17e78d83b593929979059e48b90e39421f27c62c479e7bdfa00fec05c8bea219",
+    "bytes": 838,
+    "contenido": "# Encargo ficticio pedido-incompleto\nCalcular pedido.csv con Decimal, sin cambiar entradas. Aplicar la decisión vigente. Resultado completo: resumen.json con total (texto de dos decimales), unidades (entero), moneda y decision (ID vigente). Si falta moneda, guardar parcial.json con moneda null y pregunta.json con una pregunta indispensable. Escribir esos archivos sólo en continuidad/evidencias/pedido-incompleto/. Verificar cálculo e integridad, registrar evidencia con trabajo.py actualizar usando actor ejecutor y revisión esperada vigente. Completo: para_revision y verificacion correcta; incompleto: en_espera. Prohibido aceptar, usar red, modificar scripts, entradas o fuentes. La recuperación explícita del briefing ausente y la actualización del registro están autorizadas. No preguntar datos ficticios al usuario real.\n"
+  },
+  "aceptacion": null,
+  "decisiones": [
+    {
+      "id": "decision-v1",
+      "texto": "Incluir todas las filas",
+      "fuente": {
+        "archivo": "continuidad/evidencias/pedido-incompleto/decision-v1.md",
+        "sha256": "c0b0a403dd3eb339f610b7f0b91ede2762a909d33ae58083e2b7e019c614e525",
+        "bytes": 73
+      },
+      "autor": "responsable del caso",
+      "sustituye": null,
+      "fecha": "2026-11-06T21:09:54.908047+00:00"
+    },
+    {
+      "id": "decision-v2",
+      "texto": "Decisión vigente del responsable del caso: sustituir decision-v1. Incluir sólo filas activas. Moneda aún no decidida; no inferirla.",
+      "fuente": {
+        "archivo": "continuidad/evidencias/pedido-incompleto/decision-v2.md",
+        "sha256": "56abef803eda6fb93ff7680f8f893d7efd1e066b3dae90ecb918783120a878da",
+        "bytes": 136
+      },
+      "autor": "responsable del caso",
+      "sustituye": "decision-v1",
+      "fecha": "2026-11-06T21:09:54.934785+00:00"
+    }
+  ],
+  "asignacion": {
+    "responsable": "ejecutor",
+    "rutas": [
+      "continuidad/evidencias/pedido-incompleto"
+    ],
+    "revision_base": 3,
+    "fecha": "2026-11-06T21:09:54.984069+00:00"
+  }
+}

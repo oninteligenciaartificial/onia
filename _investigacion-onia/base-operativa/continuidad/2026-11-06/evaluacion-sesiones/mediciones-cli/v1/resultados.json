@@ -1,0 +1,118 @@
+{
+  "baseline": "99da0bff96f289dc01fc10a20f745dc146f77427",
+  "runtime_sha256": {
+    "trabajo.py": "6333fb5e5acf8ee7ba7000214316750056733d466e0d6124178d762c81d1768f",
+    "harness.py": "cc08834debf81c792b55b3823bbb148a8c5cae51f5b0cd3b93d240f4b3127486"
+  },
+  "mediciones": [
+    {
+      "revisiones": 1,
+      "archivo_canonico_bytes": 841,
+      "archivo_canonico_caracteres": 836,
+      "campos_criticos_iguales": true,
+      "lecturas_sin_mutacion": true,
+      "salidas": {
+        "anterior": {
+          "archivo": "revision-1/anterior.json",
+          "bytes": 1640,
+          "caracteres": 1624,
+          "sha256": "19d3ce74bdb2d0c30e649b378c8671f407f7c724313c0cc62be820dc43c4e0a9"
+        },
+        "breve": {
+          "archivo": "revision-1/breve.json",
+          "bytes": 1534,
+          "caracteres": 1523,
+          "sha256": "6bf8171959f10bd0f6fb3e7b0f4aa88b11162cecddaba363131d2dad7182ef42"
+        },
+        "completa": {
+          "archivo": "revision-1/completa.json",
+          "bytes": 1559,
+          "caracteres": 1548,
+          "sha256": "0b5935be10dda3185af56d6a9b175438b0372b44354c7c069e9fec5d63a232fb"
+        },
+        "consulta_revision_1": {
+          "archivo": "revision-1/consulta_revision_1.json",
+          "bytes": 614,
+          "caracteres": 614,
+          "sha256": "9cd96b3a9a27b379649fbca0500a05acf56d6c70030d0c273e0a3963af354ff0"
+        }
+      },
+      "reduccion_inicial_bytes": 106,
+      "total_breve_mas_consulta_bytes": 2148
+    },
+    {
+      "revisiones": 6,
+      "archivo_canonico_bytes": 2338,
+      "archivo_canonico_caracteres": 2333,
+      "campos_criticos_iguales": true,
+      "lecturas_sin_mutacion": true,
+      "salidas": {
+        "anterior": {
+          "archivo": "revision-6/anterior.json",
+          "bytes": 3305,
+          "caracteres": 3289,
+          "sha256": "5cbe708d7454015b0ae1f041d111fd0854762263f7d5c84283e4d45b54e3b5ad"
+        },
+        "breve": {
+          "archivo": "revision-6/breve.json",
+          "bytes": 1534,
+          "caracteres": 1523,
+          "sha256": "8c0beb0514eee008a25f1852f2db38e950a1a1252dcee8aaf0476f4f4ee74e34"
+        },
+        "completa": {
+          "archivo": "revision-6/completa.json",
+          "bytes": 3224,
+          "caracteres": 3213,
+          "sha256": "2cc02a363c1edb986e8d44048286e902061ec25ce9c5b51fe063084df2f21a29"
+        },
+        "consulta_revision_1": {
+          "archivo": "revision-6/consulta_revision_1.json",
+          "bytes": 490,
+          "caracteres": 490,
+          "sha256": "5c4775e8fef1f7ea1cfed5e805d8b5351a31c5823bbebf10351851c636b994cb"
+        }
+      },
+      "reduccion_inicial_bytes": 1771,
+      "total_breve_mas_consulta_bytes": 2024
+    },
+    {
+      "revisiones": 60,
+      "archivo_canonico_bytes": 18535,
+      "archivo_canonico_caracteres": 18530,
+      "campos_criticos_iguales": true,
+      "lecturas_sin_mutacion": true,
+      "salidas": {
+        "anterior": {
+          "archivo": "revision-60/anterior.json",
+          "bytes": 21284,
+          "caracteres": 21268,
+          "sha256": "5142085b8f200159dabc349f36121faf1bd3a1f5f2f25c879fa179c3658adf11"
+        },
+        "breve": {
+          "archivo": "revision-60/breve.json",
+          "bytes": 1536,
+          "caracteres": 1525,
+          "sha256": "307d4bc9c077d446b323ab31744ba679f160f3f992ba15e86941bb52e1248c52"
+        },
+        "completa": {
+          "archivo": "revision-60/completa.json",
+          "bytes": 21204,
+          "caracteres": 21193,
+          "sha256": "d7d381ecc64ffa74cb50716b1f90a0c9c69c056d42dc948234b148d14bca13c9"
+        },
+        "consulta_revision_1": {
+          "archivo": "revision-60/consulta_revision_1.json",
+          "bytes": 491,
+          "caracteres": 491,
+          "sha256": "abd0b96e7da7b75d862d2d469aa9cf68303b8ce31241af3c7c7c72cbe53e2521"
+        }
+      },
+      "reduccion_inicial_bytes": 19748,
+      "total_breve_mas_consulta_bytes": 2027
+    }
+  ],
+  "tokens": null,
+  "contexto_total_del_modelo": null,
+  "limite": "Bytes/caracteres de archivos y salidas CLI; no tokens, conducta LLM, ahorro facturado ni compacción.",
+  "informacion_necesaria": "Objetivo, restricciones/briefing y próximo paso idénticos en todos los tamaños; sólo se agregan snapshots operativos redundantes."
+}

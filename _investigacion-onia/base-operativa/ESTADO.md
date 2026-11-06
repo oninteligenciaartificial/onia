@@ -18,6 +18,10 @@ La prueba Cloud `01a1b238-b446-777a-93c0-e31f4034301f` arrancó en `7d26f84d82c1
 
 ## Contextos conservados por encargo
 
+La evaluación posterior autorizada de sesiones tiene [un plan único](continuidad/2026-11-06/evaluacion-sesiones/PLAN.md) y el registro evaluacion-sesiones-001. Consultarlo para su estado, evidencia y próximo paso; no confundir esa implementación local y sus ensayos con el snapshot Cloud 99da0bf publicado a las 15:43. Su contrato de retoma breve, decisiones, ficha LLM y reservas locales está en CONTINUIDAD. El anuncio nativo y la compacción requieren evidencia independiente.
+
+Preparación local posterior: se reprodujo WinError 1314 y se completaron los dos enlaces faltantes mediante junctions explícitas; nueve fuentes enlazadas. Un subagente nativo local nuevo, sin herramientas ni lecturas de archivos, anunció las nueve skills propias en su catálogo inicial: [traza](continuidad/2026-11-06/evaluacion-sesiones/ejecuciones/catalogo-local/trace-actions.json) y [metadatos](continuidad/2026-11-06/evaluacion-sesiones/ejecuciones/catalogo-local/runtime.json). Eso acredita anuncio local, no lectura de cuerpos, anuncio Cloud ni compacción.
+
 - Dirección comercial y metas: [PLAN](PLAN.md), sin sustituir una solicitud técnica expresa.
 - Repartos, modelos y relevos anteriores: [SESIONES](SESIONES.md), con fechas y límites; el reparto de esta consolidación está arriba.
 - Referentes, audio e infraestructura: [índice de investigación](investigacion/2026-11-05-referentes/GOAL-REFERENTES.md) y estado histórico. Los avances y restricciones de esas tandas no se reactivan por abrir otra sesión.

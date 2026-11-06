@@ -1,0 +1,64 @@
+{
+  "results": [
+    {
+      "timestamp": "2026-11-06T21:02:14.749Z",
+      "type": "custom_tool_call_output",
+      "call_id": "call_12be2bd230c449ef825e51dbfdd06be3",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Corregí resumen.py en esta copia aislada. subtotal(pedido) recibe una lista de filas con unidades enteras no negativas, precio decimal como texto y estado activo o anulado. Debe devolver el total sólo de filas activas como texto con dos decimales y redondeo decimal HALF_UP al final, sin modificar la entrada. Unidades negativas, precio negativo o estado desconocido deben producir ValueError. No agregues dependencias, no uses red ni cambies README.md. Podés escribir tests locales. Verificá casos normales y de fallo; entregá el cambio y evidencia sin afirmar publicación.\r\n\r\n    Directory: C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\evaluacion-sesiones\\ejecucion\r\nes\\r04\\workspace\r\n\r\nMode                 LastWriteTime         Length Name\r\n----                 -------------         ------ ----\r\n-a---       06/11/2026 05:00 p. m.            581 ENCARGO.md\r\n-a---       06/11/2026 04:57 p. m.             75 README.md\r\n-a---       06/11/2026 04:57 p. m.            152 resumen.py\r\n\r\n"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-11-06T21:02:18.945Z",
+      "type": "custom_tool_call_output",
+      "call_id": "call_3f429f5758dc4dd789716bda682ba1a6",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "def subtotal(pedido):\r\n    total = 0.0\r\n    for fila in pedido:\r\n        total += fila[\"unidades\"] * float(fila[\"precio\"])\r\n    return str(round(total, 2))\r\nFixture sintético de código acotado. Conservar este archivo sin cambios.\r\nC:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\r\n"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-11-06T21:02:33.172Z",
+      "type": "custom_tool_call_output",
+      "call_id": "call_b5530d1ca2da4c17882518851504827b",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script failed\nWall time 0.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Script error:\napply_patch verification failed: invalid patch: multiple operations target C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\continuidad\\2026-11-06\\evaluacion-sesiones\\ejecuciones\\r04\\workspace\\resumen.py"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-11-06T21:02:50.803Z",
+      "type": "custom_tool_call_output",
+      "call_id": "call_512e5bbd5c6c454cb31d55e282bff83a",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Casos normales, redondeo final, precisi�n, inmutabilidad y errores: OK\r\n"
+        }
+      ]
+    }
+  ]
+}

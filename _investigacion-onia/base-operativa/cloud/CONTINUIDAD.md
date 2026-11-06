@@ -38,6 +38,47 @@ Para registrar un bloqueo o continuar, retomar y usar su revisión actual con `e
 
 Al aceptar, `--siguiente` permite indicar un seguimiento autorizado. Si se omite, el registro deja el encargo cerrado sin iniciar otra ejecución. El paso previo de revisión queda en el historial, no como una orden pendiente que deba repetirse.
 
+## Recuperación breve y detalle explícito
+
+retomar devuelve por defecto estado vigente, revisión, objetivo, siguiente paso, comprobación, evidencia, aceptación y, si existen, decisiones vigentes, ficha de ejecución y asignación. El briefing íntegro aparece una sola vez en tarea.briefing.contenido, conservando sus restricciones. No se carga el historial operativo ni las decisiones sustituidas; la respuesta informa cuántos elementos omitió y cómo consultarlos.
+
+```sh
+python3 _investigacion-onia/base-operativa/scripts/harness.py retomar demo-001 --completo
+python3 _investigacion-onia/base-operativa/scripts/harness.py historial demo-001 --revision 1
+```
+
+La vista completa recupera el JSON canónico íntegro; historial permite consultar una revisión o todas las entradas. Ambas verifican primero la evidencia vigente y no escriben nada. El historial no autoriza reactivar decisiones revocadas. Los registros v1 pueden carecer de números de revisión históricos.
+
+Cambio intencional de forma: resume(base, id, complete=False) ahora es breve por defecto y harness elimina el alias duplicado briefing de la raíz. Los consumidores deben leer tarea.briefing.contenido; complete=True conserva el registro íntegro bajo tarea. preparar sigue devolviendo briefing como RUTA. La compatibilidad de datos v1/v2 no conserva automáticamente la forma anterior de salida.
+
+## Decisiones y ficha de ejecución
+
+decidir ID --revision-esperada N --decision CLAVE --texto TEXTO --fuente RUTA --autor AUTOR registra una decisión con procedencia, hash, fecha y autor declarado. --sustituye CLAVE_ANTERIOR reemplaza explícitamente una decisión vigente: conserva ambas y muestra sólo la nueva en la vista breve. La fuente debe ser un archivo independiente conservado, nunca el JSON canónico que cambiará al registrar la decisión. La herramienta comprueba integridad y estructura, no autoridad semántica.
+
+Cambiar decisiones, ejecución o asignación de una entrega para_revision/aceptado requiere reabrir explícitamente con actualizar. No modifica silenciosamente una aceptación.
+
+preparar admite --perfil extraccion, multifuente, cambio-acotado o complejo según orquestacion.json. Recomienda por tipo de trabajo, independientemente del área/skill; no configura ni lanza un LLM. Sin selección no se inventa una recomendación. ejecucion ID --revision-esperada N --ficha RUTA lee JSON con este contrato:
+
+```json
+{
+  "recomendado": {"modelo": "gpt-6.1-sol", "esfuerzo": "medium"},
+  "solicitado": {"modelo": "gpt-6.1-terra", "esfuerzo": "medium"},
+  "observado": null,
+  "criterio": "Cambio acotado con verificación definida",
+  "escalamiento": "Comparar otro candidato ante un fallo de razonamiento identificado"
+}
+```
+
+null expresa desconocido; nunca completar observado a partir de solicitado. Una observación requiere modelo, esfuerzo y fuente (ruta a evidencia saneada y conservada). El comando incorpora hash y tamaño, sin consultar el runtime. Cotejar la fuente con los metadatos reales antes de declararla observada. Tiempo y uso quedan en la evidencia del ensayo; no inventar tokens o precios no disponibles.
+
+## Reserva local de rutas
+
+asignar ID --revision-esperada N --responsable ACTOR --ruta RUTA (repetible) reserva rutas relativas a base-operativa. Rechaza solapamientos exactos o de directorio con otra tarea del mismo checkout, incluso diferencias de mayúsculas. Un lock de asignaciones serializa las reservas y la revisión esperada evita sustituir un registro obsoleto. La reserva persiste hasta liberar; aceptar no la libera automáticamente.
+
+Mutaciones del ejecutor y recuperar exigen --actor coincidente si existe asignación. --reasignar exige actor anterior y revisión vigente; --liberar libera explícitamente, conservando historia. Liberar después de aceptar no altera resultado ni aceptación. aceptar rechaza al mismo responsable declarado como revisor. Son controles de coherencia de nombres, no autenticación.
+
+No impide que un editor externo escriba esas rutas, no vigila todos los comandos ni coordina clones distintos. Antes de trabajar en otra copia, acordar revisión base, rutas y único integrador; conciliar resultados sin descartar ninguno.
+
 ## Traspaso entre sesiones
 
 1. El escritor comprueba estado y evidencia. Revisa que los archivos de la tarea, su Markdown y sus evidencias estén incluidos en Git y saneados. `.gitattributes` conserva sus bytes.

@@ -16,6 +16,8 @@ BASE = Path(__file__).resolve().parents[1]
 STATES = {"preparado", "en_curso", "en_espera", "para_revision", "aceptado"}
 CHECKS = {"pendiente", "fallo", "correcta"}
 CLOSED_NEXT = "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo."
+EFFORTS = {"low", "medium", "high", "xhigh", "max", "ultra"}
+EXTENSIONS = ("decisiones", "ejecucion", "asignacion")
 
 
 def now():
@@ -95,6 +97,69 @@ def validate_ref(ref):
         raise ValueError("Tamaño de evidencia inválido.")
 
 
+def nonempty(value, label):
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError("Se requiere contenido: " + label)
+    return value.strip()
+
+
+def active_decisions(decisions):
+    replaced = {item["sustituye"] for item in decisions if item.get("sustituye")}
+    return [item for item in decisions if item["id"] not in replaced]
+
+
+def validate_extensions(row):
+    decisions = row.get("decisiones", [])
+    if not isinstance(decisions, list):
+        raise ValueError("Decisiones inválidas.")
+    seen, replaced = set(), set()
+    for item in decisions:
+        if not isinstance(item, dict):
+            raise ValueError("Decisión inválida.")
+        ident = nonempty(item.get("id"), "id de decisión")
+        if ident != item["id"] or not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,63}", ident) or ident in seen:
+            raise ValueError("Identificador de decisión inválido o duplicado.")
+        for key in ("texto", "autor", "fecha"):
+            nonempty(item.get(key), key)
+        validate_ref(item.get("fuente"))
+        previous = item.get("sustituye")
+        if previous is not None:
+            if not isinstance(previous, str) or previous not in seen or previous in replaced:
+                raise ValueError("La decisión sustituida debe existir y estar vigente.")
+            replaced.add(previous)
+        seen.add(ident)
+    execution = row.get("ejecucion")
+    if execution is not None:
+        if not isinstance(execution, dict):
+            raise ValueError("Ficha de ejecución inválida.")
+        for key in ("criterio", "escalamiento"):
+            nonempty(execution.get(key), key)
+        for key in ("recomendado", "solicitado", "observado"):
+            profile = execution.get(key)
+            if profile is None:
+                continue
+            if not isinstance(profile, dict):
+                raise ValueError("Perfil de modelo inválido: " + key)
+            nonempty(profile.get("modelo"), "modelo " + key)
+            if profile.get("esfuerzo") not in EFFORTS:
+                raise ValueError("Esfuerzo inválido: " + key)
+            if key == "observado":
+                validate_ref(profile.get("fuente"))
+    assignment = row.get("asignacion")
+    if assignment is not None:
+        if not isinstance(assignment, dict):
+            raise ValueError("Asignación inválida.")
+        for key in ("responsable", "fecha"):
+            nonempty(assignment.get(key), key)
+        if assignment["responsable"] != assignment["responsable"].strip():
+            raise ValueError("Responsable de asignación no canónico.")
+        routes = assignment.get("rutas")
+        if not isinstance(routes, list) or not routes or any(not isinstance(p, str) or not p for p in routes):
+            raise ValueError("Asignación requiere rutas.")
+        if type(assignment.get("revision_base")) is not int or assignment["revision_base"] < 1:
+            raise ValueError("Revisión base de asignación inválida.")
+
+
 def validate(row, task_id):
     if (not isinstance(row, dict) or type(row.get("schema")) is not int
             or row["schema"] not in (1, 2) or row.get("id") != task_id):
@@ -123,6 +188,7 @@ def validate(row, task_id):
         raise ValueError("Alcance o estado inválido.")
     if row.get("verificacion") not in CHECKS:
         raise ValueError("Verificación inválida.")
+    validate_extensions(row)
     brief = row.get("briefing")
     if brief is not None:
         validate_ref(brief)
@@ -156,11 +222,23 @@ def verify(base, row, missing_brief=False):
     # En v1 un archivo podía cambiar entre entradas. El historial registra esos
     # hashes anteriores; no implica que todos describan los bytes actuales.
     # En v2 update conserva un inventario acumulativo de evidencia inmutable.
-    refs = row["evidencias"]
+    refs = list(row["evidencias"])
+    refs.extend(item["fuente"] for item in row.get("decisiones", []))
+    observed = (row.get("ejecucion") or {}).get("observado")
+    if observed:
+        refs.append(observed["fuente"])
     for ref in refs:
+        referenced = safe_path(base, ref["archivo"])
+        canonical = task_path(base, row["id"], shared)
+        if referenced == canonical or (referenced.exists() and canonical.exists()
+                                        and os.path.samefile(referenced, canonical)):
+            raise ValueError("El registro canónico no puede ser su propia evidencia o fuente mutable.")
         actual = evidence(base, ref["archivo"], shared)
         if actual["sha256"] != ref["sha256"] or ("bytes" in ref and actual["bytes"] != ref["bytes"]):
             raise ValueError("Evidencia cambió: " + ref["archivo"])
+    for route in (row.get("asignacion") or {}).get("rutas", []):
+        if normalize_route(base, route) != route:
+            raise ValueError("Ruta de asignación no canónica.")
     brief = row.get("briefing")
     if brief is not None:
         expected = brief_path(base, row["id"], shared).relative_to(Path(base).resolve()).as_posix()
@@ -197,9 +275,9 @@ def atomic_json(path, row):
 
 
 @contextmanager
-def locked(base, task_id):
+def locked(base, task_id, assignment=False):
     paths(base, task_id)
-    lock = safe_path(base, "operacion/bloqueos/" + task_id + ".lock")
+    lock = safe_path(base, "operacion/bloqueos/" + (".asignaciones" if assignment else task_id) + ".lock")
     lock.parent.mkdir(parents=True, exist_ok=True)
     try:
         fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
@@ -237,7 +315,7 @@ def materialize(base, row):
         os.fsync(stream.fileno())
 
 
-def create(base, task_id, goal, next_step, shared=False, briefing=None):
+def create(base, task_id, goal, next_step, shared=False, briefing=None, execution=None):
     with locked(base, task_id):
         if any(os.path.lexists(p) for p in paths(base, task_id)):
             raise ValueError("La tarea ya existe; retomar, no sobrescribir.")
@@ -246,6 +324,8 @@ def create(base, task_id, goal, next_step, shared=False, briefing=None):
                "resultado": "", "comprobacion": "", "verificacion": "pendiente",
                "evidencias": [], "actualizado": now(), "historial": [], "briefing": None,
                "aceptacion": None}
+        if execution is not None:
+            row["ejecucion"] = deepcopy(execution)
         if briefing is not None:
             path = brief_path(base, task_id, shared)
             if os.path.lexists(path):
@@ -254,21 +334,26 @@ def create(base, task_id, goal, next_step, shared=False, briefing=None):
             row["briefing"] = {"archivo": path.relative_to(Path(base).resolve()).as_posix(),
                                "sha256": digest(content), "bytes": len(content), "contenido": briefing}
         validate(row, task_id)
+        verify(base, row, missing_brief=True)
         # El JSON es la autoridad atómica. El Markdown es una proyección recuperable.
         atomic_json(task_path(base, task_id, shared), row)
         materialize(base, row)
         return row
 
 
-def mutate(base, task_id, revision, transform):
+def mutate(base, task_id, revision, transform, actor=None, review=False):
     with locked(base, task_id):
         row = read_task(base, task_id)
         expected(row, revision)
         if row["schema"] != 2:
             raise ValueError("Registro histórico: ejecutar migrar explícitamente con revisión 0.")
         verify(base, row)
+        assignment = row.get("asignacion")
+        if assignment and not review and actor != assignment["responsable"]:
+            raise ValueError("Responsable distinto o ausente; indicar --actor y conciliar la asignación.")
         prior = {k: deepcopy(row[k]) for k in ("revision", "actualizado", "estado", "resultado",
                   "comprobacion", "verificacion", "evidencias", "proximo_paso", "aceptacion")}
+        prior.update({k: deepcopy(row[k]) for k in EXTENSIONS if k in row})
         changed = transform(deepcopy(row))
         changed["historial"].append(prior)
         changed["revision"] += 1
@@ -279,7 +364,7 @@ def mutate(base, task_id, revision, transform):
         return changed
 
 
-def update(base, task_id, status, result, check, next_step, files, revision=None, verification="pendiente"):
+def update(base, task_id, status, result, check, next_step, files, revision=None, verification="pendiente", actor=None):
     if status not in STATES - {"aceptado"}:
         raise ValueError("Estado inválido para actualizar; la aceptación usa aceptar.")
     def transform(row):
@@ -291,25 +376,30 @@ def update(base, task_id, status, result, check, next_step, files, revision=None
                    verificacion=verification, evidencias=list(refs.values()),
                    aceptacion=None)
         return row
-    return mutate(base, task_id, revision, transform)
+    return mutate(base, task_id, revision, transform, actor=actor)
 
 
 def accept(base, task_id, revision, reviewer, criterion, next_step=CLOSED_NEXT):
+    reviewer = nonempty(reviewer, "revisor")
     def transform(row):
         if row["estado"] != "para_revision":
             raise ValueError("Sólo una entrega para_revision puede aceptarse.")
+        if row.get("asignacion") and reviewer == row["asignacion"]["responsable"]:
+            raise ValueError("El responsable ejecutor no puede autoaceptar su entrega.")
         row.update(estado="aceptado", proximo_paso=next_step,
                    aceptacion={"revisor": reviewer, "criterio": criterion, "fecha": now()})
         return row
-    return mutate(base, task_id, revision, transform)
+    return mutate(base, task_id, revision, transform, review=True)
 
 
-def recover(base, task_id, revision):
+def recover(base, task_id, revision, actor=None):
     with locked(base, task_id):
         row = read_task(base, task_id)
         expected(row, revision)
         if row["schema"] != 2:
             raise ValueError("Recuperación requiere schema 2.")
+        if row.get("asignacion") and actor != row["asignacion"]["responsable"]:
+            raise ValueError("Responsable distinto o ausente para recuperar.")
         verify(base, row, missing_brief=True)
         materialize(base, row)
         verify(base, row)
@@ -342,12 +432,124 @@ def migrate(base, task_id, revision):
         return row
 
 
-def resume(base, task_id):
+def brief_view(row):
+    """Proyección de lectura: nunca reemplaza ni persiste el registro canónico."""
+    result = {k: deepcopy(v) for k, v in row.items() if k != "historial"}
+    if "decisiones" in result:
+        result["decisiones"] = active_decisions(result["decisiones"])
+    return result
+
+
+def resume(base, task_id, complete=False):
     row = read_task(base, task_id)
     verify(base, row)
-    return {"tarea": row, "advertencias": [] if row["schema"] == 2 else
+    return {"tarea": row if complete else brief_view(row),
+            "vista": "completa" if complete else "breve",
+            "contexto": {"entradas_historial": len(row["historial"]),
+                         "decisiones_sustituidas": len(row.get("decisiones", [])) - len(active_decisions(row.get("decisiones", []))),
+                         "detalle": "retomar " + task_id + " --completo",
+                         "historial": "historial " + task_id + " [--revision N]"},
+            "advertencias": [] if row["schema"] == 2 else
             ["Registro schema 1: lectura histórica; migrar explícitamente antes de modificar. Terminado no es aceptación."],
             "nota": "Integridad comprobada; comprobación y revisor son declaraciones, no identidad autenticada ni garantía de calidad."}
+
+
+def history(base, task_id, revision=None):
+    row = read_task(base, task_id)
+    verify(base, row)
+    entries = deepcopy(row["historial"])
+    entries.append({k: v for k, v in row.items() if k not in {"historial", "briefing"}})
+    if revision is not None:
+        entries = [entry for entry in entries if entry.get("revision") == revision]
+        if not entries:
+            raise ValueError("Revisión histórica inexistente; schema 1 puede no numerar entradas.")
+    return {"id": task_id, "revision_actual": row.get("revision"), "historial": entries,
+            "nota": "Historia operativa; no sustituye las decisiones ni autorizaciones vigentes. Sin escrituras."}
+
+
+def require_open(row):
+    if row["estado"] in {"aceptado", "para_revision"}:
+        raise ValueError("Reabrir explícitamente con actualizar antes de cambiar decisiones, ejecución o asignación.")
+
+
+def decide(base, task_id, revision, decision_id, text, source, author, replaces=None, actor=None):
+    def transform(row):
+        require_open(row)
+        row.setdefault("decisiones", []).append({"id": decision_id, "texto": nonempty(text, "decisión"),
+            "fuente": evidence(base, source, row["compartible"]), "autor": nonempty(author, "autor"),
+            "sustituye": replaces, "fecha": now()})
+        return row
+    return mutate(base, task_id, revision, transform, actor=actor)
+
+
+def set_execution(base, task_id, revision, execution, actor=None):
+    def transform(row):
+        require_open(row)
+        value = deepcopy(execution)
+        if not isinstance(value, dict):
+            raise ValueError("Ficha de ejecución inválida.")
+        for key in ("recomendado", "solicitado", "observado"):
+            value.setdefault(key, None)
+        observed = value.get("observado")
+        if isinstance(observed, dict) and isinstance(observed.get("fuente"), str):
+            observed["fuente"] = evidence(base, observed["fuente"], row["compartible"])
+        row["ejecucion"] = value
+        return row
+    return mutate(base, task_id, revision, transform, actor=actor)
+
+
+def normalize_route(base, route):
+    path = safe_path(base, route)
+    relative = path.relative_to(Path(base).resolve()).as_posix()
+    if relative == "." or any(":" in p or p.rstrip(". ") != p for p in PurePosixPath(relative).parts):
+        raise ValueError("Ruta de asignación ambigua o demasiado amplia.")
+    return relative
+
+
+def overlapping(a, b):
+    # Conservador también en Linux: entregas pueden terminar en Windows.
+    left, right = PurePosixPath(a.casefold()).parts, PurePosixPath(b.casefold()).parts
+    return left[:len(right)] == right or right[:len(left)] == left
+
+
+def all_ids(base):
+    return sorted({p.stem for folder in ("operacion/tareas", "continuidad/tareas")
+                   for p in safe_path(base, folder).glob("*.json")})
+
+
+def assign(base, task_id, revision, responsible=None, routes=(), actor=None, replace=False, release=False):
+    # Serializa sólo reservas de este checkout. Nunca bloquea editores externos o clones.
+    with locked(base, task_id, assignment=True):
+        normalized = list(dict.fromkeys(normalize_route(base, route) for route in routes))
+        if release and (responsible is not None or normalized or replace):
+            raise ValueError("Liberar no admite responsable, rutas ni reasignación.")
+        if not release:
+            nonempty(responsible, "responsable")
+            if not normalized:
+                raise ValueError("La asignación necesita rutas.")
+            for other_id in all_ids(base):
+                if other_id == task_id:
+                    continue
+                other = read_task(base, other_id)
+                assignment = other.get("asignacion")
+                if assignment:
+                    verify(base, other)
+                    if any(overlapping(a, b) for a in normalized for b in assignment["rutas"]):
+                        raise ValueError("Colisión de rutas con " + other_id + "; conservar trabajos y conciliar antes de asignar.")
+        def transform(row):
+            previous = row.get("asignacion")
+            if release:
+                if not previous:
+                    raise ValueError("No hay asignación que liberar.")
+                row["asignacion"] = None
+            else:
+                require_open(row)
+                if previous and not replace:
+                    raise ValueError("Asignación existente: usar --reasignar con actor y revisión vigentes.")
+                row["asignacion"] = {"responsable": responsible.strip(), "rutas": normalized,
+                                     "revision_base": revision, "fecha": now()}
+            return row
+        return mutate(base, task_id, revision, transform, actor=actor)
 
 
 def main(argv=None):
@@ -365,6 +567,10 @@ def main(argv=None):
     p.add_argument("--compartible", action="store_true", help="Estado saneado versionable; no copia tareas privadas.")
     p = sub.add_parser("retomar")
     p.add_argument("id")
+    p.add_argument("--completo", action="store_true", help="Incluir el registro íntegro; por defecto omite historia y decisiones sustituidas.")
+    p = sub.add_parser("historial")
+    p.add_argument("id")
+    p.add_argument("--revision", type=int)
     p = sub.add_parser("actualizar")
     p.add_argument("id")
     p.add_argument("--estado", choices=sorted(STATES - {"aceptado"}), required=True)
@@ -374,6 +580,7 @@ def main(argv=None):
     p.add_argument("--siguiente", required=True)
     p.add_argument("--evidencia", action="append", default=[])
     p.add_argument("--revision-esperada", type=int, required=True)
+    p.add_argument("--actor", help="Responsable declarado si existe asignación; no autentica identidad.")
     p = sub.add_parser("aceptar")
     p.add_argument("id")
     p.add_argument("--revision-esperada", type=int, required=True)
@@ -384,24 +591,58 @@ def main(argv=None):
         p = sub.add_parser(command)
         p.add_argument("id")
         p.add_argument("--revision-esperada", type=int, required=True)
+        if command == "recuperar":
+            p.add_argument("--actor")
+    for command in ("decidir", "ejecucion", "asignar"):
+        p = sub.add_parser(command)
+        p.add_argument("id")
+        p.add_argument("--revision-esperada", type=int, required=True)
+        p.add_argument("--actor")
+        if command == "decidir":
+            p.add_argument("--decision", required=True)
+            p.add_argument("--texto", required=True)
+            p.add_argument("--fuente", required=True, help="Archivo de procedencia conservado; compartible exige continuidad/evidencias/.")
+            p.add_argument("--autor", required=True)
+            p.add_argument("--sustituye")
+        elif command == "ejecucion":
+            p.add_argument("--ficha", required=True, help="JSON relativo a la base; no modifica el runtime ni lanza modelos.")
+        else:
+            p.add_argument("--responsable")
+            p.add_argument("--ruta", action="append", default=[])
+            p.add_argument("--reasignar", action="store_true")
+            p.add_argument("--liberar", action="store_true")
     args = parser.parse_args(argv)
     base = args.base.resolve()
     if args.command == "crear":
         data = create(base, args.id, args.objetivo, args.siguiente, args.compartible)
     elif args.command == "actualizar":
         data = update(base, args.id, args.estado, args.resultado, args.comprobacion, args.siguiente,
-                      args.evidencia, args.revision_esperada, args.verificacion)
+                      args.evidencia, args.revision_esperada, args.verificacion, actor=args.actor)
     elif args.command == "aceptar":
         data = accept(base, args.id, args.revision_esperada, args.revisor, args.criterio, args.siguiente)
-    elif args.command in {"recuperar", "migrar"}:
-        data = (recover if args.command == "recuperar" else migrate)(base, args.id, args.revision_esperada)
+    elif args.command == "recuperar":
+        data = recover(base, args.id, args.revision_esperada, actor=args.actor)
+        data["tarea"] = brief_view(data["tarea"])
+    elif args.command == "migrar":
+        data = migrate(base, args.id, args.revision_esperada)
     elif args.command == "retomar":
-        data = resume(base, args.id)
+        data = resume(base, args.id, complete=args.completo)
+    elif args.command == "historial":
+        data = history(base, args.id, args.revision)
+    elif args.command == "decidir":
+        data = decide(base, args.id, args.revision_esperada, args.decision, args.texto,
+                      args.fuente, args.autor, args.sustituye, actor=args.actor)
+    elif args.command == "ejecucion":
+        ficha = json.loads(regular_bytes(safe_path(base, args.ficha)).decode("utf-8"))
+        data = set_execution(base, args.id, args.revision_esperada, ficha, actor=args.actor)
+    elif args.command == "asignar":
+        data = assign(base, args.id, args.revision_esperada, args.responsable, args.ruta,
+                      actor=args.actor, replace=args.reasignar, release=args.liberar)
     else:
-        ids = {p.stem for folder in ("operacion/tareas", "continuidad/tareas")
-               for p in safe_path(base, folder).glob("*.json")}
         data = [{k: row[k] for k in ("id", "objetivo", "estado", "proximo_paso")}
-                for row in (read_task(base, task_id) for task_id in sorted(ids))]
+                for row in (read_task(base, task_id) for task_id in all_ids(base))]
+    if isinstance(data, dict) and "schema" in data:
+        data = brief_view(data)
     print(json.dumps(data, ensure_ascii=False, indent=2))
     return 0
 

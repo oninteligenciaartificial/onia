@@ -57,6 +57,14 @@ def manifest(base):
         paths.extend(route.get("contexto", []))
     for relative in paths:
         safe_path(base, relative)
+    profiles = data.get("perfiles_ejecucion", {})
+    if not isinstance(profiles, dict):
+        raise ValueError("Perfiles de ejecución inválidos.")
+    for profile in profiles.values():
+        if not isinstance(profile, dict):
+            raise ValueError("Perfil de ejecución inválido.")
+        trabajo.validate_extensions({"ejecucion": {"recomendado": profile,
+            "criterio": profile.get("criterio"), "escalamiento": profile.get("escalamiento")}})
     return data
 
 
@@ -102,10 +110,19 @@ def task_paths(base, task_id, shared=None):
 
 def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None, skill=None,
             ensayo=False, investigacion=None, capacidad=None, hipotesis=None, control=None, leccion=None,
-            apoyos=None, shared=False):
+            apoyos=None, shared=False, profile=None):
     base = base.resolve()
     task, brief = task_paths(base, task_id, shared)
     data = manifest(base)
+    execution = None
+    if profile is not None:
+        selected = data.get("perfiles_ejecucion", {}).get(profile)
+        if selected is None:
+            raise ValueError("Perfil de ejecución desconocido; elegir uno declarado en orquestacion.json.")
+        execution = {"perfil": profile,
+                     "recomendado": {k: selected[k] for k in ("modelo", "esfuerzo")},
+                     "solicitado": None, "observado": None,
+                     "criterio": selected["criterio"], "escalamiento": selected["escalamiento"]}
     if area not in data["areas"]:
         raise ValueError("Área inválida. Elegir: " + ", ".join(data["areas"]))
     if not all(isinstance(value, str) and value.strip() for value in (goal, deliverable, acceptance)):
@@ -169,19 +186,19 @@ def prepare(base, task_id, area, goal, deliverable, acceptance, inputs=None, ski
                   "No editar la proyección ni rehashear evidencia alterada para continuar.", "", LIMITACION, ""])
     record = trabajo.create(base, task_id, goal.strip(),
                             "Leer " + brief.relative_to(base).as_posix() + " y ejecutar el encargo dentro de su alcance.",
-                            shared=shared, briefing="\n".join(lines))
+                            shared=shared, briefing="\n".join(lines), execution=execution)
     return {"tarea": record, "briefing": brief.relative_to(base).as_posix(),
             "area": area, "skill_directora": skill, "skills_apoyo": support,
             "apoyos_seleccionados": selected_support, "modo": route["modo"], "nota": LIMITACION}
 
 
-def resume(base, task_id):
+def resume(base, task_id, complete=False):
     task_paths(base, task_id)
-    result = trabajo.resume(base.resolve(), task_id)
+    result = trabajo.resume(base.resolve(), task_id, complete=complete)
     brief = result["tarea"].get("briefing")
     if brief is None:
         raise ValueError("Sin briefing íntegro registrado. Para schema 1, revisar y migrar explícitamente antes de continuar.")
-    result["briefing"] = brief["contenido"]
+    # Un único contenido, en tarea.briefing.contenido; preparar conserva su ruta.
     result["nota_harness"] = LIMITACION
     return result
 
@@ -198,6 +215,7 @@ def main(argv=None):
     p.add_argument("id")
     p.add_argument("--area", required=True)
     p.add_argument("--skill", help="Skill directora para este encargo, entre las declaradas para el área.")
+    p.add_argument("--perfil", help="Recomendación declarativa por tipo de trabajo; no cambia el modelo del runtime.")
     p.add_argument("--objetivo", required=True)
     p.add_argument("--entregable", required=True)
     p.add_argument("--aceptacion", required=True)
@@ -212,6 +230,10 @@ def main(argv=None):
     p.add_argument("--leccion", help="Lección previa aplicable.")
     p = commands.add_parser("retomar")
     p.add_argument("id")
+    p.add_argument("--completo", action="store_true")
+    p = commands.add_parser("historial")
+    p.add_argument("id")
+    p.add_argument("--revision", type=int)
     args = parser.parse_args(argv)
     try:
         if args.command == "doctor":
@@ -222,10 +244,13 @@ def main(argv=None):
                              args.entregable, args.aceptacion, args.entrada, skill=args.skill,
                              ensayo=args.ensayo, investigacion=args.investigacion,
                              capacidad=args.capacidad, hipotesis=args.hipotesis,
-                             control=args.control, leccion=args.leccion, apoyos=args.apoyo, shared=args.compartible)
+                             control=args.control, leccion=args.leccion, apoyos=args.apoyo, shared=args.compartible,
+                             profile=args.perfil)
             code = 0
+        elif args.command == "historial":
+            result, code = trabajo.history(args.base.resolve(), args.id, args.revision), 0
         else:
-            result, code = resume(args.base, args.id), 0
+            result, code = resume(args.base, args.id, complete=args.completo), 0
     except (OSError, ValueError, KeyError, TypeError) as exc:
         result, code = {"error": str(exc)}, 2
     print(json.dumps(result, ensure_ascii=False, indent=2))

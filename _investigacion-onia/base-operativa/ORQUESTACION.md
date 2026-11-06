@@ -30,6 +30,10 @@ Un ensayo de candidato requiere `--ensayo --investigacion RUTA --capacidad TEXTO
 
 ## Ejecución y revisión
 
+La selección de área/skill no configura un LLM. Elegir un perfil por tipo de trabajo mediante --perfil si corresponde, cotejar herramientas disponibles y registrar por separado modelo/esfuerzo recomendado, solicitado y observado. Desconocido se conserva como null. Los perfiles del manifiesto son candidatos revisables; no ganadores demostrados ni permisos para gasto. Escalar ante un fallo de razonamiento identificado, no por falta de credenciales o herramientas.
+
+Retomar comienza por la vista breve; consultar historial o --completo sólo cuando una decisión o revisión lo requiera. El briefing conserva restricciones y aparece una sola vez en tarea.briefing.contenido. Las decisiones sustituidas conservan procedencia y siguen disponibles en detalle. Para cambios paralelos, usar responsable y rutas explícitas; el comando asignar comprueba reservas en este checkout. Ver [contrato de continuidad](cloud/CONTINUIDAD.md) para actor, revisión esperada, reasignación y límites entre clones.
+
 Delegar partes independientes con objetivo, entradas, entregable, comprobación y archivos asignados. Cada archivo y configuración tiene un único escritor. Los subagentes internos y los chats persistentes son mecanismos distintos; comprobar herramientas y autorización para cada uno. Un mensaje de “terminado” no sustituye la evidencia.
 
 Centralizar preguntas y decisiones en el chat de coordinación del encargo. Las autorizaciones nativas pueden quedar ancladas al chat que invoca la herramienta; no prometer moverlas ni accionarlas por Sergio. La existencia de un chat o una preferencia móvil no acredita push o programación.

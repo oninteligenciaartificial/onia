@@ -19,6 +19,17 @@ El instalador enlaza las nueve skills versionadas, ejecuta npm ci e instala Chro
 
 El fallo de scripts ausentes se reprodujo con HEAD 4de11bb. Estaban publicados desde 66674eb; el avance a f81a5b9 resolvió la ausencia y permitió instalar Chromium 156.0.8078.4. Consultar ESTADO para las verificaciones posteriores y la aceptación del entorno publicado.
 
+## Preparación local de las skills en Windows
+
+Si Windows rechaza symlinks con WinError 1314, existe una alternativa explícita y sin copia de cuerpos:
+
+```powershell
+python _investigacion-onia/base-operativa/scripts/preparar-cloud.py --install --junctions-windows
+python _investigacion-onia/base-operativa/scripts/preparar-cloud.py --check
+```
+
+Crea sólo destinos faltantes tras comprobar conflictos. Las junctions apuntan a la fuente canónica mediante destino absoluto; si se mueve el checkout deben revisarse. El modo predeterminado sigue usando symlinks relativos, también en Linux/Cloud. Ninguno acredita que el catálogo de una sesión ya abierta se haya recargado. El 6/11 se reprodujo ese error local y se completaron únicamente los dos enlaces faltantes; no es una explicación probada de la ausencia nativa en Cloud.
+
 ## Conexión n8n
 
 ```sh

@@ -1,0 +1,290 @@
+[
+  {
+    "run_id": "r01",
+    "case": "codigo",
+    "model": "gpt-6.1-sol",
+    "effort": "medium",
+    "functional_pass": true,
+    "checks": 19,
+    "seconds": 50.56,
+    "initial_input_tokens": 20170,
+    "total_input_tokens": 83974,
+    "total_cached_input_tokens": 75776,
+    "total_uncached_input_tokens": 8198,
+    "total_output_tokens": 1630,
+    "tool_calls": 3,
+    "tool_output_characters": 2610,
+    "observed": [
+      {
+        "timestamp": "2026-11-06T21:00:49.268Z",
+        "model": "gpt-6.1-sol",
+        "effort": "medium"
+      }
+    ],
+    "compaction_markers": 0
+  },
+  {
+    "run_id": "r02",
+    "case": "codigo",
+    "model": "gpt-6.1-terra",
+    "effort": "medium",
+    "functional_pass": true,
+    "checks": 19,
+    "seconds": 36.41,
+    "initial_input_tokens": 20106,
+    "total_input_tokens": 104090,
+    "total_cached_input_tokens": 81664,
+    "total_uncached_input_tokens": 22426,
+    "total_output_tokens": 1222,
+    "tool_calls": 4,
+    "tool_output_characters": 1353,
+    "observed": [
+      {
+        "timestamp": "2026-11-06T21:00:56.321Z",
+        "model": "gpt-6.1-terra",
+        "effort": "medium"
+      }
+    ],
+    "compaction_markers": 0
+  },
+  {
+    "run_id": "r03",
+    "case": "codigo",
+    "model": "gpt-6.1-sol",
+    "effort": "medium",
+    "functional_pass": true,
+    "checks": 19,
+    "seconds": 55.19,
+    "initial_input_tokens": 20170,
+    "total_input_tokens": 84143,
+    "total_cached_input_tokens": 74240,
+    "total_uncached_input_tokens": 9903,
+    "total_output_tokens": 1892,
+    "tool_calls": 3,
+    "tool_output_characters": 2261,
+    "observed": [
+      {
+        "timestamp": "2026-11-06T21:01:58.31Z",
+        "model": "gpt-6.1-sol",
+        "effort": "medium"
+      }
+    ],
+    "compaction_markers": 0
+  },
+  {
+    "run_id": "r04",
+    "case": "codigo",
+    "model": "gpt-6.1-terra",
+    "effort": "medium",
+    "functional_pass": true,
+    "checks": 19,
+    "seconds": 49.74,
+    "initial_input_tokens": 20106,
+    "total_input_tokens": 105922,
+    "total_cached_input_tokens": 101376,
+    "total_uncached_input_tokens": 4546,
+    "total_output_tokens": 2080,
+    "tool_calls": 4,
+    "tool_output_characters": 2158,
+    "observed": [
+      {
+        "timestamp": "2026-11-06T21:02:07.533Z",
+        "model": "gpt-6.1-terra",
+        "effort": "medium"
+      }
+    ],
+    "compaction_markers": 0
+  },
+  {
+    "run_id": "r05",
+    "case": "extraccion",
+    "model": "gpt-6-luna",
+    "effort": "high",
+    "functional_pass": true,
+    "checks": 12,
+    "seconds": 26.29,
+    "initial_input_tokens": 19479,
+    "total_input_tokens": 80182,
+    "total_cached_input_tokens": 71552,
+    "total_uncached_input_tokens": 8630,
+    "total_output_tokens": 1051,
+    "tool_calls": 3,
+    "tool_output_characters": 1694,
+    "observed": [
+      {
+        "timestamp": "2026-11-06T21:01:04.329Z",
+        "model": "gpt-6-luna",
+        "effort": "high"
+      }
+    ],
+    "compaction_markers": 0
+  },
+  {
+    "run_id": "r06",
+    "case": "extraccion",
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "functional_pass": true,
+    "checks": 12,
+    "seconds": 33.28,
+    "initial_input_tokens": 20296,
+    "total_input_tokens": 83740,
+    "total_cached_input_tokens": 75520,
+    "total_uncached_input_tokens": 8220,
+    "total_output_tokens": 961,
+    "tool_calls": 3,
+    "tool_output_characters": 2232,
+    "observed": [
+      {
+        "timestamp": "2026-11-06T21:02:13.974Z",
+        "model": "gpt-6.1-sol",
+        "effort": "high"
+      }
+    ],
+    "compaction_markers": 0
+  },
+  {
+    "run_id": "r07",
+    "case": "extraccion",
+    "model": "gpt-6-luna",
+    "effort": "high",
+    "functional_pass": true,
+    "checks": 12,
+    "seconds": 34.62,
+    "initial_input_tokens": 19605,
+    "total_input_tokens": 101663,
+    "total_cached_input_tokens": 92288,
+    "total_uncached_input_tokens": 9375,
+    "total_output_tokens": 1304,
+    "tool_calls": 4,
+    "tool_output_characters": 1682,
+    "observed": [
+      {
+        "timestamp": "2026-11-06T21:03:06.691Z",
+        "model": "gpt-6-luna",
+        "effort": "high"
+      }
+    ],
+    "compaction_markers": 0
+  },
+  {
+    "run_id": "r08",
+    "case": "extraccion",
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "functional_pass": true,
+    "checks": 12,
+    "seconds": 32.69,
+    "initial_input_tokens": 20296,
+    "total_input_tokens": 83675,
+    "total_cached_input_tokens": 72960,
+    "total_uncached_input_tokens": 10715,
+    "total_output_tokens": 975,
+    "tool_calls": 3,
+    "tool_output_characters": 2108,
+    "observed": [
+      {
+        "timestamp": "2026-11-06T21:03:11.002Z",
+        "model": "gpt-6.1-sol",
+        "effort": "high"
+      }
+    ],
+    "compaction_markers": 0
+  },
+  {
+    "run_id": "r09",
+    "case": "recuperacion",
+    "model": "gpt-6.1-sol",
+    "effort": "medium",
+    "functional_pass": true,
+    "checks": 41,
+    "seconds": 78.65,
+    "initial_input_tokens": 20296,
+    "total_input_tokens": 203486,
+    "total_cached_input_tokens": 192512,
+    "total_uncached_input_tokens": 10974,
+    "total_output_tokens": 2401,
+    "tool_calls": 7,
+    "tool_output_characters": 29440,
+    "observed": [
+      {
+        "timestamp": "2026-11-06T21:10:05.308Z",
+        "model": "gpt-6.1-sol",
+        "effort": "medium"
+      }
+    ],
+    "compaction_markers": 0
+  },
+  {
+    "run_id": "r10",
+    "case": "recuperacion",
+    "model": "gpt-6.1-terra",
+    "effort": "medium",
+    "functional_pass": true,
+    "checks": 41,
+    "seconds": 55.56,
+    "initial_input_tokens": 20232,
+    "total_input_tokens": 247891,
+    "total_cached_input_tokens": 216064,
+    "total_uncached_input_tokens": 31827,
+    "total_output_tokens": 1819,
+    "tool_calls": 9,
+    "tool_output_characters": 33629,
+    "observed": [
+      {
+        "timestamp": "2026-11-06T21:10:13.973Z",
+        "model": "gpt-6.1-terra",
+        "effort": "medium"
+      }
+    ],
+    "compaction_markers": 0
+  },
+  {
+    "run_id": "r11",
+    "case": "recuperacion",
+    "model": "gpt-6.1-sol",
+    "effort": "medium",
+    "functional_pass": true,
+    "checks": 41,
+    "seconds": 67.5,
+    "initial_input_tokens": 20296,
+    "total_input_tokens": 174044,
+    "total_cached_input_tokens": 163456,
+    "total_uncached_input_tokens": 10588,
+    "total_output_tokens": 2070,
+    "tool_calls": 6,
+    "tool_output_characters": 29094,
+    "observed": [
+      {
+        "timestamp": "2026-11-06T21:10:22.214Z",
+        "model": "gpt-6.1-sol",
+        "effort": "medium"
+      }
+    ],
+    "compaction_markers": 0
+  },
+  {
+    "run_id": "r12",
+    "case": "recuperacion",
+    "model": "gpt-6.1-terra",
+    "effort": "medium",
+    "functional_pass": true,
+    "checks": 41,
+    "seconds": 63.67,
+    "initial_input_tokens": 20232,
+    "total_input_tokens": 246625,
+    "total_cached_input_tokens": 224768,
+    "total_uncached_input_tokens": 21857,
+    "total_output_tokens": 2063,
+    "tool_calls": 9,
+    "tool_output_characters": 33179,
+    "observed": [
+      {
+        "timestamp": "2026-11-06T21:11:27.112Z",
+        "model": "gpt-6.1-terra",
+        "effort": "medium"
+      }
+    ],
+    "compaction_markers": 0
+  }
+]
