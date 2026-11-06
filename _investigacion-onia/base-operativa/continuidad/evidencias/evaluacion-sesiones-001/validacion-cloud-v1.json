@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "entorno": "onia",
+  "fuente": {
+    "chat": "01a1b22d-9f2c-72df-8a57-4c1ccb0c800a",
+    "turno": "01a1b2c2-a921-7091-a7d7-e57d47ccbaa6",
+    "inicio": "2026-11-06T21:27:44.000Z",
+    "fin": "2026-11-06T21:28:19.000Z",
+    "repo": "oninteligenciaartificial/onia",
+    "cwd": "/workspace/onia",
+    "commit": "a366ad71ef1f0982b2152b73df204f57e95cd6bd"
+  },
+  "suite": {
+    "definidas": 75,
+    "ejecutadas": 74,
+    "omitidas": 1,
+    "fallos": 0,
+    "segundos": 2.189,
+    "item": "exec-54fe4b94-c3e3-4fcd-841e-68aee2727e49",
+    "exit_code": 0,
+    "comando": "/bin/bash -lc \"python3 -m unittest discover -s _investigacion-onia/base-operativa/scripts -p 'test_*.py' -v\"",
+    "salida_final": "processes_cannot_reserve_same_path_for_different_tasks (test_trabajo.ContinuityTests.test_two_processes_cannot_reserve_same_path_for_different_tasks) ... ok\ntest_two_processes_same_revision_only_one_wins (test_trabajo.ContinuityTests.test_two_processes_same_revision_only_one_wins) ... ok\n\n----------------------------------------------------------------------\nRan 75 tests in 2.189s\n\nOK (skipped=1)\n",
+    "motivo_omision": "Junctions requieren Windows"
+  },
+  "preparacion": {
+    "item": "exec-5316f0be-26d5-42b4-8cf9-eea06a3ff5bd",
+    "exit_code": 0,
+    "enlaces_propios": 9,
+    "aliases_workspace": 9,
+    "doctor_rutas_presentes": 30,
+    "errores": []
+  },
+  "integridad": {
+    "item": "exec-06d2ec36-b5ee-4a01-896a-6e6d6f4d2476",
+    "exit_code": 0,
+    "salida": "{\"manifest_entries\": 190, \"matching\": 190, \"errors\": [], \"manifest_sha256\": \"4d328c966172866f979fd0ddee494c67d513b28533ceb9224c5ad17c9b5ac7be\"}\ntrabajo.py 6333fb5e5acf8ee7ba7000214316750056733d466e0d6124178d762c81d1768f OK\nharness.py cc08834debf81c792b55b3823bbb148a8c5cae51f5b0cd3b93d240f4b3127486 OK\n## master\na366ad71ef1f0982b2152b73df204f57e95cd6bd\n"
+  },
+  "limites": [
+    "Es preparación Cloud existente; no es una nueva sesión ejecutora ni un anuncio nativo de catálogo.",
+    "No se observó compacción ni recorrido real desde iPhone.",
+    "Esta evidencia precede a Guardar y publicar; no certifica por sí sola publicación del snapshot."
+  ]
+}

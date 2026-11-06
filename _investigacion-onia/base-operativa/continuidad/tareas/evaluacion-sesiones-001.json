@@ -1,22 +1,27 @@
 {
   "schema": 2,
   "id": "evaluacion-sesiones-001",
-  "revision": 5,
+  "revision": 8,
   "compartible": true,
   "objetivo": "Implementar y evaluar continuidad selectiva, decisiones, proactividad, fichas de LLM y coordinación local de ONIA",
-  "estado": "en_curso",
-  "proximo_paso": "Integrar commit revisado, verificarlo en la preparación Cloud existente y publicar el snapshot onia",
-  "resultado": "Implementación y 12 ensayos aprobados por revisión independiente; 75 pruebas definidas con cobertura complementaria Windows/WSL",
-  "comprobacion": "Dictamen favorable en revision.md; 190/190 archivos del manifiesto cotejados; fallo decimal suplementario conservado",
+  "estado": "aceptado",
+  "proximo_paso": "Unidad técnica cerrada. Consultar entrega y confirmación de snapshot en el editor onia 01a1b22d-9f2c-72df-8a57-4c1ccb0c800a; móvil real y compacción quedan fuera de esta aceptación.",
+  "resultado": "Implementación a366ad7 y doce ensayos aprobados por dictamen independiente; preparación Cloud verificada con 74 pruebas pasadas y una omisión Windows",
+  "comprobacion": "75 definidas: Windows 67+8 omisiones, WSL y Cloud 74+1 omisión; cero fallos. 190/190 hashes Cloud. Fallo decimal suplementario r02 conservado fuera de rúbrica",
   "verificacion": "correcta",
   "evidencias": [
     {
       "archivo": "continuidad/evidencias/evaluacion-sesiones-001/informe-tecnico-v1.md",
       "sha256": "d960e5abbeab9e06f1359af2c8567c46f63d00645beb8b4ccbcc2dc8dd88ff5a",
       "bytes": 4631
+    },
+    {
+      "archivo": "continuidad/evidencias/evaluacion-sesiones-001/validacion-cloud-v1.json",
+      "sha256": "5285c53d9b5153ae5616ec7e7f8b1006723dba2aded214f5d1da5c0e07fc52e3",
+      "bytes": 2177
     }
   ],
-  "actualizado": "2026-11-06T21:26:42.087198+00:00",
+  "actualizado": "2026-11-06T21:29:34.510048+00:00",
   "historial": [
     {
       "revision": 1,
@@ -160,6 +165,173 @@
         "revision_base": 1,
         "fecha": "2026-11-06T21:05:20.968698+00:00"
       }
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-06T21:26:42.087198+00:00",
+      "estado": "en_curso",
+      "resultado": "Implementación y 12 ensayos aprobados por revisión independiente; 75 pruebas definidas con cobertura complementaria Windows/WSL",
+      "comprobacion": "Dictamen favorable en revision.md; 190/190 archivos del manifiesto cotejados; fallo decimal suplementario conservado",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "continuidad/evidencias/evaluacion-sesiones-001/informe-tecnico-v1.md",
+          "sha256": "d960e5abbeab9e06f1359af2c8567c46f63d00645beb8b4ccbcc2dc8dd88ff5a",
+          "bytes": 4631
+        }
+      ],
+      "proximo_paso": "Integrar commit revisado, verificarlo en la preparación Cloud existente y publicar el snapshot onia",
+      "aceptacion": null,
+      "ejecucion": {
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": {
+          "modelo": "gpt-6-astra",
+          "esfuerzo": "ultra",
+          "fuente": {
+            "archivo": "continuidad/evidencias/evaluacion-sesiones-001/runtime-integradora-v1.json",
+            "sha256": "3cbf9f943c35a8ac0046b80b798bc8977386a91b66c373cf3335267a42fe4a92",
+            "bytes": 327
+          }
+        },
+        "criterio": "Implementacion con compatibilidad y revision independiente; se continua el chat existente cuyo runtime se registra sin inferir solicitud",
+        "escalamiento": "No cambiar el runtime por area; comparar candidatos en copias autorizadas y escalar solo ante fallo de razonamiento identificado"
+      },
+      "asignacion": {
+        "responsable": "integradora",
+        "rutas": [
+          "scripts",
+          "orquestacion.json",
+          "ORQUESTACION.md",
+          "cloud/CONTINUIDAD.md",
+          "cloud/INICIO-SESION.md",
+          "cloud/README.md",
+          "continuidad/2026-11-06/evaluacion-sesiones/PLAN.md",
+          "continuidad/2026-11-06/evaluacion-sesiones/casos",
+          "continuidad/2026-11-06/evaluacion-sesiones/mediciones-cli"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-06T21:05:20.968698+00:00"
+      }
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-06T21:29:34.425742+00:00",
+      "estado": "para_revision",
+      "resultado": "Implementación a366ad7 y doce ensayos aprobados por dictamen independiente; preparación Cloud verificada con 74 pruebas pasadas y una omisión Windows",
+      "comprobacion": "75 definidas: Windows 67+8 omisiones, WSL y Cloud 74+1 omisión; cero fallos. 190/190 hashes Cloud. Fallo decimal suplementario r02 conservado fuera de rúbrica",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "continuidad/evidencias/evaluacion-sesiones-001/informe-tecnico-v1.md",
+          "sha256": "d960e5abbeab9e06f1359af2c8567c46f63d00645beb8b4ccbcc2dc8dd88ff5a",
+          "bytes": 4631
+        },
+        {
+          "archivo": "continuidad/evidencias/evaluacion-sesiones-001/validacion-cloud-v1.json",
+          "sha256": "5285c53d9b5153ae5616ec7e7f8b1006723dba2aded214f5d1da5c0e07fc52e3",
+          "bytes": 2177
+        }
+      ],
+      "proximo_paso": "Registrar aceptación técnica conforme al dictamen independiente y liberar las reservas locales",
+      "aceptacion": null,
+      "ejecucion": {
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": {
+          "modelo": "gpt-6-astra",
+          "esfuerzo": "ultra",
+          "fuente": {
+            "archivo": "continuidad/evidencias/evaluacion-sesiones-001/runtime-integradora-v1.json",
+            "sha256": "3cbf9f943c35a8ac0046b80b798bc8977386a91b66c373cf3335267a42fe4a92",
+            "bytes": 327
+          }
+        },
+        "criterio": "Implementacion con compatibilidad y revision independiente; se continua el chat existente cuyo runtime se registra sin inferir solicitud",
+        "escalamiento": "No cambiar el runtime por area; comparar candidatos en copias autorizadas y escalar solo ante fallo de razonamiento identificado"
+      },
+      "asignacion": {
+        "responsable": "integradora",
+        "rutas": [
+          "scripts",
+          "orquestacion.json",
+          "ORQUESTACION.md",
+          "cloud/CONTINUIDAD.md",
+          "cloud/INICIO-SESION.md",
+          "cloud/README.md",
+          "continuidad/2026-11-06/evaluacion-sesiones/PLAN.md",
+          "continuidad/2026-11-06/evaluacion-sesiones/casos",
+          "continuidad/2026-11-06/evaluacion-sesiones/mediciones-cli"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-06T21:05:20.968698+00:00"
+      }
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-06T21:29:34.466289+00:00",
+      "estado": "aceptado",
+      "resultado": "Implementación a366ad7 y doce ensayos aprobados por dictamen independiente; preparación Cloud verificada con 74 pruebas pasadas y una omisión Windows",
+      "comprobacion": "75 definidas: Windows 67+8 omisiones, WSL y Cloud 74+1 omisión; cero fallos. 190/190 hashes Cloud. Fallo decimal suplementario r02 conservado fuera de rúbrica",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "continuidad/evidencias/evaluacion-sesiones-001/informe-tecnico-v1.md",
+          "sha256": "d960e5abbeab9e06f1359af2c8567c46f63d00645beb8b4ccbcc2dc8dd88ff5a",
+          "bytes": 4631
+        },
+        {
+          "archivo": "continuidad/evidencias/evaluacion-sesiones-001/validacion-cloud-v1.json",
+          "sha256": "5285c53d9b5153ae5616ec7e7f8b1006723dba2aded214f5d1da5c0e07fc52e3",
+          "bytes": 2177
+        }
+      ],
+      "proximo_paso": "Unidad técnica cerrada. Consultar entrega y confirmación de snapshot en el editor onia 01a1b22d-9f2c-72df-8a57-4c1ccb0c800a; móvil real y compacción quedan fuera de esta aceptación.",
+      "aceptacion": {
+        "revisor": "revisora 01a1af41-1ce0-7b72-a888-7fd658396b4a",
+        "criterio": "Dictamen favorable revision.md SHA d0ac5127a8e25483d30e961cf833551cc12844fae88c9e05862891a48a87d8d6: implementación, 12 rúbricas y evidencia aprobadas dentro de límites; integración registrada por la integradora. Preparación Cloud adicional comprobada, publicación se confirma aparte.",
+        "fecha": "2026-11-06T21:29:34.466289+00:00"
+      },
+      "ejecucion": {
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": {
+          "modelo": "gpt-6-astra",
+          "esfuerzo": "ultra",
+          "fuente": {
+            "archivo": "continuidad/evidencias/evaluacion-sesiones-001/runtime-integradora-v1.json",
+            "sha256": "3cbf9f943c35a8ac0046b80b798bc8977386a91b66c373cf3335267a42fe4a92",
+            "bytes": 327
+          }
+        },
+        "criterio": "Implementacion con compatibilidad y revision independiente; se continua el chat existente cuyo runtime se registra sin inferir solicitud",
+        "escalamiento": "No cambiar el runtime por area; comparar candidatos en copias autorizadas y escalar solo ante fallo de razonamiento identificado"
+      },
+      "asignacion": {
+        "responsable": "integradora",
+        "rutas": [
+          "scripts",
+          "orquestacion.json",
+          "ORQUESTACION.md",
+          "cloud/CONTINUIDAD.md",
+          "cloud/INICIO-SESION.md",
+          "cloud/README.md",
+          "continuidad/2026-11-06/evaluacion-sesiones/PLAN.md",
+          "continuidad/2026-11-06/evaluacion-sesiones/casos",
+          "continuidad/2026-11-06/evaluacion-sesiones/mediciones-cli"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-06T21:05:20.968698+00:00"
+      }
     }
   ],
   "briefing": {
@@ -168,7 +340,11 @@
     "bytes": 2707,
     "contenido": "# Encargo evaluacion-sesiones-001\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nImplementar y evaluar continuidad selectiva, decisiones, proactividad, fichas de LLM y coordinación local de ONIA\n\n## Entregable\n\nCambios mínimos revisados, casos congelados, pruebas y plan único\n\n## Criterio de aceptación\n\nConservar decisiones y evidencia; suites pertinentes y evaluación independiente; límites de runtime explícitos\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Autorización: chat01a1b245 turno01a1b29e\n- Plan: continuidad/2026-11-06/evaluacion-sesiones/PLAN.md\n- No nuevos chats, no red en fixtures, no servicios ni gasto; conservar cambios ajenos\n- Una integradora de fuentes; coordinación posee ejecuciones y comparativa; revisora sólo revision.md\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [reglas-comunes.md](../../reglas-comunes.md)\n- [ESTADO.md](../../ESTADO.md)\n- [ORQUESTACION.md](../../ORQUESTACION.md)\n- [arquitectura.md](../../arquitectura.md)\n- [compartibles/skills/desarrollar-y-verificar/SKILL.md](../../compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/evaluacion-sesiones-001.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nEste comando no crea agentes, abre chats, ejecuta encargos ni usa la red. Sólo --compartible guarda un registro saneado versionable en continuidad/. Los registros privados quedan en operacion/. Git requiere publicación y recuperación explícitas.\n"
   },
-  "aceptacion": null,
+  "aceptacion": {
+    "revisor": "revisora 01a1af41-1ce0-7b72-a888-7fd658396b4a",
+    "criterio": "Dictamen favorable revision.md SHA d0ac5127a8e25483d30e961cf833551cc12844fae88c9e05862891a48a87d8d6: implementación, 12 rúbricas y evidencia aprobadas dentro de límites; integración registrada por la integradora. Preparación Cloud adicional comprobada, publicación se confirma aparte.",
+    "fecha": "2026-11-06T21:29:34.466289+00:00"
+  },
   "ejecucion": {
     "recomendado": {
       "modelo": "gpt-6.1-sol",
@@ -187,20 +363,5 @@
     "criterio": "Implementacion con compatibilidad y revision independiente; se continua el chat existente cuyo runtime se registra sin inferir solicitud",
     "escalamiento": "No cambiar el runtime por area; comparar candidatos en copias autorizadas y escalar solo ante fallo de razonamiento identificado"
   },
-  "asignacion": {
-    "responsable": "integradora",
-    "rutas": [
-      "scripts",
-      "orquestacion.json",
-      "ORQUESTACION.md",
-      "cloud/CONTINUIDAD.md",
-      "cloud/INICIO-SESION.md",
-      "cloud/README.md",
-      "continuidad/2026-11-06/evaluacion-sesiones/PLAN.md",
-      "continuidad/2026-11-06/evaluacion-sesiones/casos",
-      "continuidad/2026-11-06/evaluacion-sesiones/mediciones-cli"
-    ],
-    "revision_base": 1,
-    "fecha": "2026-11-06T21:05:20.968698+00:00"
-  }
+  "asignacion": null
 }
