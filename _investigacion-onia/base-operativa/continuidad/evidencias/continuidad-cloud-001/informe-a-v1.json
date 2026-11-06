@@ -1,0 +1,29 @@
+{
+  "task_id": "continuidad-cloud-001",
+  "naturaleza": "Pedido enteramente ficticio; datos sintéticos, sin dinero ni clientes reales y sin operaciones externas.",
+  "entrada": "continuidad/evidencias/continuidad-cloud-001/entrada-v1.csv",
+  "metodo": "Decimal a partir de cadenas; importes decimales representados como cadenas JSON.",
+  "tabla": [
+    {
+      "articulo": "demo-a",
+      "unidades": 3,
+      "precio_unitario": "12.50",
+      "subtotal": "37.50"
+    },
+    {
+      "articulo": "demo-b",
+      "unidades": 4,
+      "precio_unitario": "2.25",
+      "subtotal": "9.00"
+    },
+    {
+      "articulo": "demo-c",
+      "unidades": 2,
+      "precio_unitario": "5.00",
+      "subtotal": "10.00"
+    }
+  ],
+  "total": "56.50",
+  "unidades": 9,
+  "limite": "Entrega de A para revisión independiente de B; no constituye aceptación."
+}
