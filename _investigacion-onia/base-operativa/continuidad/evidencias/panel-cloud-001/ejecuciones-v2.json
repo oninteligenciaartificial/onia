@@ -1,0 +1,48 @@
+{
+  "tarea": "panel-cloud-001",
+  "fecha": "2026-11-07",
+  "fuente": "Recibos saneados de Integración local, A3 Desarrollo Cloud y B2 Organización Cloud",
+  "git": {
+    "repo_privado": "oninteligenciaartificial/onia",
+    "ref": "refs/heads/codex/panel-cloud-20261107",
+    "commit_probado": "b0329c481d695a70f1916ccab49190313c2eac43",
+    "padre_y_master_preservado": "e55812ce1bc8ef798fb370257ba887d07acccc53",
+    "blobs_cotejados": 34,
+    "lista_de_blobs_sha256": "9fde5cb065bc204229b3b881429ecb38e317b348e5ac05081c940f5c732ba3e1",
+    "incidencias": ["Primer clone de revisión limitado por rutas largas Windows; resuelto en copia aislada con core.longpaths local", "La sección QA enlaza a un ancla histórica de registro-de-errores ausente en esta rama; la retoma y la pieza no dependen de ese ancla"]
+  },
+  "A3": {
+    "chat": "01a1b238-b446-777a-93c0-e31f4034301f",
+    "turno": "01a1b5da-6b69-7045-8240-68ddb4ebe71d",
+    "inicio_utc": "2026-11-07T11:52:44Z",
+    "fin_utc": "2026-11-07T11:53:30Z",
+    "readiness": "running y connected",
+    "retoma": {"id": "referentes-lote-01-001", "revision": 7, "estado": "aceptado", "advertencias": 0, "briefing_y_evidencias": "SHA-256 y bytes, 1 briefing y 3 evidencias"},
+    "pieza_presente": ["PIEZA-01.md", "TARJETA-PRUEBA.png", "TARJETA-PRUEBA.svg"],
+    "marcador_antes": "ausente",
+    "marcador_releido": "A-desarrollo",
+    "head_preservado": "9cf3e40643f8cbf41cfdf9d38c4a0fcb0afe0e41"
+  },
+  "B2": {
+    "chat": "01a1b251-c3f8-7781-9fcf-1874844c401f",
+    "turno": "01a1b5da-814f-72b4-9010-414ec7fba864",
+    "inicio_utc": "2026-11-07T11:52:48Z",
+    "fin_utc": "2026-11-07T11:54:02.259325Z",
+    "readiness": "running, observaciones actuales, política aplicada",
+    "retoma": {"id": "referentes-lote-01-001", "revision": 7, "estado": "aceptado", "salida": 0, "refs_integras": 4, "refs_entrega_v2_integras": 11},
+    "pieza": {"estado": "borrador; por grabar y montar", "enlaces_locales_validos": 9, "png_bytes": 55592, "png_dimensiones": [1080, 690], "png_sha256": "2a011eacff32b5f6b07f29b5c066f2003690016e25839834e6b3a4f3cce06eb7", "svg_bytes": 1534, "svg_sha256": "b15005940c66206038294ea9f2b80f36bce0d2485a99dd8e2052fd20de290d07", "validacion": "PNG firma, CRC y zlib; SVG XML; ambos iguales al commit"},
+    "proyeccion": {"tarjetas": 2, "estados_editorial_y_tecnico_separados": true, "sha256": "37351d19c42e3573912289e185061dbf99b4c35d8ee156ec768b15d320cddfa2"},
+    "notion": {"id": "4112eb20-bdfd-811a-8337-d171eaceb4ef", "revision_releida": 2, "misma_tarjeta": true, "escrituras": 0},
+    "marcador_releido": "B-organizacion",
+    "head_preservado": "c3ac63174815b78c0b371b6c6ad52c8a1ef3c03f",
+    "archivos_preservados": 679
+  },
+  "solape": {
+    "inicio_utc": "2026-11-07T11:52:48Z",
+    "fin_utc": "2026-11-07T11:53:30Z",
+    "segundos_segun_intervalos_declarados": 42,
+    "ruta_marcador": "/tmp/onia-panel-validacion-20261107-espacio",
+    "observacion": "A3 pudo crear y releer su valor A. B2 releyó su valor B en la misma ruta absoluta de su espacio. El solape se calcula sobre las ventanas de ejecución informadas, no sobre uso simultáneo de CPU."
+  },
+  "limites": "Dos chats Cloud existentes retomados. No prueba de chat recién creado, automatización, sincronización del panel real, uso móvil o 24/7. Modelo observado no certificado."
+}

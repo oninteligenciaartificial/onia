@@ -1,0 +1,19 @@
+# Pruebas del panel ONIA en Cloud
+
+7 de noviembre de 2026, America/Caracas. **Desarrollo y Organización ejecutaron dos encargos en espacios Cloud separados desde el mismo commit.** Se comprobó recuperación de la entrega reciente, proyección de tarjetas y actualización de una tarjeta sintética en Notion. El estado de aceptación y sus evidencias se consultan en el registro único. [Registro panel-cloud-001](../../tareas/panel-cloud-001.json)
+
+| Área y responsable | Prueba | Resultado |
+|---|---|---|
+| Desarrollo, Cloud | Recuperar el lote reciente desde el commit de prueba. | `retomar` recuperó `referentes-lote-01-001` r7 aceptado. Briefing y tres evidencias íntegros. La primera pieza, PNG y SVG estaban presentes. |
+| Organización, Cloud | Proyectar tarjetas de Git, verificar Notion y releer el resultado en otra ejecución. | Leyó la portada y cola de Notion. Actualizó la tarjeta sintética privada de r1 a r2 sobre el mismo ID y volvió a leerla en B2. Desde el paquete reciente construyó dos tarjetas temporales con estado técnico y editorial separados. Nueve enlaces de la pieza y formatos de las tarjetas verificados. |
+| Integración, local | Preparar un paquete mínimo, comprobar integridad y entregarlo por Git. | 34 archivos cotejados. La retoma pasó con los bytes originales, rechazó una evidencia con un byte alterado y volvió a pasar tras restaurarla. Publicación en una rama privada de prueba tras revisión. |
+
+**Paralelismo comprobado.** A3 trabajó de 11:52:44 a 11:53:30 UTC y B2 de 11:52:48 a 11:54:02 UTC. Los intervalos declarados se solaparon 42 segundos. A creó su marcador en `/tmp` y B conservó otro valor en la misma ruta absoluta de su espacio. Cada ejecutor extrajo el mismo commit en su directorio aislado y conservó su checkout. Es evidencia para arrancar con dos áreas en paralelo. [Recibos de recuperación y solape](ejecuciones-v2.json)
+
+**Paquete probado.** `b0329c481d695a70f1916ccab49190313c2eac43` en `codex/panel-cloud-20261107`, sobre `e55812ce1bc8ef798fb370257ba887d07acccc53`. Se comprobó la referencia remota y se conservó `master`. Contiene el lote aceptado y la primera pieza con sus tarjetas. Una referencia histórica del QA apunta a un ancla que falta en esta rama de prueba. Los nueve enlaces locales de la ficha y la retoma pasaron. [Rama privada de prueba](https://github.com/oninteligenciaartificial/onia/tree/codex/panel-cloud-20261107)
+
+**Incidencias registradas.** A y A2 devolvieron `No usable execution environment is available` antes de ejecutar. A3 se lanzó tras observar una nueva oportunidad de arranque y el entorno respondió `running/connected`. El primer ZIP local omitía la ficha y se reemplazó por v2 antes de publicar. En Notion, una lectura devolvió más contenido del necesario y la evidencia compartible conserva sólo títulos y resultados. El panel y la cola reales se leyeron. La escritura se limitó al borrador sintético. [Primeras ejecuciones y control negativo](ejecuciones-v1.json) · [Tarjeta de prueba](https://app.notion.com/p/4112eb20bdfd811a8337d171eaceb4ef)
+
+**Supervisión.** La integradora local conservó el paquete, verificó su contenido y publicó el commit revisado. La revisora local comparó el alcance, el commit y los resultados Cloud mediante recibos compactos y emitió dictamen favorable para el ensayo acotado. [Revisión del paquete](revision-v1.md) · [Dictamen de recuperación y paralelismo](revision-v2.md)
+
+Las pruebas usaron dos chats Cloud existentes con ejecutores independientes. Quedan por comprobar el arranque de este paquete en un chat recién creado, la lectura del panel desde el celular y la actualización de las vistas reales. La operación recurrente requiere su propia prueba. La siguiente unidad es implementar la proyección del panel existente con una única escritora, usando los mismos IDs y el criterio de actualización que pasó en el borrador. [Diseño y tareas del panel](../../../PANEL-DIARIO.md)
