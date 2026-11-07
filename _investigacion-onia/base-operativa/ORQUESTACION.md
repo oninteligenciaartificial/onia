@@ -13,6 +13,22 @@ Las seis áreas CLI son `marketing`, `video`, `desarrollo`, `automatizaciones`, 
 
 `--skill` selecciona una directora propia habilitada para el área; por ejemplo continuidad-de-trabajo en organización. `--apoyo CLAVE` incorpora una referencia pertinente al briefing y se puede repetir. Las claves `tercero-` sólo son apoyos. El CLI escribe enlaces: el agente debe leer los cuerpos. Sin selección, los apoyos se enumeran como opcionales, no se cargan todos.
 
+## QA previo de videos recibidos
+
+Antes de procesar un video de Sergio, identificar para qué lo quiere. Hacer una clasificación ligera con el pedido y, si hace falta, identidad, descripción, duración o una vista preliminar accesible. Este QA selecciona el trabajo; no acredita comprensión del video ni requiere descargarlo y analizarlo entero.
+
+Elegir sólo los componentes necesarios:
+
+- Resumen, idea o guion: texto disponible o ASR pertinente y apoyo visual cuando cambie la respuesta.
+- Verificar una afirmación: recuperar el pasaje y contrastar fuentes; no estudiar toda la edición por defecto.
+- Edición, colores, encuadre o tipografía: imágenes y tiempos pertinentes; ampliar cortes o detalles según el atributo pedido.
+- Sonido: audio y herramientas pertinentes al atributo solicitado, declarando capacidades no validadas. PANNs es auxiliar experimental, no escucha ni detector acreditado de música/SFX.
+- Estudio completo o prueba explícita del flujo: aplicar el alcance autorizado y conservar cobertura y límites por componente.
+
+Una URL o «mirá esto» sin finalidad clara no activa automáticamente ASR completo, todos los frames, PANNs y revisión integral. Presentar un QA breve: qué material es, posible utilidad, alcance recomendado y datos que faltan; aclarar el objetivo antes del trabajo pesado. Si el pedido ya define la finalidad o el análisis completo, avanzar dentro de ese alcance sin pedir otra confirmación. Reutilizar resultados existentes y ampliar sólo una brecha pertinente; enviar un video no inicia por sí solo otra investigación de modelos, organización o despliegue.
+
+Fuente: corrección directa de Sergio tras el reel DfaLyn7Rorf, 6/11/2026: no todos los videos requieren el flujo completo; primero QA para decidir qué hacer. [Caso y cotejo documental](registro-de-errores.md#qa-previo-de-videos--6-de-noviembre-de-2026).
+
 ## Preparación y comprobación
 
 Desde la raíz del checkout (en Windows, python también es válido):
