@@ -1,5 +1,9 @@
 # Chats de trabajo por área
 
+## Lote de análisis de pendientes · 8 de noviembre de 2026
+
+Tres ejecutoras CLI VPS y tres revisoras distintas completaron Workshop, Referentes y Conectores. Los tres registros `analisis-{workshop,referentes,conectores}-20261108` quedaron aceptados. Estas ejecuciones se consultan por el harness; no se crearon chats nuevos mediante la app. [Mapa y contexto](evidencias/analisis-lote1-20261108/MAPA-DE-TRABAJO.md) · [IDs, commits, medición y límites](evidencias/analisis-lote1-20261108/INFORME.md). El encargo de Grokbot para 19 referentes sólo fue analizado; no se lanzó.
+
 ## Lote actual de referentes · 6 de noviembre de 2026
 
 Sergio pidió estudiar al menos cinco referentes, explicar el alcance y ordenar las sesiones; preguntó si la ejecución sería Cloud. Coordinación prevé usar el laboratorio existente después de comprobar fuentes y entorno. Este reparto corresponde sólo a [este lote](../03-referentes/lote-01/PLAN.md). Los nombres siguientes fueron actualizados mediante la herramienta de chats; renombrar no prueba disponibilidad de la VM ni ejecución de los análisis.

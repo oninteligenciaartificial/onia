@@ -1,0 +1,133 @@
+{
+  "fecha_caracas": "2026-11-08T16:32:13.355623-04:00",
+  "autorizacion": "Mensaje actual de Sergio: revisar pendientes y lanzar primer lote hasta tres para análisis integral con revisores distintos, sin producción ni gasto, resultados master.",
+  "inventario": "15 registros: 13 aceptados, 2 en espera. El control negativo de cuarta sesión no es trabajo pendiente; capacidad audiovisual conserva su alcance y no se reactiva. Pendientes nuevos priorizados desde plan/decisiones workshop y codex-conectores.",
+  "seleccion": [
+    {
+      "tema": "workshop",
+      "ruta": "01-negocio/workshop-20261108/analisis-lote1",
+      "motivo": "Analizar de punta a punta la preparación, venta y entrega del workshop vigente, con decisiones y dependencias verificables.",
+      "fuentes": [
+        "05-herramientas/2026-11-08-harness/00-decisiones.md",
+        "05-herramientas/2026-11-08-harness/plan-workshop.md",
+        "04-operacion-agentes/boss-memoria.md",
+        "01-negocio/PLAN.md",
+        "02-contenido/CEREBRO-DIARIO.md"
+      ]
+    },
+    {
+      "tema": "referentes",
+      "ruta": "03-referentes/workshop-20261108",
+      "motivo": "Analizar la tarea pendiente de referentes para el workshop desde las fuentes hasta su aplicación, sin simular evidencia audiovisual o cierres privados.",
+      "fuentes": [
+        "05-herramientas/2026-11-08-harness/plan-workshop.md",
+        "05-herramientas/2026-11-08-harness/00-decisiones.md",
+        "03-referentes/cerebros/erik-taveras.md",
+        "03-referentes/cerebros/pedro-buerbaum.md",
+        "03-referentes/cerebros/alex-hormozi.md",
+        "03-referentes/cerebros/QA-2026-11-08.md",
+        "03-referentes/asr/ejecucion-2026-11-08.md"
+      ]
+    },
+    {
+      "tema": "conectores",
+      "ruta": "05-herramientas/conectores/analisis-20261108",
+      "motivo": "Analizar de punta a punta cómo habilitar lecturas de servicios en Codex VPS, distinguiendo capacidades actuales del chat y del CLI.",
+      "fuentes": [
+        "04-operacion-agentes/pendientes/codex-conectores.md",
+        "05-herramientas/accesos.md",
+        "04-operacion-agentes/ORQUESTACION.md",
+        "05-herramientas/scripts/harness_sesiones.py",
+        "05-herramientas/cloud/CONTINUIDAD.md"
+      ]
+    }
+  ],
+  "dependencias": "Se analizan contratos existentes en paralelo; el informe integrador resolverá dependencias entre análisis. No se ejecutan clases B/C antes de A ni se aprueba VIP.",
+  "preflight": {
+    "live_sessions": [],
+    "auth_chatgpt": true,
+    "mcp_cli": [],
+    "quota": {
+      "fecha_utc": "2026-11-08T20:28:46.708Z",
+      "rate_limits": {
+        "limit_id": "codex",
+        "limit_name": null,
+        "primary": {
+          "used_percent": 17.0,
+          "window_minutes": 10080,
+          "resets_at": 1794624432
+        },
+        "secondary": null,
+        "credits": {
+          "has_credits": false,
+          "unlimited": false,
+          "balance": "0"
+        },
+        "individual_limit": null,
+        "spend_control_reached": null,
+        "plan_type": "prolite",
+        "rate_limit_reached_type": null
+      }
+    },
+    "main_dirty_files": 40,
+    "source_head": "0e66b410b6f9c8e57ade637b7248f42d04a5f177",
+    "coordinator_head": "6ed5a985a4ba0cb0598e6d055d5d2d50351f8ba0"
+  },
+  "capacidades_chat": {
+    "fecha_caracas": "2026-11-08",
+    "alcance": "Preflight del coordinador; no acredita herencia de herramientas en codex exec",
+    "plugins_coordinador": [
+      {
+        "servicio": "GitHub",
+        "prueba": "get_user_login",
+        "respondio": true
+      },
+      {
+        "servicio": "Notion",
+        "prueba": "get_self",
+        "respondio": true
+      },
+      {
+        "servicio": "Drive",
+        "prueba": "get_profile",
+        "respondio": true
+      }
+    ],
+    "sin_herramientas_en_catalogo": [
+      "n8n",
+      "X/Twitter"
+    ],
+    "fuentes_primarias_preflight": [
+      {
+        "url": "https://cursos.eriktaveras.com/",
+        "observado": "Catálogo público consultado: oferta Hermes y otros cursos en preparación; no acredita acceso a una clase pública completa.",
+        "fecha_consulta": "2026-11-08"
+      },
+      {
+        "url": "https://www.acquisition.com/training/leads4",
+        "observado": "Página pública First 5 Clients Framework con enlace Warm Outreach Scripts. Página leída; video no estudiado por el coordinador.",
+        "fecha_consulta": "2026-11-08"
+      },
+      {
+        "url": "https://developers.notion.com/guides/mcp/overview",
+        "observado": "Documentación oficial de MCP Notion consultada. La documentación no acredita configuración del CLI local.",
+        "fecha_consulta": "2026-11-08"
+      },
+      {
+        "url": "https://support.claude.com/en/articles/8114491-get-started-with-claude",
+        "observado": "Ayuda oficial consultada: acceso web, escritorio y móvil; límites variables del plan gratuito. No se probó una cuenta de alumno.",
+        "fecha_consulta": "2026-11-08"
+      }
+    ],
+    "fallos_preflight": [
+      "Lecturas agrupadas excedieron el límite; se recuperaron apartados pertinentes en lecturas acotadas.",
+      "La URL supuesta de ayuda Claude /8602283-what-is-the-free-plan no fue accesible; se usó /8114491-get-started-with-claude."
+    ]
+  },
+  "fuera_del_lote": [
+    "Producción, n8n runtime, mensajes y cobros",
+    "Cerebros restantes y percepción audiovisual integral",
+    "Acceso móvil y ONIA Platform",
+    "Limpieza automática de procesos huérfanos del harness"
+  ]
+}

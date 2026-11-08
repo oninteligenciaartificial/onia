@@ -1,0 +1,80 @@
+{
+  "fecha_caracas": "2026-11-08T16:40:31.418049-04:00",
+  "id": "analisis-workshop-20261108",
+  "commit": "6dd1b56eb9d22cf01c64760b2890a50264022401",
+  "commit_base": "6ed5a985a4ba0cb0598e6d055d5d2d50351f8ba0",
+  "remote": "6dd1b56eb9d22cf01c64760b2890a50264022401\trefs/heads/codex/ws-analisis-workshop-20261108",
+  "session_id": "01a1bcdd-0099-7483-83ab-a10c844b9dbb",
+  "paths_diff": [
+    "_investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/ANALISIS.md",
+    "_investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/EVIDENCIA.md",
+    "_investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/SIGUIENTES.md"
+  ],
+  "hashes": {
+    "_investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/ANALISIS.md": "64fc39b4383ed35b1fafc609da120018b01460e45b72f821cf3c57060d61b381",
+    "_investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/EVIDENCIA.md": "22c62a6a0ec5b5f42efbfce537a71daa2753311efe5473ea15aade8d50cb0d06",
+    "_investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/SIGUIENTES.md": "2b09697c0efd352ccf02bda6a5fc20c614ae6c68b8f983ff65fe15662afebd70"
+  },
+  "worktree_limpio": true,
+  "diff_check": "correcto",
+  "runtime": [
+    {
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-analisis-workshop-20261108",
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "workspace-write",
+        "writable_roots": [
+          "/home/onia-codex-worker/operacion/git/analisis-workshop-20261108.git",
+          "/home/onia-codex-worker/operacion/git/analisis-workshop-20261108.git/worktrees/onia-ws-analisis-workshop-20261108"
+        ],
+        "network_access": true,
+        "exclude_tmpdir_env_var": false,
+        "exclude_slash_tmp": false
+      }
+    }
+  ],
+  "quota": {
+    "fecha_utc": "2026-11-08T20:37:11.181Z",
+    "rate_limits": {
+      "limit_id": "codex",
+      "limit_name": null,
+      "primary": {
+        "used_percent": 18.0,
+        "window_minutes": 10080,
+        "resets_at": 1794624432
+      },
+      "secondary": null,
+      "credits": {
+        "has_credits": false,
+        "unlimited": false,
+        "balance": "0"
+      },
+      "individual_limit": null,
+      "spend_control_reached": null,
+      "plan_type": "prolite",
+      "rate_limit_reached_type": null
+    }
+  },
+  "comandos_publicacion": [
+    {
+      "id": "item_15",
+      "type": "command_execution",
+      "command": "/bin/bash -lc \"cat >> _investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/EVIDENCIA.md <<'EOF'\n\n## Resultado de validación local\n\n- Comprobación Python con \"'`pathlib` y extracción de destinos Markdown sobre los tres archivos, rc 0. Revisados 42 enlaces internos, cero destinos ausentes. Las URLs públicas se excluyeron de este control local y la fuente Claude se leyó por navegación.\n- `git status --porcelain --untracked-files=all` cotejado mediante Python, rc 0. Exactamente tres archivos nuevos y todos dentro de la ruta autorizada.\n- `git diff --check`, rc 0. Se repetirá sobre staging para incluir los archivos nuevos.\n- Inspección de estados comerciales y pedagógicos con `rg -n` sobre ANALISIS, rc 0. Salida de inspección truncada por volumen, revisados directamente los documentos escritos. Los valores aprobados y propuestos permanecen diferenciados.\n- Revisión propia de cálculos, once etapas, dependencia A→B/C, estados de pago incierto, contingencia de cuota y criterios del piloto. Los criterios de prueba describen trabajo futuro y no resultados obtenidos.\n\nEl recibo remoto del commit se informa en la respuesta de entrega, para evitar referencias circulares al hash del propio archivo. Coordinación debe cotejar ese commit al cerrar y lanzar su revisión independiente.\nEOF\ngit add -- _investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/ANALISIS.md _investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/EVIDENCIA.md _investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/SIGUIENTES.md\ngit diff --cached --check; git diff --cached --stat; git diff --cached --name-only'",
+      "aggregated_output": " .../workshop-20261108/analisis-lote1/ANALISIS.md   | 130 +++++++++++++++++++++\n .../workshop-20261108/analisis-lote1/EVIDENCIA.md  |  73 ++++++++++++\n .../workshop-20261108/analisis-lote1/SIGUIENTES.md |  34 ++++++\n 3 files changed, 237 insertions(+)\n_investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/ANALISIS.md\n_investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/EVIDENCIA.md\n_investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/SIGUIENTES.md\n",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "id": "item_16",
+      "type": "command_execution",
+      "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\np=Path('_investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/EVIDENCIA.md')\ns=p.read_text().replace('Se repetirá sobre staging para incluir los archivos nuevos.','\"'`git diff --cached --check` también dio rc 0 sobre los tres archivos nuevos. El diff preparado contiene 3 archivos y 237 líneas añadidas antes de este ajuste textual, todos en la carpeta asignada.'\"')\np.write_text(s)\nPY\ngit add -- _investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/EVIDENCIA.md\ngit diff --cached --check && git commit -m \\\"docs: analizar recorrido integral del workshop vigente\\\" && git push origin HEAD:refs/heads/codex/ws-analisis-workshop-20261108\"",
+      "aggregated_output": "[codex/ws-analisis-workshop-20261108 6dd1b56] docs: analizar recorrido integral del workshop vigente\n 3 files changed, 237 insertions(+)\n create mode 100644 _investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/ANALISIS.md\n create mode 100644 _investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/EVIDENCIA.md\n create mode 100644 _investigacion-onia/base-operativa/01-negocio/workshop-20261108/analisis-lote1/SIGUIENTES.md\nremote: \nremote: Create a pull request for 'codex/ws-analisis-workshop-20261108' on GitHub by visiting:        \nremote:      https://github.com/oninteligenciaartificial/onia/pull/new/codex/ws-analisis-workshop-20261108        \nremote: \nTo github.com:oninteligenciaartificial/onia.git\n * [new branch]      HEAD -> codex/ws-analisis-workshop-20261108\n",
+      "exit_code": 0,
+      "status": "completed"
+    }
+  ],
+  "comandos_fallidos": [],
+  "log_sha256": "2a840e1f6a2b3ec43ee267b6edb42e0fac3851eaaf43a5eebd552064b362978a"
+}

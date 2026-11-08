@@ -1,0 +1,51 @@
+{
+  "fecha_caracas": "2026-11-08T16:45:55.612346-04:00",
+  "estado": "aceptado",
+  "revision": 20,
+  "veredicto": {
+    "veredicto": "bueno",
+    "commit": "486899d8a09b122595327cf3fcef966ed6f8f855",
+    "criterio": "Cumple los criterios del análisis. Incluye matriz de cinco servicios y contraste chat/CLI, tres alternativas completas, fuentes oficiales, primer acceso propuesto, custodia y rechazo de escritura, pruebas reproducibles T01–T10 y siguientes pasos con responsables. Verificados diff exclusivo, hashes, diez enlaces internos, árbol limpio, CLI 0.167.0 y MCP vacío. Las pruebas de integración permanecen explícitamente no ejecutadas, conforme al alcance autorizado. Publicación remota respaldada por los recibos aportados."
+  },
+  "session_id": "01a1bce6-9483-7a92-b253-807b644515fc",
+  "runtime": [
+    {
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-analisis-conectores-20261108-revision-2",
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "read-only"
+      }
+    }
+  ],
+  "quota": {
+    "fecha_utc": "2026-11-08T20:43:53.970Z",
+    "rate_limits": {
+      "limit_id": "codex",
+      "limit_name": null,
+      "primary": {
+        "used_percent": 19.0,
+        "window_minutes": 10080,
+        "resets_at": 1794624432
+      },
+      "secondary": null,
+      "credits": {
+        "has_credits": false,
+        "unlimited": false,
+        "balance": "0"
+      },
+      "individual_limit": null,
+      "spend_control_reached": null,
+      "plan_type": "prolite",
+      "rate_limit_reached_type": null
+    }
+  },
+  "aceptacion": {
+    "revisor": "revisor-conectores",
+    "criterio": "Cumple los criterios del análisis. Incluye matriz de cinco servicios y contraste chat/CLI, tres alternativas completas, fuentes oficiales, primer acceso propuesto, custodia y rechazo de escritura, pruebas reproducibles T01–T10 y siguientes pasos con responsables. Verificados diff exclusivo, hashes, diez enlaces internos, árbol limpio, CLI 0.167.0 y MCP vacío. Las pruebas de integración permanecen explícitamente no ejecutadas, conforme al alcance autorizado. Publicación remota respaldada por los recibos aportados.",
+    "fecha": "2026-11-08T20:45:55.550587+00:00"
+  },
+  "asignacion": null,
+  "comandos_fallidos": []
+}

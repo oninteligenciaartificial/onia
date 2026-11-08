@@ -1,0 +1,90 @@
+{
+  "fecha_caracas": "2026-11-08T16:43:06.881976-04:00",
+  "id": "analisis-conectores-20261108",
+  "commit": "486899d8a09b122595327cf3fcef966ed6f8f855",
+  "commit_base": "6ed5a985a4ba0cb0598e6d055d5d2d50351f8ba0",
+  "remote": "486899d8a09b122595327cf3fcef966ed6f8f855\trefs/heads/codex/ws-analisis-conectores-20261108",
+  "session_id": "01a1bcdd-1833-73b2-9678-0c0d21161dde",
+  "paths_diff": [
+    "_investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/ANALISIS.md",
+    "_investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/EVIDENCIA.md",
+    "_investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/PRUEBAS.md",
+    "_investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/SIGUIENTES.md"
+  ],
+  "hashes": {
+    "_investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/ANALISIS.md": "155ab379eeb8a35c4d150f540a53f5d47d65801e9edac5c59536bc671ff40ec3",
+    "_investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/EVIDENCIA.md": "1add252e8e8e0ac378777a27cda37ac31e0f7124f0c16ae6be67ebb12330e47f",
+    "_investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/PRUEBAS.md": "f07cb30d051a56ce34ef4976488f206c2c6c2e48b8bb650f5ab02bd13091536b",
+    "_investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/SIGUIENTES.md": "0b8b8894421dea1d3918ee67772fefa2cb3746141391008137d551354a128c33"
+  },
+  "worktree_limpio": true,
+  "diff_check": "correcto",
+  "runtime": [
+    {
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-analisis-conectores-20261108",
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "workspace-write",
+        "writable_roots": [
+          "/home/onia-codex-worker/operacion/git/analisis-conectores-20261108.git",
+          "/home/onia-codex-worker/operacion/git/analisis-conectores-20261108.git/worktrees/onia-ws-analisis-conectores-20261108"
+        ],
+        "network_access": true,
+        "exclude_tmpdir_env_var": false,
+        "exclude_slash_tmp": false
+      }
+    }
+  ],
+  "quota": {
+    "fecha_utc": "2026-11-08T20:40:43.016Z",
+    "rate_limits": {
+      "limit_id": "codex",
+      "limit_name": null,
+      "primary": {
+        "used_percent": 18.0,
+        "window_minutes": 10080,
+        "resets_at": 1794624432
+      },
+      "secondary": null,
+      "credits": {
+        "has_credits": false,
+        "unlimited": false,
+        "balance": "0"
+      },
+      "individual_limit": null,
+      "spend_control_reached": null,
+      "plan_type": "prolite",
+      "rate_limit_reached_type": null
+    }
+  },
+  "comandos_publicacion": [
+    {
+      "id": "item_34",
+      "type": "command_execution",
+      "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\nr=Path('_investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108')\np=r/'ANALISIS.md';s=p.read_text();s=s.replace('Scopes API limitables en Enterprise; fuera de Enterprise la key es amplia.','En Enterprise, \"'`workflow:list` para listado; `workflow:read` sólo si se autoriza detalle. Fuera de Enterprise la key es amplia.'\"');s=s.replace('No habilitar delegación de dominio.','No habilitar delegación de dominio. Los scopes readonly citados son restringidos: verificar requisitos de autorización/verificación aplicables al caso antes de elegirlos.');p.write_text(s)\np=r/'EVIDENCIA.md';s=p.read_text();s='\\\\n'.join(x for x in s.split('\\\\n') if not x.startswith('| [Referencia CLI Codex]'));p.write_text(s)\nPY\ngit add -- _investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/ANALISIS.md _investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/EVIDENCIA.md _investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/PRUEBAS.md _investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/SIGUIENTES.md\"",
+      "aggregated_output": "",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "id": "item_38",
+      "type": "command_execution",
+      "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\np=Path('_investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/EVIDENCIA.md')\ns=p.read_text().replace('Los checks documentales finales verifican enlaces relativos nuevos, \"'`git diff --check`, patrones de credenciales y que los únicos cambios pertenezcan a `05-herramientas/conectores/analisis-20261108`.'\"','Checks documentales ejecutados: script Python con \"'`pathlib`/`re` y `git diff --cached --name-only` comprobó cuatro archivos, diez enlaces relativos válidos, cero patrones de credenciales conocidos, cero rutas fuera de alcance y cero cambios sin stage. `git diff --cached --check` terminó rc=0. Revisión manual de matrices, límites y referencias completada. El escaneo por patrones es auxiliar, no garantía universal de ausencia de secretos.'\"')\np.write_text(s)\nPY\ngit add -- _investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/EVIDENCIA.md\ngit diff --cached --check\ngit commit -m 'docs: analizar accesos de lectura chat y CLI para cinco servicios' -- _investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/ANALISIS.md _investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/EVIDENCIA.md _investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/PRUEBAS.md _investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/SIGUIENTES.md\"",
+      "aggregated_output": "[codex/ws-analisis-conectores-20261108 486899d] docs: analizar accesos de lectura chat y CLI para cinco servicios\n 4 files changed, 219 insertions(+)\n create mode 100644 _investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/ANALISIS.md\n create mode 100644 _investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/EVIDENCIA.md\n create mode 100644 _investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/PRUEBAS.md\n create mode 100644 _investigacion-onia/base-operativa/05-herramientas/conectores/analisis-20261108/SIGUIENTES.md\n",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "id": "item_40",
+      "type": "command_execution",
+      "command": "/bin/bash -lc \"python3 - <<'PY'\nimport subprocess,re\nbranch='codex/ws-analisis-conectores-20261108'\np=subprocess.run(['git','push','origin','HEAD:refs/heads/'+branch],text=True,capture_output=True)\nprint('push_rc',p.returncode)\nif p.returncode:\n print(re.sub(r'(?:https?|ssh)://\\\\S+','[remote-redacted]',p.stderr)[-1600:]);raise SystemExit(p.returncode)\nhead=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()\nr=subprocess.run(['git','ls-remote','--exit-code','origin','refs/heads/'+branch],text=True,capture_output=True)\nprint('ls_remote_rc',r.returncode)\nif r.returncode: raise SystemExit(r.returncode)\nremote=r.stdout.split()[0]\nprint('head',head,'remote_branch',branch,'remote_hash',remote,'match',head==remote)\nassert head==remote\ns=subprocess.check_output(['git','status','--porcelain'],text=True)\nprint('worktree_clean',not s)\nassert not s\nPY\"",
+      "aggregated_output": "push_rc 0\nls_remote_rc 0\nhead 486899d8a09b122595327cf3fcef966ed6f8f855 remote_branch codex/ws-analisis-conectores-20261108 remote_hash 486899d8a09b122595327cf3fcef966ed6f8f855 match True\nworktree_clean True\n",
+      "exit_code": 0,
+      "status": "completed"
+    }
+  ],
+  "comandos_fallidos": [],
+  "log_sha256": "f4e3e1d76047938381d0edfa8cbabafa46b24b6db512d18096eb95fe42632490"
+}

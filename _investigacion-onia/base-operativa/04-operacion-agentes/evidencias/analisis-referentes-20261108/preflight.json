@@ -1,0 +1,86 @@
+{
+  "id": "analisis-referentes-20261108",
+  "route": "03-referentes/workshop-20261108",
+  "preflight": {
+    "live_sessions": [],
+    "auth_chatgpt": true,
+    "mcp_cli": [],
+    "quota": {
+      "fecha_utc": "2026-11-08T20:28:46.708Z",
+      "rate_limits": {
+        "limit_id": "codex",
+        "limit_name": null,
+        "primary": {
+          "used_percent": 17.0,
+          "window_minutes": 10080,
+          "resets_at": 1794624432
+        },
+        "secondary": null,
+        "credits": {
+          "has_credits": false,
+          "unlimited": false,
+          "balance": "0"
+        },
+        "individual_limit": null,
+        "spend_control_reached": null,
+        "plan_type": "prolite",
+        "rate_limit_reached_type": null
+      }
+    },
+    "main_dirty_files": 40,
+    "source_head": "0e66b410b6f9c8e57ade637b7248f42d04a5f177",
+    "coordinator_head": "6ed5a985a4ba0cb0598e6d055d5d2d50351f8ba0"
+  },
+  "contexto_coordinador": {
+    "fecha_caracas": "2026-11-08",
+    "alcance": "Preflight del coordinador; no acredita herencia de herramientas en codex exec",
+    "plugins_coordinador": [
+      {
+        "servicio": "GitHub",
+        "prueba": "get_user_login",
+        "respondio": true
+      },
+      {
+        "servicio": "Notion",
+        "prueba": "get_self",
+        "respondio": true
+      },
+      {
+        "servicio": "Drive",
+        "prueba": "get_profile",
+        "respondio": true
+      }
+    ],
+    "sin_herramientas_en_catalogo": [
+      "n8n",
+      "X/Twitter"
+    ],
+    "fuentes_primarias_preflight": [
+      {
+        "url": "https://cursos.eriktaveras.com/",
+        "observado": "Catálogo público consultado: oferta Hermes y otros cursos en preparación; no acredita acceso a una clase pública completa.",
+        "fecha_consulta": "2026-11-08"
+      },
+      {
+        "url": "https://www.acquisition.com/training/leads4",
+        "observado": "Página pública First 5 Clients Framework con enlace Warm Outreach Scripts. Página leída; video no estudiado por el coordinador.",
+        "fecha_consulta": "2026-11-08"
+      },
+      {
+        "url": "https://developers.notion.com/guides/mcp/overview",
+        "observado": "Documentación oficial de MCP Notion consultada. La documentación no acredita configuración del CLI local.",
+        "fecha_consulta": "2026-11-08"
+      },
+      {
+        "url": "https://support.claude.com/en/articles/8114491-get-started-with-claude",
+        "observado": "Ayuda oficial consultada: acceso web, escritorio y móvil; límites variables del plan gratuito. No se probó una cuenta de alumno.",
+        "fecha_consulta": "2026-11-08"
+      }
+    ],
+    "fallos_preflight": [
+      "Lecturas agrupadas excedieron el límite; se recuperaron apartados pertinentes en lecturas acotadas.",
+      "La URL supuesta de ayuda Claude /8602283-what-is-the-free-plan no fue accesible; se usó /8114491-get-started-with-claude."
+    ]
+  },
+  "comando": "python3 _investigacion-onia/base-operativa/05-herramientas/scripts/harness.py lanzar analisis-referentes-20261108 --revision-esperada 3 --actor analista-referentes --si-sergio --modelo gpt-6.1-sol --esfuerzo low --auth-chatgpt"
+}

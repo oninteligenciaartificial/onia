@@ -1,0 +1,84 @@
+{
+  "fecha_caracas": "2026-11-08T16:40:33.490118-04:00",
+  "id": "analisis-referentes-20261108",
+  "commit": "dbc146d1db388bbfb7bc5d26f53ff3f2b34b08c4",
+  "commit_base": "6ed5a985a4ba0cb0598e6d055d5d2d50351f8ba0",
+  "remote": "dbc146d1db388bbfb7bc5d26f53ff3f2b34b08c4\trefs/heads/codex/ws-analisis-referentes-20261108",
+  "session_id": "01a1bcdd-0c5a-7023-8b3a-eeefc507ee59",
+  "paths_diff": [
+    "_investigacion-onia/base-operativa/03-referentes/workshop-20261108/ANALISIS.md",
+    "_investigacion-onia/base-operativa/03-referentes/workshop-20261108/APLICACIONES.md",
+    "_investigacion-onia/base-operativa/03-referentes/workshop-20261108/EVIDENCIA.md",
+    "_investigacion-onia/base-operativa/03-referentes/workshop-20261108/SIGUIENTES.md",
+    "_investigacion-onia/base-operativa/03-referentes/workshop-20261108/http-checks.json"
+  ],
+  "hashes": {
+    "_investigacion-onia/base-operativa/03-referentes/workshop-20261108/ANALISIS.md": "c011bee6685ece420b9372b66aaece28e6bba2e4659deaa5e73e73cc9501744d",
+    "_investigacion-onia/base-operativa/03-referentes/workshop-20261108/APLICACIONES.md": "62dc7722068e49d4c0f0f5cb8e332c4e9fcc86c41e50d827fdbd0a18a5c5f6c5",
+    "_investigacion-onia/base-operativa/03-referentes/workshop-20261108/EVIDENCIA.md": "2db01297fd5c85be61edd132975142b04cb042099cf9fdb8c74d43e7a9abd04d",
+    "_investigacion-onia/base-operativa/03-referentes/workshop-20261108/SIGUIENTES.md": "4d8fd2cd815e4e366212a8e8a662dc18bcfe3f45fb747dc332a9994718f08bf5",
+    "_investigacion-onia/base-operativa/03-referentes/workshop-20261108/http-checks.json": "2bec0de5e1d4fd87a3881fc70458f732cc8b29a28f4fade5685a6ac896665412"
+  },
+  "worktree_limpio": true,
+  "diff_check": "correcto",
+  "runtime": [
+    {
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-analisis-referentes-20261108",
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "workspace-write",
+        "writable_roots": [
+          "/home/onia-codex-worker/operacion/git/analisis-referentes-20261108.git",
+          "/home/onia-codex-worker/operacion/git/analisis-referentes-20261108.git/worktrees/onia-ws-analisis-referentes-20261108"
+        ],
+        "network_access": true,
+        "exclude_tmpdir_env_var": false,
+        "exclude_slash_tmp": false
+      }
+    }
+  ],
+  "quota": {
+    "fecha_utc": "2026-11-08T20:36:32.156Z",
+    "rate_limits": {
+      "limit_id": "codex",
+      "limit_name": null,
+      "primary": {
+        "used_percent": 18.0,
+        "window_minutes": 10080,
+        "resets_at": 1794624432
+      },
+      "secondary": null,
+      "credits": {
+        "has_credits": false,
+        "unlimited": false,
+        "balance": "0"
+      },
+      "individual_limit": null,
+      "spend_control_reached": null,
+      "plan_type": "prolite",
+      "rate_limit_reached_type": null
+    }
+  },
+  "comandos_publicacion": [
+    {
+      "id": "item_17",
+      "type": "command_execution",
+      "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\np=Path('_investigacion-onia/base-operativa/03-referentes/workshop-20261108/EVIDENCIA.md')\ns=p.read_text().replace('Resultado y publicación se informan con hash en la entrega final.','Resultado ejecutado: 18 enlaces locales resueltos, cero ausentes; cinco archivos nuevos y todos dentro de la carpeta asignada; diff sin errores de espacios. Resultado y publicación se informan con hash en la entrega final.')\np.write_text(s)\nPY\ngit add -- _investigacion-onia/base-operativa/03-referentes/workshop-20261108/ANALISIS.md _investigacion-onia/base-operativa/03-referentes/workshop-20261108/APLICACIONES.md _investigacion-onia/base-operativa/03-referentes/workshop-20261108/EVIDENCIA.md _investigacion-onia/base-operativa/03-referentes/workshop-20261108/SIGUIENTES.md _investigacion-onia/base-operativa/03-referentes/workshop-20261108/http-checks.json\ngit diff --cached --check\ngit diff --cached --stat\ngit commit -m 'docs: analizar referentes y aplicación verificable al workshop'\"",
+      "aggregated_output": " .../03-referentes/workshop-20261108/ANALISIS.md    | 41 ++++++++++\n .../workshop-20261108/APLICACIONES.md              | 20 +++++\n .../03-referentes/workshop-20261108/EVIDENCIA.md   | 39 +++++++++\n .../03-referentes/workshop-20261108/SIGUIENTES.md  | 15 ++++\n .../workshop-20261108/http-checks.json             | 92 ++++++++++++++++++++++\n 5 files changed, 207 insertions(+)\n[codex/ws-analisis-referentes-20261108 dbc146d] docs: analizar referentes y aplicación verificable al workshop\n 5 files changed, 207 insertions(+)\n create mode 100644 _investigacion-onia/base-operativa/03-referentes/workshop-20261108/ANALISIS.md\n create mode 100644 _investigacion-onia/base-operativa/03-referentes/workshop-20261108/APLICACIONES.md\n create mode 100644 _investigacion-onia/base-operativa/03-referentes/workshop-20261108/EVIDENCIA.md\n create mode 100644 _investigacion-onia/base-operativa/03-referentes/workshop-20261108/SIGUIENTES.md\n create mode 100644 _investigacion-onia/base-operativa/03-referentes/workshop-20261108/http-checks.json\n",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "id": "item_18",
+      "type": "command_execution",
+      "command": "/bin/bash -lc 'git push origin HEAD:refs/heads/codex/ws-analisis-referentes-20261108; git rev-parse HEAD; git ls-remote --exit-code origin refs/heads/codex/ws-analisis-referentes-20261108; git status --short'",
+      "aggregated_output": "remote: \nremote: Create a pull request for 'codex/ws-analisis-referentes-20261108' on GitHub by visiting:        \nremote:      https://github.com/oninteligenciaartificial/onia/pull/new/codex/ws-analisis-referentes-20261108        \nremote: \nTo github.com:oninteligenciaartificial/onia.git\n * [new branch]      HEAD -> codex/ws-analisis-referentes-20261108\ndbc146d1db388bbfb7bc5d26f53ff3f2b34b08c4\ndbc146d1db388bbfb7bc5d26f53ff3f2b34b08c4\trefs/heads/codex/ws-analisis-referentes-20261108\n",
+      "exit_code": 0,
+      "status": "completed"
+    }
+  ],
+  "comandos_fallidos": [],
+  "log_sha256": "b53c39e4830f1cdf29e83e8829307d06431336de81af64e8b2eb1ac69de8617e"
+}

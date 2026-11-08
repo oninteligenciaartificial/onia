@@ -3,7 +3,7 @@
 Estado: pendiente de solución (no es una limitación aceptada). Pedido por Sergio el 8 de noviembre de 2026.
 
 ## Problema
-Codex en el VPS (`onia-codex-worker`) no tiene conectores (MCP) configurados: `codex mcp list` está vacío. No puede entrar a X, n8n, Notion ni Drive en una sesión directa.
+La lista MCP global de Codex en el VPS (`onia-codex-worker`) sigue vacía. Eso no implica ausencia de plugins en una sesión: el chat coordinador respondió perfiles de GitHub/Notion/Drive y una ejecutora anunció herramientas inyectadas. No se acreditó lectura de documentos ni acceso heredado por cualquier hijo CLI, y el harness usa `--ignore-user-config`. X/n8n siguen sin acceso probado en este lote. [Análisis revisado, alternativas y pruebas pendientes](../../05-herramientas/conectores/analisis-20261108/ANALISIS.md).
 
 ## Objetivo
 Que una sesión directa de Codex pueda leer y trabajar con esos servicios, sin imprimir secretos y respetando las reglas (activar n8n, publicar, cobrar o gastar solo con el sí de Sergio).

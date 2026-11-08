@@ -1,0 +1,33 @@
+[
+  {
+    "id": "analisis-conectores-20261108",
+    "fecha_caracas": "2026-11-08T16:43:10.072628-04:00",
+    "comando": [
+      "codex",
+      "-a",
+      "never",
+      "-c",
+      "sandbox_workspace_write.network_access=false",
+      "exec",
+      "--json",
+      "--sandbox",
+      "read-only",
+      "-C",
+      "/home/onia-codex-worker/repos/onia-ws-analisis-conectores-20261108-revision-2",
+      "--ignore-user-config",
+      "--output-schema",
+      "/home/onia-codex-worker/operacion/logs/analisis-conectores-20261108.2.schema.json",
+      "--output-last-message",
+      "/home/onia-codex-worker/operacion/logs/analisis-conectores-20261108.2.veredicto.json",
+      "--model",
+      "gpt-6.1-sol",
+      "-c",
+      "model_reasoning_effort=\"low\"",
+      "-c",
+      "forced_login_method=\"chatgpt\"",
+      "-c",
+      "model_provider=\"openai\"",
+      "-"
+    ]
+  }
+]

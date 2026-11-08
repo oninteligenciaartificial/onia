@@ -1,0 +1,51 @@
+{
+  "fecha_caracas": "2026-11-08T16:45:54.082449-04:00",
+  "estado": "aceptado",
+  "revision": 19,
+  "veredicto": {
+    "veredicto": "bueno",
+    "commit": "6dd1b56eb9d22cf01c64760b2890a50264022401",
+    "criterio": "Entrega cotejada con las fuentes vigentes y los criterios de aceptación. Incluye recorrido completo, reconciliación, piloto10min observable y bloqueos con responsables, dependencias y cierre. Conserva A antes de B/C y distingue aprobado, propuesto y pendiente. Verificados 42 enlaces internos, tres hashes coincidentes, diff exclusivo autorizado, whitespace correcto y árbol limpio. Fuente oficial de Claude contrastada. Publicación remota sustentada por recibos aportados. Ensayos, acceso individual, decisiones comerciales y resultados humanos permanecen pendientes."
+  },
+  "session_id": "01a1bce4-3dff-7d82-ace0-00d23bf37a00",
+  "runtime": [
+    {
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-analisis-workshop-20261108-revision-2",
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "read-only"
+      }
+    }
+  ],
+  "quota": {
+    "fecha_utc": "2026-11-08T20:41:12.345Z",
+    "rate_limits": {
+      "limit_id": "codex",
+      "limit_name": null,
+      "primary": {
+        "used_percent": 18.0,
+        "window_minutes": 10080,
+        "resets_at": 1794624432
+      },
+      "secondary": null,
+      "credits": {
+        "has_credits": false,
+        "unlimited": false,
+        "balance": "0"
+      },
+      "individual_limit": null,
+      "spend_control_reached": null,
+      "plan_type": "prolite",
+      "rate_limit_reached_type": null
+    }
+  },
+  "aceptacion": {
+    "revisor": "revisor-workshop",
+    "criterio": "Entrega cotejada con las fuentes vigentes y los criterios de aceptación. Incluye recorrido completo, reconciliación, piloto10min observable y bloqueos con responsables, dependencias y cierre. Conserva A antes de B/C y distingue aprobado, propuesto y pendiente. Verificados 42 enlaces internos, tres hashes coincidentes, diff exclusivo autorizado, whitespace correcto y árbol limpio. Fuente oficial de Claude contrastada. Publicación remota sustentada por recibos aportados. Ensayos, acceso individual, decisiones comerciales y resultados humanos permanecen pendientes.",
+    "fecha": "2026-11-08T20:45:54.009809+00:00"
+  },
+  "asignacion": null,
+  "comandos_fallidos": []
+}

@@ -1,0 +1,159 @@
+
+## preparar-lote1.py
+"""Preparación de tres encargos sobre el harness existente, no otro lanzador."""
+import json,sys
+from pathlib import Path
+from datetime import datetime
+from zoneinfo import ZoneInfo
+REPO=Path('/home/onia-codex-worker/repos/onia-coordinador');BASE=REPO/'_investigacion-onia/base-operativa';OP=Path('/home/onia-codex-worker/operacion')
+sys.path.insert(0,str(BASE/'05-herramientas/scripts'));import harness,trabajo
+common=BASE/'04-operacion-agentes/evidencias/analisis-lote1-20261108';common.mkdir(parents=True)
+context=json.loads(Path('/tmp/lote1-contexto.json').read_text());pre=json.loads(Path('/tmp/lote1-preflight.json').read_text());assert not pre['live_sessions']
+items=[
+ {'key':'workshop','area':'marketing','route':'01-negocio/workshop-20261108/analisis-lote1',
+  'goal':'Analizar de punta a punta la preparación, venta y entrega del workshop vigente, con decisiones y dependencias verificables.',
+  'sources':['05-herramientas/2026-11-08-harness/00-decisiones.md','05-herramientas/2026-11-08-harness/plan-workshop.md','04-operacion-agentes/boss-memoria.md','01-negocio/PLAN.md','02-contenido/CEREBRO-DIARIO.md'],
+  'specific':'Priorizar decisiones explícitas del 8nov sobre brief histórico WS-W01/02. Cubrir descubrimiento→interés→inscripción→comprobación de pago→acceso→clases1/2/3→resultado del alumno→seguimiento, con entradas, salidas, responsable, prueba y fallo por etapa. No cobrar ni crear formulario real. Separar aprobado (público, Claude clase1, promesa, fechas, duración, Bs50) de propuesto (VIP, formulario, rúbrica, piloto10min) y faltante. Evaluar acceso de alumnos y contingencia de cuota sin usar ni compartir cuentas prestadas. Conservar A antes de B/C como dependencia del plan; no redactar clases2/3 como aprobadas. Entregar diagnóstico accionable y, como propuesta, una ficha breve de piloto10min con objetivo observable y criterio de revisión, no un curso terminado. Verificar límites actuales de Claude con documentación oficial si se hacen afirmaciones nuevas. No inventar hora clase1, capacidad, demanda, pagos ni resultados humanos.',
+  'criteria':'Recorrido completo con matriz por etapa; reconciliación de decisiones contradictorias y enlaces internos exactos; propuesta acotada de piloto10min y aceptación observable; bloqueos priorizados con responsable/siguiente acción, distinguiendo decisiones humanas de trabajo preparable. Sin declarar clase ensayada, VIP aprobado, oferta publicada ni cobros.'},
+ {'key':'referentes','area':'marketing','route':'03-referentes/workshop-20261108',
+  'goal':'Analizar la tarea pendiente de referentes para el workshop desde las fuentes hasta su aplicación, sin simular evidencia audiovisual o cierres privados.',
+  'sources':['05-herramientas/2026-11-08-harness/plan-workshop.md','05-herramientas/2026-11-08-harness/00-decisiones.md','03-referentes/cerebros/erik-taveras.md','03-referentes/cerebros/pedro-buerbaum.md','03-referentes/cerebros/alex-hormozi.md','03-referentes/cerebros/QA-2026-11-08.md','03-referentes/asr/ejecucion-2026-11-08.md'],
+  'specific':'La tarea documental propuesta referentes-workshop-20261108 no tiene registro canónico todavía: este encargo analiza su evidencia y aplicación, no declara cumplida una clase completa por leer una landing. Reusar cerebros/fichas/ASR pertinentes. Consultar páginas públicas primarias actuales de Erik y una muestra oficial de Pedro/Hormozi para embudo comenta NEGOCIO→DM→QR. Buscar una clase o workshop público completo de Erik de forma acotada; si sólo hay preview/pago/bloqueo, documentar exactamente la brecha, evidencia de búsqueda/acceso y la próxima muestra para cerrarla. No comprar, registrarse, sortear login, instalar descargadores ni descargar material audiovisual pesado. Para cierre usar material público verificable (p.ej. worksheet oficial de Hormozi) y nunca atribuir una conversación privada no observada. Fuente/minuto sólo si existe evidencia con tiempo; texto o página sin video no tiene minuto. Separar hecho del referente, inferencia y propuesta OnIA. Evitar largas citas o copiar cursos. Producir una página de qué aplicar al workshop, respaldada por matriz y evidencia; no inventar VIP ni resultados. No reescribir los cerebros previos.',
+  'criteria':'Matriz de Erik+Pedro+Hormozi que diga qué se leyó/observó, URL o archivo, fecha, cobertura y brecha; al menos comprobación de páginas primarias actuales y muestra pública verificable de aplicación. La página de aplicaciones diferencia fuentes y propuestas. Citas temporales sólo si respaldadas; no se acepta presentar preview/ASR como clase completa ni DM privado observado. Próximo paso finito para toda brecha sin marcar cerrada la tarea de investigación completa.'},
+ {'key':'conectores','area':'desarrollo','route':'05-herramientas/conectores/analisis-20261108',
+  'goal':'Analizar de punta a punta cómo habilitar lecturas de servicios en Codex VPS, distinguiendo capacidades actuales del chat y del CLI.',
+  'sources':['04-operacion-agentes/pendientes/codex-conectores.md','05-herramientas/accesos.md','04-operacion-agentes/ORQUESTACION.md','05-herramientas/scripts/harness_sesiones.py','05-herramientas/cloud/CONTINUIDAD.md'],
+  'specific':'Cotejar CLI real mediante codex --version, codex mcp --help/list (filtrar antes de imprimir cualquier env/URL con secreto) y herramientas que te fueron anunciadas. No leer auth.json ni secretos, no modificar config ni usar mcp add/login, no llamar endpoints del n8n existente ni inspeccionar Docker/servicios. Incorporar preflight del coordinador: plugins GitHub/Notion/Drive responden perfil; el CLI global mcp list está vacío y los hijos usan --ignore-user-config, de modo que instalar config global por sí solo puede no bastar. No afirmar que heredan los plugins del chat. Para GitHub, Notion, Drive, n8n y X, matriz actual/objetivo: transporte, credenciales/almacenamiento referenciado sin valores, permisos mínimos, alcance efectivo, lecturas vs escrituras, coste o condición por comprobar, fallo/recuperación y prueba de aceptación. Contrastar opciones MCP oficial, API directa y paquete/puente coordinado, apoyándose en fuentes primarias vigentes y ayuda/código local para OpenAI. Proponer orden de implementación sin activar nada, priorizar read-only y cero compra. No confundir API paga de X con acceso gratis, ni prometer ACL de solo lectura si la integración no la impone. Pruebas pueden ser especificaciones reproducibles no ejecutadas, etiquetadas así; no pruebas contra producción.',
+  'criteria':'Matriz de los cinco servicios y contraste chat vs CLI con evidencia; al menos tres alternativas evaluadas de extremo a extremo; fuentes oficiales para capacidades/coste incierto; propuesta concreta de primer acceso de lectura, almacenamiento seguro y rechazo de escritura; pruebas de éxito, permiso insuficiente, token vencido, duplicado/recuperación e integración con --ignore-user-config. Distinguir comprobado/propuesto/no ejecutado y no declarar conectores instalados.'}
+]
+shared_rules=[
+'Pedido explícito vigente de Sergio: revisar pendientes y lanzar este primer lote de hasta tres análisis paralelos, con revisores distintos, sin producción ni gasto; resultados en origin/master. Sólo cuota ChatGPT incluida, gpt-6.1-sol/low. No API keys, compras, mensajes, cobros, publicaciones comerciales, Docker, sudo, servicios/app-server, n8n, configuraciones de cuentas ni otros procesos. No crear subagentes/sesiones: ya hay tres cupos asignados.',
+'Alcance: análisis verificable y documentos de preparación. No implementar ni activar las tareas subyacentes y no convertir una propuesta comercial en decisión. Fuentes del repo central y actuales prevalecen sobre resúmenes históricos. No tocar checkout ~/repos/onia ni leer privado/contexto. Horas al usuario America/Caracas; conservar UTC explícito sólo como evidencia técnica.',
+'Una carpeta exclusiva por tarea. No editar archivos existentes fuera de tu carpeta, ni tareas/briefings, reglas, registro-de-errores ni documentos maestros compartidos. El coordinador integrará hallazgos y registrará errores. Si algo falla, anotarlo en tu EVIDENCIA.md con causa observada, comando saneado, rc y alternativa; no repetir a ciegas. No publicar datos personales ni secretos.',
+'Entregar ANALISIS.md, EVIDENCIA.md y SIGUIENTES.md (u otra matriz/anexo pertinente dentro de tu carpeta). Redacción suficiente para cubrir el flujo completo, sin relleno. SIGUIENTES identifica prioridad, acción concreta, responsable, dependencia y criterio de cierre. EVIDENCIA incluye fuentes con fecha, cobertura real, comandos/checks y límites. Validar enlaces internos nuevos y que el diff sólo contiene la carpeta autorizada; no crear tests triviales para Markdown.',
+'Investigación de fuentes públicas sólo lectura y sin gasto. Usar herramientas de búsqueda/navegación disponibles; si falta la herramienta, HTTP GET público con límites de tiempo y tamaño es una alternativa. No enviar información del repo privado a terceros ni consultas con datos privados. Una búsqueda no equivale a leer fuente. Para software/accesos usar documentación oficial; no adivinar precios ni límites actuales. Informar brechas reales en vez de inventar comprobaciones.',
+'Después de analizar, revisar documentos y hacer commit/push propio sólo a tu rama asignada, con paths explícitos, sin force/amend ni configuración global. Informar hash, fuentes, comprobaciones, hallazgos y límites. El coordinador cerrará, lanzará otra sesión revisora read-only, aceptará únicamente con bueno y publicará integración en master.'
+]
+selection={'fecha_caracas':datetime.now(ZoneInfo('America/Caracas')).isoformat(),'autorizacion':'Mensaje actual de Sergio: revisar pendientes y lanzar primer lote hasta tres para análisis integral con revisores distintos, sin producción ni gasto, resultados master.','inventario':'15 registros: 13 aceptados, 2 en espera. El control negativo de cuarta sesión no es trabajo pendiente; capacidad audiovisual conserva su alcance y no se reactiva. Pendientes nuevos priorizados desde plan/decisiones workshop y codex-conectores.','seleccion':[{'tema':t['key'],'ruta':t['route'],'motivo':t['goal'],'fuentes':t['sources']} for t in items],'dependencias':'Se analizan contratos existentes en paralelo; el informe integrador resolverá dependencias entre análisis. No se ejecutan clases B/C antes de A ni se aprueba VIP.','preflight':pre,'capacidades_chat':context,'fuera_del_lote':['Producción, n8n runtime, mensajes y cobros','Cerebros restantes y percepción audiovisual integral','Acceso móvil y ONIA Platform','Limpieza automática de procesos huérfanos del harness']}
+(common/'seleccion-y-preflight.json').write_text(json.dumps(selection,ensure_ascii=False,indent=2)+'\n')
+for t in items:
+ t['id']='analisis-'+t['key']+'-20261108';t['actor']='analista-'+t['key'];t['reviewer']='revisor-'+t['key']
+ evidence=BASE/'04-operacion-agentes/evidencias'/t['id'];evidence.mkdir(parents=True)
+ own={'id':t['id'],'route':t['route'],'preflight':pre,'contexto_coordinador':context,'comando':f"python3 _investigacion-onia/base-operativa/05-herramientas/scripts/harness.py lanzar {t['id']} --revision-esperada 3 --actor {t['actor']} --si-sergio --modelo gpt-6.1-sol --esfuerzo low --auth-chatgpt"}
+ (evidence/'preflight.json').write_text(json.dumps(own,ensure_ascii=False,indent=2)+'\n')
+ inputs=shared_rules+['Ruta exclusiva: '+t['route'],'Leer fuentes pertinentes: '+', '.join(t['sources']),t['specific'],'Preflight real del coordinador (leer; no acredita capacidades propias): '+str(evidence/'preflight.json')]
+ harness.prepare(BASE,t['id'],t['area'],t['goal'],'Análisis integral, evidencia, decisiones pendientes y siguientes pasos ejecutables en la carpeta asignada.',t['criteria'],inputs=inputs,shared=True)
+ row=trabajo.assign(BASE,t['id'],1,t['actor'],[t['route']])
+ trabajo.update(BASE,t['id'],'preparado','Encargo de análisis seleccionado desde pendientes actuales.','Preflight y fuentes mínimas disponibles; producción y gasto excluidos.','Lanzar lote autorizado.',[(evidence/'preflight.json').relative_to(BASE).as_posix()],revision=row['revision'],actor=t['actor'])
+config={'repo':str(REPO),'base':str(BASE),'operation':str(OP),'common':str(common),'tasks':items}
+Path('/tmp/lote1-config.json').write_text(json.dumps(config,ensure_ascii=False,indent=2))
+print(json.dumps({'preparadas':[t['id'] for t in items],'revision':3,'cuota_usada':pre['quota']['rate_limits']['primary']['used_percent']},ensure_ascii=False))
+
+## lanzar-lote1.py
+import json,sys,time
+from pathlib import Path
+from datetime import datetime
+from zoneinfo import ZoneInfo
+c=json.loads(Path('/tmp/lote1-config.json').read_text());base=Path(c['base']);op=Path(c['operation']);common=Path(c['common']);sys.path.insert(0,str(base/'05-herramientas/scripts'));import harness_sesiones as hs,trabajo
+receipts=[]
+for t in c['tasks']:
+ row=trabajo.read_task(base,t['id'])
+ out=hs.launch(base,t['id'],op,row['revision'],t['actor'],approved=True,model='gpt-6.1-sol',effort='low',auth_chatgpt=True)
+ receipts.append({'id':t['id'],'fecha_caracas':datetime.now(ZoneInfo('America/Caracas')).isoformat(),'comando':out['comando']})
+ print('LANZADA',t['id'],flush=True)
+with (common/'lanzamientos.json').open('x') as f:json.dump(receipts,f,ensure_ascii=False,indent=2)
+deadline=time.monotonic()+40
+while time.monotonic()<deadline:
+ sessions=[trabajo.read_task(base,t['id'])['sesiones'][-1] for t in c['tasks']]
+ if all(s.get('session_id') and hs.alive(s) for s in sessions):break
+ time.sleep(.5)
+else:raise RuntimeError('Falta confirmación de tres sesiones vivas; inspeccionar registros y logs, no relanzar.')
+snapshot=[]
+for t,s in zip(c['tasks'],sessions):
+ cwd=str(Path('/proc',str(s['pid']),'cwd').resolve());assert cwd==s['worktree']
+ snapshot.append({'id':t['id'],'pid':s['pid'],'pid_inicio':s['pid_inicio'],'supervisor_pid':s['supervisor_pid'],'session_id':s['session_id'],'cwd_observado':cwd,'worktree':s['worktree'],'git_repo':s['git_repo'],'rama':s['rama'],'rutas':s['rutas'],'commit_base':s['commit_base'],'viva':True})
+assert len({s['session_id'] for s in snapshot})==3
+with (common/'tres-ejecutoras-vivas.json').open('x') as f:json.dump({'fecha_caracas':datetime.now(ZoneInfo('America/Caracas')).isoformat(),'monotonic_ns':time.monotonic_ns(),'sesiones':snapshot},f,ensure_ascii=False,indent=2)
+print(json.dumps({'vivas':3,'ids':[s['session_id'] for s in snapshot]},ensure_ascii=False),flush=True)
+
+## gestionar-lote1.py
+"""Verificación/cierre/revisión del lote mediante APIs existentes del harness."""
+import hashlib,json,re,subprocess,sys
+from pathlib import Path
+from datetime import datetime
+from zoneinfo import ZoneInfo
+C=json.loads(Path('/tmp/lote1-config.json').read_text());BASE=Path(C['base']);OP=Path(C['operation']);COMMON=Path(C['common']);REPO=Path(C['repo'])
+sys.path.insert(0,str(BASE/'05-herramientas/scripts'));import harness_sesiones as hs,trabajo
+def now():return datetime.now(ZoneInfo('America/Caracas')).isoformat()
+def save(folder,name,data):
+ with (folder/name).open('x') as f:json.dump(data,f,ensure_ascii=False,indent=2);f.write('\n')
+def events(s):
+ out=[]
+ with open(s['log'],'rb') as f:
+  f.seek(s['log_offset'])
+  for line in f:
+   try:out.append(json.loads(line))
+   except ValueError:pass
+ return out
+def runtime(s):
+ contexts=[];quota=None
+ for p in Path('/home/onia-codex-worker/.codex/sessions/2026/11/08').glob('*'+s['session_id']+'.jsonl'):
+  for line in p.read_text().splitlines():
+   try:e=json.loads(line)
+   except ValueError:continue
+   payload=e.get('payload',{})
+   if e.get('type')=='turn_context':contexts.append({k:payload.get(k) for k in ('cwd','model','effort','approval_policy','sandbox_policy')})
+   if e.get('type')=='event_msg' and payload.get('rate_limits'):quota={'fecha_utc':e['timestamp'],'rate_limits':payload['rate_limits']}
+ return contexts,quota
+def status():
+ rows=[]
+ for t in C['tasks']:
+  r=trabajo.read_task(BASE,t['id']);s=r['sesiones'][-1];ev=events(s)
+  msgs=[e['item']['text'] for e in ev if e.get('item',{}).get('type')=='agent_message']
+  rows.append({'id':r['id'],'revision':r['revision'],'estado_tarea':r['estado'],'rol':s['rol'],'estado_sesion':s['estado'],'viva':hs.alive(s),'rc':s['rc'],'eventos':len(ev),'ultimo_mensaje':msgs[-1][:900] if msgs else None})
+ print(json.dumps(rows,ensure_ascii=False),flush=True)
+def close_and_review():
+ for t in C['tasks']:
+  r=trabajo.read_task(BASE,t['id']);s=r['sesiones'][-1]
+  assert s['rol']=='ejecutor' and not hs.alive(s) and s['rc']==0 and s['estado']=='finalizada',t['id']
+  wt=Path(s['worktree']);head=hs.git(wt,'rev-parse','HEAD');remote=hs.git(wt,'ls-remote','origin','refs/heads/'+s['rama'])
+  assert remote.split()[0]==head and not hs.git(wt,'status','--porcelain'),t['id']
+  diff=hs.git(wt,'diff','--name-only',s['commit_base'],head).splitlines();prefix='_investigacion-onia/base-operativa/'+t['route']+'/'
+  assert diff and all(p.startswith(prefix) for p in diff),diff
+  folder=wt/'_investigacion-onia/base-operativa'/t['route']
+  assert all((folder/name).is_file() for name in ['ANALISIS.md','EVIDENCIA.md','SIGUIENTES.md'])
+  for name in diff:
+   data=(wt/name).read_bytes()
+   assert not any(re.search(pattern,data) for pattern in [rb'gh[pousr]_[A-Za-z0-9]{30,}',rb'github_pat_[A-Za-z0-9_]{30,}',rb'sk-[A-Za-z0-9_-]{24,}',rb'-----BEGIN (?:OPENSSH |RSA )?PRIVATE KEY-----']),name
+  hs.git(wt,'diff','--check',s['commit_base'],head)
+  ev=events(s);assert [e['thread_id'] for e in ev if e.get('type')=='thread.started']==[s['session_id']]
+  commands=[e['item'] for e in ev if e.get('type')=='item.completed' and e.get('item',{}).get('type')=='command_execution']
+  publish=[c for c in commands if re.search(r'git\s+(?:add|commit|push)\b',c['command'])]
+  assert any(re.search(r'git\s+push\b',c['command']) and c.get('exit_code')==0 for c in publish)
+  contexts,quota=runtime(s);assert contexts and all(p['model']=='gpt-6.1-sol' and p['effort']=='low' for p in contexts)
+  evidence=BASE/'04-operacion-agentes/evidencias'/t['id']
+  receipt={'fecha_caracas':now(),'id':t['id'],'commit':head,'commit_base':s['commit_base'],'remote':remote,'session_id':s['session_id'],'paths_diff':diff,'hashes':{p:hashlib.sha256((wt/p).read_bytes()).hexdigest() for p in diff},'worktree_limpio':True,'diff_check':'correcto','runtime':contexts,'quota':quota,'comandos_publicacion':publish,'comandos_fallidos':[{'comando':c['command'][:350],'rc':c.get('exit_code')} for c in commands if c.get('exit_code') not in (0,None)],'log_sha256':hashlib.sha256(Path(s['log']).read_bytes()).hexdigest()}
+  save(evidence,'entrega-ejecutor.json',receipt)
+  r=trabajo.update(BASE,t['id'],'en_curso','Análisis, evidencia y siguientes pasos publicados por la propia ejecutora en '+head+'.','Diff limitado a carpeta asignada, documentos completos, árbol limpio, publicación remota y runtime cotejados. Falta cotejo cualitativo independiente.','Cerrar y revisar análisis con otra sesión.',[(evidence/'entrega-ejecutor.json').relative_to(BASE).as_posix()],revision=r['revision'],verification='correcta',actor=t['actor'])
+  hs.close(BASE,t['id'],OP,r['revision'],t['actor'],r['resultado'],r['comprobacion'])
+  print('CERRADA',t['id'],head,flush=True)
+ # Tres ejecutoras ya cerradas; ahora tres revisoras independientes.
+ launches=[]
+ for t in C['tasks']:
+  r=trabajo.read_task(BASE,t['id']);out=hs.launch(BASE,t['id'],OP,r['revision'],t['actor'],approved=True,reviewer=t['reviewer'],model='gpt-6.1-sol',effort='low',auth_chatgpt=True)
+  launches.append({'id':t['id'],'fecha_caracas':now(),'comando':out['comando']});print('REVISORA',t['id'],flush=True)
+ save(COMMON,'lanzamientos-revision.json',launches)
+def accept():
+ for t in C['tasks']:
+  r=trabajo.read_task(BASE,t['id']);s=r['sesiones'][-1];assert s['rol']=='revisor' and not hs.alive(s) and s['rc']==0,t['id']
+  verdict=json.loads(Path(s['veredicto_archivo']).read_text());assert verdict['veredicto']=='bueno',(t['id'],verdict)
+  contexts,quota=runtime(s);assert contexts and all(p['sandbox_policy']['type']=='read-only' for p in contexts)
+  assert s['session_id'] not in {x['session_id'] for x in r['sesiones'] if x['rol']=='ejecutor'}
+  hs.collect_review(BASE,t['id'],OP,r['revision']);r=trabajo.read_task(BASE,t['id'])
+  trabajo.accept(BASE,t['id'],r['revision'],t['reviewer'],verdict['criterio']);r=trabajo.read_task(BASE,t['id'])
+  trabajo.assign(BASE,t['id'],r['revision'],actor=t['actor'],release=True);r=trabajo.read_task(BASE,t['id']);trabajo.verify(BASE,r)
+  ev=events(s);commands=[e['item'] for e in ev if e.get('type')=='item.completed' and e.get('item',{}).get('type')=='command_execution']
+  save(BASE/'04-operacion-agentes/evidencias'/t['id'],'revision-y-aceptacion.json',{'fecha_caracas':now(),'estado':r['estado'],'revision':r['revision'],'veredicto':verdict,'session_id':s['session_id'],'runtime':contexts,'quota':quota,'aceptacion':r['aceptacion'],'asignacion':r['asignacion'],'comandos_fallidos':[{'comando':c['command'][:350],'rc':c.get('exit_code')} for c in commands if c.get('exit_code') not in (0,None)]})
+  print('ACEPTADA',t['id'],r['revision'],flush=True)
+if __name__=='__main__':
+ {'estado':status,'cerrar-revisar':close_and_review,'aceptar':accept}[sys.argv[1]]()

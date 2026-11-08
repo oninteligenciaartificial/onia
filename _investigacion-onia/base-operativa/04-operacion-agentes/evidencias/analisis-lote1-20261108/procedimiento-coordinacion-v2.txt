@@ -1,0 +1,81 @@
+"""Verificación/cierre/revisión del lote mediante APIs existentes del harness."""
+import hashlib,json,re,subprocess,sys
+from pathlib import Path
+from datetime import datetime
+from zoneinfo import ZoneInfo
+C=json.loads(Path('/tmp/lote1-config.json').read_text());BASE=Path(C['base']);OP=Path(C['operation']);COMMON=Path(C['common']);REPO=Path(C['repo'])
+if len(sys.argv)>2:C['tasks']=[t for t in C['tasks'] if t['key'] in sys.argv[2].split(',')]
+sys.path.insert(0,str(BASE/'05-herramientas/scripts'));import harness_sesiones as hs,trabajo
+def now():return datetime.now(ZoneInfo('America/Caracas')).isoformat()
+def save(folder,name,data):
+ with (folder/name).open('x') as f:json.dump(data,f,ensure_ascii=False,indent=2);f.write('\n')
+def events(s):
+ out=[]
+ with open(s['log'],'rb') as f:
+  f.seek(s['log_offset'])
+  for line in f:
+   try:out.append(json.loads(line))
+   except ValueError:pass
+ return out
+def runtime(s):
+ contexts=[];quota=None
+ for p in Path('/home/onia-codex-worker/.codex/sessions/2026/11/08').glob('*'+s['session_id']+'.jsonl'):
+  for line in p.read_text().splitlines():
+   try:e=json.loads(line)
+   except ValueError:continue
+   payload=e.get('payload',{})
+   if e.get('type')=='turn_context':contexts.append({k:payload.get(k) for k in ('cwd','model','effort','approval_policy','sandbox_policy')})
+   if e.get('type')=='event_msg' and payload.get('rate_limits'):quota={'fecha_utc':e['timestamp'],'rate_limits':payload['rate_limits']}
+ return contexts,quota
+def status():
+ rows=[]
+ for t in C['tasks']:
+  r=trabajo.read_task(BASE,t['id']);s=r['sesiones'][-1];ev=events(s)
+  msgs=[e['item']['text'] for e in ev if e.get('item',{}).get('type')=='agent_message']
+  rows.append({'id':r['id'],'revision':r['revision'],'estado_tarea':r['estado'],'rol':s['rol'],'estado_sesion':s['estado'],'viva':hs.alive(s),'rc':s['rc'],'eventos':len(ev),'ultimo_mensaje':msgs[-1][:900] if msgs else None})
+ print(json.dumps(rows,ensure_ascii=False),flush=True)
+def close_and_review():
+ for t in C['tasks']:
+  r=trabajo.read_task(BASE,t['id']);s=r['sesiones'][-1]
+  assert s['rol']=='ejecutor' and not hs.alive(s) and s['rc']==0 and s['estado']=='finalizada',t['id']
+  wt=Path(s['worktree']);head=hs.git(wt,'rev-parse','HEAD');remote=hs.git(wt,'ls-remote','origin','refs/heads/'+s['rama'])
+  assert remote.split()[0]==head and not hs.git(wt,'status','--porcelain'),t['id']
+  diff=hs.git(wt,'diff','--name-only',s['commit_base'],head).splitlines();prefix='_investigacion-onia/base-operativa/'+t['route']+'/'
+  assert diff and all(p.startswith(prefix) for p in diff),diff
+  folder=wt/'_investigacion-onia/base-operativa'/t['route']
+  assert all((folder/name).is_file() for name in ['ANALISIS.md','EVIDENCIA.md','SIGUIENTES.md'])
+  for name in diff:
+   data=(wt/name).read_bytes()
+   assert not any(re.search(pattern,data) for pattern in [rb'gh[pousr]_[A-Za-z0-9]{30,}',rb'github_pat_[A-Za-z0-9_]{30,}',rb'sk-[A-Za-z0-9_-]{24,}',rb'-----BEGIN (?:OPENSSH |RSA )?PRIVATE KEY-----']),name
+  hs.git(wt,'diff','--check',s['commit_base'],head)
+  ev=events(s);assert [e['thread_id'] for e in ev if e.get('type')=='thread.started']==[s['session_id']]
+  commands=[e['item'] for e in ev if e.get('type')=='item.completed' and e.get('item',{}).get('type')=='command_execution']
+  publish=[c for c in commands if re.search(r'''git[\s'",]+(?:add|commit|push)\b''',c['command'])]
+  assert any(re.search(r'''git[\s'",]+push\b''',c['command']) and c.get('exit_code')==0 for c in publish)
+  contexts,quota=runtime(s);assert contexts and all(p['model']=='gpt-6.1-sol' and p['effort']=='low' for p in contexts)
+  evidence=BASE/'04-operacion-agentes/evidencias'/t['id']
+  receipt={'fecha_caracas':now(),'id':t['id'],'commit':head,'commit_base':s['commit_base'],'remote':remote,'session_id':s['session_id'],'paths_diff':diff,'hashes':{p:hashlib.sha256((wt/p).read_bytes()).hexdigest() for p in diff},'worktree_limpio':True,'diff_check':'correcto','runtime':contexts,'quota':quota,'comandos_publicacion':publish,'comandos_fallidos':[{'comando':c['command'][:350],'rc':c.get('exit_code')} for c in commands if c.get('exit_code') not in (0,None)],'log_sha256':hashlib.sha256(Path(s['log']).read_bytes()).hexdigest()}
+  save(evidence,'entrega-ejecutor.json',receipt)
+  r=trabajo.update(BASE,t['id'],'en_curso','Análisis, evidencia y siguientes pasos publicados por la propia ejecutora en '+head+'.','Diff limitado a carpeta asignada, documentos completos, árbol limpio, publicación remota y runtime cotejados. Falta cotejo cualitativo independiente.','Cerrar y revisar análisis con otra sesión.',[(evidence/'entrega-ejecutor.json').relative_to(BASE).as_posix()],revision=r['revision'],verification='correcta',actor=t['actor'])
+  hs.close(BASE,t['id'],OP,r['revision'],t['actor'],r['resultado'],r['comprobacion'])
+  print('CERRADA',t['id'],head,flush=True)
+ # Las ejecutoras seleccionadas ya cerraron; launch respeta el límite global.
+ launches=[]
+ for t in C['tasks']:
+  r=trabajo.read_task(BASE,t['id']);out=hs.launch(BASE,t['id'],OP,r['revision'],t['actor'],approved=True,reviewer=t['reviewer'],model='gpt-6.1-sol',effort='low',auth_chatgpt=True)
+  launches.append({'id':t['id'],'fecha_caracas':now(),'comando':out['comando']});print('REVISORA',t['id'],flush=True)
+ save(COMMON,'lanzamientos-revision-'+ '-'.join(t['key'] for t in C['tasks'])+'.json',launches)
+def accept():
+ for t in C['tasks']:
+  r=trabajo.read_task(BASE,t['id']);s=r['sesiones'][-1];assert s['rol']=='revisor' and not hs.alive(s) and s['rc']==0,t['id']
+  verdict=json.loads(Path(s['veredicto_archivo']).read_text());assert verdict['veredicto']=='bueno',(t['id'],verdict)
+  contexts,quota=runtime(s);assert contexts and all(p['sandbox_policy']['type']=='read-only' for p in contexts)
+  assert s['session_id'] not in {x['session_id'] for x in r['sesiones'] if x['rol']=='ejecutor'}
+  hs.collect_review(BASE,t['id'],OP,r['revision']);r=trabajo.read_task(BASE,t['id'])
+  trabajo.accept(BASE,t['id'],r['revision'],t['reviewer'],verdict['criterio']);r=trabajo.read_task(BASE,t['id'])
+  trabajo.assign(BASE,t['id'],r['revision'],actor=t['actor'],release=True);r=trabajo.read_task(BASE,t['id']);trabajo.verify(BASE,r)
+  ev=events(s);commands=[e['item'] for e in ev if e.get('type')=='item.completed' and e.get('item',{}).get('type')=='command_execution']
+  save(BASE/'04-operacion-agentes/evidencias'/t['id'],'revision-y-aceptacion.json',{'fecha_caracas':now(),'estado':r['estado'],'revision':r['revision'],'veredicto':verdict,'session_id':s['session_id'],'runtime':contexts,'quota':quota,'aceptacion':r['aceptacion'],'asignacion':r['asignacion'],'comandos_fallidos':[{'comando':c['command'][:350],'rc':c.get('exit_code')} for c in commands if c.get('exit_code') not in (0,None)]})
+  print('ACEPTADA',t['id'],r['revision'],flush=True)
+if __name__=='__main__':
+ {'estado':status,'cerrar-revisar':close_and_review,'aceptar':accept}[sys.argv[1]]()
