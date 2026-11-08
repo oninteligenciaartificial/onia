@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "id": "cerebros-b-20261108",
-  "revision": 3,
+  "revision": 7,
   "compartible": true,
   "objetivo": "Cerebros profundos de referentes, grupo B: ia-ensenanza",
-  "estado": "preparado",
-  "proximo_paso": "Lanzar tres grupos autorizados después de publicar correcciones.",
+  "estado": "en_curso",
+  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
   "resultado": "Encargo explícito de Grok aprobado por Sergio con modelo y esfuerzo definidos.",
   "comprobacion": "Preflight: loginChatGPT,20%semanal usado/saldo0, cero sesiones previas, fuentes existentes,129tests(128OK/1Windowsomitida).",
   "verificacion": "pendiente",
@@ -16,7 +16,7 @@
       "bytes": 637
     }
   ],
-  "actualizado": "2026-11-08T21:14:11.155273+00:00",
+  "actualizado": "2026-11-08T21:15:47.635616+00:00",
   "historial": [
     {
       "revision": 1,
@@ -47,6 +47,220 @@
         "revision_base": 1,
         "fecha": "2026-11-08T21:14:11.142704+00:00"
       }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-08T21:14:11.155273+00:00",
+      "estado": "preparado",
+      "resultado": "Encargo explícito de Grok aprobado por Sergio con modelo y esfuerzo definidos.",
+      "comprobacion": "Preflight: loginChatGPT,20%semanal usado/saldo0, cero sesiones previas, fuentes existentes,129tests(128OK/1Windowsomitida).",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-b-20261108/preflight.json",
+          "sha256": "85a62c88b1750a0c77a82466bfcb1125a1df3f89dc605ac1be584756e9bf4bc2",
+          "bytes": 637
+        }
+      ],
+      "proximo_paso": "Lanzar tres grupos autorizados después de publicar correcciones.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-b",
+        "rutas": [
+          "03-referentes/cerebros-profundos/b"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.142704+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-08T21:15:43.829900+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo explícito de Grok aprobado por Sergio con modelo y esfuerzo definidos.",
+      "comprobacion": "Preflight: loginChatGPT,20%semanal usado/saldo0, cero sesiones previas, fuentes existentes,129tests(128OK/1Windowsomitida).",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-b-20261108/preflight.json",
+          "sha256": "85a62c88b1750a0c77a82466bfcb1125a1df3f89dc605ac1be584756e9bf4bc2",
+          "bytes": 637
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-b",
+        "rutas": [
+          "03-referentes/cerebros-profundos/b"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.142704+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-b",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-cerebros-b-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.jsonl",
+          "log_rel": "logs/cerebros-b-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/b"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:43.799965+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-08T21:15:43.895834+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo explícito de Grok aprobado por Sergio con modelo y esfuerzo definidos.",
+      "comprobacion": "Preflight: loginChatGPT,20%semanal usado/saldo0, cero sesiones previas, fuentes existentes,129tests(128OK/1Windowsomitida).",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-b-20261108/preflight.json",
+          "sha256": "85a62c88b1750a0c77a82466bfcb1125a1df3f89dc605ac1be584756e9bf4bc2",
+          "bytes": 637
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-b",
+        "rutas": [
+          "03-referentes/cerebros-profundos/b"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.142704+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-b",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 690917,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191175922",
+          "rama": "codex/ws-cerebros-b-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.jsonl",
+          "log_rel": "logs/cerebros-b-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/b"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:43.799965+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-08T21:15:44.052750+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo explícito de Grok aprobado por Sergio con modelo y esfuerzo definidos.",
+      "comprobacion": "Preflight: loginChatGPT,20%semanal usado/saldo0, cero sesiones previas, fuentes existentes,129tests(128OK/1Windowsomitida).",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-b-20261108/preflight.json",
+          "sha256": "85a62c88b1750a0c77a82466bfcb1125a1df3f89dc605ac1be584756e9bf4bc2",
+          "bytes": 637
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-b",
+        "rutas": [
+          "03-referentes/cerebros-profundos/b"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.142704+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-b",
+          "pid": 690923,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191175937",
+          "supervisor_pid": 690917,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191175922",
+          "rama": "codex/ws-cerebros-b-20261108",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.jsonl",
+          "log_rel": "logs/cerebros-b-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/b"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:43.799965+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -63,5 +277,43 @@
     ],
     "revision_base": 1,
     "fecha": "2026-11-08T21:14:11.142704+00:00"
-  }
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "cerebros-ejecutor-b",
+      "pid": 690923,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191175937",
+      "supervisor_pid": 690917,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191175922",
+      "rama": "codex/ws-cerebros-b-20261108",
+      "session_id": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+      "estado": "ejecutando",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.jsonl",
+      "log_rel": "logs/cerebros-b-20261108.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108",
+      "rutas": [
+        "03-referentes/cerebros-profundos/b"
+      ],
+      "dry_run": false,
+      "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.1.briefing.txt",
+      "inicio": "2026-11-08T21:15:43.799965+00:00",
+      "rc": null,
+      "ultimo_evento": "turn.started",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 1,
+      "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108",
+      "perfil_permisos": "harness-git"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": null
 }
