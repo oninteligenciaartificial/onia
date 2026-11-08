@@ -1,0 +1,80 @@
+"""Ensayo puntual: usa el harness existente; no es otro lanzador de tareas."""
+from datetime import datetime,timezone
+import hashlib,json,subprocess,sys,time
+from pathlib import Path
+cfg=json.loads(Path('/tmp/harness-paralelo-config.json').read_text());repo=Path(cfg['repo']);base=Path(cfg['base']);control=Path(cfg['control']);op=Path(cfg['operation']);gate=Path(cfg['gate']);common=Path(cfg['common'])
+sys.path.insert(0,str(base/'05-herramientas/scripts'));import harness_sesiones as hs,trabajo
+cli=[sys.executable,str(base/'05-herramientas/scripts/harness.py')]
+receipt={'inicio':datetime.now(timezone.utc).isoformat(),'rechazos':[],'snapshots':[],'lanzamientos':[]}
+def write():
+ (common/'concurrencia-y-rechazos.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n')
+def call(location,*args):
+ r=subprocess.run(cli+['--base',str(location),'--operacion',str(op),*args],capture_output=True,text=True,timeout=150)
+ out=json.loads(r.stdout)
+ return r,out
+def row(name):return trabajo.read_task(base,'harness-paralelo-'+name+'-20261108')
+def launch(name):
+ ident='harness-paralelo-'+name+'-20261108'
+ r,out=call(base,'lanzar',ident,'--revision-esperada',str(row(name)['revision']),'--actor','paralelo-ejecutor-'+name,'--si-sergio','--modelo','gpt-6.1-sol','--esfuerzo','low','--auth-chatgpt')
+ assert r.returncode==0,out
+ receipt['lanzamientos'].append({'id':ident,'fecha':datetime.now(timezone.utc).isoformat(),'comando':out['comando']});write()
+ print('LANZADA',ident,flush=True)
+def rejected(location,ident,args,needle,label):
+ p=trabajo.task_path(location,ident);before=hashlib.sha256(p.read_bytes()).hexdigest()
+ r,out=call(location,*args)
+ absent={key:not path.exists() for key,path in {'worktree':hs.repo_for(location).parent/('onia-ws-'+ident),'git_privado':op/'git'/f'{ident}.git','log':op/'logs'/f'{ident}.jsonl','briefing_efectivo':op/'logs'/f'{ident}.1.briefing.txt','supervisor_log':op/'logs'/f'{ident}.1.supervisor.log'}.items()}
+ unchanged=hashlib.sha256(p.read_bytes()).hexdigest()==before
+ check={'control':label,'id':ident,'fecha':datetime.now(timezone.utc).isoformat(),'rc':r.returncode,'salida':out,'registro_intacto':unchanged,'artefactos_no_creados':absent,'sesiones':trabajo.read_task(location,ident).get('sesiones',[])}
+ receipt['rechazos'].append(check);write()
+ assert r.returncode==2 and needle in out.get('error','') and unchanged and all(absent.values()) and not check['sesiones'],check
+ print('RECHAZO_OK',label,out['error'],flush=True)
+def snapshot(names,label):
+ found=hs.status(base,op);selected=[s for s in found['sesiones'] if s['id'] in ['harness-paralelo-'+n+'-20261108' for n in names]]
+ entries=[]
+ for s in selected:
+  raw=trabajo.read_task(base,s['id'])['sesiones'][-1]
+  assert s['pid_vivo'] and s['supervisor_vivo'] and s['session_id'],s
+  cwd=str(Path('/proc',str(s['pid']),'cwd').resolve());assert cwd==raw['worktree'],(cwd,raw['worktree'])
+  entries.append({**s,'pid_inicio':raw['pid_inicio'],'supervisor_inicio':raw['supervisor_inicio'],'cwd_observado':cwd,'git_repo':raw['git_repo']})
+ assert len(entries)==len(names) and len({e['session_id'] for e in entries})==len(names)
+ receipt['snapshots'].append({'etapa':label,'fecha':datetime.now(timezone.utc).isoformat(),'monotonic_ns':time.monotonic_ns(),'barrera_liberada':gate.exists(),'sesiones':entries});write()
+ return entries
+def wait_ready(names,require_gate=False):
+ limit=time.monotonic()+150
+ while time.monotonic()<limit:
+  ready=True
+  for n in names:
+   s=row(n)['sesiones'][-1]
+   ready &= bool(s['session_id'] and hs.alive(s))
+   if require_gate:
+    events=[]
+    if Path(s['log']).exists():
+     for line in Path(s['log']).read_text().splitlines():
+      try:events.append(json.loads(line))
+      except ValueError:pass
+    ready &= any(e.get('type')=='item.started' and e.get('item',{}).get('type')=='command_execution' and str(gate) in e['item'].get('command','') for e in events)
+  if ready:return
+  time.sleep(0.5)
+ raise RuntimeError('No se observó el conjunto de sesiones vivas y su barrera a tiempo.')
+try:
+ launch('a');wait_ready(['a']);snapshot(['a'],'a-viva-antes-colision')
+ fourth='harness-paralelo-cuarta-20261108'
+ rejected(base,fourth,['asignar',fourth,'--revision-esperada','1','--responsable','paralelo-control-cuarta','--ruta',cfg['prefix']+'/a/resultado.json'],'Colisión de rutas','reserva-local-solapada')
+ trabajo.assign(base,fourth,1,'paralelo-control-cuarta',[cfg['prefix']+'/cuarta'])
+ collision='harness-paralelo-colision-20261108'
+ rejected(control,collision,['lanzar',collision,'--revision-esperada','2','--actor','paralelo-control','--si-sergio','--modelo','gpt-6.1-sol','--esfuerzo','low','--auth-chatgpt'],'Colisión de rutas con sesión viva','lanzamiento-solapado-otra-base')
+ launch('b');launch('c');wait_ready(['a','b','c'],require_gate=True)
+ snapshot(['a','b','c'],'tres-vivas-barrera-cerrada-1')
+ rejected(base,fourth,['lanzar',fourth,'--revision-esperada','2','--actor','paralelo-control-cuarta','--si-sergio','--modelo','gpt-6.1-sol','--esfuerzo','low','--auth-chatgpt'],'Máximo 3 sesiones vivas','cuarta-con-tres-vivas')
+ time.sleep(10)
+ snapshot(['a','b','c'],'tres-vivas-barrera-cerrada-2')
+ with gate.open('x') as f:json.dump({'liberar':True,'fecha':datetime.now(timezone.utc).isoformat()},f)
+ receipt['liberacion']=json.loads(gate.read_text());write();print('BARRERA_LIBERADA',flush=True)
+ time.sleep(5)
+ snapshot(['a','b','c'],'tres-vivas-tras-liberar')
+ receipt['fin_control']=datetime.now(timezone.utc).isoformat();write()
+ print('CONTROLES_PARALELOS_OK',flush=True)
+except Exception as exc:
+ receipt['error']={'tipo':type(exc).__name__,'mensaje':str(exc)};write()
+ print('CONTROL_FALLIDO',type(exc).__name__,str(exc),flush=True)
+ raise

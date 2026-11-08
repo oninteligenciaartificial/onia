@@ -1,0 +1,85 @@
+{
+  "schema": 2,
+  "id": "harness-paralelo-cuarta-20261108",
+  "revision": 4,
+  "compartible": true,
+  "objetivo": "Control negativo de cuarta sesión; no ejecutar trabajo",
+  "estado": "en_espera",
+  "proximo_paso": "No lanzar: candidato usado exclusivamente como control negativo; conservar su evidencia.",
+  "resultado": "Control negativo concluido: reserva solapada y cuarta sesión rechazadas; no se ejecutó Codex.",
+  "comprobacion": "rc=2 en ambos controles; registro del candidato intacto y sin sesión/log/Git/worktree creados.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/concurrencia-y-rechazos.json",
+      "sha256": "2a70aad4d91507aeb6b66196ba34127b48d86703ec4d6059a7e204b5b33bf31a",
+      "bytes": 16353
+    }
+  ],
+  "actualizado": "2026-11-08T19:56:25.893107+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-08T19:50:54.975282+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/harness-paralelo-cuarta-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-08T19:52:22.838946+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/harness-paralelo-cuarta-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-control-cuarta",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/cuarta"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:52:22.838911+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-08T19:56:25.863883+00:00",
+      "estado": "en_espera",
+      "resultado": "Control negativo concluido: reserva solapada y cuarta sesión rechazadas; no se ejecutó Codex.",
+      "comprobacion": "rc=2 en ambos controles; registro del candidato intacto y sin sesión/log/Git/worktree creados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/concurrencia-y-rechazos.json",
+          "sha256": "2a70aad4d91507aeb6b66196ba34127b48d86703ec4d6059a7e204b5b33bf31a",
+          "bytes": 16353
+        }
+      ],
+      "proximo_paso": "No lanzar: candidato usado exclusivamente como control negativo; conservar su evidencia.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-control-cuarta",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/cuarta"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:52:22.838911+00:00"
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/harness-paralelo-cuarta-20261108.md",
+    "sha256": "c83952bae6fdd65f7e68e5339c613a1aa03a8bbab440308cae20944a7623d901",
+    "bytes": 2608,
+    "contenido": "# Encargo harness-paralelo-cuarta-20261108\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nControl negativo de cuarta sesión; no ejecutar trabajo\n\n## Entregable\n\nRechazo sin iniciar Codex\n\n## Criterio de aceptación\n\nCon tres sesiones vivas, rechazar antes de crear proceso/log/worktree\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Control negativo autorizado. No debe convertirse en sesión real.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/harness-paralelo-cuarta-20261108.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "asignacion": null
+}

@@ -1,0 +1,48 @@
+{
+  "id": "harness-paralelo-b-20261108",
+  "estado": "aceptado",
+  "revision": 20,
+  "commit": "df775d2eadb70d9db2efe1eb8562f366b6ea0e9c",
+  "ejecutor": "01a1bcb8-4e59-7e53-97a4-72520c2ccfff",
+  "revisor": "01a1bcbb-0f45-7693-91a9-4fe35ed41a30",
+  "veredicto": {
+    "veredicto": "bueno",
+    "commit": "df775d2eadb70d9db2efe1eb8562f366b6ea0e9c",
+    "criterio": "Diff limitado a los dos archivos requeridos y JSON exacto. Verificador stdlib sin escrituras: PARALELO_B_OK desde otro cwd; 11 discrepancias rechazadas, incluidos floats y bools; main devuelve 1 ante discrepancia. Evidencia leída acredita commit/push autónomos sin escalación, HEAD remoto coincidente, tres ejecutoras con PID/session_id distintos y solape, y rechazos de cuarta y rutas solapadas sin procesos creados. Revisión independiente de sólo lectura realizada; aceptación e integración corresponden al coordinador.",
+    "revisor": "paralelo-revisor-b",
+    "session_id": "01a1bcbb-0f45-7693-91a9-4fe35ed41a30",
+    "entrega_sha256": "7b0c4d7214ee7412958d7e98178d840ce9291c320573aac97f298e9413d0b052",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/harness-paralelo-b-20261108/revision-2-6f9d7f0d.json",
+      "sha256": "1e9cda4208ea8f244f2e8e2c8de73f26b698f6ba2f1e5016747d55aea01eec8a",
+      "bytes": 629
+    }
+  },
+  "runtime_revisor": [
+    {
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "read-only"
+      }
+    }
+  ],
+  "cuota_final_revisor": {
+    "timestamp": "2026-11-08T19:56:10.804Z",
+    "primary": {
+      "used_percent": 13.0,
+      "window_minutes": 10080,
+      "resets_at": 1794624432
+    },
+    "credits": {
+      "has_credits": false,
+      "unlimited": false,
+      "balance": "0"
+    }
+  },
+  "procesos_vivos": 0,
+  "worktrees_retirados": true,
+  "rama_y_bare_conservados": true,
+  "rutas_liberadas": true
+}

@@ -250,3 +250,17 @@ Las variables heredadas `GIT_*` se eliminan en las operaciones Git del runtime y
 - **Diagnóstico de PID desde otro sandbox:** una consulta directa a `/proc` desde el sandbox exterior no veía los PID del host mientras el log seguía avanzando. No se relanzó ni se intervino el proceso. Se cotejó `estado` en el host coordinador y los eventos finales. Prevención: no interpretar PID ausente en otro namespace como sesión caída.
 
 Resultado: piloto `harness-autopush-real-20261108` aceptado con publicación propia de la ejecutora en `01654543409365cb5adb28f942b2a6f2939dd743` y revisor distinto. Suite final 125 casos: 124 aprobados y una omisión Windows; sin fallos. [Informe](../05-herramientas/2026-11-08-harness/PUBLICACION-AUTONOMA-2026-11-08.md).
+
+## Tres sesiones paralelas reales — 8 de noviembre de 2026
+
+Sergio autorizó tres juguetes en paralelo con publicación autónoma, revisores distintos y controles negativos de cuarta sesión y rutas solapadas, sin producción ni compras.
+
+- **Lectura inicial agrupada:** volvió a exceder el presupuesto de salida. Se recuperaron por separado reglas de admisión, reservas, memoria y últimas lecciones; no se consideró leído lo truncado. Prevención: mantener el presupuesto conjunto por debajo del límite, también al leer en paralelo.
+- **Riesgo detectado antes del control entre checkouts:** un segundo checkout completo conserva copias de registros históricos con `operacion=~/operacion`; `sync` podría agregarlas al TSV y dejar referencias a una base temporal. No se lanzó el control desde esa base copiada. Se preparó una fixture de base sin históricos, sólo con el contexto necesario y su control nuevo, usando el mismo índice operativo. Prevención: comprobar qué registros se indexarán y conservar toda base referenciada antes de retirar un worktree.
+- **Diseño del control de colisión:** capacidad se comprueba antes que rutas; con tres sesiones vivas la respuesta sería límite de tres aunque también hubiera solapamiento. Se prueba la colisión con sólo A viva, y después el límite con A/B/C. Son rechazos esperados, no incidentes ni fallos de trabajo.
+
+La barrera acotada permite observar procesos reales simultáneos y probar los rechazos; no acredita carga intensiva ni un servicio permanente. Los PID se cotejan en el host con identidad de arranque, SID y directorio de trabajo, sin interpretar el `/proc` de otro sandbox como estado del VPS.
+
+- **Actualización concurrente de master:** el preflight observó `a2f64ed`; los fetch de los tres lanzamientos incorporaron `26c332a` (memoria/decisiones de otra tarea). Los tres diffs se comprobaron contra su base real; el código del harness no cambió y se conservó ese commit al integrar. La nota de memoria que propone consultar si continuar se cotejó con el pedido explícito vigente de Sergio en este chat, que autoriza precisamente las tres pruebas; no se reabrió una aprobación ya concedida.
+
+Resultado del ensayo: tres tareas aceptadas, seis session IDs distintos, commit/push propios y los tres controles negativos correctos. No hubo comandos fallidos en las sesiones. Solape observado mínimo 15,405 s; 124 tests aprobados, uno omitido por Windows. [Informe](../05-herramientas/2026-11-08-harness/PARALELO-REAL-2026-11-08.md).

@@ -1,0 +1,48 @@
+{
+  "autorizacion": "Pedido de Sergio en este chat: tres juguetes paralelos, commit/push autónomos, revisores distintos, rechazos de cuarta y solapamiento; sin producción ni compras.",
+  "base_commit": "a2f64edd6ffc9394d2022c7fa8303f5813793717",
+  "herramientas": [
+    "Python stdlib",
+    "Git",
+    "Codex CLI 0.167.0",
+    "login ChatGPT existente"
+  ],
+  "skill_directora": "desarrollar-y-verificar",
+  "reglas": [
+    "AGENTS.md",
+    "reglas-comunes.md",
+    "boss-memoria.md",
+    "ORQUESTACION.md"
+  ],
+  "runtime_solicitado": {
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "low",
+    "auth": "ChatGPT"
+  },
+  "cuota_antes": {
+    "timestamp": "2026-11-08T19:48:30.569Z",
+    "primary": {
+      "used_percent": 12.0,
+      "window_minutes": 10080,
+      "resets_at": 1794624432
+    },
+    "credits": {
+      "has_credits": false,
+      "unlimited": false,
+      "balance": "0"
+    }
+  },
+  "sesiones_vivas_previas": 0,
+  "rutas": [
+    "05-herramientas/2026-11-08-harness/piloto-paralelo/a",
+    "05-herramientas/2026-11-08-harness/piloto-paralelo/b",
+    "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+  ],
+  "control": "Barrera acotada antes de crear entregas; snapshots host de tres PID/SID y rechazos antes de liberar. No mide carga intensiva.",
+  "faltante": "Piloto real, controles negativos y tres revisiones.",
+  "comandos_lanzamiento": [
+    "python3 _investigacion-onia/base-operativa/05-herramientas/scripts/harness.py lanzar harness-paralelo-a-20261108 --revision-esperada 3 --actor paralelo-ejecutor-a --si-sergio --modelo gpt-6.1-sol --esfuerzo low --auth-chatgpt",
+    "python3 _investigacion-onia/base-operativa/05-herramientas/scripts/harness.py lanzar harness-paralelo-b-20261108 --revision-esperada 3 --actor paralelo-ejecutor-b --si-sergio --modelo gpt-6.1-sol --esfuerzo low --auth-chatgpt",
+    "python3 _investigacion-onia/base-operativa/05-herramientas/scripts/harness.py lanzar harness-paralelo-c-20261108 --revision-esperada 3 --actor paralelo-ejecutor-c --si-sergio --modelo gpt-6.1-sol --esfuerzo low --auth-chatgpt"
+  ]
+}

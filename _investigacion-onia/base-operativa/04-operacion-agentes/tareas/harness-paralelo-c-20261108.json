@@ -1,0 +1,1779 @@
+{
+  "schema": 2,
+  "id": "harness-paralelo-c-20261108",
+  "revision": 20,
+  "compartible": true,
+  "objetivo": "Probar juguete c en paralelo con publicación autónoma",
+  "estado": "aceptado",
+  "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+  "resultado": "Juguete publicado por su ejecutora en 85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+  "comprobacion": "PARALELO_C_OK; autonomía y controles de concurrencia acreditados.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+      "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+      "bytes": 2070
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/publicacion-autonoma.json",
+      "sha256": "726e9aedbb5909d22c08f71cb5e1785d6b5ca31acd3d8c79bc4814ee18c2bb3c",
+      "bytes": 61595
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/concurrencia-y-rechazos.json",
+      "sha256": "2a70aad4d91507aeb6b66196ba34127b48d86703ec4d6059a7e204b5b33bf31a",
+      "bytes": 16353
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/tests-finales.txt",
+      "sha256": "ce7d1ea3e75b5f0bc8649dea900d9f5f54e7d31eeab3e5bec55da625182f4edc",
+      "bytes": 238
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+      "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+      "bytes": 278
+    }
+  ],
+  "actualizado": "2026-11-08T19:57:35.808749+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-08T19:50:54.889251+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/harness-paralelo-c-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-08T19:50:54.935183+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/harness-paralelo-c-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-08T19:50:54.949805+00:00",
+      "estado": "preparado",
+      "resultado": "Preparado para ensayo paralelo autorizado.",
+      "comprobacion": "Preflight registrado; ejecución pendiente.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        }
+      ],
+      "proximo_paso": "Lanzar cuando suite previa pase.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-08T19:52:37.305830+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para ensayo paralelo autorizado.",
+      "comprobacion": "Preflight registrado; ejecución pendiente.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-08T19:52:37.363676+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para ensayo paralelo autorizado.",
+      "comprobacion": "Preflight registrado; ejecución pendiente.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-08T19:52:37.520450+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para ensayo paralelo autorizado.",
+      "comprobacion": "Preflight registrado; ejecución pendiente.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-08T19:52:38.340527+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para ensayo paralelo autorizado.",
+      "comprobacion": "Preflight registrado; ejecución pendiente.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-08T19:52:56.314722+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para ensayo paralelo autorizado.",
+      "comprobacion": "Preflight registrado; ejecución pendiente.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": null,
+          "ultimo_evento": "item.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-08T19:53:11.698121+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para ensayo paralelo autorizado.",
+      "comprobacion": "Preflight registrado; ejecución pendiente.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-08T19:53:46.467044+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para ensayo paralelo autorizado.",
+      "comprobacion": "Preflight registrado; ejecución pendiente.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:53:46.456363+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-08T19:54:51.391317+00:00",
+      "estado": "en_curso",
+      "resultado": "Juguete c publicado autónomamente en 85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+      "comprobacion": "PARALELO_C_OK; add/commit/push propios rc=0; HEAD coincide con origin.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/publicacion-autonoma.json",
+          "sha256": "726e9aedbb5909d22c08f71cb5e1785d6b5ca31acd3d8c79bc4814ee18c2bb3c",
+          "bytes": 61595
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/concurrencia-y-rechazos.json",
+          "sha256": "2a70aad4d91507aeb6b66196ba34127b48d86703ec4d6059a7e204b5b33bf31a",
+          "bytes": 16353
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/tests-finales.txt",
+          "sha256": "ce7d1ea3e75b5f0bc8649dea900d9f5f54e7d31eeab3e5bec55da625182f4edc",
+          "bytes": 238
+        }
+      ],
+      "proximo_paso": "Cerrar y lanzar revisor distinto.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:53:46.456363+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-08T19:54:52.690578+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por su ejecutora en 85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+      "comprobacion": "PARALELO_C_OK; autonomía y controles de concurrencia acreditados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/publicacion-autonoma.json",
+          "sha256": "726e9aedbb5909d22c08f71cb5e1785d6b5ca31acd3d8c79bc4814ee18c2bb3c",
+          "bytes": 61595
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/concurrencia-y-rechazos.json",
+          "sha256": "2a70aad4d91507aeb6b66196ba34127b48d86703ec4d6059a7e204b5b33bf31a",
+          "bytes": 16353
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/tests-finales.txt",
+          "sha256": "ce7d1ea3e75b5f0bc8649dea900d9f5f54e7d31eeab3e5bec55da625182f4edc",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:53:46.456363+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+        "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+        "ramas_origin": [
+          "origin/codex/ws-harness-paralelo-c-20261108"
+        ],
+        "fecha": "2026-11-08T19:54:52.673703+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-08T19:55:39.671126+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por su ejecutora en 85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+      "comprobacion": "PARALELO_C_OK; autonomía y controles de concurrencia acreditados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/publicacion-autonoma.json",
+          "sha256": "726e9aedbb5909d22c08f71cb5e1785d6b5ca31acd3d8c79bc4814ee18c2bb3c",
+          "bytes": 61595
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/concurrencia-y-rechazos.json",
+          "sha256": "2a70aad4d91507aeb6b66196ba34127b48d86703ec4d6059a7e204b5b33bf31a",
+          "bytes": 16353
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/tests-finales.txt",
+          "sha256": "ce7d1ea3e75b5f0bc8649dea900d9f5f54e7d31eeab3e5bec55da625182f4edc",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:53:46.456363+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "paralelo-revisor-c",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:55:39.645517+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "621c35ba1efabd181ab652e8fb93b627edfa6d4ec07c5545b141bec49a80c1fb",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+        "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+        "ramas_origin": [
+          "origin/codex/ws-harness-paralelo-c-20261108"
+        ],
+        "fecha": "2026-11-08T19:54:52.673703+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-08T19:55:39.732864+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por su ejecutora en 85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+      "comprobacion": "PARALELO_C_OK; autonomía y controles de concurrencia acreditados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/publicacion-autonoma.json",
+          "sha256": "726e9aedbb5909d22c08f71cb5e1785d6b5ca31acd3d8c79bc4814ee18c2bb3c",
+          "bytes": 61595
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/concurrencia-y-rechazos.json",
+          "sha256": "2a70aad4d91507aeb6b66196ba34127b48d86703ec4d6059a7e204b5b33bf31a",
+          "bytes": 16353
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/tests-finales.txt",
+          "sha256": "ce7d1ea3e75b5f0bc8649dea900d9f5f54e7d31eeab3e5bec55da625182f4edc",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:53:46.456363+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "paralelo-revisor-c",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 481689,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190695505",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:55:39.645517+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "621c35ba1efabd181ab652e8fb93b627edfa6d4ec07c5545b141bec49a80c1fb",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+        "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+        "ramas_origin": [
+          "origin/codex/ws-harness-paralelo-c-20261108"
+        ],
+        "fecha": "2026-11-08T19:54:52.673703+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-08T19:55:39.895476+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por su ejecutora en 85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+      "comprobacion": "PARALELO_C_OK; autonomía y controles de concurrencia acreditados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/publicacion-autonoma.json",
+          "sha256": "726e9aedbb5909d22c08f71cb5e1785d6b5ca31acd3d8c79bc4814ee18c2bb3c",
+          "bytes": 61595
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/concurrencia-y-rechazos.json",
+          "sha256": "2a70aad4d91507aeb6b66196ba34127b48d86703ec4d6059a7e204b5b33bf31a",
+          "bytes": 16353
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/tests-finales.txt",
+          "sha256": "ce7d1ea3e75b5f0bc8649dea900d9f5f54e7d31eeab3e5bec55da625182f4edc",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:53:46.456363+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "paralelo-revisor-c",
+          "pid": 481698,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190695520",
+          "supervisor_pid": 481689,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190695505",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:55:39.645517+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "621c35ba1efabd181ab652e8fb93b627edfa6d4ec07c5545b141bec49a80c1fb",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+        "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+        "ramas_origin": [
+          "origin/codex/ws-harness-paralelo-c-20261108"
+        ],
+        "fecha": "2026-11-08T19:54:52.673703+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 16,
+      "actualizado": "2026-11-08T19:55:40.486099+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por su ejecutora en 85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+      "comprobacion": "PARALELO_C_OK; autonomía y controles de concurrencia acreditados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/publicacion-autonoma.json",
+          "sha256": "726e9aedbb5909d22c08f71cb5e1785d6b5ca31acd3d8c79bc4814ee18c2bb3c",
+          "bytes": 61595
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/concurrencia-y-rechazos.json",
+          "sha256": "2a70aad4d91507aeb6b66196ba34127b48d86703ec4d6059a7e204b5b33bf31a",
+          "bytes": 16353
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/tests-finales.txt",
+          "sha256": "ce7d1ea3e75b5f0bc8649dea900d9f5f54e7d31eeab3e5bec55da625182f4edc",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:53:46.456363+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "paralelo-revisor-c",
+          "pid": 481698,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190695520",
+          "supervisor_pid": 481689,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190695505",
+          "rama": "(detached)",
+          "session_id": "01a1bcbb-1713-7101-99ac-47a434dd8dd2",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:55:39.645517+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "621c35ba1efabd181ab652e8fb93b627edfa6d4ec07c5545b141bec49a80c1fb",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+        "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+        "ramas_origin": [
+          "origin/codex/ws-harness-paralelo-c-20261108"
+        ],
+        "fecha": "2026-11-08T19:54:52.673703+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 17,
+      "actualizado": "2026-11-08T19:56:09.923005+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por su ejecutora en 85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+      "comprobacion": "PARALELO_C_OK; autonomía y controles de concurrencia acreditados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/publicacion-autonoma.json",
+          "sha256": "726e9aedbb5909d22c08f71cb5e1785d6b5ca31acd3d8c79bc4814ee18c2bb3c",
+          "bytes": 61595
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/concurrencia-y-rechazos.json",
+          "sha256": "2a70aad4d91507aeb6b66196ba34127b48d86703ec4d6059a7e204b5b33bf31a",
+          "bytes": 16353
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/tests-finales.txt",
+          "sha256": "ce7d1ea3e75b5f0bc8649dea900d9f5f54e7d31eeab3e5bec55da625182f4edc",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:53:46.456363+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "paralelo-revisor-c",
+          "pid": 481698,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190695520",
+          "supervisor_pid": 481689,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190695505",
+          "rama": "(detached)",
+          "session_id": "01a1bcbb-1713-7101-99ac-47a434dd8dd2",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:55:39.645517+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "621c35ba1efabd181ab652e8fb93b627edfa6d4ec07c5545b141bec49a80c1fb",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.veredicto.json",
+          "fin": "2026-11-08T19:56:09.901895+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+        "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+        "ramas_origin": [
+          "origin/codex/ws-harness-paralelo-c-20261108"
+        ],
+        "fecha": "2026-11-08T19:54:52.673703+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 18,
+      "actualizado": "2026-11-08T19:57:35.718298+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por su ejecutora en 85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+      "comprobacion": "PARALELO_C_OK; autonomía y controles de concurrencia acreditados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/publicacion-autonoma.json",
+          "sha256": "726e9aedbb5909d22c08f71cb5e1785d6b5ca31acd3d8c79bc4814ee18c2bb3c",
+          "bytes": 61595
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/concurrencia-y-rechazos.json",
+          "sha256": "2a70aad4d91507aeb6b66196ba34127b48d86703ec4d6059a7e204b5b33bf31a",
+          "bytes": 16353
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/tests-finales.txt",
+          "sha256": "ce7d1ea3e75b5f0bc8649dea900d9f5f54e7d31eeab3e5bec55da625182f4edc",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:53:46.456363+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "paralelo-revisor-c",
+          "pid": 481698,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190695520",
+          "supervisor_pid": 481689,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190695505",
+          "rama": "(detached)",
+          "session_id": "01a1bcbb-1713-7101-99ac-47a434dd8dd2",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:55:39.645517+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "621c35ba1efabd181ab652e8fb93b627edfa6d4ec07c5545b141bec49a80c1fb",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.veredicto.json",
+          "fin": "2026-11-08T19:56:09.901895+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+        "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+        "ramas_origin": [
+          "origin/codex/ws-harness-paralelo-c-20261108"
+        ],
+        "fecha": "2026-11-08T19:54:52.673703+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+        "criterio": "Diff limitado a los dos archivos exigidos y JSON exacto. Verificador stdlib, sin escrituras, ejecutado desde otra carpeta: PARALELO_C_OK; rechazó 18 discrepancias en memoria, incluidos floats y bools. La evidencia suministrada acredita commit/push autónomos sin escalación, HEAD igual a origin, tres ejecutoras con PID/session_id distintos y solape, y rechazos de cuarta y rutas solapadas sin crear procesos. Revisión independiente de sólo lectura; corresponde recoger este veredicto antes de aceptar.",
+        "revisor": "paralelo-revisor-c",
+        "session_id": "01a1bcbb-1713-7101-99ac-47a434dd8dd2",
+        "entrega_sha256": "621c35ba1efabd181ab652e8fb93b627edfa6d4ec07c5545b141bec49a80c1fb",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/revision-2-8126c184.json",
+          "sha256": "9f57eabc43f8616e09c180c43821367bd00e7a8c73638ac1cae8ed2953562db1",
+          "bytes": 607
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/revision-2-8126c184.json",
+          "sha256": "9f57eabc43f8616e09c180c43821367bd00e7a8c73638ac1cae8ed2953562db1",
+          "bytes": 607
+        }
+      ]
+    },
+    {
+      "revision": 19,
+      "actualizado": "2026-11-08T19:57:35.776142+00:00",
+      "estado": "aceptado",
+      "resultado": "Juguete publicado por su ejecutora en 85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+      "comprobacion": "PARALELO_C_OK; autonomía y controles de concurrencia acreditados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/preflight.json",
+          "sha256": "20189db59bf06b33258d12c80289724dfa5f24053f67bd4f280447808b577e73",
+          "bytes": 2070
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/publicacion-autonoma.json",
+          "sha256": "726e9aedbb5909d22c08f71cb5e1785d6b5ca31acd3d8c79bc4814ee18c2bb3c",
+          "bytes": 61595
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/concurrencia-y-rechazos.json",
+          "sha256": "2a70aad4d91507aeb6b66196ba34127b48d86703ec4d6059a7e204b5b33bf31a",
+          "bytes": 16353
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-20261108/tests-finales.txt",
+          "sha256": "ce7d1ea3e75b5f0bc8649dea900d9f5f54e7d31eeab3e5bec55da625182f4edc",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      ],
+      "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+      "aceptacion": {
+        "revisor": "paralelo-revisor-c",
+        "criterio": "Los seis criterios cotejados por sesión distinta: juguete correcto, publicación propia y controles de concurrencia acreditados.",
+        "fecha": "2026-11-08T19:57:35.776125+00:00"
+      },
+      "asignacion": {
+        "responsable": "paralelo-ejecutor-c",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:50:54.935170+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "paralelo-ejecutor-c",
+          "pid": 473438,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+          "supervisor_pid": 473424,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+          "rama": "codex/ws-harness-paralelo-c-20261108",
+          "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:52:37.278359+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:53:46.456363+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "paralelo-revisor-c",
+          "pid": 481698,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190695520",
+          "supervisor_pid": 481689,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190695505",
+          "rama": "(detached)",
+          "session_id": "01a1bcbb-1713-7101-99ac-47a434dd8dd2",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-paralelo-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+          ],
+          "dry_run": false,
+          "commit_base": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:55:39.645517+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "621c35ba1efabd181ab652e8fb93b627edfa6d4ec07c5545b141bec49a80c1fb",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.veredicto.json",
+          "fin": "2026-11-08T19:56:09.901895+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+        "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+        "ramas_origin": [
+          "origin/codex/ws-harness-paralelo-c-20261108"
+        ],
+        "fecha": "2026-11-08T19:54:52.673703+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+          "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+          "bytes": 278
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+        "criterio": "Diff limitado a los dos archivos exigidos y JSON exacto. Verificador stdlib, sin escrituras, ejecutado desde otra carpeta: PARALELO_C_OK; rechazó 18 discrepancias en memoria, incluidos floats y bools. La evidencia suministrada acredita commit/push autónomos sin escalación, HEAD igual a origin, tres ejecutoras con PID/session_id distintos y solape, y rechazos de cuarta y rutas solapadas sin crear procesos. Revisión independiente de sólo lectura; corresponde recoger este veredicto antes de aceptar.",
+        "revisor": "paralelo-revisor-c",
+        "session_id": "01a1bcbb-1713-7101-99ac-47a434dd8dd2",
+        "entrega_sha256": "621c35ba1efabd181ab652e8fb93b627edfa6d4ec07c5545b141bec49a80c1fb",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/revision-2-8126c184.json",
+          "sha256": "9f57eabc43f8616e09c180c43821367bd00e7a8c73638ac1cae8ed2953562db1",
+          "bytes": 607
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/revision-2-8126c184.json",
+          "sha256": "9f57eabc43f8616e09c180c43821367bd00e7a8c73638ac1cae8ed2953562db1",
+          "bytes": 607
+        }
+      ]
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/harness-paralelo-c-20261108.md",
+    "sha256": "b25a687658b908de3cbdf71d2f8fbcc18779ae4a6018a28d715414bf76473144",
+    "bytes": 5082,
+    "contenido": "# Encargo harness-paralelo-c-20261108\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nProbar juguete c en paralelo con publicación autónoma\n\n## Entregable\n\nDos archivos sintéticos, verificación y commit/push propios\n\n## Criterio de aceptación\n\n1. Diff sólo agrega resultado.json y verificar.py en 05-herramientas/2026-11-08-harness/piloto-paralelo/c. 2. JSON exacto {\"tarea\": \"c\", \"valores\": [11, 13, 17], \"suma\": 41, \"maximo\": 17}. 3. verificar.py usa sólo stdlib, lee desde su carpeta, comprueba objeto completo (sin aceptar floats/bools como enteros), sale 0 con PARALELO_C_OK, rechaza discrepancias y no escribe archivos. 4. La propia ejecutora hace add/commit/push de su rama desde sandbox sin escalación; HEAD coincide con origin. 5. Evidencia host acredita tres ejecutoras reales con PID/SID distintos y solape, rechazo de cuarta y rutas solapadas sin crear esos procesos. 6. Revisor distinto coteja entrega, pruebas y evidencia, emite bueno antes de aceptar.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sergio autorizó este piloto y revisor distinto. Sólo cuota incluida ChatGPT: no API, compras, sudo, instalaciones, producción, Docker, n8n, app-server, mensajes ni otros servicios. No lanzar sesiones ni subagentes.\n- Una tarea y ruta exclusivas: 05-herramientas/2026-11-08-harness/piloto-paralelo/c. No modificar registros, reglas, archivos de otros juguetes ni metadatos de otros repositorios. Crear exactamente los dos archivos pedidos.\n- Antes de crear la entrega, después de leer reglas/contexto, esperá la señal del coordinador con este comando de sólo lectura (no escribas ni crees la señal). No hace falta explorar otras carpetas ni pedir permiso:\npython3 - <<'PYGATE'\nfrom pathlib import Path\nimport json,time\np=Path(\"/home/onia-codex-worker/operacion/controles/paralelo-20261108/liberar.json\")\nlimit=time.monotonic()+300\nprint(\"PARALELO_BARRERA_LISTO\",flush=True)\nwhile not p.exists():\n    if time.monotonic()>limit: raise SystemExit(\"BARRERA_TIMEOUT; informar y terminar sin publicar\")\n    time.sleep(0.25)\nassert json.loads(p.read_text())[\"liberar\"] is True\nprint(\"PARALELO_BARRERA_LIBERADA\",flush=True)\nPYGATE\nSi hay timeout o falla de permisos, informar y terminar, sin bypass. La espera no es una carga intensiva ni un servicio.\n- Después de la señal, crear/verificar el juguete, probar al menos un objeto discrepante en memoria sin modificar el JSON, luego git add de los dos paths explícitos, git commit -m \"test: juguete paralelo c del harness\" y git push origin HEAD:refs/heads/codex/ws-harness-paralelo-c-20261108. Nunca force. Comprobar git rev-parse HEAD y git ls-remote origin refs/heads/codex/ws-harness-paralelo-c-20261108.\n- El Git privado y la identidad técnica ya están preparados. Publicá vos desde el sandbox. El coordinador hará cierre, revisión e integración; no tu commit/push. Informar hash y comprobación.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/harness-paralelo-c-20261108.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": {
+    "revisor": "paralelo-revisor-c",
+    "criterio": "Los seis criterios cotejados por sesión distinta: juguete correcto, publicación propia y controles de concurrencia acreditados.",
+    "fecha": "2026-11-08T19:57:35.776125+00:00"
+  },
+  "asignacion": null,
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "paralelo-ejecutor-c",
+      "pid": 473438,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677284",
+      "supervisor_pid": 473424,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190677268",
+      "rama": "codex/ws-harness-paralelo-c-20261108",
+      "session_id": "01a1bcb8-4ee7-7c01-945c-9f0abd7e6263",
+      "estado": "cerrada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.jsonl",
+      "log_rel": "logs/harness-paralelo-c-20261108.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108",
+      "rutas": [
+        "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+      ],
+      "dry_run": false,
+      "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.1.briefing.txt",
+      "inicio": "2026-11-08T19:52:37.278359+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "git_repo": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/harness-paralelo-c-20261108.git/worktrees/onia-ws-harness-paralelo-c-20261108",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-08T19:53:46.456363+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "revisor",
+      "responsable": "paralelo-revisor-c",
+      "pid": 481698,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190695520",
+      "supervisor_pid": 481689,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190695505",
+      "rama": "(detached)",
+      "session_id": "01a1bcbb-1713-7101-99ac-47a434dd8dd2",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.revision-2.jsonl",
+      "log_rel": "logs/harness-paralelo-c-20261108.revision-2.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-paralelo-c-20261108-revision-2",
+      "rutas": [
+        "05-herramientas/2026-11-08-harness/piloto-paralelo/c"
+      ],
+      "dry_run": false,
+      "commit_base": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.briefing.txt",
+      "inicio": "2026-11-08T19:55:39.645517+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "entrega_sha256": "621c35ba1efabd181ab652e8fb93b627edfa6d4ec07c5545b141bec49a80c1fb",
+      "schema": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-paralelo-c-20261108.2.veredicto.json",
+      "fin": "2026-11-08T19:56:09.901895+00:00"
+    }
+  ],
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+    "criterio": "Diff limitado a los dos archivos exigidos y JSON exacto. Verificador stdlib, sin escrituras, ejecutado desde otra carpeta: PARALELO_C_OK; rechazó 18 discrepancias en memoria, incluidos floats y bools. La evidencia suministrada acredita commit/push autónomos sin escalación, HEAD igual a origin, tres ejecutoras con PID/session_id distintos y solape, y rechazos de cuarta y rutas solapadas sin crear procesos. Revisión independiente de sólo lectura; corresponde recoger este veredicto antes de aceptar.",
+    "revisor": "paralelo-revisor-c",
+    "session_id": "01a1bcbb-1713-7101-99ac-47a434dd8dd2",
+    "entrega_sha256": "621c35ba1efabd181ab652e8fb93b627edfa6d4ec07c5545b141bec49a80c1fb",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/revision-2-8126c184.json",
+      "sha256": "9f57eabc43f8616e09c180c43821367bd00e7a8c73638ac1cae8ed2953562db1",
+      "bytes": 607
+    }
+  },
+  "cierre": {
+    "commit": "85bc563fe2b96ed54b7b0748a9973f2a8d50ac94",
+    "commit_base": "26c332ac5bb49f9581229c4d469ba3cf57a0bfab",
+    "ramas_origin": [
+      "origin/codex/ws-harness-paralelo-c-20261108"
+    ],
+    "fecha": "2026-11-08T19:54:52.673703+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/cierre-r11-fd8c718c.json",
+      "sha256": "3e18b2f8b65345146a3556b9b20a97bd7166343d2150136e15f0615d52ef2a59",
+      "bytes": 278
+    }
+  },
+  "evidencias_revision": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-paralelo-c-20261108/revision-2-8126c184.json",
+      "sha256": "9f57eabc43f8616e09c180c43821367bd00e7a8c73638ac1cae8ed2953562db1",
+      "bytes": 607
+    }
+  ]
+}
