@@ -1,0 +1,37 @@
+# Reconciliar operación COMPLETA OnIA y presentar prioridades
+
+Encargo autorizado por Sergio el7nov2026 (pt100u), para SU sesión ya abierta de Codex Windows conectada al VPS. Este archivo es entrega de instrucciones, no prueba de envío ni ejecución. No iniciar otra sesión, otro exec, procesos de modelo, agentes ni tareas en paralelo. Trabaja solo en la sesión donde Sergio te pide leerlo.
+
+## Objetivo y resultado permitido
+Reconciliar el estado completo realmente recuperable de OnIA y presentar prioridades para que Sergio elija. NO comenzar la oferta workshop ni ejecutar trabajo comercial. La meta hasta14nov es Bs3000 de NUEVOS cobros conciliados; no hay evidencia aquí que acredite haberla alcanzado. Diferencia propuestas, decisiones, pruebas técnicas, entregas verificadas y resultados comerciales. No prometer “sin pérdida”: identifica lo faltante.
+
+## Fuentes y autoridad
+Repo fuente SOLO LECTURA: /home/onia-codex-worker/repos/onia. Lee AGENTS raíz y las instrucciones AGENTS base aplicables, reglas comunes, PLAN, ESTADO, ORQUESTACION y orquestacion.json según rutas reales del checkout. Recorre solo índices/documentación pertinentes para localizar fuentes; no scripts, secretos, medios ni históricos grandes. Anota HEAD y estado Git sin modificarlos. Sigue reglas aplicables de exclusión de ONIA-CENTRAL; no lo amplíes como fuente por referencias históricas.
+
+Fuera repo: /home/onia-codex-worker/operacion/fuentes-plan/ y /home/onia-codex-worker/operacion/resultados/. Prioriza PLAN-RECUPERADO-20261107-v2.md, INVENTARIO-WORKSHOP-20261107.md, REVISION-T003-20261107.md, PRUEBAS-OPERACION-MANUAL-20261107.md, T003-estado.json, MANUAL-SERGIO-VPS-20261107.md y sus anexos posteriores de acceso Windows. Si una ruta no existe, indícalo sin inventar. Usa documentos/índices existentes y referencias acotadas; no leer logs brutos de autenticación, tokens, bases de datos de apps ni chats por filesystem. Las doce exportaciones documentales son cobertura de documentos, no todos los chats originales. Una declaración antigua no reemplaza evidencia ni decisiones actuales de Sergio.
+
+## Decisiones vigentes7nov y recursos
+Codex solamente, modelo Sol ya validado gpt-6.1-sol y autenticación ChatGPT existente. Claude excluido: sin cuota. Una tarea activa, revisión secuencial; ahorrar cuota. Ningún fallback, APIkey, API facturada, nuevos modelos ni gastos. No inicies otra invocación para este encargo ni cambies configuración de permisos/modelo. Si la sesión actual no corresponde al motor autorizado, informa el bloqueo sin invocar otro motor. Operación manual, no autónoma24/7. Seis trabajos “hechos” en cola técnica no son seis resultados comerciales.
+
+## Inventario completo, legible
+Cubre las seis áreas: marketing, video, desarrollo, automatizaciones, organización y producto. Por cada área presenta tareas existentes por tema y utilidad (IDs solo referencia secundaria), entregas, estado declarado y verificado, evidencia con ruta/sección o líneas cuando sea práctico, bloqueos, dependencias, duplicados/solapamientos y fuentes no recuperadas. Incluye integradora/revisora, continuidad, dashboard/harness y límites reales documentados; diferencia diseño histórico de servicios/flujo hoy comprobados. No reactivar la cola histórica ni atribuir harness productivo al nuevo worker. Si falta evidencia de un área, marca cobertura parcial o desconocida, no “vacía” ni “terminada”.
+
+Compara historia con la decisión vigente sin borrar historia. Destaca inconsistencias entre PLAN/ESTADO/ORQUESTACION y el estado técnico medido. Distingue el ensayo de agentes del workshop de una prueba humana real, y propuestas de precio/fecha/capacidad de decisiones confirmadas. No priorices automáticamente workshop por ser el último inventario.
+
+## Entrega
+Solo reconciliación y prioridades, en español claro:
+1. Resumen real: listo, en curso, pendiente, bloqueado, no comprobado.
+2. Matriz seis áreas con fuentes, entregas/estados y bloqueos/duplicados.
+3. Decisiones vigentes vs historia y discrepancias que requieren elección.
+4. Tres próximos resultados propuestos, ordenados por utilidad hacia cobros conciliados al14nov, evidencia, dependencia y primer paso permitido. Son propuestas; NO comenzar ninguno.
+5. Continuidad: dónde están estado/guías/resultados; qué no depende de este chat y qué sigue dependiendo de acceso/permisos/cuota.
+6. Matriz fuentes/cobertura y pérdidas o desconocidos explícitos; no certificar “nada perdido”.
+7. Segunda pasada explícita de revisión documental de tu entrega: comprobar evidencia, cobertura seis áreas, no confundir técnica/comercio y ausencia de acciones externas. Señala correcciones y límites. Si una revisión independiente requiere otra invocación/permiso, deja esa revisión PENDIENTE para Sergio; no la automatices ni la declares realizada.
+
+Si los permisos actuales permiten persistir fuera repo, guarda solo el entregable en /home/onia-codex-worker/operacion/resultados/RECONCILIACION-ONIA-20261107.md sin sobrescribir otro trabajo existente. Si sandbox read-only impide escribir, devuelve texto completo en esta sesión y explica que NO quedó persistido; no amplíes permisos ni cambies sandbox. No afirmar entregado antes de comprobarlo. Al terminar muestra dónde está el resultado o indica “solo en esta sesión”, y qué elección concreta debe hacer Sergio.
+
+## Límites firmes
+No alterar master, checkout, Git config/branch, reglas o fuente; no commit/push/merge. No ejecutar scripts repo, dependencias, instalaciones, servicios, Docker, DB ni cambios en producción. No .env, credenciales, auth.json, claves, tokens, medios privados ni búsqueda de acceso. No compras, ads (siguen pausados), publicaciones, contactos, mensajes externos, deploy ni ingresos inventados. No ampliar permisos, cambiar cuenta existente onia-codex/harness, activar daemon/rutina/cola ni preparar oferta comercial. Ante bloqueo, informar causa y continuar únicamente lectura autorizada útil. Este encargo no autoriza negocio: termina en reconciliación y prioridades para elegir con Sergio.
+
+
+INSTRUCCIÓN DE COORDINACIÓN VIGENTE: Sergio confirmó app inactiva y autorizó este lote runner, que sustituye la modalidad original “solo sesión abierta”. Estás en PRODUCCIÓN T005; una revisión independiente T006 seguirá secuencialmente, no la lances. Sandbox read-only: no escribas archivos; el wrapper guardará stdout. No gastes herramientas intentando escribir. Entrega texto final completo, no solo un resumen ni afirmación de archivo creado. Cierra con sección RELEVO LOCAL que incluya HEAD/fuentes/estado/siguiente encargo, y RESUMEN EJECUTIVO con top3, cobertura/faltantes y una decisión material. Lee documentación por área e índices acotados para cobertura real. Presupuesto temporal5min; prioriza síntesis sustentada sin históricos grandes. No abras/retomes otro modelo ni app.

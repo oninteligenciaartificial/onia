@@ -1,0 +1,283 @@
+OpenAI Codex v0.167.0
+--------
+workdir: /home/onia-codex-worker/operacion
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR] (network access enabled)
+reasoning effort: none
+reasoning summaries: none
+session id: 01a1b744-2633-7772-a0cb-4ffb912765c2
+--------
+user
+=== REGLAS FIJAS MODO N8N (anteponer a todo encargo) ===
+- Puedes leer y editar workflows mediante la API REST de n8n. Para autenticarte ejecuta en cada comando: `set -a; . ~/.config/onia/n8n.env; set +a` y usa $N8N_API_URL y la cabecera `X-N8N-API-KEY: $N8N_API_KEY`. NUNCA imprimas, copies ni guardes el valor de la clave.
+- PROHIBIDO: activar, desactivar, borrar o ejecutar cualquier workflow en producción (nada de /activate, /deactivate, DELETE, ni ejecuciones). Cambios de estado y borrados solo con el sí explícito de Sergio, fuera de este encargo.
+- Antes de editar un workflow, guarda su JSON completo en ~/operacion/resultados/backups-n8n/<id>-<fecha UTC>.json.
+- Toda edición se hace sobre el workflow dejándolo INACTIVO si lo estaba; no cambies el campo active. Al enviar PUT, incluye solo los campos aceptados (name, nodes, connections, settings, staticData si aplica).
+- Tras editar, vuelve a leer el workflow y confirma que `active` no cambió.
+- Termina con una sección RESUMEN de máximo 5 líneas.
+- En este modo el runner ya tiene el lock y gestiona tareas/ y registro.tsv: NO ejecutes ./ejecutar.sh ni ./ejecutar-n8n.sh (tampoco --comprobar), no muevas tareas ni escribas en registro.tsv. Esto sustituye el paso de arranque de AGENTS.md para este modo.
+=== FIN REGLAS ===
+
+Encargo T011-N8N — Auditoría Radar YT y preparación Radar IA
+
+(a) Agente Radar YT (ynNMGtW8TCDCBMdS, ACTIVO): NO modificar. Lee el workflow y sus 2 últimas ejecuciones con datos (GET /api/v1/executions?workflowId=ynNMGtW8TCDCBMdS&includeData=true&limit=2). Evalúa la calidad de la salida (stdout/stderr SSH, ideas generadas, errores silenciosos, duplicados). Propón por escrito una alerta de fallo concreta (nodos a añadir y condición), sin aplicarla.
+
+(b) ONIA - Radar de Novedades IA (QGXVyRSgrArxfolj, INACTIVO): déjalo seguro para encender más adelante. Backup primero. Cambios:
+ 1. settings.timezone = "America/La_Paz".
+ 2. Escapar HTML (&, <, >) en todo texto dinámico enviado a Telegram (parse_mode HTML).
+ 3. Evitar ejecuciones solapadas si es posible (p. ej. timeout del comando SSH menor a 2 h y/o un guardado de lock en staticData o en el comando; explica la opción elegida).
+ Déjalo INACTIVO. Relee y confirma active=false.
+
+Informa con exactitud qué cambió (antes/después por nodo/campo), ruta del backup, y el estado active de ambos workflows leído de la API al final.
+
+codex
+Voy a revisar las instrucciones locales y consultar ambos workflows y las dos últimas ejecuciones de Radar YT. Después guardaré el backup de Radar IA y aplicaré los cambios, sin ejecutar workflows ni cambiar su estado.
+
+exec
+/bin/bash -lc "pwd; rg --files -g 'LEEME.md' -g '*T011*' -g 'AGENTS.md' -g 'T001.md'" in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+/home/onia-codex-worker/operacion
+AGENTS.md
+resultados/T011-N8N-bloqueo.md
+resultados/T001.md
+tareas/error/T011-N8N.txt
+tareas/en-curso/T011B-N8N.txt
+LEEME.md
+
+exec
+/bin/bash -lc 'cat LEEME.md tareas/error/T011-N8N.txt tareas/en-curso/T011B-N8N.txt resultados/T011-N8N-bloqueo.md' in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+# Operación manual vigente
+
+Único ejecutor: Codex mediante ChatGPT Sol, modelo `gpt-6.1-sol`. Sin API, Claude, fallback, subagentes ni llamadas anidadas. Solo una tarea manual a la vez; ninguna activación automática.
+
+El modelo trabaja en `read-only`. En ejecución headless, la aprobación efectiva es `never`: las solicitudes de escalación se rechazan. Esto no desactiva el sandbox ni autoriza bypass. El envoltorio exterior conserva los artefactos.
+
+Fuente real autorizada para lectura: `/home/onia-codex-worker/repos/onia`, rama `master`, HEAD verificado `e55812ce1bc8ef798fb370257ba887d07acccc53`, checkout limpio según la comprobación aportada. No modificar ni ejecutar scripts del repositorio.
+
+Sin red de herramientas, credenciales, privados, producción, instalaciones, publicaciones, contactos, pagos, push o deploy. No utilizar conectores heredados. Ads pausados; cobros reales desconocidos.
+
+Lee el encargo y recupera estado mediante `registro.tsv`, `tareas/` y `resultados/`. Consulta:
+
+- `resultados/MANUAL-SERGIO-VPS-20261107.md`
+- `resultados/INVENTARIO-WORKSHOP-20261107.md`
+- `resultados/CONTINUIDAD-T003-20261107.md`
+- `resultados/T003-estado.json`
+
+T002 está completada: no reactivarla. T003 terminó con rc0; T004 la acepta técnicamente como documentación. Esa revisión separada no equivale a aceptación humana/comercial. `hechas` solo indica ejecución terminada correctamente.
+
+Siguiente prueba pendiente: reanudar T003 usando su session ID exacto, restricciones actuales, lock y timeout del manual. No se ha probado todavía. Ningún reintento automático; los fallos requieren revisión manual.
+
+Autonomía 24 h: cero. No hay daemon, persistencia garantizada ni cuota garantizada; cuota restante desconocida.
+
+El LEEME anterior se conserva como histórico, sin vigencia instructiva.
+
+## Cierre verificado7nov2026 America/Caracas
+ProducciónT003, revisiónT004 y retoma misma sesión completadas0;3llamadas,6hechas técnicas,0activas/pendientes/error. Prevalece anexo actualizado del manual resultados/MANUAL-SERGIO-VPS-20261107.md y reporte resultados/PRUEBAS-OPERACION-MANUAL-20261107.md. CLI solo lectura acotada probado; acceso directo Windows al worker todavía requiere autorización públicaWindows; no contraseña worker ni authorized_keys configurados. No confundir hechos técnicos con resultados comerciales.
+
+## Último lote sustantivo7nov2026
+Reconciliación seis áreas T005 + revisión independiente T006, ambas0. Correcciones textuales del revisor incorporadas, sin tercer modelo. Ver ESTADO-LOCAL.json y resultados/RELEVO-RECONCILIACION-20261107.md para resultado, aceptación condicionada satisfecha documentalmente, fuentes y siguiente encargo; no son cobros. Relevo local separado del repo canónico; app no comparte lock.
+
+## Panel T107 y documentación pendiente
+Panel Notion ordenado y readback verificado cinco secciones+LLMmap, historia intacta. Limpieza solo propuesta, no archivar ni borrar sin lista confirmada. Parche documental gitapply--check0, NO aplicado/commit/push; archivo y pendiente en ESTADO-LOCAL.json. T009una llamada adicional, autocontrol no independiente; arquitectura y n8n continúan no implementados.
+
+## Modo n8n (ejecutar-n8n.sh) — 7nov2026
+Autorizado por Sergio: "Sí, ábrele n8n; activar y borrar solo con mi sí". `ejecutar.sh` sigue intacto en solo lectura. `./ejecutar-n8n.sh NOMBRE.txt` usa la misma estructura (lock, tareas/, resultados/, registro.tsv con prefijo `n8n:`), pero corre Codex gpt-6.1-sol con `--sandbox workspace-write`, red habilitada y timeout de 900 s, y antepone `reglas-n8n.txt` a cada encargo. Credenciales: `~/.config/onia/n8n.env` (N8N_API_URL, N8N_API_KEY), nunca imprimir. Prohibido activar, desactivar, borrar o ejecutar workflows; backup previo en `resultados/backups-n8n/`; ediciones dejan `active` sin cambios.
+Encargo T011-N8N — Auditoría Radar YT y preparación Radar IA
+
+(a) Agente Radar YT (ynNMGtW8TCDCBMdS, ACTIVO): NO modificar. Lee el workflow y sus 2 últimas ejecuciones con datos (GET /api/v1/executions?workflowId=ynNMGtW8TCDCBMdS&includeData=true&limit=2). Evalúa la calidad de la salida (stdout/stderr SSH, ideas generadas, errores silenciosos, duplicados). Propón por escrito una alerta de fallo concreta (nodos a añadir y condición), sin aplicarla.
+
+(b) ONIA - Radar de Novedades IA (QGXVyRSgrArxfolj, INACTIVO): déjalo seguro para encender más adelante. Backup primero. Cambios:
+ 1. settings.timezone = "America/La_Paz".
+ 2. Escapar HTML (&, <, >) en todo texto dinámico enviado a Telegram (parse_mode HTML).
+ 3. Evitar ejecuciones solapadas si es posible (p. ej. timeout del comando SSH menor a 2 h y/o un guardado de lock en staticData o en el comando; explica la opción elegida).
+ Déjalo INACTIVO. Relee y confirma active=false.
+
+Informa con exactitud qué cambió (antes/después por nodo/campo), ruta del backup, y el estado active de ambos workflows leído de la API al final.
+Encargo T011-N8N — Auditoría Radar YT y preparación Radar IA
+
+(a) Agente Radar YT (ynNMGtW8TCDCBMdS, ACTIVO): NO modificar. Lee el workflow y sus 2 últimas ejecuciones con datos (GET /api/v1/executions?workflowId=ynNMGtW8TCDCBMdS&includeData=true&limit=2). Evalúa la calidad de la salida (stdout/stderr SSH, ideas generadas, errores silenciosos, duplicados). Propón por escrito una alerta de fallo concreta (nodos a añadir y condición), sin aplicarla.
+
+(b) ONIA - Radar de Novedades IA (QGXVyRSgrArxfolj, INACTIVO): déjalo seguro para encender más adelante. Backup primero. Cambios:
+ 1. settings.timezone = "America/La_Paz".
+ 2. Escapar HTML (&, <, >) en todo texto dinámico enviado a Telegram (parse_mode HTML).
+ 3. Evitar ejecuciones solapadas si es posible (p. ej. timeout del comando SSH menor a 2 h y/o un guardado de lock en staticData o en el comando; explica la opción elegida).
+ Déjalo INACTIVO. Relee y confirma active=false.
+
+Informa con exactitud qué cambió (antes/después por nodo/campo), ruta del backup, y el estado active de ambos workflows leído de la API al final.
+# T011-N8N bloqueada
+
+La lectura de LEEME.md, registro.tsv y tareas/en-curso/T011-N8N.txt se completó.
+
+El arranque obligatorio `./ejecutar.sh --comprobar` terminó con rc=2 y el mensaje «Hay otra ejecución o comprobación en esta carpeta».
+
+La inspección local de ejecutar-n8n.sh muestra que el runner mantiene .ejecutar.lock mediante FD 9 durante la llamada al motor. El registro contiene un inicio de esta tarea a las 2026-11-07T18:26:52Z. Esto es compatible con un conflicto del comprobador con el propio runner, pero no se verificó el titular del lock.
+
+Se detiene la tarea conforme a la regla local de no reintentar automáticamente los fallos. No se accedió a la API ni al archivo de autenticación. No se creó backup ni se modificó ningún workflow. Los estados active de ambos workflows no fueron consultados y permanecen sin verificar.
+
+Pendientes completos los apartados (a) y (b). Hace falta revisar manualmente la compatibilidad del comprobador con el lock del runner antes de una nueva ejecución autorizada.
+
+exec
+/bin/bash -lc "set -a; . ~/.config/onia/n8n.env; set +a
+python3 - <<'PY'
+import os,json,urllib.request,datetime,pathlib
+base=os.environ['N8N_API_URL'].rstrip('/')
+if not base.endswith('/api/v1'): base+='/api/v1'
+p=pathlib.Path('resultados/T011-N8N'); p.mkdir(exist_ok=True)
+for name,endpoint in [('yt','/workflows/ynNMGtW8TCDCBMdS'),('ia','/workflows/QGXVyRSgrArxfolj'),('yt-executions','/executions?workflowId=ynNMGtW8TCDCBMdS&includeData=true&limit=2')]:
+ r=urllib.request.Request(base+endpoint,headers={'X-N8N-API-KEY':os.environ['N8N_API_KEY']})
+ data=json.load(urllib.request.urlopen(r,timeout=40)); (p/(name+'.json')).write_text(json.dumps(data,ensure_ascii=False,indent=2))
+ print(name, 'saved', 'active='+str(data.get('active')) if name"'!='"'yt-executions' else 'count='+str(len(data.get('data',[]))))
+PY" in /home/onia-codex-worker/operacion
+ succeeded in 203ms:
+yt saved active=True
+ia saved active=False
+yt-executions saved count=2
+
+exec
+/bin/bash -lc "python3 - <<'PY'
+import json
+from pathlib import Path
+for name in ['yt','ia']:
+ d=json.loads(Path('resultados/T011-N8N/'+name+'.json').read_text()); print('\\nWORKFLOW',name,'settings',d['settings'])
+ for n in d['nodes']: print(n['name'],n['type'],json.dumps(n['parameters'],ensure_ascii=False))
+d=json.loads(Path('resultados/T011-N8N/yt-executions.json').read_text())
+for e in d['data']:
+ print('\\nEXECUTION',json.dumps(e,ensure_ascii=False))
+PY" in /home/onia-codex-worker/operacion
+ succeeded in 61ms:
+
+WORKFLOW yt settings {'executionOrder': 'v1', 'availableInMCP': True}
+Miercoles 07:45 n8n-nodes-base.scheduleTrigger {"rule": {"interval": [{"field": "cronExpression", "expression": "45 7 * * 3"}]}}
+Correr Radar YT (VPS) n8n-nodes-base.ssh {"resource": "command", "operation": "execute", "authentication": "privateKey", "command": "RADAR_DRY_RUN=false RADAR_LIMIT=6 bash /opt/onia/radar-yt-agent-run.sh", "cwd": "/root"}
+
+WORKFLOW ia settings {'executionOrder': 'v1', 'availableInMCP': True}
+Cada 2h n8n-nodes-base.scheduleTrigger {"rule": {"interval": [{"field": "cronExpression", "expression": "0 */2 * * *"}]}}
+Correr Radar IA (VPS) n8n-nodes-base.ssh {"resource": "command", "operation": "execute", "authentication": "privateKey", "command": "bash /opt/onia/ai-news-radar-run.sh", "cwd": "/root"}
+Extraer novedades n8n-nodes-base.code {"mode": "runOnceForAllItems", "language": "javaScript", "jsCode": "const NL = String.fromCharCode(10);\nconst raw = ($input.first().json.stdout || \"\").trim();\nlet s;\ntry { s = JSON.parse(raw.split(NL).pop()); } catch (e) { s = { text: \"Radar IA - ERROR: no pude leer la salida.\", notify: true, error: true }; }\n// Decision Sergio 2026-08-28: Telegram avisa SOLO errores. Las novedades quedan en el log\n// del radar (/opt/onia) y en la memoria anti-repeticion; ya no viajan al celular.\nconst notify = s.error === true;\nreturn [{ json: { text: String(s.text || \"(sin contenido)\").slice(0, 3900), notify: notify } }];"}
+Hay lanzamiento grande? n8n-nodes-base.if {"conditions": {"options": {"caseSensitive": true, "typeValidation": "loose"}, "conditions": [{"id": "notify", "leftValue": "={{ $json.notify ? 'yes' : 'no' }}", "rightValue": "yes", "operator": {"type": "string", "operation": "equals"}}], "combinator": "and"}}
+Enviar a Sergio n8n-nodes-base.telegram {"resource": "message", "operation": "sendMessage", "chatId": "6830070978", "text": "={{ $json.text }}", "additionalFields": {"appendAttribution": false, "disable_web_page_preview": true, "parse_mode": "HTML"}}
+
+EXECUTION {"id": "79276", "finished": true, "mode": "trigger", "retryOf": null, "retrySuccessId": null, "status": "success", "startedAt": "2026-11-04T11:45:00.083Z", "stoppedAt": "2026-11-04T11:45:25.721Z", "workflowId": "ynNMGtW8TCDCBMdS", "waitTill": null, "storedAt": "db", "jsonSizeBytes": 5063, "workflowVersionId": "6f33c328-31b0-48b6-8a4e-d9fd457bd079", "data": {"version": 1, "startData": {}, "resultData": {"runData": {"Miercoles 07:45": [{"startTime": 1793792700348, "executionIndex": 0, "source": [], "hints": [], "executionTime": 0, "executionStatus": "success", "data": {"main": [[{"json": {"timestamp": "2026-11-04T07:45:00.015-04:00", "Readable date": "November 4th 2026, 7:45:00 am", "Readable time": "7:45:00 am", "Day of week": "Wednesday", "Year": "2026", "Month": "November", "Day of month": "04", "Hour": "07", "Minute": "45", "Second": "00", "Timezone": "America/La_Paz (UTC-04:00)"}, "pairedItem": {"item": 0}}]]}}], "Correr Radar YT (VPS)": [{"startTime": 1793792700348, "executionIndex": 1, "source": [{"previousNode": "Miercoles 07:45", "previousNodeOutput": 0, "previousNodeRun": 0}], "hints": [], "executionTime": 25373, "executionStatus": "success", "data": {"main": [[{"json": {"code": 0, "signal": null, "stdout": "{\"ok\":true,\"dryRun\":false,\"day\":\"2026-11-04\",\"queries\":[\"automatizacion con IA para pequenos negocios\",\"chatbot de whatsapp para negocios\",\"casos de uso de inteligencia artificial en pymes\",\"IA practica para emprendedores latam\",\"como automatizar tu negocio con inteligencia artificial\"],\"found\":50,\"pool\":24,\"proposed\":5,\"inserted\":5,\"ideas\":[{\"title\":\"Antes y después: tu WhatsApp sin y con chatbot ONIA\",\"format\":\"Reel\",\"hook\":\"¿Aún respondes todos los mensajes a mano? Mira cómo un chatbot puede cambiar tu WhatsApp\",\"source_url\":\"https://www.youtube.com/watch?v=ifny_ep4nO8\",\"inspired_by\":\"✅How to make a Whatsapp CHATBOT to SELL 🤖💰| Easy and cheap [tutorial]\",\"views\":267807,\"idea_key\":\"idea-radaryt-2026-11-04-6hs7ic\"},{\"title\":\"Transforma tu negocio con automatizaciones ONIA en n8n\",\"format\":\"Carrusel\",\"hook\":\"¿Sabes cuánto tiempo pierdes en tareas repetitivas? Mira cómo automatizar con ONIA cambia todo\",\"source_url\":\"https://www.youtube.com/watch?v=7Z-vRvIUqNs\",\"inspired_by\":\"Curso Completo De N8N: Cómo Crear y Vender Automatizaciones IA\",\"views\":476261,\"idea_key\":\"idea-radaryt-2026-11-04-1n66cn\"},{\"title\":\"Delegar y automatizar: el cambio que tu negocio necesita\",\"format\":\"Short\",\"hook\":\"¿Quieres dejar de hacer todo tú mismo? Descubre el poder de delegar y automatizar con ONIA\",\"source_url\":\"https://www.youtube.com/watch?v=GPIjIOIKvhs\",\"inspired_by\":\"Guía definitiva para DELEGAR y AUTOMATIZAR tu negocio\",\"views\":57401,\"idea_key\":\"idea-radaryt-2026-11-04-en17fu\"},{\"title\":\"Servicio al cliente 24/7 con chatbot WhatsApp ONIA: antes y después\",\"format\":\"Reel\",\"hook\":\"¿Atender clientes a cualquier hora? Así era antes y así es con el chatbot ONIA\",\"source_url\":\"https://www.youtube.com/watch?v=yDGrQfqL240\",\"inspired_by\":\"How to Create Your OWN Customer Service CHATBOT for WhatsApp in Less Than 10 MINUTES\",\"views\":225277,\"idea_key\":\"idea-radaryt-2026-11-04-j4jiug\"},{\"title\":\"Automatiza tu negocio sin código con ONIA: caso real antes y después\",\"format\":\"Carrusel\",\"hook\":\"¿Crees que automatizar es complicado? Mira cómo ONIA lo hace simple y efectivo\",\"source_url\":\"https://www.youtube.com/watch?v=WB1EIUriONk\",\"inspired_by\":\"Cómo Automatizar el Trabajo de tu Negocio con Inteligencia Artificial y No-Code | EraDigital Podcast\",\"views\":29643,\"idea_key\":\"idea-radaryt-2026-11-04-omirij\"}],\"notify\":true}", "stderr": ""}, "pairedItem": {"item": 0}}]]}}]}, "lastNodeExecuted": "Correr Radar YT (VPS)"}, "executionData": {"contextData": {}, "nodeExecutionStack": [], "metadata": {}, "waitingExecution": {}, "waitingExecutionSource": {}, "runtimeData": {"version": 1, "establishedAt": 1793792700032, "source": "trigger", "triggerNode": {"name": "Miercoles 07:45", "type": "n8n-nodes-base.scheduleTrigger"}, "redaction": {"version": 2, "production": false, "manual": false}}}, "resumeToken": "e041ba3d13220741fb714c130ac4a5742d0212536fe649f11dce36848d001176"}, "workflowData": {"id": "ynNMGtW8TCDCBMdS", "name": "ONIA - Agente Radar YT (ideas, panel-only)", "nodes": [{"id": "c8691c57-c5b7-4e80-9eed-f0f41a6dd4a0", "name": "Miercoles 07:45", "type": "n8n-nodes-base.scheduleTrigger", "typeVersion": 1.2, "position": [0, 0], "parameters": {"notice": "", "rule": {"interval": [{"field": "cronExpression", "notice": "", "expression": "45 7 * * 3"}]}, "skipDurableScheduler": false}}, {"id": "9f8b6757-5616-4801-a472-a4b994c4a401", "name": "Correr Radar YT (VPS)", "type": "n8n-nodes-base.ssh", "typeVersion": 1, "position": [224, 0], "parameters": {"authentication": "privateKey", "resource": "command", "operation": "execute", "command": "RADAR_DRY_RUN=false RADAR_LIMIT=6 bash /opt/onia/radar-yt-agent-run.sh", "cwd": "/root"}, "credentials": {"sshPrivateKey": {"id": "4XKauEX3b6cqaDhW", "name": "ONIA VPS SSH"}}}], "connections": {"Miercoles 07:45": {"main": [[{"node": "Correr Radar YT (VPS)", "type": "main", "index": 0}]]}}, "settings": {"executionOrder": "v1", "availableInMCP": true}, "nodeGroups": []}, "customData": {}}
+
+EXECUTION {"id": "75824", "finished": true, "mode": "trigger", "retryOf": null, "retrySuccessId": null, "status": "success", "startedAt": "2026-10-28T11:45:00.066Z", "stoppedAt": "2026-10-28T11:45:21.830Z", "workflowId": "ynNMGtW8TCDCBMdS", "waitTill": null, "storedAt": "db", "jsonSizeBytes": 4986, "workflowVersionId": "6f33c328-31b0-48b6-8a4e-d9fd457bd079", "data": {"version": 1, "startData": {}, "resultData": {"runData": {"Miercoles 07:45": [{"startTime": 1793187900090, "executionIndex": 0, "source": [], "hints": [], "executionTime": 1, "executionStatus": "success", "data": {"main": [[{"json": {"timestamp": "2026-10-28T07:45:00.021-04:00", "Readable date": "October 28th 2026, 7:45:00 am", "Readable time": "7:45:00 am", "Day of week": "Wednesday", "Year": "2026", "Month": "October", "Day of month": "28", "Hour": "07", "Minute": "45", "Second": "00", "Timezone": "America/La_Paz (UTC-04:00)"}, "pairedItem": {"item": 0}}]]}}], "Correr Radar YT (VPS)": [{"startTime": 1793187900091, "executionIndex": 1, "source": [{"previousNode": "Miercoles 07:45", "previousNodeOutput": 0, "previousNodeRun": 0}], "hints": [], "executionTime": 21737, "executionStatus": "success", "data": {"main": [[{"json": {"code": 0, "signal": null, "stdout": "{\"ok\":true,\"dryRun\":false,\"day\":\"2026-10-28\",\"queries\":[\"automatizacion con IA para pequenos negocios\",\"chatbot de whatsapp para negocios\",\"casos de uso de inteligencia artificial en pymes\",\"IA practica para emprendedores latam\",\"como automatizar tu negocio con inteligencia artificial\"],\"found\":50,\"pool\":24,\"proposed\":5,\"inserted\":5,\"ideas\":[{\"title\":\"Automatiza tu WhatsApp para vender sin perder tiempo\",\"format\":\"Reel\",\"hook\":\"¿Aún respondes todos los mensajes de tus clientes a mano?\",\"source_url\":\"https://www.youtube.com/watch?v=ifny_ep4nO8\",\"inspired_by\":\"✅How to make a Whatsapp CHATBOT to SELL 🤖💰| Easy and cheap [tutorial]\",\"views\":267723,\"idea_key\":\"idea-radaryt-2026-10-28-ea2lx1\"},{\"title\":\"Simplifica tareas repetitivas con automatizaciones sin código\",\"format\":\"Carrusel\",\"hook\":\"¿Sabías que puedes automatizar tareas diarias sin ser experto en tecnología?\",\"source_url\":\"https://www.youtube.com/watch?v=7Z-vRvIUqNs\",\"inspired_by\":\"Curso Completo De N8N: Cómo Crear y Vender Automatizaciones IA\",\"views\":469737,\"idea_key\":\"idea-radaryt-2026-10-28-f0mmf7\"},{\"title\":\"Crea un agente de ventas en WhatsApp que trabaje 24/7\",\"format\":\"Short\",\"hook\":\"Tu negocio puede vender en WhatsApp sin que tú respondas cada mensaje.\",\"source_url\":\"https://www.youtube.com/watch?v=IjyXIYtxesA\",\"inspired_by\":\"Automate WhatsApp with AI and create your sales agent (without answering yourself)\",\"views\":256925,\"idea_key\":\"idea-radaryt-2026-10-28-2t6kq2\"},{\"title\":\"Primeros pasos para tener un asistente IA que automatice tu negocio\",\"format\":\"Reel\",\"hook\":\"¿Quieres un asistente inteligente que trabaje por ti? Te mostramos cómo crear uno fácil y rápido.\",\"source_url\":\"https://www.youtube.com/watch?v=ZnlLfKR-vDQ\",\"inspired_by\":\"Create your first AI AGENT in 15 minutes (no coding)\",\"views\":515987,\"idea_key\":\"idea-radaryt-2026-10-28-7kdnek\"},{\"title\":\"Montar un chatbot gratis en WhatsApp sin programar con n8n\",\"format\":\"Carrusel\",\"hook\":\"¿Quieres un chatbot en WhatsApp sin gastar ni programar? Te mostramos cómo hacerlo gratis.\",\"source_url\":\"https://www.youtube.com/watch?v=tG8GR7S80f8\",\"inspired_by\":\"How to Create a WhatsApp Chatbot with AI for FREE (N8N Without Programming)\",\"views\":61137,\"idea_key\":\"idea-radaryt-2026-10-28-o9gva5\"}],\"notify\":true}", "stderr": ""}, "pairedItem": {"item": 0}}]]}}]}, "lastNodeExecuted": "Correr Radar YT (VPS)"}, "executionData": {"contextData": {}, "nodeExecutionStack": [], "metadata": {}, "waitingExecution": {}, "waitingExecutionSource": {}, "runtimeData": {"version": 1, "establishedAt": 1793187900029, "source": "trigger", "triggerNode": {"name": "Miercoles 07:45", "type": "n8n-nodes-base.scheduleTrigger"}, "redaction": {"version": 2, "production": false, "manual": false}}}, "resumeToken": "5a81f4b490ba02d9dc36c240b019a33676215e56cb91fc440514208cc8eda6d8"}, "workflowData": {"id": "ynNMGtW8TCDCBMdS", "name": "ONIA - Agente Radar YT (ideas, panel-only)", "nodes": [{"id": "c8691c57-c5b7-4e80-9eed-f0f41a6dd4a0", "name": "Miercoles 07:45", "type": "n8n-nodes-base.scheduleTrigger", "typeVersion": 1.2, "position": [0, 0], "parameters": {"notice": "", "rule": {"interval": [{"field": "cronExpression", "notice": "", "expression": "45 7 * * 3"}]}, "skipDurableScheduler": false}}, {"id": "9f8b6757-5616-4801-a472-a4b994c4a401", "name": "Correr Radar YT (VPS)", "type": "n8n-nodes-base.ssh", "typeVersion": 1, "position": [224, 0], "parameters": {"authentication": "privateKey", "resource": "command", "operation": "execute", "command": "RADAR_DRY_RUN=false RADAR_LIMIT=6 bash /opt/onia/radar-yt-agent-run.sh", "cwd": "/root"}, "credentials": {"sshPrivateKey": {"id": "4XKauEX3b6cqaDhW", "name": "ONIA VPS SSH"}}}], "connections": {"Miercoles 07:45": {"main": [[{"node": "Correr Radar YT (VPS)", "type": "main", "index": 0}]]}}, "settings": {"executionOrder": "v1", "availableInMCP": true}, "nodeGroups": []}, "customData": {}}
+
+codex
+Radar YT terminó ambas ejecuciones con código SSH 0, stderr vacío y cinco ideas insertadas según su salida. Dos fuentes se repiten entre semanas; además, “caso real” aparece sin evidencia que lo respalde en los datos revisados. El workflow termina en SSH y no valida el resultado ni emite alertas.
+
+Para Radar IA usaré un lock remoto con `flock` y un límite de 110 minutos con `timeout`. No ejecutaré el comando durante esta revisión; la disponibilidad de esas utilidades quedará pendiente de comprobar antes del encendido.
+
+exec
+/bin/bash -lc "python3 - <<'PY'
+import json,pathlib,datetime,copy
+p=pathlib.Path('resultados/T011-N8N'); old=json.loads((p/'ia.json').read_text()); new=copy.deepcopy(old)
+b=pathlib.Path('resultados/backups-n8n'); b.mkdir(exist_ok=True); dest=b/('QGXVyRSgrArxfolj-'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'.json'); dest.write_text(json.dumps(old,ensure_ascii=False,indent=2))
+new['settings']['timezone']='America/La_Paz'
+for n in new['nodes']:
+ if n['name']=='Enviar a Sergio': n['parameters']['text']='={{ String("'$json.text ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") }}'"'
+ if n['name']=='Correr Radar IA (VPS)': n['parameters']['command']='timeout --signal=TERM --kill-after=30s 110m flock --nonblock --conflict-exit-code 75 /opt/onia/.ai-news-radar-n8n.lock bash /opt/onia/ai-news-radar-run.sh'
+payload={k:new[k] for k in ['name','nodes','connections','settings']}
+if old.get('staticData') is not None: payload['staticData']=old['staticData']
+(p/'put-payload.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)); (p/'backup-path.txt').write_text(str(dest.resolve())+'\\n')
+print('Backup:',dest)
+PY" in /home/onia-codex-worker/operacion
+ succeeded in 8ms:
+Backup: resultados/backups-n8n/QGXVyRSgrArxfolj-20261107T182815Z.json
+
+exec
+/bin/bash -lc "set -a; . ~/.config/onia/n8n.env; set +a
+python3 - <<'PY'
+import os,json,urllib.request,pathlib
+p=pathlib.Path('resultados/T011-N8N'); base=os.environ['N8N_API_URL'].rstrip('/')
+if not base.endswith('/api/v1'): base+='/api/v1'
+headers={'X-N8N-API-KEY':os.environ['N8N_API_KEY'],'Content-Type':'application/json'}
+def get(id): return json.load(urllib.request.urlopen(urllib.request.Request(base+'/workflows/'+id,headers=headers),timeout=40))
+old=json.loads((p/'ia.json').read_text()); current=get(old['id'])
+assert current==old, 'Workflow cambió desde lectura inicial; no editar'
+r=urllib.request.Request(base+'/workflows/'+old['id'],headers=headers,data=(p/'put-payload.json').read_bytes(),method='PUT')
+response=json.load(urllib.request.urlopen(r,timeout=40)); (p/'put-response.json').write_text(json.dumps(response,ensure_ascii=False,indent=2))
+for name,id in [('ia','QGXVyRSgrArxfolj'),('yt','ynNMGtW8TCDCBMdS')]:
+ d=get(id); (p/(name+'-final.json')).write_text(json.dumps(d,ensure_ascii=False,indent=2)); original=json.loads((p/(name+'.json')).read_text()); assert d['active']==original['active']; print(name,'active=',d['active'])
+ if name=='ia':
+  payload=json.loads((p/'put-payload.json').read_text())
+  for k,v in payload.items(): assert d[k]==v, 'Readback mismatch '+k
+ else:
+  for k in ['nodes','connections','settings','updatedAt']: assert d[k]==original[k], 'YT changed '+k
+print('Readback verificado; no ejecuciones solicitadas')
+PY" in /home/onia-codex-worker/operacion
+ succeeded in 238ms:
+ia active= False
+yt active= True
+Readback verificado; no ejecuciones solicitadas
+
+exec
+/bin/bash -lc "python3 - <<'PY'
+import json,pathlib,datetime
+p=pathlib.Path('resultados/T011-N8N'); old=json.loads((p/'ia.json').read_text()); new=json.loads((p/'ia-final.json').read_text()); backup=(p/'backup-path.txt').read_text().strip()
+s='''# T011-N8N — Auditoría y preparación
+
+Finalizado: '''+datetime.datetime.now(datetime.timezone.utc).isoformat()+'''. No se ejecutó ningún workflow, comando remoto, activación, desactivación o borrado. No se modificaron tareas/ ni registro.tsv; los gestiona el runner.
+
+## Radar YT — lectura solamente
+
+- Ejecución 79276: 2026-11-04 11:45 UTC, success; SSH 25,373 s, code=0, signal=null, stderr vacío. stdout JSON válido: ok=true, dryRun=false, found=50, pool=24, proposed=5, inserted=5, notify=true.
+- Ejecución 75824: 2026-10-28 11:45 UTC, success; SSH 21,737 s, code=0, signal=null, stderr vacío. Mismos contadores y banderas.
+- Diez ideas con título, formato, hook, fuente y clave; formatos Reel/Carrusel/Short. No hay títulos ni idea_key idénticos en esta muestra. Las dos fuentes ifny_ep4nO8 y 7Z-vRvIUqNs se reutilizan entre semanas: 2 de 5 fuentes de la semana más reciente. Hay reiteración temática de WhatsApp/chatbots y automatización, con hooks genéricos y poco detalle accionable.
+- El título «Automatiza tu negocio sin código con ONIA: caso real antes y después» afirma un caso real que estos datos no prueban. «Gratis», «vender ... 24/7» y otras promesas requieren revisión editorial; las visitas no prueban resultados de ONIA. No se verificaron videos, destinos de inserción ni resultados comerciales.
+- No se observan fallos declarados en stdout/stderr. El éxito de n8n no valida el significado de stdout: solo hay Schedule → SSH. notify=true no tiene consumidor; JSON inválido, ok=false, inserciones parciales o un código remoto no cero pueden quedar sin alerta. RADAR_LIMIT=6 con 5 propuestas no demuestra fallo: puede ser un máximo.
+
+## Propuesta de alerta YT — NO aplicada
+
+Añadir «Validar resultado Radar YT» (Code) después de SSH, «¿Fallo Radar YT?» (IF) y «Avisar fallo Radar YT» (Telegram). Code parsea stdout y marca fallo si code "'!== 0, signal no nula, stderr no vacío, JSON inválido, ok !== true, dryRun !== false, contadores no enteros/no negativos, proposed !== ideas.length, inserted < proposed, o claves/fuentes repetidas dentro del lote. proposed=0 con found>0 debe generar advertencia para revisión, no afirmar automáticamente un fallo. Alertar con ID de ejecución, motivo, code y extracto limitado/escapado de stderr; no enviar la salida completa ni credenciales.
+
+Para fallos de conexión/infraestructura que impiden llegar a Code: proponer workflow separado Error Trigger → Telegram y asociarlo como errorWorkflow de YT, con aviso del nodo y ejecución fallidos. Esto requiere una edición futura autorizada de YT. La repetición entre semanas requiere un historial persistente de source_url/idea_key; no se resuelve con una comprobación local del lote.
+
+## Radar IA — backup y cambios exactos
+
+Backup completo previo al PUT: `'"'''+backup+'''"'`.
+
+'"'''
+s+='| Nodo/campo | Antes | Después |\\n|---|---|---|\\n'
+s+='| settings.timezone | Ausente | America/La_Paz |\\n'
+for a,b in zip(old['nodes'],new['nodes']):
+ for k,v in a['parameters'].items():
+  if v"'!=b['"'parameters'].get(k): s+='| '+a['name']+' / parameters.'+k+' | "'`'"'+str(v)+'"'` | `'"'+str(b['parameters'][k])+'"'` |'"\\n'
+s+='''
+El escape se aplica en el único nodo Telegram, sobre toda la cadena dinámica y en orden & → < → >. parse_mode sigue HTML. El texto de entrada ya estaba limitado a 3900 caracteres; aun expandido a entidades representa el mismo texto visible. Se verificó la expresión por inspección; no se envió ningún mensaje.
+
+El comando usa un lock de archivo exclusivo no bloqueante, específico de este radar, mantenido por flock mientras corre bash. Una segunda invocación que use el mismo lock sale con código 75. timeout termina tras 110 minutos y fuerza KILL 30 segundos después, por debajo de dos horas; timeout normalmente retorna 124. No se eligió staticData porque leer/escribir una bandera no ofrece exclusión atómica fiable entre ejecuciones. No se borrará el archivo lock: la exclusión depende del descriptor, no de su existencia.
+
+Limitaciones: no se comprobó en VPS la disponibilidad de timeout/flock ni permisos de creación del lock, pues no se autorizaron ejecuciones remotas en esta revisión. Si faltan, el comando falla antes de lanzar el script. El lock cubre invocaciones que empleen esta misma ruta; otras llamadas directas al script y procesos que se desacoplen requieren coordinación adicional. Una caída de transporte SSH exige revisar el comportamiento remoto antes del encendido. El parser existente notifica stdout vacío/no JSON, pero no inspecciona code/stderr cuando hay JSON válido: se conserva sin cambios; conviene aplicar la validación propuesta también a IA en otro encargo.
+
+PUT limitado a name, nodes, connections y settings; staticData no se envió porque era null. No se incluyó active. Readback coincide exactamente con el payload. YT conserva nodes, connections, settings y updatedAt respecto a la lectura inicial.
+
+## Estado final leído de la API
+
+- ynNMGtW8TCDCBMdS: active=true.
+- QGXVyRSgrArxfolj: active=false.
+
+Evidencias completas: yt.json, yt-executions.json, ia.json, put-payload.json, put-response.json, ia-final.json y yt-final.json en resultados/T011-N8N/.
+'''
+(p/'informe.md').write_text(s)
+print('Informe guardado:',p/'informe.md')
+PY" in /home/onia-codex-worker/operacion
+ succeeded in 24ms:
+Informe guardado: resultados/T011-N8N/informe.md
+
+codex
+### RESUMEN
+- Radar YT sin cambios, `active=true`: ambas ejecuciones con SSH 0, stderr vacío y 5 inserciones declaradas; dos fuentes repetidas. Alerta propuesta, sin aplicar.
+- Radar IA, `active=false` confirmado: timezone ausente → `America/La_Paz`; Telegram escapa `&`, `<`, `>`; SSH incorpora `flock` y timeout de 110 minutos.
+- No se ejecutaron workflows; disponibilidad remota de `flock`/`timeout` pendiente de comprobar.
+- Backup: [JSON completo](resultados/backups-n8n/QGXVyRSgrArxfolj-20261107T182815Z.json).
+- [Informe con cambios exactos antes/después, auditoría y limitaciones](resultados/T011-N8N/informe.md).
+tokens used
+30,005
+### RESUMEN
+- Radar YT sin cambios, `active=true`: ambas ejecuciones con SSH 0, stderr vacío y 5 inserciones declaradas; dos fuentes repetidas. Alerta propuesta, sin aplicar.
+- Radar IA, `active=false` confirmado: timezone ausente → `America/La_Paz`; Telegram escapa `&`, `<`, `>`; SSH incorpora `flock` y timeout de 110 minutos.
+- No se ejecutaron workflows; disponibilidad remota de `flock`/`timeout` pendiente de comprobar.
+- Backup: [JSON completo](resultados/backups-n8n/QGXVyRSgrArxfolj-20261107T182815Z.json).
+- [Informe con cambios exactos antes/después, auditoría y limitaciones](resultados/T011-N8N/informe.md).

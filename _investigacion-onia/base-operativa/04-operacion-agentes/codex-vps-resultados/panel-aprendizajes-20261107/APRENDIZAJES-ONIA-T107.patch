@@ -1,0 +1,30 @@
+diff --git a/_investigacion-onia/base-operativa/registro-de-errores.md b/_investigacion-onia/base-operativa/registro-de-errores.md
+--- a/_investigacion-onia/base-operativa/registro-de-errores.md
++++ b/_investigacion-onia/base-operativa/registro-de-errores.md
+@@ -1,4 +1,26 @@
+ # Registro de errores y correcciones — iniciado el 3 de noviembre de 2026
++
++## Corrección T107 · panel primero, reparto y continuidad documental · 7 de noviembre de 2026
++
++**Fuente y alcance:** correcciones de Sergio t106u/t107u, ingesta local del cierre T007/T008 y encargo T009. Se aplica mejorar-sistema: conservar el caso en la fuente existente, distinguir fallo, regla preventiva, decisión y estado; no copiar conversaciones ni datos personales. Esta entrada es un parche propuesto, no un cambio ya aplicado al repositorio.
++
++**Comprobado según las fuentes aportadas:** T007 produjo un borrador de workshop conservado sin revisión. T008 produjo panel y guiones; coordinación informó aplicación aditiva y readback de las páginas existentes. No hubo grabación, publicación ni campaña creada. T009 leyó las fuentes locales, sin consultar conectores ni verificar nuevamente esos resultados remotos.
++
++- **Fallo de reparto:** convertir una fila única global en bloqueo de todos los frentes. **Prevención y decisión:** mantener frentes conceptuales paralelos y reservar recursos, tareas y destinos antes de habilitar concurrencia. **Estado:** hasta dos jobs, preferiblemente pesado y liviano, es propuesta no implementada; el runner actual continúa exclusivo.
++- **Fallo de prioridad:** impulsar workshop sin pedido inmediato o interpretarlo como cancelado al pedir contenido. **Prevención y decisión:** atender primero el entregable solicitado y conservar workshop en su frente, sin activarlo ni cancelarlo por inferencia. **Estado:** borrador T007 preservado, sin revisión ni aceptación comercial.
++- **Fallo de continuidad:** asumir que app y runner comparten lock, home, sesión o contexto. **Prevención y decisión:** declarar cada superficie y su evidencia de recuperación por separado. **Estado:** la app no comparte el lock del runner; no hay sincronización garantizada entre chats, homes o sesiones.
++- **Fallo de persistencia:** confundir VPS persistente con repositorio actualizado o dejar aprendizajes sólo en memoria local. **Prevención y decisión:** entregar el cambio saneado como parche documental contra archivos existentes y comprobar su incorporación en el destino autorizado. **Estado:** T009 no aplicó parche, no verificó HEAD mediante Git y no creó commit, push ni actualización Cloud.
++- **Fallo de presentación:** sustituir el panel real por planificación abstracta o tratar un frente como exclusión de los demás. **Prevención y decisión:** usar el panel Notion existente, acciones accesibles y frentes paralelos; conservar historia y páginas/bases. **Estado:** T008 aplicado según coordinación; bloque mínimo T009 pendiente de aplicación.
++- **Fallo de asignación:** confundir perfiles de coordinación con ejecutores o inventar versiones de modelo. **Prevención y decisión:** investigación/síntesis, guion orgánico, adaptación Ads, diseño de panel/especificación n8n y revisión en sesión separada corresponden a Codex gpt-6.1-sol mediante ChatGPT. Coordinadora Grok sólo prioriza, delega, ingiere y resume, sin versión inferida. **Estado:** T009 usa un único ejecutor, sin subagentes, Claude, API ni fallback; revisión separada es método propuesto para próximos trabajos, no realizada aquí.
++- **Fallo de automatización declarativa:** presentar un diseño como integración operativa. **Prevención y decisión:** RSS, filtros, deduplicación y avisos se especifican como n8n determinista sin LLM. **Estado:** no implementados aquí; n8n invocando CLI de ChatGPT no está implementado ni probado; no se activaron rutinas ni entregas automáticas.
++- **Fallo editorial:** presentar evergreen como noticia o un borrador como actividad comercial. **Prevención y decisión:** noticias requieren fuente fechada y verificada; P1 es ejemplo ficticio evergreen rotulado. **Estado:** guion orgánico y adaptación Ads pausada son borradores; no hay noticia nueva investigada ni rendimiento observado.
++- **Incidencia de permisos:** interpretar headless never como posibilidad de aprobación humana o bypass. **Prevención y decisión:** never deniega solicitudes de escalación y no desactiva el sandbox; respetar el alcance efectivo. **Estado:** sólo lectura, sin escalaciones ni ampliación de permisos.
++- **Fallo de arranque T008:** ejecutar comprobar intentó abrir el lock y falló con rc 2 interno en sandbox de lectura. **Prevención y decisión:** identificar escrituras incidentales antes del check; si el runner ya está activo y el alcance prohíbe escritura, informar conflicto y no ejecutarlo, reintentarlo ni eludirlo. **Estado:** T009 omitió ese check; no declara comprobación del runner aprobada.
++
++**Comprobación T009:** autorrevisión textual del mismo turno, no revisión independiente ni prueba de runtime. Caso corregido: pedir contenido no cancela workshop ni autoriza otra ejecución concurrente. Caso cercano: un encargo futuro específico de workshop puede priorizarlo sin imponer esa prioridad a todos los frentes. Se separaron hechos aportados, propuestas y capacidades no implementadas; no se reprodujeron pruebas anteriores.
++
++**Pendiente y reversión:** coordinación debe validar el parche contra el checkout de destino antes de aplicarlo. Su aplicación requiere alcance documental y configuración de escritura explícitos; este texto no los concede. Acotar la regla si bloquea trabajos independientes autorizados o deriva en revisiones repetidas sin evidencia nueva. No acredita entrenamiento del modelo, sincronización entre VMs ni conducta futura garantizada.
++
+ 
+ ## Retrospectiva de la tanda VPS · cierre documental aceptado por Jefa
+ 

@@ -1,0 +1,15 @@
+Revisión secuencial separada T004 del entregable T003. Segundo de máximo3 llamados modelo del encargo; no llamadas anidadas/Claude/API/fallback/subagentes. Solo lectura, sin modificar repo/archivos, red herramientas, privados/credenciales/producción ni scripts repo. Puedes leer checkout /home/onia-codex-worker/repos/onia como fuentes expresamente autorizadas, pese a restricciones históricas genéricas.
+Lee resultados/INVENTARIO-WORKSHOP-20261107.md, MANUAL-SERGIO-VPS-20261107.md, CONTINUIDAD-T003-20261107.md, T003-estado.json y ejecutar.sh. Contrasta inventario con fuentes citadas relevantes: PLAN, taller/workshop-ensayo y alumno-p01/p02, fuente-cloud/workshop-ensayo, skill canónica preparar-oferta-y-embudo. No seguir enlaces o medios ni grandes históricos. No reconstruir plan entero.
+Criterios: fuentes reales y estado humano vs simulado separados; nada de precio/ventas/cobros inventados; manual operable sin este chat, sin garantizar SSH desde PC con clave solo box; acceso consola admin como precondición; worker distinto de cuentas existentes; scripts modos reales; nunca escritura repo/prod ni bypass; revisión explícita distinta de hecha; estado y archivos para continuar.
+Pruebas externas YA verificadas sin modelos: ocho bloques bash del manual bash-n exit0; línea CLI efectiva de resume del manual con --help exit0; T003 runner rc0; mientras trabajó se observó en-curso y --comprobar rechazó con exit2, después lock liberado y exit0. timeout300+KILL5s configurado, NO afirmar vencimiento real probado. Fuente HEAD e55812ce1bc8ef798fb370257ba887d07acccc53 y limpia. Falta tercera llamada de continuidad, todavía no la declares probada.
+Entrega stdout delimitada:
+<<<REVISION_INICIO>>>
+ACEPTAR o RECHAZAR T003 técnicamente según criterios, con fuentes y solo errores importantes. Máx300palabras; no elevar a aceptación comercial/humana. Si corrección importante impide aceptar, especifica exactamente y detén. No retries.
+<<<REVISION_FIN>>>
+<<<LEEME_NUEVO_INICIO>>>
+Contenido sustituto de LEEME.md de máximo250palabras, instrucciones actuales coherentes sin párrafos históricos contradictorios: solo Codex ChatGPTSol, read-only approval never headless niega escalaciones, sin API/Claude, repo fuente real /home/onia-codex-worker/repos/onia master HEAD verificado, manual resultados/MANUAL-SERGIO-VPS-20261107.md e inventario, estados y revisión separada,0autonomía24h, no conectores heredados, cuota restante desconocida. T002 completada, no reactivarla. Reanudar T003 es siguiente prueba aún pendiente en este momento. Viejo LEEME se conservará como histórico por envoltorio, no instrucciones vigentes.
+<<<LEEME_NUEVO_FIN>>>
+<<<CORRECCION_MANUAL_INICIO>>>
+Si guía no tiene errores importantes devuelve 'No requiere corrección técnica antes de la prueba de continuidad'. Si hay mejoras necesarias para operarla sin ti, proporciona exclusivamente texto exacto de un anexo breve con comandos seguros cuando haga falta, sin reescribir todo ni inventar capacidades. Pronombres tú, no voseo si redactas.
+<<<CORRECCION_MANUAL_FIN>>>
+Termina sin nuevas tareas ni herramientas tras salida final. El envoltorio guardará artefactos; tú no escribas.

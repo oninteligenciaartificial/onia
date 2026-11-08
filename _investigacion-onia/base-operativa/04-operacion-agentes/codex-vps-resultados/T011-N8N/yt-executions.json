@@ -1,0 +1,373 @@
+{
+  "data": [
+    {
+      "id": "79276",
+      "finished": true,
+      "mode": "trigger",
+      "retryOf": null,
+      "retrySuccessId": null,
+      "status": "success",
+      "startedAt": "2026-11-04T11:45:00.083Z",
+      "stoppedAt": "2026-11-04T11:45:25.721Z",
+      "workflowId": "ynNMGtW8TCDCBMdS",
+      "waitTill": null,
+      "storedAt": "db",
+      "jsonSizeBytes": 5063,
+      "workflowVersionId": "6f33c328-31b0-48b6-8a4e-d9fd457bd079",
+      "data": {
+        "version": 1,
+        "startData": {},
+        "resultData": {
+          "runData": {
+            "Miercoles 07:45": [
+              {
+                "startTime": 1793792700348,
+                "executionIndex": 0,
+                "source": [],
+                "hints": [],
+                "executionTime": 0,
+                "executionStatus": "success",
+                "data": {
+                  "main": [
+                    [
+                      {
+                        "json": {
+                          "timestamp": "2026-11-04T07:45:00.015-04:00",
+                          "Readable date": "November 4th 2026, 7:45:00 am",
+                          "Readable time": "7:45:00 am",
+                          "Day of week": "Wednesday",
+                          "Year": "2026",
+                          "Month": "November",
+                          "Day of month": "04",
+                          "Hour": "07",
+                          "Minute": "45",
+                          "Second": "00",
+                          "Timezone": "America/La_Paz (UTC-04:00)"
+                        },
+                        "pairedItem": {
+                          "item": 0
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            ],
+            "Correr Radar YT (VPS)": [
+              {
+                "startTime": 1793792700348,
+                "executionIndex": 1,
+                "source": [
+                  {
+                    "previousNode": "Miercoles 07:45",
+                    "previousNodeOutput": 0,
+                    "previousNodeRun": 0
+                  }
+                ],
+                "hints": [],
+                "executionTime": 25373,
+                "executionStatus": "success",
+                "data": {
+                  "main": [
+                    [
+                      {
+                        "json": {
+                          "code": 0,
+                          "signal": null,
+                          "stdout": "{\"ok\":true,\"dryRun\":false,\"day\":\"2026-11-04\",\"queries\":[\"automatizacion con IA para pequenos negocios\",\"chatbot de whatsapp para negocios\",\"casos de uso de inteligencia artificial en pymes\",\"IA practica para emprendedores latam\",\"como automatizar tu negocio con inteligencia artificial\"],\"found\":50,\"pool\":24,\"proposed\":5,\"inserted\":5,\"ideas\":[{\"title\":\"Antes y después: tu WhatsApp sin y con chatbot ONIA\",\"format\":\"Reel\",\"hook\":\"¿Aún respondes todos los mensajes a mano? Mira cómo un chatbot puede cambiar tu WhatsApp\",\"source_url\":\"https://www.youtube.com/watch?v=ifny_ep4nO8\",\"inspired_by\":\"✅How to make a Whatsapp CHATBOT to SELL 🤖💰| Easy and cheap [tutorial]\",\"views\":267807,\"idea_key\":\"idea-radaryt-2026-11-04-6hs7ic\"},{\"title\":\"Transforma tu negocio con automatizaciones ONIA en n8n\",\"format\":\"Carrusel\",\"hook\":\"¿Sabes cuánto tiempo pierdes en tareas repetitivas? Mira cómo automatizar con ONIA cambia todo\",\"source_url\":\"https://www.youtube.com/watch?v=7Z-vRvIUqNs\",\"inspired_by\":\"Curso Completo De N8N: Cómo Crear y Vender Automatizaciones IA\",\"views\":476261,\"idea_key\":\"idea-radaryt-2026-11-04-1n66cn\"},{\"title\":\"Delegar y automatizar: el cambio que tu negocio necesita\",\"format\":\"Short\",\"hook\":\"¿Quieres dejar de hacer todo tú mismo? Descubre el poder de delegar y automatizar con ONIA\",\"source_url\":\"https://www.youtube.com/watch?v=GPIjIOIKvhs\",\"inspired_by\":\"Guía definitiva para DELEGAR y AUTOMATIZAR tu negocio\",\"views\":57401,\"idea_key\":\"idea-radaryt-2026-11-04-en17fu\"},{\"title\":\"Servicio al cliente 24/7 con chatbot WhatsApp ONIA: antes y después\",\"format\":\"Reel\",\"hook\":\"¿Atender clientes a cualquier hora? Así era antes y así es con el chatbot ONIA\",\"source_url\":\"https://www.youtube.com/watch?v=yDGrQfqL240\",\"inspired_by\":\"How to Create Your OWN Customer Service CHATBOT for WhatsApp in Less Than 10 MINUTES\",\"views\":225277,\"idea_key\":\"idea-radaryt-2026-11-04-j4jiug\"},{\"title\":\"Automatiza tu negocio sin código con ONIA: caso real antes y después\",\"format\":\"Carrusel\",\"hook\":\"¿Crees que automatizar es complicado? Mira cómo ONIA lo hace simple y efectivo\",\"source_url\":\"https://www.youtube.com/watch?v=WB1EIUriONk\",\"inspired_by\":\"Cómo Automatizar el Trabajo de tu Negocio con Inteligencia Artificial y No-Code | EraDigital Podcast\",\"views\":29643,\"idea_key\":\"idea-radaryt-2026-11-04-omirij\"}],\"notify\":true}",
+                          "stderr": ""
+                        },
+                        "pairedItem": {
+                          "item": 0
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            ]
+          },
+          "lastNodeExecuted": "Correr Radar YT (VPS)"
+        },
+        "executionData": {
+          "contextData": {},
+          "nodeExecutionStack": [],
+          "metadata": {},
+          "waitingExecution": {},
+          "waitingExecutionSource": {},
+          "runtimeData": {
+            "version": 1,
+            "establishedAt": 1793792700032,
+            "source": "trigger",
+            "triggerNode": {
+              "name": "Miercoles 07:45",
+              "type": "n8n-nodes-base.scheduleTrigger"
+            },
+            "redaction": {
+              "version": 2,
+              "production": false,
+              "manual": false
+            }
+          }
+        },
+        "resumeToken": "e041ba3d13220741fb714c130ac4a5742d0212536fe649f11dce36848d001176"
+      },
+      "workflowData": {
+        "id": "ynNMGtW8TCDCBMdS",
+        "name": "ONIA - Agente Radar YT (ideas, panel-only)",
+        "nodes": [
+          {
+            "id": "c8691c57-c5b7-4e80-9eed-f0f41a6dd4a0",
+            "name": "Miercoles 07:45",
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.2,
+            "position": [
+              0,
+              0
+            ],
+            "parameters": {
+              "notice": "",
+              "rule": {
+                "interval": [
+                  {
+                    "field": "cronExpression",
+                    "notice": "",
+                    "expression": "45 7 * * 3"
+                  }
+                ]
+              },
+              "skipDurableScheduler": false
+            }
+          },
+          {
+            "id": "9f8b6757-5616-4801-a472-a4b994c4a401",
+            "name": "Correr Radar YT (VPS)",
+            "type": "n8n-nodes-base.ssh",
+            "typeVersion": 1,
+            "position": [
+              224,
+              0
+            ],
+            "parameters": {
+              "authentication": "privateKey",
+              "resource": "command",
+              "operation": "execute",
+              "command": "RADAR_DRY_RUN=false RADAR_LIMIT=6 bash /opt/onia/radar-yt-agent-run.sh",
+              "cwd": "/root"
+            },
+            "credentials": {
+              "sshPrivateKey": {
+                "id": "4XKauEX3b6cqaDhW",
+                "name": "ONIA VPS SSH"
+              }
+            }
+          }
+        ],
+        "connections": {
+          "Miercoles 07:45": {
+            "main": [
+              [
+                {
+                  "node": "Correr Radar YT (VPS)",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "settings": {
+          "executionOrder": "v1",
+          "availableInMCP": true
+        },
+        "nodeGroups": []
+      },
+      "customData": {}
+    },
+    {
+      "id": "75824",
+      "finished": true,
+      "mode": "trigger",
+      "retryOf": null,
+      "retrySuccessId": null,
+      "status": "success",
+      "startedAt": "2026-10-28T11:45:00.066Z",
+      "stoppedAt": "2026-10-28T11:45:21.830Z",
+      "workflowId": "ynNMGtW8TCDCBMdS",
+      "waitTill": null,
+      "storedAt": "db",
+      "jsonSizeBytes": 4986,
+      "workflowVersionId": "6f33c328-31b0-48b6-8a4e-d9fd457bd079",
+      "data": {
+        "version": 1,
+        "startData": {},
+        "resultData": {
+          "runData": {
+            "Miercoles 07:45": [
+              {
+                "startTime": 1793187900090,
+                "executionIndex": 0,
+                "source": [],
+                "hints": [],
+                "executionTime": 1,
+                "executionStatus": "success",
+                "data": {
+                  "main": [
+                    [
+                      {
+                        "json": {
+                          "timestamp": "2026-10-28T07:45:00.021-04:00",
+                          "Readable date": "October 28th 2026, 7:45:00 am",
+                          "Readable time": "7:45:00 am",
+                          "Day of week": "Wednesday",
+                          "Year": "2026",
+                          "Month": "October",
+                          "Day of month": "28",
+                          "Hour": "07",
+                          "Minute": "45",
+                          "Second": "00",
+                          "Timezone": "America/La_Paz (UTC-04:00)"
+                        },
+                        "pairedItem": {
+                          "item": 0
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            ],
+            "Correr Radar YT (VPS)": [
+              {
+                "startTime": 1793187900091,
+                "executionIndex": 1,
+                "source": [
+                  {
+                    "previousNode": "Miercoles 07:45",
+                    "previousNodeOutput": 0,
+                    "previousNodeRun": 0
+                  }
+                ],
+                "hints": [],
+                "executionTime": 21737,
+                "executionStatus": "success",
+                "data": {
+                  "main": [
+                    [
+                      {
+                        "json": {
+                          "code": 0,
+                          "signal": null,
+                          "stdout": "{\"ok\":true,\"dryRun\":false,\"day\":\"2026-10-28\",\"queries\":[\"automatizacion con IA para pequenos negocios\",\"chatbot de whatsapp para negocios\",\"casos de uso de inteligencia artificial en pymes\",\"IA practica para emprendedores latam\",\"como automatizar tu negocio con inteligencia artificial\"],\"found\":50,\"pool\":24,\"proposed\":5,\"inserted\":5,\"ideas\":[{\"title\":\"Automatiza tu WhatsApp para vender sin perder tiempo\",\"format\":\"Reel\",\"hook\":\"¿Aún respondes todos los mensajes de tus clientes a mano?\",\"source_url\":\"https://www.youtube.com/watch?v=ifny_ep4nO8\",\"inspired_by\":\"✅How to make a Whatsapp CHATBOT to SELL 🤖💰| Easy and cheap [tutorial]\",\"views\":267723,\"idea_key\":\"idea-radaryt-2026-10-28-ea2lx1\"},{\"title\":\"Simplifica tareas repetitivas con automatizaciones sin código\",\"format\":\"Carrusel\",\"hook\":\"¿Sabías que puedes automatizar tareas diarias sin ser experto en tecnología?\",\"source_url\":\"https://www.youtube.com/watch?v=7Z-vRvIUqNs\",\"inspired_by\":\"Curso Completo De N8N: Cómo Crear y Vender Automatizaciones IA\",\"views\":469737,\"idea_key\":\"idea-radaryt-2026-10-28-f0mmf7\"},{\"title\":\"Crea un agente de ventas en WhatsApp que trabaje 24/7\",\"format\":\"Short\",\"hook\":\"Tu negocio puede vender en WhatsApp sin que tú respondas cada mensaje.\",\"source_url\":\"https://www.youtube.com/watch?v=IjyXIYtxesA\",\"inspired_by\":\"Automate WhatsApp with AI and create your sales agent (without answering yourself)\",\"views\":256925,\"idea_key\":\"idea-radaryt-2026-10-28-2t6kq2\"},{\"title\":\"Primeros pasos para tener un asistente IA que automatice tu negocio\",\"format\":\"Reel\",\"hook\":\"¿Quieres un asistente inteligente que trabaje por ti? Te mostramos cómo crear uno fácil y rápido.\",\"source_url\":\"https://www.youtube.com/watch?v=ZnlLfKR-vDQ\",\"inspired_by\":\"Create your first AI AGENT in 15 minutes (no coding)\",\"views\":515987,\"idea_key\":\"idea-radaryt-2026-10-28-7kdnek\"},{\"title\":\"Montar un chatbot gratis en WhatsApp sin programar con n8n\",\"format\":\"Carrusel\",\"hook\":\"¿Quieres un chatbot en WhatsApp sin gastar ni programar? Te mostramos cómo hacerlo gratis.\",\"source_url\":\"https://www.youtube.com/watch?v=tG8GR7S80f8\",\"inspired_by\":\"How to Create a WhatsApp Chatbot with AI for FREE (N8N Without Programming)\",\"views\":61137,\"idea_key\":\"idea-radaryt-2026-10-28-o9gva5\"}],\"notify\":true}",
+                          "stderr": ""
+                        },
+                        "pairedItem": {
+                          "item": 0
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            ]
+          },
+          "lastNodeExecuted": "Correr Radar YT (VPS)"
+        },
+        "executionData": {
+          "contextData": {},
+          "nodeExecutionStack": [],
+          "metadata": {},
+          "waitingExecution": {},
+          "waitingExecutionSource": {},
+          "runtimeData": {
+            "version": 1,
+            "establishedAt": 1793187900029,
+            "source": "trigger",
+            "triggerNode": {
+              "name": "Miercoles 07:45",
+              "type": "n8n-nodes-base.scheduleTrigger"
+            },
+            "redaction": {
+              "version": 2,
+              "production": false,
+              "manual": false
+            }
+          }
+        },
+        "resumeToken": "5a81f4b490ba02d9dc36c240b019a33676215e56cb91fc440514208cc8eda6d8"
+      },
+      "workflowData": {
+        "id": "ynNMGtW8TCDCBMdS",
+        "name": "ONIA - Agente Radar YT (ideas, panel-only)",
+        "nodes": [
+          {
+            "id": "c8691c57-c5b7-4e80-9eed-f0f41a6dd4a0",
+            "name": "Miercoles 07:45",
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.2,
+            "position": [
+              0,
+              0
+            ],
+            "parameters": {
+              "notice": "",
+              "rule": {
+                "interval": [
+                  {
+                    "field": "cronExpression",
+                    "notice": "",
+                    "expression": "45 7 * * 3"
+                  }
+                ]
+              },
+              "skipDurableScheduler": false
+            }
+          },
+          {
+            "id": "9f8b6757-5616-4801-a472-a4b994c4a401",
+            "name": "Correr Radar YT (VPS)",
+            "type": "n8n-nodes-base.ssh",
+            "typeVersion": 1,
+            "position": [
+              224,
+              0
+            ],
+            "parameters": {
+              "authentication": "privateKey",
+              "resource": "command",
+              "operation": "execute",
+              "command": "RADAR_DRY_RUN=false RADAR_LIMIT=6 bash /opt/onia/radar-yt-agent-run.sh",
+              "cwd": "/root"
+            },
+            "credentials": {
+              "sshPrivateKey": {
+                "id": "4XKauEX3b6cqaDhW",
+                "name": "ONIA VPS SSH"
+              }
+            }
+          }
+        ],
+        "connections": {
+          "Miercoles 07:45": {
+            "main": [
+              [
+                {
+                  "node": "Correr Radar YT (VPS)",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "settings": {
+          "executionOrder": "v1",
+          "availableInMCP": true
+        },
+        "nodeGroups": []
+      },
+      "customData": {}
+    }
+  ],
+  "nextCursor": null
+}

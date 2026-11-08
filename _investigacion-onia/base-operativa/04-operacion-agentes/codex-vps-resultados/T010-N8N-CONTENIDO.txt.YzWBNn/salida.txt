@@ -1,0 +1,2468 @@
+OpenAI Codex v0.167.0
+--------
+workdir: /home/onia-codex-worker/operacion
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: none
+reasoning summaries: none
+session id: 01a1b73a-7261-7b42-97bd-16b1049b25fc
+--------
+user
+Encargo T010 — Revisión del frente de contenido en n8n (SOLO LECTURA)
+
+Modo: solo lectura y análisis. No ejecutar scripts, no red, no credenciales, no modificar archivos. Una sola respuesta por stdout.
+
+Fuentes: /home/onia-codex-worker/operacion/fuentes-plan/n8n-contenido/ (JSON exportados de n8n con secretos redactados, más NOTAS.md). Puedes consultar en solo lectura /home/onia-codex-worker/repos/onia para entender scripts SSH o rutas que los flujos invocan.
+
+Flujos: QGXVyRSgrArxfolj (Radar de Novedades IA), nZkaXaZVKzgtwUqU (Agente Contenido y Media Lab), nAGwe7DzxNQzMxXk (Video Intake Telegram), ynNMGtW8TCDCBMdS (Agente Radar YT, activo), aHFLqEtzqvq6SE3e (Web Factory VPS Radar), XRS9fWY4yFMQQftF (Building in Public), OovRU4r0o7pvglJP (Radar Normativo Bolivia). tIl4chT49LIPD0VJ (Tendencias semanal) no se pudo exportar (sin acceso MCP); menciónalo solo como pendiente.
+
+Para cada flujo indica, de forma breve:
+1. Qué hace (disparador, pasos, salida).
+2. Por qué está apagado o fallando (según la evidencia; si no hay, dilo).
+3. De qué depende: scripts SSH en el VPS (¿existen en el repo?), credenciales, APIs externas, otros flujos.
+4. Riesgos de encenderlo (costos, publicaciones automáticas, spam, duplicados, fugas).
+
+Después da un plan concreto y ordenado para encender el frente de contenido con seguridad: cuál primero, qué arreglar antes de cada uno y cómo verificarlo.
+
+Termina con una sección "RESUMEN" de máximo 5 líneas. Responde en español, sin inventar datos.
+
+exec
+/bin/bash -lc pwd in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+/home/onia-codex-worker/operacion
+
+exec
+/bin/bash -lc 'cat LEEME.md registro.tsv; rg --files fuentes-plan/n8n-contenido tareas | sort' in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+# Operación manual vigente
+
+Único ejecutor: Codex mediante ChatGPT Sol, modelo `gpt-6.1-sol`. Sin API, Claude, fallback, subagentes ni llamadas anidadas. Solo una tarea manual a la vez; ninguna activación automática.
+
+El modelo trabaja en `read-only`. En ejecución headless, la aprobación efectiva es `never`: las solicitudes de escalación se rechazan. Esto no desactiva el sandbox ni autoriza bypass. El envoltorio exterior conserva los artefactos.
+
+Fuente real autorizada para lectura: `/home/onia-codex-worker/repos/onia`, rama `master`, HEAD verificado `e55812ce1bc8ef798fb370257ba887d07acccc53`, checkout limpio según la comprobación aportada. No modificar ni ejecutar scripts del repositorio.
+
+Sin red de herramientas, credenciales, privados, producción, instalaciones, publicaciones, contactos, pagos, push o deploy. No utilizar conectores heredados. Ads pausados; cobros reales desconocidos.
+
+Lee el encargo y recupera estado mediante `registro.tsv`, `tareas/` y `resultados/`. Consulta:
+
+- `resultados/MANUAL-SERGIO-VPS-20261107.md`
+- `resultados/INVENTARIO-WORKSHOP-20261107.md`
+- `resultados/CONTINUIDAD-T003-20261107.md`
+- `resultados/T003-estado.json`
+
+T002 está completada: no reactivarla. T003 terminó con rc0; T004 la acepta técnicamente como documentación. Esa revisión separada no equivale a aceptación humana/comercial. `hechas` solo indica ejecución terminada correctamente.
+
+Siguiente prueba pendiente: reanudar T003 usando su session ID exacto, restricciones actuales, lock y timeout del manual. No se ha probado todavía. Ningún reintento automático; los fallos requieren revisión manual.
+
+Autonomía 24 h: cero. No hay daemon, persistencia garantizada ni cuota garantizada; cuota restante desconocida.
+
+El LEEME anterior se conserva como histórico, sin vigencia instructiva.
+
+## Cierre verificado7nov2026 America/Caracas
+ProducciónT003, revisiónT004 y retoma misma sesión completadas0;3llamadas,6hechas técnicas,0activas/pendientes/error. Prevalece anexo actualizado del manual resultados/MANUAL-SERGIO-VPS-20261107.md y reporte resultados/PRUEBAS-OPERACION-MANUAL-20261107.md. CLI solo lectura acotada probado; acceso directo Windows al worker todavía requiere autorización públicaWindows; no contraseña worker ni authorized_keys configurados. No confundir hechos técnicos con resultados comerciales.
+
+## Último lote sustantivo7nov2026
+Reconciliación seis áreas T005 + revisión independiente T006, ambas0. Correcciones textuales del revisor incorporadas, sin tercer modelo. Ver ESTADO-LOCAL.json y resultados/RELEVO-RECONCILIACION-20261107.md para resultado, aceptación condicionada satisfecha documentalmente, fuentes y siguiente encargo; no son cobros. Relevo local separado del repo canónico; app no comparte lock.
+
+## Panel T107 y documentación pendiente
+Panel Notion ordenado y readback verificado cinco secciones+LLMmap, historia intacta. Limpieza solo propuesta, no archivar ni borrar sin lista confirmada. Parche documental gitapply--check0, NO aplicado/commit/push; archivo y pendiente en ESTADO-LOCAL.json. T009una llamada adicional, autocontrol no independiente; arquitectura y n8n continúan no implementados.
+fecha_utc	tarea	evento	rc	resultado
+2026-11-07T16:34:13Z	T001	inicio	-	Diagnóstico documental local
+2026-11-07T16:34:13Z	T001	fin	0	resultados/T001.md; resultado Codex provisional documental, sin llamada anidada
+2026-11-07T16:35:28Z	REVISION	inicio	-	Revisión local secuencial sin activar tareas
+2026-11-07T16:35:29Z	REVISION	fin	0	VERIFICACION.md; cinco pruebas correctas, tareas intactas
+2026-11-07T16:36:35Z	PRUEBA-RUNNER.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/PRUEBA-RUNNER.txt.CSzv8N
+2026-11-07T16:36:42Z	PRUEBA-RUNNER.txt	fin	0	/home/onia-codex-worker/operacion/resultados/PRUEBA-RUNNER.txt.CSzv8N
+2026-11-07T16:49:30.176433+00:00	T002	fin	0	resultados/T002.md; login/checkout confirmados fuera runner
+2026-11-07T16:57:42Z	T003-CICLO-REAL.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T003-CICLO-REAL.txt.E6P3eh
+2026-11-07T16:59:35Z	T003-CICLO-REAL.txt	fin	0	/home/onia-codex-worker/operacion/resultados/T003-CICLO-REAL.txt.E6P3eh
+2026-11-07T17:00:36Z	T004-REVISION-REAL.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T004-REVISION-REAL.txt.VWCNg6
+2026-11-07T17:01:27Z	T004-REVISION-REAL.txt	fin	0	/home/onia-codex-worker/operacion/resultados/T004-REVISION-REAL.txt.VWCNg6
+2026-11-07T17:02:06Z	T003-RETOMA-01	inicio	-	/home/onia-codex-worker/operacion/resultados/T003-RETOMA-01.Qs44xF
+2026-11-07T17:02:20Z	T003-RETOMA-01	fin	0	/home/onia-codex-worker/operacion/resultados/T003-RETOMA-01.Qs44xF
+2026-11-07T17:04:27.767929+00:00	T003	aceptacion_tecnica_y_retoma	0	resultados/T003-estado.json; sin aceptación comercial
+2026-11-07T17:35:30Z	T005-RECONCILIACION.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T005-RECONCILIACION.txt.UWDpnK
+2026-11-07T17:38:45Z	T005-RECONCILIACION.txt	fin	0	/home/onia-codex-worker/operacion/resultados/T005-RECONCILIACION.txt.UWDpnK
+2026-11-07T17:39:05Z	T006-REVISION-RECONCILIACION.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T006-REVISION-RECONCILIACION.txt.a0ARKO
+2026-11-07T17:40:48Z	T006-REVISION-RECONCILIACION.txt	fin	0	/home/onia-codex-worker/operacion/resultados/T006-REVISION-RECONCILIACION.txt.a0ARKO
+2026-11-07T17:44:02Z	T007-PAQUETE-OFERTA.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T007-PAQUETE-OFERTA.txt.egO3Ah
+2026-11-07T17:47:52Z	T007-PAQUETE-OFERTA.txt	fin	0	/home/onia-codex-worker/operacion/resultados/T007-PAQUETE-OFERTA.txt.egO3Ah
+2026-11-07T17:48:38Z	T008-PANEL-CONTENIDO.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T008-PANEL-CONTENIDO.txt.jUO95x
+2026-11-07T17:50:28Z	T008-PANEL-CONTENIDO.txt	fin	0	/home/onia-codex-worker/operacion/resultados/T008-PANEL-CONTENIDO.txt.jUO95x
+2026-11-07T17:54:16Z	T009-PANEL-APRENDIZAJES.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T009-PANEL-APRENDIZAJES.txt.6lBkKk
+2026-11-07T17:55:47Z	T009-PANEL-APRENDIZAJES.txt	fin	0	/home/onia-codex-worker/operacion/resultados/T009-PANEL-APRENDIZAJES.txt.6lBkKk
+2026-11-07T18:17:03Z	T010-N8N-CONTENIDO.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T010-N8N-CONTENIDO.txt.YzWBNn
+fuentes-plan/n8n-contenido/NOTAS.md
+fuentes-plan/n8n-contenido/OovRU4r0o7pvglJP.json
+fuentes-plan/n8n-contenido/QGXVyRSgrArxfolj.json
+fuentes-plan/n8n-contenido/XRS9fWY4yFMQQftF.json
+fuentes-plan/n8n-contenido/aHFLqEtzqvq6SE3e.json
+fuentes-plan/n8n-contenido/nAGwe7DzxNQzMxXk.json
+fuentes-plan/n8n-contenido/nZkaXaZVKzgtwUqU.json
+fuentes-plan/n8n-contenido/ynNMGtW8TCDCBMdS.json
+tareas/en-curso/T010-N8N-CONTENIDO.txt
+tareas/hechas/PRUEBA-RUNNER.txt
+tareas/hechas/T001.txt
+tareas/hechas/T002.txt
+tareas/hechas/T003-CICLO-REAL.txt
+tareas/hechas/T003-RETOMA-01.txt
+tareas/hechas/T004-REVISION-REAL.txt
+tareas/hechas/T005-RECONCILIACION.txt
+tareas/hechas/T006-REVISION-RECONCILIACION.txt
+tareas/hechas/T007-PAQUETE-OFERTA.txt
+tareas/hechas/T008-PANEL-CONTENIDO.txt
+tareas/hechas/T009-PANEL-APRENDIZAJES.txt
+
+exec
+/bin/bash -lc "cat tareas/en-curso/T010-N8N-CONTENIDO.txt fuentes-plan/n8n-contenido/NOTAS.md; wc -c fuentes-plan/n8n-contenido/*.json; jq 'keys' fuentes-plan/n8n-contenido/QGXVyRSgrArxfolj.json" in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+Encargo T010 — Revisión del frente de contenido en n8n (SOLO LECTURA)
+
+Modo: solo lectura y análisis. No ejecutar scripts, no red, no credenciales, no modificar archivos. Una sola respuesta por stdout.
+
+Fuentes: /home/onia-codex-worker/operacion/fuentes-plan/n8n-contenido/ (JSON exportados de n8n con secretos redactados, más NOTAS.md). Puedes consultar en solo lectura /home/onia-codex-worker/repos/onia para entender scripts SSH o rutas que los flujos invocan.
+
+Flujos: QGXVyRSgrArxfolj (Radar de Novedades IA), nZkaXaZVKzgtwUqU (Agente Contenido y Media Lab), nAGwe7DzxNQzMxXk (Video Intake Telegram), ynNMGtW8TCDCBMdS (Agente Radar YT, activo), aHFLqEtzqvq6SE3e (Web Factory VPS Radar), XRS9fWY4yFMQQftF (Building in Public), OovRU4r0o7pvglJP (Radar Normativo Bolivia). tIl4chT49LIPD0VJ (Tendencias semanal) no se pudo exportar (sin acceso MCP); menciónalo solo como pendiente.
+
+Para cada flujo indica, de forma breve:
+1. Qué hace (disparador, pasos, salida).
+2. Por qué está apagado o fallando (según la evidencia; si no hay, dilo).
+3. De qué depende: scripts SSH en el VPS (¿existen en el repo?), credenciales, APIs externas, otros flujos.
+4. Riesgos de encenderlo (costos, publicaciones automáticas, spam, duplicados, fugas).
+
+Después da un plan concreto y ordenado para encender el frente de contenido con seguridad: cuál primero, qué arreglar antes de cada uno y cómo verificarlo.
+
+Termina con una sección "RESUMEN" de máximo 5 líneas. Responde en español, sin inventar datos.
+- tIl4chT49LIPD0VJ (ONIA tendencias semanal): NO exportado; n8n dice que no tiene acceso MCP habilitado.
+- Ejecuciones: solo ynNMGtW8TCDCBMdS tiene historial (2 éxitos, 28-oct y 4-nov). Los otros 6 no tienen ejecuciones registradas.
+- Valores secretos redactados como [REDACTED].
+ 9368 fuentes-plan/n8n-contenido/OovRU4r0o7pvglJP.json
+ 5116 fuentes-plan/n8n-contenido/QGXVyRSgrArxfolj.json
+ 6708 fuentes-plan/n8n-contenido/XRS9fWY4yFMQQftF.json
+ 8203 fuentes-plan/n8n-contenido/aHFLqEtzqvq6SE3e.json
+ 5123 fuentes-plan/n8n-contenido/nAGwe7DzxNQzMxXk.json
+ 5548 fuentes-plan/n8n-contenido/nZkaXaZVKzgtwUqU.json
+ 3067 fuentes-plan/n8n-contenido/ynNMGtW8TCDCBMdS.json
+43133 total
+[
+  "recentExecutions",
+  "triggerInfo",
+  "workflow"
+]
+
+exec
+/bin/bash -lc 'cat fuentes-plan/n8n-contenido/*.json' in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+{
+ "workflow": {
+  "id": "OovRU4r0o7pvglJP",
+  "name": "ONIA - Radar Normativo Bolivia",
+  "active": false,
+  "isArchived": false,
+  "versionId": "93d1290e-8c62-4641-b925-d287b2efd69a",
+  "activeVersionId": null,
+  "triggerCount": 1,
+  "nodeCount": 6,
+  "createdAt": "2026-07-04T17:35:53.828Z",
+  "updatedAt": "2026-07-04T17:35:53.828Z",
+  "settings": {
+   "executionOrder": "v1",
+   "availableInMCP": true
+  },
+  "tags": [],
+  "parentFolderId": null,
+  "description": "Vigila RNDs/normas nuevas del SIN (impuestos.com.bo + siatinfo) con memoria anti-repetición y alerta por Telegram. 08:00 L-V. Runbook: ONIA_RADAR_NORMATIVO_RUNBOOK_2026.md",
+  "scopes": [
+   "execution:delete",
+   "execution:list",
+   "execution:read",
+   "execution:reveal",
+   "workflow:create",
+   "workflow:delete",
+   "workflow:disableRedaction",
+   "workflow:enableRedaction",
+   "workflow:execute",
+   "workflow:execute-chat",
+   "workflow:export",
+   "workflow:import",
+   "workflow:list",
+   "workflow:move",
+   "workflow:publish",
+   "workflow:read",
+   "workflow:share",
+   "workflow:unpublish",
+   "workflow:unshare",
+   "workflow:update"
+  ],
+  "canExecute": true,
+  "connections": {
+   "Lunes a viernes 08:00": {
+    "main": [
+     [
+      {
+       "node": "Normativa SIN (impuestos.com.bo)",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Normativa SIN (impuestos.com.bo)": {
+    "main": [
+     [
+      {
+       "node": "SIAT novedades (siatinfo)",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "SIAT novedades (siatinfo)": {
+    "main": [
+     [
+      {
+       "node": "Detectar novedades",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Detectar novedades": {
+    "main": [
+     [
+      {
+       "node": "Hay novedades?",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Hay novedades?": {
+    "main": [
+     [
+      {
+       "node": "Telegram a Sergio",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   }
+  },
+  "nodes": [
+   {
+    "id": "9370c729-d701-4eeb-86b0-e8c839884660",
+    "name": "Lunes a viernes 08:00",
+    "type": "n8n-nodes-base.scheduleTrigger",
+    "typeVersion": 1.2,
+    "position": [
+     0,
+     0
+    ],
+    "parameters": {
+     "rule": {
+      "interval": [
+       {
+        "field": "cronExpression",
+        "expression": "0 8 * * 1-5"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "id": "ccd69697-ee11-4fc6-bdcf-d8310eff6af1",
+    "name": "Normativa SIN (impuestos.com.bo)",
+    "type": "n8n-nodes-base.httpRequest",
+    "typeVersion": 4.2,
+    "position": [
+     224,
+     0
+    ],
+    "parameters": {
+     "url": "=https://impuestos.com.bo/normativa-{{ $now.year }}/",
+     "options": {
+      "timeout": 20000,
+      "response": {
+       "response": {
+        "responseFormat": "text"
+       }
+      }
+     }
+    },
+    "onError": "continueRegularOutput"
+   },
+   {
+    "id": "a5d9f806-787d-433a-9d1b-ef488a1a7838",
+    "name": "SIAT novedades (siatinfo)",
+    "type": "n8n-nodes-base.httpRequest",
+    "typeVersion": 4.2,
+    "position": [
+     448,
+     0
+    ],
+    "parameters": {
+     "url": "https://siatinfo.impuestos.gob.bo/",
+     "options": {
+      "timeout": 20000,
+      "response": {
+       "response": {
+        "responseFormat": "text"
+       }
+      }
+     }
+    },
+    "executeOnce": true,
+    "onError": "continueRegularOutput"
+   },
+   {
+    "id": "5e5e660b-5656-40a3-9a5d-dd13d4560714",
+    "name": "Detectar novedades",
+    "type": "n8n-nodes-base.code",
+    "typeVersion": 2,
+    "position": [
+     672,
+     0
+    ],
+    "parameters": {
+     "jsCode": "// Radar Normativo Bolivia — detecta normas nuevas del SIN y evita repetir avisos.\n// Estructura HTML verificada con curl el 2026-07-04 (runbook: ONIA_RADAR_NORMATIVO_RUNBOOK_2026.md):\n// - impuestos.com.bo/normativa-<anio>/ (WordPress estatico, scrapeable): cada norma es\n//   <h2 class=\"wp-block-heading\"><span class=\"ez-toc-section\" id=\"RND-...\"></span>\n//   <a href=\"https://www.impuestos.gob.bo/....pdf\">RND-102600000012</a><span class=\"ez-toc-section-end\"></span></h2>\n//   seguida de <p class=\"wp-block-paragraph\">resumen</p> (los decretos supremos se mencionan en ese resumen).\n// - siatinfo.impuestos.gob.bo (Joomla estatico, scrapeable): anchors <a href=\"....pdf\">RND-102500000018</a>.\nconst ZONA = 'America/La_Paz';\nconst ahora = new Date();\nconst anio = new Intl.DateTimeFormat('es-BO', { timeZone: ZONA, year: 'numeric' }).format(ahora);\nconst anio2 = anio.slice(2);\n\nconst limpiar = (s) => String(s).replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&amp;/g, '&').replace(/\\s+/g, ' ').trim();\n\nconst htmlDe = (nombre) => {\n  try {\n    const j = $(nombre).first().json;\n    return String(j.data ?? '');\n  } catch (e) {\n    return '';\n  }\n};\n\nconst items = [];\nlet m;\n\n// Fuente 1: pagina de normativa del anio en curso (impuestos.com.bo).\nconst htmlNormativa = htmlDe('Normativa SIN (impuestos.com.bo)');\nconst RE_WP = /<h2 class=\"wp-block-heading\"><span class=\"ez-toc-section\" id=\"[^\"]*\"><\\/span><a href=\"([^\"]+)\"[^>]*>\\s*([^<]{3,80}?)\\s*<\\/a><span class=\"ez-toc-section-end\"><\\/span><\\/h2>\\s*(?:<p[^>]*>([\\s\\S]{0,400}?)<\\/p>)?/g;\nwhile ((m = RE_WP.exec(htmlNormativa)) !== null) {\n  items.push({ titulo: limpiar(m[2]).toUpperCase(), link: m[1], resumen: limpiar(m[3] || '').slice(0, 160), fuente: 'impuestos.com.bo' });\n}\n\n// Fuente 2: home de siatinfo (novedades oficiales de facturacion).\nconst htmlSiat = htmlDe('SIAT novedades (siatinfo)');\nconst RE_SIAT = /<a href=\"([^\"]+)\"[^>]*>\\s*(RND[-\\s]?N?°?\\s?\\d{10,14})\\s*<\\/a>/gi;\nwhile ((m = RE_SIAT.exec(htmlSiat)) !== null) {\n  const link = m[1].indexOf('http') === 0 ? m[1] : 'https://siatinfo.impuestos.gob.bo' + m[1];\n  items.push({ titulo: limpiar(m[2]).toUpperCase(), link, resumen: '', fuente: 'siatinfo (SIN)' });\n}\n\n// Solo lo del anio en curso: el codigo RND embebe el anio (10YY), o el titulo/link lo menciona.\nconst RE_ANIO = new RegExp('RND[-\\\\s]?N?°?\\\\s?10' + anio2 + '\\\\d');\nconst esDelAnio = (it) => it.titulo.includes(anio) || RE_ANIO.test(it.titulo) || it.link.includes('/' + anio + '/');\n\nconst enCorrida = new Set();\nconst delAnio = items.filter((it) => {\n  if (!esDelAnio(it) || enCorrida.has(it.titulo)) return false;\n  enCorrida.add(it.titulo);\n  return true;\n});\n\n// Memoria entre ejecuciones: solo persiste en ejecuciones de produccion (workflow activo), no en Test.\nconst memoria = $getWorkflowStaticData('global');\nif (!Array.isArray(memoria.lastSeen)) memoria.lastSeen = [];\nconst yaVistos = new Set(memoria.lastSeen);\nconst novedades = delAnio.filter((it) => !yaVistos.has(it.titulo));\nmemoria.lastSeen = memoria.lastSeen.concat(novedades.map((it) => it.titulo)).slice(-200); // cap 200, FIFO\n\nconst fecha = new Intl.DateTimeFormat('es-BO', { timeZone: ZONA, day: '2-digit', month: '2-digit', year: 'numeric' }).format(ahora);\nconst MAX_LISTA = 15; // limite defensivo (Telegram corta a 4096 chars)\nconst visibles = novedades.slice(0, MAX_LISTA);\nconst lineas = [\n  'Radar Normativo Bolivia — ' + fecha,\n  '',\n  ...visibles.map((it) => '• ' + it.titulo + ' [' + it.fuente + ']' + (it.resumen ? '\\n  ' + it.resumen : '') + '\\n  ' + it.link),\n  novedades.length > MAX_LISTA ? '(+' + (novedades.length - MAX_LISTA) + ' mas en las fuentes)' : null,\n  '',\n  'Revisar impacto en clientes → crear pendiente si aplica.',\n].filter((l) => l !== null);\n\nreturn [{\n  json: {\n    count: novedades.length,\n    novedades,\n    text: lineas.join('\\n'),\n    anio,\n    fuentesLeidas: { normativa: htmlNormativa.length > 0, siatinfo: htmlSiat.length > 0 },\n  },\n}];"
+    }
+   },
+   {
+    "id": "44da3dfb-be3a-43df-9752-3b1a3ebe01f3",
+    "name": "Hay novedades?",
+    "type": "n8n-nodes-base.if",
+    "typeVersion": 2.2,
+    "position": [
+     896,
+     0
+    ],
+    "parameters": {
+     "conditions": {
+      "options": {
+       "caseSensitive": true,
+       "leftValue": "",
+       "typeValidation": "strict",
+       "version": 2
+      },
+      "conditions": [
+       {
+        "id": "hay-novedades",
+        "leftValue": "={{ $json.count }}",
+        "rightValue": 0,
+        "operator": {
+         "type": "number",
+         "operation": "gt"
+        }
+       }
+      ],
+      "combinator": "and"
+     }
+    }
+   },
+   {
+    "id": "59350045-c7f9-4f70-a710-5e0c872e156a",
+    "name": "Telegram a Sergio",
+    "type": "n8n-nodes-base.telegram",
+    "typeVersion": 1.2,
+    "position": [
+     1120,
+     0
+    ],
+    "parameters": {
+     "chatId": "6830070978",
+     "text": "={{ $json.text }}",
+     "additionalFields": {
+      "parse_mode": "HTML"
+     }
+    },
+    "webhookId": "a25c11fc-f5b1-4216-b220-7b117628a903",
+    "credentials": {
+     "telegramApi": {
+      "id": "r8y2CN5RyOEIDce3",
+      "name": "Telegram account"
+     }
+    }
+   }
+  ],
+  "nodeGroups": [],
+  "activeVersion": null,
+  "meta": {
+   "aiBuilderAssisted": true,
+   "builderVariant": "mcp"
+  }
+ },
+ "triggerInfo": "This workflow has the following trigger(s):\n\n\nSchedule trigger(s):\n\n\n\t\t\t\t<trigger 1>\n\t\t\t\t\t - Node name: Lunes a viernes 08:00\n\t\t\t\t</trigger 1>\n\nScheduled workflows do not take inputs. To execute a specific schedule trigger, pass triggerNodeName only: { triggerNodeName: \"<node name>\" }.",
+ "recentExecutions": []
+}{
+ "workflow": {
+  "id": "QGXVyRSgrArxfolj",
+  "name": "ONIA - Radar de Novedades IA",
+  "active": false,
+  "isArchived": false,
+  "versionId": "f2a7a1b6-30e6-4141-8ba5-e826744bb5fe",
+  "activeVersionId": null,
+  "triggerCount": 1,
+  "nodeCount": 5,
+  "createdAt": "2026-07-22T23:05:17.435Z",
+  "updatedAt": "2026-08-29T00:27:30.046Z",
+  "settings": {
+   "executionOrder": "v1",
+   "availableInMCP": true
+  },
+  "tags": [],
+  "parentFolderId": null,
+  "scopes": [
+   "execution:delete",
+   "execution:list",
+   "execution:read",
+   "execution:reveal",
+   "workflow:create",
+   "workflow:delete",
+   "workflow:disableRedaction",
+   "workflow:enableRedaction",
+   "workflow:execute",
+   "workflow:execute-chat",
+   "workflow:export",
+   "workflow:import",
+   "workflow:list",
+   "workflow:move",
+   "workflow:publish",
+   "workflow:read",
+   "workflow:share",
+   "workflow:unpublish",
+   "workflow:unshare",
+   "workflow:update"
+  ],
+  "canExecute": true,
+  "connections": {
+   "Cada 2h": {
+    "main": [
+     [
+      {
+       "node": "Correr Radar IA (VPS)",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Correr Radar IA (VPS)": {
+    "main": [
+     [
+      {
+       "node": "Extraer novedades",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Extraer novedades": {
+    "main": [
+     [
+      {
+       "node": "Hay lanzamiento grande?",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Hay lanzamiento grande?": {
+    "main": [
+     [
+      {
+       "node": "Enviar a Sergio",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   }
+  },
+  "nodes": [
+   {
+    "id": "2e053392-9b5c-4bd7-ad5f-609f63110b90",
+    "name": "Cada 2h",
+    "type": "n8n-nodes-base.scheduleTrigger",
+    "typeVersion": 1.2,
+    "position": [
+     0,
+     0
+    ],
+    "parameters": {
+     "rule": {
+      "interval": [
+       {
+        "field": "cronExpression",
+        "expression": "0 */2 * * *"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "id": "3a19a77e-a696-4588-b7cd-1823517b8e5b",
+    "name": "Correr Radar IA (VPS)",
+    "type": "n8n-nodes-base.ssh",
+    "typeVersion": 1,
+    "position": [
+     224,
+     0
+    ],
+    "parameters": {
+     "resource": "command",
+     "operation": "execute",
+     "authentication": "privateKey",
+     "command": "bash /opt/onia/ai-news-radar-run.sh",
+     "cwd": "/root"
+    },
+    "credentials": {
+     "sshPrivateKey": {
+      "id": "4XKauEX3b6cqaDhW",
+      "name": "ONIA VPS SSH"
+     }
+    }
+   },
+   {
+    "id": "cd7be66f-b6dd-4b6e-83ea-8fa63be87db6",
+    "name": "Extraer novedades",
+    "type": "n8n-nodes-base.code",
+    "typeVersion": 2,
+    "position": [
+     448,
+     0
+    ],
+    "parameters": {
+     "mode": "runOnceForAllItems",
+     "language": "javaScript",
+     "jsCode": "const NL = String.fromCharCode(10);\nconst raw = ($input.first().json.stdout || \"\").trim();\nlet s;\ntry { s = JSON.parse(raw.split(NL).pop()); } catch (e) { s = { text: \"Radar IA - ERROR: no pude leer la salida.\", notify: true, error: true }; }\n// Decision Sergio 2026-08-28: Telegram avisa SOLO errores. Las novedades quedan en el log\n// del radar (/opt/onia) y en la memoria anti-repeticion; ya no viajan al celular.\nconst notify = s.error === true;\nreturn [{ json: { text: String(s.text || \"(sin contenido)\").slice(0, 3900), notify: notify } }];"
+    }
+   },
+   {
+    "id": "fd9d7469-fd24-49bf-982e-ebb1b445a8fe",
+    "name": "Hay lanzamiento grande?",
+    "type": "n8n-nodes-base.if",
+    "typeVersion": 2.2,
+    "position": [
+     672,
+     0
+    ],
+    "parameters": {
+     "conditions": {
+      "options": {
+       "caseSensitive": true,
+       "typeValidation": "loose"
+      },
+      "conditions": [
+       {
+        "id": "notify",
+        "leftValue": "={{ $json.notify ? 'yes' : 'no' }}",
+        "rightValue": "yes",
+        "operator": {
+         "type": "string",
+         "operation": "equals"
+        }
+       }
+      ],
+      "combinator": "and"
+     }
+    }
+   },
+   {
+    "id": "fcfc8a02-c68e-437a-a2b7-862ed05f0536",
+    "name": "Enviar a Sergio",
+    "type": "n8n-nodes-base.telegram",
+    "typeVersion": 1.2,
+    "position": [
+     896,
+     0
+    ],
+    "parameters": {
+     "resource": "message",
+     "operation": "sendMessage",
+     "chatId": "6830070978",
+     "text": "={{ $json.text }}",
+     "additionalFields": {
+      "appendAttribution": false,
+      "disable_web_page_preview": true,
+      "parse_mode": "HTML"
+     }
+    },
+    "webhookId": "a7f577fe-9f52-4231-aa6c-389468ccc7b3",
+    "credentials": {
+     "telegramApi": {
+      "id": "r8y2CN5RyOEIDce3",
+      "name": "Telegram account"
+     }
+    }
+   }
+  ],
+  "nodeGroups": [],
+  "activeVersion": null,
+  "meta": {
+   "aiBuilderAssisted": true,
+   "builderVariant": "mcp"
+  }
+ },
+ "triggerInfo": "This workflow has the following trigger(s):\n\n\nSchedule trigger(s):\n\n\n\t\t\t\t<trigger 1>\n\t\t\t\t\t - Node name: Cada 2h\n\t\t\t\t</trigger 1>\n\nScheduled workflows do not take inputs. To execute a specific schedule trigger, pass triggerNodeName only: { triggerNodeName: \"<node name>\" }.",
+ "recentExecutions": []
+}{
+ "workflow": {
+  "id": "XRS9fWY4yFMQQftF",
+  "name": "ONIA - Agente Building in Public",
+  "active": false,
+  "isArchived": false,
+  "versionId": "5617dd77-fb92-4101-b419-d0820164943b",
+  "activeVersionId": null,
+  "triggerCount": 1,
+  "nodeCount": 5,
+  "createdAt": "2026-07-10T01:02:30.119Z",
+  "updatedAt": "2026-07-10T01:02:43.643Z",
+  "settings": {
+   "executionOrder": "v1",
+   "availableInMCP": true
+  },
+  "tags": [],
+  "parentFolderId": null,
+  "description": "DESACTIVADO (vacaciones, 2026-07-10). Cron Lunes 07:25 La Paz: SSH docker exec onia-center building-public-agent.mjs. Lee repo-pulse, escribe onia_center.dev_pulse (visibilidad de desarrollo) y deja contenido building-in-public SANITIZADO (sin clientes) e",
+  "scopes": [
+   "execution:delete",
+   "execution:list",
+   "execution:read",
+   "execution:reveal",
+   "workflow:create",
+   "workflow:delete",
+   "workflow:disableRedaction",
+   "workflow:enableRedaction",
+   "workflow:execute",
+   "workflow:execute-chat",
+   "workflow:export",
+   "workflow:import",
+   "workflow:list",
+   "workflow:move",
+   "workflow:publish",
+   "workflow:read",
+   "workflow:share",
+   "workflow:unpublish",
+   "workflow:unshare",
+   "workflow:update"
+  ],
+  "canExecute": true,
+  "connections": {
+   "Lunes 07:25": {
+    "main": [
+     [
+      {
+       "node": "Correr Building in Public (VPS)",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Correr Building in Public (VPS)": {
+    "main": [
+     [
+      {
+       "node": "Preparar aviso",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Preparar aviso": {
+    "main": [
+     [
+      {
+       "node": "Hay algo que avisar?",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Hay algo que avisar?": {
+    "main": [
+     [
+      {
+       "node": "Avisar a Sergio",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   }
+  },
+  "nodes": [
+   {
+    "id": "9e195c19-b1cf-44f6-9eac-46ff788eb7cb",
+    "name": "Lunes 07:25",
+    "type": "n8n-nodes-base.scheduleTrigger",
+    "typeVersion": 1.2,
+    "position": [
+     0,
+     0
+    ],
+    "parameters": {
+     "rule": {
+      "interval": [
+       {
+        "field": "cronExpression",
+        "expression": "25 7 * * 1"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "id": "ebe08333-5c63-4f76-8031-d7c9d8e83d0b",
+    "name": "Correr Building in Public (VPS)",
+    "type": "n8n-nodes-base.ssh",
+    "typeVersion": 1,
+    "position": [
+     224,
+     0
+    ],
+    "parameters": {
+     "resource": "command",
+     "operation": "execute",
+     "authentication": "privateKey",
+     "command": "bash /opt/onia/building-public-agent-run.sh",
+     "cwd": "/root"
+    },
+    "credentials": {
+     "sshPrivateKey": {
+      "id": "4XKauEX3b6cqaDhW",
+      "name": "ONIA VPS SSH"
+     }
+    }
+   },
+   {
+    "id": "7c94163a-1e49-4322-9e42-f0e9113fba37",
+    "name": "Preparar aviso",
+    "type": "n8n-nodes-base.code",
+    "typeVersion": 2,
+    "position": [
+     448,
+     0
+    ],
+    "parameters": {
+     "mode": "runOnceForAllItems",
+     "language": "javaScript",
+     "jsCode": "const raw = ($input.first().json.stdout || '').trim();\nlet s;\ntry { s = JSON.parse(raw.split('\\n').pop()); } catch (e) { s = { ok: false, fatal: 'parse', raw: raw.slice(0, 200) }; }\nconst esc = (t) => String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');\nconst notify = (!s.ok) || (s.notify === true);\nlet text;\nif (!s.ok) {\n  text = 'Building in Public ONIA - ERROR: ' + esc(s.fatal || 'desconocido');\n} else {\n  const p = s.preview || {};\n  const sc = p.script || {};\n  const c = p.carousel || {};\n  const L = [];\n  L.push('<b>Building in Public ONIA — ' + esc(s.day || '') + '</b>');\n  if (s.devText) L.push(esc(s.devText));\n  if (sc.hook || sc.body) {\n    L.push('');\n    L.push('<b>GUION (' + esc(sc.format || 'Reel') + ' · ' + esc(sc.duration || '') + ')</b>');\n    if (sc.hook) L.push('Gancho: ' + esc(sc.hook));\n    if (sc.body) L.push('Desarrollo: ' + esc(sc.body));\n    if (sc.cta) L.push('CTA: ' + esc(sc.cta));\n    if (sc.on_screen) L.push('En pantalla: ' + esc(sc.on_screen));\n    if (sc.visual_prompt) L.push('Prompt visual: ' + esc(sc.visual_prompt));\n    if (sc.voice_tone) L.push('Voz/tono: ' + esc(sc.voice_tone));\n  }\n  if (c && (c.title || (Array.isArray(c.slides) && c.slides.length))) {\n    L.push('');\n    L.push('<b>CARRUSEL: ' + esc(c.title || '') + '</b>');\n    const sl = Array.isArray(c.slides) ? c.slides : [];\n    for (let j = 0; j < sl.length; j++) L.push((j + 1) + '. ' + esc(sl[j]));\n    if (c.cta) L.push('CTA: ' + esc(c.cta));\n  }\n  L.push('');\n  L.push((s.reviewsCreated || 0) + ' borrador(es) building-in-public en revision en ONIA Center. Nada se publica sin tu OK.');\n  text = L.join('\\n').slice(0, 3900);\n}\nreturn [{ json: { notify: notify, text: text } }];"
+    }
+   },
+   {
+    "id": "909f0985-0caf-49f7-a676-b9ea20c5daf1",
+    "name": "Hay algo que avisar?",
+    "type": "n8n-nodes-base.if",
+    "typeVersion": 2.3,
+    "position": [
+     672,
+     0
+    ],
+    "parameters": {
+     "conditions": {
+      "options": {
+       "caseSensitive": true,
+       "leftValue": "",
+       "typeValidation": "loose",
+       "version": 2
+      },
+      "combinator": "and",
+      "conditions": [
+       {
+        "id": "cond-notify",
+        "leftValue": "={{ $json.notify }}",
+        "rightValue": "",
+        "operator": {
+         "type": "boolean",
+         "operation": "true",
+         "singleValue": true
+        }
+       }
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8389b03-75b8-486f-af7b-9d8c93254677",
+    "name": "Avisar a Sergio",
+    "type": "n8n-nodes-base.telegram",
+    "typeVersion": 1.2,
+    "position": [
+     896,
+     0
+    ],
+    "parameters": {
+     "resource": "message",
+     "operation": "sendMessage",
+     "chatId": "6830070978",
+     "text": "={{ $json.text }}",
+     "additionalFields": {
+      "appendAttribution": false,
+      "disable_web_page_preview": true,
+      "parse_mode": "HTML"
+     }
+    },
+    "webhookId": "4d19e4b1-0241-4178-94b2-051a98778d79",
+    "credentials": {
+     "telegramApi": {
+      "id": "r8y2CN5RyOEIDce3",
+      "name": "Telegram account"
+     }
+    }
+   }
+  ],
+  "nodeGroups": [],
+  "activeVersion": null,
+  "meta": {
+   "aiBuilderAssisted": true,
+   "builderVariant": "mcp"
+  }
+ },
+ "triggerInfo": "This workflow has the following trigger(s):\n\n\nSchedule trigger(s):\n\n\n\t\t\t\t<trigger 1>\n\t\t\t\t\t - Node name: Lunes 07:25\n\t\t\t\t</trigger 1>\n\nScheduled workflows do not take inputs. To execute a specific schedule trigger, pass triggerNodeName only: { triggerNodeName: \"<node name>\" }.",
+ "recentExecutions": []
+}{
+ "workflow": {
+  "id": "aHFLqEtzqvq6SE3e",
+  "name": "ONIA - Web Factory VPS Radar",
+  "active": false,
+  "isArchived": false,
+  "versionId": "70ba0a3f-f869-4e69-87f9-4632baee4f9e",
+  "activeVersionId": null,
+  "triggerCount": 1,
+  "nodeCount": 8,
+  "createdAt": "2026-07-04T15:25:21.349Z",
+  "updatedAt": "2026-07-22T16:45:29.226Z",
+  "settings": {
+   "executionOrder": "v1",
+   "availableInMCP": true
+  },
+  "tags": [],
+  "parentFolderId": null,
+  "description": "Corre el worker de Web Factory en el VPS por SSH (Lun-Sab 07:10 La Paz), normaliza el resultado y notifica a Sergio por Telegram. Nodo SSH usa credencial ONIA VPS SSH. Comando: node scripts/web-factory-vps-automation.mjs --mode daily en /opt/onia-hermes/w",
+  "scopes": [
+   "execution:delete",
+   "execution:list",
+   "execution:read",
+   "execution:reveal",
+   "workflow:create",
+   "workflow:delete",
+   "workflow:disableRedaction",
+   "workflow:enableRedaction",
+   "workflow:execute",
+   "workflow:execute-chat",
+   "workflow:export",
+   "workflow:import",
+   "workflow:list",
+   "workflow:move",
+   "workflow:publish",
+   "workflow:read",
+   "workflow:share",
+   "workflow:unpublish",
+   "workflow:unshare",
+   "workflow:update"
+  ],
+  "canExecute": true,
+  "connections": {
+   "Lunes a sabado 07:10": {
+    "main": [
+     [
+      {
+       "node": "Run Web Factory worker on VPS",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Run Web Factory worker on VPS": {
+    "main": [
+     [
+      {
+       "node": "Normalize worker result",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Normalize worker result": {
+    "main": [
+     [
+      {
+       "node": "Telegram configured?",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Telegram configured?": {
+    "main": [
+     [
+      {
+       "node": "Worker OK?",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Worker OK?": {
+    "main": [
+     [
+      {
+       "node": "Notify success Telegram",
+       "type": "main",
+       "index": 0
+      }
+     ],
+     [
+      {
+       "node": "Notify failure Telegram",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   }
+  },
+  "nodes": [
+   {
+    "id": "b2d1b67f-33ea-49ae-8e71-8614397394c1",
+    "name": "Lunes a sabado 07:10",
+    "type": "n8n-nodes-base.scheduleTrigger",
+    "typeVersion": 1.3,
+    "position": [
+     240,
+     300
+    ],
+    "parameters": {
+     "rule": {
+      "interval": [
+       {
+        "field": "cronExpression",
+        "expression": "10 7 * * 1-6"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "id": "c194269a-4e01-4539-95aa-c1fc5623ba38",
+    "name": "Run Web Factory worker on VPS",
+    "type": "n8n-nodes-base.ssh",
+    "typeVersion": 1,
+    "position": [
+     540,
+     300
+    ],
+    "parameters": {
+     "resource": "command",
+     "operation": "execute",
+     "authentication": "privateKey",
+     "cwd": "/opt/onia-hermes/web-factory",
+     "command": "cd /opt/onia-hermes/web-factory && node scripts/web-factory-vps-automation.mjs --mode daily"
+    },
+    "credentials": {
+     "sshPrivateKey": {
+      "id": "4XKauEX3b6cqaDhW",
+      "name": "ONIA VPS SSH"
+     }
+    }
+   },
+   {
+    "id": "b1d0b04b-36d8-47a4-a081-f6eb9a89de47",
+    "name": "Normalize worker result",
+    "type": "n8n-nodes-base.code",
+    "typeVersion": 2,
+    "position": [
+     840,
+     300
+    ],
+    "parameters": {
+     "mode": "runOnceForAllItems",
+     "language": "javaScript",
+     "jsCode": "const raw = items[0]?.json || {};\nconst stdout = String(raw.stdout || '').trim();\nlet parsed = null;\ntry {\n  const start = stdout.indexOf('{');\n  parsed = start >= 0 ? JSON.parse(stdout.slice(start)) : null;\n} catch (error) {\n  parsed = null;\n}\nconst report = parsed || {};\nconst steps = Array.isArray(report.steps) ? report.steps : [];\nconst failedStep = steps.find((step) => !step.ok);\nconst exitCode = typeof raw.code === 'number' ? raw.code : (typeof raw.exitCode === 'number' ? raw.exitCode : 1);\nconst ok = exitCode === 0 && report.ok !== false && !failedStep;\nconst lines = [\n  ok ? 'ONIA Web Factory VPS: OK' : 'ONIA Web Factory VPS: FALLO',\n  `mode=${report.mode || 'daily'} runId=${report.runId || 'sin-run-id'}`,\n  `exitCode=${exitCode} report=${report.reportPath || '/var/log/onia/web-factory/latest-web-factory-vps-automation.json'}`,\n  failedStep ? `failedStep=${failedStep.id || 'unknown'}` : `steps=${steps.length}`,\n];\nif (raw.stderr) lines.push(String(raw.stderr).slice(-800));\nreturn [{ json: { ok, exitCode, runId: report.runId || '', reportPath: report.reportPath || '', failedStep: failedStep?.id || '', message: lines.join('\\n').slice(0, 3900) } }];"
+    }
+   },
+   {
+    "id": "defc5280-33af-4677-9eda-2c1337d0e5a8",
+    "name": "Telegram configured?",
+    "type": "n8n-nodes-base.if",
+    "typeVersion": 2.3,
+    "position": [
+     1140,
+     300
+    ],
+    "parameters": {
+     "conditions": {
+      "options": {
+       "caseSensitive": true,
+       "leftValue": "",
+       "typeValidation": "strict"
+      },
+      "conditions": [
+       {
+        "id": "telegram-env-ready",
+        "leftValue": "={{ Boolean($env.TELEGRAM_BOT_TOKEN && $env.TELEGRAM_SERGIO_CHAT_ID) }}",
+        "rightValue": true,
+        "operator": {
+         "type": "boolean",
+         "operation": "equals"
+        }
+       }
+      ],
+      "combinator": "and"
+     }
+    }
+   },
+   {
+    "id": "f116541f-3bc0-45be-b3fc-def6f7d83eb7",
+    "name": "Worker OK?",
+    "type": "n8n-nodes-base.if",
+    "typeVersion": 2.3,
+    "position": [
+     1440,
+     300
+    ],
+    "parameters": {
+     "conditions": {
+      "options": {
+       "caseSensitive": true,
+       "leftValue": "",
+       "typeValidation": "strict"
+      },
+      "conditions": [
+       {
+        "id": "worker-ok",
+        "leftValue": "={{ $json.ok }}",
+        "rightValue": true,
+        "operator": {
+         "type": "boolean",
+         "operation": "equals"
+        }
+       }
+      ],
+      "combinator": "and"
+     }
+    }
+   },
+   {
+    "id": "36369ec6-81ca-402c-b6f5-c85bf00b21a0",
+    "name": "Notify success Telegram",
+    "type": "n8n-nodes-base.httpRequest",
+    "typeVersion": 4.4,
+    "position": [
+     1740,
+     180
+    ],
+    "parameters": {
+     "method": "POST",
+     "url": "={{ 'https://api.telegram.org/bot' + $env.TELEGRAM_BOT_TOKEN + '/sendMessage' }}",
+     "sendBody": true,
+     "contentType": "json",
+     "specifyBody": "json",
+     "jsonBody": "={{ { chat_id: $env.TELEGRAM_SERGIO_CHAT_ID, text: $json.message, disable_web_page_preview: true } }}",
+     "options": {
+      "timeout": 30000
+     }
+    },
+    "disabled": true
+   },
+   {
+    "id": "7ed3ca0a-cc50-4360-8720-a70b52cd2ce0",
+    "name": "Notify failure Telegram",
+    "type": "n8n-nodes-base.httpRequest",
+    "typeVersion": 4.4,
+    "position": [
+     1740,
+     420
+    ],
+    "parameters": {
+     "method": "POST",
+     "url": "={{ 'https://api.telegram.org/bot' + $env.TELEGRAM_BOT_TOKEN + '/sendMessage' }}",
+     "sendBody": true,
+     "contentType": "json",
+     "specifyBody": "json",
+     "jsonBody": "={{ { chat_id: $env.TELEGRAM_SERGIO_CHAT_ID, text: $json.message, disable_web_page_preview: true } }}",
+     "options": {
+      "timeout": 30000
+     }
+    }
+   },
+   {
+    "id": "5e1a00c9-c543-4e54-a2ab-a6bba03f1ad0",
+    "name": "Sticky Note 6b06c6fa",
+    "type": "n8n-nodes-base.stickyNote",
+    "typeVersion": 1,
+    "position": [
+     1090,
+     250
+    ],
+    "parameters": {
+     "content": "## Telegram no configurado\nSi TELEGRAM_BOT_TOKEN o TELEGRAM_SERGIO_CHAT_ID faltan, el workflow ejecuta el worker pero no notifica. Mantener logs en /var/log/onia/web-factory.",
+     "color": 3,
+     "width": 300,
+     "height": 200
+    }
+   }
+  ],
+  "nodeGroups": [],
+  "activeVersion": null,
+  "meta": {
+   "aiBuilderAssisted": true,
+   "builderVariant": "mcp"
+  }
+ },
+ "triggerInfo": "This workflow has the following trigger(s):\n\n\nSchedule trigger(s):\n\n\n\t\t\t\t<trigger 1>\n\t\t\t\t\t - Node name: Lunes a sabado 07:10\n\t\t\t\t</trigger 1>\n\nScheduled workflows do not take inputs. To execute a specific schedule trigger, pass triggerNodeName only: { triggerNodeName: \"<node name>\" }.",
+ "recentExecutions": []
+}{
+ "workflow": {
+  "id": "nAGwe7DzxNQzMxXk",
+  "name": "ONIA - Video Intake (link por Telegram)",
+  "active": false,
+  "isArchived": false,
+  "versionId": "75dd74f2-d786-40b2-a466-1d5b9d511e04",
+  "activeVersionId": null,
+  "triggerCount": 0,
+  "nodeCount": 4,
+  "createdAt": "2026-08-12T23:37:39.556Z",
+  "updatedAt": "2026-08-12T23:37:52.618Z",
+  "settings": {
+   "executionOrder": "v1",
+   "availableInMCP": true
+  },
+  "tags": [],
+  "parentFolderId": null,
+  "description": "Sergio manda un link de IG/TikTok/YouTube por Telegram y dispara el workflow video-intake de GitHub Actions (repository_dispatch), que baja el video, lo ve, lo transcribe y commitea la ficha. El token de GitHub va como CREDENCIAL Header Auth, nunca en el ",
+  "scopes": [
+   "execution:delete",
+   "execution:list",
+   "execution:read",
+   "execution:reveal",
+   "workflow:create",
+   "workflow:delete",
+   "workflow:disableRedaction",
+   "workflow:enableRedaction",
+   "workflow:execute",
+   "workflow:execute-chat",
+   "workflow:export",
+   "workflow:import",
+   "workflow:list",
+   "workflow:move",
+   "workflow:publish",
+   "workflow:read",
+   "workflow:share",
+   "workflow:unpublish",
+   "workflow:unshare",
+   "workflow:update"
+  ],
+  "canExecute": true,
+  "connections": {
+   "Link por Telegram": {
+    "main": [
+     [
+      {
+       "node": "Extraer links de video",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Extraer links de video": {
+    "main": [
+     [
+      {
+       "node": "Disparar video-intake en GitHub",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Disparar video-intake en GitHub": {
+    "main": [
+     [
+      {
+       "node": "Avisar que entro",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   }
+  },
+  "nodes": [
+   {
+    "id": "34f104c0-71fb-4904-ad4c-291ebdc2819a",
+    "name": "Link por Telegram",
+    "type": "n8n-nodes-base.telegramTrigger",
+    "typeVersion": 1.2,
+    "position": [
+     0,
+     0
+    ],
+    "parameters": {
+     "updates": [
+      "message"
+     ],
+     "additionalFields": {
+      "parse_mode": "HTML"
+     }
+    },
+    "webhookId": "76d269dd-4abf-418a-abb4-1c813fb07ddf",
+    "credentials": {
+     "telegramApi": {
+      "id": "r8y2CN5RyOEIDce3",
+      "name": "Telegram account"
+     }
+    }
+   },
+   {
+    "id": "8987134b-fbcb-4a2d-a8c9-060fda9ba780",
+    "name": "Extraer links de video",
+    "type": "n8n-nodes-base.code",
+    "typeVersion": 2,
+    "position": [
+     224,
+     0
+    ],
+    "parameters": {
+     "mode": "runOnceForAllItems",
+     "jsCode": "const m = $input.first().json.message || {};\nconst texto = (m.text || '') + ' ' + (m.caption || '');\nconst encontrados = texto.match(/https?:\\/\\/\\S*?(?:instagram\\.com|tiktok\\.com|youtube\\.com|youtu\\.be)\\S*/gi) || [];\nif (!encontrados.length) return [];\nreturn [{ json: { urls: encontrados.join(' '), cuantos: encontrados.length, chatId: m.chat.id } }];"
+    }
+   },
+   {
+    "id": "862b3341-4af1-4dd2-aad3-ea3a455c3694",
+    "name": "Disparar video-intake en GitHub",
+    "type": "n8n-nodes-base.httpRequest",
+    "typeVersion": 4.2,
+    "position": [
+     448,
+     0
+    ],
+    "parameters": {
+     "method": "POST",
+     "url": "https://api.github.com/repos/oninteligenciaartificial/onia-hermes/dispatches",
+     "authentication": "genericCredentialType",
+     "genericAuthType": "httpHeaderAuth",
+     "sendHeaders": true,
+     "headerParameters": {
+      "parameters": [
+       {
+        "name": "Accept",
+        "value": "application/vnd.github+json"
+       },
+       {
+        "name": "User-Agent",
+        "value": "onia-n8n"
+       }
+      ]
+     },
+     "sendBody": true,
+     "specifyBody": "json",
+     "jsonBody": "={{ JSON.stringify({ event_type: \"video-intake\", client_payload: { urls: $json.urls } }) }}",
+     "options": {}
+    }
+   },
+   {
+    "id": "4c266770-39f8-4f6a-b1d8-514846febff5",
+    "name": "Avisar que entro",
+    "type": "n8n-nodes-base.telegram",
+    "typeVersion": 1.2,
+    "position": [
+     672,
+     0
+    ],
+    "parameters": {
+     "chatId": "={{ $(\"Extraer links de video\").first().json.chatId }}",
+     "text": "={{ \"Recibido: \" + $(\"Extraer links de video\").first().json.cuantos + \" link(s). Bajando y leyendo el video; la ficha se commitea en hermes-content/references/video-intake/ y te aviso al terminar.\" }}",
+     "additionalFields": {
+      "parse_mode": "HTML"
+     },
+     "resource": "message",
+     "operation": "sendMessage"
+    },
+    "webhookId": "8be82a96-4ec1-4487-ad5d-193a98965fb0",
+    "credentials": {
+     "telegramApi": {
+      "id": "r8y2CN5RyOEIDce3",
+      "name": "Telegram account"
+     }
+    }
+   }
+  ],
+  "nodeGroups": [],
+  "activeVersion": null,
+  "meta": {
+   "aiBuilderAssisted": true,
+   "builderVariant": "mcp"
+  }
+ },
+ "triggerInfo": "This workflow's trigger(s) are not supported for direct execution through MCP: Link por Telegram. Only Schedule, Webhook, Form, and Chat triggers can be executed directly through MCP, so this workflow cannot be executed through MCP. Its trigger(s) still run normally when the workflow is active.",
+ "recentExecutions": []
+}{
+ "workflow": {
+  "id": "nZkaXaZVKzgtwUqU",
+  "name": "ONIA - Agente Contenido y Media Lab (borradores)",
+  "active": false,
+  "isArchived": false,
+  "versionId": "384da4b5-8b6c-46b9-88ea-8311f2208b18",
+  "activeVersionId": null,
+  "triggerCount": 1,
+  "nodeCount": 5,
+  "createdAt": "2026-07-09T21:14:20.745Z",
+  "updatedAt": "2026-08-29T00:26:28.121Z",
+  "settings": {
+   "executionOrder": "v1",
+   "availableInMCP": true
+  },
+  "tags": [],
+  "parentFolderId": null,
+  "description": "Cron Lun-Sab 07:20 La Paz: SSH docker exec onia-center content-media-agent.mjs. Elige pilar/idea, redacta con LiteLLM SOLO TEXTO (guion \"que grabar hoy\" + carruseles), deja borradores en review_queue (pending/sensitive/reviewer=sergio) + agent_content_med",
+  "scopes": [
+   "execution:delete",
+   "execution:list",
+   "execution:read",
+   "execution:reveal",
+   "workflow:create",
+   "workflow:delete",
+   "workflow:disableRedaction",
+   "workflow:enableRedaction",
+   "workflow:execute",
+   "workflow:execute-chat",
+   "workflow:export",
+   "workflow:import",
+   "workflow:list",
+   "workflow:move",
+   "workflow:publish",
+   "workflow:read",
+   "workflow:share",
+   "workflow:unpublish",
+   "workflow:unshare",
+   "workflow:update"
+  ],
+  "canExecute": true,
+  "connections": {
+   "Lun-Sab 07:20": {
+    "main": [
+     [
+      {
+       "node": "Correr Agente Contenido (VPS)",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Correr Agente Contenido (VPS)": {
+    "main": [
+     [
+      {
+       "node": "Preparar aviso",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Preparar aviso": {
+    "main": [
+     [
+      {
+       "node": "Hay algo que avisar?",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   },
+   "Hay algo que avisar?": {
+    "main": [
+     [
+      {
+       "node": "Avisar a Sergio",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   }
+  },
+  "nodes": [
+   {
+    "id": "f74d5346-8fc7-4179-99a3-0f458b19161c",
+    "name": "Lun-Sab 07:20",
+    "type": "n8n-nodes-base.scheduleTrigger",
+    "typeVersion": 1.2,
+    "position": [
+     0,
+     0
+    ],
+    "parameters": {
+     "rule": {
+      "interval": [
+       {
+        "field": "cronExpression",
+        "expression": "20 7 * * 1-6"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "id": "012c21ae-1ca3-4171-a8b9-ec6fb02feba7",
+    "name": "Correr Agente Contenido (VPS)",
+    "type": "n8n-nodes-base.ssh",
+    "typeVersion": 1,
+    "position": [
+     224,
+     0
+    ],
+    "parameters": {
+     "resource": "command",
+     "operation": "execute",
+     "authentication": "privateKey",
+     "command": "bash /opt/onia/content-media-agent-run.sh",
+     "cwd": "/root"
+    },
+    "credentials": {
+     "sshPrivateKey": {
+      "id": "4XKauEX3b6cqaDhW",
+      "name": "ONIA VPS SSH"
+     }
+    }
+   },
+   {
+    "id": "2a373f64-461f-4b5e-a6c7-9b15fbea0f1c",
+    "name": "Preparar aviso",
+    "type": "n8n-nodes-base.code",
+    "typeVersion": 2,
+    "position": [
+     448,
+     0
+    ],
+    "parameters": {
+     "mode": "runOnceForAllItems",
+     "language": "javaScript",
+     "jsCode": "const raw = ($input.first().json.stdout || '').trim();\nlet s;\ntry { s = JSON.parse(raw.split('\\n').pop()); } catch (e) { s = { ok: false, fatal: 'parse', raw: raw.slice(0, 200) }; }\nconst esc = (t) => String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');\n// Decision Sergio 2026-08-28: Telegram avisa SOLO errores. El contenido vive en el panel.\nconst notify = (!s.ok);\nlet text = '';\nif (!s.ok) {\n  text = 'Agente Contenido ONIA - ERROR: ' + esc(s.fatal || 'desconocido');\n}\nreturn [{ json: { notify: notify, text: text } }];"
+    }
+   },
+   {
+    "id": "557534c4-bb2c-4f90-aa5d-a279b66bb132",
+    "name": "Hay algo que avisar?",
+    "type": "n8n-nodes-base.if",
+    "typeVersion": 2.3,
+    "position": [
+     672,
+     0
+    ],
+    "parameters": {
+     "conditions": {
+      "options": {
+       "caseSensitive": true,
+       "leftValue": "",
+       "typeValidation": "loose",
+       "version": 2
+      },
+      "combinator": "and",
+      "conditions": [
+       {
+        "id": "cond-notify",
+        "leftValue": "={{ $json.notify }}",
+        "rightValue": "",
+        "operator": {
+         "type": "boolean",
+         "operation": "true",
+         "singleValue": true
+        }
+       }
+      ]
+     }
+    }
+   },
+   {
+    "id": "46ed70a3-b2ae-4076-9d71-5812f1cdb817",
+    "name": "Avisar a Sergio",
+    "type": "n8n-nodes-base.telegram",
+    "typeVersion": 1.2,
+    "position": [
+     896,
+     0
+    ],
+    "parameters": {
+     "resource": "message",
+     "operation": "sendMessage",
+     "chatId": "6830070978",
+     "text": "={{ $json.text }}",
+     "additionalFields": {
+      "appendAttribution": false,
+      "disable_web_page_preview": true,
+      "parse_mode": "HTML"
+     }
+    },
+    "webhookId": "54c7210e-5493-4476-a338-57c3e354e330",
+    "disabled": false,
+    "credentials": {
+     "telegramApi": {
+      "id": "r8y2CN5RyOEIDce3",
+      "name": "Telegram account"
+     }
+    }
+   }
+  ],
+  "nodeGroups": [],
+  "activeVersion": null,
+  "meta": {
+   "aiBuilderAssisted": true,
+   "builderVariant": "mcp"
+  }
+ },
+ "triggerInfo": "This workflow has the following trigger(s):\n\n\nSchedule trigger(s):\n\n\n\t\t\t\t<trigger 1>\n\t\t\t\t\t - Node name: Lun-Sab 07:20\n\t\t\t\t</trigger 1>\n\nScheduled workflows do not take inputs. To execute a specific schedule trigger, pass triggerNodeName only: { triggerNodeName: \"<node name>\" }.",
+ "recentExecutions": []
+}{
+ "workflow": {
+  "id": "ynNMGtW8TCDCBMdS",
+  "name": "ONIA - Agente Radar YT (ideas, panel-only)",
+  "active": true,
+  "isArchived": false,
+  "versionId": "6f33c328-31b0-48b6-8a4e-d9fd457bd079",
+  "activeVersionId": "6f33c328-31b0-48b6-8a4e-d9fd457bd079",
+  "triggerCount": 1,
+  "nodeCount": 2,
+  "createdAt": "2026-07-22T17:00:49.400Z",
+  "updatedAt": "2026-07-22T17:00:49.400Z",
+  "settings": {
+   "executionOrder": "v1",
+   "availableInMCP": true
+  },
+  "tags": [],
+  "parentFolderId": null,
+  "description": "Cron Miercoles 07:45 La Paz: corre el Agente Radar YT por SSH (yt-dlp en el host + docker exec onia-center radar-yt-agent.mjs). Mira tendencias de YouTube (cero costo, sin API key), destila 3-6 ideas de contenido con LiteLLM y las deja en onia_center.idea",
+  "scopes": [
+   "execution:delete",
+   "execution:list",
+   "execution:read",
+   "execution:reveal",
+   "workflow:create",
+   "workflow:delete",
+   "workflow:disableRedaction",
+   "workflow:enableRedaction",
+   "workflow:execute",
+   "workflow:execute-chat",
+   "workflow:export",
+   "workflow:import",
+   "workflow:list",
+   "workflow:move",
+   "workflow:publish",
+   "workflow:read",
+   "workflow:share",
+   "workflow:unpublish",
+   "workflow:unshare",
+   "workflow:update"
+  ],
+  "canExecute": true,
+  "connections": {
+   "Miercoles 07:45": {
+    "main": [
+     [
+      {
+       "node": "Correr Radar YT (VPS)",
+       "type": "main",
+       "index": 0
+      }
+     ]
+    ]
+   }
+  },
+  "nodes": [
+   {
+    "id": "c8691c57-c5b7-4e80-9eed-f0f41a6dd4a0",
+    "name": "Miercoles 07:45",
+    "type": "n8n-nodes-base.scheduleTrigger",
+    "typeVersion": 1.2,
+    "position": [
+     0,
+     0
+    ],
+    "parameters": {
+     "rule": {
+      "interval": [
+       {
+        "field": "cronExpression",
+        "expression": "45 7 * * 3"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "id": "9f8b6757-5616-4801-a472-a4b994c4a401",
+    "name": "Correr Radar YT (VPS)",
+    "type": "n8n-nodes-base.ssh",
+    "typeVersion": 1,
+    "position": [
+     224,
+     0
+    ],
+    "parameters": {
+     "resource": "command",
+     "operation": "execute",
+     "authentication": "privateKey",
+     "command": "RADAR_DRY_RUN=false RADAR_LIMIT=6 bash /opt/onia/radar-yt-agent-run.sh",
+     "cwd": "/root"
+    },
+    "credentials": {
+     "sshPrivateKey": {
+      "id": "4XKauEX3b6cqaDhW",
+      "name": "ONIA VPS SSH"
+     }
+    }
+   }
+  ],
+  "nodeGroups": [],
+  "activeVersion": {
+   "sameAsDraft": true
+  },
+  "meta": {
+   "aiBuilderAssisted": true,
+   "builderVariant": "mcp"
+  }
+ },
+ "triggerInfo": "This workflow has the following trigger(s):\n\n\nSchedule trigger(s):\n\n\n\t\t\t\t<trigger 1>\n\t\t\t\t\t - Node name: Miercoles 07:45\n\t\t\t\t</trigger 1>\n\nScheduled workflows do not take inputs. To execute a specific schedule trigger, pass triggerNodeName only: { triggerNodeName: \"<node name>\" }.",
+ "recentExecutions": [
+  {
+   "id": "79276",
+   "status": "success",
+   "startedAt": "2026-11-04T11:45:00Z"
+  },
+  {
+   "id": "75824",
+   "status": "success",
+   "startedAt": "2026-10-28T11:45:00Z"
+  }
+ ]
+}
+exec
+/bin/bash -lc "jq '{id:.workflow.id,description:.workflow.description,nodes:[.workflow.nodes[]|{name,type,parameters,disabled,credentials}],connections:.workflow.connections}' fuentes-plan/n8n-contenido/aHFLqEtzqvq6SE3e.json fuentes-plan/n8n-contenido/XRS9fWY4yFMQQftF.json; rg --files --hidden /home/onia-codex-worker/repos/onia -g '"'!**/.git/**'"' -g '"'!**/.env*'"' -g '"'!**/.codex/**'"' | rg '(ai-news-radar|content-media-agent|radar-yt-agent|building-public|web-factory|video.intake|RADAR_NORMATIVO)'" in /home/onia-codex-worker/operacion
+ exited 1 in 0ms:
+{
+  "id": "aHFLqEtzqvq6SE3e",
+  "description": "Corre el worker de Web Factory en el VPS por SSH (Lun-Sab 07:10 La Paz), normaliza el resultado y notifica a Sergio por Telegram. Nodo SSH usa credencial ONIA VPS SSH. Comando: node scripts/web-factory-vps-automation.mjs --mode daily en /opt/onia-hermes/w",
+  "nodes": [
+    {
+      "name": "Lunes a sabado 07:10",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "10 7 * * 1-6"
+            }
+          ]
+        }
+      },
+      "disabled": null,
+      "credentials": null
+    },
+    {
+      "name": "Run Web Factory worker on VPS",
+      "type": "n8n-nodes-base.ssh",
+      "parameters": {
+        "resource": "command",
+        "operation": "execute",
+        "authentication": "privateKey",
+        "cwd": "/opt/onia-hermes/web-factory",
+        "command": "cd /opt/onia-hermes/web-factory && node scripts/web-factory-vps-automation.mjs --mode daily"
+      },
+      "disabled": null,
+      "credentials": {
+        "sshPrivateKey": {
+          "id": "4XKauEX3b6cqaDhW",
+          "name": "ONIA VPS SSH"
+        }
+      }
+    },
+    {
+      "name": "Normalize worker result",
+      "type": "n8n-nodes-base.code",
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "language": "javaScript",
+        "jsCode": "const raw = items[0]?.json || {};\nconst stdout = String(raw.stdout || '').trim();\nlet parsed = null;\ntry {\n  const start = stdout.indexOf('{');\n  parsed = start >= 0 ? JSON.parse(stdout.slice(start)) : null;\n} catch (error) {\n  parsed = null;\n}\nconst report = parsed || {};\nconst steps = Array.isArray(report.steps) ? report.steps : [];\nconst failedStep = steps.find((step) => !step.ok);\nconst exitCode = typeof raw.code === 'number' ? raw.code : (typeof raw.exitCode === 'number' ? raw.exitCode : 1);\nconst ok = exitCode === 0 && report.ok !== false && !failedStep;\nconst lines = [\n  ok ? 'ONIA Web Factory VPS: OK' : 'ONIA Web Factory VPS: FALLO',\n  `mode=${report.mode || 'daily'} runId=${report.runId || 'sin-run-id'}`,\n  `exitCode=${exitCode} report=${report.reportPath || '/var/log/onia/web-factory/latest-web-factory-vps-automation.json'}`,\n  failedStep ? `failedStep=${failedStep.id || 'unknown'}` : `steps=${steps.length}`,\n];\nif (raw.stderr) lines.push(String(raw.stderr).slice(-800));\nreturn [{ json: { ok, exitCode, runId: report.runId || '', reportPath: report.reportPath || '', failedStep: failedStep?.id || '', message: lines.join('\\n').slice(0, 3900) } }];"
+      },
+      "disabled": null,
+      "credentials": null
+    },
+    {
+      "name": "Telegram configured?",
+      "type": "n8n-nodes-base.if",
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "telegram-env-ready",
+              "leftValue": "={{ Boolean($env.TELEGRAM_BOT_TOKEN && $env.TELEGRAM_SERGIO_CHAT_ID) }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "disabled": null,
+      "credentials": null
+    },
+    {
+      "name": "Worker OK?",
+      "type": "n8n-nodes-base.if",
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "worker-ok",
+              "leftValue": "={{ $json.ok }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "disabled": null,
+      "credentials": null
+    },
+    {
+      "name": "Notify success Telegram",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "POST",
+        "url": "={{ 'https://api.telegram.org/bot' + $env.TELEGRAM_BOT_TOKEN + '/sendMessage' }}",
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={{ { chat_id: $env.TELEGRAM_SERGIO_CHAT_ID, text: $json.message, disable_web_page_preview: true } }}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "disabled": true,
+      "credentials": null
+    },
+    {
+      "name": "Notify failure Telegram",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "POST",
+        "url": "={{ 'https://api.telegram.org/bot' + $env.TELEGRAM_BOT_TOKEN + '/sendMessage' }}",
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={{ { chat_id: $env.TELEGRAM_SERGIO_CHAT_ID, text: $json.message, disable_web_page_preview: true } }}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "disabled": null,
+      "credentials": null
+    },
+    {
+      "name": "Sticky Note 6b06c6fa",
+      "type": "n8n-nodes-base.stickyNote",
+      "parameters": {
+        "content": "## Telegram no configurado\nSi TELEGRAM_BOT_TOKEN o TELEGRAM_SERGIO_CHAT_ID faltan, el workflow ejecuta el worker pero no notifica. Mantener logs en /var/log/onia/web-factory.",
+        "color": 3,
+        "width": 300,
+        "height": 200
+      },
+      "disabled": null,
+      "credentials": null
+    }
+  ],
+  "connections": {
+    "Lunes a sabado 07:10": {
+      "main": [
+        [
+          {
+            "node": "Run Web Factory worker on VPS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run Web Factory worker on VPS": {
+      "main": [
+        [
+          {
+            "node": "Normalize worker result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize worker result": {
+      "main": [
+        [
+          {
+            "node": "Telegram configured?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram configured?": {
+      "main": [
+        [
+          {
+            "node": "Worker OK?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Worker OK?": {
+      "main": [
+        [
+          {
+            "node": "Notify success Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Notify failure Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
+{
+  "id": "XRS9fWY4yFMQQftF",
+  "description": "DESACTIVADO (vacaciones, 2026-07-10). Cron Lunes 07:25 La Paz: SSH docker exec onia-center building-public-agent.mjs. Lee repo-pulse, escribe onia_center.dev_pulse (visibilidad de desarrollo) y deja contenido building-in-public SANITIZADO (sin clientes) e",
+  "nodes": [
+    {
+      "name": "Lunes 07:25",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "25 7 * * 1"
+            }
+          ]
+        }
+      },
+      "disabled": null,
+      "credentials": null
+    },
+    {
+      "name": "Correr Building in Public (VPS)",
+      "type": "n8n-nodes-base.ssh",
+      "parameters": {
+        "resource": "command",
+        "operation": "execute",
+        "authentication": "privateKey",
+        "command": "bash /opt/onia/building-public-agent-run.sh",
+        "cwd": "/root"
+      },
+      "disabled": null,
+      "credentials": {
+        "sshPrivateKey": {
+          "id": "4XKauEX3b6cqaDhW",
+          "name": "ONIA VPS SSH"
+        }
+      }
+    },
+    {
+      "name": "Preparar aviso",
+      "type": "n8n-nodes-base.code",
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "language": "javaScript",
+        "jsCode": "const raw = ($input.first().json.stdout || '').trim();\nlet s;\ntry { s = JSON.parse(raw.split('\\n').pop()); } catch (e) { s = { ok: false, fatal: 'parse', raw: raw.slice(0, 200) }; }\nconst esc = (t) => String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');\nconst notify = (!s.ok) || (s.notify === true);\nlet text;\nif (!s.ok) {\n  text = 'Building in Public ONIA - ERROR: ' + esc(s.fatal || 'desconocido');\n} else {\n  const p = s.preview || {};\n  const sc = p.script || {};\n  const c = p.carousel || {};\n  const L = [];\n  L.push('<b>Building in Public ONIA — ' + esc(s.day || '') + '</b>');\n  if (s.devText) L.push(esc(s.devText));\n  if (sc.hook || sc.body) {\n    L.push('');\n    L.push('<b>GUION (' + esc(sc.format || 'Reel') + ' · ' + esc(sc.duration || '') + ')</b>');\n    if (sc.hook) L.push('Gancho: ' + esc(sc.hook));\n    if (sc.body) L.push('Desarrollo: ' + esc(sc.body));\n    if (sc.cta) L.push('CTA: ' + esc(sc.cta));\n    if (sc.on_screen) L.push('En pantalla: ' + esc(sc.on_screen));\n    if (sc.visual_prompt) L.push('Prompt visual: ' + esc(sc.visual_prompt));\n    if (sc.voice_tone) L.push('Voz/tono: ' + esc(sc.voice_tone));\n  }\n  if (c && (c.title || (Array.isArray(c.slides) && c.slides.length))) {\n    L.push('');\n    L.push('<b>CARRUSEL: ' + esc(c.title || '') + '</b>');\n    const sl = Array.isArray(c.slides) ? c.slides : [];\n    for (let j = 0; j < sl.length; j++) L.push((j + 1) + '. ' + esc(sl[j]));\n    if (c.cta) L.push('CTA: ' + esc(c.cta));\n  }\n  L.push('');\n  L.push((s.reviewsCreated || 0) + ' borrador(es) building-in-public en revision en ONIA Center. Nada se publica sin tu OK.');\n  text = L.join('\\n').slice(0, 3900);\n}\nreturn [{ json: { notify: notify, text: text } }];"
+      },
+      "disabled": null,
+      "credentials": null
+    },
+    {
+      "name": "Hay algo que avisar?",
+      "type": "n8n-nodes-base.if",
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "cond-notify",
+              "leftValue": "={{ $json.notify }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ]
+        }
+      },
+      "disabled": null,
+      "credentials": null
+    },
+    {
+      "name": "Avisar a Sergio",
+      "type": "n8n-nodes-base.telegram",
+      "parameters": {
+        "resource": "message",
+        "operation": "sendMessage",
+        "chatId": "6830070978",
+        "text": "={{ $json.text }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "disable_web_page_preview": true,
+          "parse_mode": "HTML"
+        }
+      },
+      "disabled": null,
+      "credentials": {
+        "telegramApi": {
+          "id": "r8y2CN5RyOEIDce3",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Lunes 07:25": {
+      "main": [
+        [
+          {
+            "node": "Correr Building in Public (VPS)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Correr Building in Public (VPS)": {
+      "main": [
+        [
+          {
+            "node": "Preparar aviso",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preparar aviso": {
+      "main": [
+        [
+          {
+            "node": "Hay algo que avisar?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hay algo que avisar?": {
+      "main": [
+        [
+          {
+            "node": "Avisar a Sergio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
+
+exec
+/bin/bash -lc "ls -la /home/onia-codex-worker/repos/onia; rg --files --hidden --no-ignore /home/onia-codex-worker/repos/onia -g '"'!**/.git/**'"' -g '"'!**/.env*'"' -g '"'!**/.codex/**'"' | head -60" in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+total 32
+drwx------ 4 onia-codex-worker onia-codex-worker 4096 Nov  7 16:48 .
+drwx------ 3 onia-codex-worker onia-codex-worker 4096 Nov  7 16:48 ..
+drwx------ 8 onia-codex-worker onia-codex-worker 4096 Nov  7 17:57 .git
+-rw------- 1 onia-codex-worker onia-codex-worker 1293 Nov  7 16:48 .gitattributes
+-rw------- 1 onia-codex-worker onia-codex-worker  561 Nov  7 16:48 .gitignore
+-rw------- 1 onia-codex-worker onia-codex-worker 1433 Nov  7 16:48 AGENTS.md
+-rw------- 1 onia-codex-worker onia-codex-worker 2881 Nov  7 16:48 README.md
+drwx------ 3 onia-codex-worker onia-codex-worker 4096 Nov  7 16:48 _investigacion-onia
+/home/onia-codex-worker/repos/onia/AGENTS.md
+/home/onia-codex-worker/repos/onia/.gitignore
+/home/onia-codex-worker/repos/onia/.gitattributes
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/ORQUESTACION.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/SESIONES.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/enrique-rocha.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/jeff-nippard.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/iman-gadzhi.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/nick-bare.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/san-munoz.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/justin-welsh.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/workshop-piloto.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/como-operan.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/formatos-onia.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/alex-hormozi.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/funcionamiento-redes.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/victor-heras.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/erik-taveras.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/ali-abdaal.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-04/README.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/RELEVO-SOL-ULTRA.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/d1-piloto.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/PUBLICACION.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/decodificacion.log
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/render.log
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/run.mjs
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/hyperframes.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/metadata.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/index.html
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/.gitattributes
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/verificacion.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/render-result.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/check.log
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/verificar.py
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/REPRODUCIBILIDAD.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/procedencia.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/sha256.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/reporte.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/check-result.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/piloto-d1/package.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/inventario-tanda-vps-borrador.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/inventario-documental-actual.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/validate-local.cjs
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/prepare-local.cjs
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/aceptacion.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/workflow.reserva.local.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/bundle-manifest.original.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/.gitattributes
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/workflow.local.patch.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/sources/manifest.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/sources/workflow.cloud.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/sources/pg-qa.cloud.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/sources/transactional-outbox.cloud.sql
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/validation-results.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/README.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/sql-gaps.propuesta.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/n8n-reserva-local/bundle-manifest.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/revisiones/organizacion.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/revisiones/automatizaciones.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/revisiones/aprendizaje.md
+
+exec
+/bin/bash -lc "cat /home/onia-codex-worker/repos/onia/AGENTS.md /home/onia-codex-worker/repos/onia/README.md; rg --files --hidden --no-ignore /home/onia-codex-worker/repos/onia -g '"'!**/.git/**'"' -g '"'!**/.env*'"' -g '"'!**/.codex/**'"' | rg '(ai-news-radar|content-media-agent|radar-yt-agent|building-public|web-factory-vps-automation|video.intake|RADAR_NORMATIVO)'; rg -n 'ai-news-radar-run|content-media-agent-run|radar-yt-agent-run|building-public-agent-run|web-factory-vps-automation|video-intake|Radar Normativo' /home/onia-codex-worker/repos/onia/_investigacion-onia -g '*.md' -g '"'!**/.env*'"'" in /home/onia-codex-worker/operacion
+ exited 1 in 0ms:
+# Sergio y ONIA: entrada del espacio de trabajo
+
+Para encargos de Sergio y ONIA, la base vigente está en `_investigacion-onia/base-operativa/`.
+Leé `reglas-comunes.md` y `ESTADO.md` allí antes de continuar trabajo de ese sistema. Son referencias a una sola fuente; no copies sus reglas a cada proyecto.
+
+Las instrucciones actuales de Sergio prevalecen sobre propuestas históricas. ONIA-CENTRAL está excluido como fuente: no consultar ni importar sus reglas, skills o estados para este trabajo.
+
+Consultá `privado/contexto.md` sólo si la tarea necesita datos personales, horarios o recursos de Sergio; no incluirlo en paquetes públicos. Para código del producto, leer además las instrucciones técnicas aplicables en onia-platform y cotejar el estado real antes de editar. No extender estas decisiones comerciales a proyectos ajenos al encargo.
+
+Las skills propias tienen sus fuentes editables únicas en `base-operativa/compartibles/skills`; los enlaces de `.agents/skills` dependen de la preparación del entorno. Al iniciar un encargo, aplicar la selección y lectura por área de `base-operativa/ORQUESTACION.md`; cargar sólo las pertinentes. En Cloud seguir `base-operativa/cloud/INICIO-SESION.md`, incluyendo recuperación por ID/commit si el encargo la pide. El historial se consulta sólo cuando es pertinente. La existencia de instrucciones no acredita su carga automática, conexiones, tareas cloud o resultados.
+# onia
+
+Base operativa de Sergio y ONIA: reglas comunes, skills y continuidad de tareas. Repositorio privado operativo: oninteligenciaartificial/onia, rama master, entorno Cloud onia. ONIA Platform conserva su repo de producto; onia-harness queda como referencia.
+
+## Empezar
+
+Leer [AGENTS.md](AGENTS.md), [reglas comunes](_investigacion-onia/base-operativa/reglas-comunes.md) y [ESTADO](_investigacion-onia/base-operativa/ESTADO.md). [ORQUESTACION](_investigacion-onia/base-operativa/ORQUESTACION.md) selecciona área y skill pertinente. El contexto histórico se consulta por encargo, sin reactivar objetivos anteriores.
+
+- [Inicio Cloud](_investigacion-onia/base-operativa/cloud/INICIO-SESION.md): comprobar entorno y leer fuentes; separar lectura de descubrimiento nativo.
+- [Continuidad](_investigacion-onia/base-operativa/cloud/CONTINUIDAD.md): crear, retomar, revisar y compartir una tarea con el CLI existente.
+- [Uso desde iPhone](_investigacion-onia/base-operativa/cloud/MOVIL.md): iniciar y continuar en Cloud.
+- [Informe de consolidación](_investigacion-onia/base-operativa/continuidad/2026-11-06/consolidacion-harness/INFORME.md): pruebas, revisiones y límites.
+
+## Qué conserva el repo
+
+Las nueve skills propias tienen una única fuente editable en base-operativa/compartibles/skills. El manifiesto mantiene seis áreas y nueve apoyos externos opcionales. harness.py prepara briefings y trabajo.py mantiene el registro; no son agentes residentes ni un scheduler.
+
+Una tarea compartible usa un registro saneado bajo continuidad/tareas y evidencia versionada. Los auxiliares de operacion, datos personales, credenciales, sesiones, medios privados y ONIA-CENTRAL quedan fuera de Git. No usar git add -f para incorporarlos. La presencia de una referencia local no acredita disponibilidad Cloud.
+
+## Preparar y comprobar Cloud
+
+El setup reproducible y sus dependencias están en [CONFIGURAR-ONIA](_investigacion-onia/base-operativa/cloud/CONFIGURAR-ONIA.md). El instalador prepara los enlaces de skills; comprobarlos no prueba anuncio nativo. Las skills personales del equipo no se trasladan por esos enlaces.
+
+Desde la raíz, con Python 3.10 o superior:
+
+```sh
+python3 -B -m unittest discover -s _investigacion-onia/base-operativa/scripts -p 'test_*.py' -v
+python3 _investigacion-onia/base-operativa/scripts/harness.py doctor
+```
+
+Cambiar el repo no actualiza por sí solo el snapshot reusable. Tras revisión, publicar Git y preparar/republicar el entorno cuando corresponda; comprobar después una sesión nueva. Una tarea existente conserva su propio estado.
+
+Las cuentas, servicios y operaciones externas se prueban sólo si el encargo las necesita y tiene autorización aplicable. Las claves se obtienen de su integración o almacén correspondiente. Los servicios VPS, n8n y producto mantienen sus alcances propios; esta consolidación no los instala ni activa.
+
+exec
+/bin/bash -lc 'cat /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/reglas-comunes.md /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/ESTADO.md /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/ORQUESTACION.md' in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+# Reglas comunes de trabajo
+
+Consolidación autorizada por Sergio el 6 de noviembre de 2026, America/Caracas. Esta es la única fuente de reglas generales de ONIA. Las instrucciones actuales del usuario prevalecen. Las versiones anteriores se conservan con bytes y hashes en [histórico](continuidad/2026-11-06/consolidacion-harness/HISTORICO.md); se consultan por encargo, no como una cola que deba ejecutarse al iniciar.
+
+## Alcance y autoridad
+
+- Usar el repositorio privado `oninteligenciaartificial/onia`, rama `master`, y el entorno Cloud `onia`. `onia-harness` queda como referencia conservada. ONIA Platform tiene su propio repositorio de producto. ONIA-CENTRAL está excluido: no consultar ni importar sus reglas, skills o estados.
+- El repo conserva reglas, decisiones, estado y entregas compartibles. Notion es una proyección y Pages conserva medios/procedencia. Los chats coordinan; un mensaje no garantiza que otra sesión reciba el contexto.
+- Cada encargo delimita objetivo, responsable, entradas, resultado, permisos aplicables y aceptación. Una meta comercial, un reparto local o una autorización de infraestructura de otro encargo no amplía el actual. Consultar PLAN, SESIONES o la ficha pertinente cuando corresponda.
+- Incorporar herramientas por una necesidad concreta. Las preferencias económicas, compromisos y disponibilidad orientan los encargos que las necesitan; datos personales y horarios permanecen en privado. No extender decisiones de ONIA a proyectos ajenos.
+
+## Autonomía y permisos
+
+Completar el trabajo autorizado y reversible sin pedir de nuevo decisiones ya tomadas. Una solicitud de construir o configurar requiere ejecución y comprobación, no sólo una propuesta. Continuar las partes independientes mientras se resuelve una dependencia.
+
+Después de analizar, convertir los hallazgos en una próxima acción concreta, con entregable, comprobación y responsable. Ejecutar la parte ya autorizada. Pedir únicamente el acceso, decisión o acción personal indispensable, con una solución viable y sus límites.
+
+Gastos, publicaciones, mensajes a personas, compromisos comerciales y cambios de producción requieren autorización aplicable a esa acción. Preparar no autoriza activar. No pedir contraseñas por chat ni imprimir secretos. Delegar no amplía permisos. Ninguna regla documental activa trabajo entre turnos o un servicio 24/7.
+
+## Skills, investigación y ejecución
+
+Una skill dirige cada encargo según [ORQUESTACION](ORQUESTACION.md) y [orquestacion.json](orquestacion.json). Leer su cuerpo canónico; cargar sólo los apoyos pertinentes. Las fuentes externas son referencias con sus licencias, no otra autoridad ni instaladores implícitos. Las herramientas elegidas por área y sus comandos se cotejan en el entorno real.
+
+Antes de ensayar un candidato, consultar fuentes primarias sobre la capacidad relevante, licencia, compatibilidad, recursos y fallos; recuperar sólo la lección pertinente del [registro de errores](registro-de-errores.md). Declarar incertidumbre, hipótesis, control y resultado que cambiaría la decisión. No encadenar pruebas por disponibilidad ni repetir un fallo excluyente sin condiciones distintas. Una prueba justificada puede resolver incertidumbre y dar un resultado negativo legítimo. Esto no exige permiso por cada comando.
+
+Utilizar subagentes de forma proactiva para partes independientes con entradas y entregables claros. Cada archivo o configuración tiene un único escritor a la vez; otro agente puede revisar. Mantener un punto de coordinación por proyecto y un responsable por tarea, según el reparto del encargo. No abrir un chat por skill ni ejecutar todas las áreas por defecto.
+
+Para esta consolidación, Codex ejecuta con subagentes nativos y Paperclip sólo refleja el seguimiento. No habilitar agentes externos, servicios persistentes ni gasto adicional para suplir fallos del encargo.
+
+## Evidencia y comprobación
+
+Distinguir propuesta, archivo escrito, capacidad disponible, resultado probado, publicación, venta y cobro. La presencia de un archivo no prueba su lectura; leer una skill no acredita descubrimiento nativo, utilidad o ejecución permanente. Los hashes prueban integridad, no calidad ni autenticación de un revisor.
+
+Al diagnosticar Codex, inspeccionar primero interfaz y capacidades disponibles y contrastar después con documentación oficial. Comprobar repo, HEAD y rutas antes de concluir que un archivo Cloud falta o de reconstruirlo. Un resultado de otra VM no valida la sesión actual.
+
+Cubrir el material solicitado según su finalidad sin reducir silenciosamente el alcance. En audiovisual, distinguir contenido, imagen, edición y componentes sonoros; fotogramas, ASR y métricas no sustituyen lo no percibido. Identificar cualquier muestreo. Las restricciones y controles de un caso concreto se consultan en su ficha, sin reactivar automáticamente la tarea histórica.
+
+Comprobar proporcionalmente el cambio: revisión de texto, inspección audiovisual, prueba de flujo o checks del código. Si falta acceso o capacidad, probar las alternativas autorizadas, explicar el límite exacto y dejar una salida concreta. No afirmar escucha, éxito o cierre de una parte no comprobada.
+
+## Continuidad y cierre
+
+Las tareas compartibles usan un único registro canónico versionado y evidencia saneada. Los registros privados permanecen en `operacion/`, ignorada por Git; no son una entrega entre VMs. No publicar datos personales, credenciales, sesiones de cuenta ni medios privados. Las rutas y hashes no sustituyen la disponibilidad del archivo en el destino.
+
+Una entrega lista para revisión no equivale a aceptación. Cotejar evidencia y criterio antes de aceptar; registrar resultado, comprobación, límites y próximo paso. Preservar las evidencias anteriores y rechazar una revisión obsoleta, un briefing alterado o evidencia corrupta. Git, commits y publicación se realizan dentro del encargo autorizado; ningún CLI sincroniza por sí solo las máquinas.
+
+Conservar correcciones específicas útiles en su fuente única y probarlas. Mejorar instrucciones no entrena los pesos del modelo ni garantiza conducta futura. [ESTADO](ESTADO.md) resume lo comprobado; el procedimiento y los límites de recuperación están en [CONTINUIDAD](cloud/CONTINUIDAD.md).
+# Estado vigente de ONIA
+
+6 de noviembre de 2026 · America/Caracas. Este resumen distingue lo comprobado de lo pendiente. El [estado completo anterior](continuidad/2026-11-06/consolidacion-harness/HISTORICO.md) se conserva sin pérdida de bytes y se consulta por tema; no es una cola automática de nuevas tareas.
+
+## Consolidación autorizada
+
+Sergio decidió usar `onia`, con una sesión integradora y otra revisora, conservar lo existente, probar continuidad entre sesiones y mostrar el uso móvil. Fuente: chat “Explicar cómo funciona un harness”, turno `01a1b23b-288c-7853-9b84-9285f4dce5ae`. Integra “Mostrar mapa de skills y reglas” (`01a1b221-dbd1-7b10-aada-a26094e04705`); revisa “Explicar cómo funciona un harness” (`01a1af41-1ce0-7b72-a888-7fd658396b4a`).
+
+Repositorio operativo: `oninteligenciaartificial/onia`, rama `master`, entorno Cloud `onia`. `onia-harness` se conserva como referencia; no se migran sus borradores ni se mantiene otro CLI operativo. ONIA Platform sigue separado.
+
+Estado de esta unidad: **implementación publicada y continuidad real A→Git→B aprobada técnicamente por revisión independiente**. Código final 706bf5eadb13abb7b97dfb286c3df1d546ac71bb: 54/54 tests en preparación Cloud, cero omisiones. El registro único continuidad-cloud-001 conserva evidencia y aceptación técnica, con próximo paso de consultar el resultado desde iPhone. [Informe, commits, sesiones y límites](continuidad/2026-11-06/consolidacion-harness/INFORME.md). Los controles y guía están en [CONTINUIDAD](cloud/CONTINUIDAD.md) y [MOVIL](cloud/MOVIL.md).
+
+## Arranques y recuperación comprobados
+
+La prueba Cloud `01a1b238-b446-777a-93c0-e31f4034301f` arrancó en `7d26f84d82c138335727735e158df7b904e91582`, Git limpio. Verificó 9 enlaces propios en repo y 9 aliases del workspace, 9 skills propias y 9 apoyos externos resueltos, y doctor 30/30. Leyó reglas, mapa y desarrollar-y-verificar desde archivos.
+
+**No anunció nativamente instrucciones de inicio ni skills ONIA.** La lectura explícita funcionó; no se acredita carga automática de Start skill. La prueba no ejecutó start.sh ni repitió los 39 tests que habían pasado en preparación. Por sí sola esa prueba no acreditó traspaso a otra VM, móvil ni ejecución permanente. El traspaso posterior A→B sí pasó, según el informe de consolidación.
+
+## Contextos conservados por encargo
+
+La evaluación posterior autorizada de sesiones tiene [un plan único](continuidad/2026-11-06/evaluacion-sesiones/PLAN.md) y el [registro evaluacion-sesiones-001](continuidad/tareas/evaluacion-sesiones-001.json). Implementación y doce ensayos revisados en Git a366ad71ef1f0982b2152b73df204f57e95cd6bd. La preparación Cloud de esa versión pasó 74 pruebas y omitió una de junctions Windows, de 75 definidas; también cotejó 9 enlaces propios, 9 aliases, doctor 30/30 y 190/190 archivos de evidencia. [Recibo Cloud](continuidad/evidencias/evaluacion-sesiones-001/validacion-cloud-v1.json). Esta comprobación precede a guardar/publicar el snapshot: su confirmación se consulta en el editor 01a1b22d-9f2c-72df-8a57-4c1ccb0c800a. La retoma breve, decisiones, ficha LLM y reservas locales se describen en CONTINUIDAD. El anuncio nativo Cloud y la compacción siguen sin acreditarse.
+
+Preparación local posterior: se reprodujo WinError 1314 y se completaron los dos enlaces faltantes mediante junctions explícitas; nueve fuentes enlazadas. Un subagente nativo local nuevo, sin herramientas ni lecturas de archivos, anunció las nueve skills propias en su catálogo inicial: [traza](continuidad/2026-11-06/evaluacion-sesiones/ejecuciones/catalogo-local/trace-actions.json) y [metadatos](continuidad/2026-11-06/evaluacion-sesiones/ejecuciones/catalogo-local/runtime.json). Eso acredita anuncio local, no lectura de cuerpos, anuncio Cloud ni compacción.
+
+- Dirección comercial y metas: [PLAN](PLAN.md), sin sustituir una solicitud técnica expresa.
+- Repartos, modelos y relevos anteriores: [SESIONES](SESIONES.md), con fechas y límites; el reparto de esta consolidación está arriba.
+- Referentes, audio e infraestructura: [índice de investigación](investigacion/2026-11-05-referentes/GOAL-REFERENTES.md) y estado histórico. Los avances y restricciones de esas tandas no se reactivan por abrir otra sesión.
+- Video D1, n8n, cuentas, VPS y producto: conservar evidencias en sus fichas y el estado anterior; no interpretar la consolidación como nuevas instalaciones, activación o despliegue.
+- Contexto personal, credenciales, sesiones autenticadas y medios privados siguen fuera de Git.
+
+No hay scheduler distribuido ni actividad 24/7 acreditados. Paperclip es un tablero de seguimiento; su configuración y estado efectivo se comprueban al actualizar la tarea correspondiente.
+
+B (01a1b251-c3f8-7781-9fcf-1874844c401f) arrancó desde el snapshot 9cf3e40 y recuperó por Git la entrega c3ac631; continuó de revisión 2 a 3 con siete controles aislados. Persistió el límite de anuncio nativo, aunque leyó las fuentes y aplicó la directora. La entrega B está publicada en 955e981; el cierre de aquella consolidación se publicó con 99da0bf a las 15:43 Caracas. La evaluación posterior se distingue arriba. Uso real de iPhone y ejecución permanente siguen sin acreditar.
+# Ejecutar y retomar encargos
+
+Aplicar [reglas-comunes](reglas-comunes.md), [ESTADO](ESTADO.md) y el encargo actual. Un coordinador integra y un responsable ejecuta cada tarea; otro puede revisar sin editar. El reparto de chats de fechas anteriores está en [SESIONES](SESIONES.md), como procedencia. No obliga a despachar cada tarea Cloud a áreas locales. El CLI prepara y recupera archivos; no crea agentes, chats, servicios ni disparadores.
+
+## Entrada y selección
+
+1. Comprobar repo, HEAD y cambios existentes, conservando trabajo ajeno. En Cloud seguir [INICIO-SESION](cloud/INICIO-SESION.md).
+2. Identificar el área por el resultado del encargo y consultar [orquestacion.json](orquestacion.json). Leer las reglas generales, el estado vigente y el cuerpo de la directora canónica.
+3. Leer sólo el contexto y las lecciones pertinentes. PLAN contiene dirección de negocio; SESIONES conserva repartos; los [antecedentes](continuidad/2026-11-06/consolidacion-harness/HISTORICO.md) se recuperan si la tarea los necesita.
+4. Registrar por separado catálogo inicialmente anunciado, rutas realmente leídas y prueba realizada. Si ONIA no aparece en el catálogo, leer la fuente canónica permite trabajar, pero no acredita descubrimiento nativo ni ejecución automática de Start skill.
+
+Las seis áreas CLI son `marketing`, `video`, `desarrollo`, `automatizaciones`, `organizacion` y `producto`. Jefatura y Aprendizaje no añaden claves ni agentes automáticos. En producto leer primero las instrucciones y el estado de ONIA Platform en su repo.
+
+`--skill` selecciona una directora propia habilitada para el área; por ejemplo continuidad-de-trabajo en organización. `--apoyo CLAVE` incorpora una referencia pertinente al briefing y se puede repetir. Las claves `tercero-` sólo son apoyos. El CLI escribe enlaces: el agente debe leer los cuerpos. Sin selección, los apoyos se enumeran como opcionales, no se cargan todos.
+
+## Preparación y comprobación
+
+Desde la raíz del checkout (en Windows, python también es válido):
+
+```sh
+python3 _investigacion-onia/base-operativa/scripts/harness.py doctor
+python3 _investigacion-onia/base-operativa/scripts/harness.py preparar demo-001 --compartible --area desarrollo --objetivo "Comprobar una entrega ficticia" --entregable "Informe con evidencia" --aceptacion "Resultado reproducible y límites explícitos"
+```
+
+`doctor` comprueba presencia de rutas; instalación, conexiones, navegador, publicación y descubrimiento se acreditan por separado. Un ID existente se retoma. El JSON es la autoridad de estado y briefing; el Markdown se genera desde él y se comprueba al recuperar.
+
+Usar `--compartible` sólo para contenido saneado apto para el repo: crea el registro único en `continuidad/tareas/ID.json` y su proyección en `continuidad/encargos/ID.md`. Sin esa opción el registro queda en `operacion/` ignorada. No se copian ni convierten tareas privadas automáticamente y se rechaza un ID presente en ambos lugares.
+
+Un ensayo de candidato requiere `--ensayo --investigacion RUTA --capacidad TEXTO --hipotesis TEXTO --control TEXTO --leccion TEXTO`. El coordinador revisa el contenido de la investigación; el CLI sólo comprueba presencia y ruta. No detecta automáticamente un ensayo mal clasificado.
+
+## Ejecución y revisión
+
+La selección de área/skill no configura un LLM. Elegir un perfil por tipo de trabajo mediante --perfil si corresponde, cotejar herramientas disponibles y registrar por separado modelo/esfuerzo recomendado, solicitado y observado. Desconocido se conserva como null. Los perfiles del manifiesto son candidatos revisables; no ganadores demostrados ni permisos para gasto. Escalar ante un fallo de razonamiento identificado, no por falta de credenciales o herramientas.
+
+Retomar comienza por la vista breve; consultar historial o --completo sólo cuando una decisión o revisión lo requiera. El briefing conserva restricciones y aparece una sola vez en tarea.briefing.contenido. Las decisiones sustituidas conservan procedencia y siguen disponibles en detalle. Para cambios paralelos, usar responsable y rutas explícitas; el comando asignar comprueba reservas en este checkout. Ver [contrato de continuidad](cloud/CONTINUIDAD.md) para actor, revisión esperada, reasignación y límites entre clones.
+
+Delegar partes independientes con objetivo, entradas, entregable, comprobación y archivos asignados. Cada archivo y configuración tiene un único escritor. Los subagentes internos y los chats persistentes son mecanismos distintos; comprobar herramientas y autorización para cada uno. Un mensaje de “terminado” no sustituye la evidencia.
+
+Centralizar preguntas y decisiones en el chat de coordinación del encargo. Las autorizaciones nativas pueden quedar ancladas al chat que invoca la herramienta; no prometer moverlas ni accionarlas por Sergio. La existencia de un chat o una preferencia móvil no acredita push o programación.
+
+El ejecutor prepara evidencia y deja `para_revision` únicamente con comprobación declarada correcta. El revisor coteja el resultado con la aceptación y usa `aceptar` de forma explícita. Cada mutación exige la revisión esperada; si cambió, retomar y reconciliar antes de escribir. Los nombres de revisor y comprobaciones son declaraciones auditables, no autenticación ni garantía automática de calidad.
+
+Para tareas de código paralelas, usar ramas y copias de trabajo separadas cuando corresponda al encargo y a las capacidades disponibles, e integrar secuencialmente con revisión. Crear worktrees o chats requiere la autorización aplicable de la herramienta. Una rama separada no aísla ni bloquea efectos sobre servicios externos.
+
+## Cierre, traspaso y fallos
+
+Seguir [CONTINUIDAD](cloud/CONTINUIDAD.md) para comandos, recuperación, publicación y prueba A→B. Un traspaso compartible proporciona ID, repositorio y commit; la nueva sesión recupera objetivo, briefing, evidencia y siguiente paso desde Git, no desde todo el chat.
+
+Conservar evidencia por revisión sin sobrescribirla. Ante alteración o pérdida, recuperar los bytes originales desde la entrega publicada; no recalcular hashes para ocultar el fallo. Si se interrumpió la proyección del briefing, `recuperar` puede reconstruir sólo el Markdown ausente desde el JSON íntegro. Un lock abandonado requiere verificar primero que ya no haya un escritor activo.
+
+Actualizar [ESTADO](ESTADO.md) cuando cambien capacidades o hitos, con evidencia y límites. No reescribir la historia como si una prueba anterior validara el código actual. La [guía móvil](cloud/MOVIL.md) explica el acceso; el uso real del teléfono se acredita por separado.
+
+Aplicar mejorar-sistema a correcciones observadas, evaluar-catalogo-skills a selección de candidatos y continuidad-de-trabajo a traspasos. Esta mejora de instrucciones no crea un scheduler ni entrenamiento del modelo.
+
+codex
+La evidencia muestra **seis flujos apagados y Radar YT activo**. Solo Radar YT tiene ejecuciones registradas: dos éxitos, el 28 de octubre y el 4 de noviembre. Eso acredita el estado de ejecución de n8n, pero no demuestra la calidad ni la persistencia de sus resultados.
+
+Revisión realizada sobre los siete JSON y `NOTAS.md`, con consulta de archivos del repositorio local autorizado. No ejecuté scripts, usé red, consulté secretos ni modifiqué archivos.
+
+**Límites comunes**
+
+- No encontré en el checkout local los cuatro wrappers `/opt/onia/*-run.sh`, sus agentes `.mjs`, el worker de Web Factory ni el receptor GitHub Actions de Video Intake. Su presencia y comportamiento en el VPS u otro repositorio quedan sin verificar.
+- Los flujos SSH referencian la credencial **ONIA VPS SSH**. Las referencias a credenciales no prueban que funcionen.
+- No aparecen nodos que invoquen directamente otros workflows n8n. Puede haber dependencias internas en los scripts ausentes.
+- Los cron no fijan zona horaria en `settings`. Las descripciones indican La Paz; debe verificarse la configuración efectiva antes de activarlos.
+
+**1. Radar de Novedades IA — `QGXVyRSgrArxfolj`**
+
+- **Qué hace:** cada dos horas ejecuta `bash /opt/onia/ai-news-radar-run.sh`; interpreta la última línea de stdout como JSON. Aunque el filtro se llama «Hay lanzamiento grande?», el código vigente manda Telegram **solo si `error === true`**; también avisa ante JSON ilegible. Según el comentario, las novedades quedan en logs y memoria del radar.
+- **Estado:** apagado, sin ejecuciones registradas. No consta el motivo de desactivación ni un fallo observado.
+- **Dependencias:** wrapper no encontrado en el repo; SSH y Telegram. Fuentes, APIs, almacenamiento y posible consumo de modelos dentro del script: desconocidos.
+- **Riesgos:** doce ejecuciones diarias, costos internos desconocidos, avisos repetidos ante errores y pérdida silenciosa de novedades si el contrato JSON es incorrecto. El texto externo se envía como HTML sin escape. Un fallo del nodo SSH podría detener el flujo antes del aviso.
+
+**2. Agente Contenido y Media Lab — `nZkaXaZVKzgtwUqU`**
+
+- **Qué hace:** lunes a sábado, 07:20; ejecuta `/opt/onia/content-media-agent-run.sh`. La descripción declara generación de guiones y carruseles con LiteLLM, y borradores en `review_queue` como `pending/sensitive/reviewer=sergio`. Telegram informa únicamente errores.
+- **Estado:** apagado, sin ejecuciones. No consta por qué.
+- **Dependencias:** wrapper y `content-media-agent.mjs` no encontrados; SSH, contenedor `onia-center`, LiteLLM, almacenamiento del panel y Telegram, según la descripción.
+- **Riesgos:** consumo de modelos, acumulación o duplicación de borradores, contenido incorrecto y envío de contexto sensible al proveedor. El JSON n8n no contiene publicación social, pero **no permite comprobar** que el agente y los consumidores de la cola respeten la revisión humana. Los errores SSH pueden quedar fuera del aviso.
+
+**3. Video Intake Telegram — `nAGwe7DzxNQzMxXk`**
+
+- **Qué hace:** recibe mensajes Telegram, extrae enlaces de Instagram/TikTok/YouTube y envía un `repository_dispatch` de tipo `video-intake` a `oninteligenciaartificial/onia-hermes`. Luego confirma recepción. Descargar, analizar, transcribir y guardar la ficha son funciones declaradas del receptor externo.
+- **Estado:** apagado, sin ejecuciones. El trigger no admite ejecución directa por MCP; **eso no impide que funcione al activarlo**. El nodo GitHub pide Header Auth, pero no incluye una credencial asociada en el exportado: bloqueo de configuración visible.
+- **Dependencias:** Telegram, autenticación GitHub, API GitHub y workflow Actions receptor, no encontrado en este repo. No usa SSH.
+- **Riesgos:** no hay filtro de remitente/chat, deduplicación ni límite de enlaces. La expresión regular admite dominios que solo contengan el nombre permitido. Puede disparar trabajos abusivos, consumir Actions/transcripción y descargar contenido no confiable. El receptor declara commits automáticos. El mensaje promete aviso final, pero este flujo solo confirma recepción; no muestra seguimiento de terminación.
+
+**4. Agente Radar YT — `ynNMGtW8TCDCBMdS`**
+
+- **Qué hace:** miércoles, 07:45; ejecuta `RADAR_DRY_RUN=false RADAR_LIMIT=6 bash /opt/onia/radar-yt-agent-run.sh`. Según la descripción, obtiene tendencias con `yt-dlp`, destila entre tres y seis ideas con LiteLLM y las deja en el panel.
+- **Estado:** activo; dos ejecuciones `success`. No hay fallo documentado.
+- **Dependencias:** wrapper y agente no encontrados; SSH, `yt-dlp` en el host, YouTube, contenedor `onia-center`, LiteLLM y almacenamiento del panel.
+- **Riesgos:** ya corre con escritura habilitada (`DRY_RUN=false`). El reclamo «cero costo, sin API key» no acredita gratuidad de LiteLLM. Posibles duplicados, bloqueo de extracción y resultados vacíos. Solo tiene trigger y SSH: no valida la salida ni avisa de fallos mediante nodos posteriores.
+
+**5. Web Factory VPS Radar — `aHFLqEtzqvq6SE3e`**
+
+- **Qué hace:** lunes a sábado, 07:10; ejecuta `node scripts/web-factory-vps-automation.mjs --mode daily` desde `/opt/onia-hermes/web-factory`. Normaliza stdout y código de salida; notifica fallos por Telegram si existen las variables requeridas. El aviso de éxito está deshabilitado.
+- **Estado:** apagado, sin ejecuciones. No consta el motivo.
+- **Dependencias:** worker no encontrado; SSH, Node.js y directorio remoto. Telegram depende de `TELEGRAM_BOT_TOKEN` y `TELEGRAM_SERGIO_CHAT_ID` accesibles desde n8n; no se comprobaron sus valores. APIs y efectos del worker: desconocidos.
+- **Riesgos:** **no se puede descartar publicación, despliegue u otras escrituras** sin leer el worker. El normalizador puede marcar éxito con JSON inválido si el código de salida es cero. Si faltan variables Telegram, termina sin aviso; si SSH falla antes, tampoco hay ruta de error explícita. Envía parte de stderr, con posible exposición de datos internos.
+
+**6. Building in Public — `XRS9fWY4yFMQQftF`**
+
+- **Qué hace:** lunes, 07:25; ejecuta `/opt/onia/building-public-agent-run.sh`. La descripción declara lectura de `repo-pulse`, escritura en `onia_center.dev_pulse` y preparación de contenido saneado. Telegram envía errores o previsualizaciones cuando el agente devuelve `notify=true`.
+- **Estado:** apagado **por vacaciones**, según la descripción del 10 de julio. Sin ejecuciones registradas; no hay evidencia de fallo.
+- **Dependencias:** wrapper y agente no encontrados; SSH, `onia-center`, `repo-pulse`, almacenamiento de borradores/panel y Telegram. Proveedor de generación y credenciales internas: desconocidos.
+- **Riesgos:** filtración de nombres de clientes, rutas, commits o datos internos a borradores, modelos o Telegram. El saneamiento y la aprobación antes de publicar son afirmaciones del flujo, no controles comprobados en el agente. Posibles borradores duplicados y costos no determinados.
+
+**7. Radar Normativo Bolivia — `OovRU4r0o7pvglJP`**
+
+- **Qué hace:** lunes a viernes, 08:00; descarga normativa anual de `impuestos.com.bo` y novedades de `siatinfo.impuestos.gob.bo`, extrae RND del año, deduplica mediante memoria estática y envía novedades por Telegram.
+- **Estado:** apagado, sin ejecuciones. No consta la causa. Hay defectos visibles que requieren corrección:
+  - `RE_ANIO` usa escapes duplicados en `new RegExp`: no representa correctamente `\s` y `\d`, por lo que puede excluir RND válidas.
+  - Los errores HTTP continúan por la salida normal; páginas vacías o extracción rota pueden parecer ausencia de novedades.
+  - Marca todas las novedades como vistas, pero solo muestra quince: las restantes podrían no detallarse nunca.
+- **Dependencias:** HTTP a ambas webs, estructura HTML, memoria persistente n8n y credencial Telegram. No usa SSH ni modelos.
+- **Riesgos:** falsos negativos, primer aviso masivo, repetición al perder memoria y mensajes superiores a 4096 caracteres. Los textos extraídos no se escapan pese a usar HTML. La primera fuente no es el dominio oficial del SIN: cada norma requiere contraste con su documento oficial.
+
+**Tendencias semanal — `tIl4chT49LIPD0VJ`: pendiente**, sin exportación por falta de acceso MCP.
+
+**Plan concreto de activación**
+
+Este es un plan para una intervención posterior autorizada; no se ejecutó ninguna activación.
+
+1. **Primero, verificar Radar YT, que ya está activo.** Obtener evidencia saneada del wrapper/agente desplegados y de las dos ejecuciones: salida SSH, resultado del modelo y registros creados. Confirmar costos, deduplicación y ausencia de publicaciones. Añadir validación de resultado y aviso de fallo. Criterio: ideas visibles y trazables, sin duplicados al repetir la misma entrada.
+
+2. **Primera activación nueva: Radar IA.** Revisar el script real y sus fuentes/costos; exigir código de salida y JSON válidos, escape HTML y tratamiento explícito de errores SSH. Ensayar una novedad, una repetición y un fallo controlado. Criterio: novedad guardada una vez, repetición sin duplicado y error avisado una sola vez. Después habilitar su cron.
+
+3. **Activar Contenido y Media Lab para un lote mínimo de borradores.** Revisar agente, permisos de cola y consumidores; fijar presupuesto y comprobar que ninguna transición publica automáticamente. Probar una idea aprobada y repetirla. Criterio: borrador pendiente de Sergio, costo registrado, cero publicación y cero duplicado. Luego habilitar la frecuencia prevista.
+
+4. **Habilitar Video Intake solo para remitentes autorizados.** Asociar Header Auth de mínimo alcance; revisar primero el Actions receptor. Añadir validación real de hostname, límites, deduplicación y seguimiento del resultado. Probar un enlace permitido, uno rechazado y una repetición. Criterio: un único trabajo y ficha saneada, sin escritura imprevista ni promesas de terminación sin comprobar.
+
+5. **Recuperar Building in Public.** Revisar el saneamiento del script y los campos de `repo-pulse` que salen del sistema. Probar con datos ficticios que incluyan nombres y rutas sensibles. Criterio: borrador revisable y previsualización sin esos datos, sin publicación automática; después activar el lunes.
+
+6. **Mantener Web Factory apagado hasta conocer el worker.** Inventariar cada paso de `daily`, sus escrituras, APIs y costos. Corregir el falso éxito ante JSON inválido y la cobertura de errores. Si incluye publicación o despliegue, separarlos y exigir autorización específica. Criterio: informe válido con pasos comprobables; JSON inválido y fallo SSH deben producir fallo visible.
+
+7. **Activar Radar Normativo como frente separado.** Corregir regex, detección de fuentes fallidas, escape HTML, paginación de mensajes y memoria de avisos entregados. Probar HTML guardado con norma nueva, repetida, año distinto, más de quince novedades y fuente caída. Criterio: ninguna pérdida silenciosa, repetición ni confusión entre “sin novedades” y “fuente fallida”.
+
+Antes de cada cron: confirmar zona horaria, límite de concurrencia, comportamiento ante repetición y criterio de parada. Un fallo requiere revisión manual antes de reintentar.
+
+## RESUMEN
+
+- Radar YT está activo; sus dos éxitos aún necesitan validación del resultado.
+- Primera activación nueva propuesta: Radar IA; después, Contenido en modo borradores.
+- Scripts remotos y receptor Actions no están en el checkout consultado.
+- Video Intake, Web Factory y Radar Normativo tienen bloqueos concretos que corregir.
+- No se activó nada ni se modificaron archivos.
+tokens used
+46,329
+La evidencia muestra **seis flujos apagados y Radar YT activo**. Solo Radar YT tiene ejecuciones registradas: dos éxitos, el 28 de octubre y el 4 de noviembre. Eso acredita el estado de ejecución de n8n, pero no demuestra la calidad ni la persistencia de sus resultados.
+
+Revisión realizada sobre los siete JSON y `NOTAS.md`, con consulta de archivos del repositorio local autorizado. No ejecuté scripts, usé red, consulté secretos ni modifiqué archivos.
+
+**Límites comunes**
+
+- No encontré en el checkout local los cuatro wrappers `/opt/onia/*-run.sh`, sus agentes `.mjs`, el worker de Web Factory ni el receptor GitHub Actions de Video Intake. Su presencia y comportamiento en el VPS u otro repositorio quedan sin verificar.
+- Los flujos SSH referencian la credencial **ONIA VPS SSH**. Las referencias a credenciales no prueban que funcionen.
+- No aparecen nodos que invoquen directamente otros workflows n8n. Puede haber dependencias internas en los scripts ausentes.
+- Los cron no fijan zona horaria en `settings`. Las descripciones indican La Paz; debe verificarse la configuración efectiva antes de activarlos.
+
+**1. Radar de Novedades IA — `QGXVyRSgrArxfolj`**
+
+- **Qué hace:** cada dos horas ejecuta `bash /opt/onia/ai-news-radar-run.sh`; interpreta la última línea de stdout como JSON. Aunque el filtro se llama «Hay lanzamiento grande?», el código vigente manda Telegram **solo si `error === true`**; también avisa ante JSON ilegible. Según el comentario, las novedades quedan en logs y memoria del radar.
+- **Estado:** apagado, sin ejecuciones registradas. No consta el motivo de desactivación ni un fallo observado.
+- **Dependencias:** wrapper no encontrado en el repo; SSH y Telegram. Fuentes, APIs, almacenamiento y posible consumo de modelos dentro del script: desconocidos.
+- **Riesgos:** doce ejecuciones diarias, costos internos desconocidos, avisos repetidos ante errores y pérdida silenciosa de novedades si el contrato JSON es incorrecto. El texto externo se envía como HTML sin escape. Un fallo del nodo SSH podría detener el flujo antes del aviso.
+
+**2. Agente Contenido y Media Lab — `nZkaXaZVKzgtwUqU`**
+
+- **Qué hace:** lunes a sábado, 07:20; ejecuta `/opt/onia/content-media-agent-run.sh`. La descripción declara generación de guiones y carruseles con LiteLLM, y borradores en `review_queue` como `pending/sensitive/reviewer=sergio`. Telegram informa únicamente errores.
+- **Estado:** apagado, sin ejecuciones. No consta por qué.
+- **Dependencias:** wrapper y `content-media-agent.mjs` no encontrados; SSH, contenedor `onia-center`, LiteLLM, almacenamiento del panel y Telegram, según la descripción.
+- **Riesgos:** consumo de modelos, acumulación o duplicación de borradores, contenido incorrecto y envío de contexto sensible al proveedor. El JSON n8n no contiene publicación social, pero **no permite comprobar** que el agente y los consumidores de la cola respeten la revisión humana. Los errores SSH pueden quedar fuera del aviso.
+
+**3. Video Intake Telegram — `nAGwe7DzxNQzMxXk`**
+
+- **Qué hace:** recibe mensajes Telegram, extrae enlaces de Instagram/TikTok/YouTube y envía un `repository_dispatch` de tipo `video-intake` a `oninteligenciaartificial/onia-hermes`. Luego confirma recepción. Descargar, analizar, transcribir y guardar la ficha son funciones declaradas del receptor externo.
+- **Estado:** apagado, sin ejecuciones. El trigger no admite ejecución directa por MCP; **eso no impide que funcione al activarlo**. El nodo GitHub pide Header Auth, pero no incluye una credencial asociada en el exportado: bloqueo de configuración visible.
+- **Dependencias:** Telegram, autenticación GitHub, API GitHub y workflow Actions receptor, no encontrado en este repo. No usa SSH.
+- **Riesgos:** no hay filtro de remitente/chat, deduplicación ni límite de enlaces. La expresión regular admite dominios que solo contengan el nombre permitido. Puede disparar trabajos abusivos, consumir Actions/transcripción y descargar contenido no confiable. El receptor declara commits automáticos. El mensaje promete aviso final, pero este flujo solo confirma recepción; no muestra seguimiento de terminación.
+
+**4. Agente Radar YT — `ynNMGtW8TCDCBMdS`**
+
+- **Qué hace:** miércoles, 07:45; ejecuta `RADAR_DRY_RUN=false RADAR_LIMIT=6 bash /opt/onia/radar-yt-agent-run.sh`. Según la descripción, obtiene tendencias con `yt-dlp`, destila entre tres y seis ideas con LiteLLM y las deja en el panel.
+- **Estado:** activo; dos ejecuciones `success`. No hay fallo documentado.
+- **Dependencias:** wrapper y agente no encontrados; SSH, `yt-dlp` en el host, YouTube, contenedor `onia-center`, LiteLLM y almacenamiento del panel.
+- **Riesgos:** ya corre con escritura habilitada (`DRY_RUN=false`). El reclamo «cero costo, sin API key» no acredita gratuidad de LiteLLM. Posibles duplicados, bloqueo de extracción y resultados vacíos. Solo tiene trigger y SSH: no valida la salida ni avisa de fallos mediante nodos posteriores.
+
+**5. Web Factory VPS Radar — `aHFLqEtzqvq6SE3e`**
+
+- **Qué hace:** lunes a sábado, 07:10; ejecuta `node scripts/web-factory-vps-automation.mjs --mode daily` desde `/opt/onia-hermes/web-factory`. Normaliza stdout y código de salida; notifica fallos por Telegram si existen las variables requeridas. El aviso de éxito está deshabilitado.
+- **Estado:** apagado, sin ejecuciones. No consta el motivo.
+- **Dependencias:** worker no encontrado; SSH, Node.js y directorio remoto. Telegram depende de `TELEGRAM_BOT_TOKEN` y `TELEGRAM_SERGIO_CHAT_ID` accesibles desde n8n; no se comprobaron sus valores. APIs y efectos del worker: desconocidos.
+- **Riesgos:** **no se puede descartar publicación, despliegue u otras escrituras** sin leer el worker. El normalizador puede marcar éxito con JSON inválido si el código de salida es cero. Si faltan variables Telegram, termina sin aviso; si SSH falla antes, tampoco hay ruta de error explícita. Envía parte de stderr, con posible exposición de datos internos.
+
+**6. Building in Public — `XRS9fWY4yFMQQftF`**
+
+- **Qué hace:** lunes, 07:25; ejecuta `/opt/onia/building-public-agent-run.sh`. La descripción declara lectura de `repo-pulse`, escritura en `onia_center.dev_pulse` y preparación de contenido saneado. Telegram envía errores o previsualizaciones cuando el agente devuelve `notify=true`.
+- **Estado:** apagado **por vacaciones**, según la descripción del 10 de julio. Sin ejecuciones registradas; no hay evidencia de fallo.
+- **Dependencias:** wrapper y agente no encontrados; SSH, `onia-center`, `repo-pulse`, almacenamiento de borradores/panel y Telegram. Proveedor de generación y credenciales internas: desconocidos.
+- **Riesgos:** filtración de nombres de clientes, rutas, commits o datos internos a borradores, modelos o Telegram. El saneamiento y la aprobación antes de publicar son afirmaciones del flujo, no controles comprobados en el agente. Posibles borradores duplicados y costos no determinados.
+
+**7. Radar Normativo Bolivia — `OovRU4r0o7pvglJP`**
+
+- **Qué hace:** lunes a viernes, 08:00; descarga normativa anual de `impuestos.com.bo` y novedades de `siatinfo.impuestos.gob.bo`, extrae RND del año, deduplica mediante memoria estática y envía novedades por Telegram.
+- **Estado:** apagado, sin ejecuciones. No consta la causa. Hay defectos visibles que requieren corrección:
+  - `RE_ANIO` usa escapes duplicados en `new RegExp`: no representa correctamente `\s` y `\d`, por lo que puede excluir RND válidas.
+  - Los errores HTTP continúan por la salida normal; páginas vacías o extracción rota pueden parecer ausencia de novedades.
+  - Marca todas las novedades como vistas, pero solo muestra quince: las restantes podrían no detallarse nunca.
+- **Dependencias:** HTTP a ambas webs, estructura HTML, memoria persistente n8n y credencial Telegram. No usa SSH ni modelos.
+- **Riesgos:** falsos negativos, primer aviso masivo, repetición al perder memoria y mensajes superiores a 4096 caracteres. Los textos extraídos no se escapan pese a usar HTML. La primera fuente no es el dominio oficial del SIN: cada norma requiere contraste con su documento oficial.
+
+**Tendencias semanal — `tIl4chT49LIPD0VJ`: pendiente**, sin exportación por falta de acceso MCP.
+
+**Plan concreto de activación**
+
+Este es un plan para una intervención posterior autorizada; no se ejecutó ninguna activación.
+
+1. **Primero, verificar Radar YT, que ya está activo.** Obtener evidencia saneada del wrapper/agente desplegados y de las dos ejecuciones: salida SSH, resultado del modelo y registros creados. Confirmar costos, deduplicación y ausencia de publicaciones. Añadir validación de resultado y aviso de fallo. Criterio: ideas visibles y trazables, sin duplicados al repetir la misma entrada.
+
+2. **Primera activación nueva: Radar IA.** Revisar el script real y sus fuentes/costos; exigir código de salida y JSON válidos, escape HTML y tratamiento explícito de errores SSH. Ensayar una novedad, una repetición y un fallo controlado. Criterio: novedad guardada una vez, repetición sin duplicado y error avisado una sola vez. Después habilitar su cron.
+
+3. **Activar Contenido y Media Lab para un lote mínimo de borradores.** Revisar agente, permisos de cola y consumidores; fijar presupuesto y comprobar que ninguna transición publica automáticamente. Probar una idea aprobada y repetirla. Criterio: borrador pendiente de Sergio, costo registrado, cero publicación y cero duplicado. Luego habilitar la frecuencia prevista.
+
+4. **Habilitar Video Intake solo para remitentes autorizados.** Asociar Header Auth de mínimo alcance; revisar primero el Actions receptor. Añadir validación real de hostname, límites, deduplicación y seguimiento del resultado. Probar un enlace permitido, uno rechazado y una repetición. Criterio: un único trabajo y ficha saneada, sin escritura imprevista ni promesas de terminación sin comprobar.
+
+5. **Recuperar Building in Public.** Revisar el saneamiento del script y los campos de `repo-pulse` que salen del sistema. Probar con datos ficticios que incluyan nombres y rutas sensibles. Criterio: borrador revisable y previsualización sin esos datos, sin publicación automática; después activar el lunes.
+
+6. **Mantener Web Factory apagado hasta conocer el worker.** Inventariar cada paso de `daily`, sus escrituras, APIs y costos. Corregir el falso éxito ante JSON inválido y la cobertura de errores. Si incluye publicación o despliegue, separarlos y exigir autorización específica. Criterio: informe válido con pasos comprobables; JSON inválido y fallo SSH deben producir fallo visible.
+
+7. **Activar Radar Normativo como frente separado.** Corregir regex, detección de fuentes fallidas, escape HTML, paginación de mensajes y memoria de avisos entregados. Probar HTML guardado con norma nueva, repetida, año distinto, más de quince novedades y fuente caída. Criterio: ninguna pérdida silenciosa, repetición ni confusión entre “sin novedades” y “fuente fallida”.
+
+Antes de cada cron: confirmar zona horaria, límite de concurrencia, comportamiento ante repetición y criterio de parada. Un fallo requiere revisión manual antes de reintentar.
+
+## RESUMEN
+
+- Radar YT está activo; sus dos éxitos aún necesitan validación del resultado.
+- Primera activación nueva propuesta: Radar IA; después, Contenido en modo borradores.
+- Scripts remotos y receptor Actions no están en el checkout consultado.
+- Video Intake, Web Factory y Radar Normativo tienen bloqueos concretos que corregir.
+- No se activó nada ni se modificaron archivos.

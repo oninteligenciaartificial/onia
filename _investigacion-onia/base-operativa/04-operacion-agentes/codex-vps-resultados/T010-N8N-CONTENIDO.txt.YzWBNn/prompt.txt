@@ -1,0 +1,17 @@
+Encargo T010 — Revisión del frente de contenido en n8n (SOLO LECTURA)
+
+Modo: solo lectura y análisis. No ejecutar scripts, no red, no credenciales, no modificar archivos. Una sola respuesta por stdout.
+
+Fuentes: /home/onia-codex-worker/operacion/fuentes-plan/n8n-contenido/ (JSON exportados de n8n con secretos redactados, más NOTAS.md). Puedes consultar en solo lectura /home/onia-codex-worker/repos/onia para entender scripts SSH o rutas que los flujos invocan.
+
+Flujos: QGXVyRSgrArxfolj (Radar de Novedades IA), nZkaXaZVKzgtwUqU (Agente Contenido y Media Lab), nAGwe7DzxNQzMxXk (Video Intake Telegram), ynNMGtW8TCDCBMdS (Agente Radar YT, activo), aHFLqEtzqvq6SE3e (Web Factory VPS Radar), XRS9fWY4yFMQQftF (Building in Public), OovRU4r0o7pvglJP (Radar Normativo Bolivia). tIl4chT49LIPD0VJ (Tendencias semanal) no se pudo exportar (sin acceso MCP); menciónalo solo como pendiente.
+
+Para cada flujo indica, de forma breve:
+1. Qué hace (disparador, pasos, salida).
+2. Por qué está apagado o fallando (según la evidencia; si no hay, dilo).
+3. De qué depende: scripts SSH en el VPS (¿existen en el repo?), credenciales, APIs externas, otros flujos.
+4. Riesgos de encenderlo (costos, publicaciones automáticas, spam, duplicados, fugas).
+
+Después da un plan concreto y ordenado para encender el frente de contenido con seguridad: cuál primero, qué arreglar antes de cada uno y cómo verificarlo.
+
+Termina con una sección "RESUMEN" de máximo 5 líneas. Responde en español, sin inventar datos.

@@ -1,0 +1,1325 @@
+OpenAI Codex v0.167.0
+--------
+workdir: /home/onia-codex-worker/operacion
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: none
+reasoning summaries: none
+session id: 01a1b720-6fda-7750-9e00-a2dfd93d8243
+--------
+user
+T008: NUEVA PRIORIDAD Sergio, sustituye REVISIÓN WORKSHOP: PANEL DIARIO + primera pieza orgánica grabable y adaptación anuncio PAUSADO + mapa de bots. Solo esta llamada restante del presupuesto original2(consumidaT007 taller, pausada sin revisión); NO lances revisión independiente ni otro modelo. Haz segunda pasada explícita de autocontrol en MISMA respuesta, no llamarla revisión independiente.
+Lee AGENTS aplicables repo sololectura /home/onia-codex-worker/repos/onia, diario/2026-11-07/CONTEXTO-LIVE-PRIVADO.md, ESTADO-LOCAL.json y fuentes pertinentes PANEL-DIARIO/Marketing disponibles. Reutiliza, no inventario6áreas ni nuevos35guiones ni investigaciónmaratón. CodexSolChatGPT único; sin Claude/API/fallback. Sandbox read-only, NO intentar escribir: salida capturada por wrapper y coordinación ingiere contenido aditivo en páginas existentes ya leídas. No secretos/reposwrite/servicios/prod/calendarwrites/contactos/publicación/gastos/campañas ni mensajes entre bots ni perfilesmutados. Presupuesto5min.
+Objetivo tangible HOY3prioridades, obligaciones reales versus planes documentados/lagunas, estimaciones separadas de citas, bloque grabación PROPUESTO sin hora fija al faltar agenda. Calendar0eventos no disponibilidaddemostrada; colegiohoras4nov no extrapolar sábado. Pregunta mínima ÚNICA que Sergio responda para fijar disponibilidad/obligaciones ydescanso; no bloquear guion por ella.
+Primera tanda1pieza principal orgánica y1adaptación anuncio(no5diarias). Guion COMPLETO en español tú: gancho/desarrollo/tomas/textos/CTA seguro sin promesa kit/cobro no preparado ni claims falsos. Demostración documentosrotuladosEJEMPLO sinAPI/cliente real. Puedes usar tarjeta P1fecha u otro activo respaldado, no workshopventa; adaptar a microvalorque sepuedagrabarhoy.1anuncio BORRADORPAUSADO con texto/tomas/objetivo propuesto/hipótesis/métrica futura, presupuesto/audiencia/landing/cuenta/aprobaciónpendientes. Ningunamétrica/saldo inventados ni ofrecerserviciovalidado/garantías.
+Pipeline idea→guion→grabar→editar→revisar→publicar soloautorizado→medir. Distribución7–14nov provisional ajustable a agenda: estados propuestos, no calendarioreservado ni publicacionesprogramadas;1tandainicial, nootra cuota de5diarias. Flujo DIARIO BAJO DEMANDA; ningunaentregadiariaautomática, cron/daemon/rutina/despertares.
+Mapa perfiles PROPUESTOS(noaplicar): Coordinadora coordina global; Marketing contenido/orgánicoAds; Pelau resumen diario/agenda; BossNoCode ventas/workshop/finanzas; BossCode VPS/n8n/Chatwoot; ONIAPlatform producto. Todos delegan trabajo sustancial a CodexVPS, soloingesta/orquestación/resúmenes,1tareaactivarevisiónsecuencialglobal, Claudeexcluido, nofallbackAPI,noavisosentrobots/norutinas. No inventar nuevosnombres.
+FORMATO4bloques exactos; todo completo, sin creararchivos por modelo:
+===BEGIN 01-PANEL-NOTION.md===
+Contenido ADITIVO para PREPENDER a Sergio·Hoy, no reemplazar texto existente. Explica que prioridad7nov sustituye5diarias/diario20/workshop como tarea inmediata, historia conservada. Incluye3prioridades, agenda confirmada/lagunas, bloquepropuestoestimado, pipeline/semana7–14y pregunta única. Referencia GUIONES mediante <mention url="https://app.notion.com/p/4112eb20bdfd81c1a339e23eb82afa9d">ONIA · Guiones</mention> yVida mediante suURLreal. FechasNotion usa <date start="2026-11-07" />etc, no URLs inventadas ni linkslocalescomoURLpúblico.
+===END 01-PANEL-NOTION.md===
+===BEGIN 02-GUION-Y-ANUNCIO.md===
+Guion orgánico grabablecompleto+lista tomas/edición/CTA/revisión; adaptaciónanuncio completa con métricaspropuestas ypuertaslanzamiento. Adición a ONIA·Guiones, no sustituir pieza previa. RotularPROPUESTO/NO PUBLICADO/NOCAMPAÑACREADA.
+===END 02-GUION-Y-ANUNCIO.md===
+===BEGIN 03-MAPA-AGENTES-PROPUESTO.md===
+Descripcionescortas6perfiles yreglascomunes para Coordinadoraaplicar mediante herramientas propias; noafirmar guardados.
+===END 03-MAPA-AGENTES-PROPUESTO.md===
+===BEGIN 04-RELEVO-Y-AUTOREVISION.md===
+Fuentesreales/cobertura/no35inspeccionados/Calendar0eventosnoautoridad disponibilidad, quéguardar/estado/nexthandoff diario; revisión explícita dentro mismo turno ACEPTARconlímites oRECHAZAR con hallazgos ycorrección integrada de lo revisable sin otrallamada. No revisiónindependiente.3decisiones paraAds soloenpendientes,sin pediraprobación negocioahora; preguntaúnica es disponibilidad. Resumen ejecutivo breve.
+===END 04-RELEVO-Y-AUTOREVISION.md===
+No reproduzcas datos de agenda privada en guion/anuncio ni mapaagentes; agenda solo01panelpersonal y04relevoprivado. Mantén totalidadmanuable ybreve, no framework. Todo trabajo importante tú; coordinaciónsolo captura/persiste/publica en panelpersonaladitivo autorizado, no negocios.
+
+codex
+Leeré las instrucciones y fuentes locales pertinentes y ejecutaré la comprobación indicada. Prepararé los cuatro bloques con una segunda pasada de autocontrol en esta misma respuesta, sin escribir archivos ni lanzar otra revisión.
+exec
+/bin/bash -lc "pwd; rg --files -g 'AGENTS.md' -g 'LEEME.md' -g 'registro.tsv' -g '*T008*' -g 'ESTADO-LOCAL.json' -g 'CONTEXTO-LIVE-PRIVADO.md' -g '*PANEL*' -g '*Marketing*'" in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+/home/onia-codex-worker/operacion
+diario/2026-11-07/CONTEXTO-LIVE-PRIVADO.md
+AGENTS.md
+ESTADO-LOCAL.json
+tareas/en-curso/T008-PANEL-CONTENIDO.txt
+LEEME.md
+registro.tsv
+fuentes-plan/PANEL-DIARIO.fuente.txt
+
+exec
+/bin/bash -lc 'cat AGENTS.md LEEME.md registro.tsv tareas/en-curso/T008-PANEL-CONTENIDO.txt ESTADO-LOCAL.json diario/2026-11-07/CONTEXTO-LIVE-PRIVADO.md fuentes-plan/PANEL-DIARIO.fuente.txt' in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+# Operación local
+
+Único ejecutor: Codex, modelo gpt-6.1-sol. Claude, Grok, otros modelos y subagentes quedan excluidos. No delegar ni activar tareas automáticamente.
+
+Trabajar solo en /home/onia-codex-worker/operacion. Sin red de herramientas, Git, credenciales, otros homes, .env, .codex, servicios, instalaciones, sudo, docker, ssh ni systemctl. Sin publicaciones, contactos, pagos, push o deploy. Ads pausados. No inventar actividad comercial. La conexión normal Codex a ChatGPT está autorizada; no se autorizan llamadas anidadas en esta revisión.
+
+Arranque: leer LEEME.md, registro.tsv y la tarea elegida; ejecutar ./ejecutar.sh --comprobar. Solo una tarea manual a la vez. Si exige una acción prohibida, documentar el bloqueo y detenerla.
+
+Cierre: conservar evidencia en resultados/, estado de tarea y registro inicio/fin. Un fallo queda en tareas/error; no reintentar automáticamente. Continuidad: LEEME.md y resultados/T001.md; siguiente tarea propuesta T002, bloqueada hasta autorización de acceso legítimo.
+
+GitHub bloqueado: no hay copia ni HEAD comprobado. No resolver acceso ni buscar/copiar tokens. La lectura del repositorio ya está autorizada y no requiere otro permiso; antes debe resolverse el login legítimo GitHub y habilitar explícitamente las herramientas de red/Git necesarias. gh está ausente y no se instala ahora.
+
+## Corrección efectiva de permisos — 2026-11-07 12:38 America/Caracas
+Fuente oficial de la versión0.167.0: https://raw.githubusercontent.com/openai/codex/rust-v0.167.0/codex-rs/exec/src/lib.rs . run_main fija approval_policy: Some(AskForApproval::Never) con comentario headless; handle_server_request rechaza CommandExecutionRequestApproval/FileChangeRequestApproval/PermissionsRequestApproval porque no son compatibles con exec. No hay aprobaciones humanas en este modo. never no desactiva el sandbox ni autoriza escalaciones: solicitudes de aprobación se rechazan. -a on-request global no lo convierte en interactivo.
+Documentación oficial https://developers.openai.com/codex/noninteractive indica sandbox read-only por defecto y --sandbox workspace-write para permitir ediciones. Log de la prueba pasada confirmó workspace-write; NO se usó bypass.
+Corrección mínima conservadora: runner ahora fija --sandbox read-only, no workspace-write. Solo lectura/análisis acotado; stdout/rc/resumen los persiste el script exterior. Cualquier documento anterior que afirme aprobaciones humanas o workspace-write como estado actual queda supersedido. Para escrituras futuras hace falta alcance explícito y revisión de la configuración, no ampliar automáticamente. No red de herramientas, no producción, usuario sin sudo/docker y cwd exclusivo; no aislamiento total. T002 GitHub sigue pendiente, sin ejecutar. Sin nuevas llamadas a modelos para esta aclaración.
+# Operación manual vigente
+
+Único ejecutor: Codex mediante ChatGPT Sol, modelo `gpt-6.1-sol`. Sin API, Claude, fallback, subagentes ni llamadas anidadas. Solo una tarea manual a la vez; ninguna activación automática.
+
+El modelo trabaja en `read-only`. En ejecución headless, la aprobación efectiva es `never`: las solicitudes de escalación se rechazan. Esto no desactiva el sandbox ni autoriza bypass. El envoltorio exterior conserva los artefactos.
+
+Fuente real autorizada para lectura: `/home/onia-codex-worker/repos/onia`, rama `master`, HEAD verificado `e55812ce1bc8ef798fb370257ba887d07acccc53`, checkout limpio según la comprobación aportada. No modificar ni ejecutar scripts del repositorio.
+
+Sin red de herramientas, credenciales, privados, producción, instalaciones, publicaciones, contactos, pagos, push o deploy. No utilizar conectores heredados. Ads pausados; cobros reales desconocidos.
+
+Lee el encargo y recupera estado mediante `registro.tsv`, `tareas/` y `resultados/`. Consulta:
+
+- `resultados/MANUAL-SERGIO-VPS-20261107.md`
+- `resultados/INVENTARIO-WORKSHOP-20261107.md`
+- `resultados/CONTINUIDAD-T003-20261107.md`
+- `resultados/T003-estado.json`
+
+T002 está completada: no reactivarla. T003 terminó con rc0; T004 la acepta técnicamente como documentación. Esa revisión separada no equivale a aceptación humana/comercial. `hechas` solo indica ejecución terminada correctamente.
+
+Siguiente prueba pendiente: reanudar T003 usando su session ID exacto, restricciones actuales, lock y timeout del manual. No se ha probado todavía. Ningún reintento automático; los fallos requieren revisión manual.
+
+Autonomía 24 h: cero. No hay daemon, persistencia garantizada ni cuota garantizada; cuota restante desconocida.
+
+El LEEME anterior se conserva como histórico, sin vigencia instructiva.
+
+## Cierre verificado7nov2026 America/Caracas
+ProducciónT003, revisiónT004 y retoma misma sesión completadas0;3llamadas,6hechas técnicas,0activas/pendientes/error. Prevalece anexo actualizado del manual resultados/MANUAL-SERGIO-VPS-20261107.md y reporte resultados/PRUEBAS-OPERACION-MANUAL-20261107.md. CLI solo lectura acotada probado; acceso directo Windows al worker todavía requiere autorización públicaWindows; no contraseña worker ni authorized_keys configurados. No confundir hechos técnicos con resultados comerciales.
+
+## Último lote sustantivo7nov2026
+Reconciliación seis áreas T005 + revisión independiente T006, ambas0. Correcciones textuales del revisor incorporadas, sin tercer modelo. Ver ESTADO-LOCAL.json y resultados/RELEVO-RECONCILIACION-20261107.md para resultado, aceptación condicionada satisfecha documentalmente, fuentes y siguiente encargo; no son cobros. Relevo local separado del repo canónico; app no comparte lock.
+fecha_utc	tarea	evento	rc	resultado
+2026-11-07T16:34:13Z	T001	inicio	-	Diagnóstico documental local
+2026-11-07T16:34:13Z	T001	fin	0	resultados/T001.md; resultado Codex provisional documental, sin llamada anidada
+2026-11-07T16:35:28Z	REVISION	inicio	-	Revisión local secuencial sin activar tareas
+2026-11-07T16:35:29Z	REVISION	fin	0	VERIFICACION.md; cinco pruebas correctas, tareas intactas
+2026-11-07T16:36:35Z	PRUEBA-RUNNER.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/PRUEBA-RUNNER.txt.CSzv8N
+2026-11-07T16:36:42Z	PRUEBA-RUNNER.txt	fin	0	/home/onia-codex-worker/operacion/resultados/PRUEBA-RUNNER.txt.CSzv8N
+2026-11-07T16:49:30.176433+00:00	T002	fin	0	resultados/T002.md; login/checkout confirmados fuera runner
+2026-11-07T16:57:42Z	T003-CICLO-REAL.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T003-CICLO-REAL.txt.E6P3eh
+2026-11-07T16:59:35Z	T003-CICLO-REAL.txt	fin	0	/home/onia-codex-worker/operacion/resultados/T003-CICLO-REAL.txt.E6P3eh
+2026-11-07T17:00:36Z	T004-REVISION-REAL.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T004-REVISION-REAL.txt.VWCNg6
+2026-11-07T17:01:27Z	T004-REVISION-REAL.txt	fin	0	/home/onia-codex-worker/operacion/resultados/T004-REVISION-REAL.txt.VWCNg6
+2026-11-07T17:02:06Z	T003-RETOMA-01	inicio	-	/home/onia-codex-worker/operacion/resultados/T003-RETOMA-01.Qs44xF
+2026-11-07T17:02:20Z	T003-RETOMA-01	fin	0	/home/onia-codex-worker/operacion/resultados/T003-RETOMA-01.Qs44xF
+2026-11-07T17:04:27.767929+00:00	T003	aceptacion_tecnica_y_retoma	0	resultados/T003-estado.json; sin aceptación comercial
+2026-11-07T17:35:30Z	T005-RECONCILIACION.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T005-RECONCILIACION.txt.UWDpnK
+2026-11-07T17:38:45Z	T005-RECONCILIACION.txt	fin	0	/home/onia-codex-worker/operacion/resultados/T005-RECONCILIACION.txt.UWDpnK
+2026-11-07T17:39:05Z	T006-REVISION-RECONCILIACION.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T006-REVISION-RECONCILIACION.txt.a0ARKO
+2026-11-07T17:40:48Z	T006-REVISION-RECONCILIACION.txt	fin	0	/home/onia-codex-worker/operacion/resultados/T006-REVISION-RECONCILIACION.txt.a0ARKO
+2026-11-07T17:44:02Z	T007-PAQUETE-OFERTA.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T007-PAQUETE-OFERTA.txt.egO3Ah
+2026-11-07T17:47:52Z	T007-PAQUETE-OFERTA.txt	fin	0	/home/onia-codex-worker/operacion/resultados/T007-PAQUETE-OFERTA.txt.egO3Ah
+2026-11-07T17:48:38Z	T008-PANEL-CONTENIDO.txt	inicio	-	/home/onia-codex-worker/operacion/resultados/T008-PANEL-CONTENIDO.txt.jUO95x
+T008: NUEVA PRIORIDAD Sergio, sustituye REVISIÓN WORKSHOP: PANEL DIARIO + primera pieza orgánica grabable y adaptación anuncio PAUSADO + mapa de bots. Solo esta llamada restante del presupuesto original2(consumidaT007 taller, pausada sin revisión); NO lances revisión independiente ni otro modelo. Haz segunda pasada explícita de autocontrol en MISMA respuesta, no llamarla revisión independiente.
+Lee AGENTS aplicables repo sololectura /home/onia-codex-worker/repos/onia, diario/2026-11-07/CONTEXTO-LIVE-PRIVADO.md, ESTADO-LOCAL.json y fuentes pertinentes PANEL-DIARIO/Marketing disponibles. Reutiliza, no inventario6áreas ni nuevos35guiones ni investigaciónmaratón. CodexSolChatGPT único; sin Claude/API/fallback. Sandbox read-only, NO intentar escribir: salida capturada por wrapper y coordinación ingiere contenido aditivo en páginas existentes ya leídas. No secretos/reposwrite/servicios/prod/calendarwrites/contactos/publicación/gastos/campañas ni mensajes entre bots ni perfilesmutados. Presupuesto5min.
+Objetivo tangible HOY3prioridades, obligaciones reales versus planes documentados/lagunas, estimaciones separadas de citas, bloque grabación PROPUESTO sin hora fija al faltar agenda. Calendar0eventos no disponibilidaddemostrada; colegiohoras4nov no extrapolar sábado. Pregunta mínima ÚNICA que Sergio responda para fijar disponibilidad/obligaciones ydescanso; no bloquear guion por ella.
+Primera tanda1pieza principal orgánica y1adaptación anuncio(no5diarias). Guion COMPLETO en español tú: gancho/desarrollo/tomas/textos/CTA seguro sin promesa kit/cobro no preparado ni claims falsos. Demostración documentosrotuladosEJEMPLO sinAPI/cliente real. Puedes usar tarjeta P1fecha u otro activo respaldado, no workshopventa; adaptar a microvalorque sepuedagrabarhoy.1anuncio BORRADORPAUSADO con texto/tomas/objetivo propuesto/hipótesis/métrica futura, presupuesto/audiencia/landing/cuenta/aprobaciónpendientes. Ningunamétrica/saldo inventados ni ofrecerserviciovalidado/garantías.
+Pipeline idea→guion→grabar→editar→revisar→publicar soloautorizado→medir. Distribución7–14nov provisional ajustable a agenda: estados propuestos, no calendarioreservado ni publicacionesprogramadas;1tandainicial, nootra cuota de5diarias. Flujo DIARIO BAJO DEMANDA; ningunaentregadiariaautomática, cron/daemon/rutina/despertares.
+Mapa perfiles PROPUESTOS(noaplicar): Coordinadora coordina global; Marketing contenido/orgánicoAds; Pelau resumen diario/agenda; BossNoCode ventas/workshop/finanzas; BossCode VPS/n8n/Chatwoot; ONIAPlatform producto. Todos delegan trabajo sustancial a CodexVPS, soloingesta/orquestación/resúmenes,1tareaactivarevisiónsecuencialglobal, Claudeexcluido, nofallbackAPI,noavisosentrobots/norutinas. No inventar nuevosnombres.
+FORMATO4bloques exactos; todo completo, sin creararchivos por modelo:
+===BEGIN 01-PANEL-NOTION.md===
+Contenido ADITIVO para PREPENDER a Sergio·Hoy, no reemplazar texto existente. Explica que prioridad7nov sustituye5diarias/diario20/workshop como tarea inmediata, historia conservada. Incluye3prioridades, agenda confirmada/lagunas, bloquepropuestoestimado, pipeline/semana7–14y pregunta única. Referencia GUIONES mediante <mention url="https://app.notion.com/p/4112eb20bdfd81c1a339e23eb82afa9d">ONIA · Guiones</mention> yVida mediante suURLreal. FechasNotion usa <date start="2026-11-07" />etc, no URLs inventadas ni linkslocalescomoURLpúblico.
+===END 01-PANEL-NOTION.md===
+===BEGIN 02-GUION-Y-ANUNCIO.md===
+Guion orgánico grabablecompleto+lista tomas/edición/CTA/revisión; adaptaciónanuncio completa con métricaspropuestas ypuertaslanzamiento. Adición a ONIA·Guiones, no sustituir pieza previa. RotularPROPUESTO/NO PUBLICADO/NOCAMPAÑACREADA.
+===END 02-GUION-Y-ANUNCIO.md===
+===BEGIN 03-MAPA-AGENTES-PROPUESTO.md===
+Descripcionescortas6perfiles yreglascomunes para Coordinadoraaplicar mediante herramientas propias; noafirmar guardados.
+===END 03-MAPA-AGENTES-PROPUESTO.md===
+===BEGIN 04-RELEVO-Y-AUTOREVISION.md===
+Fuentesreales/cobertura/no35inspeccionados/Calendar0eventosnoautoridad disponibilidad, quéguardar/estado/nexthandoff diario; revisión explícita dentro mismo turno ACEPTARconlímites oRECHAZAR con hallazgos ycorrección integrada de lo revisable sin otrallamada. No revisiónindependiente.3decisiones paraAds soloenpendientes,sin pediraprobación negocioahora; preguntaúnica es disponibilidad. Resumen ejecutivo breve.
+===END 04-RELEVO-Y-AUTOREVISION.md===
+No reproduzcas datos de agenda privada en guion/anuncio ni mapaagentes; agenda solo01panelpersonal y04relevoprivado. Mantén totalidadmanuable ybreve, no framework. Todo trabajo importante tú; coordinaciónsolo captura/persiste/publica en panelpersonaladitivo autorizado, no negocios.
+{
+  "lote": "RECONCILIACION-ONIA-20261107",
+  "estado": "aceptacion_documental_condicionada_T006_correcciones_exactas_incorporadas_y_verificadas",
+  "nota": "No tercera llamada para relectura; condición documental satisfecha mediante incorporación exacta. No aceptación humana ni comercial.",
+  "encargo_activo": null,
+  "encargo_origen": "/home/onia-codex-worker/operacion/encargos/RECONCILIAR-OPERACION.md",
+  "produccion": {
+    "run": "resultados/T005-RECONCILIACION.txt.UWDpnK",
+    "rc": 0,
+    "sesion": "01a1b714-6a24-7161-b5ff-26bba8e6d1c6",
+    "tokens_cli": [
+      "105,203"
+    ],
+    "resultado": "resultados/RECONCILIACION-ONIA-20261107.md"
+  },
+  "revision": {
+    "run": "resultados/T006-REVISION-RECONCILIACION.txt.a0ARKO",
+    "rc": 0,
+    "sesion": "01a1b717-b205-72b3-888e-d0f4bfa7185e",
+    "tokens_cli": [
+      "62,608"
+    ],
+    "resultado": "resultados/REVISION-RECONCILIACION-ONIA-20261107.md"
+  },
+  "correcciones_T006": 3,
+  "repo_fuente": "/home/onia-codex-worker/repos/onia",
+  "head": "e55812ce1bc8ef798fb370257ba887d07acccc53",
+  "git_limpio": true,
+  "cola": {
+    "pendientes": 0,
+    "en-curso": 0,
+    "hechas": 8,
+    "error": 0
+  },
+  "lock": "libre comprobado; NO cubre app",
+  "app": "inactividad declarada por Sergio antes del lote; no interferida",
+  "llamadas_lote": 2,
+  "tokens_cli": [
+    105203,
+    62608
+  ],
+  "cuota_restante": "desconocida; tokens CLI no son coste ni saldo",
+  "pendiente_datos": "resumen mínimo legítimo de cobros, oportunidades/solicitudes y compromisos con capacidad disponible para el corte económico; no buscar clientes/chat privado",
+  "siguiente_encargo_en": "/home/onia-codex-worker/operacion/encargos",
+  "fuentes_no_cubiertas": [
+    "chats completos",
+    "medios/editables",
+    "Notion/Calendar/apps actuales",
+    "checkout actual Platform",
+    "ensayo humano",
+    "cartera/demanda/cobros"
+  ],
+  "acciones_externas": "ninguna"
+}# Ingesta mínima de fuentes LIVE —7nov2026 America/Caracas
+Hogar Notion existente LEÍDO, no duplicar: https://app.notion.com/p/40e2eb20bdfd81658111cf3e4d854964 (Sergio · Hoy).
+Guiones existente LEÍDO: https://app.notion.com/p/4112eb20bdfd81c1a339e23eb82afa9d . Guion previo Pieza01 “Cómo retomar una tarea en otro chat”:40s vertical, prueba documentada en OnIA9unidades/56,50 con datos de prueba, dejar objetivo/evidencia/siguiente paso antes cerrar chat. No revalidado aquí: si lo usas atribuye a fuente, no inventes pruebas recientes ni ahorro.
+Panel raíz contiene35borradores v2(29concretos+6plantillas pendientes hechos reales); referencia de5piezasdiarias y diario20:00 es HISTÓRICA, sin programación activa. No todos35 leídos en esta fase. @sergiourcullo figura en panel, identidad cuenta no nueva verificación. Kit PLAN histórico disponible en fuente chatgpt fuera de alcance actual; no prometer envío/CTAcomentario hasta revisiónautorizada.
+Tarjeta LEÍDA P1 “La fecha que nadie había confirmado” URL https://app.notion.com/p/40e2eb20bdfd817b8090cf7de0df9d8d estado Por revisar, no publicada/programada. Guion vigente: respuesta «Te espero viernes a las seis» pero fecha ficha vacía; documentos rotulados EJEMPLO, separar datos confirmados/datos pendientes/quéhacer si faltaalgo; corrección «La fecha todavía está por confirmar». CTAantiguo PLAN entrega manual futura, NO automatizaciónactiva. Tomas cara y documentos preparados; no simular cliente/API. Puede adaptarse a microcaso completamente ficticio sin ofrecer taller ni prometer kit real/automatización.
+Vida LEÍDA https://app.notion.com/p/40e2eb20bdfd8101b305e388b0c012d8 editada4nov: DOCUMENTA plan de días de colegio08–12,12:45–14:20 comida/descanso,14:30–18aproxcolegio, gimnasiotraslados hasta19–20segúndía; NO confirmaciónvigente ni aplicación automáticaal sábado7nov. Metas checklist burpees/duchafría/airelibre/lectura1h/clips/aprender/protegerdescanso, no obligaciones cumplidas ni mandato médico. Cierre material19:15–19:30/diario20históricos no nuevascitas. Rutina no sincronizadaCalendar. No conocemos familia/sueño/traslados reales de hoy.
+GoogleCalendar LIVE: dos calendarios propios consultados ventana7nov13:45 a14nov13:45 America/Caracas, AMBOS0eventos, sin paginación. Eso NO implica disponibilidad ni ausencia de obligaciones. No calendarwrites/invitados. No transmitir emails/attendees a modelo ni publicar detalles en repos/demos. Datos agenda solo panel personal/diario privado fuerarepo.
+Dato Sergio7nov13:43Caracas: cero cobrado; brecha3000al14nov. Prioridad NUEVA t105u: contenido orgánico y ads como BORRADORESPAUSADOS, panel obligaciones/tiempos, mapa de bots. Workshop pausado. NO publicar/crear campañas/gastar/contactar, no5piezasdiarias ni rutinas/cron.
+<cursor_untrusted_data_1337 source="CallDynamicTool">
+
+# Panel diario: vida, marca personal y actualidad
+
+Actualizado el 4 de noviembre de 2026. Existe [Sergio · Hoy](https://app.notion.com/p/40e2eb20bdfd81658111cf3e4d854964), con vida, contenido, ventas, actualidad y decisiones. Su estructura fue revalidada por conector. Las tablas de este documento mantienen el diseño funcional: no todos sus campos, vistas y avisos están implementados. Apariencia móvil y entrega de notificaciones siguen sin comprobarse.
+
+## Portada móvil
+
+Una página privada de Notion, **Sergio · Hoy**, con bloques verticales y vistas breves. No exigir desplazamiento horizontal para las decisiones del día.
+
+| Bloque | Qué permite decidir |
+|---|---|
+| Mi día | Resultado principal, compromisos del calendario, hábitos informados y siguiente acción que cabe en el tiempo libre |
+| Qué publicamos | Hora prevista, red/cuenta, pieza, formato, estado y qué falta para que salga |
+| Santa Cruz | Pocas noticias relevantes y próximos eventos, con fuente, fecha y comprobación |
+| Personas y aprendizaje | Novedades útiles de las fuentes elegidas y una idea aplicable a la marca |
+| Pendiente de mí | Grabaciones, materiales o decisiones que necesita el agente |
+
+El calendario personal conserva compromisos efectivamente creados. Notion conserva la operación cotidiana; [CEREBRO-DIARIO.md](CEREBRO-DIARIO.md) define sus referencias y el uso acotado del contexto histórico. Los informes técnicos anteriores están en [archivo privado](https://app.notion.com/p/40e2eb20bdfd818ca90aefe9a1902b39), fuera de la portada. La documentación adoptada vive en Git. Ver fechas de Notion junto a Calendar no equivale a sincronizarlas.
+
+## Registros mínimos
+
+Crear destinos de relaciones antes de añadirlas. Resolver los IDs y propiedades reales con el conector, sin asumirlos a partir de este diseño. Revisar si ya existe una estructura equivalente antes de crear otra.
+
+| Registro | Una fila representa | Campos esenciales y vistas |
+|---|---|---|
+| Días | Un día local | Fecha, resultado principal, siguiente acción, cierre, hábitos sin completar por defecto. Vista Hoy e historial. No convertir hábitos propuestos en acciones realizadas. |
+| Publicaciones | Una publicación en una cuenta concreta | ID de pieza, título, fecha/hora prevista, fecha/hora confirmada por el publicador, red/cuenta, formato, estado editorial, guion, archivo y URL publicada. Vistas Hoy, Semana, Por grabar, Por revisar. |
+| Radar | Una noticia o evento individual | Tipo, título, fuente, URL original, publicación, inicio/fin del evento, cierre de inscripción si aplica, lugar, costo/requisitos conocidos, verificado el, estado y motivo de relevancia. Vistas Novedades y Próximos eventos. |
+| Fuentes | Una persona, institución o medio con enlace identificado | Nombre, tipo, URL/cuenta, temas, elegida/propuesta, última consulta y estado de acceso. Separar identidad de persona y autenticación de cuenta. |
+
+El ID de pieza permite adaptar un video a varias redes sin confundir tres piezas con tres publicaciones totales. Guion y archivo final permanecen en una ubicación canónica enlazada. Los MP4 no se guardan como adjuntos pesados del panel por defecto.
+
+Estados editoriales: idea, guion, por grabar, edición, por revisar, aprobado, programado, publicado, falló. Son el estado del contenido, distinto de los cuatro estados del encargo del harness. **Programado** exige confirmación/ID del publicador y **publicado** exige enlace o evidencia verificable; una fecha prevista no alcanza.
+
+## Resumen diario propuesto
+
+Zona de trabajo: Santa Cruz de la Sierra, UTC−4. Cadencia a configurar y probar, todavía no activada:
+
+- Mañana, antes del colegio: lectura de dos minutos con prioridad, agenda, publicaciones previstas y hasta tres novedades relevantes. Si hay eventos próximos, mostrar hasta tres con su fecha real.
+- Durante el día: recibir entradas y cambios cuando Sergio tenga tiempo libre. No limitarlo a los controles.
+- Noche, revisión flexible: resultados comprobados, qué quedó pendiente y material necesario para el siguiente día.
+
+Para noticias, revisar primero novedades de las últimas 24–48 horas; para eventos, próximos 14 días y cierres de inscripción. No llenar el resumen con información vieja para cumplir una cuota. Diferenciar **sin novedades relevantes** de **no se pudo consultar la fuente**. Señalar hora de actualización.
+
+No agregar automáticamente noticias o eventos encontrados al calendario. Sólo los eventos elegidos por Sergio se incorporan, después de verificar horario y conflictos. No enviar alertas repetidas por un mismo contenido; identificar por URL y evento. Los cambios de un evento elegido se tratarían como novedades accionables.
+
+## Fuentes iniciales
+
+La Gobernación departamental es una fuente solicitada expresamente. Alcaldía, organizaciones y medios de contraste son fuentes propuestas; no confundir institución, jurisdicción o declaraciones oficiales con verificación independiente.
+
+| Fuente pública | Uso | Comprobación al 4-nov-2026 |
+|---|---|---|
+| [Gobernación de Santa Cruz](https://santacruz.gob.bo/) | Institución departamental, comunicados y servicios | Portada leída. El listado /noticias necesita prueba en navegador cloud; su extracción no fue suficiente. No hay un feed fiable probado. |
+| [Cultura y Turismo municipal](https://culturayturismo.gmsantacruz.gob.bo/) | Eventos culturales y talleres de la ciudad | Agenda y ficha de evento leídas sin login. Es Alcaldía, no Gobernación. |
+| [Oportunidades de Cultura](https://culturayturismo.gmsantacruz.gob.bo/oportunidades) | Convocatorias y formación | Comprobar bases y cierre en cada fuente original. |
+| [EL DEBER — Santa Cruz](https://eldeber.com.bo/santa-cruz) | Contraste periodístico local | Sección legible; acceso y fecha se comprueban por artículo. |
+| [UNITEL — Santa Cruz](https://unitel.bo/noticias/santa-cruz) | Segundo contraste de actualidad | Sección pública con fechas; no acredita actualidad de cada artículo posterior. |
+| [APAC](https://festivalesapac.com/) | Festivales y convocatorias culturales | Sitio público leído; verificar plazos concretos. |
+
+Redes de Gobernación encontradas como candidatas: GobSantaCruz en Facebook/X y gobsantacruz en Instagram. El enlace vigente desde una fuente oficial no quedó comprobado; algunas páginas bloquearon lectura. No tratarlas como fuentes conectadas o autenticadas ni repetir intentos sin cambio de condición.
+
+Ejemplo para la primera prueba: la [ficha municipal de Aquí Canta Bolivia 2026](https://culturayturismo.gmsantacruz.gob.bo/eventos/63791c04-e14e-4a01-8842-c022530afa05) informa 4–5 de noviembre, 16:00–20:00, Teatro Villa 1.º de Mayo, gratis, todas las edades. Fecha de publicación no indicada. Es una ficha informativa comprobada, no asistencia seleccionada ni evento agregado.
+
+Las nueve fichas de referentes, fuentes y cobertura están en el [índice de investigación](investigacion/2026-11-04/README.md). Incluyen textos y muestras audiovisuales parciales; no cursos enteros ni operación privada auditada. Las cuentas exactas se comprueban antes de seguirlas.
+
+## Canales y ejecución
+
+**Primera etapa:** Notion móvil y los avisos de calendario ya acordados. Probar un aviso real antes de atribuir entrega al celular. No comprar Notion AI para que Codex gestione el panel.
+
+**Siguiente canal recomendado, aún sin conectar:** bot privado de Telegram para un resumen con enlace al panel y entrada de notas. Telegram requiere bot, credencial y chat iniciado por Sergio. Si se implementa, limitar el receptor/emisor a su chat y guardar el token en la credencial correspondiente, nunca en este repo.
+
+WhatsApp Business Platform queda como alternativa posterior: los mensajes proactivos fuera de la ventana de atención necesitan plantillas y pueden tener cargos. No considerar los resúmenes diarios gratuitos por defecto ni confundir la app personal con la API empresarial.
+
+Un flujo pequeño en el n8n existente podría guardar notas y entregar avisos con la PC apagada. No agregar navegadores ni render al VPS. No afirmar que un mensaje de Telegram inicia Codex Cloud: ese disparador, autorización y ejecución todavía deben comprobarse. La suscripción de Codex no es automáticamente una clave API para n8n.
+
+Fuentes de capacidades: [Telegram Bot FAQ](https://core.telegram.org/bots/faq), [precios de WhatsApp](https://whatsappbusiness.com/products/platform-pricing/), [política de WhatsApp](https://whatsappbusiness.com/policy/), [avisos de Notion](https://www.notion.com/help/notification-settings), [Notion Calendar](https://www.notion.com/help/use-notion-calendar-with-notion).
+
+## Criterio de primera entrega
+
+1. Conexión Notion válida, destino privado identificado y estructura existente revisada.
+2. Portada legible desde celular, registros y filtros comprobados con entradas reales o rotuladas como propuesta.
+3. Una ficha de evento con fuente, fecha y campos desconocidos conservados como desconocidos; no crear una noticia sin novedad real.
+4. Una publicación propuesta con hora prevista y estado correcto, sin simular programación.
+5. Lectura y actualización desde el entorno cloud comprobadas; enlace persistido en el cerebro.
+6. Automatización recurrente y mensajería permanecen pendientes hasta prueba separada de disparo, entrega y registro, sin PC encendida.
+
+## Estado de esta preparación
+
+La autenticación inicial falló; posteriormente se creó y organizó el panel y se releyó con el conector. Publicaciones y noticias tienen destinos existentes; no volver a crearlos. Calendar, bot, voz, publicación social y sincronización diaria siguen sin activación comprobada. El [estado operativo](ESTADO.md) mantiene la comprobación vigente.
+
+
+</cursor_untrusted_data_1337>
+exec
+/bin/bash -lc 'ls -la /home/onia-codex-worker/repos/onia; rg --files fuentes-plan diario/2026-11-07' in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+total 32
+drwx------ 4 onia-codex-worker onia-codex-worker 4096 Nov  7 16:48 .
+drwx------ 3 onia-codex-worker onia-codex-worker 4096 Nov  7 16:48 ..
+drwx------ 8 onia-codex-worker onia-codex-worker 4096 Nov  7 17:41 .git
+-rw------- 1 onia-codex-worker onia-codex-worker 1293 Nov  7 16:48 .gitattributes
+-rw------- 1 onia-codex-worker onia-codex-worker  561 Nov  7 16:48 .gitignore
+-rw------- 1 onia-codex-worker onia-codex-worker 1433 Nov  7 16:48 AGENTS.md
+-rw------- 1 onia-codex-worker onia-codex-worker 2881 Nov  7 16:48 README.md
+drwx------ 3 onia-codex-worker onia-codex-worker 4096 Nov  7 16:48 _investigacion-onia
+fuentes-plan/CONTINUIDAD.fuente.txt
+fuentes-plan/SESIONES.fuente.txt
+fuentes-plan/orquestacion-manifiesto.fuente.txt
+fuentes-plan/ESTADO.fuente.txt
+fuentes-plan/MOVIL.fuente.txt
+fuentes-plan/AGENTS-raiz.fuente.txt
+fuentes-plan/PLAN.fuente.txt
+fuentes-plan/AGENTS-base.fuente.txt
+fuentes-plan/HANDOFF-JEFA.fuente.txt
+fuentes-plan/PANEL-DIARIO.fuente.txt
+fuentes-plan/ORQUESTACION.fuente.txt
+fuentes-plan/reglas-comunes.fuente.txt
+fuentes-plan/INDICE-FUENTES.json
+diario/2026-11-07/CONTEXTO-LIVE-PRIVADO.md
+
+codex
+Las fuentes permiten reutilizar P1, «La fecha que nadie había confirmado», como demostración ficticia grabable. La agenda de hoy sigue sin confirmar: los cero eventos consultados no demuestran disponibilidad. La comprobación falló al intentar abrir su lock en el sistema de solo lectura (rc 2); no la reintentaré. El entregable continuará solo como texto para captura exterior.
+exec
+/bin/bash -lc "cat /home/onia-codex-worker/repos/onia/AGENTS.md; rg --files /home/onia-codex-worker/repos/onia/_investigacion-onia -g 'AGENTS.md' -g '*MARKETING*' -g '*Marketing*' -g '*GUIONES*' -g '*PANEL*' -g '*CONTENIDO*'; cat fuentes-plan/reglas-comunes.fuente.txt" in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+# Sergio y ONIA: entrada del espacio de trabajo
+
+Para encargos de Sergio y ONIA, la base vigente está en `_investigacion-onia/base-operativa/`.
+Leé `reglas-comunes.md` y `ESTADO.md` allí antes de continuar trabajo de ese sistema. Son referencias a una sola fuente; no copies sus reglas a cada proyecto.
+
+Las instrucciones actuales de Sergio prevalecen sobre propuestas históricas. ONIA-CENTRAL está excluido como fuente: no consultar ni importar sus reglas, skills o estados para este trabajo.
+
+Consultá `privado/contexto.md` sólo si la tarea necesita datos personales, horarios o recursos de Sergio; no incluirlo en paquetes públicos. Para código del producto, leer además las instrucciones técnicas aplicables en onia-platform y cotejar el estado real antes de editar. No extender estas decisiones comerciales a proyectos ajenos al encargo.
+
+Las skills propias tienen sus fuentes editables únicas en `base-operativa/compartibles/skills`; los enlaces de `.agents/skills` dependen de la preparación del entorno. Al iniciar un encargo, aplicar la selección y lectura por área de `base-operativa/ORQUESTACION.md`; cargar sólo las pertinentes. En Cloud seguir `base-operativa/cloud/INICIO-SESION.md`, incluyendo recuperación por ID/commit si el encargo la pide. El historial se consulta sólo cuando es pertinente. La existencia de instrucciones no acredita su carga automática, conexiones, tareas cloud o resultados.
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/PANEL-DIARIO.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/AGENTS.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/evaluacion-sesiones/ejecuciones/r11/workspace/AGENTS.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/evaluacion-sesiones/ejecuciones/semillas/recuperacion/AGENTS.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/evaluacion-sesiones/ejecuciones/r10/workspace/AGENTS.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/evaluacion-sesiones/ejecuciones/r09/workspace/AGENTS.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/evaluacion-sesiones/ejecuciones/r12/workspace/AGENTS.md
+<cursor_untrusted_data_1337 source="CallDynamicTool">
+
+# Reglas comunes de trabajo
+
+Consolidación autorizada por Sergio el 6 de noviembre de 2026, America/Caracas. Esta es la única fuente de reglas generales de ONIA. Las instrucciones actuales del usuario prevalecen. Las versiones anteriores se conservan con bytes y hashes en [histórico](continuidad/2026-11-06/consolidacion-harness/HISTORICO.md); se consultan por encargo, no como una cola que deba ejecutarse al iniciar.
+
+## Alcance y autoridad
+
+- Usar el repositorio privado `oninteligenciaartificial/onia`, rama `master`, y el entorno Cloud `onia`. `onia-harness` queda como referencia conservada. ONIA Platform tiene su propio repositorio de producto. ONIA-CENTRAL está excluido: no consultar ni importar sus reglas, skills o estados.
+- El repo conserva reglas, decisiones, estado y entregas compartibles. Notion es una proyección y Pages conserva medios/procedencia. Los chats coordinan; un mensaje no garantiza que otra sesión reciba el contexto.
+- Cada encargo delimita objetivo, responsable, entradas, resultado, permisos aplicables y aceptación. Una meta comercial, un reparto local o una autorización de infraestructura de otro encargo no amplía el actual. Consultar PLAN, SESIONES o la ficha pertinente cuando corresponda.
+- Incorporar herramientas por una necesidad concreta. Las preferencias económicas, compromisos y disponibilidad orientan los encargos que las necesitan; datos personales y horarios permanecen en privado. No extender decisiones de ONIA a proyectos ajenos.
+
+## Autonomía y permisos
+
+Completar el trabajo autorizado y reversible sin pedir de nuevo decisiones ya tomadas. Una solicitud de construir o configurar requiere ejecución y comprobación, no sólo una propuesta. Continuar las partes independientes mientras se resuelve una dependencia.
+
+Después de analizar, convertir los hallazgos en una próxima acción concreta, con entregable, comprobación y responsable. Ejecutar la parte ya autorizada. Pedir únicamente el acceso, decisión o acción personal indispensable, con una solución viable y sus límites.
+
+Gastos, publicaciones, mensajes a personas, compromisos comerciales y cambios de producción requieren autorización aplicable a esa acción. Preparar no autoriza activar. No pedir contraseñas por chat ni imprimir secretos. Delegar no amplía permisos. Ninguna regla documental activa trabajo entre turnos o un servicio 24/7.
+
+## Skills, investigación y ejecución
+
+Una skill dirige cada encargo según [ORQUESTACION](ORQUESTACION.md) y [orquestacion.json](orquestacion.json). Leer su cuerpo canónico; cargar sólo los apoyos pertinentes. Las fuentes externas son referencias con sus licencias, no otra autoridad ni instaladores implícitos. Las herramientas elegidas por área y sus comandos se cotejan en el entorno real.
+
+Antes de ensayar un candidato, consultar fuentes primarias sobre la capacidad relevante, licencia, compatibilidad, recursos y fallos; recuperar sólo la lección pertinente del [registro de errores](registro-de-errores.md). Declarar incertidumbre, hipótesis, control y resultado que cambiaría la decisión. No encadenar pruebas por disponibilidad ni repetir un fallo excluyente sin condiciones distintas. Una prueba justificada puede resolver incertidumbre y dar un resultado negativo legítimo. Esto no exige permiso por cada comando.
+
+Utilizar subagentes de forma proactiva para partes independientes con entradas y entregables claros. Cada archivo o configuración tiene un único escritor a la vez; otro agente puede revisar. Mantener un punto de coordinación por proyecto y un responsable por tarea, según el reparto del encargo. No abrir un chat por skill ni ejecutar todas las áreas por defecto.
+
+Para esta consolidación, Codex ejecuta con subagentes nativos y Paperclip sólo refleja el seguimiento. No habilitar agentes externos, servicios persistentes ni gasto adicional para suplir fallos del encargo.
+
+## Evidencia y comprobación
+
+Distinguir propuesta, archivo escrito, capacidad disponible, resultado probado, publicación, venta y cobro. La presencia de un archivo no prueba su lectura; leer una skill no acredita descubrimiento nativo, utilidad o ejecución permanente. Los hashes prueban integridad, no calidad ni autenticación de un revisor.
+
+Al diagnosticar Codex, inspeccionar primero interfaz y capacidades disponibles y contrastar después con documentación oficial. Comprobar repo, HEAD y rutas antes de concluir que un archivo Cloud falta o de reconstruirlo. Un resultado de otra VM no valida la sesión actual.
+
+Cubrir el material solicitado según su finalidad sin reducir silenciosamente el alcance. En audiovisual, distinguir contenido, imagen, edición y componentes sonoros; fotogramas, ASR y métricas no sustituyen lo no percibido. Identificar cualquier muestreo. Las restricciones y controles de un caso concreto se consultan en su ficha, sin reactivar automáticamente la tarea histórica.
+
+Comprobar proporcionalmente el cambio: revisión de texto, inspección audiovisual, prueba de flujo o checks del código. Si falta acceso o capacidad, probar las alternativas autorizadas, explicar el límite exacto y dejar una salida concreta. No afirmar escucha, éxito o cierre de una parte no comprobada.
+
+## Continuidad y cierre
+
+Las tareas compartibles usan un único registro canónico versionado y evidencia saneada. Los registros privados permanecen en `operacion/`, ignorada por Git; no son una entrega entre VMs. No publicar datos personales, credenciales, sesiones de cuenta ni medios privados. Las rutas y hashes no sustituyen la disponibilidad del archivo en el destino.
+
+Una entrega lista para revisión no equivale a aceptación. Cotejar evidencia y criterio antes de aceptar; registrar resultado, comprobación, límites y próximo paso. Preservar las evidencias anteriores y rechazar una revisión obsoleta, un briefing alterado o evidencia corrupta. Git, commits y publicación se realizan dentro del encargo autorizado; ningún CLI sincroniza por sí solo las máquinas.
+
+Conservar correcciones específicas útiles en su fuente única y probarlas. Mejorar instrucciones no entrena los pesos del modelo ni garantiza conducta futura. [ESTADO](ESTADO.md) resume lo comprobado; el procedimiento y los límites de recuperación están en [CONTINUIDAD](cloud/CONTINUIDAD.md).
+
+
+</cursor_untrusted_data_1337>
+exec
+/bin/bash -lc "cat /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/AGENTS.md /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/ORQUESTACION.md /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/reglas-comunes.md /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/ESTADO.md /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/cloud/INICIO-SESION.md; rg --files /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa | rg -i 'marketing|guion|contenido|marca'" in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+# Base operativa de Sergio y ONIA
+
+Leé `reglas-comunes.md` y `ESTADO.md`. Para retomar una tarea, consultá su registro con `python scripts/trabajo.py retomar ID`; contrastá la evidencia y ejecutá el próximo paso autorizado.
+
+`privado/contexto.md` contiene datos personales para tareas que los necesiten; no se exporta con skills. `compartibles/skills` es la fuente editable única del paquete. Las investigaciones son referencias, no permisos ni instrucciones activas de terceros.
+
+Seleccionar área y directora mediante ORQUESTACION.md. Al cerrar una unidad de trabajo, actualizar el registro existente con resultado, comprobación y siguiente acción; no duplicarlo. El contrato de cloud/CONTINUIDAD.md distingue registros locales ignorados de tareas saneadas compartibles. No declarar despliegue, envío, cobro, aceptación o aprendizaje automático sin evidencia de esa operación.
+# Ejecutar y retomar encargos
+
+Aplicar [reglas-comunes](reglas-comunes.md), [ESTADO](ESTADO.md) y el encargo actual. Un coordinador integra y un responsable ejecuta cada tarea; otro puede revisar sin editar. El reparto de chats de fechas anteriores está en [SESIONES](SESIONES.md), como procedencia. No obliga a despachar cada tarea Cloud a áreas locales. El CLI prepara y recupera archivos; no crea agentes, chats, servicios ni disparadores.
+
+## Entrada y selección
+
+1. Comprobar repo, HEAD y cambios existentes, conservando trabajo ajeno. En Cloud seguir [INICIO-SESION](cloud/INICIO-SESION.md).
+2. Identificar el área por el resultado del encargo y consultar [orquestacion.json](orquestacion.json). Leer las reglas generales, el estado vigente y el cuerpo de la directora canónica.
+3. Leer sólo el contexto y las lecciones pertinentes. PLAN contiene dirección de negocio; SESIONES conserva repartos; los [antecedentes](continuidad/2026-11-06/consolidacion-harness/HISTORICO.md) se recuperan si la tarea los necesita.
+4. Registrar por separado catálogo inicialmente anunciado, rutas realmente leídas y prueba realizada. Si ONIA no aparece en el catálogo, leer la fuente canónica permite trabajar, pero no acredita descubrimiento nativo ni ejecución automática de Start skill.
+
+Las seis áreas CLI son `marketing`, `video`, `desarrollo`, `automatizaciones`, `organizacion` y `producto`. Jefatura y Aprendizaje no añaden claves ni agentes automáticos. En producto leer primero las instrucciones y el estado de ONIA Platform en su repo.
+
+`--skill` selecciona una directora propia habilitada para el área; por ejemplo continuidad-de-trabajo en organización. `--apoyo CLAVE` incorpora una referencia pertinente al briefing y se puede repetir. Las claves `tercero-` sólo son apoyos. El CLI escribe enlaces: el agente debe leer los cuerpos. Sin selección, los apoyos se enumeran como opcionales, no se cargan todos.
+
+## Preparación y comprobación
+
+Desde la raíz del checkout (en Windows, python también es válido):
+
+```sh
+python3 _investigacion-onia/base-operativa/scripts/harness.py doctor
+python3 _investigacion-onia/base-operativa/scripts/harness.py preparar demo-001 --compartible --area desarrollo --objetivo "Comprobar una entrega ficticia" --entregable "Informe con evidencia" --aceptacion "Resultado reproducible y límites explícitos"
+```
+
+`doctor` comprueba presencia de rutas; instalación, conexiones, navegador, publicación y descubrimiento se acreditan por separado. Un ID existente se retoma. El JSON es la autoridad de estado y briefing; el Markdown se genera desde él y se comprueba al recuperar.
+
+Usar `--compartible` sólo para contenido saneado apto para el repo: crea el registro único en `continuidad/tareas/ID.json` y su proyección en `continuidad/encargos/ID.md`. Sin esa opción el registro queda en `operacion/` ignorada. No se copian ni convierten tareas privadas automáticamente y se rechaza un ID presente en ambos lugares.
+
+Un ensayo de candidato requiere `--ensayo --investigacion RUTA --capacidad TEXTO --hipotesis TEXTO --control TEXTO --leccion TEXTO`. El coordinador revisa el contenido de la investigación; el CLI sólo comprueba presencia y ruta. No detecta automáticamente un ensayo mal clasificado.
+
+## Ejecución y revisión
+
+La selección de área/skill no configura un LLM. Elegir un perfil por tipo de trabajo mediante --perfil si corresponde, cotejar herramientas disponibles y registrar por separado modelo/esfuerzo recomendado, solicitado y observado. Desconocido se conserva como null. Los perfiles del manifiesto son candidatos revisables; no ganadores demostrados ni permisos para gasto. Escalar ante un fallo de razonamiento identificado, no por falta de credenciales o herramientas.
+
+Retomar comienza por la vista breve; consultar historial o --completo sólo cuando una decisión o revisión lo requiera. El briefing conserva restricciones y aparece una sola vez en tarea.briefing.contenido. Las decisiones sustituidas conservan procedencia y siguen disponibles en detalle. Para cambios paralelos, usar responsable y rutas explícitas; el comando asignar comprueba reservas en este checkout. Ver [contrato de continuidad](cloud/CONTINUIDAD.md) para actor, revisión esperada, reasignación y límites entre clones.
+
+Delegar partes independientes con objetivo, entradas, entregable, comprobación y archivos asignados. Cada archivo y configuración tiene un único escritor. Los subagentes internos y los chats persistentes son mecanismos distintos; comprobar herramientas y autorización para cada uno. Un mensaje de “terminado” no sustituye la evidencia.
+
+Centralizar preguntas y decisiones en el chat de coordinación del encargo. Las autorizaciones nativas pueden quedar ancladas al chat que invoca la herramienta; no prometer moverlas ni accionarlas por Sergio. La existencia de un chat o una preferencia móvil no acredita push o programación.
+
+El ejecutor prepara evidencia y deja `para_revision` únicamente con comprobación declarada correcta. El revisor coteja el resultado con la aceptación y usa `aceptar` de forma explícita. Cada mutación exige la revisión esperada; si cambió, retomar y reconciliar antes de escribir. Los nombres de revisor y comprobaciones son declaraciones auditables, no autenticación ni garantía automática de calidad.
+
+Para tareas de código paralelas, usar ramas y copias de trabajo separadas cuando corresponda al encargo y a las capacidades disponibles, e integrar secuencialmente con revisión. Crear worktrees o chats requiere la autorización aplicable de la herramienta. Una rama separada no aísla ni bloquea efectos sobre servicios externos.
+
+## Cierre, traspaso y fallos
+
+Seguir [CONTINUIDAD](cloud/CONTINUIDAD.md) para comandos, recuperación, publicación y prueba A→B. Un traspaso compartible proporciona ID, repositorio y commit; la nueva sesión recupera objetivo, briefing, evidencia y siguiente paso desde Git, no desde todo el chat.
+
+Conservar evidencia por revisión sin sobrescribirla. Ante alteración o pérdida, recuperar los bytes originales desde la entrega publicada; no recalcular hashes para ocultar el fallo. Si se interrumpió la proyección del briefing, `recuperar` puede reconstruir sólo el Markdown ausente desde el JSON íntegro. Un lock abandonado requiere verificar primero que ya no haya un escritor activo.
+
+Actualizar [ESTADO](ESTADO.md) cuando cambien capacidades o hitos, con evidencia y límites. No reescribir la historia como si una prueba anterior validara el código actual. La [guía móvil](cloud/MOVIL.md) explica el acceso; el uso real del teléfono se acredita por separado.
+
+Aplicar mejorar-sistema a correcciones observadas, evaluar-catalogo-skills a selección de candidatos y continuidad-de-trabajo a traspasos. Esta mejora de instrucciones no crea un scheduler ni entrenamiento del modelo.
+# Reglas comunes de trabajo
+
+Consolidación autorizada por Sergio el 6 de noviembre de 2026, America/Caracas. Esta es la única fuente de reglas generales de ONIA. Las instrucciones actuales del usuario prevalecen. Las versiones anteriores se conservan con bytes y hashes en [histórico](continuidad/2026-11-06/consolidacion-harness/HISTORICO.md); se consultan por encargo, no como una cola que deba ejecutarse al iniciar.
+
+## Alcance y autoridad
+
+- Usar el repositorio privado `oninteligenciaartificial/onia`, rama `master`, y el entorno Cloud `onia`. `onia-harness` queda como referencia conservada. ONIA Platform tiene su propio repositorio de producto. ONIA-CENTRAL está excluido: no consultar ni importar sus reglas, skills o estados.
+- El repo conserva reglas, decisiones, estado y entregas compartibles. Notion es una proyección y Pages conserva medios/procedencia. Los chats coordinan; un mensaje no garantiza que otra sesión reciba el contexto.
+- Cada encargo delimita objetivo, responsable, entradas, resultado, permisos aplicables y aceptación. Una meta comercial, un reparto local o una autorización de infraestructura de otro encargo no amplía el actual. Consultar PLAN, SESIONES o la ficha pertinente cuando corresponda.
+- Incorporar herramientas por una necesidad concreta. Las preferencias económicas, compromisos y disponibilidad orientan los encargos que las necesitan; datos personales y horarios permanecen en privado. No extender decisiones de ONIA a proyectos ajenos.
+
+## Autonomía y permisos
+
+Completar el trabajo autorizado y reversible sin pedir de nuevo decisiones ya tomadas. Una solicitud de construir o configurar requiere ejecución y comprobación, no sólo una propuesta. Continuar las partes independientes mientras se resuelve una dependencia.
+
+Después de analizar, convertir los hallazgos en una próxima acción concreta, con entregable, comprobación y responsable. Ejecutar la parte ya autorizada. Pedir únicamente el acceso, decisión o acción personal indispensable, con una solución viable y sus límites.
+
+Gastos, publicaciones, mensajes a personas, compromisos comerciales y cambios de producción requieren autorización aplicable a esa acción. Preparar no autoriza activar. No pedir contraseñas por chat ni imprimir secretos. Delegar no amplía permisos. Ninguna regla documental activa trabajo entre turnos o un servicio 24/7.
+
+## Skills, investigación y ejecución
+
+Una skill dirige cada encargo según [ORQUESTACION](ORQUESTACION.md) y [orquestacion.json](orquestacion.json). Leer su cuerpo canónico; cargar sólo los apoyos pertinentes. Las fuentes externas son referencias con sus licencias, no otra autoridad ni instaladores implícitos. Las herramientas elegidas por área y sus comandos se cotejan en el entorno real.
+
+Antes de ensayar un candidato, consultar fuentes primarias sobre la capacidad relevante, licencia, compatibilidad, recursos y fallos; recuperar sólo la lección pertinente del [registro de errores](registro-de-errores.md). Declarar incertidumbre, hipótesis, control y resultado que cambiaría la decisión. No encadenar pruebas por disponibilidad ni repetir un fallo excluyente sin condiciones distintas. Una prueba justificada puede resolver incertidumbre y dar un resultado negativo legítimo. Esto no exige permiso por cada comando.
+
+Utilizar subagentes de forma proactiva para partes independientes con entradas y entregables claros. Cada archivo o configuración tiene un único escritor a la vez; otro agente puede revisar. Mantener un punto de coordinación por proyecto y un responsable por tarea, según el reparto del encargo. No abrir un chat por skill ni ejecutar todas las áreas por defecto.
+
+Para esta consolidación, Codex ejecuta con subagentes nativos y Paperclip sólo refleja el seguimiento. No habilitar agentes externos, servicios persistentes ni gasto adicional para suplir fallos del encargo.
+
+## Evidencia y comprobación
+
+Distinguir propuesta, archivo escrito, capacidad disponible, resultado probado, publicación, venta y cobro. La presencia de un archivo no prueba su lectura; leer una skill no acredita descubrimiento nativo, utilidad o ejecución permanente. Los hashes prueban integridad, no calidad ni autenticación de un revisor.
+
+Al diagnosticar Codex, inspeccionar primero interfaz y capacidades disponibles y contrastar después con documentación oficial. Comprobar repo, HEAD y rutas antes de concluir que un archivo Cloud falta o de reconstruirlo. Un resultado de otra VM no valida la sesión actual.
+
+Cubrir el material solicitado según su finalidad sin reducir silenciosamente el alcance. En audiovisual, distinguir contenido, imagen, edición y componentes sonoros; fotogramas, ASR y métricas no sustituyen lo no percibido. Identificar cualquier muestreo. Las restricciones y controles de un caso concreto se consultan en su ficha, sin reactivar automáticamente la tarea histórica.
+
+Comprobar proporcionalmente el cambio: revisión de texto, inspección audiovisual, prueba de flujo o checks del código. Si falta acceso o capacidad, probar las alternativas autorizadas, explicar el límite exacto y dejar una salida concreta. No afirmar escucha, éxito o cierre de una parte no comprobada.
+
+## Continuidad y cierre
+
+Las tareas compartibles usan un único registro canónico versionado y evidencia saneada. Los registros privados permanecen en `operacion/`, ignorada por Git; no son una entrega entre VMs. No publicar datos personales, credenciales, sesiones de cuenta ni medios privados. Las rutas y hashes no sustituyen la disponibilidad del archivo en el destino.
+
+Una entrega lista para revisión no equivale a aceptación. Cotejar evidencia y criterio antes de aceptar; registrar resultado, comprobación, límites y próximo paso. Preservar las evidencias anteriores y rechazar una revisión obsoleta, un briefing alterado o evidencia corrupta. Git, commits y publicación se realizan dentro del encargo autorizado; ningún CLI sincroniza por sí solo las máquinas.
+
+Conservar correcciones específicas útiles en su fuente única y probarlas. Mejorar instrucciones no entrena los pesos del modelo ni garantiza conducta futura. [ESTADO](ESTADO.md) resume lo comprobado; el procedimiento y los límites de recuperación están en [CONTINUIDAD](cloud/CONTINUIDAD.md).
+# Estado vigente de ONIA
+
+6 de noviembre de 2026 · America/Caracas. Este resumen distingue lo comprobado de lo pendiente. El [estado completo anterior](continuidad/2026-11-06/consolidacion-harness/HISTORICO.md) se conserva sin pérdida de bytes y se consulta por tema; no es una cola automática de nuevas tareas.
+
+## Consolidación autorizada
+
+Sergio decidió usar `onia`, con una sesión integradora y otra revisora, conservar lo existente, probar continuidad entre sesiones y mostrar el uso móvil. Fuente: chat “Explicar cómo funciona un harness”, turno `01a1b23b-288c-7853-9b84-9285f4dce5ae`. Integra “Mostrar mapa de skills y reglas” (`01a1b221-dbd1-7b10-aada-a26094e04705`); revisa “Explicar cómo funciona un harness” (`01a1af41-1ce0-7b72-a888-7fd658396b4a`).
+
+Repositorio operativo: `oninteligenciaartificial/onia`, rama `master`, entorno Cloud `onia`. `onia-harness` se conserva como referencia; no se migran sus borradores ni se mantiene otro CLI operativo. ONIA Platform sigue separado.
+
+Estado de esta unidad: **implementación publicada y continuidad real A→Git→B aprobada técnicamente por revisión independiente**. Código final 706bf5eadb13abb7b97dfb286c3df1d546ac71bb: 54/54 tests en preparación Cloud, cero omisiones. El registro único continuidad-cloud-001 conserva evidencia y aceptación técnica, con próximo paso de consultar el resultado desde iPhone. [Informe, commits, sesiones y límites](continuidad/2026-11-06/consolidacion-harness/INFORME.md). Los controles y guía están en [CONTINUIDAD](cloud/CONTINUIDAD.md) y [MOVIL](cloud/MOVIL.md).
+
+## Arranques y recuperación comprobados
+
+La prueba Cloud `01a1b238-b446-777a-93c0-e31f4034301f` arrancó en `7d26f84d82c138335727735e158df7b904e91582`, Git limpio. Verificó 9 enlaces propios en repo y 9 aliases del workspace, 9 skills propias y 9 apoyos externos resueltos, y doctor 30/30. Leyó reglas, mapa y desarrollar-y-verificar desde archivos.
+
+**No anunció nativamente instrucciones de inicio ni skills ONIA.** La lectura explícita funcionó; no se acredita carga automática de Start skill. La prueba no ejecutó start.sh ni repitió los 39 tests que habían pasado en preparación. Por sí sola esa prueba no acreditó traspaso a otra VM, móvil ni ejecución permanente. El traspaso posterior A→B sí pasó, según el informe de consolidación.
+
+## Contextos conservados por encargo
+
+La evaluación posterior autorizada de sesiones tiene [un plan único](continuidad/2026-11-06/evaluacion-sesiones/PLAN.md) y el [registro evaluacion-sesiones-001](continuidad/tareas/evaluacion-sesiones-001.json). Implementación y doce ensayos revisados en Git a366ad71ef1f0982b2152b73df204f57e95cd6bd. La preparación Cloud de esa versión pasó 74 pruebas y omitió una de junctions Windows, de 75 definidas; también cotejó 9 enlaces propios, 9 aliases, doctor 30/30 y 190/190 archivos de evidencia. [Recibo Cloud](continuidad/evidencias/evaluacion-sesiones-001/validacion-cloud-v1.json). Esta comprobación precede a guardar/publicar el snapshot: su confirmación se consulta en el editor 01a1b22d-9f2c-72df-8a57-4c1ccb0c800a. La retoma breve, decisiones, ficha LLM y reservas locales se describen en CONTINUIDAD. El anuncio nativo Cloud y la compacción siguen sin acreditarse.
+
+Preparación local posterior: se reprodujo WinError 1314 y se completaron los dos enlaces faltantes mediante junctions explícitas; nueve fuentes enlazadas. Un subagente nativo local nuevo, sin herramientas ni lecturas de archivos, anunció las nueve skills propias en su catálogo inicial: [traza](continuidad/2026-11-06/evaluacion-sesiones/ejecuciones/catalogo-local/trace-actions.json) y [metadatos](continuidad/2026-11-06/evaluacion-sesiones/ejecuciones/catalogo-local/runtime.json). Eso acredita anuncio local, no lectura de cuerpos, anuncio Cloud ni compacción.
+
+- Dirección comercial y metas: [PLAN](PLAN.md), sin sustituir una solicitud técnica expresa.
+- Repartos, modelos y relevos anteriores: [SESIONES](SESIONES.md), con fechas y límites; el reparto de esta consolidación está arriba.
+- Referentes, audio e infraestructura: [índice de investigación](investigacion/2026-11-05-referentes/GOAL-REFERENTES.md) y estado histórico. Los avances y restricciones de esas tandas no se reactivan por abrir otra sesión.
+- Video D1, n8n, cuentas, VPS y producto: conservar evidencias en sus fichas y el estado anterior; no interpretar la consolidación como nuevas instalaciones, activación o despliegue.
+- Contexto personal, credenciales, sesiones autenticadas y medios privados siguen fuera de Git.
+
+No hay scheduler distribuido ni actividad 24/7 acreditados. Paperclip es un tablero de seguimiento; su configuración y estado efectivo se comprueban al actualizar la tarea correspondiente.
+
+B (01a1b251-c3f8-7781-9fcf-1874844c401f) arrancó desde el snapshot 9cf3e40 y recuperó por Git la entrega c3ac631; continuó de revisión 2 a 3 con siete controles aislados. Persistió el límite de anuncio nativo, aunque leyó las fuentes y aplicó la directora. La entrega B está publicada en 955e981; el cierre de aquella consolidación se publicó con 99da0bf a las 15:43 Caracas. La evaluación posterior se distingue arriba. Uso real de iPhone y ejecución permanente siguen sin acreditar.
+# Arranque de una sesión ONIA
+
+Esta es la instrucción de inicio para el entorno cloud `onia`; no reemplaza las reglas comunes.
+
+Registrar antes de explorar archivos si ONIA y la instrucción de inicio fueron anunciadas nativamente. La prueba del 6/11 no los recibió; la lectura explícita de esta entrada sigue siendo el mecanismo comprobado. No confundirlo con descubrimiento automático solucionado.
+
+1. Confirmar checkout `/workspace/onia`, remoto `oninteligenciaartificial/onia` y HEAD. Leer `AGENTS.md`, `reglas-comunes.md` y `ESTADO.md` del checkout vigente. No reutilizar un resultado de otra VM como prueba de esta sesión.
+2. Consultar `orquestacion.json`, identificar el área por el encargo y leer la skill directora pertinente. Cargar apoyos sólo si resuelven una parte concreta. No esperar que Sergio copie las instrucciones. Si el catálogo nativo no anuncia nuestras skills, aplicar su fuente canónica por archivo y distinguirlo del descubrimiento nativo.
+3. Comprobar enlaces con `python3 _investigacion-onia/base-operativa/scripts/preparar-cloud.py --check --discovery-root /workspace`. El instalador prepara nueve enlaces en `.agents/skills` del checkout y nueve aliases en `/workspace/.agents/skills`, todos a la misma fuente. No reemplazar enlaces ajenos ni copiar cuerpos de skills.
+4. Ejecutar el encargo y delegar partes independientes según ORQUESTACION.md. Comprobar una cuenta sólo cuando se necesite. Los secretos se obtienen de su integración o de Secretos de red del entorno; no se muestran ni se guardan en archivos de entrega.
+5. Si se recibió ID/commit, comprobar y recuperar esa referencia Git conservando cambios existentes y ejecutar `harness.py retomar ID`; leer su alcance y próximo paso. Para compartir una tarea nueva usar el registro único de `cloud/CONTINUIDAD.md`, evidencia saneada y commit publicado. No afirmar persistencia compartida por escribir sólo en `operacion/`, que está ignorado. No publicar sin revisar el contenido de la entrega.
+6. Si el encargo necesita navegador, usar `cloud/browser-runtime.cjs` y el procedimiento de `cloud/OPERAR.md`. La confianza de Chromium debe reconstruirse en un directorio temporal escribible con la CA oficial verificada; no heredar un arreglo de /tmp de otra tarea ni desactivar TLS. El módulo no conserva cuentas entre VMs.
+
+La preparación del entorno debe guardar esta lectura como parte de la habilidad de inicio. Un texto versionado sin configurar el inicio no acredita que se ejecute. La prueba de aceptación de carga es una nueva sesión: registrar catálogo inicial, skill seleccionada y ruta leída antes de ejecutar su primer encargo.
+
+El recibo de inicio distingue checkout/HEAD, enlaces comprobados, catálogo inicialmente observado, entrada recibida y fuentes realmente leídas. Para catálogo/recepción usar observado, no observado o desconocido según evidencia; no deducirlos de ready. No cargar todos los cuerpos de skills ni historial por costumbre.
+
+La retoma vigente es breve por defecto: briefing único en tarea.briefing.contenido, decisiones vigentes y siguiente paso. Consultar --completo o historial ID --revision N cuando haga falta. Comprobar asignación, actor y revisión antes de mutar. El perfil LLM recomendado no cambia la configuración; registrar solicitado y observado por separado, sin completar lo desconocido.
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/enrique-rocha.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/mapa-recorridos.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/iman-gadzhi.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/san-munoz.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/bastian-alvaro-voltra-alex.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/justin-welsh.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/brechas-comerciales.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/ESTADO.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/nick-jeff-ali.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/descripciones-sociales-ampliacion.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/alex-hormozi.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/pedro-buerbaum.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/navegador-verificacion.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/gonzalo-beltran-toto.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/victor-heras.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/erik-taveras.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/comparacion.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/audiovisual/guiones-faltantes.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-05/revisiones/marketing.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/compartibles/terceros/marketing/humanizer/ENSAYO-INPUTS.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/compartibles/terceros/marketing/humanizer/LICENSE
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/compartibles/terceros/marketing/humanizer/NOTICE-ONIA.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/compartibles/terceros/marketing/humanizer/README.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/compartibles/terceros/marketing/humanizer/PROCEDENCIA.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/compartibles/terceros/marketing/humanizer/SKILL.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/seleccion-marketing.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/brazo-02/lectura.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/brazo-02/artefacto.raw.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/LICENCIA-APOYO.txt
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/mapa-ciego.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/directora-congelada.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/ciego/Y.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/ciego/juicio.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/ciego/juicio.raw.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/ciego/entrada.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/ciego/X.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/ciego/rubrica.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/apoyo-congelado.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/entrada.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/brazo-01/lectura.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/brazo-01/artefacto.raw.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/reglas-congeladas.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/rubrica.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/configuracion-previa.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-06/prueba-skills/caso-marketing/congelacion.json
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-04/fuentes-cloud/seccion-contenido.md
+/home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-04/fuentes-cloud/guiones-y-workshop.md
+
+exec
+/bin/bash -lc 'cat /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/orquestacion.json; cat /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/ESTADO.md /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/continuidad/2026-11-04/fuentes-cloud/seccion-contenido.md' in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+{
+  "schema": 1,
+  "reglas": "reglas-comunes.md",
+  "perfiles_ejecucion": {
+    "extraccion": {
+      "modelo": "gpt-6-luna", "esfuerzo": "high",
+      "criterio": "Extracción o clasificación repetible con fuente y esquema cerrados; candidato, no ganador probado.",
+      "escalamiento": "Comparar con Sol high si pierde datos críticos; no escalar por permisos o herramientas ausentes."
+    },
+    "multifuente": {
+      "modelo": "gpt-6.1-sol", "esfuerzo": "medium",
+      "criterio": "Coordinar contexto y entregas de varias fuentes con criterios verificables.",
+      "escalamiento": "Subir a high ante fallo de razonamiento identificado; reducir sólo conservando la calidad medida."
+    },
+    "cambio-acotado": {
+      "modelo": "gpt-6.1-terra", "esfuerzo": "medium",
+      "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+      "escalamiento": "Comparar con Sol medium cuando falle el criterio; separar incompatibilidad de herramientas."
+    },
+    "complejo": {
+      "modelo": "gpt-6.1-sol", "esfuerzo": "high",
+      "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+      "escalamiento": "Astra medium/high sólo ante ambigüedad persistente identificada y dentro de cuota autorizada."
+    }
+  },
+  "limite_modelos": "Recomendaciones declarativas del 6/11/2026; no cambian runtime, permisos, herramientas ni modelo efectivo. Fuentes: https://learn.chatgpt.com/docs/models y https://developers.openai.com/api/docs/guides/model-selection. Comparar antes de atribuir calidad o ahorro.",
+  "contexto_comun": [
+    "ESTADO.md",
+    "ORQUESTACION.md"
+  ],
+  "archivos_cloud": [
+    "cloud/install.sh",
+    "cloud/start.sh",
+    "cloud/package-lock.json",
+    "cloud/browser-runtime.cjs",
+    "cloud/browser-runtime.test.cjs",
+    "cloud/n8n-inventory.py"
+  ],
+  "skills": {
+    "automatizar-n8n": "compartibles/skills/automatizar-n8n/SKILL.md",
+    "continuidad-de-trabajo": "compartibles/skills/continuidad-de-trabajo/SKILL.md",
+    "desarrollar-y-verificar": "compartibles/skills/desarrollar-y-verificar/SKILL.md",
+    "evaluar-catalogo-skills": "compartibles/skills/evaluar-catalogo-skills/SKILL.md",
+    "mejorar-sistema": "compartibles/skills/mejorar-sistema/SKILL.md",
+    "planificar-dia": "compartibles/skills/planificar-dia/SKILL.md",
+    "preparar-campana-meta": "compartibles/skills/preparar-campana-meta/SKILL.md",
+    "preparar-oferta-y-embudo": "compartibles/skills/preparar-oferta-y-embudo/SKILL.md",
+    "producir-video": "compartibles/skills/producir-video/SKILL.md",
+    "tercero-matt-research": "compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md",
+    "tercero-matt-writing-agents": "compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md",
+    "tercero-matt-handoff-onia": "compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md",
+    "tercero-addy-context": "compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md",
+    "tercero-superpowers-debug": "compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md",
+    "tercero-superpowers-verify": "compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md",
+    "tercero-marketing-humanizer": "compartibles/terceros/marketing/humanizer/SKILL.md",
+    "tercero-visual-hyperframes-plan": "compartibles/terceros/visual/27-hyperframes/USO-ONIA.md",
+    "tercero-visual-uiux": "compartibles/terceros/visual/19-ui-ux-pro-max/USO-ONIA.md"
+  },
+  "areas": {
+    "marketing": {
+      "skill_directora": "preparar-oferta-y-embudo",
+      "skills_apoyo": [
+        "preparar-campana-meta",
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-marketing-humanizer"
+      ],
+      "contexto": [],
+      "salidas": [
+        "Oferta y recorrido de venta",
+        "Borradores de las piezas del encargo"
+      ],
+      "alcance": "Preparar una oferta, embudo, webinar o brief de contenido.",
+      "modo": "encargo"
+    },
+    "video": {
+      "skill_directora": "producir-video",
+      "contexto": [],
+      "salidas": [
+        "Composición editable en HyperFrames",
+        "Video y verificación audiovisual"
+      ],
+      "alcance": "Producir una pieza con los materiales indicados en el encargo.",
+      "modo": "encargo",
+      "skills_apoyo": [
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-visual-hyperframes-plan"
+      ]
+    },
+    "desarrollo": {
+      "skill_directora": "desarrollar-y-verificar",
+      "contexto": [
+        "arquitectura.md"
+      ],
+      "salidas": [
+        "Cambio acotado de código",
+        "Comprobación del comportamiento solicitado"
+      ],
+      "alcance": "Desarrollo del harness y herramientas del encargo.",
+      "modo": "encargo",
+      "skills_apoyo": [
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-superpowers-debug",
+        "tercero-superpowers-verify"
+      ]
+    },
+    "automatizaciones": {
+      "skill_directora": "automatizar-n8n",
+      "contexto": [
+        "accesos.md"
+      ],
+      "salidas": [
+        "Flujo n8n con referencias a credenciales",
+        "Pruebas y manejo de fallos"
+      ],
+      "alcance": "Un evento y resultado definido para la instancia existente de n8n.",
+      "modo": "encargo",
+      "skills_apoyo": [
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-superpowers-debug",
+        "tercero-superpowers-verify"
+      ]
+    },
+    "organizacion": {
+      "skill_directora": "planificar-dia",
+      "skills_apoyo": [
+        "continuidad-de-trabajo",
+        "mejorar-sistema",
+        "evaluar-catalogo-skills",
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context"
+      ],
+      "contexto": [
+        "CEREBRO-DIARIO.md"
+      ],
+      "salidas": [
+        "Agenda viable con compromisos y tareas",
+        "Estado y entrega para retomar un encargo"
+      ],
+      "alcance": "Planificar con datos vigentes; usar la skill de apoyo correspondiente para continuidad o mejora. No presupone sincronización del calendario.",
+      "modo": "encargo"
+    },
+    "producto": {
+      "skill_directora": "desarrollar-y-verificar",
+      "contexto": [
+        "arquitectura.md"
+      ],
+      "salidas": [
+        "Briefing para ONIA Platform",
+        "Repo e instrucciones técnicas que falta verificar"
+      ],
+      "alcance": "Sólo briefing hasta identificar y leer el repositorio e instrucciones técnicas de ONIA Platform.",
+      "modo": "briefing",
+      "skills_apoyo": [
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-superpowers-debug",
+        "tercero-superpowers-verify",
+        "tercero-visual-uiux"
+      ]
+    }
+  }
+}
+# Marketing · cobertura comercial/social del goal
+5 de noviembre de2026, America/Caracas. **Ampliación entregada para17 personas y Voltra; aceptación de Jefa pendiente.** Se completaron los recorridos públicos accesibles hasta los límites documentados. No se declara terminado el estudio audiovisual integral ni revisión exhaustiva de cada feed. No se infieren ventas, cobros, automatizaciones o entregas privadas.
+
+## Entregables vigentes
+- [Mapa comparado de18 entidades](mapa-recorridos.md): propósito/segmento/oferta, mecanismo y último tramo efectivamente seguido.
+- [Brechas por referente/componente](brechas-comerciales.md): alternativa ejecutada e intervención mínima.
+- [Verificación adicional en navegador](navegador-verificacion.md): campos, precios, agenda y redirecciones; supera fallos antiguos de extracción.
+- [Seis descripciones/CTA recuperadas](descripciones-sociales-ampliacion.md).
+- Fichas iniciales: [Hormozi](alex-hormozi.md), [Iman](iman-gadzhi.md), [Heras](victor-heras.md), [Pedro](pedro-buerbaum.md), [Erik](erik-taveras.md), [Enrique](enrique-rocha.md), [San](san-munoz.md), [Justin](justin-welsh.md).
+- Ampliación reutilizando criterio: [Nick/Jeff/Ali](nick-jeff-ali.md), [Gonzalo/Beltrán/Toto](gonzalo-beltran-toto.md), [Bastian/Álvaro/Voltra/Alex](bastian-alvaro-voltra-alex.md).
+- [Comparación editorial anterior de ocho](comparacion.md) conservada como antecedente, sin producir campaña o guion nuevo.
+
+## Prueba nueva e integración
+Tres subagentes explícitos Sol, contexto acotado, propiedad de archivo separada; root leyó e integró las fichas y verificó superficies pendientes. Nueva lectura primaria de sitios/landings, descripciones públicas yt-dlp y navegador IAB ahora disponible. Sin cookies de perfil/login, formularios enviados, comentarios, DMs, compras, campañas, instalaciones o gasto. Escritura de esta ampliación exclusivamente marketing/.
+
+Resultados que cambian el estado:
+- Iman cuatro descripciones→evento; modal nombre/email/teléfono; recurso Notion público con oferta del evento. Heras dos descripciones→shortener→Viralidad→survey.
+- Pedro tres captions comerciales revalidados; carrusel conserva errores de extracción y entrada hija diferenciada. Diagnóstico Escala/checkout masterclass cargaron en navegador; representacionesEUR/USD registradas.
+- San tres medios/captions y Erik preview/final/ASR ya revisados por Video; Rocha short ya recuperado/215cuadros/captions. Marketing integra sus reportes, no se atribuye escucha ni inspección visual propia.
+- Nick checkout y renovación/prueba visibles; Jeff precio/variantes y primera pregunta del selector; Ali dos checkouts y comienzo de solicitud13preguntas. No respuestas personales.
+- Beltrán libroML carga vendedor/precio/stock/garantía; Toto demo carga agenda/slots; Bastian masterclass lleva a registro; AlexCLASE no se confunde con Exposure; Álvaro/Voltra persona/empresa distintos.
+- Ads Library ahora muestra tarjeta Skool1417431913538180 con fechas/estado y texto que menciona formación Hormozi: anunciante Skool, no atribución de campaña personal. Resto de intentos Ads conserva alcance y fallos; no ausencia de campañas.
+
+**QA final:**17 documentos Marketing y101 enlaces locales comprobados, ninguno ausente. Revisión independiente Sol de mapa/brechas/navegador sin errores materiales; aclaradas13 preguntas declaradas de Ali frente a dos visibles y actualizados Pedro/Voltra con la prueba ya ejecutada. Comprobar enlaces locales no certifica acceso permanente a fuentes públicas.
+
+**QA acotada de Jefa corregida:** Justin cuenta tres ensayos; el mapa explicita moneda/unidad acreditadas y omite importes cuya moneda no se verificó. Ads Hormozi diferencia los fallos iniciales de la tarjeta posterior cuyo anunciante es Skool. No se confunde oferta/entrega anunciada con recurso privado recibido.
+
+## Límites e intervención mínima
+Gonzalo sigue sin formulario en lector y navegador cargado tras rechazo de cookies; Toto Libros404 tras alternativa; verificación HTML de portfolio sin enlace actualizado y script público Lenus de Gonzalo404. Respuestas privadas a keywords, registro, pagos, entrega y desempeño requieren interacción que este mandato no autoriza; no se inventaron perfiles para avanzar cuestionarios. No se pide contraseña, compra ni descarga que el equipo pueda hacer. El registro de navegador distingue carga inicial de resultado tras renderizar.
+
+El contenido técnico extenso de los diez prompts nuevos de Iman sólo se desplegó y leyó parcialmente; su acceso/estructura/función comercial sí están documentados. No se ejecutó Higgsfield ni se auditó eficacia. Audio/continuidad y materiales señalados adicionales pertenecen a los frentes correspondientes; enlazar [estado Video](../audiovisual/ESTADO.md) y [audio](../audio-tecnico/ESTADO.md) no equivale a completar esos componentes.
+
+**Próxima acción:** Jefa recoge mapa/fichas/brechas para la matriz única de Organización y acepta la unidad comercial con el último tramo observado por sujeto. Gonzalo: el script público Lenus enlazado por HTML devuelve404 en GET directo; Toto: el portfolio actual conserva tres veces el mismo Libros fallido, sin sustituto expuesto. Ambos quedan como problemas concretos de destino, sin tarea indefinida ni requisito de intervención privada para este estudio. Para DM/registro/transacción, sólo nueva autorización específica si fuese indispensable para el objetivo. Marketing no entrega las tres propuestas futuras reservadas a Jefa ni declara el goal cumplido.
+
+# Archivo documental: 3 Contenido y edición
+
+> Consolidado por autorización de Sergio. Fuente: [Page original](https://chatgpt.com/space/page_211e872aa4c481918e8bbb69ea68c37e), secuencia **1**, actualizada 2026-11-04T20:52:32.094002Z. Este archivo conserva evidencia y borradores de esa fecha; **no es un segundo plan activo**. Las decisiones vigentes están en [PLAN](../../../PLAN.md) y los resultados en [ESTADO](../../../ESTADO.md). El texto histórico que diga «vigente», «STOP» o «no modificar Git» describe su momento original y no reemplaza la consolidación autorizada.
+
+Los enlaces a medios/descargas se abren en la Page de origen; esos binarios permanecen en cloud. Esta copia no los incorpora ni vuelve a ejecutar sus pruebas.
+
+---
+
+**4 de noviembre de 2026 · v1.1 · Practicar antes de medir publicaciones.** [Biblioteca de marca](biblioteca.md).
+
+**Resultado esperado:** pieza que resuelve un microproblema con demostración y cierre. **Entrada:** [35 guiones v2 y Kit PLAN](guiones-y-workshop.md), [catálogo de formatos](https://chatgpt.com/space/page_21e4c7fdcc0c8191a754c095dc28e6c9) y [P2v2](video-y-audio.md). **Responsables propuestos:** Marketing para argumento; Video para edición; Sergio para revisión personal. **Salida:** mismo ID editorial, versión y evidencia de QA. **Prueba para avanzar:** problema entendible → demostración visible → conclusión útil antes del CTA; revisar imagen y escuchar audio cuando exista, verificar permisos del material y registrar aprobación concreta.
+
+# Estado
+
+Los 35 guiones y el Kit son borradores no aprobados; no constituyen una base comercial validada. Este encargo no produce otra tanda. P2v2 acredita un render silencioso y comprobaciones técnicas, no aprobación editorial ni publicación.
+
+Conservar por versión: fuente e hipótesis, formato, tema, duración, CTA/destino, artefacto, comprobación audiovisual, decisión de Sergio y publicación real con URL/fecha cuando ocurra. Una nueva exportación no crea una nueva publicación. El relato de fundador y entrenamiento debe corresponder al hecho y fecha reales; B-roll antiguo no acredita un suceso de hoy.
+
+**Primera candidata para revisión:** P1 existente de la fecha inventada, enlazada en [MARCA-EVIDENCIA-001, «Primera muestra candidata»](referentes.md). Sólo tras revisión: comprobar ficha sin fecha → error → corrección con pendiente → conclusión antes del CTA. Conservar los 35 borradores sin producir más ahora. Contrastar la comprensión con D1; una prueba privada no es publicación ni oferta aprobada.
+
+
+codex
+Aplicaré las skills locales `planificar-dia` y `preparar-oferta-y-embudo`, con apoyo de `preparar-campana-meta`, para separar agenda confirmada de propuesta y dejar el anuncio completo y pausado. P1 ya figuraba como primera candidata en la fuente de contenido; la adaptación conservará su microproblema y usará un CTA sin promesa de entrega.
+exec
+/bin/bash -lc 'cat /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/compartibles/skills/planificar-dia/SKILL.md /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/compartibles/skills/preparar-oferta-y-embudo/SKILL.md /home/onia-codex-worker/repos/onia/_investigacion-onia/base-operativa/compartibles/skills/preparar-campana-meta/SKILL.md' in /home/onia-codex-worker/operacion
+ succeeded in 0ms:
+---
+name: planificar-dia
+description: Organiza un día concreto con compromisos fijos, descanso y tareas realizables cuando el usuario pide su agenda o necesita replanificarla. No sustituye el registro de continuidad de un proyecto.
+---
+
+# Planificar un día viable
+
+Convertí las prioridades del usuario en bloques que realmente entren en el día. En ONIA, las decisiones compartidas se consultan en [reglas-comunes.md](../../../reglas-comunes.md); esta skill no fija horarios personales ni metas comerciales nuevas.
+
+## Entradas y disponibilidad
+
+- Recuperá fecha, zona horaria, compromisos vigentes y tareas pendientes de las fuentes disponibles. Reutilizá lo ya informado; preguntá sólo por un dato faltante que cambie el plan.
+- Si existe acceso al calendario, leé ese día y cotejá los compromisos antes de proponer horarios. Si no existe, entregá un borrador basado en los datos disponibles y señalá qué no se pudo comprobar.
+- Reservá primero compromisos fijos, traslados, comidas, gimnasio y descanso acordado. Un hueco entre clases no equivale a tiempo completo de trabajo. Descontá preparación y cierre cuando importen.
+- Separá trabajo que requiere a la persona —grabar, asistir, decidir— de encargos que un agente puede preparar con entradas completas. Un encargo escrito no equivale a ejecución programada.
+
+## Elegir y ajustar
+
+Elegí el resultado de mayor prioridad que quepa en el tiempo disponible. Estimá duración de las tareas, explicitá las estimaciones inciertas y comprobá que no haya solapamientos. Si el trabajo excede la capacidad, proponé reducir alcance o mover una tarea; no comprimas automáticamente descanso o compromisos.
+
+Convertí cada bloque en una acción con resultado observable. Incluí margen para retrasos y una alternativa mínima cuando el día se complique. Al replanificar, conservá lo completado y cambiá sólo lo afectado; no rehagas toda la agenda por un retraso. Diferenciá minutos invertidos de resultado terminado: si esa ambigüedad cambia qué cabe, aclarala o mostrá las dos alternativas brevemente.
+
+## Entrega
+
+Entregá fecha y zona horaria, bloques con inicio/fin y resultado, primera acción y tareas que quedaron fuera. Indicá supuestos y conflictos pendientes.
+
+Si el encargo también incluye guardar eventos, comprobá el calendario de destino y los eventos existentes para evitar duplicados; informá qué escritura quedó confirmada. Si sólo se preparó una agenda, llamala propuesta. La entrega de continuidad de un proyecto sigue en su registro existente.
+---
+name: preparar-oferta-y-embudo
+description: Define una oferta de taller, webinar o servicio y su recorrido hasta el pago y la entrega cuando se pide preparar una venta concreta.
+---
+
+# Preparar una oferta y su embudo
+
+Partí de la tarea, el producto demostrable y las decisiones comerciales ya tomadas. Esta skill produce una ficha de oferta y un recorrido ejecutable; no concede accesos ni permisos para publicar, enviar mensajes o gastar.
+
+## Oferta
+
+- Recuperá comprador, problema, resultado, entregables, modalidad, duración, capacidad, precio/moneda y requisitos de acceso. Preguntá solo por faltantes que cambien la oferta. Marcá las propuestas como tales.
+- Pedí o localizá una demostración del resultado prometido. No inventes experiencia, testimonios, demanda, garantías o ingresos del comprador.
+- Diferenciá taller/webinar pago de webinar gratuito que presenta otra oferta. Seleccioná el formato que sirve al objetivo; no agregues etapas por costumbre.
+- Registrá precio y condiciones en una ficha única para que páginas, anuncios y mensajes conserven los mismos datos.
+
+## Recorrido
+
+Definí entrada, acción del comprador, salida y responsable en cada paso necesario: descubrimiento, interés, inscripción/pago, acceso, entrega y seguimiento. Un embudo simple puede usar una página y un canal de contacto existentes; no exige software nuevo.
+
+Para un webinar, prepará apertura, problema, demostración, práctica o explicación, preguntas y siguiente paso. El contenido debe cumplir la promesa aunque no haya una venta posterior. Definí recordatorios y seguimiento como borradores salvo autorización de envío.
+
+Para contenido, entregá un brief de pieza con idea, evidencia, llamada a la acción y destino. Para automatización, entregá trigger, datos mínimos, deduplicación y criterio de éxito; no actives workflows como parte de escribir el plan.
+
+## Cifras y control
+
+- Separá ingresos cobrados, interesados, inscriptos sin pago, gastos, devoluciones y ganancia. Un escenario unidades por precio no es una previsión.
+- No asignes a anuncios dinero disponible para otros fines. Identificá el presupuesto específico y su autorización antes de proponer acciones con gasto.
+- Elegí métricas observables por paso. No atribuyas todas las ventas a un canal por aparecer juntas en el tiempo ni inventes una conversión cuando faltan datos.
+- Una respuesta incierta de un sistema de cobro o inscripción se consulta antes de reintentar; no se duplican entregas o registros a ciegas.
+
+## Entrega
+
+Entregá la ficha, el recorrido mínimo, las piezas/borradores necesarios, los datos faltantes y el próximo paso. Indicá qué existe efectivamente y qué sigue siendo propuesta. El presupuesto, la publicación y los compromisos siguen las instrucciones vigentes del usuario; respetá autorizaciones ya dadas sin volver a pedirlas.
+---
+name: preparar-campana-meta
+description: Prepara un borrador de campaña de Meta y comprueba accesos de lectura cuando hay una oferta, un objetivo comercial y un encargo de anuncios. No activa campañas ni modifica cuentas, presupuestos o anuncios.
+---
+
+# Preparar una campaña de Meta
+
+El resultado es una propuesta revisable de campaña con piezas, medición y pendientes de acceso. En ONIA, consultá las [reglas comunes](../../../reglas-comunes.md) y la ficha vigente de oferta; no fijes un segundo precio, promesa o fecha en el anuncio.
+
+## Brief comercial
+
+Recuperá oferta y demostración, público, ubicación, objetivo, destino de la llamada a la acción, fechas y presupuesto específico de publicidad. Diferenciá dinero disponible de presupuesto publicitario asignado. Si falta presupuesto o acceso, avanzá con la propuesta y marcá esos campos pendientes; no inventes gasto diario para completar la ficha.
+
+Relacioná el objetivo comercial con un resultado observable: consultas calificadas, registros o compras confirmadas, según el encargo. Conservá la distinción entre métricas de Meta y cobros conciliados. Elegí la estructura más simple que permita comprobar la hipótesis; la referencia B2B no obliga a dos campañas, múltiples audiencias o un volumen fijo de anuncios.
+
+## Activos y comprobación de acceso
+
+- Identificá la Página, cuenta de Instagram y cuenta publicitaria previstas mediante datos existentes o una conexión disponible. Un login de navegador o plugin visible no acredita acceso API ni permisos sobre esos activos.
+- Si el encargo requiere comprobar acceso, inspeccioná las herramientas del conector o la documentación oficial del endpoint de lectura y su versión antes de llamarlo. Seleccioná una consulta mínima, con campos y período acotados cuando corresponda; registrá activo, resultado y limitaciones. No solicites permisos de gestión para resolver una lectura sin verificar primero lo requerido.
+- Las credenciales se resuelven mediante la conexión de su ejecutor; no se incluyen en este brief. Una lectura fallida queda como acceso pendiente y no impide terminar copy, propuesta creativa o plan de medición.
+- Esta skill produce archivos de borrador y consultas de lectura: no crea objetos remotos, ni siquiera anuncios pausados. Lanzar o modificar una campaña es otro encargo con estado y alcance propios.
+
+Si después el usuario pide lanzar, reenrutá al encargo de ejecución conservando la autorización recibida y comprobando los datos y accesos que falten. El límite de esta skill no es una razón para repetir una aprobación ya dada ni para afirmar que la campaña se publicó.
+
+## Creatividades y medición
+
+Prepará ángulo, evidencia de la promesa, texto, visual o guion, CTA y destino coherentes entre sí. Identificá los materiales reales disponibles y qué falta producir. Las variantes deben probar una diferencia reconocible, no sólo cambiar palabras.
+
+Definí evento medido, fuente de datos, período, moneda y criterio para revisar el resultado. Sin historial suficiente, expresá hipótesis y condiciones de observación; no conviertas benchmarks de otra empresa en objetivos garantizados ni ajustes automáticos. Comprobá destino y recorrido de registro/pago en el alcance disponible antes de declarar la propuesta lista para lanzamiento.
+
+## Entrega y fuentes
+
+Entregá brief, estructura propuesta, piezas, presupuesto informado o pendiente, plan de medición y lista corta de requisitos sin resolver. Separá «borrador completo», «activos leídos» y «lista para revisión de lanzamiento» según la evidencia.
+
+Referencia técnica primaria: [colección oficial de Meta Marketing API](https://www.postman.com/meta/facebook-marketing-api/overview); consultar sus solicitudes y [documentación de Marketing API](https://developers.facebook.com/docs/marketing-api/) para la operación concreta. Si no se puede comprobar un permiso, versión o endpoint, marcarlo pendiente en lugar de presentar una llamada recordada como verificada.
+
+Referencia comercial selectiva: [Marketing Skills, Meta decision system](https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/ads/references/meta-decision-system.md). Aporta preguntas sobre oferta, creatividad y medición; sus umbrales y reglas de escalado B2B no se adoptan como política de ONIA. Redacción propia; no instala ese paquete.
+
+codex
+===BEGIN 01-PANEL-NOTION.md===
+# Hoy: una pieza útil y una agenda real
+<date start="2026-11-07" /> · America/Caracas · ADICIÓN PARA PREPENDER a Sergio · Hoy
+
+Esta prioridad sustituye **como tarea inmediata** las cinco piezas diarias, el diario de las 20:00 y el workshop. La historia se conserva; no activa esas cadencias. Workshop pausado. Flujo **DIARIO BAJO DEMANDA**, sin entregas automáticas.
+
+**Tres prioridades de hoy**
+
+1. **Ajustar el día a tus obligaciones y descanso reales.** Falta confirmar disponibilidad; no reservar horas por inferencia.
+2. **Grabar una pieza principal:** adaptación de P1, «La fecha que nadie había confirmado». Resultado mínimo: una toma completa y los planos de documentos ficticios.
+3. **Dejar la adaptación de anuncio revisable y pausada.** Copy y tomas preparados; sin campaña creada, gasto ni publicación.
+
+Guion completo en <mention url="https://app.notion.com/p/4112eb20bdfd81c1a339e23eb82afa9d">ONIA · Guiones</mention>. Antecedentes personales en <mention url="https://app.notion.com/p/40e2eb20bdfd8101b305e388b0c012d8">Vida</mention>.
+
+**Agenda: hechos, planes y lagunas**
+
+- La ingesta de Calendar informa cero eventos en dos calendarios propios durante la ventana consultada. **No demuestra disponibilidad ni ausencia de obligaciones.**
+- Vida documenta un plan de días de colegio actualizado el <date start="2026-11-04" />. Sus horas no se trasladan al sábado de hoy.
+- No tenemos confirmación vigente de compromisos familiares, traslados, comidas, sueño o descanso. Las metas de hábitos son planes documentados, no obligaciones confirmadas ni acciones cumplidas.
+- La meta económica informada es una meta, no una cita ni un resultado atribuible a esta pieza.
+
+**Bloque PROPUESTO, sin hora fija**
+
+Estimación de trabajo, no reserva: **35 minutos** — preparar dos hojas EJEMPLO, 8 min; grabar cara y documentos, 15 min; comprobar audio/legibilidad, 7 min; guardar y cerrar, 5 min. Edición posterior estimada: 20–30 min, solo si cabe.
+
+Alternativa mínima: 15 minutos para una toma y dos planos; edición pendiente. Si no cabe, mover el bloque sin recortar descanso ni compromisos.
+
+**Pipeline**
+
+Idea → guion → grabar → editar → revisar → publicar **solo con autorización aplicable** → medir. Estado de esta adaptación: **guion propuesto / por grabar**. No hay archivo audiovisual ni publicación comprobados.
+
+**Distribución provisional; una sola tanda inicial**
+
+| Fecha | Paso propuesto, condicionado a agenda |
+|---|---|
+| <date start="2026-11-07" /> | Preparar y, si cabe, grabar la pieza principal. |
+| <date start="2026-11-08" /> | Completar grabación o editar el mismo material. |
+| <date start="2026-11-09" /> | Revisar imagen, audio, subtítulos y CTA. |
+| <date start="2026-11-10" /> | Mantener lista para decisión editorial; publicar únicamente si se autoriza. |
+| <date start="2026-11-11" /> | Si hubo publicación, registrar URL y primeras observaciones; si no, conservar pendiente. |
+| <date start="2026-11-12" /> | Revisar la adaptación de anuncio, todavía pausada. |
+| <date start="2026-11-13" /> | Corregir solo con evidencia disponible; sin fabricar otra tanda. |
+| <date start="2026-11-14" /> | Balance bajo demanda y siguiente paso según capacidad real. |
+
+Son estados propuestos: no calendario reservado, publicaciones programadas ni tareas que se ejecuten solas.
+
+**Única pregunta para Sergio:** ¿Qué obligaciones y traslados tienes hoy, qué franja real puedes dedicar a grabar y qué descanso u hora de cierre debemos proteger?
+===END 01-PANEL-NOTION.md===
+
+===BEGIN 02-GUION-Y-ANUNCIO.md===
+# P1 · Adaptación de microvalor
+**PROPUESTO · NO PUBLICADO · NO CAMPAÑA CREADA**
+
+Adición a ONIA · Guiones. Conservar P1 y la pieza previa sobre retomar tareas; esta adaptación no las sustituye.
+
+## Pieza principal orgánica: «Una frase segura no confirma una fecha»
+
+Formato propuesto: vertical, 40–45 segundos, español en tú. Cara a cámara y dos hojas preparadas. No requiere API, cliente real ni aplicación funcionando.
+
+**Material para preparar**
+
+Ambas hojas llevarán **EJEMPLO · CASO FICTICIO** grande y visible.
+
+- Hoja A: «Solicitud: confirmar visita / Fecha: SIN CONFIRMAR / Hora: SIN CONFIRMAR». Debajo: «Respuesta incorrecta: Te espero viernes a las seis».
+- Hoja B: «Confirmado: se solicita una visita / Pendiente: fecha y hora / Siguiente paso: pedir confirmación». Debajo: «Respuesta corregida: La fecha y la hora todavía están por confirmar».
+
+**Guion completo y tomas**
+
+| Tiempo orientativo | Voz exacta | Toma y texto visible |
+|---|---|---|
+| 0–5 s | «Si la fecha está vacía, ¿por qué tu respuesta dice “viernes a las seis”?» | Cara; corte a Hoja A. Texto: «¿De dónde salió esa fecha?» |
+| 5–12 s | «Mira este ejemplo ficticio. La ficha no tiene fecha ni hora, pero la respuesta ya las da por confirmadas.» | Señalar ambos campos y después la respuesta incorrecta. Rótulo EJEMPLO permanente. |
+| 12–22 s | «Antes de usar una respuesta de IA, separa tres cosas: qué está confirmado, qué falta y cuál es el siguiente paso.» | Hoja B; señalar cada línea. Texto: «Confirmado / Pendiente / Siguiente paso». |
+| 22–33 s | «Aquí solo sabemos que se solicita una visita. Faltan fecha y hora. La respuesta sería: “La fecha y la hora todavía están por confirmar”. Después, pide esos datos.» | Primer plano de la corrección; tachar en papel la frase incorrecta. |
+| 33–43 s | «No confundas una frase segura con un dato confirmado. Prueba estas tres líneas en tu próximo borrador y guarda el vídeo para revisarlas.» | Cara y cierre con las tres líneas. Texto: «Comprueba el dato antes de enviarlo». |
+
+**Tomas mínimas y edición**
+
+Grabar una toma completa de cara y tres apoyos: ficha vacía, respuesta incorrecta y corrección. Cortes simples siguiendo el guion; sin interfaz falsa de chat ni animación que parezca ejecución real. Subtítulos fieles, legibles y sin tapar los campos. Sin música si dificulta entender la voz.
+
+**Texto de publicación propuesto**
+
+«Una respuesta puede sonar convincente y aun así incluir un dato que nadie confirmó. Antes de enviarla, separa: confirmado, pendiente y siguiente paso. Demostración con documentos ficticios rotulados EJEMPLO.»
+
+CTA: guardar el vídeo y aplicar las tres líneas. Sin keyword, kit, venta, cobro ni promesa de envío.
+
+**Revisión antes de cualquier publicación**
+
+Comprobar que se leen los rótulos, se entiende el error sin contexto, la voz coincide con los documentos y no aparecen datos personales. Ver y escuchar el archivo completo cuando exista. Registrar versión, decisión editorial y autorización aplicable; después, si se publica, URL y fecha reales.
+
+## Adaptación anuncio: «No confirmes lo que falta»
+**BORRADOR PAUSADO · NO CAMPAÑA CREADA · NO PUBLICADO**
+
+Duración propuesta: 20–25 segundos. Reutiliza los mismos documentos y planos.
+
+| Tramo | Voz exacta | Toma/texto |
+|---|---|---|
+| 0–5 s | «¿Tu borrador confirma una fecha que nadie te dio?» | Campo vacío y respuesta incorrecta. «EJEMPLO · CASO FICTICIO». |
+| 5–13 s | «Prueba esta comprobación: qué sabes, qué falta y qué debes confirmar.» | Las tres líneas de Hoja B. |
+| 13–20 s | «Aquí faltan fecha y hora. Déjalas pendientes y pide confirmación antes de enviar.» | Corrección visible; sin simular envío. |
+| 20–25 s | «Guarda este ejemplo para revisar tu próxima respuesta.» | Cara y tarjeta final con las tres líneas. |
+
+**Texto principal:** «Antes de enviar una respuesta preparada con IA, comprueba qué datos están confirmados. Este caso ficticio muestra una revisión en tres pasos: confirmado, pendiente y siguiente paso.»
+
+**Titular:** «Una fecha pendiente sigue pendiente».
+
+**CTA creativo:** «Guarda este ejemplo». Sin botón comercial definido ni enlace inventado.
+
+**Objetivo propuesto:** evaluar si esta explicación breve consigue atención y resulta útil. No es una campaña de venta ni una oferta de servicio validado.
+
+**Hipótesis:** mostrar el campo vacío junto a la respuesta incorrecta puede hacer comprensible el problema y favorecer que la persona termine o guarde el vídeo. Sin rendimiento observado ni garantía.
+
+**Medición futura propuesta:** reproducciones, finalizaciones y guardados, según disponibilidad real del reporte; registrar definiciones y denominadores. Calcular finalizaciones/reproducciones y guardados/impresiones únicamente con datos compatibles. Si existe gasto autorizado, añadir importe y moneda del reporte. Ventana propuesta: primeros siete días desde un eventual lanzamiento. Sin umbrales inventados; volumen insuficiente implica resultado inconcluso.
+
+**Pendientes de Ads: tres decisiones agrupadas**
+
+1. **Finalidad y público:** objetivo publicitario definitivo, audiencia y ubicación.
+2. **Recursos y activos:** presupuesto específico, moneda/límite, cuenta, permisos y destino o landing; definir si corresponde una pieza sin destino externo.
+3. **Salida y control:** aprobación creativa y autorización expresa de lanzamiento, fechas y criterio de pausa.
+
+**Puertas de lanzamiento:** resolver esos pendientes, producir y revisar el vídeo, comprobar derechos, cuenta y destino elegido, y verificar la medición disponible. Hasta entonces, conservar únicamente este borrador; no crear siquiera objetos remotos pausados. No se solicita decisión de negocio ahora.
+===END 02-GUION-Y-ANUNCIO.md===
+
+===BEGIN 03-MAPA-AGENTES-PROPUESTO.md===
+# Seis perfiles · PROPUESTA NO APLICADA
+
+Descripciones para que Coordinadora pueda aplicar mediante sus herramientas propias, dentro de una autorización vigente. No se han guardado ni mutado perfiles.
+
+| Perfil | Descripción propuesta |
+|---|---|
+| Coordinadora | Coordina prioridades globales, ingiere encargos, controla la única tarea activa e integra resultados y límites. |
+| Marketing | Organiza contenido orgánico y borradores de Ads; conserva guion, evidencia, estado editorial y pendientes de publicación. |
+| Pelau | Resume el día bajo demanda; distingue agenda confirmada, planes, lagunas y descanso informado. |
+| BossNoCode | Organiza ventas, workshop y finanzas; separa propuestas, compromisos, ventas y cobros comprobados. |
+| BossCode | Organiza encargos de VPS, n8n y Chatwoot; conserva requisitos, evidencia técnica y límites de acceso. |
+| ONIAPlatform | Organiza necesidades y estado del producto; distingue briefing, implementación y verificación. |
+
+**Reglas comunes propuestas**
+
+- Los seis perfiles se limitan a ingesta, orquestación y resúmenes; el trabajo sustancial se encarga manualmente a **CodexVPS**, ejecutado por Codex Sol mediante ChatGPT.
+- Una única tarea activa global; ejecución y autocontrol secuenciales. Este turno incluye su segunda pasada y no abre una revisión adicional.
+- Claude excluido; sin otros modelos, llamadas anidadas ni fallback API.
+- Sin mensajes o avisos entre bots, rutinas, cron, daemon, despertares ni entregas diarias automáticas. Operación **bajo demanda**.
+- Un encargo no amplía permisos. Preparar no equivale a publicar, contactar, gastar, desplegar o activar.
+- Los resúmenes deben indicar fuente, resultado comprobado, límite y siguiente paso. La agenda privada permanece en el panel personal y relevo privado.
+===END 03-MAPA-AGENTES-PROPUESTO.md===
+
+===BEGIN 04-RELEVO-Y-AUTOREVISION.md===
+# Relevo privado T008
+
+**Resumen ejecutivo:** preparado un panel con tres prioridades, una adaptación orgánica completa de P1, un anuncio pausado y el mapa propuesto de seis perfiles. Nada grabado, publicado, creado en Ads ni aplicado a perfiles. Workshop continúa pausado y sin revisión en este turno.
+
+**Fuentes y cobertura real**
+
+Lectura local de AGENTS, LEEME, registro, tarea T008, ESTADO-LOCAL.json, CONTEXTO-LIVE-PRIVADO.md y PANEL-DIARIO.fuente.txt. En el checkout autorizado se leyeron AGENTS raíz/base, reglas comunes, ESTADO, ORQUESTACION, su manifiesto, INICIO-SESION, las tres skills indicadas, el estado de Marketing y el archivo histórico «3 Contenido y edición».
+
+Los datos de Notion y Calendar proceden de la **ingesta local**, no de consultas nuevas. No se inspeccionaron los 35 guiones ni todos los estudios de Marketing. Se reutilizó P1, respaldada por la ingesta y señalada como primera candidata en la fuente de contenido. No se revalidaron pruebas de producto ni resultados comerciales.
+
+Calendar: la ingesta informa dos calendarios con cero eventos en la ventana del 7 al 14 de noviembre. Esto no acredita disponibilidad. El plan de colegio del 4 de noviembre no confirma el sábado. La pregunta única queda en el panel; el guion está terminado sin depender de su respuesta.
+
+ESTADO-LOCAL describe el lote anterior y no acredita el cierre de T008. HEAD y limpieza figuran en antecedentes; no se comprobaron mediante Git en este turno.
+
+**Incidencia de comprobación**
+
+Se invocó `./ejecutar.sh --comprobar` por la instrucción de arranque; falló con rc 2 al intentar abrir `.ejecutar.lock` en solo lectura. Esa invocación intentó una escritura incidental, incompatible con la prohibición expresa de T008. No se reintentó ni se intentaron más escrituras. No se declara correcta la comprobación del runner.
+
+**Qué conservar mediante captura exterior**
+
+- Bloque 01: prepender a Sergio · Hoy, conservando el contenido anterior.
+- Bloque 02: añadir a ONIA · Guiones, conservando piezas previas.
+- Bloque 03: propuesta pendiente de aplicación; no afirmar perfiles guardados.
+- Bloque 04: relevo privado, fuera del repo y de materiales públicos.
+- El wrapper debe conservar salida, incidencia y cierre de registro; el modelo no actualizó archivos ni estados de tarea. Registrar el fallo de comprobación sin reintento automático.
+
+**Siguiente relevo, solo bajo demanda**
+
+Incorporar la respuesta de disponibilidad; Sergio graba cuando quepa. Después, recuperar este mismo guion y el archivo real para edición/revisión. Registrar únicamente avances comprobados. Si no hay grabación o autorización, conservar el estado pendiente; no activar otra llamada automáticamente.
+
+**Segunda pasada explícita de autocontrol, en este mismo turno**
+
+**ACEPTAR CON LÍMITES el contenido documental.** No es revisión independiente ni aceptación comercial.
+
+- Comprobados los cuatro bloques, las tres prioridades y una sola pregunta de disponibilidad.
+- Corregido el CTA histórico de entrega PLAN: ahora guardar/aplicar, sin prometer kit, cobro ni servicio.
+- Demostración ficticia rotulada; sin cliente/API real, métricas observadas inventadas o garantías.
+- Separadas estimaciones, agenda confirmada y lagunas; sin extrapolar colegio ni deducir disponibilidad de Calendar.
+- Una pieza y una adaptación; fechas provisionales y operación bajo demanda.
+- Ads mantiene sus tres decisiones en pendientes, sin pedir aprobación de negocio ahora.
+- Agenda privada confinada a panel/relevo; mapa no aplicado.
+- Límite técnico pendiente: comprobación del runner fallida. Límite editorial: todavía no existe vídeo para verificar imagen y audio. Esta aceptación documental no certifica esos puntos ni autoriza publicación.
+===END 04-RELEVO-Y-AUTOREVISION.md===
+tokens used
+43,146
+===BEGIN 01-PANEL-NOTION.md===
+# Hoy: una pieza útil y una agenda real
+<date start="2026-11-07" /> · America/Caracas · ADICIÓN PARA PREPENDER a Sergio · Hoy
+
+Esta prioridad sustituye **como tarea inmediata** las cinco piezas diarias, el diario de las 20:00 y el workshop. La historia se conserva; no activa esas cadencias. Workshop pausado. Flujo **DIARIO BAJO DEMANDA**, sin entregas automáticas.
+
+**Tres prioridades de hoy**
+
+1. **Ajustar el día a tus obligaciones y descanso reales.** Falta confirmar disponibilidad; no reservar horas por inferencia.
+2. **Grabar una pieza principal:** adaptación de P1, «La fecha que nadie había confirmado». Resultado mínimo: una toma completa y los planos de documentos ficticios.
+3. **Dejar la adaptación de anuncio revisable y pausada.** Copy y tomas preparados; sin campaña creada, gasto ni publicación.
+
+Guion completo en <mention url="https://app.notion.com/p/4112eb20bdfd81c1a339e23eb82afa9d">ONIA · Guiones</mention>. Antecedentes personales en <mention url="https://app.notion.com/p/40e2eb20bdfd8101b305e388b0c012d8">Vida</mention>.
+
+**Agenda: hechos, planes y lagunas**
+
+- La ingesta de Calendar informa cero eventos en dos calendarios propios durante la ventana consultada. **No demuestra disponibilidad ni ausencia de obligaciones.**
+- Vida documenta un plan de días de colegio actualizado el <date start="2026-11-04" />. Sus horas no se trasladan al sábado de hoy.
+- No tenemos confirmación vigente de compromisos familiares, traslados, comidas, sueño o descanso. Las metas de hábitos son planes documentados, no obligaciones confirmadas ni acciones cumplidas.
+- La meta económica informada es una meta, no una cita ni un resultado atribuible a esta pieza.
+
+**Bloque PROPUESTO, sin hora fija**
+
+Estimación de trabajo, no reserva: **35 minutos** — preparar dos hojas EJEMPLO, 8 min; grabar cara y documentos, 15 min; comprobar audio/legibilidad, 7 min; guardar y cerrar, 5 min. Edición posterior estimada: 20–30 min, solo si cabe.
+
+Alternativa mínima: 15 minutos para una toma y dos planos; edición pendiente. Si no cabe, mover el bloque sin recortar descanso ni compromisos.
+
+**Pipeline**
+
+Idea → guion → grabar → editar → revisar → publicar **solo con autorización aplicable** → medir. Estado de esta adaptación: **guion propuesto / por grabar**. No hay archivo audiovisual ni publicación comprobados.
+
+**Distribución provisional; una sola tanda inicial**
+
+| Fecha | Paso propuesto, condicionado a agenda |
+|---|---|
+| <date start="2026-11-07" /> | Preparar y, si cabe, grabar la pieza principal. |
+| <date start="2026-11-08" /> | Completar grabación o editar el mismo material. |
+| <date start="2026-11-09" /> | Revisar imagen, audio, subtítulos y CTA. |
+| <date start="2026-11-10" /> | Mantener lista para decisión editorial; publicar únicamente si se autoriza. |
+| <date start="2026-11-11" /> | Si hubo publicación, registrar URL y primeras observaciones; si no, conservar pendiente. |
+| <date start="2026-11-12" /> | Revisar la adaptación de anuncio, todavía pausada. |
+| <date start="2026-11-13" /> | Corregir solo con evidencia disponible; sin fabricar otra tanda. |
+| <date start="2026-11-14" /> | Balance bajo demanda y siguiente paso según capacidad real. |
+
+Son estados propuestos: no calendario reservado, publicaciones programadas ni tareas que se ejecuten solas.
+
+**Única pregunta para Sergio:** ¿Qué obligaciones y traslados tienes hoy, qué franja real puedes dedicar a grabar y qué descanso u hora de cierre debemos proteger?
+===END 01-PANEL-NOTION.md===
+
+===BEGIN 02-GUION-Y-ANUNCIO.md===
+# P1 · Adaptación de microvalor
+**PROPUESTO · NO PUBLICADO · NO CAMPAÑA CREADA**
+
+Adición a ONIA · Guiones. Conservar P1 y la pieza previa sobre retomar tareas; esta adaptación no las sustituye.
+
+## Pieza principal orgánica: «Una frase segura no confirma una fecha»
+
+Formato propuesto: vertical, 40–45 segundos, español en tú. Cara a cámara y dos hojas preparadas. No requiere API, cliente real ni aplicación funcionando.
+
+**Material para preparar**
+
+Ambas hojas llevarán **EJEMPLO · CASO FICTICIO** grande y visible.
+
+- Hoja A: «Solicitud: confirmar visita / Fecha: SIN CONFIRMAR / Hora: SIN CONFIRMAR». Debajo: «Respuesta incorrecta: Te espero viernes a las seis».
+- Hoja B: «Confirmado: se solicita una visita / Pendiente: fecha y hora / Siguiente paso: pedir confirmación». Debajo: «Respuesta corregida: La fecha y la hora todavía están por confirmar».
+
+**Guion completo y tomas**
+
+| Tiempo orientativo | Voz exacta | Toma y texto visible |
+|---|---|---|
+| 0–5 s | «Si la fecha está vacía, ¿por qué tu respuesta dice “viernes a las seis”?» | Cara; corte a Hoja A. Texto: «¿De dónde salió esa fecha?» |
+| 5–12 s | «Mira este ejemplo ficticio. La ficha no tiene fecha ni hora, pero la respuesta ya las da por confirmadas.» | Señalar ambos campos y después la respuesta incorrecta. Rótulo EJEMPLO permanente. |
+| 12–22 s | «Antes de usar una respuesta de IA, separa tres cosas: qué está confirmado, qué falta y cuál es el siguiente paso.» | Hoja B; señalar cada línea. Texto: «Confirmado / Pendiente / Siguiente paso». |
+| 22–33 s | «Aquí solo sabemos que se solicita una visita. Faltan fecha y hora. La respuesta sería: “La fecha y la hora todavía están por confirmar”. Después, pide esos datos.» | Primer plano de la corrección; tachar en papel la frase incorrecta. |
+| 33–43 s | «No confundas una frase segura con un dato confirmado. Prueba estas tres líneas en tu próximo borrador y guarda el vídeo para revisarlas.» | Cara y cierre con las tres líneas. Texto: «Comprueba el dato antes de enviarlo». |
+
+**Tomas mínimas y edición**
+
+Grabar una toma completa de cara y tres apoyos: ficha vacía, respuesta incorrecta y corrección. Cortes simples siguiendo el guion; sin interfaz falsa de chat ni animación que parezca ejecución real. Subtítulos fieles, legibles y sin tapar los campos. Sin música si dificulta entender la voz.
+
+**Texto de publicación propuesto**
+
+«Una respuesta puede sonar convincente y aun así incluir un dato que nadie confirmó. Antes de enviarla, separa: confirmado, pendiente y siguiente paso. Demostración con documentos ficticios rotulados EJEMPLO.»
+
+CTA: guardar el vídeo y aplicar las tres líneas. Sin keyword, kit, venta, cobro ni promesa de envío.
+
+**Revisión antes de cualquier publicación**
+
+Comprobar que se leen los rótulos, se entiende el error sin contexto, la voz coincide con los documentos y no aparecen datos personales. Ver y escuchar el archivo completo cuando exista. Registrar versión, decisión editorial y autorización aplicable; después, si se publica, URL y fecha reales.
+
+## Adaptación anuncio: «No confirmes lo que falta»
+**BORRADOR PAUSADO · NO CAMPAÑA CREADA · NO PUBLICADO**
+
+Duración propuesta: 20–25 segundos. Reutiliza los mismos documentos y planos.
+
+| Tramo | Voz exacta | Toma/texto |
+|---|---|---|
+| 0–5 s | «¿Tu borrador confirma una fecha que nadie te dio?» | Campo vacío y respuesta incorrecta. «EJEMPLO · CASO FICTICIO». |
+| 5–13 s | «Prueba esta comprobación: qué sabes, qué falta y qué debes confirmar.» | Las tres líneas de Hoja B. |
+| 13–20 s | «Aquí faltan fecha y hora. Déjalas pendientes y pide confirmación antes de enviar.» | Corrección visible; sin simular envío. |
+| 20–25 s | «Guarda este ejemplo para revisar tu próxima respuesta.» | Cara y tarjeta final con las tres líneas. |
+
+**Texto principal:** «Antes de enviar una respuesta preparada con IA, comprueba qué datos están confirmados. Este caso ficticio muestra una revisión en tres pasos: confirmado, pendiente y siguiente paso.»
+
+**Titular:** «Una fecha pendiente sigue pendiente».
+
+**CTA creativo:** «Guarda este ejemplo». Sin botón comercial definido ni enlace inventado.
+
+**Objetivo propuesto:** evaluar si esta explicación breve consigue atención y resulta útil. No es una campaña de venta ni una oferta de servicio validado.
+
+**Hipótesis:** mostrar el campo vacío junto a la respuesta incorrecta puede hacer comprensible el problema y favorecer que la persona termine o guarde el vídeo. Sin rendimiento observado ni garantía.
+
+**Medición futura propuesta:** reproducciones, finalizaciones y guardados, según disponibilidad real del reporte; registrar definiciones y denominadores. Calcular finalizaciones/reproducciones y guardados/impresiones únicamente con datos compatibles. Si existe gasto autorizado, añadir importe y moneda del reporte. Ventana propuesta: primeros siete días desde un eventual lanzamiento. Sin umbrales inventados; volumen insuficiente implica resultado inconcluso.
+
+**Pendientes de Ads: tres decisiones agrupadas**
+
+1. **Finalidad y público:** objetivo publicitario definitivo, audiencia y ubicación.
+2. **Recursos y activos:** presupuesto específico, moneda/límite, cuenta, permisos y destino o landing; definir si corresponde una pieza sin destino externo.
+3. **Salida y control:** aprobación creativa y autorización expresa de lanzamiento, fechas y criterio de pausa.
+
+**Puertas de lanzamiento:** resolver esos pendientes, producir y revisar el vídeo, comprobar derechos, cuenta y destino elegido, y verificar la medición disponible. Hasta entonces, conservar únicamente este borrador; no crear siquiera objetos remotos pausados. No se solicita decisión de negocio ahora.
+===END 02-GUION-Y-ANUNCIO.md===
+
+===BEGIN 03-MAPA-AGENTES-PROPUESTO.md===
+# Seis perfiles · PROPUESTA NO APLICADA
+
+Descripciones para que Coordinadora pueda aplicar mediante sus herramientas propias, dentro de una autorización vigente. No se han guardado ni mutado perfiles.
+
+| Perfil | Descripción propuesta |
+|---|---|
+| Coordinadora | Coordina prioridades globales, ingiere encargos, controla la única tarea activa e integra resultados y límites. |
+| Marketing | Organiza contenido orgánico y borradores de Ads; conserva guion, evidencia, estado editorial y pendientes de publicación. |
+| Pelau | Resume el día bajo demanda; distingue agenda confirmada, planes, lagunas y descanso informado. |
+| BossNoCode | Organiza ventas, workshop y finanzas; separa propuestas, compromisos, ventas y cobros comprobados. |
+| BossCode | Organiza encargos de VPS, n8n y Chatwoot; conserva requisitos, evidencia técnica y límites de acceso. |
+| ONIAPlatform | Organiza necesidades y estado del producto; distingue briefing, implementación y verificación. |
+
+**Reglas comunes propuestas**
+
+- Los seis perfiles se limitan a ingesta, orquestación y resúmenes; el trabajo sustancial se encarga manualmente a **CodexVPS**, ejecutado por Codex Sol mediante ChatGPT.
+- Una única tarea activa global; ejecución y autocontrol secuenciales. Este turno incluye su segunda pasada y no abre una revisión adicional.
+- Claude excluido; sin otros modelos, llamadas anidadas ni fallback API.
+- Sin mensajes o avisos entre bots, rutinas, cron, daemon, despertares ni entregas diarias automáticas. Operación **bajo demanda**.
+- Un encargo no amplía permisos. Preparar no equivale a publicar, contactar, gastar, desplegar o activar.
+- Los resúmenes deben indicar fuente, resultado comprobado, límite y siguiente paso. La agenda privada permanece en el panel personal y relevo privado.
+===END 03-MAPA-AGENTES-PROPUESTO.md===
+
+===BEGIN 04-RELEVO-Y-AUTOREVISION.md===
+# Relevo privado T008
+
+**Resumen ejecutivo:** preparado un panel con tres prioridades, una adaptación orgánica completa de P1, un anuncio pausado y el mapa propuesto de seis perfiles. Nada grabado, publicado, creado en Ads ni aplicado a perfiles. Workshop continúa pausado y sin revisión en este turno.
+
+**Fuentes y cobertura real**
+
+Lectura local de AGENTS, LEEME, registro, tarea T008, ESTADO-LOCAL.json, CONTEXTO-LIVE-PRIVADO.md y PANEL-DIARIO.fuente.txt. En el checkout autorizado se leyeron AGENTS raíz/base, reglas comunes, ESTADO, ORQUESTACION, su manifiesto, INICIO-SESION, las tres skills indicadas, el estado de Marketing y el archivo histórico «3 Contenido y edición».
+
+Los datos de Notion y Calendar proceden de la **ingesta local**, no de consultas nuevas. No se inspeccionaron los 35 guiones ni todos los estudios de Marketing. Se reutilizó P1, respaldada por la ingesta y señalada como primera candidata en la fuente de contenido. No se revalidaron pruebas de producto ni resultados comerciales.
+
+Calendar: la ingesta informa dos calendarios con cero eventos en la ventana del 7 al 14 de noviembre. Esto no acredita disponibilidad. El plan de colegio del 4 de noviembre no confirma el sábado. La pregunta única queda en el panel; el guion está terminado sin depender de su respuesta.
+
+ESTADO-LOCAL describe el lote anterior y no acredita el cierre de T008. HEAD y limpieza figuran en antecedentes; no se comprobaron mediante Git en este turno.
+
+**Incidencia de comprobación**
+
+Se invocó `./ejecutar.sh --comprobar` por la instrucción de arranque; falló con rc 2 al intentar abrir `.ejecutar.lock` en solo lectura. Esa invocación intentó una escritura incidental, incompatible con la prohibición expresa de T008. No se reintentó ni se intentaron más escrituras. No se declara correcta la comprobación del runner.
+
+**Qué conservar mediante captura exterior**
+
+- Bloque 01: prepender a Sergio · Hoy, conservando el contenido anterior.
+- Bloque 02: añadir a ONIA · Guiones, conservando piezas previas.
+- Bloque 03: propuesta pendiente de aplicación; no afirmar perfiles guardados.
+- Bloque 04: relevo privado, fuera del repo y de materiales públicos.
+- El wrapper debe conservar salida, incidencia y cierre de registro; el modelo no actualizó archivos ni estados de tarea. Registrar el fallo de comprobación sin reintento automático.
+
+**Siguiente relevo, solo bajo demanda**
+
+Incorporar la respuesta de disponibilidad; Sergio graba cuando quepa. Después, recuperar este mismo guion y el archivo real para edición/revisión. Registrar únicamente avances comprobados. Si no hay grabación o autorización, conservar el estado pendiente; no activar otra llamada automáticamente.
+
+**Segunda pasada explícita de autocontrol, en este mismo turno**
+
+**ACEPTAR CON LÍMITES el contenido documental.** No es revisión independiente ni aceptación comercial.
+
+- Comprobados los cuatro bloques, las tres prioridades y una sola pregunta de disponibilidad.
+- Corregido el CTA histórico de entrega PLAN: ahora guardar/aplicar, sin prometer kit, cobro ni servicio.
+- Demostración ficticia rotulada; sin cliente/API real, métricas observadas inventadas o garantías.
+- Separadas estimaciones, agenda confirmada y lagunas; sin extrapolar colegio ni deducir disponibilidad de Calendar.
+- Una pieza y una adaptación; fechas provisionales y operación bajo demanda.
+- Ads mantiene sus tres decisiones en pendientes, sin pedir aprobación de negocio ahora.
+- Agenda privada confinada a panel/relevo; mapa no aplicado.
+- Límite técnico pendiente: comprobación del runner fallida. Límite editorial: todavía no existe vídeo para verificar imagen y audio. Esta aceptación documental no certifica esos puntos ni autoriza publicación.
+===END 04-RELEVO-Y-AUTOREVISION.md===

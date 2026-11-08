@@ -1,0 +1,7 @@
+**Veredicto: fiel en lo sustancial, con una corrección importante.**
+
+La frase final **«Único punto humano pendiente ahora: aprobar el login oficial de GitHub»** es demasiado absoluta. GitHub es el bloqueo inmediato para acceder al repositorio, pero no la única intervención humana pendiente del plan: también quedan decisiones comerciales, ensayo con dos principiantes, aportes personales y autorizaciones específicas. Además, aprobar el device login no demuestra por sí solo acceso efectivo al repositorio ni HEAD comprobado.
+
+**Corrección:** «Para completar el acceso inmediato al repositorio, queda pendiente que el usuario apruebe el device login oficial de GitHub; después deberá comprobarse el acceso y la revisión recuperada. Las demás intervenciones humanas se mantienen para sus encargos respectivos».
+
+No detecté otras tergiversaciones importantes en los aspectos solicitados: conserva la meta de Bs 3.000 al 14 de noviembre, las condiciones comerciales pendientes, las seis áreas CLI y los repartos históricos diferenciados. La continuidad A→Git→B se presenta como evidencia histórica, sin atribuirla al VPS actual. El calendario hasta el 14 está identificado como propuesta; no promete recuperación total ni «nada perdido». El estado del 7 de noviembre proporcionado por la coordinadora se recoge sin exigir nuevas mediciones.

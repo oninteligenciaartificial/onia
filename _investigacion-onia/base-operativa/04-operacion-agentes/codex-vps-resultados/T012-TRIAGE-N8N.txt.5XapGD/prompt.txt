@@ -1,0 +1,27 @@
+=== REGLAS FIJAS MODO N8N (anteponer a todo encargo) ===
+- Puedes leer y editar workflows mediante la API REST de n8n. Para autenticarte ejecuta en cada comando: `set -a; . ~/.config/onia/n8n.env; set +a` y usa $N8N_API_URL y la cabecera `X-N8N-API-KEY: $N8N_API_KEY`. NUNCA imprimas, copies ni guardes el valor de la clave.
+- PROHIBIDO: activar, desactivar, borrar o ejecutar cualquier workflow en producción (nada de /activate, /deactivate, DELETE, ni ejecuciones). Cambios de estado y borrados solo con el sí explícito de Sergio, fuera de este encargo.
+- Antes de editar un workflow, guarda su JSON completo en ~/operacion/resultados/backups-n8n/<id>-<fecha UTC>.json.
+- Toda edición se hace sobre el workflow dejándolo INACTIVO si lo estaba; no cambies el campo active. Al enviar PUT, incluye solo los campos aceptados (name, nodes, connections, settings, staticData si aplica).
+- Tras editar, vuelve a leer el workflow y confirma que `active` no cambió.
+- Termina con una sección RESUMEN de máximo 5 líneas.
+- En este modo el runner ya tiene el lock y gestiona tareas/ y registro.tsv: NO ejecutes ./ejecutar.sh ni ./ejecutar-n8n.sh (tampoco --comprobar), no muevas tareas ni escribas en registro.tsv. Esto sustituye el paso de arranque de AGENTS.md para este modo.
+=== FIN REGLAS ===
+
+Encargo T012 — Triage de todos los workflows n8n (SOLO LECTURA)
+
+ESTE ENCARGO ES ESTRICTAMENTE DE LECTURA: prohibido cualquier PUT/POST/PATCH/DELETE a n8n, ninguna edición, activación, desactivación, borrado ni ejecución. Solo GET. No hacen falta backups porque no se edita nada.
+
+Fuentes:
+- ~/operacion/fuentes-plan/contexto/ (estado-equipo.md, decisiones-pendientes.md, reporte-equipo.md, pendientes-sum.md): prioridades actuales de OnIA.
+- ~/repos/onia: documentos ESTADO / INICIO (y similares) en solo lectura.
+- API n8n: TODOS los workflows (paginar con cursor): nombre, active, descripción/notas, y últimas ejecuciones (GET /executions?workflowId=...&limit=3, sin includeData salvo que haga falta para detectar un error).
+
+Entrega: guarda ~/operacion/resultados/TRIAGE-N8N-20261107.md con:
+1. Lista de cada workflow (id, nombre, active) con exactamente UNA etiqueta: "entra ahora", "espera" o "se descarta", y una razón de una línea basada en las prioridades actuales de OnIA (one man company: Sergio solo, mínimo mantenimiento, foco en ingresos).
+2. Agrupado por área: ventas, operación, contenido, finanzas, producto/DentalGest, demos (otra si no encaja).
+3. Marca los activos que parecen rotos o riesgosos (errores recientes, publicaciones automáticas, costos, datos sensibles).
+4. Top 5 para encender a continuación, en orden.
+5. Conteo por etiqueta.
+6. RESUMEN de máximo 5 líneas.
+No inventes datos; si algo no consta, dilo.

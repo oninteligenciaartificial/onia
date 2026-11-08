@@ -1,0 +1,20 @@
+=== REGLAS FIJAS MODO N8N (anteponer a todo encargo) ===
+- Puedes leer y editar workflows mediante la API REST de n8n. Para autenticarte ejecuta en cada comando: `set -a; . ~/.config/onia/n8n.env; set +a` y usa $N8N_API_URL y la cabecera `X-N8N-API-KEY: $N8N_API_KEY`. NUNCA imprimas, copies ni guardes el valor de la clave.
+- PROHIBIDO: activar, desactivar, borrar o ejecutar cualquier workflow en producción (nada de /activate, /deactivate, DELETE, ni ejecuciones). Cambios de estado y borrados solo con el sí explícito de Sergio, fuera de este encargo.
+- Antes de editar un workflow, guarda su JSON completo en ~/operacion/resultados/backups-n8n/<id>-<fecha UTC>.json.
+- Toda edición se hace sobre el workflow dejándolo INACTIVO si lo estaba; no cambies el campo active. Al enviar PUT, incluye solo los campos aceptados (name, nodes, connections, settings, staticData si aplica).
+- Tras editar, vuelve a leer el workflow y confirma que `active` no cambió.
+- Termina con una sección RESUMEN de máximo 5 líneas.
+=== FIN REGLAS ===
+
+Encargo T011-N8N — Auditoría Radar YT y preparación Radar IA
+
+(a) Agente Radar YT (ynNMGtW8TCDCBMdS, ACTIVO): NO modificar. Lee el workflow y sus 2 últimas ejecuciones con datos (GET /api/v1/executions?workflowId=ynNMGtW8TCDCBMdS&includeData=true&limit=2). Evalúa la calidad de la salida (stdout/stderr SSH, ideas generadas, errores silenciosos, duplicados). Propón por escrito una alerta de fallo concreta (nodos a añadir y condición), sin aplicarla.
+
+(b) ONIA - Radar de Novedades IA (QGXVyRSgrArxfolj, INACTIVO): déjalo seguro para encender más adelante. Backup primero. Cambios:
+ 1. settings.timezone = "America/La_Paz".
+ 2. Escapar HTML (&, <, >) en todo texto dinámico enviado a Telegram (parse_mode HTML).
+ 3. Evitar ejecuciones solapadas si es posible (p. ej. timeout del comando SSH menor a 2 h y/o un guardado de lock en staticData o en el comando; explica la opción elegida).
+ Déjalo INACTIVO. Relee y confirma active=false.
+
+Informa con exactitud qué cambió (antes/después por nodo/campo), ruta del backup, y el estado active de ambos workflows leído de la API al final.

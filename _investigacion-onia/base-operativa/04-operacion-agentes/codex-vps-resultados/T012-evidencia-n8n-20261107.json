@@ -1,0 +1,5756 @@
+{
+  "observedAt": "2026-11-07T18:30:33.149705+00:00",
+  "pages": 2,
+  "workflows": [
+    {
+      "id": "054c24194266a61b",
+      "name": "CRON · backup-dentalgest",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Horario",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr en VPS",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Probar",
+          "type": "n8n-nodes-base.manualTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82010",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T07:30:00.177Z",
+            "stoppedAt": "2026-11-07T07:30:32.343Z",
+            "workflowId": "054c24194266a61b",
+            "waitTill": null
+          },
+          {
+            "id": "81079",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-06T07:30:00.211Z",
+            "stoppedAt": "2026-11-06T07:30:44.211Z",
+            "workflowId": "054c24194266a61b",
+            "waitTill": null
+          },
+          {
+            "id": "80148",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-05T07:30:00.197Z",
+            "stoppedAt": "2026-11-05T07:30:44.703Z",
+            "workflowId": "054c24194266a61b",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MDE0OCIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "0f487ec234202aa5",
+      "name": "CRON · vigia-ci",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Horario",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr en VPS",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Probar",
+          "type": "n8n-nodes-base.manualTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82437",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:30:00.218Z",
+            "stoppedAt": "2026-11-07T18:30:02.782Z",
+            "workflowId": "0f487ec234202aa5",
+            "waitTill": null
+          },
+          {
+            "id": "82431",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:20:00.165Z",
+            "stoppedAt": "2026-11-07T18:20:01.634Z",
+            "workflowId": "0f487ec234202aa5",
+            "waitTill": null
+          },
+          {
+            "id": "82425",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:10:00.199Z",
+            "stoppedAt": "2026-11-07T18:10:01.971Z",
+            "workflowId": "0f487ec234202aa5",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MjQyNSIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "11c8636d2b490f1c",
+      "name": "CRON · claude-guardia",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Horario",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr en VPS",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Probar",
+          "type": "n8n-nodes-base.manualTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82439",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:30:00.270Z",
+            "stoppedAt": "2026-11-07T18:30:03.653Z",
+            "workflowId": "11c8636d2b490f1c",
+            "waitTill": null
+          },
+          {
+            "id": "82430",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:20:00.139Z",
+            "stoppedAt": "2026-11-07T18:20:01.691Z",
+            "workflowId": "11c8636d2b490f1c",
+            "waitTill": null
+          },
+          {
+            "id": "82424",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:10:00.186Z",
+            "stoppedAt": "2026-11-07T18:10:01.948Z",
+            "workflowId": "11c8636d2b490f1c",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MjQyNCIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "1jS4jwmNmvcQpqqH",
+      "name": "ONIA - Comentario IG -> DM (Private Reply)",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Webhook Comentario IG",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Token de verificacion ok?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Devolver challenge",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Rechazar (403)",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Parsear comentario",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Accionable?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Token o freno 24h",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Permite enviar?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Enviar DM privado",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Cuenta sin mapear con palabra?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Telegram: fijar entry_id",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Webhook IG POST",
+          "type": "n8n-nodes-base.webhook",
+          "notes": "200 INMEDIATO. Meta reintenta si no contesta rapido, y el reintento agrava la lentitud que lo causo. Con onReceived el 200 sale antes de trabajar, asi que ninguna lentitud aguas abajo puede generar una tormenta. El GET vive en otro nodo porque necesita devolver hub.challenge y responseMode es por nodo, no por metodo.\n\n2026-09-08: rawBody=true. La firma de Meta se calcula sobre los BYTES que mando; re-serializar el JSON parseado daba 282 bytes contra los 306 de su content-length, asi que nunca habria coincidido."
+        },
+        {
+          "name": "Es comentario?",
+          "type": "n8n-nodes-base.if",
+          "notes": "IF NATIVO a proposito: los IF no usan el task runner, el nodo Code SI. El 2026-08-24 la instancia se ahogo y el Code murio 76 veces con 'Task request timed out'. Los eventos eran messaging con is_echo (ecos de DMs propios), que este IF descarta sin tocar el runner. Filtrar aca hace que una tormenta no invoque el Code ni una vez."
+        },
+        {
+          "name": "Se entrego?",
+          "type": "n8n-nodes-base.if",
+          "notes": "H1 (2026-08-27): el envio tiene neverError, asi que un rechazo de Meta se guardaba como ejecucion SUCCESS. Meta devuelve message_id si entrego, y error si no."
+        },
+        {
+          "name": "Liberar freno 24h",
+          "type": "n8n-nodes-base.ssh",
+          "notes": "H2: el freno se pone ANTES de enviar para evitar DMs duplicados. Si el envio fallo hay que liberarlo, o el lead queda bloqueado 24h por un error ajeno. Idempotente."
+        },
+        {
+          "name": "Avisar FALLO",
+          "type": "n8n-nodes-base.telegram",
+          "notes": "Mensaje DISTINTO al de exito: antes el aviso salia igual con el error adentro, asi que un fallo se leia como un envio."
+        },
+        {
+          "name": "Marcar ejecucion fallida",
+          "type": "n8n-nodes-base.stopAndError",
+          "notes": "Sin esto la ejecucion queda SUCCESS aunque el DM no salio, y el monitor de salud no la ve: busca estado error. Va DESPUES de liberar y avisar."
+        },
+        {
+          "name": "Firma: preparar",
+          "type": "n8n-nodes-base.code",
+          "notes": "Saca los bytes crudos, los pasa a base64 (que no tiene caracteres que el shell interprete) y parsea el JSON para los nodos de abajo. Si NO consigue los bytes crudos lo dice con crudo_confiable=false: entonces una firma que no coincide es culpa de esto, no del secreto."
+        },
+        {
+          "name": "Firma: verificar",
+          "type": "n8n-nodes-base.ssh",
+          "notes": "Corre en el VPS a proposito: el App Secret vive alli y NUNCA entra a n8n. El cuerpo viaja en base64 para no pelear con el escapado de ssh."
+        },
+        {
+          "name": "Firma: veredicto",
+          "type": "n8n-nodes-base.code",
+          "notes": "MODO OBSERVAR (2026-09-08): anota si la firma coincide y deja pasar TODO. Activar el rechazo con el secreto equivocado tira todos los comentarios reales y no se nota hasta que alguien pregunta por que no le llego nada. Se pasa a bloquear cuando un comentario REAL confirme cual de las dos apps de Meta firma este webhook."
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "1wYZPz9xNSLVDL0g",
+      "name": "ONIA resumen 08:00",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Todos los días 08:00",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Armar resumen",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Leer resumen",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Enviar a Sergio (Telegram)",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Correr a mano",
+          "type": "n8n-nodes-base.executeWorkflowTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "76687",
+            "finished": true,
+            "mode": "cli",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-01T16:49:12.948Z",
+            "stoppedAt": "2026-11-01T16:49:14.450Z",
+            "workflowId": "1wYZPz9xNSLVDL0g",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "2733cc6c02f31c26",
+      "name": "CRON · auth-canary",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Horario",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr en VPS",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Probar",
+          "type": "n8n-nodes-base.manualTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82438",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:30:00.251Z",
+            "stoppedAt": "2026-11-07T18:30:01.525Z",
+            "workflowId": "2733cc6c02f31c26",
+            "waitTill": null
+          },
+          {
+            "id": "82433",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:25:00.077Z",
+            "stoppedAt": "2026-11-07T18:25:00.583Z",
+            "workflowId": "2733cc6c02f31c26",
+            "waitTill": null
+          },
+          {
+            "id": "82432",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:20:00.187Z",
+            "stoppedAt": "2026-11-07T18:20:00.970Z",
+            "workflowId": "2733cc6c02f31c26",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MjQzMiIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "2cef05c8fdbf5d38",
+      "name": "CRON · vigia-disco",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Horario",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr en VPS",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Probar",
+          "type": "n8n-nodes-base.manualTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82403",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T17:37:00.054Z",
+            "stoppedAt": "2026-11-07T17:37:00.135Z",
+            "workflowId": "2cef05c8fdbf5d38",
+            "waitTill": null
+          },
+          {
+            "id": "82363",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T16:37:00.037Z",
+            "stoppedAt": "2026-11-07T16:37:00.127Z",
+            "workflowId": "2cef05c8fdbf5d38",
+            "waitTill": null
+          },
+          {
+            "id": "82323",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T15:37:00.051Z",
+            "stoppedAt": "2026-11-07T15:37:00.236Z",
+            "workflowId": "2cef05c8fdbf5d38",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MjMyMyIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "2gk5aOIvIHBbttqJ",
+      "name": "ONIA - Aviso de pago QR (Telegram)",
+      "active": false,
+      "description": "Cada 5 min busca subscription_payments status=PENDING que no esten en n8n_ops.payment_alerts_sent (tabla de vistos, evita duplicados) y avisa a Sergio por Telegram (chat 6830070978). Reemplaza el aviso in-app roto por SMTP (Brevo 535). Marca el pago como ",
+      "nodes": [
+        {
+          "name": "Cada 5 min",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Asegurar tabla de vistos",
+          "type": "n8n-nodes-base.postgres",
+          "notes": null
+        },
+        {
+          "name": "Pagos QR pendientes sin avisar",
+          "type": "n8n-nodes-base.postgres",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio (Telegram)",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Marcar aviso enviado",
+          "type": "n8n-nodes-base.postgres",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "3VUUpM6FRTXzTSdA",
+      "name": "WF-06: Weekly Clinic Digest",
+      "active": false,
+      "description": "Weekly per-clinic digest: iterates clinics, fetches appointments/revenue/new-patients, sends digest per clinic via Gmail Workspace (migrado 2026-08-07, sin $env).",
+      "nodes": [
+        {
+          "name": "Schedule: Monday 7AM La Paz",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Active Clinics",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Done",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Weekly Appointments",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Weekly Revenue",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Supabase: New Patients",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Code: Aggregate Stats",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Split: Per Clinic",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Send Weekly Digest",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "4845b94417f4dd02",
+      "name": "CRON · limpiar-publicar-viejos",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Horario",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr en VPS",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Probar",
+          "type": "n8n-nodes-base.manualTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82429",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:17:00.018Z",
+            "stoppedAt": "2026-11-07T18:17:00.070Z",
+            "workflowId": "4845b94417f4dd02",
+            "waitTill": null
+          },
+          {
+            "id": "82390",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T17:17:00.025Z",
+            "stoppedAt": "2026-11-07T17:17:00.100Z",
+            "workflowId": "4845b94417f4dd02",
+            "waitTill": null
+          },
+          {
+            "id": "82350",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T16:17:00.036Z",
+            "stoppedAt": "2026-11-07T16:17:00.125Z",
+            "workflowId": "4845b94417f4dd02",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MjM1MCIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "5ReZhW6QheZfbuuC",
+      "name": "ONIA - Vigilante del chatbot (alerta Telegram)",
+      "active": false,
+      "description": "Cada 10 min chequea el bot de WhatsApp (+591 75414930) corriendo /opt/onia/bot/webhook-server.sh status por SSH, y avisa a Sergio por Telegram SOLO si algo esta mal: no responde / JSON ilegible, ok distinto de true, o knowledge.source distinto de file. Oj",
+      "nodes": [
+        {
+          "name": "Cada 10 minutos",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Estado del bot (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Evaluar estado",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Hay problema?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Sticky Note 77c55298",
+          "type": "n8n-nodes-base.stickyNote",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "6kSduWXyq8JoqT9v",
+      "name": "ONIA resumen 20:00",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Todos los días 20:00",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Armar resumen",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Leer resumen",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Enviar a Sergio (Telegram)",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Correr a mano",
+          "type": "n8n-nodes-base.executeWorkflowTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "76688",
+            "finished": true,
+            "mode": "cli",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-01T16:49:26.049Z",
+            "stoppedAt": "2026-11-01T16:49:28.153Z",
+            "workflowId": "6kSduWXyq8JoqT9v",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "6oowIHo8G9baBOYc",
+      "name": "GestiOS — Weekly Admin Digest [WF-GS-04]",
+      "active": false,
+      "description": "Weekly Monday 9am: org stats + revenue from Supabase → email digest to business@onia.com.bo via Resend.",
+      "nodes": [
+        {
+          "name": "scheduleTrigger",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "fetchOrgStats",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "buildDigest",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "fetchNewOrgs",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "fetchRevenueStats",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Send Digest",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "6q0y6m9rFwFiPrXC",
+      "name": "ONIA - Agenda + energia del dia",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Lun-Sab 07:05",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Reuniones de hoy",
+          "type": "n8n-nodes-base.googleCalendar",
+          "notes": null
+        },
+        {
+          "name": "Armar agenda del dia",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Enviar agenda a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "7avrjjM6NoRnTUrL",
+      "name": "WF-11 Post-Treatment Follow-up",
+      "active": false,
+      "description": "Hourly: follow-up email (Gmail Workspace) + WhatsApp 23-25h after completed appointments. Deduped by followupSentAt (migrado 2026-08-07, sin $env).",
+      "nodes": [
+        {
+          "name": "Schedule: Every Hour",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "If Has Email?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "If Has WhatsApp?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "App: WhatsApp Follow-up",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Split Appointments",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        },
+        {
+          "name": "Query Follow-ups",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Mark followupSentAt",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "DRY RUN Resumen Followup",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "DRY RUN Aviso Followup",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Follow-up Email",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "7ddd13fdffdb1678",
+      "name": "CRON · aligerar-worktrees",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Horario",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr en VPS",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Probar",
+          "type": "n8n-nodes-base.manualTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82372",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T16:51:00.055Z",
+            "stoppedAt": "2026-11-07T16:51:01.611Z",
+            "workflowId": "7ddd13fdffdb1678",
+            "waitTill": null
+          },
+          {
+            "id": "82213",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T12:51:00.022Z",
+            "stoppedAt": "2026-11-07T12:51:01.429Z",
+            "workflowId": "7ddd13fdffdb1678",
+            "waitTill": null
+          },
+          {
+            "id": "82058",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T08:51:00.049Z",
+            "stoppedAt": "2026-11-07T08:51:01.331Z",
+            "workflowId": "7ddd13fdffdb1678",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MjA1OCIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "7f1de8d94406cf8a",
+      "name": "CRON · backup-postgres",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Horario",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr en VPS",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Probar",
+          "type": "n8n-nodes-base.manualTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "81987",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T07:00:00.300Z",
+            "stoppedAt": "2026-11-07T07:00:12.667Z",
+            "workflowId": "7f1de8d94406cf8a",
+            "waitTill": null
+          },
+          {
+            "id": "81057",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-06T07:00:00.445Z",
+            "stoppedAt": "2026-11-06T07:00:12.434Z",
+            "workflowId": "7f1de8d94406cf8a",
+            "waitTill": null
+          },
+          {
+            "id": "80126",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-05T07:00:00.382Z",
+            "stoppedAt": "2026-11-05T07:00:12.525Z",
+            "workflowId": "7f1de8d94406cf8a",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MDEyNiIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "8mO8JA5X0ILtvA1q",
+      "name": "WF-04: Overdue Invoice Dunning",
+      "active": false,
+      "description": "Overdue invoice dunning via Gmail Workspace (3 niveles) + WhatsApp opcional por factura, con credenciales por clinica en $json (migrado 2026-08-07, sin $env).",
+      "nodes": [
+        {
+          "name": "Schedule: Daily 10AM La Paz",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Overdue Invoices",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "If: Has Overdue?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Done",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "Code: Calculate Days Overdue",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Switch: Dunning Level",
+          "type": "n8n-nodes-base.switch",
+          "notes": null
+        },
+        {
+          "name": "If: Has WhatsApp (L1)?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "WhatsApp: Friendly Reminder",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Update Level",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "If: Has WhatsApp (L2)?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "WhatsApp: Second Notice",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "If: Has WhatsApp (L3)?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "WhatsApp: Urgent Notice",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Split: Per Invoice",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        },
+        {
+          "name": "No Overdue",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Friendly Reminder",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Second Notice",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Urgent Notice",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "9bF53cn0lkvdUyZT",
+      "name": "WF-02: QR Payment Alerts",
+      "active": false,
+      "description": "Every 5 minutes checks for pending QR payments and alerts superadmin via Gmail Workspace (migrado 2026-08-07, sin $env).",
+      "nodes": [
+        {
+          "name": "Schedule: Every 5min",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Pending Payments",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "If: Has Payments?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Done",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "Split: Per Payment",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        },
+        {
+          "name": "No Payments",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Alert SUPERADMIN",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "9jN5v2gOH6leskwM",
+      "name": "ONIA · Ensayo privado · Sintético DRY RUN",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Webhook privado",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Validar",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Entrada valida",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Buscar evento",
+          "type": "n8n-nodes-base.dataTable",
+          "notes": null
+        },
+        {
+          "name": "Decision",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Nuevo evento",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Guardar borrador",
+          "type": "n8n-nodes-base.dataTable",
+          "notes": null
+        },
+        {
+          "name": "Confirmar dry run",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Dependencia incierta",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Responder privado",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "AooUOwSMSAaFLQnA",
+      "name": "ONIA - Chatbot: seguimiento y recordatorio",
+      "active": true,
+      "description": "Cada hora 8-20 La Paz corre los dos barridos del chatbot en el VPS (followup-run.sh y reminder-run.sh, ambos con --emit y envio real) y avisa a Sergio por Telegram SOLO si hubo mensajes enviados, envios fallidos, o un barrido que no pudo mirar la base. Un",
+      "nodes": [
+        {
+          "name": "Cada hora 8-20",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Barrer seguimiento",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Barrer recordatorio",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Resumir barridos",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Hay algo que contar?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Cerrar demos pasadas",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82415",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:00:00.146Z",
+            "stoppedAt": "2026-11-07T18:00:11.800Z",
+            "workflowId": "AooUOwSMSAaFLQnA",
+            "waitTill": null
+          },
+          {
+            "id": "82375",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T17:00:00.102Z",
+            "stoppedAt": "2026-11-07T17:00:10.465Z",
+            "workflowId": "AooUOwSMSAaFLQnA",
+            "waitTill": null
+          },
+          {
+            "id": "82334",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T16:00:00.238Z",
+            "stoppedAt": "2026-11-07T16:00:13.451Z",
+            "workflowId": "AooUOwSMSAaFLQnA",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MjMzNCIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "BUAMdJ1pz16CZ997",
+      "name": "WF-11: Patient Sync Incremental (Chatwoot)",
+      "active": false,
+      "description": "When a new patient is created in an org with whatsappAddon active, sync them as a Chatwoot contact in that org's inbox.",
+      "nodes": [
+        {
+          "name": "Patient Sync Webhook",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Validate API Key",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Fetch Clinic Settings",
+          "type": "n8n-nodes-base.postgres",
+          "notes": null
+        },
+        {
+          "name": "Has Inbox ID?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Create Chatwoot Contact",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Respond OK",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Respond No Inbox",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Respond 401",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "C96NmbalLhaTEf0G",
+      "name": "ONIA - Agente Vendedor (borradores)",
+      "active": false,
+      "description": "Cron Lun-Sab 08:30: corre el Agente Vendedor por SSH (docker exec onia-center). Lee leads del CRM, califica+redacta con LiteLLM, y deja SOLO borradores (tarea + review_queue pending/sensitive/reviewer=sergio). Avisa a Sergio por Telegram. NO envia nada si",
+      "nodes": [
+        {
+          "name": "Lun-Sab 08:30",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr Agente Vendedor (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Preparar aviso",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Hay algo que avisar?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "C9wNxI78lJUrcU4n",
+      "name": "WF-03: Recurring Invoice Delivery",
+      "active": false,
+      "description": "Hourly delivery of recurring invoices to patients via Gmail Workspace, then marks them as sent in Supabase (migrado 2026-08-07, sin $env).",
+      "nodes": [
+        {
+          "name": "Schedule: Every Hour",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Draft Recurring",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "If: Has Drafts?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Done",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Mark SENT",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Split: Per Invoice",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        },
+        {
+          "name": "No Drafts",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "DRY RUN Resumen Facturas",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "DRY RUN Aviso Facturas",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Send to Patient",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "CllIkRkqdcGXS67o",
+      "name": "WF-GS-05 — Nuevo Tenant Notificación Admin - Gestios",
+      "active": false,
+      "description": "Webhook al registrar nuevo tenant en GestiOS. Responde 200 inmediatamente, envía email (Resend API) y WhatsApp a Sergio con detalles del nuevo tenant.",
+      "nodes": [
+        {
+          "name": "New Tenant Webhook",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Respond OK",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Send Admin Email",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Send Admin WA",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "DKSPEsrRYDtoSaG0",
+      "name": "WF-07: Payment Reconciliation",
+      "active": true,
+      "description": "Payment reconciliation: runs nightly, checks for mismatches, alerts superadmin via Gmail Workspace (migrado 2026-08-07, sin $env).",
+      "nodes": [
+        {
+          "name": "Schedule: Daily 11PM La Paz",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Last 24h Payments",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Paid Without Payment Record",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Payment Without Matching Invoice",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Code: Compare & Find Mismatches",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "If: Has Issues?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Alert SUPERADMIN",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "81988",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T07:00:00.314Z",
+            "stoppedAt": "2026-11-07T07:00:03.163Z",
+            "workflowId": "DKSPEsrRYDtoSaG0",
+            "waitTill": null
+          },
+          {
+            "id": "81056",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-06T07:00:00.419Z",
+            "stoppedAt": "2026-11-06T07:00:03.148Z",
+            "workflowId": "DKSPEsrRYDtoSaG0",
+            "waitTill": null
+          },
+          {
+            "id": "80125",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-05T07:00:00.361Z",
+            "stoppedAt": "2026-11-05T07:00:04.140Z",
+            "workflowId": "DKSPEsrRYDtoSaG0",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MDEyNSIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "DtKnm7mTGTmM4dXu",
+      "name": "WF-13: WhatsApp Quota Alert",
+      "active": false,
+      "description": "Daily cron checks WhatsApp usage per clinic. Alerts clinic admin at 80% and superadmin at 100% via Gmail Workspace. Limit 200 msgs/month per org (migrado 2026-08-07, sin $env).",
+      "nodes": [
+        {
+          "name": "Daily 10am La Paz",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Query WA Usage",
+          "type": "n8n-nodes-base.postgres",
+          "notes": null
+        },
+        {
+          "name": "Done",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "Compute Flags",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Is 100%?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Batch Orgs",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Email Admin 100%",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Alert SUPERADMIN",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Email Admin 80%",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "ECC1THa2kTmOGepY",
+      "name": "ONIA - Nuvia Sourcing Score (v1)",
+      "active": true,
+      "description": "Webhook POST /nuvia-candidato {secret,candidates[]}. Copiloto de sourcing Nuvia v1 (read-only): scorea cada candidato con el filtro ONIA-Bolivia (flete/arancel/demanda/precio) por SSH (docker exec onia-center), guarda en onia_center.nuvia_sourcing_candida",
+      "nodes": [
+        {
+          "name": "Webhook Nuvia Candidatos",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Autorizado?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Encode candidatos",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Scorear + guardar (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Preparar aviso Nuvia",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Responder OK",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Responder No Autorizado",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Verificar secret",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "Er2jSjR2fnKbDXMN",
+      "name": "ONIA - Sync estado agentes (24/7 real)",
+      "active": true,
+      "description": "Cron cada hora: corre operating-agents-sync.mjs por SSH. Restaura en onia_center.operating_agents el contrato de estado vivo (status=ready + raw.live + raw.cadence_label + last_run) que los runtimes de agentes (Contenido/Finanzas) borran al reescribir raw",
+      "nodes": [
+        {
+          "name": "Cada hora :05",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Sync estado agentes (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82423",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:05:00.081Z",
+            "stoppedAt": "2026-11-07T18:05:03.273Z",
+            "workflowId": "Er2jSjR2fnKbDXMN",
+            "waitTill": null
+          },
+          {
+            "id": "82384",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T17:05:00.144Z",
+            "stoppedAt": "2026-11-07T17:05:02.218Z",
+            "workflowId": "Er2jSjR2fnKbDXMN",
+            "waitTill": null
+          },
+          {
+            "id": "82344",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T16:05:00.074Z",
+            "stoppedAt": "2026-11-07T16:05:03.395Z",
+            "workflowId": "Er2jSjR2fnKbDXMN",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MjM0NCIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "F0HOvw0lpGqTdpQS",
+      "name": "WF-08: Welcome Email for New Patients",
+      "active": true,
+      "description": "Sends a welcome email via Gmail Workspace when a new patient is created via webhook (migrado 2026-08-07, sin $env).",
+      "nodes": [
+        {
+          "name": "Webhook: Patient Created",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "If: Has Email?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Respond: OK",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Welcome Email",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "FGqyNTrQfMIFiVG2",
+      "name": "ONIA — Pipeline Llamada → Propuesta",
+      "active": false,
+      "description": "Receives Telegram voice notes, transcribes with Whisper, extracts client data with GPT-4o-mini, generates an HTML proposal, and sends both a summary and the proposal file back via Telegram.",
+      "nodes": [
+        {
+          "name": "Telegram Trigger",
+          "type": "n8n-nodes-base.telegramTrigger",
+          "notes": null
+        },
+        {
+          "name": "¿Es audio?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Webhook — Pipeline",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Telegram — Resumen",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Descargar HTML",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Telegram — Propuesta HTML",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Telegram — No es audio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "¿Es texto largo?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Webhook — Analizar",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Telegram — Resumen Análisis",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Descargar HTML Análisis",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Telegram — Propuesta Análisis",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "GFeCZKr1zQT6CVN8",
+      "name": "ONIA - Web Factory QA",
+      "active": false,
+      "description": "Diario 08:00: regenera los 6 demos de Web Factory con el codigo actual y valida el HTML (roto/vacio/template sin renderizar) via SSH; avisa a Telegram SOLO si un template se rompio. Script /opt/onia/web-factory-qa.sh.",
+      "nodes": [
+        {
+          "name": "Diario 08:00",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "QA demos Web Factory",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Evaluar QA",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Roto?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Alerta Telegram",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "GjNeraAVnY7HduCG",
+      "name": "ONIA - Agente Integraciones self-hosted",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Cada 6h",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr chequeo (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Extraer estado",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Algo caido?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Enviar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "GnmIyrHWb1mO5eNy",
+      "name": "ONIA - Demo Asistente Diario",
+      "active": false,
+      "description": "Demo vendible: cada mañana 7am Bolivia envía por Telegram un briefing con clima real de Santa Cruz (Open-Meteo) + tip de negocio del día. Muestra a prospectos el valor de un asistente automático.",
+      "nodes": [
+        {
+          "name": "Cron 7am Bolivia",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Clima Santa Cruz",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Armar Briefing",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Enviar a Telegram",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "H1PDrinGPYtBcyhw",
+      "name": "WF-GS-ERR-01: Sentry to GitHub Issue Draft",
+      "active": false,
+      "description": "Draft GestiOS monitoring repair flow: Sentry webhook -> redacted GitHub Issue payload -> GitHub issue node. Not published; credential must be selected manually before production.",
+      "nodes": [
+        {
+          "name": "Sentry production webhook",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Build GitHub issue payload",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Create GitHub issue",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "JN4tcboVyFKv4qGA",
+      "name": "WF-10: WhatsApp Addon Onboarding",
+      "active": false,
+      "description": "Triggered al activar el add-on WhatsApp de una clinica: sync pacientes a Chatwoot, welcome email via Gmail Workspace, WA test message, marca onboarding (migrado 2026-08-07, sin $env). Mantener SIN publicar hasta revision.",
+      "nodes": [
+        {
+          "name": "WA Onboarding Trigger",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Valid API Key?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Fetch Patients",
+          "type": "n8n-nodes-base.postgres",
+          "notes": null
+        },
+        {
+          "name": "Save Context",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Contacts Synced",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Send WA Test Message",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Mark Onboarding Complete",
+          "type": "n8n-nodes-base.postgres",
+          "notes": null
+        },
+        {
+          "name": "Respond 200",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Create Chatwoot Contact",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Wait 1s",
+          "type": "n8n-nodes-base.wait",
+          "notes": null
+        },
+        {
+          "name": "Batch 50",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        },
+        {
+          "name": "Reject Unauthorized",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Send Welcome Email",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "M7m23v5JpPh4je76",
+      "name": "WF-DISCORD-02: Recordatorios de Eventos",
+      "active": false,
+      "description": "Cada 15 minutos revisa Google Calendar. Si hay un evento empezando en 15-35 min, envía un recordatorio al canal Discord.",
+      "nodes": [
+        {
+          "name": "Cada 15 minutos",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Eventos próximos 15-35 min",
+          "type": "n8n-nodes-base.googleCalendar",
+          "notes": null
+        },
+        {
+          "name": "Enviar recordatorio",
+          "type": "n8n-nodes-base.discord",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "MedkND258rck68om",
+      "name": "WF-DISCORD-01: Resumen Diario de Agenda",
+      "active": false,
+      "description": "Cada mañana a las 8am Bolivia envía al canal Discord un resumen de los eventos del día desde Google Calendar.",
+      "nodes": [
+        {
+          "name": "Cada mañana 8am Bolivia",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Obtener eventos del día",
+          "type": "n8n-nodes-base.googleCalendar",
+          "notes": null
+        },
+        {
+          "name": "Formatear resumen diario",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Enviar resumen a Discord",
+          "type": "n8n-nodes-base.discord",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "NDXLJiR00ciQx72V",
+      "name": "ONIA - Guiones Diarios de Contenido",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Lunes a sabado 07:00",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Fecha + pilar del dia",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Generar guiones (OpenAI)",
+          "type": "@n8n/n8n-nodes-langchain.openAi",
+          "notes": null
+        },
+        {
+          "name": "Preparar mensaje Telegram",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Enviar guiones a Telegram",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "NDgVcJGnvrgK91St",
+      "name": "WF-01: Trial Warnings",
+      "active": false,
+      "description": "Avisos diarios de vencimiento de trial (3 días o menos) por Gmail Workspace. Migrado de Resend 2026-08-07; sin $env (URLs fijas). APAGADO hasta tener clientes: duplica el trial-drip del producto.",
+      "nodes": [
+        {
+          "name": "Schedule: Daily 9AM La Paz",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Trial Orgs",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Done",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "Code: Calc Days",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "If: Days Remaining",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Split: Per Org",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Send Warning Email",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "O0NHmyqP6Fyk4f0b",
+      "name": "Alta de Cliente ONIA → CRM + Correo",
+      "active": true,
+      "description": "Webhook POST del Formulario de Alta de Cliente (alta-cliente.html en onia-forms). Responde 200 con CORS abierto, inserta el alta como lead Ganado en onia_center.leads via SSH (lead-insert.mjs, payload completo en raw.alta) y envia el resumen por Gmail a o",
+      "nodes": [
+        {
+          "name": "Webhook Alta Cliente",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Armar lead",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Insertar en CRM (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Preparar correo",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Enviar alta",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "ONIADailyBrief001",
+      "name": "ONIA Center - Briefing diario operativo",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Lunes a sabado 06:45",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Preparar resumen Telegram",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Preparar calendario protegido",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Correr briefing (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Leer repo pulse",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "OovRU4r0o7pvglJP",
+      "name": "ONIA - Radar Normativo Bolivia",
+      "active": false,
+      "description": "Vigila RNDs/normas nuevas del SIN (impuestos.com.bo + siatinfo) con memoria anti-repetición y alerta por Telegram. 08:00 L-V. Runbook: ONIA_RADAR_NORMATIVO_RUNBOOK_2026.md",
+      "nodes": [
+        {
+          "name": "Lunes a viernes 08:00",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Normativa SIN (impuestos.com.bo)",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "SIAT novedades (siatinfo)",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Detectar novedades",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Hay novedades?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Telegram a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "PGgAHAwZVr9TQEvp",
+      "name": "ONIA · Instagram mensajes · DRY_RUN revision humana",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Recepcion privada",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Normalizar",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Entrada valida",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Buscar evento",
+          "type": "n8n-nodes-base.dataTable",
+          "notes": null
+        },
+        {
+          "name": "Deduplicar",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Evento nuevo",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Leer conversacion",
+          "type": "n8n-nodes-base.dataTable",
+          "notes": null
+        },
+        {
+          "name": "Clasificar",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Preparado",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Persistir control",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Guardar control",
+          "type": "n8n-nodes-base.dataTable",
+          "notes": null
+        },
+        {
+          "name": "Verificar control",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Control persistido",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Cola revision humana",
+          "type": "n8n-nodes-base.dataTable",
+          "notes": null
+        },
+        {
+          "name": "Borrador registrado",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Dependencia incierta",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Responder dry run",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "QGXVyRSgrArxfolj",
+      "name": "ONIA - Radar de Novedades IA",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Cada 2h",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr Radar IA (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Extraer novedades",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Hay lanzamiento grande?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Enviar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "SemAJNk7ZoZxA8D7",
+      "name": "Cuestionario Cliente ONIA → Correo",
+      "active": true,
+      "description": "Webhook POST del cuestionario de cliente (cuestionario-cliente.html). Responde 200 con CORS abierto y envia las respuestas por Gmail Workspace a oninteligenciaartificial@gmail.com (migrado 2026-08-07, sin $env).",
+      "nodes": [
+        {
+          "name": "Cuestionario Webhook",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Enviar Lead",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "Si1cPoh65Ld4z7Ej",
+      "name": "Atlas AI Media - YouTube Content Factory Draft v1",
+      "active": false,
+      "description": "Manual dry-run workflow that prepares a YouTube content review package and explicitly blocks upload and publish until human approval.",
+      "nodes": [
+        {
+          "name": "Manual Dry Run",
+          "type": "n8n-nodes-base.manualTrigger",
+          "notes": null
+        },
+        {
+          "name": "Draft Input",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Build Review Package",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Safety Lock - No Upload No Publish",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Sticky Note a183103b",
+          "type": "n8n-nodes-base.stickyNote",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "Su4vVZCB9rtJ3gAy",
+      "name": "ONIA - Agente CEO Mensual",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Dia 1, 08:00",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr CEO Mensual (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Extraer informe",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Hay que avisar?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Enviar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "TBECCNhi334cOLTG",
+      "name": "ONIA - Agente Entrega de proyectos",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Lunes 08:00",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr Entrega (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Extraer resumen",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Hay que avisar?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Enviar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "UMpcKi7wfMmC9KCw",
+      "name": "ONIA - Propuesta Abierta (pixel)",
+      "active": true,
+      "description": "Pixel de apertura de propuestas comerciales. El HTML trackeado (generador --track) llama GET /webhook/propuesta-abierta?t=<token>&s=<slug> y avisa a Sergio por Telegram. Runbook: hermes-content/docs/ONIA_PROPUESTAS_V3_PLAN_20260705.md",
+      "nodes": [
+        {
+          "name": "Pixel Propuesta Abierta",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Telegram a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "VaX3lx0zibnNbg57",
+      "name": "ONIA - VPS Healthcheck",
+      "active": false,
+      "description": "Cada 2h chequea salud del VPS (contenedores criticos arriba, disco, RAM) via SSH y avisa a Sergio por Telegram SOLO si hay problema. Script: /opt/onia/vps-healthcheck.sh. Credencial ONIA VPS SSH.",
+      "nodes": [
+        {
+          "name": "Cada 2 horas",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Chequeo salud VPS",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Evaluar salud",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Hay problema?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "VeCHKr6wkK5Wet25",
+      "name": "ONIA - Scheduled Operations Pack",
+      "active": false,
+      "description": "Dispara recordatorios internos por Telegram para radar creativo, cola diaria, CRM, Video Lab, Higgsfield, copy y registro. No contacta clientes ni publica contenido.",
+      "nodes": [
+        {
+          "name": "07:30 Radar creativo",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Set Radar creativo",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Format Telegram Reply",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Send Telegram Reply",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "08:00 Cola contenido",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Set Cola contenido",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "08:30 Seguimientos CRM",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Set Seguimientos CRM",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "10:00 Recordatorios Video Lab",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Set Recordatorios Video Lab",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "15:00 Copy plataformas",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Set Copy plataformas",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "17:00 Watcher Higgsfield",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Set Watcher Higgsfield",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "21:00 Registro Hermes",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Set Registro Hermes",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Sticky Note b4e79c2a",
+          "type": "n8n-nodes-base.stickyNote",
+          "notes": null
+        },
+        {
+          "name": "Lunes 09:00 Digest",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Build Digest Pipeline",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Send Digest Clientes",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Es CRM o Cola?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Send Reply Arthur",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Run Hermes Scheduled Command",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "WA6VkNu5OHo6Npem",
+      "name": "ONIA - Nuevo Lead (speed-to-lead)",
+      "active": true,
+      "description": "Webhook POST /nuevo-lead {secret,company,contact,channel,message}. Cuando entra un inbound (formulario/WhatsApp/Hermes): crea el lead en onia_center.leads, lo califica + redacta la primera respuesta con LiteLLM, deja tarea + borrador en review_queue (pend",
+      "nodes": [
+        {
+          "name": "Webhook Nuevo Lead",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Autorizado?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Encode lead",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Crear + calificar lead (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Preparar aviso",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Responder OK",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Responder No Autorizado",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Verificar secret",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "WQvAV1z9f3XqCyQf",
+      "name": "ONIA Brand Pilot STUB · SOLO SIMULACION",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Entrada STUB",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Canal STUB",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Normalizar",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Entrada valida",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Leer journal",
+          "type": "n8n-nodes-base.dataTable",
+          "notes": null
+        },
+        {
+          "name": "Procesar paso",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Guardar paso",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Persistir journal",
+          "type": "n8n-nodes-base.dataTable",
+          "notes": null
+        },
+        {
+          "name": "Verificar persistencia",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Persistido",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Demora SOLO fixture",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Error cerrado",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Responder",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "X6gd3EBW7Y3z9xTg",
+      "name": "ONIA - Agenda: Cal.com Booking",
+      "active": false,
+      "description": "Recibe webhook de Cal.com cuando cliente agenda, crea evento en Google Calendar y notifica a Sergio por Telegram.",
+      "nodes": [
+        {
+          "name": "Cal.com Booking Webhook",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Parsear Booking CalCom",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Armar Notificacion",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Notificar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Validar firma Cal (OFF)",
+          "type": "n8n-nodes-base.code",
+          "notes": "Deshabilitado. Activar tras setear CALCOM_WEBHOOK_SECRET en Cal y n8n. Ver route/ONIA_CALCOM runbook."
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "XRS9fWY4yFMQQftF",
+      "name": "ONIA - Agente Building in Public",
+      "active": false,
+      "description": "DESACTIVADO (vacaciones, 2026-07-10). Cron Lunes 07:25 La Paz: SSH docker exec onia-center building-public-agent.mjs. Lee repo-pulse, escribe onia_center.dev_pulse (visibilidad de desarrollo) y deja contenido building-in-public SANITIZADO (sin clientes) e",
+      "nodes": [
+        {
+          "name": "Lunes 07:25",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr Building in Public (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Preparar aviso",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Hay algo que avisar?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "XhA3Z2BE6X8LmFEy",
+      "name": "Samuel - Construccion mensaje (demo)",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Schedule Trigger",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Send a text message",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "XxiHPNgpsL5FsHct",
+      "name": "DentalGest - Email Intake (ONIA Core)",
+      "active": false,
+      "description": "Correo → pendiente con dueño. Gmail trigger → payload intake normalizado → POST /api/onia-core/intake (dedupe + ruteo). Piloto: org-demo-001. Falta credencial Header Auth \"DentalGest Intake Secret\" (x-intake-secret).",
+      "nodes": [
+        {
+          "name": "Buzon Gmail",
+          "type": "n8n-nodes-base.gmailTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correo a payload intake",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "POST intake DentalGest",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "ZPDOxyNmQHotEJ3j",
+      "name": "Samuel - Construccion monitor (demo)",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Schedule Trigger",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "HTTP Request",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "If",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Send a text message",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "ZjaHUEMJVMXkLlmO",
+      "name": "ONIA - Tareas diarias reales (CRM -> panel)",
+      "active": true,
+      "description": "Cron Lun-Sab 06:50 La Paz: corre daily-tasks-agent.mjs por SSH. Genera tareas REALES derivadas del estado del CRM (trabajar los N leads nuevos, revisar los N borradores en cola, revisar las N ideas), dedup por task_key=auto-<kind>-<fecha>. Reemplaza las t",
+      "nodes": [
+        {
+          "name": "Lun-Sab 06:50",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Tareas reales del CRM (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82134",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T10:50:00.144Z",
+            "stoppedAt": "2026-11-07T10:50:02.931Z",
+            "workflowId": "ZjaHUEMJVMXkLlmO",
+            "waitTill": null
+          },
+          {
+            "id": "81203",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-06T10:50:00.261Z",
+            "stoppedAt": "2026-11-06T10:50:03.108Z",
+            "workflowId": "ZjaHUEMJVMXkLlmO",
+            "waitTill": null
+          },
+          {
+            "id": "80272",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-05T10:50:00.130Z",
+            "stoppedAt": "2026-11-05T10:50:03.057Z",
+            "workflowId": "ZjaHUEMJVMXkLlmO",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MDI3MiIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "Zzc1PgVzaKxOPxck",
+      "name": "WF-05: Birthday & Cleaning Reminder",
+      "active": false,
+      "description": "Birthday & cleaning reminders (email Gmail Workspace + WhatsApp opcional) por paciente via splitInBatches (migrado 2026-08-07, sin $env). Mantener SIN publicar hasta revision.",
+      "nodes": [
+        {
+          "name": "Schedule: Daily 8AM La Paz",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Today's Birthdays",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "If: Has Birthdays?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Birthday Done",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "If: Has WhatsApp (Birthday)?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "WhatsApp: Birthday",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Split: Per Birthday",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        },
+        {
+          "name": "No Birthdays",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Cleaning Due 6+ Months",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "If: Has Cleaning Due?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Cleaning Done",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "If: Has WhatsApp (Cleaning)?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "WhatsApp: Cleaning Reminder",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Split: Per Cleaning",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        },
+        {
+          "name": "No Cleaning",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "Cleaning: Tiene Email?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Birthday: Tiene Email?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Birthday Email",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Cleaning Reminder Email",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "a15fb86c57d4206c",
+      "name": "CRON · backup-storage",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Horario",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr en VPS",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Probar",
+          "type": "n8n-nodes-base.manualTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "81997",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T07:10:00.142Z",
+            "stoppedAt": "2026-11-07T07:10:00.736Z",
+            "workflowId": "a15fb86c57d4206c",
+            "waitTill": null
+          },
+          {
+            "id": "81066",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-06T07:10:00.201Z",
+            "stoppedAt": "2026-11-06T07:10:00.817Z",
+            "workflowId": "a15fb86c57d4206c",
+            "waitTill": null
+          },
+          {
+            "id": "80135",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-05T07:10:00.159Z",
+            "stoppedAt": "2026-11-05T07:10:00.653Z",
+            "workflowId": "a15fb86c57d4206c",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MDEzNSIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "aHFLqEtzqvq6SE3e",
+      "name": "ONIA - Web Factory VPS Radar",
+      "active": false,
+      "description": "Corre el worker de Web Factory en el VPS por SSH (Lun-Sab 07:10 La Paz), normaliza el resultado y notifica a Sergio por Telegram. Nodo SSH usa credencial ONIA VPS SSH. Comando: node scripts/web-factory-vps-automation.mjs --mode daily en /opt/onia-hermes/w",
+      "nodes": [
+        {
+          "name": "Lunes a sabado 07:10",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Run Web Factory worker on VPS",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Normalize worker result",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Telegram configured?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Worker OK?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Notify success Telegram",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Notify failure Telegram",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Sticky Note 6b06c6fa",
+          "type": "n8n-nodes-base.stickyNote",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "aOb3lNzewdGckb9H",
+      "name": "ONIA - Demo Cliente New Sakura",
+      "active": false,
+      "description": "Demo personalizado de venta para New Sakura (restaurante Calacoto, La Paz): briefing matutino con clima La Paz + alerta lluvia/terraza + reservas (ejemplo) + tip de restaurante, a Telegram. Para mostrar al prospecto cómo se vería su asistente.",
+      "nodes": [
+        {
+          "name": "Cron 7am Bolivia",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Clima La Paz",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Armar Briefing New Sakura",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Enviar a Telegram",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "b6hjjNJFLuLXhRm3",
+      "name": "ONIA - Digest semanal (panel -> Telegram)",
+      "active": false,
+      "description": "Cron Domingo 19:00 La Paz: corre weekly-digest.mjs por SSH (READ-ONLY en onia-center), agrega la actividad de la semana del panel (leads nuevos, ideas y borradores para revisar, anomalias de caja) en UN mensaje y lo manda a Sergio por Telegram. Reemplaza ",
+      "nodes": [
+        {
+          "name": "Domingo 19:00",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr Digest (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Extraer resumen",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Enviar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "bJhSGHPYsaICEeKm",
+      "name": "ONIA - Chatbot Demo (Chatwoot)",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Webhook Chatwoot",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Normalizar webhook",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Correr adaptador (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Leer resultado",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "bfNDDU0b4rOfhHmH",
+      "name": "WF-08: GestiOS WhatsApp Onboarding",
+      "active": false,
+      "description": "Onboarding al activar WhatsApp add-on: sincroniza contactos a Chatwoot, envía email de bienvenida + WA de prueba, marca onboardingAt en DB.",
+      "nodes": [
+        {
+          "name": "Webhook Trigger",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Respond OK",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Fetch Customers",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Fetch WA Addon",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Send Welcome Email",
+          "type": "n8n-nodes-base.emailSend",
+          "notes": null
+        },
+        {
+          "name": "Send WA Test",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Mark Onboarding Complete",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Sync Contact to Chatwoot",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Batch Customers",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "cA7PMtzHFR47NR9W",
+      "name": "WF-09: Trial Expired Alert",
+      "active": true,
+      "description": "Checks for expired trials daily and alerts SUPERADMIN per expired clinic via Gmail Workspace (migrado 2026-08-07, sin $env).",
+      "nodes": [
+        {
+          "name": "Schedule: Daily 6AM La Paz",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Expired Trials",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "If: Has Expired?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Split: Per Expired",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Alert SUPERADMIN",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82261",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T14:00:00.696Z",
+            "stoppedAt": "2026-11-07T14:00:03.182Z",
+            "workflowId": "cA7PMtzHFR47NR9W",
+            "waitTill": null
+          },
+          {
+            "id": "81328",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-06T14:00:01.057Z",
+            "stoppedAt": "2026-11-06T14:00:04.180Z",
+            "workflowId": "cA7PMtzHFR47NR9W",
+            "waitTill": null
+          },
+          {
+            "id": "80399",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-05T14:00:00.281Z",
+            "stoppedAt": "2026-11-05T14:00:01.608Z",
+            "workflowId": "cA7PMtzHFR47NR9W",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MDM5OSIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "cy3tCi9kNLxB20la",
+      "name": "ONIA - Agenda hoy (Jarvis)",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Pedido del resumen",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Eventos del día",
+          "type": "n8n-nodes-base.googleCalendar",
+          "notes": null
+        },
+        {
+          "name": "Responder",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "d04c8df3f232694e",
+      "name": "CRON · vigia-credito-ia",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Horario",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr en VPS",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Probar",
+          "type": "n8n-nodes-base.manualTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82436",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:30:00.181Z",
+            "stoppedAt": "2026-11-07T18:30:02.690Z",
+            "workflowId": "d04c8df3f232694e",
+            "waitTill": null
+          },
+          {
+            "id": "82427",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:15:00.139Z",
+            "stoppedAt": "2026-11-07T18:15:01.306Z",
+            "workflowId": "d04c8df3f232694e",
+            "waitTill": null
+          },
+          {
+            "id": "82416",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:00:00.168Z",
+            "stoppedAt": "2026-11-07T18:00:04.587Z",
+            "workflowId": "d04c8df3f232694e",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MjQxNiIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "dlWHWx34RWImpo1N",
+      "name": "Samuel - 02 - Monitor y alerta (demo)",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Revisar cada 5 minutos",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Revisar mi web",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "La web tiene un problema",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Avisarme por Telegram",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "drFWP7nttzvtZzso",
+      "name": "ONIA - Monitor de Salud n8n",
+      "active": true,
+      "description": "Cada hora revisa ejecuciones fallidas en n8n y avisa a Sergio por Telegram solo si hubo fallos en los últimos 70 min. Observabilidad para detectar workflows rotos (ej. credenciales caídas).",
+      "nodes": [
+        {
+          "name": "Cada Hora",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Buscar Ejecuciones Fallidas",
+          "type": "n8n-nodes-base.n8n",
+          "notes": null
+        },
+        {
+          "name": "Filtrar Ultima Hora y Formatear",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82420",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:00:12.072Z",
+            "stoppedAt": "2026-11-07T18:00:12.349Z",
+            "workflowId": "drFWP7nttzvtZzso",
+            "waitTill": null
+          },
+          {
+            "id": "82381",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T17:00:12.038Z",
+            "stoppedAt": "2026-11-07T17:00:12.288Z",
+            "workflowId": "drFWP7nttzvtZzso",
+            "waitTill": null
+          },
+          {
+            "id": "82341",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T16:00:12.038Z",
+            "stoppedAt": "2026-11-07T16:00:12.332Z",
+            "workflowId": "drFWP7nttzvtZzso",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MjM0MSIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "dtl2ru7enIbao76C",
+      "name": "WF-DISCORD-06: Alertas de Suscripciones",
+      "active": false,
+      "description": "Cron diario 8am Bolivia: consulta Supabase por suscripciones con cobro en 3 días y envía alerta formateada a Discord.",
+      "nodes": [
+        {
+          "name": "Daily 8am Bolivia",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Fetch Active Subscriptions",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Filter Due in 3 Days",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Has Upcoming Subscriptions?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Send Discord Alert",
+          "type": "n8n-nodes-base.discord",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "dybtwU9dejZXwYKF",
+      "name": "WF-GS-01 — Trial Expiry Warning- Gesti-os",
+      "active": false,
+      "description": "Daily 9AM LPZ: finds orgs with trial ending in 3 days, emails admin via Resend, optionally sends WhatsApp via Meta Graph API if addon active.",
+      "nodes": [
+        {
+          "name": "Daily 9AM LPZ",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Calc Dates",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Fetch Trial Orgs",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Done",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "Fetch Admin Profile",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Fetch Auth User",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Send Trial Email",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Has WA Addon?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Fetch WA Addon",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Send WA Warning",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "For Each Org",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "e2UbFNNSnaLA6JlU",
+      "name": "ONIA Brand Pilot B · SOLO SIMULACION",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Entrada COMMENT",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Canal COMMENT",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Normalizar",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Entrada valida",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Leer journal",
+          "type": "n8n-nodes-base.dataTable",
+          "notes": null
+        },
+        {
+          "name": "Procesar paso",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Guardar paso",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Persistir journal",
+          "type": "n8n-nodes-base.dataTable",
+          "notes": null
+        },
+        {
+          "name": "Verificar persistencia",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Persistido",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Error cerrado",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Responder",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "fek4OoxRlNfpD6GZ",
+      "name": "ONIA - Disparador de Agentes (panel)",
+      "active": true,
+      "description": "Webhook desde ONIA Center: recibe agentId/agentName del panel, mapea al script del agente y lo corre en el VPS por SSH (mismo patron que los crons). No toca los workflows de cron existentes.",
+      "nodes": [
+        {
+          "name": "Disparo desde panel",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Mapear agente a script",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Correr agente en VPS",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Responder al panel",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Verificar secret",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Autorizado?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Responder No Autorizado",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "fop5l1FEirkYoZke",
+      "name": "DEMO CONTENIDO · 4 campos antes de n8n",
+      "active": false,
+      "description": "Workflow inactivo creado solo para capturar el video: formulario → cuatro campos → validación → Google Sheets/Telegram → excepción.",
+      "nodes": [
+        {
+          "name": "Formulario web",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "4 campos: name · phone · service · source",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "¿Phone y service existen?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Google Sheets · Append row",
+          "type": "n8n-nodes-base.googleSheets",
+          "notes": null
+        },
+        {
+          "name": "Telegram · Send message al equipo",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Rama false · Pedir phone",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "gN7pQld6Lh3qAcTS",
+      "name": "ONIA - Backup diario",
+      "active": true,
+      "description": "Diario 03:00 La Paz: backup por SSH (dump Supabase DentalGest + export workflows y credenciales n8n) a /opt/onia/backups con rotacion 7 dias, y avisa a Sergio por Telegram (OK con tamanos, o FALLO). Off-site R2 pendiente. Script /opt/onia/vps-backup.sh.",
+      "nodes": [
+        {
+          "name": "Diario 03:00",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Backup VPS",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Resumen backup",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "81989",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T07:00:00.335Z",
+            "stoppedAt": "2026-11-07T07:00:26.069Z",
+            "workflowId": "gN7pQld6Lh3qAcTS",
+            "waitTill": null
+          },
+          {
+            "id": "81058",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-06T07:00:00.465Z",
+            "stoppedAt": "2026-11-06T07:00:26.897Z",
+            "workflowId": "gN7pQld6Lh3qAcTS",
+            "waitTill": null
+          },
+          {
+            "id": "80127",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-05T07:00:00.399Z",
+            "stoppedAt": "2026-11-05T07:00:27.073Z",
+            "workflowId": "gN7pQld6Lh3qAcTS",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MDEyNyIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "iqsnnQXlJyypiew8",
+      "name": "ONIA - Web Factory VPS Radar",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Lunes a sabado 07:10",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Run Web Factory worker on VPS",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Normalize worker result",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Telegram configurado?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Worker OK?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Notify success Telegram",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Notify failure Telegram",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "j7orHCgVd92AOcfa",
+      "name": "ONIA - Vigia SIAT runner (F1.5)",
+      "active": true,
+      "description": "Vigia F1.5 del cierre 1.0: recibe por webhook (POST /onia-siat-vigia) el estado del runner SIAT Fase 1 que arma un cron del HOST del VPS (pgrep + tail del log + casos ok del ndjson) y lo reenvia a Sergio por Telegram en HTML. El cron del host corre 2x/dia",
+      "nodes": [
+        {
+          "name": "Webhook SIAT vigia",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Armar mensaje",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82142",
+            "finished": true,
+            "mode": "webhook",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T11:00:02.893Z",
+            "stoppedAt": "2026-11-07T11:00:03.589Z",
+            "workflowId": "j7orHCgVd92AOcfa",
+            "waitTill": null
+          },
+          {
+            "id": "81607",
+            "finished": true,
+            "mode": "webhook",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-06T21:00:03.920Z",
+            "stoppedAt": "2026-11-06T21:00:04.766Z",
+            "workflowId": "j7orHCgVd92AOcfa",
+            "waitTill": null
+          },
+          {
+            "id": "81211",
+            "finished": true,
+            "mode": "webhook",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-06T11:00:03.029Z",
+            "stoppedAt": "2026-11-06T11:00:03.786Z",
+            "workflowId": "j7orHCgVd92AOcfa",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MTIxMSIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "jcmJ509pTJeqJU0Z",
+      "name": "ONIA - Sync gasto IA (LiteLLM -> panel)",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Cada 6h",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Sync gasto IA (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82340",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T16:00:00.464Z",
+            "stoppedAt": "2026-11-07T16:00:07.591Z",
+            "workflowId": "jcmJ509pTJeqJU0Z",
+            "waitTill": null
+          },
+          {
+            "id": "82101",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T10:00:00.211Z",
+            "stoppedAt": "2026-11-07T10:00:02.914Z",
+            "workflowId": "jcmJ509pTJeqJU0Z",
+            "waitTill": null
+          },
+          {
+            "id": "81877",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T04:00:00.299Z",
+            "stoppedAt": "2026-11-07T04:00:05.148Z",
+            "workflowId": "jcmJ509pTJeqJU0Z",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MTg3NyIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "jspfoUsjQfQ1VXY4",
+      "name": "ONIA - Prospeccion diaria",
+      "active": false,
+      "description": "Lun-Vie 09:00: manda a Sergio por Telegram el prospecto del dia (rota rubro+ciudad) con el prompt de prospeccion ONIA y la regla de no contactar sin aprobar. v1 nudge; upgrade a auto-busqueda cuando haya fuente (Google Places/Tavily).",
+      "nodes": [
+        {
+          "name": "Lun-Vie 09:00",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Armar prospeccion del dia",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Enviar a Telegram",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "jtLIb0i6jxAZOvwa",
+      "name": "WF-GS-05: BCP Auto Payment Confirmation",
+      "active": false,
+      "description": "Polls Gmail for BCP payment emails, extracts reference, queries Supabase, and auto-confirms pending payments to activate workspace plans.",
+      "nodes": [
+        {
+          "name": "Sticky Note f43106ab",
+          "type": "n8n-nodes-base.stickyNote",
+          "notes": null
+        },
+        {
+          "name": "BCP Email Received",
+          "type": "n8n-nodes-base.gmailTrigger",
+          "notes": null
+        },
+        {
+          "name": "Extract Reference from Email",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Reference Found?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Lookup Payment in Supabase",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Payment Record Exists?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Mark Payment CONFIRMADO",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Compute Plan Expiry",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Activate Org Plan in Supabase",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Skip - No Matching Payment",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        },
+        {
+          "name": "Skip - No Reference Found",
+          "type": "n8n-nodes-base.noOp",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "kB10A8oLWioS8lXP",
+      "name": "ONIA - Agenda Create API",
+      "active": true,
+      "description": "Webhook POST /agendar-create: recibe titulo/startISO/endISO/descripcion, crea evento en Google Calendar y responde JSON con htmlLink. Llamado por Hermes VPS.",
+      "nodes": [
+        {
+          "name": "Agendar Create Hook",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Crear Evento GCal",
+          "type": "n8n-nodes-base.googleCalendar",
+          "notes": null
+        },
+        {
+          "name": "Responder JSON",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "lryabRhGQW4WIuJG",
+      "name": "Hermes Radar Diario Creativo y Clientes",
+      "active": false,
+      "description": "Radar diario n8n para investigar novedades de IA/video/social/prospeccion y enviar un reporte seguro a Telegram. No publica ni contacta clientes.",
+      "nodes": [
+        {
+          "name": "Sticky Note 4d26cb9b",
+          "type": "n8n-nodes-base.stickyNote",
+          "notes": null
+        },
+        {
+          "name": "Manual Test",
+          "type": "n8n-nodes-base.manualTrigger",
+          "notes": null
+        },
+        {
+          "name": "Build Radar Brief",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Telegram Chat Configured?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Hermes Radar Agent",
+          "type": "@n8n/n8n-nodes-langchain.agent",
+          "notes": null
+        },
+        {
+          "name": "OpenAI Web Research Model",
+          "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+          "notes": null
+        },
+        {
+          "name": "Send Telegram Radar",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Missing Telegram Chat ID",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Daily 07:30",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Send Radar Arthur",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "m0wEy7YRDbGWVDKU",
+      "name": "ONIA Brand Pilot A · SOLO SIMULACION",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Entrada INGRESS",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Canal INGRESS",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Entrada APPROVAL",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Canal APPROVAL",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Normalizar",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Entrada valida",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Leer journal",
+          "type": "n8n-nodes-base.dataTable",
+          "notes": null
+        },
+        {
+          "name": "Procesar paso",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Guardar paso",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Persistir journal",
+          "type": "n8n-nodes-base.dataTable",
+          "notes": null
+        },
+        {
+          "name": "Verificar persistencia",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Persistido",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Llamar simulador",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Adaptador SOLO stub n8n",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Validar resultado stub",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Persistir resultado",
+          "type": "n8n-nodes-base.dataTable",
+          "notes": null
+        },
+        {
+          "name": "Verificar resultado",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Error cerrado",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Responder",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "mboH09gPgu5kAoHm",
+      "name": "Brief de Produccion ONIA → Correo",
+      "active": true,
+      "description": "Webhook POST del Brief de Produccion (brief-produccion.html). Recibe datos de construccion y los envia por Gmail Workspace a oninteligenciaartificial@gmail.com (migrado 2026-08-07, sin $env).",
+      "nodes": [
+        {
+          "name": "Brief Webhook",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Enviar Brief",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "nAGwe7DzxNQzMxXk",
+      "name": "ONIA - Video Intake (link por Telegram)",
+      "active": false,
+      "description": "Sergio manda un link de IG/TikTok/YouTube por Telegram y dispara el workflow video-intake de GitHub Actions (repository_dispatch), que baja el video, lo ve, lo transcribe y commitea la ficha. El token de GitHub va como CREDENCIAL Header Auth, nunca en el ",
+      "nodes": [
+        {
+          "name": "Link por Telegram",
+          "type": "n8n-nodes-base.telegramTrigger",
+          "notes": null
+        },
+        {
+          "name": "Extraer links de video",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Disparar video-intake en GitHub",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Avisar que entro",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "nZkaXaZVKzgtwUqU",
+      "name": "ONIA - Agente Contenido y Media Lab (borradores)",
+      "active": false,
+      "description": "Cron Lun-Sab 07:20 La Paz: SSH docker exec onia-center content-media-agent.mjs. Elige pilar/idea, redacta con LiteLLM SOLO TEXTO (guion \"que grabar hoy\" + carruseles), deja borradores en review_queue (pending/sensitive/reviewer=sergio) + agent_content_med",
+      "nodes": [
+        {
+          "name": "Lun-Sab 07:20",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr Agente Contenido (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Preparar aviso",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Hay algo que avisar?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "nkPMoUYQ9DMIL9gM",
+      "name": "ONIA - Agente Prospector (CRM)",
+      "active": false,
+      "description": "Cron Lun+Jue 07:40: rota rubro+ciudad y corre el Agente Prospector por SSH (docker exec onia-center prospector-agent.mjs). Descubre negocios reales de Bolivia desde OpenStreetMap (Overpass, cero costo, ODbL), prioriza los SIN web, enriquece con LiteLLM (s",
+      "nodes": [
+        {
+          "name": "Lun+Jue 07:40",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Elegir rubro y ciudad",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Correr Prospector (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Preparar aviso",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Hay algo que avisar?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "oKSTNdvS58ixBgnl",
+      "name": "ONIA - Agente Finanzas y Fondo ONIA",
+      "active": false,
+      "description": "Cron Lun-Sab 07:15 La Paz: SSH docker exec onia-center finance-fund-agent.mjs. Agrega caja, ingresos del periodo, comisiones por estado y Fondo ONIA en onia_center.finance_summary (upsert diario) + agent_finance_fund 'ready'. Determinista, READ-ONLY. Avis",
+      "nodes": [
+        {
+          "name": "Lun-Sab 07:15",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr Agente Finanzas (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Preparar aviso",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Hay anomalias que avisar?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "qOVpQwPZplQKYkMc",
+      "name": "GestiOS — Birthday WA [WF-GS-03]",
+      "active": false,
+      "description": "Daily 1PM: fetches customers with birthdays today, sends WA greeting using each org's own WhatsApp Business credentials.",
+      "nodes": [
+        {
+          "name": "Daily 1PM",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Fetch Customers With Birthday",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Filter Birthdays Today",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Fetch WA Addon",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Send Birthday WA",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Split In Batches",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "qdAEP9seSxp5whXh",
+      "name": "ONIA - Agenda: Briefing Diario",
+      "active": false,
+      "description": "Briefing diario 8am Bolivia: lee Google Calendar del día y envía resumen por Telegram a Sergio.",
+      "nodes": [
+        {
+          "name": "Cron 8am Bolivia",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Eventos Hoy",
+          "type": "n8n-nodes-base.googleCalendar",
+          "notes": null
+        },
+        {
+          "name": "Formatear Agenda",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Briefing a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "rDdlijedMLN22fhC",
+      "name": "Samuel - 01 - Mensaje programado (demo)",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Cada dia a las 09:00",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Enviar recordatorio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "rGvQb4CRBdJPwrp1",
+      "name": "ONIA - Prospeccion Diaria",
+      "active": false,
+      "description": "Días laborales 8am Bolivia: busca con web 5 prospectos reales en Bolivia (clínicas dentales, pymes, negocios sin web), recomienda producto ONIA y ángulo, y envía a Sergio por Telegram para aprobar antes de contactar. No contacta a nadie.",
+      "nodes": [
+        {
+          "name": "Diario 8am Bolivia",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Brief de Prospeccion",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Agente Prospector ONIA",
+          "type": "@n8n/n8n-nodes-langchain.agent",
+          "notes": null
+        },
+        {
+          "name": "OpenAI Prospeccion Model",
+          "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+          "notes": null
+        },
+        {
+          "name": "Enviar Prospectos a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "rROEMfHl1KVRvvbS",
+      "name": "WF-00: Appointment Reminders",
+      "active": false,
+      "description": "Appointment reminders 24h/2h (email Gmail Workspace + WhatsApp opcional). Migrado 2026-08-07, sin $env. OJO: duplica el cron de recordatorios del PRODUCTO — mantener apagado salvo decision explicita.",
+      "nodes": [
+        {
+          "name": "Schedule: Every Hour",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Reminders 24h",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "If: Has 24h?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "If: Has WhatsApp 24h?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "WhatsApp: Reminder 24h",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Mark reminder24Sent",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Split: Per Appointment 24h",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Reminders 2h",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "If: Has 2h?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "If: Has WhatsApp 2h?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "WhatsApp: Reminder 2h",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Supabase: Mark reminder2hSent",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Split: Per Appointment 2h",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        },
+        {
+          "name": "DRY RUN Resumen 24h",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "DRY RUN Aviso 24h",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Reminder 24h",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Reminder 2h",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "rlDDxcvArueSjegQ",
+      "name": "ONIA - Vigia lead sin respuesta (F3.5)",
+      "active": true,
+      "description": "Vigia F3.5 del cierre 1.0: cada 30 min lee onia_center.bot_conversations en supabase-db (por SSH + docker exec psql, patron de la casa: las credenciales Postgres de n8n apuntan a hosts muertos) y avisa a Sergio por Telegram si hay leads con >1 h sin respu",
+      "nodes": [
+        {
+          "name": "Cada 30 min",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Leads sin respuesta >1h",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Anti-spam 12h y mensaje",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82435",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:30:00.152Z",
+            "stoppedAt": "2026-11-07T18:30:01.167Z",
+            "workflowId": "rlDDxcvArueSjegQ",
+            "waitTill": null
+          },
+          {
+            "id": "82419",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:00:00.240Z",
+            "stoppedAt": "2026-11-07T18:00:03.755Z",
+            "workflowId": "rlDDxcvArueSjegQ",
+            "waitTill": null
+          },
+          {
+            "id": "82397",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T17:30:00.217Z",
+            "stoppedAt": "2026-11-07T17:30:04.233Z",
+            "workflowId": "rlDDxcvArueSjegQ",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MjM5NyIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "rwQuwSvd29bV34EY",
+      "name": "ONIA - Generar Propuesta (oficial)",
+      "active": true,
+      "description": "Webhook POST /generar-propuesta {slug,secret}. Valida secret (ONIA_CENTER_INTERNAL_API_KEY) y slug kebab-case, corre el generador oficial + PDF (chromium VPS) por SSH, y envia el PDF a Sergio por Telegram para revisar antes de enviar al cliente. Autonomo ",
+      "nodes": [
+        {
+          "name": "Webhook Propuesta",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Autorizado y slug valido?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Generar propuesta + PDF (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Preparar PDF binario",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "PDF generado?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Enviar PDF a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Responder OK",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Responder Fallo",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Responder No Autorizado",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Verificar secret",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "tIl4chT49LIPD0VJ",
+      "name": "ONIA tendencias semanal",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Lunes 09:00",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "X",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": "Opcional: activar cuando estén X_BEARER_TOKEN / YOUTUBE_API_KEY"
+        },
+        {
+          "name": "YouTube",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": "Opcional: activar cuando estén X_BEARER_TOKEN / YOUTUBE_API_KEY"
+        },
+        {
+          "name": "GitHub",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "HuggingFace",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Reddit",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Juntar fuentes",
+          "type": "n8n-nodes-base.merge",
+          "notes": null
+        },
+        {
+          "name": "Filtrar máx 5",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Enviar a Sergio (Telegram)",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Correr a mano",
+          "type": "n8n-nodes-base.executeWorkflowTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "76689",
+            "finished": true,
+            "mode": "cli",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-01T16:49:39.764Z",
+            "stoppedAt": "2026-11-01T16:49:41.736Z",
+            "workflowId": "tIl4chT49LIPD0VJ",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "tUaQasfCDGOXEl2j",
+      "name": "ONIA - Tipo de cambio Bolivia diario",
+      "active": false,
+      "description": "Oficial flotante BCB + spread bancario (tasa efectiva) + referencia Binance P2P. Alerta Telegram 07:30 L-S. Diseño: onia-core/ONIA_EXCHANGE_RATE_AUTOPRICING_2026.md",
+      "nodes": [
+        {
+          "name": "Lunes a sabado 07:30",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Binance P2P USDT BOB",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "BCB oficial diario",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Consolidar tasas",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Telegram a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "uAEgHBsVNkkfcAzd",
+      "name": "WF-12: Plan Activation Confirmation",
+      "active": false,
+      "description": "Al activar un plan, envia confirmacion al admin de la clinica via Gmail Workspace. Valida API key hardcodeada, arma plan label, responde 200 (migrado 2026-08-07, sin $env). Mantener SIN publicar hasta revision.",
+      "nodes": [
+        {
+          "name": "Plan Activation Webhook",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Validate API Key",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Build Plan Label",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Respond 200",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Respond 401",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        },
+        {
+          "name": "Gmail: Send Email",
+          "type": "n8n-nodes-base.gmail",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "uc4r1fYC0Z5Rwrnr",
+      "name": "OnIA Ventas chatbot",
+      "active": false,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Webhook Chatwoot",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Filtro",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Leer historial",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Preparar historial",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Armar prompt",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "LLM (OpenAI)",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Parsear JSON",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Responder en Chatwoot",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Handoff?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Etiqueta atender-sergio",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Nota privada",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "uwqJDGwkkWJaFtLU",
+      "name": "ONIA - Agenda: Recordatorios",
+      "active": true,
+      "description": "Cada 30 minutos revisa Google Calendar por eventos próximos y envía recordatorio por Telegram a Sergio.",
+      "nodes": [
+        {
+          "name": "Cada 30 Minutos",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Eventos Proximos 30min",
+          "type": "n8n-nodes-base.googleCalendar",
+          "notes": null
+        },
+        {
+          "name": "Formatear Recordatorio",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Recordatorio a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "82421",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T18:00:55.036Z",
+            "stoppedAt": "2026-11-07T18:00:55.282Z",
+            "workflowId": "uwqJDGwkkWJaFtLU",
+            "waitTill": null
+          },
+          {
+            "id": "82401",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T17:30:55.034Z",
+            "stoppedAt": "2026-11-07T17:30:55.525Z",
+            "workflowId": "uwqJDGwkkWJaFtLU",
+            "waitTill": null
+          },
+          {
+            "id": "82382",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-07T17:00:55.026Z",
+            "stoppedAt": "2026-11-07T17:00:55.273Z",
+            "workflowId": "uwqJDGwkkWJaFtLU",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": "eyJsYXN0SWQiOiI4MjM4MiIsImxpbWl0IjozfQ=="
+      }
+    },
+    {
+      "id": "vuicWsvh0hwqKhYs",
+      "name": "ONIA - Telegram Command Center",
+      "active": true,
+      "description": "Recibe comandos Hermes/ONIA por Telegram, ejecuta `hermes-command telegram --message` por SSH en el VPS y devuelve `telegram_reply`. Enruta Video Lab, proyectos, plan semanal y estado; no publica ni contacta sin aprobacion explicita.",
+      "nodes": [
+        {
+          "name": "Telegram Video Lab Command",
+          "type": "n8n-nodes-base.telegramTrigger",
+          "notes": null
+        },
+        {
+          "name": "Normalize Video Lab Command",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Format Telegram Reply",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Send Video Lab Reply",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Es /agendar? CC",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Parsear Agenda CC",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Crear Evento GCal CC",
+          "type": "n8n-nodes-base.googleCalendar",
+          "notes": null
+        },
+        {
+          "name": "Confirmar Agenda CC",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Alfred Webhook",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Unwrap Update",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Call ONIA Center Command",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Es nota de voz CC",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "Bajar nota de voz CC",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Voz a base64 CC",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Transcribir voz VPS CC",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Comando desde voz CC",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "w3vgUCV1yMkv70TW",
+      "name": "ONIA Intake Cliente a Telegram",
+      "active": true,
+      "description": "Recibe el formulario de levantamiento de cliente (web-factory/intake-cliente.html) vía webhook y envía el resumen por Telegram a ONIA.",
+      "nodes": [
+        {
+          "name": "Recibe Formulario Intake",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Avisar a Sergio (Telegram)",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Responder al Formulario",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "w8WrMlq06O5KyyR0",
+      "name": "ONIA - Agenda cambios (Jarvis)",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Pedido de cambio",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Cambiar en su calendario",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Responder",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "wFCVE4eSNMzHOCaB",
+      "name": "BE - SLA reassign (test, cada 2 min)",
+      "active": false,
+      "description": "Cada 2 min pega al endpoint /api/cron/sla-reassign del chatbot Bolivian Electric en el canal de PRUEBA (bolivian-electric-os-test). Alerta a gerencia (nota+label) y reasigna cuando un vendedor no responde dentro del SLA. Apunta al contenedor de prueba; re",
+      "nodes": [
+        {
+          "name": "Cada 2 min",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "BE SLA reassign (test)",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "wImYWwbHGVK5tvIA",
+      "name": "WF-SENTRY-01 - Sentry Codex Triage",
+      "active": true,
+      "description": null,
+      "nodes": [
+        {
+          "name": "Webhook: Sentry Alert",
+          "type": "n8n-nodes-base.webhook",
+          "notes": null
+        },
+        {
+          "name": "Code: Normalize Sentry Payload",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "If: GitHub Token Present?",
+          "type": "n8n-nodes-base.if",
+          "notes": null
+        },
+        {
+          "name": "GitHub: Create Issue",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Code: GitHub Issue Response",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Code: Missing GitHub Token Response",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Respond: Triage Accepted",
+          "type": "n8n-nodes-base.respondToWebhook",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "xQaO3Sfsl9XzMiid",
+      "name": "ONIA - Reporte diario Sergio + Arthur",
+      "active": false,
+      "description": "Cron Lun-Sab 07:00: SSH docker exec onia-center arthur-report.mjs. Da las tareas del dia a Sergio y a Arthur (de las obligaciones del acuerdo 60 dias + CRM vivo) y verifica las ganancias de Arthur (payment_commissions por estado + ventas + progreso del tr",
+      "nodes": [
+        {
+          "name": "Lun-Sab 07:00",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Reporte Sergio + Arthur (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Extraer texto",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Enviar a Sergio",
+          "type": "n8n-nodes-base.telegram",
+          "notes": null
+        },
+        {
+          "name": "Leer repo pulse",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Leer docs hygiene",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "xx4wzzzqZBGfu836",
+      "name": "GestiOS — Plan Expiry WA [WF-GS-02]",
+      "active": false,
+      "description": "Daily 12PM: fetches orgs with plan expiring in 7 days, sends WA reminder using each org's own WhatsApp Business credentials.",
+      "nodes": [
+        {
+          "name": "Daily 12PM",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Calc Dates",
+          "type": "n8n-nodes-base.code",
+          "notes": null
+        },
+        {
+          "name": "Fetch Expiring Orgs",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Fetch WA Addon",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "Send WA Expiry",
+          "type": "n8n-nodes-base.httpRequest",
+          "notes": null
+        },
+        {
+          "name": "For Each Org",
+          "type": "n8n-nodes-base.splitInBatches",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "ynNMGtW8TCDCBMdS",
+      "name": "ONIA - Agente Radar YT (ideas, panel-only)",
+      "active": true,
+      "description": "Cron Miercoles 07:45 La Paz: corre el Agente Radar YT por SSH (yt-dlp en el host + docker exec onia-center radar-yt-agent.mjs). Mira tendencias de YouTube (cero costo, sin API key), destila 3-6 ideas de contenido con LiteLLM y las deja en onia_center.idea",
+      "nodes": [
+        {
+          "name": "Miercoles 07:45",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Correr Radar YT (VPS)",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [
+          {
+            "id": "79276",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-11-04T11:45:00.083Z",
+            "stoppedAt": "2026-11-04T11:45:25.721Z",
+            "workflowId": "ynNMGtW8TCDCBMdS",
+            "waitTill": null
+          },
+          {
+            "id": "75824",
+            "finished": true,
+            "mode": "trigger",
+            "retryOf": null,
+            "retrySuccessId": null,
+            "status": "success",
+            "startedAt": "2026-10-28T11:45:00.066Z",
+            "stoppedAt": "2026-10-28T11:45:21.830Z",
+            "workflowId": "ynNMGtW8TCDCBMdS",
+            "waitTill": null
+          }
+        ],
+        "nextCursor": null
+      }
+    },
+    {
+      "id": "zediOCdtlP1zpImK",
+      "name": "Mara Daily Content — Trend Research",
+      "active": false,
+      "description": "Diario 9am Bolivia: investiga trends TikTok skincare, genera brief UGC Mara Vale via hermes, envia a Sergio por Telegram para aprobar. No publica sin aprobacion.",
+      "nodes": [
+        {
+          "name": "Daily 9am Bolivia",
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "notes": null
+        },
+        {
+          "name": "Build Mara Command",
+          "type": "n8n-nodes-base.set",
+          "notes": null
+        },
+        {
+          "name": "Run Hermes — Mara Daily",
+          "type": "n8n-nodes-base.ssh",
+          "notes": null
+        },
+        {
+          "name": "Manual Trigger",
+          "type": "n8n-nodes-base.manualTrigger",
+          "notes": null
+        }
+      ],
+      "executions": {
+        "data": [],
+        "nextCursor": null
+      }
+    }
+  ]
+}
