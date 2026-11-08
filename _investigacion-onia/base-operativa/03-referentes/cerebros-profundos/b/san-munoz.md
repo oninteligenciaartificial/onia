@@ -2,11 +2,11 @@
 
 ## Estado y alcance
 
-**PARCIAL · 8 de noviembre de 2026.** Tres audiovisuales distintos cuentan con lectura primaria suficiente para los cinco apartados y tiempos sustentados. Una cuarta candidata queda pendiente. La página comercial se analiza aparte. El mínimo de cuatro audiovisuales completos sigue pendiente.
+**CUATRO PIEZAS CUBIERTAS · 8 de noviembre de 2026.** P1–P4 cuentan con lectura primaria suficiente para los cinco apartados y tiempos sustentados. La página comercial tiene su propia sección. La entrega queda preparada para revisión del coordinador.
 
-La consulta de esta sesión se realizó el 8/11/2026, con comprobación de cierre a las 21:37 UTC. Se recuperó la ficha anterior, sus fuentes de marketing y audiovisual, las decisiones y el plan vigentes. Se aplicaron `preparar-oferta-y-embudo` y el apoyo `research`, sin delegación adicional. Modelo observado `null`, esfuerzo observado `null`. La configuración efectiva del hijo requiere cotejo del coordinador.
+La primera consulta se realizó el 8/11/2026, con comprobación a las 21:37 UTC, y quedó preservada en el commit `03a965882d0b960534dbf31f4e03d411e5d904dc`. La retoma del mismo hijo recuperó una fuente primaria adicional de Instagram a las 22:28 UTC. Conserva P1–P3 y sustituye la candidata histórica por un reel distinto con medio público, ASR corto y muestras visuales. Se aplicaron `preparar-oferta-y-embudo` y el apoyo `research`. Modelo observado `null`, esfuerzo observado `null`. La configuración efectiva del hijo requiere cotejo del coordinador.
 
-Se leyeron íntegros los tres textos derivados existentes. Para los tiempos se cotejaron los cues automáticos JSON originales en los rangos declarados abajo. La lectura permite analizar explicación, secuencia verbal y venta. La evaluación sonora, los cortes visuales y la interacción real con alumnos quedan fuera de esta evidencia. Las referencias a capacidades técnicas describen lo dicho por el autor en las piezas. Los nombres de modelos, costes y resultados anunciados requieren comprobación propia antes de adoptarse.
+Se leyeron íntegros los tres textos derivados existentes. Para los tiempos se cotejaron los cues automáticos JSON originales en los rangos declarados abajo. En P4 se leyó todo el ASR local y se inspeccionaron nueve posiciones visuales. La lectura permite analizar explicación, secuencia verbal y venta. La evaluación sonora integral, todos los cortes y la interacción real con alumnos quedan fuera de esta evidencia. Las referencias a capacidades técnicas describen lo dicho por el autor en las piezas. Los nombres de modelos, costes y resultados anunciados requieren comprobación propia antes de adoptarse.
 
 El uso para ONIA respeta al comprador aprobado, dueños de pequeños negocios de Santa Cruz. Clase 1, ordenar con Claude y práctica acompañada. Clase 2, vender. Clase 3, automatizar. Bs 50 grupal aprobado. VIP Bs 150 continúa propuesto. Las aplicaciones de esta ficha son propuestas de adaptación y no constituyen guiones de las clases. [Decisiones vigentes](../../../05-herramientas/2026-11-08-harness/00-decisiones.md) · [Plan vigente](../../../05-herramientas/2026-11-08-harness/plan-workshop.md).
 
@@ -17,7 +17,7 @@ El uso para ONIA respeta al comprador aprobado, dueños de pequeños negocios de
 | P1 · anrAaNvbp4M | video | Texto completo derivado de captions propios de YouTube, más cues JSON cotejados | `true` |
 | P2 · oFYznV9EYPg | video | Texto completo derivado de captions propios de YouTube, más cues JSON cotejados | `true` |
 | P3 · 4jWLq8Gn_4Y | video | Texto completo derivado de captions propios de YouTube, más cues JSON cotejados | `true` |
-| P4 · 5REPWhjX64A | video, candidata | Sólo reproducción externa declarada literal de captions. Fuente original bloqueada y sin tiempos | `false` |
+| P4 · Dfc2-y6IQF8 | reel | Medio público del autor, ASR completo de 139,112 s de audio y muestras visuales con tiempos | `true` |
 | C1 · Horizontes IA | página comercial/curso | HTML público actual y ficha pública Skool | No computa como audiovisual |
 
 `completa` significa cobertura suficiente del contenido para esta rúbrica. Los reels reproducidos dentro de P1–P3 forman parte de esas piezas y se cuentan una sola vez.
@@ -33,6 +33,8 @@ Autor registrado en metadata, Santiago Munoz, canal `@SantiMunozIA`. Consulta ac
 | P3 | 1271 | 2,389–1526,720 | 1525,166667 | 1,553 s |
 
 La sobreextensión procede del subtitulado automático. Los rangos del cierre que siguen identifican los cues leídos, con sus finales originales. El desfase no añade duración al medio ni acredita escucha.
+
+Hashes SHA-256 de las fuentes temporales conservadas. P1 `65ecd0780fd3aef0109353bbe874e73928e69f8804976e628130efe0942cbdbf`, P2 `96e04933bdbed49eed9dd2a4dff59997eff19cb0590ce326b0947836e6ddd9e8` y P3 `eed3a02b1d192a492b95f9d8e8a72496574c27fbe99cc140eb7d1f048354cbea`. Corresponden a los JSON de captions enlazados en cada pieza.
 
 ## P1 · Convertí a Claude en mi editor de videos (nivel 1 vs nivel 3)
 
@@ -123,30 +125,41 @@ Los capítulos de la descripción previa situaban un resultado en 14:30. Aquí s
 
 **PROPUESTA ONIA.** Tomar la revisión como acción del alumno. En clase 1, comprobar que Claude conservó horarios y tareas de sus notas. En clase 2, comprobar que un mensaje respeta precio, producto y condiciones suministradas. En clase 3, usar una demostración acotada con un caso correcto y otro que requiere al dueño. La adaptación se centra en reconocer y corregir el fallo observable. [Base P3](https://www.youtube.com/watch?v=4jWLq8Gn_4Y&t=1000).
 
-## P4 · Contraté a Claude como animador y esto pasó
+## P4 · Comenta agente y te paso el tutorial
 
-- Original candidato [YouTube 5REPWhjX64A](https://www.youtube.com/watch?v=5REPWhjX64A). Autor atribuido por el espejo, Santiago Munoz / `@SantiMunozIA`. Fecha y duración atribuidas por el espejo, 26/9/2026 y 20:16. Consulta 8/11/2026. Tipo `video`. `completa: false`.
-- Cobertura realmente leída, bloque Transcript completo de la reproducción externa. La página declara copiar captions publicados por YouTube. La fuente original devolvió `LOGIN_REQUIRED`, sin captions ni metadata de video. La procedencia queda sin cotejo primario. Rangos temporales leídos `null`. `fuente_tiempos: null`. El cálculo de primeras palabras como “30 segundos” del proveedor no sirve para fijar tiempos. [Reproducción externa consultada](https://prepublish.ai/youtube-transcript/5REPWhjX64A).
+- URL original [Instagram Dfc2-y6IQF8](https://www.instagram.com/p/Dfc2-y6IQF8/). El encabezado reproduce la parte textual del caption publicado. El reel muestra una llamada de demostración para agendar una cita.
+- Autor propietario del medio, `sanmunoz.ia`, confirmado por `owner.username` del embed individual. Consulta 8/11/2026 a las 22:28:25 UTC. Tipo `reel`. `completa: true`. [Embed primario](https://www.instagram.com/p/Dfc2-y6IQF8/embed/).
+- Duración declarada por Instagram 139,109 s. Duración del contenedor medida por ffprobe 139,223991 s. Audio decodificado y procesado 139,1121875 s. Medio público HTTP 200, 8.844.453 bytes, SHA-256 `a6ca78516e656a882cbf1e5958d876748e2055f74753f4f9c7f4faef1b719b2e`.
+- **Cobertura realmente leída.** Los 36 segmentos de ASR, desde 00:00,000 hasta el último fin 02:14,600, sobre la pista completa de audio de 02:19,112. Las posiciones visuales inspeccionadas, extraídas con búsqueda temporal explícita `-ss`, fueron 00:00, 00:20, 00:40, 01:00, 01:20, 01:40, 02:00, 02:12 y 02:17. La muestra de 02:17 permite leer el CTA final que el ASR no recoge. La zona posterior al último segmento carece de texto ASR recuperado. Las imágenes se muestrearon y el audio se procesó automáticamente, sin escucha continua.
+- **`fuente_tiempos`.** [ASR original local](/tmp/san-munoz-retoma-6uusdvc7/Dfc2-y6IQF8-asr-raw.json), con `start`/`end` de faster-whisper-small. SHA-256 `e96ad834cf106b008408fe8b242b1b226d8d0193cee44b8460837d02903e60a2`. [Medio primario local](/tmp/san-munoz-retoma-6uusdvc7/Dfc2-y6IQF8.mp4), [ffprobe](/tmp/san-munoz-retoma-6uusdvc7/Dfc2-y6IQF8-ffprobe.json) y [procedencia](/tmp/san-munoz-retoma-6uusdvc7/Dfc2-y6IQF8-procedencia.json). El último cue termina antes del medio y no necesita acotarse. Los nombres y dígitos que reconoce el ASR carecen de certificación humana y se omiten en esta ficha.
 
-### 1. Idea
+### 1. Idea que desarrolla
 
-**LECTURA EXTERNA PENDIENTE DE COTEJO.** Animaciones adaptadas al objetivo de un negocio, con instrucciones y estilos reutilizables. [Espejo](https://prepublish.ai/youtube-transcript/5REPWhjX64A).
+**HECHO REFERENTE.** Presenta una llamada en la que un agente virtual recibe la solicitud, pide datos, confirma lo entendido, ofrece horarios, solicita aceptación del envío de confirmación y anuncia el registro. Después el presentador abre la agenda y señala un evento coincidente con la demostración. Las imágenes de 00:00–01:40 incluyen el rótulo de clínica de demo y datos de ejemplo. El contenido muestra una simulación comercial publicada, con verificación visible de su salida. [P4, medio y ASR](https://www.instagram.com/p/Dfc2-y6IQF8/) · [Fuente temporal local](/tmp/san-munoz-retoma-6uusdvc7/Dfc2-y6IQF8-asr-raw.json).
 
 ### 2. Audiencia y problema
 
-Personas que desean promocionar o explicar servicios sin experiencia de animación. La atribución al autor sigue pendiente. [Espejo](https://prepublish.ai/youtube-transcript/5REPWhjX64A).
+**HECHO REFERENTE.** El caso representa un negocio que atiende citas por llamada y necesita trasladar una solicitud a su agenda. **INFERENCIA.** Puede atraer a dueños de negocios con reservas y a quienes buscan aprender a construir agentes para ofrecerlos como servicio. El caption y la placa final ofrecen un tutorial. El público exacto y las conversiones permanecen sin medición. [P4, caption del autor](https://www.instagram.com/p/Dfc2-y6IQF8/) · [Placa a 02:17](/tmp/san-munoz-retoma-6uusdvc7/final-137.jpg).
 
 ### 3. Apertura, desarrollo y cierre
 
-El espejo presenta promesa y demo inicial, preparación, decisiones de objetivo/estilo, revisión y comunidad al final. Los tiempos de las tres fases están pendientes. [Espejo](https://prepublish.ai/youtube-transcript/5REPWhjX64A).
+- **Apertura, 00:00–00:24,250.** Comienza dentro de una llamada. La voz del agente se presenta y ofrece atención. El interlocutor visible, que actúa como solicitante, pide una cita y responde sobre el servicio. El rótulo de demostración contextualiza el ejemplo. [P4, ASR 0–24,25 s](/tmp/san-munoz-retoma-6uusdvc7/Dfc2-y6IQF8-asr-raw.json) · [Muestras visuales](/tmp/san-munoz-retoma-6uusdvc7/muestra-posiciones-explicitas.jpg).
+- **Desarrollo, 00:24,250–01:51,600.** La voz del agente pide y confirma datos hasta 00:54,230. Entre 00:54,230–01:22,460 consulta preferencias y ofrece alternativas de horario. Entre 01:22,460–01:33,060 el interlocutor elige y acepta el envío de confirmación. Entre 01:33,060–01:51,600 el agente anuncia el registro, resume la cita y termina la llamada. La atribución de turnos se apoya en el contenido de las respuestas y en las etiquetas visibles del demo. [P4, segmentos temporales](/tmp/san-munoz-retoma-6uusdvc7/Dfc2-y6IQF8-asr-raw.json).
+- **Cierre y comprobación, 01:51,600–02:14,600.** El presentador comenta la prueba y busca el registro en la agenda. Se lee su intención de comprobar la cita entre 01:55,600–02:03,600. Entre 02:04,600–02:14,600 revisa el calendario y señala el resultado. El frame de 02:12 muestra esa revisión. En el frame de 02:17 aparece la invitación a comentar AGENTE para recibir el tutorial. Este CTA está sustentado por el fotograma y por el caption del autor. [ASR del cierre](/tmp/san-munoz-retoma-6uusdvc7/Dfc2-y6IQF8-asr-raw.json) · [CTA visual a 02:17](/tmp/san-munoz-retoma-6uusdvc7/final-137.jpg).
 
-### 4. Técnica
+La voz del agente, el interlocutor y el comentario del presentador cumplen papeles distintos en la escena. La publicación y el calendario mostrado sustentan el análisis de la demostración. La existencia de una reserva real, la entrega del mensaje y la fiabilidad sostenida del sistema siguen sin auditarse.
 
-Aparente demostración inicial y personalización guiada por preguntas. Falta cotejarla con contenido primario. [Espejo](https://prepublish.ai/youtube-transcript/5REPWhjX64A).
+### 4. Técnica de enseñanza y venta
 
-### 5. Qué tomar
+**HECHO REFERENTE.** Empieza con la tarea en marcha, mantiene visible el intercambio y termina comprobando una salida en otra pantalla. El recurso ofrecido es el tutorial mediante keyword. **INFERENCIA.** La secuencia deja que la utilidad de una tarea reconocible despierte interés antes de explicar la construcción. Los pasos de implementación requieren el tutorial posterior, cuyo envío no fue comprobado. [P4 original](https://www.instagram.com/p/Dfc2-y6IQF8/) · [ASR completo](/tmp/san-munoz-retoma-6uusdvc7/Dfc2-y6IQF8-asr-raw.json) · [Placa final](/tmp/san-munoz-retoma-6uusdvc7/final-137.jpg).
 
-**PROPUESTA ONIA CONDICIONAL.** Considerar preguntas de objetivo para clase 2 después del cotejo. Clases 1/3, aplicación pendiente. P4 queda excluida de las aplicaciones fundamentadas. [Espejo](https://prepublish.ai/youtube-transcript/5REPWhjX64A).
+### 5. Qué tomar para ONIA
+
+**PROPUESTA ONIA.** Clase 1 con Claude, pedir que el alumno revise si una tarea ordenada conserva los datos originales. Clase 2, abrir un ejemplo de servicio mostrando la solicitud del cliente y su respuesta útil antes de ofrecer el siguiente paso. Clase 3, usar una simulación sencilla de reserva con datos ficticios, confirmar campos y comprobar una salida visible. La secuencia transferible es solicitud → aclaración → confirmación → registro → revisión. Su alcance es una propuesta de ejercicio para pequeños negocios de Santa Cruz. [Base P4, desarrollo y revisión](https://www.instagram.com/p/Dfc2-y6IQF8/) · [Tiempos de referencia](/tmp/san-munoz-retoma-6uusdvc7/Dfc2-y6IQF8-asr-raw.json).
+
+### Distinción frente a P1–P3
+
+**COTEJO DE CONTENIDO.** P1 contiene un reel que explica tres niveles de edición. P2 reproduce un anuncio de Forja Inbox y sus funciones de conversación. P3 desarrolla reels sobre capacitación empresarial. P4 contiene el diálogo completo de una llamada de agendamiento, turnos de confirmación y revisión posterior del calendario. Estos contenidos se contrastaron con los tres textos derivados ya leídos. P4 añade una demostración distinta y no se contabiliza como otro extracto de los ejemplos contenidos en P1–P3. La evidencia disponible permite distinguir los cuatro guiones, mientras que su posible distribución en otros canales no fue investigada. [P1, texto](../../../99-archivo/recuperacion-secundaria/anrAaNvbp4M-texto-derivado.txt) · [P2, texto](../../../99-archivo/recuperacion-secundaria/oFYznV9EYPg-texto-derivado.txt) · [P3, texto](../../../99-archivo/recuperacion-secundaria/4jWLq8Gn_4Y-texto-derivado.txt) · [P4, texto ASR](/tmp/san-munoz-retoma-6uusdvc7/Dfc2-y6IQF8-asr-raw.json).
 
 ## C1 · Página comercial y curso, consulta separada
 
@@ -158,19 +171,21 @@ La ficha pública de Skool muestra USD 64/mes, comunidad privada y autor Santiag
 
 ## Patrón observado y límite
 
-**HECHO REFERENTE.** P1 conserva una entrada para comparar niveles, P2 reduce alternativas antes del resultado final y P3 descompone materiales y corrige un fallo. Los tres terminan ofreciendo un recurso, soporte o comunidad. [P1](https://www.youtube.com/watch?v=anrAaNvbp4M&t=680) · [P2](https://www.youtube.com/watch?v=oFYznV9EYPg&t=650) · [P3](https://www.youtube.com/watch?v=4jWLq8Gn_4Y&t=1000).
+**HECHO REFERENTE.** P1 conserva una entrada para comparar niveles, P2 reduce alternativas antes del resultado final y P3 descompone materiales y corrige un fallo. P4 comienza con una tarea de negocio en marcha y termina revisando el resultado. Los cuatro añaden una invitación a recurso, soporte o comunidad. P4 fundamenta su CTA en la placa visual y el caption. [P1](https://www.youtube.com/watch?v=anrAaNvbp4M&t=680) · [P2](https://www.youtube.com/watch?v=oFYznV9EYPg&t=650) · [P3](https://www.youtube.com/watch?v=4jWLq8Gn_4Y&t=1000) · [P4](https://www.instagram.com/p/Dfc2-y6IQF8/).
 
-**INFERENCIA.** Su enseñanza hace concreta una capacidad mediante resultado, decisiones e instrucciones de repetición. La muestra está concentrada en tres tutoriales de edición del mismo autor. Permite inferir una estructura reiterada en esas piezas, con alcance limitado para caracterizar toda su enseñanza o su embudo. La efectividad pedagógica, las conversiones y el cierre privado siguen sin medición.
+**INFERENCIA.** En esta muestra, la explicación extensa desarrolla decisiones y el reel ofrece una demostración breve con comprobación visible. Ambos formatos conectan la capacidad presentada con un siguiente paso. Tres de las cuatro piezas se concentran en edición y una en agendamiento. La efectividad pedagógica, las conversiones, la fiabilidad técnica y el cierre privado siguen sin medición.
 
 ## Tres aplicaciones fundamentadas para pequeños negocios de Santa Cruz
 
-1. **Clase 1, ordenar con Claude. HECHO REFERENTE P1.** Cambia el tratamiento manteniendo la entrada común. **INFERENCIA.** Así se puede juzgar qué cambio ayuda. **PROPUESTA ONIA.** Utilizar notas ficticias de una tienda, mostrar su lista ordenada y después una semana organizada. El participante revisaría que ninguna tarea desapareció y que los horarios coinciden con la entrada. Entregable propuesto, agenda revisada por su dueño. [P1, comparación](https://www.youtube.com/watch?v=anrAaNvbp4M&t=680).
-2. **Clase 2, vender. HECHO REFERENTE P2.** Presenta alternativas, explica preferencias y corrige antes de terminar. **INFERENCIA.** Elegir entre ejemplos hace más concreta la evaluación. **PROPUESTA ONIA.** Comparar tres mensajes para una oferta real de una panadería o peluquería, elegir el más claro y ajustar usando los datos aportados por el dueño. Entregable propuesto, un mensaje elegido con precio, producto y acción siguiente comprobados. [P2, selección](https://www.youtube.com/watch?v=oFYznV9EYPg&t=650).
-3. **Clase 3, automatizar. HECHO REFERENTE P3.** Detecta un resultado incorrecto y lo redirige. **INFERENCIA.** Una demo puede enseñar tanto salida como criterio de intervención. **PROPUESTA ONIA.** Simular clasificación de consultas de un pequeño negocio con un caso resoluble y otro incompleto. El dueño decide cuál responder y cuál revisar personalmente. Entregable propuesto, una regla de clasificación probada sobre ejemplos. [P3, corrección](https://www.youtube.com/watch?v=4jWLq8Gn_4Y&t=1000).
+1. **Clase 1, ordenar con Claude. HECHO REFERENTE P1/P4.** P1 mantiene la entrada común y P4 confirma datos antes de registrar una tarea. **INFERENCIA.** Comparar la salida con los datos de partida hace visible la revisión. **PROPUESTA ONIA.** Utilizar notas ficticias de una tienda, mostrar su lista ordenada y después una semana organizada en Claude. El participante comprobaría que conserva tareas, horarios y prioridades. Entregable propuesto, agenda revisada por su dueño. [P1, comparación](https://www.youtube.com/watch?v=anrAaNvbp4M&t=680) · [P4, confirmación 00:40,250–00:54,230](/tmp/san-munoz-retoma-6uusdvc7/Dfc2-y6IQF8-asr-raw.json).
+2. **Clase 2, vender. HECHO REFERENTE P2/P4.** P2 presenta alternativas y P4 muestra una utilidad antes de ofrecer el tutorial. **INFERENCIA.** La evaluación concreta del mensaje y el ejemplo de uso pueden preparar un siguiente paso claro. **PROPUESTA ONIA.** Comparar tres mensajes para una oferta real de una panadería o peluquería, elegir el más claro y revisar sus datos. Un ejemplo breve mostraría qué recibe el cliente antes de invitarlo a consultar o reservar. Entregable propuesto, un mensaje con precio, producto y acción siguiente comprobados. [P2, selección](https://www.youtube.com/watch?v=oFYznV9EYPg&t=650) · [P4, CTA a 02:17](/tmp/san-munoz-retoma-6uusdvc7/final-137.jpg).
+3. **Clase 3, automatizar. HECHO REFERENTE P3/P4.** P3 corrige una salida y P4 revisa el calendario después del anuncio de registro. **INFERENCIA.** Una demo enseña más cuando incluye la comprobación del resultado. **PROPUESTA ONIA.** Simular una reserva de un pequeño negocio con datos ficticios, confirmar los campos y revisar su salida. Incluir un caso incompleto para que el dueño determine qué debe aclarar. Entregable propuesto, una secuencia de solicitud y revisión probada sobre ambos ejemplos. [P3, corrección](https://www.youtube.com/watch?v=4jWLq8Gn_4Y&t=1000) · [P4, revisión 01:55,600–02:14,600](/tmp/san-munoz-retoma-6uusdvc7/Dfc2-y6IQF8-asr-raw.json).
 
-## Intentos fechados, barreras y recuperación exacta
+## Historial preservado de la primera entrega
 
-Todos los intentos siguientes se realizaron el 8/11/2026, antes de las 21:37 UTC. Se limitaron a lecturas públicas y medios ya existentes.
+La entrega `03a965882d0b960534dbf31f4e03d411e5d904dc` tenía tres piezas completas. Identificaba como candidata a `5REPWhjX64A`, denominada P4 en aquella versión, mediante el espejo de captions Prepublish. Esa candidata histórica no entra en el conteo vigente y se conserva aquí con ID H1. La P4 vigente es exclusivamente `Dfc2-y6IQF8`. El espejo mostraba una explicación de animaciones por objetivo y estilos, pero faltaban cotejo primario y tiempos. [H1 original](https://www.youtube.com/watch?v=5REPWhjX64A) · [Espejo histórico](https://prepublish.ai/youtube-transcript/5REPWhjX64A).
+
+Los intentos de esta tabla se realizaron el 8/11/2026 antes de las 21:37 UTC y corresponden a la primera entrega. Sus límites se conservan como historial.
 
 | Fuente o alternativa | Resultado de la consulta | Consecuencia |
 | --- | --- | --- |
@@ -182,14 +197,22 @@ Todos los intentos siguientes se realizaron el 8/11/2026, antes de las 21:37 UTC
 | Vimeo primera conversación `/video/1174395229/config` | HTTP 403 | Sin contenido legible |
 | Reproductor Vimeo Intro `/video/1174389260` | HTTP 401 | Bloqueo del reproductor |
 | Vimeo Explorer `1179745384`, enlazado desde landing | Config HTTP 403 | Sin contenido para analizar |
-| P4 watch de YouTube, un intento nuevo | Página con `playabilityStatus=LOGIN_REQUIRED`, captions vacíos y sin videoDetails | No se repitió el mismo método sobre más IDs |
-| P4 espejo Prepublish | Herramienta web permite leer texto, GET directo 403. Sin cues temporales publicados en el texto leído | Sigue siendo candidata sin cotejo primario |
+| H1 watch de YouTube `5REPWhjX64A`, un intento | Página con `playabilityStatus=LOGIN_REQUIRED`, captions vacíos y sin videoDetails | No se repitió el mismo método sobre más IDs |
+| H1 espejo Prepublish | Herramienta web permite leer texto, GET directo 403. Sin cues temporales publicados en el texto leído | Candidata histórica excluida del conteo |
 | Skool about | Texto público accesible mediante herramienta web, anuncia preview 3:12. GET directo 403 | El preview anunciado carece de contenido leído y no cuenta |
 
-Fuentes de recuperación [ruta gratuita del autor](https://www.horizontesia.com/ruta-claude-code), [Intro Vimeo](https://vimeo.com/1174389260), [primera conversación Vimeo](https://vimeo.com/1174395229), [preview Explorer](https://vimeo.com/1179745384), [P4 original](https://www.youtube.com/watch?v=5REPWhjX64A).
+Fuentes históricas [ruta gratuita del autor](https://www.horizontesia.com/ruta-claude-code), [Intro Vimeo](https://vimeo.com/1174389260), [primera conversación Vimeo](https://vimeo.com/1174395229), [preview Explorer](https://vimeo.com/1179745384), [H1 original](https://www.youtube.com/watch?v=5REPWhjX64A).
 
-**Próxima recuperación concreta.** El coordinador puede priorizar la pista original de subtítulos de P4 `5REPWhjX64A`, o el preview público Intro `1174389260` con captions temporales. Con ese archivo público disponible, la siguiente lectura debe localizar apertura, práctica y cierre, registrar rangos exactos y completar las cinco respuestas. Hasta obtener esa evidencia, el conteo permanece en tres piezas completas. Esta ficha conserva el objetivo de cuatro a seis piezas.
+## Retoma y evidencia nueva
+
+El 8/11/2026, a las 22:28 UTC, el GET ordinario del [perfil embebido del autor](https://www.instagram.com/sanmunoz.ia/embed/) devolvió HTTP 200. Se consultaron los embeds individuales de `Dfc2-y6IQF8`, `DfQpOEUojha`, `DfN23Vqo9nP` y `DfFjR4ZoJ92`, todos HTTP 200. Se seleccionó únicamente el primero para descargar y transcribir. Los otros tres aportaron metadata de candidatos y carecen de análisis de contenido en esta ficha. [Embed elegido](https://www.instagram.com/p/Dfc2-y6IQF8/embed/).
+
+El medio público de P4 devolvió HTTP 200 y se decodificó con FFmpeg. Un único proceso local de faster-whisper-small procesó 139,1121875 s de audio. Configuración `device=cpu`, `compute_type=int8`, `cpu_threads=2`, `num_workers=1`, `beam_size=5`, `vad_filter=true`, idioma español, `local_files_only=true`, `HF_HUB_OFFLINE=1` y `TRANSFORMERS_OFFLINE=1`. Se utilizó el snapshot autorizado ya presente. El ASR consumió **32,753 s de tiempo de pared**, dentro del presupuesto de 180 s, y finalizó con código 0. [Recibo local](/tmp/san-munoz-retoma-6uusdvc7/recibo-retoma.json) · [Script local](/tmp/san-munoz-retoma-6uusdvc7/transcribir.py).
+
+ONNX Runtime emitió un aviso al intentar persistir un identificador de telemetría y siguió con uno en memoria. El ASR contiene reconocimientos dudosos de nombres, números y una frase del comentario final. Se parafraseó la estructura y se conservaron los segmentos originales. El último segmento termina en 134,600 s, anterior a la duración del medio. [Log del ASR](/tmp/san-munoz-retoma-6uusdvc7/asr.log) · [Aviso del runtime](/tmp/san-munoz-retoma-6uusdvc7/asr.stderr).
+
+Los medios, el audio, los embeds, el ASR y las imágenes quedan preservados fuera de Git en `/tmp/san-munoz-retoma-6uusdvc7/`. Las rutas `/tmp` corresponden al entorno actual y requieren conservar ese directorio para reutilizar sus bytes. Esta ficha mantiene enlaces de procedencia pública, hashes y ventanas temporales para la revisión. El siguiente paso corresponde al coordinador, cotejar P1–P4 y su evidencia antes de integrar la entrega.
 
 ## Comprobación documental
 
-Se cotejaron títulos/autor/fechas con metadata conservada para P1–P3, se leyó el texto derivado completo de cada una y se inspeccionaron los rangos JSON declarados. Se comprobaron conteos de cues y sobreextensiones finales. Los enlaces locales apuntan a fuentes existentes en el checkout. La revisión independiente y la publicación corresponden al coordinador del grupo.
+Se cotejaron títulos/autor/fechas con metadata conservada para P1–P3, se leyó el texto derivado completo de cada una y se inspeccionaron los rangos JSON declarados. Se comprobaron conteos de cues y sobreextensiones finales. En la retoma se comprobó autor y HTTP público de P4, duración y hash del medio, lectura de sus 36 segmentos ASR, nueve posiciones visuales y diferencia de contenido frente a P1–P3. El inventario vigente contiene cuatro piezas completas y una página comercial. La revisión independiente y la publicación corresponden al coordinador del grupo.

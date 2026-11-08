@@ -1,124 +1,113 @@
-# Enrique Rocha / tododeia · investigación profunda parcial
+# Enrique Rocha / tododeia · cuatro piezas audiovisuales analizadas
 
-Consulta realizada el 8 de noviembre de 2026, UTC. `estado: PARCIAL`. `piezas_audiovisuales_completas: 0`. Se localizaron seis shorts distintos del canal oficial y se comprobaron sus barreras de recuperación. **Esta entrega no cumple la aceptación de cuatro a seis piezas audiovisuales con contenido primario y tiempos sustentados.** La lectura de una guía y de páginas comerciales se registra por separado.
+Consulta y retoma realizadas el 8 de noviembre de 2026, UTC. `estado: cobertura documental mínima alcanzada, pendiente revisión`. `piezas_audiovisuales_completas: 4`. Corpus vigente P1–P4, cuatro reels públicos distintos con ASR íntegro leído y tiempos del audio recuperado. P5–P6 son candidatas adicionales incompletas. C1 conserva la página comercial separada.
 
-## Identidad y procedencia
+La entrega inicial conservada en Git `03a9658` tenía cero piezas completas por bloqueo de YouTube y ausencia de los derivados históricos. Esta retoma añade acceso ordinario a embeds públicos de Instagram, cuatro medios, ASR local y muestreo visual. Sustituye la selección audiovisual vigente. Los seis shorts anteriores quedan como antecedente de acceso fallido en aquella entrega, sin duplicarlos ni sumarlos al corpus actual.
 
-**HECHO REFERENTE.** La página propia atribuye el proyecto a Enrique Rocha y declara @soyenriquerocha en Instagram y YouTube. El listado público de shorts corresponde a Soy Enrique Rocha, canal `UCFNddu8E_6ITF72_6lvZa2Q`, y contiene los seis IDs de esta ficha. Esa cadena identifica al creador de tododeia. [Sobre tododeia](https://www.tododeia.com/about), [canal y listado primario](https://www.youtube.com/@soyenriquerocha/shorts).
+## Identidad, recuperación y cobertura real
 
-Se releyeron la [ficha previa](../../cerebros/enrique-rocha.md), su [fuente comercial](../../fichas/marketing/enrique-rocha.md), el [informe audiovisual histórico](../../fichas/audiovisual/enrique-rocha.md) y las [decisiones vigentes](../../../05-herramientas/2026-11-08-harness/00-decisiones.md). La directora fue `preparar-oferta-y-embudo`, con apoyo de `research`. Se aplicó la restricción expresa de este encargo sobre delegación.
+**HECHO REFERENTE.** El sitio propio identifica al fundador y declara @soyenriquerocha. El perfil embed y los seis objetos `GraphVideo` devuelven `owner.username=soyenriquerocha`, ID de propietario `58244148135`. Se enlazan piezas de ese perfil. [Identidad propia](https://www.tododeia.com/about), [perfil público embed](https://www.instagram.com/soyenriquerocha/embed/).
 
-## Cobertura y método
+La vía autorizada fue GET ordinario a `/p/<ID>/embed/`, lectura de `contextJSON.gql_data.shortcode_media`, comprobación del propietario y GET de su `video_url`. Los seis embeds devolvieron metadata pública y los cuatro MP4 seleccionados HTTP 200. Se conservaron HTML, JSON de contexto, medios y ffprobe. El material inicial suma **206,599727 s**, inferior a 720 s, con cada pieza inferior a 180 s. Los guiones efectivamente leídos tratan edición iterativa, correo, acceso a recursos y asignación de trabajo a IA. Se cuentan una vez cada uno.
 
-Se leyó el JSON público `ytInitialData` de la pestaña de shorts mediante HTTP GET. Se extrajeron los IDs y títulos de `shortsLockupViewModel`, sin atribuirles contenido hablado. Para cada ID se leyó el estado del reproductor devuelto por la página pública `watch`. Los seis devolvieron `LOGIN_REQUIRED`, razón `Sign in to confirm you’re not a bot`, sin `captionTracks`. Se conservan las URLs de shorts como destinos canónicos de las piezas.
+**Fuente de tiempos.** `fuente_tiempos: ASR local faster-whisper-small sobre WAV derivado del MP4 primario, segmentos start/end en segundos; duración ffprobe`. Se usó el snapshot local `536b0662742c02347bc0e980a01041f333bce120`, CPU/int8, dos hilos, un worker, español, beam 5 y VAD, con Hugging Face y Transformers offline. Un proceso de transcripción por vez, timeout de 180 s por pieza y tope global 450 s. Los cuatro terminaron correctamente. Wall total **68,127 s**, incluidos arranques y cargas. El ASR produce texto automático y no acredita escucha humana.
 
-La ruta histórica `base-operativa/operacion/referentes-20261105/video/rocha/captions-normalized.json` no existe en este checkout. Tampoco se recuperó el MP4 histórico desde esa ruta. El informe del 5/11 cuenta 215 cuadros y 62 entradas de captions, pero esta sesión leyó el informe, sin acceso al texto crudo de esas entradas. Su cobertura permanece como antecedente documental. [Informe histórico](../../fichas/audiovisual/enrique-rocha.md).
+Los tiempos internos de los JSON ASR fueron **15,451 / 8,242 / 11,784 / 31,015 s**, suma **66,492 s**. Los wall por pieza publicados abajo son mediciones externas del proceso y suman 68,127 s. Las duraciones WAV informadas por ASR fueron **50,7834375 / 22,8730625 / 43,306625 / 89,2356875 s**. El contenedor MP4 incluye pistas con duraciones ligeramente diferentes y la extracción a WAV entrega la duración de audio. Se conservan ambas mediciones. Las marcas ASR corresponden al WAV, sin inferir un offset de alineación con el video a partir de esa diferencia.
 
-Las alternativas públicas realizadas fueron las siguientes.
+Se leyeron los **67 segmentos completos** y se inspeccionaron **16 cuadros**, cuatro por pieza. Las ventanas que siguen son paráfrasis con sus marcas ASR, redondeadas a centésimas, sin reconstruir una transcripción literal. Los nombres y algunas palabras del ASR presentan errores. En P2 la apertura es especialmente imprecisa y en P4 hay errores léxicos en la invitación final. Se analiza su función general, sin atribuir esas palabras dudosas como citas. Los cuatro últimos cues terminan dentro de sus medios. El tramo entre el último cue y el fin del contenedor se registra como cobertura sin texto ASR, sin inventar habla adicional.
 
-- El lector web intentó abrir los shorts P2 y P3 y devolvió `Cache miss` en ambos. Las búsquedas exactas de los IDs nuevos P4 y P5 no aportaron transcripción primaria.
-- Los endpoints públicos `https://www.youtube.com/api/timedtext?v=LsOQDp76898&lang=es&kind=asr` y `https://www.youtube.com/api/timedtext?v=t7J-xcXjBlA&lang=es&kind=asr` respondieron HTTP 200 con cero bytes. Eso describe esas solicitudes concretas. Sin pistas anunciadas por el reproductor, esas respuestas no prueban inexistencia de subtítulos.
-- El GET público a `https://www.instagram.com/soyenriquerocha/` devolvió HTTP 429. La búsqueda `"soyenriquerocha" site:instagram.com/reel/` no recuperó una pieza verificable. La búsqueda equivalente en YouTube tampoco aportó texto audiovisual.
-- Se inspeccionó el HTML público de `/community`, `/community/crea-contenido-con-claude`, `/community/editor-pro-max` y `/community/videos-a-skills`. Las cuatro respuestas fueron HTTP 200 al usar un User-Agent de navegador. No se encontraron etiquetas `video`, `iframe` o `track`, ni enlaces MP4, VTT o SRT en esas respuestas. Sólo apareció el canal general y, en la guía sobre videos, una URL de ejemplo con un ID de marcador. El primer GET sin ese encabezado había recibido HTTP 403 en la guía. [Índice](https://www.tododeia.com/community), [guía de contenido](https://www.tododeia.com/community/crea-contenido-con-claude), [Editor Pro Max](https://www.tododeia.com/community/editor-pro-max), [Videos a skills](https://www.tododeia.com/community/videos-a-skills).
-- Las búsquedas `"Enrique Rocha" "tododeia" "entrevista"` y `"soyenriquerocha" "podcast"` no localizaron una entrevista audiovisual primaria con la identidad comprobada y texto temporal accesible. Los resultados sobre herramientas de transcripción y personas homónimas quedaron fuera de la muestra.
+La muestra visual es discontinua y permite describir los cuadros inspeccionados. Las afirmaciones sobre software, entregabilidad, resultados y autoría de edición siguen siendo declaraciones del referente. No se ejecutaron sus herramientas.
 
-Las respuestas HTTP y JSON se examinaron en la salida de herramientas. Esta ficha conserva sus resultados y las rutas de reproducción. No se crearon archivos de medios o transcripciones. No hubo escucha, visionado nuevo ni ASR en esta sesión.
+Temporales preservados en `/tmp/onia-enrique-retoma-xhha7ogo/`. Cada pieza tiene `<ID>.html`, `<ID>.context.json`, `<ID>.mp4`, `<ID>.wav`, `<ID>.ffprobe.json`, `<ID>.asr.json`, `<ID>.asr.log` y cuatro JPG. Comunes, `manifest.json`, `asr-ejecucion.json`, `frames-muestreo.json`, `hoja-16-cuadros.jpg` y `transcribir.py`. Todos permanecen fuera de Git y pueden perderse al retirarse la VM. No se borró material. En `fuente.json` se conservó una corrección explícita del valor de fecha inicial escrito erróneamente como 2026-11-09, frente al reloj real de 2026-11-08 UTC.
 
-## P1 · Claude Fable 5 + Codex
+## P1 · Edición iterativa con dos herramientas
 
-- URL exacta · https://www.youtube.com/shorts/LsOQDp76898
-- Título del listado primario · *Claude Fable 5 + Codex: Step-by-Step Guide to Building With Both*.
-- Autor · Soy Enrique Rocha / @soyenriquerocha.
-- Consulta · 2026-11-08. `tipo: reel` — short de YouTube. `completa: false`. `fuente_tiempos: null` para esta investigación primaria.
-- Cobertura efectiva · ID y título del listado oficial, estado del reproductor y lectura íntegra del informe histórico. Captions y medio originales pendientes.
+- URL primaria exacta · https://www.instagram.com/p/DfeYbLOCU-A/
+- Caption original usado como título · «Claude como editor de video y Motion 😬 gracias a las herramientas de la comunidad y paciencia».
+- Autor · Enrique Rocha / @soyenriquerocha. Consulta 2026-11-08 UTC. `tipo: reel`. `completa: true`.
+- Duración ffprobe **50,895283 s**. Metadata **50,78 s**. ASR leído **0–50,76 s**, 16 segmentos. Wall **15,882 s**. Cuadros **0 / 16,795 / 33,591 / 49,895 s**.
+- `fuente_tiempos` · `DfeYbLOCU-A.asr.json`, contrastado con duración y muestras visuales.
 
-1. **Idea central. HECHO DOCUMENTAL HISTÓRICO.** El informe previo atribuye a la pieza separar planificación y ejecución entre herramientas para gestionar límites. Esta atribución procede del análisis anterior, cuya transcripción no se pudo releer. [Informe](../../fichas/audiovisual/enrique-rocha.md).
-2. **Audiencia y problema. INFERENCIA LIMITADA.** El título y ese informe apuntan a usuarios que ya construyen con asistentes de código y encuentran límites de uso. El encaje con principiantes de un pequeño comercio queda por comprobar.
-3. **Apertura, desarrollo y cierre.** El antecedente describe problema de consumo → reparto de tareas → inserto de interfaz → guía por comentario. Sus intervalos históricos son 0–10 s, 26–61 s, 62–71,5 s y 95–106,97 s respectivamente. Son tiempos del informe anterior, sin nuevo cotejo con captions o medio primario. No satisfacen `fuente_tiempos` en este encargo. [Secuencia histórica](../../fichas/audiovisual/enrique-rocha.md).
-4. **Técnica de enseñanza y venta. HECHO DOCUMENTAL HISTÓRICO.** El informe describe ilustración del reparto, pantalla y CTA de recurso. Quedan pendientes lenguaje exacto, duración efectiva de cada argumento y relación entre comentario y entrega.
-5. **Qué tomar para clase 1/2/3. PROPUESTA ONIA.** Evaluar la separación entre pedir un plan, revisarlo y ejecutarlo. Su prioridad sería clase 3. En clase 1 se conservaría una tarea simple con Claude. En clase 2, revisión humana del mensaje antes de usarlo. Esta adaptación está pendiente de corroborar P1.
+1. **Idea central. HECHO REFERENTE según ASR.** Atribuye su edición a dos herramientas, referencias y correcciones. Declara unas 17 versiones.
+2. **Audiencia/problema. INFERENCIA.** Creadores que esperan resolver la edición con IA y encuentran resultados iniciales insuficientes.
+3. **Apertura/desarrollo/cierre. HECHO REFERENTE.** **0–11,72 s**, presenta el resultado y las iteraciones. **11,72–38,28 s**, herramientas, referencias, intención y corrección. **38,28–50,76 s**, ofrece guía por comentario y pide difusión. **50,76–50,90 s**, resto del contenedor sin texto ASR.
+4. **Técnica. INFERENCIA.** Resultado → dificultad admitida → condiciones → recurso. Los cuadros muestran plano cercano, rótulo, subtítulos y señal de seguir.
+5. **Qué tomar. PROPUESTA ONIA.** Clase 2, revisar un borrador comercial con criterio explícito. Clase 1, corregir prioridades. Clase 3, comprobar una salida antes de repetirla.
 
-**Faltante y alternativa intentada.** Recuperar captions originales o texto del autor vinculado a este ID. GET watch bloqueado, timedtext vacío y derivados locales ausentes. P4–P6 se probaron como alternativas genuinas del mismo canal.
+## P2 · Correo y lenguaje promocional
 
-## P2 · Manual y Skills personales
+- URL primaria exacta · https://www.instagram.com/p/DfeQUwrCtP7/
+- Caption original usado como título · «Evita SPAM de Correos con Claude 😮‍💨 Aumenta la entrega de tus correos con IA 👇».
+- Autor · Enrique Rocha / @soyenriquerocha. Consulta 2026-11-08 UTC. `tipo: reel`, fragmento de exposición presencial. `completa: true` para este clip publicado.
+- Duración ffprobe **22,984898 s**. Metadata **22,87 s**. ASR leído **0–22,80 s**, 11 segmentos. Wall **8,633 s**. Cuadros **0 / 7,585 / 15,170 / 21,985 s**.
+- `fuente_tiempos` · `DfeQUwrCtP7.asr.json`, contrastado con duración y muestras visuales.
 
-- URL exacta · https://www.youtube.com/shorts/T_V-GujTLXA
-- Título del listado primario · *Claude Fable 5: manual y cómo usar Skills personales*.
-- Autor · Soy Enrique Rocha / @soyenriquerocha.
-- Consulta · 2026-11-08. `tipo: reel`. `completa: false`. `fuente_tiempos: null`.
-- Cobertura efectiva · ID y título del listado oficial, respuesta de reproductor y error del lector web. Cero texto hablado recuperado.
+**Roles acreditados.** El propietario de la publicación es Enrique Rocha / @soyenriquerocha. El fragmento muestra una exposición ante público y proyección, sin intercambio de entrevista observado. Se analiza la explicación publicada. La evidencia disponible no acredita el nombre del expositor mediante presentación o etiqueta, ni la autoría de edición.
 
-1. **Idea central.** El título anuncia un manual y Skills personales. El planteamiento real queda pendiente.
-2. **Audiencia y problema. INFERENCIA DE SELECCIÓN.** Podría servir para estudiar cómo introduce instrucciones reutilizables a usuarios de Claude. El nivel de entrada y la necesidad concreta permanecen desconocidos.
-3. **Apertura, desarrollo y cierre.** Pendientes los tres tramos y sus tiempos. El título no permite reconstruirlos.
-4. **Técnica de enseñanza y venta.** Pendiente. No se acreditan demo, analogías, CTA ni venta.
-5. **Qué tomar para clase 1/2/3. PROPUESTA CONDICIONAL.** Si una recuperación posterior demuestra una explicación accesible, evaluar instrucciones guardadas para ordenar tareas en clase 1, conservar tono comercial en clase 2 y repetir un procedimiento en clase 3. Son preguntas para revisar la pieza.
+1. **Idea central. HECHO REFERENTE según ASR.** Presenta una habilidad para ajustar correos y atribuye a ciertas palabras problemas de clasificación promocional.
+2. **Audiencia/problema. INFERENCIA.** Personas que redactan con IA y quieren que sus correos lleguen al destinatario.
+3. **Apertura/desarrollo/cierre. HECHO REFERENTE.** **0–3,48 s**, introduce la herramienta con léxico ASR incierto. **3,48–13,56 s**, problema de correo promocional. **13,56–22,80 s**, explica el ajuste de redacción. Cierra con esa explicación, sin CTA verbal reconocido. **22,80–22,98 s**, resto sin texto ASR.
+4. **Técnica. INFERENCIA.** Un problema cotidiano y una solución presentada en lenguaje breve. Cuadros con expositor, público, proyección, rótulo y subtítulos. Falta prueba de entregabilidad.
+5. **Qué tomar. PROPUESTA ONIA.** Clase 2, revisar claridad y tono de un mensaje del negocio. Clase 1, aportar contexto. Clase 3, incluir aprobación de borradores.
 
-**Faltante y alternativa intentada.** Captions o guion temporal completo. GET watch dio `LOGIN_REQUIRED`; lector web del short dio `Cache miss`. Se contrastó con la guía escrita propia S1 como apoyo pedagógico separado.
+## P3 · Recursos accesibles para quien empieza
 
-## P3 · Conexión con información propia
+- URL primaria exacta · https://www.instagram.com/p/DfeOvR9iiyH/
+- Caption original usado como título · «La bóveda lA es Gratis siempre para todos porque la meta siempre será ayudar a toda la comunidad».
+- Autor · Enrique Rocha / @soyenriquerocha. Consulta 2026-11-08 UTC. `tipo: reel`, fragmento de conversación en escenario. `completa: true` para este clip publicado.
+- Duración ffprobe **43,395238 s**. Metadata **43,30 s**. ASR leído **0–43,20 s**, 10 segmentos. Wall **12,201 s**. Cuadros **0 / 14,320 / 28,641 / 42,395 s**.
+- `fuente_tiempos` · `DfeOvR9iiyH.asr.json`, contrastado con duración y muestras visuales.
 
-- URL exacta · https://www.youtube.com/shorts/MHAD0IKofgc
-- Título del listado primario · *Claude ahora se conecta a toda tu información y da miedo lo que puede hacer*.
-- Autor · Soy Enrique Rocha / @soyenriquerocha.
-- Consulta · 2026-11-08. `tipo: reel`. `completa: false`. `fuente_tiempos: null`.
-- Cobertura efectiva · ID, título y barreras. Cero texto hablado recuperado.
+**Roles acreditados.** Enrique Rocha / @soyenriquerocha es el autor de la publicación según `owner`. El rol anfitrión–invitado no está determinado. El clip y las muestras carecen de introducción o etiquetas de voz que permitan acreditarlo. Se analiza el discurso publicado sin atribuir turnos individuales ni edición al publicador y sin identificar participantes por su apariencia.
 
-1. **Idea central.** El título anuncia conexión con información. Sistemas, permisos y resultado mostrado quedan pendientes.
-2. **Audiencia y problema. INFERENCIA DE SELECCIÓN.** Candidata para estudiar cómo presenta información dispersa a usuarios de IA. La amplitud prometida por el titular requiere contrastar la pieza.
-3. **Apertura, desarrollo y cierre.** Pendientes los tres tramos y sus tiempos.
-4. **Técnica de enseñanza y venta.** El titular utiliza curiosidad y sorpresa. Es una observación del título, sin evidencia de cómo se sostiene el argumento audiovisual ni de su CTA.
-5. **Qué tomar para clase 1/2/3. PROPUESTA CONDICIONAL.** Revisar si enseña a elegir el contexto necesario. Podría orientar información de tareas en clase 1, datos del producto en clase 2 y datos de entrada en clase 3. Esta posibilidad aún carece de ejemplo audiovisual leído.
+1. **Idea central. HECHO REFERENTE según ASR del clip publicado.** El discurso expresa intención de ayudar a quienes empiezan con recursos aplicables. No se establece como creencia personal comprobada del propietario.
+2. **Audiencia/problema. HECHO REFERENTE del contenido publicado.** El discurso menciona emprendedores con pocos recursos y experiencias narradas de herramientas pagadas poco útiles.
+3. **Apertura/desarrollo/cierre. HECHO REFERENTE del contenido publicado.** **0–9,72 s**, dificultad económica inicial. **9,72–29,04 s**, relatos sobre herramientas y recursos gratuitos. **29,04–43,20 s**, propósito de ayuda y referencia autobiográfica dentro del discurso. Cierre de posicionamiento, sin CTA verbal reconocido. **43,20–43,40 s**, resto sin texto ASR.
+4. **Técnica. INFERENCIA.** Identificación con el principiante y relato de propósito. Muestras con interlocutor, micrófonos, público, rótulo y subtítulos.
+5. **Qué tomar. PROPUESTA ONIA.** En las tres clases, seleccionar recursos por la tarea que resuelven. Clase 1, comprobar el acceso antes de practicar con Claude.
 
-**Faltante y alternativa intentada.** Transcripción y tiempos, además de comprobar el alcance de la demo. GET watch bloqueado y lector web `Cache miss`. El HTML de guías propias se examinó buscando un medio accesible alternativo.
+## P4 · Contexto y misión para trabajar con IA
 
-## P4 · Prompts que funcionan a la primera
+- URL primaria exacta · https://www.instagram.com/p/DfbNZ5FCHBU/
+- Caption original usado como título · «Es tu compañero de TRABAJO, Dale la misión 😮‍💨 todo este video lo EDITO Claude al 100% cada sonido y corte lo hizo todo CLAUDE».
+- Autor · Enrique Rocha / @soyenriquerocha. Consulta 2026-11-08 UTC. `tipo: reel`. `completa: true`.
+- Duración ffprobe **89,324308 s**. Metadata **89,209 s**. ASR leído **0–89,10 s**, 30 segmentos. Wall **31,411 s**. Cuadros **0 / 29,477 / 58,954 / 88,324 s**.
+- `fuente_tiempos` · `DfbNZ5FCHBU.asr.json`, contrastado con duración y muestras visuales.
 
-- URL exacta · https://www.youtube.com/shorts/t7J-xcXjBlA
-- Título del listado primario · *How to write Claude prompts that work the first time*.
-- Autor · Soy Enrique Rocha / @soyenriquerocha.
-- Consulta · 2026-11-08. `tipo: reel`. `completa: false`. `fuente_tiempos: null`.
-- Cobertura efectiva · ID y título nuevos del listado oficial, estado del reproductor y respuesta timedtext vacía. El título inglés del listado no demuestra idioma hablado.
+1. **Idea central. HECHO REFERENTE según ASR.** Pide dar trabajo, información y contexto al asistente mediante la analogía de un compañero recién contratado.
+2. **Audiencia/problema. INFERENCIA.** Usuarios que esperan resultados completos con peticiones insuficientes.
+3. **Apertura/desarrollo/cierre. HECHO REFERENTE.** **0–27,22 s**, cuestiona hábitos y falta de información. **27,26–74,14 s**, autoridad invocada, analogía y repreguntas. **74,14–89,10 s**, refuerza la misión y ofrece guía/entrevista por comentario. La frase exacta final tiene errores ASR. **89,10–89,32 s**, resto sin texto ASR.
+4. **Técnica. INFERENCIA.** Confrontación inicial, analogía laboral e invitación a contextualizar. Cuadros alternan rostro y gráficos. Las generalizaciones sobre agentes carecen de prueba técnica aquí.
+5. **Qué tomar. PROPUESTA ONIA.** Clase 1, contexto y pedido para ordenar tareas. Clase 2, datos del producto. Clase 3, entradas y criterio de revisión.
 
-1. **Idea central.** El título promete mejorar prompts. La fórmula enseñada y los ejemplos permanecen pendientes.
-2. **Audiencia y problema. INFERENCIA DE SELECCIÓN.** Posible pertinencia para personas que obtienen respuestas poco adecuadas. Falta identificar su público explícito.
-3. **Apertura, desarrollo y cierre.** Pendientes los tres tramos y sus tiempos.
-4. **Técnica de enseñanza y venta.** La promesa del título es observable. Queda pendiente si muestra contraste de entradas/salidas, práctica o recurso de cierre.
-5. **Qué tomar para clase 1/2/3. PROPUESTA CONDICIONAL.** Evaluar cómo explica contexto, pedido y resultado. El uso prioritario sería clase 1 con una solicitud de organización. En clase 2 se examinaría un pedido comercial y en clase 3 una instrucción repetible, una vez recuperado el contenido.
+## P5–P6 · Candidatas adicionales, fuera del mínimo completado
 
-**Faltante y alternativa intentada.** Captions o texto temporal autoral. GET watch bloqueado, timedtext HTTP 200 de cero bytes y búsqueda de ID sin transcripción. Se revisó S1 para obtener apoyo escrito verificable.
+**P5.** URL exacta https://www.instagram.com/p/DfYQ4RcRLMz/. Caption original «Claude Editando y agregando efectos de video 😅 usando las herramientas de la comunidad y @higgsfield.ai los límites no existen. #higgsfieldcreator #claude». Autor @soyenriquerocha, consulta 2026-11-08 UTC. `tipo: reel`. `completa: false`. `fuente_tiempos: null`. Metadata declara **60,649 s**. Se leyó caption, propietario y URL pública del medio en el embed. No se recuperó el medio ni se leyó su contenido verbal.
 
-## P5 · Claude y Shopify
+1. Idea anunciada por caption, edición y efectos.
+2. Audiencia inferida para selección, creadores.
+3. Apertura, desarrollo, cierre y tiempos pendientes.
+4. Técnica de enseñanza/venta pendiente.
+5. Aplicación a clases pendiente. La alternativa ejecutada fue completar P1–P4, que ya aportan cuatro guiones distintos.
 
-- URL exacta · https://www.youtube.com/shorts/bJGvavTY3j0
-- Título del listado primario · *How to Connect Claude to Shopify to Manage Your Store*.
-- Autor · Soy Enrique Rocha / @soyenriquerocha.
-- Consulta · 2026-11-08. `tipo: reel`. `completa: false`. `fuente_tiempos: null`.
-- Cobertura efectiva · ID y título nuevos del listado oficial y estado del reproductor. Cero texto hablado recuperado.
+**P6.** URL exacta https://www.instagram.com/p/DfWgwmBiZ1x/. Caption original «Tu Claude no se vuelve tonto, el error eres tú 😅». Autor @soyenriquerocha, consulta 2026-11-08 UTC. `tipo: reel`. `completa: false`. `fuente_tiempos: null`. Metadata declara **80,455 s**. Se leyó caption, propietario y URL pública del medio en el embed. No se recuperó el medio ni se leyó su contenido verbal.
 
-1. **Idea central.** El título anuncia una conexión con Shopify para gestión de tienda. Funciones concretas, requisitos y resultado quedan pendientes.
-2. **Audiencia y problema. INFERENCIA DE SELECCIÓN.** Podría dirigirse a comerciantes que ya usan esa plataforma. No hay base para asumir ese requisito entre asistentes de Santa Cruz.
-3. **Apertura, desarrollo y cierre.** Pendientes los tres tramos y sus tiempos.
-4. **Técnica de enseñanza y venta.** Pendiente observar interfaz, demostración, pasos y CTA. Nombrar una integración en el título no acredita su ejecución.
-5. **Qué tomar para clase 1/2/3. PROPUESTA CONDICIONAL.** Candidata para estudiar una demostración de clase 3. Para clase 1/2 sólo se evaluaría cómo explica los datos de un negocio y su oferta. No se incorpora Shopify como requisito de ONIA.
+1. Idea anunciada por caption, errores de uso atribuidos al usuario.
+2. Audiencia inferida para selección, usuarios insatisfechos con Claude.
+3. Apertura, desarrollo, cierre y tiempos pendientes.
+4. Técnica de enseñanza/venta pendiente.
+5. Aplicación a clases pendiente. La alternativa ejecutada fue completar P1–P4. No se infiere duplicación ni diferencia de guion con P4 a partir del caption.
 
-**Faltante y alternativa intentada.** Contenido verbal temporal y comprobación del resultado mostrado. GET watch bloqueado y búsqueda del ID sin pieza textual recuperable. Se buscaron embeds en las guías propias y entrevistas con identidad verificable.
+## Huellas de los cuatro medios y transcripciones
 
-## P6 · Prompts y gasto
+SHA-256 completos, calculados sobre los archivos preservados en la carpeta temporal indicada. `manifest.json` conserva además los SHA-256 WAV y los resultados ffprobe.
 
-- URL exacta · https://www.youtube.com/shorts/4yVqeDu3O98
-- Título del listado primario · *How to write great Claude prompts and stop wasting your money*.
-- Autor · Soy Enrique Rocha / @soyenriquerocha.
-- Consulta · 2026-11-08. `tipo: reel`. `completa: false`. `fuente_tiempos: null`.
-- Cobertura efectiva · ID y título nuevos del listado oficial y estado del reproductor. Cero texto hablado recuperado.
+- P1 `DfeYbLOCU-A.mp4` · `34c36216d0f6c7979029a6daaa1b4dc557eaeb45044be7e047d376d74148dba0`. `DfeYbLOCU-A.asr.json` · `cb20657fd8504a9a7cbd47755dd1721a8edf92573b700d7acd01fde18a7796b2`.
+- P2 `DfeQUwrCtP7.mp4` · `7b4ee2ef68df4a07f6a9248ed6945bc392bc43a1330e5b19f8bc390cc60f2006`. `DfeQUwrCtP7.asr.json` · `264a76717f5f9bf0589cb4c856f41f9bb9dabad33861a365e78822fa8b7c7b2a`.
+- P3 `DfeOvR9iiyH.mp4` · `3c5a7f2c111c4b9128ea35e9f62fa82ebd3601eed48a9af2c8806579314e7ec4`. `DfeOvR9iiyH.asr.json` · `308be1d8b8ceb7f4d78df4aea1c72bba37d81a206ac6c0bb8bb5299876c471fb`.
+- P4 `DfbNZ5FCHBU.mp4` · `48a704c4a8bfac47e64098c834ba82ba2881b02141ae90c8943c122765919e95`. `DfbNZ5FCHBU.asr.json` · `8e3d088f72dbfa7305cba6a9c62e8e63f98c682806fe0f11913bcba9b93ef6bb`.
 
-1. **Idea central.** El título vincula calidad del prompt y gasto. Método y evidencia del ahorro quedan pendientes.
-2. **Audiencia y problema. INFERENCIA DE SELECCIÓN.** Posible orientación a usuarios que pagan por IA. El plan o modelo aludido es desconocido.
-3. **Apertura, desarrollo y cierre.** Pendientes los tres tramos y sus tiempos.
-4. **Técnica de enseñanza y venta.** El titular usa un costo percibido para despertar interés. Quedan pendientes prueba, explicación y CTA.
-5. **Qué tomar para clase 1/2/3. PROPUESTA CONDICIONAL.** Revisar si enseña a definir mejor un pedido antes de enviarlo. Podría ayudar en las tres clases, pero no se adopta promesa de ahorro monetario sin evidencia propia.
-
-**Faltante y alternativa intentada.** Captions o texto temporal del autor y sustento de la afirmación económica. GET watch bloqueado. La alternativa documental S1 permite analizar un método escrito sin sumar una pieza al mínimo.
+`manifest.json` · `824e7499d77f3d67275d85e96c2d59d3d48872c0fd731771cd7329e78d515e6d`.
 
 ## C1 · Página comercial separada
 
@@ -134,22 +123,25 @@ Se reabrieron como fuentes exactas complementarias el [hub](https://www.tododeia
 
 **HECHO REFERENTE.** Se leyó el cuerpo de *Crea contenido con Claude · investigación, guiones, b-roll y portadas + 3 agentes que lo hacen por ti*, desde apertura hasta FAQ y cierre. Ordena siete etapas, aporta prompts y plantea conservar la participación humana al seleccionar ideas y grabar. Las secciones de guion usan trabajos anteriores para extraer una fórmula y proponen lectura en voz alta. La parte de agentes presenta reutilización de instrucciones y encadenamiento. Sus afirmaciones técnicas y de ahorro son declaraciones del autor. Es una guía escrita, sin tiempos audiovisuales. [S1, texto primario](https://www.tododeia.com/community/crea-contenido-con-claude).
 
-## Patrón observado y límite de la muestra
 
-**HECHO REFERENTE.** En la selección del listado oficial, cuatro títulos se centran en construcción, integración o acceso a información y dos en prompts. C1 explica público y resultados antes del precio. S1 avanza desde un mapa de etapas hacia tareas, ejemplos de instrucciones y reutilización. Estas son observaciones de títulos y texto primario escrito. [P1–P6, listado oficial](https://www.youtube.com/@soyenriquerocha/shorts), [C1](https://luma.com/5td5jr2y?locale=es), [S1](https://www.tododeia.com/community/crea-contenido-con-claude).
+La página C1 se volvió a abrir en esta retoma y mantiene el texto de oferta y estado agotado descritos. La guía S1 conserva su lectura documental anterior como apoyo escrito. Las cuatro piezas audiovisuales del mínimo vigente son P1–P4.
 
-**INFERENCIA.** La muestra documental sugiere comunicación centrada en una tarea y un siguiente recurso. Con cero audiovisuales primarios recuperados no se puede establecer un patrón repetido de apertura hablada, ritmo, edición, voz o cierre entre piezas. La coincidencia temática entre títulos tampoco verifica el método enseñado.
+## Patrón observado y límite de muestra
 
-## Tres aplicaciones concretas condicionadas por la evidencia
+**HECHO REFERENTE del contenido publicado.** P1 y P4 terminan ofreciendo una guía por comentario. P2 concluye la explicación y P3 concluye con un relato de propósito, sin atribución individual de turnos. Así se distinguen cierres distintos dentro de cuatro clips. P1 admite iteraciones y P4 insiste en dar contexto. [P1](https://www.instagram.com/p/DfeYbLOCU-A/), [P2](https://www.instagram.com/p/DfeQUwrCtP7/), [P3](https://www.instagram.com/p/DfeOvR9iiyH/), [P4](https://www.instagram.com/p/DfbNZ5FCHBU/).
 
-1. **PROPUESTA ONIA · clase 1, ordenar.** Usar una tarea cotidiana de un comercio y revisar si el pedido contiene contexto suficiente antes de aceptar la respuesta de Claude. Entregable futuro verificable, una lista priorizada que el dueño corrija. P4 se conserva como fuente candidata para estudiar cómo lo explica Rocha. El apoyo actualmente leído es S1, que hace explícitos audiencia, contexto y tarea en sus prompts. Esta aplicación tiene sustento escrito auxiliar y sigue pendiente de sustento audiovisual P4. [P4](https://www.youtube.com/shorts/t7J-xcXjBlA), [S1](https://www.tododeia.com/community/crea-contenido-con-claude).
-2. **PROPUESTA ONIA · clase 2, vender.** Hacer que el dueño aporte un mensaje propio y corrija el borrador generado antes de usarlo. Entregable futuro verificable, un texto comercial que conserve datos reales y una revisión del dueño. S1 aporta el procedimiento escrito de partir de guiones propios y pulirlos en voz alta. P2 queda como candidata para comprobar cómo presenta instrucciones reutilizables. No se atribuye ese procedimiento a P2 mientras siga sin texto primario. [P2](https://www.youtube.com/shorts/T_V-GujTLXA), [S1](https://www.tododeia.com/community/crea-contenido-con-claude).
-3. **PROPUESTA ONIA · clase 3, automatizar.** Mostrar un proceso acotado con entrada, resultado y revisión humana visibles. Entregable futuro verificable, que el asistente identifique qué información entra y qué salida debe comprobar. P1 es referencia documental histórica sobre reparto de tareas y P5 candidata temática para observar una demo de gestión de tienda. S1 sí permite examinar una cadena escrita de pasos. La selección concreta de automatización requiere una pieza audiovisual recuperada y el alcance aprobado de la clase. [P1](https://www.youtube.com/shorts/LsOQDp76898), [P5](https://www.youtube.com/shorts/bJGvavTY3j0), [S1](https://www.tododeia.com/community/crea-contenido-con-claude).
+**INFERENCIA.** En esta muestra la enseñanza combina un problema reconocible con una orientación de uso. El paso comercial visible es una invitación a recurso en dos piezas. No se observó la entrega por privado, el pago ni la clase completa. Cuatro clips seleccionados desde un embed de perfil no permiten inferir frecuencia del método o eficacia comercial. El ASR cubre todo el contenido reconocido, mientras las 16 imágenes cubren instantes concretos. Prosodia, música y sincronía fina quedan sin escucha evaluada.
 
-## Próximos pasos y comprobación
+## Tres aplicaciones para ONIA
 
-El coordinador puede retomar P1 recuperando el MP4 o `captions-normalized.json` del archivo original autorizado del 5/11 y cotejando ID, cobertura y tiempos. Para P2–P6 hace falta un medio público accesible o captions/texto temporal autoral ligado al ID. Conservar `completa: false` hasta leer el contenido y responder los cinco apartados con marcas sustentadas. Recuperar al menos cuatro piezas distintas antes de reevaluar la aceptación. Los fallos de esta sesión no justifican nuevos intentos idénticos de `watch` mientras no cambie la condición de acceso.
+1. **PROPUESTA ONIA · clase 1, ordenar con Claude.** Pedir al dueño que aporte actividad del negocio, pendientes y restricciones antes de solicitar prioridades. Revisar juntos si la salida respeta esas condiciones. Entregable propuesto, lista corregida por su dueño. La analogía laboral inspira la explicación. [P4, 31,14–74,14 s](https://www.instagram.com/p/DfbNZ5FCHBU/).
+2. **PROPUESTA ONIA · clase 2, vender.** Tomar un mensaje real del negocio, definir el tono y revisar un borrador con una corrección observable. Entregable propuesto, versión aprobada por el dueño. Se toma de P1 la iteración guiada y de P2 la atención a la redacción. La entregabilidad exigiría otra prueba. [P1, 24,36–38,28 s](https://www.instagram.com/p/DfeYbLOCU-A/), [P2, 13,56–22,80 s](https://www.instagram.com/p/DfeQUwrCtP7/).
+3. **PROPUESTA ONIA · clase 3, automatizar.** Describir una tarea con entrada, salida esperada y revisión humana antes de mostrar su repetición. Entregable propuesto, que el participante identifique los tres elementos en un caso sencillo. P4 aporta el criterio de información y misión. P3 orienta la selección de recursos aplicables. [P4, 39,90–74,14 s](https://www.instagram.com/p/DfbNZ5FCHBU/), [P3, 29,04–43,20 s](https://www.instagram.com/p/DfeOvR9iiyH/).
 
-Comprobación documental realizada sobre esta entrega, seis IDs diferentes, seis estados incompletos, fuentes comerciales y guía separadas, ausencia de citas habladas inventadas y distinción entre antecedente, inferencia y propuesta. El archivo contiene investigación y aplicaciones propuestas, sin producción de clases ni síntesis entre grupos.
+Estas aplicaciones conservan el público aprobado de pequeños negocios de Santa Cruz, las tres clases ordenar/vender/automatizar, Claude en clase 1 y Bs50 grupal aprobado. VIP Bs150 permanece propuesto. Son aplicaciones de investigación para que el coordinador evalúe. [Decisiones vigentes](../../../05-herramientas/2026-11-08-harness/00-decisiones.md).
 
-`modelo_observado: null`. `esfuerzo_observado: null`. Esta sesión hija carece de evidencia de runtime que permita acreditar esos valores.
+## Comprobación y entrega
+
+Se verificaron cuatro IDs, cuatro propietarios coincidentes, cuatro descargas HTTP 200, cuatro resultados ASR correctos y duraciones por debajo de los topes. Se leyeron íntegros los 67 segmentos y se abrió la hoja de 16 cuadros. Los últimos cues fueron **50,76 / 22,80 / 43,20 / 89,10 s**, inferiores a sus medios. La selección actual cumple el mínimo documental de cuatro piezas con cinco apartados y fuente de tiempos. La aceptación independiente corresponde al coordinador/revisor.
+
+`modelo_observado: null`. `esfuerzo_observado: null`. Estos campos corresponden al LLM de la sesión hija, sin metadatos de runtime acreditados. El modelo de ASR utilizado y su configuración sí están observados y registrados arriba.

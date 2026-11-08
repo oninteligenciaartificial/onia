@@ -83,3 +83,90 @@ Paquete de 38 archivos: ocho Markdown, un JSON y 29 JPEG pequeños; integridad d
 La entrega es parcial: Erik1, Enrique0, Ali4, San3, Cormac3 y Bastian4 piezas completas; no se declara aceptación global. Las fuentes auxiliares y bloqueadas no reemplazan el mínimo. No se escribieron clases ni síntesis entre A/B/C. No se tocaron tareas, briefing, memoria, reglas u otros grupos. No hubo compras, registros, mensajes a personas, producción, instalaciones, ASR nuevo, servicios ni configuraciones globales.
 
 Publicación autorizada únicamente en `origin/codex/ws-cerebros-b-20261108`, sin force ni amend. El hash de esta entrega se informa al usuario y se coteja con la referencia remota después del push; no se embebe un hash autorreferencial. El cierre de harness, revisión independiente, aceptación e integración corresponden al coordinador. Esta entrega no declara integración en master.
+
+
+## Retoma de la misma tarea · fuentes públicas y ASR corto
+
+La primera entrega y sus comprobaciones anteriores corresponden al commit `03a965882d0b960534dbf31f4e03d411e5d904dc`, que se conserva íntegro en la historia. Esta sección registra la continuación autorizada; no reinterpreta el resultado parcial anterior como aceptación. Inicio desde esa misma rama/HEAD y worktree limpio. No se modifica el registro ni el briefing canónicos.
+
+Se releyeron AGENTS, reglas comunes, boss-memoria, decisiones/plan del workshop y directora/apoyo research. Se reanudan los hijos originales, secuencialmente y con sus mismos archivos exclusivos: prioridad Erik, Enrique, San y Cormac. Ali y Bastian ya tenían cuatro piezas y no se reabren para inflar el corpus. Cada hijo conserva la primera versión mediante Git y sus propios auxiliares fuera del repo; el principal actualizará únicamente índice, cobertura y evidencia.
+
+La instrucción actual permite ASR breve: pesos small ya existentes, offline, CPU/int8, dos hilos y un trabajador; máximo180s por nueva pieza, secuencial y con presupuesto acotado. Prevalece sobre la exclusión anterior de ASR nuevo de la primera entrega. No se instala ni descarga modelo. No se borra ningún archivo ni temporal; medios y transcripciones extensas se conservan fuera de Git. Detención de una fuente ante auth/403/429, sin cookies, proxies o bypass.
+
+Metodología C: la carpeta no existe en este checkout ni en el master remoto consultado `e677c7cd804621ecdbd65138be25de39f800f23a`. Se leyó solamente la documentación pertinente EVIDENCIA y apartados técnicos de gonzalo-teba/beltran-briones desde el worktree C, sin escribir allí ni abrir sus metadatos Git. Método: embed público individual → metadata/propietario/medio público → audio mono16kHz con FFmpeg si hace falta → FFprobe → small offline. La limpieza de temporales mencionada en C no se hereda: la instrucción vigente prohíbe borrar.
+
+El snapshot local comprobado está en `~/asr/modelos/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120`. No se usa el wrapper predeterminado que puede escribir fuera de la carpeta o descargar pesos; scripts auxiliares sólo en directorios temporales nuevos y salida declarada. Las rutas temporales son evidencia complementaria; la entrega conservará fuente pública, duración, método, huellas y ventanas interpretadas, sin transcripciones largas.
+
+### Erik · hijo original reanudado y terminado
+
+ID `/root/erik_taveras`, modelo/esfuerzo solicitado heredado `gpt-6.1-sol/high`, observado `null/null`. Estado nativo `completed` comprobado antes de reanudar Enrique. Corpus vigente cinco completas: preview previa y cuatro reels nuevos, con formatos/guiones distintos. El principal leyó la ficha vigente completa, los cuatro ASR íntegros y metadata de autor/medio; cotejó las cuatro huellas MP4 declaradas, configuración del script y dos láminas de tres imágenes. No inspeccionó video continuo ni afirma escucha.
+
+273,589297s de material nuevo, 78 segmentos y88,356s de wall de transcripción; no coste facturado. DfIxCRDuvXU excede1,581s en su último cue: cierre limitado a78,179s y confirmado por muestra77,47s; no se alteró el JSON original. Novedades/planes/créditos se mantienen como dichos del autor, sin validación técnica ni acciones de cuenta. Primera versión íntegra dentro del bloque histórico cercado y en03a9658; sus candidatos no se cuentan de nuevo.
+
+ASR conservados fueraGit bajo `/tmp/onia-erik-retoma-20261108-jzkgnwkt/`; SHA-256 cotejados por el principal:
+
+| ID | SHA-256 JSON ASR | Duración medida(s) | Wall ASR(s) |
+|---|---|---:|---:|
+| DfcPRmlxlbr | `8005240064ba0450580dd37074243e79e8c2c4c97f99bcf3c5b6de15e8f9f0c6` | 59.625986 | 17.655 |
+| DfZ-HLAuVAV | `24c1fb4aaab162178a62167140ad0558fce2cec4645c64241eb3b19d31198ecc` | 30.229524 | 10.265 |
+| DfP6T1XJliW | `041b1f56e19437f74bde84fe70827d613c99321c4cd386ce915c4a69d767eabb` | 105.555057 | 35.503 |
+| DfIxCRDuvXU | `da8070b151f194b05ab93e7958b4eece9124b953262bb9872d65e8ad933dc5e1` | 78.178730 | 24.933 |
+
+### Enrique · hijo original reanudado y terminado
+
+ID `/root/enrique_rocha`, solicitado heredado `gpt-6.1-sol/high`, observado `null/null`; `completed` cotejado antes de reanudar San. Cuatro nuevas piezas de @soyenriquerocha comprobadas por embed/medio200 y ASR íntegro, con guiones de edición, correo, recursos y contexto. Candidatas extra P5/P6 siguen incompletas y fuera del corpus vigente P1–P4; no se usan para afirmar el mínimo. Los shorts bloqueados de la primera entrega quedan en03a9658.
+
+Principal leyó ficha completa, los67 segmentos y la hoja de16 imágenes; cotejó ocho huellas declaradas (cuatro MP4 y cuatro JSON ASR) y parámetros del script: offline/small/CPUint8/2hilos/1worker. 206,599727s de MP4; wall externo68,127s e internoASR66,492s son medidas diferentes, no gasto ni CPUfacturada. Las duraciones WAV son algo menores que los contenedores y no se infiere un offset de video. Últimos cues dentro deaudio. La afirmación antispam y el resto de prestaciones siguen atribuidas, sin probar entregabilidad ni ejecutar herramientas. C1 reabierta por el hijo.
+
+Temporales conservados: `/tmp/onia-enrique-retoma-xhha7ogo/` (56archivos según entrega del hijo); sin borrar ni copiar transcripciones/medios alrepo. Error declarado: el auxiliar `fuente.json` se inició con fecha2026-11-09 y se corrigió explícitamente a2026-11-08 UTC dejando nota; no se presenta la fecha errónea como real ni se altera la evidencia canónica. Las ocho huellas de medios/ASR se conservaron y cotejaron.
+
+### San · hijo original reanudado y terminado
+
+ID `/root/san_munoz`, solicitado heredado `gpt-6.1-sol/high`, observado `null/null`; `completed` cotejado antes de reanudar Cormac. P1–P3 conservadas, nuevaP4 `Dfc2-y6IQF8` completa; la antigua candidata `5REPWhjX64A` quedaH1histórica y excluida. Guion de llamada/agendamiento contrastado con los tres textos de edición previos: no es otro extracto de esos ejemplos.
+
+Principal leyó los36 segmentos del ASR evitando reproducir identificadores de ejemplo, comparó la ficha vigente contra la primera y abrió las muestras temporales explícitas y cuadros132/137. El rótulo identifica clínica de demo/datos de ejemplo; se separan agente, interlocutor y presentador. No se afirma reserva o envío real ni se copian nombres/teléfonos. CTA AGENTE a137s sustentado por frame, no por ausencia de texto ASR.
+
+Modelo/script observado small offline CPUint8/2hilos/1worker, beam5VAD. Audio139,1121875s, MP4139,223991s, wallASR32,753s,36segmentos hasta134,6s; no metraje posterior inventado. Cinco huellas cotejadas y coincidentes: tres JSON captions previos, MP4 nuevo y ASR nuevo. JSONASR SHA-256 `e96ad834cf106b008408fe8b242b1b226d8d0193cee44b8460837d02903e60a2`; MP4 `a6ca78516e656a882cbf1e5958d876748e2055f74753f4f9c7f4faef1b719b2e`.
+
+Temporales preservados en `/tmp/san-munoz-retoma-6uusdvc7/`. Corrección de método: la cuadrícula exploratoria con filtrofps no se usa para fijar tiempos; se extrajeron posiciones explícitas mediante-ss y se mantuvo la cuadrícula anterior sin borrarla. Aviso ONNX de identificador de telemetría no bloqueó el proceso; no se modificó configuración para resolverlo. Ningún medio ni transcript extenso nuevo se copió aGit.
+
+### Cormac · hijo original reanudado y terminado
+
+ID `/root/cormac_hayden`, solicitado heredado `gpt-6.1-sol/high`, observado `null/null`; `completed` cotejado antes de la aclaración final del hijo Enrique. P1–P3 conservadas y nuevaP4 `DfTCQtuIRPJ` completa. Owner78346194006/cormachdn coincide con el reelP1; no se inventa migración acormacbuilds. Un GraphVideo/post, no un conjunto de assets contados como piezas. Guion de rutina/botellas distinto del escritorio y dos montajes. Las candidatas antiguas C1–C3 siguen incompletas y no cuentan.
+
+Principal leyó la ficha actualizada y los22 segmentos íntegros, abrió11muestras0/10/…/100s y cotejó cinco huellas declaradas (MP4,WAV,JSON,TXT,contacto). Modelo/scriptobservado smallofflineCPUint8/2hilos/1worker, beam5VAD; una ejecución33,109s dewall, fuente101,003946s, últimoASR100,80s. JSONASR SHA-256 `40172e4a7a9081062a7983bd4b1643a6340710407f1feda4405e8846953909d1`. El CTA aOasis pertenece al caption y no se presenta como frase hablada. Las propiedades/relaciones con salud se describen sólo como afirmaciones del emisor; no se validan ni recomiendan.
+
+Temporales nuevos conservados en `/tmp/cormac-retoma-20261108-y_cijoug/`, sin borrar ni copiarmedios/transcriptsextensos aGit. Los CDN temporales quedan sólo fueraGit. Las tres candidatas sin contenido suficiente se preservan como tales y dejan de ser necesarias para el mínimo.
+
+### Aclaración final de atribución y cierre de escritores
+
+Se reanudó brevemente al mismo hijo `/root/enrique_rocha`, después de terminar las cuatro recuperaciones, sin nuevos ASR o fuentes: aclaró P3 como discurso publicado con roles anfitrión/invitado no determinados y sin asignar turnos individuales ni edición al propietario. P2 se distingue como exposición presencial. No cambió el corpus ni sus67segmentos/huellas. Todos los hijos originales terminaron sus turnos; no hubo nuevos ejecutores ni nietos, y nunca más de un hijo trabajando. Los cuatro escritores de ficha de la retoma conservaron sus archivos exclusivos.
+
+La evidencia de la primera entrega se comprobó conservada byte a byte como prefijo de este documento, además de permanecer en03a9658. Ali y Bastian se cotejaron byte a byte contra03a9658 y están sin cambios. Los temporales nuevos y las29imágenes previas permanecen; no se eliminó ningún archivo. La matriz final selecciona sólo el corpus vigente completo: candidatos adicionales e históricos permanecen en las fichas o primera entrega y se excluyen del conteo.
+
+### Resultado documental de la retoma
+
+| Slug | Hijo original reanudado | Completas antes→ahora | Nuevos clips | Material MP4(s) | Wall ASR registrado(s) |
+|---|---|---:|---:|---:|---:|
+| erik-taveras | `/root/erik_taveras` | 1→5 | 4 | 273.589297 | 88.356 |
+| enrique-rocha | `/root/enrique_rocha` | 0→4 | 4 | 206.599727 | 66.492 |
+| san-munoz | `/root/san_munoz` | 3→4 | 1 | 139.223991 | 32.753 |
+| cormac-hayden | `/root/cormac_hayden` | 3→4 | 1 | 101.003946 | 33.109 |
+
+Ali4 y Bastian4 permanecen sin cambios: total vigente25completas, con mínimo4en cada uno de los seis. Se reutilizaron los hijos originales, heredando la solicitudSol6.1/high; modelo/esfuerzo conversacionales efectivos siguen no expuestos (`null/null`). No se lanzaron otros ejecutores, chats ni nietos. El último turno de aclaración de Enrique terminó en `completed`; no quedan hijos escribiendo.
+
+Total de10 nuevos clips: 720.416961s de contenedores MP4, máximo individual139,223991s, todos bajo180s. Los campos internos wall de transcripción suman220.709s; sus alcances se declaran por hijo y no equivalen al tiempo global de VM ni CPU/gasto facturado. Se mantuvo un único ASR activo, offline/CPUint8/2hilos/1worker, sin instalaciones ni pesos nuevos. Se cotejaron los203 segmentos nuevos; en San se omitieron identificadores del ejemplo al reproducir la salida de control.
+
+Las limitaciones restantes no se ocultan: ASR automático con léxico imperfecto; muestras visuales discontinuas; reloj editorial de Ali no sincronizado; sin escucha integral, compra, eficacia comercial o garantía técnica/médica acreditadas. Las candidatas excluidas siguen sin contenido suficiente y no se convierten en completas por alcanzar el mínimo con otras. Las propuestas ONIA siguen separadas de los hechos: Claude en clase1, Bs50 grupal aprobado y VIP sólo propuesto.
+
+### Comprobaciones finales de esta ampliación
+
+JSON parseado y esquema cotejado: seis slugs en orden, 25 piezas seleccionadas completas, 4–6 por referente, cinco apartados presentes y fuente temporal existente/URL válida por pieza. Diez JSON ASR nuevos leídos; para Enrique, cuya salida no repite los parámetros CPU, se cotejó directamente el script offline con 2hilos/1worker, sin modificar los resultados. Un primer pase del control esperaba esos campos en todos los JSON y se corrigió el control, no la fuente.
+
+Se comprobaron 257 enlaces Markdown renderizables: URLs con sintaxis/host válidos, destinos locales y fragmentos existentes, incluidas las rutas temporales preservadas en este entorno. La disponibilidad global de las candidatas bloqueadas no se afirma. La validación distingue el corpus vigente del bloque histórico cercado de Erik y de las candidatas adicionales de otras fichas. Sin IDs seleccionados duplicados; el cotejo semántico/visual de guiones se describe por referente.
+
+Paquete conservado de 38archivos: ocho Markdown, un JSON y29JPEG previos (576.862bytes), estos últimos cotejados byte a byte con03a9658. Ali/Bastian íntegros sin cambios y primera EVIDENCIA íntegra como prefijo. Siete archivos modificados, todos bajo la carpeta exclusiva B; cero archivos borrados y ningún archivo nuevo fuera de la asignación. Los medios/transcripts nuevos permanecen fueraGit. `git diff --check` pasó antes de preparar el índice. El control de índice/commit y publicación se realiza a continuación sobre esta entrega.
+
+Revisión de contenido: los ASR nuevos y ventanas coinciden con las cinco respuestas; roles, muestras, condiciones, diferencias de duración y afirmaciones no comprobadas quedan declarados. Los tiempos que exceden medio no se convierten en metraje, los fotogramas exploratorios no fijan tiempos y las propiedades sanitarias/antispam no se adoptan como hechos probados. No se realizaron clases completas, síntesis entre A/B/C, registros, mensajes a personas, compras, API pagas ni activaciones. Estos son cotejos proporcionales de documentación/fuentes y Git, no una suite de tests documentales ni un veredicto independiente.
+
+La primera entrega permanece en03a9658 y como prefijo íntegro de esta evidencia. Esta ampliación se publica mediante un nuevo commit descendiente en `origin/codex/ws-cerebros-b-20261108`, sin amend ni force; el hash se informa y coteja con remoto al terminar. No se modifica el registro/briefing canónico, otras carpetas ni master. Cierre del harness, revisión independiente, aceptación e integración corresponden al coordinador.
