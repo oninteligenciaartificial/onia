@@ -1,0 +1,21 @@
+{
+  "correcciones": [
+    "VIP sólo propuesta en índice y nota vigente19fichas",
+    "límite0..2hijos por ejecutor;1enesteencargo; sin nietos; revisor0",
+    "retoma recibe estado/proximo paso y último veredicto íntegro"
+  ],
+  "suite": {
+    "total": 129,
+    "aprobadas": 128,
+    "omitidas": 1,
+    "fallos": 0,
+    "segundos": 33.287
+  },
+  "revision_auxiliar": "Agente nativo revisar_git_sandbox, sólo lectura; detectó pérdida de feedback en retoma y recomendó comprobación de cero explícito y defaults hijos. Correcciones aplicadas y nueva prueba end-to-end sintética aprobada.",
+  "fuentes_runtime": [
+    "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+    "https://github.com/openai/codex/blob/rust-v0.167.0/codex-rs/core/config.schema.json"
+  ],
+  "sin_modelos_en_tests": true,
+  "limites": "Límite configurado por CLI; observación de subagentes reales pendiente del lote. No limpia huérfanos ni es ACL de archivos por hijo."
+}

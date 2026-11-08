@@ -1,5 +1,8 @@
 # Erik Taveras · cerebro para OnIA
 
+> Corrección de contexto, 8/11/2026: Bs50 grupal está aprobado; VIP Bs150 y sus condiciones siguen siendo propuesta según [decisiones vigentes](../../05-herramientas/2026-11-08-harness/00-decisiones.md). Las menciones al VIP más abajo conservan el contexto del borrador histórico y no acreditan aprobación.
+
+
 estado: parcial
 
 Corte: 8/11/2026. Síntesis de evidencia documental del 5/11, sin ejecutar sus instrucciones ni entrar a productos privados. **Sí existe transcripción previa:** preview Hermes, doce segmentos 00:00–00:58,40 sobre pista de 61,67 s, conservada fuera de `asr/` en [erik-asr.txt](../../99-archivo/recuperacion-secundaria/erik-asr.txt). Faltan escucha, ritmo continuo de cortes, clase completa con práctica/corrección y cierre privado. Precios históricos, no cotización actual.

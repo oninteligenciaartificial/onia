@@ -1,5 +1,8 @@
 # Álvaro Risoglio
 
+> Corrección de contexto, 8/11/2026: Bs50 grupal está aprobado; VIP Bs150 y sus condiciones siguen siendo propuesta según [decisiones vigentes](../../05-herramientas/2026-11-08-harness/00-decisiones.md). Las menciones al VIP más abajo conservan el contexto del borrador histórico y no acreditan aprobación.
+
+
 estado: parcial
 
 Actualización: 8 de noviembre de 2026. Síntesis documental del corpus; no nueva escucha ni visionado continuo. Los datos comerciales son observaciones históricas del 5/11, no precios vigentes confirmados hoy.

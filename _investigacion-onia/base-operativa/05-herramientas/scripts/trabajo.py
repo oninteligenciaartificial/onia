@@ -201,6 +201,10 @@ def validate_sessions(row):
                 value = nonempty(session.get(key), key)
                 if not Path(value).is_absolute():
                     raise ValueError('Ruta Git privada no absoluta.')
+        if 'subagentes_maximos' in session:
+            limit = session['subagentes_maximos']
+            if type(limit) is not int or limit not in range(3) or (session['rol'] == 'revisor' and limit):
+                raise ValueError('Límite de subagentes inválido.')
         for key in ('pid', 'supervisor_pid'):
             if session.get(key) is not None and (type(session[key]) is not int or session[key] <= 0):
                 raise ValueError('PID inválido.')

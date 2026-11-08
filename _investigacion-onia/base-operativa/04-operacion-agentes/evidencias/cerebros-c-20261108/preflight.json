@@ -1,0 +1,28 @@
+{
+  "preflight_comun": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/preflight.json",
+  "id": "cerebros-c-20261108",
+  "grupo": "contenido-marca",
+  "referentes": [
+    "gonzalo-teba",
+    "beltran-briones",
+    "toto-artuso",
+    "nick-bare",
+    "jeff-nippard",
+    "alvaro-risoglio",
+    "voltra"
+  ],
+  "ruta": "03-referentes/cerebros-profundos/c",
+  "autorizado": true,
+  "runtime": {
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "high",
+    "subagentes_maximos": 1,
+    "auth_chatgpt": true
+  },
+  "revisor": {
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "ultra",
+    "responsable": "cerebros-revisor-c",
+    "subagentes_maximos": 0
+  }
+}

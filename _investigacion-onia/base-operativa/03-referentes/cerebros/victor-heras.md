@@ -1,5 +1,8 @@
 # Víctor Heras · cerebro para OnIA
 
+> Corrección de contexto, 8/11/2026: Bs50 grupal está aprobado; VIP Bs150 y sus condiciones siguen siendo propuesta según [decisiones vigentes](../../05-herramientas/2026-11-08-harness/00-decisiones.md). Las menciones al VIP más abajo conservan el contexto del borrador histórico y no acreditan aprobación.
+
+
 estado: parcial
 
 Corte: 8/11/2026. Integra páginas, ASR V1/V2 e inspección visual documentados el 5/11; no nueva auditoría. Faltan precio/condiciones de la oferta final, DM/cierre privado, escucha y ritmo continuo de cortes. Las citas son texto automático, con errores posibles; no resultados verificados.

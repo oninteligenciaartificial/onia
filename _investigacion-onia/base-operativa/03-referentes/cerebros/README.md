@@ -2,7 +2,7 @@
 
 Corte: 8/11/2026. **18 personas + Voltra = 19 cerebros individuales.** El nombre del encargo «18 referentes» se conserva en la entrega, pero no excluye a Cormac ni a la marca. Prioridad de elaboración: Pedro, Heras y Erik; después el resto.
 
-Contexto vigente, fuente: solicitud de Sergio en esta sesión del 8/11/2026: workshop **«Tu negocio con IA: ordena, vende y automatiza»**, tres clases, **Bs50 grupal / Bs150 VIP**, para dueños de negocio; continuidad posterior con OnIA Platform. Las propuestas de guion, ejercicios y DM están marcadas como propuestas propias. No se heredan nombre, precio o fecha de talleres antiguos. Falta concretar las inclusiones VIP; no se inventan.
+Contexto vigente, fuente: solicitud de Sergio en esta sesión del 8/11/2026: workshop **«Tu negocio con IA: ordena, vende y automatiza»**, tres clases, **Bs50 grupal aprobado; VIP Bs150 sólo propuesto**, para dueños de negocio; continuidad posterior con OnIA Platform. Corrección vigente: [00-decisiones](../../05-herramientas/2026-11-08-harness/00-decisiones.md) prevalece sobre los precios y condiciones propuestos en las fichas históricas. Las propuestas de guion, ejercicios y DM están marcadas como propuestas propias. No se heredan nombre, precio o fecha de talleres antiguos. Falta aprobar el VIP y sus condiciones; no se presenta como oferta vigente.
 
 Cada cerebro cubre: oferta/precios, captación y cierre, enseñanza, tono/citas, edición observada y aplicación/límites. Precios del corpus del 5/11 son históricos; las fuentes enlazadas no acreditan vigencia actual. Los ASR/captions son automáticos y sus citas requieren cotejo antes de publicación literal.
 

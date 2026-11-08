@@ -529,6 +529,48 @@ class SessionTests(unittest.TestCase):
             self.assertEqual(os.environ['OPENAI_API_KEY'], 'fixture')
         self.assertEqual(self.row()['sesiones'][0]['esfuerzo'], 'low')
 
+    def test_subagents_default_off_and_invalid_before_mutation(self):
+        self.prepare()
+        for value in (-1, 3, True, '1'):
+            with self.assertRaisesRegex(ValueError, 'Subagentes'):
+                self.launch(dry=True, subagents=value)
+        self.assertNotIn('sesiones', self.row())
+        cmd = self.launch(dry=True)['comando']
+        self.assertIn('agents.enabled=false', cmd)
+        self.assertIn('features.multi_agent=false', cmd)
+        self.assertIn('features.multi_agent_v2=false', cmd)
+        self.assertFalse(any('max_concurrent_threads' in arg for arg in cmd))
+
+    def test_subagents_limit_persists_resume_and_reviewer_is_independent(self):
+        self.prepare()
+        launched = self.launch(subagents=1, model='gpt-6.1-sol', effort='high')
+        self.assertIn('agents.max_concurrent_threads_per_session=1', launched['comando'])
+        self.assertIn('agents.max_depth=1', launched['comando'])
+        self.assertIn('agents.default_subagent_model="gpt-6.1-sol"', launched['comando'])
+        self.assertIn('agents.default_subagent_reasoning_effort="high"', launched['comando'])
+        first = self.wait_finished()['sesiones'][-1]
+        resumed = self.launch(resume=True)
+        self.assertIn('agents.enabled=true', resumed['comando'])
+        second = self.wait_finished()['sesiones'][-1]
+        self.assertEqual(second['subagentes_maximos'], 1)
+        self.assertEqual(second['session_id'], first['session_id'])
+        disabled = self.launch(resume=True, subagents=0)
+        self.assertIn('agents.enabled=false', disabled['comando'])
+        self.assertEqual(self.wait_finished()['sesiones'][-1]['subagentes_maximos'], 0)
+        self.deliver()
+        self.close()
+        with self.assertRaisesRegex(ValueError, 'no delega'):
+            self.launch(reviewer='reviewer', subagents=1)
+        reviewed = self.launch(reviewer='reviewer', model='gpt-6.1-sol', effort='ultra')
+        self.assertIn('agents.enabled=false', reviewed['comando'])
+        self.assertIn('model_reasoning_effort="ultra"', reviewed['comando'])
+        self.wait_finished()
+        self.assertEqual(self.row()['sesiones'][-1]['subagentes_maximos'], 0)
+        invalid = json.loads(json.dumps(self.row()))
+        invalid['sesiones'][-1]['subagentes_maximos'] = 1
+        with self.assertRaisesRegex(ValueError, 'subagentes'):
+            trabajo.validate_sessions(invalid)
+
     def test_close_fetches_task_branch_when_clone_tracks_only_master(self):
         self.git('config', '--unset-all', 'remote.origin.fetch')
         self.git('config', '--add', 'remote.origin.fetch', '+refs/heads/master:refs/remotes/origin/master')
@@ -583,6 +625,44 @@ class SessionTests(unittest.TestCase):
         self.assertEqual(resumed['git_repo'], first['git_repo'])
         self.assertEqual(resumed['git_dir'], first['git_dir'])
         self.assertEqual(self.git('rev-parse', 'HEAD', repo=Path(first['worktree'])), first['commit_base'])
+
+    def test_changes_review_reaches_resumed_executor_after_worktree_removed(self):
+        self.prepare()
+        self.launch()
+        first = self.wait_finished()['sesiones'][0]
+        commit = self.deliver()
+        self.close()
+        with patch.dict(os.environ, {'HARNESS_TEST_VERDICT': 'cambios'}):
+            self.launch(reviewer='reviewer')
+            self.wait_finished()
+        sessions.collect_review(self.base, 'toy', self.op, self.row()['revision'])
+        row = self.row()
+        self.assertEqual(row['revision_independiente']['veredicto'], 'cambios')
+        self.assertFalse(Path(first['worktree']).exists())
+        trabajo.update(self.base, 'toy', 'en_curso', 'Corregir según revisión',
+                       'Veredicto recogido', 'Añadir detalle faltante', [],
+                       revision=row['revision'], actor='executor')
+        self.assertIsNone(self.row()['revision_independiente'])
+        self.launch(resume=True)
+        resumed = self.wait_finished()['sesiones'][-1]
+        prompt = Path(resumed['briefing']).read_text()
+        self.assertIn('ÚLTIMO VEREDICTO INDEPENDIENTE', prompt)
+        self.assertIn('"veredicto": "cambios"', prompt)
+        self.assertIn(commit, prompt)
+        self.assertIn('Añadir detalle faltante', prompt)
+        self.assertEqual(resumed['session_id'], first['session_id'])
+        wt = Path(resumed['worktree'])
+        (wt / '_investigacion-onia/base-operativa/salidas/toy').write_text('Entrega corregida\n')
+        self.git('add', '.', repo=wt)
+        self.git('commit', '-m', 'corrección sintética', repo=wt)
+        self.git('push', 'origin', 'codex/ws-toy', repo=wt)
+        self.close()
+        self.launch(reviewer='reviewer-2')
+        self.wait_finished()
+        sessions.collect_review(self.base, 'toy', self.op, self.row()['revision'])
+        accepted = trabajo.accept(self.base, 'toy', self.row()['revision'], 'reviewer-2', 'Corrección comprobada')
+        self.assertEqual(accepted['estado'], 'aceptado')
+        self.assertEqual(len(accepted['evidencias_revision']), 2)
 
     def test_private_git_rejects_changed_owner_directory_and_alternates(self):
         self.prepare()

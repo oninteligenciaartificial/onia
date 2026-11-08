@@ -255,6 +255,7 @@ def main(argv=None):
         p.add_argument("--modelo", help="Modelo explícito para esta sesión, sin cambiar config global.")
         p.add_argument("--esfuerzo", choices=sorted(trabajo.EFFORTS))
         p.add_argument("--auth-chatgpt", action="store_true", help="Exigir login ChatGPT y quitar variables API del hijo; no mide cuota.")
+        p.add_argument("--subagentes-maximos", type=int, choices=range(3), help="Hijos abiertos por ejecutora: 0 a 2; defecto 0, retoma hereda. Revisores: 0.")
         p.add_argument("--dry-run", action="store_true")
         if name == "revisar":
             p.add_argument("--revisor")
@@ -301,7 +302,8 @@ def main(argv=None):
                 result = sessions.launch(args.base, args.id, args.operacion, args.revision_esperada,
                     args.actor, approved=args.si_sergio, dry_run=args.dry_run,
                     resume=args.command == "reanudar", reviewer=getattr(args, "revisor", None),
-                    model=args.modelo, effort=args.esfuerzo, auth_chatgpt=args.auth_chatgpt)
+                    model=args.modelo, effort=args.esfuerzo, auth_chatgpt=args.auth_chatgpt,
+                    subagents=args.subagentes_maximos)
             code = 0
         elif args.command == "asignar":
             result = trabajo.assign(args.base.resolve(), args.id, args.revision_esperada,

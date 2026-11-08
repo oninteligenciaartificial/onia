@@ -157,3 +157,15 @@ Los perfiles requieren un CLI compatible (probado con 0.167.0). Fuentes oficiale
 `lanzar`, `reanudar` y `revisar` admiten `--modelo gpt-6.1-sol --esfuerzo low --auth-chatgpt`. Modelo y esfuerzo quedan registrados por intento; `reanudar` hereda los valores anteriores si se omiten. `--auth-chatgpt` exige autenticación ChatGPT/proveedor OpenAI y elimina del entorno del hijo las variables `OPENAI_API_KEY`, `CODEX_API_KEY` y `OPENAI_BASE_URL`; no cambia configuración global, no compra créditos ni sustituye la comprobación de cuota/saldo. Modelo solicitado y observado se distinguen en evidencia de runtime.
 
 Para verificar publicación, cierre y revisión hacen fetch explícito de la rama de la tarea, aunque el clon esté configurado para recuperar sólo master. No se modifica el refspec configurado ni se podan otras referencias. Si la rama remota falta o no contiene el commit, la tarea permanece abierta.
+
+### Delegación nativa acotada (8/11/2026)
+
+`lanzar` y `reanudar` aceptan `--subagentes-maximos 0|1|2`: por defecto cero y la retoma hereda el valor anterior. Revisores siempre cero, incluso con esfuerzo ultra. Se registra por intento y configura sólo ese proceso, sin editar ajustes globales. El límite nativo cuenta hijos abiertos y excluye el principal; cerrar/liberar cada hijo antes de iniciar el siguiente. `agents.max_depth=1` con multi_agent V1 impide nietos; V2 queda desactivado. Los hijos usan archivos exclusivos, no hacen Git y heredan las restricciones. El ejecutor reúne, verifica y publica su grupo.
+
+Ejemplo autorizado para cerebros: `python3 "$H" lanzar cerebros-a-20261108 --revision-esperada N --actor cerebros-ejecutor-a --si-sergio --modelo gpt-6.1-sol --esfuerzo high --auth-chatgpt --subagentes-maximos 1`. Revisión: `python3 "$H" revisar cerebros-a-20261108 --revision-esperada N --actor cerebros-ejecutor-a --revisor cerebros-revisor-a --si-sergio --modelo gpt-6.1-sol --esfuerzo ultra --auth-chatgpt`.
+
+El máximo tres del harness cuenta sesiones principales (ejecutoras o revisoras). Con este encargo puede haber además hasta tres hijos nativos, uno por grupo; no equivale a sólo tres contextos consumiendo cuota. Mantener evidencia de IDs, modelo y esfuerzo efectivos. Fuente: [configuración oficial de subagentes](https://learn.chatgpt.com/docs/agent-configuration/subagents), CLI 0.167.0 y validación estricta local sin modelo. Si faltan herramientas, registrar el límite y preservar trabajo; no sustituirlo por otros procesos de Codex.
+
+En `comprobacion`, describir controles ya realizados. Lo pendiente va en `proximo_paso`; así un chequeo previo no aparenta contradecir una aceptación posterior. No reescribir evidencias aceptadas para cambiar ese texto histórico.
+
+Una retoma recibe resultado, comprobación y próximo paso del registro actual, más el último veredicto conservado en `evidencias_revision` cuando existe. Así la ejecutora recibe los cambios pedidos aunque reabrir haya limpiado `revision_independiente`. El recibo se verifica antes de leerlo y se identifica su commit; no convierte una revisión vieja en aprobación de una entrega nueva.

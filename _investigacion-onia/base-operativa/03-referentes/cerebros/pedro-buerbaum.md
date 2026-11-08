@@ -1,5 +1,8 @@
 # Pedro Buerbaum · cerebro para OnIA
 
+> Corrección de contexto, 8/11/2026: Bs50 grupal está aprobado; VIP Bs150 y sus condiciones siguen siendo propuesta según [decisiones vigentes](../../05-herramientas/2026-11-08-harness/00-decisiones.md). Las menciones al VIP más abajo conservan el contexto del borrador histórico y no acreditan aprobación.
+
+
 estado: parcial
 
 Corte: 8/11/2026. Síntesis documental del corpus del 5/11; no nueva auditoría del negocio. Falta escucha para música/prosodia, medición continua de cortes y acceso a clase/webinar completo y cierre privado. Los precios son registros históricos, no cotizaciones actuales. Las frases entre comillas son ASR automático sin certificación humana.

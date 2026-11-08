@@ -1,0 +1,27 @@
+{
+  "preflight_comun": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/preflight.json",
+  "id": "cerebros-b-20261108",
+  "grupo": "ia-ensenanza",
+  "referentes": [
+    "erik-taveras",
+    "enrique-rocha",
+    "ali-abdaal",
+    "san-munoz",
+    "cormac-hayden",
+    "bastian-xu"
+  ],
+  "ruta": "03-referentes/cerebros-profundos/b",
+  "autorizado": true,
+  "runtime": {
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "high",
+    "subagentes_maximos": 1,
+    "auth_chatgpt": true
+  },
+  "revisor": {
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "ultra",
+    "responsable": "cerebros-revisor-b",
+    "subagentes_maximos": 0
+  }
+}

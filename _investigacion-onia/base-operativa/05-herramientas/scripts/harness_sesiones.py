@@ -276,6 +276,19 @@ def command(session, codex='codex'):
         args += ['-c', 'model_reasoning_effort=' + json.dumps(session['esfuerzo'])]
     if session.get('auth_chatgpt'):
         args += ['-c', 'forced_login_method="chatgpt"', '-c', 'model_provider="openai"']
+    # Overrides por intento: nunca heredar una delegación global implícita.
+    limit = session.get('subagentes_maximos', 0) if not review else 0
+    enabled = 'true' if limit else 'false'
+    args += ['-c', 'agents.enabled=' + enabled,
+             '-c', 'features.multi_agent=' + enabled,
+             '-c', 'features.multi_agent_v2=false']
+    if limit:
+        args += ['-c', 'agents.max_concurrent_threads_per_session=' + str(limit),
+                 '-c', 'agents.max_depth=1']
+        if session.get('modelo'):
+            args += ['-c', 'agents.default_subagent_model=' + json.dumps(session['modelo'])]
+        if session.get('esfuerzo'):
+            args += ['-c', 'agents.default_subagent_reasoning_effort=' + json.dumps(session['esfuerzo'])]
     if session.get('reanuda'):
         args += ['resume', session['reanuda']]
     return args + ['-']
@@ -309,12 +322,16 @@ def link_skills(repo, base, dry_run=False):
 
 
 def launch(base, ident, root, revision, actor, approved=False, dry_run=False, resume=False,
-           reviewer=None, model=None, effort=None, auth_chatgpt=False):
+           reviewer=None, model=None, effort=None, auth_chatgpt=False, subagents=None):
     base = Path(base).resolve()
     if model is not None and not re.fullmatch(r'[a-zA-Z0-9][a-zA-Z0-9._-]{0,99}', model):
         raise ValueError('Modelo inválido.')
     if effort is not None and effort not in trabajo.EFFORTS:
         raise ValueError('Esfuerzo inválido.')
+    if subagents is not None and (type(subagents) is not int or subagents not in range(3)):
+        raise ValueError('Subagentes máximos debe ser un entero de 0 a 2.')
+    if reviewer and subagents not in (None, 0):
+        raise ValueError('La revisión independiente no delega subagentes.')
     trabajo.task_path(base, ident)
     root = operation(root, dry_run)
     if not dry_run and not approved:
@@ -339,6 +356,10 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
             model = model or previous.get('modelo')
             effort = effort or previous.get('esfuerzo')
             auth_chatgpt = auth_chatgpt or previous.get('auth_chatgpt', False)
+            if subagents is None:
+                subagents = previous.get('subagentes_maximos', 0)
+        if subagents is None:
+            subagents = 0
         if reviewer:
             reviewer = trabajo.nonempty(reviewer, 'revisor')
             if reviewer in {actor, *[s['responsable'] for s in row.get('sesiones', []) if s['rol'] == 'ejecutor']}:
@@ -404,7 +425,8 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
                        worktree=str(worktree), rutas=assignment['rutas'], dry_run=dry_run,
                        commit_base=start_commit, reanuda=previous['session_id'] if resume else None,
                        briefing=str(prompt_file), inicio=trabajo.now(), rc=None, ultimo_evento=None,
-                       modelo=model, esfuerzo=effort, auth_chatgpt=auth_chatgpt)
+                       modelo=model, esfuerzo=effort, auth_chatgpt=auth_chatgpt,
+                       subagentes_maximos=subagents)
         if git_owner:
             session.update(git_repo=str(git_owner), git_dir=str(git_owner / 'worktrees' / worktree.name),
                            perfil_permisos='harness-git')
@@ -417,6 +439,17 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
                   'Los enlaces del briefing se resuelven desde base-operativa/' + row['briefing']['archivo'] + '.\n'
                   'Rutas asignadas (relativas a base-operativa): ' + json.dumps(assignment['rutas']) + '\n\n'
                   + row['briefing']['contenido'])
+        if resume:
+            prompt += ('\nCONTINUIDAD DEL REGISTRO ACTUAL:\n' + row['resultado'] + '\n'
+                       + row['comprobacion'] + '\nPróximo paso: ' + row['proximo_paso'] + '\n')
+            # actualizar conserva los recibos aunque limpie la revisión vigente.
+            # verify ya comprobó sus bytes antes de leer el último veredicto.
+            if row.get('evidencias_revision'):
+                ref = row['evidencias_revision'][-1]
+                feedback = trabajo.safe_path(base, ref['archivo']).read_text(encoding='utf-8')
+                prompt += ('\nÚLTIMO VEREDICTO INDEPENDIENTE CONSERVADO (cotejar su commit):\n'
+                           + feedback + '\nFuente: ' + ref['archivo'] + '\n'
+                           'Resolver los cambios indicados que correspondan a la entrega; no ocultar límites.\n')
         if reviewer:
             session['entrega_sha256'] = trabajo.delivery_digest(row)
             session['schema'] = str(private_path(root, f'logs/{ident}.{attempt}.schema.json'))
@@ -446,7 +479,9 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
                        'Hacé el commit y push vos desde tu sandbox; no pedir publicación al coordinador.\n'
                        'Usá push explícito sólo a la rama asignada, sin force; no cambiar otras ramas ni configuración global.\n'
                        'Informá hash y evidencia. El coordinador ejecutará cerrar y luego una revisión independiente.\n'
-                       'No iniciar otras tareas, sesiones, servicios ni efectos externos fuera del encargo.\n')
+                       'No iniciar otras tareas, sesiones, servicios ni efectos externos fuera del encargo.\n'
+                       'Subagentes nativos autorizados por este intento: ' + str(subagents) + ' hijos abiertos como máximo; sin nietos.\n'
+                       'Cada hijo recibe un archivo exclusivo. Cerrarlo/liberarlo antes de reutilizar su cupo; el ejecutor publica una vez al terminar todos.\n')
         with prompt_file.open('x', encoding='utf-8') as stream:
             stream.write(prompt)
         if dry_run:

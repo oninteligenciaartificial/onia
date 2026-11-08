@@ -1,0 +1,27 @@
+{
+  "preflight_comun": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/preflight.json",
+  "id": "cerebros-a-20261108",
+  "grupo": "venta-oferta",
+  "referentes": [
+    "alex-hormozi",
+    "pedro-buerbaum",
+    "victor-heras",
+    "iman-gadzhi",
+    "justin-welsh",
+    "alex-carrera"
+  ],
+  "ruta": "03-referentes/cerebros-profundos/a",
+  "autorizado": true,
+  "runtime": {
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "high",
+    "subagentes_maximos": 1,
+    "auth_chatgpt": true
+  },
+  "revisor": {
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "ultra",
+    "responsable": "cerebros-revisor-a",
+    "subagentes_maximos": 0
+  }
+}

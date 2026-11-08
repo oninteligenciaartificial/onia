@@ -1,5 +1,8 @@
 # Cerebro · Enrique Rocha
 
+> Corrección de contexto, 8/11/2026: Bs50 grupal está aprobado; VIP Bs150 y sus condiciones siguen siendo propuesta según [decisiones vigentes](../../05-herramientas/2026-11-08-harness/00-decisiones.md). Las menciones al VIP más abajo conservan el contexto del borrador histórico y no acreditan aprobación.
+
+
 Actualización: 8 de noviembre de 2026. **estado: parcial**. Síntesis del corpus existente; precios y condiciones son observaciones históricas del 5/11, no cotización vigente. ASR automático no equivale a palabras verificadas mediante escucha. Las propuestas para OnIA siguen el encargo actual: «Tu negocio con IA: ordena, vende y automatiza», tres clases, Bs50 grupal / Bs150 VIP y luego OnIA Platform; no heredan el antiguo taller de salud.
 
 ## 1) Qué vende y escalera de ofertas
