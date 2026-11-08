@@ -1,0 +1,1815 @@
+{
+  "schema": 2,
+  "id": "harness-autopush-real-20261108",
+  "revision": 19,
+  "compartible": true,
+  "objetivo": "Probar publicación autónoma de un juguete desde sandbox con Git privado",
+  "estado": "aceptado",
+  "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+  "resultado": "Juguete publicado por la propia ejecutora en 01654543409365cb5adb28f942b2a6f2939dd743; sin publicación del coordinador.",
+  "comprobacion": "AUTOPUSH_OK; 7 discrepancias rechazadas; git add/commit/push dentro del sandbox con rc=0; HEAD coincide con origin.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+      "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+      "bytes": 1435
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+      "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+      "bytes": 387
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/publicacion-autonoma.json",
+      "sha256": "fe64e093b00c05da9288610be3b07a6ba5648737c01ee2497a0cd39f75c3163e",
+      "bytes": 5831
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/tests-finales.txt",
+      "sha256": "0bb8b3335333d59e4c919f6a988c0f2ff57469374d10203605f5b7411055a9b0",
+      "bytes": 238
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+      "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+      "bytes": 281
+    }
+  ],
+  "actualizado": "2026-11-08T19:31:16.690851+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-08T19:26:42.990669+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/harness-autopush-real-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-08T19:26:43.048692+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/harness-autopush-real-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-08T19:26:43.064233+00:00",
+      "estado": "preparado",
+      "resultado": "Piloto preparado; publicación autónoma pendiente.",
+      "comprobacion": "Sandbox sin modelo aprobado; suite previa y piloto por completar.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        }
+      ],
+      "proximo_paso": "Completar suite y lanzar ejecutora autorizada.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-08T19:27:02.324245+00:00",
+      "estado": "en_curso",
+      "resultado": "Piloto preparado; publicación autónoma pendiente.",
+      "comprobacion": "Sandbox sin modelo aprobado; suite previa y piloto por completar.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-08T19:27:02.378269+00:00",
+      "estado": "en_curso",
+      "resultado": "Piloto preparado; publicación autónoma pendiente.",
+      "comprobacion": "Sandbox sin modelo aprobado; suite previa y piloto por completar.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-08T19:27:02.482712+00:00",
+      "estado": "en_curso",
+      "resultado": "Piloto preparado; publicación autónoma pendiente.",
+      "comprobacion": "Sandbox sin modelo aprobado; suite previa y piloto por completar.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": 408834,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-08T19:27:03.058138+00:00",
+      "estado": "en_curso",
+      "resultado": "Piloto preparado; publicación autónoma pendiente.",
+      "comprobacion": "Sandbox sin modelo aprobado; suite previa y piloto por completar.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": 408834,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-08T19:28:01.601645+00:00",
+      "estado": "en_curso",
+      "resultado": "Piloto preparado; publicación autónoma pendiente.",
+      "comprobacion": "Sandbox sin modelo aprobado; suite previa y piloto por completar.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": 408834,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:28:01.578028+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-08T19:28:46.969156+00:00",
+      "estado": "en_curso",
+      "resultado": "Juguete publicado autónomamente en 01654543409365cb5adb28f942b2a6f2939dd743",
+      "comprobacion": "AUTOPUSH_OK; siete casos inválidos rechazados por ejecutor; commit/push propios rc=0; HEAD cotejado con origin.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/publicacion-autonoma.json",
+          "sha256": "fe64e093b00c05da9288610be3b07a6ba5648737c01ee2497a0cd39f75c3163e",
+          "bytes": 5831
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/tests-finales.txt",
+          "sha256": "0bb8b3335333d59e4c919f6a988c0f2ff57469374d10203605f5b7411055a9b0",
+          "bytes": 238
+        }
+      ],
+      "proximo_paso": "Cerrar y lanzar revisor distinto.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": 408834,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:28:01.578028+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-08T19:29:00.880267+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por la propia ejecutora en 01654543409365cb5adb28f942b2a6f2939dd743; sin publicación del coordinador.",
+      "comprobacion": "AUTOPUSH_OK; 7 discrepancias rechazadas; git add/commit/push dentro del sandbox con rc=0; HEAD coincide con origin.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/publicacion-autonoma.json",
+          "sha256": "fe64e093b00c05da9288610be3b07a6ba5648737c01ee2497a0cd39f75c3163e",
+          "bytes": 5831
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/tests-finales.txt",
+          "sha256": "0bb8b3335333d59e4c919f6a988c0f2ff57469374d10203605f5b7411055a9b0",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": 408834,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:28:01.578028+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+        "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+        "ramas_origin": [
+          "origin/codex/ws-harness-autopush-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:29:00.848566+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-08T19:29:34.348965+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por la propia ejecutora en 01654543409365cb5adb28f942b2a6f2939dd743; sin publicación del coordinador.",
+      "comprobacion": "AUTOPUSH_OK; 7 discrepancias rechazadas; git add/commit/push dentro del sandbox con rc=0; HEAD coincide con origin.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/publicacion-autonoma.json",
+          "sha256": "fe64e093b00c05da9288610be3b07a6ba5648737c01ee2497a0cd39f75c3163e",
+          "bytes": 5831
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/tests-finales.txt",
+          "sha256": "0bb8b3335333d59e4c919f6a988c0f2ff57469374d10203605f5b7411055a9b0",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": 408834,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:28:01.578028+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "autopush-revisor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "01654543409365cb5adb28f942b2a6f2939dd743",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:29:34.334541+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "88b5c4437a4205a4c9276354ad0e63240b270253c78e947b5eedcf090fd7fe47",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+        "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+        "ramas_origin": [
+          "origin/codex/ws-harness-autopush-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:29:00.848566+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-08T19:29:34.389683+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por la propia ejecutora en 01654543409365cb5adb28f942b2a6f2939dd743; sin publicación del coordinador.",
+      "comprobacion": "AUTOPUSH_OK; 7 discrepancias rechazadas; git add/commit/push dentro del sandbox con rc=0; HEAD coincide con origin.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/publicacion-autonoma.json",
+          "sha256": "fe64e093b00c05da9288610be3b07a6ba5648737c01ee2497a0cd39f75c3163e",
+          "bytes": 5831
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/tests-finales.txt",
+          "sha256": "0bb8b3335333d59e4c919f6a988c0f2ff57469374d10203605f5b7411055a9b0",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": 408834,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:28:01.578028+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "autopush-revisor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 414992,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538971",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "01654543409365cb5adb28f942b2a6f2939dd743",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:29:34.334541+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "88b5c4437a4205a4c9276354ad0e63240b270253c78e947b5eedcf090fd7fe47",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+        "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+        "ramas_origin": [
+          "origin/codex/ws-harness-autopush-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:29:00.848566+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-08T19:29:34.446091+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por la propia ejecutora en 01654543409365cb5adb28f942b2a6f2939dd743; sin publicación del coordinador.",
+      "comprobacion": "AUTOPUSH_OK; 7 discrepancias rechazadas; git add/commit/push dentro del sandbox con rc=0; HEAD coincide con origin.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/publicacion-autonoma.json",
+          "sha256": "fe64e093b00c05da9288610be3b07a6ba5648737c01ee2497a0cd39f75c3163e",
+          "bytes": 5831
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/tests-finales.txt",
+          "sha256": "0bb8b3335333d59e4c919f6a988c0f2ff57469374d10203605f5b7411055a9b0",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": 408834,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:28:01.578028+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "autopush-revisor",
+          "pid": 414994,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538976",
+          "supervisor_pid": 414992,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538971",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "01654543409365cb5adb28f942b2a6f2939dd743",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:29:34.334541+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "88b5c4437a4205a4c9276354ad0e63240b270253c78e947b5eedcf090fd7fe47",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+        "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+        "ramas_origin": [
+          "origin/codex/ws-harness-autopush-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:29:00.848566+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-08T19:29:34.996207+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por la propia ejecutora en 01654543409365cb5adb28f942b2a6f2939dd743; sin publicación del coordinador.",
+      "comprobacion": "AUTOPUSH_OK; 7 discrepancias rechazadas; git add/commit/push dentro del sandbox con rc=0; HEAD coincide con origin.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/publicacion-autonoma.json",
+          "sha256": "fe64e093b00c05da9288610be3b07a6ba5648737c01ee2497a0cd39f75c3163e",
+          "bytes": 5831
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/tests-finales.txt",
+          "sha256": "0bb8b3335333d59e4c919f6a988c0f2ff57469374d10203605f5b7411055a9b0",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": 408834,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:28:01.578028+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "autopush-revisor",
+          "pid": 414994,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538976",
+          "supervisor_pid": 414992,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538971",
+          "rama": "(detached)",
+          "session_id": "01a1bca3-33b4-7902-92a2-df7d76b3165f",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "01654543409365cb5adb28f942b2a6f2939dd743",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:29:34.334541+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "88b5c4437a4205a4c9276354ad0e63240b270253c78e947b5eedcf090fd7fe47",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+        "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+        "ramas_origin": [
+          "origin/codex/ws-harness-autopush-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:29:00.848566+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-08T19:29:58.322791+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por la propia ejecutora en 01654543409365cb5adb28f942b2a6f2939dd743; sin publicación del coordinador.",
+      "comprobacion": "AUTOPUSH_OK; 7 discrepancias rechazadas; git add/commit/push dentro del sandbox con rc=0; HEAD coincide con origin.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/publicacion-autonoma.json",
+          "sha256": "fe64e093b00c05da9288610be3b07a6ba5648737c01ee2497a0cd39f75c3163e",
+          "bytes": 5831
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/tests-finales.txt",
+          "sha256": "0bb8b3335333d59e4c919f6a988c0f2ff57469374d10203605f5b7411055a9b0",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": 408834,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:28:01.578028+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "autopush-revisor",
+          "pid": 414994,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538976",
+          "supervisor_pid": 414992,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538971",
+          "rama": "(detached)",
+          "session_id": "01a1bca3-33b4-7902-92a2-df7d76b3165f",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "01654543409365cb5adb28f942b2a6f2939dd743",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:29:34.334541+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "88b5c4437a4205a4c9276354ad0e63240b270253c78e947b5eedcf090fd7fe47",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+        "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+        "ramas_origin": [
+          "origin/codex/ws-harness-autopush-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:29:00.848566+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 16,
+      "actualizado": "2026-11-08T19:30:05.462359+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por la propia ejecutora en 01654543409365cb5adb28f942b2a6f2939dd743; sin publicación del coordinador.",
+      "comprobacion": "AUTOPUSH_OK; 7 discrepancias rechazadas; git add/commit/push dentro del sandbox con rc=0; HEAD coincide con origin.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/publicacion-autonoma.json",
+          "sha256": "fe64e093b00c05da9288610be3b07a6ba5648737c01ee2497a0cd39f75c3163e",
+          "bytes": 5831
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/tests-finales.txt",
+          "sha256": "0bb8b3335333d59e4c919f6a988c0f2ff57469374d10203605f5b7411055a9b0",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": 408834,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:28:01.578028+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "autopush-revisor",
+          "pid": 414994,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538976",
+          "supervisor_pid": 414992,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538971",
+          "rama": "(detached)",
+          "session_id": "01a1bca3-33b4-7902-92a2-df7d76b3165f",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "01654543409365cb5adb28f942b2a6f2939dd743",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:29:34.334541+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "88b5c4437a4205a4c9276354ad0e63240b270253c78e947b5eedcf090fd7fe47",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.veredicto.json",
+          "fin": "2026-11-08T19:30:05.418184+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+        "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+        "ramas_origin": [
+          "origin/codex/ws-harness-autopush-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:29:00.848566+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 17,
+      "actualizado": "2026-11-08T19:31:16.505251+00:00",
+      "estado": "para_revision",
+      "resultado": "Juguete publicado por la propia ejecutora en 01654543409365cb5adb28f942b2a6f2939dd743; sin publicación del coordinador.",
+      "comprobacion": "AUTOPUSH_OK; 7 discrepancias rechazadas; git add/commit/push dentro del sandbox con rc=0; HEAD coincide con origin.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/publicacion-autonoma.json",
+          "sha256": "fe64e093b00c05da9288610be3b07a6ba5648737c01ee2497a0cd39f75c3163e",
+          "bytes": 5831
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/tests-finales.txt",
+          "sha256": "0bb8b3335333d59e4c919f6a988c0f2ff57469374d10203605f5b7411055a9b0",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": 408834,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:28:01.578028+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "autopush-revisor",
+          "pid": 414994,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538976",
+          "supervisor_pid": 414992,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538971",
+          "rama": "(detached)",
+          "session_id": "01a1bca3-33b4-7902-92a2-df7d76b3165f",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "01654543409365cb5adb28f942b2a6f2939dd743",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:29:34.334541+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "88b5c4437a4205a4c9276354ad0e63240b270253c78e947b5eedcf090fd7fe47",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.veredicto.json",
+          "fin": "2026-11-08T19:30:05.418184+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+        "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+        "ramas_origin": [
+          "origin/codex/ws-harness-autopush-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:29:00.848566+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+        "criterio": "Cumple los seis criterios: diff limitado a los dos archivos nuevos; JSON exacto; comprobador stdlib relativo a su carpeta, sin escrituras, con AUTOPUSH_OK y rechazo de ocho discrepancias comprobadas en memoria. La evidencia suministrada acredita add/commit/push autónomos con rc=0 dentro del sandbox, sin escalación ni force, y coincidencia HEAD/origin. Revisión independiente de sólo lectura; no se editó ni aceptó la tarea.",
+        "revisor": "autopush-revisor",
+        "session_id": "01a1bca3-33b4-7902-92a2-df7d76b3165f",
+        "entrega_sha256": "88b5c4437a4205a4c9276354ad0e63240b270253c78e947b5eedcf090fd7fe47",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/revision-2-f0d5bd73.json",
+          "sha256": "230f9bdef46e3d5f7850c28bcf7ccb01ec6d9af8d8e299c9c0b5618de5f755ae",
+          "bytes": 532
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/revision-2-f0d5bd73.json",
+          "sha256": "230f9bdef46e3d5f7850c28bcf7ccb01ec6d9af8d8e299c9c0b5618de5f755ae",
+          "bytes": 532
+        }
+      ]
+    },
+    {
+      "revision": 18,
+      "actualizado": "2026-11-08T19:31:16.607284+00:00",
+      "estado": "aceptado",
+      "resultado": "Juguete publicado por la propia ejecutora en 01654543409365cb5adb28f942b2a6f2939dd743; sin publicación del coordinador.",
+      "comprobacion": "AUTOPUSH_OK; 7 discrepancias rechazadas; git add/commit/push dentro del sandbox con rc=0; HEAD coincide con origin.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/preflight.json",
+          "sha256": "e76cee01c3f9ba7845537ec2d706c9a9bf87cfb263bde79a02af7d9fb1d2aa48",
+          "bytes": 1435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/sandbox-sin-modelo.json",
+          "sha256": "cb1704649e745e2a282175b9148c458e7d508e518667c5809f367e722139e5f7",
+          "bytes": 387
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/publicacion-autonoma.json",
+          "sha256": "fe64e093b00c05da9288610be3b07a6ba5648737c01ee2497a0cd39f75c3163e",
+          "bytes": 5831
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/tests-finales.txt",
+          "sha256": "0bb8b3335333d59e4c919f6a988c0f2ff57469374d10203605f5b7411055a9b0",
+          "bytes": 238
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      ],
+      "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+      "aceptacion": {
+        "revisor": "autopush-revisor",
+        "criterio": "Seis criterios cotejados por sesión independiente: juguete correcto y commit/push autónomos acreditados dentro del sandbox.",
+        "fecha": "2026-11-08T19:31:16.607270+00:00"
+      },
+      "asignacion": {
+        "responsable": "autopush-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-autopush"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T19:26:43.048671+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "autopush-ejecutor",
+          "pid": 408834,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+          "supervisor_pid": 408806,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+          "rama": "codex/ws-harness-autopush-real-20261108",
+          "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T19:27:02.290537+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T19:28:01.578028+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "autopush-revisor",
+          "pid": 414994,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538976",
+          "supervisor_pid": 414992,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538971",
+          "rama": "(detached)",
+          "session_id": "01a1bca3-33b4-7902-92a2-df7d76b3165f",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_rel": "logs/harness-autopush-real-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108-revision-2",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-autopush"
+          ],
+          "dry_run": false,
+          "commit_base": "01654543409365cb5adb28f942b2a6f2939dd743",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T19:29:34.334541+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "88b5c4437a4205a4c9276354ad0e63240b270253c78e947b5eedcf090fd7fe47",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.veredicto.json",
+          "fin": "2026-11-08T19:30:05.418184+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+        "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+        "ramas_origin": [
+          "origin/codex/ws-harness-autopush-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:29:00.848566+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+          "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+          "bytes": 281
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+        "criterio": "Cumple los seis criterios: diff limitado a los dos archivos nuevos; JSON exacto; comprobador stdlib relativo a su carpeta, sin escrituras, con AUTOPUSH_OK y rechazo de ocho discrepancias comprobadas en memoria. La evidencia suministrada acredita add/commit/push autónomos con rc=0 dentro del sandbox, sin escalación ni force, y coincidencia HEAD/origin. Revisión independiente de sólo lectura; no se editó ni aceptó la tarea.",
+        "revisor": "autopush-revisor",
+        "session_id": "01a1bca3-33b4-7902-92a2-df7d76b3165f",
+        "entrega_sha256": "88b5c4437a4205a4c9276354ad0e63240b270253c78e947b5eedcf090fd7fe47",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/revision-2-f0d5bd73.json",
+          "sha256": "230f9bdef46e3d5f7850c28bcf7ccb01ec6d9af8d8e299c9c0b5618de5f755ae",
+          "bytes": 532
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/revision-2-f0d5bd73.json",
+          "sha256": "230f9bdef46e3d5f7850c28bcf7ccb01ec6d9af8d8e299c9c0b5618de5f755ae",
+          "bytes": 532
+        }
+      ]
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/harness-autopush-real-20261108.md",
+    "sha256": "b0b76e4f871b9ea72b4c7d8a52905e15844ae73c3ccc40ffc21a4496de5c5bba",
+    "bytes": 4823,
+    "contenido": "# Encargo harness-autopush-real-20261108\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nProbar publicación autónoma de un juguete desde sandbox con Git privado\n\n## Entregable\n\nDos archivos sintéticos verificados, commit y push realizados por la sesión ejecutora\n\n## Criterio de aceptación\n\n1. El diff respecto a base sólo agrega resultado.json y verificar.py en la ruta asignada. 2. resultado.json es exactamente {\"valores\":[4,1,7],\"ordenados\":[1,4,7],\"suma\":12,\"cuadrados\":[16,1,49]}. 3. verificar.py usa sólo stdlib, lee ese JSON desde su propia carpeta, comprueba todo el objeto y sale 0 con AUTOPUSH_OK; si hay discrepancia sale distinto de 0 y no escribe archivos. 4. La propia sesión ejecutora ejecuta git add, git commit y git push origin HEAD:refs/heads/codex/ws-harness-autopush-real-20261108 dentro de su sandbox, sin pedir al coordinador publicar y sin escalación ni acceso irrestricto. 5. Su HEAD coincide con la rama en origin, sin force ni cambios de otras ramas. 6. Revisor real distinto coteja diff, comprobador y evidencia de publicación autónoma; sólo su veredicto bueno permite aceptar.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sergio autorizó este piloto real y revisión distinta en este chat. Sin producción, Docker, n8n, servicios, mensajes, sudo, instalaciones, API keys ni compras. Consumir sólo la cuota ChatGPT existente. No lanzar otras sesiones ni subagentes.\n- Ruta exclusiva relativa a base-operativa: 05-herramientas/2026-11-08-harness/piloto-autopush. Crear exactamente dos archivos nuevos: resultado.json y verificar.py. No editar registro canónico, briefing, AGENTS, reglas ni otros archivos.\n- El harness ya preparó un Git privado de esta tarea y perfil acotado. La limitación del piloto anterior documentada en ORQUESTACION está resuelta para este lanzamiento; debés hacer vos el commit y push. No cambiar perfiles, configuración global, remoto ni hooks. Si falla un permiso, informar el error y terminar sin buscar un bypass.\n- Ejecutar python3 sobre verificar.py, después git add de los dos paths explícitos, git commit -m \"test: piloto de publicacion autonoma del harness\" y git push origin HEAD:refs/heads/codex/ws-harness-autopush-real-20261108. Finalmente git rev-parse HEAD y git ls-remote origin refs/heads/codex/ws-harness-autopush-real-20261108. No imprimir configuración ni credenciales.\n- Informar hash completo, resultado del comprobador y publicación observada. La identidad técnica Git ya está configurada sólo en tu repositorio. El coordinador se ocupa de cierre, revisión y merge después de tu push; no de publicar tu entrega.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/harness-autopush-real-20261108.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": {
+    "revisor": "autopush-revisor",
+    "criterio": "Seis criterios cotejados por sesión independiente: juguete correcto y commit/push autónomos acreditados dentro del sandbox.",
+    "fecha": "2026-11-08T19:31:16.607270+00:00"
+  },
+  "asignacion": null,
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "autopush-ejecutor",
+      "pid": 408834,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523779",
+      "supervisor_pid": 408806,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190523769",
+      "rama": "codex/ws-harness-autopush-real-20261108",
+      "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+      "estado": "cerrada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.jsonl",
+      "log_rel": "logs/harness-autopush-real-20261108.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108",
+      "rutas": [
+        "05-herramientas/2026-11-08-harness/piloto-autopush"
+      ],
+      "dry_run": false,
+      "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.1.briefing.txt",
+      "inicio": "2026-11-08T19:27:02.290537+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-08T19:28:01.578028+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "revisor",
+      "responsable": "autopush-revisor",
+      "pid": 414994,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538976",
+      "supervisor_pid": 414992,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190538971",
+      "rama": "(detached)",
+      "session_id": "01a1bca3-33b4-7902-92a2-df7d76b3165f",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.revision-2.jsonl",
+      "log_rel": "logs/harness-autopush-real-20261108.revision-2.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108-revision-2",
+      "rutas": [
+        "05-herramientas/2026-11-08-harness/piloto-autopush"
+      ],
+      "dry_run": false,
+      "commit_base": "01654543409365cb5adb28f942b2a6f2939dd743",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.briefing.txt",
+      "inicio": "2026-11-08T19:29:34.334541+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "entrega_sha256": "88b5c4437a4205a4c9276354ad0e63240b270253c78e947b5eedcf090fd7fe47",
+      "schema": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-autopush-real-20261108.2.veredicto.json",
+      "fin": "2026-11-08T19:30:05.418184+00:00"
+    }
+  ],
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+    "criterio": "Cumple los seis criterios: diff limitado a los dos archivos nuevos; JSON exacto; comprobador stdlib relativo a su carpeta, sin escrituras, con AUTOPUSH_OK y rechazo de ocho discrepancias comprobadas en memoria. La evidencia suministrada acredita add/commit/push autónomos con rc=0 dentro del sandbox, sin escalación ni force, y coincidencia HEAD/origin. Revisión independiente de sólo lectura; no se editó ni aceptó la tarea.",
+    "revisor": "autopush-revisor",
+    "session_id": "01a1bca3-33b4-7902-92a2-df7d76b3165f",
+    "entrega_sha256": "88b5c4437a4205a4c9276354ad0e63240b270253c78e947b5eedcf090fd7fe47",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/revision-2-f0d5bd73.json",
+      "sha256": "230f9bdef46e3d5f7850c28bcf7ccb01ec6d9af8d8e299c9c0b5618de5f755ae",
+      "bytes": 532
+    }
+  },
+  "cierre": {
+    "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+    "commit_base": "3745d255612450828c3288682fb67cb18929fd14",
+    "ramas_origin": [
+      "origin/codex/ws-harness-autopush-real-20261108"
+    ],
+    "fecha": "2026-11-08T19:29:00.848566+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/cierre-r9-6f168ef0.json",
+      "sha256": "31b67df34de695270e9676ca24a981f306bedb946e96b4961ebfb08d207e7fe4",
+      "bytes": 281
+    }
+  },
+  "evidencias_revision": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/revision-2-f0d5bd73.json",
+      "sha256": "230f9bdef46e3d5f7850c28bcf7ccb01ec6d9af8d8e299c9c0b5618de5f755ae",
+      "bytes": 532
+    }
+  ]
+}

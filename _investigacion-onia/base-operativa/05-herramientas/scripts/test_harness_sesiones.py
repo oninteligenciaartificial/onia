@@ -14,7 +14,8 @@ import harness_sesiones as sessions
 import trabajo
 
 FAKE = '''#!/usr/bin/env python3
-import json, os, re, sys, time, uuid
+import json, os, re, subprocess, sys, time, uuid
+from pathlib import Path
 args = sys.argv[1:]
 prompt = sys.stdin.read()
 sid = args[args.index('resume') + 1] if 'resume' in args else str(uuid.uuid4())
@@ -26,6 +27,18 @@ while release and not os.path.exists(release):
     if time.monotonic() > deadline:
         sys.exit(8)
     time.sleep(0.02)
+if os.environ.get('HARNESS_TEST_GIT_DELIVERY') and '--output-last-message' not in args:
+    ident = os.environ['HARNESS_TEST_GIT_DELIVERY']
+    delivery = Path('_investigacion-onia/base-operativa/salidas') / ident
+    delivery.parent.mkdir(parents=True, exist_ok=True)
+    delivery.write_text('Entrega creada y publicada por el ejecutor falso\\n')
+    def git(*arguments):
+        return subprocess.check_output(['git', *arguments], text=True).strip()
+    branch = git('branch', '--show-current')
+    git('add', str(delivery))
+    git('commit', '-m', 'entrega autónoma sintética')
+    git('push', 'origin', branch)
+    print(json.dumps({'type': 'fake.git_published', 'commit': git('rev-parse', 'HEAD')}), flush=True)
 if '--output-last-message' in args:
     commit = re.search(r'Commit a revisar: ([0-9a-f]+)', prompt).group(1)
     with open(args[args.index('--output-last-message') + 1], 'w') as f:
@@ -167,6 +180,8 @@ class SessionTests(unittest.TestCase):
         row = self.wait_finished()
         self.assertEqual(row['sesiones'][1]['session_id'], first['session_id'])
         self.assertEqual(row['sesiones'][1]['rc'], 0)
+        self.assertEqual(row['sesiones'][1]['git_repo'], first['git_repo'])
+        self.assertEqual(row['sesiones'][1]['git_dir'], first['git_dir'])
         state = sessions.status(self.base, self.op)
         self.assertEqual(state['sesiones'][-1]['ultimo_evento'], 'turn.completed')
         self.assertFalse(state['sesiones'][-1]['pid_vivo'])
@@ -188,7 +203,7 @@ class SessionTests(unittest.TestCase):
         self.git('push', 'origin', 'codex/ws-toy', repo=worktree)
         self.close()
         self.assertFalse(worktree.exists())
-        self.assertEqual(self.git('rev-parse', 'codex/ws-toy'), commit)
+        self.assertEqual(self.git('rev-parse', 'codex/ws-toy', repo=Path(self.row()['sesiones'][0]['git_repo'])), commit)
         with self.assertRaisesRegex(ValueError, 'veredicto bueno'):
             trabajo.accept(self.base, 'toy', self.row()['revision'], 'reviewer', 'Sin revisión')
         with self.assertRaisesRegex(ValueError, 'distinto'):
@@ -398,6 +413,169 @@ class SessionTests(unittest.TestCase):
         result = self.close()
         self.assertEqual(result['tarea']['cierre']['commit'], commit)
         self.assertIn('origin/codex/ws-toy', result['tarea']['cierre']['ramas_origin'])
+
+    def test_private_owners_and_fake_executor_commit_push_preserve_coordinator(self):
+        self.prepare('other')
+        self.launch('other')
+        other = self.wait_finished('other')['sesiones'][0]
+        self.prepare()
+        main_refs = self.git('show-ref')
+        main_index = (self.repo / '.git/index').read_bytes()
+        with patch.dict(os.environ, {'HARNESS_TEST_GIT_DELIVERY': 'toy'}):
+            self.launch()
+            row = self.wait_finished()
+        session = row['sesiones'][0]
+        self.assertEqual(session['rc'], 0)
+        owner = Path(session['git_repo'])
+        self.assertNotEqual(owner, Path(other['git_repo']))
+        self.assertNotEqual(owner, self.repo / '.git')
+        self.assertEqual(self.git('rev-parse', '--path-format=absolute', '--git-common-dir',
+                                  repo=Path(session['worktree'])), str(owner))
+        commit = self.git('rev-parse', 'codex/ws-toy', repo=owner)
+        self.assertNotEqual(commit, session['commit_base'])
+        self.assertEqual(self.git('rev-parse', 'codex/ws-toy', repo=self.remote), commit)
+        self.assertEqual(self.git('rev-parse', 'codex/ws-other', repo=Path(other['git_repo'])), other['commit_base'])
+        self.assertEqual(self.git('show-ref'), main_refs)
+        self.assertEqual((self.repo / '.git/index').read_bytes(), main_index)
+        self.assertFalse((owner / 'objects/info/alternates').exists())
+        with self.assertRaises(ValueError):
+            self.git('rev-parse', '--verify', 'refs/heads/codex/ws-toy')
+        self.close()
+        self.assertEqual(self.git('rev-parse', 'origin/codex/ws-toy'), commit)
+        self.assertEqual(self.git('rev-parse', 'codex/ws-toy', repo=owner), commit)
+        self.assertTrue(owner.is_dir())
+        self.assertFalse(Path(session['worktree']).exists())
+
+    def test_resume_restores_worktree_from_same_private_owner(self):
+        self.prepare()
+        self.launch()
+        first = self.wait_finished()['sesiones'][0]
+        self.git('worktree', 'remove', first['worktree'], repo=Path(first['git_repo']))
+        self.launch(resume=True)
+        resumed = self.wait_finished()['sesiones'][-1]
+        self.assertEqual(resumed['session_id'], first['session_id'])
+        self.assertEqual(resumed['git_repo'], first['git_repo'])
+        self.assertEqual(resumed['git_dir'], first['git_dir'])
+        self.assertEqual(self.git('rev-parse', 'HEAD', repo=Path(first['worktree'])), first['commit_base'])
+
+    def test_private_git_rejects_changed_owner_directory_and_alternates(self):
+        self.prepare()
+        self.launch()
+        session = self.wait_finished()['sesiones'][0]
+        owner = Path(session['git_repo'])
+        self.assertEqual(sessions.validate_private_git(session, 'toy'), owner)
+        for key, value in (('git_repo', str(self.repo / '.git')),
+                           ('git_dir', str(self.repo / '.git'))):
+            with self.subTest(field=key), self.assertRaisesRegex(ValueError, 'inválidos'):
+                sessions.validate_private_git(dict(session, **{key: value}), 'toy')
+        alternates = owner / 'objects/info/alternates'
+        alternates.write_text(str(self.repo / '.git/objects') + '\n')
+        with self.assertRaisesRegex(ValueError, 'otro repositorio'):
+            sessions.validate_private_git(session, 'toy')
+
+    def test_private_git_rejects_symlinked_metadata_without_touching_target(self):
+        self.prepare()
+        self.launch()
+        session = self.wait_finished()['sesiones'][0]
+        owner = Path(session['git_repo'])
+        original_config = (owner / 'config').read_bytes()
+        for name in ('config', 'objects', 'refs', 'worktrees'):
+            with self.subTest(path=name):
+                path = owner / name
+                preserved = owner / (name + '.fixture-original')
+                path.rename(preserved)
+                path.symlink_to(preserved, target_is_directory=preserved.is_dir())
+                try:
+                    with self.assertRaisesRegex(ValueError, 'enlace'):
+                        sessions.validate_private_git(session, 'toy')
+                finally:
+                    path.unlink()  # Enlace creado exclusivamente en esta fixture.
+                    preserved.rename(path)
+        self.assertEqual((owner / 'config').read_bytes(), original_config)
+
+    def test_private_git_rejects_worktree_symlink_with_same_basename(self):
+        self.prepare()
+        self.launch()
+        session = self.wait_finished()['sesiones'][0]
+        original = Path(session['worktree'])
+        alias = self.root / 'alias' / original.name
+        alias.parent.mkdir()
+        alias.symlink_to(original, target_is_directory=True)
+        with self.assertRaisesRegex(ValueError, 'enlace'):
+            sessions.validate_private_git(dict(session, worktree=str(alias)), 'toy')
+        self.assertTrue(original.is_dir())
+
+    def test_git_and_child_environment_ignore_inherited_git_redirections(self):
+        expected = self.git('rev-parse', 'HEAD')
+        injected = {'GIT_DIR': '/fixture/foreign', 'GIT_COMMON_DIR': '/fixture/common',
+                    'GIT_WORK_TREE': '/fixture/worktree', 'GIT_INDEX_FILE': '/fixture/index',
+                    'GIT_OBJECT_DIRECTORY': '/fixture/objects',
+                    'GIT_CONFIG_COUNT': '1', 'GIT_CONFIG_KEY_0': 'core.bare',
+                    'GIT_CONFIG_VALUE_0': 'true'}
+        with patch.dict(os.environ, injected):
+            self.assertEqual(self.git('rev-parse', 'HEAD'), expected)
+            environment = sessions.child_environment({'auth_chatgpt': True})
+            self.assertFalse(any(k.startswith('GIT_') for k in environment))
+            self.assertEqual(os.environ['GIT_DIR'], injected['GIT_DIR'])
+            self.assertEqual(environment['PATH'], os.environ['PATH'])
+
+    def test_private_profile_grants_only_own_metadata_and_reviewer_stays_readonly(self):
+        self.prepare()
+        self.launch(dry=True)
+        session = self.row()['sesiones'][0]
+        cmd = sessions.command(session)
+        self.assertNotIn('--sandbox', cmd)
+        self.assertIn('--ignore-user-config', cmd)
+        self.assertIn('default_permissions="harness-git"', cmd)
+        self.assertIn('permissions.harness-git.extends=":workspace"', cmd)
+        self.assertFalse(any('sandbox_workspace_write' in part for part in cmd))
+        permissions = next(part for part in cmd if part.startswith('permissions.harness-git.filesystem='))
+        self.assertIn(json.dumps(session['git_repo']) + ' = "write"', permissions)
+        self.assertIn(json.dumps(session['git_dir']) + ' = "write"', permissions)
+        self.assertEqual(permissions.count(' = "write"'), 2)
+        self.assertNotIn(str(self.repo / '.git'), permissions)
+        reviewer = dict(session, rol='revisor', schema='/tmp/schema', veredicto_archivo='/tmp/verdict')
+        review_cmd = sessions.command(reviewer)
+        self.assertIn('read-only', review_cmd)
+        self.assertNotIn('default_permissions="harness-git"', review_cmd)
+        self.assertFalse(any('permissions.harness-git' in part for part in review_cmd))
+
+    def test_legacy_shared_worktree_can_resume_and_close_without_migration(self):
+        self.prepare()
+        def legacy_create(repo, root, ident, branch, worktree):
+            self.git('fetch', 'origin')
+            start = self.git('rev-parse', 'origin/master')
+            self.git('worktree', 'add', '-b', branch, str(worktree), start)
+            return None, start
+        with patch.object(sessions, 'create_private_git', side_effect=legacy_create):
+            self.launch()
+            first = self.wait_finished()['sesiones'][0]
+        self.assertNotIn('git_repo', first)
+        resumed = self.launch(resume=True)
+        self.assertIn('workspace-write', resumed['comando'])
+        last = self.wait_finished()['sesiones'][-1]
+        self.assertEqual(last['session_id'], first['session_id'])
+        self.assertNotIn('git_repo', last)
+        commit = self.deliver()
+        self.close()
+        self.assertEqual(self.git('rev-parse', 'codex/ws-toy'), commit)
+        self.assertFalse(Path(first['worktree']).exists())
+
+    def test_task_schema_rejects_partial_relative_or_reviewer_git_permissions(self):
+        self.prepare()
+        self.launch(dry=True)
+        row = self.row()
+        variants = ({'perfil_permisos': 'otro'}, {'rol': 'revisor'},
+                    {'git_repo': 'relative.git'}, {'git_dir': 'relative.git'},
+                    {'git_repo': None}, {'git_dir': None})
+        for fields in variants:
+            changed = dict(row, sesiones=[dict(row['sesiones'][0], **fields)])
+            with self.subTest(fields=fields), self.assertRaises(ValueError):
+                trabajo.validate_sessions(changed)
+        legacy = dict(row['sesiones'][0])
+        for key in ('git_repo', 'git_dir', 'perfil_permisos'):
+            legacy.pop(key)
+        trabajo.validate_sessions(dict(row, sesiones=[legacy]))
 
     def test_cli_dry_run_from_prepare_to_close(self):
         cli = [sys.executable, str(Path(harness.__file__)), '--base', str(self.base), '--operacion', str(self.op)]

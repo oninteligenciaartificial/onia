@@ -1,0 +1,48 @@
+{
+  "id": "harness-autopush-real-20261108",
+  "estado": "aceptado",
+  "revision": 19,
+  "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+  "ejecutor": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+  "revisor": "01a1bca3-33b4-7902-92a2-df7d76b3165f",
+  "veredicto": {
+    "veredicto": "bueno",
+    "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+    "criterio": "Cumple los seis criterios: diff limitado a los dos archivos nuevos; JSON exacto; comprobador stdlib relativo a su carpeta, sin escrituras, con AUTOPUSH_OK y rechazo de ocho discrepancias comprobadas en memoria. La evidencia suministrada acredita add/commit/push autónomos con rc=0 dentro del sandbox, sin escalación ni force, y coincidencia HEAD/origin. Revisión independiente de sólo lectura; no se editó ni aceptó la tarea.",
+    "revisor": "autopush-revisor",
+    "session_id": "01a1bca3-33b4-7902-92a2-df7d76b3165f",
+    "entrega_sha256": "88b5c4437a4205a4c9276354ad0e63240b270253c78e947b5eedcf090fd7fe47",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/harness-autopush-real-20261108/revision-2-f0d5bd73.json",
+      "sha256": "230f9bdef46e3d5f7850c28bcf7ccb01ec6d9af8d8e299c9c0b5618de5f755ae",
+      "bytes": 532
+    }
+  },
+  "runtime_revisor": [
+    {
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "read-only"
+      }
+    }
+  ],
+  "cuota_despues_revisor": {
+    "timestamp": "2026-11-08T19:30:04.510Z",
+    "primary": {
+      "used_percent": 11.0,
+      "window_minutes": 10080,
+      "resets_at": 1794624432
+    },
+    "credits": {
+      "has_credits": false,
+      "unlimited": false,
+      "balance": "0"
+    }
+  },
+  "procesos_vivos": 0,
+  "worktrees_ejecutor_revisor_retirados": true,
+  "rama_privada_conservada": true,
+  "rutas_liberadas": true
+}

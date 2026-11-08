@@ -1,0 +1,36 @@
+{
+  "id": "harness-autopush-real-20261108",
+  "autorizacion": "Pedido explícito de Sergio en el chat: publicación autónoma, otro juguete y revisor distinto.",
+  "existente": "Harness publicado 3745d255612450828c3288682fb67cb18929fd14; se extiende modelo existente.",
+  "herramientas": [
+    "Git",
+    "Python stdlib",
+    "Codex CLI 0.167.0",
+    "ChatGPT login existente"
+  ],
+  "skill_leida": "desarrollar-y-verificar",
+  "reglas_leidas": [
+    "AGENTS.md",
+    "reglas-comunes.md",
+    "boss-memoria.md",
+    "ORQUESTACION.md"
+  ],
+  "modelo_solicitado": "gpt-6.1-sol",
+  "esfuerzo_solicitado": "low",
+  "auth": "ChatGPT; sin API keys en hijo",
+  "cuota_antes": {
+    "fuente": "metadatos locales 2026-11-08T19:22:51.216Z",
+    "used_percent": 10,
+    "window_minutes": 10080,
+    "credits_balance": "0",
+    "has_credits": false
+  },
+  "rutas": [
+    "05-herramientas/2026-11-08-harness/piloto-autopush"
+  ],
+  "actor": "autopush-ejecutor",
+  "revisor": "autopush-revisor",
+  "falta": "Completar suite antes del lanzamiento; probar commit/push real y revisión.",
+  "sandbox_previo": "commit permitido en metadata privada; tres escrituras canarias denegadas sin modelo",
+  "comando_lanzamiento": "python3 _investigacion-onia/base-operativa/05-herramientas/scripts/harness.py lanzar harness-autopush-real-20261108 --revision-esperada 3 --actor autopush-ejecutor --si-sergio --modelo gpt-6.1-sol --esfuerzo low --auth-chatgpt"
+}

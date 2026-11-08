@@ -92,10 +92,15 @@ python3 "$H" estado
 python3 "$H" retomar ejemplo-001
 ```
 
-`lanzar` crea `../onia-ws-ejemplo-001`, rama `codex/ws-ejemplo-001`, desde `origin/master` después de `fetch`. El supervisor ejecuta en segundo plano:
+`lanzar` crea `../onia-ws-ejemplo-001`, rama `codex/ws-ejemplo-001`, desde `origin/master` después de `fetch`. Cada ejecutor nuevo tiene su repositorio bare privado en `~/operacion/git/ejemplo-001.git`, con objetos copiados por Git, sin alternates ni metadatos compartidos con el coordinador. El supervisor ejecuta en segundo plano:
 
 ```bash
-codex -a never -c sandbox_workspace_write.network_access=true exec --json --sandbox workspace-write -C <worktree> - < <briefing>
+codex -a never \
+  -c 'default_permissions="harness-git"' \
+  -c 'permissions.harness-git.extends=":workspace"' \
+  -c 'permissions.harness-git.network.enabled=true' \
+  -c 'permissions.harness-git.filesystem={"<bare privado>"="write","<gitdir del worktree>"="write"}' \
+  exec --json --ignore-user-config -C <worktree> - < <briefing>
 ```
 
 Guarda eventos privados en `~/operacion/logs/ejemplo-001.jsonl`, stderr aparte y el briefing efectivo por intento. La tarea contiene PID de Codex, PID del supervisor, identidades de arranque Linux, rama, session id, estado y resultado del proceso. El hijo espera una señal del supervisor hasta que su PID esté persistido; si el supervisor cae antes, no ejecuta Codex. El índice `~/operacion/sesiones.tsv` se actualiza bajo un `flock` corto compartido; el lock no dura toda la ejecución. La identidad de arranque y boot id evitan confundir un PID reutilizado o un zombi con una sesión viva. `estado` reconcilia el índice y los eventos sin imprimir su contenido sensible: muestra el tipo del último evento, estado de tarea y revisión actual. El código de salida cero no acredita entrega ni aceptación.
@@ -109,9 +114,9 @@ python3 "$H" reanudar ejemplo-001 --revision-esperada N --actor ejecutor-001 --s
 python3 "$H" cerrar ejemplo-001 --revision-esperada N --actor ejecutor-001 --resultado "Cambio y evidencia listos" --comprobacion "Comprobaciones ejecutadas y resultados concretos"
 ```
 
-`reanudar` conserva rama, worktree y log, agrega un intento y usa `codex … exec --json --sandbox workspace-write -C <worktree> resume <session_id> -`. No utiliza `--last`, no vuelve a partir de master ni descarta cambios. Un ID de sesión ausente impide reanudar: preservar el log y conciliar; no inventar un ID ni relanzar a ciegas. Una sesión viva impide una segunda ejecución de la misma tarea. `retomar` conserva su semántica anterior: leer el estado, sin ejecutar.
+`reanudar` conserva rama, worktree y log, agrega un intento y usa `codex … exec --json --ignore-user-config -C <worktree> resume <session_id> -` con el mismo perfil y dueño Git privado. Los intentos anteriores a esta capacidad conservan su sandbox y metadatos originales; no se migran ni amplían sus permisos al retomar. No utiliza `--last`, no vuelve a partir de master ni descarta cambios. Un ID de sesión ausente impide reanudar: preservar el log y conciliar; no inventar un ID ni relanzar a ciegas. Una sesión viva impide una segunda ejecución de la misma tarea. `retomar` conserva su semántica anterior: leer el estado, sin ejecutar.
 
-`cerrar` exige un commit nuevo descendiente del commit base, recupera explícitamente la rama de la tarea con `git fetch origin +refs/heads/<rama>:refs/remotes/origin/<rama>`, comprueba `git branch -r --contains <commit>` y exige que esa rama de origin contenga el commit. También exige que la rama y HEAD del worktree coincidan. Si falta publicación, queda abierta y explica que falta push. Si hay modificaciones, archivos no versionados o ignorados ajenos, conserva el worktree y pide preservarlos; nunca usa `--force`. Únicamente los enlaces propios generados en `.agents/skills` se consideran descartables. Después guarda recibo y pasa a `para_revision`; `git worktree remove` conserva la rama. La tarea y los recibos del coordinador se publican por separado cuando son compartibles.
+`cerrar` exige un commit nuevo descendiente del commit base, recupera explícitamente la rama de la tarea con `git fetch origin +refs/heads/<rama>:refs/remotes/origin/<rama>`, comprueba `git branch -r --contains <commit>` y exige que esa rama de origin contenga el commit. También exige que la rama y HEAD del worktree coincidan. Si falta publicación, queda abierta y explica que falta push. Si hay modificaciones, archivos no versionados o ignorados ajenos, conserva el worktree y pide preservarlos; nunca usa `--force`. Únicamente los enlaces propios generados en `.agents/skills` se consideran descartables. Después guarda recibo y pasa a `para_revision`; `git worktree remove` se ejecuta desde el dueño correcto y conserva la rama y el bare privado. El coordinador importa objetos y la referencia remota mediante fetch; no necesita una rama local duplicada del ejecutor. La tarea y los recibos del coordinador se publican por separado cuando son compartibles.
 
 Revisión y aceptación:
 
@@ -137,11 +142,15 @@ bash -n _investigacion-onia/base-operativa/05-herramientas/scripts/instalar-skil
 
 `test_harness_sesiones.py` recorre preparar → asignar → lanzar → estado → cerrar con `--dry-run`, llena tres cupos y rechaza el cuarto. También usa un ejecutable sintético y remotos Git locales para comprobar supervisión, retoma, publicación, rechazo por cambios pendientes y revisión; no consume cuota ni lanza Codex real.
 
-Sintaxis contrastada con `codex-cli 0.167.0`, `codex exec --help`, `codex exec resume --help` y [documentación oficial de modo no interactivo](https://learn.chatgpt.com/docs/non-interactive-mode). La compatibilidad real con autenticación, sandbox/push y cuota de una nueva sesión queda pendiente de un piloto autorizado; esta fase no lo lanza.
+Sintaxis contrastada con `codex-cli 0.167.0`, `codex exec --help`, `codex exec resume --help` y [documentación oficial de modo no interactivo](https://learn.chatgpt.com/docs/non-interactive-mode). El piloto previo acreditó autenticación, retoma y revisión. La publicación autónoma usa el perfil acotado descrito abajo y se verifica en su propio piloto; no asumir compatibilidad de otras versiones del CLI.
 
 ### Resultado del piloto real y selección de runtime
 
-El piloto `harness-piloto-real-20261108` ejercita una pausa voluntaria y la retoma por el mismo ID. En un worktree de este VPS, `workspace-write` permite crear la entrega pero impide `git add` sobre el índice Git compartido. Por eso el **coordinador publica los archivos asignados una vez terminada la ejecutora**, conservando el sandbox; después usa `cerrar` y la revisión independiente. No asumir que `rc=0` implica commit/push. El bloqueo exacto y el resultado están en el registro de errores y la evidencia del piloto.
+El piloto `harness-piloto-real-20261108` ejercitó una pausa voluntaria y la retoma por el mismo ID; su publicación la hizo el coordinador por el bloqueo del índice compartido. Los ejecutores nuevos resuelven esa limitación mediante Git privado y el perfil `harness-git`: la sesión ejecutora hace `git add`, `git commit` y `git push origin HEAD:refs/heads/codex/ws-ID` sin intervención del coordinador. Éste conserva cierre, revisión e integración a master. No asumir que `rc=0` implica commit/push.
+
+El perfil extiende `:workspace`, agrega escritura sólo al bare y al gitdir privados y mantiene `.git` pointer y las carpetas protegidas de instrucciones en sólo lectura. Usa `-a never`, red habilitada y `--ignore-user-config`; no se combina con `--sandbox` ni con ajustes legacy que anularían el perfil. No se cambia configuración global ni se usa acceso irrestricto. Se valida el dueño antes de ejecutar, retomar y cerrar; un enlace, dueño diferente o almacén dependiente de alternates bloquea. `GIT_*` heredadas se eliminan para impedir redirecciones accidentales. Identidad local de commit: `OnIA Codex <onia-codex-worker@localhost>`.
+
+Los perfiles requieren un CLI compatible (probado con 0.167.0). Fuentes oficiales: [permisos](https://learn.chatgpt.com/docs/permissions) y [rutas protegidas](https://learn.chatgpt.com/docs/agent-approvals-security). El aislamiento es de archivos locales; las credenciales GitHub existentes conservan su alcance remoto. No es una ACL remota de ramas ni una autorización para producción. La sesión sólo debe publicar su rama asignada sin force. La retención del bare permite retomar después del cierre sin borrar la rama; no hay limpieza automática de esos repositorios.
 
 `lanzar`, `reanudar` y `revisar` admiten `--modelo gpt-6.1-sol --esfuerzo low --auth-chatgpt`. Modelo y esfuerzo quedan registrados por intento; `reanudar` hereda los valores anteriores si se omiten. `--auth-chatgpt` exige autenticación ChatGPT/proveedor OpenAI y elimina del entorno del hijo las variables `OPENAI_API_KEY`, `CODEX_API_KEY` y `OPENAI_BASE_URL`; no cambia configuración global, no compra créditos ni sustituye la comprobación de cuota/saldo. Modelo solicitado y observado se distinguen en evidencia de runtime.
 

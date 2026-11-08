@@ -1,0 +1,59 @@
+{
+  "id": "harness-autopush-real-20261108",
+  "session_id": "01a1bca0-e275-7de1-a776-2942f4b7a72c",
+  "commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+  "origin_branch_commit": "01654543409365cb5adb28f942b2a6f2939dd743",
+  "branch": "codex/ws-harness-autopush-real-20261108",
+  "git_repo": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+  "git_dir": "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108",
+  "rc": 0,
+  "ultimo_evento": "turn.completed",
+  "comandos_autonomos": [
+    {
+      "command": "/bin/bash -lc 'git add _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/resultado.json _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/verificar.py && git diff --cached --check && git diff --cached --stat && git diff --cached && git commit -m \"test: piloto de publicacion autonoma del harness\" && git push origin HEAD:refs/heads/codex/ws-harness-autopush-real-20261108'",
+      "exit_code": 0,
+      "output": " .../piloto-autopush/resultado.json                 |  1 +\n .../piloto-autopush/verificar.py                   | 29 ++++++++++++++++++++++\n 2 files changed, 30 insertions(+)\ndiff --git a/_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/resultado.json b/_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/resultado.json\nnew file mode 100644\nindex 0000000..5d6cdc6\n--- /dev/null\n+++ b/_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/resultado.json\n@@ -0,0 +1 @@\n+{\"valores\":[4,1,7],\"ordenados\":[1,4,7],\"suma\":12,\"cuadrados\":[16,1,49]}\ndiff --git a/_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/verificar.py b/_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/verificar.py\nnew file mode 100644\nindex 0000000..64f2f34\n--- /dev/null\n+++ b/_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/verificar.py\n@@ -0,0 +1,29 @@\n+import json\n+from pathlib import Path\n+import sys\n+\n+\n+def main():\n+    esperado = {\n+        \"valores\": [4, 1, 7],\n+        \"ordenados\": [1, 4, 7],\n+        \"suma\": 12,\n+        \"cuadrados\": [16, 1, 49],\n+    }\n+    try:\n+        ruta = Path(__file__).resolve().parent / \"resultado.json\"\n+        resultado = json.loads(ruta.read_text(encoding=\"utf-8\"))\n+    except (OSError, ValueError) as error:\n+        print(f\"AUTOPUSH_ERROR {error}\", file=sys.stderr)\n+        return 1\n+\n+    if json.dumps(resultado, sort_keys=True) != json.dumps(esperado, sort_keys=True):\n+        print(\"AUTOPUSH_ERROR objeto discrepante\", file=sys.stderr)\n+        return 1\n+\n+    print(\"AUTOPUSH_OK\")\n+    return 0\n+\n+\n+if __name__ == \"__main__\":\n+    sys.exit(main())\n[codex/ws-harness-autopush-real-20261108 0165454] test: piloto de publicacion autonoma del harness\n 2 files changed, 30 insertions(+)\n create mode 100644 _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/resultado.json\n create mode 100644 _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/verificar.py\nremote: \nremote: Create a pull request for 'codex/ws-harness-autopush-real-20261108' on GitHub by visiting:        \nremote:      https://github.com/oninteligenciaartificial/onia/pull/new/codex/ws-harness-autopush-real-20261108        \nremote: \nTo github.com:oninteligenciaartificial/onia.git\n * [new branch]      HEAD -> codex/ws-harness-autopush-real-20261108\n"
+    },
+    {
+      "command": "/bin/bash -lc 'git rev-parse HEAD && git ls-remote origin refs/heads/codex/ws-harness-autopush-real-20261108 && git status --short && git diff --name-status 3745d255612450828c3288682fb67cb18929fd14 HEAD && (cd /tmp && python3 /home/onia-codex-worker/repos/onia-ws-harness-autopush-real-20261108/_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/verificar.py)'",
+      "exit_code": 0,
+      "output": "01654543409365cb5adb28f942b2a6f2939dd743\n01654543409365cb5adb28f942b2a6f2939dd743\trefs/heads/codex/ws-harness-autopush-real-20261108\nA\t_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/resultado.json\nA\t_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/verificar.py\nAUTOPUSH_OK\n"
+    }
+  ],
+  "diff": [
+    "A\t_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/resultado.json",
+    "A\t_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-autopush/verificar.py"
+  ],
+  "runtime_observado": [
+    {
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "workspace-write",
+        "writable_roots": [
+          "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git",
+          "/home/onia-codex-worker/operacion/git/harness-autopush-real-20261108.git/worktrees/onia-ws-harness-autopush-real-20261108"
+        ],
+        "network_access": true,
+        "exclude_tmpdir_env_var": false,
+        "exclude_slash_tmp": false
+      }
+    }
+  ],
+  "cuota_despues_ejecutor": {
+    "timestamp": "2026-11-08T19:28:00.984Z",
+    "primary": {
+      "used_percent": 11.0,
+      "window_minutes": 10080,
+      "resets_at": 1794624432
+    },
+    "credits": {
+      "has_credits": false,
+      "unlimited": false,
+      "balance": "0"
+    }
+  },
+  "publicacion_coordinador": false,
+  "nota": "El coordinador preparó permisos y tomó estas comprobaciones de sólo lectura. add/commit/push fueron ejecutados por la sesión dentro de su sandbox."
+}

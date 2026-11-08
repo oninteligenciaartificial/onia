@@ -47,10 +47,15 @@ def registry_lock(root):
         yield
 
 
+def git_environment():
+    # No heredar redirecciones de índice/objetos/configuración de otro checkout.
+    return {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
+
+
 def git(repo, *args):
     try:
         result = subprocess.run(['git', '-C', str(repo), *args], capture_output=True,
-                                text=True, encoding='utf-8', timeout=120)
+                                text=True, encoding='utf-8', timeout=120, env=git_environment())
     except subprocess.TimeoutExpired:
         raise ValueError('Git excedió 120 s en ' + args[0] + '; conservar estado y revisar acceso.') from None
     if result.returncode:
@@ -203,12 +208,65 @@ def check_capacity(rows, task_id, base, routes, role):
                 raise ValueError('Colisión de rutas con sesión viva de ' + row['id'] + '.')
 
 
+def permission_args(session):
+    """Perfil acotado; rutas literales TOML, nunca claves CLI separadas por puntos."""
+    owner, directory = session['git_repo'], session['git_dir']
+    paths = {owner: 'write', directory: 'write'}
+    table = '{' + ', '.join(json.dumps(k) + ' = ' + json.dumps(v) for k, v in paths.items()) + '}'
+    return ['-c', 'default_permissions="harness-git"',
+            '-c', 'permissions.harness-git.extends=":workspace"',
+            '-c', 'permissions.harness-git.network.enabled=true',
+            '-c', 'permissions.harness-git.filesystem=' + table]
+
+
+def validate_private_git(session, ident):
+    owner = private_path(Path(session['operacion']), 'git/' + ident + '.git')
+    worktree = Path(session['worktree'])
+    if any(path.is_symlink() for path in (worktree, *worktree.parents)):
+        raise ValueError('El worktree contiene un enlace; conservar y conciliar.')
+    expected_dir = private_path(owner, 'worktrees/' + worktree.name)
+    for relative in ('config', 'objects', 'refs', 'worktrees'):
+        private_path(owner, relative)  # Validar antes de cargar configuración Git.
+    if (session.get('git_repo') != str(owner) or session.get('git_dir') != str(expected_dir)
+            or git(owner, 'rev-parse', '--is-bare-repository') != 'true'):
+        raise ValueError('Metadatos Git privados inválidos; conservar y conciliar.')
+    if (owner / 'objects/info/alternates').exists():
+        raise ValueError('El Git privado no debe depender de objetos de otro repositorio.')
+    if worktree.exists() and (git(worktree, 'rev-parse', '--absolute-git-dir') != str(expected_dir)
+            or Path(git(worktree, 'rev-parse', '--path-format=absolute', '--git-common-dir')) != owner):
+        raise ValueError('El worktree no pertenece a sus metadatos Git privados.')
+    return owner
+
+
+def create_private_git(repo, root, ident, branch, worktree):
+    owner = private_path(root, 'git/' + ident + '.git')
+    if owner.exists() or worktree.exists() or worktree.is_symlink():
+        raise ValueError('Git privado o worktree existente; conservar y conciliar, no sobrescribir.')
+    owner.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
+    git(repo, 'init', '--bare', str(owner))
+    git(owner, 'remote', 'add', 'origin', git(repo, 'remote', 'get-url', 'origin'))
+    # Identidad técnica sólo en este repositorio; sin cambiar el usuario global.
+    git(owner, 'config', 'user.name', 'OnIA Codex')
+    git(owner, 'config', 'user.email', 'onia-codex-worker@localhost')
+    git(owner, 'config', 'commit.gpgsign', 'false')
+    git(owner, 'config', 'core.hooksPath', str(owner / 'hooks'))
+    git(owner, 'fetch', 'origin', '+refs/heads/master:refs/remotes/origin/master')
+    commit = git(owner, 'rev-parse', 'origin/master')
+    git(owner, 'worktree', 'add', '-b', branch, str(worktree), commit)
+    return owner, commit
+
+
 def command(session, codex='codex'):
     review = session['rol'] == 'revisor'
-    args = [codex, '-a', 'never', '-c',
-            'sandbox_workspace_write.network_access=' + ('false' if review else 'true'),
-            'exec', '--json', '--sandbox', 'read-only' if review else 'workspace-write',
-            '-C', session['worktree']]
+    isolated = bool(session.get('git_repo')) and not review
+    args = [codex, '-a', 'never']
+    if isolated:
+        args += permission_args(session) + ['exec', '--json', '--ignore-user-config', '-C', session['worktree']]
+    else:
+        # Compatibilidad: una retoma antigua conserva su sandbox y dueño Git.
+        args += ['-c', 'sandbox_workspace_write.network_access=' + ('false' if review else 'true'),
+                 'exec', '--json', '--sandbox', 'read-only' if review else 'workspace-write',
+                 '-C', session['worktree']]
     if review:
         args += ['--ignore-user-config', '--output-schema', session['schema'],
                  '--output-last-message', session['veredicto_archivo']]
@@ -307,6 +365,7 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
         branch = 'codex/ws-' + ident
         worktree = repo.parent / ('onia-ws-' + ident + (f'-revision-{attempt}' if reviewer else ''))
         start_commit = 'simulado'
+        git_owner = None
         log_rel = 'logs/' + ident + (f'.revision-{attempt}' if reviewer else '') + '.jsonl'
         if not resume and private_path(root, log_rel).exists():
             raise ValueError('Log existente sin retoma; se conserva y no se sobrescribe.')
@@ -320,15 +379,16 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
                 branch = previous['rama']
                 worktree = Path(previous['worktree'])
                 start_commit = previous['commit_base']
+                git_owner = validate_private_git(previous, ident) if previous.get('git_repo') else None
                 if not worktree.exists():
-                    git(repo, 'worktree', 'add', str(worktree), branch)
+                    git(git_owner or repo, 'worktree', 'add', str(worktree), branch)
                 if git(worktree, 'branch', '--show-current') != branch:
                     raise ValueError('El worktree ya no está en la rama de la sesión.')
             else:
-                git(repo, 'fetch', 'origin')
-                start_commit = git(repo, 'rev-parse', 'origin/master')
-                git(repo, 'worktree', 'add', '-b', branch, str(worktree), 'origin/master')
+                git_owner, start_commit = create_private_git(repo, root, ident, branch, worktree)
             link_skills(worktree, worktree / base.relative_to(repo))
+        elif not reviewer:
+            git_owner = Path(previous['git_repo']) if resume and previous.get('git_repo') else private_path(root, 'git/' + ident + '.git')
         logs = private_path(root, 'logs')
         logs.mkdir(parents=True, exist_ok=True, mode=0o700)
         log_rel = 'logs/' + ident + (f'.revision-{attempt}' if reviewer else '') + '.jsonl'
@@ -345,6 +405,11 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
                        commit_base=start_commit, reanuda=previous['session_id'] if resume else None,
                        briefing=str(prompt_file), inicio=trabajo.now(), rc=None, ultimo_evento=None,
                        modelo=model, esfuerzo=effort, auth_chatgpt=auth_chatgpt)
+        if git_owner:
+            session.update(git_repo=str(git_owner), git_dir=str(git_owner / 'worktrees' / worktree.name),
+                           perfil_permisos='harness-git')
+            if not dry_run:
+                validate_private_git(session, ident)
         prompt = ('Una tarea por sesión. Leé AGENTS.md, reglas-comunes.md y boss-memoria.md.\n'
                   'El coordinador conserva el registro canónico: no modificar su JSON ni su briefing.\n'
                   'Base operativa dentro de este worktree: ' + str(base.relative_to(repo)) + '\n'
@@ -378,6 +443,8 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
                     else 'Contenido no adjunto (binario o >64 KiB); cotejar en commit, o declarar faltante.') + '\n'
         else:
             prompt += ('\n\nAl finalizar: comprobá, commit y push origin ' + branch + '.\n'
+                       'Hacé el commit y push vos desde tu sandbox; no pedir publicación al coordinador.\n'
+                       'Usá push explícito sólo a la rama asignada, sin force; no cambiar otras ramas ni configuración global.\n'
                        'Informá hash y evidencia. El coordinador ejecutará cerrar y luego una revisión independiente.\n'
                        'No iniciar otras tareas, sesiones, servicios ni efectos externos fuera del encargo.\n')
         with prompt_file.open('x', encoding='utf-8') as stream:
@@ -417,7 +484,7 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
 
 
 def child_environment(session):
-    environment = os.environ.copy()
+    environment = git_environment()
     if session.get('auth_chatgpt'):
         for key in ('OPENAI_API_KEY', 'CODEX_API_KEY', 'OPENAI_BASE_URL'):
             environment.pop(key, None)
@@ -431,6 +498,8 @@ def worker(base, ident, root, attempt):
         session = next(s for s in row['sesiones'] if s['intento'] == attempt)
         if session['dry_run'] or session['estado'] != 'iniciando' or session['supervisor_pid'] != os.getpid():
             raise ValueError('Supervisor no autorizado para este intento.')
+        if session.get('git_repo'):
+            validate_private_git(session, ident)
         codex = shutil.which('codex')
         if not codex:
             session_update(root, base, ident, attempt, estado='fallida', rc=127)
@@ -565,16 +634,17 @@ def close(base, ident, root, revision, actor, result, check, dry_run=False):
             commit, branches = 'simulado', ['origin/simulado']
         else:
             git(repo, 'fetch', 'origin')
-            commit = git(repo, 'rev-parse', session['rama'] + '^{commit}')
+            git_owner = validate_private_git(session, ident) if session.get('git_repo') else repo
+            commit = git(git_owner, 'rev-parse', session['rama'] + '^{commit}')
             if commit == session['commit_base']:
                 raise ValueError('No hay commit de entrega nuevo; tarea abierta.')
-            git(repo, 'merge-base', '--is-ancestor', session['commit_base'], commit)
+            git(git_owner, 'merge-base', '--is-ancestor', session['commit_base'], commit)
             branches = ensure_remote(repo, commit, session['rama'])
             worktree = Path(session['worktree'])
             if worktree.exists():
                 if git(worktree, 'rev-parse', 'HEAD') != commit:
                     raise ValueError('HEAD del worktree no coincide con la rama asignada.')
-                clean_worktree(repo, worktree)
+                clean_worktree(git_owner, worktree)
         receipt = dict(commit=commit, commit_base=session['commit_base'], ramas_origin=branches,
                        fecha=trabajo.now(), dry_run=dry_run, intento=session['intento'])
         ref = write_evidence(base, row, f'cierre-r{row["revision"]}-{uuid.uuid4().hex[:8]}.json', receipt)

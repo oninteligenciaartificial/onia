@@ -194,6 +194,13 @@ def validate_sessions(row):
             raise ValueError('Rol o modo de sesión inválido.')
         for key in ('responsable', 'rama', 'worktree', 'log', 'log_rel', 'operacion', 'estado', 'commit_base'):
             nonempty(session.get(key), key)
+        if any(key in session for key in ('git_repo', 'git_dir', 'perfil_permisos')):
+            if session['rol'] != 'ejecutor' or session.get('perfil_permisos') != 'harness-git':
+                raise ValueError('Perfil Git privado inválido.')
+            for key in ('git_repo', 'git_dir'):
+                value = nonempty(session.get(key), key)
+                if not Path(value).is_absolute():
+                    raise ValueError('Ruta Git privada no absoluta.')
         for key in ('pid', 'supervisor_pid'):
             if session.get(key) is not None and (type(session[key]) is not int or session[key] <= 0):
                 raise ValueError('PID inválido.')

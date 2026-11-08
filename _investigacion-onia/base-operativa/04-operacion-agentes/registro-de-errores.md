@@ -233,3 +233,20 @@ Autorización posterior de Sergio: una tarea de juguete, sesión ejecutora y rev
 - **Briefing por stdin:** la ejecutora informó que el Markdown canónico no estaba materializado en su worktree; siguió correctamente el briefing recibido. El prompt aclara ahora que la ruta es referencia para resolver enlaces y no exige una segunda copia del registro.
 
 El cierre prematuro sin commit y la aceptación sin veredicto son controles negativos deliberados del piloto, no entregas fallidas ocultas. La retoma probada usa una pausa voluntaria entre turnos; no se provocó una caída de proceso ni se detuvo un servicio.
+
+## Publicación autónoma desde sandbox — 8 de noviembre de 2026
+
+Pedido de Sergio: resolver commit/push del ejecutor sin intervención del coordinador y probar otro juguete con revisor distinto, sin producción ni gasto adicional.
+
+- **Causa del bloqueo anterior confirmada:** `workspace-write` protege `.git` y el gitdir resuelto de los worktrees. Abrir el Git compartido expondría índices y referencias de otros trabajos. Se reemplaza para ejecutores nuevos por un bare privado por tarea y perfil `harness-git` que extiende `:workspace` con escritura explícita al common-dir y gitdir privados. El checkout principal no recibe permisos de escritura. Fuente primaria: https://learn.chatgpt.com/docs/agent-approvals-security y https://learn.chatgpt.com/docs/permissions.
+- **Diagnóstico inicial demasiado amplio:** una lectura agrupada excedió el presupuesto de salida. Se acotó por archivos/secciones antes de decidir; no se interpreta texto truncado como lectura completa. La ayuda CLI bajo el sandbox exterior avisó que no podía crear aliases PATH; la ayuda sí terminó, y las comprobaciones posteriores se ejecutaron con el permiso del encargo.
+- **URL documental supuesta:** `/docs/sandbox` respondió 404. Se recuperaron y abrieron las páginas vigentes encontradas por búsqueda oficial; la URL fallida no se usa como evidencia. Prevención: abrir resultados existentes.
+- **Primer ensayo sin modelo:** `codex sandbox` exigió `--permission-profile` aunque se pasara `default_permissions`. No ejecutó el comando de prueba. Corrección: usar `-P harness-git` en esta interfaz; `exec` selecciona mediante `default_permissions`.
+- **Claves CLI con rutas que contienen puntos:** `-c permissions.harness-git.filesystem."/tmp/…/owner.git"=…` se dividió incorrectamente y fue rechazado como ruta no absoluta. No ejecutó Git. Corrección: pasar `filesystem={"ruta literal"="write",…}` como tabla TOML, preservando los puntos de las rutas.
+- **Comprobación posterior sin modelo:** el perfil generado por el propio harness permitió `git add` y `git commit`; denegó escritura en índice de una fixture ajena, archivo canario y pointer `.git`. Los tres conservaron su SHA-256. El experimento se hizo en fixtures, nunca intentando escribir en producción.
+
+Las variables heredadas `GIT_*` se eliminan en las operaciones Git del runtime y en el hijo para impedir redirecciones accidentales de índice/objetos/configuración. Los ensayos de permisos usan herramientas locales sin modelo; el piloto real y su evidencia se registran por separado.
+
+- **Diagnóstico de PID desde otro sandbox:** una consulta directa a `/proc` desde el sandbox exterior no veía los PID del host mientras el log seguía avanzando. No se relanzó ni se intervino el proceso. Se cotejó `estado` en el host coordinador y los eventos finales. Prevención: no interpretar PID ausente en otro namespace como sesión caída.
+
+Resultado: piloto `harness-autopush-real-20261108` aceptado con publicación propia de la ejecutora en `01654543409365cb5adb28f942b2a6f2939dd743` y revisor distinto. Suite final 125 casos: 124 aprobados y una omisión Windows; sin fallos. [Informe](../05-herramientas/2026-11-08-harness/PUBLICACION-AUTONOMA-2026-11-08.md).
