@@ -1,0 +1,86 @@
+{
+  "fase": 2,
+  "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+  "mismo_id": true,
+  "rc": 0,
+  "checkpoint_intacto": true,
+  "verificacion": {
+    "exit_code": 0,
+    "stdout": "PILOTO_OK"
+  },
+  "commit": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+  "archivos": [
+    "_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-real/checkpoint.json",
+    "_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-real/resultado.json",
+    "_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-real/verificar.py"
+  ],
+  "publicacion": "Realizada por el coordinador después de que workspace-write bloqueara git add en el índice compartido; no se cambió el sandbox.",
+  "limite_observado": "Read-only file system al crear .git/worktrees/<worktree>/index.lock",
+  "runtime_observado": [
+    {
+      "timestamp": "2026-11-08T18:56:15.895Z",
+      "model": "gpt-6.1-sol",
+      "effort": "low"
+    },
+    {
+      "timestamp": "2026-11-08T18:57:05.872Z",
+      "model": "gpt-6.1-sol",
+      "effort": "low"
+    }
+  ],
+  "usage_turn_completed": [
+    {
+      "input_tokens": 135881,
+      "cached_input_tokens": 108544,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 630,
+      "reasoning_output_tokens": 22
+    },
+    {
+      "input_tokens": 272124,
+      "cached_input_tokens": 237568,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1668,
+      "reasoning_output_tokens": 42
+    }
+  ],
+  "estado": {
+    "dry_run": false,
+    "sesiones": [
+      {
+        "id": "harness-piloto-real-20261108",
+        "base": "/home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa",
+        "intento": 1,
+        "rol": "ejecutor",
+        "pid": 324130,
+        "pid_vivo": false,
+        "supervisor_vivo": false,
+        "viva_simulada": false,
+        "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+        "rama": "codex/ws-harness-piloto-real-20261108",
+        "estado_sesion": "finalizada",
+        "estado_tarea": "en_curso",
+        "revision": 13,
+        "ultimo_evento": "turn.completed",
+        "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl"
+      },
+      {
+        "id": "harness-piloto-real-20261108",
+        "base": "/home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa",
+        "intento": 2,
+        "rol": "ejecutor",
+        "pid": 327010,
+        "pid_vivo": false,
+        "supervisor_vivo": false,
+        "viva_simulada": false,
+        "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+        "rama": "codex/ws-harness-piloto-real-20261108",
+        "estado_sesion": "finalizada",
+        "estado_tarea": "en_curso",
+        "revision": 13,
+        "ultimo_evento": "turn.completed",
+        "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl"
+      }
+    ]
+  }
+}

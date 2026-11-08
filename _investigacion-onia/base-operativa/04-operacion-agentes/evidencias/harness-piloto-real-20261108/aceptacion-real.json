@@ -1,0 +1,69 @@
+{
+  "estado": "aceptado",
+  "revision": 23,
+  "asignacion_liberada": true,
+  "commit_entrega": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+  "sesion_ejecutora": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+  "sesion_retomada": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+  "sesion_revisora": "01a1bc89-b761-7331-aea2-25976eef5ed1",
+  "veredicto": "bueno",
+  "criterio": "1) checkpoint.json contiene etapa preparado y valores [2,3,5]; su SHA-256 coincide con fase1, conservando sus bytes. 2) resultado.json contiene etapa completo, valores [2,3,5], total 10 y cantidad 3. 3) verificar.py usa sólo stdlib, lee desde su carpeta, compara ambos contenidos y devuelve error ante discrepancias; ejecutado con salida PILOTO_OK y código 0. 4) El diff contra 715ffa9665abfc4f759c9e50b251ba004a9f1375 sólo añade los tres archivos asignados. 5) La referencia origin/codex/ws-harness-piloto-real-20261108 contiene el commit; el recibo de cierre aportado confirma publicación. Commit y push por el coordinador ante el bloqueo del sandbox están documentados. 6) Esta revisión independiente explica cada criterio. Las evidencias aportadas de fase1 y fase2 registran el mismo session_id y pausa voluntaria. Worktree limpio después de comprobar; no se modificaron archivos ni se aceptó la tarea.",
+  "worktrees_retirados": true,
+  "sesiones_vivas": 0,
+  "estado_final": {
+    "dry_run": false,
+    "sesiones": [
+      {
+        "id": "harness-piloto-real-20261108",
+        "base": "/home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa",
+        "intento": 1,
+        "rol": "ejecutor",
+        "pid": 324130,
+        "pid_vivo": false,
+        "supervisor_vivo": false,
+        "viva_simulada": false,
+        "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+        "rama": "codex/ws-harness-piloto-real-20261108",
+        "estado_sesion": "finalizada",
+        "estado_tarea": "aceptado",
+        "revision": 23,
+        "ultimo_evento": "turn.completed",
+        "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl"
+      },
+      {
+        "id": "harness-piloto-real-20261108",
+        "base": "/home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa",
+        "intento": 2,
+        "rol": "ejecutor",
+        "pid": 327010,
+        "pid_vivo": false,
+        "supervisor_vivo": false,
+        "viva_simulada": false,
+        "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+        "rama": "codex/ws-harness-piloto-real-20261108",
+        "estado_sesion": "cerrada",
+        "estado_tarea": "aceptado",
+        "revision": 23,
+        "ultimo_evento": "turn.completed",
+        "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl"
+      },
+      {
+        "id": "harness-piloto-real-20261108",
+        "base": "/home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa",
+        "intento": 3,
+        "rol": "revisor",
+        "pid": 342233,
+        "pid_vivo": false,
+        "supervisor_vivo": false,
+        "viva_simulada": false,
+        "session_id": "01a1bc89-b761-7331-aea2-25976eef5ed1",
+        "rama": "(detached)",
+        "estado_sesion": "finalizada",
+        "estado_tarea": "aceptado",
+        "revision": 23,
+        "ultimo_evento": "turn.completed",
+        "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.revision-3.jsonl"
+      }
+    ]
+  }
+}

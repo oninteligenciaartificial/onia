@@ -1,0 +1,58 @@
+{
+  "fuente": "Sólo turn_context y token_count/rate_limits de las dos sesiones del piloto; sin mensajes, tokens de autenticación ni secretos.",
+  "sesiones": [
+    {
+      "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+      "turnos": [
+        {
+          "timestamp": "2026-11-08T18:56:15.895Z",
+          "model": "gpt-6.1-sol",
+          "effort": "low"
+        },
+        {
+          "timestamp": "2026-11-08T18:57:05.872Z",
+          "model": "gpt-6.1-sol",
+          "effort": "low"
+        }
+      ],
+      "ultima_cuota": {
+        "timestamp": "2026-11-08T18:57:32.396Z",
+        "primary": {
+          "used_percent": 9.0,
+          "window_minutes": 10080,
+          "resets_at": 1794624432
+        },
+        "credits": {
+          "has_credits": false,
+          "unlimited": false,
+          "balance": "0"
+        },
+        "plan_type": "prolite"
+      }
+    },
+    {
+      "session_id": "01a1bc89-b761-7331-aea2-25976eef5ed1",
+      "turnos": [
+        {
+          "timestamp": "2026-11-08T19:01:45.964Z",
+          "model": "gpt-6.1-sol",
+          "effort": "low"
+        }
+      ],
+      "ultima_cuota": {
+        "timestamp": "2026-11-08T19:02:07.997Z",
+        "primary": {
+          "used_percent": 9.0,
+          "window_minutes": 10080,
+          "resets_at": 1794624432
+        },
+        "credits": {
+          "has_credits": false,
+          "unlimited": false,
+          "balance": "0"
+        },
+        "plan_type": "prolite"
+      }
+    }
+  ]
+}

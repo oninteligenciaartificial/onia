@@ -373,6 +373,32 @@ class SessionTests(unittest.TestCase):
             self.launch(dry=True)
         self.assertEqual(list(target.iterdir()), [])
 
+    def test_explicit_runtime_and_chatgpt_auth_do_not_inherit_api_credentials(self):
+        self.prepare()
+        result = self.launch(dry=True, model='gpt-6.1-sol', effort='low', auth_chatgpt=True)
+        command = result['comando']
+        self.assertIn('gpt-6.1-sol', command)
+        self.assertIn('model_reasoning_effort="low"', command)
+        self.assertIn('forced_login_method="chatgpt"', command)
+        with patch.dict(os.environ, {'OPENAI_API_KEY': 'fixture', 'CODEX_API_KEY': 'fixture', 'OPENAI_BASE_URL': 'fixture'}):
+            child_env = sessions.child_environment(self.row()['sesiones'][0])
+            self.assertNotIn('OPENAI_API_KEY', child_env)
+            self.assertNotIn('CODEX_API_KEY', child_env)
+            self.assertNotIn('OPENAI_BASE_URL', child_env)
+            self.assertEqual(os.environ['OPENAI_API_KEY'], 'fixture')
+        self.assertEqual(self.row()['sesiones'][0]['esfuerzo'], 'low')
+
+    def test_close_fetches_task_branch_when_clone_tracks_only_master(self):
+        self.git('config', '--unset-all', 'remote.origin.fetch')
+        self.git('config', '--add', 'remote.origin.fetch', '+refs/heads/master:refs/remotes/origin/master')
+        self.prepare()
+        self.launch()
+        self.wait_finished()
+        commit = self.deliver()
+        result = self.close()
+        self.assertEqual(result['tarea']['cierre']['commit'], commit)
+        self.assertIn('origin/codex/ws-toy', result['tarea']['cierre']['ramas_origin'])
+
     def test_cli_dry_run_from_prepare_to_close(self):
         cli = [sys.executable, str(Path(harness.__file__)), '--base', str(self.base), '--operacion', str(self.op)]
         def call(*args, rc=0):

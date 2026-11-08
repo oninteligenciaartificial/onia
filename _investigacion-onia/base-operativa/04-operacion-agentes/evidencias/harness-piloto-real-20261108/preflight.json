@@ -1,0 +1,32 @@
+{
+  "fecha": "2026-11-08",
+  "autorizacion": "Solicitud explícita de Sergio en este chat: piloto real de juguete, revisor distinto, retoma, cierre y aceptación; sin producción ni gasto adicional.",
+  "base_commit": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+  "cli_version": "0.167.0",
+  "auth": "ChatGPT; sin claves API presentes",
+  "cuota_observada": {
+    "fuente": "metadatos locales token_count/rate_limits",
+    "timestamp": "2026-11-08T18:52:40.944Z",
+    "used_percent": 8.0,
+    "window_minutes": 10080,
+    "credits_balance": "0",
+    "has_credits": false
+  },
+  "runtime_solicitado": {
+    "model": "gpt-6.1-sol",
+    "effort": "low",
+    "auth_chatgpt": true
+  },
+  "mcp_necesarios": [],
+  "doctor": {
+    "ok": true,
+    "archivos": 30
+  },
+  "plan": "Un turno crea checkpoint y termina voluntariamente. Reanudar ese mismo session id para terminar, verificar y publicar. Cerrar, nueva sesión revisora sólo lectura, recoger, aceptar e integrar. No simula caída de proceso.",
+  "limites": [
+    "Sin instalaciones ni llamadas a otros servicios",
+    "No sudo, Docker, n8n ni app-server",
+    "No compras ni API facturada",
+    "Checkout principal intacto"
+  ]
+}

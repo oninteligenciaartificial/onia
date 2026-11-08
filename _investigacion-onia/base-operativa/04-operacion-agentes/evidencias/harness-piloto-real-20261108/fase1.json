@@ -1,0 +1,31 @@
+{
+  "fase": 1,
+  "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+  "rc": 0,
+  "checkpoint_sha256": "e63adb5afab493c148af37cf2364b8b7b1339ff2d3e2a4333ca6ff976dff2fcb",
+  "resultado_ausente": true,
+  "cierre_prematuro_rechazado": "No hay commit de entrega nuevo; tarea abierta.",
+  "estado": {
+    "dry_run": false,
+    "sesiones": [
+      {
+        "id": "harness-piloto-real-20261108",
+        "base": "/home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa",
+        "intento": 1,
+        "rol": "ejecutor",
+        "pid": 324130,
+        "pid_vivo": false,
+        "supervisor_vivo": false,
+        "viva_simulada": false,
+        "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+        "rama": "codex/ws-harness-piloto-real-20261108",
+        "estado_sesion": "finalizada",
+        "estado_tarea": "en_curso",
+        "revision": 8,
+        "ultimo_evento": "turn.completed",
+        "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl"
+      }
+    ]
+  },
+  "pausa": "Fin voluntario del primer turno, no caída forzada"
+}

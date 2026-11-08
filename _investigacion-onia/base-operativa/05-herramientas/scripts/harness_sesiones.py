@@ -212,6 +212,12 @@ def command(session, codex='codex'):
     if review:
         args += ['--ignore-user-config', '--output-schema', session['schema'],
                  '--output-last-message', session['veredicto_archivo']]
+    if session.get('modelo'):
+        args += ['--model', session['modelo']]
+    if session.get('esfuerzo'):
+        args += ['-c', 'model_reasoning_effort=' + json.dumps(session['esfuerzo'])]
+    if session.get('auth_chatgpt'):
+        args += ['-c', 'forced_login_method="chatgpt"', '-c', 'model_provider="openai"']
     if session.get('reanuda'):
         args += ['resume', session['reanuda']]
     return args + ['-']
@@ -245,8 +251,12 @@ def link_skills(repo, base, dry_run=False):
 
 
 def launch(base, ident, root, revision, actor, approved=False, dry_run=False, resume=False,
-           reviewer=None):
+           reviewer=None, model=None, effort=None, auth_chatgpt=False):
     base = Path(base).resolve()
+    if model is not None and not re.fullmatch(r'[a-zA-Z0-9][a-zA-Z0-9._-]{0,99}', model):
+        raise ValueError('Modelo inválido.')
+    if effort is not None and effort not in trabajo.EFFORTS:
+        raise ValueError('Esfuerzo inválido.')
     trabajo.task_path(base, ident)
     root = operation(root, dry_run)
     if not dry_run and not approved:
@@ -267,6 +277,10 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
             raise ValueError('No mezclar simulación, operación real ni carpetas de operación para un ID.')
         role = 'revisor' if reviewer else 'ejecutor'
         previous = next((s for s in reversed(row.get('sesiones', [])) if s['rol'] == 'ejecutor'), None)
+        if resume and previous:
+            model = model or previous.get('modelo')
+            effort = effort or previous.get('esfuerzo')
+            auth_chatgpt = auth_chatgpt or previous.get('auth_chatgpt', False)
         if reviewer:
             reviewer = trabajo.nonempty(reviewer, 'revisor')
             if reviewer in {actor, *[s['responsable'] for s in row.get('sesiones', []) if s['rol'] == 'ejecutor']}:
@@ -300,7 +314,7 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
             if reviewer:
                 git(repo, 'fetch', 'origin')
                 start_commit = row['cierre']['commit']
-                ensure_remote(repo, start_commit)
+                ensure_remote(repo, start_commit, previous['rama'])
                 git(repo, 'worktree', 'add', '--detach', str(worktree), start_commit)
             elif resume:
                 branch = previous['rama']
@@ -329,10 +343,12 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
                        log=str(log), log_rel=log_rel, log_offset=log.stat().st_size if log.exists() else 0,
                        worktree=str(worktree), rutas=assignment['rutas'], dry_run=dry_run,
                        commit_base=start_commit, reanuda=previous['session_id'] if resume else None,
-                       briefing=str(prompt_file), inicio=trabajo.now(), rc=None, ultimo_evento=None)
+                       briefing=str(prompt_file), inicio=trabajo.now(), rc=None, ultimo_evento=None,
+                       modelo=model, esfuerzo=effort, auth_chatgpt=auth_chatgpt)
         prompt = ('Una tarea por sesión. Leé AGENTS.md, reglas-comunes.md y boss-memoria.md.\n'
                   'El coordinador conserva el registro canónico: no modificar su JSON ni su briefing.\n'
                   'Base operativa dentro de este worktree: ' + str(base.relative_to(repo)) + '\n'
+                  'El briefing se recibe por stdin; su archivo no tiene que existir en este worktree.\n'
                   'Los enlaces del briefing se resuelven desde base-operativa/' + row['briefing']['archivo'] + '.\n'
                   'Rutas asignadas (relativas a base-operativa): ' + json.dumps(assignment['rutas']) + '\n\n'
                   + row['briefing']['contenido'])
@@ -400,6 +416,14 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
                 else 'Supervisor en segundo plano; consultar estado para PID e ID de Codex.'}
 
 
+def child_environment(session):
+    environment = os.environ.copy()
+    if session.get('auth_chatgpt'):
+        for key in ('OPENAI_API_KEY', 'CODEX_API_KEY', 'OPENAI_BASE_URL'):
+            environment.pop(key, None)
+    return environment
+
+
 def worker(base, ident, root, attempt):
     root, base = Path(root), Path(base).resolve()
     with registry_lock(root):
@@ -424,7 +448,8 @@ def worker(base, ident, root, attempt):
                                  'os.execvp(sys.argv[2],sys.argv[2:])')
                     child = subprocess.Popen([sys.executable, '-c', bootstrap, str(gate_read),
                         *command(session, codex)], stdin=prompt, stdout=output, stderr=errors,
-                        cwd=session['worktree'], close_fds=True, pass_fds=(gate_read,))
+                        cwd=session['worktree'], close_fds=True, pass_fds=(gate_read,),
+                        env=child_environment(session))
                     with os.fdopen(gate_write, 'wb') as gate:
                         gate_write = None
                         session_update(root, base, ident, attempt, pid=child.pid,
@@ -469,10 +494,17 @@ def status(base, root, dry_run=False):
                 for location, row in rows for s in row['sesiones']]}
 
 
-def ensure_remote(repo, commit):
+def ensure_remote(repo, commit, branch):
+    # Algunos clones sólo recuperan master. Actualizar explícitamente la rama de
+    # esta tarea evita rechazar un push real o aceptar una referencia obsoleta.
+    try:
+        git(repo, 'fetch', 'origin', '+refs/heads/' + branch + ':refs/remotes/origin/' + branch)
+    except ValueError as exc:
+        raise ValueError('Commit no está en origin o no se pudo recuperar su rama; '
+                         'tarea abierta, comprobar push y acceso.') from exc
     branches = git(repo, 'branch', '-r', '--contains', commit, '--format=%(refname:short)').splitlines()
     branches = [b for b in branches if b.startswith('origin/') and b != 'origin/HEAD']
-    if not branches:
+    if 'origin/' + branch not in branches:
         raise ValueError('Commit no está en origin: tarea abierta; hacer push y volver a cerrar.')
     return branches
 
@@ -532,12 +564,12 @@ def close(base, ident, root, revision, actor, result, check, dry_run=False):
         if dry_run:
             commit, branches = 'simulado', ['origin/simulado']
         else:
-            git(repo, 'fetch', 'origin', '--prune')
+            git(repo, 'fetch', 'origin')
             commit = git(repo, 'rev-parse', session['rama'] + '^{commit}')
             if commit == session['commit_base']:
                 raise ValueError('No hay commit de entrega nuevo; tarea abierta.')
             git(repo, 'merge-base', '--is-ancestor', session['commit_base'], commit)
-            branches = ensure_remote(repo, commit)
+            branches = ensure_remote(repo, commit, session['rama'])
             worktree = Path(session['worktree'])
             if worktree.exists():
                 if git(worktree, 'rev-parse', 'HEAD') != commit:

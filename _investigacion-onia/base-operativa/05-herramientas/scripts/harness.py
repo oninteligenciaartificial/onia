@@ -252,6 +252,9 @@ def main(argv=None):
         p.add_argument("--revision-esperada", type=int, required=True)
         p.add_argument("--actor")
         p.add_argument("--si-sergio", action="store_true")
+        p.add_argument("--modelo", help="Modelo explícito para esta sesión, sin cambiar config global.")
+        p.add_argument("--esfuerzo", choices=sorted(trabajo.EFFORTS))
+        p.add_argument("--auth-chatgpt", action="store_true", help="Exigir login ChatGPT y quitar variables API del hijo; no mide cuota.")
         p.add_argument("--dry-run", action="store_true")
         if name == "revisar":
             p.add_argument("--revisor")
@@ -297,7 +300,8 @@ def main(argv=None):
                     raise ValueError("Revisar requiere --revisor distinto del ejecutor.")
                 result = sessions.launch(args.base, args.id, args.operacion, args.revision_esperada,
                     args.actor, approved=args.si_sergio, dry_run=args.dry_run,
-                    resume=args.command == "reanudar", reviewer=getattr(args, "revisor", None))
+                    resume=args.command == "reanudar", reviewer=getattr(args, "revisor", None),
+                    model=args.modelo, effort=args.esfuerzo, auth_chatgpt=args.auth_chatgpt)
             code = 0
         elif args.command == "asignar":
             result = trabajo.assign(args.base.resolve(), args.id, args.revision_esperada,

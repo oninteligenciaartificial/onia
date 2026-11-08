@@ -1,0 +1,2289 @@
+{
+  "schema": 2,
+  "id": "harness-piloto-real-20261108",
+  "revision": 23,
+  "compartible": true,
+  "objetivo": "Comprobar el ciclo real del harness con una tarea sintética en dos turnos",
+  "estado": "aceptado",
+  "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+  "resultado": "Tres archivos sintéticos publicados; retoma del mismo ID comprobada",
+  "comprobacion": "PILOTO_OK, checkpoint intacto, diff limitado a tres archivos. Commit/push realizados por coordinador debido a bloqueo Git del sandbox.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/preflight.json",
+      "sha256": "f00d82b098bf2ca009a55e621e3a1facd92f92c0b3b6b329b94cb17915eef49a",
+      "bytes": 1181
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase1.json",
+      "sha256": "5f9ca080325a4d5d1665f38706b2c2c7b41fde0a1405b675c978ce026949b68a",
+      "bytes": 1094
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase2.json",
+      "sha256": "21634dc040f7489fb0626251f66ebede18d19464ea7cb70b1e88b33202f6048d",
+      "bytes": 2909
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+      "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+      "bytes": 279
+    }
+  ],
+  "actualizado": "2026-11-08T19:02:51.326689+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-08T18:55:28.229976+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/harness-piloto-real-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-08T18:55:28.292096+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/harness-piloto-real-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-08T18:56:13.490884+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-08T18:56:13.534526+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-08T18:56:13.598841+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-08T18:56:14.657703+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-08T18:56:21.596232+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-08T18:56:38.267700+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-08T18:57:03.926367+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-08T18:57:03.975782+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 327008,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-08T18:57:04.047567+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 327010,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343937",
+          "supervisor_pid": 327008,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-08T18:57:04.591887+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 327010,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343937",
+          "supervisor_pid": 327008,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-08T18:57:32.960301+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 327010,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343937",
+          "supervisor_pid": 327008,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:57:32.951370+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-08T18:59:16.518941+00:00",
+      "estado": "en_curso",
+      "resultado": "Juguete comprobado tras retoma; publicado por coordinador",
+      "comprobacion": "PILOTO_OK; checkpoint intacto; diff de tres archivos",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/preflight.json",
+          "sha256": "f00d82b098bf2ca009a55e621e3a1facd92f92c0b3b6b329b94cb17915eef49a",
+          "bytes": 1181
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase1.json",
+          "sha256": "5f9ca080325a4d5d1665f38706b2c2c7b41fde0a1405b675c978ce026949b68a",
+          "bytes": 1094
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase2.json",
+          "sha256": "21634dc040f7489fb0626251f66ebede18d19464ea7cb70b1e88b33202f6048d",
+          "bytes": 2909
+        }
+      ],
+      "proximo_paso": "Cerrar y revisar",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 327010,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343937",
+          "supervisor_pid": 327008,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:57:32.951370+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-08T19:01:42.317296+00:00",
+      "estado": "para_revision",
+      "resultado": "Tres archivos sintéticos publicados; retoma del mismo ID comprobada",
+      "comprobacion": "PILOTO_OK, checkpoint intacto, diff limitado a tres archivos. Commit/push realizados por coordinador debido a bloqueo Git del sandbox.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/preflight.json",
+          "sha256": "f00d82b098bf2ca009a55e621e3a1facd92f92c0b3b6b329b94cb17915eef49a",
+          "bytes": 1181
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase1.json",
+          "sha256": "5f9ca080325a4d5d1665f38706b2c2c7b41fde0a1405b675c978ce026949b68a",
+          "bytes": 1094
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase2.json",
+          "sha256": "21634dc040f7489fb0626251f66ebede18d19464ea7cb70b1e88b33202f6048d",
+          "bytes": 2909
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 327010,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343937",
+          "supervisor_pid": 327008,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:57:32.951370+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+        "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+        "ramas_origin": [
+          "origin/codex/ws-harness-piloto-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:01:42.298108+00:00",
+        "dry_run": false,
+        "intento": 2,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 16,
+      "actualizado": "2026-11-08T19:01:44.078839+00:00",
+      "estado": "para_revision",
+      "resultado": "Tres archivos sintéticos publicados; retoma del mismo ID comprobada",
+      "comprobacion": "PILOTO_OK, checkpoint intacto, diff limitado a tres archivos. Commit/push realizados por coordinador debido a bloqueo Git del sandbox.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/preflight.json",
+          "sha256": "f00d82b098bf2ca009a55e621e3a1facd92f92c0b3b6b329b94cb17915eef49a",
+          "bytes": 1181
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase1.json",
+          "sha256": "5f9ca080325a4d5d1665f38706b2c2c7b41fde0a1405b675c978ce026949b68a",
+          "bytes": 1094
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase2.json",
+          "sha256": "21634dc040f7489fb0626251f66ebede18d19464ea7cb70b1e88b33202f6048d",
+          "bytes": 2909
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 327010,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343937",
+          "supervisor_pid": 327008,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:57:32.951370+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "piloto-revisor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108-revision-3",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T19:01:44.057222+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "2e79c2c5e4dbcf88ee6332e3744ad5c00c112b4de0468d949e68a5f95ae24c2c",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+        "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+        "ramas_origin": [
+          "origin/codex/ws-harness-piloto-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:01:42.298108+00:00",
+        "dry_run": false,
+        "intento": 2,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 17,
+      "actualizado": "2026-11-08T19:01:44.138047+00:00",
+      "estado": "para_revision",
+      "resultado": "Tres archivos sintéticos publicados; retoma del mismo ID comprobada",
+      "comprobacion": "PILOTO_OK, checkpoint intacto, diff limitado a tres archivos. Commit/push realizados por coordinador debido a bloqueo Git del sandbox.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/preflight.json",
+          "sha256": "f00d82b098bf2ca009a55e621e3a1facd92f92c0b3b6b329b94cb17915eef49a",
+          "bytes": 1181
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase1.json",
+          "sha256": "5f9ca080325a4d5d1665f38706b2c2c7b41fde0a1405b675c978ce026949b68a",
+          "bytes": 1094
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase2.json",
+          "sha256": "21634dc040f7489fb0626251f66ebede18d19464ea7cb70b1e88b33202f6048d",
+          "bytes": 2909
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 327010,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343937",
+          "supervisor_pid": 327008,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:57:32.951370+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "piloto-revisor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 342231,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190371945",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108-revision-3",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T19:01:44.057222+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "2e79c2c5e4dbcf88ee6332e3744ad5c00c112b4de0468d949e68a5f95ae24c2c",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+        "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+        "ramas_origin": [
+          "origin/codex/ws-harness-piloto-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:01:42.298108+00:00",
+        "dry_run": false,
+        "intento": 2,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 18,
+      "actualizado": "2026-11-08T19:01:44.197438+00:00",
+      "estado": "para_revision",
+      "resultado": "Tres archivos sintéticos publicados; retoma del mismo ID comprobada",
+      "comprobacion": "PILOTO_OK, checkpoint intacto, diff limitado a tres archivos. Commit/push realizados por coordinador debido a bloqueo Git del sandbox.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/preflight.json",
+          "sha256": "f00d82b098bf2ca009a55e621e3a1facd92f92c0b3b6b329b94cb17915eef49a",
+          "bytes": 1181
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase1.json",
+          "sha256": "5f9ca080325a4d5d1665f38706b2c2c7b41fde0a1405b675c978ce026949b68a",
+          "bytes": 1094
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase2.json",
+          "sha256": "21634dc040f7489fb0626251f66ebede18d19464ea7cb70b1e88b33202f6048d",
+          "bytes": 2909
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 327010,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343937",
+          "supervisor_pid": 327008,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:57:32.951370+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "piloto-revisor",
+          "pid": 342233,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190371951",
+          "supervisor_pid": 342231,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190371945",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108-revision-3",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T19:01:44.057222+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "2e79c2c5e4dbcf88ee6332e3744ad5c00c112b4de0468d949e68a5f95ae24c2c",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+        "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+        "ramas_origin": [
+          "origin/codex/ws-harness-piloto-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:01:42.298108+00:00",
+        "dry_run": false,
+        "intento": 2,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 19,
+      "actualizado": "2026-11-08T19:01:44.750419+00:00",
+      "estado": "para_revision",
+      "resultado": "Tres archivos sintéticos publicados; retoma del mismo ID comprobada",
+      "comprobacion": "PILOTO_OK, checkpoint intacto, diff limitado a tres archivos. Commit/push realizados por coordinador debido a bloqueo Git del sandbox.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/preflight.json",
+          "sha256": "f00d82b098bf2ca009a55e621e3a1facd92f92c0b3b6b329b94cb17915eef49a",
+          "bytes": 1181
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase1.json",
+          "sha256": "5f9ca080325a4d5d1665f38706b2c2c7b41fde0a1405b675c978ce026949b68a",
+          "bytes": 1094
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase2.json",
+          "sha256": "21634dc040f7489fb0626251f66ebede18d19464ea7cb70b1e88b33202f6048d",
+          "bytes": 2909
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 327010,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343937",
+          "supervisor_pid": 327008,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:57:32.951370+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "piloto-revisor",
+          "pid": 342233,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190371951",
+          "supervisor_pid": 342231,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190371945",
+          "rama": "(detached)",
+          "session_id": "01a1bc89-b761-7331-aea2-25976eef5ed1",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108-revision-3",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T19:01:44.057222+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "2e79c2c5e4dbcf88ee6332e3744ad5c00c112b4de0468d949e68a5f95ae24c2c",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+        "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+        "ramas_origin": [
+          "origin/codex/ws-harness-piloto-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:01:42.298108+00:00",
+        "dry_run": false,
+        "intento": 2,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 20,
+      "actualizado": "2026-11-08T19:02:08.653906+00:00",
+      "estado": "para_revision",
+      "resultado": "Tres archivos sintéticos publicados; retoma del mismo ID comprobada",
+      "comprobacion": "PILOTO_OK, checkpoint intacto, diff limitado a tres archivos. Commit/push realizados por coordinador debido a bloqueo Git del sandbox.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/preflight.json",
+          "sha256": "f00d82b098bf2ca009a55e621e3a1facd92f92c0b3b6b329b94cb17915eef49a",
+          "bytes": 1181
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase1.json",
+          "sha256": "5f9ca080325a4d5d1665f38706b2c2c7b41fde0a1405b675c978ce026949b68a",
+          "bytes": 1094
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase2.json",
+          "sha256": "21634dc040f7489fb0626251f66ebede18d19464ea7cb70b1e88b33202f6048d",
+          "bytes": 2909
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 327010,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343937",
+          "supervisor_pid": 327008,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:57:32.951370+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "piloto-revisor",
+          "pid": 342233,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190371951",
+          "supervisor_pid": 342231,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190371945",
+          "rama": "(detached)",
+          "session_id": "01a1bc89-b761-7331-aea2-25976eef5ed1",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108-revision-3",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T19:01:44.057222+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "2e79c2c5e4dbcf88ee6332e3744ad5c00c112b4de0468d949e68a5f95ae24c2c",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.veredicto.json",
+          "fin": "2026-11-08T19:02:08.624385+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+        "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+        "ramas_origin": [
+          "origin/codex/ws-harness-piloto-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:01:42.298108+00:00",
+        "dry_run": false,
+        "intento": 2,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 21,
+      "actualizado": "2026-11-08T19:02:51.237939+00:00",
+      "estado": "para_revision",
+      "resultado": "Tres archivos sintéticos publicados; retoma del mismo ID comprobada",
+      "comprobacion": "PILOTO_OK, checkpoint intacto, diff limitado a tres archivos. Commit/push realizados por coordinador debido a bloqueo Git del sandbox.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/preflight.json",
+          "sha256": "f00d82b098bf2ca009a55e621e3a1facd92f92c0b3b6b329b94cb17915eef49a",
+          "bytes": 1181
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase1.json",
+          "sha256": "5f9ca080325a4d5d1665f38706b2c2c7b41fde0a1405b675c978ce026949b68a",
+          "bytes": 1094
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase2.json",
+          "sha256": "21634dc040f7489fb0626251f66ebede18d19464ea7cb70b1e88b33202f6048d",
+          "bytes": 2909
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 327010,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343937",
+          "supervisor_pid": 327008,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:57:32.951370+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "piloto-revisor",
+          "pid": 342233,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190371951",
+          "supervisor_pid": 342231,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190371945",
+          "rama": "(detached)",
+          "session_id": "01a1bc89-b761-7331-aea2-25976eef5ed1",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108-revision-3",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T19:01:44.057222+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "2e79c2c5e4dbcf88ee6332e3744ad5c00c112b4de0468d949e68a5f95ae24c2c",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.veredicto.json",
+          "fin": "2026-11-08T19:02:08.624385+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+        "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+        "ramas_origin": [
+          "origin/codex/ws-harness-piloto-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:01:42.298108+00:00",
+        "dry_run": false,
+        "intento": 2,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+        "criterio": "1) checkpoint.json contiene etapa preparado y valores [2,3,5]; su SHA-256 coincide con fase1, conservando sus bytes. 2) resultado.json contiene etapa completo, valores [2,3,5], total 10 y cantidad 3. 3) verificar.py usa sólo stdlib, lee desde su carpeta, compara ambos contenidos y devuelve error ante discrepancias; ejecutado con salida PILOTO_OK y código 0. 4) El diff contra 715ffa9665abfc4f759c9e50b251ba004a9f1375 sólo añade los tres archivos asignados. 5) La referencia origin/codex/ws-harness-piloto-real-20261108 contiene el commit; el recibo de cierre aportado confirma publicación. Commit y push por el coordinador ante el bloqueo del sandbox están documentados. 6) Esta revisión independiente explica cada criterio. Las evidencias aportadas de fase1 y fase2 registran el mismo session_id y pausa voluntaria. Worktree limpio después de comprobar; no se modificaron archivos ni se aceptó la tarea.",
+        "revisor": "piloto-revisor",
+        "session_id": "01a1bc89-b761-7331-aea2-25976eef5ed1",
+        "entrega_sha256": "2e79c2c5e4dbcf88ee6332e3744ad5c00c112b4de0468d949e68a5f95ae24c2c",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/revision-3-cdd179f7.json",
+          "sha256": "a4dc68239096d424b1d8dce1422c0fdfe7ac326287a0b95bec5fb8dcd631e68e",
+          "bytes": 1016
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/revision-3-cdd179f7.json",
+          "sha256": "a4dc68239096d424b1d8dce1422c0fdfe7ac326287a0b95bec5fb8dcd631e68e",
+          "bytes": 1016
+        }
+      ]
+    },
+    {
+      "revision": 22,
+      "actualizado": "2026-11-08T19:02:51.289730+00:00",
+      "estado": "aceptado",
+      "resultado": "Tres archivos sintéticos publicados; retoma del mismo ID comprobada",
+      "comprobacion": "PILOTO_OK, checkpoint intacto, diff limitado a tres archivos. Commit/push realizados por coordinador debido a bloqueo Git del sandbox.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/preflight.json",
+          "sha256": "f00d82b098bf2ca009a55e621e3a1facd92f92c0b3b6b329b94cb17915eef49a",
+          "bytes": 1181
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase1.json",
+          "sha256": "5f9ca080325a4d5d1665f38706b2c2c7b41fde0a1405b675c978ce026949b68a",
+          "bytes": 1094
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/fase2.json",
+          "sha256": "21634dc040f7489fb0626251f66ebede18d19464ea7cb70b1e88b33202f6048d",
+          "bytes": 2909
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      ],
+      "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+      "aceptacion": {
+        "revisor": "piloto-revisor",
+        "criterio": "1) checkpoint.json contiene etapa preparado y valores [2,3,5]; su SHA-256 coincide con fase1, conservando sus bytes. 2) resultado.json contiene etapa completo, valores [2,3,5], total 10 y cantidad 3. 3) verificar.py usa sólo stdlib, lee desde su carpeta, compara ambos contenidos y devuelve error ante discrepancias; ejecutado con salida PILOTO_OK y código 0. 4) El diff contra 715ffa9665abfc4f759c9e50b251ba004a9f1375 sólo añade los tres archivos asignados. 5) La referencia origin/codex/ws-harness-piloto-real-20261108 contiene el commit; el recibo de cierre aportado confirma publicación. Commit y push por el coordinador ante el bloqueo del sandbox están documentados. 6) Esta revisión independiente explica cada criterio. Las evidencias aportadas de fase1 y fase2 registran el mismo session_id y pausa voluntaria. Worktree limpio después de comprobar; no se modificaron archivos ni se aceptó la tarea.",
+        "fecha": "2026-11-08T19:02:51.289713+00:00"
+      },
+      "asignacion": {
+        "responsable": "piloto-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-real"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T18:55:28.292026+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 324130,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+          "supervisor_pid": 324126,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T18:56:13.473693+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:56:38.255096+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "piloto-ejecutor",
+          "pid": 327010,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343937",
+          "supervisor_pid": 327008,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+          "rama": "codex/ws-harness-piloto-real-20261108",
+          "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+          "log_offset": 17970,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+          "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T18:57:03.916275+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "fin": "2026-11-08T18:57:32.951370+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "piloto-revisor",
+          "pid": 342233,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190371951",
+          "supervisor_pid": 342231,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190371945",
+          "rama": "(detached)",
+          "session_id": "01a1bc89-b761-7331-aea2-25976eef5ed1",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_rel": "logs/harness-piloto-real-20261108.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108-revision-3",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-real"
+          ],
+          "dry_run": false,
+          "commit_base": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T19:01:44.057222+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "2e79c2c5e4dbcf88ee6332e3744ad5c00c112b4de0468d949e68a5f95ae24c2c",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.veredicto.json",
+          "fin": "2026-11-08T19:02:08.624385+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+        "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+        "ramas_origin": [
+          "origin/codex/ws-harness-piloto-real-20261108"
+        ],
+        "fecha": "2026-11-08T19:01:42.298108+00:00",
+        "dry_run": false,
+        "intento": 2,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+          "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+          "bytes": 279
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+        "criterio": "1) checkpoint.json contiene etapa preparado y valores [2,3,5]; su SHA-256 coincide con fase1, conservando sus bytes. 2) resultado.json contiene etapa completo, valores [2,3,5], total 10 y cantidad 3. 3) verificar.py usa sólo stdlib, lee desde su carpeta, compara ambos contenidos y devuelve error ante discrepancias; ejecutado con salida PILOTO_OK y código 0. 4) El diff contra 715ffa9665abfc4f759c9e50b251ba004a9f1375 sólo añade los tres archivos asignados. 5) La referencia origin/codex/ws-harness-piloto-real-20261108 contiene el commit; el recibo de cierre aportado confirma publicación. Commit y push por el coordinador ante el bloqueo del sandbox están documentados. 6) Esta revisión independiente explica cada criterio. Las evidencias aportadas de fase1 y fase2 registran el mismo session_id y pausa voluntaria. Worktree limpio después de comprobar; no se modificaron archivos ni se aceptó la tarea.",
+        "revisor": "piloto-revisor",
+        "session_id": "01a1bc89-b761-7331-aea2-25976eef5ed1",
+        "entrega_sha256": "2e79c2c5e4dbcf88ee6332e3744ad5c00c112b4de0468d949e68a5f95ae24c2c",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/revision-3-cdd179f7.json",
+          "sha256": "a4dc68239096d424b1d8dce1422c0fdfe7ac326287a0b95bec5fb8dcd631e68e",
+          "bytes": 1016
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/revision-3-cdd179f7.json",
+          "sha256": "a4dc68239096d424b1d8dce1422c0fdfe7ac326287a0b95bec5fb8dcd631e68e",
+          "bytes": 1016
+        }
+      ]
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/harness-piloto-real-20261108.md",
+    "sha256": "fae4256c0d084d266606ef2e3535983a340461cc7259ac5d7c67f97ddc68f0d0",
+    "bytes": 5312,
+    "contenido": "# Encargo harness-piloto-real-20261108\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nComprobar el ciclo real del harness con una tarea sintética en dos turnos\n\n## Entregable\n\nTres archivos de juguete, prueba PILOTO_OK y commit publicado en rama propia\n\n## Criterio de aceptación\n\n1) checkpoint.json permanece con etapa preparado y valores [2,3,5]. 2) resultado.json tiene etapa completo, los mismos valores, total 10 y cantidad 3. 3) verificar.py comprueba ambos archivos y sale 0 con PILOTO_OK. 4) El diff de entrega sólo añade los tres archivos de la carpeta piloto-real. 5) El commit de entrega está publicado en origin. 6) El revisor independiente explica su veredicto por criterio.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Autorización explícita de Sergio, 8/11/2026: piloto real de juguete con ejecutor y revisor distinto, lanzamiento, retoma, cierre y aceptación; sin producción ni gasto adicional.\n- No usar subagentes, otros chats, APIs externas, n8n, Docker, sudo, instalaciones, servicios, mensajes ni compras. Sólo leer instrucciones, trabajar en la carpeta asignada y usar Git para publicar la rama del piloto.\n- Piloto en DOS turnos. Primer turno: después de leer AGENTS, reglas, boss-memoria y desarrollar-y-verificar, crear únicamente 05-herramientas/2026-11-08-harness/piloto-real/checkpoint.json con {\"etapa\":\"preparado\",\"valores\":[2,3,5]}. No escribir resultado.json ni verificar.py todavía; no hacer commit ni push en este primer turno. Terminar voluntariamente con PILOTO_CHECKPOINT. Es una pausa planificada: el coordinador reanudará este mismo session id.\n- Segundo turno (al retomar y encontrar checkpoint.json): conservar sus bytes. Crear 05-herramientas/2026-11-08-harness/piloto-real/resultado.json con {\"etapa\":\"completo\",\"valores\":[2,3,5],\"total\":10,\"cantidad\":3}. Crear 05-herramientas/2026-11-08-harness/piloto-real/verificar.py, sólo stdlib, que lea ambos JSON desde su propia carpeta, compruebe explícitamente esos valores y escriba PILOTO_OK con exit 0; si no coinciden, exit distinto de 0. No importar módulos que generen caches en el repo ni generar archivos auxiliares.\n- Comprobar con python3 05-herramientas/2026-11-08-harness/piloto-real/verificar.py. Usar git add sólo para esos tres archivos. Commit con git -c user.name=\"OnIA Codex\" -c user.email=\"onia-codex-worker@localhost\" commit -m \"test: juguete del piloto real del harness\" y git push origin codex/ws-harness-piloto-real-20261108. No cambiar config Git global ni del repo. Si el sandbox impide commit/push, informar exactamente el bloqueo; no cambiar permisos ni usar bypasses.\n- Primera pausa no equivale a entrega final; la indicación genérica de commit/push al finalizar se aplica sólo al segundo turno. No editar registros de tareas, evidencias de coordinación, README general, ESTADO ni registro-de-errores: el coordinador mantiene esos archivos.\n- El revisor sólo coteja la entrega final contra la aceptación; no sigue los pasos de ejecución ni modifica archivos. Puede ejecutar verificar.py porque no tiene efectos de escritura y cotejar git diff desde el commit base.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/harness-piloto-real-20261108.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": {
+    "revisor": "piloto-revisor",
+    "criterio": "1) checkpoint.json contiene etapa preparado y valores [2,3,5]; su SHA-256 coincide con fase1, conservando sus bytes. 2) resultado.json contiene etapa completo, valores [2,3,5], total 10 y cantidad 3. 3) verificar.py usa sólo stdlib, lee desde su carpeta, compara ambos contenidos y devuelve error ante discrepancias; ejecutado con salida PILOTO_OK y código 0. 4) El diff contra 715ffa9665abfc4f759c9e50b251ba004a9f1375 sólo añade los tres archivos asignados. 5) La referencia origin/codex/ws-harness-piloto-real-20261108 contiene el commit; el recibo de cierre aportado confirma publicación. Commit y push por el coordinador ante el bloqueo del sandbox están documentados. 6) Esta revisión independiente explica cada criterio. Las evidencias aportadas de fase1 y fase2 registran el mismo session_id y pausa voluntaria. Worktree limpio después de comprobar; no se modificaron archivos ni se aceptó la tarea.",
+    "fecha": "2026-11-08T19:02:51.289713+00:00"
+  },
+  "asignacion": null,
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "piloto-ejecutor",
+      "pid": 324130,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338892",
+      "supervisor_pid": 324126,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190338886",
+      "rama": "codex/ws-harness-piloto-real-20261108",
+      "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+      "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+      "rutas": [
+        "05-herramientas/2026-11-08-harness/piloto-real"
+      ],
+      "dry_run": false,
+      "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.1.briefing.txt",
+      "inicio": "2026-11-08T18:56:13.473693+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "fin": "2026-11-08T18:56:38.255096+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "ejecutor",
+      "responsable": "piloto-ejecutor",
+      "pid": 327010,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343937",
+      "supervisor_pid": 327008,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190343930",
+      "rama": "codex/ws-harness-piloto-real-20261108",
+      "session_id": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+      "estado": "cerrada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.jsonl",
+      "log_rel": "logs/harness-piloto-real-20261108.jsonl",
+      "log_offset": 17970,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108",
+      "rutas": [
+        "05-herramientas/2026-11-08-harness/piloto-real"
+      ],
+      "dry_run": false,
+      "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+      "reanuda": "01a1bc84-ac53-7281-a8a5-1763c3f6cd50",
+      "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.2.briefing.txt",
+      "inicio": "2026-11-08T18:57:03.916275+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "fin": "2026-11-08T18:57:32.951370+00:00"
+    },
+    {
+      "intento": 3,
+      "rol": "revisor",
+      "responsable": "piloto-revisor",
+      "pid": 342233,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190371951",
+      "supervisor_pid": 342231,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190371945",
+      "rama": "(detached)",
+      "session_id": "01a1bc89-b761-7331-aea2-25976eef5ed1",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.revision-3.jsonl",
+      "log_rel": "logs/harness-piloto-real-20261108.revision-3.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-piloto-real-20261108-revision-3",
+      "rutas": [
+        "05-herramientas/2026-11-08-harness/piloto-real"
+      ],
+      "dry_run": false,
+      "commit_base": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.briefing.txt",
+      "inicio": "2026-11-08T19:01:44.057222+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "entrega_sha256": "2e79c2c5e4dbcf88ee6332e3744ad5c00c112b4de0468d949e68a5f95ae24c2c",
+      "schema": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-piloto-real-20261108.3.veredicto.json",
+      "fin": "2026-11-08T19:02:08.624385+00:00"
+    }
+  ],
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+    "criterio": "1) checkpoint.json contiene etapa preparado y valores [2,3,5]; su SHA-256 coincide con fase1, conservando sus bytes. 2) resultado.json contiene etapa completo, valores [2,3,5], total 10 y cantidad 3. 3) verificar.py usa sólo stdlib, lee desde su carpeta, compara ambos contenidos y devuelve error ante discrepancias; ejecutado con salida PILOTO_OK y código 0. 4) El diff contra 715ffa9665abfc4f759c9e50b251ba004a9f1375 sólo añade los tres archivos asignados. 5) La referencia origin/codex/ws-harness-piloto-real-20261108 contiene el commit; el recibo de cierre aportado confirma publicación. Commit y push por el coordinador ante el bloqueo del sandbox están documentados. 6) Esta revisión independiente explica cada criterio. Las evidencias aportadas de fase1 y fase2 registran el mismo session_id y pausa voluntaria. Worktree limpio después de comprobar; no se modificaron archivos ni se aceptó la tarea.",
+    "revisor": "piloto-revisor",
+    "session_id": "01a1bc89-b761-7331-aea2-25976eef5ed1",
+    "entrega_sha256": "2e79c2c5e4dbcf88ee6332e3744ad5c00c112b4de0468d949e68a5f95ae24c2c",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/revision-3-cdd179f7.json",
+      "sha256": "a4dc68239096d424b1d8dce1422c0fdfe7ac326287a0b95bec5fb8dcd631e68e",
+      "bytes": 1016
+    }
+  },
+  "cierre": {
+    "commit": "75b42ecc098eebd098cfd8d120a2363d1fd3c8a8",
+    "commit_base": "715ffa9665abfc4f759c9e50b251ba004a9f1375",
+    "ramas_origin": [
+      "origin/codex/ws-harness-piloto-real-20261108"
+    ],
+    "fecha": "2026-11-08T19:01:42.298108+00:00",
+    "dry_run": false,
+    "intento": 2,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/cierre-r14-78bf7001.json",
+      "sha256": "20c7118862480a2288e690b9c42f1c20cddbb775c525fbb292422ebd7bf85063",
+      "bytes": 279
+    }
+  },
+  "evidencias_revision": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-piloto-real-20261108/revision-3-cdd179f7.json",
+      "sha256": "a4dc68239096d424b1d8dce1422c0fdfe7ac326287a0b95bec5fb8dcd631e68e",
+      "bytes": 1016
+    }
+  ]
+}
