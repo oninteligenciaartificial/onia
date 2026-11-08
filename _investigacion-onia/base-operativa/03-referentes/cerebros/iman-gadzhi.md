@@ -1,66 +1,31 @@
 # Cerebro · Iman Gadzhi
 
-Construido el 8 nov 2026 solo con material del repo (sin web nueva, sin Codex). `ref/` = [`_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/`](../../_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/). Los ASR/captions/MP4 enlazados bajo `operacion/referentes-20261105/` **no están en el repo** (carpeta en `.gitignore`, vivía en el PC Windows de Sergio): por eso casi no hay citas literales; ver [PERDIDO.md](../../00-MAPA/PERDIDO.md).
+Actualización: 8 de noviembre de 2026. **estado: parcial**. Síntesis del corpus existente; precios y condiciones son observaciones históricas del 5/11, no cotización vigente. ASR automático no equivale a palabras verificadas mediante escucha. Las propuestas para OnIA siguen el encargo actual: «Tu negocio con IA: ordena, vende y automatiza», tres clases, Bs50 grupal / Bs150 VIP y luego OnIA Platform; no heredan el antiguo taller de salud.
 
-Fuentes: `ref/marketing/iman-gadzhi.md`, `ref/audiovisual/iman.md`, `ref/criterio/iman-prompts-publicos.md`, `ref/criterio/ensenanza-hormozi-iman-heras.md`, `ref/criterio/sintesis-integral.md`, `ref/marketing/brechas-comerciales.md`.
+## 1) Qué vende y escalera de ofertas
 
-## 1) Video de venta (VSL)
-- No hay VSL corta documentada. Su pieza de venta es el webinar largo (§2).
+Recurso Notion de10 prompts → AI Income Challenge (cinco sesiones, CTA gratis en captura) → Monetise para construir/lanzar productos digitales; nivel separado Quantum para founders que buscan escalar, con solicitud/assessment-call. Monetise mostraba lista de espera/inscripciones cerradas, sin precio final confirmado. No confundir precios contradictorios del evento con el precio de Monetise. [Ficha comercial, «Productos, formatos y oferta»](../fichas/marketing/iman-gadzhi.md), [síntesis histórica](../fichas/criterio/sintesis-integral.md).
 
-## 2) Webinar (dpko4jRSIsM, 2 h 34 min, `ref/audiovisual/iman.md`)
-| Tramo | Contenido |
-|---|---|
-| 0:00–0:39:30 | Incidencias técnicas, participación del chat, recursos y promesa; analogías y microcreadores |
-| 0:39:30–1:20:00 | Método: estimación, búsqueda y contacto (calculadora, perfiles, mensajes) |
-| 1:20:00–1:40:30 | Producto y secuencia de lanzamiento; diagramas de fases y preguntas de compromiso |
-| 1:40:30–1:58:00 | Contraste manual vs IA; herramientas |
-| 1:58:00–2:24:00 | Oferta Monetise: herramientas, servicio, certificado, bonos |
-| 2:24:00–2:33:50 | Precio, CTA a enlace/checkout, garantías, financiación |
-| 2:33:50–fin | Presenta a Jason y empieza Q&A (cortado) |
-- Evento actual: **AI Income Challenge**, virtual, 7–15 nov, 5 sesiones, CTA gratis, cuenta regresiva (`ref/marketing/iman-gadzhi.md`).
-- Precio: £75 / £95 contradictorios (`ref/criterio/sintesis-integral.md`).
+## 2) Cómo consigue clientes
 
-## 3) Funnel paso a paso
-1. Contenido en 3 familias (negocio, lifestyle, opiniones polémicas) con públicos y destinos distintos (post LinkedIn de distribución).
-2. Descripción de YouTube → shortener → landing del challenge (variantes yt-video-aic / yt-higgsfield-aic).
-3. Modal: nombre, email, teléfono, WhatsApp (no enviado).
-4. Lead magnet: Notion con 10 prompts y 6 consejos, que repite invitación al evento.
-5. Evento de 5 sesiones → oferta Monetise (lista de espera, inscripciones cerradas).
-6. Nivel alto: Quantum → "Apply to Work With Us" → página assessment-call/demo.
-- No comprobado: emails, WhatsApp, ventas.
+Distribuye contenido de negocio, lifestyle y opiniones con públicos distintos; descripción YouTube → enlace corto → landing → modal nombre/email/teléfono/WhatsApp → challenge. El recurso de prompts vuelve a invitar al evento. Quantum usa «Apply to Work With Us». Son rutas públicas leídas; no se enviaron formularios ni se recibieron emails/WhatsApp. No hay palabra clave/DM de cierre comprobados. [Ficha comercial](../fichas/marketing/iman-gadzhi.md).
 
-## 4) Guiones: estructura y PALABRAS EXACTAS
-Textos literales en el repo:
-- Título webinar: *This is The BEST AI Business to Start In 2026* (`ref/audiovisual/iman.md`).
-- Título corto: *How does Iman stay disciplined* (canal Moments, oficialidad no corroborada).
-- CTA del post: «Apply to Work With Us» (`ref/marketing/iman-gadzhi.md`).
-- Lema que el repo contrasta: «menos créditos, mismo resultado» (`ref/criterio/iman-prompts-publicos.md`).
-- Las 33.943 palabras de subtítulos se leyeron pero **no se citan en el repo**.
+## 3) Cómo enseña
 
-Estructuras:
-- **Posts:** apertura con resultado/tesis → despiece en categorías/pasos → ejemplos por público. Post de producto: 7 puntos (necesidad del alumno, cambio de oferta, segmentación, especialistas, sistemas, roles); contrasta producción editada para principiantes vs Loom para empresarios.
-- **Prompts:** entrada explícita → prioridades → pasos → salida → criterio de revisión.
-- **Webinar:** enseñar valor real ~2 h → contrastar manual vs IA → oferta → precio/garantía.
+Webinar dpko4jRSIsM (~2:34): apertura/recursos hasta39:30; estimación/búsqueda/contacto39:30–1:20; producto/lanzamiento1:20–1:40:30; contraste manual/IA1:40:30–1:58; oferta desde1:58; precio/CTA/garantía2:24–2:33:50. Termina al comenzar Q&A. Esto describe una pieza, no todos sus cursos. [Informe visual/textual](../fichas/audiovisual/iman.md). Los prompts estructuran entrada → prioridades → pasos → salida → revisión. [Análisis del recurso](../fichas/criterio/iman-prompts-publicos.md).
 
-## 5) Cómo se dirige a la gente
-- Tono: seguro, prescriptivo, ambicioso; en webinar insistente y promocional.
-- Avatar segmentado: principiante que quiere lanzar un producto digital (Monetise) vs founder que ya factura y quiere escalar (Quantum).
-- Aspiración personal + capacidad empresarial (lujo, equipo).
-- Voz: **no está en el repo**.
+## 4) Tono y frases con minuto
 
-## 6) Edición de video
-- Webinar: láminas blancas, énfasis morado/verde, cámara pequeña; split-screen, B-roll, capturas y clips previos; sin subtítulo permanente.
-- Corto Moments: entrevistador 0–4 s → corte al entrevistado; primeros planos; subtítulos amarillos por fragmentos; sin B-roll ni CTA.
-- Cortes exactos, música, ritmo: **no está en el repo.**
+Ficha describe copy seguro, prescriptivo y aspiracional; el webinar insiste en promoción. «Apply to Work With Us» es CTA escrito, no frase con minuto. [Ficha comercial](../fichas/marketing/iman-gadzhi.md). No hay transcripción cruda aquí que permita citar frases habladas con tiempo;33.943 palabras de captions fueron leídas en la tanda previa, pero no preservadas íntegramente en esta carpeta. No inventar literalidad ni prosodia. [Cobertura/captions](../fichas/audiovisual/iman.md).
 
-## 7) Qué copiar para "Automatiza tu vida y sé más saludable con IA" (50 Bs)
-1. **Orden del workshop:** ~40 min de enseñanza real (armar la semana con IA en vivo) → contraste "a mano vs con IA" → al final, siguiente paso.
-2. **Lead magnet de prompts:** "5 prompts para armar tu rutina de estudio + entreno", que invita al workshop (como sus 10 prompts).
-3. **Prompts con estructura** entrada → prioridades → pasos → salida → cómo revisarlo.
-4. **Un público por pieza:** reels para estudiantes de 15–25 años, distintos de piezas para padres o profesionales.
-Evitar: promesas de ingresos, lujo, urgencia falsa, eventos de 5 días.
+## 5) Edición observada
 
-## 8) Huecos (no está en el repo)
-- Texto literal del webinar; Q&A completo; precio confirmado.
-- 4 videos históricos solo por título/descripción.
-- Instagram (429), ads (sin anuncio educativo verificado), emails/WhatsApp.
+Webinar:310 muestras cada30 s más final, láminas blancas con morado/verde, cámara pequeña, pantalla partida, capturas, B-roll y clips previos; sin subtítulo permanente. El corto N9hkRtP7yzI de Moments (~30 s, oficialidad no corroborada) pasa de entrevistador a entrevistado y usa subtítulos amarillos; no atribuir esa edición al canal oficial. Ritmo exacto de cortes, música/SFX y escucha pendientes. [Informe audiovisual](../fichas/audiovisual/iman.md).
+
+## 6) Qué aplicar a OnIA y qué no
+
+**Propuesta:** cada clase debe entregar una práctica completa antes de presentar Platform; comparar una tarea manual con el flujo asistido y mostrar límites/resultado. Usar prompts con campos de entrada y criterio de revisión. Inspiración: §3; no se propone copiar dos horas de webinar ni su modelo económico.
+
+**No trasladar:** lujo, promesas de ingresos, autoridad prestada, garantías o urgencia no respaldadas. Faltan ASR/citas con minuto, precio confirmado, Q&A, entrega privada y sonido. El webinar íntegro excede el tope de30 min del encargo; el corpus no acredita selección de2–3 videos públicos cortos oficiales. [Brechas comerciales](../fichas/marketing/iman-gadzhi.md).
+
+**Recuperación nueva:** los intentos ASR públicos de esta sesión quedaron bloqueados por YouTube; [registro de ejecución](../asr/ejecucion-2026-11-08.md). No se cuentan como transcripciones completadas.

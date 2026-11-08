@@ -1,102 +1,31 @@
-# Cerebro · Enrique Rocha (tododeia, @soyenriquerocha)
+# Cerebro · Enrique Rocha
 
-Construido el 8 nov 2026 SOLO con material existente del repo (VPS `~/repos/onia/_investigacion-onia/base-operativa/`). Sin web nueva, sin Codex. Rutas abreviadas: `ref/` = [`_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/`](../../_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/).
+Actualización: 8 de noviembre de 2026. **estado: parcial**. Síntesis del corpus existente; precios y condiciones son observaciones históricas del 5/11, no cotización vigente. ASR automático no equivale a palabras verificadas mediante escucha. Las propuestas para OnIA siguen el encargo actual: «Tu negocio con IA: ordena, vende y automatiza», tres clases, Bs50 grupal / Bs150 VIP y luego OnIA Platform; no heredan el antiguo taller de salud.
 
-Fuentes usadas:
-- `ref/marketing/enrique-rocha.md` (ficha comercial principal)
-- `ref/audiovisual/enrique-rocha.md` (short LsOQDp76898, 215 cuadros + 62 captions automáticos)
-- `investigacion/2026-11-04/enrique-rocha.md` (ficha inicial)
-- `ref/criterio/ensenanza-pedro-erik-rocha-san-justin.md`, `ref/criterio/sintesis-integral.md`, `ref/marketing/brechas-comerciales.md`, `ref/marketing/mapa-recorridos.md`, `ref/audiovisual/LECTURA-COMPARADA.md`, `investigacion/2026-11-04/formatos-onia.md`
+## 1) Qué vende y escalera de ofertas
 
-**Aviso importante:** los archivos crudos que la ficha audiovisual enlaza (`operacion/referentes-20261105/video/rocha/captions-normalized.json`, MP4, manifest) **no están en el repo** (la carpeta `operacion/` está en `.gitignore` y vivía en el PC Windows de Sergio, `C:/dev/proyectos/...`; ver [PERDIDO.md](../../00-MAPA/PERDIDO.md)). Por eso NO hay transcripción literal disponible: el repo solo describe el contenido en paráfrasis.
+Hub tododeia con guías/repos gratuitos; libros PDF Claude/Codex USD29/MXN599; taller Claude de2 h USD69/30 plazas; Marketing V6 de3 h USD197/30 plazas, intermedio y plan pago requerido. Llamadas:20 min USD15/MXN299;45 min USD79/MXN1.499;90 min USD297/MXN5.499. Exclusiones explícitas: no mentoría continua ni ejecución de código. V15 inaccesible, sin importar condiciones de V6. [Ficha comercial, «Distribución, productos y recorrido observable»](../fichas/marketing/enrique-rocha.md).
 
----
+## 2) Cómo consigue clientes
 
-## 1) Video de venta (VSL)
-- **No está en el repo.** No se documentó ninguna VSL de Enrique Rocha.
-- Lo más cercano: un short de ~107 s (LsOQDp76898) que termina en CTA de recurso, no de compra (ver §4). Fuente: `ref/audiovisual/enrique-rocha.md`.
+Redes → hub → guía/recurso y newsletter → libro, taller o consulta. La guía «Crea contenido con Claude» solicita comentario, seguir y compartir y muestra formulario de nombre/correo/código. El short LsOQDp76898 termina pidiendo comentar qué se quiere construir para recibir guía: no hay palabra clave única documentada ni DM entregado. [Ficha comercial](../fichas/marketing/enrique-rocha.md), [short, 01:35–01:47](../fichas/audiovisual/enrique-rocha.md). Sin secuencia email, cierre privado o conversiones comprobadas.
 
-## 2) Webinar / workshop (estructura de la página Luma)
-**Workshop Claude "de 0 a 100" — luma.com/5td5jr2y** (`ref/marketing/enrique-rocha.md`, `2026-11-04/enrique-rocha.md`):
-1. **Apertura desde el dolor:** frustración con tutoriales y falta de enseñanza contextualizada.
-2. **Qué vas a aprender** (lista).
-3. **Qué incluye:** prompts, preguntas y mención/oferta posterior de otro workshop.
-4. **Para quién es** (delimita público).
-5. **Precio y cupos:** USD 69, 2 h, 30 plazas.
-6. **Lenguaje comercial:** compara con alternativas y usa urgencia.
-- Estado: agotado; fecha no visible. "30 asistieron" es indicador de la plataforma, no asistencia auditada.
+## 3) Cómo enseña
 
-**Workshop Marketing V6 — luma.com/tcfid7z5:** 3 h, 30 plazas, USD 197, nivel intermedio, plan pago requerido; ofrece configurar agentes ya preparados. Registro cerrado.
-**V15 — luma.com/kuabdl78:** inaccesible en la revisión; nada verificado.
-- Contenido real de la clase, asistentes, grabación: **no está en el repo.**
+La guía escrita delimita tareas humanas/IA → mapa de siete etapas → prácticas y prompts → agentes reutilizables → FAQ. El short plantea el agotamiento de límites → separar planificación/ejecución → demo de pantalla → siguiente acción. La landing Luma abre con frustración, lista aprendizaje/inclusiones y delimita público antes de precio/cupos. Es estructura documental de guía/short/landing: el interior del taller no fue observado. [Ficha comercial](../fichas/marketing/enrique-rocha.md), [análisis audiovisual](../fichas/audiovisual/enrique-rocha.md).
 
-## 3) Funnel paso a paso
-Comprobado (público):
-1. Instagram / YouTube @soyenriquerocha (canal UCFNddu8E_6ITF72_6lvZa2Q, solo pestaña shorts).
-2. Short educativo → CTA: comentar qué quieres construir para recibir una guía; seguir/compartir.
-3. Hub tododeia.com: guías y repos gratis, eventos, newsletter, tienda, llamadas.
-4. Guía gratuita (p. ej. "Crea contenido con Claude") → cierre con comentar/seguir/compartir; formulario nombre/correo/código y casilla de newsletter.
-5. Pagos escalonados:
-   - Libros "Claude de cero a cien" / "Codex de cero a cien": USD 29 / MXN 599, PDF, pago único (edición jun 2026).
-   - Workshops Luma: USD 69 (2 h) → USD 197 (3 h, intermedio).
-   - Llamadas: Express 20 min USD 15 (MXN 299), Quick Call 45 min USD 79 (MXN 1.499), Consultoría 90 min USD 297 (MXN 5.499), con usos y exclusiones (no mentoría continua, no ejecución de código).
-6. La web declara que libros y consultoría sostienen el proyecto (declaración, no cifra).
+## 4) Tono y frases con minuto
 
-No comprobado / **no está en el repo:** entrega real de la guía por comentario (DM), secuencia de email, checkout, conversiones, anuncios (Ads Library sin resultados, no prueba de ausencia).
+Texto conversacional en segunda persona, contrastes e imperativos; Luma más comercial y urgente. [Ficha comercial, «Contenido, guion y tonalidad»](../fichas/marketing/enrique-rocha.md). «Crea contenido con Claude» y «Claude de cero a cien» son títulos escritos, no citas habladas. Falta ASR/captions crudos accesibles para citar una frase real con minuto; las paráfrasis del short no se convierten en comillas. Voz/acento/ritmo no acreditados.
 
-## 4) Guiones: estructura y PALABRAS EXACTAS
-**Palabras exactas: NO están en el repo.** Las 62 entradas de captions se leyeron, pero el repo solo guarda paráfrasis y el JSON crudo no está commiteado. No cito frases textuales para no inventar.
-Textos literales que sí están en el repo (fuente `ref/marketing/enrique-rocha.md`):
-- Título de su guía: «Crea contenido con Claude» (también en `ref/criterio/ensenanza-pedro-erik-rocha-san-justin.md`)
-- Producto: «Claude de cero a cien» / «Codex de cero a cien» (slugs de tienda)
-Títulos de shorts (metadata yt-dlp):
-- "Claude Fable 5 + Codex: Step-by-Step Guide to Building With Both" (LsOQDp76898; la metadata detallada da versión española, no transcrita)
-- "Claude Fable 5: manual y cómo usar Skills personales" (T_V-GujTLXA, no revisado)
-- "Claude ahora se conecta a toda tu información y da miedo lo que puede hacer" (MHAD0IKofgc, no revisado)
+## 5) Edición observada
 
-Estructura del short LsOQDp76898 (`ref/audiovisual/enrique-rocha.md`, paráfrasis):
-| Tramo | Función |
-|---|---|
-| 0–10 s | Hook: problema (se te acaban los límites de uso) + promesa de solución repartiendo el trabajo |
-| 10–26 s | Agita: usar un mismo modelo para planear y construir agota |
-| 26–61 s | Solución: separar planificación y ejecución; pregunta puente al procedimiento |
-| 62–71,5 s | Demo de pantalla (~10 s): repo, menú de plugins, ficha del plugin |
-| 72–95 s | Explica el reparto propuesto (cifras de ahorro no verificadas) |
-| 95–107 s | CTA: comenta qué quieres construir y te paso la guía; sígueme/comparte |
+Short LsOQDp76898: ~107 s, vertical720×1280/30fps; presentador en mesa, fondo cálido y gestos; titular superior persistente, subtítulos inferiores fragmentados, logos/ilustraciones sobre torso. Inserto de pantalla aproximadamente **01:02–01:11.5**, luego vuelve al presentador; sin placa final.215 cuadros y62 captions documentados en la ficha; música/SFX y cadencia exacta de cortes sin comprobar. [Informe visual](../fichas/audiovisual/enrique-rocha.md).
 
-Guía escrita "Crea contenido con Claude": delimita qué hace la IA y qué el humano → mapa de 7 etapas → prácticas y prompts → agentes reutilizables → FAQ → CTA comentar/seguir/compartir. Recomienda partir de experiencia y guiones propios y pulir leyendo en voz alta.
+## 6) Qué aplicar a OnIA y qué no
 
-## 5) Cómo se dirige a la gente
-- **Tono (texto):** conversacional, segunda persona (tú), contrastes, expresiones coloquiales e imperativos. En Luma: más comercial, compara alternativas, urgencia.
-- **Avatar:** hispanohablante que quiere aplicar IA al trabajo; segmentado por nivel — principiante paso a paso, usuario activo, desarrollador, equipos.
-- **Vocabulario:** "de cero a cien", Claude/Codex/skills/agentes, ahorro de horas, calificaciones por estrellas.
-- **Voz hablada, acento, ritmo:** **no está en el repo** (nada escuchado).
+**Propuesta:** landing con problema del negocio → resultado de cada clase → materiales → requisitos → Bs50/Bs150 y diferencias de soporte; reel sobre un problema concreto con demo legible y guía relacionada. Inspiración: estructura Luma/short de §3. Para DM, preguntar qué tarea quiere ordenar y enviar temario/precio; esto es un borrador propio, no cierre observado del referente.
 
-## 6) Edición de video (short LsOQDp76898)
-- Vertical 720×1280, 30 fps, ~107 s.
-- Presentador en mesa, cámara frontal amplia, fondo cálido, gestos grandes.
-- Titular superior fijo todo el video (también durante la demo).
-- Subtítulos inferiores + etiquetas negras sobre blanco con fragmentos cortos.
-- Iconos/logos e ilustraciones pequeñas (personajes pixelados) sobre el torso, reforzando palabras.
-- Un solo inserto de pantalla (~10 s) a mitad; resto talking head.
-- Cierre sin placa final: presentador + subtítulo.
-- Cortes exactos, música, SFX, ritmo de audio: **no está en el repo.**
+**No trasladar:** «de cero a cien», ahorro sin medición, urgencia/cupos ajenos ni herramientas como requisito por imitación. Faltan:2–3 transcripciones públicas, citas habladas con tiempo, interior de clases, DM/checkout y sonido. Candidatos oficiales identificados en la ficha: LsOQDp76898, T_V-GujTLXA, MHAD0IKofgc; sólo el primero tiene análisis visual documentado. [Cobertura](../fichas/marketing/enrique-rocha.md).
 
-## 7) Qué copiar para "Automatiza tu vida y sé más saludable con IA" (50 Bs, sáb 14 nov)
-1. **Página estilo Luma, en este orden:** dolor ("no tengo tiempo para entrenar, estudiar y dormir bien") → qué te llevas (tu semana en Google Calendar + rutina de ejercicio y estudio armadas con IA) → qué incluye (prompts, plantilla, Q&A) → para quién es y para quién no → 50 Bs, 1 h, cupos reales, fecha.
-2. **Short de 60–100 s con la estructura problema → agitar → solución → demo de 10 s → CTA de comentario:** "Comenta RUTINA y te paso los prompts que usé para armar mi semana", con la demo de su calendario real de esta semana.
-3. **Formato visual barato:** talking head con titular fijo arriba, subtítulos cortos e iconos simples; un solo inserto de pantalla.
-4. **Escalera:** recurso gratis (prompts) → workshop de 50 Bs → al final, mencionar el siguiente paso (llamada o segundo taller), como hace Enrique.
-5. **Requisitos y exclusiones antes de pagar** (qué necesitas: celular + Google Calendar; no es plan médico).
-Evitar: promesas de ahorro o salud sin prueba, "de 0 a 100", urgencia falsa.
-
-## 8) Huecos (no está en el repo)
-- VSL: no existe.
-- Transcripción literal de cualquier video (JSON de captions no commiteado).
-- Audio: voz, música, SFX, ritmo.
-- Contenido de los workshops (clase, grabación, asistentes, resultados).
-- Entrega del recurso por comentario/DM, emails, checkout, conversión.
-- Anuncios pagados.
-- Shorts T_V-GujTLXA y MHAD0IKofgc: sin revisar.
-- Instagram/reels: nunca recuperados.
-- Workshop V15: inaccesible.
+**Recuperación nueva:** los intentos ASR públicos de esta sesión quedaron bloqueados por YouTube; [registro de ejecución](../asr/ejecucion-2026-11-08.md). No se cuentan como transcripciones completadas.

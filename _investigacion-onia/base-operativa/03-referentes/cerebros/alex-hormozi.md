@@ -1,57 +1,37 @@
 # Cerebro · Alex Hormozi
 
-Construido el 8 nov 2026 solo con material del repo (sin web nueva, sin Codex). `ref/` = [`_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/`](../../_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/). Los ASR/captions/MP4 enlazados bajo `operacion/referentes-20261105/` **no están en el repo** (carpeta en `.gitignore`, vivía en el PC Windows de Sergio): por eso casi no hay citas literales; ver [PERDIDO.md](../../00-MAPA/PERDIDO.md).
+Actualización: 8 de noviembre de 2026. **estado: parcial**. Síntesis del corpus existente; precios y condiciones son observaciones históricas del 5/11, no cotización vigente. ASR automático no equivale a palabras verificadas mediante escucha. Las propuestas para OnIA siguen el encargo actual: «Tu negocio con IA: ordena, vende y automatiza», tres clases, Bs50 grupal / Bs150 VIP y luego OnIA Platform; no heredan el antiguo taller de salud.
 
-Fuentes: `ref/marketing/alex-hormozi.md`, `ref/audiovisual/hormozi.md`, `ref/audiovisual/guiones-faltantes.md`, `ref/criterio/ensenanza-hormozi-iman-heras.md`, `ref/marketing/brechas-comerciales.md`.
+## 1) Qué vende y escalera de ofertas
 
-## 1) Video de venta (VSL)
-- **No está en el repo** una VSL propia. El reel DfSV88LohWW **menciona** la VSL como paso del proceso de venta (educación, persona adecuada, VSL, contacto rápido; 28–42 s).
+Formación gratuita y checklists → libros/recursos → talleres aplicados. Marketing Workshop anuncia dos jornadas presenciales, USD5.000 por asiento y llamada para negocios de USD1M–100M/año. El catálogo segmenta por limitación (Scaling/Marketing/Sales/Offers), pero contiene contradicciones de fechas/cupos: no afirmar disponibilidad. [Ficha comercial, «Productos, CTA y recorrido observable»](../fichas/marketing/alex-hormozi.md).
 
-## 2) Webinar / workshop
-- **Marketing Workshop:** 2 jornadas presenciales, USD 5.000 por asiento, CTA a llamada, para negocios de USD 1M–100M/año. Catálogo segmenta Scaling/Marketing/Sales/Offers por limitación del negocio (fechas/cupos contradictorios).
-- **Clases gratis** (leads5 29:47, leads6 35:48, offers4 11:31): presentador + diapositivas en fondo azul + agenda.
-  - offers4: presentación → ecuación de valor (resultado deseado × probabilidad percibida / tiempo × esfuerzo) → ejemplos → comparación (Amazon/Netflix) → recapitulación → invitación a aplicarlo + enlace a formación + anticipo del siguiente video.
-  - leads5: unidad de contenido = gancho → retención → recompensa; 7 rasgos de titulares; listas, pasos e historias; cierre con práctica.
-  - leads6: dar en público, pedir en privado; CTA integrada vs intermitente; recurso gratis vs oferta; 7 lecciones.
+## 2) Cómo consigue clientes
 
-## 3) Funnel paso a paso
-1. Reels con caption «comenta SALES» → formación gratis (DM no verificado).
-2. Cursos gratis acquisition.com/training → checklists PDF (nicho, precio/valor, oferta, bonos, garantía, urgencia).
-3. Roadmap (recurso personalizado + consentimiento de contacto), Mozi Money Minute (newsletter), libros.
-4. Workshop USD 5.000 → llamada.
-- Landing: limitación de marketing → testimonios → encaje, entrega y precio.
-- Ads: tarjeta Skool ID 1417431913538180 (anunciante Skool, no Hormozi personal).
+En los tres reels examinados, el caption solicita **SALES** para formación; el pedido no se comprobó en voz ni se recibió el DM. Cursos → recurso Roadmap/newsletter → taller por llamada son destinos públicos observados, sin conversión auditada. El reel DfTSZcnovSg diagnostica volumen/precio/capacidad; DfSV88LohWW usa una analogía de cierre. [Ficha comercial](../fichas/marketing/alex-hormozi.md), [análisis visual](../fichas/audiovisual/hormozi.md).
 
-## 4) Guiones: estructura y PALABRAS EXACTAS
-Textos literales en el repo:
-- Keyword de CTA en caption: **SALES** (`ref/audiovisual/hormozi.md`).
-- Nombres de piezas: «The Value Equation» (offers4), «Mozi Media I/II» (leads5/6) (`ref/marketing/alex-hormozi.md`).
-- Frases del ASR marcadas **dudosas** en el repo, no citables como reales: «equal product», «all our gap», «Recorder sales calls», «make a drink», «stilly», «actors.com», «$299» (`ref/audiovisual/guiones-faltantes.md`).
-- Los TXT ASR completos existen fuera del repo (ver PERDIDO). **Texto literal: no está en el repo.**
+El marco verbal de leads6 es dar hasta que pidan, dar en público y pedir en privado; no «give, give, give, ask», fórmula que rechaza. [ASR leads6, 04:45–05:16](../asr/complementario/hormozi-leads6.txt). Esto es consejo del autor, no prueba de su backend comercial.
 
-Estructuras de reels (`ref/audiovisual/hormozi.md` + guiones-faltantes):
-- **DfTSZcnovSg (89 s), diagnóstico conversado:** titular rojo de confrontación → participante presenta volumen → preguntas de volumen/precio/capacidad + rotafolio → objeciones → solución: contratar vendedores, resolver capacidad antes de otro canal.
-- **DfS9tS4IcP6 (49 s), lista con contador:** promesa "experiencia comercial en un minuto" → 11 consejos numerados (descuentos, seguimiento, valor, testimonios, anclaje, objeciones, feedback) → cierre: reducir creencias necesarias, más razones para creer, mismo resultado en mitad de tiempo por doble precio.
-- **DfSV88LohWW (67 s), analogía:** titular sobre tasa de cierre + imagen de caballo → rotafolio con flechas y barra de probabilidad → traslado a ventas → qué controla el vendedor.
-- Ningún ASR contiene pedido hablado de comentar SALES (solo caption).
+## 3) Cómo enseña
 
-## 5) Cómo se dirige a la gente
-- Tono escrito: directo, prescriptivo, centrado en operación.
-- Avatar: dueños de negocio con facturación; contenido gratis amplio, venta solo a calificados.
-- Voz/energía: **no está en el repo**.
+Offers4: presentación → cuatro componentes de valor → ejemplos → comparación → recapitulación → aplicar y siguiente clase. Leads5 descompone contenido en gancho, retención y recompensa y desarrolla listas/pasos/historias. Leads6 distingue contenido/recurso/oferta y lecciones de producción. [Ficha audiovisual](../fichas/audiovisual/hormozi.md), [ASR offers4](../asr/complementario/hormozi-offers4.txt), [leads5](../asr/complementario/hormozi-leads5.txt). Son clases gratuitas analizadas; no taller pago observado.
 
-## 6) Edición de video
-- Reels 720×1280: titulares rojos arriba, subtítulos blanco/amarillo, pantalla partida/apilada, acercamientos, rotafolio dibujado, contador rojo de progreso; sin placa final.
-- Clases 854×480: presentador + láminas azules + agenda que vuelve entre secciones.
-- Cortes exactos, música, SFX: **no está en el repo.**
+## 4) Tono y frases con minuto
 
-## 7) Qué copiar para "Automatiza tu vida y sé más saludable con IA" (50 Bs)
-1. **Ecuación de valor en la página:** resultado (semana organizada + rutina) alto, probabilidad alta (lo haces en vivo conmigo), tiempo bajo (1 h), esfuerzo bajo (plantilla lista).
-2. **Reel "lista con contador":** "7 cosas que automaticé con IA para dormir, entrenar y estudiar mejor" con rótulo numerado.
-3. **Dar en público, pedir en privado:** reels de valor + CTA por comentario/DM ("comenta RUTINA").
-4. **Alcance y soporte claros antes del precio** (qué incluye, cuánto acompañamiento), y garantía solo si se puede cumplir.
-Evitar: precio alto/escasez de Hormozi, apilar bonos falsos.
+Copy directo, prescriptivo y centrado en operación; no se acredita prosodia por ASR. [Ficha comercial, «Contenido, guion, formato y tono»](../fichas/marketing/alex-hormozi.md).
 
-## 8) Huecos (no está en el repo)
-- Texto literal de ASR (archivos fuera del repo); voz/prosodia.
-- VSL propia, entrega del DM SALES, checkout, resultados.
+- «Give until they ask.» — **04:45.50–04:46.72**, [leads6](../asr/complementario/hormozi-leads6.txt).
+- «You give in public, you ask in private.» — **05:13.74–05:15.74**, [leads6](../asr/complementario/hormozi-leads6.txt).
+- «So, number one is that every piece of content has a hook.» — **05:56.32–05:58.98**, [leads5](../asr/complementario/hormozi-leads5.txt).
+
+Citas candidatas copiadas del ASR; errores de nombres y cifras permanecen advertidos en [resumen ASR](../asr/resumen-asr-referentes.md).
+
+## 5) Edición observada
+
+Muestreo documentado: reels 49/67/89 s, verticales 720×1280, titulares rojos, subtítulos blanco/amarillo, acercamientos, rotafolio y contador en la lista; clases 11:31/29:47/35:48, láminas azules, presentador y agenda. Se inspeccionaron 524 imágenes de seis piezas; clases cada15 s, reels cada1 s. Eso no certifica cadencia exacta de cortes. Música/SFX y reproducción continua pendientes. [Informe visual y cobertura](../fichas/audiovisual/hormozi.md).
+
+## 6) Qué aplicar a OnIA y qué no
+
+**Propuesta:** presentar un resultado por clase (ordenar información, producir una pieza de venta, automatizar una tarea acotada), mostrar el ejemplo antes de invitar al taller y hacer que cada gancho entregue su recompensa. Inspiración: ecuación de valor y gancho/retención/recompensa de las fuentes de §3. En DM, aclarar qué incluye grupal/VIP antes de pedir el pago; no se afirma que este sea el texto real de cierre de Hormozi.
+
+**No trasladar:** su ticket, requisito de facturación, escasez contradictoria ni promesas económicas. Falta: DM SALES recibido, llamada/cierre, checkout, escucha y edición continua; por eso no se declara completo. [Límites comerciales](../fichas/marketing/alex-hormozi.md).

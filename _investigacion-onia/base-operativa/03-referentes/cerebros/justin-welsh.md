@@ -1,53 +1,29 @@
 # Cerebro · Justin Welsh
 
-Construido el 8 nov 2026 solo con material del repo (sin web nueva, sin Codex). `ref/` = [`_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/`](../../_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/). Los ASR/captions/MP4 enlazados bajo `operacion/referentes-20261105/` **no están en el repo** (carpeta en `.gitignore`, vivía en el PC Windows de Sergio): por eso casi no hay citas literales; ver [PERDIDO.md](../../00-MAPA/PERDIDO.md).
+Actualización: 8 de noviembre de 2026. **estado: parcial**. Síntesis del corpus existente; precios y condiciones son observaciones históricas del 5/11, no cotización vigente. ASR automático no equivale a palabras verificadas mediante escucha. Las propuestas para OnIA siguen el encargo actual: «Tu negocio con IA: ordena, vende y automatiza», tres clases, Bs50 grupal / Bs150 VIP y luego OnIA Platform; no heredan el antiguo taller de salud.
 
-Fuentes: `ref/marketing/justin-welsh.md`, `ref/marketing/comparacion.md`, `ref/criterio/sintesis-integral.md`, `ref/criterio/ensenanza-pedro-erik-rocha-san-justin.md`, `ref/marketing/brechas-comerciales.md`.
+## 1) Qué vende y escalera de ofertas
 
-## 1) Video de venta (VSL)
-- **No está en el repo.** Su corpus es escrito (3 ensayos + 2 capturas de tweets). La landing de Creator MBA declara que no usa anuncios (afirmación del vendedor).
+Ensayo semanal y guía gratuita de30 páginas → Content OS USD79 (~90 min) / LinkedIn OS con precios contradictorios USD79/99/120 → Creator MBA USD549 (14 capítulos,111 lecciones,~19 h, acceso de por vida). Cursos autónomos; Content OS excluye soporte por email/llamada. Newsletter anuncia patrocinio USD2.500 por espacio, hasta dos por edición: ruta distinta del comprador de cursos. [Ficha comercial](../fichas/marketing/justin-welsh.md).
 
-## 2) Webinar / workshop
-- **No está en el repo** (no se documentó ningún webinar). Vende cursos autónomos sin soporte individual.
+## 2) Cómo consigue clientes
 
-## 3) Funnel paso a paso (`ref/marketing/justin-welsh.md`)
-1. Ensayo semanal gratis en justinwelsh.me (+ LinkedIn, X, Instagram).
-2. Recurso gratis: guía de negocio unipersonal de 30 páginas, 7 capacidades con ejercicios, entrega por email y alta en el ensayo semanal.
-3. Dentro de los ensayos, enlaces a productos:
-   - Content OS: USD 79, ~90 min, autónomo, sin soporte por email/llamada.
-   - LinkedIn OS: USD 79 en hero, USD 99 en FAQ, USD 120 en otro CTA (inconsistente), 90 min / 25 lecciones.
-   - Creator MBA: USD 549, 14 capítulos, 111 lecciones, ~19 h, acceso de por vida → checkout "Do It Yourself Package".
-4. Monetización adicional: patrocinio de newsletter, USD 2.500 por espacio, hasta 2 por edición.
-- No comprobado: entrega del email, secuencias, conversión.
+Contenido en LinkedIn/X y ensayo → guía con email/alta al ensayo → enlaces contextuales a productos → checkout «Do It Yourself Package». La landing afirma que no usa anuncios; es declaración propia. No se comprobó entrega del recurso, secuencia email, palabra clave, DM o cierre conversacional. [Ficha comercial, «Distribución y recorrido»](../fichas/marketing/justin-welsh.md).
 
-## 4) Guiones: estructura y PALABRAS EXACTAS
-Textos literales en el repo (`ref/marketing/justin-welsh.md`):
-- Títulos de ensayos: «4 Questions for Better Weekly Productivity» (2-jul-2022), «The Power of Repeatable Content» (30-sep-2023), «I hope you waste some potential» (31-oct-2026).
-- Producto checkout: «Do It Yourself Package».
-- El cuerpo literal de ensayos y tweets **no está citado en el repo** (solo paráfrasis).
+## 3) Cómo enseña
 
-Estructuras (paráfrasis del repo):
-- **Productividad:** resultado práctico + problema de tiempo → eliminar → simplificar → automatizar → delegar → ejemplos propios, preguntas de decisión, jornada ilustrativa → enlace a plantilla/producto → newsletter.
-- **Contenido repetible:** fatiga creativa → experimento propio → analogías → plantilla → 3 acciones. Reutilizar estructuras de piezas propias que ya funcionaron.
-- **Ensayo personal:** historia en un encuentro → objeción a su decisión → tensión → reflexión → pregunta final.
-- **Tweets (2 capturas):** 3 bloques: idea cuestionada → criterio alternativo → consecuencia práctica. Sin CTA. (229K y 150,4K vistas declaradas en captura.)
+Ensayo de productividad: problema de tiempo → eliminar/simplificar/automatizar/delegar → ejemplos y preguntas de decisión → plantilla/producto. Contenido repetible: fatiga → experimento propio → analogías → plantilla → tres acciones. Ensayo personal: escena → objeción/tensión → reflexión → pregunta. Son lecturas escritas, no observación de una clase paga. [Ficha comercial](../fichas/marketing/justin-welsh.md), [criterio de enseñanza](../fichas/criterio/ensenanza-pedro-erik-rocha-san-justin.md).
 
-## 5) Cómo se dirige a la gente
-- Tono escrito: directo e instructivo en ensayos viejos; personal y reflexivo en el reciente; conciso y con contraste en tweets.
-- Avatar: "personas ambiciosas" que quieren trabajo y vida elegidos conscientemente; operación unipersonal.
-- Voz hablada: **no está en el repo** (no aplica, corpus escrito).
+## 4) Tono y frases con minuto
 
-## 6) Edición de video
-- **No está en el repo** (no se analizó video de Justin). Tweets: captura blanca, texto negro en 3 bloques.
+Directo/instructivo en ensayos anteriores, personal/reflexivo en el reciente; tweets breves por contraste. Los títulos «4 Questions for Better Weekly Productivity», «The Power of Repeatable Content» e «I hope you waste some potential» son literales escritos, sin minuto porque no proceden de video. El corpus conserva paráfrasis del cuerpo; falta cita hablada comprobable. [Ficha comercial](../fichas/marketing/justin-welsh.md).
 
-## 7) Qué copiar para "Automatiza tu vida y sé más saludable con IA" (50 Bs)
-1. **Columna vertebral de la clase:** eliminar → simplificar → automatizar → delegar, aplicado a la semana del alumno (qué quitar, qué simplificar, qué agenda/recordatorio automatizar con IA).
-2. **Recurso gratis antes de vender:** una guía corta (p. ej. "mi semana con IA en 1 página") que capte contacto por WhatsApp.
-3. **Posts de 3 bloques** para captar: idea común cuestionada ("no te falta tiempo") → criterio alternativo → consecuencia.
-4. **Reusar estructura de piezas propias que funcionen**, no inventar formato nuevo cada día.
-Evitar: copiar su agenda/vida/ingresos; confundir engagement con ventas.
+## 5) Edición observada
 
-## 8) Huecos (no está en el repo)
-- VSL, webinar, video, voz.
-- Texto literal de ensayos/tweets.
-- Entrega de email, conversión, ads (botón "Promote" no prueba promoción pagada).
+No hay video de Justin analizado en las fuentes disponibles. Dos capturas de tweets usan fondo blanco, texto negro y tres bloques: eso es diseño de texto, no edición audiovisual. No afirmar ritmo de cortes, subtítulos, B-roll, música, duración o formato de video por extrapolación. [Cobertura de corpus](../fichas/marketing/justin-welsh.md).
+
+## 6) Qué aplicar a OnIA y qué no
+
+**Propuesta:** clase1 elegir qué eliminar/simplificar antes de automatizar; clase2 reutilizar una estructura de publicación propia; clase3 automatizar una tarea que ya tenga criterio de éxito. Preparar una ficha útil gratuita → tres clases Bs50/Bs150 → evaluar Platform al resolver un caso real. Inspiración: marcos escritos de §3, no un embudo probado en Bolivia.
+
+**No trasladar:** ingresos, estilo de vida, ausencia de soporte o precios ajenos; no llamar venta al engagement. Faltan2–3 videos públicos representativos con ASR, citas con minuto, edición y cierre privado. La búsqueda pública adicional localizó como candidato [M31yGtpvBoM](https://www.youtube.com/watch?v=M31yGtpvBoM), clip atribuido a Jay Clouse por [índice Glasp](https://glasp.co/youtube/M31yGtpvBoM); sin descarga/ASR ni duración confirmados, no se incorpora como observado. Otros candidatos de entrevista: [NWNR7BJ1qy8](https://www.youtube.com/watch?v=NWNR7BJ1qy8), [índice y capítulos](https://videohighlight.com/v/NWNR7BJ1qy8?aiFormatted=false&language=en&mediaType=youtube). Falta comprobar duración y que el conjunto no exceda30 minutos; la edición sería del anfitrión, no estilo propio acreditado de Justin. [Límites de la ficha](../fichas/marketing/justin-welsh.md).
