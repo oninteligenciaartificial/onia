@@ -1,0 +1,49 @@
+# Sesiones, memoria y contexto: Grok Bot y Codex
+
+Investigación documental consultada el **6 de noviembre de 2026**. Alcance: comportamiento descrito por fuentes primarias públicas; no se inició sesión en Grok Bot, no se cambiaron cuentas/configuraciones y no se probó ninguna garantía. Las afirmaciones de producto deben distinguirse del estado realmente comprobado de ONIA.
+
+## La distinción que resuelve la confusión
+
+Una máquina persistente conserva archivos, programas y accesos. Una conversación conserva mensajes. La memoria extrae información reutilizable. El contexto activo es lo que el modelo recibe para trabajar ahora. **Conservar lo anterior no implica cargarlo todo, tener una ventana infinita ni cumplir siempre todas las reglas.** Es una inferencia técnica apoyada por la separación explícita entre computadora, chats y recuerdos de Grok, y por la carga selectiva y compacción documentadas en Codex. [Grok: overview](https://docs.x.ai/grok-bot/overview), [Codex: skills](https://learn.chatgpt.com/docs/build-skills), [Codex: conversaciones largas](https://learn.chatgpt.com/docs/learn/best-practices).
+
+## Qué está documentado en Grok Bot
+
+- **Computadora compartida; conversaciones separadas.** Todos los Bots de una cuenta usan la misma computadora cloud y comparten archivos, sesiones de navegador e inicios de sesión. Conservan roles y conversaciones propios. Los mensajes directos, grupos y archivos permiten traspasar contexto; compartir equipo no significa que todos lean automáticamente todas las conversaciones. [Overview](https://docs.x.ai/grok-bot/overview).
+- **Memoria selectiva por Bot.** Guarda preferencias, hechos importantes y resúmenes del trabajo, sin reproducir todos los mensajes anteriores. Decide qué conservar; se le puede pedir que recuerde, corrija u olvide algo. Lo guardado se reutiliza en los chats con ese mismo Bot. Algunos datos personales básicos se comparten entre Bots. En grupos, cada Bot mantiene su memoria, aunque lo que diga queda visible. [Create and manage Bots](https://docs.x.ai/grok-bot/bots).
+- **Reiniciar conversación no borra memoria.** El Reset ofrecido para una conversación bloqueada reinicia el historial y conserva memoria, archivos, rutinas y ajustes. La documentación advierte que la memoria no reemplaza las fuentes actuales y que las restricciones importantes necesitan aprobaciones y reglas de revisión. [Create and manage Bots](https://docs.x.ai/grok-bot/bots).
+- **Los chats tampoco son el disco de la VM.** Se almacenan por separado. Recuperar o reiniciar la computadora reconstruye el entorno desde datos guardados; puede interrumpir trabajo, perder cambios recientes y eliminar paquetes instalados. Esto es recuperación de infraestructura, no un procedimiento documentado para ampliar el contexto del modelo. [Troubleshooting](https://docs.x.ai/grok-bot/troubleshooting).
+- **Skills compartidas, con activación y acceso.** La biblioteca privada está disponible entre Bots, pero una skill puede necesitar habilitarse para el Bot actual y requerir la app o login pertinente. Guarda instrucciones, decisiones, validación y límites. La rutina determina cuándo ejecutar; la skill explica cómo. La guía recomienda probar primero la tarea y después automatizarla. [Skills and routines](https://docs.x.ai/grok-bot/skills-routines-and-automations).
+- **Coordinación explícita.** Los grupos admiten de dos a seis Bots; se puede asignar un responsable por etapa. No hay un interruptor general para impedir mensajes entre Bots: la página indica dar la instrucción y pedir que cada uno la recuerde. Esto describe un control por instrucciones, no una barrera técnica independiente. [Message and collaborate](https://docs.x.ai/grok-bot/chat-and-collaboration).
+
+La guía **Grok Bot 101**, publicada el 11 de septiembre de 2026, ya reconoce el problema del contexto cargado de material irrelevante: su ejemplo separa al agente que reúne información del ejecutor de código y le entrega un pedido depurado. También dice que las reglas en lenguaje natural dependen de que el modelo las siga. No presenta la VM compartida como remedio para esa limitación. [Grok Bot 101](https://x.ai/bot/guides/grok-bot-101).
+
+Hay un cambio de versión visible: 101 explica una descripción personal editable en Settings; la documentación de Bots, actualizada el 28 de octubre, dice que los Bots personales ya no tienen esa descripción/página y que se cambian mediante chat. Para instrucciones operativas actuales debe prevalecer esta última. [Create and manage Bots](https://docs.x.ai/grok-bot/bots).
+
+## Qué está documentado en Codex
+
+- **Mismos archivos no equivalen al mismo chat.** Chats de un proyecto local pueden trabajar sobre los mismos archivos mientras cada uno conserva su transcripción. Reanudar conserva el chat y su directorio registrado, pero los archivos se leen del árbol de trabajo actual. Sincronizar una conversación tampoco sube toda la carpeta local a otra computadora. [Projects and chats](https://learn.chatgpt.com/docs/projects).
+- **Memorias locales opcionales.** Codex puede extraer contexto útil de chats anteriores elegibles hacia archivos locales. La generación ocurre en segundo plano, puede demorarse y excluye sesiones activas o muy breves. Las memorias locales están desactivadas por defecto según la documentación; no se comprobó el ajuste de esta cuenta. OpenAI indica conservar las reglas obligatorias en `AGENTS.md` o documentación versionada, y tratar la memoria como ayuda de recuperación. Este almacenamiento local es distinto de la memoria de ChatGPT web/Work. [Memories](https://learn.chatgpt.com/docs/customization/memories).
+- **Skills con carga progresiva.** Se anuncia inicialmente nombre y descripción; en Codex también ruta. El cuerpo completo de `SKILL.md` se lee al seleccionar la skill. La lista inicial tiene un presupuesto: por defecto hasta 2% del contexto, o 8.000 caracteres si se desconoce la ventana. Muchas skills pueden causar descripciones abreviadas y omisiones con aviso. El presupuesto de catálogo no limita el cuerpo que se lee después. [Build skills](https://learn.chatgpt.com/docs/build-skills).
+- **Subagentes para trabajo delimitado.** La documentación recomienda apartar exploración, logs y pruebas del hilo principal y devolver resúmenes. Advierte que incluso ventanas grandes sufren ruido y degradación al llenarse de detalles poco pertinentes. Los agentes tienen sus propios hilos; no se documenta una memoria universal compartida. Heredan permisos del padre: una instrucción de “sólo lectura” por sí sola no crea otro sandbox. [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents).
+- **Compacción real, con resumen.** Codex compacta automáticamente y ofrece `/compact` para resumir contexto anterior. Recomienda un chat por unidad coherente de trabajo, continuar en él si sigue siendo el mismo problema y bifurcar cuando el trabajo realmente se separa. No propone un chat infinito para todo un proyecto. [Best practices](https://learn.chatgpt.com/docs/learn/best-practices).
+- **Cloud conserva estado por tarea.** El entorno publicado es una preparación reutilizable; cada nueva tarea recibe un workspace aislado. Una tarea existente continúa con sus propios archivos guardados, incluso cambios sin commit y herramientas instaladas. Por tanto, usar el mismo entorno no equivale a estar en la misma VM mutable ni a recibir el historial de todas las tareas. [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environments).
+
+OpenAI también advierte que leer skills irrelevantes consume contexto y acerca la compacción. Recomienda descripciones claras, un documento raíz breve que remita al apoyo pertinente y evitar obligar a leer toda la documentación antes de cualquier cambio. Es una pauta de diseño contextual, no una promesa de obediencia. [Rethinking skills and prompts](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra).
+
+## Lo no demostrado y cómo explicarlo
+
+En las páginas oficiales de **Grok Bot** revisadas no encontré un tamaño publicado de ventana activa, un umbral de compacción, un algoritmo de recuperación de recuerdos ni una garantía de que cada regla guardada entre siempre en contexto. La búsqueda de compacción devuelve documentación de la API de xAI; esa capacidad de API no demuestra su uso interno en Grok Bot. No debe inferirse una arquitectura ausente de las fuentes.
+
+Auto Review de Grok revisa acciones propuestas y puede solicitar aprobación; las reglas Ask first generan una tarjeta según la documentación. Eso es una capa adicional de control. Sus propios documentos desaconsejan usar Bots separados como frontera de seguridad porque comparten la computadora. No encontré una garantía de cumplimiento perfecto de instrucciones, memoria o revisión. [Approvals, security, and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy).
+
+Traducción práctica para la explicación al usuario, como **síntesis recomendada**:
+
+| Situación | Criterio |
+|---|---|
+| Sigue el mismo resultado y las mismas decisiones | Continuar el chat actual; compactar cuando corresponda. |
+| Hay otro resultado independiente | Abrir otro chat con un encargo breve y referencias actuales. |
+| Una especialidad necesita responsabilidad permanente | Puede justificar otro Bot; no uno por cada archivo o skill. |
+| Hay exploración o revisión acotada | Delegarla y devolver hallazgos/resumen al coordinador. |
+| Se retoma en otra tarea o máquina | Recuperar objetivo, estado, evidencia y siguiente paso desde fuentes accesibles; comprobar que se leyeron. |
+
+Estas pautas se apoyan en la separación de chats de Codex y en los roles/handoffs de Grok, pero no sustituyen una prueba de continuidad. La mejora concreta de Grok es conservar y reutilizar más entorno y conocimiento seleccionado. **No está acreditado que elimine la saturación de contexto, el olvido selectivo o los errores de cumplimiento.**

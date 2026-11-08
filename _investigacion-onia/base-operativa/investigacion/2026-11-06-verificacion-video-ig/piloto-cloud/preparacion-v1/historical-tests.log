@@ -1,0 +1,113 @@
+=== Historical supervisor iteration v1; not final-source validation ===
+test_01_validation_before_launch (__main__.SupervisorTests.test_01_validation_before_launch) ... ok
+test_02_limits_effective_and_parent_unchanged (__main__.SupervisorTests.test_02_limits_effective_and_parent_unchanged) ... ok
+test_03_small_as_allocation_is_refused (__main__.SupervisorTests.test_03_small_as_allocation_is_refused) ... ok
+test_04_timeout_group_and_external_witness (__main__.SupervisorTests.test_04_timeout_group_and_external_witness) ... ok
+test_05_cpu_limit (__main__.SupervisorTests.test_05_cpu_limit) ... ok
+test_06_output_bound (__main__.SupervisorTests.test_06_output_bound) ... ok
+test_07_guard_boundaries (__main__.SupervisorTests.test_07_guard_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.366s
+
+OK
+
+=== Historical supervisor iteration v2; not final-source validation ===
+test_01_validation_before_launch (__main__.SupervisorTests.test_01_validation_before_launch) ... ok
+test_02_limits_effective_and_parent_unchanged (__main__.SupervisorTests.test_02_limits_effective_and_parent_unchanged) ... FAIL
+test_03_small_as_allocation_is_refused (__main__.SupervisorTests.test_03_small_as_allocation_is_refused) ... FAIL
+test_04_timeout_group_and_external_witness (__main__.SupervisorTests.test_04_timeout_group_and_external_witness) ... FAIL
+test_05_cpu_limit (__main__.SupervisorTests.test_05_cpu_limit) ... ok
+test_06_output_bound (__main__.SupervisorTests.test_06_output_bound) ... FAIL
+test_07_guard_boundaries (__main__.SupervisorTests.test_07_guard_boundaries) ... ok
+
+======================================================================
+FAIL: test_02_limits_effective_and_parent_unchanged (__main__.SupervisorTests.test_02_limits_effective_and_parent_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/onia-av-pilot-20261106/test_supervisor.py", line 23, in test_02_limits_effective_and_parent_unchanged
+    self.assertEqual(r['reason'], 'exited')
+AssertionError: 'affinity_changed' != 'exited'
+- affinity_changed
++ exited
+
+
+======================================================================
+FAIL: test_03_small_as_allocation_is_refused (__main__.SupervisorTests.test_03_small_as_allocation_is_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/onia-av-pilot-20261106/test_supervisor.py", line 33, in test_03_small_as_allocation_is_refused
+    self.assertEqual(r['exit_code'],23)
+AssertionError: -9 != 23
+
+======================================================================
+FAIL: test_04_timeout_group_and_external_witness (__main__.SupervisorTests.test_04_timeout_group_and_external_witness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/onia-av-pilot-20261106/test_supervisor.py", line 43, in test_04_timeout_group_and_external_witness
+    self.assertEqual(r['reason'],'wall_timeout')
+AssertionError: 'affinity_changed' != 'wall_timeout'
+- affinity_changed
++ wall_timeout
+
+
+======================================================================
+FAIL: test_06_output_bound (__main__.SupervisorTests.test_06_output_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/onia-av-pilot-20261106/test_supervisor.py", line 63, in test_06_output_bound
+    self.assertEqual(r['reason'],'output_limit')
+AssertionError: 'affinity_changed' != 'output_limit'
+- affinity_changed
++ output_limit
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.438s
+
+FAILED (failures=4)
+
+=== Historical supervisor iteration v3; not final-source validation ===
+test_01_validation_before_launch (__main__.SupervisorTests.test_01_validation_before_launch) ... ok
+test_02_limits_effective_and_parent_unchanged (__main__.SupervisorTests.test_02_limits_effective_and_parent_unchanged) ... FAIL
+test_03_small_as_allocation_is_refused (__main__.SupervisorTests.test_03_small_as_allocation_is_refused) ... FAIL
+test_04_timeout_group_and_external_witness (__main__.SupervisorTests.test_04_timeout_group_and_external_witness) ... ok
+test_05_cpu_limit (__main__.SupervisorTests.test_05_cpu_limit) ... ok
+test_06_output_bound (__main__.SupervisorTests.test_06_output_bound) ... FAIL
+test_07_guard_boundaries (__main__.SupervisorTests.test_07_guard_boundaries) ... ok
+
+======================================================================
+FAIL: test_02_limits_effective_and_parent_unchanged (__main__.SupervisorTests.test_02_limits_effective_and_parent_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/onia-av-pilot-20261106/test_supervisor.py", line 23, in test_02_limits_effective_and_parent_unchanged
+    self.assertEqual(r['reason'], 'exited')
+AssertionError: 'affinity_changed' != 'exited'
+- affinity_changed
++ exited
+
+
+======================================================================
+FAIL: test_03_small_as_allocation_is_refused (__main__.SupervisorTests.test_03_small_as_allocation_is_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/onia-av-pilot-20261106/test_supervisor.py", line 33, in test_03_small_as_allocation_is_refused
+    self.assertEqual(r['exit_code'],23)
+AssertionError: -9 != 23
+
+======================================================================
+FAIL: test_06_output_bound (__main__.SupervisorTests.test_06_output_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/onia-av-pilot-20261106/test_supervisor.py", line 63, in test_06_output_bound
+    self.assertEqual(r['reason'],'output_limit')
+AssertionError: 'affinity_changed' != 'output_limit'
+- affinity_changed
++ output_limit
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 4.006s
+
+FAILED (failures=3)
+

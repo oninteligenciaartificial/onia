@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "reviewer_chat": "01a1af41-1ce0-7b72-a888-7fd658396b4a",
+  "scope": "Dictamen final acotado del positivo, transferencia y ficha Cormac parcial",
+  "verified": {
+    "positivo_v1": 17,
+    "positivo_v2": 18,
+    "cormac_transfer_v1": 7
+  },
+  "manifests": {
+    "positivo_v1": "51cabe47a664da9741ca62d229a185067cb424dc4854e164a6a480370d86bdec",
+    "positivo_v2": "436a1d14ced05f07c0b9dd3f0116e45630445aa7a265b252774b6622ee8f9ca1",
+    "cormac_transfer_v1": "ea9b35ddc2f005c896f16527497c11439745b73e3c99459bbd2f250464f529f5"
+  },
+  "verdict": {
+    "negative": "Aceptado este control sintético",
+    "positive": "Fallo semántico contra la verdad del generador; recepción técnica correcta",
+    "cormac": "Ficha útil ASR completo +38 muestras aceptada; AV conjunto0s"
+  },
+  "confirmed": [
+    "V1 guardprompt:0inferencias;v2 sólo cambia ruta del promptcanónico,1inferencia133.6105s/exit0/EOS/complete.",
+    "Vozflite13823muestras íntegra ypaddinga1s; últimochunk16000ceros. Verdad delgenerador,sinaudiciónhumana.",
+    "Dos modalidades por doschunks aceptadas;210+128=338/2048;logíntegro/cleanupvacío/padrerestaurado.",
+    "Payloads vídeo/audio coinciden; remux distinto del original."
+  ],
+  "precision": [
+    "No afirmar que todo cambio de tono es inventado ni sincronía falsa medida.",
+    "Coincidencia de payload no prueba timestamps equivalentes, identidad binaria o decodificación integral.",
+    "No se ejecutó Cormac con esta ruta ni la propuesta de3s; detención sin nuevos ensayos justificada."
+  ],
+  "prior_cuts_unchanged": true
+}

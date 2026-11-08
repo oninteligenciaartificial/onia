@@ -1,0 +1,61 @@
+{
+  "measured_utc": "2026-11-06T23:39:03.770536+00:00",
+  "scope": "/workspace/onia-av-pilot-20261106",
+  "categories": {
+    "weights_complete_verified": {
+      "file_apparent_bytes": 5686882304,
+      "allocated_blocks_bytes": 5686894592,
+      "files": 2,
+      "symlink_apparent_bytes": 0,
+      "symlinks": 0
+    },
+    "weights_partial_or_unverified": {
+      "file_apparent_bytes": 171966464,
+      "allocated_blocks_bytes": 171966464,
+      "files": 1,
+      "symlink_apparent_bytes": 0,
+      "symlinks": 0
+    },
+    "runtime_code": {
+      "file_apparent_bytes": 225858609,
+      "allocated_blocks_bytes": 234377216,
+      "files": 3512,
+      "symlink_apparent_bytes": 0,
+      "symlinks": 0
+    },
+    "build_cmake": {
+      "file_apparent_bytes": 160471984,
+      "allocated_blocks_bytes": 178360320,
+      "files": 5560,
+      "symlink_apparent_bytes": 183,
+      "symlinks": 10
+    },
+    "controls": {
+      "file_apparent_bytes": 65664,
+      "allocated_blocks_bytes": 73728,
+      "files": 4,
+      "symlink_apparent_bytes": 0,
+      "symlinks": 0
+    },
+    "logs_receipts_zip": {
+      "file_apparent_bytes": 5227092,
+      "allocated_blocks_bytes": 5926912,
+      "files": 259,
+      "symlink_apparent_bytes": 0,
+      "symlinks": 0
+    }
+  },
+  "directory_metadata_apparent_bytes": 3514368,
+  "directory_metadata_allocated_blocks_bytes": 3514368,
+  "total_file_apparent_bytes": 6250472117,
+  "total_symlink_apparent_bytes": 183,
+  "total_apparent_including_directory_metadata_bytes": 6253986668,
+  "total_allocated_blocks_including_directory_metadata_bytes": 6281113600,
+  "hardlink_duplicate_entries_not_double_counted": 0,
+  "symlink_policy": "lstat link storage only; never follow/count target twice",
+  "blocks_scope": "st_blocks*512 reported by this filesystem, not exclusive host billing or provisioned capacity",
+  "workspace_filesystem_total_bytes": 67586535424,
+  "workspace_filesystem_free_bytes": 57849610240,
+  "ram_and_cgroup": "separate memory-observation.json; not storage",
+  "persistence": "observed between turns only; NOT permanent storage"
+}

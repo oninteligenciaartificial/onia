@@ -1,0 +1,32 @@
+{
+  "phase": "PANNs phase1a preflight only",
+  "continuity": "four manifests and current marker verified",
+  "onia_HEAD": "e55812ce1bc8ef798fb370257ba887d07acccc53",
+  "git_clean": true,
+  "fixtures": "negative gray/silence and complete flite one two positive fixture hashes/bytes/truth verified; positive-v2 reuses positive-v1",
+  "reserve_bytes": 31598002176,
+  "reserve_required_bytes": 6442450944,
+  "resource_preflight_pass": true,
+  "visible_cgroup_levels": 1,
+  "disk_free_bytes": 56903487488,
+  "previous_process_groups_pending": 0,
+  "python_interpreters": 2,
+  "details": [
+    "continuity.json",
+    "fixtures.json",
+    "resources.json",
+    "versions.json"
+  ],
+  "not_performed": [
+    "framework import",
+    "package install/download",
+    "checkpoint download",
+    "inference",
+    "regeneration",
+    "runtime rebuild",
+    "signals to processes",
+    "ONIA/configuration/publication changes"
+  ],
+  "limits_for_next_entry": "AS3GiB virtual per process, CPU/wall120s, CPU1,batch1,reserve>=6GiB; no swap added. Not applied to parent; no child inference started.",
+  "status": "metadata_preflight_complete_not_runtime_validation"
+}

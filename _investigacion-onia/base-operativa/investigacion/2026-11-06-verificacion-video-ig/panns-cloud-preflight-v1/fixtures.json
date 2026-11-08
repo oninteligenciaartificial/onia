@@ -1,0 +1,103 @@
+[
+  {
+    "fixture": "negativo-v1",
+    "used_by": "accepted negative",
+    "manifest_sha256": "d516419bfbee8b8a406476a58ac961965493ca20c0c7c469ac23b248aa93230e",
+    "truth_sha256": "534f68fbf6281c5546ebc3cff5317fc188c785c8116c712663f8a8a32a0a7ada",
+    "truth": {
+      "opaque_id": "2b799ab7-9d97-49ea-a7ae-7e192785e83e",
+      "truth": "uniform static gray image and digital silence throughout both consecutive seconds",
+      "intervals": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "never_pass_to_model": true
+    },
+    "files": [
+      {
+        "path": "negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0000.jpg",
+        "bytes": 788,
+        "sha256": "cdcc1af597bcc4a90c2c678665f9fd2567798e541265cdeccb61257c99607774"
+      },
+      {
+        "path": "negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0000.wav",
+        "bytes": 32044,
+        "sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc"
+      },
+      {
+        "path": "negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0001.jpg",
+        "bytes": 788,
+        "sha256": "cdcc1af597bcc4a90c2c678665f9fd2567798e541265cdeccb61257c99607774"
+      },
+      {
+        "path": "negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0001.wav",
+        "bytes": 32044,
+        "sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc"
+      }
+    ],
+    "regenerated": false,
+    "human_audition": false
+  },
+  {
+    "fixture": "positivo-v1",
+    "used_by": "positivo-v2",
+    "manifest_sha256": "c428c670934f5eae4fe85c69b075e76515426f519399c5b74d2a9fc8d1a411bd",
+    "truth_sha256": "8f8405be7fabce4c20fc88166a5b8971d17e785b51c20ba2b675e6326667f6d7",
+    "truth": {
+      "authority": "generator truth, NOT human audition",
+      "speech": "one two",
+      "voice": "included flite kal16",
+      "voice_samples": 13823,
+      "voice_blocks": 1,
+      "first_blocks": "white image, red square left; complete speech then zero padding",
+      "last_chunk": "white image, blue circle right; exactly16000 zero samples",
+      "no_truncation": true,
+      "not_passed_to_model": true
+    },
+    "files": [
+      {
+        "path": "positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0000.wav",
+        "bytes": 32044,
+        "sha256": "cdfb48b1b0a7fc4f080a457c3578bce7e9ad34947c7fabafcf4ed832e7f10068"
+      },
+      {
+        "path": "positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0000.jpg",
+        "bytes": 1162,
+        "sha256": "77c79265cf91af36e835d456f128457d9561d418fa619b8c21e5504b108c228b"
+      },
+      {
+        "path": "positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/bbc4e1574a8d4c52a8541d3ede113ff1.ppm",
+        "bytes": 150543,
+        "sha256": "1f5e22ca89266e36720a4717d0cf8f914a22e7aabd0ea95f5fdb8196c37aa777"
+      },
+      {
+        "path": "positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0001.wav",
+        "bytes": 32044,
+        "sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc"
+      },
+      {
+        "path": "positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0001.jpg",
+        "bytes": 3003,
+        "sha256": "74a1fe4ef8e77f853dcf19468736e71985dedd1e8c7632f90ebe65ea0ffd46da"
+      },
+      {
+        "path": "positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/78aa7ff4958840f7ad4ccf3e2f095288.ppm",
+        "bytes": 150543,
+        "sha256": "ae0aa290607e2ae911892c2924d512f3a244c3d0271c91eeb346b49faa93ab98"
+      },
+      {
+        "path": "positivo-v1/5f1a913f952e4f56882ba333f598d4df.wav",
+        "bytes": 27724,
+        "sha256": "5e1bedda62019daf679055125fdcb5f2cff3afaa5270b43c7aee69fea5d50b03"
+      }
+    ],
+    "regenerated": false,
+    "human_audition": false
+  }
+]

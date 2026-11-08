@@ -1,0 +1,304 @@
+{
+  "all_frames_processed": 2264,
+  "video_duration_s": 37.733333333333334,
+  "container_duration_s": 37.753991,
+  "time_base": "1/15360",
+  "frame_duration_s": 0.016666666666666666,
+  "detection_scale": [
+    720,
+    1280
+  ],
+  "native_source_scale": [
+    1440,
+    2560
+  ],
+  "threshold": 10,
+  "threshold_candidates": [
+    {
+      "frame": 208,
+      "pts": 53248,
+      "pts_time": 3.466667,
+      "mafd": 22.467,
+      "score": 21.71,
+      "time": 3.466667
+    },
+    {
+      "frame": 432,
+      "pts": 110592,
+      "pts_time": 7.2,
+      "mafd": 22.976,
+      "score": 22.974,
+      "time": 7.2
+    },
+    {
+      "frame": 568,
+      "pts": 145408,
+      "pts_time": 9.466667,
+      "mafd": 12.494,
+      "score": 12.477,
+      "time": 9.466667
+    },
+    {
+      "frame": 880,
+      "pts": 225280,
+      "pts_time": 14.666667,
+      "mafd": 15.328,
+      "score": 15.283,
+      "time": 14.666667
+    },
+    {
+      "frame": 1300,
+      "pts": 332800,
+      "pts_time": 21.666667,
+      "mafd": 14.203,
+      "score": 14.12,
+      "time": 21.666667
+    }
+  ],
+  "manual_boundaries": [
+    {
+      "frame": 208,
+      "pts": 53248,
+      "pts_seconds": 3.466666666666667,
+      "previous_frame_seconds": 3.45,
+      "score": 21.71,
+      "threshold_candidate": true,
+      "kind": "content_cut",
+      "visual_annotation": "presenter to desktop",
+      "one_native_frame_seconds": 0.016666666666666666
+    },
+    {
+      "frame": 432,
+      "pts": 110592,
+      "pts_seconds": 7.2,
+      "previous_frame_seconds": 7.183333333333334,
+      "score": 22.974,
+      "threshold_candidate": true,
+      "kind": "content_cut",
+      "visual_annotation": "desktop to repository",
+      "one_native_frame_seconds": 0.016666666666666666
+    },
+    {
+      "frame": 568,
+      "pts": 145408,
+      "pts_seconds": 9.466666666666667,
+      "previous_frame_seconds": 9.45,
+      "score": 12.477,
+      "threshold_candidate": true,
+      "kind": "abrupt_reframe",
+      "visual_annotation": "same repository, abrupt framing/finger discontinuity",
+      "one_native_frame_seconds": 0.016666666666666666
+    },
+    {
+      "frame": 880,
+      "pts": 225280,
+      "pts_seconds": 14.666666666666666,
+      "previous_frame_seconds": 14.65,
+      "score": 15.283,
+      "threshold_candidate": true,
+      "kind": "content_cut",
+      "visual_annotation": "repository to presenter",
+      "one_native_frame_seconds": 0.016666666666666666
+    },
+    {
+      "frame": 1082,
+      "pts": 276992,
+      "pts_seconds": 18.033333333333335,
+      "previous_frame_seconds": 18.016666666666666,
+      "score": 3.739,
+      "threshold_candidate": false,
+      "kind": "subthreshold_pose_or_reframe",
+      "visual_annotation": "same presenter; pose/framing discontinuity, edit versus fast movement not independently proven",
+      "one_native_frame_seconds": 0.016666666666666666
+    },
+    {
+      "frame": 1300,
+      "pts": 332800,
+      "pts_seconds": 21.666666666666668,
+      "previous_frame_seconds": 21.65,
+      "score": 14.12,
+      "threshold_candidate": true,
+      "kind": "abrupt_reframe",
+      "visual_annotation": "presenter close framing to wider framing",
+      "one_native_frame_seconds": 0.016666666666666666
+    },
+    {
+      "frame": 1780,
+      "pts": 455680,
+      "pts_seconds": 29.666666666666668,
+      "previous_frame_seconds": 29.65,
+      "score": 5.088,
+      "threshold_candidate": false,
+      "kind": "subthreshold_pose_or_reframe",
+      "visual_annotation": "same presenter, hand/pose discontinuity; edit provenance uncertain",
+      "one_native_frame_seconds": 0.016666666666666666
+    },
+    {
+      "frame": 2096,
+      "pts": 536576,
+      "pts_seconds": 34.93333333333333,
+      "previous_frame_seconds": 34.916666666666664,
+      "score": 3.053,
+      "threshold_candidate": false,
+      "kind": "subthreshold_pose_or_reframe",
+      "visual_annotation": "same presenter, head/pose discontinuity; edit provenance uncertain",
+      "one_native_frame_seconds": 0.016666666666666666
+    }
+  ],
+  "macro_blocks": [
+    {
+      "start_frame": 0,
+      "end_frame_exclusive": 208,
+      "start_s": 0.0,
+      "end_s": 3.466666666666667,
+      "duration_s": 3.466666666666667,
+      "label": "presenter hook"
+    },
+    {
+      "start_frame": 208,
+      "end_frame_exclusive": 432,
+      "start_s": 3.466666666666667,
+      "end_s": 7.2,
+      "duration_s": 3.7333333333333334,
+      "label": "desktop insert"
+    },
+    {
+      "start_frame": 432,
+      "end_frame_exclusive": 880,
+      "start_s": 7.2,
+      "end_s": 14.666666666666666,
+      "duration_s": 7.466666666666667,
+      "label": "repository/documentation"
+    },
+    {
+      "start_frame": 880,
+      "end_frame_exclusive": 2264,
+      "start_s": 14.666666666666666,
+      "end_s": 37.733333333333334,
+      "duration_s": 23.066666666666666,
+      "label": "presenter explanation and closing"
+    }
+  ],
+  "fine_visual_segments_not_proven_distinct_camera_takes": [
+    {
+      "start_frame": 0,
+      "end_frame_exclusive": 208,
+      "duration_s": 3.466666666666667
+    },
+    {
+      "start_frame": 208,
+      "end_frame_exclusive": 432,
+      "duration_s": 3.7333333333333334
+    },
+    {
+      "start_frame": 432,
+      "end_frame_exclusive": 568,
+      "duration_s": 2.2666666666666666
+    },
+    {
+      "start_frame": 568,
+      "end_frame_exclusive": 880,
+      "duration_s": 5.2
+    },
+    {
+      "start_frame": 880,
+      "end_frame_exclusive": 1082,
+      "duration_s": 3.3666666666666667
+    },
+    {
+      "start_frame": 1082,
+      "end_frame_exclusive": 1300,
+      "duration_s": 3.6333333333333333
+    },
+    {
+      "start_frame": 1300,
+      "end_frame_exclusive": 1780,
+      "duration_s": 8.0
+    },
+    {
+      "start_frame": 1780,
+      "end_frame_exclusive": 2096,
+      "duration_s": 5.266666666666667
+    },
+    {
+      "start_frame": 2096,
+      "end_frame_exclusive": 2264,
+      "duration_s": 2.8
+    }
+  ],
+  "diagnostic_non_cuts": {
+    "598": "finger gesture, same monitor content",
+    "710": "camera/content drift, same repository",
+    "790": "scroll with source-image ghosting",
+    "870": "scroll with source-image ghosting"
+  },
+  "screening_scope": "Five primary candidates and seven diagnostic subthreshold points reviewed. Does not prove exhaustive recall of all low-contrast edits.",
+  "hard_content_cuts_confirmed": 3,
+  "primary_abrupt_reframes": 2,
+  "subthreshold_discontinuities": 3,
+  "subthreshold_discontinuities_not_all_certified_hard_edits": true,
+  "native_pts_checks": {
+    "reference_frames": {
+      "frames": [
+        30,
+        270,
+        510,
+        780,
+        1710
+      ],
+      "pts_verified": true,
+      "time_base": "1/15360"
+    },
+    "neighbors": {
+      "frames": [
+        206,
+        207,
+        208,
+        209,
+        210,
+        430,
+        431,
+        432,
+        433,
+        434,
+        566,
+        567,
+        568,
+        569,
+        570,
+        878,
+        879,
+        880,
+        881,
+        882,
+        1298,
+        1299,
+        1300,
+        1301,
+        1302
+      ],
+      "pts_verified": true,
+      "time_base": "1/15360"
+    },
+    "diagnostic_neighbors": {
+      "frames": [
+        597,
+        598,
+        709,
+        710,
+        789,
+        790,
+        869,
+        870,
+        1081,
+        1082,
+        1779,
+        1780,
+        2095,
+        2096
+      ],
+      "pts_verified": true,
+      "time_base": "1/15360"
+    }
+  }
+}

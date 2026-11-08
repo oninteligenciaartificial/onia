@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "manifest_sha256": "578e54307938649f9362d5b711841f30305e6fefd80eb540c60d4a207f93a031",
+  "recovered_files": 21,
+  "verified_files": 21,
+  "chunk": "4e7ad9",
+  "result": {
+    "utc": "2026-11-07T00:06:45.413113+00:00",
+    "transfer_complete": true,
+    "range_status": 206,
+    "bytes_added": 923146720,
+    "all_three_weights_verified": true,
+    "model_invocations": 1,
+    "exit_code": 0,
+    "wall_model_seconds": 135.59645423999973,
+    "wall_transfer_seconds": 173.0394700900015,
+    "context_budget": {
+      "input_positions": 210,
+      "text_and_control_positions": 62,
+      "response_reserve": 128,
+      "total": 338,
+      "effective_context": 2048
+    },
+    "counts_verified": true,
+    "response_exact": "No hay ningún contenido visible ni auditivo en el video. La imagen es un cuadrado gris uniforme y silenciosa durante todo el clip. No se observan cambios ni transiciones.",
+    "assessment": "No sound is invented in this single synthetic gray/silence control; integration/review decide acceptance. Not general audiovisual perception or a reel analysis.",
+    "sampled_max_model_rss_bytes": 10784366592,
+    "rss_is_not_exact_peak": true,
+    "sampled_max_model_os_threads": 3,
+    "cpu_limit_seconds_per_process": 600,
+    "actual_cpu_seconds": "not captured",
+    "old_cuts_runtime_and_control_verified_unchanged": true,
+    "old_incomplete_receipt_preserved": true,
+    "driver_source_unchanged_two_receipt_paths_routed": true,
+    "pending_live": [],
+    "onia_status": "",
+    "configuration_and_publication": "untouched",
+    "next_step": "Stop. Integration/review may send ONE controlled positive if they accept this negative; none is executed automatically. Cormac remains outside this completed stage."
+  },
+  "reviewer_chat": "01a1af41-1ce0-7b72-a888-7fd658396b4a",
+  "review_verdict": "Aceptado este único negativo gris/silencio, con cotejo independiente de bytes, wrapper, argv, log, telemetría y cierre. No demuestra voz, orden, Cormac ni AV general.",
+  "review_details": [
+    "Driver original fijado por SHA; sólo dos rutas de recibos redirigidas.",
+    "2×(10 posiciones audio +64 imagen)+62 texto/control=210; más128reservadas=338<2048.",
+    "Cada WAV16000muestras, imagen y audio aceptados; EOS y complete=true; log íntegro y grupos sin procesos vivos.",
+    "Respuesta identifica campo gris, silencio y ausencia de cambios; primera frase imprecisa no bloquea este control."
+  ],
+  "stage_costs": "Sólo wall total por fase registrado; tiempos separados de carga/prefill/decode no aparecen en el log recuperado.",
+  "positive": "Despachado una vez, pendiente de resultado."
+}

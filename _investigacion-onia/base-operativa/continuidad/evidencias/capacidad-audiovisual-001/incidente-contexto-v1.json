@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "tipo": "incidente_contexto_observado",
+  "chat": "01a1af41-1ce0-7b72-a888-7fd658396b4a",
+  "turno": "01a1b2ff-33b1-78a2-8c8d-4153cd707e3e",
+  "evento": {
+    "id": "01a1b313-1de0-7c43-8c9d-36a4ae86d60c",
+    "tipo": "contextCompaction"
+  },
+  "comentario_posterior": {
+    "id": "msg_098fb071d473e49e016aee5b77616c87d2bbebd7ab2c8fb4e2",
+    "texto": "Voy a verificar qué quedó consolidado en `onia` y coordinar una sola sesión para los cambios y otra para la revisión. Después te mostraré la prueba de continuidad y los pasos para usarlo desde el iPhone, distinguiendo lo probado de lo pendiente."
+  },
+  "comando_posterior": {
+    "id": "exec-5806bdb6-7f69-40ed-9980-10d4fe13f159",
+    "exit_code": 1,
+    "cwd": "C:\\Users\\PC\\Documents\\Codex\\2026-11-06\\cod",
+    "alcance": "consulta Git en directorio original; no mutación"
+  },
+  "recuperacion": {
+    "intervencion": "Coordinación envió retoma explícita por capacidad-audiovisual-001 y rol/ruta de revisión; informado por su mensaje de coordinación",
+    "respuesta_posterior": {
+      "id": "msg_098fb071d473e49e016aee5bc02ef887d28fed3e4e1bf466ae",
+      "texto": "La revisión encontró dos detalles que conviene corregir antes de probar el modelo: una opción de CPU todavía se rechazaba por un validador heredado, y el muestreo no estaba fijado para comparar resultados. Ya se los pasé a la sesión integradora; yo mantengo la revisión independiente, sin duplicar sus cambios ni sus pruebas."
+    },
+    "limite": "Se observa retorno al adaptador AV; no se acredita recuperación automática ni ausencia de pérdidas."
+  },
+  "accion": "Conservar el incidente y continuar revisión con registro vigente. No modificar harness ni repetir ensayos por este incidente dentro de esta unidad."
+}

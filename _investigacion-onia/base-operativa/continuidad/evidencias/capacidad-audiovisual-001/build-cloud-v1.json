@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "thread": "01a1b22d-9f2c-72df-8a57-4c1ccb0c800a",
+  "turn": "01a1b329-e690-7682-aaf3-ff3db183afb3",
+  "tipo": "compilacion_incremental_sin_carga_modelo",
+  "copia_local": "investigacion/2026-11-06-verificacion-video-ig/piloto-cloud/build-continuacion-v1",
+  "manifest_sha256": "d0a2dbabdd8abcc253040b21bb7bd5d4a3f5633cfda94ce7207f636dfc45457a",
+  "recuperacion": {
+    "archivos": 7,
+    "exactos": 7,
+    "chunk": "41c25b"
+  },
+  "resultado": {
+    "utc": "2026-11-06T23:22:36.989089+00:00",
+    "run_id": "build-continuacion-v1",
+    "reason": "exited",
+    "exit_code": 0,
+    "elapsed_seconds": 69.55308822999996,
+    "os_thread_cap_this_run": 16,
+    "previous_os_thread_cap": null,
+    "previous_540s_receipt_preserved": true,
+    "sources_verified_after": true,
+    "v2_all_16_files_still_exact": true,
+    "pending_live": [],
+    "parent_limits_unchanged": true,
+    "parent_sigterm_restored": true,
+    "sampled_max_group_rss_bytes": 916180992,
+    "sampled_max_single_rss_bytes": 506429440,
+    "sampled_max_group_os_threads": 12,
+    "onia_status": "",
+    "model_load_or_av": "not_executed",
+    "publication": "not_performed"
+  },
+  "binario": {
+    "path": "/workspace/onia-av-pilot-20261106/build-v2/bin/llama-omni-single-test-omni",
+    "bytes": 55680,
+    "sha256": "9e93dec5eafa79172827df6afcd3d51abb2bb79123c4000a86dcbfc62e449f47",
+    "executed": false,
+    "frozen_sources_verified_after_build": true
+  },
+  "alcance": "Enlace verificado, no ejecutado en este corte; no demuestra percepción audiovisual ni fit VPS. La huella de bibliotecas propias se registrará antes de carga."
+}

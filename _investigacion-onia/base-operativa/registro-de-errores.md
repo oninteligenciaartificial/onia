@@ -1,5 +1,15 @@
 # Registro de errores y correcciones — iniciado el 3 de noviembre de 2026
 
+## QA previo de videos — 6 de noviembre de 2026
+
+**Fuente y caso:** Sergio pidió analizar DfaLyn7Rorf para estrenar el flujo y luego aclaró que no quiere ese análisis completo para todos los videos: primero QA para decidir qué hacer. El [análisis de estreno](investigacion/2026-11-06-reel-DfaLyn7Rorf/ANALISIS.md) estaba autorizado; no se reclasifica retrospectivamente como un error. La corrección explícita fija selección proporcional para los próximos encargos de ONIA.
+
+**Cambio:** la fuente operativa única es [QA previo de videos en ORQUESTACION](ORQUESTACION.md#qa-previo-de-videos-recibidos). No se cambia producir-video ni se crea otra memoria o un módulo de software.
+
+**Cotejo documental:** URL sin finalidad → QA ligero y aclaración antes del flujo pesado; «resumí la idea» → texto/ASR y sólo apoyo pertinente; «analizá guion, imagen, edición y sonido para probar el flujo» → alcance completo ya autorizado, sin nueva confirmación. Esto comprueba la coherencia de las instrucciones; no demuestra ejecución automática o ahorro medido. No se repitieron inferencias.
+
+**Límite y revisión:** mantener distinción entre transcripción, imagen seleccionada y percepción audiovisual integral. Revisar esta regla si produce preguntas redundantes ante un encargo claro o convierte el QA en otro análisis completo.
+
 ## Retrospectiva de la tanda VPS · cierre documental aceptado por Jefa
 
 Pedido de Sergio: explicar demoras y conservar errores/soluciones para no repetirlos. Sólo causas observadas y correcciones comunicadas por Jefa; sin minutos inventados ni causa global de todos los fallos. Descarga de dependencias/modelos, transferencia autorizada de2.949.254.316bytes y prueba de negativos son trabajo necesario; el fallo legítimo de un modelo no es por sí solo un error de ejecución. Lote independiente8WAV terminado:integridad/rutas8/8, ceros2/2 y señal6/6; orden0/2 y atribución no respaldada impiden aceptar captioner en corpus. Jefa acepta propiedades/aciertos limitados, no percepción integral; sin tuning ni segunda pasada.

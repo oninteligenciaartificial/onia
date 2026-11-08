@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-07T00:06:45.428529+00:00",
+  "proc_memory": {
+    "MemTotal_bytes": 35743748096,
+    "MemAvailable_bytes": 34753171456,
+    "SwapTotal_bytes": 0,
+    "SwapFree_bytes": 0
+  },
+  "visible_cgroups": [
+    {
+      "path": "/sys/fs/cgroup",
+      "max": "34359738368",
+      "current": 7121563648
+    }
+  ],
+  "model_sampled_max_rss_bytes": 10784366592,
+  "model_sampled_max_os_threads": 3,
+  "limits": "AS12GiB and CPU600s PER PROCESS; affinity2CPU; OS cap16",
+  "rss": "sampled, not exact peak",
+  "cgroup_current": "includes file cache and other charged memory, not model RSS alone"
+}

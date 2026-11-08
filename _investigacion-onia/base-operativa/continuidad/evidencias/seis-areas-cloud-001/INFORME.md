@@ -1,0 +1,22 @@
+# Ejecución de las seis áreas ONIA en Cloud
+
+7 de noviembre de 2026. Se ejecutaron las seis pruebas funcionales en chats Cloud existentes. La revisión inicial dio cinco resultados conformes y uno parcial. La coordinación y los cotejos se hicieron desde las sesiones locales de Integración y Revisión. [Plan](../../2026-11-07-seis-areas/PLAN.md) · [Registro único](../../tareas/seis-areas-cloud-001.json)
+
+| Área | Trabajo ejecutado | Resultado de la primera pasada |
+|---|---|---|
+| Desarrollo | Creó el encargo sintético, guardó evidencia, dejó r2 para revisión y probó una mutación con r1. | Retoma íntegra y rechazo efectivo con salida 2. La marca inicial de su script se perdió y el comienzo se reconstruyó desde la creación registrada por el CLI. |
+| Organización | Actualizó la tarjeta privada sintética de Notion por el mismo ID y repitió el intento. | r2→r3, una escritura y cero escrituras en el reintento. Relectura conforme. [Tarjeta de prueba](https://app.notion.com/p/4112eb20bdfd811a8337d171eaceb4ef) |
+| Marketing | Escribió dos aperturas, CTA y tabla de respaldo para la primera pieza. Ejecutó el cotejo de los recibos y CSV. | Coincidieron 9 unidades y 56,50 ficticios. Tres referencias conformes por bytes y SHA. |
+| Video | Renderizó y decodificó un MP4 con la tarjeta de la pieza. | H.264, 1080×1920, 30 fps, 150 cuadros, 5 s, sin audio, 43.370 bytes. El chequeo de enlaces de skills reportó faltantes y conflictos en la copia. Se leyó la fuente canónica para ejecutar. |
+| Automatizaciones | Ejecutó los cuatro nodos Code literales con fixtures y shims de Node. | Aceptó caso válido, rechazó cuenta ajena, conservó el bigint como texto y devolvió `sent:false` y `auto_send:false`. La integración real n8n/SQL conserva su prueba pendiente. |
+| Producto | Ejecutó la función real de Platform con cuatro entradas sintéticas. | 4/4 casos correctos en Cloud sobre blob verificado. El checkout completo se cotejó aparte en la sesión local de Producto, en el mismo commit y con 4/4. La preparación de un checkout completo en Cloud queda pendiente. |
+
+Cinco áreas trabajaron con el commit de prueba `13311ee80e1c83c9b68639c0a13aa3404a1cd037`. Producto obtuvo el módulo de Platform del commit `a0488f04200b14c95caf0013043716b16efa1f1d`. Cuatro chats Cloud archivados se reactivaron para el ensayo. Se preservaron los resultados y fallos recuperados en los recibos. [Recibos de la primera pasada](recibos-v1.json) · [Revisión independiente](revision-v1.md)
+
+**Solape efectivo de la primera pasada:** dos áreas. Desarrollo y Organización coincidieron unos 26,59 segundos. Los seis encargos tuvieron trabajo real, con inicios desfasados por arranque y preparación. El cálculo excluye despachos y esperas.
+
+**Primera pasada sincronizada, 12:22 UTC.** Cinco áreas acreditaron ejecución dentro de los 15 segundos acordados. La intersección de sus intervalos fue de 13 ms según los relojes registrados. Automatizaciones llegó a la ventana, pero el lanzador de Node devolvió `EPERM` y la comprobación quedó sin salida. Se excluyó ese intento pese al estado interno 0. Se preservó el resultado correcto de su primera ejecución y se cambió el lanzador a invocación directa para la pasada final. [Recibos de sincronización v1](recibos-sincronizados-v1.json) · [Dictamen v2](revision-v2.md)
+
+**Pasada final, 12:26:50 UTC. Las seis áreas ejecutaron y pasaron sus comprobaciones en Cloud dentro de la ventana.** Cada una trabajó entre 0,400 y 0,666 s. Automatizaciones ejecutó cinco invocaciones directas con salida correcta. El cruce de los seis intervalos instrumentados va de 12:26:50.015 a 12:26:50.400723 UTC, unos **386 ms nominales**. Algunas trazas tienen resolución de un milisegundo y el desfase entre hosts quedó sin medir. Se excluyó la espera de sincronización. [Recibos de sincronización v2](recibos-sincronizados-v2.json) · [Dictamen de la pasada final](revision-v3.md)
+
+La pasada acredita una ráfaga corta de seis ejecuciones con archivos y responsables separados. La prueba funcional de Notion usó una tarjeta privada, y la última pasada usó una proyección temporal. El checkout completo de Producto en Cloud y las operaciones sostenidas quedan como pruebas de otro alcance. La aceptación técnica de la tanda documenta estos límites y conserva los intentos fallidos. La fuente de las pruebas del harness fue la rama privada de prueba. El informe y los recibos de esta tanda quedaron en la base operativa local.

@@ -1,0 +1,79 @@
+{
+  "tarea": "panel-cloud-001",
+  "fecha": "2026-11-07",
+  "base_comun": "e55812ce1bc8ef798fb370257ba887d07acccc53",
+  "procedencia": "Resultados saneados de los chats de ejecución y de la integradora. Horas UTC declaradas por cada ejecutor.",
+  "ejecuciones": [
+    {
+      "prueba": "A-desarrollo",
+      "chat": "01a1b22d-9f2c-72df-8a57-4c1ccb0c800a",
+      "host": "durable",
+      "inicio_utc": "2026-11-07T11:44:42Z",
+      "fin_utc": "2026-11-07T11:45:10Z",
+      "observaciones_runtime": "Observaciones actuales; estado de política de red desconocido.",
+      "error": "No usable execution environment is available",
+      "fase": "Primer comando rechazado antes de ejecutar",
+      "git_marcador_y_retomas": "No ejecutados",
+      "modelo_observado": null
+    },
+    {
+      "prueba": "A2-desarrollo",
+      "chat": "01a1b238-b446-777a-93c0-e31f4034301f",
+      "turno": "01a1b5d5-84be-7545-8a0d-a804fee6864f",
+      "host": "durable",
+      "inicio_utc": "2026-11-07T11:47:16Z",
+      "fin_utc": "2026-11-07T11:47:20Z",
+      "observaciones_runtime": "starting, offline, observaciones actuales, revisión 1",
+      "comando_solicitado": "pwd",
+      "error": "No usable execution environment is available. Wait for an environment to become available before using this tool.",
+      "git_marcador_y_retomas": "No ejecutados"
+    },
+    {
+      "prueba": "B-organizacion",
+      "chat": "01a1b251-c3f8-7781-9fcf-1874844c401f",
+      "turno": "01a1b5d3-1042-72c8-a1d1-6273b7d1e6ba",
+      "host": "durable",
+      "inicio_utc": "2026-11-07T11:45:12Z",
+      "fin_utc": "2026-11-07T11:48:04Z",
+      "tarjetas": [
+        {"id": "continuidad-cloud-001", "revision": 6, "estado": "aceptado"},
+        {"id": "evaluacion-sesiones-001", "revision": 8, "estado": "aceptado"}
+      ],
+      "notion": {
+        "lecturas": ["Sergio · Hoy", "Operación · Marca, workshop y Platform"],
+        "borrador_privado_sintetico": "https://app.notion.com/p/4112eb20bdfd811a8337d171eaceb4ef",
+        "revision_inicial": 1,
+        "revision_releida": 2,
+        "actualizacion_mismo_id": true,
+        "tarjetas_duplicadas": 0,
+        "incidencia": "Una salida intermedia de lectura devolvió más contenido del requerido. El recibo compartible conserva títulos y resultados."
+      },
+      "head_preservado_prefijo": "c3ac631",
+      "archivos_y_indice_preservados": 679,
+      "marcador_final": "B-organizacion",
+      "evidencia_en_ejecutor": "/tmp/onia-panel-B-organizacion-c6285l31/evidencia-B-organizacion.json",
+      "limite": "Un ejecutor Cloud con trabajo efectivo. Esta ejecución sola no valida el aislamiento entre dos ejecutores ni el acceso desde una sesión recién creada."
+    },
+    {
+      "prueba": "C-integracion",
+      "chat": "01a1b221-dbd1-7b10-aada-a26094e04705",
+      "turno": "01a1b5d3-290a-73c0-afa8-383b79b92f74",
+      "host": "local",
+      "revision_recuperada": 7,
+      "tarea_recuperada": "referentes-lote-01-001",
+      "estado_recuperado": "aceptado",
+      "paquete_v2_bytes": 135973,
+      "paquete_v2_sha256": "08b5ef2f87047dab83a01f033fe06d8013a1574c01903c1fc5cee6308ba498a2",
+      "manifiesto_v2_sha256": "3c1ebd2a005f69c212df9023074a0126dc7779af0808c5dc5927655b13a80a1e",
+      "dependencias_total": 70,
+      "archivos_overlay": 34,
+      "archivos_base": 36,
+      "control_integridad": [
+        {"caso": "original", "salida": 0},
+        {"caso": "un byte alterado, mismo tamaño", "salida": 2, "error": "Evidencia cambió"},
+        {"caso": "bytes originales restaurados", "salida": 0}
+      ],
+      "incidencia": "v1 omitía PIEZA-01. v2 incluye la pieza y sus tarjetas y es la versión verificada."
+    }
+  ]
+}

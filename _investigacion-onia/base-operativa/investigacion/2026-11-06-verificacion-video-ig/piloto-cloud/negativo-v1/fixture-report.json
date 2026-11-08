@@ -1,0 +1,129 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/onia-av-pilot-20261106/negativo-v1/generate_control.py"
+  ],
+  "policy": {
+    "as_bytes": 12884901888,
+    "cpu_seconds": 600,
+    "wall_seconds": 60,
+    "threads": 2,
+    "os_thread_cap": 16,
+    "affinity_count": 2,
+    "reserve_bytes": 8589934592,
+    "disk_free_bytes": 32212254720,
+    "tree_bytes": 17179869184,
+    "interval": 0.1,
+    "log_bytes": 262144,
+    "output_bytes": 1048576
+  },
+  "initial": {
+    "mem_available": 34805698560,
+    "cgroups": [
+      {
+        "path": "/sys/fs/cgroup",
+        "max": "34359738368",
+        "current": 1231409152
+      }
+    ],
+    "reserve": 33128329216,
+    "disk_free": 63093878784,
+    "tree_bytes": 1010833463
+  },
+  "parent_before": {
+    "as": [
+      -1,
+      -1
+    ],
+    "cpu": [
+      -1,
+      -1
+    ],
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "reason": "exited",
+  "sample_count": 6,
+  "sampled_max_group_rss_bytes": 46399488,
+  "sampled_max_single_rss_bytes": 33292288,
+  "rss_scope": "sum of observed group RSS; shared pages may be counted twice; not exact peak",
+  "output_seen_bytes": 124,
+  "log_written_bytes": 124,
+  "limits_scope": "AS and CPU per process; guards sampled; visible cgroup ancestors only",
+  "thread_scope": "workers=2 per backend; total-group OS threads observed separately; optional explicit cap; no kernel thread quota",
+  "sampled_max_group_os_threads": 2,
+  "killed_members": [],
+  "parent_sigterm_before": "<Handlers.SIG_DFL: 0>",
+  "pgid": 12169,
+  "last_snapshot": {
+    "mem_available": 34785955840,
+    "cgroups": [
+      {
+        "path": "/sys/fs/cgroup",
+        "max": "34359738368",
+        "current": 1266417664
+      }
+    ],
+    "reserve": 33093320704,
+    "disk_free": 63081189376,
+    "tree_bytes": 1023496574
+  },
+  "zombies_at_leader_exit": [],
+  "live_descendants_at_leader_exit": [],
+  "exit_code": 0,
+  "cleanup_pending_live": [],
+  "cleanup_pending_zombies": [],
+  "effective": {
+    "pid": 12169,
+    "pgid": 12169,
+    "sid": 12169,
+    "rlimit_as": [
+      12884901888,
+      12884901888
+    ],
+    "rlimit_cpu": [
+      600,
+      600
+    ],
+    "affinity": [
+      0,
+      1
+    ],
+    "thread_settings": {
+      "OMP_NUM_THREADS": "2",
+      "OPENBLAS_NUM_THREADS": "2",
+      "MKL_NUM_THREADS": "2",
+      "NUMEXPR_NUM_THREADS": "2",
+      "BLIS_NUM_THREADS": "2",
+      "VECLIB_MAXIMUM_THREADS": "2"
+    },
+    "thread_limit_scope": "library settings, not a kernel thread-count quota"
+  },
+  "elapsed_seconds": 1.0720541910004613,
+  "parent_after": {
+    "as": [
+      -1,
+      -1
+    ],
+    "cpu": [
+      -1,
+      -1
+    ],
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "parent_limits_unchanged": true,
+  "log_truncated": false,
+  "parent_sigterm_after": "<Handlers.SIG_DFL: 0>",
+  "parent_sigterm_restored": true
+}

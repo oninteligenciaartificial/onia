@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "tipo": "recepcion_fuentes_de_corte",
+  "fuentes": [
+    {
+      "archivo": "investigacion/2026-11-06-verificacion-video-ig/fuentes-capacidades.md",
+      "bytes": 10623,
+      "sha256": "5cb2534a4af41a15c43232f1cd846e4c3c1be59630c2fa9ecb0625365e736c8a"
+    },
+    {
+      "archivo": "investigacion/2026-11-06-verificacion-video-ig/estado-local-vps.md",
+      "bytes": 7362,
+      "sha256": "b89b30969230ef19d19f5210e950492befff1a9ee63c2e4ecb14c1827839b07c"
+    },
+    {
+      "archivo": "investigacion/2026-11-06-verificacion-video-ig/preflight-vps-20261106.json",
+      "bytes": 703,
+      "sha256": "9e09c1a6b549e8f2e47859e509b59a8880f0ca18fd98e1a7a0c430b79abe15af"
+    },
+    {
+      "archivo": "investigacion/2026-11-06-verificacion-video-ig/preflight_vps.py",
+      "bytes": 1887,
+      "sha256": "2aef35526b1ccabae72ece258fc4b9e25e14043d03b4977eebabcd8ff4062cc3"
+    }
+  ],
+  "preflight_vps": {
+    "chat": "01a1b245-bfe7-70f1-a4a1-a8c6eed15b4a",
+    "item": "exec-c8697376-871c-40d0-8c42-298c7a2da6ec",
+    "chunk_id": "caa566",
+    "exit_code": 0,
+    "segundos": 2.5520439,
+    "timestamp_utc": "2026-11-06T22:29:38.551872+00:00",
+    "alias": "onia-codex",
+    "usuario_efectivo": "no_comprobado",
+    "limites": [
+      "Docker exit1 no distingue permiso de daemon",
+      "PermissionError no acredita hash del medio remoto",
+      "No se probaron aislamiento ni consumo de inferencia",
+      "No se repitió SSH en la recepción"
+    ]
+  },
+  "autorizacion": {
+    "chat": "01a1b245-bfe7-70f1-a4a1-a8c6eed15b4a",
+    "turno": "01a1b2f7-3fc4-7702-b25e-7823f3f45332",
+    "mensaje_coordinacion": "01a1b2fe-6322-7cd1-a018-2094d5a37636"
+  }
+}

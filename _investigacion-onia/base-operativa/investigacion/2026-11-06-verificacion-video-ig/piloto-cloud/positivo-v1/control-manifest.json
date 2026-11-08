@@ -1,0 +1,161 @@
+{
+  "opaque_id": "7155c9e5476e4c5fb5dcecc6e532bbc8",
+  "prefix": "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_",
+  "chunks": 2,
+  "files": [
+    {
+      "path": "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0000.wav",
+      "bytes": 32044,
+      "sha256": "cdfb48b1b0a7fc4f080a457c3578bce7e9ad34947c7fabafcf4ed832e7f10068",
+      "modality": "audio",
+      "pts": 0,
+      "duration": 1
+    },
+    {
+      "path": "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0000.jpg",
+      "bytes": 1162,
+      "sha256": "77c79265cf91af36e835d456f128457d9561d418fa619b8c21e5504b108c228b",
+      "modality": "image",
+      "pts": 0,
+      "duration": 1
+    },
+    {
+      "path": "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/bbc4e1574a8d4c52a8541d3ede113ff1.ppm",
+      "bytes": 150543,
+      "sha256": "1f5e22ca89266e36720a4717d0cf8f914a22e7aabd0ea95f5fdb8196c37aa777",
+      "modality": "generator-source",
+      "pts": 0,
+      "duration": 1
+    },
+    {
+      "path": "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0001.wav",
+      "bytes": 32044,
+      "sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+      "modality": "audio",
+      "pts": 1,
+      "duration": 1
+    },
+    {
+      "path": "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0001.jpg",
+      "bytes": 3003,
+      "sha256": "74a1fe4ef8e77f853dcf19468736e71985dedd1e8c7632f90ebe65ea0ffd46da",
+      "modality": "image",
+      "pts": 1,
+      "duration": 1
+    },
+    {
+      "path": "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/78aa7ff4958840f7ad4ccf3e2f095288.ppm",
+      "bytes": 150543,
+      "sha256": "ae0aa290607e2ae911892c2924d512f3a244c3d0271c91eeb346b49faa93ab98",
+      "modality": "generator-source",
+      "pts": 1,
+      "duration": 1
+    }
+  ],
+  "voice_source": {
+    "path": "/workspace/onia-av-pilot-20261106/positivo-v1/5f1a913f952e4f56882ba333f598d4df.wav",
+    "bytes": 27724,
+    "sha256": "5e1bedda62019daf679055125fdcb5f2cff3afaa5270b43c7aee69fea5d50b03",
+    "samples": 13823,
+    "duration": 0.8639375
+  },
+  "commands": [
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-filter_threads",
+      "2",
+      "-f",
+      "lavfi",
+      "-i",
+      "flite=text=one two:voice=kal16",
+      "-ar",
+      "16000",
+      "-ac",
+      "1",
+      "-c:a",
+      "pcm_s16le",
+      "-threads",
+      "2",
+      "/workspace/onia-av-pilot-20261106/positivo-v1/5f1a913f952e4f56882ba333f598d4df.wav"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-threads",
+      "2",
+      "-i",
+      "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/bbc4e1574a8d4c52a8541d3ede113ff1.ppm",
+      "-frames:v",
+      "1",
+      "-c:v",
+      "mjpeg",
+      "-pix_fmt",
+      "yuvj444p",
+      "-threads",
+      "2",
+      "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0000.jpg"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-threads",
+      "2",
+      "-i",
+      "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0000.jpg",
+      "-frames:v",
+      "1",
+      "-f",
+      "rawvideo",
+      "-pix_fmt",
+      "rgb24",
+      "-threads",
+      "2",
+      "pipe:1"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-threads",
+      "2",
+      "-i",
+      "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/78aa7ff4958840f7ad4ccf3e2f095288.ppm",
+      "-frames:v",
+      "1",
+      "-c:v",
+      "mjpeg",
+      "-pix_fmt",
+      "yuvj444p",
+      "-threads",
+      "2",
+      "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0001.jpg"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-threads",
+      "2",
+      "-i",
+      "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0001.jpg",
+      "-frames:v",
+      "1",
+      "-f",
+      "rawvideo",
+      "-pix_fmt",
+      "rgb24",
+      "-threads",
+      "2",
+      "pipe:1"
+    ]
+  ]
+}

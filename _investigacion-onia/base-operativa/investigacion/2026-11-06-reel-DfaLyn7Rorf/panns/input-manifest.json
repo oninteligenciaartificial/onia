@@ -1,0 +1,175 @@
+{
+  "reel": "DfaLyn7Rorf",
+  "source_account": "murphmaxxing",
+  "source_person": "Aidan Murphy",
+  "source_remux_sha256": "94af46ae425441fdf021bac0482be981a7225f2dacfbd713d707b8a39e3d7f74",
+  "PC_payloads_match": true,
+  "container_duration_seconds": 37.548005,
+  "decoded_samples": 1201539,
+  "decoded_duration_seconds": 37.54809375,
+  "full_decoded_WAV": "/workspace/onia-av-pilot-20261106/reel-DfaLyn7Rorf/2e500698994c4bb2810ddd841a7ef168.wav",
+  "full_decoded_WAV_sha256": "5d6c12265f7111ba525ba633d5c66a0f86223249c76574aa809f2cacc2b6978a",
+  "command": [
+    "ffmpeg",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-threads",
+    "1",
+    "-filter_threads",
+    "1",
+    "-i",
+    "/workspace/onia-av-pilot-20261106/reel-DfaLyn7Rorf/DfaLyn7Rorf-remux.mp4",
+    "-map",
+    "0:a:0",
+    "-vn",
+    "-ar",
+    "32000",
+    "-ac",
+    "1",
+    "-c:a",
+    "pcm_s16le",
+    "-threads",
+    "1",
+    "/workspace/onia-av-pilot-20261106/reel-DfaLyn7Rorf/2e500698994c4bb2810ddd841a7ef168.wav"
+  ],
+  "windows": [
+    {
+      "case": "aidan0",
+      "path": "/workspace/onia-av-pilot-20261106/reel-DfaLyn7Rorf/085f759ef3864ff4a2c39347071a31d6.wav",
+      "sha256": "4e9e069f9f183f21d43c4182e055c521f07655ae3db257b27558e8a880cc47a3",
+      "bytes": 640044,
+      "samples": 320000,
+      "rate": 32000,
+      "duration": 10.0,
+      "interval_source_seconds": [
+        0.0,
+        10.0
+      ],
+      "padding": 0
+    },
+    {
+      "case": "aidan1",
+      "path": "/workspace/onia-av-pilot-20261106/reel-DfaLyn7Rorf/765e2e42365a481b8516bd5322ba0e23.wav",
+      "sha256": "b86dff0b85bbb9ff8ffad2992ab703a358878cd82dd4bbb45328b75684bd07e2",
+      "bytes": 640044,
+      "samples": 320000,
+      "rate": 32000,
+      "duration": 10.0,
+      "interval_source_seconds": [
+        10.0,
+        20.0
+      ],
+      "padding": 0
+    },
+    {
+      "case": "aidan2",
+      "path": "/workspace/onia-av-pilot-20261106/reel-DfaLyn7Rorf/210b2282b4834adc8e62f3b0d43c3acb.wav",
+      "sha256": "1c0f717677034a9479e522708e97393613ba703fbf40044bcbd37c681c8989f1",
+      "bytes": 640044,
+      "samples": 320000,
+      "rate": 32000,
+      "duration": 10.0,
+      "interval_source_seconds": [
+        20.0,
+        30.0
+      ],
+      "padding": 0
+    },
+    {
+      "case": "aidan3",
+      "path": "/workspace/onia-av-pilot-20261106/reel-DfaLyn7Rorf/228e19cead5841f182c71de62b3d3e5a.wav",
+      "sha256": "fa626fdb1965247c009b7ce474fce59b4ff3ad4f3d857f7df2a8a546f4f58d55",
+      "bytes": 483122,
+      "samples": 241539,
+      "rate": 32000,
+      "duration": 7.54809375,
+      "interval_source_seconds": [
+        30.0,
+        37.54809375
+      ],
+      "padding": 0
+    }
+  ],
+  "inputs": {
+    "aidan0": {
+      "case": "aidan0",
+      "path": "/workspace/onia-av-pilot-20261106/reel-DfaLyn7Rorf/085f759ef3864ff4a2c39347071a31d6.wav",
+      "sha256": "4e9e069f9f183f21d43c4182e055c521f07655ae3db257b27558e8a880cc47a3",
+      "bytes": 640044,
+      "samples": 320000,
+      "rate": 32000,
+      "duration": 10.0,
+      "interval_source_seconds": [
+        0.0,
+        10.0
+      ],
+      "padding": 0
+    },
+    "aidan1": {
+      "case": "aidan1",
+      "path": "/workspace/onia-av-pilot-20261106/reel-DfaLyn7Rorf/765e2e42365a481b8516bd5322ba0e23.wav",
+      "sha256": "b86dff0b85bbb9ff8ffad2992ab703a358878cd82dd4bbb45328b75684bd07e2",
+      "bytes": 640044,
+      "samples": 320000,
+      "rate": 32000,
+      "duration": 10.0,
+      "interval_source_seconds": [
+        10.0,
+        20.0
+      ],
+      "padding": 0
+    },
+    "aidan2": {
+      "case": "aidan2",
+      "path": "/workspace/onia-av-pilot-20261106/reel-DfaLyn7Rorf/210b2282b4834adc8e62f3b0d43c3acb.wav",
+      "sha256": "1c0f717677034a9479e522708e97393613ba703fbf40044bcbd37c681c8989f1",
+      "bytes": 640044,
+      "samples": 320000,
+      "rate": 32000,
+      "duration": 10.0,
+      "interval_source_seconds": [
+        20.0,
+        30.0
+      ],
+      "padding": 0
+    },
+    "aidan3": {
+      "case": "aidan3",
+      "path": "/workspace/onia-av-pilot-20261106/reel-DfaLyn7Rorf/228e19cead5841f182c71de62b3d3e5a.wav",
+      "sha256": "fa626fdb1965247c009b7ce474fce59b4ff3ad4f3d857f7df2a8a546f4f58d55",
+      "bytes": 483122,
+      "samples": 241539,
+      "rate": 32000,
+      "duration": 7.54809375,
+      "interval_source_seconds": [
+        30.0,
+        37.54809375
+      ],
+      "padding": 0
+    }
+  },
+  "CSV": {
+    "installed_path": "/workspace/onia-av-pilot-20261106/panns-setup-v3/runtime-home/panns_data/class_labels_indices.csv",
+    "sha256": "cdd1049833c4b86127c2773ac0d14a2754b6a6d0d1798002ed5c66e699708429",
+    "Speech_index": 0,
+    "Music_index": 137
+  },
+  "checkpoint_sha256": "dd3b4043a87d4ec13df8082c0fcfee3fb5084151808e47e060987a95eabdd142",
+  "adapter_sha256": "6b61bd8ba7818409bbb9ef2105daa1577b4f3bd41fc5ad6f8201112f89aa304a",
+  "params": {
+    "CPU": 1,
+    "workers": 1,
+    "batch": 1,
+    "AS_GiB": 3,
+    "CPU_wall_seconds_per_entry": 120,
+    "reserve_GiB": 6,
+    "VAD": false,
+    "rate": 32000,
+    "model": "Cnn14_DecisionLevelMax",
+    "interpolate": "nearest"
+  },
+  "coverage": "entire decoded audio sample range, no VAD/crop/padding; visual analysis0",
+  "interpretation": "auxiliary uncalibrated scores, no emotion/music-absence/validated-event or integral AV claims",
+  "ASR": "omitted: coordinator confirms PC small CPU+Silero already performed; no Cloud installation or ASR"
+}

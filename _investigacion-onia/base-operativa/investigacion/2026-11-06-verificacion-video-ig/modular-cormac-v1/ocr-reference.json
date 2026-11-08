@@ -1,0 +1,50 @@
+[
+  {
+    "case": "a",
+    "crop_sha256": "5f8e16b4fab11ee2a771f41b48a818e67807aaf3752889c796fd716467434e3d",
+    "expected_text": "please tell me",
+    "legibility": "clear",
+    "uncertainty": "Ninguna en el texto transcrito.",
+    "observaciones": "Texto blanco completo y legible."
+  },
+  {
+    "case": "b",
+    "crop_sha256": "109977556ed5c2da70c8e0837294825429811d839b9a321b107cf7fc9b8d1c83",
+    "expected_text": "i gave my ai access",
+    "legibility": "partial",
+    "uncertainty": "El borde derecho contiene un fragmento blanco truncado; no permite transcribir otro carácter con certeza.",
+    "observaciones": "La frase transcrita es legible; no se completa la continuación fuera del recorte."
+  },
+  {
+    "case": "c",
+    "crop_sha256": "63e613c29814766e48f68f44d55fd5d9e7b1c6be7800aa9b9b0d85dba3f1da40",
+    "expected_text": "agent-desktop Public",
+    "legibility": "clear",
+    "uncertainty": "Ninguna en el texto transcrito.",
+    "observaciones": "Dos bloques legibles: nombre y distintivo Public."
+  },
+  {
+    "case": "d",
+    "crop_sha256": "b429520993afb4841436018a7766ab7ea184204c8eddf4b351cc41fe4819f7f9",
+    "expected_text": "Serendipity",
+    "legibility": "partial",
+    "uncertainty": "Una segunda línea queda cortada por el borde inferior; no se transcribe como texto íntegro.",
+    "observaciones": "El título está completo. Se ven fragmentos de letras de una línea inferior truncada."
+  },
+  {
+    "case": "e",
+    "crop_sha256": "9d5abe3a4b52de2ed51e5592def3ca7c03881de5e843e6c4bc08d70ae880cd73",
+    "expected_text": "emails and messages",
+    "legibility": "clear",
+    "uncertainty": "Ninguna en el texto transcrito.",
+    "observaciones": "Texto blanco completo y legible."
+  },
+  {
+    "case": "f",
+    "crop_sha256": "1e46f3ea8a5a686a2f05399444c9fc77f07cabb007d338f439e3ea8b838e44e8",
+    "expected_text": "",
+    "legibility": "no_text",
+    "uncertainty": "No se distinguen caracteres ni palabras.",
+    "observaciones": "Superficies oscuras y una franja clara superior; sin texto visible."
+  }
+]

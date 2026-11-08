@@ -1,0 +1,117 @@
+{
+  "selection_before_ocr": true,
+  "source_frame_indices": [
+    30,
+    270,
+    510,
+    780,
+    1710
+  ],
+  "showinfo_pts": [
+    [
+      "0",
+      "7680",
+      "0.5"
+    ],
+    [
+      "1",
+      "69120",
+      "4.5"
+    ],
+    [
+      "2",
+      "130560",
+      "8.5"
+    ],
+    [
+      "3",
+      "199680",
+      "13"
+    ],
+    [
+      "4",
+      "437760",
+      "28.5"
+    ]
+  ],
+  "cases": [
+    {
+      "case": "a",
+      "source": "frame-01.png",
+      "rect_xywh": [
+        450,
+        1800,
+        650,
+        150
+      ],
+      "crop": "crop-a.png",
+      "purpose": "subtitle opening",
+      "sha256": "5f8e16b4fab11ee2a771f41b48a818e67807aaf3752889c796fd716467434e3d"
+    },
+    {
+      "case": "b",
+      "source": "frame-02.png",
+      "rect_xywh": [
+        340,
+        1800,
+        700,
+        140
+      ],
+      "crop": "crop-b.png",
+      "purpose": "subtitle desktop",
+      "sha256": "109977556ed5c2da70c8e0837294825429811d839b9a321b107cf7fc9b8d1c83"
+    },
+    {
+      "case": "c",
+      "source": "frame-03.png",
+      "rect_xywh": [
+        360,
+        870,
+        650,
+        130
+      ],
+      "crop": "crop-c.png",
+      "purpose": "repository title",
+      "sha256": "63e613c29814766e48f68f44d55fd5d9e7b1c6be7800aa9b9b0d85dba3f1da40"
+    },
+    {
+      "case": "d",
+      "source": "frame-02.png",
+      "rect_xywh": [
+        875,
+        737,
+        370,
+        50
+      ],
+      "crop": "crop-d.png",
+      "purpose": "small dictionary title",
+      "sha256": "b429520993afb4841436018a7766ab7ea184204c8eddf4b351cc41fe4819f7f9"
+    },
+    {
+      "case": "e",
+      "source": "frame-05.png",
+      "rect_xywh": [
+        330,
+        1800,
+        800,
+        140
+      ],
+      "crop": "crop-e.png",
+      "purpose": "subtitle later",
+      "sha256": "9d5abe3a4b52de2ed51e5592def3ca7c03881de5e843e6c4bc08d70ae880cd73"
+    },
+    {
+      "case": "f",
+      "source": "frame-01.png",
+      "rect_xywh": [
+        850,
+        20,
+        500,
+        220
+      ],
+      "crop": "crop-f.png",
+      "purpose": "negative no text",
+      "sha256": "1e46f3ea8a5a686a2f05399444c9fc77f07cabb007d338f439e3ea8b838e44e8"
+    }
+  ]
+}

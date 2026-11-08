@@ -1,0 +1,53 @@
+# Capacidad audiovisual de ONIA: protocolo de implementación
+
+6/11/2026, America/Caracas. Estado único: [capacidad-audiovisual-001](../../continuidad/tareas/capacidad-audiovisual-001.json). Coordinación: chat 01a1b245; integradora: 01a1b221; revisión independiente: 01a1af41. La integradora escribe este protocolo, ENTREGA.md y scripts/audiovisual.py/test_audiovisual.py; la revisora sólo revision-infraestructura.md. Los informes y preflight recibidos son evidencia de corte inmutable. No hay autorización de publicación nueva, producción, servicios públicos, gasto ni corpus de cuarenta medios.
+
+## Resultado y etapas
+
+El objetivo es analizar señal audiovisual real y aprender patrones respaldados de guion, edición, tipografías y afirmaciones. Reproducir un reel en Chrome acredita reproducción en el navegador; capturas/DOM no prueban que el modelo recibió audio o movimiento. La unidad instrumental puede verificarse por separado y nunca cierra ese objetivo.
+
+1. **Ingesta local trazable:** original autorizado dentro de una raíz explícita, identidad pública normalizada, hash incremental, bytes, duración y pistas mediante ffprobe. No copiar originales, cookies, URLs firmadas, tags ni rutas privadas al recibo compartible. Rechazar salida existente, rutas enlazadas, entrada mutada, formato inválido o timeout. El recibo acredita metadata, no decodificación completa ni percepción.
+2. **Backend y recursos:** fijar modelo/pesos, runtime, configuración, consigna y transformaciones exactos con hashes; comprobar entorno y límites efectivos antes de descargar o ejecutar. Preparar sólo un candidato con condición nueva justificada. No convertir documentación CPU en inferencia probada.
+3. **Controles independientes:** congelar verdad, rúbrica, tiempos y tolerancias antes del ensayo; ejecutor recibe identificadores opacos y señal, sin respuestas esperadas. Conservar raw, trazas, conteos, medidas y revisión. Calibración y evaluación separadas.
+4. **Piloto corto:** sólo después de aceptar capacidades pertinentes; un reel español recuperable, cobertura y muestreo declarados. Analizar guion, imagen, montaje temporal, voz/prosodia, música, efectos y sincronía por separado. Una capacidad puede quedar pendiente aunque otra apruebe.
+5. **Contraste y conocimiento:** observaciones ligadas a intervalos y fuentes; afirmaciones clasificadas como respaldadas, refutadas o no verificadas según pruebas externas. Guardar patrones, aplicación a ONIA, condiciones y contraejemplos con revisión. Aprendizaje operativo no significa entrenar pesos ni terminar el cerebro de referentes.
+
+## Evidencia y controles que habilitarían el piloto
+
+Se reutiliza como lección fechada el [método anterior](../2026-11-05-referentes/criterio/metodo-validacion-audiovisual.md), sin rehabilitar configuraciones rechazadas. Matriz mínima independiente:
+
+| Control | Resultado que debe discriminarse |
+|---|---|
+| Silencio digital y silencio ambiental | No inventar voz/música/SFX; silencio pasa por el backend sin VAD ni máscara previa. Abstenerse no cuenta como acierto positivo. |
+| Voz española, incluida voz débil | Presencia, contenido contrastable y atributo vocal solicitado; transcripción por sí sola no acredita prosodia. |
+| Música y efectos sin voz | Distinguir positivos independientes y mezcla sin descartarlos como no-voz; no identificar fuente concreta sin respaldo. |
+| Orden y movimiento | A→B frente a B→A con entradas de igual contenido; no resolver por nombres, subtítulos o un único cuadro. |
+| Desfase audiovisual | Controles 0 y ±250 ms con PTS de ambas pistas; tolerancia inicial de control instrumental ±50 ms. La rúbrica semántica debe fijar su tolerancia antes de congelar el lote. Offset sintético no acredita lectura labial real. |
+
+El adaptador debe registrar por modalidad y chunk unidades esperadas, decodificadas, entregadas y aceptadas, PTS, huecos, errores y finalización. Cada rechazo/omisión debe fallar explícitamente; no basta exit 0. El target oficial single_test_omni.cpp@d30f00f ignora retornos de prefill/decode y puede omitir una modalidad: es una referencia que requiere adaptación, no un adaptador aceptado. La consigna neutral debe congelarse y pasarse por el sexto argumento de stream_prefill; index>=1 para señal tras inicialización. Ningún gate acepta sólo booleanos pass o hashes: integridad de recibos y calidad semántica son comprobaciones distintas.
+
+Las unidades esperadas corresponden al muestreo fijado antes del ensayo; cuadros no seleccionados quedan fuera de cobertura, no como omisiones inesperadas. La fase preliminar puede comprobar sólo silencio, señal, orden y coocurrencia en chunks de un segundo. Eso no sustituye música, SFX, español, prosodia ni sincronía fina. Su verdad se conserva fuera de la consigna; omisión o abstención dejan el atributo sin demostrar. Consigna neutral propuesta para congelar antes del lote: «Describe qué aparece y qué se oye, en orden; indica qué cambios coinciden. Si algo no puede determinarse, dilo».
+
+**Addendum al corte documental, antes de inferencia:** la API admite texto como sexto argumento, pero la revisión independiente y el editor comprobaron que la implementación fijada no garantiza consumirlo junto con embeddings. La ruta síncrona ignora text; la asíncrona tiene una exclusión else-if. También se omiten fallos de audio y retornos de prefill_with_emb/eval_string. Ver [omni.cpp fijado](https://github.com/tc-mb/llama.cpp-omni/blob/d30f00feadb7ebce95bacd55b0d104e3ef501481/tools/omni/omni.cpp), recorridos 10526–10645, 5063–5094, 911–962 y 369–393. La receta documental del sexto argumento era insuficiente: se preserva y se corrige aquí, sin reescribir la evidencia original. El parche propuesto debe propagar errores y acreditar encoder e inserción real, sin basarse sólo en logs o n_past. La ventana de 1024 era una hipótesis; calcular/preservar señal, consigna y respuesta antes del lote, fallando ante recortes/evicciones no declarados. Contexto nuevo por caso. Negativo inicial único: dos segundos, sin smoke adicional contado como éxito.
+
+En un futuro informe, cada observación tendrá atributo, intervalo finito dentro de duración, modalidad recibida, método, cobertura, evidencia y estado observado/inferido/pendiente. Tipografía exacta exige archivo/metadato atribuible; parecido visual sólo autoriza candidato. “Humo” no es una categoría probatoria: separar promesa, demostración, limitaciones y fuente externa. No verificar ventas, eficacia o causalidad mediante estética del reel.
+
+## Recursos y acceso: decisión vigente
+
+Las [fuentes primarias y revisiones](fuentes-capacidades.md) identifican MiniCPM-o 4.5 + llama.cpp-omni como candidata documental CPU con entrada audio+visión. Tres pesos suman 6.32 GiB en disco; no es una medida de RAM. Pico RSS, buffers, latencia y corrección x86 siguen desconocidos. VideoLLaMA2-AV queda documental por su receta GPU. No se repiten configuraciones históricas fallidas.
+
+El preflight VPS de 22:29 UTC observó unos 9.96 GiB disponibles, cuatro CPU y CMake ausente. Adoptamos provisionalmente 6 GiB de reserva como precaución de esta unidad: no es una ley de ONIA ni demuestra imposibilidad física. El presupuesto histórico de 12 GiB era disco. MemAvailable puntual no garantiza margen durante una inferencia.
+
+Antes del piloto, la revisión debe aprobar una ficha concreta: entorno/usuario, pico o estimación fundamentada para esa configuración, límite duro efectivo de memoria/CPU/tiempo, monitor de reserva/disco, parada sólo de proceso propio y cleanup de temporales propios. No usar swap adicional para aparentar encaje. Un límite debe poder consultarse/comprobarse; Docker denegado no prueba aislamiento ni imposibilidad de usar un workspace del usuario. PermissionError de /opt exige acceso y hash nuevos; no cambiar permisos ni elevar automáticamente.
+
+Vías autorizadas por investigar en orden: (a) preflight de lectura de una VM Cloud ya disponible y sin producción, para medir allí una configuración acotada si los límites y capacidad permiten el control; (b) workspace de usuario VPS con límites verificables y presupuesto revisado sobre cargas actuales; (c) si ninguna vía permite el ensayo, pedir sólo un entorno aislado/acceso a un directorio concreto con presupuesto aprobado. Ninguna vía inicia descargas o inferencia por aparecer en este plan. El original Cormac local ya trazado permite ingesta sin acceso a /opt; transferirlo requiere destino y alcance establecidos.
+
+**Condición nueva observada a las 22:41 UTC:** el [preflight Cloud](../../continuidad/evidencias/capacidad-audiovisual-001/preflight-cloud-v1.json) del editor existente muestra memory.max visible de 32 GiB, cuota de cuatro CPU, sin swap y unos 59.7 GiB de disco libre; padres cgroup ocultos no evaluables. Coordinación y revisión habilitan preparación aislada de fuente/supervisor, sin pesos ni inferencia hasta revisar sus controles. Workspace exclusivo /workspace/onia-av-pilot-20261106, fuera del repo y sin publicación. CMake oficial se preparará dentro del workspace; nada de apt/sudo ni servicios.
+
+Presupuesto propuesto: afinidad de dos CPU y dos hilos, RLIMIT_AS duro de 12 GiB y RLIMIT_CPU de 600 s por proceso, wall timeout de 600 s por carga/control; no son límites agregados ni RSS. Monitor de grupo propio y reserva min(MemAvailable, memory.max-memory.current) >=8 GiB; piso de disco libre 30 GiB y árbol propio <=16 GiB. Preparación inicial <=20 min y <=1 GiB, antes de pesos. El supervisor se prueba con hijos sintéticos de asignación/timeout y un testigo externo intacto; los límites nunca se aplican al agente padre. Conservar salida acotada, límites efectivos, duración, RSS muestreado y motivo de corte, sin llamarlo pico continuo exacto. Una carga que alcance el límite se registra como fallo técnico y no provoca aumentos automáticos o nuevas familias. Este margen permite medir bajo contención; no demuestra encaje del candidato ni capacidad futura de la VPS.
+
+## Criterio de esta primera entrega
+
+La ingesta debe superar pruebas de medio sintético AV, ausencia de audio explícita, identidad/ruta inválida, mutación, timeout y protección contra sobrescritura. Puede cotejar metadata/hash del original local sin inferir su contenido. La entrega conserva la percepción integral como pendiente hasta resultados independientes de backend y piloto. No se genera guion, análisis de edición o conclusión factual ficticios para rellenar un contrato.
+
+El timeout de ingesta limita sólo ffprobe, no los hashes; -max_alloc limita una asignación de FFmpeg y no la RAM total. El recibo de ejecución identifica su versión. La salida nueva se prepara en temporal propio y se publica por hardlink sin reemplazo; si el filesystem no permite esa operación, falla sin degradarse a sobrescritura.

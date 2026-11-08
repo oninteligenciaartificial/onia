@@ -1,0 +1,11 @@
+--- v3/supervise.py
++++ screen/supervise.py
+@@ -1,7 +1,7 @@
+ """Own-group CPU1 supervisor; stdlib only; never changes parent limits."""
+ from pathlib import Path
+ import os,sys,time,json,resource,signal,subprocess,selectors,hashlib
+-R=Path('/workspace/onia-av-pilot-20261106');O=R/'panns-setup-v3';G=1024**3
++R=Path('/workspace/onia-av-pilot-20261106');O=R/'panns-screen-v1';G=1024**3
+ def snapshot():
+  mem=int(next(x.split()[1] for x in Path('/proc/meminfo').read_text().splitlines() if x.startswith('MemAvailable:')))*1024
+  cg=Path('/sys/fs/cgroup');maximum=(cg/'memory.max').read_text().strip();current=int((cg/'memory.current').read_text())

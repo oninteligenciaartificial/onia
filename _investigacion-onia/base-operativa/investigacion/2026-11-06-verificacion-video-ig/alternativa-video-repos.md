@@ -1,0 +1,39 @@
+# Alternativa modular para estudiar reels
+
+6 de noviembre de 2026. Investigación primaria, sin instalar, descargar pesos ni ejecutar inferencia. ONIA-CENTRAL excluido. Reutilizar FFmpeg + faster-whisper + Silero; no reconstruir infraestructura antes de una capacidad concreta.
+
+**Decisión recomendada:** ampliar el análisis de Cormac con cortes y OCR verificables, conservando ASR existente. Separar el audio semántico como una capacidad pendiente, con criterio propio. No se encontró una alternativa audiovisual conjunta validada para el CPU/presupuesto actual. Eso no demuestra que ninguna exista.
+
+El [cierre real de Cormac](FICHA-CORMAC.md) conserva el resultado: MiniCPM-o 4.5 GGUF/llama.cpp-omni superó el negativo y falló el positivo de voz/orden; no se aplicó al reel. Es rechazo de esa revisión/configuración, no incapacidad universal del modelo. No se repite sin cambio pertinente y control previo.
+
+## Tres rutas, sin catálogo adicional
+
+| Ruta | Qué aporta y fuentes primarias | Licencias / recursos / decisión |
+|---|---|---|
+| **1. Modular CPU, recomendada** | FFmpeg conserva audio/video/PTS y obtiene cuadros; [PySceneDetect](https://github.com/Breakthrough/PySceneDetect) puede localizar candidatos de corte/fade; [Tesseract](https://github.com/tesseract-ocr/tesseract) obtiene texto/posición de rótulos. El ASR existente aporta guion verbal con tiempos aproximados. | FFmpeg LGPL/GPL según build; PySceneDetect BSD-3-Clause, sin pesos; Tesseract código Apache 2.0 y [tessdata_fast Apache 2.0](https://github.com/tesseract-ocr/tessdata_fast/blob/main/LICENSE), modelos separados. CPU, sin API paga. Cortes/OCR nuevos sin benchmark. Comenzar con FFmpeg existente; añadir sólo lo que falte. |
+| **2. Audio separado, reserva condicionada** | [PANNs](https://github.com/qiuqiangkong/panns_inference) devuelve probabilidades de categorías entrenadas y salida temporal; [librosa](https://librosa.org/doc/0.11.0/generated/librosa.pyin.html) mide rasgos como F0/voicing, además de energía y pausas. PANNs clasifica, no genera explicaciones. | Wrapper admite CPU. `setup.py` declara MIT, pero no se encontró LICENSE en los repos consultados: cerrar procedencia/licencia antes de adoptar. [Pesos SED Zenodo v3](https://zenodo.org/records/3987831) CC BY 4.0, 327.428.481 bytes; librosa ISC, sin pesos para esas medidas. Pico RAM/latencia no medidos. **No instalar por esta investigación.** |
+| **3. Modelo AV con GPU, sólo contraste documental** | [Qwen3-Omni](https://github.com/QwenLM/Qwen3-Omni) declara entrada audio+video conjunta; no confundirlo con modelos VL que sólo reciben imágenes/video. | Código/pesos Apache 2.0 declarados por autor. La receta Transformers BF16/FlashAttention2 publica para 15 s de video 68,74 GB GPU Thinking y 78,85 GB Instruct; para 30 s 77,79/88,52 GB. No acredita CPU ni encaje en VPS/Cloud sin GPU. **No es siguiente ensayo ni alternativa gratuita demostrada aquí.** |
+
+Las licencias de código no cubren automáticamente modelos, dependencias o medios. Pesos accesibles y etiqueta MIT de un paquete no acreditan toda la cadena OSI. La pila seleccionada y sus restricciones se documentaron en [opciones abiertas](opciones-open-source.md).
+
+## Qué permite aprender la ruta 1 y qué no
+
+- **Guion:** usar transcripción ya recuperada, marcar términos dudosos y relacionar gancho, desarrollo y cierre con cuadros fechados. Coincidencia de dos ASR no es verdad humana.
+- **Cortes/transiciones:** analizar todos los cuadros/PTS, sin saltar frames; inspeccionar vecinos de cada candidato. [Content/Adaptive](https://www.scenedetect.com/docs/latest/api/detectors.html) comparan cambios visuales; Threshold busca fades por intensidad. Movimiento de cámara, flashes y texto animado pueden producir falsos cortes; un score no identifica por sí solo una transición ni calidad editorial. El mínimo de escena debe declararse: puede ocultar insertos breves.
+- **OCR y tipografía:** conservar cuadro, recorte, texto, coordenadas y confianza; verificar visualmente texto pequeño. OCR no identifica de forma fiable la familia tipográfica de una imagen rasterizada. Describir rasgos observables —sans/serif, peso aparente, contorno, tamaño relativo, ubicación— y mantener la familia exacta como desconocida salvo archivo/procedencia comprobables.
+- **Música/SFX/prosodia:** ASR/VAD no cubren estas capacidades. Energía, silencio, tempo o F0 son mediciones, no escucha. F0 en mezcla puede seguir música; no prueba énfasis comunicativo, emoción o intención. Una categoría PANNs tampoco confirma el efecto preciso, balance voz/música ni causalidad entre un sonido y un gesto/corte.
+- **Claims:** conservar afirmación literal con intervalo y distinguir lo visible de lo afirmado; contrastar con repos/docs/resultados primarios. Ninguna herramienta perceptual convierte una promesa comercial en hecho.
+
+## Prueba pequeña propuesta, no ejecutada
+
+**Primero mismo Cormac, sin modelo nuevo:** original SHA `9be4267480093249e104ec9821271e1a755e4329b7ea4d8fca3fc8bacd3b664e`, 37,753991 s. Reutilizar ASR y pista; una pasada secuencial de cortes con FFmpeg y exportación de PTS/score. Extraer vecindarios nativo-frame alrededor de candidatos y seis recortes OCR preseleccionados, incluidos un rótulo pequeño y uno sin texto. Comparar contra anotación visual fijada antes de ver la salida. No hacer otra batería sintética sólo para comprobar cortes.
+
+**Aceptación visual/OCR:** presentar lista completa de candidatos y sus PTS; registrar cortes esperados omitidos/falsos positivos. En límites de corte duro anotados, exigir coincidencia dentro de un frame; fades se evalúan como intervalos, sin imponer ese criterio. Para seis recortes, coincidencia literal en texto legible y vacío en negativo; conservar errores, sin inferir fuente tipográfica. Ningún corte confirmado ni rótulo verificado permite declarar resuelto el audio.
+
+Presupuesto propuesto de esta unidad: un worker, máximo 2 CPU/3 GiB y 120 s por etapa, sin nuevo servicio; son cortes de ensayo, **no promesa de rendimiento**. Parar ante falta de recursos/supervisión; preservar resultados parciales. Si agregar un paquete o resolver permisos excede esta prueba, dejar la dependencia precisa y no volver a una preparación de horas.
+
+**Aceptación acústica separada, sólo si después se aprueba PANNs y su procedencia:** primero el silencio y positivo de voz ya conservados, sin VAD que descarte negativos; después clips propios/licenciados de música, click y mezcla, con verdad de intervalos reservada. Fijar clases/umbrales antes de evaluar; exigir presencia de categorías pertinentes en positivos y ningún evento falsamente confirmado en silencio. Reportar falsas alarmas y omisiones; una clase máxima sin calibración no es certeza. Orden voz→evento y evento→voz debe variar correctamente entre ambos; resolución/tolerancia se fijan según salida efectiva, no se exige precisión de 10 ms por interpolar scores. Sólo tras pasar, contrastar un tramo de Cormac con escucha humana independiente.
+
+El wrapper [SED publicado](https://github.com/qiuqiangkong/panns_inference/blob/master/panns_inference/inference.py) admite `device='cpu'`, usa 32 kHz y descarga automáticamente si no recibe checkpoint válido: una ejecución futura debe fijar archivo local/hash y bloquear esa descarga implícita. El [registro v3](https://zenodo.org/records/3987831) reduce el tamaño frente al [v1](https://zenodo.org/records/3576403), que listaba 1,4 GB; no extrapolar RAM desde ninguno. El programa usa interpolación temporal: densidad de salida no garantiza onset/offset reales.
+
+**Límite final:** la ruta modular puede producir un análisis trazable de guion, cortes y texto; la reserva acústica sólo aspira a categorías entrenadas. Comprensión de mezcla, música, efectos precisos y prosodia comunicativa siguen pendientes. No se sustituye ese objetivo por métricas ni se promete escucha literal desde esta investigación.

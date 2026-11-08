@@ -1,0 +1,401 @@
+{
+  "results": [
+    {
+      "case": "a",
+      "expected": "please tell me",
+      "reference_legibility": "clear",
+      "raw": "please tell me\n",
+      "text": "please tell me",
+      "literal_match_whitespace_collapsed": true,
+      "casefold_match": true,
+      "words": [
+        {
+          "text": "please",
+          "confidence": 96.71273,
+          "crop_rect": [
+            81,
+            29,
+            185,
+            63
+          ],
+          "source_rect": [
+            531,
+            1829,
+            185,
+            63
+          ]
+        },
+        {
+          "text": "tell",
+          "confidence": 95.913567,
+          "crop_rect": [
+            278,
+            29,
+            79,
+            51
+          ],
+          "source_rect": [
+            728,
+            1829,
+            79,
+            51
+          ]
+        },
+        {
+          "text": "me",
+          "confidence": 96.941277,
+          "crop_rect": [
+            374,
+            42,
+            91,
+            38
+          ],
+          "source_rect": [
+            824,
+            1842,
+            91,
+            38
+          ]
+        }
+      ],
+      "command": [
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/operacion/modular-cormac-v1/tesseract/usr/bin/tesseract",
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/investigacion/2026-11-06-verificacion-video-ig/modular-cormac-v1/crop-a.png",
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/investigacion/2026-11-06-verificacion-video-ig/modular-cormac-v1/ocr-a",
+        "-l",
+        "eng",
+        "--oem",
+        "1",
+        "--psm",
+        "7",
+        "-c",
+        "tessedit_create_tsv=1",
+        "-c",
+        "tessedit_create_txt=1"
+      ]
+    },
+    {
+      "case": "b",
+      "expected": "i gave my ai access",
+      "reference_legibility": "partial",
+      "raw": "eeigave y ai access |\n",
+      "text": "eeigave y ai access |",
+      "literal_match_whitespace_collapsed": false,
+      "casefold_match": false,
+      "words": [
+        {
+          "text": "eeigave",
+          "confidence": 0.0,
+          "crop_rect": [
+            0,
+            0,
+            269,
+            129
+          ],
+          "source_rect": [
+            340,
+            1800,
+            269,
+            129
+          ]
+        },
+        {
+          "text": "y",
+          "confidence": 54.621243,
+          "crop_rect": [
+            343,
+            43,
+            28,
+            48
+          ],
+          "source_rect": [
+            683,
+            1843,
+            28,
+            48
+          ]
+        },
+        {
+          "text": "ai",
+          "confidence": 54.621243,
+          "crop_rect": [
+            379,
+            6,
+            56,
+            96
+          ],
+          "source_rect": [
+            719,
+            1806,
+            56,
+            96
+          ]
+        },
+        {
+          "text": "access",
+          "confidence": 83.410873,
+          "crop_rect": [
+            447,
+            0,
+            187,
+            140
+          ],
+          "source_rect": [
+            787,
+            1800,
+            187,
+            140
+          ]
+        },
+        {
+          "text": "|",
+          "confidence": 95.673439,
+          "crop_rect": [
+            668,
+            104,
+            24,
+            36
+          ],
+          "source_rect": [
+            1008,
+            1904,
+            24,
+            36
+          ]
+        }
+      ],
+      "command": [
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/operacion/modular-cormac-v1/tesseract/usr/bin/tesseract",
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/investigacion/2026-11-06-verificacion-video-ig/modular-cormac-v1/crop-b.png",
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/investigacion/2026-11-06-verificacion-video-ig/modular-cormac-v1/ocr-b",
+        "-l",
+        "eng",
+        "--oem",
+        "1",
+        "--psm",
+        "7",
+        "-c",
+        "tessedit_create_tsv=1",
+        "-c",
+        "tessedit_create_txt=1"
+      ]
+    },
+    {
+      "case": "c",
+      "expected": "agent-desktop Public",
+      "reference_legibility": "clear",
+      "raw": ". agent-desktop \u00bbvbiic\n",
+      "text": ". agent-desktop \u00bbvbiic",
+      "literal_match_whitespace_collapsed": false,
+      "casefold_match": false,
+      "words": [
+        {
+          "text": ".",
+          "confidence": 53.14056,
+          "crop_rect": [
+            0,
+            52,
+            9,
+            17
+          ],
+          "source_rect": [
+            360,
+            922,
+            9,
+            17
+          ]
+        },
+        {
+          "text": "agent-desktop",
+          "confidence": 80.400261,
+          "crop_rect": [
+            43,
+            38,
+            444,
+            49
+          ],
+          "source_rect": [
+            403,
+            908,
+            444,
+            49
+          ]
+        },
+        {
+          "text": "\u00bbvbiic",
+          "confidence": 9.067574,
+          "crop_rect": [
+            394,
+            34,
+            96,
+            57
+          ],
+          "source_rect": [
+            754,
+            904,
+            96,
+            57
+          ]
+        }
+      ],
+      "command": [
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/operacion/modular-cormac-v1/tesseract/usr/bin/tesseract",
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/investigacion/2026-11-06-verificacion-video-ig/modular-cormac-v1/crop-c.png",
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/investigacion/2026-11-06-verificacion-video-ig/modular-cormac-v1/ocr-c",
+        "-l",
+        "eng",
+        "--oem",
+        "1",
+        "--psm",
+        "7",
+        "-c",
+        "tessedit_create_tsv=1",
+        "-c",
+        "tessedit_create_txt=1"
+      ]
+    },
+    {
+      "case": "d",
+      "expected": "Serendipity",
+      "reference_legibility": "partial",
+      "raw": "",
+      "text": "",
+      "literal_match_whitespace_collapsed": false,
+      "casefold_match": false,
+      "words": [],
+      "command": [
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/operacion/modular-cormac-v1/tesseract/usr/bin/tesseract",
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/investigacion/2026-11-06-verificacion-video-ig/modular-cormac-v1/crop-d.png",
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/investigacion/2026-11-06-verificacion-video-ig/modular-cormac-v1/ocr-d",
+        "-l",
+        "eng",
+        "--oem",
+        "1",
+        "--psm",
+        "7",
+        "-c",
+        "tessedit_create_tsv=1",
+        "-c",
+        "tessedit_create_txt=1"
+      ]
+    },
+    {
+      "case": "e",
+      "expected": "emails and messages",
+      "reference_legibility": "clear",
+      "raw": "emails and meggages\n",
+      "text": "emails and meggages",
+      "literal_match_whitespace_collapsed": false,
+      "casefold_match": false,
+      "words": [
+        {
+          "text": "emails",
+          "confidence": 96.533348,
+          "crop_rect": [
+            85,
+            29,
+            185,
+            51
+          ],
+          "source_rect": [
+            415,
+            1829,
+            185,
+            51
+          ]
+        },
+        {
+          "text": "and",
+          "confidence": 96.430199,
+          "crop_rect": [
+            283,
+            29,
+            107,
+            51
+          ],
+          "source_rect": [
+            613,
+            1829,
+            107,
+            51
+          ]
+        },
+        {
+          "text": "meggages",
+          "confidence": 77.511269,
+          "crop_rect": [
+            406,
+            25,
+            294,
+            115
+          ],
+          "source_rect": [
+            736,
+            1825,
+            294,
+            115
+          ]
+        }
+      ],
+      "command": [
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/operacion/modular-cormac-v1/tesseract/usr/bin/tesseract",
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/investigacion/2026-11-06-verificacion-video-ig/modular-cormac-v1/crop-e.png",
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/investigacion/2026-11-06-verificacion-video-ig/modular-cormac-v1/ocr-e",
+        "-l",
+        "eng",
+        "--oem",
+        "1",
+        "--psm",
+        "7",
+        "-c",
+        "tessedit_create_tsv=1",
+        "-c",
+        "tessedit_create_txt=1"
+      ]
+    },
+    {
+      "case": "f",
+      "expected": "",
+      "reference_legibility": "no_text",
+      "raw": " \u2014a\n",
+      "text": "\u2014a",
+      "literal_match_whitespace_collapsed": false,
+      "casefold_match": false,
+      "words": [
+        {
+          "text": " \u2014a",
+          "confidence": 0.0,
+          "crop_rect": [
+            235,
+            0,
+            260,
+            78
+          ],
+          "source_rect": [
+            1085,
+            20,
+            260,
+            78
+          ]
+        }
+      ],
+      "command": [
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/operacion/modular-cormac-v1/tesseract/usr/bin/tesseract",
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/investigacion/2026-11-06-verificacion-video-ig/modular-cormac-v1/crop-f.png",
+        "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/investigacion/2026-11-06-verificacion-video-ig/modular-cormac-v1/ocr-f",
+        "-l",
+        "eng",
+        "--oem",
+        "1",
+        "--psm",
+        "7",
+        "-c",
+        "tessedit_create_tsv=1",
+        "-c",
+        "tessedit_create_txt=1"
+      ]
+    }
+  ],
+  "reference_frozen_before_execution": true,
+  "confidence_is_not_calibrated_probability": true
+}

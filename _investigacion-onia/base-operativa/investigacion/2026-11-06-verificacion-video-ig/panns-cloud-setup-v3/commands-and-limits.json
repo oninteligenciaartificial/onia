@@ -1,0 +1,95 @@
+{
+  "launcher": "supervise.run; inherited limits only on child/group, parent unchanged",
+  "commands": [
+    {
+      "run": "zeros-real",
+      "spec": {
+        "command": [
+          "/workspace/onia-av-pilot-20261106/panns-setup-v3/venv/bin/python",
+          "-B",
+          "/workspace/onia-av-pilot-20261106/panns-screen-v1/infer.py",
+          "zeros"
+        ],
+        "cpu": 120,
+        "affinity": [
+          0
+        ]
+      }
+    },
+    {
+      "run": "voice-real",
+      "spec": {
+        "command": [
+          "/workspace/onia-av-pilot-20261106/panns-setup-v3/venv/bin/python",
+          "-B",
+          "/workspace/onia-av-pilot-20261106/panns-screen-v1/infer.py",
+          "voice"
+        ],
+        "cpu": 120,
+        "affinity": [
+          0
+        ]
+      }
+    },
+    {
+      "run": "cormac0",
+      "spec": {
+        "command": [
+          "/workspace/onia-av-pilot-20261106/panns-setup-v3/venv/bin/python",
+          "-B",
+          "/workspace/onia-av-pilot-20261106/panns-screen-v1/infer.py",
+          "cormac0"
+        ],
+        "cpu": 120,
+        "affinity": [
+          0
+        ]
+      }
+    },
+    {
+      "run": "cormac1",
+      "spec": {
+        "command": [
+          "/workspace/onia-av-pilot-20261106/panns-setup-v3/venv/bin/python",
+          "-B",
+          "/workspace/onia-av-pilot-20261106/panns-screen-v1/infer.py",
+          "cormac1"
+        ],
+        "cpu": 120,
+        "affinity": [
+          0
+        ]
+      }
+    },
+    {
+      "run": "cormac2",
+      "spec": {
+        "command": [
+          "/workspace/onia-av-pilot-20261106/panns-setup-v3/venv/bin/python",
+          "-B",
+          "/workspace/onia-av-pilot-20261106/panns-screen-v1/infer.py",
+          "cormac2"
+        ],
+        "cpu": 120,
+        "affinity": [
+          0
+        ]
+      }
+    },
+    {
+      "run": "cormac3",
+      "spec": {
+        "command": [
+          "/workspace/onia-av-pilot-20261106/panns-setup-v3/venv/bin/python",
+          "-B",
+          "/workspace/onia-av-pilot-20261106/panns-screen-v1/infer.py",
+          "cormac3"
+        ],
+        "cpu": 120,
+        "affinity": [
+          0
+        ]
+      }
+    }
+  ]
+}

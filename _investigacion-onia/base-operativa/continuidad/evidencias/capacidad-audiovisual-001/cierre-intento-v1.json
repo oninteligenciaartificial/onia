@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "thread": "01a1b22d-9f2c-72df-8a57-4c1ccb0c800a",
+  "turn": "01a1b32d-f020-739f-a607-79d660854f3c",
+  "tipo": "cierre_adquisicion_incompleta_sin_inferencia",
+  "resultado": {
+    "utc": "2026-11-06T23:37:54.163748+00:00",
+    "status": "technical_failure_before_model_invocation",
+    "verified_weight_files": 2,
+    "model_invocations": 0,
+    "negative_semantic_result": "not_evaluated",
+    "control_frozen": true,
+    "automatic_retry": false,
+    "no_live_owned_groups": true,
+    "onia_status": "",
+    "configuration": "untouched",
+    "publication": "not_performed",
+    "next_step": "Integration reviews transfer receipts and retained partial file; no resume, retry, model load or AV is authorized automatically by this closure."
+  },
+  "transferencia": {
+    "files": [
+      {
+        "path": "MiniCPM-o-4_5-Q4_K_M.gguf",
+        "expected_bytes": 5026714400,
+        "expected_sha256": "1237a97ee081b8abebc47aa7dad565701e8f5f904cdc92f6723ac4281bbc0932",
+        "verified_bytes": 5026714400,
+        "partial_bytes": 0,
+        "status": "complete_verified"
+      },
+      {
+        "path": "audio/MiniCPM-o-4_5-audio-F16.gguf",
+        "expected_bytes": 660167904,
+        "expected_sha256": "d5b188ac7feaf98e17175c3f9bd14bf269301bfd187439fdaa3e3a494fc32ef7",
+        "verified_bytes": 660167904,
+        "partial_bytes": 0,
+        "status": "complete_verified"
+      },
+      {
+        "path": "vision/MiniCPM-o-4_5-vision-F16.gguf",
+        "expected_bytes": 1095113184,
+        "expected_sha256": "1453678cc4e4fe18de241952962e234f265cb8dda780773526103ab8ba82f421",
+        "verified_bytes": 0,
+        "partial_bytes": 171966464,
+        "status": "partial_unverified",
+        "closed_partial_sha256": "fb749ab559817ef0a472e94104808e131f18f049fe7b22063f91c568aabfa8e0",
+        "partial_is_not_accepted_as_weight": true
+      }
+    ],
+    "observed_failure": {
+      "error_type": "TimeoutError",
+      "http_status": null,
+      "verified_files": 2,
+      "automatic_retry": false,
+      "detail": "transfer or integrity failed; signed URLs and exception text intentionally omitted"
+    },
+    "phase_elapsed_seconds": 590.2766326880001,
+    "internal_phase_deadline_seconds": 590,
+    "supervisor_wall_seconds": 600,
+    "cause_precision": "Observed TimeoutError at the internal phase deadline; exception text intentionally not retained, no signed redirect URL logged. No HTTP error status recorded.",
+    "automatic_retries": 0,
+    "preserved_all_files": true
+  },
+  "supervisor": {
+    "reason": "child_failure",
+    "exit_code": 1,
+    "elapsed_seconds": 590.2766326880001,
+    "cleanup_pending_live": [],
+    "cleanup_pending_zombies": [],
+    "parent_limits_unchanged": true,
+    "parent_sigterm_restored": true,
+    "log_truncated": false,
+    "sampled_max_group_rss_bytes": 19472384
+  },
+  "recuperacion": {
+    "archivos": 24,
+    "exactos": 24,
+    "manifest_sha256": "8532f2ab6f0f90aed4e034813012675e17c6b625be8c9ec35d707fc774f70896",
+    "copia_local": "investigacion/2026-11-06-verificacion-video-ig/piloto-cloud/negativo-v1",
+    "chunk": "d2847a"
+  },
+  "limite_diagnostico": "TimeoutError cerca del deadline interno de 590 s; el punto exacto de la excepción no quedó conservado. No atribuir fallo HTTP ni corte por el wall supervisor de 600 s.",
+  "negativo": "NO EJECUTADO",
+  "semantica_av": "NO EVALUADA",
+  "retoma": "Conservar pesos y parcial. Esperar selección del stack solicitada por Sergio; no nuevos intentos automáticos. Si se decide retomarlo, cotejar marcador, manifiestos, pesos y parcial antes de una transferencia acotada, y mantener el primer negativo pendiente.",
+  "repositorio_local": {
+    "head": "e55812ce1bc8ef798fb370257ba887d07acccc53",
+    "baseline_ajeno_verificado": 28,
+    "baseline_ajeno_sin_cambios": 28,
+    "chunk": "1558cb",
+    "publicacion_de_unidad": false
+  }
+}

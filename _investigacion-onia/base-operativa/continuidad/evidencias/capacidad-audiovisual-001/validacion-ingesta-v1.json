@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "ffprobe_version": "ffprobe version 8.1.1-essentials_build-www.gyan.dev Copyright (c) 2007-2026 the FFmpeg developers",
+  "comando_ingesta": "scripts/audiovisual.py: raíz local autorizada del reel DfWLWspIruU, sin exportar ruta privada",
+  "ingesta_exit_code": 0,
+  "ingesta_resultado": {
+    "resultado": "ingesta_instrumental",
+    "capacidad_av_acreditada": false,
+    "sha256_original": "9be4267480093249e104ec9821271e1a755e4329b7ea4d8fca3fc8bacd3b664e"
+  },
+  "tests": [
+    {
+      "plataforma": "Windows",
+      "definidas": 23,
+      "pasadas": 22,
+      "omitidas": 1,
+      "motivo": "privilegio symlink real",
+      "segundos": 0.552,
+      "chunk": "4f5a5e",
+      "exit_code": 0
+    },
+    {
+      "plataforma": "WSL Linux local",
+      "definidas": 23,
+      "pasadas": 23,
+      "omitidas": 0,
+      "segundos": 0.497,
+      "chunk": "c8d733",
+      "exit_code": 0
+    }
+  ],
+  "fuentes": {
+    "audiovisual.py": "45593f41262ba13b1d7a1e43ba9eb4564ca2a250aad6ecad8607702933ca2a8d",
+    "test_audiovisual.py": "9249c7a7be171d7ebc9b4f939b69df37acc9769e9a1a9e50be897f3eb627f4e5"
+  },
+  "limites": [
+    "Sólo ingesta instrumental: no lectura del guion, escucha ni movimiento",
+    "Timeout sólo de ffprobe; max_alloc es por asignación, no límite global RAM",
+    "No se repitieron suites previas ni ejecutó backendAV"
+  ]
+}

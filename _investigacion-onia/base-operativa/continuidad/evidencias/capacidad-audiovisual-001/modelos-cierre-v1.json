@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "ambito": "Cierre documental de capacidad-audiovisual-001, no nuevo ensayo",
+  "regla_existente": "ORQUESTACION.md:33 exige distinguir recomendado, solicitado y observado; no se modifica esa regla.",
+  "solicitud_coordinacion": {
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "medium",
+    "cambio_durante_turno_no_acreditado": true
+  },
+  "observacion_propia": {
+    "fuente": "turn_context local del chat 01a1b221-dbd1-7b10-aada-a26094e04705",
+    "timestamp": "2026-11-06T23:12:46.337Z",
+    "turn_id": "01a1b2ff-32e5-7401-8588-6b1b24600a9a",
+    "modelo": "gpt-6-astra",
+    "esfuerzo": "ultra",
+    "chunk_verificacion": "d0d658",
+    "alcance": "Último turn_context del turno que continuó activo; no apareció uno nuevo de Sol. No se buscará de nuevo en este turno."
+  },
+  "antecedentes_informados_por_coordinacion": [
+    {
+      "chat": "01a1b245-bfe7-70f1-a4a1-a8c6eed15b4a",
+      "timestamp": "2026-11-06T22:41:45Z",
+      "modelo": "gpt-6-astra",
+      "esfuerzo": "ultra"
+    },
+    {
+      "chat": "01a1af41-1ce0-7b72-a888-7fd658396b4a",
+      "timestamp": "2026-11-06T23:42:39Z",
+      "modelo": "gpt-6-astra",
+      "esfuerzo": "ultra"
+    }
+  ],
+  "cuota_informada_por_coordinacion": {
+    "fuente": "get_usage_limits consultado por coordinación; no reconsultado en este cierre",
+    "ventana": "semanal compartida de la cuenta",
+    "consumido_porcentaje": 92,
+    "restante_porcentaje": 8,
+    "reset_utc": "2026-11-12T18:09:38Z",
+    "reinicios_disponibles": 2,
+    "reinicios_usados_en_este_cierre": 0,
+    "atribucion_por_chat": "no disponible; no inferida"
+  },
+  "leccion": "Reutilizar un chat no modifica su modelo. Cotejar configuración efectiva antes del siguiente despacho; conservar antecedentes y discrepancia entre solicitud y observación.",
+  "aplicacion": "Este cierre registra solicitado Sol medio y observado Astra ultra; termina sin nuevos ensayos ni esperas. Coordinación verificará un único turno corto posterior con Sol medio.",
+  "recomendacion": {
+    "documental_simple": "gpt-6.1-sol medium",
+    "implementacion_revision_compleja": "gpt-6.1-sol high",
+    "escalamiento": "Sólo ante causa de razonamiento documentada; no porcentajes de ahorro inventados."
+  }
+}

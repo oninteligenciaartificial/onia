@@ -1,0 +1,300 @@
+{
+  "clean": {
+    "reason": "exited",
+    "exit_code": 0,
+    "policy": {
+      "as_bytes": 12884901888,
+      "cpu_seconds": 600,
+      "wall_seconds": 600,
+      "threads": 2,
+      "os_thread_cap": null,
+      "affinity_count": 2,
+      "reserve_bytes": 8589934592,
+      "disk_free_bytes": 32212254720,
+      "tree_bytes": 17179869184,
+      "interval": 0.1,
+      "log_bytes": 262144,
+      "output_bytes": 1048576
+    },
+    "cut_receipt": null,
+    "killed_members": [],
+    "live_descendants_at_leader_exit": [],
+    "zombies_at_leader_exit": [],
+    "cleanup_pending_live": [],
+    "cleanup_pending_zombies": [],
+    "parent_limits_unchanged": true,
+    "parent_sigterm_before": "<Handlers.SIG_DFL: 0>",
+    "parent_sigterm_after": "<Handlers.SIG_DFL: 0>",
+    "parent_sigterm_restored": true,
+    "sampled_max_group_os_threads": 1,
+    "sampled_max_group_rss_bytes": 6422528,
+    "effective": {
+      "pid": 8100,
+      "pgid": 8100,
+      "sid": 8100,
+      "rlimit_as": [
+        12884901888,
+        12884901888
+      ],
+      "rlimit_cpu": [
+        600,
+        600
+      ],
+      "affinity": [
+        0,
+        1
+      ],
+      "thread_settings": {
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "NUMEXPR_NUM_THREADS": "2",
+        "BLIS_NUM_THREADS": "2",
+        "VECLIB_MAXIMUM_THREADS": "2"
+      },
+      "thread_limit_scope": "library settings, not a kernel thread-count quota"
+    }
+  },
+  "earlyexit": {
+    "reason": "incomplete_group_shutdown",
+    "exit_code": 0,
+    "policy": {
+      "as_bytes": 12884901888,
+      "cpu_seconds": 600,
+      "wall_seconds": 600,
+      "threads": 2,
+      "os_thread_cap": null,
+      "affinity_count": 2,
+      "reserve_bytes": 8589934592,
+      "disk_free_bytes": 32212254720,
+      "tree_bytes": 17179869184,
+      "interval": 0.1,
+      "log_bytes": 262144,
+      "output_bytes": 1048576
+    },
+    "cut_receipt": null,
+    "killed_members": [
+      8102
+    ],
+    "live_descendants_at_leader_exit": [
+      8102
+    ],
+    "zombies_at_leader_exit": [],
+    "cleanup_pending_live": [],
+    "cleanup_pending_zombies": [
+      8102
+    ],
+    "parent_limits_unchanged": true,
+    "parent_sigterm_before": "<Handlers.SIG_DFL: 0>",
+    "parent_sigterm_after": "<Handlers.SIG_DFL: 0>",
+    "parent_sigterm_restored": true,
+    "sampled_max_group_os_threads": 1,
+    "sampled_max_group_rss_bytes": 12320768,
+    "effective": {
+      "pid": 8101,
+      "pgid": 8101,
+      "sid": 8101,
+      "rlimit_as": [
+        12884901888,
+        12884901888
+      ],
+      "rlimit_cpu": [
+        600,
+        600
+      ],
+      "affinity": [
+        0,
+        1
+      ],
+      "thread_settings": {
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "NUMEXPR_NUM_THREADS": "2",
+        "BLIS_NUM_THREADS": "2",
+        "VECLIB_MAXIMUM_THREADS": "2"
+      },
+      "thread_limit_scope": "library settings, not a kernel thread-count quota"
+    }
+  },
+  "sigterm": {
+    "reason": "interrupted_by_sigterm",
+    "exit_code": -9,
+    "policy": {
+      "as_bytes": 12884901888,
+      "cpu_seconds": 600,
+      "wall_seconds": 600,
+      "threads": 2,
+      "os_thread_cap": null,
+      "affinity_count": 2,
+      "reserve_bytes": 8589934592,
+      "disk_free_bytes": 32212254720,
+      "tree_bytes": 17179869184,
+      "interval": 0.1,
+      "log_bytes": 262144,
+      "output_bytes": 1048576
+    },
+    "cut_receipt": {
+      "signal": "SIGTERM",
+      "signal_number": 15,
+      "utc": "2026-11-06T23:08:07.920511+00:00",
+      "action": "kill owned group only; preserve report"
+    },
+    "killed_members": [
+      8105,
+      8106
+    ],
+    "live_descendants_at_leader_exit": null,
+    "zombies_at_leader_exit": null,
+    "cleanup_pending_live": [],
+    "cleanup_pending_zombies": [
+      8106
+    ],
+    "parent_limits_unchanged": true,
+    "parent_sigterm_before": "<Handlers.SIG_DFL: 0>",
+    "parent_sigterm_after": "<Handlers.SIG_DFL: 0>",
+    "parent_sigterm_restored": true,
+    "sampled_max_group_os_threads": 1,
+    "sampled_max_group_rss_bytes": 10092544,
+    "effective": {
+      "pid": 8105,
+      "pgid": 8105,
+      "sid": 8105,
+      "rlimit_as": [
+        12884901888,
+        12884901888
+      ],
+      "rlimit_cpu": [
+        600,
+        600
+      ],
+      "affinity": [
+        0,
+        1
+      ],
+      "thread_settings": {
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "NUMEXPR_NUM_THREADS": "2",
+        "BLIS_NUM_THREADS": "2",
+        "VECLIB_MAXIMUM_THREADS": "2"
+      },
+      "thread_limit_scope": "library settings, not a kernel thread-count quota"
+    }
+  },
+  "as": {
+    "reason": "child_failure",
+    "exit_code": 23,
+    "policy": {
+      "as_bytes": 100663296,
+      "cpu_seconds": 600,
+      "wall_seconds": 600,
+      "threads": 2,
+      "os_thread_cap": null,
+      "affinity_count": 2,
+      "reserve_bytes": 8589934592,
+      "disk_free_bytes": 32212254720,
+      "tree_bytes": 17179869184,
+      "interval": 0.1,
+      "log_bytes": 262144,
+      "output_bytes": 1048576
+    },
+    "cut_receipt": null,
+    "killed_members": [],
+    "live_descendants_at_leader_exit": [],
+    "zombies_at_leader_exit": [],
+    "cleanup_pending_live": [],
+    "cleanup_pending_zombies": [],
+    "parent_limits_unchanged": true,
+    "parent_sigterm_before": "<Handlers.SIG_DFL: 0>",
+    "parent_sigterm_after": "<Handlers.SIG_DFL: 0>",
+    "parent_sigterm_restored": true,
+    "sampled_max_group_os_threads": 1,
+    "sampled_max_group_rss_bytes": 9437184,
+    "effective": {
+      "pid": 8107,
+      "pgid": 8107,
+      "sid": 8107,
+      "rlimit_as": [
+        100663296,
+        100663296
+      ],
+      "rlimit_cpu": [
+        600,
+        600
+      ],
+      "affinity": [
+        0,
+        1
+      ],
+      "thread_settings": {
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "NUMEXPR_NUM_THREADS": "2",
+        "BLIS_NUM_THREADS": "2",
+        "VECLIB_MAXIMUM_THREADS": "2"
+      },
+      "thread_limit_scope": "library settings, not a kernel thread-count quota"
+    }
+  },
+  "threads": {
+    "reason": "os_thread_cap_exceeded_pending_review",
+    "exit_code": -9,
+    "policy": {
+      "as_bytes": 12884901888,
+      "cpu_seconds": 600,
+      "wall_seconds": 600,
+      "threads": 2,
+      "os_thread_cap": 2,
+      "affinity_count": 2,
+      "reserve_bytes": 8589934592,
+      "disk_free_bytes": 32212254720,
+      "tree_bytes": 17179869184,
+      "interval": 0.1,
+      "log_bytes": 262144,
+      "output_bytes": 1048576
+    },
+    "cut_receipt": null,
+    "killed_members": [
+      8108
+    ],
+    "live_descendants_at_leader_exit": null,
+    "zombies_at_leader_exit": null,
+    "cleanup_pending_live": [],
+    "cleanup_pending_zombies": [],
+    "parent_limits_unchanged": true,
+    "parent_sigterm_before": "<Handlers.SIG_DFL: 0>",
+    "parent_sigterm_after": "<Handlers.SIG_DFL: 0>",
+    "parent_sigterm_restored": true,
+    "sampled_max_group_os_threads": 4,
+    "sampled_max_group_rss_bytes": 7208960,
+    "effective": {
+      "pid": 8108,
+      "pgid": 8108,
+      "sid": 8108,
+      "rlimit_as": [
+        12884901888,
+        12884901888
+      ],
+      "rlimit_cpu": [
+        600,
+        600
+      ],
+      "affinity": [
+        0,
+        1
+      ],
+      "thread_settings": {
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "NUMEXPR_NUM_THREADS": "2",
+        "BLIS_NUM_THREADS": "2",
+        "VECLIB_MAXIMUM_THREADS": "2"
+      },
+      "thread_limit_scope": "library settings, not a kernel thread-count quota"
+    }
+  }
+}

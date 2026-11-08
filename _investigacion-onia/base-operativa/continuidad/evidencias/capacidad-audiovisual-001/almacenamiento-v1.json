@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "cloud": {
+    "measured_utc": "2026-11-06T23:39:03.770536+00:00",
+    "scope": "/workspace/onia-av-pilot-20261106",
+    "categories": {
+      "weights_complete_verified": {
+        "file_apparent_bytes": 5686882304,
+        "allocated_blocks_bytes": 5686894592,
+        "files": 2,
+        "symlink_apparent_bytes": 0,
+        "symlinks": 0
+      },
+      "weights_partial_or_unverified": {
+        "file_apparent_bytes": 171966464,
+        "allocated_blocks_bytes": 171966464,
+        "files": 1,
+        "symlink_apparent_bytes": 0,
+        "symlinks": 0
+      },
+      "runtime_code": {
+        "file_apparent_bytes": 225858609,
+        "allocated_blocks_bytes": 234377216,
+        "files": 3512,
+        "symlink_apparent_bytes": 0,
+        "symlinks": 0
+      },
+      "build_cmake": {
+        "file_apparent_bytes": 160471984,
+        "allocated_blocks_bytes": 178360320,
+        "files": 5560,
+        "symlink_apparent_bytes": 183,
+        "symlinks": 10
+      },
+      "controls": {
+        "file_apparent_bytes": 65664,
+        "allocated_blocks_bytes": 73728,
+        "files": 4,
+        "symlink_apparent_bytes": 0,
+        "symlinks": 0
+      },
+      "logs_receipts_zip": {
+        "file_apparent_bytes": 5227092,
+        "allocated_blocks_bytes": 5926912,
+        "files": 259,
+        "symlink_apparent_bytes": 0,
+        "symlinks": 0
+      }
+    },
+    "directory_metadata_apparent_bytes": 3514368,
+    "directory_metadata_allocated_blocks_bytes": 3514368,
+    "total_file_apparent_bytes": 6250472117,
+    "total_symlink_apparent_bytes": 183,
+    "total_apparent_including_directory_metadata_bytes": 6253986668,
+    "total_allocated_blocks_including_directory_metadata_bytes": 6281113600,
+    "hardlink_duplicate_entries_not_double_counted": 0,
+    "symlink_policy": "lstat link storage only; never follow/count target twice",
+    "blocks_scope": "st_blocks*512 reported by this filesystem, not exclusive host billing or provisioned capacity",
+    "workspace_filesystem_total_bytes": 67586535424,
+    "workspace_filesystem_free_bytes": 57849610240,
+    "ram_and_cgroup": "separate memory-observation.json; not storage",
+    "persistence": "observed between turns only; NOT permanent storage"
+  },
+  "memoria": {
+    "utc": "2026-11-06T23:37:54.240881+00:00",
+    "memory_proc": {
+      "MemTotal_bytes": 35743748096,
+      "MemAvailable_bytes": 34734055424,
+      "SwapTotal_bytes": 0,
+      "SwapFree_bytes": 0
+    },
+    "visible_cgroups": [
+      {
+        "path": "/sys/fs/cgroup",
+        "max": "34359738368",
+        "current": 6577463296
+      }
+    ],
+    "download_sampled_max_rss_bytes": 19472384,
+    "model_ram": "not_measured_no_model_loaded",
+    "memory_current_includes_cache_not_only_process_rss": true,
+    "cpu_consumption_actual_seconds": "not_captured; RLIMIT_CPU600 is a per-process limit, not consumption"
+  },
+  "pc": {
+    "scope": "investigacion/2026-11-06-verificacion-video-ig/piloto-cloud",
+    "text_files": 65,
+    "apparent_bytes": 356293,
+    "model_weight_files": 0,
+    "note": "Copias textuales de código, parches, recetas, logs y recibos; no es inventario de toda la aplicación ni incluye documentos fuera de este directorio.",
+    "codigo_ingesta_y_tests_bytes": 31160,
+    "voz_control_local_bytes": 31566,
+    "original_reel_preexistente_bytes": 10749782
+  },
+  "vps": {
+    "actividad": "preflight de lectura",
+    "instalaciones_modelos": 0,
+    "medios_copiados_en_esta_unidad": 0,
+    "nota": "No se ha medido RAM del modelo ni validado despliegue en VPS."
+  },
+  "persistencia": "Los artefactos Cloud se cotejaron entre turnos concretos; no hay almacenamiento permanente contratado o decidido. Copias textuales recuperadas al PC. No publicar ni borrar parciales."
+}

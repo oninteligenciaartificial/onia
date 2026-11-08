@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "id": "av-negativo-001",
+  "estado": "configuracion_previa_no_ejecutada",
+  "modelo": {
+    "repo": "openbmb/MiniCPM-o-4_5-gguf",
+    "revision": "db25077c33951fe163b42986fba0132e279872a2",
+    "runtime": "tc-mb/llama.cpp-omni",
+    "commit": "d30f00feadb7ebce95bacd55b0d104e3ef501481",
+    "parche": "preparacion-v2/runtime-review.patch",
+    "parche_sha256": "0c0fef074417faac845cdcd8699b5f5037544a6c96f15c624661aaf14bfb9232"
+  },
+  "entrada": {
+    "duracion_s": 2,
+    "chunks": 2,
+    "por_chunk": {
+      "duracion_s": 1,
+      "imagen": {
+        "ancho": 224,
+        "alto": 224,
+        "contenido": "gris uniforme",
+        "nombre": "UUID opaco, sin significado semántico"
+      },
+      "audio": {
+        "formato": "WAV PCM16LE",
+        "canales": 1,
+        "hz": 16000,
+        "muestras": 16000,
+        "contenido": "ceros exactos"
+      }
+    },
+    "tiempos_s": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "verdad": "Fijada antes de inferencia; conservar manifiesto y hashes de archivos generados. No pasar esta receta ni verdad al modelo."
+  },
+  "prompt": "Describe qué aparece y qué se oye, en orden; indica qué cambios coinciden. Si algo no puede determinarse, dilo.",
+  "configuracion": {
+    "n_ctx": 2048,
+    "response_tokens": 128,
+    "seed": 20261106,
+    "temperature": 0,
+    "cpu_affinity_count": 2,
+    "workers_per_backend": 2,
+    "os_thread_cap": 16,
+    "os_thread_cap_nota": "Techo de política conservador; no recuento observado ni máximo inferido del runtime.",
+    "fresh_process_each_case": true,
+    "tts": false,
+    "vad": false,
+    "contexto": "Posiciones reales señal+texto+control+128 < min(2048,llama_n_ctx); rechazar sin recortar ni aumentar."
+  },
+  "limites": {
+    "rlimit_as_bytes_por_proceso": 12884901888,
+    "rlimit_cpu_s_por_proceso": 600,
+    "wall_s_carga_y_control_juntos": 600,
+    "reserva_min_bytes": 8589934592,
+    "disco_libre_min_bytes": 32212254720,
+    "arbol_propio_max_bytes": 17179869184,
+    "log_persistido_max_bytes": 262144,
+    "salida_observada_corte_bytes": 1048576
+  },
+  "condiciones": [
+    "Build final y dictamen sobre bytes v2 exactos antes de pesos.",
+    "Descargar sólo tres pesos fijados y cotejar bytes+LFS SHA256 antes de uso.",
+    "Una sola primera ejecución negativa; conservar fallo técnico o semántico sin repetición automática, otro perfil ni escalado.",
+    "Resultado negativo correcto sólo habilita controles positivos pertinentes; no acredita comprensión audiovisual."
+  ],
+  "limitaciones": [
+    "Verdad conocida por operador, oculta al modelo; no es doble ciego.",
+    "RSS y threads muestreados; afinidad CPU distinta del número de threads; RLIMIT_AS por proceso distinto de memoria agregada."
+  ]
+}

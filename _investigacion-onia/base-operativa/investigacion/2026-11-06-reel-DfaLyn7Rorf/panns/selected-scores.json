@@ -1,0 +1,114 @@
+[
+  {
+    "case": "aidan0",
+    "interval": [
+      0.0,
+      10.0
+    ],
+    "input_samples": 320000,
+    "selected": {
+      "Speech": {
+        "max": 0.5738525390625,
+        "mean": 0.42568910121917725,
+        "argmax_seconds": 2.88
+      },
+      "Music": {
+        "max": 0.6445501446723938,
+        "mean": 0.10789372771978378,
+        "argmax_seconds": 0.32
+      }
+    },
+    "frame_shape": [
+      1,
+      1001,
+      527
+    ],
+    "import_seconds": 8.964965421997476,
+    "model_load_seconds": 20.01147066699923,
+    "inference_seconds": 0.65860255699954
+  },
+  {
+    "case": "aidan1",
+    "interval": [
+      10.0,
+      20.0
+    ],
+    "input_samples": 320000,
+    "selected": {
+      "Speech": {
+        "max": 0.4740796387195587,
+        "mean": 0.40296831727027893,
+        "argmax_seconds": 8.64
+      },
+      "Music": {
+        "max": 0.5905195474624634,
+        "mean": 0.2511712908744812,
+        "argmax_seconds": 7.68
+      }
+    },
+    "frame_shape": [
+      1,
+      1001,
+      527
+    ],
+    "import_seconds": 5.56065261799813,
+    "model_load_seconds": 6.739771947999543,
+    "inference_seconds": 0.698064981999778
+  },
+  {
+    "case": "aidan2",
+    "interval": [
+      20.0,
+      30.0
+    ],
+    "input_samples": 320000,
+    "selected": {
+      "Speech": {
+        "max": 0.5670737028121948,
+        "mean": 0.4065013825893402,
+        "argmax_seconds": 8.96
+      },
+      "Music": {
+        "max": 0.6796256303787231,
+        "mean": 0.40715277194976807,
+        "argmax_seconds": 8.64
+      }
+    },
+    "frame_shape": [
+      1,
+      1001,
+      527
+    ],
+    "import_seconds": 5.37344784400193,
+    "model_load_seconds": 7.3888044449995505,
+    "inference_seconds": 0.6035524069993699
+  },
+  {
+    "case": "aidan3",
+    "interval": [
+      30.0,
+      37.54809375
+    ],
+    "input_samples": 241539,
+    "selected": {
+      "Speech": {
+        "max": 0.4987609088420868,
+        "mean": 0.37628117203712463,
+        "argmax_seconds": 2.24
+      },
+      "Music": {
+        "max": 0.5700787305831909,
+        "mean": 0.47481462359428406,
+        "argmax_seconds": 2.24
+      }
+    },
+    "frame_shape": [
+      1,
+      755,
+      527
+    ],
+    "import_seconds": 5.503517468998325,
+    "model_load_seconds": 6.068120476000331,
+    "inference_seconds": 0.5018239880009787
+  }
+]

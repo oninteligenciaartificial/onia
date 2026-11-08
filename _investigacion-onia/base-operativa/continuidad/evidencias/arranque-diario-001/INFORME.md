@@ -1,0 +1,17 @@
+# Arranque diario de ONIA
+
+7 de noviembre de 2026, America/Caracas. Sergio aprobó el arranque y pidió una vista ordenada de sus acciones, las áreas y el trabajo diario. El registro único conserva la comprobación y el estado. [Arranque diario](../../tareas/arranque-diario-001.json)
+
+**Panel disponible.** Organización Cloud creó una página hija de Sergio · Hoy y agregó el acceso en su sección Hoy. Releyó la página guardada. Revisión local confirmó el parentesco, el orden de las secciones, el único pendiente personal, las dos prioridades iniciales y las seis áreas. Coordinación comprobó que el enlace figura al inicio de Hoy. El panel enlaza la cola que ya existe. [ONIA · Panel diario](https://app.notion.com/p/4112eb20bdfd81c1a339e23eb82afa9d) · [Sergio · Hoy](https://app.notion.com/p/40e2eb20bdfd81658111cf3e4d854964)
+
+**Pendiente de Sergio.** Grabar la toma vertical de unos 40 segundos y enviarla a ONIA · Coordinación. Video monta el primer corte cuando confirme acceso al material. [Guion](../../../investigacion/2026-11-07-primer-contenido-onia/PIEZA-01.md)
+
+**Paquete diario publicado.** Integración local cotejó 11 blobs y ejecutó `retomar seis-areas-cloud-001` desde la copia exacta. Revisión independiente dio dictamen favorable sobre el commit `532412a65ed3d0fda783758ed3f8f78bbba7f8b3`. La rama privada `codex/panel-cloud-20261107` avanzó desde `13311ee80e1c83c9b68639c0a13aa3404a1cd037`. El remoto confirmó ambas referencias y `master` permaneció en `e55812ce1bc8ef798fb370257ba887d07acccc53`. [Paquete operativo](https://github.com/oninteligenciaartificial/onia/tree/532412a65ed3d0fda783758ed3f8f78bbba7f8b3)
+
+**Retoma comprobada en un chat Cloud nuevo.** El primer turno recuperó el commit exacto, retuvo el checkout inicial y verificó el registro aceptado r4, el briefing y siete evidencias sin advertencias. Desde la ficha y el plan recuperó la toma pendiente y quién la monta. El conector también abrió el panel y leyó su primer pendiente. Las instrucciones ONIA se leyeron explícitamente y el anuncio nativo sigue sin observarse. [Recibo Cloud](retoma-cloud-v1.json)
+
+**Actualización real comprobada.** Organización cambió la prioridad del paquete a «verificado en Cloud» en la misma página y releyó su estado a las 13:45:39 UTC. Se alinearon dos referencias del resumen que aún mostraban la preparación anterior. La relectura de las 13:46:53 UTC confirmó el mismo ID, un único pendiente personal, las seis áreas y la navegación conservada. La apertura desde el teléfono y la recurrencia quedan como comprobaciones separadas. [Dictamen independiente](revision-v1.md)
+
+**Rutina.** Coordinación recibe decisiones y material. Cada área aporta una línea de estado con evidencia y siguiente acción. Se trabajan inicialmente dos entregas independientes. Integración y Revisión locales cotejan los resultados y Organización mantiene la vista Notion. El panel muestra un corte fechado. [Plan de operación diaria](../../../PANEL-DIARIO.md)
+
+**Herramientas.** Codex ejecuta los encargos y Notion muestra el trabajo y las acciones personales. Dots puede ser la siguiente prueba para seguimiento de pendientes y avisos desde un único panel, con acceso y comportamiento verificados antes de usarlo en la rutina. Grok Bot queda como candidato para una tarea aislada cuando haya acceso y cuota confirmados. La puesta en marcha usa las conexiones ya comprobadas. [OpenAI Docs · Dots](https://learn.chatgpt.com/docs/dots) · [Grok Bot · FAQ](https://docs.x.ai/grok-bot/faq)

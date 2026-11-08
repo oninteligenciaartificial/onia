@@ -1,5 +1,32 @@
 # Chats de trabajo por área
 
+## Lote actual de referentes · 6 de noviembre de 2026
+
+Sergio pidió estudiar al menos cinco referentes, explicar el alcance y ordenar las sesiones; preguntó si la ejecución sería Cloud. Coordinación prevé usar el laboratorio existente después de comprobar fuentes y entorno. Este reparto corresponde sólo a [este lote](investigacion/2026-11-06-referentes-lote-01/PLAN.md). Los nombres siguientes fueron actualizados mediante la herramienta de chats; renombrar no prueba disponibilidad de la VM ni ejecución de los análisis.
+
+| Chat | ID / host | Responsabilidad |
+|---|---|---|
+| ONIA · Coordinación | `01a1b245-bfe7-70f1-a4a1-a8c6eed15b4a` · local | Coordinar alcance, selección y decisiones; escribir PLAN y este reparto. |
+| ONIA · Integración de referentes | `01a1b221-dbd1-7b10-aada-a26094e04705` · local | QA, registro `referentes-lote-01-001`, preparación de fuentes, integración y recuperación de entregas. |
+| ONIA · Ejecución Cloud | `01a1b22d-9f2c-72df-8a57-4c1ccb0c800a` · durable | Verificar entorno y fuentes reales antes de producir los cinco análisis en Cloud existente. |
+| ONIA · Revisión de referentes | `01a1af41-1ce0-7b72-a888-7fd658396b4a` · local | Revisión independiente de entregas y evidencia; no editar archivos de la ejecutora. |
+
+Modelo solicitado para este reparto: Sol medio; modelo observado se coteja en el encargo actual, sin heredar como prueba las capturas históricas de abajo. Un lote activo, un escritor por archivo y como máximo dos subtareas independientes en paralelo. No se crearon más chats ni se archivaron otras tareas del usuario.
+
+## Entrada recurrente de reels y operación Cloud pendiente · 6 de noviembre
+
+Sergio pidió conservar una sesión para enviar reels y otras referencias durante el trabajo diario, analizarlas y recuperar aprendizajes. Se reutiliza **ONIA · Reels e ideas**, `01a1ac99-eb3b-71a2-96ce-39942950bc63`, host **local**, proyecto **Onia 03/11**. Estaba archivada y se desarchivó mediante la herramienta de chats en este encargo; no se creó otra sesión. El [índice del receptor](investigacion/reels-e-ideas/README.md) conserva entradas y procedimiento específico; ORQUESTACION mantiene el QA previo.
+
+La ejecución objetivo sigue en la nube. **ONIA · Ejecución Cloud**, `01a1b22d-9f2c-72df-8a57-4c1ccb0c800a`, host **durable**, es el ejecutor existente; esto no convierte el receptor local en un chat Cloud ni acredita un despacho automático. Coordinación mantiene alcance y decisiones; la integración y revisión se asignan por tarea, sin abrir un chat por referencia.
+
+La nueva referencia tiene ID `DfWR5BWiGct` y selector `img_index=4`; debe conservarse en su ficha del índice como pendiente de QA y análisis Cloud. El enlace `/p/` no confirma por sí solo que sea un reel o carrusel. No se lanza procesamiento integral al anotarlo. El lote de cinco referentes ya está aceptado en `referentes-lote-01-001`, revisión 7; no queda esperando otro análisis de esos cinco.
+
+**Para declarar listo el circuito diario falta una comprobación acotada:** recibir una referencia en la entrada elegida, seleccionar alcance y LLM según tarea, ejecutar en Cloud con reglas/contexto pertinentes, revisar y recuperar el resultado, y retomarlo desde otra sesión sin cargar todo el historial. Registrar cobertura, propuesta y resultado comprobado por separado. Este encargo deja la entrada y esa condición anotadas; no despliega servicios ni programa actividad entre mensajes.
+
+## Repartos anteriores y procedencia
+
+Las fechas y estados de las secciones siguientes son antecedentes; no sustituyen el reparto del lote actual.
+
 Nota de alcance, 6/11: este documento conserva el reparto y modelos de los encargos fechados abajo. No impone esos chats ni una jefa local a todo encargo Cloud nuevo. Para la consolidación actual, el reparto de integradora y revisora está en ESTADO; aplicar ORQUESTACION y la instrucción vigente de Sergio.
 
 Modelo efectivo cotejado por la nueva Jefa extrayendo sólo model/effort/timestamp del último turn_context local: `model=gpt-6.1-sol`, `effort=ultra`, `timestamp=2026-11-06T03:35:25.035Z` (5/11,23:35:25 Caracas). Recepción y asunción confirmadas; unidad harness aceptada técnicamente con los límites de su evidencia.

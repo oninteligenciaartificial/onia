@@ -1,0 +1,33 @@
+{
+  "continuity": "all three manifests/markers, frozen sources and own ELFs verified",
+  "files": [
+    {
+      "path": "MiniCPM-o-4_5-Q4_K_M.gguf",
+      "bytes": 5026714400,
+      "sha256": "1237a97ee081b8abebc47aa7dad565701e8f5f904cdc92f6723ac4281bbc0932"
+    },
+    {
+      "path": "audio/MiniCPM-o-4_5-audio-F16.gguf",
+      "bytes": 660167904,
+      "sha256": "d5b188ac7feaf98e17175c3f9bd14bf269301bfd187439fdaa3e3a494fc32ef7"
+    },
+    {
+      "path": "vision/MiniCPM-o-4_5-vision-F16.gguf.part",
+      "bytes": 171966464,
+      "sha256": "fb749ab559817ef0a472e94104808e131f18f049fe7b22063f91c568aabfa8e0"
+    }
+  ],
+  "resources": {
+    "mem_available": 34772549632,
+    "cgroups": [
+      {
+        "path": "/sys/fs/cgroup",
+        "max": "34359738368",
+        "current": 6169620480
+      }
+    ],
+    "reserve": 28190117888,
+    "disk_free": 57849610240,
+    "tree_bytes": 6253982572
+  }
+}

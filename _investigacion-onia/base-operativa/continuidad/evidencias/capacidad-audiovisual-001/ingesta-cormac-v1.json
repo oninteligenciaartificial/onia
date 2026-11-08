@@ -1,0 +1,95 @@
+{
+  "schema": 1,
+  "tipo": "ingesta_instrumental",
+  "fecha_utc": "2026-11-06T22:45:45.306109+00:00",
+  "fuente": {
+    "plataforma": "instagram",
+    "id": "DfWLWspIruU",
+    "url": "https://www.instagram.com/reel/DfWLWspIruU/",
+    "asociacion": "declarada_por_operador_no_verificada_en_red"
+  },
+  "original": {
+    "sha256": "9be4267480093249e104ec9821271e1a755e4329b7ea4d8fca3fc8bacd3b664e",
+    "bytes": 10749782
+  },
+  "metadata": {
+    "duracion_contenedor_s": 37.753991,
+    "inicio_contenedor_s": 0.0,
+    "pistas": [
+      {
+        "indice": 0,
+        "tipo": "video",
+        "codec": "vp9",
+        "inicio_s": 0.0,
+        "duracion_s": 37.733333,
+        "ancho": 1440,
+        "alto": 2560,
+        "r_frame_rate": "60/1",
+        "avg_frame_rate": "60/1"
+      },
+      {
+        "indice": 1,
+        "tipo": "audio",
+        "codec": "aac",
+        "inicio_s": 0.0,
+        "duracion_s": 37.753991,
+        "frecuencia_hz": 44100,
+        "canales": 2
+      }
+    ],
+    "audio_presente": true,
+    "pts_decodificados": false,
+    "decodificacion_completa": false
+  },
+  "capacidad_av_acreditada": false,
+  "atributos": {
+    "guion": {
+      "estado": "pendiente",
+      "observaciones": []
+    },
+    "imagen": {
+      "estado": "pendiente",
+      "observaciones": []
+    },
+    "edicion_temporal": {
+      "estado": "pendiente",
+      "observaciones": []
+    },
+    "tipografia": {
+      "estado": "pendiente",
+      "observaciones": []
+    },
+    "voz": {
+      "estado": "pendiente",
+      "observaciones": []
+    },
+    "prosodia": {
+      "estado": "pendiente",
+      "observaciones": []
+    },
+    "musica": {
+      "estado": "pendiente",
+      "observaciones": []
+    },
+    "efectos": {
+      "estado": "pendiente",
+      "observaciones": []
+    },
+    "sincronia": {
+      "estado": "pendiente",
+      "observaciones": []
+    },
+    "afirmaciones": {
+      "estado": "pendiente",
+      "observaciones": []
+    }
+  },
+  "afirmaciones_contrastadas": [],
+  "conocimiento_aceptado": [],
+  "limites": [
+    "Sólo hash y metadata de contenedor; no escucha ni interpretación temporal.",
+    "FPS nominal no son PTS; no hay muestreo ni cobertura perceptual acreditados.",
+    "La URL identifica la fuente declarada; no verifica procedencia en red.",
+    "No se copiaron originales ni metadata privada; no se ejecutó un backend AV."
+  ]
+}

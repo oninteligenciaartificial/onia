@@ -1,0 +1,98 @@
+{
+  "source": "/workspace/onia-av-pilot-20261106/cormac-transfer-v1/DfWLWspIruU-remux.mp4",
+  "source_sha256": "2c89164b66a9c556e749b789e0ca2004562c859316ac447ba883f7535f5a79a5",
+  "container_duration_seconds": 37.78,
+  "decoded_full_samples": 1208968,
+  "decoded_full_duration_seconds": 37.78025,
+  "beyond_container_samples_not_covered": 8,
+  "full_decoded_WAV": "/workspace/onia-av-pilot-20261106/panns-screen-v1/4bb3dc2b8bea4ef99c43537c45e9f726.wav",
+  "full_decoded_WAV_sha256": "d3dec3376e638eb2a460aecc2bb7b88fe7966bc5c50852fc76a0671e3cd9eef3",
+  "command": [
+    "ffmpeg",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-threads",
+    "1",
+    "-filter_threads",
+    "1",
+    "-i",
+    "/workspace/onia-av-pilot-20261106/cormac-transfer-v1/DfWLWspIruU-remux.mp4",
+    "-map",
+    "0:a:0",
+    "-vn",
+    "-ar",
+    "32000",
+    "-ac",
+    "1",
+    "-c:a",
+    "pcm_s16le",
+    "-threads",
+    "1",
+    "/workspace/onia-av-pilot-20261106/panns-screen-v1/4bb3dc2b8bea4ef99c43537c45e9f726.wav"
+  ],
+  "windows": [
+    {
+      "case": "cormac0",
+      "path": "/workspace/onia-av-pilot-20261106/panns-screen-v1/3e27f709330047a6a0c93d38feab964e.wav",
+      "sha256": "922486a248756c7ab28ecd35f13680ce296d9c6f63b1460c29dd10185c14fe8e",
+      "bytes": 640044,
+      "samples": 320000,
+      "rate": 32000,
+      "duration": 10.0,
+      "interval_source_seconds": [
+        0.0,
+        10.0
+      ],
+      "padding": 0
+    },
+    {
+      "case": "cormac1",
+      "path": "/workspace/onia-av-pilot-20261106/panns-screen-v1/cbbd56bc8d594f65b4923895c85aeccb.wav",
+      "sha256": "eb85538e8a14cc51e95433e05e117ceba2e9f112beb74ab23f1a5360728e3733",
+      "bytes": 640044,
+      "samples": 320000,
+      "rate": 32000,
+      "duration": 10.0,
+      "interval_source_seconds": [
+        10.0,
+        20.0
+      ],
+      "padding": 0
+    },
+    {
+      "case": "cormac2",
+      "path": "/workspace/onia-av-pilot-20261106/panns-screen-v1/a8d1b0bf5cb548f88dbc02c8e2fbf8ad.wav",
+      "sha256": "fcc817762fd66f38a544f2d27cbbad9ebba0ea3fdcaa4e01f557cce354dec90f",
+      "bytes": 640044,
+      "samples": 320000,
+      "rate": 32000,
+      "duration": 10.0,
+      "interval_source_seconds": [
+        20.0,
+        30.0
+      ],
+      "padding": 0
+    },
+    {
+      "case": "cormac3",
+      "path": "/workspace/onia-av-pilot-20261106/panns-screen-v1/940d0668b6bb43038ef4675703d5641a.wav",
+      "sha256": "df3b886d89c001ff0df966647251f27369e0050cd76ee7cbeefc800d2ccad2b4",
+      "bytes": 497964,
+      "samples": 248960,
+      "rate": 32000,
+      "duration": 7.78,
+      "interval_source_seconds": [
+        30.0,
+        37.78
+      ],
+      "padding": 0
+    }
+  ],
+  "coverage_audio_seconds": 37.78,
+  "coverage_visual_seconds": 0,
+  "threshold": null,
+  "interpretation": "model candidates, not independent truth; no ASR/word/emotion/mix/synchrony claims",
+  "adapter_sha256": "6b61bd8ba7818409bbb9ef2105daa1577b4f3bd41fc5ad6f8201112f89aa304a",
+  "known_controls_not_retained": true
+}

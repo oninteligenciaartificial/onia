@@ -1,0 +1,758 @@
+diff --git a/tools/omni/omni.h b/tools/omni/omni.h
+--- a/tools/omni/omni.h
++++ b/tools/omni/omni.h
+@@ -167,7 +167,10 @@
+ // ============================================================================
+ using audio_output_cb_t = std::function<void(const float * samples, int n_samples, int sample_rate, bool is_final)>;
+ 
++#include "pilot-state.h"
++
+ struct omni_context {
++    OmniPilotState pilot;
+     struct vision_ctx * ctx_vision = NULL;
+     struct audition_ctx * ctx_audio = NULL;
+     
+diff --git a/tools/omni/audition.h b/tools/omni/audition.h
+--- a/tools/omni/audition.h
++++ b/tools/omni/audition.h
+@@ -169,7 +169,7 @@
+ struct audition_audio_f32   * audition_audio_f32_init(void);
+ struct audition_audio_f32_batch * audition_audio_f32_batch_init(void);
+ 
+-bool audition_audio_preprocess  (struct audition_ctx * ctx, struct audition_audio_u8 * audio, struct audition_audio_f32 ** out_mel);
++bool audition_audio_preprocess  (struct audition_ctx * ctx, struct audition_audio_u8 * audio, struct audition_audio_f32 ** out_mel, int64_t * decoded_samples = nullptr);
+ bool audition_audio_encode      (struct audition_ctx * ctx, int n_threads, struct audition_audio_f32 * audio, float * vec);
+ bool audition_audio_batch_encode(struct audition_ctx * ctx, int n_threads, const struct audition_audio_f32_batch * audios, float * vec);
+ 
+diff --git a/tools/omni/audition.cpp b/tools/omni/audition.cpp
+--- a/tools/omni/audition.cpp
++++ b/tools/omni/audition.cpp
+@@ -1978,7 +1978,7 @@
+                 WHISPER_N_FFT,
+                 WHISPER_HOP_LENGTH,
+                 filters.n_mel,
+-                4, // n_threads
++                2, // fixed pilot preparation worker budget (was hardcoded 4)
+                 filters,
+                 false, // debug
+                 out_full);
+@@ -1994,7 +1994,8 @@
+ } // namespace whisper_preprocessor
+ 
+ // from mtmd-helper.cpp (temp)
+-static bool decode_audio_from_buf(const unsigned char * buf_in, size_t len, int target_sampler_rate, std::vector<float> & pcmf32_mono) {
++static bool decode_audio_from_buf(const unsigned char * buf_in, size_t len, int target_sampler_rate, std::vector<float> & pcmf32_mono, int64_t * frames_effective = nullptr) {
++    if (frames_effective) *frames_effective = 0;
+     ma_result result;
+     const int channels = 1;
+     ma_decoder_config decoder_config = ma_decoder_config_init(ma_format_f32, channels, target_sampler_rate);
+@@ -2005,8 +2006,8 @@
+         return false;
+     }
+ 
+-    ma_uint64 frame_count;
+-    ma_uint64 frames_read;
++    ma_uint64 frame_count = 0;
++    ma_uint64 frames_read = 0;
+     result = ma_decoder_get_length_in_pcm_frames(&decoder, &frame_count);
+     if (result != MA_SUCCESS) {
+         ma_decoder_uninit(&decoder);
+@@ -2015,8 +2016,9 @@
+ 
+     pcmf32_mono.resize(frame_count);
+     result = ma_decoder_read_pcm_frames(&decoder, pcmf32_mono.data(), frame_count, &frames_read);
+-
+-    if (result != MA_SUCCESS) {
++    if (frames_effective) *frames_effective = (int64_t)frames_read;
++    pcmf32_mono.resize((size_t)frames_read); // never count reserved tail as decoded audio
++    if (result != MA_SUCCESS || frames_read != frame_count || frames_read == 0) {
+         ma_decoder_uninit(&decoder);
+         return false;
+     }
+@@ -2028,7 +2030,8 @@
+ bool audition_audio_preprocess(
+     audition_ctx * ctx,
+     audition_audio_u8 * audio,
+-    audition_audio_f32 ** out_mel) {
++    audition_audio_f32 ** out_mel, int64_t * decoded_samples) {
++    if (decoded_samples) *decoded_samples = 0;
+     const unsigned char * audio_data = audio->buf.data();
+     size_t audio_data_len = audio->buf.size();
+ 
+@@ -2040,9 +2043,9 @@
+         audio_data, 
+         audio_data_len, 
+         sample_rate, 
+-        pcm_f32
++        pcm_f32,
++        decoded_samples
+     );
+-
+     if (!decode_ok) {
+         LOG_ERR("%s: Failed to decode audio data\n", __func__);
+         return false;
+diff --git a/tools/omni/omni.cpp b/tools/omni/omni.cpp
+--- a/tools/omni/omni.cpp
++++ b/tools/omni/omni.cpp
+@@ -367,7 +367,13 @@
+ }
+ 
+ bool prefill_with_emb(struct omni_context * ctx_omni, common_params * params, float* embed, int n_pos, int n_batch, int*n_past) {
+-    kv_cache_slide_window(ctx_omni, params, n_pos);
++    if (ctx_omni->pilot.enabled) {
++        if (ctx_omni->pilot.failed || n_pos <= 0 || *n_past < 0 ||
++                int64_t(*n_past) + n_pos >= std::min<int64_t>(params->n_ctx, llama_n_ctx(ctx_omni->ctx_llama))) {
++            ctx_omni->pilot.failed = true;
++            return false;
++        }
++    } else { kv_cache_slide_window(ctx_omni, params, n_pos); }
+     
+     int n_embd  = llama_n_embd(llama_get_model(ctx_omni->ctx_llama));
+     for (int i = 0; i < n_pos; i += n_batch) {
+@@ -401,7 +407,13 @@
+         return true;
+     }
+ 
+-    kv_cache_slide_window(ctx_omni, params, n_pos);
++    if (ctx_omni->pilot.enabled) {
++        if (ctx_omni->pilot.failed || n_pos <= 0 || *n_past < 0 ||
++                int64_t(*n_past) + n_pos >= std::min<int64_t>(params->n_ctx, llama_n_ctx(ctx_omni->ctx_llama))) {
++            ctx_omni->pilot.failed = true;
++            return false;
++        }
++    } else { kv_cache_slide_window(ctx_omni, params, n_pos); }
+ 
+     int n_embd = llama_n_embd(llama_get_model(ctx_omni->ctx_llama));
+ 
+@@ -1163,7 +1175,13 @@
+ 
+ static bool eval_tokens(struct omni_context* ctx_omni, common_params* params, std::vector<llama_token> tokens, int n_batch, int * n_past, bool get_emb = false) {
+     int N = (int) tokens.size();
+-    kv_cache_slide_window(ctx_omni, params, N);
++    if (ctx_omni->pilot.enabled) {
++        if (ctx_omni->pilot.failed || *n_past < 0 ||
++                int64_t(*n_past) + N >= std::min<int64_t>(params->n_ctx, llama_n_ctx(ctx_omni->ctx_llama))) {
++            ctx_omni->pilot.failed = true;
++            return false;
++        }
++    } else { kv_cache_slide_window(ctx_omni, params, N); }
+ 
+     for (int i = 0; i < N; i += n_batch) {
+         int n_eval = (int) tokens.size() - i;
+@@ -4224,7 +4242,7 @@
+         delete ctx_omni;
+         return NULL;
+     }
+-    ctx_omni->ctx_audio = audition_init(params->apm_model.c_str(), audition_context_params{true, GGML_LOG_LEVEL_INFO});
++    ctx_omni->ctx_audio = audition_init(params->apm_model.c_str(), audition_context_params{params->n_gpu_layers != 0, GGML_LOG_LEVEL_INFO});
+     print_with_timestamp("APM: init from %s\n", params->apm_model.c_str());
+     if (ctx_omni->ctx_audio == nullptr) {
+         LOG_ERR("%s: error: failed to init audition model from %s\n", __func__, params->apm_model.c_str());
+@@ -4246,7 +4264,7 @@
+     if (media_type == 2) {
+         LOG_INF("init vision....");
+         const char * vision_path = ctx_omni->params->vpm_model.c_str();
+-        auto * ctx_vision = vision_init(vision_path, vision_context_params{true, GGML_LOG_LEVEL_INFO, nullptr});
++        auto * ctx_vision = vision_init(vision_path, vision_context_params{params->n_gpu_layers != 0, GGML_LOG_LEVEL_INFO, nullptr});
+         ctx_omni->ctx_vision = ctx_vision;
+ 
+         // 🔧 [batch encode 开关] 由 common_params 控制（默认关闭）
+@@ -10290,7 +10308,11 @@
+ // ===== END DUPLEX PIPELINE ==================================================
+ // ============================================================================
+ 
++#include "pilot-sync.inc"
++
+ bool stream_prefill(struct omni_context * ctx_omni, std::string aud_fname, std::string img_fname, int index, int max_slice_nums, std::string text) {
++    if (ctx_omni->pilot.enabled)
++        return pilot_sync_prefill(ctx_omni, aud_fname, img_fname, index, max_slice_nums, text);
+ 
+     // 🔧 [Duplex Pipeline Stage 1] 路由：
+     //   duplex_mode && async && index > 0 && system prompt 已初始化 时，走新 duplex 路径。
+@@ -10646,6 +10668,7 @@
+ }
+ 
+ bool stream_decode(struct omni_context * ctx_omni, std::string debug_dir, int round_idx) {
++    if (ctx_omni->pilot.enabled) return pilot_sync_decode(ctx_omni);
+     // 🔧 [Duplex Pipeline Stage 1] 路由：
+     //   duplex_mode && async && system prompt 已初始化时，走新 duplex 路径。
+     //   duplex_decode 内部会把请求 post 到 duplex_llm_thread 并同步等待完成，
+diff --git a/tools/omni/test/single_test_omni.cpp b/tools/omni/test/single_test_omni.cpp
+--- a/tools/omni/test/single_test_omni.cpp
++++ b/tools/omni/test/single_test_omni.cpp
+@@ -1,22 +1,6 @@
+-/**
+- * 单工 (Singleplex) Omni (audio + vision) 批量测试
+- *
+- * 测试数据格式: <prefix>0000.wav / <prefix>0000.jpg, <prefix>0001.wav / <prefix>0001.jpg, ...
+- * 每个 chunk 的图片 (.jpg) 与音频 (.wav) 同前缀同编号配对；图片缺失的 chunk 会退化为纯音频 prefill。
+- * 典型数据集:
+- *   tools/omni/assets/test_case/omni_test_case/omni_test_case_XXXX.{wav,jpg}
+- *
+- * 流程：所有 (audio[+image]) chunk 同步 prefill 完成后，统一 decode 一次生成完整回复。
+- *
+- * 用法:
+- *   llama-omni-single-test-omni -m <llm_model_path> --test <prefix> <n> [options]
+- *
+- * 示例:
+- *   llama-omni-single-test-omni \
+- *       -m /path/to/MiniCPM-o-4_5-gguf/MiniCPM-o-4_5-Q4_K_M.gguf \
+- *       --test tools/omni/assets/test_case/omni_test_case/omni_test_case_ 9
+- */
+-
++/** Review-only isolated CPU pilot adapter. One case/process; audio+image pairs;
++ * no VAD, no reference audio, no TTS. Explicit context/response budget required.
++ * Not compiled or run in preparation. */
+ #include "omni-impl.h"
+ #include "omni.h"
+ 
+@@ -33,6 +17,8 @@
+ #include <cstdio>
+ #include <cstdlib>
+ #include <cstring>
++#include <algorithm>
++#include <exception>
+ 
+ #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
+ #include <signal.h>
+@@ -115,78 +101,64 @@
+ // ==================== 批量测试主流程 ====================
+ 
+ // Omni 单工批量测试：audio + 同名 .jpg 图片同步 prefill，最后统一 decode 一次
+-static void run_omni_test(struct omni_context * ctx_omni,
+-                          const std::string & data_path_prefix,
+-                          int cnt) {
+-    ctx_omni->system_prompt_initialized = false;
+-    bool orig_async = ctx_omni->async;
+-    ctx_omni->async = false;  // 同步模式 prefill，确保所有数据被处理
+-
+-    // index=0 仅用于系统 prompt + ref_audio 初始化，不会处理用户音频。
+-    // 用户音频必须从 index>=1 开始喂，否则第一个 chunk 会被丢掉（见 omni.cpp stream_prefill）。
+-    {
+-        auto t0 = std::chrono::high_resolution_clock::now();
+-        stream_prefill(ctx_omni, std::string(), std::string(), 0);
+-        auto t1 = std::chrono::high_resolution_clock::now();
+-        std::cout << "prefill init (system prompt) : "
+-                  << std::chrono::duration<double>(t1 - t0).count() << " s" << std::endl;
+-    }
+-
+-    for (int il = 0; il < cnt; ++il) {
+-        char idx_str[16];
+-        snprintf(idx_str, sizeof(idx_str), "%04d", il);
+-        std::string aud_fname = data_path_prefix + idx_str + ".wav";
+-        std::string img_fname;
+-        std::string img_candidate = data_path_prefix + idx_str + ".jpg";
+-        if (file_exists(img_candidate)) {
+-            img_fname = img_candidate;
+-        }
+-
+-        if (!file_exists(aud_fname)) {
+-            fprintf(stderr, "Warning: audio chunk not found, skip: %s\n", aud_fname.c_str());
+-            continue;
+-        }
+-
+-        auto t0 = std::chrono::high_resolution_clock::now();
+-        stream_prefill(ctx_omni, aud_fname, img_fname, il + 1);
+-        auto t1 = std::chrono::high_resolution_clock::now();
+-        double dt = std::chrono::duration<double>(t1 - t0).count();
+-        if (img_fname.empty()) {
+-            std::cout << "prefill " << il << " (audio only) : " << dt << " s" << std::endl;
+-        } else {
+-            std::cout << "prefill " << il << " (audio+vision) : " << dt << " s" << std::endl;
+-        }
+-    }
+-
+-    ctx_omni->async = orig_async;
+-    stream_decode(ctx_omni, "./");
+-}
+-
+-static void show_usage(const char * prog_name) {
+-    printf(
+-        "MiniCPM-o Singleplex Omni (audio+vision) Test\n\n"
+-        "Usage: %s -m <llm_model_path> --test <prefix> <n> [options]\n\n"
+-        "Required:\n"
+-        "  -m <path>                LLM GGUF 模型路径\n"
+-        "  --test <prefix> <n>      测试数据前缀和 chunk 数量\n"
+-        "                           (文件: <prefix>0000.wav/.jpg 等)\n\n"
+-        "Options:\n"
+-        "  --vision <path>          覆盖 vision 模型路径\n"
+-        "  --audio <path>           覆盖 audio 模型路径\n"
+-        "  --tts <path>             覆盖 TTS 模型路径\n"
+-        "  --projector <path>       覆盖 projector 模型路径\n"
+-        "  --ref-audio <path>       参考音频路径 (voice clone)\n"
+-        "  -c, --ctx-size <n>       上下文大小 (默认 4096)\n"
+-        "  -ngl <n>                 GPU 层数 (默认 99)\n"
+-        "  --no-tts                 禁用 TTS\n"
+-        "  --vision-backend <mode>  Vision 后端: 'metal'(默认) 或 'coreml'\n"
+-        "  --vision-coreml <path>   CoreML 模型路径 (backend=coreml 时需要)\n"
+-        "  -h, --help               显示帮助\n\n"
+-        "Example:\n"
+-        "  %s -m /path/to/MiniCPM-o-4_5-gguf/MiniCPM-o-4_5-Q4_K_M.gguf \\\n"
+-        "     --test tools/omni/assets/test_case/omni_test_case/omni_test_case_ 9\n",
+-        prog_name, prog_name
+-    );
++// Each invocation is exactly one case in a fresh context/process.
++static bool run_omni_test(omni_context * ctx, const std::string & prefix,
++                          int count, const std::string & prompt) {
++    ctx->async = false;
++    ctx->pilot.enabled = true;
++    ctx->pilot.expected_chunks = count;
++    ctx->pilot.response_limit = ctx->params->n_predict;
++    if (!stream_prefill(ctx, "", "", 0, -1, "")) return false;
++    for (int chunk = 0; chunk < count; ++chunk) {
++        char number[16];
++        snprintf(number, sizeof(number), "%04d", chunk);
++        const std::string audio = prefix + number + ".wav";
++        const std::string image = prefix + number + ".jpg";
++        if (!file_exists(audio) || !file_exists(image)) {
++            ctx->pilot.failed = true;
++            ctx->pilot.error = "missing_audio_or_image";
++            ctx->pilot.chunks[chunk].error = ctx->pilot.error;
++            return false;
++        }
++        // Literal neutral text is the SIXTH argument, on the last user chunk.
++        if (!stream_prefill(ctx, audio, image, chunk+1, -1,
++                            chunk+1 == count ? prompt : "")) return false;
++    }
++    return stream_decode(ctx, "./", 0);
++}
++
++static void print_count(const char * modality, const OmniPilotCount & c) {
++    fprintf(stderr, "\"%s\":{\"expected\":%d,\"decoded\":%d,\"encoder_ok\":%d,"
++                    "\"delivered\":%d,\"accepted\":%d,\"decoded_samples\":%lld,"
++                    "\"encoded_positions\":%lld,\"accepted_positions\":%lld}",
++            modality,c.expected,c.decoded,c.encoder_ok,c.delivered,c.accepted,
++            (long long)c.decoded_samples,(long long)c.encoded_positions,(long long)c.accepted_positions);
++}
++
++static void print_audit(const omni_context * ctx) {
++    for (size_t i=0;i<ctx->pilot.chunks.size();++i) {
++        const auto & c=ctx->pilot.chunks[i];
++        fprintf(stderr,"PILOT_CHUNK {\"chunk\":%zu,",i);
++        print_count("audio",c.audio); fprintf(stderr,",");
++        print_count("image",c.image); fprintf(stderr,",");
++        print_count("text",c.text);
++        fprintf(stderr,",\"error\":\"%s\"}\n",c.error.c_str());
++    }
++    fprintf(stderr,"PILOT_RESULT {\"complete\":%s,\"error\":\"%s\","
++                   "\"n_past\":%d,\"response_sampled\":%d,\"response_accepted\":%d}\n",
++            ctx->pilot.complete?"true":"false",ctx->pilot.error.c_str(),ctx->n_past,
++            ctx->pilot.response_sampled,ctx->pilot.response_accepted);
++}
++
++static int positive_int(const char * value) {
++    char * end=nullptr;
++    long n=std::strtol(value,&end,10);
++    return end && *value && *end=='\0' && n>0 && n<=1000000 ? (int)n : -1;
++}
++
++static void show_usage(const char * name) {
++    printf("%s -m LLM --vision VISION --audio AUDIO --test PREFIX COUNT -c CONTEXT --response-tokens N --prompt TEXT\n",name);
++    printf("CPU/no-TTS only; one fresh process per case; no implicit context size.\n");
+ }
+ 
+ int main(int argc, char ** argv) {
+@@ -197,19 +169,25 @@
+     std::string audio_path_override;
+     std::string tts_path_override;
+     std::string projector_path_override;
+-    std::string vision_backend = "metal";
++    std::string vision_backend = "cpu";
+     std::string vision_coreml_model_path;
+-    std::string ref_audio_path = "tools/omni/assets/default_ref_audio/default_ref_audio.wav";
+-    int n_ctx = 4096;
+-    int n_gpu_layers = 99;
+-    bool use_tts = true;
++    std::string ref_audio_path;
++    int n_ctx = 0; // explicit, reviewed context; never assume 1024
++    int response_tokens = 0;
++    std::string prompt;
++    int n_gpu_layers = 0;
++    bool use_tts = false;
+     std::string test_audio_prefix;
+     int test_count = 0;
+ 
+     for (int i = 1; i < argc; i++) {
+         std::string arg = argv[i];
+ 
+-        if (arg == "-h" || arg == "--help") {
++        if (arg == "--prompt" && i+1<argc) {
++            prompt=argv[++i];
++        } else if (arg == "--response-tokens" && i+1<argc) {
++            response_tokens=positive_int(argv[++i]);
++        } else if (arg == "-h" || arg == "--help") {
+             show_usage(argv[0]);
+             return 0;
+         } else if (arg == "-m" && i + 1 < argc) {
+@@ -225,22 +203,22 @@
+         } else if (arg == "--ref-audio" && i + 1 < argc) {
+             ref_audio_path = argv[++i];
+         } else if ((arg == "-c" || arg == "--ctx-size") && i + 1 < argc) {
+-            n_ctx = std::atoi(argv[++i]);
++            n_ctx = positive_int(argv[++i]);
+         } else if (arg == "-ngl" && i + 1 < argc) {
+             n_gpu_layers = std::atoi(argv[++i]);
+         } else if (arg == "--no-tts") {
+             use_tts = false;
+         } else if (arg == "--vision-backend" && i + 1 < argc) {
+             vision_backend = argv[++i];
+-            if (vision_backend != "metal" && vision_backend != "coreml") {
+-                fprintf(stderr, "Error: --vision-backend must be 'metal' or 'coreml', got '%s'\n", vision_backend.c_str());
++            if (vision_backend != "cpu") {
++                fprintf(stderr, "Error: --vision-backend must be 'cpu', got '%s'\n", vision_backend.c_str());
+                 return 1;
+             }
+         } else if (arg == "--vision-coreml" && i + 1 < argc) {
+             vision_coreml_model_path = argv[++i];
+         } else if (arg == "--test" && i + 2 < argc) {
+             test_audio_prefix = argv[++i];
+-            test_count = std::atoi(argv[++i]);
++            test_count = positive_int(argv[++i]);
+         } else {
+             fprintf(stderr, "Unknown argument: %s\n", arg.c_str());
+             show_usage(argv[0]);
+@@ -259,6 +237,18 @@
+         return 1;
+     }
+ 
++    if (n_ctx<=0 || response_tokens<=0 || response_tokens>=n_ctx || prompt.empty()
++            || n_gpu_layers!=0 || !ref_audio_path.empty() || vision_backend!="cpu") {
++        fprintf(stderr,"Pilot requires explicit -c, --response-tokens, --prompt; CPU/no-TTS/no-reference only\n");
++        return 2;
++    }
++    // Reject all missing pairs before loading any model. No silent skipping.
++    for (int i=0;i<test_count;++i) {
++        char number[16]; snprintf(number,sizeof(number),"%04d",i);
++        if (!file_exists(test_audio_prefix+number+".wav") || !file_exists(test_audio_prefix+number+".jpg")) {
++            fprintf(stderr,"PILOT_ERROR chunk=%d missing_audio_or_image\n",i); return 2;
++        }
++    }
+     OmniModelPaths paths = resolve_model_paths(llm_path);
+     if (!vision_path_override.empty())    paths.vision    = vision_path_override;
+     if (!audio_path_override.empty())     paths.audio     = audio_path_override;
+@@ -295,10 +285,24 @@
+         params.vision_coreml_model_path = vision_coreml_model_path;
+     }
+     params.n_ctx        = n_ctx;
++    params.n_predict = response_tokens;
++    params.cpuparams.n_threads = 2;
++    params.cpuparams_batch.n_threads = 2;
++    params.n_batch = std::min(128, n_ctx);
+     params.n_gpu_layers = n_gpu_layers;
+ 
+     std::string tts_bin_dir = get_parent_dir(paths.tts);
+ 
++    // Fixed policy for every case, before any model/sampler initialization.
++    params.sampling.seed = 20261106;
++    params.sampling.temp = 0.0f;
++    params.sampling.dynatemp_range = 0.0f;
++    params.sampling.mirostat = 0;
++    params.sampling.samplers = { COMMON_SAMPLER_TYPE_TEMPERATURE };
++    params.sampling.penalty_repeat = 1.0f;
++    params.sampling.penalty_freq = params.sampling.penalty_present = 0.0f;
++    params.sampling.ignore_eos = false;
++    fprintf(stderr,"PILOT_SAMPLER {\"seed\":20261106,\"temperature\":0,\"policy\":\"temperature_zero_then_dist_fixed_seed\",\"filters\":\"none\",\"eos\":true}\n");
+     common_init();
+ 
+     printf("=== Initializing Omni Context (audio+vision) ===\n");
+@@ -313,18 +317,24 @@
+     printf("  Ref audio:     %s\n", ref_audio_path.c_str());
+ 
+     // media_type=2 表示 omni 模式（audio + vision）
+-    auto ctx_omni = omni_init(&params, /*media_type=*/2, use_tts, tts_bin_dir, -1, "gpu:0");
++    auto ctx_omni = omni_init(&params, /*media_type=*/2, false, tts_bin_dir, 0, "cpu", false, nullptr, nullptr, "./runtime-output");
+     if (ctx_omni == nullptr) {
+         fprintf(stderr, "Error: Failed to initialize omni context\n");
+         return 1;
+     }
+-    ctx_omni->async = true;
++    ctx_omni->async = false;
+     ctx_omni->ref_audio_path = ref_audio_path;
+ 
+     printf("=== Running omni (audio+vision) singleplex test ===\n");
+     printf("  Prefix: %s\n", test_audio_prefix.c_str());
+     printf("  Count:  %d\n", test_count);
+-    run_omni_test(ctx_omni, test_audio_prefix, test_count);
++    bool pilot_ok = false;
++    try { pilot_ok = run_omni_test(ctx_omni, test_audio_prefix, test_count, prompt); }
++    catch (const std::exception & e) {
++        fprintf(stderr,"PILOT_ERROR exception: %s\n",e.what());
++        ctx_omni->pilot.failed=true; ctx_omni->pilot.error="runtime_exception";
++    }
++    print_audit(ctx_omni);
+ 
+     if (ctx_omni->async && ctx_omni->use_tts) {
+         std::string done_flag = std::string(ctx_omni->base_output_dir) + "/round_000/tts_wav/generation_done.flag";
+@@ -349,5 +359,5 @@
+ 
+     llama_perf_context_print(ctx_omni->ctx_llama);
+     omni_free(ctx_omni);
+-    return 0;
+-}
++    return pilot_ok ? 0 : 1;
++}
+diff --git a/tools/omni/pilot-state.h b/tools/omni/pilot-state.h
+--- /dev/null
++++ b/tools/omni/pilot-state.h
+@@ -0,0 +1,45 @@
++#pragma once
++
++// Opt-in audit state. Only the isolated singleplex pilot enables this.
++struct OmniPilotCount {
++    int expected = 0;
++    int decoded = 0;
++    int encoder_ok = 0;
++    int delivered = 0;
++    int accepted = 0;
++    int64_t decoded_samples = 0;
++    int64_t encoded_positions = 0;
++    int64_t accepted_positions = 0;
++};
++
++struct OmniPilotChunk {
++    OmniPilotCount audio, image, text;
++    std::string error;
++};
++
++struct OmniPilotSegment {
++    std::string modality;
++    int chunk = -1;
++    std::vector<llama_token> tokens;
++    std::vector<float> embedding;
++    int positions = 0;
++};
++
++struct OmniPilotState {
++    bool enabled = false;
++    bool initialized = false;
++    bool failed = false;
++    bool committed = false;
++    bool complete = false;
++    int expected_chunks = 0;
++    int staged_chunks = 0;
++    int response_limit = 0;
++    int response_sampled = 0;
++    int response_accepted = 0;
++    int64_t input_positions = 0;
++    int64_t prompt_positions = 0;
++    int64_t reserved_positions = 0;
++    std::string error;
++    std::vector<OmniPilotChunk> chunks;
++    std::vector<OmniPilotSegment> segments;
++};
+diff --git a/tools/omni/pilot-sync.inc b/tools/omni/pilot-sync.inc
+--- /dev/null
++++ b/tools/omni/pilot-sync.inc
+@@ -0,0 +1,212 @@
++// Included in omni.cpp, immediately before stream_prefill. No external API or
++// installer; calls the pinned local decoders, encoders and injection functions.
++// One fresh context/process per case, simplex CPU/no-TTS; no VAD.
++static bool pilot_fail(omni_context * ctx, int chunk, const char * reason) {
++    auto & p = ctx->pilot;
++    p.failed = true;
++    p.error = reason;
++    if (chunk >= 0 && chunk < (int)p.chunks.size()) p.chunks[chunk].error = reason;
++    fprintf(stderr, "PILOT_ERROR {\"chunk\":%d,\"error\":\"%s\",\"n_past\":%d}\n",
++            chunk, reason, ctx->n_past);
++    return false;
++}
++
++static void pilot_text(omni_context * ctx, const std::string & text, int chunk,
++                       bool special, const std::string & modality = "control") {
++    OmniPilotSegment segment;
++    segment.modality = modality;
++    segment.chunk = chunk;
++    segment.tokens = common_tokenize(ctx->ctx_llama, text, false, special);
++    segment.positions = (int)segment.tokens.size();
++    ctx->pilot.prompt_positions += segment.positions;
++    ctx->pilot.segments.push_back(std::move(segment));
++}
++
++// Strict WAV metadata validation BEFORE the upstream resampling/preprocessor.
++// Only PCM16 or IEEE float32 RIFF/WAVE, mono 16 kHz, exactly 16000 frames.
++static bool pilot_wav_one_second(const std::vector<uint8_t> & b) {
++    auto u16 = [&](size_t i) -> uint32_t { return uint32_t(b[i]) | (uint32_t(b[i+1])<<8); };
++    auto u32 = [&](size_t i) -> uint32_t { return u16(i) | (u16(i+2)<<16); };
++    if (b.size()<12 || std::memcmp(b.data(),"RIFF",4) || std::memcmp(b.data()+8,"WAVE",4)
++            || uint64_t(u32(4))+8 != b.size()) return false;
++    bool fmt=false, data=false; uint32_t align=0; uint32_t data_bytes=0;
++    for (size_t off=12; off<b.size();) {
++        if (b.size()-off<8) return false;
++        const uint32_t n=u32(off+4); const size_t begin=off+8;
++        if (uint64_t(begin)+n+(n&1)>b.size()) return false;
++        if (!std::memcmp(b.data()+off,"fmt ",4)) {
++            if (fmt || n<16) return false;
++            const uint32_t type=u16(begin), channels=u16(begin+2), rate=u32(begin+4);
++            const uint32_t bytes_sec=u32(begin+8), bits=u16(begin+14);
++            align=u16(begin+12);
++            if (channels!=1 || rate!=16000 || !((type==1 && bits==16)||(type==3 && bits==32))
++                    || align!=bits/8 || bytes_sec!=rate*align) return false;
++            fmt=true;
++        } else if (!std::memcmp(b.data()+off,"data",4)) {
++            if (data) return false;
++            data=true;data_bytes=n;
++        }
++        off=begin+n+(n&1);
++    }
++    return fmt && data && align>0 && data_bytes==16000*align;
++}
++
++static bool pilot_sync_prefill(omni_context * ctx, const std::string & audio_path,
++                               const std::string & image_path, int index,
++                               int max_slices, const std::string & text) {
++    auto & p = ctx->pilot;
++    if (p.failed) return false;
++    if (ctx->async || ctx->duplex_mode || ctx->use_tts || p.committed || p.complete)
++        return pilot_fail(ctx, -1, "unsupported_mode_or_reused_context");
++    if (index == 0) {
++        if (p.initialized || ctx->n_past != 0 || !audio_path.empty() || !image_path.empty() || !text.empty()
++                || p.expected_chunks <= 0 || p.response_limit <= 0)
++            return pilot_fail(ctx, -1, "invalid_init_or_dirty_context");
++        p.chunks.resize(p.expected_chunks);
++        for (auto & c : p.chunks) { c.audio.expected = 1; c.image.expected = 1; }
++        p.chunks.back().text.expected = 1;
++        // Tokenize and STAGE only. No KV insertion until ALL signal is encoded
++        // and signal+literal prompt+control tokens+response budget is known.
++        pilot_text(ctx, "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n<|im_start|>user\n", -1, true);
++        p.initialized = true;
++        ctx->system_prompt_initialized = true;
++        return true;
++    }
++    const int chunk = index - 1;
++    if (!p.initialized || chunk != p.staged_chunks || chunk >= p.expected_chunks
++            || audio_path.empty() || image_path.empty() || !ctx->ctx_audio || !ctx->ctx_vision)
++        return pilot_fail(ctx, chunk, "missing_pair_or_out_of_order");
++    const int hidden = llama_n_embd(llama_get_model(ctx->ctx_llama));
++    if (hidden <= 0) return pilot_fail(ctx, chunk, "invalid_hidden_size");
++    if (vision_n_mmproj_embd(ctx->ctx_vision) != hidden)
++        return pilot_fail(ctx, chunk, "vision_projector_dimension_mismatch");
++    auto & audit = p.chunks[chunk];
++    // A path delivered to a decoder is NOT decoded/encoded/accepted work.
++    audit.image.delivered = 1;
++    std::vector<uint8_t> image_bytes;
++    if (!audition_read_binary_file(image_path.c_str(), &image_bytes))
++        return pilot_fail(ctx, chunk, "image_read_failed");
++    std::unique_ptr<vision_image_u8, decltype(&vision_image_u8_free)> image(
++        vision_image_u8_init(), vision_image_u8_free);
++    if (!vision_image_load_from_bytes(image_bytes.data(), image_bytes.size(), image.get()))
++        return pilot_fail(ctx, chunk, "image_decode_failed");
++    audit.image.decoded = 1;
++    if (max_slices >= 1) vision_set_max_slice_nums(ctx->ctx_vision, max_slices);
++    std::vector<std::vector<float>> vision_chunks;
++    if (!encode_image_with_vision_chunks(ctx->ctx_vision, 2, image.get(), vision_chunks)
++            || vision_chunks.empty())
++        return pilot_fail(ctx, chunk, "vision_encoder_failed");
++    audit.image.encoder_ok = 1;
++    pilot_text(ctx, "<unit><image>", chunk, true);
++    for (size_t i = 0; i < vision_chunks.size(); ++i) {
++        if (vision_chunks[i].empty() || vision_chunks[i].size() % hidden != 0)
++            return pilot_fail(ctx, chunk, "vision_embedding_shape");
++        if (i > 0) pilot_text(ctx, "<slice>", chunk, true);
++        OmniPilotSegment segment;
++        segment.modality = "image"; segment.chunk = chunk;
++        segment.positions = (int)(vision_chunks[i].size() / hidden);
++        segment.embedding = std::move(vision_chunks[i]);
++        audit.image.encoded_positions += segment.positions;
++        p.segments.push_back(std::move(segment));
++        pilot_text(ctx, i == 0 ? "</image>" : "</slice>", chunk, true);
++    }
++    if (vision_chunks.size() > 1) pilot_text(ctx, "\n", chunk, true);
++
++    audit.audio.delivered = 1;
++    std::unique_ptr<audition_audio_u8, decltype(&audition_audio_u8_free)> audio(
++        audition_audio_u8_init(), audition_audio_u8_free);
++    if (!audition_read_binary_file(audio_path.c_str(), &audio->buf))
++        return pilot_fail(ctx, chunk, "audio_read_failed");
++    if (!pilot_wav_one_second(audio->buf))
++        return pilot_fail(ctx, chunk, "wav_requires_exact_1s_mono_16khz_pcm16_or_float32");
++    audition_audio_f32 * mel_raw = nullptr; // preprocess allocates the returned object
++    const bool preprocessed = audition_audio_preprocess(ctx->ctx_audio, audio.get(), &mel_raw,
++                                                       &audit.audio.decoded_samples);
++    std::unique_ptr<audition_audio_f32, decltype(&audition_audio_f32_free)> mel(
++        mel_raw, audition_audio_f32_free);
++    audit.audio.decoded = preprocessed && audit.audio.decoded_samples == 16000 ? 1 : 0;
++    if (!preprocessed || !audit.audio.decoded)
++        return pilot_fail(ctx, chunk, "audio_decode_or_preprocess_failed");
++    // Upstream pads to 100 ms. Reject rather than silently change the signal.
++    if (audit.audio.decoded_samples < 1600 || audit.audio.decoded_samples % 1600 != 0)
++        return pilot_fail(ctx, chunk, "undeclared_audio_padding");
++    if (audition_n_mmproj_embd(ctx->ctx_audio) != hidden)
++        return pilot_fail(ctx, chunk, "audio_embedding_shape");
++    OmniPilotSegment segment;
++    segment.modality = "audio"; segment.chunk = chunk;
++    segment.positions = audition_n_output_tokens(ctx->ctx_audio, mel.get());
++    if (segment.positions <= 0) return pilot_fail(ctx, chunk, "empty_audio_embedding");
++    segment.embedding.resize((size_t)hidden * segment.positions);
++    if (!audition_audio_encode(ctx->ctx_audio, 2, mel.get(), segment.embedding.data()))
++        return pilot_fail(ctx, chunk, "audio_encoder_failed");
++    audit.audio.encoder_ok = 1;
++    audit.audio.encoded_positions = segment.positions;
++    pilot_text(ctx, "<|audio_start|>", chunk, true);
++    p.segments.push_back(std::move(segment));
++    pilot_text(ctx, "<|audio_end|>", chunk, true);
++    if (!text.empty()) {
++        audit.text.expected = audit.text.delivered = 1;
++        pilot_text(ctx, text, chunk, false, "text"); // literal, real tokenizer
++        audit.text.encoded_positions = p.segments.back().positions;
++        if (!audit.text.encoded_positions) return pilot_fail(ctx, chunk, "empty_text_tokens");
++    }
++    ++p.staged_chunks;
++    return true;
++}
++
++static bool pilot_sync_decode(omni_context * ctx) {
++    auto & p = ctx->pilot;
++    if (p.failed) return false;
++    if (!p.initialized || p.committed || p.complete || p.staged_chunks != p.expected_chunks
++            || ctx->n_past != 0 || ctx->async || ctx->duplex_mode || ctx->use_tts)
++        return pilot_fail(ctx, -1, "incomplete_or_dirty_case");
++    pilot_text(ctx, "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n", -1, true);
++    for (const auto & segment : p.segments) p.input_positions += segment.positions;
++    p.reserved_positions = p.input_positions + p.response_limit;
++    const int64_t effective_ctx = std::min<int64_t>(ctx->params->n_ctx, llama_n_ctx(ctx->ctx_llama));
++    fprintf(stderr, "PILOT_BUDGET {\"input_positions\":%lld,\"text_and_control_positions\":%lld,\"response_reserve\":%d,\"total\":%lld,\"effective_context\":%lld}\n",
++            (long long)p.input_positions, (long long)p.prompt_positions, p.response_limit,
++            (long long)p.reserved_positions, (long long)effective_ctx);
++    // Strictly below: the pinned cache helper would slide at >= n_ctx.
++    if (p.reserved_positions >= effective_ctx)
++        return pilot_fail(ctx, -1, "insufficient_context_before_any_insertion");
++    p.committed = true;
++    for (auto & segment : p.segments) {
++        const int before = ctx->n_past;
++        bool ok = segment.embedding.empty()
++            ? eval_tokens(ctx, ctx->params, segment.tokens, ctx->params->n_batch, &ctx->n_past)
++            : prefill_with_emb(ctx, ctx->params, segment.embedding.data(), segment.positions,
++                               ctx->params->n_batch, &ctx->n_past);
++        if (segment.chunk >= 0 && segment.modality != "control") {
++            auto & c = p.chunks[segment.chunk];
++            auto & count = segment.modality == "image" ? c.image : segment.modality == "audio" ? c.audio : c.text;
++            count.accepted_positions += ctx->n_past - before; // successful batches only
++            count.accepted = count.encoded_positions > 0 && count.accepted_positions == count.encoded_positions
++                             && (segment.modality == "text" || count.encoder_ok);
++        }
++        if (!ok || ctx->n_past - before != segment.positions)
++            return pilot_fail(ctx, segment.chunk, "embedding_or_token_insertion_failed");
++    }
++    for (auto & c : p.chunks) {
++        c.image.accepted = c.image.encoder_ok && c.image.accepted_positions == c.image.encoded_positions;
++        c.audio.accepted = c.audio.encoder_ok && c.audio.accepted_positions == c.audio.encoded_positions;
++        c.text.accepted = c.text.expected && c.text.accepted_positions == c.text.encoded_positions;
++    }
++    p.segments.clear(); // free staged media vectors before autoregressive response
++    for (int i = 0; i < p.response_limit; ++i) {
++        const llama_token token = common_sampler_sample(ctx->ctx_sampler, ctx->ctx_llama, -1);
++        ++p.response_sampled;
++        if (is_end_token(ctx, token)) {
++            p.complete = true;
++            return true;
++        }
++        const int before = ctx->n_past;
++        if (!eval_tokens(ctx, ctx->params, std::vector<llama_token>{token}, 1, &ctx->n_past)
++                || ctx->n_past != before + 1)
++            return pilot_fail(ctx, -1, "response_insertion_failed");
++        common_sampler_accept(ctx->ctx_sampler, token, true);
++        ++p.response_accepted;
++        std::cout << common_token_to_piece(ctx->ctx_llama, token) << std::flush;
++    }
++    return pilot_fail(ctx, -1, "response_budget_exhausted_no_eos");
++}

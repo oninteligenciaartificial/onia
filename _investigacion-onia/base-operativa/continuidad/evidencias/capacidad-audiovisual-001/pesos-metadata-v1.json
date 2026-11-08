@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "tipo": "metadata_oficial_sin_descarga",
+  "revisado_por": "/root/auditoria_contrato_av",
+  "recibido_por": "/root",
+  "endpoint": "https://huggingface.co/api/models/openbmb/MiniCPM-o-4_5-gguf/paths-info/db25077c33951fe163b42986fba0132e279872a2",
+  "metodo": "POST",
+  "revision": "db25077c33951fe163b42986fba0132e279872a2",
+  "hora_utc_observada": null,
+  "nota_hora": "La consulta original no registró timestamp UTC; no se reconstruyó.",
+  "referencia": {
+    "herramienta": "exec_command",
+    "chunk_id": "5f4714",
+    "exit_code": 0,
+    "descripcion": "Python estándar: POST limitado a tres paths y tres HEAD sin seguir redirecciones."
+  },
+  "archivos": [
+    {
+      "path": "MiniCPM-o-4_5-Q4_K_M.gguf",
+      "size": 5026714400,
+      "lfs": {
+        "oid": "1237a97ee081b8abebc47aa7dad565701e8f5f904cdc92f6723ac4281bbc0932",
+        "size": 5026714400
+      },
+      "resolve_url": "https://huggingface.co/openbmb/MiniCPM-o-4_5-gguf/resolve/db25077c33951fe163b42986fba0132e279872a2/MiniCPM-o-4_5-Q4_K_M.gguf",
+      "head": {
+        "status": 302,
+        "X-Repo-Commit": "db25077c33951fe163b42986fba0132e279872a2",
+        "X-Linked-Size": "5026714400",
+        "X-Linked-Etag": "\"1237a97ee081b8abebc47aa7dad565701e8f5f904cdc92f6723ac4281bbc0932\"",
+        "ETag": null
+      }
+    },
+    {
+      "path": "audio/MiniCPM-o-4_5-audio-F16.gguf",
+      "size": 660167904,
+      "lfs": {
+        "oid": "d5b188ac7feaf98e17175c3f9bd14bf269301bfd187439fdaa3e3a494fc32ef7",
+        "size": 660167904
+      },
+      "resolve_url": "https://huggingface.co/openbmb/MiniCPM-o-4_5-gguf/resolve/db25077c33951fe163b42986fba0132e279872a2/audio/MiniCPM-o-4_5-audio-F16.gguf",
+      "head": {
+        "status": 302,
+        "X-Repo-Commit": "db25077c33951fe163b42986fba0132e279872a2",
+        "X-Linked-Size": "660167904",
+        "X-Linked-Etag": "\"d5b188ac7feaf98e17175c3f9bd14bf269301bfd187439fdaa3e3a494fc32ef7\"",
+        "ETag": null
+      }
+    },
+    {
+      "path": "vision/MiniCPM-o-4_5-vision-F16.gguf",
+      "size": 1095113184,
+      "lfs": {
+        "oid": "1453678cc4e4fe18de241952962e234f265cb8dda780773526103ab8ba82f421",
+        "size": 1095113184
+      },
+      "resolve_url": "https://huggingface.co/openbmb/MiniCPM-o-4_5-gguf/resolve/db25077c33951fe163b42986fba0132e279872a2/vision/MiniCPM-o-4_5-vision-F16.gguf",
+      "head": {
+        "status": 302,
+        "X-Repo-Commit": "db25077c33951fe163b42986fba0132e279872a2",
+        "X-Linked-Size": "1095113184",
+        "X-Linked-Etag": "\"1453678cc4e4fe18de241952962e234f265cb8dda780773526103ab8ba82f421\"",
+        "ETag": null
+      }
+    }
+  ],
+  "interpretacion": "SHA256 esperado de metadata LFS, no hash de descarga local. X-Linked-Etag coincide; oid Git y xetHash no lo sustituyen.",
+  "pesos_descargados": false,
+  "errores": [
+    "Acceso inicial web al endpoint general falló; POST directo y tres HEAD funcionaron."
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "RSS_CPU_are_sampled_not_exact": true,
+  "entries": [
+    {
+      "case": "aidan0",
+      "wall_seconds": 30.765987446997315,
+      "sampled_CPU_seconds": 30.29,
+      "sampled_RSS_bytes": 1251983360,
+      "sampled_OS_threads": 3,
+      "policy": {
+        "AS_virtual_bytes_per_process": 3221225472,
+        "CPU_seconds_per_process": 120,
+        "wall_seconds": 120,
+        "affinity": [
+          0
+        ],
+        "workers": 1,
+        "batch": 1,
+        "reserve_bytes": 6442450944,
+        "swap_added": false,
+        "log_bytes": 262144,
+        "output_cut_bytes": 1048576
+      },
+      "exit": 0,
+      "reserve_before": 30239334400,
+      "reserve_last": 30059077632,
+      "cleanup_live": [],
+      "cleanup_zombies": [],
+      "parent_restored": true,
+      "parent_SIGTERM_restored": true
+    },
+    {
+      "case": "aidan1",
+      "wall_seconds": 13.85812089799947,
+      "sampled_CPU_seconds": 13.7,
+      "sampled_RSS_bytes": 1152040960,
+      "sampled_OS_threads": 3,
+      "policy": {
+        "AS_virtual_bytes_per_process": 3221225472,
+        "CPU_seconds_per_process": 120,
+        "wall_seconds": 120,
+        "affinity": [
+          0
+        ],
+        "workers": 1,
+        "batch": 1,
+        "reserve_bytes": 6442450944,
+        "swap_added": false,
+        "log_bytes": 262144,
+        "output_cut_bytes": 1048576
+      },
+      "exit": 0,
+      "reserve_before": 30059077632,
+      "reserve_last": 30066524160,
+      "cleanup_live": [],
+      "cleanup_zombies": [],
+      "parent_restored": true,
+      "parent_SIGTERM_restored": true
+    },
+    {
+      "case": "aidan2",
+      "wall_seconds": 14.164005323997117,
+      "sampled_CPU_seconds": 13.98,
+      "sampled_RSS_bytes": 1146507264,
+      "sampled_OS_threads": 5,
+      "policy": {
+        "AS_virtual_bytes_per_process": 3221225472,
+        "CPU_seconds_per_process": 120,
+        "wall_seconds": 120,
+        "affinity": [
+          0
+        ],
+        "workers": 1,
+        "batch": 1,
+        "reserve_bytes": 6442450944,
+        "swap_added": false,
+        "log_bytes": 262144,
+        "output_cut_bytes": 1048576
+      },
+      "exit": 0,
+      "reserve_before": 30066524160,
+      "reserve_last": 30065537024,
+      "cleanup_live": [],
+      "cleanup_zombies": [],
+      "parent_restored": true,
+      "parent_SIGTERM_restored": true
+    },
+    {
+      "case": "aidan3",
+      "wall_seconds": 12.988073170999996,
+      "sampled_CPU_seconds": 12.88,
+      "sampled_RSS_bytes": 1152012288,
+      "sampled_OS_threads": 1,
+      "policy": {
+        "AS_virtual_bytes_per_process": 3221225472,
+        "CPU_seconds_per_process": 120,
+        "wall_seconds": 120,
+        "affinity": [
+          0
+        ],
+        "workers": 1,
+        "batch": 1,
+        "reserve_bytes": 6442450944,
+        "swap_added": false,
+        "log_bytes": 262144,
+        "output_cut_bytes": 1048576
+      },
+      "exit": 0,
+      "reserve_before": 30065537024,
+      "reserve_last": 30065569792,
+      "cleanup_live": [],
+      "cleanup_zombies": [],
+      "parent_restored": true,
+      "parent_SIGTERM_restored": true
+    }
+  ]
+}

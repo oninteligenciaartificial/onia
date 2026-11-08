@@ -1,0 +1,176 @@
+{
+  "opaque_id": "2b799ab7-9d97-49ea-a7ae-7e192785e83e",
+  "prefix": "/workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_",
+  "chunks": 2,
+  "total_duration_declared_seconds": 2,
+  "frames_represent_their_chunks": true,
+  "files": [
+    {
+      "chunk": 0,
+      "modality": "image",
+      "path": "/workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0000.jpg",
+      "bytes": 788,
+      "sha256": "cdcc1af597bcc4a90c2c678665f9fd2567798e541265cdeccb61257c99607774",
+      "pts_declared_seconds": 0,
+      "duration_declared_seconds": 1,
+      "interval_declared": [
+        0,
+        1
+      ],
+      "verification": {
+        "width": 224,
+        "height": 224
+      }
+    },
+    {
+      "chunk": 0,
+      "modality": "audio",
+      "path": "/workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0000.wav",
+      "bytes": 32044,
+      "sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+      "pts_declared_seconds": 0,
+      "duration_declared_seconds": 1,
+      "interval_declared": [
+        0,
+        1
+      ],
+      "verification": {
+        "pcm": "s16le",
+        "channels": 1,
+        "rate": 16000,
+        "samples": 16000,
+        "all_zero": true
+      }
+    },
+    {
+      "chunk": 1,
+      "modality": "image",
+      "path": "/workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0001.jpg",
+      "bytes": 788,
+      "sha256": "cdcc1af597bcc4a90c2c678665f9fd2567798e541265cdeccb61257c99607774",
+      "pts_declared_seconds": 1,
+      "duration_declared_seconds": 1,
+      "interval_declared": [
+        1,
+        2
+      ],
+      "verification": {
+        "width": 224,
+        "height": 224
+      }
+    },
+    {
+      "chunk": 1,
+      "modality": "audio",
+      "path": "/workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0001.wav",
+      "bytes": 32044,
+      "sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+      "pts_declared_seconds": 1,
+      "duration_declared_seconds": 1,
+      "interval_declared": [
+        1,
+        2
+      ],
+      "verification": {
+        "pcm": "s16le",
+        "channels": 1,
+        "rate": 16000,
+        "samples": 16000,
+        "all_zero": true
+      }
+    }
+  ],
+  "generator_commands": [
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-filter_threads",
+      "2",
+      "-f",
+      "rawvideo",
+      "-pixel_format",
+      "rgb24",
+      "-video_size",
+      "224x224",
+      "-framerate",
+      "1",
+      "-i",
+      "pipe:0",
+      "-frames:v",
+      "1",
+      "-c:v",
+      "mjpeg",
+      "-pix_fmt",
+      "yuvj444p",
+      "-threads",
+      "2",
+      "/workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0000.jpg"
+    ],
+    [
+      "ffprobe",
+      "-v",
+      "error",
+      "-select_streams",
+      "v:0",
+      "-show_entries",
+      "stream=width,height",
+      "-of",
+      "json",
+      "/workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0000.jpg"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-threads",
+      "2",
+      "-i",
+      "/workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0000.jpg",
+      "-frames:v",
+      "1",
+      "-f",
+      "rawvideo",
+      "-pix_fmt",
+      "rgb24",
+      "-threads",
+      "2",
+      "pipe:1"
+    ],
+    [
+      "ffprobe",
+      "-v",
+      "error",
+      "-select_streams",
+      "v:0",
+      "-show_entries",
+      "stream=width,height",
+      "-of",
+      "json",
+      "/workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0001.jpg"
+    ],
+    [
+      "ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-threads",
+      "2",
+      "-i",
+      "/workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0001.jpg",
+      "-frames:v",
+      "1",
+      "-f",
+      "rawvideo",
+      "-pix_fmt",
+      "rgb24",
+      "-threads",
+      "2",
+      "pipe:1"
+    ]
+  ],
+  "decoded_uniform_rgb_value": 128,
+  "timing_scope": "declared stimulus PTS, not measured model temporal precision"
+}

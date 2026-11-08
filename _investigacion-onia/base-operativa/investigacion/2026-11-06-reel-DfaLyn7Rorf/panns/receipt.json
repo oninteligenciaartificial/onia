@@ -1,0 +1,141 @@
+{
+  "reel": "DfaLyn7Rorf",
+  "account": "murphmaxxing",
+  "person": "Aidan Murphy",
+  "public_source": "https://www.instagram.com/reel/DfaLyn7Rorf/",
+  "status": "four_offline_PANNs_entries_complete",
+  "anonymous_supplied_tracks_only": true,
+  "no_extraction_search_install_new_controls_or_model": true,
+  "track_sources_sanitized": [
+    {
+      "format_id": "dash-1688430642890048a",
+      "host": "scontent-lim1-1.cdninstagram.com",
+      "url_without_query_sha256": "f2820ddb28a10c346208ba8ec6b262beaa8ffb9742661cecc6e02f9b151b859f",
+      "bytes": 298614,
+      "complete": true,
+      "http_status": 200,
+      "content_length": "298614",
+      "sha256": "1f6fae9890242c4adc994f6a1100cd4424060a264580fc3d86ad8e6493ab4ad0",
+      "closed_file_hash": true
+    },
+    {
+      "format_id": "dash-1688431096223336v",
+      "host": "scontent-lim1-1.cdninstagram.com",
+      "url_without_query_sha256": "f25e6cad8a91cd874dcade9392aa4125ba2776eafb86a8fb2d34e07cfe566c23",
+      "bytes": 3710957,
+      "complete": true,
+      "http_status": 200,
+      "content_length": "3710957",
+      "sha256": "6909b399a18854c51be29194045cf6caeb18c758a15224d42c499d8025b79137",
+      "closed_file_hash": true
+    }
+  ],
+  "PC_reference": {
+    "bytes": 4019553,
+    "sha256": "b2006a4f36588ed260c148f0bd347552fab0627b24f0ffd6f154635e51cd890d",
+    "video_seconds": 37.533333,
+    "video_frames": 1126,
+    "audio_seconds": 37.545011
+  },
+  "remux": {
+    "bytes": 4019544,
+    "sha256": "94af46ae425441fdf021bac0482be981a7225f2dacfbd713d707b8a39e3d7f74",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "vp9",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920,
+          "r_frame_rate": "30/1",
+          "duration": "37.533333",
+          "nb_read_frames": "1126",
+          "nb_read_packets": "1126"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2,
+          "r_frame_rate": "0/0",
+          "duration": "37.548005",
+          "nb_read_frames": "809",
+          "nb_read_packets": "811"
+        }
+      ],
+      "format": {
+        "duration": "37.548005",
+        "size": "4019544"
+      }
+    },
+    "streamhashes": "0,v,SHA256=dd47543edc46efbf26fe6fdff2e2493323d3fcb689cdc4b4377b30a742f2dba6\n1,a,SHA256=43b8932a8e13ec8aeaa1fb3808d2ac8dece4c4ad4e9d55c4a762166e7b80053a\n",
+    "payloads_match_PC": true,
+    "byte_identical_container": false,
+    "note": "matching ordered compressed payload hashes; timestamps/container metadata equality not claimed"
+  },
+  "coverage": {
+    "samples": 1201539,
+    "rate": 32000,
+    "audio_seconds": 37.54809375,
+    "windows": [
+      [
+        0.0,
+        10.0
+      ],
+      [
+        10.0,
+        20.0
+      ],
+      [
+        20.0,
+        30.0
+      ],
+      [
+        30.0,
+        37.54809375
+      ]
+    ],
+    "padding_added": 0,
+    "VAD": false,
+    "visual_seconds": 0,
+    "scope": "entire decoded audio, no crop; tiny container/PCM duration rounding recorded in manifest"
+  },
+  "results": {
+    "Speech_max": 0.5738525390625,
+    "Music_max": 0.6796256303787231,
+    "Speech_mean_from_9sig_CSV": 0.4046149665728362,
+    "Music_mean_from_9sig_CSV": 0.29944639008007456,
+    "class_curves": 527,
+    "time_grid_seconds": 0.01,
+    "time_grid": "nearest interpolation, not validated boundary precision",
+    "interpretation": "auxiliary candidate scores only; no validated event threshold, emotion, music absence, mixing, ASR words or integral AV claim"
+  },
+  "ASR": {
+    "Cloud": "omitted",
+    "reason": "coordinator confirms PC small CPU+Silero already completed; no Cloud ASR requested or installed",
+    "preexisting_inventory": "faster_whisper absent in primary, system and PANNs venv; metadata/spec checked without importing"
+  },
+  "execution": {
+    "inferences": 4,
+    "inference_retries": 0,
+    "max_entry_wall_seconds": 30.765987446997315,
+    "total_entry_wall_seconds": 71.7761868399939,
+    "max_sampled_RSS_bytes": 1251983360,
+    "RSS_not_exact_peak": true,
+    "transfer_wall_seconds": 6.411997040002461,
+    "all_entry_groups_clean": true,
+    "all_parent_limits_affinity_handlers_restored": true,
+    "kernel_network_block": "verified in each child; no inference downloads"
+  },
+  "checkpoint_sha256": "dd3b4043a87d4ec13df8082c0fcfee3fb5084151808e47e060987a95eabdd142",
+  "CSV_sha256": "cdd1049833c4b86127c2773ac0d14a2754b6a6d0d1798002ed5c66e699708429",
+  "old_Cormac_and_pilot": "unchanged",
+  "ONIA_HEAD": "e55812ce1bc8ef798fb370257ba887d07acccc53",
+  "ONIA_status": "",
+  "configuration_publication": "untouched",
+  "disk_free_at_close": 54607351808
+}

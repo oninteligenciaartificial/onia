@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "tipo": "verificacion_modelo_por_coordinacion",
+  "fecha_observacion_utc": "2026-11-06T23:51:09.1692786Z",
+  "tarea": "capacidad-audiovisual-001",
+  "chat": "01a1b221-dbd1-7b10-aada-a26094e04705",
+  "turno": "01a1b344-dd0d-7502-846c-3139bb9f93e2",
+  "fuente_log": "rollout-2026-11-06T14-32-06-01a1b221-dbd1-7b10-aada-a26094e04705.jsonl",
+  "fecha_turn_context": "2026-11-06T23:49:57.233Z",
+  "solicitado": {
+    "esfuerzo": "medium",
+    "modelo": "gpt-6.1-sol"
+  },
+  "observado": {
+    "esfuerzo": "medium",
+    "modelo": "gpt-6.1-sol"
+  },
+  "resultado": "Cambio efectivo comprobado en un turno nuevo, posterior al cierre del turno largo Astra ultra.",
+  "limites": [
+    "No modifica retrospectivamente el modelo del turno anterior.",
+    "No acredita cambio en los otros chats ni ahorro porcentual.",
+    "Turno de comprobacion terminado sin herramientas ni tareas activas."
+  ]
+}

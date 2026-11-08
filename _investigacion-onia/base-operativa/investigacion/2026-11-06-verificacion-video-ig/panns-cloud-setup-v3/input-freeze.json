@@ -1,0 +1,145 @@
+{
+  "inputs": {
+    "zeros": {
+      "path": "/workspace/onia-av-pilot-20261106/panns-screen-v1/27815ba4dc90461da8c5247ff4ba12f8.wav",
+      "sha256": "2967913f5118171b40d83ead3a6ef429026513d5b29faace80f2a6625ee1088c",
+      "bytes": 128078,
+      "samples": 64000,
+      "rate": 32000,
+      "duration": 2,
+      "source_chunks": [
+        {
+          "path": "/workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0000.wav",
+          "sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc"
+        },
+        {
+          "path": "/workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_0001.wav",
+          "sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc"
+        }
+      ],
+      "command": [
+        "ffmpeg",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-i",
+        "/workspace/onia-av-pilot-20261106/panns-screen-v1/55f9c4807a244e6e992d5412256ca613.wav",
+        "-ar",
+        "32000",
+        "-ac",
+        "1",
+        "-c:a",
+        "pcm_s16le",
+        "-threads",
+        "1",
+        "/workspace/onia-av-pilot-20261106/panns-screen-v1/27815ba4dc90461da8c5247ff4ba12f8.wav"
+      ],
+      "extra_padding": 0,
+      "voice_scope": "two seconds digital zeros"
+    },
+    "voice": {
+      "path": "/workspace/onia-av-pilot-20261106/panns-screen-v1/0dffd074053c46cf99eb76fef58b22af.wav",
+      "sha256": "3638cd5adc47074f77167eb705abea64f04983c81066f7b763f76556b1d8b579",
+      "bytes": 128078,
+      "samples": 64000,
+      "rate": 32000,
+      "duration": 2,
+      "source_chunks": [
+        {
+          "path": "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0000.wav",
+          "sha256": "cdfb48b1b0a7fc4f080a457c3578bce7e9ad34947c7fabafcf4ed832e7f10068"
+        },
+        {
+          "path": "/workspace/onia-av-pilot-20261106/positivo-v1/7155c9e5476e4c5fb5dcecc6e532bbc8/673580a517fb46f595e6ce635c9844ea_0001.wav",
+          "sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc"
+        }
+      ],
+      "command": [
+        "ffmpeg",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-i",
+        "/workspace/onia-av-pilot-20261106/panns-screen-v1/714ee53dedef407eaee46bf99929f773.wav",
+        "-ar",
+        "32000",
+        "-ac",
+        "1",
+        "-c:a",
+        "pcm_s16le",
+        "-threads",
+        "1",
+        "/workspace/onia-av-pilot-20261106/panns-screen-v1/0dffd074053c46cf99eb76fef58b22af.wav"
+      ],
+      "extra_padding": 0,
+      "voice_scope": "complete one two0.8639375s within original1s padded chunk, plus final1s silence"
+    }
+  },
+  "CSV": {
+    "complete": true,
+    "source": "https://storage.googleapis.com/us_audioset/youtube_corpus/v1/csv/class_labels_indices.csv?generation=1488737428851815",
+    "generation": "1488737428851815",
+    "bytes": 14675,
+    "sha256": "cdd1049833c4b86127c2773ac0d14a2754b6a6d0d1798002ed5c66e699708429",
+    "rows": 527,
+    "unique_mids": 527,
+    "columns": [
+      "index",
+      "mid",
+      "display_name"
+    ],
+    "mid_namespaces_observed": [
+      "g",
+      "m",
+      "t"
+    ],
+    "Speech_index": 0,
+    "Music_index": 137,
+    "installed_path": "/workspace/onia-av-pilot-20261106/panns-setup-v3/runtime-home/panns_data/class_labels_indices.csv",
+    "network_requests": 0,
+    "code_or_global_HOME_changed": false,
+    "prior_validation_failures": "overstrict invented namespace assumptions, preserved separately; raw fixed-generation bytes reused without another request"
+  },
+  "checkpoint": {
+    "bytes": 327428481,
+    "MD5": "70539c43c18b6a289b3199c503a82c5a",
+    "sha256": "dd3b4043a87d4ec13df8082c0fcfee3fb5084151808e47e060987a95eabdd142",
+    "source": "Zenodo3987831 version3",
+    "license": "CC BY4.0",
+    "closed_file_hash": true
+  },
+  "params": {
+    "sample_rate": 32000,
+    "window_size": 1024,
+    "hop_size": 320,
+    "mel_bins": 64,
+    "fmin": 50,
+    "fmax": 14000,
+    "classes": 527,
+    "interpolate": "nearest",
+    "CPU": 1,
+    "workers": 1,
+    "batch": 1,
+    "AS_GiB": 3,
+    "CPU_wall_seconds": 120,
+    "reserve_GiB": 6,
+    "VAD": false
+  },
+  "criterion": {
+    "known_controls_not_retained": true,
+    "paired1": "max Speech frame score voice > max Speech frame score zeros",
+    "paired2": "mean Speech on[0,0.8639375) voice > mean Speech on[1,2) final silence",
+    "threshold": null,
+    "scores_not_calibrated_event_probabilities": true,
+    "truth": "generator, not human audition"
+  },
+  "adapter_sha256": "6b61bd8ba7818409bbb9ef2105daa1577b4f3bd41fc5ad6f8201112f89aa304a"
+}

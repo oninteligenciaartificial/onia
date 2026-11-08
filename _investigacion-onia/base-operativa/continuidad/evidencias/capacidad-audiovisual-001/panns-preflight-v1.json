@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "unidad": "panns-preflight-v1",
+  "utc": "2026-11-07T01:24:46.9111339Z",
+  "estado": "detenido_antes_de_instalacion",
+  "hipotesis": "PANNs temporal recupera categorias y orden grueso; no captioning, prosodia ni percepcion integral",
+  "head": "e55812ce1bc8ef798fb370257ba887d07acccc53",
+  "evidencia_observada": {
+    "wsl_mem_total_bytes": 6214492160,
+    "wsl_mem_available_primera_bytes": 5686218752,
+    "wsl_mem_available_segunda_kib": 5548704,
+    "windows_free_physical_kib": 5532460,
+    "reserva_minima_bytes": 6442450944,
+    "wsl_cpus": 4,
+    "wsl_disco_disponible_bytes": 1017183834112,
+    "wsl_python": "torch,torchaudio,librosa,numpy,panns_inference ausentes por find_spec; sin import pesado",
+    "windows_runtime": "operacion/referentes-20261105/audio/midasheng-venv",
+    "windows_dist_info": [
+      "torch-2.15.0+cpu",
+      "torchaudio-2.11.1+cpu",
+      "librosa-1.0.0",
+      "numpy-2.5.4"
+    ],
+    "windows_compatibilidad": "No probada; presencia de dist-info no acredita import ni compatibilidad",
+    "windows_faltantes": [
+      "panns_inference",
+      "torchlibrosa"
+    ],
+    "entradas": "Exportes locales positivo-v2 y negativo conservan recibos/codigo; manifiesto excluye medios/pesos. Controles binarios en VM anterior no comprobados disponibles aqui",
+    "busqueda_limitada": "Venvs WSL /home,/opt,/tmp maxdepth4 y runtimes locales pertinentes; no inventario exhaustivo global"
+  },
+  "artefactos_documentados": {
+    "fuente": "investigacion/2026-11-05-referentes/audiovisual/investigacion-previa-modulos.md",
+    "wheel": "panns_inference-0.1.1-py3-none-any.whl",
+    "wheel_sha256": "97f6b56b6c9467cf00e21f041e1f88933188c65c1b5ca64eeb3c92e37fb27fc2",
+    "licencia_sha256": "ebf680a8816f15b367981f48d461369a9848a29c9ce644c249bbcbaa4831a01f",
+    "aviso_literal": "Copyright (c) 2010-2017 Google, Inc. http://angularjs.org",
+    "licencia_codigo": "MIT publicada, anomalia de titular conservada; no nueva validacion remota",
+    "peso": "Cnn14_DecisionLevelMax_mAP=0.385.pth",
+    "peso_bytes": 327428481,
+    "peso_md5": "70539c43c18b6a289b3199c503a82c5a",
+    "licencia_peso": "CC BY 4.0 segun investigacion previa",
+    "verificacion_binaria_actual": "No descargados ni verificados en esta unidad"
+  },
+  "limites_previstos": {
+    "cpu_max": 2,
+    "cpu_s_por_entrada": 120,
+    "wall_s_por_entrada": 120,
+    "as_bytes": 3221225472,
+    "reserva_host_bytes": 6442450944,
+    "inferencia_sin_red": true,
+    "descargas_implicitas": false
+  },
+  "decision": "No instalar/cargar: WSL y Windows bajo reserva minima. WSL total es inferior incluso a esa reserva. No es fallo de clasificacion ni rechazo del modelo",
+  "ejecucion": {
+    "instalaciones": 0,
+    "descargas": 0,
+    "inferencias": 0,
+    "cambios_produccion": 0,
+    "procesos_pendientes": 0,
+    "ground_truth_congelada": false
+  },
+  "salida_concreta": "Reutilizar VM de laboratorio existente solo tras medir reserva>=6GiB, supervisar AS3GiB/CPU/wall y recuperar/verificar controles conservados; fijar dependencias compatibles y parametros antes de salida. No ampliar WSL ni crear VM/servicio implicitamente",
+  "alcance": "Preflight solamente; ninguna aceptacion acustica o integral"
+}

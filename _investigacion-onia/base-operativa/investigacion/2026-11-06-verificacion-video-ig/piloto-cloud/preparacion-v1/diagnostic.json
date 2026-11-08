@@ -1,0 +1,43 @@
+{
+  "utc": "2026-11-06T22:58:06.016938+00:00",
+  "resources": {
+    "mem_available": 34851508224,
+    "cgroups": [
+      {
+        "path": "/sys/fs/cgroup",
+        "max": "34359738368",
+        "current": 353599488
+      }
+    ],
+    "reserve": 34006138880,
+    "disk_free": 63895662592,
+    "tree_bytes": 228353636
+  },
+  "parent_rlimit_as": [
+    -1,
+    -1
+  ],
+  "parent_rlimit_cpu": [
+    -1,
+    -1
+  ],
+  "cpu_logical": 5,
+  "parent_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "python": "3.12.14",
+  "machine": "x86_64",
+  "runtime_head": "d30f00feadb7ebce95bacd55b0d104e3ef501481",
+  "onia_head": "e55812ce1bc8ef798fb370257ba887d07acccc53",
+  "onia_status_porcelain": "",
+  "compilation": "not_run",
+  "weights": "not_downloaded",
+  "inference": "not_run",
+  "configuration": "untouched",
+  "preparation_budget_bytes": 1073741824,
+  "fit": "unknown; no fit inferred from weights or MemAvailable"
+}

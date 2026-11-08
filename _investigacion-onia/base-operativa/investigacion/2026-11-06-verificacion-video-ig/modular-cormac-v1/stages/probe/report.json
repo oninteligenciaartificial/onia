@@ -1,0 +1,33 @@
+{
+  "stage": "probe",
+  "command": [
+    "ffprobe",
+    "-v",
+    "error",
+    "-select_streams",
+    "v:0",
+    "-show_entries",
+    "stream=codec_name,width,height,r_frame_rate,avg_frame_rate,time_base,start_pts,start_time,duration,nb_frames",
+    "-show_entries",
+    "format=duration,size",
+    "-of",
+    "json",
+    "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/operacion/reels-e-ideas/DfWLWspIruU/DfWLWspIruU.mp4"
+  ],
+  "exit_code": 0,
+  "reason": "exited",
+  "wall_seconds": 0.411987541000002,
+  "cpu_seconds_leader": 0.15579199999999999,
+  "max_rss_leader_kib": 61176,
+  "sampled_group_rss_bytes": 43872256,
+  "affinity": [
+    0,
+    1
+  ],
+  "AS_bytes_per_process": 3221225472,
+  "CPU_seconds_per_process": 120,
+  "wall_limit_seconds": 120,
+  "limits_scope": "AS/CPU per process; group RSS sampled, not aggregate hard cap",
+  "killed": [],
+  "pending_live": []
+}

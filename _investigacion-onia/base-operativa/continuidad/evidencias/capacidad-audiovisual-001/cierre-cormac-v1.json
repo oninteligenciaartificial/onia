@@ -1,0 +1,211 @@
+{
+  "schema": 1,
+  "reel": "DfWLWspIruU",
+  "publisher": {
+    "name": "Cormac Hayden",
+    "handle": "cormachdn",
+    "source": "metadata local de la plataforma, no autoría legal certificada"
+  },
+  "pipeline_selected": "FFmpeg + faster-whisper + Silero",
+  "new_model_inferences": {
+    "negative": 1,
+    "positive": 1,
+    "cormac": 0
+  },
+  "new_asr_inferences": 0,
+  "repeated_suites": 0,
+  "negative": {
+    "accepted": true,
+    "manifest_sha256": "578e54307938649f9362d5b711841f30305e6fefd80eb540c60d4a207f93a031",
+    "wall_seconds": 135.59645423999973
+  },
+  "positive_pre_execution_failure": {
+    "model_inferences": 0,
+    "reason": "Referencia al prompt antiguo; guard literal rechazó antes de cargar el modelo",
+    "manifest_sha256": "51cabe47a664da9741ca62d229a185067cb424dc4854e164a6a480370d86bdec",
+    "fix": "Sólo referencia al prompt canónico, en corte nuevo; anterior intacto"
+  },
+  "positive": {
+    "status": "exited",
+    "exit_code": 0,
+    "real_model_execs": 1,
+    "previous_real_positive_execs": 0,
+    "one_attempt_lock": true,
+    "wall_seconds": 133.61054730700016,
+    "sampled_max_rss_bytes": 10784448512,
+    "RSS_not_exact_peak": true,
+    "actual_cpu_seconds": null,
+    "sampled_max_os_threads": 3,
+    "response_literal": "Se oye un sonido de bajar de tono, seguido de un sonido de subir de tono. Aparece un cuadrado rojo en la esquina izquierda y un círculo azul en la esquina derecha. Ambos cambios de sonido y de color ocurren al mismo tiempo.",
+    "telemetry": "model-telemetry.json",
+    "semantic_acceptance": "integration/reviewer decide; exit0 alone does not accept",
+    "old_cuts_sources_libraries_verified_unchanged": true,
+    "prompt_only_source_change_verified": true,
+    "fixture_reused_unchanged": true,
+    "receipt_routing": "run_driver.py routes exclusive model-invocation.json write from old positive-v1 to positive-v2; no other I/O changes",
+    "cleanup_live": [],
+    "cleanup_zombies": [],
+    "parent_limits_restored": true,
+    "onia_status": "",
+    "next": "Stop; no Cormac execution, retries or further controls.",
+    "manifest_sha256": "436a1d14ced05f07c0b9dd3f0116e45630445aa7a265b252774b6622ee8f9ca1",
+    "assessment": {
+      "classification": "semantic_failure_against_generator_truth",
+      "truth_authority": "included flite generator text and deterministic synthetic figures; NOT human audition",
+      "voice_and_one_two_or_equivalent": {
+        "met": false,
+        "finding": "No voice or words recognized; substitutes descending then ascending sounds."
+      },
+      "red_first_blue_after": {
+        "met": "partial",
+        "finding": "Identifies red square left and blue circle right, but does not explicitly establish sequential presentation."
+      },
+      "voice_first_silence_last": {
+        "met": false,
+        "finding": "Final exact silence omitted; describes two pitch sounds and claims simultaneous sound/color changes."
+      },
+      "technically_complete": true,
+      "exit0_is_not_semantic_acceptance": true,
+      "next": "Stop model AV. No retry, further controls or Cormac inference. Integration/reviewer retain final judgment."
+    },
+    "truth": {
+      "authority": "generator truth, NOT human audition",
+      "speech": "one two",
+      "voice": "included flite kal16",
+      "voice_samples": 13823,
+      "voice_blocks": 1,
+      "first_blocks": "white image, red square left; complete speech then zero padding",
+      "last_chunk": "white image, blue circle right; exactly16000 zero samples",
+      "no_truncation": true,
+      "not_passed_to_model": true
+    }
+  },
+  "transfer": {
+    "manifest_sha256": "ea9b35ddc2f005c896f16527497c11439745b73e3c99459bbd2f250464f529f5",
+    "original_packet_hash_chunk": "273800",
+    "receipt": {
+      "piece": "DfWLWspIruU",
+      "anonymous": true,
+      "automatic_retries": 0,
+      "tracks": [
+        {
+          "format_id": "dash-1622684339260942v",
+          "host": "scontent-lim1-1.cdninstagram.com",
+          "url_without_query_sha256": "7acbf67cac3bd669b869872c2f6be319b0dbe2c8744ebfdaf5b6669d999664c4",
+          "bytes": 10486198,
+          "complete": true,
+          "http_status": 200,
+          "content_length": "10486198",
+          "sha256": "d13afd0cf3f74141bd222eba161d6a97a14d1acc376d484f9b0b411c03051d74",
+          "closed_file_hash": true
+        },
+        {
+          "format_id": "dash-1622683569261019a",
+          "host": "scontent-lim1-1.cdninstagram.com",
+          "url_without_query_sha256": "2eff7245301d8dfac23ade4ae29fa8066968d18d18e82ed80a29e48c252529b7",
+          "bytes": 257026,
+          "complete": true,
+          "http_status": 200,
+          "content_length": "257026",
+          "sha256": "37bf647e526b1d64f3a8342fb7dc6f39ad75c983dc0bc132d869bddb2dd5346f",
+          "closed_file_hash": true
+        }
+      ],
+      "complete": true,
+      "remux": {
+        "bytes": 10749773,
+        "sha256": "2c89164b66a9c556e749b789e0ca2004562c859316ac447ba883f7535f5a79a5",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "vp9",
+              "codec_type": "video",
+              "width": 1440,
+              "height": 2560,
+              "duration": "37.733333",
+              "nb_read_packets": "2264"
+            },
+            {
+              "index": 1,
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "sample_rate": "44100",
+              "channels": 2,
+              "duration": "37.780000",
+              "nb_read_packets": "816"
+            }
+          ],
+          "format": {
+            "duration": "37.780000",
+            "size": "10749773"
+          }
+        },
+        "streamhash_output": "0,v,SHA256=ae7c9a7097a0f7d3d262bcde444569bb10789b76a4afd5176f209e0ed505b403\n1,a,SHA256=681f83302315ebb9819b9b72b1a0ebaa1f3967a1afe615fdfdf982ded8c4ab49\n",
+        "expected_original_streamhashes": [
+          "ae7c9a7097a0f7d3d262bcde444569bb10789b76a4afd5176f209e0ed505b403",
+          "681f83302315ebb9819b9b72b1a0ebaa1f3967a1afe615fdfdf982ded8c4ab49"
+        ],
+        "both_streams_match_original": true,
+        "original_file_sha256": "9be4267480093249e104ec9821271e1a755e4329b7ea4d8fca3fc8bacd3b664e",
+        "file_hash_matches_original": false,
+        "container_variant": "local remux, not assumed byte-identical original",
+        "command": [
+          "ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-threads",
+          "2",
+          "-i",
+          "/workspace/onia-av-pilot-20261106/cormac-transfer-v1/track-0.mp4",
+          "-i",
+          "/workspace/onia-av-pilot-20261106/cormac-transfer-v1/track-1.mp4",
+          "-map",
+          "0:v:0",
+          "-map",
+          "1:a:0",
+          "-c",
+          "copy",
+          "/workspace/onia-av-pilot-20261106/cormac-transfer-v1/DfWLWspIruU-remux.mp4"
+        ]
+      }
+    }
+  },
+  "coverage": {
+    "asr_source": "pista completa existente, con marcas automáticas aproximadas",
+    "visual_samples": 38,
+    "visual_sampling_rate": "1 Hz según preparación; no PTS individual verificado en esta retoma",
+    "cormac_joint_av_seconds": 0,
+    "whole_reel_av_accepted": false,
+    "three_second_proposal_executed": false
+  },
+  "resources": {
+    "disk_free_bytes": 56903532544,
+    "memory_cgroup": {
+      "mem_available": 34399543296,
+      "cgroups": [
+        {
+          "path": "/sys/fs/cgroup",
+          "max": "34359738368",
+          "current": 7469092864
+        }
+      ],
+      "reserve": 26890645504,
+      "disk_free": 56903589888,
+      "tree_bytes": 7199749849
+    },
+    "limits": "unchanged; see model-report.json",
+    "actual_cpu_seconds": "not captured"
+  },
+  "artifacts_verified": {
+    "chunk": "dcf7ef",
+    "positivo_v1": 17,
+    "positivo_v2": 18,
+    "cormac_transfer_v1": 7,
+    "private_cdn_urls_exported": false
+  },
+  "next": "Cerrar este piloto con límite AV comprobado y ficha útil; coordinación retoma cerebro existente y luego plan full Cloud. No nuevas familias, inferencias o servicios automáticos."
+}

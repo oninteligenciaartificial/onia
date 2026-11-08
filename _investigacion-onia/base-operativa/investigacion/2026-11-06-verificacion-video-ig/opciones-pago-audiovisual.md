@@ -1,0 +1,51 @@
+# Opciones de comprensión audiovisual paga
+
+Verificación documental: 6 de noviembre de 2026. Alcance: comparar como máximo Gemini, TwelveLabs e Higgsfield; no se subieron reels, ejecutaron análisis, instalaron paquetes ni contrataron servicios. Fuentes primarias; las capacidades anunciadas se distinguen de resultados probados en ONIA.
+
+La base actual indicada por el encargo —FFmpeg, ASR, imágenes seleccionadas y PANNs auxiliar— no acredita percepción audiovisual integral. Ninguna documentación examinada garantiza juicio humano perfecto sobre fluidez, música/SFX, entonación, mezcla y sincronía fina.
+
+## Gemini Flash: primera candidata para una prueba acotada
+
+**Capacidad anunciada.** La API recibe las pistas visual y sonora del video. El análisis estático usa por defecto **1 fotograma por segundo**; permite ajustar fps y recortar intervalos. Ese muestreo puede perder movimientos o cortes breves y no equivale a inspeccionar todos los fotogramas. El modo agentic solicita segmentos, transcripción, fotogramas y audio bajo demanda; el proveedor recomienda estático para clips cortos y advierte que agentic puede costar más en videos inferiores a cinco minutos. [Comprensión de video](https://ai.google.dev/gemini-api/docs/video-understanding).
+
+La documentación de audio declara reconocimiento de emociones en habla/música y eventos sonoros. Es una capacidad del proveedor, no una validación nuestra de prosodia, SFX exactos, balance de mezcla, BPM o sincronía milimétrica. Puede devolver una explicación o un desglose solicitado por prompt; cada hallazgo temporal debe contrastarse en una prueba controlada. [Comprensión de audio](https://ai.google.dev/gemini-api/docs/audio).
+
+**Precio condicionado.** Gemini 3.8 Flash Standard publica US$0,75/millón de tokens de entrada y US$3,75/millón de salida **incluido thinking** hasta el 31 de diciembre de 2026; desde el 1 de enero de 2027, US$1,50 y US$7,50 respectivamente. El nivel gratuito figura disponible sujeto a cuotas y disponibilidad. [Tarifas oficiales](https://ai.google.dev/gemini-api/docs/pricing).
+
+Ejemplo ilustrativo: 60 s estáticos a 1 fps, aproximadamente 18.000 tokens de entrada y 2.000 tokens de salida total incluido thinking, costarían **US$0,021** con la tarifa vigente: 18.000×0,75/1.000.000 + 2.000×3,75/1.000.000. No es precio fijo por reel. La guía estima alrededor de 100 tokens/s en baja resolución o 300 tokens/s en alta; la parte sonora ronda 32 tokens/s dentro del total aproximado. Cambiar fps, resolución, razonamiento o reintentos cambia consumo y coste. [Tokens de video](https://ai.google.dev/gemini-api/docs/video-understanding), [precios](https://ai.google.dev/gemini-api/docs/pricing).
+
+**Desembolso y acceso.** Un nuevo Paid Tier requiere configurar billing y un prepago mínimo de US$5, o asignación a Postpay según la cuenta. Un análisis marginal de dos centavos no significa que pueda recargarse sólo esa cantidad. AI Studio/nivel gratuito puede permitir un primer ensayo según cuotas; el acceso API, facturación y disponibilidad de la cuenta de Sergio no se comprobaron. [Facturación](https://ai.google.dev/gemini-api/docs/billing).
+
+Es una API comercial alojada; no es un modelo de pesos abiertos para instalar en nuestra base. Estas fuentes fueron verificadas por el coordinador en la documentación oficial el 6 de noviembre de 2026; no se ejecutó el modelo.
+
+## TwelveLabs: alternativa especializada, coste sujeto al plan
+
+**Capacidad anunciada.** Pegasus 1.5 combina información visual, sonora y textual, sin preindexado; genera descripciones, respuestas y segmentos con tiempos en JSON. El SDK oficial describe procesamiento de imágenes, sonidos, habla y texto en pantalla. Pegasus 1.6 es la versión actual, añade reconocimiento y eventos dentro de segmentos. Esto permite plantear un análisis AV integrado; no acredita haberlo validado con nuestros reels. [Pegasus 1.5](https://docs.twelvelabs.io/docs/concepts/models/pegasus/pegasus-1-5), [SDK oficial](https://github.com/twelvelabs-io/twelvelabs-python), [Pegasus 1.6](https://docs.twelvelabs.io/docs/concepts/models/pegasus/pegasus-1-6).
+
+**Límite importante del sonido.** La página de contexto enumera «Audio transcription», y no especifica resolución acústica ni validación de prosodia, BPM, balance de mezcla o sincronía subsegundo. La plataforma sí documenta música, ambiente y SFX para la búsqueda/embeddings Marengo; esa capacidad no prueba por sí sola que Pegasus describa correctamente todos esos atributos. No se verificó una tasa de muestreo visual de inferencia. Las afirmaciones comerciales sobre procesar cada instante no sustituyen esa especificación. [Modalidades y separación entre audio no verbal y transcripción](https://docs.twelvelabs.io/docs/concepts/modalities), [documentación de contexto](https://docs.twelvelabs.io/docs/concepts/models/pegasus/pegasus-1-6).
+
+**Acceso y entrada.** Cuenta y API key; también Playground. Admite archivo/asset, URL directa del archivo o base64; una URL de Instagram o enlace de reproductor no sirve como URL directa. Reels verticales 9:16 compatibles. Modelo: hasta 2 h analizadas, 10 GB y mínimo 360×360; el método impone límites menores (archivo directo local 200 MB, URL pública 4 GB, multipart hasta 10 GB). Español con soporte parcial; inglés completo. [Requisitos](https://docs.twelvelabs.io/docs/concepts/models/pegasus/pegasus-1-6), [guía de análisis y carga](https://docs.twelvelabs.io/docs/guides/analyze-videos-and-images/videos).
+
+**Precio verificable hoy.** Free US$0; Plus US$29/mes; Pro US$99/mes, con 3/50/200 GB respectivamente y cupos mensuales de trabajo. El exceso opcional se ofrece sólo en Pro. Precio de lista del exceso de Pegasus 1.6: entrada US$1,75/h (=US$0,02917/min), salida US$7,50/millón de tokens; almacenamiento adicional US$0,065/GB/mes. Un minuto y 1.000 tokens serían aproximadamente US$0,0367 de carga marginal de análisis, condicionado a exceso Pro; **no es el desembolso mínimo ni el precio total por reel**. [Planes](https://www.twelvelabs.io/pricing), [precios de exceso](https://www.twelvelabs.io/list-price).
+
+No añadir indexado Marengo al coste de un análisis Pegasus directo: 1.5+ no lo requiere. La calculadora aún muestra indexado por minuto para Search, una operación distinta. Coexisten documentación de facturación heredada y nueva; verificar el régimen de la cuenta antes de estimar una compra. [Análisis y regímenes](https://docs.twelvelabs.io/docs/guides/analyze-videos-and-images/videos), [calculadora](https://www.twelvelabs.io/pricing-calculator).
+
+**Régimen.** Servicio alojado bajo términos comerciales; no se verificó licencia abierta de pesos para ejecución local. Los términos asignan al cliente derechos sobre la salida sujeto al cumplimiento y advierten de inexactitud y posible falta de exclusividad/protección. Tener un SDK abierto no abre el modelo. Disponibilidad pública documentada; no se verificó elegibilidad de país, cuenta o pago de Sergio. [Términos](https://www.twelvelabs.io/legal/terms-of-use).
+
+## Higgsfield `video_analysis`: disponible en catálogo, AV completo sin acreditar
+
+**Evidencia de esta sesión.** Se inspeccionaron únicamente metadatos de `mcp__codex_apps__higgsfield_video_analysis_create` y `..._status`; no se llamaron. El primero acepta exactamente un `video_input_id` de una carga confirmada o una URL YouTube; no acepta directamente una URL IG. Declara desglose por escenas, tarda típicamente 3–5 min y advierte que la precisión disminuye con videos más largos. La salida expone `scenes: Array<unknown>`: el contrato mostrado no define campos acústicos, fps ni modelo subyacente.
+
+La documentación pública de MCP anuncia análisis de estructura, planos y ritmo de edición. **No demuestra que este análisis escuche música/SFX ni procese la voz más allá de transcripción**. No trasladar las capacidades de generación de audio de otros modelos de Higgsfield a esta herramienta. [Changelog oficial, entradas 28 de mayo y 28 de abril](https://higgsfield.ai/creator-hub/changelog).
+
+**Precio y acceso pendientes de verificación específica.** No se encontró tarifa primaria por minuto/crédito de `video_analysis`, ni prueba de que sea gratis. El changelog exige suscripción activa para MCP y plataforma conectada; las generaciones usan créditos del plan, pero no especifica el cargo del análisis. La página pública de precios consultada no expuso una tabla verificable de esta función. No recomendar comprar un plan para resolver audio integral con esta evidencia. [Precios](https://higgsfield.ai/pricing), [MCP y acceso](https://higgsfield.ai/creator-hub/changelog).
+
+Es un servicio comercial alojado, sin pesos o ejecución local acreditados para esta función. La API de generación tiene facturación independiente; su mínimo de recarga US$5 **no es precio del análisis conectado**. [Distinción oficial API frente a MCP](https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api).
+
+## Decisión condicionada y comprobación futura
+
+Primera candidata: **Gemini Flash**, por audio+video documentado y coste por uso, para una prueba acotada; aprovechar primero el nivel gratuito si la cuenta lo permite. **TwelveLabs** merece consideración para segmentación estructurada, análisis repetido o una videoteca, evaluando el coste mensual real. **Higgsfield** queda como opción de desglose visual/documental sin evidencia suficiente para elegirlo por audio. No se ha probado ningún proveedor.
+
+Conservar la base abierta existente. El QA del encargo elige una API sólo cuando falta un atributo necesario; pagar no acredita percepción perfecta ni obliga a enviar todos los videos al proveedor.
+
+Antes de adoptar cualquiera, el responsable de ONIA debe definir una prueba pequeña autorizada con un clip controlado: movimiento continuo/cortes breves, voz con cambios de entonación, música y SFX conocidos, y un desfase AV intencional. Comparar contra eventos y tiempos anotados, incluir un control sin audio y exigir que la respuesta separe observado, inferido y desconocido. Cambiaría la decisión si omite o inventa sonidos, deriva la emoción sólo del texto, o confunde simultaneidad y sincronía. Una prueba futura requiere autorización aplicable para subir el material y consumir créditos; este informe no la ejecuta.

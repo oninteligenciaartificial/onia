@@ -1,0 +1,49 @@
+{
+  "venv_search_roots": [
+    "/workspace",
+    "/opt/codex/runtimes"
+  ],
+  "venvs_found": [],
+  "interpreters": [
+    {
+      "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "version": "3.12.14",
+      "prefix": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+      "base_prefix": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+      "packages": {
+        "torch": null,
+        "torchaudio": null,
+        "numpy": {
+          "version": "2.3.5",
+          "location": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages",
+          "requires": null
+        },
+        "librosa": null,
+        "torchlibrosa": null,
+        "panns-inference": null
+      },
+      "frameworks_imported": false
+    },
+    {
+      "executable": "/usr/bin/python3",
+      "version": "3.13.5",
+      "prefix": "/usr",
+      "base_prefix": "/usr",
+      "packages": {
+        "torch": null,
+        "torchaudio": null,
+        "numpy": {
+          "version": "2.2.4",
+          "location": "/usr/lib/python3/dist-packages",
+          "requires": null
+        },
+        "librosa": null,
+        "torchlibrosa": null,
+        "panns-inference": null
+      },
+      "frameworks_imported": false
+    }
+  ],
+  "method": "stdlib importlib.metadata only; no framework import, pip or network",
+  "CPU_compatibility": "metadata only; CPU kernel availability/runtime ABI not executed or certified"
+}

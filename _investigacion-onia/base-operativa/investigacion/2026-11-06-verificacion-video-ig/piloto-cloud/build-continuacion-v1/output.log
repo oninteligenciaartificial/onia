@@ -1,0 +1,784 @@
+BUILD_COMMAND ["/workspace/onia-av-pilot-20261106/cmake-local/cmake/data/bin/cmake", "--build", "/workspace/onia-av-pilot-20261106/build-v2", "--target", "llama-omni-single-test-omni", "-j2"]
+[  0%] Built target cpp-httplib
+[  3%] Built target ggml-base
+[  5%] Built target llama-common-base
+[ 12%] Built target ggml-cpu
+[ 13%] Built target ggml
+[ 82%] Built target llama
+[ 82%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/caps.cpp.o
+[ 82%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/value.cpp.o
+[ 82%] Linking CXX shared library ../bin/libllama-common.so
+[ 96%] Built target llama-common
+[ 96%] Building CXX object tools/omni/CMakeFiles/omni.dir/omni.cpp.o
+[ 96%] Building CXX object tools/omni/CMakeFiles/omni.dir/tts-condition-graph.cpp.o
+[ 98%] Building CXX object tools/omni/CMakeFiles/omni.dir/audition.cpp.o
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘bool omni_eval_embed(llama_context*, const omni_embed*, int, int*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:344:31: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+  344 |     int n_embd  = llama_n_embd(llama_get_model(ctx_llama));
+      |                   ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.h:2,
+                 from /workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4:
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘bool prefill_with_emb(omni_context*, common_params*, float*, int, int, int*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:378:31: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+  378 |     int n_embd  = llama_n_embd(llama_get_model(ctx_omni->ctx_llama));
+      |                   ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘bool prefill_emb_with_hidden(omni_context*, common_params*, float*, int, int, int*, float*&)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:418:30: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+  418 |     int n_embd = llama_n_embd(llama_get_model(ctx_omni->ctx_llama));
+      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: At global scope:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:873:6: warning: no previous declaration for ‘bool omni_image_embed_make_chunks_with_filename(vision_ctx*, int, std::string, std::vector<std::vector<float> >&)’ [-Wmissing-declarations]
+  873 | bool omni_image_embed_make_chunks_with_filename(struct vision_ctx * ctx_vision, int n_threads,
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:902:6: warning: no previous declaration for ‘bool audition_read_binary_file(const char*, std::vector<unsigned char>*)’ [-Wmissing-declarations]
+  902 | bool audition_read_binary_file(const char * fname, std::vector<uint8_t> * buf_res) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:923:21: warning: no previous declaration for ‘omni_embed* omni_audio_embed_make_with_bytes(audition_ctx*, int, audition_audio_u8*)’ [-Wmissing-declarations]
+  923 | struct omni_embed * omni_audio_embed_make_with_bytes(audition_ctx * ctx_audio, int n_threads, audition_audio_u8 * audio) {
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘bool eval_tokens_with_hidden(omni_context*, common_params*, std::vector<int>, int, int*, float*&)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:1230:36: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+ 1230 |     const int n_embd = llama_n_embd(llama_get_model(ctx_omni->ctx_llama));
+      |                        ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘bool load_tts_weights_from_gguf(omni_context*, const char*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:1701:28: warning: unused variable ‘emb_code_type’ [-Wunused-variable]
+ 1701 |             enum ggml_type emb_code_type = emb_code_tensor->type;
+      |                            ^~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:1702:21: warning: unused variable ‘emb_code_elements’ [-Wunused-variable]
+ 1702 |             int64_t emb_code_elements = dim0 * dim1;
+      |                     ^~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:1783:28: warning: unused variable ‘emb_text_type’ [-Wunused-variable]
+ 1783 |             enum ggml_type emb_text_type = emb_text_tensor->type;
+      |                            ^~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:1784:21: warning: unused variable ‘emb_text_elements’ [-Wunused-variable]
+ 1784 |             int64_t emb_text_elements = vocab_size * hidden_size;
+      |                     ^~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:2009:27: warning: unused variable ‘src_data’ [-Wunused-variable]
+ 2009 |             const float * src_data = (const float *)head_code_tensor->data;
+      |                           ^~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:2010:18: warning: variable ‘need_transpose’ set but not used [-Wunused-but-set-variable]
+ 2010 |             bool need_transpose = false;
+      |                  ^~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:2059:21: warning: unused variable ‘total_elements’ [-Wunused-variable]
+ 2059 |             int64_t total_elements = expected_hidden_size * expected_num_audio_tokens;
+      |                     ^~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘bool eval_tokens_tts(omni_context*, common_params*, std::vector<int>, int, int*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:2328:75: warning: unused parameter ‘params’ [-Wunused-parameter]
+ 2328 | static bool eval_tokens_tts(struct omni_context* ctx_omni, common_params* params, std::vector<llama_token> tokens, int n_batch, int * n_past_tts) {
+      |                                                            ~~~~~~~~~~~~~~~^~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘bool prefill_with_emb_tts(omni_context*, common_params*, float*, int, int, int*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:2408:30: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+ 2408 |     int n_embd = llama_n_embd(llama_get_model(ctx_omni->ctx_tts_llama));
+      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:2393:73: warning: unused parameter ‘params’ [-Wunused-parameter]
+ 2393 | bool prefill_with_emb_tts(struct omni_context* ctx_omni, common_params* params, float* embed, int n_pos, int n_batch, int* n_past_tts) {
+      |                                                          ~~~~~~~~~~~~~~~^~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘llama_token sample_tts_token_simplex(common_sampler*, omni_context*, common_params*, int*, const std::vector<int>*, int, bool, bool)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:2802:17: warning: unused variable ‘logits_debug_dir’ [-Wunused-variable]
+ 2802 |     const char* logits_debug_dir = getenv("TTS_LOGITS_DEBUG_DIR");
+      |                 ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: At global scope:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:3003:13: warning: no previous declaration for ‘llama_token sample_tts_token(common_sampler*, omni_context*, common_params*, int*, const std::vector<int>*, const std::vector<int>*, int, bool, bool)’ [-Wmissing-declarations]
+ 3003 | llama_token sample_tts_token(struct common_sampler * smpl, struct omni_context * ctx_omni, common_params* params, int * n_past_tts, const std::vector<llama_token> * all_generated_tokens, const std::vector<llama_token> * chunk_generated_tokens, int token_index_in_chunk, bool force_no_eos, bool is_final_text_chunk = false) {
+      |             ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘llama_token sample_tts_token(common_sampler*, omni_context*, common_params*, int*, const std::vector<int>*, const std::vector<int>*, int, bool, bool)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:3101:39: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+ 3101 |         int hidden_size = llama_n_embd(llama_get_model(ctx_omni->ctx_tts_llama));
+      |                           ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:3135:9: warning: unused variable ‘eos_relative_idx’ [-Wunused-variable]
+ 3135 |     int eos_relative_idx = num_audio_tokens - 1;  // EOS token relative index: 6561
+      |         ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:3213:11: warning: unused variable ‘tau_r’ [-Wunused-variable]
+ 3213 |     float tau_r = 0.1f;             // TTSSamplingParams.tau_r = 0.1
+      |           ^~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘llama_model* llama_init(common_params*, std::string)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4003:53: warning: ‘llama_model* llama_load_model_from_file(const char*, llama_model_params)’ is deprecated: use llama_model_load_from_file instead [-Wdeprecated-declarations]
+ 4003 |     llama_model * model = llama_load_model_from_file(model_path.c_str(), model_params);
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:486:47: note: declared here
+  486 |     DEPRECATED(LLAMA_API struct llama_model * llama_load_model_from_file(
+      |                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘llama_model* llama_init_tts(common_params*, std::string, int)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4025:53: warning: ‘llama_model* llama_load_model_from_file(const char*, llama_model_params)’ is deprecated: use llama_model_load_from_file instead [-Wdeprecated-declarations]
+ 4025 |     llama_model * model = llama_load_model_from_file(model_path.c_str(), model_params);
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:486:47: note: declared here
+  486 |     DEPRECATED(LLAMA_API struct llama_model * llama_load_model_from_file(
+      |                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘omni_context* omni_init(common_params*, int, bool, std::string, int, const std::string&, bool, llama_model*, llama_context*, const std::string&)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4137:49: warning: ‘llama_context* llama_new_context_with_model(llama_model*, llama_context_params)’ is deprecated: use llama_init_from_model instead [-Wdeprecated-declarations]
+ 4137 |         ctx_llama = llama_new_context_with_model(model, ctx_params);
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:523:49: note: declared here
+  523 |     DEPRECATED(LLAMA_API struct llama_context * llama_new_context_with_model(
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4159:29: warning: ‘void llama_free_model(llama_model*)’ is deprecated: use llama_model_free instead [-Wdeprecated-declarations]
+ 4159 |             llama_free_model(model);
+      |             ~~~~~~~~~~~~~~~~^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:514:31: note: declared here
+  514 |     DEPRECATED(LLAMA_API void llama_free_model(struct llama_model * model),
+      |                               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4172:69: warning: ‘llama_context* llama_new_context_with_model(llama_model*, llama_context_params)’ is deprecated: use llama_init_from_model instead [-Wdeprecated-declarations]
+ 4172 |         llama_context * ctx_tts_llama = llama_new_context_with_model(tts_model, tts_ctx_params);
+      |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:523:49: note: declared here
+  523 |     DEPRECATED(LLAMA_API struct llama_context * llama_new_context_with_model(
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4175:29: warning: ‘void llama_free_model(llama_model*)’ is deprecated: use llama_model_free instead [-Wdeprecated-declarations]
+ 4175 |             llama_free_model(tts_model);
+      |             ~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:514:31: note: declared here
+  514 |     DEPRECATED(LLAMA_API void llama_free_model(struct llama_model * model),
+      |                               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4178:29: warning: ‘void llama_free_model(llama_model*)’ is deprecated: use llama_model_free instead [-Wdeprecated-declarations]
+ 4178 |             llama_free_model(model);
+      |             ~~~~~~~~~~~~~~~~^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:514:31: note: declared here
+  514 |     DEPRECATED(LLAMA_API void llama_free_model(struct llama_model * model),
+      |                               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4208:29: warning: ‘void llama_free_model(llama_model*)’ is deprecated: use llama_model_free instead [-Wdeprecated-declarations]
+ 4208 |             llama_free_model(tts_model);
+      |             ~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:514:31: note: declared here
+  514 |     DEPRECATED(LLAMA_API void llama_free_model(struct llama_model * model),
+      |                               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4211:29: warning: ‘void llama_free_model(llama_model*)’ is deprecated: use llama_model_free instead [-Wdeprecated-declarations]
+ 4211 |             llama_free_model(model);
+      |             ~~~~~~~~~~~~~~~~^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:514:31: note: declared here
+  514 |     DEPRECATED(LLAMA_API void llama_free_model(struct llama_model * model),
+      |                               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4236:29: warning: ‘void llama_free_model(llama_model*)’ is deprecated: use llama_model_free instead [-Wdeprecated-declarations]
+ 4236 |             llama_free_model(ctx_omni->model_tts);
+      |             ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:514:31: note: declared here
+  514 |     DEPRECATED(LLAMA_API void llama_free_model(struct llama_model * model),
+      |                               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4240:25: warning: ‘void llama_free_model(llama_model*)’ is deprecated: use llama_model_free instead [-Wdeprecated-declarations]
+ 4240 |         llama_free_model(model);
+      |         ~~~~~~~~~~~~~~~~^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:514:31: note: declared here
+  514 |     DEPRECATED(LLAMA_API void llama_free_model(struct llama_model * model),
+      |                               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4252:29: warning: ‘void llama_free_model(llama_model*)’ is deprecated: use llama_model_free instead [-Wdeprecated-declarations]
+ 4252 |             llama_free_model(ctx_omni->model_tts);
+      |             ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:514:31: note: declared here
+  514 |     DEPRECATED(LLAMA_API void llama_free_model(struct llama_model * model),
+      |                               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4256:25: warning: ‘void llama_free_model(llama_model*)’ is deprecated: use llama_model_free instead [-Wdeprecated-declarations]
+ 4256 |         llama_free_model(model);
+      |         ~~~~~~~~~~~~~~~~^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:514:31: note: declared here
+  514 |     DEPRECATED(LLAMA_API void llama_free_model(struct llama_model * model),
+      |                               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘void omni_free(omni_context*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4788:25: warning: ‘void llama_free_model(llama_model*)’ is deprecated: use llama_model_free instead [-Wdeprecated-declarations]
+ 4788 |         llama_free_model(ctx_omni->model_tts);
+      |         ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:514:31: note: declared here
+  514 |     DEPRECATED(LLAMA_API void llama_free_model(struct llama_model * model),
+      |                               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4847:25: warning: ‘void llama_free_model(llama_model*)’ is deprecated: use llama_model_free instead [-Wdeprecated-declarations]
+ 4847 |         llama_free_model(ctx_omni->model);
+      |         ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:514:31: note: declared here
+  514 |     DEPRECATED(LLAMA_API void llama_free_model(struct llama_model * model),
+      |                               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4852:5: warning: possible problem detected in invocation of ‘operator delete’ [-Wdelete-incomplete]
+ 4852 |     delete ctx_omni->audio_input_manager;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4852:22: warning: invalid use of incomplete type ‘class AudioInputManager’
+ 4852 |     delete ctx_omni->audio_input_manager;
+      |            ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.h:341:11: note: forward declaration of ‘class AudioInputManager’
+  341 |     class AudioInputManager * audio_input_manager = NULL;
+      |           ^~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4852:5: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+ 4852 |     delete ctx_omni->audio_input_manager;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: At global scope:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4877:6: warning: no previous declaration for ‘void omni_set_language(omni_context*, const std::string&)’ [-Wmissing-declarations]
+ 4877 | void omni_set_language(struct omni_context * ctx_omni, const std::string & lang) {
+      |      ^~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘void process_audio(omni_context*, omni_embed*, common_params*, bool)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4917:116: warning: unused parameter ‘save_spk_emb’ [-Wunused-parameter]
+ 4917 | static void process_audio(struct omni_context * ctx_omni, struct omni_embed * embeds, common_params * params, bool save_spk_emb=false) {
+      |                                                                                                               ~~~~~^~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: At global scope:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4923:6: warning: no previous declaration for ‘void eval_prefix(omni_context*, common_params*)’ [-Wmissing-declarations]
+ 4923 | void eval_prefix(struct omni_context* ctx_omni, common_params* params){
+      |      ^~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4929:6: warning: no previous declaration for ‘void eval_prefix_with_hidden(omni_context*, common_params*, float*&)’ [-Wmissing-declarations]
+ 4929 | void eval_prefix_with_hidden(struct omni_context* ctx_omni, common_params* params, float *& hidden_states){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4951:6: warning: no previous declaration for ‘void llm_thread_func(omni_context*, common_params*)’ [-Wmissing-declarations]
+ 4951 | void llm_thread_func(omni_context* ctx_omni, common_params* params){
+      |      ^~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘void llm_thread_func(omni_context*, common_params*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:4954:41: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+ 4954 |     const int hidden_size = llama_n_embd(llama_get_model(ctx_omni->ctx_llama));
+      |                             ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: At global scope:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6233:6: warning: no previous declaration for ‘void tts_thread_func_duplex(omni_context*, common_params*)’ [-Wmissing-declarations]
+ 6233 | void tts_thread_func_duplex(struct omni_context * ctx_omni, common_params *params) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘void tts_thread_func_duplex(omni_context*, common_params*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6569:48: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+ 6569 |             const int tts_n_embd = llama_n_embd(llama_get_model(ctx_omni->ctx_tts_llama));
+      |                                    ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6558:17: warning: unused variable ‘n_tokens_orig’ [-Wunused-variable]
+ 6558 |             int n_tokens_orig = (int)(current_chunk_hidden_states.size() / current_chunk_n_embd);
+      |                 ^~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6794:52: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+ 6794 |                 const int tts_n_embd = llama_n_embd(llama_get_model(ctx_omni->ctx_tts_llama));
+      |                                        ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6235:9: warning: variable ‘tts_n_past’ set but not used [-Wunused-but-set-variable]
+ 6235 |     int tts_n_past = 0;
+      |         ^~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6239:10: warning: variable ‘tts_finish’ set but not used [-Wunused-but-set-variable]
+ 6239 |     bool tts_finish = false;
+      |          ^~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6267:15: warning: unused variable ‘audio_eos_token_id’ [-Wunused-variable]
+ 6267 |     const int audio_eos_token_id = audio_bos_token_id + 6561;
+      |               ^~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6268:15: warning: unused variable ‘text_eos_token_id’ [-Wunused-variable]
+ 6268 |     const int text_eos_token_id = 151692;
+      |               ^~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6269:15: warning: unused variable ‘num_audio_tokens’ [-Wunused-variable]
+ 6269 |     const int num_audio_tokens = 6562;
+      |               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: At global scope:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6857:6: warning: no previous declaration for ‘void tts_thread_func(omni_context*, common_params*)’ [-Wmissing-declarations]
+ 6857 | void tts_thread_func(struct omni_context * ctx_omni, common_params *params) {
+      |      ^~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘void tts_thread_func(omni_context*, common_params*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:7327:48: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+ 7327 |             const int tts_n_embd = llama_n_embd(llama_get_model(ctx_omni->ctx_tts_llama));
+      |                                    ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:7457:18: warning: unused variable ‘is_final_chunk’ [-Wunused-variable]
+ 7457 |             bool is_final_chunk = llm_finish;
+      |                  ^~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:7458:18: warning: variable ‘tts_success’ set but not used [-Wunused-but-set-variable]
+ 7458 |             bool tts_success = false;
+      |                  ^~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6859:9: warning: variable ‘tts_n_past’ set but not used [-Wunused-but-set-variable]
+ 6859 |     int tts_n_past = 0;  // TTS model's n_past counter
+      |         ^~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6863:10: warning: variable ‘tts_finish’ set but not used [-Wunused-but-set-variable]
+ 6863 |     bool tts_finish = false;
+      |          ^~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6872:17: warning: unused variable ‘info’ [-Wunused-variable]
+ 6872 |     struct stat info;
+      |                 ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6938:15: warning: unused variable ‘audio_eos_token_id’ [-Wunused-variable]
+ 6938 |     const int audio_eos_token_id = audio_bos_token_id + 6561;  // 158248
+      |               ^~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6939:15: warning: unused variable ‘text_eos_token_id’ [-Wunused-variable]
+ 6939 |     const int text_eos_token_id = 151692;  // 用于文本结束检测
+      |               ^~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6940:15: warning: unused variable ‘spk_emb_token_id’ [-Wunused-variable]
+ 6940 |     const int spk_emb_token_id = 21143;
+      |               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6941:15: warning: unused variable ‘num_audio_tokens’ [-Wunused-variable]
+ 6941 |     const int num_audio_tokens = 6562;
+      |               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:6942:15: warning: unused variable ‘max_audio_tokens’ [-Wunused-variable]
+ 6942 |     const int max_audio_tokens = 1000;  // Maximum audio tokens to generate per text chunk
+      |               ^~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: At global scope:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:8619:6: warning: no previous declaration for ‘void t2w_thread_func_python(omni_context*, common_params*)’ [-Wmissing-declarations]
+ 8619 | void t2w_thread_func_python(struct omni_context * ctx_omni, common_params *params) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘void t2w_thread_func_python(omni_context*, common_params*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:8653:15: warning: unused variable ‘sample_rate’ [-Wunused-variable]
+ 8653 |     const int sample_rate = 24000;  // Python Token2Wav 输出采样率
+      |               ^~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:8619:76: warning: unused parameter ‘params’ [-Wunused-parameter]
+ 8619 | void t2w_thread_func_python(struct omni_context * ctx_omni, common_params *params) {
+      |                                                             ~~~~~~~~~~~~~~~^~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: At global scope:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:8904:6: warning: no previous declaration for ‘void t2w_thread_func_cpp(omni_context*, common_params*)’ [-Wmissing-declarations]
+ 8904 | void t2w_thread_func_cpp(struct omni_context * ctx_omni, common_params *params) {
+      |      ^~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘void t2w_thread_func_cpp(omni_context*, common_params*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:9178:20: warning: unused variable ‘buffer_before_slide’ [-Wunused-variable]
+ 9178 |             size_t buffer_before_slide = token_buffer.size();
+      |                    ^~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:9054:16: warning: unused variable ‘buffer_before’ [-Wunused-variable]
+ 9054 |         size_t buffer_before = token_buffer.size();
+      |                ^~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:8904:73: warning: unused parameter ‘params’ [-Wunused-parameter]
+ 8904 | void t2w_thread_func_cpp(struct omni_context * ctx_omni, common_params *params) {
+      |                                                          ~~~~~~~~~~~~~~~^~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: At global scope:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:9268:6: warning: no previous declaration for ‘void t2w_thread_func(omni_context*, common_params*)’ [-Wmissing-declarations]
+ 9268 | void t2w_thread_func(struct omni_context * ctx_omni, common_params *params) {
+      |      ^~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘void duplex_encoder_thread_func(omni_context*, common_params*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:9392:41: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+ 9392 |     const int hidden_size = llama_n_embd(llama_get_model(ctx_omni->ctx_llama));
+      |                             ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘bool duplex_init_emb_cache(omni_context*, common_params*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:9567:40: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+ 9567 |     const int llm_hidden = llama_n_embd(llama_get_model(ctx_omni->ctx_llama));
+      |                            ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘bool duplex_do_decode(omni_context*, common_params*, const std::string&, int)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:9912:52: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+ 9912 |     const int llm_n_embd             = llama_n_embd(llama_get_model(ctx_omni->ctx_llama));
+      |                                        ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘void duplex_llm_thread_func(omni_context*, common_params*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:10138:41: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+10138 |     const int hidden_size = llama_n_embd(llama_get_model(ctx_omni->ctx_llama));
+      |                             ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+In file included from /workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:10311:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/pilot-sync.inc: In function ‘bool pilot_sync_prefill(omni_context*, const std::string&, const std::string&, int, int, const std::string&)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/pilot-sync.inc:79:36: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+   79 |     const int hidden = llama_n_embd(llama_get_model(ctx->ctx_llama));
+      |                        ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘bool stream_prefill(omni_context*, std::string, std::string, int, int, std::string)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:10376:41: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+10376 |     const int hidden_size = llama_n_embd(llama_get_model(ctx_omni->ctx_llama));
+      |                             ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:10608:49: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+10608 |             const int hidden_size = llama_n_embd(llama_get_model(ctx_omni->ctx_llama));
+      |                                     ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In lambda function:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:10656:107: warning: comparison of integer expressions of different signedness: ‘std::queue<omni_embeds*>::size_type’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+10656 |             ctx_omni->llm_thread_info->cv.wait(lock, [&] { return ctx_omni->llm_thread_info->queue.size() < ctx_omni->llm_thread_info->MAX_QUEUE_SIZE; });
+      |                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘bool stream_decode(omni_context*, std::string, int)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:10933:38: warning: ‘int32_t llama_n_embd(const llama_model*)’ is deprecated: use llama_model_n_embd instead [-Wdeprecated-declarations]
+10933 |         int llm_n_embd = llama_n_embd(llama_get_model(ctx_omni->ctx_llama));
+      |                          ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:553:34: note: declared here
+  553 |     DEPRECATED(LLAMA_API int32_t llama_n_embd     (const struct llama_model * model), "use llama_model_n_embd instead");
+      |                                  ^~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/src/../include/llama.h:30:36: note: in definition of macro ‘DEPRECATED’
+   30 | #    define DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
+      |                                    ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In lambda function:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:11231:111: warning: comparison of integer expressions of different signedness: ‘std::queue<LLMOut*>::size_type’ {aka ‘long unsigned int’} and ‘const int’ [-Wsign-compare]
+11231 |                 ctx_omni->tts_thread_info->cv.wait(lock, [&] { return ctx_omni->tts_thread_info->queue.size() < ctx_omni->tts_thread_info->MAX_QUEUE_SIZE; });
+      |                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp: In function ‘bool stream_decode(omni_context*, std::string, int)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:11194:22: warning: unused variable ‘llm_elapsed_ms’ [-Wunused-variable]
+11194 |                 auto llm_elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(
+      |                      ^~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/omni.cpp:10899:9: warning: unused variable ‘chunk_idx’ [-Wunused-variable]
+10899 |     int chunk_idx = 0;
+      |         ^~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/audition.cpp: In function ‘bool audition_audio_batch_encode(audition_ctx*, int, const audition_audio_f32_batch*, float*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/audition.cpp:1439:15: warning: unused variable ‘n_pos’ [-Wunused-variable]
+ 1439 |     const int n_pos = num_patches + (model.class_embedding ? 1 : 0);
+      |               ^~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/audition.cpp:1440:15: warning: unused variable ‘pos_w’ [-Wunused-variable]
+ 1440 |     const int pos_w = image_size_width  / patch_size;
+      |               ^~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/audition.cpp:1441:15: warning: unused variable ‘pos_h’ [-Wunused-variable]
+ 1441 |     const int pos_h = image_size_height / patch_size;
+      |               ^~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/audition.cpp:1443:16: warning: unused variable ‘use_window_attn’ [-Wunused-variable]
+ 1443 |     const bool use_window_attn = hparams.n_wa_pattern > 0; // for qwen2.5vl
+      |                ^~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/audition.cpp:1463:10: warning: variable ‘set_input_i32’ set but not used [-Wunused-but-set-variable]
+ 1463 |     auto set_input_i32 = [&get_inp_tensor](const char * name, std::vector<int32_t> & values) {
+      |          ^~~~~~~~~~~~~
+[ 98%] Building CXX object tools/omni/CMakeFiles/omni.dir/vision.cpp.o
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/vision.cpp:2565:6: warning: no previous declaration for ‘void vision_set_max_slice_nums(vision_ctx*, int)’ [-Wmissing-declarations]
+ 2565 | void vision_set_max_slice_nums(struct vision_ctx * ctx, int max_slice_nums) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 98%] Building CXX object tools/omni/CMakeFiles/omni.dir/token2wav/token2wav-impl.cpp.o
+[ 98%] Building CXX object tools/omni/CMakeFiles/omni.dir/token2wav/token2wav.cpp.o
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In function ‘ggml_tensor* omni::flow::{anonymous}::flow_build_l2_normalize_cb(ggml_context*, ggml_tensor*, float)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:143:19: warning: unused variable ‘C’ [-Wunused-variable]
+  143 |     const int64_t C = x_cb->ne[0];
+      |                   ^
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:144:19: warning: unused variable ‘B’ [-Wunused-variable]
+  144 |     const int64_t B = x_cb->ne[1];
+      |                   ^
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In function ‘ggml_tensor* omni::flow_matching::{anonymous}::fm_attn_mul_mat_checked(ggml_context*, ggml_tensor*, ggml_tensor*, const char*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:445:106: warning: unused parameter ‘label’ [-Wunused-parameter]
+  445 | ggml_tensor * fm_attn_mul_mat_checked(ggml_context * ctx, ggml_tensor * a, ggml_tensor * b, const char * label) {
+      |                                                                                             ~~~~~~~~~~~~~^~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In static member function ‘static ggml_tensor* omni::flow_matching::fmCausalConditionalCFM::deterministic_noise(ggml_context*, int64_t, int64_t, int64_t, float, int64_t)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:719:74: warning: unused parameter ‘offset_ct’ [-Wunused-parameter]
+  719 |                                                           int64_t        offset_ct) {
+      |                                                           ~~~~~~~~~~~~~~~^~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘ggml_tensor* omni::flow_matching::fmCausalConditionalCFM::build_forward_graph(ggml_context*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, int, float) const’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:782:27: warning: unused variable ‘B_spk’ [-Wunused-variable]
+  782 |             const int64_t B_spk = spks->ne[1];
+      |                           ^~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:786:27: warning: unused variable ‘one’ [-Wunused-variable]
+  786 |             const int64_t one   = spks->ne[1];
+      |                           ^~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:787:27: warning: unused variable ‘B_spk’ [-Wunused-variable]
+  787 |             const int64_t B_spk = spks->ne[2];
+      |                           ^~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘ggml_tensor* omni::flow_matching::fmCausalConditionalCFM::build_forward_chunk_graph(ggml_context*, ggml_tensor*, ggml_tensor*, ggml_tensor*, int, float, const omni::flow_matching::fmCFMCache*, omni::flow_matching::fmCFMCache*) const’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:862:23: warning: unused variable ‘n_time_in’ [-Wunused-variable]
+  862 |         const int64_t n_time_in = att_cache_packed->ne[2] / (int64_t) (H * depth);
+      |                       ^~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:866:23: warning: unused variable ‘n_time_in’ [-Wunused-variable]
+  866 |         const int64_t n_time_in = cnn_cache_packed->ne[2] / (int64_t) depth;
+      |                       ^~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:885:27: warning: unused variable ‘B_spk’ [-Wunused-variable]
+  885 |             const int64_t B_spk = spks->ne[1];
+      |                           ^~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:889:27: warning: unused variable ‘one’ [-Wunused-variable]
+  889 |             const int64_t one   = spks->ne[1];
+      |                           ^~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:890:27: warning: unused variable ‘B_spk’ [-Wunused-variable]
+  890 |             const int64_t B_spk = spks->ne[2];
+      |                           ^~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘ggml_tensor* omni::flow_matching::fmDiT::build_blocks_forward_graph(ggml_context*, ggml_tensor*, ggml_tensor*, ggml_tensor*) const’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:1377:19: warning: unused variable ‘T’ [-Wunused-variable]
+ 1377 |     const int64_t T = x->ne[1];
+      |                   ^
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘ggml_tensor* omni::flow_matching::fmDiT::build_blocks_forward_chunk_graph(ggml_context*, ggml_tensor*, ggml_tensor*, ggml_tensor*, const std::vector<ggml_tensor*>&, const std::vector<ggml_tensor*>&, std::vector<ggml_tensor*>&, std::vector<ggml_tensor*>&) const’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:1426:19: warning: unused variable ‘T’ [-Wunused-variable]
+ 1426 |     const int64_t T = x->ne[1];
+      |                   ^
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘bool omni::flow_matching::fmFlowMatchingModelLoaderGGUF::load_from_file(const std::string&, ggml_backend_t)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:1884:23: warning: the address of ‘ggml_tensor::name’ will never be NULL [-Waddress]
+ 1884 |         if (!t || !t->name) {
+      |                    ~~~^~~~
+In file included from /workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.h:5,
+                 from /workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3:
+/workspace/onia-av-pilot-20261106/runtime/ggml/src/../include/ggml.h:693:14: note: ‘ggml_tensor::name’ declared here
+  693 |         char name[GGML_MAX_NAME];
+      |              ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In function ‘ggml_backend* omni::flow_matching::{anonymous}::fm_loader_init_backend_gpu_idx(int, std::string&)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:2203:51: warning: unused parameter ‘gpu_idx’ [-Wunused-parameter]
+ 2203 | ggml_backend_t fm_loader_init_backend_gpu_idx(int gpu_idx, std::string & backend_name_out) {
+      |                                               ~~~~^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In static member function ‘static void omni::flow_matching::fmFlowMatchingGGUFModelLoader::fill_noise_ctb(std::vector<float>&, int64_t, int64_t, int64_t, float, int64_t)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:2330:73: warning: unused parameter ‘offset_ct’ [-Wunused-parameter]
+ 2330 |                                                    int64_t              offset_ct) {
+      |                                                    ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In function ‘ggml_backend* omni::upsample_encoder_v2::{anonymous}::ue_loader_init_backend_gpu_idx(int, std::string&)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3183:51: warning: unused parameter ‘gpu_idx’ [-Wunused-parameter]
+ 3183 | ggml_backend_t ue_loader_init_backend_gpu_idx(int gpu_idx, std::string & backend_name_out) {
+      |                                               ~~~~^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In function ‘ggml_tensor* omni::upsample_encoder_v2::{anonymous}::ue_mha_mul_mat_checked(ggml_context*, ggml_tensor*, ggml_tensor*, const char*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3618:105: warning: unused parameter ‘label’ [-Wunused-parameter]
+ 3618 | ggml_tensor * ue_mha_mul_mat_checked(ggml_context * ctx, ggml_tensor * a, ggml_tensor * b, const char * label) {
+      |                                                                                            ~~~~~~~~~~~~~^~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘void omni::upsample_encoder_v2::ueMultiHeadedAttention::build_forward_qkv(ggml_context*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor**, ggml_tensor**, ggml_tensor**) const’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3718:19: warning: unused variable ‘Cq’ [-Wunused-variable]
+ 3718 |     const int64_t Cq = query_ctb->ne[0];
+      |                   ^~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3719:19: warning: unused variable ‘Bk’ [-Wunused-variable]
+ 3719 |     const int64_t Bk = key_ctb->ne[2];
+      |                   ^~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3721:19: warning: unused variable ‘Ck’ [-Wunused-variable]
+ 3721 |     const int64_t Ck = key_ctb->ne[0];
+      |                   ^~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3722:19: warning: unused variable ‘Bv’ [-Wunused-variable]
+ 3722 |     const int64_t Bv = value_ctb->ne[2];
+      |                   ^~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3723:19: warning: unused variable ‘Tv’ [-Wunused-variable]
+ 3723 |     const int64_t Tv = value_ctb->ne[1];
+      |                   ^~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3724:19: warning: unused variable ‘Cv’ [-Wunused-variable]
+ 3724 |     const int64_t Cv = value_ctb->ne[0];
+      |                   ^~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘ggml_tensor* omni::upsample_encoder_v2::ueMultiHeadedAttention::build_forward_graph(ggml_context*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor**) const’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3794:19: warning: unused variable ‘C’ [-Wunused-variable]
+ 3794 |     const int64_t C  = query_ctb->ne[0];
+      |                   ^
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3801:19: warning: variable ‘t_cache’ set but not used [-Wunused-but-set-variable]
+ 3801 |     int64_t       t_cache = 0;
+      |                   ^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘ggml_tensor* omni::upsample_encoder_v2::uePositionwiseFeedForward::build_forward_graph(ggml_context*, ggml_tensor*) const’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3853:19: warning: unused variable ‘C’ [-Wunused-variable]
+ 3853 |     const int64_t C = xs_ctb->ne[0];
+      |                   ^
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In function ‘ggml_tensor* omni::upsample_encoder_v2::{anonymous}::ue_prelook_build_conv1d_f32_ctb(ggml_context*, ggml_tensor*, ggml_tensor*, ggml_tensor*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3902:19: warning: unused variable ‘Cin’ [-Wunused-variable]
+ 3902 |     const int64_t Cin  = x_ctb->ne[0];
+      |                   ^~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3904:19: warning: unused variable ‘K’ [-Wunused-variable]
+ 3904 |     const int64_t K    = w_kic_oc->ne[0];
+      |                   ^
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3905:19: warning: unused variable ‘Cinw’ [-Wunused-variable]
+ 3905 |     const int64_t Cinw = w_kic_oc->ne[1];
+      |                   ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘ggml_tensor* omni::upsample_encoder_v2::uePreLookaheadLayer::build_forward_graph(ggml_context*, ggml_tensor*) const’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3953:19: warning: unused variable ‘T’ [-Wunused-variable]
+ 3953 |     const int64_t T = inputs_ctb->ne[1];
+      |                   ^
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3955:19: warning: unused variable ‘K1’ [-Wunused-variable]
+ 3955 |     const int64_t K1 = conv1_weight_->ne[0];
+      |                   ^~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3962:19: warning: unused variable ‘K2’ [-Wunused-variable]
+ 3962 |     const int64_t K2 = conv2_weight_->ne[0];
+      |                   ^~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘ggml_tensor* omni::upsample_encoder_v2::uePreLookaheadLayer::build_forward_chunk_graph(ggml_context*, ggml_tensor*, ggml_tensor*, ggml_tensor**) const’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3982:19: warning: unused variable ‘dt’ [-Wunused-variable]
+ 3982 |     const int64_t dt = inputs_ctb->ne[1];
+      |                   ^~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:3984:19: warning: unused variable ‘K1’ [-Wunused-variable]
+ 3984 |     const int64_t K1 = conv1_weight_->ne[0];
+      |                   ^~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In function ‘ggml_tensor* omni::upsample_encoder_v2::{anonymous}::ue_rel_mha_mul_mat_checked(ggml_context*, ggml_tensor*, ggml_tensor*, const char*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:4089:109: warning: unused parameter ‘label’ [-Wunused-parameter]
+ 4089 | ggml_tensor * ue_rel_mha_mul_mat_checked(ggml_context * ctx, ggml_tensor * a, ggml_tensor * b, const char * label) {
+      |                                                                                                ~~~~~~~~~~~~~^~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘ggml_tensor* omni::upsample_encoder_v2::ueRelPositionMultiHeadedAttention::build_forward_graph(ggml_context*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor**) const’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:4157:19: warning: variable ‘t_cache’ set but not used [-Wunused-but-set-variable]
+ 4157 |     int64_t       t_cache = 0;
+      |                   ^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In function ‘ggml_tensor* omni::upsample_encoder_v2::{anonymous}::ue_up1d_build_conv1d_f32_ctb(ggml_context*, ggml_tensor*, ggml_tensor*, ggml_tensor*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:4313:19: warning: unused variable ‘Cin’ [-Wunused-variable]
+ 4313 |     const int64_t Cin  = x_ctb->ne[0];
+      |                   ^~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:4315:19: warning: unused variable ‘K’ [-Wunused-variable]
+ 4315 |     const int64_t K    = w_kic_oc->ne[0];
+      |                   ^
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:4316:19: warning: unused variable ‘Cinw’ [-Wunused-variable]
+ 4316 |     const int64_t Cinw = w_kic_oc->ne[1];
+      |                   ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘ggml_tensor* omni::upsample_encoder_v2::ueUpsample1D::build_forward_graph(ggml_context*, ggml_tensor*) const’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:4360:19: warning: unused variable ‘K’ [-Wunused-variable]
+ 4360 |     const int64_t K        = conv_weight_->ne[0];
+      |                   ^
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘ggml_tensor* omni::upsample_encoder_v2::ueUpsample1D::build_forward_chunk_graph(ggml_context*, ggml_tensor*, ggml_tensor*, ggml_tensor**) const’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:4381:19: warning: unused variable ‘K’ [-Wunused-variable]
+ 4381 |     const int64_t K       = conv_weight_->ne[0];
+      |                   ^
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘ggml_tensor* omni::upsample_encoder_v2::ueUpsampleConformerEncoderV2::build_forward_chunk_graph(ggml_context*, ggml_tensor*, bool, ggml_tensor*, ggml_tensor*, ggml_tensor**, ggml_tensor**) const’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:4660:19: warning: variable ‘Tk1’ set but not used [-Wunused-but-set-variable]
+ 4660 |     int64_t       Tk1                   = 0;
+      |                   ^~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:4698:19: warning: variable ‘Tk2’ set but not used [-Wunused-but-set-variable]
+ 4698 |     int64_t       Tk2                   = 0;
+      |                   ^~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘bool omni::vocoder::hifigan2::hg2_gguf_model_loader::hg_gguf_model_loader_load_from_file(const std::string&, ggml_backend_t)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:5149:23: warning: the address of ‘ggml_tensor::name’ will never be NULL [-Waddress]
+ 5149 |         if (!t || !t->name) {
+      |                    ~~~^~~~
+/workspace/onia-av-pilot-20261106/runtime/ggml/src/../include/ggml.h:693:14: note: ‘ggml_tensor::name’ declared here
+  693 |         char name[GGML_MAX_NAME];
+      |              ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In function ‘ggml_tensor* omni::vocoder::hifigan2::hg_istft16_repeat_checked(ggml_context*, ggml_tensor*, ggml_tensor*, const char*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:5590:64: warning: unused parameter ‘what’ [-Wunused-parameter]
+ 5590 |                                                 const char *   what) {
+      |                                                 ~~~~~~~~~~~~~~~^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘bool omni::flow::flowExtraModelLoaderGGUF::load_from_file(const std::string&, ggml_backend_t)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:7139:23: warning: the address of ‘ggml_tensor::name’ will never be NULL [-Waddress]
+ 7139 |         if (!t || !t->name) {
+      |                    ~~~^~~~
+/workspace/onia-av-pilot-20261106/runtime/ggml/src/../include/ggml.h:693:14: note: ‘ggml_tensor::name’ declared here
+  693 |         char name[GGML_MAX_NAME];
+      |              ^~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In function ‘void omni::flow::{anonymous}::runner_fill_noise_ctb(std::vector<float>&, int64_t, int64_t, int64_t, float, int64_t)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:7417:42: warning: unused parameter ‘offset_ct’ [-Wunused-parameter]
+ 7417 |                     int64_t              offset_ct) {
+      |                     ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In member function ‘bool omni::flow::Token2Mel::start_stream_ane_(const omni::flow::flowStreamCacheHost&)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:9144:18: warning: unused variable ‘cnn_per_step_dB’ [-Wunused-variable]
+ 9144 |     const size_t cnn_per_step_dB = (size_t) (depth_i * B_i) * cnn_per_slot;
+      |                  ^~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp: In static member function ‘static ggml_tensor* omni::flow_matching::fmModulateUtils::build_modulate(ggml_context*, ggml_tensor*, ggml_tensor*, ggml_tensor*)’:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:2722:15: warning: infinite recursion detected [-Winfinite-recursion]
+ 2722 | ggml_tensor * fmModulateUtils::build_modulate(ggml_context * ctx,
+      |               ^~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:2726:26: note: recursive call
+ 2726 |     return build_modulate(ctx, x, shift, scale);
+      |            ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/token2wav/token2wav-impl.cpp:2722:15: warning: function might be candidate for attribute ‘noreturn’ [-Wsuggest-attribute=noreturn]
+ 2722 | ggml_tensor * fmModulateUtils::build_modulate(ggml_context * ctx,
+      |               ^~~~~~~~~~~~~~~
+[100%] Linking CXX shared library ../../bin/libomni.so
+[100%] Built target omni
+[100%] Building CXX object tools/omni/CMakeFiles/llama-omni-single-test-omni.dir/test/single_test_omni.cpp.o
+In file included from /workspace/onia-av-pilot-20261106/runtime/tools/omni/test/single_test_omni.cpp:8:
+/workspace/onia-av-pilot-20261106/runtime/common/./log.h:104:9: warning: "LOG_TMPL" redefined
+  104 | #define LOG_TMPL(level, verbosity, ...) \
+      |         ^~~~~~~~
+In file included from /workspace/onia-av-pilot-20261106/runtime/tools/omni/test/single_test_omni.cpp:4:
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/./omni-impl.h:190:9: note: this is the location of the previous definition
+  190 | #define LOG_TMPL(level, ...) \
+      |         ^~~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/common/./log.h:114:9: warning: "LOG_DBG" redefined
+  114 | #define LOG_DBG(...) LOG_TMPL(GGML_LOG_LEVEL_DEBUG, LOG_LEVEL_DEBUG,  __VA_ARGS__)
+      |         ^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/./omni-impl.h:199:9: note: this is the location of the previous definition
+  199 | #define LOG_DBG(...) LOG_TMPL(GGML_LOG_LEVEL_DEBUG, __VA_ARGS__)
+      |         ^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/common/./log.h:116:9: warning: "LOG_INF" redefined
+  116 | #define LOG_INF(...) LOG_TMPL(GGML_LOG_LEVEL_INFO,  LOG_LEVEL_INFO,   __VA_ARGS__)
+      |         ^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/./omni-impl.h:196:9: note: this is the location of the previous definition
+  196 | #define LOG_INF(...) LOG_TMPL(GGML_LOG_LEVEL_INFO,  __VA_ARGS__)
+      |         ^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/common/./log.h:117:9: warning: "LOG_WRN" redefined
+  117 | #define LOG_WRN(...) LOG_TMPL(GGML_LOG_LEVEL_WARN,  LOG_LEVEL_WARN,   __VA_ARGS__)
+      |         ^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/./omni-impl.h:197:9: note: this is the location of the previous definition
+  197 | #define LOG_WRN(...) LOG_TMPL(GGML_LOG_LEVEL_WARN,  __VA_ARGS__)
+      |         ^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/common/./log.h:118:9: warning: "LOG_ERR" redefined
+  118 | #define LOG_ERR(...) LOG_TMPL(GGML_LOG_LEVEL_ERROR, LOG_LEVEL_ERROR,  __VA_ARGS__)
+      |         ^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/./omni-impl.h:198:9: note: this is the location of the previous definition
+  198 | #define LOG_ERR(...) LOG_TMPL(GGML_LOG_LEVEL_ERROR, __VA_ARGS__)
+      |         ^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/common/./log.h:119:9: warning: "LOG_CNT" redefined
+  119 | #define LOG_CNT(...) LOG_TMPL(GGML_LOG_LEVEL_CONT,  LOG_LEVEL_INFO,   __VA_ARGS__) // same as INFO
+      |         ^~~~~~~
+/workspace/onia-av-pilot-20261106/runtime/tools/omni/./omni-impl.h:200:9: note: this is the location of the previous definition
+  200 | #define LOG_CNT(...) LOG_TMPL(GGML_LOG_LEVEL_CONT,  __VA_ARGS__)
+      |         ^~~~~~~
+[100%] Linking CXX executable ../../bin/llama-omni-single-test-omni
+[100%] Built target llama-omni-single-test-omni
+BUILD_EXIT 0
+BUILD_ARTIFACT {"path": "/workspace/onia-av-pilot-20261106/build-v2/bin/llama-omni-single-test-omni", "bytes": 55680, "sha256": "9e93dec5eafa79172827df6afcd3d51abb2bb79123c4000a86dcbfc62e449f47", "executed": false, "frozen_sources_verified_after_build": true}

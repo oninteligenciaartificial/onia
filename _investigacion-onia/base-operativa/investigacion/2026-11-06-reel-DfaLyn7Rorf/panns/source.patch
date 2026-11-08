@@ -1,0 +1,78 @@
+--- panns-screen-v1/supervise.py
++++ reel-DfaLyn7Rorf/supervise.py
+@@ -1,7 +1,7 @@
+ """Own-group CPU1 supervisor; stdlib only; never changes parent limits."""
+ from pathlib import Path
+ import os,sys,time,json,resource,signal,subprocess,selectors,hashlib
+-R=Path('/workspace/onia-av-pilot-20261106');O=R/'panns-screen-v1';G=1024**3
++R=Path('/workspace/onia-av-pilot-20261106');O=R/'reel-DfaLyn7Rorf';G=1024**3
+ def snapshot():
+  mem=int(next(x.split()[1] for x in Path('/proc/meminfo').read_text().splitlines() if x.startswith('MemAvailable:')))*1024
+  cg=Path('/sys/fs/cgroup');maximum=(cg/'memory.max').read_text().strip();current=int((cg/'memory.current').read_text())
+--- panns-screen-v1/run_windows.py
++++ reel-DfaLyn7Rorf/run_windows.py
+@@ -1,12 +1,12 @@
+ from pathlib import Path
+ import json,hashlib
+ import supervise
+-O=Path(__file__).resolve().parent;freeze=json.loads((O/'cormac-input-freeze.json').read_text())
++O=Path(__file__).resolve().parent;freeze=json.loads((O/'input-manifest.json').read_text())
+ assert hashlib.sha256((O/'infer.py').read_bytes()).hexdigest()==freeze['adapter_sha256']
+ for x in freeze['windows']:
+  assert hashlib.sha256(Path(x['path']).read_bytes()).hexdigest()==x['sha256']
+  assert json.loads((O/(x['case']+'-input.json')).read_text())==x
+-with open(O/'cormac-once.lock','x') as f:f.write('four nonoverlapping windows, one attempt each, stop first failure\n')
++with open(O/'inference-once.lock','x') as f:f.write('four nonoverlapping windows, one attempt each, stop first failure\n')
+ for x in freeze['windows']:
+  case=x['case'];assert not (O/(case+'-receipt.json')).exists()
+  r=supervise.run(case,[str(O.parent/'panns-setup-v3/venv/bin/python'),'-B',str(O/'infer.py'),case],120,120)
+--- cormac-transfer-v1/transfer.py
++++ reel-DfaLyn7Rorf/transfer.py
+@@ -1,6 +1,6 @@
+ from pathlib import Path
+ import json,hashlib,time,urllib.request,urllib.error,urllib.parse,subprocess,sys
+-O=Path('/workspace/onia-av-pilot-20261106/cormac-transfer-v1')
++O=Path('/workspace/onia-av-pilot-20261106/reel-DfaLyn7Rorf')
+ deadline=time.monotonic()+110;MAX=64*1024**2
+ def save(x):(O/'transfer-receipt.json').write_text(json.dumps(x,indent=2)+'\n')
+ def sha(p):
+@@ -8,7 +8,7 @@
+  with open(p,'rb') as f:
+   while b:=f.read(1048576):h.update(b)
+  return h.hexdigest()
+-state={'piece':'DfWLWspIruU','anonymous':True,'automatic_retries':0,'tracks':[],'complete':False}
++state={'piece':'DfaLyn7Rorf','anonymous':True,'automatic_retries':0,'tracks':[],'complete':False}
+ def run(cmd):
+  t=deadline-time.monotonic()
+  if t<=0:raise TimeoutError('deadline')
+@@ -19,7 +19,7 @@
+   entry={'format_id':spec['format_id'],'host':parsed.hostname,'url_without_query_sha256':hashlib.sha256(queryless.encode()).hexdigest(),'bytes':0,'complete':False}
+   state['tracks'].append(entry);save(state)
+   assert parsed.scheme=='https' and parsed.hostname=='scontent-lim1-1.cdninstagram.com'
+-  dest=O/f'track-{i}.mp4';headers=dict(spec['headers']);headers['Accept-Encoding']='identity'
++  dest=O/f'track-{i}.mp4';headers=dict(spec['http_headers']);headers['Accept-Encoding']='identity'
+   req=urllib.request.Request(spec['url'],headers=headers)
+   with urllib.request.urlopen(req,timeout=min(20,max(.1,deadline-time.monotonic()))) as response:
+    entry['http_status']=response.status;entry['content_length']=response.headers.get('Content-Length')
+@@ -35,16 +35,16 @@
+      f.write(b);entry['bytes']+=len(b)
+    if entry['content_length'] and entry['bytes']!=int(entry['content_length']):raise ValueError('short_body')
+   entry.update(sha256=sha(dest),closed_file_hash=True,complete=True);save(state)
+- remux=O/'DfWLWspIruU-remux.mp4'
+- cmd=['ffmpeg','-hide_banner','-loglevel','error','-threads','2','-i',str(O/'track-0.mp4'),'-i',str(O/'track-1.mp4'),'-map','0:v:0','-map','1:a:0','-c','copy',str(remux)]
++ remux=O/'DfaLyn7Rorf-remux.mp4'
++ cmd=['ffmpeg','-hide_banner','-loglevel','error','-threads','2','-i',str(O/'track-0.mp4'),'-i',str(O/'track-1.mp4'),'-map','1:v:0','-map','0:a:0','-c','copy',str(remux)]
+  run(cmd)
+- probe=json.loads(run(['ffprobe','-v','error','-count_packets','-show_entries','format=duration,size:stream=index,codec_type,codec_name,width,height,sample_rate,channels,duration,nb_read_packets','-of','json',str(remux)]))
+- expected=['ae7c9a7097a0f7d3d262bcde444569bb10789b76a4afd5176f209e0ed505b403','681f83302315ebb9819b9b72b1a0ebaa1f3967a1afe615fdfdf982ded8c4ab49']
++ probe=json.loads(run(['ffprobe','-v','error','-count_packets','-count_frames','-show_entries','format=duration,size:stream=index,codec_type,codec_name,width,height,sample_rate,channels,duration,nb_read_packets,nb_read_frames,r_frame_rate','-of','json',str(remux)]))
++ expected=None
+  hashes=run(['ffmpeg','-hide_banner','-loglevel','error','-i',str(remux),'-map','0:v:0','-map','0:a:0','-c','copy','-f','streamhash','-hash','sha256','-'])
+  actual=[line.strip().split('=')[-1] for line in hashes.splitlines() if '=SHA' in line]
+  # ffmpeg emits e.g. 0,v,SHA256=<digest>; compare both ordered tracks.
+  actual=[line.strip().split('=')[-1] for line in hashes.splitlines() if 'SHA256=' in line]
+- state.update(complete=True,remux={'bytes':remux.stat().st_size,'sha256':sha(remux),'probe':probe,'streamhash_output':hashes,'expected_original_streamhashes':expected,'both_streams_match_original':actual==expected,'original_file_sha256':'9be4267480093249e104ec9821271e1a755e4329b7ea4d8fca3fc8bacd3b664e','file_hash_matches_original':sha(remux)=='9be4267480093249e104ec9821271e1a755e4329b7ea4d8fca3fc8bacd3b664e','container_variant':'local remux, not assumed byte-identical original','command':cmd})
++ state.update(complete=True,remux={'bytes':remux.stat().st_size,'sha256':sha(remux),'probe':probe,'streamhash_output':hashes,'expected_original_streamhashes':expected,'both_streams_match_original':None,'PC_streamhash_comparison':'PC payload streamhashes not supplied; computed hashes retained for coordination comparison','original_file_sha256':'b2006a4f36588ed260c148f0bd347552fab0627b24f0ffd6f154635e51cd890d','file_hash_matches_original':sha(remux)=='b2006a4f36588ed260c148f0bd347552fab0627b24f0ffd6f154635e51cd890d','container_variant':'local remux, not assumed byte-identical original','command':cmd})
+ except BaseException as exc:
+  state.update(error_type=type(exc).__name__,http_error_status=getattr(exc,'code',None),safe_error='exception text suppressed to avoid signed URLs; no retry')
+  for i,x in enumerate(state['tracks']):

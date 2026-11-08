@@ -1,0 +1,275 @@
+{
+  "utc": "2026-11-07T01:27:28.918099+00:00",
+  "host_memory": {
+    "MemTotal_bytes": 35743748096,
+    "MemAvailable_bytes": 34792882176,
+    "SwapTotal_bytes": 0,
+    "SwapFree_bytes": 0
+  },
+  "cgroup_visible_levels": [
+    {
+      "path": "/sys/fs/cgroup",
+      "memory.max": "34359738368",
+      "memory.current": "2761736192",
+      "memory.swap.max": "max",
+      "memory.swap.current": "0",
+      "cpu.max": "400000 100000",
+      "cpuset.cpus": "",
+      "cpuset.cpus.effective": "0-4",
+      "cpuset.mems.effective": "0"
+    }
+  ],
+  "hidden_ancestors": "not observable; no claims about host ancestors beyond namespace",
+  "reserve_bytes": 31598002176,
+  "required_reserve_bytes": 6442450944,
+  "reserve_pass": true,
+  "cpu_logical_host": 5,
+  "parent_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "visible_cpu_quota_min_cores": 4.0,
+  "disk_free_bytes": 56903487488,
+  "parent_rlimit_as": [
+    -1,
+    -1
+  ],
+  "parent_rlimit_cpu": [
+    -1,
+    -1
+  ],
+  "future_entry_policy": {
+    "AS_virtual_bytes_per_process": 3221225472,
+    "cpu_seconds_per_entry": 120,
+    "wall_seconds_per_entry": 120,
+    "affinity_CPUs": 1,
+    "batch": 1,
+    "reserve_bytes": 6442450944,
+    "swap_addition": false,
+    "policy_applied_now": false
+  },
+  "own_uid_process_metadata": [
+    {
+      "pid": 1,
+      "comm": "tail",
+      "state": "S",
+      "ppid": 0,
+      "pgid": 1,
+      "threads": 1,
+      "rss_bytes": 655360
+    },
+    {
+      "pid": 2,
+      "comm": "cloud-agent-log",
+      "state": "S",
+      "ppid": 1,
+      "pgid": 1,
+      "threads": 1,
+      "rss_bytes": 1703936
+    },
+    {
+      "pid": 3,
+      "comm": "caas-prefix-tra",
+      "state": "S",
+      "ppid": 2,
+      "pgid": 1,
+      "threads": 1,
+      "rss_bytes": 131072
+    },
+    {
+      "pid": 637,
+      "comm": "codex",
+      "state": "S",
+      "ppid": 0,
+      "pgid": 637,
+      "threads": 9,
+      "rss_bytes": 39391232
+    },
+    {
+      "pid": 6332,
+      "comm": "python3",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 6331,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 7045,
+      "comm": "python3",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 7044,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 7103,
+      "comm": "python3",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 7102,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 7911,
+      "comm": "python3",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 7910,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 7915,
+      "comm": "python3",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 7914,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 8102,
+      "comm": "python3",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 8101,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 8106,
+      "comm": "python3",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 8105,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 8634,
+      "comm": "cmake",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 8511,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 8635,
+      "comm": "gmake",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 8511,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 8640,
+      "comm": "gmake",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 8511,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 10881,
+      "comm": "sh",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 8511,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 10882,
+      "comm": "c++",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 8511,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 10883,
+      "comm": "cc1plus",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 8511,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 10895,
+      "comm": "sh",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 8511,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 10896,
+      "comm": "c++",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 8511,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 10897,
+      "comm": "cc1plus",
+      "state": "Z",
+      "ppid": 1,
+      "pgid": 8511,
+      "threads": 1,
+      "rss_bytes": 0
+    },
+    {
+      "pid": 22758,
+      "comm": "codex-linux-san",
+      "state": "S",
+      "ppid": 637,
+      "pgid": 22758,
+      "threads": 1,
+      "rss_bytes": 15990784
+    },
+    {
+      "pid": 22760,
+      "comm": "bwrap",
+      "state": "S",
+      "ppid": 22758,
+      "pgid": 22760,
+      "threads": 1,
+      "rss_bytes": 917504
+    },
+    {
+      "pid": 22761,
+      "comm": "codex",
+      "state": "S",
+      "ppid": 22760,
+      "pgid": 22761,
+      "threads": 1,
+      "rss_bytes": 15466496
+    },
+    {
+      "pid": 22762,
+      "comm": "python3",
+      "state": "R",
+      "ppid": 22761,
+      "pgid": 22761,
+      "threads": 1,
+      "rss_bytes": 11796480
+    }
+  ],
+  "other_uid_process_count_only": 7,
+  "previous_groups_pending": [],
+  "no_process_signals_sent": true
+}

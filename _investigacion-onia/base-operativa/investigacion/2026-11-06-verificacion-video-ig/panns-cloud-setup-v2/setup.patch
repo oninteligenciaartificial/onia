@@ -1,0 +1,51 @@
+--- panns-setup-v1/setup.py
++++ panns-setup-v2/setup.py
+@@ -6,18 +6,30 @@
+ from pip._vendor.packaging.tags import sys_tags
+ from pip._vendor.packaging.utils import parse_wheel_filename,canonicalize_name
+ O=Path(__file__).resolve().parent;W=O/'wheels';W.mkdir();START=time.monotonic();LIMIT=1610612736
+-state={'stage':'official_metadata','network_start_monotonic':START,'download_bytes_total':0,'download_cap_bytes':LIMIT,'automatic_retries':0,'packages':{},'complete':False};tags=set(sys_tags())
++state={'stage':'official_metadata','network_start_monotonic':START,'download_bytes_total':431099,'prior_v1_wall_seconds':0.6820892569994612,'download_cap_bytes':LIMIT,'automatic_retries':0,'packages':{},'complete':False};tags=set(sys_tags())
+ def save():(O/'setup-receipt.json').write_text(json.dumps(state,indent=2)+'\n')
+ def remaining():
+- t=295-(time.monotonic()-START)
++ t=295-0.6820892569994612-(time.monotonic()-START)
+  if t<=0:raise TimeoutError('global_preparation_deadline')
+  return t
++def guard_url(url,phase):
++ parsed=urllib.parse.urlsplit(url);host=parsed.hostname
++ allowed=parsed.scheme=='https' and (host in {'pypi.org','files.pythonhosted.org','download.pytorch.org','zenodo.org'} or (host=='download-r2.pytorch.org' and url==state.get('torch_provenance',{}).get('url')))
++ state.setdefault('guard_trace',[]).append({'phase':phase,'hostname':host,'path_sha256':hashlib.sha256(parsed.path.encode()).hexdigest(),'allowed':allowed});save()
++ if not allowed:raise ValueError('rejected_hostname:'+str(host))
++class GuardRedirect(urllib.request.HTTPRedirectHandler):
++ def redirect_request(self,req,fp,code,msg,headers,newurl):
++  guard_url(newurl,'redirect_before_follow')
++  return super().redirect_request(req,fp,code,msg,headers,newurl)
++opener=urllib.request.build_opener(GuardRedirect())
+ def fetch(url,dest=None,expected_size=None,expected_sha=None,expected_md5=None):
+- assert urllib.parse.urlsplit(url).hostname in {'pypi.org','files.pythonhosted.org','download.pytorch.org','zenodo.org'}
++ guard_url(url,'request_before_HTTP')
+  remaining();req=urllib.request.Request(url,headers={'Accept-Encoding':'identity'})
+  h=hashlib.sha256();md=hashlib.md5();size=0;pieces=[];handle=open(dest,'xb') if dest else None
+  try:
+-  with urllib.request.urlopen(req,timeout=min(20,remaining())) as response:
++  with opener.open(req,timeout=min(20,remaining())) as response:
++   guard_url(response.geturl(),'response_host')
++   state['last_HTTP_status']=response.status;save()
+    if response.status!=200:raise ValueError('HTTP_status')
+    if response.headers.get('Content-Encoding','identity')!='identity':raise ValueError('HTTP_encoding')
+    announced=response.headers.get('Content-Length')
+@@ -53,10 +65,12 @@
+ try:
+  # First network action begins the sole preparation clock. Only official CPU index.
+  import re,html
+- index=fetch('https://download.pytorch.org/whl/cpu/torch/').decode()
++ index_bytes=fetch('https://download.pytorch.org/whl/cpu/torch/');(O/'official-torch-index.html').write_bytes(index_bytes);index=index_bytes.decode()
+  links=[html.unescape(x) for x in re.findall(r'href="([^"]+)"',index)]
+  torch_link=next(x for x in links if 'torch-2.5.1%2Bcpu-cp312-cp312-linux_x86_64.whl' in x or 'torch-2.5.1+cpu-cp312-cp312-linux_x86_64.whl' in x)
+  torch_url=urllib.parse.urljoin('https://download.pytorch.org/whl/cpu/torch/',torch_link);torch_sha=urllib.parse.parse_qs(urllib.parse.urlsplit(torch_url).fragment)['sha256'][0];torch_url=torch_url.split('#',1)[0]
++ state['torch_provenance']={'index_url':'https://download.pytorch.org/whl/cpu/torch/','index_sha256':hashlib.sha256(index_bytes).hexdigest(),'index_bytes':len(index_bytes),'link_found_in_same_index':torch_link in links,'hostname':urllib.parse.urlsplit(torch_url).hostname,'url':torch_url,'wheel_sha256_from_index':torch_sha};save()
++ guard_url(torch_url,'selected_index_link')
+  while queue:
+   remaining();req=queue.pop(0)
+   if req.marker and not req.marker.evaluate({'extra':''}):continue

@@ -1,0 +1,100 @@
+{
+  "sampler": [
+    {
+      "seed": 20261106,
+      "temperature": 0,
+      "policy": "temperature_zero_then_dist_fixed_seed",
+      "filters": "none",
+      "eos": true
+    }
+  ],
+  "budget": [
+    {
+      "input_positions": 210,
+      "text_and_control_positions": 62,
+      "response_reserve": 128,
+      "total": 338,
+      "effective_context": 2048
+    }
+  ],
+  "chunk": [
+    {
+      "chunk": 0,
+      "audio": {
+        "expected": 1,
+        "decoded": 1,
+        "encoder_ok": 1,
+        "delivered": 1,
+        "accepted": 1,
+        "decoded_samples": 16000,
+        "encoded_positions": 10,
+        "accepted_positions": 10
+      },
+      "image": {
+        "expected": 1,
+        "decoded": 1,
+        "encoder_ok": 1,
+        "delivered": 1,
+        "accepted": 1,
+        "decoded_samples": 0,
+        "encoded_positions": 64,
+        "accepted_positions": 64
+      },
+      "text": {
+        "expected": 0,
+        "decoded": 0,
+        "encoder_ok": 0,
+        "delivered": 0,
+        "accepted": 0,
+        "decoded_samples": 0,
+        "encoded_positions": 0,
+        "accepted_positions": 0
+      },
+      "error": ""
+    },
+    {
+      "chunk": 1,
+      "audio": {
+        "expected": 1,
+        "decoded": 1,
+        "encoder_ok": 1,
+        "delivered": 1,
+        "accepted": 1,
+        "decoded_samples": 16000,
+        "encoded_positions": 10,
+        "accepted_positions": 10
+      },
+      "image": {
+        "expected": 1,
+        "decoded": 1,
+        "encoder_ok": 1,
+        "delivered": 1,
+        "accepted": 1,
+        "decoded_samples": 0,
+        "encoded_positions": 64,
+        "accepted_positions": 64
+      },
+      "text": {
+        "expected": 1,
+        "decoded": 0,
+        "encoder_ok": 0,
+        "delivered": 1,
+        "accepted": 1,
+        "decoded_samples": 0,
+        "encoded_positions": 29,
+        "accepted_positions": 29
+      },
+      "error": ""
+    }
+  ],
+  "result": [
+    {
+      "complete": true,
+      "error": "",
+      "n_past": 282,
+      "response_sampled": 73,
+      "response_accepted": 72
+    }
+  ],
+  "error": []
+}

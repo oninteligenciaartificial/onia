@@ -1,0 +1,18 @@
+{
+  "perfil": "cierre_documental",
+  "recomendado": {
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "medium"
+  },
+  "solicitado": {
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "medium"
+  },
+  "observado": {
+    "modelo": "gpt-6-astra",
+    "esfuerzo": "ultra",
+    "fuente": "continuidad/evidencias/capacidad-audiovisual-001/modelos-cierre-v1.json"
+  },
+  "criterio": "Cierre simple de documentación. La solicitud de Sol medio no cambia el turno ya activo: último turn_context propio comprobado sigue en Astra ultra; se conserva el antecedente.",
+  "escalamiento": "Terminar este turno sin ensayos ni consultas adicionales; coordinación verificará Sol medio en un turno corto posterior. Para implementación/revisión compleja, Sol alto; escalar sólo por causa documentada."
+}

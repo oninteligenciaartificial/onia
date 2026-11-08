@@ -1,0 +1,362 @@
+{
+ "base_repo": "/workspace/onia",
+ "base_commit": "e55812ce1bc8ef798fb370257ba887d07acccc53",
+ "leyenda": {
+  "parent": "autor de Heras/San/Carrera/SINTESIS y recibos",
+  "A": "/root/lote_preflight_comercial, único autor Hormozi",
+  "B": "/root/lote_preflight_didactica, único autor Iman",
+  "B-preflight": "mismo B durante preflight previo; no otro agente"
+ },
+ "modelo": {
+  "solicitado_subagentes": "gpt-6.1-sol",
+  "esfuerzo_solicitado": "medium",
+  "perfil_recomendado": "multifuente",
+  "modelo_observado": null,
+  "nota": "No hay observación de runtime que certifique el modelo real. No se inventa."
+ },
+ "lecturas_previas_checkout": [
+  {
+   "repo": "AGENTS.md",
+   "sha256_leido": "f2804c1a6522e68922b445f8342a7038e4d68f2a9a2195f00dc2b9029d19da99",
+   "bytes_leidos": 1433,
+   "lectura": "completa",
+   "por": [
+    "parent",
+    "A",
+    "B"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/AGENTS.md",
+   "sha256_leido": "6371ae719128c281acb1d9cde38d8c4d16c3154173b78838b06d261fa30e1358",
+   "bytes_leidos": 891,
+   "lectura": "completa",
+   "por": [
+    "parent"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/cloud/INICIO-SESION.md",
+   "sha256_leido": "fbb6516876f10c30f38b2eebcdedb27744c249bfd4b6a7b587219737805b86b1",
+   "bytes_leidos": 3352,
+   "lectura": "completa",
+   "por": [
+    "parent"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/reglas-comunes.md",
+   "sha256_leido": "ac506e6e1bc6586b0cd4378c0fef513c6e67a4399154bb4bd06f8169eec713f7",
+   "bytes_leidos": 6311,
+   "lectura": "completa",
+   "por": [
+    "parent",
+    "A",
+    "B"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/ESTADO.md",
+   "sha256_leido": "e1aee20482e1674e184d3368304637a1edc50402521043999c0faea68f820a67",
+   "bytes_leidos": 5280,
+   "lectura": "completa",
+   "por": [
+    "parent",
+    "A",
+    "B"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/ORQUESTACION.md",
+   "sha256_leido": "381eb0d561204f0755bedaf7f9ca77350e3aaede01b833d2771c44bbae5052e7",
+   "bytes_leidos": 6878,
+   "lectura": "completa; versión checkout sin QA NOV6",
+   "por": [
+    "parent"
+   ],
+   "snapshot_sha256": "ac2b99a558c42ff6166e4f80d770e0bbaa3e3b0b6f0a72cb219d5f72b28fc190",
+   "cotejo": "versión con contenido actualizado; lectura adicional abajo"
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/orquestacion.json",
+   "sha256_leido": "1764775a72e6773cbbfc9b562354b59ee66bd33acd5be778714c286d91ef1ba1",
+   "bytes_leidos": 7285,
+   "lectura": "completa",
+   "por": [
+    "parent"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/compartibles/skills/continuidad-de-trabajo/SKILL.md",
+   "sha256_leido": "5d86f6a16131cf4128cd51c9c1d9a4b067502ddebc26bb6ac32fd2e97c2a732c",
+   "bytes_leidos": 4430,
+   "lectura": "completa",
+   "por": [
+    "parent",
+    "A",
+    "B"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md",
+   "sha256_leido": "1f629e18ab899412683bc6a1c4efb4339999e27c2fdac328f26ee10a8c031d33",
+   "bytes_leidos": 832,
+   "lectura": "completa",
+   "por": [
+    "parent",
+    "A",
+    "B"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/GOAL-REFERENTES.md",
+   "sha256_leido": "e13903cea796da5ae2b72245f1590862a5272572fdfd08dd72841ecca24a5c25",
+   "bytes_leidos": 46188,
+   "lectura": "cabecera, filas Hormozi/Iman/Heras/San/Alex Carrera y límites pertinentes; no lectura integral",
+   "por": [
+    "parent",
+    "A",
+    "B"
+   ],
+   "snapshot_sha256": "690cf8424e4648e38647dcad1c6284bc15ef620e990bd790b43f6d9796c11339",
+   "cotejo": "versión con contenido actualizado; lectura adicional abajo"
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/alex-hormozi.md",
+   "sha256_leido": "b2acabcd3a88b6c6db87cae450be7c0aba8604072f3cd3f0196ed51d15b7d181",
+   "bytes_leidos": 10959,
+   "lectura": "completa, líneas1–60",
+   "por": [
+    "A"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/audiovisual/hormozi.md",
+   "sha256_leido": "685abf3f6263231d53ac265075053a3e9546639fabbab0eab64e4e8670306675",
+   "bytes_leidos": 11258,
+   "lectura": "completa, líneas1–90",
+   "por": [
+    "A"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/iman-gadzhi.md",
+   "sha256_leido": "3c80628a9b43e36a041267c5b8573415440a3adc134db7e5c17320dce82231ac",
+   "bytes_leidos": 10128,
+   "lectura": "completa, líneas1–54",
+   "por": [
+    "B"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/audiovisual/iman.md",
+   "sha256_leido": "20c6d7063c1025929fb99572aff04b819155209e3169b7f123e12ee08d5132de",
+   "bytes_leidos": 5738,
+   "lectura": "completa, líneas1–38",
+   "por": [
+    "B"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/criterio/iman-prompts-publicos.md",
+   "sha256_leido": "4e33b8e38f2a34f114bb19a1d45dcdae19af0534d10b2cdd4943f16beaf33d53",
+   "bytes_leidos": 5530,
+   "lectura": "completa, líneas1–29",
+   "por": [
+    "B"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/victor-heras.md",
+   "sha256_leido": "c12d118c19762c6c2f6ea03eecefe4e84731f2913ab7e06516b32a1146540543",
+   "bytes_leidos": 9018,
+   "lectura": "completa",
+   "por": [
+    "parent"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/audiovisual/heras-vsl.md",
+   "sha256_leido": "ebaba80a738ee2bcbb05cb87a91a6441949065836c6005db21e02b9f83e24522",
+   "bytes_leidos": 8479,
+   "lectura": "completa",
+   "por": [
+    "parent"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/san-munoz.md",
+   "sha256_leido": "6bdf2fdf305d61db913c90c738899331b7dfe705e7bf70f3249a411e65926652",
+   "bytes_leidos": 11018,
+   "lectura": "completa",
+   "por": [
+    "parent",
+    "B-preflight"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/audiovisual/san.md",
+   "sha256_leido": "ed544c148b3e5aeb65b3c2973b69c7a8e64cb53c45f736bff2b81b0a2bcc110e",
+   "bytes_leidos": 12193,
+   "lectura": "completa",
+   "por": [
+    "parent",
+    "B-preflight"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/criterio/alex-carrera.md",
+   "sha256_leido": "9aa4d1ed890227588915f197b214b052cbf841c626670b808d17a165100d2902",
+   "bytes_leidos": 4646,
+   "lectura": "completa",
+   "por": [
+    "parent",
+    "B-preflight"
+   ],
+   "snapshot_sha256": "631ae1d02920e45736a815a5901007b575ad17a92c80e8b989d2257fc4965fba",
+   "cotejo": "mismo texto, sólo CRLF; sin relectura íntegra"
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/audiovisual/alex-carrera.md",
+   "sha256_leido": "2bbfa353e57f272d32c062c10a18d72126b9d3ab69841321afbb3f307061b73a",
+   "bytes_leidos": 7341,
+   "lectura": "completa",
+   "por": [
+    "parent",
+    "B-preflight"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/audiovisual/alex-cuadros-completos.md",
+   "sha256_leido": "323edc1b631303defb5719219e2b196798de35c0f4fdea6ace2e7fdfcc1c36ca",
+   "bytes_leidos": 13159,
+   "lectura": "completa",
+   "por": [
+    "parent",
+    "B-preflight"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/criterio/ensenanza-hormozi-iman-heras.md",
+   "sha256_leido": "0ea2ac59695049696ab19223b45b46d734e7876c9c265e6135b705f9e14defe2",
+   "bytes_leidos": 16818,
+   "lectura": "A: completa en preflight y Hormozi7–20; B: Iman22–31/actualización34; parent: Heras32–43",
+   "por": [
+    "parent",
+    "A",
+    "B"
+   ],
+   "snapshot_sha256": "b333721d971dc32ed95e0f38c9b0bca2385e0f073b004ed97c7b416f796069aa",
+   "cotejo": "mismo texto, sólo CRLF; sin relectura íntegra"
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/criterio/ensenanza-pedro-erik-rocha-san-justin.md",
+   "sha256_leido": "e6395894ac5384e0c828cd5b7c66cfe711b9c1a53cd732fffdf3a33397e43832",
+   "bytes_leidos": 17874,
+   "lectura": "parent: San37–48; B: preflight San; sin uso de otros referentes",
+   "por": [
+    "parent",
+    "B-preflight"
+   ],
+   "snapshot_sha256": "6bac27e6fb6bff40457d125a35a687140a317603ff0884a37bfb2d56c6e21309",
+   "cotejo": "mismo texto, sólo CRLF; sin relectura íntegra"
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/criterio/INTEGRACION-AMPLIACION.md",
+   "sha256_leido": "4da8a1d046407b910046ee6dadbd9af0ec11da3997622561405ffb090eb3b4f4",
+   "bytes_leidos": 9128,
+   "lectura": "cabecera, filas/pasajes pertinentes a cinco; parent1–21; A Hormozi9; B Iman10–11/17/29; no uso de otras filas",
+   "por": [
+    "parent",
+    "A",
+    "B"
+   ],
+   "snapshot_sha256": "85f9071cf600fd4fb0c8825567ca93eb78ea7b518bc032cda15397ffae3bb749",
+   "cotejo": "mismo texto, sólo CRLF; sin relectura íntegra"
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/criterio/delta-clases.md",
+   "sha256_leido": "714965991c5ea1c4e51fa875b8785eb6d56c67a2a7ffa42cee4b4966964e1686",
+   "bytes_leidos": 15362,
+   "lectura": "Hormozi5–17 y Heras32–50; límites de literalidad/cobertura",
+   "por": [
+    "parent",
+    "A"
+   ],
+   "snapshot_sha256": "550418607807c38d2e5e04aa553972031ff971f417c689a7ba895d40feea8bd3",
+   "cotejo": "mismo texto, sólo CRLF; sin relectura íntegra"
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/criterio/sintesis-integral.md",
+   "sha256_leido": "12f7fb51e13ddbbe358455552333978c0460fccb2aa70578a47c094541e40324",
+   "bytes_leidos": 13350,
+   "lectura": "sólo cinco referentes y límites pertinentes; A Hormozi21, B Iman22/42",
+   "por": [
+    "parent",
+    "A",
+    "B"
+   ],
+   "snapshot_sha256": "a2a1d87eee63b0f63d4520cb85babc90f66d67201689bf70d9db300700d18a59",
+   "cotejo": "mismo texto, sólo CRLF; sin relectura íntegra"
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/marketing/mapa-recorridos.md",
+   "sha256_leido": "07a1e8f893dca133632040e79abc2527ff2e33aa19d2171f50ae1f6631f5e23e",
+   "bytes_leidos": 7253,
+   "lectura": "sólo filas pertinentes; A Hormozi6, B Iman7",
+   "por": [
+    "parent",
+    "A",
+    "B"
+   ]
+  },
+  {
+   "repo": "_investigacion-onia/base-operativa/investigacion/2026-11-05-referentes/audiovisual/pendientes-visuales-finitos.md",
+   "sha256_leido": "934b1ec726502b9e7dfa7b97c5d79cec4cd0faf4e9ebf926ec3df2f28229c1d9",
+   "bytes_leidos": 9710,
+   "lectura": "pasajes de cinco referentes/límites; sin ejecución AV",
+   "por": [
+    "parent"
+   ]
+  }
+ ],
+ "lecturas_adicionales": [
+  {
+   "archivo": "fuentes-locales-v2/ORQUESTACION.md",
+   "lectura": "completa, incluido QA previo de videos recibidos",
+   "por": "parent",
+   "sha256": "ac2b99a558c42ff6166e4f80d770e0bbaa3e3b0b6f0a72cb219d5f72b28fc190"
+  },
+  {
+   "archivo": "fuentes-locales-v2/investigacion/2026-11-05-referentes/GOAL-REFERENTES.md",
+   "lectura": "cabecera1–15; corpus/límites17–33; cinco filas73/74/75/79/89; decisiones pertinentes98/100; puerta de cierre106–112. No lectura integral ni de los otros13 referentes.",
+   "por": "parent",
+   "sha256": "690cf8424e4648e38647dcad1c6284bc15ef620e990bd790b43f6d9796c11339"
+  },
+  {
+   "archivo": "entradaQA-v3.md",
+   "lectura": "completa",
+   "por": [
+    "parent",
+    "A",
+    "B"
+   ],
+   "sha256": "0c3be267d1195948ebc6b838b24410a99784a50627e841ed9a8e69df26a92bd4"
+  },
+  {
+   "archivo": "recibos/materializacion-v2.json",
+   "lectura": "completa",
+   "por": [
+    "A",
+    "B"
+   ],
+   "sha256": "336fabf879741d5e1d8983023b3637c778784a45dcf3dd39f69436de772b57a7"
+  }
+ ],
+ "distinciones": "Materializar8 archivos y cotejar sus bytes no significa leer sus cuerpos. Seis documentos criterio son textualmente idénticos normalizando CRLF a las versiones ya leídas: se mantienen alcances originales, sin afirmar nueva lectura completa. Ninguna lectura documental es nuevo visionado/escucha o ejecución de una práctica.",
+ "catalogo_y_skills": {
+  "anuncio_nativo": "Catálogo Cloud incluye cloud-environment-runtime; no anunció skills ONIA.",
+  "lectura_por_archivo": "continuidad-de-trabajo directora, research apoyo; rutas/hashes en lista. cloud-environment-runtime leído vía skill cloud.",
+  "criterio_aplicado": "lectura delegada fresca con fuentes acotadas y un escritor por archivo; entrega recuperable. No seleccionar oferta/embudo por aparecer marketing en las fuentes."
+ }
+}

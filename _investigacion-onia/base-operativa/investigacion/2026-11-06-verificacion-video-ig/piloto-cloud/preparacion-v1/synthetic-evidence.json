@@ -1,0 +1,653 @@
+{
+  "final_source_sha256": "c321e9403aeab4a827d04d44bd54557d10b159a5d1fb87fa895fc93e00f3594f",
+  "final_test_log": "synthetic-tests.log",
+  "runs": {
+    "effective": {
+      "report": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "-c",
+          "print(\"synthetic-no-model\")"
+        ],
+        "policy": {
+          "as_bytes": 12884901888,
+          "cpu_seconds": 600,
+          "wall_seconds": 600,
+          "threads": 2,
+          "affinity_count": 2,
+          "reserve_bytes": 8589934592,
+          "disk_free_bytes": 32212254720,
+          "tree_bytes": 17179869184,
+          "interval": 0.1,
+          "log_bytes": 262144,
+          "output_bytes": 1048576
+        },
+        "initial": {
+          "mem_available": 34852511744,
+          "cgroups": [
+            {
+              "path": "/sys/fs/cgroup",
+              "max": "34359738368",
+              "current": 354852864
+            }
+          ],
+          "reserve": 34004885504,
+          "disk_free": 63896203264,
+          "tree_bytes": 227942571
+        },
+        "parent_before": {
+          "as": [
+            -1,
+            -1
+          ],
+          "cpu": [
+            -1,
+            -1
+          ],
+          "affinity": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "reason": "exited",
+        "sample_count": 2,
+        "sampled_max_group_rss_bytes": 6422528,
+        "sampled_max_single_rss_bytes": 6422528,
+        "rss_scope": "sum of observed group RSS; shared pages may be counted twice; not exact peak",
+        "output_seen_bytes": 19,
+        "log_written_bytes": 19,
+        "limits_scope": "AS and CPU per process; guards sampled; visible cgroup ancestors only",
+        "thread_scope": "library settings=2, sampled per-process thread count <=2; no kernel thread quota",
+        "killed_members": [],
+        "pgid": 7099,
+        "last_snapshot": {
+          "mem_available": 34852253696,
+          "cgroups": [
+            {
+              "path": "/sys/fs/cgroup",
+              "max": "34359738368",
+              "current": 357994496
+            }
+          ],
+          "reserve": 34001743872,
+          "disk_free": 63896190976,
+          "tree_bytes": 227943893
+        },
+        "exit_code": 0,
+        "effective": {
+          "pid": 7099,
+          "pgid": 7099,
+          "sid": 7099,
+          "rlimit_as": [
+            12884901888,
+            12884901888
+          ],
+          "rlimit_cpu": [
+            600,
+            600
+          ],
+          "affinity": [
+            0,
+            1
+          ],
+          "thread_settings": {
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2",
+            "MKL_NUM_THREADS": "2",
+            "NUMEXPR_NUM_THREADS": "2",
+            "BLIS_NUM_THREADS": "2",
+            "VECLIB_MAXIMUM_THREADS": "2"
+          },
+          "thread_limit_scope": "library settings, not a kernel thread-count quota"
+        },
+        "elapsed_seconds": 0.10208312099985051,
+        "parent_after": {
+          "as": [
+            -1,
+            -1
+          ],
+          "cpu": [
+            -1,
+            -1
+          ],
+          "affinity": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "parent_limits_unchanged": true,
+        "log_truncated": false
+      },
+      "output_bytes": 19,
+      "output_sha256": "b2b7f380d42e85d88dacb8a00a80addac5a20d547d8b4adf78177fd23037504a",
+      "output_utf8": "synthetic-no-model\n",
+      "sample_log_sha256": "1b77acc025bfa9f33d5f2b04a24830cecd4f68ec4015f6dda37c74901ca81d45"
+    },
+    "allocation": {
+      "report": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "-c",
+          "import sys\ntry:\n x=bytearray(256*1024**2)\nexcept MemoryError:\n print(\"EXPECTED_MEMORY_ERROR\",flush=True);sys.exit(23)\nraise RuntimeError(\"allocation unexpectedly passed\")"
+        ],
+        "policy": {
+          "as_bytes": 100663296,
+          "cpu_seconds": 600,
+          "wall_seconds": 600,
+          "threads": 2,
+          "affinity_count": 2,
+          "reserve_bytes": 8589934592,
+          "disk_free_bytes": 32212254720,
+          "tree_bytes": 17179869184,
+          "interval": 0.1,
+          "log_bytes": 262144,
+          "output_bytes": 1048576
+        },
+        "initial": {
+          "mem_available": 34852253696,
+          "cgroups": [
+            {
+              "path": "/sys/fs/cgroup",
+              "max": "34359738368",
+              "current": 355311616
+            }
+          ],
+          "reserve": 34004426752,
+          "disk_free": 63896174592,
+          "tree_bytes": 227951319
+        },
+        "parent_before": {
+          "as": [
+            -1,
+            -1
+          ],
+          "cpu": [
+            -1,
+            -1
+          ],
+          "affinity": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "reason": "child_failure",
+        "sample_count": 2,
+        "sampled_max_group_rss_bytes": 6553600,
+        "sampled_max_single_rss_bytes": 6553600,
+        "rss_scope": "sum of observed group RSS; shared pages may be counted twice; not exact peak",
+        "output_seen_bytes": 22,
+        "log_written_bytes": 22,
+        "limits_scope": "AS and CPU per process; guards sampled; visible cgroup ancestors only",
+        "thread_scope": "library settings=2, sampled per-process thread count <=2; no kernel thread quota",
+        "killed_members": [],
+        "pgid": 7100,
+        "last_snapshot": {
+          "mem_available": 34848382976,
+          "cgroups": [
+            {
+              "path": "/sys/fs/cgroup",
+              "max": "34359738368",
+              "current": 358412288
+            }
+          ],
+          "reserve": 34001326080,
+          "disk_free": 63896162304,
+          "tree_bytes": 227952787
+        },
+        "exit_code": 23,
+        "effective": {
+          "pid": 7100,
+          "pgid": 7100,
+          "sid": 7100,
+          "rlimit_as": [
+            100663296,
+            100663296
+          ],
+          "rlimit_cpu": [
+            600,
+            600
+          ],
+          "affinity": [
+            0,
+            1
+          ],
+          "thread_settings": {
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2",
+            "MKL_NUM_THREADS": "2",
+            "NUMEXPR_NUM_THREADS": "2",
+            "BLIS_NUM_THREADS": "2",
+            "VECLIB_MAXIMUM_THREADS": "2"
+          },
+          "thread_limit_scope": "library settings, not a kernel thread-count quota"
+        },
+        "elapsed_seconds": 0.12302719600029377,
+        "parent_after": {
+          "as": [
+            -1,
+            -1
+          ],
+          "cpu": [
+            -1,
+            -1
+          ],
+          "affinity": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "parent_limits_unchanged": true,
+        "log_truncated": false
+      },
+      "output_bytes": 22,
+      "output_sha256": "8fcd819456f07dc61c4f021f03a8ea0331dcd0aa01f06cd4d1a2ee68dcf39f9f",
+      "output_utf8": "EXPECTED_MEMORY_ERROR\n",
+      "sample_log_sha256": "75f60249cbcb50500b54781233da45e67e0733023b2e5cd15331f055f1a8c8c0"
+    },
+    "timeout": {
+      "report": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "-c",
+          "import subprocess,sys,time\np=subprocess.Popen([sys.executable,\"-c\",\"import time;time.sleep(15)\"])\nprint(\"DESCENDANT\",p.pid,flush=True)\ntime.sleep(15)"
+        ],
+        "policy": {
+          "as_bytes": 12884901888,
+          "cpu_seconds": 600,
+          "wall_seconds": 0.8,
+          "threads": 2,
+          "affinity_count": 2,
+          "reserve_bytes": 8589934592,
+          "disk_free_bytes": 32212254720,
+          "tree_bytes": 17179869184,
+          "interval": 0.1,
+          "log_bytes": 262144,
+          "output_bytes": 1048576
+        },
+        "initial": {
+          "mem_available": 34848382976,
+          "cgroups": [
+            {
+              "path": "/sys/fs/cgroup",
+              "max": "34359738368",
+              "current": 355434496
+            }
+          ],
+          "reserve": 34004303872,
+          "disk_free": 63896145920,
+          "tree_bytes": 227960378
+        },
+        "parent_before": {
+          "as": [
+            -1,
+            -1
+          ],
+          "cpu": [
+            -1,
+            -1
+          ],
+          "affinity": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "reason": "wall_timeout",
+        "sample_count": 7,
+        "sampled_max_group_rss_bytes": 15073280,
+        "sampled_max_single_rss_bytes": 8650752,
+        "rss_scope": "sum of observed group RSS; shared pages may be counted twice; not exact peak",
+        "output_seen_bytes": 16,
+        "log_written_bytes": 16,
+        "limits_scope": "AS and CPU per process; guards sampled; visible cgroup ancestors only",
+        "thread_scope": "library settings=2, sampled per-process thread count <=2; no kernel thread quota",
+        "killed_members": [
+          7102,
+          7103
+        ],
+        "pgid": 7102,
+        "last_snapshot": {
+          "mem_available": 34837176320,
+          "cgroups": [
+            {
+              "path": "/sys/fs/cgroup",
+              "max": "34359738368",
+              "current": 366665728
+            }
+          ],
+          "reserve": 33993072640,
+          "disk_free": 63896133632,
+          "tree_bytes": 227961825
+        },
+        "exit_code": -9,
+        "effective": {
+          "pid": 7102,
+          "pgid": 7102,
+          "sid": 7102,
+          "rlimit_as": [
+            12884901888,
+            12884901888
+          ],
+          "rlimit_cpu": [
+            600,
+            600
+          ],
+          "affinity": [
+            0,
+            1
+          ],
+          "thread_settings": {
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2",
+            "MKL_NUM_THREADS": "2",
+            "NUMEXPR_NUM_THREADS": "2",
+            "BLIS_NUM_THREADS": "2",
+            "VECLIB_MAXIMUM_THREADS": "2"
+          },
+          "thread_limit_scope": "library settings, not a kernel thread-count quota"
+        },
+        "elapsed_seconds": 0.8962956329996814,
+        "parent_after": {
+          "as": [
+            -1,
+            -1
+          ],
+          "cpu": [
+            -1,
+            -1
+          ],
+          "affinity": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "parent_limits_unchanged": true,
+        "log_truncated": false
+      },
+      "output_bytes": 16,
+      "output_sha256": "45dc2a82f662c11ac203db1dd074476762d32c5535f10c36a0ba40be7ec9391c",
+      "output_utf8": "DESCENDANT 7103\n",
+      "sample_log_sha256": "8fe2c42e2c7ca45b1f5ad4dd3f6a1aae69abdcb552f90ec72939b5ae53d658c1"
+    },
+    "cpu": {
+      "report": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "-c",
+          "while True: pass"
+        ],
+        "policy": {
+          "as_bytes": 12884901888,
+          "cpu_seconds": 1,
+          "wall_seconds": 5,
+          "threads": 2,
+          "affinity_count": 2,
+          "reserve_bytes": 8589934592,
+          "disk_free_bytes": 32212254720,
+          "tree_bytes": 17179869184,
+          "interval": 0.1,
+          "log_bytes": 262144,
+          "output_bytes": 1048576
+        },
+        "initial": {
+          "mem_available": 34837176320,
+          "cgroups": [
+            {
+              "path": "/sys/fs/cgroup",
+              "max": "34359738368",
+              "current": 355622912
+            }
+          ],
+          "reserve": 34004115456,
+          "disk_free": 63896113152,
+          "tree_bytes": 227971682
+        },
+        "parent_before": {
+          "as": [
+            -1,
+            -1
+          ],
+          "cpu": [
+            -1,
+            -1
+          ],
+          "affinity": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "reason": "child_failure",
+        "sample_count": 9,
+        "sampled_max_group_rss_bytes": 6422528,
+        "sampled_max_single_rss_bytes": 6422528,
+        "rss_scope": "sum of observed group RSS; shared pages may be counted twice; not exact peak",
+        "output_seen_bytes": 0,
+        "log_written_bytes": 0,
+        "limits_scope": "AS and CPU per process; guards sampled; visible cgroup ancestors only",
+        "thread_scope": "library settings=2, sampled per-process thread count <=2; no kernel thread quota",
+        "killed_members": [],
+        "pgid": 7106,
+        "last_snapshot": {
+          "mem_available": 34837065728,
+          "cgroups": [
+            {
+              "path": "/sys/fs/cgroup",
+              "max": "34359738368",
+              "current": 358305792
+            }
+          ],
+          "reserve": 34001432576,
+          "disk_free": 63896100864,
+          "tree_bytes": 227972971
+        },
+        "exit_code": -9,
+        "effective": {
+          "pid": 7106,
+          "pgid": 7106,
+          "sid": 7106,
+          "rlimit_as": [
+            12884901888,
+            12884901888
+          ],
+          "rlimit_cpu": [
+            1,
+            1
+          ],
+          "affinity": [
+            0,
+            1
+          ],
+          "thread_settings": {
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2",
+            "MKL_NUM_THREADS": "2",
+            "NUMEXPR_NUM_THREADS": "2",
+            "BLIS_NUM_THREADS": "2",
+            "VECLIB_MAXIMUM_THREADS": "2"
+          },
+          "thread_limit_scope": "library settings, not a kernel thread-count quota"
+        },
+        "elapsed_seconds": 1.3684048830000393,
+        "parent_after": {
+          "as": [
+            -1,
+            -1
+          ],
+          "cpu": [
+            -1,
+            -1
+          ],
+          "affinity": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "parent_limits_unchanged": true,
+        "log_truncated": false
+      },
+      "output_bytes": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_utf8": "",
+      "sample_log_sha256": "85235e38edc4291d6bcc77133ad566d2ca6ebcf2bda8bf1c65f3f57147cdcd41"
+    },
+    "output": {
+      "report": {
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "-c",
+          "import os\nwhile True: os.write(1,b\"x\"*65536)"
+        ],
+        "policy": {
+          "as_bytes": 12884901888,
+          "cpu_seconds": 600,
+          "wall_seconds": 600,
+          "threads": 2,
+          "affinity_count": 2,
+          "reserve_bytes": 8589934592,
+          "disk_free_bytes": 32212254720,
+          "tree_bytes": 17179869184,
+          "interval": 0.1,
+          "log_bytes": 262144,
+          "output_bytes": 1048576
+        },
+        "initial": {
+          "mem_available": 34837065728,
+          "cgroups": [
+            {
+              "path": "/sys/fs/cgroup",
+              "max": "34359738368",
+              "current": 355328000
+            }
+          ],
+          "reserve": 34004410368,
+          "disk_free": 63896088576,
+          "tree_bytes": 227982672
+        },
+        "parent_before": {
+          "as": [
+            -1,
+            -1
+          ],
+          "cpu": [
+            -1,
+            -1
+          ],
+          "affinity": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "reason": "output_limit",
+        "sample_count": 17,
+        "sampled_max_group_rss_bytes": 6422528,
+        "sampled_max_single_rss_bytes": 6422528,
+        "rss_scope": "sum of observed group RSS; shared pages may be counted twice; not exact peak",
+        "output_seen_bytes": 1114112,
+        "log_written_bytes": 262144,
+        "limits_scope": "AS and CPU per process; guards sampled; visible cgroup ancestors only",
+        "thread_scope": "library settings=2, sampled per-process thread count <=2; no kernel thread quota",
+        "killed_members": [
+          7107
+        ],
+        "pgid": 7107,
+        "last_snapshot": {
+          "mem_available": 34836348928,
+          "cgroups": [
+            {
+              "path": "/sys/fs/cgroup",
+              "max": "34359738368",
+              "current": 358961152
+            }
+          ],
+          "reserve": 34000777216,
+          "disk_free": 63895814144,
+          "tree_bytes": 228246150
+        },
+        "exit_code": -9,
+        "effective": {
+          "pid": 7107,
+          "pgid": 7107,
+          "sid": 7107,
+          "rlimit_as": [
+            12884901888,
+            12884901888
+          ],
+          "rlimit_cpu": [
+            600,
+            600
+          ],
+          "affinity": [
+            0,
+            1
+          ],
+          "thread_settings": {
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2",
+            "MKL_NUM_THREADS": "2",
+            "NUMEXPR_NUM_THREADS": "2",
+            "BLIS_NUM_THREADS": "2",
+            "VECLIB_MAXIMUM_THREADS": "2"
+          },
+          "thread_limit_scope": "library settings, not a kernel thread-count quota"
+        },
+        "elapsed_seconds": 0.8708241989997987,
+        "parent_after": {
+          "as": [
+            -1,
+            -1
+          ],
+          "cpu": [
+            -1,
+            -1
+          ],
+          "affinity": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "parent_limits_unchanged": true,
+        "log_truncated": true
+      },
+      "output_bytes": 262144,
+      "output_sha256": "d509bff642a353f88582e8a846ecae041c333b79c57a7a24ff310fbdb7e914e9",
+      "output_utf8": "excluded_repetitive_synthetic_flood",
+      "sample_log_sha256": "3e092a3dbecca1948d3ab52f83de2e930819bc408e55e5fa8d44199ae55d5658"
+    }
+  },
+  "external_witness": {
+    "pid": 7101,
+    "pgid": 7101,
+    "alive_after_supervised_group_kill": true,
+    "cleanup": "terminate only this witness process created by test"
+  },
+  "raw_output_note": "Repetitive capped output flood excluded from text handoff; its exact size/hash is retained. Original bounded logs and samples stay in the own workspace."
+}

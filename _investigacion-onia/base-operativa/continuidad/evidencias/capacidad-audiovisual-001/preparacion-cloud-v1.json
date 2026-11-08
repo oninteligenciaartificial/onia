@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "tipo": "preparacion_cloud_recuperada_v1",
+  "chat": "01a1b22d-9f2c-72df-8a57-4c1ccb0c800a",
+  "turno": "01a1b309-60f4-7429-939c-d4512e51ed03",
+  "manifest": {
+    "archivo": "investigacion/2026-11-06-verificacion-video-ig/piloto-cloud/preparacion-v1/review-manifest.json",
+    "sha256": "f66dd70c99c435f02017e96bdda314a60415bc77bf0d8ce4093b837d2e6ff0ea",
+    "archivos_cotejados": 12,
+    "discrepancias": []
+  },
+  "tests_finales_supervisor": {
+    "definidas": 7,
+    "correctas": 7,
+    "segundos": 3.591,
+    "item": "exec-39305862",
+    "iteraciones_previas": "conservadas en historical-tests.log; no ensayos AV"
+  },
+  "limites": [
+    "Preparación sólo; sin compilar, pesos o inferencia",
+    "No habilitado para cargar modelos: hallazgos SIGTERM, descendientes vivos, parserCPU, sampler, lectura WAV y proyección visual pendientes en v2",
+    "Copia local de artefactos acredita recuperación de bytes; persistencia remota entre turnos se verifica aparte"
+  ],
+  "transferencia": "Salidas de herramientas de lectura UTF-8, concatenadas por orden de slices Unicode y cotejadas por SHA-256/bytes; sin base64 ni transferencia de medios privados"
+}

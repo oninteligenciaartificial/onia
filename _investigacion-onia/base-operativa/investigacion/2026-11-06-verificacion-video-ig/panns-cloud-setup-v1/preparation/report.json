@@ -1,0 +1,83 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "/workspace/onia-av-pilot-20261106/panns-setup-v1/setup.py"
+  ],
+  "policy": {
+    "AS_virtual_bytes_per_process": 3221225472,
+    "CPU_seconds_per_process": 300,
+    "wall_seconds": 300,
+    "affinity": [
+      0
+    ],
+    "workers": 1,
+    "batch": 1,
+    "reserve_bytes": 6442450944,
+    "swap_added": false,
+    "log_bytes": 262144,
+    "output_cut_bytes": 1048576
+  },
+  "before": {
+    "mem_available": 34795999232,
+    "memory_max": "34359738368",
+    "memory_current": 2765582336,
+    "reserve": 31594156032,
+    "disk_free": 56903430144
+  },
+  "reason": "child_failure",
+  "sampled_max_group_RSS": 23543808,
+  "sampled_max_threads": 1,
+  "output_bytes": 325,
+  "log_bytes": 325,
+  "parent_before": {
+    "AS": [
+      -1,
+      -1
+    ],
+    "CPU": [
+      -1,
+      -1
+    ],
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "RSS_scope": "sampled sum, not exact peak; shared pages may double count",
+  "pgid": 23594,
+  "last_resources": {
+    "mem_available": 34786082816,
+    "memory_max": "34359738368",
+    "memory_current": 2766262272,
+    "reserve": 31593476096,
+    "disk_free": 56903413760
+  },
+  "exit_code": 1,
+  "wall_seconds": 0.6820892569994612,
+  "pending_live": [],
+  "pending_zombies": [],
+  "sampled_CPU_seconds": 0.18,
+  "CPU_scope": "sampled process times; transient exited processes may be missed; all descendants constrained to same single CPU so global wall also bounds aggregate CPU",
+  "parent_after": {
+    "AS": [
+      -1,
+      -1
+    ],
+    "CPU": [
+      -1,
+      -1
+    ],
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "parent_SIGTERM_restored": true
+}

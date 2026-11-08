@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "thread": "01a1b22d-9f2c-72df-8a57-4c1ccb0c800a",
+  "turn": "01a1b31a-f5f4-73c1-b907-ed90c18f9c76",
+  "tipo": "preparacion_y_compilacion_incompleta",
+  "manifest_sha256": "c4211c3f120bbbeabd2c8abc57e88d08278b6ed3ccada230477a555e6e1bf088",
+  "copia_local": "investigacion/2026-11-06-verificacion-video-ig/piloto-cloud/preparacion-v2",
+  "recuperacion": {
+    "archivos": 16,
+    "sha256_y_bytes": "16/16 coinciden",
+    "chunk_comprobacion": "4b2bc4",
+    "unicode": "Fragmentos Python por caracteres, concatenación exacta y hash UTF-8; no recortar por unidades UTF-16."
+  },
+  "supervisor_sha256": "bef18dcd8a5bef2b76a82d3502630e0bfb3aa5bc97c11cdc90deb4528ca152c8",
+  "parche_sha256": "0c0fef074417faac845cdcd8699b5f5037544a6c96f15c624661aaf14bfb9232",
+  "regresiones": {
+    "cantidad": 5,
+    "aprobadas": 5,
+    "segundos": 1.783,
+    "comando_id": "exec-188baf95-c6ee-4136-8b62-c39c1262b6dc"
+  },
+  "build": {
+    "utc": "2026-11-06T23:18:46.881187+00:00",
+    "build_reason": "wall_timeout",
+    "exit_code": -9,
+    "elapsed_seconds": 540.1411470510002,
+    "target_link_confirmed": false,
+    "last_reported_progress": "96%; common/jinja/caps.cpp.o",
+    "sampled_max_group_rss_bytes": 1553944576,
+    "sampled_max_single_rss_bytes": 821374976,
+    "sampled_max_group_os_threads": 13,
+    "parent_limits_unchanged": true,
+    "handler_restored": true,
+    "pending_live": [],
+    "frozen_sources_verified_after_build": true,
+    "v1_archive_verified": true,
+    "onia_status": "",
+    "next_step": "Review frozen v2 and incomplete build receipt. A further bounded incremental compilation needs an explicit new time budget; do not download weights or run AV."
+  },
+  "limites": {
+    "as_bytes": 12884901888,
+    "cpu_seconds": 600,
+    "wall_seconds": 540,
+    "threads": 2,
+    "os_thread_cap": null,
+    "affinity_count": 2,
+    "reserve_bytes": 8589934592,
+    "disk_free_bytes": 32212254720,
+    "tree_bytes": 1073741824,
+    "interval": 0.1,
+    "log_bytes": 262144,
+    "output_bytes": 1048576
+  },
+  "continuacion_decidida": {
+    "wall_s": 300,
+    "os_thread_cap": 16,
+    "cambio_fuentes": false,
+    "limpiar": false,
+    "reconfigurar": false,
+    "resultado": "pendiente"
+  },
+  "modelo_cargado": false,
+  "inferencia": false
+}

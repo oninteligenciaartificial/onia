@@ -1,0 +1,43 @@
+{
+  "files": [
+    {
+      "path": "MiniCPM-o-4_5-Q4_K_M.gguf",
+      "expected_bytes": 5026714400,
+      "expected_sha256": "1237a97ee081b8abebc47aa7dad565701e8f5f904cdc92f6723ac4281bbc0932",
+      "verified_bytes": 5026714400,
+      "partial_bytes": 0,
+      "status": "complete_verified"
+    },
+    {
+      "path": "audio/MiniCPM-o-4_5-audio-F16.gguf",
+      "expected_bytes": 660167904,
+      "expected_sha256": "d5b188ac7feaf98e17175c3f9bd14bf269301bfd187439fdaa3e3a494fc32ef7",
+      "verified_bytes": 660167904,
+      "partial_bytes": 0,
+      "status": "complete_verified"
+    },
+    {
+      "path": "vision/MiniCPM-o-4_5-vision-F16.gguf",
+      "expected_bytes": 1095113184,
+      "expected_sha256": "1453678cc4e4fe18de241952962e234f265cb8dda780773526103ab8ba82f421",
+      "verified_bytes": 0,
+      "partial_bytes": 171966464,
+      "status": "partial_unverified",
+      "closed_partial_sha256": "fb749ab559817ef0a472e94104808e131f18f049fe7b22063f91c568aabfa8e0",
+      "partial_is_not_accepted_as_weight": true
+    }
+  ],
+  "observed_failure": {
+    "error_type": "TimeoutError",
+    "http_status": null,
+    "verified_files": 2,
+    "automatic_retry": false,
+    "detail": "transfer or integrity failed; signed URLs and exception text intentionally omitted"
+  },
+  "phase_elapsed_seconds": 590.2766326880001,
+  "internal_phase_deadline_seconds": 590,
+  "supervisor_wall_seconds": 600,
+  "cause_precision": "Observed TimeoutError at the internal phase deadline; exception text intentionally not retained, no signed redirect URL logged. No HTTP error status recorded.",
+  "automatic_retries": 0,
+  "preserved_all_files": true
+}

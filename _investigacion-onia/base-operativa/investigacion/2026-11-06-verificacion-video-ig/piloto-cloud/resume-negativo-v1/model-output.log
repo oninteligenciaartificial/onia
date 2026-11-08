@@ -1,0 +1,90 @@
+ONE_MODEL_INVOCATION {"command": ["/workspace/onia-av-pilot-20261106/build-v2/bin/llama-omni-single-test-omni", "-m", "/workspace/onia-av-pilot-20261106/negativo-v1/weights/MiniCPM-o-4_5-Q4_K_M.gguf", "--audio", "/workspace/onia-av-pilot-20261106/negativo-v1/weights/audio/MiniCPM-o-4_5-audio-F16.gguf", "--vision", "/workspace/onia-av-pilot-20261106/negativo-v1/weights/vision/MiniCPM-o-4_5-vision-F16.gguf", "--test", "/workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_", "2", "-c", "2048", "--response-tokens", "128", "--prompt", "Describe qué aparece y qué se oye, en orden; indica qué cambios coinciden. Si algo no puede determinarse, dilo.", "--vision-backend", "cpu", "--no-tts", "-ngl", "0"], "model_invocation_attempt": 1, "fresh_process_context": true, "requested_context": 2048, "response_tokens": 128, "temperature": 0, "seed": 20261106, "prefill_budget_rule": "actual signal+literal prompt+control+128 < min(2048,llama_n_ctx)", "truth_passed_to_model": false, "validated_closed_weights_again_before_exec": true}
+PILOT_SAMPLER {"seed":20261106,"temperature":0,"policy":"temperature_zero_then_dist_fixed_seed","filters":"none","eos":true}
+0.00.264.513 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.06.917.032 W llama_context: n_ctx_seq (2048) < n_ctx_train (40960) -- the full capacity of the model will not be utilized
+vision_model_loader: model name:   
+vision_model_loader: description:  image encoder for MiniCPM-V
+vision_model_loader: GGUF version: 3
+vision_model_loader: alignment:    32
+vision_model_loader: n_tensors:    455
+vision_model_loader: n_kv:         20
+
+vision_ctx: vision using CPU backend
+load_hparams: model_type:         0
+load_hparams: n_embd:             1152
+load_hparams: n_head:             16
+load_hparams: n_ff:               4304
+load_hparams: n_layer:            27
+load_hparams: ffn_op:             gelu
+load_hparams: projection_dim:     0
+
+--- vision hparams ---
+load_hparams: image_size:         448
+load_hparams: patch_size:         14
+load_hparams: minicpmv_version:   100045
+load_hparams: proj_scale_factor:  0
+load_hparams: n_wa_pattern:       0
+load_hparams: insert_layer_id:     0
+
+load_hparams: model size:         1044.36 MiB
+load_hparams: metadata size:      0.16 MiB
+load_tensors: ffn up/down are swapped
+alloc_compute_meta:        CPU compute buffer size =   100.30 MiB
+vision_set_batch_encode: vision batch encode disabled
+encode_image_with_vision_chunks: overview encoded in 19544.67 ms
+
+encode_image_with_vision_chunks: image encoded in 19602.17 ms by vision (1 chunks, 64 total tokens, grid: 0x0)
+audition_audio_preprocess: Decoded audio - sample_rate=16000, n_samples=16000
+audition_get_mel_filters: Retrieved mel filters from model: 80 mel bins x 201 fft bins
+audition_audio_preprocess: Using mel filters - n_mel=80, n_fft=201
+audition_audio_preprocess: Generated 1 mel spectrogram chunk(s)
+audition_audio_preprocess: Mel spectrogram ready - n_len=100, n_mel=80, total_size=8000
+build_whisper: Whisper encoder graph built (projector output, pre-pooling)
+audition_audio_batch_encode: Audio input data - n_step=100, n_mel=80, total_elements=8000
+audition_audio_batch_encode: Before incrementing iter: input_frames=100, n_tokens=50, current_iter=0, current_total=0, new_total=50, max_tokens=1500
+audition_audio_batch_encode: KV cache iter incremented to 1 (total_tokens=50, max_tokens=1500)
+audition_audio_batch_encode: Final output shape: [4096, 10]
+audition_audio_batch_encode: Final output: 10 tokens x 4096 dims
+encode_image_with_vision_chunks: overview encoded in 19347.76 ms
+
+encode_image_with_vision_chunks: image encoded in 19399.18 ms by vision (1 chunks, 64 total tokens, grid: 0x0)
+audition_audio_preprocess: Decoded audio - sample_rate=16000, n_samples=16000
+audition_get_mel_filters: Retrieved mel filters from model: 80 mel bins x 201 fft bins
+audition_audio_preprocess: Using mel filters - n_mel=80, n_fft=201
+audition_audio_preprocess: Generated 1 mel spectrogram chunk(s)
+audition_audio_preprocess: Mel spectrogram ready - n_len=100, n_mel=80, total_size=8000
+build_whisper: Whisper encoder graph built (projector output, pre-pooling)
+audition_audio_batch_encode: Audio input data - n_step=100, n_mel=80, total_elements=8000
+audition_audio_batch_encode: Before incrementing iter: input_frames=100, n_tokens=50, current_iter=1, current_total=50, new_total=100, max_tokens=1500
+audition_audio_batch_encode: KV cache iter incremented to 2 (total_tokens=100, max_tokens=1500)
+audition_audio_batch_encode: Final output shape: [4096, 10]
+audition_audio_batch_encode: Final output: 10 tokens x 4096 dims
+PILOT_BUDGET {"input_positions":210,"text_and_control_positions":62,"response_reserve":128,"total":338,"effective_context":2048}
+=== Model Paths ===
+  Base dir:   /workspace/onia-av-pilot-20261106/negativo-v1/weights
+  LLM:        /workspace/onia-av-pilot-20261106/negativo-v1/weights/MiniCPM-o-4_5-Q4_K_M.gguf [OK]
+  Vision:     /workspace/onia-av-pilot-20261106/negativo-v1/weights/vision/MiniCPM-o-4_5-vision-F16.gguf [OK]
+  Audio:      /workspace/onia-av-pilot-20261106/negativo-v1/weights/audio/MiniCPM-o-4_5-audio-F16.gguf [OK]
+  TTS:        /workspace/onia-av-pilot-20261106/negativo-v1/weights/tts/MiniCPM-o-4_5-tts-F16.gguf [NOT FOUND]
+  Projector:  /workspace/onia-av-pilot-20261106/negativo-v1/weights/tts/MiniCPM-o-4_5-projector-F16.gguf [NOT FOUND]
+===================
+=== Initializing Omni Context (audio+vision) ===
+  TTS enabled:   no
+  Context size:  2048
+  GPU layers:    0
+  Vision backend:cpu
+  TTS bin dir:   /workspace/onia-av-pilot-20261106/negativo-v1/weights/tts
+  Ref audio:     
+00:02:49.597 === omni_init start
+00:02:49.597 media_type = 2, duplex_mode = 0, base_output_dir = ./runtime-output
+00:02:49.597 === omni_init: loading new LLM model
+00:02:56.776 === omni_init: loading APM model
+00:02:57.493 APM: init from /workspace/onia-av-pilot-20261106/negativo-v1/weights/audio/MiniCPM-o-4_5-audio-F16.gguf
+00:02:58.504 === omni_init success: ctx_llama = 0x558abb320460
+=== Running omni (audio+vision) singleplex test ===
+  Prefix: /workspace/onia-av-pilot-20261106/negativo-v1/signals/2b799ab7-9d97-49ea-a7ae-7e192785e83e/ccab45d2d10a45799bfd0ee91b352ac8_
+  Count:  2
+No hay ningún contenido visible ni auditivo en el video. La imagen es un cuadrado gris uniforme y silenciosa durante todo el clip. No se observan cambios ni transiciones.PILOT_CHUNK {"chunk":0,"audio":{"expected":1,"decoded":1,"encoder_ok":1,"delivered":1,"accepted":1,"decoded_samples":16000,"encoded_positions":10,"accepted_positions":10},"image":{"expected":1,"decoded":1,"encoder_ok":1,"delivered":1,"accepted":1,"decoded_samples":0,"encoded_positions":64,"accepted_positions":64},"text":{"expected":0,"decoded":0,"encoder_ok":0,"delivered":0,"accepted":0,"decoded_samples":0,"encoded_positions":0,"accepted_positions":0},"error":""}
+PILOT_CHUNK {"chunk":1,"audio":{"expected":1,"decoded":1,"encoder_ok":1,"delivered":1,"accepted":1,"decoded_samples":16000,"encoded_positions":10,"accepted_positions":10},"image":{"expected":1,"decoded":1,"encoder_ok":1,"delivered":1,"accepted":1,"decoded_samples":0,"encoded_positions":64,"accepted_positions":64},"text":{"expected":1,"decoded":0,"encoder_ok":0,"delivered":1,"accepted":1,"decoded_samples":0,"encoded_positions":29,"accepted_positions":29},"error":""}
+PILOT_RESULT {"complete":true,"error":"","n_past":250,"response_sampled":41,"response_accepted":40}
+audition_whisper_free_kv_cache: KV cache freed

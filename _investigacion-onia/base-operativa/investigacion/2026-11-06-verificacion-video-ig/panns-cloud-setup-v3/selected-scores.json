@@ -1,0 +1,154 @@
+[
+  {
+    "case": "zeros",
+    "selected": {
+      "Speech": {
+        "max": 0.0020532431080937386,
+        "mean": 0.001385197858326137,
+        "argmax_seconds": 1.6
+      },
+      "Music": {
+        "max": 0.0037871520034968853,
+        "mean": 0.0024319130461663008,
+        "argmax_seconds": 0.0
+      }
+    },
+    "input_samples": 64000,
+    "frame_shape": [
+      1,
+      201,
+      527
+    ],
+    "import_seconds": 7.345262876999186,
+    "model_load_seconds": 18.639087982999627,
+    "inference_seconds": 0.23268841100070858,
+    "total_child_seconds": 26.22633973599841
+  },
+  {
+    "case": "voice",
+    "selected": {
+      "Speech": {
+        "max": 0.23548157513141632,
+        "mean": 0.11591490358114243,
+        "argmax_seconds": 0.32,
+        "voice_interval_mean": 0.21711061894893646,
+        "final_silence_mean": 0.021068600937724113
+      },
+      "Music": {
+        "max": 0.021579818800091743,
+        "mean": 0.007825942710042,
+        "argmax_seconds": 0.0
+      }
+    },
+    "input_samples": 64000,
+    "frame_shape": [
+      1,
+      201,
+      527
+    ],
+    "import_seconds": 5.12194283899953,
+    "model_load_seconds": 4.97746506600015,
+    "inference_seconds": 0.21329743699971004,
+    "total_child_seconds": 10.321796176000134
+  },
+  {
+    "case": "cormac0",
+    "selected": {
+      "Speech": {
+        "max": 0.6343637108802795,
+        "mean": 0.5513135194778442,
+        "argmax_seconds": 3.84
+      },
+      "Music": {
+        "max": 0.0036228522658348083,
+        "mean": 0.0016093422891572118,
+        "argmax_seconds": 0.0
+      }
+    },
+    "input_samples": 320000,
+    "frame_shape": [
+      1,
+      1001,
+      527
+    ],
+    "import_seconds": 5.936953128000823,
+    "model_load_seconds": 5.466638600000806,
+    "inference_seconds": 0.5777357170009054,
+    "total_child_seconds": 12.003983186999903
+  },
+  {
+    "case": "cormac1",
+    "selected": {
+      "Speech": {
+        "max": 0.6494358777999878,
+        "mean": 0.5661125779151917,
+        "argmax_seconds": 4.8
+      },
+      "Music": {
+        "max": 0.0031183462124317884,
+        "mean": 0.001736979465931654,
+        "argmax_seconds": 8.64
+      }
+    },
+    "input_samples": 320000,
+    "frame_shape": [
+      1,
+      1001,
+      527
+    ],
+    "import_seconds": 5.2425192819991935,
+    "model_load_seconds": 4.897933526999623,
+    "inference_seconds": 0.602140106000661,
+    "total_child_seconds": 10.765127914999539
+  },
+  {
+    "case": "cormac2",
+    "selected": {
+      "Speech": {
+        "max": 0.7134175896644592,
+        "mean": 0.5658285617828369,
+        "argmax_seconds": 7.68
+      },
+      "Music": {
+        "max": 0.012630561366677284,
+        "mean": 0.0027710911817848682,
+        "argmax_seconds": 8.32
+      }
+    },
+    "input_samples": 320000,
+    "frame_shape": [
+      1,
+      1001,
+      527
+    ],
+    "import_seconds": 5.256300954000835,
+    "model_load_seconds": 5.123349028999655,
+    "inference_seconds": 0.6274800679984764,
+    "total_child_seconds": 11.032723545000408
+  },
+  {
+    "case": "cormac3",
+    "selected": {
+      "Speech": {
+        "max": 0.6739464402198792,
+        "mean": 0.5804452896118164,
+        "argmax_seconds": 3.52
+      },
+      "Music": {
+        "max": 0.002483828691765666,
+        "mean": 0.0012661434011533856,
+        "argmax_seconds": 5.76
+      }
+    },
+    "input_samples": 248960,
+    "frame_shape": [
+      1,
+      779,
+      527
+    ],
+    "import_seconds": 5.397648690999631,
+    "model_load_seconds": 5.272797094999987,
+    "inference_seconds": 0.49609222800063435,
+    "total_child_seconds": 11.184895815000345
+  }
+]

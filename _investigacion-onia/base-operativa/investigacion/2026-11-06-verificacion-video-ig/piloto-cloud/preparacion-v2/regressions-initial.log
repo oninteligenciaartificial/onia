@@ -1,0 +1,21 @@
+test_clean_exit_and_handler_restoration (__main__.Regressions.test_clean_exit_and_handler_restoration) ... FAIL
+test_leader_zero_with_live_descendant_is_not_success (__main__.Regressions.test_leader_zero_with_live_descendant_is_not_success) ... ok
+test_sigterm_owned_group_receipt_and_external_witness (__main__.Regressions.test_sigterm_owned_group_receipt_and_external_witness) ... ok
+test_small_virtual_limit_regression (__main__.Regressions.test_small_virtual_limit_regression) ... ok
+test_workers_and_os_cap_are_separate_and_not_auto_raised (__main__.Regressions.test_workers_and_os_cap_are_separate_and_not_auto_raised) ... ok
+
+======================================================================
+FAIL: test_clean_exit_and_handler_restoration (__main__.Regressions.test_clean_exit_and_handler_restoration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/onia-av-pilot-20261106/review-v2/test_regressions.py", line 61, in test_clean_exit_and_handler_restoration
+    self.assertEqual(r['reason'],'exited')
+AssertionError: 'child_setup_timeout' != 'exited'
+- child_setup_timeout
++ exited
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 5.052s
+
+FAILED (failures=1)

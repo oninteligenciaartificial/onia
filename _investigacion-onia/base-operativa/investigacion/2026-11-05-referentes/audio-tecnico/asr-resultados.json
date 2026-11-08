@@ -1,0 +1,1831 @@
+{
+  "method": "faster-whisper small, CPU int8, 4 threads, cached weights only",
+  "model_directory": "C:\\Users\\PC\\.cache\\huggingface\\hub\\models--Systran--faster-whisper-small\\snapshots\\536b0662742c02347bc0e980a01041f333bce120",
+  "vad_filter": false,
+  "scope": "words from audio, not music/SFX/emotion/prosody validation",
+  "files": [
+    {
+      "file": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\control-silencio.wav",
+      "bytes": 192044,
+      "sha256": "47b589098cc9e4b92774cd5b6a57ccca0713c02396bf755b2318f7e81cdc534e",
+      "elapsed_s": 1.891,
+      "duration": 6.0,
+      "segments": [],
+      "text": ""
+    },
+    {
+      "file": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\control-tono440.wav",
+      "bytes": 192044,
+      "sha256": "d49b97c927f4099e4cb29df926f683e27e025f1306588c86664ab632f57221e5",
+      "elapsed_s": 2.078,
+      "duration": 6.0,
+      "segments": [
+        {
+          "start": 3.059999999999999,
+          "end": 4.62,
+          "text": " Subtítulos realizados por la comunidad de Amara.org",
+          "avg_logprob": -0.6153705260332893,
+          "no_speech_prob": 0.6689808368682861,
+          "words": [
+            {
+              "start": 3.059999999999999,
+              "end": 3.8,
+              "word": " Subtítulos",
+              "probability": 0.6741123534739017
+            },
+            {
+              "start": 3.8,
+              "end": 3.8,
+              "word": " realizados",
+              "probability": 0.5296117626130581
+            },
+            {
+              "start": 3.8,
+              "end": 3.8,
+              "word": " por",
+              "probability": 0.8641349077224731
+            },
+            {
+              "start": 3.8,
+              "end": 3.8,
+              "word": " la",
+              "probability": 0.6584230661392212
+            },
+            {
+              "start": 3.8,
+              "end": 3.94,
+              "word": " comunidad",
+              "probability": 0.6166746020317078
+            },
+            {
+              "start": 3.94,
+              "end": 3.94,
+              "word": " de",
+              "probability": 0.6223952770233154
+            },
+            {
+              "start": 3.94,
+              "end": 4.02,
+              "word": " Amara",
+              "probability": 0.8764497637748718
+            },
+            {
+              "start": 4.02,
+              "end": 4.62,
+              "word": ".org",
+              "probability": 0.9970766305923462
+            }
+          ]
+        }
+      ],
+      "text": " Subtítulos realizados por la comunidad de Amara.org"
+    },
+    {
+      "file": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\control-voz.wav",
+      "bytes": 199104,
+      "sha256": "a03e475eeb1340b2068baae2d888f8089c795052b463caf0f2c6818e9c119955",
+      "elapsed_s": 2.078,
+      "duration": 4.5138125,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 1.78,
+          "text": " This is a controlled audio test.",
+          "avg_logprob": -0.39771899055032167,
+          "no_speech_prob": 0.003400854766368866,
+          "words": [
+            {
+              "start": 0.0,
+              "end": 0.26,
+              "word": " This",
+              "probability": 0.7939485311508179
+            },
+            {
+              "start": 0.26,
+              "end": 0.4,
+              "word": " is",
+              "probability": 0.9915380477905273
+            },
+            {
+              "start": 0.4,
+              "end": 0.5,
+              "word": " a",
+              "probability": 0.9754785299301147
+            },
+            {
+              "start": 0.5,
+              "end": 0.88,
+              "word": " controlled",
+              "probability": 0.9291623830795288
+            },
+            {
+              "start": 0.88,
+              "end": 1.28,
+              "word": " audio",
+              "probability": 0.9757404923439026
+            },
+            {
+              "start": 1.28,
+              "end": 1.78,
+              "word": " test.",
+              "probability": 0.9888939261436462
+            }
+          ]
+        },
+        {
+          "start": 2.44,
+          "end": 3.54,
+          "text": " The number is 7.",
+          "avg_logprob": -0.39771899055032167,
+          "no_speech_prob": 0.003400854766368866,
+          "words": [
+            {
+              "start": 2.44,
+              "end": 2.82,
+              "word": " The",
+              "probability": 0.9468913674354553
+            },
+            {
+              "start": 2.82,
+              "end": 3.06,
+              "word": " number",
+              "probability": 0.9914461374282837
+            },
+            {
+              "start": 3.06,
+              "end": 3.28,
+              "word": " is",
+              "probability": 0.9951425790786743
+            },
+            {
+              "start": 3.28,
+              "end": 3.54,
+              "word": " 7.",
+              "probability": 0.740899384021759
+            }
+          ]
+        }
+      ],
+      "text": " This is a controlled audio test. The number is 7."
+    },
+    {
+      "file": "C:\\dev\\proyectos\\_investigacion-onia\\base-operativa\\operacion\\referentes-20261105\\audio\\pedro-asr-16k.wav",
+      "bytes": 2891212,
+      "sha256": "d3fddfc3562aa94f9b2d592830041c6495291c1edf2911fc2e6a987df8d96fe5",
+      "elapsed_s": 16.766,
+      "duration": 90.3479375,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.26,
+          "text": " Te voy a decir cómo puedes mejorar tu oferta en cinco pasos.",
+          "avg_logprob": -0.13446278392802924,
+          "no_speech_prob": 0.10502459853887558,
+          "words": [
+            {
+              "start": 0.0,
+              "end": 0.14,
+              "word": " Te",
+              "probability": 0.5329562425613403
+            },
+            {
+              "start": 0.14,
+              "end": 0.22,
+              "word": " voy",
+              "probability": 0.9759941101074219
+            },
+            {
+              "start": 0.22,
+              "end": 0.3,
+              "word": " a",
+              "probability": 0.9967490434646606
+            },
+            {
+              "start": 0.3,
+              "end": 0.5,
+              "word": " decir",
+              "probability": 0.9913753867149353
+            },
+            {
+              "start": 0.5,
+              "end": 0.74,
+              "word": " cómo",
+              "probability": 0.7764336466789246
+            },
+            {
+              "start": 0.74,
+              "end": 1.04,
+              "word": " puedes",
+              "probability": 0.9903818964958191
+            },
+            {
+              "start": 1.04,
+              "end": 1.4,
+              "word": " mejorar",
+              "probability": 0.9473065733909607
+            },
+            {
+              "start": 1.4,
+              "end": 1.62,
+              "word": " tu",
+              "probability": 0.9896929860115051
+            },
+            {
+              "start": 1.62,
+              "end": 2.02,
+              "word": " oferta",
+              "probability": 0.9987698495388031
+            },
+            {
+              "start": 2.02,
+              "end": 2.68,
+              "word": " en",
+              "probability": 0.975569486618042
+            },
+            {
+              "start": 2.68,
+              "end": 2.96,
+              "word": " cinco",
+              "probability": 0.844443678855896
+            },
+            {
+              "start": 2.96,
+              "end": 3.26,
+              "word": " pasos.",
+              "probability": 0.9976958632469177
+            }
+          ]
+        },
+        {
+          "start": 3.36,
+          "end": 7.86,
+          "text": " En primer lugar, háblale a un avatar concreto y de forma específica,",
+          "avg_logprob": -0.13446278392802924,
+          "no_speech_prob": 0.10502459853887558,
+          "words": [
+            {
+              "start": 3.36,
+              "end": 3.4,
+              "word": " En",
+              "probability": 0.991986870765686
+            },
+            {
+              "start": 3.4,
+              "end": 3.82,
+              "word": " primer",
+              "probability": 0.9978373646736145
+            },
+            {
+              "start": 3.82,
+              "end": 4.26,
+              "word": " lugar,",
+              "probability": 0.9997135996818542
+            },
+            {
+              "start": 4.68,
+              "end": 5.06,
+              "word": " háblale",
+              "probability": 0.9106871287027994
+            },
+            {
+              "start": 5.06,
+              "end": 5.36,
+              "word": " a",
+              "probability": 0.9833166003227234
+            },
+            {
+              "start": 5.36,
+              "end": 5.5,
+              "word": " un",
+              "probability": 0.8739156723022461
+            },
+            {
+              "start": 5.5,
+              "end": 5.76,
+              "word": " avatar",
+              "probability": 0.9488765597343445
+            },
+            {
+              "start": 5.76,
+              "end": 6.48,
+              "word": " concreto",
+              "probability": 0.989547610282898
+            },
+            {
+              "start": 6.48,
+              "end": 6.66,
+              "word": " y",
+              "probability": 0.9755436182022095
+            },
+            {
+              "start": 6.66,
+              "end": 6.74,
+              "word": " de",
+              "probability": 0.9952284097671509
+            },
+            {
+              "start": 6.74,
+              "end": 6.98,
+              "word": " forma",
+              "probability": 0.9982470273971558
+            },
+            {
+              "start": 6.98,
+              "end": 7.86,
+              "word": " específica,",
+              "probability": 0.9858565330505371
+            }
+          ]
+        },
+        {
+          "start": 7.9,
+          "end": 10.0,
+          "text": " con un problema específico.",
+          "avg_logprob": -0.13446278392802924,
+          "no_speech_prob": 0.10502459853887558,
+          "words": [
+            {
+              "start": 7.9,
+              "end": 8.02,
+              "word": " con",
+              "probability": 0.9936151504516602
+            },
+            {
+              "start": 8.02,
+              "end": 8.16,
+              "word": " un",
+              "probability": 0.9985626339912415
+            },
+            {
+              "start": 8.16,
+              "end": 8.76,
+              "word": " problema",
+              "probability": 0.998678982257843
+            },
+            {
+              "start": 8.76,
+              "end": 10.0,
+              "word": " específico.",
+              "probability": 0.9987820684909821
+            }
+          ]
+        },
+        {
+          "start": 10.04,
+          "end": 12.78,
+          "text": " Tu cliente potencial se va a sentir mucho más identificado",
+          "avg_logprob": -0.13446278392802924,
+          "no_speech_prob": 0.10502459853887558,
+          "words": [
+            {
+              "start": 10.04,
+              "end": 10.18,
+              "word": " Tu",
+              "probability": 0.9700973033905029
+            },
+            {
+              "start": 10.18,
+              "end": 10.5,
+              "word": " cliente",
+              "probability": 0.9901646077632904
+            },
+            {
+              "start": 10.5,
+              "end": 10.92,
+              "word": " potencial",
+              "probability": 0.9915140867233276
+            },
+            {
+              "start": 10.92,
+              "end": 11.08,
+              "word": " se",
+              "probability": 0.9784704446792603
+            },
+            {
+              "start": 11.08,
+              "end": 11.18,
+              "word": " va",
+              "probability": 0.9871538281440735
+            },
+            {
+              "start": 11.18,
+              "end": 11.26,
+              "word": " a",
+              "probability": 0.9940786361694336
+            },
+            {
+              "start": 11.26,
+              "end": 11.46,
+              "word": " sentir",
+              "probability": 0.9987345337867737
+            },
+            {
+              "start": 11.46,
+              "end": 11.82,
+              "word": " mucho",
+              "probability": 0.9873403906822205
+            },
+            {
+              "start": 11.82,
+              "end": 11.98,
+              "word": " más",
+              "probability": 0.9892200827598572
+            },
+            {
+              "start": 11.98,
+              "end": 12.78,
+              "word": " identificado",
+              "probability": 0.9971131384372711
+            }
+          ]
+        },
+        {
+          "start": 12.78,
+          "end": 15.62,
+          "text": " y se disparan las probabilidades",
+          "avg_logprob": -0.13446278392802924,
+          "no_speech_prob": 0.10502459853887558,
+          "words": [
+            {
+              "start": 12.78,
+              "end": 13.22,
+              "word": " y",
+              "probability": 0.8488624095916748
+            },
+            {
+              "start": 13.22,
+              "end": 13.34,
+              "word": " se",
+              "probability": 0.9965425133705139
+            },
+            {
+              "start": 13.34,
+              "end": 14.16,
+              "word": " disparan",
+              "probability": 0.9922827482223511
+            },
+            {
+              "start": 14.16,
+              "end": 14.58,
+              "word": " las",
+              "probability": 0.9929198622703552
+            },
+            {
+              "start": 14.58,
+              "end": 15.62,
+              "word": " probabilidades",
+              "probability": 0.9867259562015533
+            }
+          ]
+        },
+        {
+          "start": 15.62,
+          "end": 17.6,
+          "text": " de que quieran interactuar con tu ecosistema.",
+          "avg_logprob": -0.13446278392802924,
+          "no_speech_prob": 0.10502459853887558,
+          "words": [
+            {
+              "start": 15.62,
+              "end": 15.8,
+              "word": " de",
+              "probability": 0.9549118876457214
+            },
+            {
+              "start": 15.8,
+              "end": 15.9,
+              "word": " que",
+              "probability": 0.9967657327651978
+            },
+            {
+              "start": 15.9,
+              "end": 16.16,
+              "word": " quieran",
+              "probability": 0.9063043296337128
+            },
+            {
+              "start": 16.16,
+              "end": 16.7,
+              "word": " interactuar",
+              "probability": 0.9966877698898315
+            },
+            {
+              "start": 16.7,
+              "end": 16.92,
+              "word": " con",
+              "probability": 0.9982648491859436
+            },
+            {
+              "start": 16.92,
+              "end": 17.08,
+              "word": " tu",
+              "probability": 0.9936349391937256
+            },
+            {
+              "start": 17.08,
+              "end": 17.6,
+              "word": " ecosistema.",
+              "probability": 0.9790599743525187
+            }
+          ]
+        },
+        {
+          "start": 17.68,
+          "end": 20.48,
+          "text": " Será mucho más efectivo hablar a mujeres",
+          "avg_logprob": -0.13446278392802924,
+          "no_speech_prob": 0.10502459853887558,
+          "words": [
+            {
+              "start": 17.68,
+              "end": 17.78,
+              "word": " Será",
+              "probability": 0.6803545355796814
+            },
+            {
+              "start": 17.78,
+              "end": 18.06,
+              "word": " mucho",
+              "probability": 0.9980906844139099
+            },
+            {
+              "start": 18.06,
+              "end": 18.24,
+              "word": " más",
+              "probability": 0.9966071844100952
+            },
+            {
+              "start": 18.24,
+              "end": 18.74,
+              "word": " efectivo",
+              "probability": 0.9969863891601562
+            },
+            {
+              "start": 18.74,
+              "end": 19.4,
+              "word": " hablar",
+              "probability": 0.9693034291267395
+            },
+            {
+              "start": 19.4,
+              "end": 20.02,
+              "word": " a",
+              "probability": 0.9838797450065613
+            },
+            {
+              "start": 20.02,
+              "end": 20.48,
+              "word": " mujeres",
+              "probability": 0.9991015195846558
+            }
+          ]
+        },
+        {
+          "start": 20.48,
+          "end": 23.14,
+          "text": " que acaban de dar a luz para ofrecerles la transformación",
+          "avg_logprob": -0.13446278392802924,
+          "no_speech_prob": 0.10502459853887558,
+          "words": [
+            {
+              "start": 20.48,
+              "end": 20.78,
+              "word": " que",
+              "probability": 0.9955474138259888
+            },
+            {
+              "start": 20.78,
+              "end": 21.18,
+              "word": " acaban",
+              "probability": 0.9864743947982788
+            },
+            {
+              "start": 21.18,
+              "end": 21.32,
+              "word": " de",
+              "probability": 0.9980453252792358
+            },
+            {
+              "start": 21.32,
+              "end": 21.48,
+              "word": " dar",
+              "probability": 0.9989073276519775
+            },
+            {
+              "start": 21.48,
+              "end": 21.56,
+              "word": " a",
+              "probability": 0.9451317191123962
+            },
+            {
+              "start": 21.56,
+              "end": 21.72,
+              "word": " luz",
+              "probability": 0.9976382255554199
+            },
+            {
+              "start": 21.72,
+              "end": 21.9,
+              "word": " para",
+              "probability": 0.9617578983306885
+            },
+            {
+              "start": 21.9,
+              "end": 22.38,
+              "word": " ofrecerles",
+              "probability": 0.992619663476944
+            },
+            {
+              "start": 22.38,
+              "end": 22.5,
+              "word": " la",
+              "probability": 0.994838297367096
+            },
+            {
+              "start": 22.5,
+              "end": 23.14,
+              "word": " transformación",
+              "probability": 0.99639692902565
+            }
+          ]
+        },
+        {
+          "start": 23.14,
+          "end": 26.94,
+          "text": " de recuperar el peso que tenían antes de quedarse embarazadas,",
+          "avg_logprob": -0.13446278392802924,
+          "no_speech_prob": 0.10502459853887558,
+          "words": [
+            {
+              "start": 23.14,
+              "end": 23.28,
+              "word": " de",
+              "probability": 0.9724742770195007
+            },
+            {
+              "start": 23.28,
+              "end": 23.82,
+              "word": " recuperar",
+              "probability": 0.9987786114215851
+            },
+            {
+              "start": 23.82,
+              "end": 23.98,
+              "word": " el",
+              "probability": 0.9973083734512329
+            },
+            {
+              "start": 23.98,
+              "end": 24.26,
+              "word": " peso",
+              "probability": 0.9983021020889282
+            },
+            {
+              "start": 24.26,
+              "end": 24.4,
+              "word": " que",
+              "probability": 0.9960152506828308
+            },
+            {
+              "start": 24.4,
+              "end": 24.78,
+              "word": " tenían",
+              "probability": 0.9849757552146912
+            },
+            {
+              "start": 24.78,
+              "end": 25.74,
+              "word": " antes",
+              "probability": 0.9483594298362732
+            },
+            {
+              "start": 25.74,
+              "end": 26.1,
+              "word": " de",
+              "probability": 0.9911841750144958
+            },
+            {
+              "start": 26.1,
+              "end": 26.44,
+              "word": " quedarse",
+              "probability": 0.9789333343505859
+            },
+            {
+              "start": 26.44,
+              "end": 26.94,
+              "word": " embarazadas,",
+              "probability": 0.985525111357371
+            }
+          ]
+        },
+        {
+          "start": 26.94,
+          "end": 34.1,
+          "text": " que hablarle al público general y simplemente ofrecerles mejorar su forma física. En segundo",
+          "avg_logprob": -0.16901612936795413,
+          "no_speech_prob": 0.376844197511673,
+          "words": [
+            {
+              "start": 26.94,
+              "end": 27.14,
+              "word": " que",
+              "probability": 0.08817854523658752
+            },
+            {
+              "start": 27.14,
+              "end": 27.64,
+              "word": " hablarle",
+              "probability": 0.7542016804218292
+            },
+            {
+              "start": 27.64,
+              "end": 28.16,
+              "word": " al",
+              "probability": 0.9841247797012329
+            },
+            {
+              "start": 28.16,
+              "end": 28.6,
+              "word": " público",
+              "probability": 0.9810071587562561
+            },
+            {
+              "start": 28.6,
+              "end": 29.28,
+              "word": " general",
+              "probability": 0.936728298664093
+            },
+            {
+              "start": 29.28,
+              "end": 29.52,
+              "word": " y",
+              "probability": 0.9436081051826477
+            },
+            {
+              "start": 29.52,
+              "end": 29.78,
+              "word": " simplemente",
+              "probability": 0.9710562229156494
+            },
+            {
+              "start": 29.78,
+              "end": 30.72,
+              "word": " ofrecerles",
+              "probability": 0.9951025396585464
+            },
+            {
+              "start": 30.72,
+              "end": 31.72,
+              "word": " mejorar",
+              "probability": 0.8383655548095703
+            },
+            {
+              "start": 31.72,
+              "end": 32.04,
+              "word": " su",
+              "probability": 0.9967945218086243
+            },
+            {
+              "start": 32.04,
+              "end": 32.48,
+              "word": " forma",
+              "probability": 0.9982840418815613
+            },
+            {
+              "start": 32.48,
+              "end": 33.14,
+              "word": " física.",
+              "probability": 0.9926043748855591
+            },
+            {
+              "start": 33.66,
+              "end": 33.86,
+              "word": " En",
+              "probability": 0.9800077676773071
+            },
+            {
+              "start": 33.86,
+              "end": 34.1,
+              "word": " segundo",
+              "probability": 0.9951363205909729
+            }
+          ]
+        },
+        {
+          "start": 34.1,
+          "end": 40.2,
+          "text": " lugar añade escasez, siempre que sea real, claro. Si comunicas que solamente coges a",
+          "avg_logprob": -0.16901612936795413,
+          "no_speech_prob": 0.376844197511673,
+          "words": [
+            {
+              "start": 34.1,
+              "end": 34.5,
+              "word": " lugar",
+              "probability": 0.9987103939056396
+            },
+            {
+              "start": 34.5,
+              "end": 35.38,
+              "word": " añade",
+              "probability": 0.7608039081096649
+            },
+            {
+              "start": 35.38,
+              "end": 36.56,
+              "word": " escasez,",
+              "probability": 0.8204067548116049
+            },
+            {
+              "start": 36.82,
+              "end": 37.02,
+              "word": " siempre",
+              "probability": 0.971335768699646
+            },
+            {
+              "start": 37.02,
+              "end": 37.18,
+              "word": " que",
+              "probability": 0.9973648190498352
+            },
+            {
+              "start": 37.18,
+              "end": 37.36,
+              "word": " sea",
+              "probability": 0.9844745397567749
+            },
+            {
+              "start": 37.36,
+              "end": 37.76,
+              "word": " real,",
+              "probability": 0.9896609783172607
+            },
+            {
+              "start": 37.92,
+              "end": 38.06,
+              "word": " claro.",
+              "probability": 0.9907845258712769
+            },
+            {
+              "start": 38.58,
+              "end": 38.68,
+              "word": " Si",
+              "probability": 0.9932265877723694
+            },
+            {
+              "start": 38.68,
+              "end": 39.08,
+              "word": " comunicas",
+              "probability": 0.8586033880710602
+            },
+            {
+              "start": 39.08,
+              "end": 39.22,
+              "word": " que",
+              "probability": 0.9908360242843628
+            },
+            {
+              "start": 39.22,
+              "end": 39.48,
+              "word": " solamente",
+              "probability": 0.9635874629020691
+            },
+            {
+              "start": 39.48,
+              "end": 40.0,
+              "word": " coges",
+              "probability": 0.9056611657142639
+            },
+            {
+              "start": 40.0,
+              "end": 40.2,
+              "word": " a",
+              "probability": 0.9936215281486511
+            }
+          ]
+        },
+        {
+          "start": 40.2,
+          "end": 46.02,
+          "text": " cinco clientes nuevos cada semana tu servicio será percibido como algo de mucho más valor.",
+          "avg_logprob": -0.16901612936795413,
+          "no_speech_prob": 0.376844197511673,
+          "words": [
+            {
+              "start": 40.2,
+              "end": 40.46,
+              "word": " cinco",
+              "probability": 0.6231048703193665
+            },
+            {
+              "start": 40.46,
+              "end": 40.98,
+              "word": " clientes",
+              "probability": 0.9985362887382507
+            },
+            {
+              "start": 40.98,
+              "end": 41.22,
+              "word": " nuevos",
+              "probability": 0.9930590391159058
+            },
+            {
+              "start": 41.22,
+              "end": 41.58,
+              "word": " cada",
+              "probability": 0.8251730799674988
+            },
+            {
+              "start": 41.58,
+              "end": 42.02,
+              "word": " semana",
+              "probability": 0.9990971088409424
+            },
+            {
+              "start": 42.02,
+              "end": 42.22,
+              "word": " tu",
+              "probability": 0.72259122133255
+            },
+            {
+              "start": 42.22,
+              "end": 42.72,
+              "word": " servicio",
+              "probability": 0.9979997277259827
+            },
+            {
+              "start": 42.72,
+              "end": 43.38,
+              "word": " será",
+              "probability": 0.8744205832481384
+            },
+            {
+              "start": 43.38,
+              "end": 43.88,
+              "word": " percibido",
+              "probability": 0.9890750795602798
+            },
+            {
+              "start": 43.88,
+              "end": 44.08,
+              "word": " como",
+              "probability": 0.9883930087089539
+            },
+            {
+              "start": 44.08,
+              "end": 44.28,
+              "word": " algo",
+              "probability": 0.9951059818267822
+            },
+            {
+              "start": 44.28,
+              "end": 44.46,
+              "word": " de",
+              "probability": 0.9970296621322632
+            },
+            {
+              "start": 44.46,
+              "end": 44.9,
+              "word": " mucho",
+              "probability": 0.9948923587799072
+            },
+            {
+              "start": 44.9,
+              "end": 45.4,
+              "word": " más",
+              "probability": 0.9908167123794556
+            },
+            {
+              "start": 45.4,
+              "end": 46.02,
+              "word": " valor.",
+              "probability": 0.9923931360244751
+            }
+          ]
+        },
+        {
+          "start": 46.66,
+          "end": 51.18,
+          "text": " En tercer lugar añade urgencias y quedan tan solo tres días para poder formar parte",
+          "avg_logprob": -0.16901612936795413,
+          "no_speech_prob": 0.376844197511673,
+          "words": [
+            {
+              "start": 46.66,
+              "end": 46.72,
+              "word": " En",
+              "probability": 0.9901222586631775
+            },
+            {
+              "start": 46.72,
+              "end": 46.86,
+              "word": " tercer",
+              "probability": 0.99510657787323
+            },
+            {
+              "start": 46.86,
+              "end": 47.24,
+              "word": " lugar",
+              "probability": 0.9998185038566589
+            },
+            {
+              "start": 47.24,
+              "end": 47.64,
+              "word": " añade",
+              "probability": 0.9402414262294769
+            },
+            {
+              "start": 47.64,
+              "end": 48.42,
+              "word": " urgencias",
+              "probability": 0.8773829340934753
+            },
+            {
+              "start": 48.42,
+              "end": 48.64,
+              "word": " y",
+              "probability": 0.7468261122703552
+            },
+            {
+              "start": 48.64,
+              "end": 48.86,
+              "word": " quedan",
+              "probability": 0.9701784551143646
+            },
+            {
+              "start": 48.86,
+              "end": 48.96,
+              "word": " tan",
+              "probability": 0.9377750754356384
+            },
+            {
+              "start": 48.96,
+              "end": 49.22,
+              "word": " solo",
+              "probability": 0.5784645080566406
+            },
+            {
+              "start": 49.22,
+              "end": 49.46,
+              "word": " tres",
+              "probability": 0.9327081441879272
+            },
+            {
+              "start": 49.46,
+              "end": 49.7,
+              "word": " días",
+              "probability": 0.9981151819229126
+            },
+            {
+              "start": 49.7,
+              "end": 49.96,
+              "word": " para",
+              "probability": 0.9839087128639221
+            },
+            {
+              "start": 49.96,
+              "end": 50.4,
+              "word": " poder",
+              "probability": 0.9912717938423157
+            },
+            {
+              "start": 50.4,
+              "end": 50.86,
+              "word": " formar",
+              "probability": 0.9982334971427917
+            },
+            {
+              "start": 50.86,
+              "end": 51.18,
+              "word": " parte",
+              "probability": 0.999340832233429
+            }
+          ]
+        },
+        {
+          "start": 51.18,
+          "end": 57.06,
+          "text": " del grupo de clientes que se incorpora tu programa en septiembre, comunica, lo estamos programados",
+          "avg_logprob": -0.1963659678355302,
+          "no_speech_prob": 0.6644818782806396,
+          "words": [
+            {
+              "start": 51.18,
+              "end": 51.38,
+              "word": " del",
+              "probability": 0.08191477507352829
+            },
+            {
+              "start": 51.38,
+              "end": 51.64,
+              "word": " grupo",
+              "probability": 0.789505124092102
+            },
+            {
+              "start": 51.64,
+              "end": 51.82,
+              "word": " de",
+              "probability": 0.966370165348053
+            },
+            {
+              "start": 51.82,
+              "end": 52.24,
+              "word": " clientes",
+              "probability": 0.9860946834087372
+            },
+            {
+              "start": 52.24,
+              "end": 52.32,
+              "word": " que",
+              "probability": 0.966001033782959
+            },
+            {
+              "start": 52.32,
+              "end": 52.42,
+              "word": " se",
+              "probability": 0.9829176068305969
+            },
+            {
+              "start": 52.42,
+              "end": 52.84,
+              "word": " incorpora",
+              "probability": 0.9841578602790833
+            },
+            {
+              "start": 52.84,
+              "end": 53.0,
+              "word": " tu",
+              "probability": 0.862960696220398
+            },
+            {
+              "start": 53.0,
+              "end": 53.4,
+              "word": " programa",
+              "probability": 0.9942225813865662
+            },
+            {
+              "start": 53.4,
+              "end": 53.92,
+              "word": " en",
+              "probability": 0.9335594773292542
+            },
+            {
+              "start": 53.92,
+              "end": 54.86,
+              "word": " septiembre,",
+              "probability": 0.9916966259479523
+            },
+            {
+              "start": 55.22,
+              "end": 55.96,
+              "word": " comunica,",
+              "probability": 0.916201651096344
+            },
+            {
+              "start": 56.02,
+              "end": 56.08,
+              "word": " lo",
+              "probability": 0.6735650897026062
+            },
+            {
+              "start": 56.08,
+              "end": 56.26,
+              "word": " estamos",
+              "probability": 0.9914097189903259
+            },
+            {
+              "start": 56.26,
+              "end": 57.06,
+              "word": " programados",
+              "probability": 0.986716240644455
+            }
+          ]
+        },
+        {
+          "start": 57.06,
+          "end": 63.72,
+          "text": " para postergar nuestras decisiones y esto invita el lead a tomar acción. En cuarto lugar construye tu",
+          "avg_logprob": -0.1963659678355302,
+          "no_speech_prob": 0.6644818782806396,
+          "words": [
+            {
+              "start": 57.06,
+              "end": 57.3,
+              "word": " para",
+              "probability": 0.9886696338653564
+            },
+            {
+              "start": 57.3,
+              "end": 57.98,
+              "word": " postergar",
+              "probability": 0.9841282367706299
+            },
+            {
+              "start": 57.98,
+              "end": 58.2,
+              "word": " nuestras",
+              "probability": 0.9928023219108582
+            },
+            {
+              "start": 58.2,
+              "end": 58.98,
+              "word": " decisiones",
+              "probability": 0.9964271187782288
+            },
+            {
+              "start": 58.98,
+              "end": 59.08,
+              "word": " y",
+              "probability": 0.6325258016586304
+            },
+            {
+              "start": 59.08,
+              "end": 59.34,
+              "word": " esto",
+              "probability": 0.9685158133506775
+            },
+            {
+              "start": 59.34,
+              "end": 60.12,
+              "word": " invita",
+              "probability": 0.7765255868434906
+            },
+            {
+              "start": 60.12,
+              "end": 60.38,
+              "word": " el",
+              "probability": 0.4785354733467102
+            },
+            {
+              "start": 60.38,
+              "end": 60.62,
+              "word": " lead",
+              "probability": 0.3808380663394928
+            },
+            {
+              "start": 60.62,
+              "end": 61.14,
+              "word": " a",
+              "probability": 0.9887246489524841
+            },
+            {
+              "start": 61.14,
+              "end": 61.32,
+              "word": " tomar",
+              "probability": 0.9970988035202026
+            },
+            {
+              "start": 61.32,
+              "end": 61.64,
+              "word": " acción.",
+              "probability": 0.9290130734443665
+            },
+            {
+              "start": 61.76,
+              "end": 61.78,
+              "word": " En",
+              "probability": 0.9884294271469116
+            },
+            {
+              "start": 61.78,
+              "end": 62.0,
+              "word": " cuarto",
+              "probability": 0.9568198323249817
+            },
+            {
+              "start": 62.0,
+              "end": 62.42,
+              "word": " lugar",
+              "probability": 0.9994301199913025
+            },
+            {
+              "start": 62.42,
+              "end": 63.56,
+              "word": " construye",
+              "probability": 0.6547622382640839
+            },
+            {
+              "start": 63.56,
+              "end": 63.72,
+              "word": " tu",
+              "probability": 0.9907958507537842
+            }
+          ]
+        },
+        {
+          "start": 63.72,
+          "end": 69.36,
+          "text": " marco propietario, necesitas comunicar tu propia metodología que debe tener un componente diferencial",
+          "avg_logprob": -0.1963659678355302,
+          "no_speech_prob": 0.6644818782806396,
+          "words": [
+            {
+              "start": 63.72,
+              "end": 64.0,
+              "word": " marco",
+              "probability": 0.9258127808570862
+            },
+            {
+              "start": 64.0,
+              "end": 64.64,
+              "word": " propietario,",
+              "probability": 0.9919780294100443
+            },
+            {
+              "start": 64.8,
+              "end": 65.14,
+              "word": " necesitas",
+              "probability": 0.979069322347641
+            },
+            {
+              "start": 65.14,
+              "end": 65.64,
+              "word": " comunicar",
+              "probability": 0.9933034181594849
+            },
+            {
+              "start": 65.64,
+              "end": 65.86,
+              "word": " tu",
+              "probability": 0.9962183833122253
+            },
+            {
+              "start": 65.86,
+              "end": 66.24,
+              "word": " propia",
+              "probability": 0.9952465891838074
+            },
+            {
+              "start": 66.24,
+              "end": 67.08,
+              "word": " metodología",
+              "probability": 0.9919918974240621
+            },
+            {
+              "start": 67.08,
+              "end": 67.7,
+              "word": " que",
+              "probability": 0.7070590257644653
+            },
+            {
+              "start": 67.7,
+              "end": 67.86,
+              "word": " debe",
+              "probability": 0.9828994274139404
+            },
+            {
+              "start": 67.86,
+              "end": 68.08,
+              "word": " tener",
+              "probability": 0.9976669549942017
+            },
+            {
+              "start": 68.08,
+              "end": 68.26,
+              "word": " un",
+              "probability": 0.9980498552322388
+            },
+            {
+              "start": 68.26,
+              "end": 68.76,
+              "word": " componente",
+              "probability": 0.9978602826595306
+            },
+            {
+              "start": 68.76,
+              "end": 69.36,
+              "word": " diferencial",
+              "probability": 0.981513500213623
+            }
+          ]
+        },
+        {
+          "start": 69.36,
+          "end": 75.48,
+          "text": " para que te separen de tu competencia y no te comparem simplemente por precio y en quinto lugar",
+          "avg_logprob": -0.1963659678355302,
+          "no_speech_prob": 0.6644818782806396,
+          "words": [
+            {
+              "start": 69.36,
+              "end": 69.58,
+              "word": " para",
+              "probability": 0.9722644090652466
+            },
+            {
+              "start": 69.58,
+              "end": 69.72,
+              "word": " que",
+              "probability": 0.9975255131721497
+            },
+            {
+              "start": 69.72,
+              "end": 69.88,
+              "word": " te",
+              "probability": 0.9335878491401672
+            },
+            {
+              "start": 69.88,
+              "end": 70.34,
+              "word": " separen",
+              "probability": 0.9666466116905212
+            },
+            {
+              "start": 70.34,
+              "end": 70.52,
+              "word": " de",
+              "probability": 0.9882680773735046
+            },
+            {
+              "start": 70.52,
+              "end": 70.7,
+              "word": " tu",
+              "probability": 0.9897108674049377
+            },
+            {
+              "start": 70.7,
+              "end": 71.5,
+              "word": " competencia",
+              "probability": 0.9971490502357483
+            },
+            {
+              "start": 71.5,
+              "end": 71.94,
+              "word": " y",
+              "probability": 0.9688904285430908
+            },
+            {
+              "start": 71.94,
+              "end": 72.04,
+              "word": " no",
+              "probability": 0.9982802867889404
+            },
+            {
+              "start": 72.04,
+              "end": 72.16,
+              "word": " te",
+              "probability": 0.9964078068733215
+            },
+            {
+              "start": 72.16,
+              "end": 72.64,
+              "word": " comparem",
+              "probability": 0.516830787062645
+            },
+            {
+              "start": 72.64,
+              "end": 73.16,
+              "word": " simplemente",
+              "probability": 0.9775011539459229
+            },
+            {
+              "start": 73.16,
+              "end": 73.48,
+              "word": " por",
+              "probability": 0.9946423768997192
+            },
+            {
+              "start": 73.48,
+              "end": 73.9,
+              "word": " precio",
+              "probability": 0.9466908574104309
+            },
+            {
+              "start": 73.9,
+              "end": 74.1,
+              "word": " y",
+              "probability": 0.2709948718547821
+            },
+            {
+              "start": 74.1,
+              "end": 74.28,
+              "word": " en",
+              "probability": 0.9641883969306946
+            },
+            {
+              "start": 74.28,
+              "end": 74.72,
+              "word": " quinto",
+              "probability": 0.9902375936508179
+            },
+            {
+              "start": 74.72,
+              "end": 75.48,
+              "word": " lugar",
+              "probability": 0.974779486656189
+            }
+          ]
+        },
+        {
+          "start": 75.48,
+          "end": 80.98,
+          "text": " no vendas tu oferta como un todo. Ten un producto principal o servicio y luego",
+          "avg_logprob": -0.19575070998361033,
+          "no_speech_prob": 0.20254984498023987,
+          "words": [
+            {
+              "start": 75.48,
+              "end": 76.22,
+              "word": " no",
+              "probability": 0.672507107257843
+            },
+            {
+              "start": 76.22,
+              "end": 76.5,
+              "word": " vendas",
+              "probability": 0.9861697554588318
+            },
+            {
+              "start": 76.5,
+              "end": 76.62,
+              "word": " tu",
+              "probability": 0.9903366565704346
+            },
+            {
+              "start": 76.62,
+              "end": 76.98,
+              "word": " oferta",
+              "probability": 0.9986375570297241
+            },
+            {
+              "start": 76.98,
+              "end": 77.26,
+              "word": " como",
+              "probability": 0.9952757358551025
+            },
+            {
+              "start": 77.26,
+              "end": 77.46,
+              "word": " un",
+              "probability": 0.9957690238952637
+            },
+            {
+              "start": 77.46,
+              "end": 77.78,
+              "word": " todo.",
+              "probability": 0.9502964615821838
+            },
+            {
+              "start": 78.0,
+              "end": 78.22,
+              "word": " Ten",
+              "probability": 0.8393146991729736
+            },
+            {
+              "start": 78.22,
+              "end": 78.38,
+              "word": " un",
+              "probability": 0.9915632009506226
+            },
+            {
+              "start": 78.38,
+              "end": 78.72,
+              "word": " producto",
+              "probability": 0.9879699945449829
+            },
+            {
+              "start": 78.72,
+              "end": 79.5,
+              "word": " principal",
+              "probability": 0.9978801012039185
+            },
+            {
+              "start": 79.5,
+              "end": 80.06,
+              "word": " o",
+              "probability": 0.8397341966629028
+            },
+            {
+              "start": 80.06,
+              "end": 80.5,
+              "word": " servicio",
+              "probability": 0.9960582256317139
+            },
+            {
+              "start": 80.5,
+              "end": 80.84,
+              "word": " y",
+              "probability": 0.8207003474235535
+            },
+            {
+              "start": 80.84,
+              "end": 80.98,
+              "word": " luego",
+              "probability": 0.9949268102645874
+            }
+          ]
+        },
+        {
+          "start": 80.98,
+          "end": 85.16,
+          "text": " añade una serie de bonuses de valor añadido que van a funcionar o bien como",
+          "avg_logprob": -0.19575070998361033,
+          "no_speech_prob": 0.20254984498023987,
+          "words": [
+            {
+              "start": 80.98,
+              "end": 81.36,
+              "word": " añade",
+              "probability": 0.9814830422401428
+            },
+            {
+              "start": 81.36,
+              "end": 81.52,
+              "word": " una",
+              "probability": 0.994594395160675
+            },
+            {
+              "start": 81.52,
+              "end": 81.76,
+              "word": " serie",
+              "probability": 0.9974330067634583
+            },
+            {
+              "start": 81.76,
+              "end": 81.96,
+              "word": " de",
+              "probability": 0.9989734888076782
+            },
+            {
+              "start": 81.96,
+              "end": 82.62,
+              "word": " bonuses",
+              "probability": 0.6306859850883484
+            },
+            {
+              "start": 82.62,
+              "end": 82.9,
+              "word": " de",
+              "probability": 0.9935945868492126
+            },
+            {
+              "start": 82.9,
+              "end": 83.12,
+              "word": " valor",
+              "probability": 0.9963674545288086
+            },
+            {
+              "start": 83.12,
+              "end": 83.72,
+              "word": " añadido",
+              "probability": 0.9757762551307678
+            },
+            {
+              "start": 83.72,
+              "end": 83.86,
+              "word": " que",
+              "probability": 0.9052013754844666
+            },
+            {
+              "start": 83.86,
+              "end": 84.02,
+              "word": " van",
+              "probability": 0.9929335117340088
+            },
+            {
+              "start": 84.02,
+              "end": 84.08,
+              "word": " a",
+              "probability": 0.9988389611244202
+            },
+            {
+              "start": 84.08,
+              "end": 84.6,
+              "word": " funcionar",
+              "probability": 0.9979050755500793
+            },
+            {
+              "start": 84.6,
+              "end": 84.68,
+              "word": " o",
+              "probability": 0.6310330033302307
+            },
+            {
+              "start": 84.68,
+              "end": 84.9,
+              "word": " bien",
+              "probability": 0.994019627571106
+            },
+            {
+              "start": 84.9,
+              "end": 85.16,
+              "word": " como",
+              "probability": 0.9706562161445618
+            }
+          ]
+        },
+        {
+          "start": 85.16,
+          "end": 90.2,
+          "text": " incentivo o bien como forma de aumentar el valor persiguido de tu oferta.",
+          "avg_logprob": -0.19575070998361033,
+          "no_speech_prob": 0.20254984498023987,
+          "words": [
+            {
+              "start": 85.16,
+              "end": 86.14,
+              "word": " incentivo",
+              "probability": 0.9766433537006378
+            },
+            {
+              "start": 86.14,
+              "end": 86.72,
+              "word": " o",
+              "probability": 0.6779108047485352
+            },
+            {
+              "start": 86.72,
+              "end": 86.98,
+              "word": " bien",
+              "probability": 0.9969348907470703
+            },
+            {
+              "start": 86.98,
+              "end": 87.22,
+              "word": " como",
+              "probability": 0.9840166568756104
+            },
+            {
+              "start": 87.22,
+              "end": 87.54,
+              "word": " forma",
+              "probability": 0.9926894307136536
+            },
+            {
+              "start": 87.54,
+              "end": 87.68,
+              "word": " de",
+              "probability": 0.9980015158653259
+            },
+            {
+              "start": 87.68,
+              "end": 88.12,
+              "word": " aumentar",
+              "probability": 0.9988677501678467
+            },
+            {
+              "start": 88.12,
+              "end": 88.66,
+              "word": " el",
+              "probability": 0.99850994348526
+            },
+            {
+              "start": 88.66,
+              "end": 88.92,
+              "word": " valor",
+              "probability": 0.998234748840332
+            },
+            {
+              "start": 88.92,
+              "end": 89.52,
+              "word": " persiguido",
+              "probability": 0.7920998533566793
+            },
+            {
+              "start": 89.52,
+              "end": 89.68,
+              "word": " de",
+              "probability": 0.9973921775817871
+            },
+            {
+              "start": 89.68,
+              "end": 89.82,
+              "word": " tu",
+              "probability": 0.9913313388824463
+            },
+            {
+              "start": 89.82,
+              "end": 90.2,
+              "word": " oferta.",
+              "probability": 0.9995790123939514
+            }
+          ]
+        }
+      ],
+      "text": " Te voy a decir cómo puedes mejorar tu oferta en cinco pasos. En primer lugar, háblale a un avatar concreto y de forma específica, con un problema específico. Tu cliente potencial se va a sentir mucho más identificado y se disparan las probabilidades de que quieran interactuar con tu ecosistema. Será mucho más efectivo hablar a mujeres que acaban de dar a luz para ofrecerles la transformación de recuperar el peso que tenían antes de quedarse embarazadas, que hablarle al público general y simplemente ofrecerles mejorar su forma física. En segundo lugar añade escasez, siempre que sea real, claro. Si comunicas que solamente coges a cinco clientes nuevos cada semana tu servicio será percibido como algo de mucho más valor. En tercer lugar añade urgencias y quedan tan solo tres días para poder formar parte del grupo de clientes que se incorpora tu programa en septiembre, comunica, lo estamos programados para postergar nuestras decisiones y esto invita el lead a tomar acción. En cuarto lugar construye tu marco propietario, necesitas comunicar tu propia metodología que debe tener un componente diferencial para que te separen de tu competencia y no te comparem simplemente por precio y en quinto lugar no vendas tu oferta como un todo. Ten un producto principal o servicio y luego añade una serie de bonuses de valor añadido que van a funcionar o bien como incentivo o bien como forma de aumentar el valor persiguido de tu oferta."
+    }
+  ],
+  "total_elapsed_s": 25.172,
+  "model_files": [
+    {
+      "file": "C:\\Users\\PC\\.cache\\huggingface\\hub\\models--Systran--faster-whisper-small\\snapshots\\536b0662742c02347bc0e980a01041f333bce120\\config.json",
+      "bytes": 2370,
+      "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+    },
+    {
+      "file": "C:\\Users\\PC\\.cache\\huggingface\\hub\\models--Systran--faster-whisper-small\\snapshots\\536b0662742c02347bc0e980a01041f333bce120\\model.bin",
+      "bytes": 483546902,
+      "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+    },
+    {
+      "file": "C:\\Users\\PC\\.cache\\huggingface\\hub\\models--Systran--faster-whisper-small\\snapshots\\536b0662742c02347bc0e980a01041f333bce120\\tokenizer.json",
+      "bytes": 2203239,
+      "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+    },
+    {
+      "file": "C:\\Users\\PC\\.cache\\huggingface\\hub\\models--Systran--faster-whisper-small\\snapshots\\536b0662742c02347bc0e980a01041f333bce120\\vocabulary.txt",
+      "bytes": 459861,
+      "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+    }
+  ]
+}

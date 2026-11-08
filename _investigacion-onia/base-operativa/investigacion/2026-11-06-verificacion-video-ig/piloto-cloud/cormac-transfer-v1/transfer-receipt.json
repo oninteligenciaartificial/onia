@@ -1,0 +1,90 @@
+{
+  "piece": "DfWLWspIruU",
+  "anonymous": true,
+  "automatic_retries": 0,
+  "tracks": [
+    {
+      "format_id": "dash-1622684339260942v",
+      "host": "scontent-lim1-1.cdninstagram.com",
+      "url_without_query_sha256": "7acbf67cac3bd669b869872c2f6be319b0dbe2c8744ebfdaf5b6669d999664c4",
+      "bytes": 10486198,
+      "complete": true,
+      "http_status": 200,
+      "content_length": "10486198",
+      "sha256": "d13afd0cf3f74141bd222eba161d6a97a14d1acc376d484f9b0b411c03051d74",
+      "closed_file_hash": true
+    },
+    {
+      "format_id": "dash-1622683569261019a",
+      "host": "scontent-lim1-1.cdninstagram.com",
+      "url_without_query_sha256": "2eff7245301d8dfac23ade4ae29fa8066968d18d18e82ed80a29e48c252529b7",
+      "bytes": 257026,
+      "complete": true,
+      "http_status": 200,
+      "content_length": "257026",
+      "sha256": "37bf647e526b1d64f3a8342fb7dc6f39ad75c983dc0bc132d869bddb2dd5346f",
+      "closed_file_hash": true
+    }
+  ],
+  "complete": true,
+  "remux": {
+    "bytes": 10749773,
+    "sha256": "2c89164b66a9c556e749b789e0ca2004562c859316ac447ba883f7535f5a79a5",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "vp9",
+          "codec_type": "video",
+          "width": 1440,
+          "height": 2560,
+          "duration": "37.733333",
+          "nb_read_packets": "2264"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2,
+          "duration": "37.780000",
+          "nb_read_packets": "816"
+        }
+      ],
+      "format": {
+        "duration": "37.780000",
+        "size": "10749773"
+      }
+    },
+    "streamhash_output": "0,v,SHA256=ae7c9a7097a0f7d3d262bcde444569bb10789b76a4afd5176f209e0ed505b403\n1,a,SHA256=681f83302315ebb9819b9b72b1a0ebaa1f3967a1afe615fdfdf982ded8c4ab49\n",
+    "expected_original_streamhashes": [
+      "ae7c9a7097a0f7d3d262bcde444569bb10789b76a4afd5176f209e0ed505b403",
+      "681f83302315ebb9819b9b72b1a0ebaa1f3967a1afe615fdfdf982ded8c4ab49"
+    ],
+    "both_streams_match_original": true,
+    "original_file_sha256": "9be4267480093249e104ec9821271e1a755e4329b7ea4d8fca3fc8bacd3b664e",
+    "file_hash_matches_original": false,
+    "container_variant": "local remux, not assumed byte-identical original",
+    "command": [
+      "ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-threads",
+      "2",
+      "-i",
+      "/workspace/onia-av-pilot-20261106/cormac-transfer-v1/track-0.mp4",
+      "-i",
+      "/workspace/onia-av-pilot-20261106/cormac-transfer-v1/track-1.mp4",
+      "-map",
+      "0:v:0",
+      "-map",
+      "1:a:0",
+      "-c",
+      "copy",
+      "/workspace/onia-av-pilot-20261106/cormac-transfer-v1/DfWLWspIruU-remux.mp4"
+    ]
+  }
+}

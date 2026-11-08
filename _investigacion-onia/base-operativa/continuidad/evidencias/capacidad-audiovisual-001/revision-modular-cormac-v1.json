@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "reviewer_chat": "01a1af41-1ce0-7b72-a888-7fd658396b4a",
+  "verdict": "Acepta evidencia instrumental y lectura visual seleccionada de UN Cormac; no detector exhaustivo, OCR fiable autónomo ni escucha.",
+  "confirmed": {
+    "frames": 2264,
+    "consecutive": true,
+    "pts_formula": "256*n, time_base1/15360,60fps",
+    "video_end_s": 37.7333333333333,
+    "container_duration_s": 37.753991,
+    "content_cut_pts": [
+      3.4666666667,
+      7.2,
+      14.6666666667
+    ],
+    "abrupt_reframe_pts": [
+      9.4666666667,
+      21.6666666667
+    ],
+    "subthreshold_ambiguous_pts": [
+      18.0333333333,
+      29.6666666667,
+      34.9333333333
+    ],
+    "ocr_exact": 1,
+    "ocr_cases": 6,
+    "reference_sha256": "e0a4b2ee8534ee0d310d612567487062df80ebf49d68714bbb1b33a79b2fd43b"
+  },
+  "scope": [
+    "Métricas720x1280todosframes, confirmaciónvecinosnativos; no visión manualde2264.",
+    "Cincohojascandidatas−1/actual/+1 respaldan3cortescontenido y2reencuadres; sinflashvisible.",
+    "Pareslow−1/actual no pruebanmontajevs movimiento rápidoni persistencia posterior.",
+    "OCR a exacto,b/c/e corruptos,d vacío,f falsopositivo—aconf0; refagentevisión,nohumana.",
+    "ASRexistente verbal candidato; audio semántico/mezcla/sincronía permanecen pendientes."
+  ],
+  "new_tests_or_writes_by_reviewer": false
+}

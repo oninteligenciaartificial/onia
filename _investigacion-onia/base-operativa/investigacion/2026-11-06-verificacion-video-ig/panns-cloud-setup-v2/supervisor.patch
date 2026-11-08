@@ -1,0 +1,19 @@
+--- v1/supervise.py
++++ v2/supervise.py
+@@ -1,14 +1,14 @@
+ """Own-group CPU1 supervisor; stdlib only; never changes parent limits."""
+ from pathlib import Path
+ import os,sys,time,json,resource,signal,subprocess,selectors,hashlib
+-R=Path('/workspace/onia-av-pilot-20261106');O=R/'panns-setup-v1';G=1024**3
++R=Path('/workspace/onia-av-pilot-20261106');O=R/'panns-setup-v2';G=1024**3
+ def snapshot():
+  mem=int(next(x.split()[1] for x in Path('/proc/meminfo').read_text().splitlines() if x.startswith('MemAvailable:')))*1024
+  cg=Path('/sys/fs/cgroup');maximum=(cg/'memory.max').read_text().strip();current=int((cg/'memory.current').read_text())
+  import shutil
+  return {'mem_available':mem,'memory_max':maximum,'memory_current':current,'reserve':min(mem,int(maximum)-current) if maximum!='max' else mem,'disk_free':shutil.disk_usage(R).free}
+ def run(name,command,wall,cpu):
+- assert wall in [120,300] and cpu==wall
++ assert 0<wall<=300 and type(cpu) is int and 0<cpu<=wall
+  s=snapshot();assert s['reserve']>=6*G and s['disk_free']>=30*G
+  dest=O/name;dest.mkdir();start=time.monotonic();affinity=[min(os.sched_getaffinity(0))]
+  report={'command':command,'policy':{'AS_virtual_bytes_per_process':3*G,'CPU_seconds_per_process':cpu,'wall_seconds':wall,'affinity':affinity,'workers':1,'batch':1,'reserve_bytes':6*G,'swap_added':False,'log_bytes':262144,'output_cut_bytes':1048576},'before':s,'reason':None,'sampled_max_group_RSS':0,'sampled_max_threads':0,'output_bytes':0,'log_bytes':0,'parent_before':{'AS':resource.getrlimit(resource.RLIMIT_AS),'CPU':resource.getrlimit(resource.RLIMIT_CPU),'affinity':sorted(os.sched_getaffinity(0))},'RSS_scope':'sampled sum, not exact peak; shared pages may double count'}

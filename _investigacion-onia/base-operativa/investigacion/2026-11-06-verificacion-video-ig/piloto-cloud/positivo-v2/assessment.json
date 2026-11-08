@@ -1,0 +1,19 @@
+{
+  "classification": "semantic_failure_against_generator_truth",
+  "truth_authority": "included flite generator text and deterministic synthetic figures; NOT human audition",
+  "voice_and_one_two_or_equivalent": {
+    "met": false,
+    "finding": "No voice or words recognized; substitutes descending then ascending sounds."
+  },
+  "red_first_blue_after": {
+    "met": "partial",
+    "finding": "Identifies red square left and blue circle right, but does not explicitly establish sequential presentation."
+  },
+  "voice_first_silence_last": {
+    "met": false,
+    "finding": "Final exact silence omitted; describes two pitch sounds and claims simultaneous sound/color changes."
+  },
+  "technically_complete": true,
+  "exit0_is_not_semantic_acceptance": true,
+  "next": "Stop model AV. No retry, further controls or Cormac inference. Integration/reviewer retain final judgment."
+}

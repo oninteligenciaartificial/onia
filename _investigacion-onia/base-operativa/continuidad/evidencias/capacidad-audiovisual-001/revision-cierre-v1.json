@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "revisora": "01a1af41-1ce0-7b72-a888-7fd658396b4a",
+  "corte_codigo_sha256": "8e2f4a13712284a91cfefa4ab7ede93df6acbf51bc04ab8af3bc40b411b80f04",
+  "corte_codigo_preservado": true,
+  "manifest_intento_sha256": "8532f2ab6f0f90aed4e034813012675e17c6b625be8c9ec35d707fc774f70896",
+  "archivos_cotejados": 24,
+  "exactos": 24,
+  "comandos_originales_cotejados": [
+    "exec-65a5f9e4-25d6-4301-b0e3-789ee42d31ea",
+    "exec-411d8cf8-2ead-4a6b-b030-77747f2b2501"
+  ],
+  "dictamen": "Preparación/adquisición fallida; control negativo NO EJECUTADO; capacidad audiovisual NO EVALUADA.",
+  "confirmado": [
+    "Cero invocaciones y ningún proceso propio vivo.",
+    "Fuentes congeladas intactas e inventario concordante.",
+    "Dos pesos completos verificados; visión parcial no aceptada.",
+    "Salida 1 child_failure a 590.2766 s; no corte por wall ni miembros matados; estado del padre restaurado."
+  ],
+  "limites": [
+    "TimeoutError compatible con deadline interno 590 s, sin texto conservado para distinguirlo inequívocamente de otro timeout.",
+    "HTTP null no prueba fallo HTTP.",
+    "Gate del driver revisado estáticamente, no ejecutado.",
+    "2048/128 son parámetros solicitados; no contexto efectivo observado.",
+    "Cap OS16 es política; descarga observó un hilo.",
+    "No inferir fallo perceptual ni insuficiencia de RAM."
+  ]
+}

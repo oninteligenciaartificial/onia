@@ -1,0 +1,11 @@
+--- positivo-v1/model_driver.py
++++ positivo-v2/model_driver.py
+@@ -30,7 +30,7 @@
+ for item in control['files']:
+     path=Path(item['path'])
+     assert path.stat().st_size==item['bytes'] and digest(path)==item['sha256']
+-prompt=(ROOT/'model-prompt.txt').read_text().rstrip('\n')
++prompt=(ROOT/'negativo-v1/model-prompt.txt').read_text().rstrip('\n')
+ assert prompt=='Describe qué aparece y qué se oye, en orden; indica qué cambios coinciden. Si algo no puede determinarse, dilo.'
+ command=[str(ROOT/'build-v2/bin/llama-omni-single-test-omni'),
+  '-m',str(WEIGHTS/'MiniCPM-o-4_5-Q4_K_M.gguf'),

@@ -1,0 +1,217 @@
+{
+  "schema": 1,
+  "id": "seis-areas-cloud-001",
+  "fecha": "2026-11-07",
+  "base_harness": "13311ee80e1c83c9b68639c0a13aa3404a1cd037",
+  "alcance": "Integración de salidas originales de los chats. Las rutas Cloud y hashes reportados son referencias a artefactos de sus sesiones.",
+  "cloud": [
+    {
+      "area": "Desarrollo",
+      "host": "f60d78bca7fd",
+      "commit": "13311ee80e1c83c9b68639c0a13aa3404a1cd037",
+      "accion": "harness.py preparar → trabajo.py actualizar r1 → retomar → actualización obsoleta r1 → retomar",
+      "resultado": "r2 para_revision íntegra, revisión obsoleta rechazada con salida 2 y bytes conservados",
+      "prueba": "exec-bb879312-1fc5-4c6a-bff7-77d78ac252c3",
+      "ruta": "/tmp/onia-seis-dev-knrvb5xi/recibo-desarrollo.json",
+      "sha": "adf1531542dcf4ae93fa904665f9d957c1f02189478d9bdc82c4e111947709b7",
+      "limite": "Inicio recuperado del historial de creación del CLI. El auxiliar inicial perdió la marca previa al intentar interpretar JSON.",
+      "host_tipo": "Cloud",
+      "inicio_utc": "2026-11-07T12:14:03.410404Z",
+      "fin_utc": "2026-11-07T12:14:33.389767Z",
+      "chat": "01a1b238-b446-777a-93c0-e31f4034301f",
+      "turno": "01a1b5ed-3983-76c2-a62b-967135c2c0c6",
+      "turno_utc": {
+        "inicio": "2026-11-07T12:13:05.000Z",
+        "fin": "2026-11-07T12:14:45.000Z"
+      },
+      "fallos_recuperados": [
+        {
+          "fuente": "exec-41b59574-bb87-4138-a6ec-17de5163940c",
+          "salida": 1,
+          "inicio_utc": null,
+          "fin_utc": null,
+          "resultado": "El auxiliar de recibo falló al interpretar la salida del CLI como JSON. Se retomó r2 y se completó el negativo."
+        }
+      ]
+    },
+    {
+      "area": "Organización",
+      "host": "Cloud, identidad de instancia observada en el recibo original",
+      "commit": "13311ee80e1c83c9b68639c0a13aa3404a1cd037",
+      "accion": "fetch → actualizar tarjeta sintética privada de r2 a r3 → releer → repetir sincronización → releer",
+      "resultado": "Mismo ID y una ocurrencia, una actualización, cero creaciones, cero escrituras del reintento. Próxima acción: Cotejar prueba de seis áreas. 679 archivos intactos.",
+      "prueba": "exec-8590d9fd-db55-4b6b-a35f-d089fb813e2a",
+      "ruta": "/tmp/onia-seis-organizacion-suyazr4g/recibo-organizacion.json",
+      "sha": "827b32f89aec853d264b1cf9d828f1e662a299a6aaa33294c0603edaa87d9362",
+      "limite": "Una tarjeta sintética privada. Sin garantía CAS ni auditoría global.",
+      "host_tipo": "Cloud",
+      "inicio_utc": "2026-11-07T12:13:50Z",
+      "fin_utc": "2026-11-07T12:14:30Z",
+      "chat": "01a1b251-c3f8-7781-9fcf-1874844c401f",
+      "turno": "01a1b5ed-4026-760e-b68c-cb562f91ac15",
+      "turno_utc": {
+        "inicio": "2026-11-07T12:13:07.000Z",
+        "fin": "2026-11-07T12:14:59.000Z"
+      },
+      "fallos_recuperados": []
+    },
+    {
+      "area": "Marketing",
+      "host": "78caf72c4a89",
+      "commit": "13311ee80e1c83c9b68639c0a13aa3404a1cd037",
+      "accion": "Escritura de brief de dos aperturas y CTA. python3 operacion/entregas/seis-areas-cloud-001-marketing/validar.py dentro de base-operativa",
+      "resultado": "PASS CSV = A = B recuperado = B recalculado. 9 unidades y 56.50 ficticios. Tres referencias SHA/bytes conformes.",
+      "prueba": "exec-b9e8de01-d90d-4db8-8719-3095e5f1841a",
+      "ruta": "/workspace/scratch/seis-areas-cloud-001-marketing/_investigacion-onia/base-operativa/operacion/entregas/seis-areas-cloud-001-marketing/recibo.json",
+      "sha": "db5d878e5e35945495e82e71defb26640ab4e3a4b050a1a2bc2fe3cbc587edc1",
+      "artefacto": {
+        "archivo": "brief.md",
+        "sha256": "4ac1a9705d3f101c29e93b8e5094e8e91570366a24b436de440ac9a78b7067f3"
+      },
+      "limite": "Validación de respaldo y CTA. La marca temporal corresponde a validar.py.",
+      "host_tipo": "Cloud",
+      "inicio_utc": "2026-11-07T12:16:31.771548Z",
+      "fin_utc": "2026-11-07T12:16:33.424364Z",
+      "chat": "01a1a484-2da0-7440-8502-dfae74ab901f",
+      "turno": "01a1b5ee-6c8b-7415-bdd4-cd9d339a432c",
+      "turno_utc": {
+        "inicio": "2026-11-07T12:14:23.000Z",
+        "fin": "2026-11-07T12:16:46.000Z"
+      },
+      "fallos_recuperados": [
+        {
+          "fuente": "exec-078ceafc-f196-42fd-94a5-fbc825a9916e",
+          "salida": 128,
+          "inicio_utc": null,
+          "fin_utc": null,
+          "resultado": "Fetch inicial rechazado por fallo de conexión al proxy. Fetch posterior correcto."
+        },
+        {
+          "fuente": "exec-572af216-fff8-4e5a-b5dd-fa2ed58ac5d1",
+          "salida": 2,
+          "inicio_utc": null,
+          "fin_utc": null,
+          "resultado": "Lectura agrupada de archivos terminó con salida 2. Se localizaron las entradas pertinentes en la revisión fijada."
+        },
+        {
+          "fuente": "exec-97cb6b99-fc13-41ab-ad0a-0a9cf7ee29f7",
+          "salida": 2,
+          "inicio_utc": null,
+          "fin_utc": null,
+          "resultado": "Segundo comando agrupado de lectura terminó con salida 2. El validador final cotejó CSV y recibos con salida 0."
+        }
+      ]
+    },
+    {
+      "area": "Video",
+      "host": "a9abecba2303",
+      "commit": "13311ee80e1c83c9b68639c0a13aa3404a1cd037",
+      "accion": "ffmpeg -loop 1 -framerate 30 con TARJETA-PRUEBA.png y fondo 1080x1920, overlay centrado, -t 5 -c:v libx264 -an; ffprobe JSON y decodificación a null",
+      "resultado": "H.264, 1080×1920, 30 fps, 150 frames, 5.000000 s, 43370 bytes. Salida 0.",
+      "prueba": "exec-ce1e09b0-37dc-4bf9-93dd-58b1c5ececab",
+      "ruta": "/workspace/video-seis-areas/tarjeta-prueba.mp4",
+      "sha": "d6001a94c8f5ec0a9e6fa3b096e898cb03b5762d30821c3c79f904993aacf9f7",
+      "limite": "Render de tarjeta sintética. Nueve enlaces faltantes y nueve aliases en conflicto en copia aislada, skill leída desde fuente canónica.",
+      "host_tipo": "Cloud",
+      "inicio_utc": "2026-11-07T12:15:35Z",
+      "fin_utc": "2026-11-07T12:15:37Z",
+      "chat": "01a1a484-560e-72bb-8d5d-e64733c22027",
+      "turno": "01a1b5ee-8c58-7744-b49d-2410d8a04af6",
+      "turno_utc": {
+        "inicio": "2026-11-07T12:14:32.000Z",
+        "fin": "2026-11-07T12:16:06.000Z"
+      },
+      "fallos_recuperados": [
+        {
+          "fuente": "exec-6f758fc1-6100-49b6-82de-4cd94e3202b1",
+          "salida": 128,
+          "inicio_utc": null,
+          "fin_utc": null,
+          "resultado": "El origen del clon compartido apuntaba al checkout local y no contenía la ref."
+        },
+        {
+          "fuente": "exec-cecd09c7-f5dc-49d1-9f76-d6243b315360",
+          "salida": 128,
+          "inicio_utc": null,
+          "fin_utc": null,
+          "resultado": "El primer fetch al origen corregido falló por conexión al proxy. Fetch posterior correcto."
+        }
+      ]
+    },
+    {
+      "area": "Automatizaciones",
+      "host": "6cf36441cc35",
+      "commit": "13311ee80e1c83c9b68639c0a13aa3404a1cd037",
+      "accion": "node /tmp/onia-13311ee/test-code.cjs, cuatro nodos Code literales con shims",
+      "resultado": "Fixture válido y cuenta ajena PASS. 9007199254740993 como texto. sent:false, auto_send:false. Rama error PASS.",
+      "prueba": "exec-966d6601-ffa4-4032-b48d-8162b046aec8",
+      "ruta": "/tmp/onia-13311ee/receipt.json",
+      "sha": "d7640cafa9bd4671fd400a8ec236e0d9be8cd4d0b84a60bea56dde00604702d2",
+      "limite": "Node v24.22.1. Workflow recuperado por archivo. Ejecución aislada de JS, sin n8n ni SQL.",
+      "host_tipo": "Cloud",
+      "inicio_utc": "2026-11-07T12:15:33.907Z",
+      "fin_utc": "2026-11-07T12:15:33.912Z",
+      "chat": "01a1a484-81ca-7605-ab7e-243b8e1f4001",
+      "turno": "01a1b5ee-aa50-74b8-9823-5b5ebc01a0b5",
+      "turno_utc": {
+        "inicio": "2026-11-07T12:14:39.000Z",
+        "fin": "2026-11-07T12:15:44.000Z"
+      },
+      "fallos_recuperados": []
+    },
+    {
+      "area": "Producto",
+      "host": "5871c144b901",
+      "commit": "a0488f04200b14c95caf0013043716b16efa1f1d",
+      "accion": "node --experimental-strip-types --input-type=module con numeroParaWhatsapp importado del archivo verificado y node:assert",
+      "resultado": "4/4 móvil, fijo, idempotencia e inválido. Salida 0.",
+      "prueba": "exec-fab22105-33d0-4873-9c6f-c120c6cb7ad2",
+      "ruta": "/workspace/six-areas-producto/recibo.md",
+      "sha": "f6c443b9cba530b75839383f082de27e98344a6ceaf90599cb3021026585d584",
+      "limite": "Blob Platform 189546c57e6444b56b93cf06a6498d8809af259e. Cloud sin checkout completo de Platform; ONIA por archivos de SHA, sin fetch Git. Precisión del reloj de un segundo.",
+      "host_tipo": "Cloud",
+      "inicio_utc": "2026-11-07T12:15:41Z",
+      "fin_utc": "2026-11-07T12:15:41Z",
+      "chat": "01a1a484-d46a-7028-8b80-93f0349f4031",
+      "turno": "01a1b5ee-c49b-77b6-9f03-cbcb78d04724",
+      "turno_utc": {
+        "inicio": "2026-11-07T12:14:46.000Z",
+        "fin": "2026-11-07T12:16:03.000Z"
+      },
+      "fallos_recuperados": []
+    }
+  ],
+  "fallbacks": [
+    {
+      "area": "Producto",
+      "host_tipo": "local",
+      "host": "Windows",
+      "chat": "01a1ab82-5531-78c2-8529-52c939967af9",
+      "turno": "01a1b5f1-7310-7252-9d57-608849103c42",
+      "incidencia_despacho": "La sesión estaba archivada. Se reactivó la misma sesión.",
+      "motivo": "Complementar el cotejo de checkout completo ausente en Cloud.",
+      "inicio_utc": "2026-11-07T12:18:08.7790063Z",
+      "fin_utc": "2026-11-07T12:18:09.4708169Z",
+      "accion": "node --input-type=module con import de lib/whatsapp/numero-para-enviar.ts y node:assert",
+      "prueba": "exec-6a43dd5e-70f4-4c8c-873b-c6481b4fbff9",
+      "resultado": "4/4, salida 0. HEAD detached y árbol limpio antes y después. Advertencia no fatal de tipo de módulo.",
+      "checkout": "onia-platform/.claude/worktrees/brave-northcutt-60131b",
+      "commit": "a0488f04200b14c95caf0013043716b16efa1f1d",
+      "blob": "189546c57e6444b56b93cf06a6498d8809af259e",
+      "cotejo": "Mismo commit y blob de la prueba Cloud."
+    }
+  ],
+  "solape": {
+    "max_cloud": 2,
+    "max_tanda_mixta": 2,
+    "areas": [
+      "Desarrollo",
+      "Organización"
+    ],
+    "desde_utc": "2026-11-07T12:14:03.410404Z",
+    "hasta_utc": "2026-11-07T12:14:30Z",
+    "segundos_aprox": 26.59,
+    "metodo": "Intersección de intervalos instrumentados de ejecución. Desarrollo usa creación registrada por CLI. Organización y Producto Cloud tienen precisión al segundo. Se excluyen turnos, despachos, fallos de preparación y lecturas."
+  },
+  "notas": "Las horas individuales de los fallos de preparación se dejan nulas cuando la traza no las expone. El turno UTC acota su ejecución. Modelo observado no certificado."
+}

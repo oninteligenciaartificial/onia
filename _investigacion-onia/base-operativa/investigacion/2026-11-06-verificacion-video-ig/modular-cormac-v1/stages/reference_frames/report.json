@@ -1,0 +1,43 @@
+{
+  "stage": "reference_frames",
+  "command": [
+    "ffmpeg",
+    "-hide_banner",
+    "-nostdin",
+    "-n",
+    "-threads",
+    "2",
+    "-filter_threads",
+    "1",
+    "-i",
+    "/mnt/c/dev/proyectos/_investigacion-onia/base-operativa/operacion/reels-e-ideas/DfWLWspIruU/DfWLWspIruU.mp4",
+    "-map",
+    "0:v:0",
+    "-an",
+    "-vf",
+    "select='eq(n,30)+eq(n,270)+eq(n,510)+eq(n,780)+eq(n,1710)',showinfo",
+    "-fps_mode",
+    "vfr",
+    "-threads",
+    "1",
+    "-compression_level",
+    "2",
+    "frame-%02d.png"
+  ],
+  "exit_code": 0,
+  "reason": "exited",
+  "wall_seconds": 6.936710058000003,
+  "cpu_seconds_leader": 10.361788,
+  "max_rss_leader_kib": 192412,
+  "sampled_group_rss_bytes": 197029888,
+  "affinity": [
+    0,
+    1
+  ],
+  "AS_bytes_per_process": 3221225472,
+  "CPU_seconds_per_process": 120,
+  "wall_limit_seconds": 120,
+  "limits_scope": "AS/CPU per process; group RSS sampled, not aggregate hard cap",
+  "killed": [],
+  "pending_live": []
+}

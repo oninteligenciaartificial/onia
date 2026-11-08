@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "utc": "2026-11-07T02:07:26.573320+00:00",
+  "estado": "ensayo_finalizado_capacidad_parcial_observada",
+  "fuente_chat": "01a1b22d-9f2c-72df-8a57-4c1ccb0c800a",
+  "turno": "01a1b3ad-5506-742a-bb84-a4cefc337a92",
+  "cloud_source": "/workspace/onia-av-pilot-20261106/panns-screen-v1",
+  "exporte_local": "investigacion/2026-11-06-verificacion-video-ig/panns-cloud-setup-v3",
+  "manifest_sha256": "b6d1c24255bc91a6798c30a56a1f9ee71ddfefa0213454d02793a0c05fd6d88b",
+  "archivos_verificados": 21,
+  "resultado": {
+    "verdict": "Useful as auxiliary candidate Speech-activity scoring for these measured inputs; NOT a validated acoustic or integral reel evaluator",
+    "known_control_diagnostic": {
+      "max_voice": 0.23548157513141632,
+      "max_zeros": 0.0020532431080937386,
+      "voice_segment_mean": 0.21711061894893646,
+      "final_silence_mean": 0.021068600937724113,
+      "pair1": true,
+      "pair2": true,
+      "known_controls_not_retained": true,
+      "threshold": null,
+      "acoustic_acceptance": "not established by these two controls"
+    },
+    "real_inferences": 6,
+    "model_retries": 0,
+    "Cormac_audio_intervals": [
+      [
+        0,
+        10
+      ],
+      [
+        10,
+        20
+      ],
+      [
+        20,
+        30
+      ],
+      [
+        30,
+        37.78
+      ]
+    ],
+    "covered_audio_seconds": 37.78,
+    "covered_visual_seconds": 0,
+    "model_curves": 527,
+    "time_grid_seconds": 0.01,
+    "time_grid_is_interpolated_not_validated_event_precision": true,
+    "Cormac_Speech_max": 0.7134175896644592,
+    "Cormac_Music_max": 0.012630561366677284,
+    "Cormac_Speech_mean": 0.5650918050884066,
+    "Cormac_Music_mean": 0.0018799469094949708,
+    "interpretation": "Speech scores exceed Music in all four windows; candidates only, no independently validated absence of music, true event boundaries, ASR words, emotion, mix or AV synchrony. No event threshold or known-controls-as-heldout acceptance.",
+    "max_entry_wall_seconds": 27.13146519199836,
+    "max_sampled_RSS_bytes": 1267875840,
+    "min_observed_before_or_last_reserve_bytes": 29446328320,
+    "sampled_RSS_not_exact_peak": true,
+    "aggregate_preparation_wall_including_prior_failed_import_and_static_failures": 194.59816909000256,
+    "preparation_wall_cap_seconds": 300,
+    "aggregate_received_prior_plus_new_HTTP_bytes": 678616455,
+    "counting_scope": "HTTP response plaintext delivered by http.client fp: status/headers/body; includes metadata; excludes TLS/IP/proxy overhead and unread buffering; NOT exact wire traffic",
+    "wire_overhead_not_measured": true,
+    "static_CSV": {
+      "complete": true,
+      "source": "https://storage.googleapis.com/us_audioset/youtube_corpus/v1/csv/class_labels_indices.csv?generation=1488737428851815",
+      "generation": "1488737428851815",
+      "bytes": 14675,
+      "sha256": "cdd1049833c4b86127c2773ac0d14a2754b6a6d0d1798002ed5c66e699708429",
+      "rows": 527,
+      "unique_mids": 527,
+      "columns": [
+        "index",
+        "mid",
+        "display_name"
+      ],
+      "mid_namespaces_observed": [
+        "g",
+        "m",
+        "t"
+      ],
+      "Speech_index": 0,
+      "Music_index": 137,
+      "installed_path": "/workspace/onia-av-pilot-20261106/panns-setup-v3/runtime-home/panns_data/class_labels_indices.csv",
+      "network_requests": 0,
+      "code_or_global_HOME_changed": false,
+      "prior_validation_failures": "overstrict invented namespace assumptions, preserved separately; raw fixed-generation bytes reused without another request"
+    },
+    "static_recovery_notes": "Two overly restrictive namespace checks preserved separately; third step installs retained bytes offline. One wrong relative Python launcher path failed before adapter/model entry; absolute-path launcher corrected, no inference repeat.",
+    "all_entry_groups_clean": true,
+    "all_parents_restored": true,
+    "checkpoint_reused": "panns-setup-v3 checkpoint SHA dd3b4043a87d4ec13df8082c0fcfee3fb5084151808e47e060987a95eabdd142",
+    "no_reinstall_new_family_service_VM_publication": true,
+    "onia_HEAD": "e55812ce1bc8ef798fb370257ba887d07acccc53",
+    "onia_status": "",
+    "disk_free_at_close": 54623891456
+  },
+  "bundle_curvas": {
+    "path": "/workspace/onia-av-pilot-20261106/panns-screen-v1-numeric.zip",
+    "bytes": 409443,
+    "sha256": "93a8a275de7b07570807542c15a24586971c99950b50d28f2e4a77bb41d23ee3",
+    "contents": "compact manifest+sources+receipts, complete raw numeric curves and labels; NO media/checkpoint/packages/credentials",
+    "local_artifact_only": "no external upload or native-attachment claim"
+  },
+  "disponibilidad_bundle": "ZIP y curvas completas conservados en laboratorioCloud, no copiados a PC ni publicados. Local conserva recibos/curvas SpeechMusic1s/adapter/manifiesto/referencias de curvas527clases",
+  "dictamen_ejecutor": "Apoyo orientativo de actividad de habla en entradas medidas; no detector validado, ni ausencia de musica, eventos exactos, mezcla o percepcion integral",
+  "revision": "Nueva evidencia enviada a revisora existente; no aceptacion integral ni ampliacion corpus"
+}

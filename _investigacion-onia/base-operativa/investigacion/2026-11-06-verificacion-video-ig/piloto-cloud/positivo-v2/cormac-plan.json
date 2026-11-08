@@ -1,0 +1,72 @@
+{
+  "source": "existing resume-negativo-v1/model-output.log and model-report.json ONLY; no benchmark",
+  "observed_negative": {
+    "load_seconds_from_logged_timestamps": 8.907,
+    "image_encoder_seconds_total": 39.001349999999995,
+    "wall_including_validation_load_all_prefill_decode_seconds": 135.59645423999973,
+    "prefill_seconds": null,
+    "decode_seconds": null,
+    "unseparated_remainder_seconds": 87.68810423999975,
+    "limitation": "No separate audio/prefill/decode timers in retained log. Remainder also includes file hashing, monitoring and teardown; not a decode measurement."
+  },
+  "positions_estimate": {
+    "assumptions": "same prompt, 224x224 single vision embedding64 plus audio10 per1s and five wrapper tokens per chunk; token wrapper count inferred from frozen tokenized strings, to verify with actual PILOT_BUDGET before KV",
+    "fixed_text_control": 52,
+    "per_chunk": 79,
+    "response_reserve": 128,
+    "formula": "180+79*N",
+    "N38_total": 3182,
+    "effective_context": 2048,
+    "N38_fits": false,
+    "max_estimated_chunks_by_context": 23,
+    "max_is_not_a_time_or_memory_authorization": true
+  },
+  "time_estimate": {
+    "method": "single observed synthetic point, linear extrapolation excluding logged loading once; not prediction validated on reel",
+    "N38_wall_seconds": 2416.0066305599953,
+    "N38_image_encoder_alone_seconds": 741.0256499999999,
+    "N38_wall600_feasible": false,
+    "sample_proposal_chunks": 3,
+    "sample_proposal_interval_seconds": [
+      0,
+      3
+    ],
+    "sample_proposal_total_positions": 417,
+    "sample_proposal_wall_seconds": 198.9411813599996,
+    "sample_proposal_policy_wall_seconds": 600,
+    "sample_proposal_policy_cpu_perprocess_seconds": 600,
+    "sample_proposal_rough_two_cpu_seconds": 397.8823627199992,
+    "actual_cpu_seconds": null,
+    "same_AS_GiB": 12,
+    "same_affinity_workers_OS_cap": [
+      2,
+      2,
+      16
+    ],
+    "same_reserve_disk_tree_GiB": [
+      8,
+      30,
+      16
+    ]
+  },
+  "coverage": {
+    "original_duration_seconds": 37.753991,
+    "proposed_interval_seconds": 3,
+    "duration_fraction": 0.07946179782688405,
+    "original_sample_entries": 38,
+    "proposed_entries": 3,
+    "limitations": "ONLY [0,3) if later authorized and media available; no coverage of remaining34.753991s, no general whole-reel or subtitle/detail claims; resize224 loses detail. Last0.753991s cannot become a strict1s input without separately declared padding.",
+    "remux_duration_fraction": 0.07940709370037057
+  },
+  "blockers": [
+    "Positive real inference failed stated speech/silence/synchrony criteria; do not execute model on Cormac."
+  ],
+  "execution_performed": false,
+  "media_availability": {
+    "path": "cormac-transfer-v1/DfWLWspIruU-remux.mp4",
+    "both_streamhashes_match_supplied_original": true,
+    "container_is_variant": true,
+    "container_duration_seconds": 37.78
+  },
+  "proposal_status": "Conditional arithmetic only, not recommended execution after failed positive; no new benchmark."
+}
