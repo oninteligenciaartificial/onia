@@ -10,6 +10,8 @@ def overrides(cwd):
       'command':'/usr/bin/node',
       'args':[str(INSTALL/'node_modules/@playwright/mcp/cli.js'),'--headless','--isolated','--sandbox','--executable-path',str(INSTALL/'browsers/chromium-1252/chrome-linux64/chrome'),'--output-dir',str(output)],
       'enabled':True,'required':True,'startup_timeout_sec':30,'tool_timeout_sec':60,
+      # Sergio autorizó estas cuatro llamadas de lectura/navegación/captura.
+      'default_tools_approval_mode':'approve',
       'enabled_tools':['browser_navigate','browser_snapshot','browser_take_screenshot','browser_close'],
     }
     args=[]
