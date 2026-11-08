@@ -1,4 +1,4 @@
-"""Prepara encargos y comprueba archivos; no crea agentes ni ejecuta red o tareas."""
+"""Prepara y coordina tareas; lanza, retoma y revisa sesiones Codex con worktrees."""
 import argparse
 import json
 import os
@@ -9,9 +9,10 @@ import trabajo
 
 BASE = Path(__file__).resolve().parents[2]
 REGLAS = "04-operacion-agentes/reglas-comunes.md"
-LIMITACION = ("Este comando no crea agentes, abre chats, ejecuta encargos ni usa la red. "
-              "Sólo --compartible guarda un registro saneado versionable en 04-operacion-agentes/. "
-              "Los registros privados quedan en operacion/. Git requiere publicación y recuperación explícitas.")
+LIMITACION = ("Preparar/retomar sólo recuperan archivos y no crean agentes. "
+              "Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. "
+              "--dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. "
+              "No hay scheduler ni permisos implícitos para servicios externos.")
 
 
 def safe_path(base, relative):
@@ -213,6 +214,7 @@ def main(argv=None):
             stream.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base", type=Path, default=BASE)
+    parser.add_argument("--operacion", type=Path, default=Path.home() / "operacion")
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("doctor")
     p = commands.add_parser("preparar", help="Guardar un encargo sin ejecutarlo.")
@@ -238,9 +240,74 @@ def main(argv=None):
     p = commands.add_parser("historial")
     p.add_argument("id")
     p.add_argument("--revision", type=int)
+    p = commands.add_parser("asignar", help="Reservar rutas mediante el modelo de trabajo existente.")
+    p.add_argument("id")
+    p.add_argument("--revision-esperada", type=int, required=True)
+    p.add_argument("--responsable", required=True)
+    p.add_argument("--ruta", action="append", required=True)
+    p.add_argument("--actor")
+    for name in ("lanzar", "reanudar", "revisar"):
+        p = commands.add_parser(name)
+        p.add_argument("id")
+        p.add_argument("--revision-esperada", type=int, required=True)
+        p.add_argument("--actor")
+        p.add_argument("--si-sergio", action="store_true")
+        p.add_argument("--dry-run", action="store_true")
+        if name == "revisar":
+            p.add_argument("--revisor")
+            p.add_argument("--recoger", action="store_true")
+    p = commands.add_parser("estado")
+    p.add_argument("--dry-run", action="store_true")
+    p = commands.add_parser("cerrar")
+    p.add_argument("id")
+    p.add_argument("--revision-esperada", type=int, required=True)
+    p.add_argument("--actor", required=True)
+    p.add_argument("--resultado", required=True)
+    p.add_argument("--comprobacion", required=True)
+    p.add_argument("--dry-run", action="store_true")
+    p = commands.add_parser("aceptar")
+    p.add_argument("id")
+    p.add_argument("--revision-esperada", type=int, required=True)
+    p.add_argument("--revisor", required=True)
+    p.add_argument("--criterio", required=True)
+    p = commands.add_parser("skills", help="Crear enlaces faltantes de skills propias sin reemplazar existentes.")
+    p.add_argument("--dry-run", action="store_true")
+    p = commands.add_parser("_ejecutar", help=argparse.SUPPRESS)
+    p.add_argument("id")
+    p.add_argument("--intento", type=int, required=True)
     args = parser.parse_args(argv)
     try:
-        if args.command == "doctor":
+        if args.command in {"lanzar", "reanudar", "revisar", "estado", "cerrar", "skills", "_ejecutar"}:
+            import harness_sesiones as sessions
+            if args.command == "_ejecutar":
+                return sessions.worker(args.base, args.id, args.operacion, args.intento)
+            if args.command == "estado":
+                result = sessions.status(args.base, args.operacion, args.dry_run)
+            elif args.command == "skills":
+                result = sessions.link_skills(sessions.repo_for(args.base), args.base, args.dry_run)
+            elif args.command == "cerrar":
+                result = sessions.close(args.base, args.id, args.operacion, args.revision_esperada,
+                                        args.actor, args.resultado, args.comprobacion, args.dry_run)
+            elif args.command == "revisar" and args.recoger:
+                if args.dry_run:
+                    raise ValueError("Una simulación no produce un veredicto real.")
+                result = sessions.collect_review(args.base, args.id, args.operacion, args.revision_esperada)
+            else:
+                if args.command == "revisar" and not args.revisor:
+                    raise ValueError("Revisar requiere --revisor distinto del ejecutor.")
+                result = sessions.launch(args.base, args.id, args.operacion, args.revision_esperada,
+                    args.actor, approved=args.si_sergio, dry_run=args.dry_run,
+                    resume=args.command == "reanudar", reviewer=getattr(args, "revisor", None))
+            code = 0
+        elif args.command == "asignar":
+            result = trabajo.assign(args.base.resolve(), args.id, args.revision_esperada,
+                                    args.responsable, args.ruta, actor=args.actor)
+            code = 0
+        elif args.command == "aceptar":
+            result = trabajo.accept(args.base.resolve(), args.id, args.revision_esperada,
+                                    args.revisor, args.criterio)
+            code = 0
+        elif args.command == "doctor":
             result = doctor(args.base)
             code = 0 if result["ok"] else 1
         elif args.command == "preparar":

@@ -134,7 +134,7 @@ class HarnessTests(unittest.TestCase):
         self.assertIn(os.path.relpath(orchestration, "operacion/encargos").replace("\\", "/"),
                       result["tarea"]["briefing"]["contenido"])
         self.assertNotIn("briefing", result)
-        self.assertIn("no crea agentes", result["nota_harness"])
+        self.assertIn("no crean agentes", result["nota_harness"])
 
     def test_routes_and_product_scope(self):
         expected = {"marketing": "preparar-oferta-y-embudo", "video": "producir-video",

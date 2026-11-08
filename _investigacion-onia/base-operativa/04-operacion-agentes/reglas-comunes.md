@@ -37,6 +37,16 @@ Cubrir el material solicitado según su finalidad sin reducir silenciosamente el
 
 Comprobar proporcionalmente el cambio: revisión de texto, inspección audiovisual, prueba de flujo o checks del código. Si falta acceso o capacidad, probar las alternativas autorizadas, explicar el límite exacto y dejar una salida concreta. No afirmar escucha, éxito o cierre de una parte no comprobada.
 
+## Lanzamiento de sesiones en el VPS
+
+Antes de lanzar, el coordinador presenta y deja comprobado: (1) qué existe en el repo; (2) qué necesita la tarea —herramientas, conectores, skills y reglas— y si está disponible; (3) cuota de Codex comprobada o incertidumbre explícita; (4) qué falta; (5) ID, alcance, rutas y comando exacto que se lanzará. **Lanzar sólo con el sí de Sergio aplicable a ese lanzamiento.** `--si-sergio` registra la declaración del coordinador, no autentica una aprobación ni mide cuota. No repetir una autorización ya concedida; construir o probar el harness en simulación no autoriza una sesión real.
+
+Una tarea por sesión y un worktree por sesión, con rama propia para el ejecutor. Máximo tres sesiones vivas del harness en el VPS, incluyendo revisores. Un archivo tiene un solo escritor; asignar rutas antes de lanzar y conservar el índice común `~/operacion/sesiones.tsv`. Usar siempre la misma carpeta de operación y el mismo checkout coordinador: las rutas reservadas son relativas a `base-operativa`. No cambiar las asignaciones mientras una sesión trabaje. El coordinador conserva el JSON canónico; los ejecutores reciben el briefing y entregan cambios en su worktree.
+
+El revisor debe ser una sesión distinta del ejecutor y trabaja en sólo lectura sobre el commit publicado. Su veredicto debe corresponder a esa entrega; sólo un veredicto bueno permite `aceptar`. Integrar de a una tarea y comprobar el resultado combinado. GitHub (`oninteligenciaartificial/onia`, `master`) es la fuente central: nada está terminado hasta que el commit esté en `origin/master`. `para_revision` sólo acredita publicación en alguna rama de origin y aceptación sigue siendo un paso explícito.
+
+Los worktrees no aíslan servicios, cuentas ni conectores externos. No ampliar permisos de producción, n8n, publicaciones, mensajes, cobros o gastos por lanzar una sesión.
+
 ## Continuidad y cierre
 
 Las tareas compartibles usan un único registro canónico versionado y evidencia saneada. Los registros privados permanecen en `operacion/`, ignorada por Git; no son una entrega entre VMs. No publicar datos personales, credenciales, sesiones de cuenta ni medios privados. Las rutas y hashes no sustituyen la disponibilidad del archivo en el destino.

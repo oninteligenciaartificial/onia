@@ -23,7 +23,7 @@ STATES = {"preparado", "en_curso", "en_espera", "para_revision", "aceptado"}
 CHECKS = {"pendiente", "fallo", "correcta"}
 CLOSED_NEXT = "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo."
 EFFORTS = {"low", "medium", "high", "xhigh", "max", "ultra"}
-EXTENSIONS = ("decisiones", "ejecucion", "asignacion")
+EXTENSIONS = ("decisiones", "ejecucion", "asignacion", "sesiones", "cierre", "revision_independiente", "evidencias_revision")
 
 
 def now():
@@ -176,6 +176,45 @@ def validate_extensions(row):
             raise ValueError("Revisión base de asignación inválida.")
 
 
+def delivery_digest(row):
+    """Liga la revisión a los bytes de la entrega, no a metadatos de PID cambiantes."""
+    value = {k: row.get(k) for k in ('objetivo', 'resultado', 'comprobacion', 'verificacion', 'evidencias', 'cierre')}
+    value['briefing_sha256'] = (row.get('briefing') or {}).get('sha256')
+    return digest(json.dumps(value, sort_keys=True, ensure_ascii=False).encode('utf-8'))
+
+
+def validate_sessions(row):
+    sessions = row.get('sesiones', [])
+    if not isinstance(sessions, list):
+        raise ValueError('Sesiones inválidas.')
+    for number, session in enumerate(sessions, 1):
+        if not isinstance(session, dict) or session.get('intento') != number:
+            raise ValueError('Intento de sesión inválido.')
+        if session.get('rol') not in {'ejecutor', 'revisor'} or type(session.get('dry_run')) is not bool:
+            raise ValueError('Rol o modo de sesión inválido.')
+        for key in ('responsable', 'rama', 'worktree', 'log', 'log_rel', 'operacion', 'estado', 'commit_base'):
+            nonempty(session.get(key), key)
+        for key in ('pid', 'supervisor_pid'):
+            if session.get(key) is not None and (type(session[key]) is not int or session[key] <= 0):
+                raise ValueError('PID inválido.')
+        if not isinstance(session.get('rutas'), list) or not session['rutas']:
+            raise ValueError('Sesión sin rutas asignadas.')
+    if sessions and row['estado'] in {'para_revision', 'aceptado'}:
+        closure = row.get('cierre')
+        if not isinstance(closure, dict) or not closure.get('ramas_origin'):
+            raise ValueError('Una sesión del harness requiere cierre con prueba en origin.')
+        validate_ref(closure.get('evidencia'))
+        if not closure.get('dry_run') and not re.fullmatch(r'[0-9a-f]{40,64}', closure.get('commit', '')):
+            raise ValueError('Commit de cierre inválido.')
+    for ref in row.get('evidencias_revision', []):
+        validate_ref(ref)
+    review = row.get('revision_independiente')
+    if review is not None:
+        if not isinstance(review, dict) or review.get('veredicto') not in {'bueno', 'cambios'}:
+            raise ValueError('Revisión independiente inválida.')
+        validate_ref(review.get('evidencia'))
+
+
 def validate(row, task_id):
     if (not isinstance(row, dict) or type(row.get("schema")) is not int
             or row["schema"] not in (1, 2) or row.get("id") != task_id):
@@ -205,6 +244,7 @@ def validate(row, task_id):
     if row.get("verificacion") not in CHECKS:
         raise ValueError("Verificación inválida.")
     validate_extensions(row)
+    validate_sessions(row)
     brief = row.get("briefing")
     if brief is not None:
         validate_ref(brief)
@@ -238,7 +278,9 @@ def verify(base, row, missing_brief=False):
     # En v1 un archivo podía cambiar entre entradas. El historial registra esos
     # hashes anteriores; no implica que todos describan los bytes actuales.
     # En v2 update conserva un inventario acumulativo de evidencia inmutable.
-    refs = list(row["evidencias"])
+    refs = list(row["evidencias"]) + row.get("evidencias_revision", [])
+    if row.get("revision_independiente"):
+        refs.append(row["revision_independiente"]["evidencia"])
     refs.extend(item["fuente"] for item in row.get("decisiones", []))
     observed = (row.get("ejecucion") or {}).get("observado")
     if observed:
@@ -388,6 +430,9 @@ def update(base, task_id, status, result, check, next_step, files, revision=None
         for name in files:
             ref = evidence(base, name, row["compartible"])
             refs[ref["archivo"]] = ref
+        if row.get('sesiones') and status not in {'para_revision', 'aceptado'}:
+            row['revision_independiente'] = None
+            row['cierre'] = None
         row.update(estado=status, resultado=result, comprobacion=check, proximo_paso=next_step,
                    verificacion=verification, evidencias=list(refs.values()),
                    aceptacion=None)
@@ -402,6 +447,16 @@ def accept(base, task_id, revision, reviewer, criterion, next_step=CLOSED_NEXT):
             raise ValueError("Sólo una entrega para_revision puede aceptarse.")
         if row.get("asignacion") and reviewer == row["asignacion"]["responsable"]:
             raise ValueError("El responsable ejecutor no puede autoaceptar su entrega.")
+        if row.get('sesiones'):
+            verdict = row.get('revision_independiente') or {}
+            execution_ids = {s.get('session_id') for s in row['sesiones'] if s['rol'] == 'ejecutor'}
+            if (any(s['dry_run'] for s in row['sesiones']) or verdict.get('veredicto') != 'bueno'
+                    or any(s['rol'] == 'ejecutor' and s['responsable'] == reviewer for s in row['sesiones'])
+                    or verdict.get('entrega_sha256') != delivery_digest(row)
+                    or verdict.get('commit') != (row.get('cierre') or {}).get('commit')
+                    or verdict.get('revisor') != reviewer or not verdict.get('session_id')
+                    or verdict['session_id'] in execution_ids):
+                raise ValueError('Aceptar requiere veredicto bueno, vigente y de otra sesión real.')
         row.update(estado="aceptado", proximo_paso=next_step,
                    aceptacion={"revisor": reviewer, "criterio": criterion, "fecha": now()})
         return row

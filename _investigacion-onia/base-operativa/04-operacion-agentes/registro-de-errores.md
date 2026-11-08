@@ -192,3 +192,29 @@ La comprobación documental distingue discovery, POST/GET reales y 14 tests de m
 Se indicó la app de Ads y sus scopes antes de inspeccionar los casos de uso reales. Coordinación comprobó en Chrome que ONIA Marketing API sólo ofrece dos casos de anuncios, mientras OnIA Social API ya dispone de mensajes/contenido Instagram. Corrección específica: revisar **producto + login + host** antes de pedir scopes; para el piloto propio se seleccionó Instagram Login existente y `graph.instagram.com`, con `instagram_business_basic`, `instagram_business_content_publish` e `instagram_business_manage_messages` listos para prueba en la UI. Ads queda separado en `graph.facebook.com`. No es una regla nueva ni autorización personal concedida.
 
 Sólo se añadió el permiso de mensajería a la preparación existente. Cuentas anteriores y webhooks quedaron intactos; no se exportó el token visible en una captura. `@sergiourcullo` aún no conectado: Sergio completa Agregar cuenta, guarda el secreto por su mecanismo y publica onia; el ejecutor valida lectura cloud después. Evaluar Unified Login antes de producción, sin prometer permanencia o renovación automática. [Estado y alcance canónico](../05-herramientas/accesos.md#instagram-operativo-y-continuidad-de-autenticación).
+
+
+## Lanzamientos y preparación — correcciones de Sergio, 8 de noviembre de 2026
+
+Fuente: [boss-memoria.md, errores del 8 nov](boss-memoria.md#errores-del-8-nov-corregidos-por-sergio). Son correcciones comunicadas por Sergio y conservadas por Boss; no se inventan logs ni causas técnicas adicionales.
+
+| Qué pasó | Causa identificable | Evidencia | Cómo evitarlo |
+|---|---|---|---|
+| Lanzar Codex sin decir qué necesitaba. | Se omitió presentar las necesidades antes del lanzamiento. | Primer error de la memoria de Boss. | Checklist de requisitos, disponibilidad, cuota, faltantes y comando exacto; lanzar sólo con el sí aplicable de Sergio. |
+| Responder sin leer el repo. | Se respondió sin cotejar la fuente central vigente. | Segundo error de la memoria de Boss. | Leer reglas, memoria, tarea y archivos existentes; comprobar rama/HEAD antes de proponer o implementar. |
+| No revisar conectores, skills y reglas antes de lanzar. | Se dio por supuesta una capacidad sin comprobarla en el entorno. | Tercer error de la memoria de Boss. | Distinguir archivo presente, conector disponible y operación probada; declarar qué falta antes de lanzar. |
+
+### Implementación del harness, misma fecha
+
+- **Lecturas truncadas:** la salida conjunta de documentos y código excedió el límite de la herramienta. Causa: lote de salida demasiado amplio. Evidencia: avisos de truncamiento en las lecturas iniciales; se recuperaron secciones por archivo y rango. Prevención: acotar cada salida y no presentar un bloque truncado como lectura completa.
+- **Ayuda de Codex:** `--help` emitió `could not create PATH aliases: Read-only file system`, aunque devolvió ayuda y versión. Causa observada: el sandbox no permite escribir los aliases del CLI. Se usó la ruta explícita existente, sin cambiar permisos ni ejecutar una sesión. Prevención: distinguir esa advertencia del resultado de la ayuda; no instalar ni modificar el runtime por ella.
+- **Test de revisión obsoleta:** la primera tanda nueva dio 11/12 correctos; el test restante escribió la vista breve (sin historial) como si fuera el JSON completo. Evidencia: `test_review_bad_stale_and_corrupt_verdict_never_accept`, error `Historial o evidencias inválidos` en vez del rechazo esperado. Corrección: modificar el registro canónico completo en la fixture. Prevención: nunca persistir `brief_view`; sólo el modelo canónico mediante `trabajo.py`.
+- **Supervisores de prueba:** Python avisó `ResourceWarning: subprocess … is still running` al soltar el objeto del supervisor. Causa: el lanzador es asíncrono pero el test mantiene vivo al proceso padre. Corrección: un hilo daemon recoge únicamente ese hijo; el CLI sigue devolviendo control sin esperar la tarea. No se detuvo ningún servicio ni proceso ajeno.
+
+Los rechazos intencionales de cuarta sesión, colisión, commit sin push, revisión mala y evidencia corrupta son controles positivos de los tests, no errores operativos ni incidentes reales del VPS.
+
+Comprobación posterior de esta implementación: suite completa de 114 pruebas (113 aprobadas y una omisión Windows), `doctor` 30/30 y sintaxis Bash de siete scripts. Incluye el recorrido CLI con `--dry-run`, rechazo de cuarta sesión y lanzamiento concurrente de cuatro solicitantes bajo un mismo lock. Todas las sesiones de prueba usan simulación o ejecutables falsos y Git local; no prueban una sesión Codex real.
+
+- **Carrera en test de sesión viva:** una ejecución posterior detectó que el supervisor actualizó la revisión entre la lectura del test y su intento de cierre; el sistema rechazó correctamente la revisión obsoleta, pero el test esperaba exclusivamente “sesión viva”. Evidencia: `test_live_process_blocks_fourth_close_and_resume`, esperada 6/actual 7. Corrección: el ejecutable sintético espera una señal explícita de liberación y el test espera primero el session id persistido y reconcilia el estado. Prevención: sincronizar pruebas asíncronas por eventos/condiciones, no por una demora fija.
+
+- **Primer commit detenido:** Git devolvió `Author identity unknown` y `empty ident name`. Causa: el usuario del VPS no tenía `user.name`/`user.email` disponibles para este comando. Los archivos quedaron preparados, sin commit parcial. Corrección: identidad técnica explícita `OnIA Codex <onia-codex-worker@localhost>` mediante opciones `git -c` sólo para el commit; no cambiar configuración global, no atribuirlo a Sergio. Prevención: verificar identidad antes de entregar y usar una identidad de servicio declarada.
