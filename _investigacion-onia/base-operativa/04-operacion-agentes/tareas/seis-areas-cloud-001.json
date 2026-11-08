@@ -1,0 +1,176 @@
+{
+  "schema": 2,
+  "id": "seis-areas-cloud-001",
+  "revision": 4,
+  "compartible": true,
+  "objetivo": "Probar la ejecución de las seis áreas en una misma tanda y medir concurrencia real en Cloud",
+  "estado": "aceptado",
+  "proximo_paso": "Usar el resultado para planificar tandas independientes y retomar la implementación del panel según el encargo vigente",
+  "resultado": "Seis áreas ejecutaron en Cloud. Pasada final 6/6 dentro de la ventana, con 385,723 ms de solape nominal. Producto: módulo real Cloud, checkout completo cotejado localmente.",
+  "comprobacion": "Tres pasadas y revisión independiente. Fallo EPERM de Automatizaciones corregido mediante invocación directa. Recibos y límites conservados.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/seis-areas-cloud-001/INFORME.md",
+      "sha256": "db28b4de37ab8b14e45422baa7e5f0b1e3f818f746f30037cf41dd6762012749",
+      "bytes": 4513
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/seis-areas-cloud-001/recibos-v1.json",
+      "sha256": "e07f4c7db82c4873e5bd5bd2dee613a3516ffa306509eda8d5b1fa2cbe2363b5",
+      "bytes": 10707
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/seis-areas-cloud-001/recibos-sincronizados-v1.json",
+      "sha256": "bda1d41c898ae4229c0506db7a6cc57350461cd86c77def24e082753fa73faa1",
+      "bytes": 5218
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/seis-areas-cloud-001/recibos-sincronizados-v2.json",
+      "sha256": "e691a39d272497e448ba612498175d9657e34660530551394de41ea2c97d8ba0",
+      "bytes": 5009
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/seis-areas-cloud-001/revision-v1.md",
+      "sha256": "34aa12d5c7b467fd01ae5e732c18eab32feb0ff57eeeb9891f8856549571a990",
+      "bytes": 4318
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/seis-areas-cloud-001/revision-v2.md",
+      "sha256": "51c99c133796cadd6387a47424d74ec017e72f7cde167c4bac3fee36f6e6dbc3",
+      "bytes": 1946
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/seis-areas-cloud-001/revision-v3.md",
+      "sha256": "6fc5a9a16b6ace811431fca0ab77d19fc9aa6103d5b2ba90c92ea7658e508634",
+      "bytes": 2091
+    }
+  ],
+  "actualizado": "2026-11-07T12:30:14.143204+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-07T12:15:11.524674+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer continuidad/encargos/seis-areas-cloud-001.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "multifuente",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "medium"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Coordinar contexto y entregas de varias fuentes con criterios verificables.",
+        "escalamiento": "Subir a high ante fallo de razonamiento identificado; reducir sólo conservando la calidad medida."
+      }
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-07T12:15:11.700863+00:00",
+      "estado": "en_curso",
+      "resultado": "Seis encargos despachados en chats Cloud. Integración y Revisión locales supervisan.",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Recuperar recibos de ejecución y aplicar fallback local sólo a las áreas con bloqueo",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "multifuente",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "medium"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Coordinar contexto y entregas de varias fuentes con criterios verificables.",
+        "escalamiento": "Subir a high ante fallo de razonamiento identificado; reducir sólo conservando la calidad medida."
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-07T12:30:13.937243+00:00",
+      "estado": "para_revision",
+      "resultado": "Seis áreas ejecutaron en Cloud. Pasada final 6/6 dentro de la ventana, con 385,723 ms de solape nominal. Producto: módulo real Cloud, checkout completo cotejado localmente.",
+      "comprobacion": "Tres pasadas y revisión independiente. Fallo EPERM de Automatizaciones corregido mediante invocación directa. Recibos y límites conservados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "continuidad/evidencias/seis-areas-cloud-001/INFORME.md",
+          "sha256": "db28b4de37ab8b14e45422baa7e5f0b1e3f818f746f30037cf41dd6762012749",
+          "bytes": 4513
+        },
+        {
+          "archivo": "continuidad/evidencias/seis-areas-cloud-001/recibos-v1.json",
+          "sha256": "e07f4c7db82c4873e5bd5bd2dee613a3516ffa306509eda8d5b1fa2cbe2363b5",
+          "bytes": 10707
+        },
+        {
+          "archivo": "continuidad/evidencias/seis-areas-cloud-001/recibos-sincronizados-v1.json",
+          "sha256": "bda1d41c898ae4229c0506db7a6cc57350461cd86c77def24e082753fa73faa1",
+          "bytes": 5218
+        },
+        {
+          "archivo": "continuidad/evidencias/seis-areas-cloud-001/recibos-sincronizados-v2.json",
+          "sha256": "e691a39d272497e448ba612498175d9657e34660530551394de41ea2c97d8ba0",
+          "bytes": 5009
+        },
+        {
+          "archivo": "continuidad/evidencias/seis-areas-cloud-001/revision-v1.md",
+          "sha256": "34aa12d5c7b467fd01ae5e732c18eab32feb0ff57eeeb9891f8856549571a990",
+          "bytes": 4318
+        },
+        {
+          "archivo": "continuidad/evidencias/seis-areas-cloud-001/revision-v2.md",
+          "sha256": "51c99c133796cadd6387a47424d74ec017e72f7cde167c4bac3fee36f6e6dbc3",
+          "bytes": 1946
+        },
+        {
+          "archivo": "continuidad/evidencias/seis-areas-cloud-001/revision-v3.md",
+          "sha256": "6fc5a9a16b6ace811431fca0ab77d19fc9aa6103d5b2ba90c92ea7658e508634",
+          "bytes": 2091
+        }
+      ],
+      "proximo_paso": "Asentar dictamen de la revisora local",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "multifuente",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "medium"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Coordinar contexto y entregas de varias fuentes con criterios verificables.",
+        "escalamiento": "Subir a high ante fallo de razonamiento identificado; reducir sólo conservando la calidad medida."
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/seis-areas-cloud-001.md",
+    "sha256": "ccd18748a3c8415ee41a4ad4086fa9b97cbc2394423c82b8318139666fd36973",
+    "bytes": 2663,
+    "contenido": "# Encargo seis-areas-cloud-001\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nProbar la ejecución de las seis áreas en una misma tanda y medir concurrencia real en Cloud\n\n## Entregable\n\nSeis resultados con comandos o acciones, recibos por host, solape y dictamen independiente\n\n## Criterio de aceptación\n\nEjecución comprobable por área, aislamiento, distinción Cloud/local y solape calculado sólo con ventanas válidas\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Plan operativo: continuidad/2026-11-07-seis-areas/PLAN.md. Base de ensayo Git 13311ee80e1c83c9b68639c0a13aa3404a1cd037.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [reglas-comunes.md](../reglas-comunes.md)\n- [ESTADO.md](../../00-MAPA/ESTADO.md)\n- [ORQUESTACION.md](../ORQUESTACION.md)\n- [arquitectura.md](../../06-plataforma/arquitectura.md)\n- [compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/seis-areas-cloud-001.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nEste comando no crea agentes, abre chats, ejecuta encargos ni usa la red. Sólo --compartible guarda un registro saneado versionable en continuidad/. Los registros privados quedan en operacion/. Git requiere publicación y recuperación explícitas.\n"
+  },
+  "aceptacion": {
+    "revisor": "revisora-local-01a1af41",
+    "criterio": "Dictámenes v1 a v3 cotejados. Aceptado el ensayo acotado de seis ejecuciones y solape según relojes registrados. Operación sostenida y checkout completo de Platform Cloud quedan pendientes.",
+    "fecha": "2026-11-07T12:30:14.143204+00:00"
+  },
+  "ejecucion": {
+    "perfil": "multifuente",
+    "recomendado": {
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "medium"
+    },
+    "solicitado": null,
+    "observado": null,
+    "criterio": "Coordinar contexto y entregas de varias fuentes con criterios verificables.",
+    "escalamiento": "Subir a high ante fallo de razonamiento identificado; reducir sólo conservando la calidad medida."
+  }
+}

@@ -1,0 +1,37 @@
+# Comparación aplicada · ocho referentes
+5 de noviembre de 2026 · REF-MARKETING-20261105. Lectura de muestras y recorridos públicos, no ranking por popularidad ni auditoría integral. Las fichas enlazan fuentes exactas, procedencia, cobertura y fallos. **Observación** describe material recuperado; **inferencia** explica una posible función; **adaptación** es una hipótesis propia que necesita prueba.
+
+## Qué tomar y qué evitar
+| Referente | Evidencia que cambia una decisión | Adaptación propuesta para ONIA | Evitar / por qué |
+|---|---|---|---|
+| [Hormozi](alex-hormozi.md) | Cursos/checklists gratuitos y workshops segmentados por problema y tamaño; caption SALES recuperado. | Explicar un problema completo y diferenciar material gratuito de ayuda aplicada; fijar alcance/soporte antes del precio. | Copiar precio alto, escasez o supuesto CTA universal: hay discrepancias de disponibilidad y no hay causalidad de ventas verificada. |
+| [Iman](iman-gadzhi.md) | Dos textos propios asignan público/propósito a familias de contenido; Monetise/Quantum/challenge tienen niveles distintos. | Definir para quién es cada pieza y qué siguiente paso tiene sentido; adaptar explicación al nivel del alumno. | Copiar lujo, ingresos, lanzamiento o equipo. Una ruta pública no demuestra su operación interna. |
+| [Heras](victor-heras.md) | Web separa formación/servicio; Viralidad conduce a formulario de calificación extenso. | Hacer explícitos problema, público y resultado, y pedir sólo los datos que cambian la ayuda. | Usar un formulario de alta inversión para una primera consulta sencilla; tomar métricas/ejemplos monetarios como resultado típico. |
+| [Pedro](pedro-buerbaum.md) | Reel educativo de cinco pasos y otro reflexivo sin numeración, ambos con nuevas muestras; captions comerciales distintos y cuatro destinos. | Elegir enseñanza o reflexión según propósito; ejemplo visible y CTA sólo si corresponde. | Atribuir al reel el keyword de otro caption; copiar personaje agresivo o cifras. No toda pieza necesita vender. |
+| [Erik](erik-taveras.md) | Guía práctica, preview, curso, comunidad y servicios con niveles definidos. | Recurso relacionado con la tarea; muestra antes de comprar; requisitos y costes externos visibles. | Prometer automatización continua o funcionamiento técnico por observar la landing. Los horarios públicos discrepan. |
+| [Enrique](enrique-rocha.md) | Guía escrita completa, Luma y libros/consultoría segmentados. | Partir de experiencia propia, mostrar pasos y delimitar ayuda puntual frente a implementación. | Títulos “0 a 100”, amplitud o ahorro sin prueba propia; declarar acceso sin cuenta sin comprobar el recorrido. |
+| [San](san-munoz.md) | Descripciones/capítulos de tres vídeos conservan entrada, proceso, resultados anunciados y recursos; llevan a comunidad/productos. | Comparar tratamientos con el mismo material y explicar cambios/correcciones; enlazar un recurso utilizable. | Suponer sustitución del editor, velocidad o reventa probadas. Los capítulos no prueban ejecución y hay urgencia/precio inconsistentes. |
+| [Justin](justin-welsh.md) | Dos ensayos completos enseñan simplificación y reutilización; otro reciente narra una decisión personal con coste. | Separar enseñanza de relato founder; eliminar pasos sin resultado y reutilizar estructuras propias ya comprobadas. | Copiar agenda/vida/volumen o confundir engagement con ventas; un ensayo histórico no describe automáticamente el negocio actual. |
+
+## Tono: qué sabemos y qué no
+Se puede analizar **voz escrita**: instrucción práctica en Erik/Enrique; argumentación con ejemplos en Justin; autoridad y prescripción en los textos de Hormozi/Iman/Heras; confrontación deliberada en la newsletter de Pedro; promesa de transformación en titulares/descripciones de San. Son registros de esas muestras, no identidades fijas ni recomendaciones de imitación.
+
+No se puede convertir ese vocabulario en una descripción de velocidad, pausas, intensidad, timbre o música. La evidencia sonora nueva de Pedro está en [audio técnico](../../../99-archivo/audio-tecnico/README.md): recuperación, medición, controles y ASR; el ASR sin VAD falló ante un tono sintético. La variante con VAD y el control positivo ayudan a delimitar contenido verbal, **no certifican prosodia, SFX ni escucha**. El original y fragmentos permiten una revisión concreta; repetir “audio pendiente” sin esa salida ya no es suficiente.
+
+Para Sergio, la hipótesis editorial razonable es una explicación cercana y concreta que conserve su experiencia y su manera de hablar. El ensayo de Justin muestra una alternativa al checklist: decisión, coste y reflexión. Es posible combinar piezas de enseñanza y relatos propios sin meter founder/fitness/IA a la fuerza en cada vídeo. El corpus de estas ocho fichas no resuelve por sí solo la narrativa fitness.
+
+## Aplicación al piloto existente, sin reescribirlo
+D1 puede probar si una situación, una instrucción y el cotejo se entienden en 35–45 s. Su etiqueta hipotética, respuesta propuesta y CTA de interacción son decisiones propias. Su sencillez no demuestra todavía el valor de pagar un workshop; ese valor candidato está en practicar, recibir corrección y transferir el criterio a otra consulta. Ningún referente valida por comparación esa entrega ni su precio.
+
+Criterio para revisar el piloto actual: el espectador identifica qué dato falta, de dónde sale el viernes y por qué no se puede confirmarlo; el aprendizaje aparece antes del CTA. Una pieza correcta puede ser útil como enseñanza aun sin historia founder. Si el objetivo posterior es marca personal, habrá que aportar una decisión real de Sergio y su evidencia; no fabricar un fallo ni usar gimnasio como decoración que simule una vida.
+
+## Qué queda demostrado del recorrido comercial
+Las lecturas verifican rutas públicas y condiciones anunciadas hasta landing, formulario o checkout accesible. No prueban registro, entrega de email/DM, onboarding, atención, retención, ingreso, ROAS ni automatización privada. Las consultas a Ads Library y alternativas no recuperaron creatividades primarias atribuibles; no es prueba de cero campañas. El archivo secundario localizado para Iman tampoco verifica un anuncio educativo vigente.
+
+Las contradicciones de fechas, precios, acceso y horarios son hallazgos accionables: conviene mantener una ficha propia única y probar el destino desde la situación real del destinatario antes de anunciarlo. No justifican acusaciones sobre intención o prácticas de los autores.
+
+## Cierre y siguiente acción
+**Resultado:** comparación editorial/comercial con aplicaciones y motivos, apoyada en ocho fichas investigadas; sin nuevos guiones, ofertas o reglas. **Prueba:** fuentes actuales abiertas, destinos seguidos sin enviar, cobertura por pieza y fallos/alternativas registrados. **Bloqueos con salida:** audiovisuales se integran por URL/timecode desde Video/Desarrollo; las piezas de Erik/San que requieran visionado se conservan como brechas exactas; Ads necesita biblioteca recuperable y anunciante/ID comprobados. Justin y el corpus obligatorio de Enrique son documentales, sin pendiente vocal artificial.
+
+**Siguiente acción de Jefa:** revisar esta comparación junto al cierre audiovisual y elegir un solo criterio que contrastar en D1 ya producido. Aceptación: conservar el archivo del piloto, registrar respuesta concreta del revisor y decidir mantener/corregir ese criterio, sin convertir el ensayo en oferta o campaña aprobada.
+

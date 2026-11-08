@@ -1,0 +1,182 @@
+{
+  "schema": 1,
+  "reglas": "04-operacion-agentes/reglas-comunes.md",
+  "perfiles_ejecucion": {
+    "extraccion": {
+      "modelo": "gpt-6-luna",
+      "esfuerzo": "high",
+      "criterio": "Extracción o clasificación repetible con fuente y esquema cerrados; candidato, no ganador probado.",
+      "escalamiento": "Comparar con Sol high si pierde datos críticos; no escalar por permisos o herramientas ausentes."
+    },
+    "multifuente": {
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "medium",
+      "criterio": "Coordinar contexto y entregas de varias fuentes con criterios verificables.",
+      "escalamiento": "Subir a high ante fallo de razonamiento identificado; reducir sólo conservando la calidad medida."
+    },
+    "cambio-acotado": {
+      "modelo": "gpt-6.1-terra",
+      "esfuerzo": "medium",
+      "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+      "escalamiento": "Comparar con Sol medium cuando falle el criterio; separar incompatibilidad de herramientas."
+    },
+    "complejo": {
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+      "escalamiento": "Astra medium/high sólo ante ambigüedad persistente identificada y dentro de cuota autorizada."
+    }
+  },
+  "limite_modelos": "Recomendaciones declarativas del 6/11/2026; no cambian runtime, permisos, herramientas ni modelo efectivo. Fuentes: https://learn.chatgpt.com/docs/models y https://developers.openai.com/api/docs/guides/model-selection. Comparar antes de atribuir calidad o ahorro.",
+  "contexto_comun": [
+    "00-MAPA/ESTADO.md",
+    "04-operacion-agentes/ORQUESTACION.md"
+  ],
+  "archivos_cloud": [
+    "05-herramientas/cloud/install.sh",
+    "05-herramientas/cloud/start.sh",
+    "05-herramientas/cloud/package-lock.json",
+    "05-herramientas/cloud/browser-runtime.cjs",
+    "05-herramientas/cloud/browser-runtime.test.cjs",
+    "05-herramientas/cloud/n8n-inventory.py"
+  ],
+  "skills": {
+    "automatizar-n8n": "05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md",
+    "continuidad-de-trabajo": "05-herramientas/compartibles/skills/continuidad-de-trabajo/SKILL.md",
+    "desarrollar-y-verificar": "05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md",
+    "evaluar-catalogo-skills": "05-herramientas/compartibles/skills/evaluar-catalogo-skills/SKILL.md",
+    "mejorar-sistema": "05-herramientas/compartibles/skills/mejorar-sistema/SKILL.md",
+    "planificar-dia": "05-herramientas/compartibles/skills/planificar-dia/SKILL.md",
+    "preparar-campana-meta": "05-herramientas/compartibles/skills/preparar-campana-meta/SKILL.md",
+    "preparar-oferta-y-embudo": "01-negocio/preparar-oferta-y-embudo/SKILL.md",
+    "producir-video": "05-herramientas/compartibles/skills/producir-video/SKILL.md",
+    "tercero-matt-research": "05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md",
+    "tercero-matt-writing-agents": "05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md",
+    "tercero-matt-handoff-onia": "05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md",
+    "tercero-addy-context": "05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md",
+    "tercero-superpowers-debug": "05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md",
+    "tercero-superpowers-verify": "05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md",
+    "tercero-marketing-humanizer": "05-herramientas/compartibles/terceros/marketing/humanizer/SKILL.md",
+    "tercero-visual-hyperframes-plan": "05-herramientas/compartibles/terceros/visual/27-hyperframes/USO-ONIA.md",
+    "tercero-visual-uiux": "05-herramientas/compartibles/terceros/visual/19-ui-ux-pro-max/USO-ONIA.md"
+  },
+  "areas": {
+    "marketing": {
+      "skill_directora": "preparar-oferta-y-embudo",
+      "skills_apoyo": [
+        "preparar-campana-meta",
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-marketing-humanizer"
+      ],
+      "contexto": [],
+      "salidas": [
+        "Oferta y recorrido de venta",
+        "Borradores de las piezas del encargo"
+      ],
+      "alcance": "Preparar una oferta, embudo, webinar o brief de contenido.",
+      "modo": "encargo"
+    },
+    "video": {
+      "skill_directora": "producir-video",
+      "contexto": [],
+      "salidas": [
+        "Composición editable en HyperFrames",
+        "Video y verificación audiovisual"
+      ],
+      "alcance": "Producir una pieza con los materiales indicados en el encargo.",
+      "modo": "encargo",
+      "skills_apoyo": [
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-visual-hyperframes-plan"
+      ]
+    },
+    "desarrollo": {
+      "skill_directora": "desarrollar-y-verificar",
+      "contexto": [
+        "06-plataforma/arquitectura.md"
+      ],
+      "salidas": [
+        "Cambio acotado de código",
+        "Comprobación del comportamiento solicitado"
+      ],
+      "alcance": "Desarrollo del harness y herramientas del encargo.",
+      "modo": "encargo",
+      "skills_apoyo": [
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-superpowers-debug",
+        "tercero-superpowers-verify"
+      ]
+    },
+    "automatizaciones": {
+      "skill_directora": "automatizar-n8n",
+      "contexto": [
+        "05-herramientas/accesos.md"
+      ],
+      "salidas": [
+        "Flujo n8n con referencias a credenciales",
+        "Pruebas y manejo de fallos"
+      ],
+      "alcance": "Un evento y resultado definido para la instancia existente de n8n.",
+      "modo": "encargo",
+      "skills_apoyo": [
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-superpowers-debug",
+        "tercero-superpowers-verify"
+      ]
+    },
+    "organizacion": {
+      "skill_directora": "planificar-dia",
+      "skills_apoyo": [
+        "continuidad-de-trabajo",
+        "mejorar-sistema",
+        "evaluar-catalogo-skills",
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context"
+      ],
+      "contexto": [
+        "02-contenido/CEREBRO-DIARIO.md"
+      ],
+      "salidas": [
+        "Agenda viable con compromisos y tareas",
+        "Estado y entrega para retomar un encargo"
+      ],
+      "alcance": "Planificar con datos vigentes; usar la skill de apoyo correspondiente para continuidad o mejora. No presupone sincronización del calendario.",
+      "modo": "encargo"
+    },
+    "producto": {
+      "skill_directora": "desarrollar-y-verificar",
+      "contexto": [
+        "06-plataforma/arquitectura.md"
+      ],
+      "salidas": [
+        "Briefing para ONIA Platform",
+        "Repo e instrucciones técnicas que falta verificar"
+      ],
+      "alcance": "Sólo briefing hasta identificar y leer el repositorio e instrucciones técnicas de ONIA Platform.",
+      "modo": "briefing",
+      "skills_apoyo": [
+        "tercero-matt-research",
+        "tercero-matt-writing-agents",
+        "tercero-matt-handoff-onia",
+        "tercero-addy-context",
+        "tercero-superpowers-debug",
+        "tercero-superpowers-verify",
+        "tercero-visual-uiux"
+      ]
+    }
+  }
+}

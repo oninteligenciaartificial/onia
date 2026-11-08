@@ -1,0 +1,11 @@
+# Harness: investigación antes de preparar ensayos
+
+Cambio de Desarrollo, 5/11/2026. El control está en `scripts/harness.py preparar`, antes de crear briefing o registro. Un ensayo declarado con `--ensayo` exige `--investigacion` (archivo existente relativo a la base), `--capacidad`, `--hipotesis`, `--control` y `--leccion`; guarda el enlace y los datos en el briefing existente. La investigación enlazada debe contener licencia, compatibilidad, recursos y límites pertinentes: el programa sólo comprueba que la ruta sea válida y exista, no que su contenido sea suficiente o verdadero. Recursos y calidad pueden ser incertidumbres medibles. Preparar no ejecuta nada ni otorga permisos.
+
+La sintaxis breve para declarar un ensayo está en [ORQUESTACION](../ORQUESTACION.md).
+
+Verificación: `python -m unittest test_harness test_trabajo` con `tempfile.tempdir` en la raíz de visualización escribible: 19 pruebas, OK, 1 omitida (symlink no permitido por Windows). Incluye caso con todos los datos salvo hipótesis, rechazado sin briefing ni registro; CLI de ensayo incompleto sin archivos, fuente ausente/privada/externa rechazada, ensayo completo y retoma, tareas ordinarias y pruebas previas. Primera ejecución con temporal predeterminado falló por permisos del sandbox antes de ejecutar lógica; segunda con temporal autorizado pasó. No se crearon encargos reales.
+
+Límites: la clasificación es declarativa; si se omite `--ensayo` o se usa directamente `trabajo.py crear`, esta validación no se aplica. No se afirmó detección semántica automática ni se alteró compatibilidad del CLI anterior. Los campos y enlace no certifican calidad de la investigación, ni habilitan ejecución. ORQUESTACION documenta la declaración obligatoria de Jefa y la revisión semántica. Jefa revisa el diff y decide si una política más amplia de clasificación o control de otros puntos de entrada amerita encargo separado.
+
+Revisión independiente de Jefa: pasaron `test_ensayo_incompleto_no_crea_archivos`, `test_cli_ensayo_completo_guarda_contexto_y_retoma` y `test_prepare_and_resume_in_separate_processes`. Primero se intentó por error el selector inexistente `test_prepare_creates_brief_and_record`: el cargador reportó error y no ejecutó esa prueba; se consultaron los nombres reales y se ejecutó el selector correcto. No se añadió regla ni prueba por ese error de selección.
