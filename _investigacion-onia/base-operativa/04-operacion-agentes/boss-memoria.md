@@ -39,3 +39,10 @@ Lanzar solo después del sí. Boss revisa el VPS por su cuenta, sin esperar que 
 - Lanzar Codex sin decir qué necesitaba.
 - Responder sin leer el repo.
 - No revisar conectores, skills y reglas de Codex antes de lanzar.
+
+## 2026-11-08 tarde
+- Decisiones del workshop en 05-herramientas/2026-11-08-harness/00-decisiones.md (clase 1 con Claude, Bs 50, fechas 12/13/14, 1-1,5 h, referente Eric Tavera por venta y persona).
+- Error: Boss respondió una vez en inglés. Corrección: siempre en español.
+- Error: un encargo de commit se delegó y no se hizo; Boss lo subió ella misma.
+- Instagram: la bandeja la bloqueó un control de seguridad de Instagram (pide teléfono y código). Leads no leídos; Sergio lo resuelve desde su celular.
+- Codex terminó pilotos del harness (a2f64ed, 124 pruebas OK) y empezó una prueba de 3 sesiones en paralelo que no estaba en el plan comercial; pedir a Sergio si sigue o se pausa.
