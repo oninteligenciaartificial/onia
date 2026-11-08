@@ -46,3 +46,7 @@ Lanzar solo después del sí. Boss revisa el VPS por su cuenta, sin esperar que 
 - Error: un encargo de commit se delegó y no se hizo; Boss lo subió ella misma.
 - Instagram: la bandeja la bloqueó un control de seguridad de Instagram (pide teléfono y código). Leads no leídos; Sergio lo resuelve desde su celular.
 - Codex terminó pilotos del harness (a2f64ed, 124 pruebas OK) y empezó una prueba de 3 sesiones en paralelo que no estaba en el plan comercial; pedir a Sergio si sigue o se pausa.
+
+- Regla: todo error, corrección, decisión o plan va directo a GitHub sin esperar que Sergio lo pida.
+- Plan del workshop en 05-herramientas/2026-11-08-harness/plan-workshop.md.
+- Error: una subida se cortó y faltó un archivo; se rehízo.
