@@ -1,6 +1,7 @@
 """Tests con Git local y ejecutable sintético. Nunca invocan Codex real ni la red."""
 import json
 import os
+import signal
 from pathlib import Path
 import subprocess
 import sys
@@ -46,6 +47,58 @@ if '--output-last-message' in args:
                    'criterio': 'Entrega sintética cotejada con aceptación'}, f)
 print(json.dumps({'type': 'turn.failed' if os.environ.get('HARNESS_TEST_FAIL') else 'turn.completed'}), flush=True)
 sys.exit(7 if os.environ.get('HARNESS_TEST_FAIL') else 0)
+'''
+
+
+INTERRUPTION_FAKE = r'''#!/usr/bin/env python3
+import hashlib, json, os, subprocess, sys, time, uuid
+from pathlib import Path
+args = sys.argv[1:]
+sys.stdin.read()
+sid = args[args.index('resume') + 1] if 'resume' in args else str(uuid.uuid4())
+print(json.dumps({'type': 'thread.started', 'thread_id': sid}), flush=True)
+def git(*arguments):
+    return subprocess.check_output(['git', '--no-optional-locks', *arguments], text=True).strip()
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+folder = Path('_investigacion-onia/base-operativa/salidas/toy')
+checkpoint, note, result = (folder / name for name in ('checkpoint.json', 'nota.txt', 'resultado.json'))
+marker = Path(os.environ['HARNESS_TEST_INTERRUPTION_MARKER'])
+index = Path(git('rev-parse', '--git-path', 'index'))
+if 'resume' not in args:
+    folder.mkdir(parents=True)
+    checkpoint.write_text('{"valores":[2,3,5]}\n')
+    note.write_text('Nota sin seguimiento que debe conservarse.\n')
+    git('add', '--', str(checkpoint))
+    receipt = {'head': git('rev-parse', 'HEAD'), 'index': sha(index),
+               'checkpoint': sha(checkpoint), 'note': sha(note)}
+    temporary = marker.with_suffix('.tmp')
+    temporary.write_text(json.dumps(receipt))
+    os.replace(temporary, marker)
+    # Espera acotada, sin hijos lectores ni operaciones Git en curso.
+    deadline = time.monotonic() + 15
+    while time.monotonic() < deadline:
+        time.sleep(0.02)
+    sys.exit(8)
+receipt = json.loads(marker.read_text())
+assert sha(checkpoint) == receipt['checkpoint'] and sha(note) == receipt['note']
+branch = git('branch', '--show-current')
+if git('rev-parse', 'HEAD') == receipt['head']:
+    assert sha(index) == receipt['index'], 'Se alteró el índice antes de retomar'
+    values = json.loads(checkpoint.read_text())['valores']
+    result.write_text(json.dumps({'total': sum(values), 'cantidad': len(values)}) + '\n')
+    git('add', '--', str(checkpoint), str(note), str(result))
+    git('commit', '-m', 'entrega única tras interrupción sintética')
+    git('push', 'origin', 'HEAD:refs/heads/' + branch)
+    print(json.dumps({'type': 'fake.resumed_and_published'}), flush=True)
+else:
+    assert json.loads(result.read_text()) == {'total': 10, 'cantidad': 3}
+    print(json.dumps({'type': 'fake.already_published'}), flush=True)
+head = git('rev-parse', 'HEAD')
+assert git('rev-list', '--count', receipt['head'] + '..HEAD') == '1'
+assert git('ls-remote', 'origin', 'refs/heads/' + branch).split()[0] == head
+assert not git('status', '--porcelain')
+print(json.dumps({'type': 'turn.completed'}), flush=True)
 '''
 
 
@@ -187,6 +240,79 @@ class SessionTests(unittest.TestCase):
         self.assertFalse(state['sesiones'][-1]['pid_vivo'])
         self.assertIn(first['session_id'], (self.op / 'sesiones.tsv').read_text())
         self.assertEqual(Path(first['log']).read_text().count('thread.started'), 2)
+
+    def test_sigterm_resume_preserves_staged_untracked_and_single_publication(self):
+        self.prepare()
+        (self.fakebin / 'codex').write_text(INTERRUPTION_FAKE)
+        marker = self.root / 'checkpoint-ready.json'
+        with patch.dict(os.environ, {'HARNESS_TEST_INTERRUPTION_MARKER': str(marker)}):
+            self.launch()
+            # Siempre terminar sólo el proceso de esta fixture si falla una aserción.
+            def finish_fixture():
+                session = self.row()['sesiones'][-1]
+                if (session['pid'] and session['pid_inicio'] and
+                        sessions.process_start(session['pid']) == session['pid_inicio']):
+                    os.kill(session['pid'], signal.SIGTERM)
+                self.wait_finished()
+            self.addCleanup(finish_fixture)
+            deadline = time.monotonic() + 6
+            while not (marker.exists() and self.row()['sesiones'][0]['session_id']):
+                self.assertLess(time.monotonic(), deadline, 'El fake no preparó su checkpoint')
+                time.sleep(0.02)
+            first = self.row()['sesiones'][0]
+            worktree = Path(first['worktree'])
+            folder = worktree / '_investigacion-onia/base-operativa/salidas/toy'
+            index = Path(first['git_dir']) / 'index'
+            def snapshot():
+                return {'checkpoint': (folder / 'checkpoint.json').read_bytes(),
+                        'note': (folder / 'nota.txt').read_bytes(), 'index': index.read_bytes(),
+                        'head': self.git('rev-parse', 'HEAD', repo=worktree),
+                        'staged': self.git('ls-files', '--stage', repo=worktree),
+                        'status': self.git('--no-optional-locks', 'status', '--porcelain',
+                                           '--untracked-files=all', repo=worktree)}
+            before = snapshot()
+            prefix = '_investigacion-onia/base-operativa/salidas/toy/'
+            self.assertIn('A  ' + prefix + 'checkpoint.json', before['status'])
+            self.assertIn('?? ' + prefix + 'nota.txt', before['status'])
+            self.assertEqual(before['head'], first['commit_base'])
+            self.assertEqual(self.git('rev-list', '--count', first['commit_base'] + '..HEAD', repo=worktree), '0')
+            self.assertEqual(sessions.process_start(first['pid']), first['pid_inicio'])
+            # No señalar grupos ni al supervisor: únicamente el Codex falso del test.
+            os.kill(first['pid'], signal.SIGTERM)
+            failed = self.wait_finished()
+            self.assertEqual(failed['estado'], 'en_espera')
+            self.assertEqual(failed['sesiones'][0]['estado'], 'fallida')
+            self.assertEqual(failed['sesiones'][0]['rc'], -signal.SIGTERM)
+            self.assertFalse(sessions.alive(failed['sesiones'][0]))
+            self.assertNotEqual(sessions.process_start(first['supervisor_pid']), first['supervisor_inicio'])
+            self.assertEqual(snapshot(), before)
+            resumed = self.launch(resume=True)
+            self.assertEqual(resumed['comando'][-3:], ['resume', first['session_id'], '-'])
+            row = self.wait_finished()
+            self.assertEqual(row['sesiones'][1]['rc'], 0)
+            self.assertEqual(row['sesiones'][1]['session_id'], first['session_id'])
+            self.assertEqual((folder / 'checkpoint.json').read_bytes(), before['checkpoint'])
+            self.assertEqual((folder / 'nota.txt').read_bytes(), before['note'])
+            self.assertEqual(json.loads((folder / 'resultado.json').read_text()), {'total': 10, 'cantidad': 3})
+            commit = self.git('rev-parse', 'HEAD', repo=worktree)
+            self.assertNotEqual(commit, before['head'])
+            self.assertEqual(self.git('rev-parse', first['rama'], repo=self.remote), commit)
+            self.assertEqual(self.git('rev-list', '--count', first['commit_base'] + '..HEAD', repo=worktree), '1')
+            published_index = index.read_bytes()
+            # Un tercer turno comprueba una entrega ya publicada sin crear otro commit.
+            self.launch(resume=True)
+            row = self.wait_finished()
+            self.assertEqual(row['sesiones'][2]['rc'], 0)
+            self.assertEqual(row['sesiones'][2]['session_id'], first['session_id'])
+            self.assertEqual(self.git('rev-parse', 'HEAD', repo=worktree), commit)
+            self.assertEqual(self.git('rev-parse', first['rama'], repo=self.remote), commit)
+            self.assertEqual(self.git('rev-list', '--count', first['commit_base'] + '..HEAD', repo=worktree), '1')
+            self.assertEqual(index.read_bytes(), published_index)
+            events = [json.loads(line) for line in Path(first['log']).read_text().splitlines()]
+            self.assertEqual([e['thread_id'] for e in events if e['type'] == 'thread.started'],
+                             [first['session_id']] * 3)
+            self.assertEqual(sum(e['type'] == 'fake.resumed_and_published' for e in events), 1)
+            self.assertEqual(sum(e['type'] == 'fake.already_published' for e in events), 1)
 
     def test_close_requires_published_new_commit_preserves_branch_and_review_gates_accept(self):
         self.prepare()

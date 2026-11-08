@@ -1,0 +1,52 @@
+{
+  "id": "harness-interrupcion-real-20261108",
+  "autorizacion": "Pedido explícito actual de Sergio: interrumpir una sesión de juguete, retomarla por mismo ID, conservar cambios y evitar duplicados, revisor distinto, publicar resultados en master.",
+  "existente": "Harness con Git privado, reanudar por session ID y revisión independiente; coordinador y operación existentes.",
+  "herramientas": [
+    "Python stdlib",
+    "Git",
+    "Codex CLI",
+    "ChatGPT login",
+    "Linux pidfd_open/pidfd_send_signal"
+  ],
+  "reglas_y_skill": [
+    "AGENTS.md",
+    "reglas-comunes.md",
+    "boss-memoria.md",
+    "ORQUESTACION.md",
+    "desarrollar-y-verificar"
+  ],
+  "runtime_solicitado": {
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "low",
+    "auth": "ChatGPT"
+  },
+  "cuota_antes": {
+    "timestamp_utc": "2026-11-08T20:09:26.541Z",
+    "primary": {
+      "used_percent": 14.0,
+      "window_minutes": 10080,
+      "resets_at": 1794624432
+    },
+    "credits": {
+      "has_credits": false,
+      "unlimited": false,
+      "balance": "0"
+    }
+  },
+  "senal_prevista": "SIGTERM sólo al PID Codex del juguete, con pidfd e identidad revalidada; no killpg ni servicios.",
+  "controles": [
+    "bytes staged/untracked e índice antes/después",
+    "cero commits antes de corte",
+    "descendientes del intento terminados antes de retomar",
+    "eventos reales thread.started mismo ID por offset",
+    "un commit/push y segunda retoma idempotente",
+    "revisor distinto read-only"
+  ],
+  "limites_previos": "El harness no garantiza detectar todos los escritores huérfanos ni impone un número de commits; se comprueban explícitamente para este juguete.",
+  "rutas": [
+    "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+  ],
+  "comando_lanzamiento": "python3 _investigacion-onia/base-operativa/05-herramientas/scripts/harness.py lanzar harness-interrupcion-real-20261108 --revision-esperada 3 --actor interrupcion-ejecutor --si-sergio --modelo gpt-6.1-sol --esfuerzo low --auth-chatgpt",
+  "faltante": "Ensayo real y veredicto independiente."
+}

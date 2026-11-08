@@ -1,0 +1,131 @@
+{
+  "fecha_utc": "2026-11-08T20:17:20.064399+00:00",
+  "fecha_caracas": "2026-11-08T16:17:20.064399-04:00",
+  "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+  "intento": 1,
+  "pid": {
+    "pid": 538534,
+    "start": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+    "ppid": 538529,
+    "pgrp": 538529,
+    "sid_os": 538529,
+    "estado_proc": "S",
+    "exe": "/usr/bin/node",
+    "cwd": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+    "uid": 1004
+  },
+  "supervisor": {
+    "pid": 538529,
+    "start": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+    "ppid": 1,
+    "pgrp": 538529,
+    "sid_os": 538529,
+    "estado_proc": "S",
+    "exe": "/usr/bin/python3.12",
+    "cwd": "/home/onia-codex-worker/repos/onia-coordinador",
+    "uid": 1004
+  },
+  "descendientes": [
+    {
+      "pid": 538545,
+      "start": "899d39f7-551f-428d-b1df-bbde3eec5534:190822600",
+      "ppid": 538534,
+      "pgrp": 538529,
+      "sid_os": 538529,
+      "estado_proc": "S",
+      "exe": "/home/onia-codex-worker/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/bin/codex",
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+      "uid": 1004
+    },
+    {
+      "pid": 538677,
+      "start": "899d39f7-551f-428d-b1df-bbde3eec5534:190822654",
+      "ppid": 538545,
+      "pgrp": 538677,
+      "sid_os": 538529,
+      "estado_proc": "S",
+      "exe": "/usr/bin/node",
+      "cwd": "/home/onia-codex-worker/.codex/plugins/cache/openai-curated-remote/openai-developers/1.3.14",
+      "uid": 1004
+    },
+    {
+      "pid": 539070,
+      "start": "899d39f7-551f-428d-b1df-bbde3eec5534:190823330",
+      "ppid": 538545,
+      "pgrp": 539070,
+      "sid_os": 538529,
+      "estado_proc": "S",
+      "exe": "/home/onia-codex-worker/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/bin/codex-code-mode-host",
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+      "uid": 1004
+    },
+    {
+      "pid": 540116,
+      "start": "899d39f7-551f-428d-b1df-bbde3eec5534:190825441",
+      "ppid": 538545,
+      "pgrp": 540116,
+      "sid_os": 540116,
+      "estado_proc": "S",
+      "exe": "/home/onia-codex-worker/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/bin/codex",
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+      "uid": 1004
+    },
+    {
+      "pid": 540122,
+      "start": "899d39f7-551f-428d-b1df-bbde3eec5534:190825446",
+      "ppid": 540116,
+      "pgrp": 540122,
+      "sid_os": 540116,
+      "estado_proc": "S",
+      "exe": "/usr/bin/bwrap",
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+      "uid": 1004
+    },
+    {
+      "pid": 540123,
+      "start": "899d39f7-551f-428d-b1df-bbde3eec5534:190825446",
+      "ppid": 540122,
+      "pgrp": 540123,
+      "sid_os": 540123,
+      "estado_proc": "S",
+      "exe": "/home/onia-codex-worker/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/bin/codex",
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+      "uid": 1004
+    },
+    {
+      "pid": 540130,
+      "start": "899d39f7-551f-428d-b1df-bbde3eec5534:190825453",
+      "ppid": 540123,
+      "pgrp": 540123,
+      "sid_os": 540123,
+      "estado_proc": "S",
+      "exe": "/usr/bin/bash",
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+      "uid": 1004
+    },
+    {
+      "pid": 540132,
+      "start": "899d39f7-551f-428d-b1df-bbde3eec5534:190825454",
+      "ppid": 540130,
+      "pgrp": 540123,
+      "sid_os": 540123,
+      "estado_proc": "S",
+      "exe": "/usr/bin/python3.12",
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+      "uid": 1004
+    }
+  ],
+  "espera_solo_lectura": "/bin/bash -lc \"python3 - <<'PYWAIT'\nfrom pathlib import Path\nimport json,time\np=Path(\\\"/home/onia-codex-worker/operacion/controles/interrupcion-20261108/continuar.json\\\")\nlimit=time.monotonic()+300\nprint(\\\"INTERRUPCION_ESPERANDO\\\",flush=True)\nwhile not p.exists():\n    if time.monotonic()>limit: raise SystemExit(\\\"ESPERA_TIMEOUT\\\")\n    time.sleep(0.25)\nassert json.loads(p.read_text())[\\\"continuar\\\"] is True\nprint(\\\"LECTOR_TERMINADO\\\",flush=True)\nPYWAIT\"",
+  "git": {
+    "files_sha256": {
+      "checkpoint.json": "ab0a32d8c67d70450bd6d29dbae11f10aef561917223f49e4b289ce79d28f483",
+      "nota.txt": "a1531bf862635cd9f17a14640875f36424fe5de0ff5686ff6164f456692399c4"
+    },
+    "index_sha256": "0d2a45ac93fb588f6d2a3d8bbfc5885fc01bbc45eee48b500cc3892c80d8edef",
+    "index_entries": "100644 0850570745c1949cfd58aa54883388921fe32625 0\t_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/checkpoint.json",
+    "status": "A  _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/checkpoint.json\n?? _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/nota.txt",
+    "head": "307f6d30ab71df58854cd8157bce5887e3803f90",
+    "commit_count": 0,
+    "remote": ""
+  }
+}

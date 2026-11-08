@@ -1,0 +1,91 @@
+{
+  "fecha_utc": "2026-11-08T20:22:14.410014+00:00",
+  "fecha_caracas": "2026-11-08T16:22:14.410014-04:00",
+  "estado_tarea": "aceptado",
+  "revision": 29,
+  "revisor_session_id": "01a1bcd1-d0de-70d1-8b21-de75ca48043c",
+  "ejecutor_session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+  "veredicto": {
+    "veredicto": "bueno",
+    "commit": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+    "criterio": "Entrega cotejada con los seis criterios y los recibos suministrados por stdin: checkpoint staged y nota untracked antes del corte; bytes, índice y HEAD preservados; cero hijos activos antes de retomar; tres intentos con el mismo SID; un único commit/push y retoma posterior sin mutaciones. Comprobé los cuatro archivos contra el commit, sus hashes y el verificador: RETOMA_OK y rechazo de seis discrepancias mediante mocks sin escrituras. Worktree limpio y un commit desde la base. La liberación de lectores residuales fue coordinada, no automática. No edité ni acepté la tarea."
+  },
+  "aceptacion": {
+    "revisor": "interrupcion-revisor",
+    "criterio": "Entrega cotejada con los seis criterios y los recibos suministrados por stdin: checkpoint staged y nota untracked antes del corte; bytes, índice y HEAD preservados; cero hijos activos antes de retomar; tres intentos con el mismo SID; un único commit/push y retoma posterior sin mutaciones. Comprobé los cuatro archivos contra el commit, sus hashes y el verificador: RETOMA_OK y rechazo de seis discrepancias mediante mocks sin escrituras. Worktree limpio y un commit desde la base. La liberación de lectores residuales fue coordinada, no automática. No edité ni acepté la tarea.",
+    "fecha": "2026-11-08T20:22:14.251723+00:00"
+  },
+  "asignacion": null,
+  "runtime_observado": [
+    {
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108-revision-4",
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "read-only"
+      }
+    }
+  ],
+  "cuota_ultima": {
+    "fecha_utc": "2026-11-08T20:21:04.062Z",
+    "rate_limits": {
+      "limit_id": "codex",
+      "limit_name": null,
+      "primary": {
+        "used_percent": 16.0,
+        "window_minutes": 10080,
+        "resets_at": 1794624432
+      },
+      "secondary": null,
+      "credits": {
+        "has_credits": false,
+        "unlimited": false,
+        "balance": "0"
+      },
+      "individual_limit": null,
+      "spend_control_reached": null,
+      "plan_type": "prolite",
+      "rate_limit_reached_type": null
+    }
+  },
+  "comandos_revisor": [
+    {
+      "id": "item_3",
+      "type": "command_execution",
+      "command": "/bin/bash -lc \"python3 -B - <<'PY'\nfrom pathlib import Path\nfrom unittest.mock import patch\nimport runpy, subprocess, hashlib, json\np=Path('_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion')\nassert {x.name for x in p.iterdir()}=={'checkpoint.json','nota.txt','resultado.json','verificar.py'}\nfor f in sorted(p.iterdir()):\n data=f.read_bytes(); blob=subprocess.check_output(['git','show','c77d03a0047e82d9b7f4ab627f4f18a628d44926:'+str(f)])\n assert data==blob\n print(f.name,hashlib.sha256(data).hexdigest())\nn=runpy.run_path(str(p/'verificar.py'));assert n['main']()==0\noriginal=Path.read_bytes\nfor filename in ['checkpoint.json','nota.txt']:\n def altered(path, filename=filename):return b'alterado' if path.name==filename else original(path)\n with patch.object(Path,'read_bytes',altered):assert n['main']()==1\nfor result in [dict(n['RESULTADO'],total=28),dict(n['RESULTADO'],total=27.0),dict(n['RESULTADO'],extra=1)]:\n with patch.object(Path,'read_text',return_value=json.dumps(result)):assert n['main']()==1\nwith patch.object(Path,'read_text',return_value='{\\\"total\\\":27,\\\"total\\\":28}'):\n assert n['main']()==1\nprint('PRUEBAS_OK')\ne=Path('_investigacion-onia/base-operativa/04-operacion-agentes/evidencias/harness-interrupcion-real-20261108')\nprint('EVIDENCIA_LOCAL',e.exists())\nif e.exists():\n for f in sorted(e.iterdir()):print(f.name,len(f.read_bytes()),hashlib.sha256(f.read_bytes()).hexdigest())\nPY\ngit rev-list --count 307f6d30ab71df58854cd8157bce5887e3803f90..HEAD\ngit diff --check 307f6d30ab71df58854cd8157bce5887e3803f90 HEAD\ngit status --short\"",
+      "aggregated_output": "RETOMA_ERROR Bytes del checkpoint discrepantes\nRETOMA_ERROR Bytes de la nota discrepantes\nRETOMA_ERROR Resultado discrepante\nRETOMA_ERROR Resultado discrepante\nRETOMA_ERROR Resultado discrepante\nRETOMA_ERROR Claves duplicadas en resultado\ncheckpoint.json ab0a32d8c67d70450bd6d29dbae11f10aef561917223f49e4b289ce79d28f483\nnota.txt a1531bf862635cd9f17a14640875f36424fe5de0ff5686ff6164f456692399c4\nresultado.json 79a98b07e9e84475aa4b95879a2624bdc18718fa028773ad785ff0e6b66e52ed\nverificar.py 32f7b2c8f7f031ee9c9c7fd8b0191b8efa44246950c71cdceead79923608b5ca\nRETOMA_OK\nPRUEBAS_OK\nEVIDENCIA_LOCAL False\n1\n",
+      "exit_code": 0,
+      "status": "completed"
+    }
+  ],
+  "worktrees_retirados": true,
+  "sesiones_vivas_piloto": 0,
+  "comando_revision": [
+    "codex",
+    "-a",
+    "never",
+    "-c",
+    "sandbox_workspace_write.network_access=false",
+    "exec",
+    "--json",
+    "--sandbox",
+    "read-only",
+    "-C",
+    "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108-revision-4",
+    "--ignore-user-config",
+    "--output-schema",
+    "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.schema.json",
+    "--output-last-message",
+    "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.veredicto.json",
+    "--model",
+    "gpt-6.1-sol",
+    "-c",
+    "model_reasoning_effort=\"low\"",
+    "-c",
+    "forced_login_method=\"chatgpt\"",
+    "-c",
+    "model_provider=\"openai\"",
+    "-"
+  ]
+}

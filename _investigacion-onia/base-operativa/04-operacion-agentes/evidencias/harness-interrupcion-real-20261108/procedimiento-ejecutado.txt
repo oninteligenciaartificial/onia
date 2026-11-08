@@ -1,0 +1,202 @@
+Procedimiento puntual del piloto; no es otro lanzador. El harness existente conserva todo el ciclo.
+
+## preparar-interrupcion.py
+import hashlib,json,sys
+from pathlib import Path
+repo=Path('/home/onia-codex-worker/repos/onia-coordinador');base=repo/'_investigacion-onia/base-operativa';sys.path.insert(0,str(base/'05-herramientas/scripts'));import harness,trabajo
+ident='harness-interrupcion-real-20261108';route='05-herramientas/2026-11-08-harness/piloto-interrupcion';op=Path('/home/onia-codex-worker/operacion');gate=op/'controles/interrupcion-20261108/continuar.json';gate.parent.mkdir(parents=True,exist_ok=True);assert not gate.exists()
+checkpoint='{"etapa":"antes-interrupcion","valores":[6,9,12]}\n';note='Nota sin seguimiento: conservar estos bytes al retomar.\n';sha=hashlib.sha256(checkpoint.encode()).hexdigest()
+acceptance='1. Antes de la señal externa existen checkpoint.json staged y nota.txt untracked, cero commits desde la base y ningún push. 2. Tras interrupción externa del PID Codex identificado, se conservan exactamente bytes, índice y HEAD; no quedan hijos activos del intento antes de retomar. 3. Los eventos thread.started reales de los tres intentos ejecutores tienen el mismo session ID, y conservan worktree/Git privado/rama. 4. Al retomar se completan exactamente cuatro archivos: checkpoint.json, nota.txt, resultado.json y verificar.py; checkpoint/nota conservan sus bytes iniciales. Resultado exacto {"valores":[6,9,12],"total":27,"checkpoint_sha256":"'+sha+'"}. Verificador stdlib sin escrituras, lee desde su carpeta, devuelve RETOMA_OK con rc0 y rechaza discrepancias. 5. La propia ejecutora crea y publica exactamente UN commit. Otra retoma posterior comprueba y sale sin nuevo commit/push ni cambios; HEAD, remoto y conteo siguen iguales. 6. Revisor real distinto, sólo lectura, coteja entrega y recibos de interrupción/retoma/idempotencia y emite bueno antes de aceptar.'
+barrier='''En el primer intento, después de crear y stagear checkpoint, ejecutar ÚNICAMENTE este lector en un comando de shell aparte. No encadenar creación de archivos, commit ni push después del bloque. El coordinador interrumpirá externamente tu proceso mientras espera:
+python3 - <<'PYWAIT'
+from pathlib import Path
+import json,time
+p=Path("'''+str(gate)+'''")
+limit=time.monotonic()+300
+print("INTERRUPCION_ESPERANDO",flush=True)
+while not p.exists():
+    if time.monotonic()>limit: raise SystemExit("ESPERA_TIMEOUT")
+    time.sleep(0.25)
+assert json.loads(p.read_text())["continuar"] is True
+print("LECTOR_TERMINADO",flush=True)
+PYWAIT
+No mates procesos vos. La espera es sólo lectura y termina al ver la señal; no tiene efectos posteriores.'''
+inputs=[
+'Sergio autorizó interrupción real de esta sesión de juguete y retoma por su mismo ID. Sólo ChatGPT incluido, Sol/low. Sin API, compras, instalaciones, sudo, producción, Docker, n8n, app-server, mensajes, otros servicios ni sesiones/subagentes.',
+'Ruta exclusiva: '+route+'. Leer reglas pertinentes; no editar tarea/briefing canónicos ni archivos fuera de esta ruta. Git privado e identidad técnica ya preparados.',
+'Flujo idempotente. Primero inspeccionar HEAD, estado y archivos; no sobrescribir archivos existentes ni descartar cambios. Si no existe señal '+str(gate)+': crear checkpoint.json con EXACTAMENTE estos bytes UTF-8 '+repr(checkpoint)+' y nota.txt con EXACTAMENTE '+repr(note)+'. Usar git add sólo para checkpoint.json; nota.txt queda untracked. No crear resultado/verificador, commit o push todavía.',
+barrier,
+'Si la señal ya existe al retomar: conservar bytes e índice del checkpoint y la nota; no re-crear ni añadir líneas. Completar resultado.json con el objeto de aceptación y verificar.py que use stdlib, compruebe ambos archivos conservados, SHA256 del checkpoint y el resultado completo, sin escribir. Probar un caso correcto y discrepante sin modificar archivos de entrega (por ejemplo mocks en memoria).',
+'Antes de publicar contar commits desde la base registrada por el harness (origin/master local del Git privado). Si no hay commit de entrega, git add de los cuatro paths explícitos, git commit -m "test: interrupcion y retoma idempotente del harness", git push origin HEAD:refs/heads/codex/ws-'+ident+'. Si ya hay un commit válido, NO crear otro: comprobar y sólo hacer push si aún faltara remoto. Prohibidos amend, rebase, force, --allow-empty y modificar configuración global.',
+'Cuando HEAD y remoto ya coinciden y la entrega está completa, limitarse a ejecutar verificar.py, git status, git rev-parse HEAD, git rev-list --count origin/master..HEAD y git ls-remote origin refs/heads/codex/ws-'+ident+'; informar RETOMA_IDEMPOTENTE_OK y salir. No hacer git add/commit/push en ese caso. El coordinador hará una segunda retoma deliberada antes del cierre para verificarlo.',
+'Informar hash y evidencia. Si falla un permiso o la evidencia de estado no coincide, terminar e informar sin bypass. El coordinador no publicará la entrega por vos; hará cierre, revisión e integración después.'
+]
+evidence=base/f'04-operacion-agentes/evidencias/{ident}';evidence.mkdir(parents=True)
+preflight={'id':ident,'autorizacion':'Pedido explícito actual de Sergio: interrumpir una sesión de juguete, retomarla por mismo ID, conservar cambios y evitar duplicados, revisor distinto, publicar resultados en master.','existente':'Harness con Git privado, reanudar por session ID y revisión independiente; coordinador y operación existentes.','herramientas':['Python stdlib','Git','Codex CLI','ChatGPT login','Linux pidfd_open/pidfd_send_signal'],'reglas_y_skill':['AGENTS.md','reglas-comunes.md','boss-memoria.md','ORQUESTACION.md','desarrollar-y-verificar'],'runtime_solicitado':{'modelo':'gpt-6.1-sol','esfuerzo':'low','auth':'ChatGPT'},'cuota_antes':json.loads(Path('/tmp/harness-interrupcion-cuota-antes.json').read_text()),'senal_prevista':'SIGTERM sólo al PID Codex del juguete, con pidfd e identidad revalidada; no killpg ni servicios.','controles':['bytes staged/untracked e índice antes/después','cero commits antes de corte','descendientes del intento terminados antes de retomar','eventos reales thread.started mismo ID por offset','un commit/push y segunda retoma idempotente','revisor distinto read-only'],'limites_previos':'El harness no garantiza detectar todos los escritores huérfanos ni impone un número de commits; se comprueban explícitamente para este juguete.','rutas':[route],'comando_lanzamiento':'python3 _investigacion-onia/base-operativa/05-herramientas/scripts/harness.py lanzar '+ident+' --revision-esperada 3 --actor interrupcion-ejecutor --si-sergio --modelo gpt-6.1-sol --esfuerzo low --auth-chatgpt','faltante':'Ensayo real y veredicto independiente.'}
+(evidence/'preflight.json').write_text(json.dumps(preflight,ensure_ascii=False,indent=2)+'\n')
+harness.prepare(base,ident,'desarrollo','Interrumpir y retomar el mismo juguete sin perder cambios ni duplicar commits','Checkpoint preservado, entrega autónoma única y revisión independiente',acceptance,inputs=inputs,shared=True)
+r=trabajo.assign(base,ident,1,'interrupcion-ejecutor',[route]);r=trabajo.update(base,ident,'preparado','Preparado para interrupción externa y retomas controladas.','Preflight, pidfd, login y cuota comprobados.','Lanzar ejecutora autorizada.',[(evidence/'preflight.json').relative_to(base).as_posix()],revision=r['revision'],actor='interrupcion-ejecutor')
+Path('/tmp/harness-interrupcion-config.json').write_text(json.dumps({'repo':str(repo),'base':str(base),'id':ident,'operation':str(op),'gate':str(gate),'route':route,'evidence':str(evidence),'checkpoint':checkpoint,'note':note,'checkpoint_sha256':sha}))
+print('Preparado',ident,'revision',r['revision'],'checkpoint_sha256',sha)
+
+## interrupcion_util.py
+from datetime import datetime,timezone
+from zoneinfo import ZoneInfo
+import hashlib,json,os,sys
+from pathlib import Path
+CFG=json.loads(Path('/tmp/harness-interrupcion-config.json').read_text());BASE=Path(CFG['base']);OP=Path(CFG['operation']);IDENT=CFG['id'];EVIDENCE=Path(CFG['evidence']);GATE=Path(CFG['gate'])
+sys.path.insert(0,str(BASE/'05-herramientas/scripts'));import harness_sesiones as hs,trabajo
+
+def stamp():
+ now=datetime.now(timezone.utc)
+ return {'fecha_utc':now.isoformat(),'fecha_caracas':now.astimezone(ZoneInfo('America/Caracas')).isoformat()}
+
+def readrow():return trabajo.read_task(BASE,IDENT)
+
+def meta(pid):
+ try:
+  p=Path('/proc',str(pid));fields=(p/'stat').read_text().rsplit(')',1)[1].split();start=hs.process_start(pid)
+  if not start:return None
+  return {'pid':pid,'start':start,'ppid':int(fields[1]),'pgrp':int(fields[2]),'sid_os':int(fields[3]),'estado_proc':fields[0],'exe':str((p/'exe').resolve()),'cwd':str((p/'cwd').resolve()),'uid':p.stat().st_uid}
+ except (FileNotFoundError,ProcessLookupError):return None
+
+def descendants(pid):
+ parents={}
+ for p in Path('/proc').iterdir():
+  if not p.name.isdigit():continue
+  try:parents[int(p.name)]=int((p/'stat').read_text().rsplit(')',1)[1].split()[1])
+  except (FileNotFoundError,ProcessLookupError,PermissionError,ValueError):pass
+ found={pid}
+ while True:
+  added={child for child,parent in parents.items() if parent in found}-found
+  if not added:break
+  found.update(added)
+ return [m for child in sorted(found-{pid}) if (m:=meta(child))]
+
+def git_snapshot(session):
+ wt=Path(session['worktree']);route=wt/'_investigacion-onia/base-operativa'/CFG['route']
+ def git(*a):return hs.git(wt,'--no-optional-locks',*a)
+ files={name:hashlib.sha256((route/name).read_bytes()).hexdigest() for name in ('checkpoint.json','nota.txt')}
+ assert (route/'checkpoint.json').read_bytes()==CFG['checkpoint'].encode()
+ assert (route/'nota.txt').read_bytes()==CFG['note'].encode()
+ index=Path(git('rev-parse','--git-path','index'))
+ return {'files_sha256':files,'index_sha256':hashlib.sha256(index.read_bytes()).hexdigest(),'index_entries':git('ls-files','--stage','--','_investigacion-onia/base-operativa/'+CFG['route']),'status':git('status','--porcelain','--untracked-files=all'),'head':git('rev-parse','HEAD'),'commit_count':int(git('rev-list','--count',session['commit_base']+'..HEAD')),'remote':git('ls-remote','origin','refs/heads/'+session['rama'])}
+
+def save(name,data):
+ with (EVIDENCE/name).open('x') as f:json.dump(data,f,ensure_ascii=False,indent=2);f.write('\n')
+
+## observar-interrupcion.py
+import json,time
+from pathlib import Path
+from interrupcion_util import *
+limit=time.monotonic()+180
+while time.monotonic()<limit:
+ row=readrow();s=row.get('sesiones',[{}])[-1];events=[]
+ if s.get('log') and Path(s['log']).exists():
+  for line in Path(s['log']).read_text().splitlines():
+   try:events.append(json.loads(line))
+   except ValueError:pass
+ completed={e.get('item',{}).get('id') for e in events if e.get('type')=='item.completed'}
+ waits=[e['item'] for e in events if e.get('type')=='item.started' and e.get('item',{}).get('type')=='command_execution' and str(GATE) in e['item'].get('command','') and 'INTERRUPCION_ESPERANDO' in e['item'].get('command','') and e['item'].get('id') not in completed]
+ if waits and s.get('session_id') and hs.alive(s):
+  command=waits[-1]['command'];assert not any(x in command for x in ('git ','write_text','write_bytes','open(')),command
+  snapshot=git_snapshot(s);assert snapshot['head']==s['commit_base'] and snapshot['commit_count']==0 and snapshot['remote']==''
+  assert 'checkpoint.json' in snapshot['index_entries'] and 'nota.txt' not in snapshot['index_entries']
+  assert snapshot['status'].startswith('A ') and '?? ' in snapshot['status']
+  m=meta(s['pid']);assert m and m['start']==s['pid_inicio'] and m['ppid']==s['supervisor_pid'] and m['cwd']==s['worktree'] and m['uid']==os.getuid()
+  receipt={**stamp(),'session_id':s['session_id'],'intento':s['intento'],'pid':m,'supervisor':meta(s['supervisor_pid']),'descendientes':descendants(s['pid']),'espera_solo_lectura':command,'git':snapshot}
+  save('antes-interrupcion.json',receipt)
+  print(json.dumps({'checkpoint_listo':True,'pid':m,'session_id':s['session_id'],'descendientes':len(receipt['descendientes']),'espera':command},ensure_ascii=False),flush=True)
+  break
+ if s.get('estado') in ('fallida','finalizada','interrumpida'):raise RuntimeError('El intento terminó antes del punto de corte.')
+ time.sleep(.5)
+else:raise RuntimeError('No se alcanzó el punto de corte en 180 s.')
+
+## interrumpir-juguete.py
+import signal,time
+from interrupcion_util import *
+
+before=json.loads((EVIDENCE/'antes-interrupcion.json').read_text())
+row=readrow();s=row['sesiones'][-1]
+assert not GATE.exists()
+assert s['session_id']==before['session_id'] and s['pid']==before['pid']['pid']
+assert hs.alive(s) and git_snapshot(s)==before['git']
+fd=os.pidfd_open(s['pid'])
+try:
+ m=meta(s['pid'])
+ assert m and m['start']==s['pid_inicio']==before['pid']['start']
+ assert m['ppid']==s['supervisor_pid'] and m['cwd']==s['worktree'] and m['uid']==os.getuid()
+ argv=Path('/proc',str(s['pid']),'cmdline').read_bytes().split(b'\0')
+ assert b'exec' in argv and s['worktree'].encode() in argv and b'app-server' not in argv
+ children={x['pid']:x for x in before['descendientes']+descendants(s['pid'])}
+ sent={**stamp(),'signal':'SIGTERM','target':m,'session_id':s['session_id'],'descendientes':list(children.values())}
+ signal.pidfd_send_signal(fd,signal.SIGTERM)
+finally:os.close(fd)
+limit=time.monotonic()+25
+while hs.alive(s) and time.monotonic()<limit:time.sleep(.25)
+assert not hs.alive(s),'Codex/supervisor sigue vivo; inspeccionar, no reanudar.'
+def remaining():return [x for x in children.values() if hs.process_start(x['pid'])==x['start']]
+residual=remaining()
+with GATE.open('x') as f:json.dump({'continuar':True,**stamp(),'motivo':'SIGTERM del único ejecutor de juguete completado'},f)
+limit=time.monotonic()+20
+while remaining() and time.monotonic()<limit:time.sleep(.25)
+assert not remaining(),'Hijos anteriores vivos; no reanudar.'
+row=readrow();finished=row['sesiones'][-1]
+after=git_snapshot(finished)
+assert after==before['git'],'Cambió checkpoint, nota, índice, HEAD o remoto.'
+assert finished['rc']!=0 and finished['estado'] in ('fallida','interrumpida')
+save('despues-interrupcion.json',{**stamp(),'senal':sent,'estado_tarea':row['estado'],'estado_sesion':finished['estado'],'rc':finished['rc'],'residuales_antes_senal_lector':residual,'descendientes_activos_final':remaining(),'git':after,'conservacion_exacta':True,'otros_procesos_senalados':[]})
+print(json.dumps({'interrupcion_real':'SIGTERM','session_id':s['session_id'],'rc':finished['rc'],'estado':row['estado'],'conservacion_exacta':True,'hijos_activos':0,'residuales_lector':len(residual),'revision':row['revision']}),flush=True)
+
+## capturar-retoma.py
+import re,subprocess,time
+from interrupcion_util import *
+
+attempt=int(sys.argv[1]);row=readrow();s=row['sesiones'][-1]
+assert s['intento']==attempt and not hs.alive(s) and s['rc']==0 and s['estado']=='finalizada'
+events=[]
+with open(s['log'],'rb') as f:
+ f.seek(s['log_offset'])
+ for line in f:
+  try:events.append(json.loads(line))
+  except ValueError:pass
+actual=[e['thread_id'] for e in events if e.get('type')=='thread.started']
+assert actual==[row['sesiones'][0]['session_id']]==[s['session_id']]
+assert s['worktree']==row['sesiones'][0]['worktree'] and s['git_repo']==row['sesiones'][0]['git_repo'] and s['rama']==row['sesiones'][0]['rama']
+commands=[e['item'] for e in events if e.get('type')=='item.completed' and e.get('item',{}).get('type')=='command_execution']
+failed=[c for c in commands if c.get('exit_code')!=0]
+assert not failed,failed
+mutations=[c for c in commands if re.search(r'git\s+(?:add|commit|push)\b',c['command'])]
+snapshot=git_snapshot(s);assert snapshot['status']=='' and snapshot['commit_count']==1
+assert snapshot['remote'].split()[0]==snapshot['head']
+wt=Path(s['worktree']);delivery=wt/'_investigacion-onia/base-operativa'/CFG['route']
+expected={'checkpoint.json','nota.txt','resultado.json','verificar.py'}
+assert {f.name for f in delivery.iterdir()}==expected
+changed=hs.git(wt,'diff','--name-only',s['commit_base'],snapshot['head']).splitlines()
+assert set(changed)=={'_investigacion-onia/base-operativa/'+CFG['route']+'/'+name for name in expected}
+v=subprocess.run([sys.executable,str(delivery/'verificar.py')],capture_output=True,text=True,timeout=10)
+assert v.returncode==0 and 'RETOMA_OK' in v.stdout
+for name,sha in snapshot['files_sha256'].items():
+ blob=subprocess.check_output(['git','show',snapshot['head']+':_investigacion-onia/base-operativa/'+CFG['route']+'/'+name],cwd=wt)
+ assert hashlib.sha256(blob).hexdigest()==sha
+if attempt==2:
+ assert any(re.search(r'git\s+commit\b',c['command']) for c in mutations)
+ assert any(re.search(r'git\s+push\b',c['command']) for c in mutations)
+else:
+ assert attempt==3 and not mutations
+ before=json.loads((EVIDENCE/'retoma-publicacion.json').read_text())
+ for key in ('files_sha256','index_entries','status','head','commit_count','remote'):assert snapshot[key]==before['git'][key],key
+ assert any('RETOMA_IDEMPOTENTE_OK' in e.get('item',{}).get('text','') for e in events)
+runtime=[];quota=None
+for path in Path('/home/onia-codex-worker/.codex/sessions/2026/11/08').glob('*'+s['session_id']+'.jsonl'):
+ for line in path.read_text().splitlines():
+  try:e=json.loads(line)
+  except ValueError:continue
+  p=e.get('payload',{})
+  if e.get('type')=='turn_context':runtime.append({k:p.get(k) for k in ('cwd','model','effort','approval_policy','sandbox_policy')})
+  if e.get('type')=='event_msg' and p.get('rate_limits'):quota={'fecha_utc':e.get('timestamp'),'rate_limits':p['rate_limits']}
+selected=[c for c in commands if c in mutations or 'INDICE_BYTES_OK' in c.get('aggregated_output','') or 'RETOMA_' in c.get('aggregated_output','') or (attempt==3 and 'cat ' not in c['command'])]
+receipt={**stamp(),'intento':attempt,'session_id':s['session_id'],'thread_started_reales':actual,'log_offset':s['log_offset'],'log_sha256':hashlib.sha256(Path(s['log']).read_bytes()).hexdigest(),'worktree':s['worktree'],'git_repo':s['git_repo'],'rama':s['rama'],'base':s['commit_base'],'git':snapshot,'archivos':{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in delivery.iterdir()},'paths_diff':changed,'verificador':{'rc':v.returncode,'stdout':v.stdout},'comandos_fallidos':failed,'comandos_mutadores_git':len(mutations),'extractos_comandos':selected,'runtime_observado':runtime,'cuota_ultima':quota,'estado_sesion':s['estado'],'rc':s['rc']}
+name='retoma-publicacion.json' if attempt==2 else 'retoma-idempotente.json'
+save(name,receipt)
+print(json.dumps({'evidencia':name,'commit':snapshot['head'],'commit_count':snapshot['commit_count'],'session_id':s['session_id'],'mutaciones_git':len(mutations),'revision':row['revision'],'bytes':(EVIDENCE/name).stat().st_size}),flush=True)

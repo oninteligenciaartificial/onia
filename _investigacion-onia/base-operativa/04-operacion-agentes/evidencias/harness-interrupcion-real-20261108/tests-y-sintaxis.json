@@ -1,0 +1,137 @@
+{
+  "suite": "python3 -m unittest discover -s _investigacion-onia/base-operativa/05-herramientas/scripts -p test_*.py",
+  "salida": "....................................................................................s.........................................\n----------------------------------------------------------------------\nRan 126 tests in 27.158s\n\nOK (skipped=1)\n",
+  "bash_n": [
+    "/home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/05-herramientas/scripts/instalar-skills-locales.sh",
+    "/home/onia-codex-worker/operacion/ejecutar.sh",
+    "/home/onia-codex-worker/operacion/ejecutar-n8n.sh"
+  ],
+  "doctor": {
+    "base": "/home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa",
+    "archivos": [
+      {
+        "ruta": "04-operacion-agentes/reglas-comunes.md",
+        "presente": true
+      },
+      {
+        "ruta": "00-MAPA/ESTADO.md",
+        "presente": true
+      },
+      {
+        "ruta": "04-operacion-agentes/ORQUESTACION.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/cloud/install.sh",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/cloud/start.sh",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/cloud/package-lock.json",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/cloud/browser-runtime.cjs",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/cloud/browser-runtime.test.cjs",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/cloud/n8n-inventory.py",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/skills/continuidad-de-trabajo/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/skills/evaluar-catalogo-skills/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/skills/mejorar-sistema/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/skills/planificar-dia/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/skills/preparar-campana-meta/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "01-negocio/preparar-oferta-y-embudo/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/skills/producir-video/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/terceros/marketing/humanizer/SKILL.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/terceros/visual/27-hyperframes/USO-ONIA.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/compartibles/terceros/visual/19-ui-ux-pro-max/USO-ONIA.md",
+        "presente": true
+      },
+      {
+        "ruta": "06-plataforma/arquitectura.md",
+        "presente": true
+      },
+      {
+        "ruta": "05-herramientas/accesos.md",
+        "presente": true
+      },
+      {
+        "ruta": "02-contenido/CEREBRO-DIARIO.md",
+        "presente": true
+      }
+    ],
+    "errores": [],
+    "limite": "Sólo presencia de archivos. No prueba instalación, descubrimiento de skills, navegador, secretos, conectividad ni publicación cloud.",
+    "ok": true
+  }
+}

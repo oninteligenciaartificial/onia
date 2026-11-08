@@ -1,0 +1,3764 @@
+{
+  "schema": 2,
+  "id": "harness-interrupcion-real-20261108",
+  "revision": 29,
+  "compartible": true,
+  "objetivo": "Interrumpir y retomar el mismo juguete sin perder cambios ni duplicar commits",
+  "estado": "aceptado",
+  "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+  "resultado": "Interrupción SIGTERM real; bytes, índice y HEAD conservados; dos retomas con el mismo SID; exactamente un commit/push propio.",
+  "comprobacion": "125 tests aprobados, 1 omisión Windows. Eventos thread.started de tres intentos iguales; commit c77d03a0047e82d9b7f4ab627f4f18a628d44926 remoto y count1. Segunda retoma sin git add/commit/push. Tres hijos lectores residuales drenados por coordinador antes de retomar; no es limpieza automática del harness.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+      "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+      "bytes": 2059
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/antes-interrupcion.json",
+      "sha256": "0c3e94f055de58ee0ef624e011f4ac223c62f224cd8a3173bdc53fafcc2e250f",
+      "bytes": 5346
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/despues-interrupcion.json",
+      "sha256": "3aecf323d9d05f003d3e8173761c047afaac6bc97f4c471b58a6b8a203407854",
+      "bytes": 6215
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/procedimiento-ejecutado.txt",
+      "sha256": "230dbf34008f5f0f9688efef04086eb821780ed8f900542ebb40eae4dbfec290",
+      "bytes": 18690
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-idempotente.json",
+      "sha256": "59843c479c9e7773fb9ae321c7b7203944897c5a9e7351366f99b058e93a7868",
+      "bytes": 5953
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-publicacion.json",
+      "sha256": "768f7a47e195c8b6c09efa9f72ec8181211031634b3e03a458c5878d7537cbc3",
+      "bytes": 12794
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tests-y-sintaxis.json",
+      "sha256": "33363d2475cf661116d854072267c6b57d37b055f5fae5664c0adb120637ff61",
+      "bytes": 4581
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tres-intentos-mismo-id.json",
+      "sha256": "c7aa175e45042f7f1f9b0851c2dd1375816850317add7971ed45687500268a9f",
+      "bytes": 4615
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+      "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+      "bytes": 285
+    }
+  ],
+  "actualizado": "2026-11-08T20:22:14.299943+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-08T20:12:08.972071+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/harness-interrupcion-real-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-08T20:12:09.031477+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/harness-interrupcion-real-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-08T20:12:09.048087+00:00",
+      "estado": "preparado",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Lanzar ejecutora autorizada.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-08T20:16:50.463669+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-08T20:16:50.514316+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-08T20:16:50.583632+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-08T20:16:51.153742+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-08T20:17:27.089415+00:00",
+      "estado": "en_espera",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Revisar log y usar reanudar, conservando session id.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "item.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-08T20:17:54.633583+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "item.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-08T20:17:54.696415+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "item.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-08T20:17:54.761897+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "item.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-08T20:17:55.315272+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "item.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": null,
+          "ultimo_evento": "turn.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-08T20:18:45.242537+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "item.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-08T20:19:19.155866+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-08T20:19:19.253211+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 16,
+      "actualizado": "2026-11-08T20:19:19.302965+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 545246,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 17,
+      "actualizado": "2026-11-08T20:19:19.373237+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 545251,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837469",
+          "supervisor_pid": 545246,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 18,
+      "actualizado": "2026-11-08T20:19:19.925028+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 545251,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837469",
+          "supervisor_pid": 545246,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 19,
+      "actualizado": "2026-11-08T20:19:32.502167+00:00",
+      "estado": "en_curso",
+      "resultado": "Preparado para interrupción externa y retomas controladas.",
+      "comprobacion": "Preflight, pidfd, login y cuota comprobados.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 545251,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837469",
+          "supervisor_pid": 545246,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:19:32.492462+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 20,
+      "actualizado": "2026-11-08T20:20:26.045351+00:00",
+      "estado": "en_curso",
+      "resultado": "Interrupción SIGTERM real; bytes, índice y HEAD conservados; dos retomas con el mismo SID; exactamente un commit/push propio.",
+      "comprobacion": "125 tests aprobados, 1 omisión Windows. Eventos thread.started de tres intentos iguales; commit c77d03a0047e82d9b7f4ab627f4f18a628d44926 remoto y count1. Segunda retoma sin git add/commit/push. Tres hijos lectores residuales drenados por coordinador antes de retomar; no es limpieza automática del harness.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/antes-interrupcion.json",
+          "sha256": "0c3e94f055de58ee0ef624e011f4ac223c62f224cd8a3173bdc53fafcc2e250f",
+          "bytes": 5346
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/despues-interrupcion.json",
+          "sha256": "3aecf323d9d05f003d3e8173761c047afaac6bc97f4c471b58a6b8a203407854",
+          "bytes": 6215
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/procedimiento-ejecutado.txt",
+          "sha256": "230dbf34008f5f0f9688efef04086eb821780ed8f900542ebb40eae4dbfec290",
+          "bytes": 18690
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-idempotente.json",
+          "sha256": "59843c479c9e7773fb9ae321c7b7203944897c5a9e7351366f99b058e93a7868",
+          "bytes": 5953
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-publicacion.json",
+          "sha256": "768f7a47e195c8b6c09efa9f72ec8181211031634b3e03a458c5878d7537cbc3",
+          "bytes": 12794
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tests-y-sintaxis.json",
+          "sha256": "33363d2475cf661116d854072267c6b57d37b055f5fae5664c0adb120637ff61",
+          "bytes": 4581
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tres-intentos-mismo-id.json",
+          "sha256": "c7aa175e45042f7f1f9b0851c2dd1375816850317add7971ed45687500268a9f",
+          "bytes": 4615
+        }
+      ],
+      "proximo_paso": "Cerrar y obtener veredicto de revisor distinto.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 545251,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837469",
+          "supervisor_pid": 545246,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:19:32.492462+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 21,
+      "actualizado": "2026-11-08T20:20:27.486407+00:00",
+      "estado": "para_revision",
+      "resultado": "Interrupción SIGTERM real; bytes, índice y HEAD conservados; dos retomas con el mismo SID; exactamente un commit/push propio.",
+      "comprobacion": "125 tests aprobados, 1 omisión Windows. Eventos thread.started de tres intentos iguales; commit c77d03a0047e82d9b7f4ab627f4f18a628d44926 remoto y count1. Segunda retoma sin git add/commit/push. Tres hijos lectores residuales drenados por coordinador antes de retomar; no es limpieza automática del harness.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/antes-interrupcion.json",
+          "sha256": "0c3e94f055de58ee0ef624e011f4ac223c62f224cd8a3173bdc53fafcc2e250f",
+          "bytes": 5346
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/despues-interrupcion.json",
+          "sha256": "3aecf323d9d05f003d3e8173761c047afaac6bc97f4c471b58a6b8a203407854",
+          "bytes": 6215
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/procedimiento-ejecutado.txt",
+          "sha256": "230dbf34008f5f0f9688efef04086eb821780ed8f900542ebb40eae4dbfec290",
+          "bytes": 18690
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-idempotente.json",
+          "sha256": "59843c479c9e7773fb9ae321c7b7203944897c5a9e7351366f99b058e93a7868",
+          "bytes": 5953
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-publicacion.json",
+          "sha256": "768f7a47e195c8b6c09efa9f72ec8181211031634b3e03a458c5878d7537cbc3",
+          "bytes": 12794
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tests-y-sintaxis.json",
+          "sha256": "33363d2475cf661116d854072267c6b57d37b055f5fae5664c0adb120637ff61",
+          "bytes": 4581
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tres-intentos-mismo-id.json",
+          "sha256": "c7aa175e45042f7f1f9b0851c2dd1375816850317add7971ed45687500268a9f",
+          "bytes": 4615
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 545251,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837469",
+          "supervisor_pid": 545246,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:19:32.492462+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+        "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+        "ramas_origin": [
+          "origin/codex/ws-harness-interrupcion-real-20261108"
+        ],
+        "fecha": "2026-11-08T20:20:27.458746+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 22,
+      "actualizado": "2026-11-08T20:20:29.113091+00:00",
+      "estado": "para_revision",
+      "resultado": "Interrupción SIGTERM real; bytes, índice y HEAD conservados; dos retomas con el mismo SID; exactamente un commit/push propio.",
+      "comprobacion": "125 tests aprobados, 1 omisión Windows. Eventos thread.started de tres intentos iguales; commit c77d03a0047e82d9b7f4ab627f4f18a628d44926 remoto y count1. Segunda retoma sin git add/commit/push. Tres hijos lectores residuales drenados por coordinador antes de retomar; no es limpieza automática del harness.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/antes-interrupcion.json",
+          "sha256": "0c3e94f055de58ee0ef624e011f4ac223c62f224cd8a3173bdc53fafcc2e250f",
+          "bytes": 5346
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/despues-interrupcion.json",
+          "sha256": "3aecf323d9d05f003d3e8173761c047afaac6bc97f4c471b58a6b8a203407854",
+          "bytes": 6215
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/procedimiento-ejecutado.txt",
+          "sha256": "230dbf34008f5f0f9688efef04086eb821780ed8f900542ebb40eae4dbfec290",
+          "bytes": 18690
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-idempotente.json",
+          "sha256": "59843c479c9e7773fb9ae321c7b7203944897c5a9e7351366f99b058e93a7868",
+          "bytes": 5953
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-publicacion.json",
+          "sha256": "768f7a47e195c8b6c09efa9f72ec8181211031634b3e03a458c5878d7537cbc3",
+          "bytes": 12794
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tests-y-sintaxis.json",
+          "sha256": "33363d2475cf661116d854072267c6b57d37b055f5fae5664c0adb120637ff61",
+          "bytes": 4581
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tres-intentos-mismo-id.json",
+          "sha256": "c7aa175e45042f7f1f9b0851c2dd1375816850317add7971ed45687500268a9f",
+          "bytes": 4615
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 545251,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837469",
+          "supervisor_pid": 545246,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:19:32.492462+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "interrupcion-revisor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108-revision-4",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.briefing.txt",
+          "inicio": "2026-11-08T20:20:29.087194+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "46ed0fa430acd9b4cd603b3f52185c922b4d508cbcacc6221ffea5118842b571",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+        "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+        "ramas_origin": [
+          "origin/codex/ws-harness-interrupcion-real-20261108"
+        ],
+        "fecha": "2026-11-08T20:20:27.458746+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 23,
+      "actualizado": "2026-11-08T20:20:29.203876+00:00",
+      "estado": "para_revision",
+      "resultado": "Interrupción SIGTERM real; bytes, índice y HEAD conservados; dos retomas con el mismo SID; exactamente un commit/push propio.",
+      "comprobacion": "125 tests aprobados, 1 omisión Windows. Eventos thread.started de tres intentos iguales; commit c77d03a0047e82d9b7f4ab627f4f18a628d44926 remoto y count1. Segunda retoma sin git add/commit/push. Tres hijos lectores residuales drenados por coordinador antes de retomar; no es limpieza automática del harness.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/antes-interrupcion.json",
+          "sha256": "0c3e94f055de58ee0ef624e011f4ac223c62f224cd8a3173bdc53fafcc2e250f",
+          "bytes": 5346
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/despues-interrupcion.json",
+          "sha256": "3aecf323d9d05f003d3e8173761c047afaac6bc97f4c471b58a6b8a203407854",
+          "bytes": 6215
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/procedimiento-ejecutado.txt",
+          "sha256": "230dbf34008f5f0f9688efef04086eb821780ed8f900542ebb40eae4dbfec290",
+          "bytes": 18690
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-idempotente.json",
+          "sha256": "59843c479c9e7773fb9ae321c7b7203944897c5a9e7351366f99b058e93a7868",
+          "bytes": 5953
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-publicacion.json",
+          "sha256": "768f7a47e195c8b6c09efa9f72ec8181211031634b3e03a458c5878d7537cbc3",
+          "bytes": 12794
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tests-y-sintaxis.json",
+          "sha256": "33363d2475cf661116d854072267c6b57d37b055f5fae5664c0adb120637ff61",
+          "bytes": 4581
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tres-intentos-mismo-id.json",
+          "sha256": "c7aa175e45042f7f1f9b0851c2dd1375816850317add7971ed45687500268a9f",
+          "bytes": 4615
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 545251,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837469",
+          "supervisor_pid": 545246,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:19:32.492462+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "interrupcion-revisor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 548496,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190844451",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108-revision-4",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.briefing.txt",
+          "inicio": "2026-11-08T20:20:29.087194+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "46ed0fa430acd9b4cd603b3f52185c922b4d508cbcacc6221ffea5118842b571",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+        "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+        "ramas_origin": [
+          "origin/codex/ws-harness-interrupcion-real-20261108"
+        ],
+        "fecha": "2026-11-08T20:20:27.458746+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 24,
+      "actualizado": "2026-11-08T20:20:29.297965+00:00",
+      "estado": "para_revision",
+      "resultado": "Interrupción SIGTERM real; bytes, índice y HEAD conservados; dos retomas con el mismo SID; exactamente un commit/push propio.",
+      "comprobacion": "125 tests aprobados, 1 omisión Windows. Eventos thread.started de tres intentos iguales; commit c77d03a0047e82d9b7f4ab627f4f18a628d44926 remoto y count1. Segunda retoma sin git add/commit/push. Tres hijos lectores residuales drenados por coordinador antes de retomar; no es limpieza automática del harness.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/antes-interrupcion.json",
+          "sha256": "0c3e94f055de58ee0ef624e011f4ac223c62f224cd8a3173bdc53fafcc2e250f",
+          "bytes": 5346
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/despues-interrupcion.json",
+          "sha256": "3aecf323d9d05f003d3e8173761c047afaac6bc97f4c471b58a6b8a203407854",
+          "bytes": 6215
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/procedimiento-ejecutado.txt",
+          "sha256": "230dbf34008f5f0f9688efef04086eb821780ed8f900542ebb40eae4dbfec290",
+          "bytes": 18690
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-idempotente.json",
+          "sha256": "59843c479c9e7773fb9ae321c7b7203944897c5a9e7351366f99b058e93a7868",
+          "bytes": 5953
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-publicacion.json",
+          "sha256": "768f7a47e195c8b6c09efa9f72ec8181211031634b3e03a458c5878d7537cbc3",
+          "bytes": 12794
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tests-y-sintaxis.json",
+          "sha256": "33363d2475cf661116d854072267c6b57d37b055f5fae5664c0adb120637ff61",
+          "bytes": 4581
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tres-intentos-mismo-id.json",
+          "sha256": "c7aa175e45042f7f1f9b0851c2dd1375816850317add7971ed45687500268a9f",
+          "bytes": 4615
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 545251,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837469",
+          "supervisor_pid": 545246,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:19:32.492462+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "interrupcion-revisor",
+          "pid": 548498,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190844461",
+          "supervisor_pid": 548496,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190844451",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108-revision-4",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.briefing.txt",
+          "inicio": "2026-11-08T20:20:29.087194+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "46ed0fa430acd9b4cd603b3f52185c922b4d508cbcacc6221ffea5118842b571",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+        "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+        "ramas_origin": [
+          "origin/codex/ws-harness-interrupcion-real-20261108"
+        ],
+        "fecha": "2026-11-08T20:20:27.458746+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 25,
+      "actualizado": "2026-11-08T20:20:29.879262+00:00",
+      "estado": "para_revision",
+      "resultado": "Interrupción SIGTERM real; bytes, índice y HEAD conservados; dos retomas con el mismo SID; exactamente un commit/push propio.",
+      "comprobacion": "125 tests aprobados, 1 omisión Windows. Eventos thread.started de tres intentos iguales; commit c77d03a0047e82d9b7f4ab627f4f18a628d44926 remoto y count1. Segunda retoma sin git add/commit/push. Tres hijos lectores residuales drenados por coordinador antes de retomar; no es limpieza automática del harness.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/antes-interrupcion.json",
+          "sha256": "0c3e94f055de58ee0ef624e011f4ac223c62f224cd8a3173bdc53fafcc2e250f",
+          "bytes": 5346
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/despues-interrupcion.json",
+          "sha256": "3aecf323d9d05f003d3e8173761c047afaac6bc97f4c471b58a6b8a203407854",
+          "bytes": 6215
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/procedimiento-ejecutado.txt",
+          "sha256": "230dbf34008f5f0f9688efef04086eb821780ed8f900542ebb40eae4dbfec290",
+          "bytes": 18690
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-idempotente.json",
+          "sha256": "59843c479c9e7773fb9ae321c7b7203944897c5a9e7351366f99b058e93a7868",
+          "bytes": 5953
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-publicacion.json",
+          "sha256": "768f7a47e195c8b6c09efa9f72ec8181211031634b3e03a458c5878d7537cbc3",
+          "bytes": 12794
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tests-y-sintaxis.json",
+          "sha256": "33363d2475cf661116d854072267c6b57d37b055f5fae5664c0adb120637ff61",
+          "bytes": 4581
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tres-intentos-mismo-id.json",
+          "sha256": "c7aa175e45042f7f1f9b0851c2dd1375816850317add7971ed45687500268a9f",
+          "bytes": 4615
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 545251,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837469",
+          "supervisor_pid": 545246,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:19:32.492462+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "interrupcion-revisor",
+          "pid": 548498,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190844461",
+          "supervisor_pid": 548496,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190844451",
+          "rama": "(detached)",
+          "session_id": "01a1bcd1-d0de-70d1-8b21-de75ca48043c",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108-revision-4",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.briefing.txt",
+          "inicio": "2026-11-08T20:20:29.087194+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "46ed0fa430acd9b4cd603b3f52185c922b4d508cbcacc6221ffea5118842b571",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+        "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+        "ramas_origin": [
+          "origin/codex/ws-harness-interrupcion-real-20261108"
+        ],
+        "fecha": "2026-11-08T20:20:27.458746+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 26,
+      "actualizado": "2026-11-08T20:21:04.642252+00:00",
+      "estado": "para_revision",
+      "resultado": "Interrupción SIGTERM real; bytes, índice y HEAD conservados; dos retomas con el mismo SID; exactamente un commit/push propio.",
+      "comprobacion": "125 tests aprobados, 1 omisión Windows. Eventos thread.started de tres intentos iguales; commit c77d03a0047e82d9b7f4ab627f4f18a628d44926 remoto y count1. Segunda retoma sin git add/commit/push. Tres hijos lectores residuales drenados por coordinador antes de retomar; no es limpieza automática del harness.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/antes-interrupcion.json",
+          "sha256": "0c3e94f055de58ee0ef624e011f4ac223c62f224cd8a3173bdc53fafcc2e250f",
+          "bytes": 5346
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/despues-interrupcion.json",
+          "sha256": "3aecf323d9d05f003d3e8173761c047afaac6bc97f4c471b58a6b8a203407854",
+          "bytes": 6215
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/procedimiento-ejecutado.txt",
+          "sha256": "230dbf34008f5f0f9688efef04086eb821780ed8f900542ebb40eae4dbfec290",
+          "bytes": 18690
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-idempotente.json",
+          "sha256": "59843c479c9e7773fb9ae321c7b7203944897c5a9e7351366f99b058e93a7868",
+          "bytes": 5953
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-publicacion.json",
+          "sha256": "768f7a47e195c8b6c09efa9f72ec8181211031634b3e03a458c5878d7537cbc3",
+          "bytes": 12794
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tests-y-sintaxis.json",
+          "sha256": "33363d2475cf661116d854072267c6b57d37b055f5fae5664c0adb120637ff61",
+          "bytes": 4581
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tres-intentos-mismo-id.json",
+          "sha256": "c7aa175e45042f7f1f9b0851c2dd1375816850317add7971ed45687500268a9f",
+          "bytes": 4615
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 545251,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837469",
+          "supervisor_pid": 545246,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:19:32.492462+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "interrupcion-revisor",
+          "pid": 548498,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190844461",
+          "supervisor_pid": 548496,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190844451",
+          "rama": "(detached)",
+          "session_id": "01a1bcd1-d0de-70d1-8b21-de75ca48043c",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108-revision-4",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.briefing.txt",
+          "inicio": "2026-11-08T20:20:29.087194+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "46ed0fa430acd9b4cd603b3f52185c922b4d508cbcacc6221ffea5118842b571",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.veredicto.json",
+          "fin": "2026-11-08T20:21:04.614709+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+        "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+        "ramas_origin": [
+          "origin/codex/ws-harness-interrupcion-real-20261108"
+        ],
+        "fecha": "2026-11-08T20:20:27.458746+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 27,
+      "actualizado": "2026-11-08T20:22:14.175775+00:00",
+      "estado": "para_revision",
+      "resultado": "Interrupción SIGTERM real; bytes, índice y HEAD conservados; dos retomas con el mismo SID; exactamente un commit/push propio.",
+      "comprobacion": "125 tests aprobados, 1 omisión Windows. Eventos thread.started de tres intentos iguales; commit c77d03a0047e82d9b7f4ab627f4f18a628d44926 remoto y count1. Segunda retoma sin git add/commit/push. Tres hijos lectores residuales drenados por coordinador antes de retomar; no es limpieza automática del harness.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/antes-interrupcion.json",
+          "sha256": "0c3e94f055de58ee0ef624e011f4ac223c62f224cd8a3173bdc53fafcc2e250f",
+          "bytes": 5346
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/despues-interrupcion.json",
+          "sha256": "3aecf323d9d05f003d3e8173761c047afaac6bc97f4c471b58a6b8a203407854",
+          "bytes": 6215
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/procedimiento-ejecutado.txt",
+          "sha256": "230dbf34008f5f0f9688efef04086eb821780ed8f900542ebb40eae4dbfec290",
+          "bytes": 18690
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-idempotente.json",
+          "sha256": "59843c479c9e7773fb9ae321c7b7203944897c5a9e7351366f99b058e93a7868",
+          "bytes": 5953
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-publicacion.json",
+          "sha256": "768f7a47e195c8b6c09efa9f72ec8181211031634b3e03a458c5878d7537cbc3",
+          "bytes": 12794
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tests-y-sintaxis.json",
+          "sha256": "33363d2475cf661116d854072267c6b57d37b055f5fae5664c0adb120637ff61",
+          "bytes": 4581
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tres-intentos-mismo-id.json",
+          "sha256": "c7aa175e45042f7f1f9b0851c2dd1375816850317add7971ed45687500268a9f",
+          "bytes": 4615
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 545251,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837469",
+          "supervisor_pid": 545246,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:19:32.492462+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "interrupcion-revisor",
+          "pid": 548498,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190844461",
+          "supervisor_pid": 548496,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190844451",
+          "rama": "(detached)",
+          "session_id": "01a1bcd1-d0de-70d1-8b21-de75ca48043c",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108-revision-4",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.briefing.txt",
+          "inicio": "2026-11-08T20:20:29.087194+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "46ed0fa430acd9b4cd603b3f52185c922b4d508cbcacc6221ffea5118842b571",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.veredicto.json",
+          "fin": "2026-11-08T20:21:04.614709+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+        "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+        "ramas_origin": [
+          "origin/codex/ws-harness-interrupcion-real-20261108"
+        ],
+        "fecha": "2026-11-08T20:20:27.458746+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+        "criterio": "Entrega cotejada con los seis criterios y los recibos suministrados por stdin: checkpoint staged y nota untracked antes del corte; bytes, índice y HEAD preservados; cero hijos activos antes de retomar; tres intentos con el mismo SID; un único commit/push y retoma posterior sin mutaciones. Comprobé los cuatro archivos contra el commit, sus hashes y el verificador: RETOMA_OK y rechazo de seis discrepancias mediante mocks sin escrituras. Worktree limpio y un commit desde la base. La liberación de lectores residuales fue coordinada, no automática. No edité ni acepté la tarea.",
+        "revisor": "interrupcion-revisor",
+        "session_id": "01a1bcd1-d0de-70d1-8b21-de75ca48043c",
+        "entrega_sha256": "46ed0fa430acd9b4cd603b3f52185c922b4d508cbcacc6221ffea5118842b571",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/revision-4-cfc384fc.json",
+          "sha256": "326bc162c61a927b3a58f2778f64ef7ba78533faaf789371e86bd7520670143a",
+          "bytes": 686
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/revision-4-cfc384fc.json",
+          "sha256": "326bc162c61a927b3a58f2778f64ef7ba78533faaf789371e86bd7520670143a",
+          "bytes": 686
+        }
+      ]
+    },
+    {
+      "revision": 28,
+      "actualizado": "2026-11-08T20:22:14.251742+00:00",
+      "estado": "aceptado",
+      "resultado": "Interrupción SIGTERM real; bytes, índice y HEAD conservados; dos retomas con el mismo SID; exactamente un commit/push propio.",
+      "comprobacion": "125 tests aprobados, 1 omisión Windows. Eventos thread.started de tres intentos iguales; commit c77d03a0047e82d9b7f4ab627f4f18a628d44926 remoto y count1. Segunda retoma sin git add/commit/push. Tres hijos lectores residuales drenados por coordinador antes de retomar; no es limpieza automática del harness.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/preflight.json",
+          "sha256": "088dd9e2f604ce48d74e2096a031f3feff990982a3145d713e5463ea29b9c361",
+          "bytes": 2059
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/antes-interrupcion.json",
+          "sha256": "0c3e94f055de58ee0ef624e011f4ac223c62f224cd8a3173bdc53fafcc2e250f",
+          "bytes": 5346
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/despues-interrupcion.json",
+          "sha256": "3aecf323d9d05f003d3e8173761c047afaac6bc97f4c471b58a6b8a203407854",
+          "bytes": 6215
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/procedimiento-ejecutado.txt",
+          "sha256": "230dbf34008f5f0f9688efef04086eb821780ed8f900542ebb40eae4dbfec290",
+          "bytes": 18690
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-idempotente.json",
+          "sha256": "59843c479c9e7773fb9ae321c7b7203944897c5a9e7351366f99b058e93a7868",
+          "bytes": 5953
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/retoma-publicacion.json",
+          "sha256": "768f7a47e195c8b6c09efa9f72ec8181211031634b3e03a458c5878d7537cbc3",
+          "bytes": 12794
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tests-y-sintaxis.json",
+          "sha256": "33363d2475cf661116d854072267c6b57d37b055f5fae5664c0adb120637ff61",
+          "bytes": 4581
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/tres-intentos-mismo-id.json",
+          "sha256": "c7aa175e45042f7f1f9b0851c2dd1375816850317add7971ed45687500268a9f",
+          "bytes": 4615
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      ],
+      "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+      "aceptacion": {
+        "revisor": "interrupcion-revisor",
+        "criterio": "Entrega cotejada con los seis criterios y los recibos suministrados por stdin: checkpoint staged y nota untracked antes del corte; bytes, índice y HEAD preservados; cero hijos activos antes de retomar; tres intentos con el mismo SID; un único commit/push y retoma posterior sin mutaciones. Comprobé los cuatro archivos contra el commit, sus hashes y el verificador: RETOMA_OK y rechazo de seis discrepancias mediante mocks sin escrituras. Worktree limpio y un commit desde la base. La liberación de lectores residuales fue coordinada, no automática. No edité ni acepté la tarea.",
+        "fecha": "2026-11-08T20:22:14.251723+00:00"
+      },
+      "asignacion": {
+        "responsable": "interrupcion-ejecutor",
+        "rutas": [
+          "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T20:12:09.031459+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 538534,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+          "supervisor_pid": 538529,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "fallida",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T20:16:50.440758+00:00",
+          "rc": -15,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:17:27.079549+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 541644,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+          "supervisor_pid": 541639,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 80680,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T20:17:54.606399+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:18:45.228208+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "interrupcion-ejecutor",
+          "pid": 545251,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837469",
+          "supervisor_pid": 545246,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+          "rama": "codex/ws-harness-interrupcion-real-20261108",
+          "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+          "log_offset": 95113,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+          "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+          "inicio": "2026-11-08T20:19:19.235007+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T20:19:32.492462+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "interrupcion-revisor",
+          "pid": 548498,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190844461",
+          "supervisor_pid": 548496,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190844451",
+          "rama": "(detached)",
+          "session_id": "01a1bcd1-d0de-70d1-8b21-de75ca48043c",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_rel": "logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108-revision-4",
+          "rutas": [
+            "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+          ],
+          "dry_run": false,
+          "commit_base": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.briefing.txt",
+          "inicio": "2026-11-08T20:20:29.087194+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "entrega_sha256": "46ed0fa430acd9b4cd603b3f52185c922b4d508cbcacc6221ffea5118842b571",
+          "schema": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.veredicto.json",
+          "fin": "2026-11-08T20:21:04.614709+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+        "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+        "ramas_origin": [
+          "origin/codex/ws-harness-interrupcion-real-20261108"
+        ],
+        "fecha": "2026-11-08T20:20:27.458746+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+          "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+          "bytes": 285
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+        "criterio": "Entrega cotejada con los seis criterios y los recibos suministrados por stdin: checkpoint staged y nota untracked antes del corte; bytes, índice y HEAD preservados; cero hijos activos antes de retomar; tres intentos con el mismo SID; un único commit/push y retoma posterior sin mutaciones. Comprobé los cuatro archivos contra el commit, sus hashes y el verificador: RETOMA_OK y rechazo de seis discrepancias mediante mocks sin escrituras. Worktree limpio y un commit desde la base. La liberación de lectores residuales fue coordinada, no automática. No edité ni acepté la tarea.",
+        "revisor": "interrupcion-revisor",
+        "session_id": "01a1bcd1-d0de-70d1-8b21-de75ca48043c",
+        "entrega_sha256": "46ed0fa430acd9b4cd603b3f52185c922b4d508cbcacc6221ffea5118842b571",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/revision-4-cfc384fc.json",
+          "sha256": "326bc162c61a927b3a58f2778f64ef7ba78533faaf789371e86bd7520670143a",
+          "bytes": 686
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/revision-4-cfc384fc.json",
+          "sha256": "326bc162c61a927b3a58f2778f64ef7ba78533faaf789371e86bd7520670143a",
+          "bytes": 686
+        }
+      ]
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/harness-interrupcion-real-20261108.md",
+    "sha256": "a0e3ef4f97f265171596958a4e8773db0b666f5c36b13e752aee254dcdf5f2e4",
+    "bytes": 7058,
+    "contenido": "# Encargo harness-interrupcion-real-20261108\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nInterrumpir y retomar el mismo juguete sin perder cambios ni duplicar commits\n\n## Entregable\n\nCheckpoint preservado, entrega autónoma única y revisión independiente\n\n## Criterio de aceptación\n\n1. Antes de la señal externa existen checkpoint.json staged y nota.txt untracked, cero commits desde la base y ningún push. 2. Tras interrupción externa del PID Codex identificado, se conservan exactamente bytes, índice y HEAD; no quedan hijos activos del intento antes de retomar. 3. Los eventos thread.started reales de los tres intentos ejecutores tienen el mismo session ID, y conservan worktree/Git privado/rama. 4. Al retomar se completan exactamente cuatro archivos: checkpoint.json, nota.txt, resultado.json y verificar.py; checkpoint/nota conservan sus bytes iniciales. Resultado exacto {\"valores\":[6,9,12],\"total\":27,\"checkpoint_sha256\":\"ab0a32d8c67d70450bd6d29dbae11f10aef561917223f49e4b289ce79d28f483\"}. Verificador stdlib sin escrituras, lee desde su carpeta, devuelve RETOMA_OK con rc0 y rechaza discrepancias. 5. La propia ejecutora crea y publica exactamente UN commit. Otra retoma posterior comprueba y sale sin nuevo commit/push ni cambios; HEAD, remoto y conteo siguen iguales. 6. Revisor real distinto, sólo lectura, coteja entrega y recibos de interrupción/retoma/idempotencia y emite bueno antes de aceptar.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sergio autorizó interrupción real de esta sesión de juguete y retoma por su mismo ID. Sólo ChatGPT incluido, Sol/low. Sin API, compras, instalaciones, sudo, producción, Docker, n8n, app-server, mensajes, otros servicios ni sesiones/subagentes.\n- Ruta exclusiva: 05-herramientas/2026-11-08-harness/piloto-interrupcion. Leer reglas pertinentes; no editar tarea/briefing canónicos ni archivos fuera de esta ruta. Git privado e identidad técnica ya preparados.\n- Flujo idempotente. Primero inspeccionar HEAD, estado y archivos; no sobrescribir archivos existentes ni descartar cambios. Si no existe señal /home/onia-codex-worker/operacion/controles/interrupcion-20261108/continuar.json: crear checkpoint.json con EXACTAMENTE estos bytes UTF-8 '{\"etapa\":\"antes-interrupcion\",\"valores\":[6,9,12]}\\n' y nota.txt con EXACTAMENTE 'Nota sin seguimiento: conservar estos bytes al retomar.\\n'. Usar git add sólo para checkpoint.json; nota.txt queda untracked. No crear resultado/verificador, commit o push todavía.\n- En el primer intento, después de crear y stagear checkpoint, ejecutar ÚNICAMENTE este lector en un comando de shell aparte. No encadenar creación de archivos, commit ni push después del bloque. El coordinador interrumpirá externamente tu proceso mientras espera:\npython3 - <<'PYWAIT'\nfrom pathlib import Path\nimport json,time\np=Path(\"/home/onia-codex-worker/operacion/controles/interrupcion-20261108/continuar.json\")\nlimit=time.monotonic()+300\nprint(\"INTERRUPCION_ESPERANDO\",flush=True)\nwhile not p.exists():\n    if time.monotonic()>limit: raise SystemExit(\"ESPERA_TIMEOUT\")\n    time.sleep(0.25)\nassert json.loads(p.read_text())[\"continuar\"] is True\nprint(\"LECTOR_TERMINADO\",flush=True)\nPYWAIT\nNo mates procesos vos. La espera es sólo lectura y termina al ver la señal; no tiene efectos posteriores.\n- Si la señal ya existe al retomar: conservar bytes e índice del checkpoint y la nota; no re-crear ni añadir líneas. Completar resultado.json con el objeto de aceptación y verificar.py que use stdlib, compruebe ambos archivos conservados, SHA256 del checkpoint y el resultado completo, sin escribir. Probar un caso correcto y discrepante sin modificar archivos de entrega (por ejemplo mocks en memoria).\n- Antes de publicar contar commits desde la base registrada por el harness (origin/master local del Git privado). Si no hay commit de entrega, git add de los cuatro paths explícitos, git commit -m \"test: interrupcion y retoma idempotente del harness\", git push origin HEAD:refs/heads/codex/ws-harness-interrupcion-real-20261108. Si ya hay un commit válido, NO crear otro: comprobar y sólo hacer push si aún faltara remoto. Prohibidos amend, rebase, force, --allow-empty y modificar configuración global.\n- Cuando HEAD y remoto ya coinciden y la entrega está completa, limitarse a ejecutar verificar.py, git status, git rev-parse HEAD, git rev-list --count origin/master..HEAD y git ls-remote origin refs/heads/codex/ws-harness-interrupcion-real-20261108; informar RETOMA_IDEMPOTENTE_OK y salir. No hacer git add/commit/push en ese caso. El coordinador hará una segunda retoma deliberada antes del cierre para verificarlo.\n- Informar hash y evidencia. Si falla un permiso o la evidencia de estado no coincide, terminar e informar sin bypass. El coordinador no publicará la entrega por vos; hará cierre, revisión e integración después.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/harness-interrupcion-real-20261108.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": {
+    "revisor": "interrupcion-revisor",
+    "criterio": "Entrega cotejada con los seis criterios y los recibos suministrados por stdin: checkpoint staged y nota untracked antes del corte; bytes, índice y HEAD preservados; cero hijos activos antes de retomar; tres intentos con el mismo SID; un único commit/push y retoma posterior sin mutaciones. Comprobé los cuatro archivos contra el commit, sus hashes y el verificador: RETOMA_OK y rechazo de seis discrepancias mediante mocks sin escrituras. Worktree limpio y un commit desde la base. La liberación de lectores residuales fue coordinada, no automática. No edité ni acepté la tarea.",
+    "fecha": "2026-11-08T20:22:14.251723+00:00"
+  },
+  "asignacion": null,
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "interrupcion-ejecutor",
+      "pid": 538534,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822591",
+      "supervisor_pid": 538529,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190822584",
+      "rama": "codex/ws-harness-interrupcion-real-20261108",
+      "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+      "estado": "fallida",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+      "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+      "rutas": [
+        "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+      ],
+      "dry_run": false,
+      "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.1.briefing.txt",
+      "inicio": "2026-11-08T20:16:50.440758+00:00",
+      "rc": -15,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-08T20:17:27.079549+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "ejecutor",
+      "responsable": "interrupcion-ejecutor",
+      "pid": 541644,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829008",
+      "supervisor_pid": 541639,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190829001",
+      "rama": "codex/ws-harness-interrupcion-real-20261108",
+      "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+      "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+      "log_offset": 80680,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+      "rutas": [
+        "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+      ],
+      "dry_run": false,
+      "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+      "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+      "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.2.briefing.txt",
+      "inicio": "2026-11-08T20:17:54.606399+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-08T20:18:45.228208+00:00"
+    },
+    {
+      "intento": 3,
+      "rol": "ejecutor",
+      "responsable": "interrupcion-ejecutor",
+      "pid": 545251,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837469",
+      "supervisor_pid": 545246,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190837462",
+      "rama": "codex/ws-harness-interrupcion-real-20261108",
+      "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+      "estado": "cerrada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.jsonl",
+      "log_rel": "logs/harness-interrupcion-real-20261108.jsonl",
+      "log_offset": 95113,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+      "rutas": [
+        "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+      ],
+      "dry_run": false,
+      "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+      "reanuda": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+      "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.3.briefing.txt",
+      "inicio": "2026-11-08T20:19:19.235007+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-08T20:19:32.492462+00:00"
+    },
+    {
+      "intento": 4,
+      "rol": "revisor",
+      "responsable": "interrupcion-revisor",
+      "pid": 548498,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190844461",
+      "supervisor_pid": 548496,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:190844451",
+      "rama": "(detached)",
+      "session_id": "01a1bcd1-d0de-70d1-8b21-de75ca48043c",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+      "log_rel": "logs/harness-interrupcion-real-20261108.revision-4.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108-revision-4",
+      "rutas": [
+        "05-herramientas/2026-11-08-harness/piloto-interrupcion"
+      ],
+      "dry_run": false,
+      "commit_base": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.briefing.txt",
+      "inicio": "2026-11-08T20:20:29.087194+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "entrega_sha256": "46ed0fa430acd9b4cd603b3f52185c922b4d508cbcacc6221ffea5118842b571",
+      "schema": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/harness-interrupcion-real-20261108.4.veredicto.json",
+      "fin": "2026-11-08T20:21:04.614709+00:00"
+    }
+  ],
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+    "criterio": "Entrega cotejada con los seis criterios y los recibos suministrados por stdin: checkpoint staged y nota untracked antes del corte; bytes, índice y HEAD preservados; cero hijos activos antes de retomar; tres intentos con el mismo SID; un único commit/push y retoma posterior sin mutaciones. Comprobé los cuatro archivos contra el commit, sus hashes y el verificador: RETOMA_OK y rechazo de seis discrepancias mediante mocks sin escrituras. Worktree limpio y un commit desde la base. La liberación de lectores residuales fue coordinada, no automática. No edité ni acepté la tarea.",
+    "revisor": "interrupcion-revisor",
+    "session_id": "01a1bcd1-d0de-70d1-8b21-de75ca48043c",
+    "entrega_sha256": "46ed0fa430acd9b4cd603b3f52185c922b4d508cbcacc6221ffea5118842b571",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/revision-4-cfc384fc.json",
+      "sha256": "326bc162c61a927b3a58f2778f64ef7ba78533faaf789371e86bd7520670143a",
+      "bytes": 686
+    }
+  },
+  "cierre": {
+    "commit": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+    "commit_base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+    "ramas_origin": [
+      "origin/codex/ws-harness-interrupcion-real-20261108"
+    ],
+    "fecha": "2026-11-08T20:20:27.458746+00:00",
+    "dry_run": false,
+    "intento": 3,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/cierre-r20-abf8f0cc.json",
+      "sha256": "1a9549de063ffefb96458aefed0bb6cee925b8d86ebb96f6985e61d1b163e393",
+      "bytes": 285
+    }
+  },
+  "evidencias_revision": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/harness-interrupcion-real-20261108/revision-4-cfc384fc.json",
+      "sha256": "326bc162c61a927b3a58f2778f64ef7ba78533faaf789371e86bd7520670143a",
+      "bytes": 686
+    }
+  ]
+}

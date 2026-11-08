@@ -1,0 +1,137 @@
+{
+  "fecha_utc": "2026-11-08T20:19:05.591451+00:00",
+  "fecha_caracas": "2026-11-08T16:19:05.591451-04:00",
+  "intento": 2,
+  "session_id": "01a1bcce-7a6a-7922-aa16-e17371c1dbf8",
+  "thread_started_reales": [
+    "01a1bcce-7a6a-7922-aa16-e17371c1dbf8"
+  ],
+  "log_offset": 80680,
+  "log_sha256": "27008923c402db3ca6334d6bc0aa877b092db001e236613af37faba9be286684",
+  "worktree": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+  "git_repo": "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+  "rama": "codex/ws-harness-interrupcion-real-20261108",
+  "base": "307f6d30ab71df58854cd8157bce5887e3803f90",
+  "git": {
+    "files_sha256": {
+      "checkpoint.json": "ab0a32d8c67d70450bd6d29dbae11f10aef561917223f49e4b289ce79d28f483",
+      "nota.txt": "a1531bf862635cd9f17a14640875f36424fe5de0ff5686ff6164f456692399c4"
+    },
+    "index_sha256": "bf33388b7a485cc84db711054600cfad602546eef24f54da0f527699f821fbc2",
+    "index_entries": "100644 0850570745c1949cfd58aa54883388921fe32625 0\t_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/checkpoint.json\n100644 df6244ad70945456da2c507a2c08480d2374648a 0\t_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/nota.txt\n100644 7f16c5d39a884190c01b0f461135ea3819562d6b 0\t_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/resultado.json\n100644 9e5d9f15e2c57b4d783ecf713f56ad6fc773ad41 0\t_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/verificar.py",
+    "status": "",
+    "head": "c77d03a0047e82d9b7f4ab627f4f18a628d44926",
+    "commit_count": 1,
+    "remote": "c77d03a0047e82d9b7f4ab627f4f18a628d44926\trefs/heads/codex/ws-harness-interrupcion-real-20261108"
+  },
+  "archivos": {
+    "resultado.json": "79a98b07e9e84475aa4b95879a2624bdc18718fa028773ad785ff0e6b66e52ed",
+    "verificar.py": "32f7b2c8f7f031ee9c9c7fd8b0191b8efa44246950c71cdceead79923608b5ca",
+    "checkpoint.json": "ab0a32d8c67d70450bd6d29dbae11f10aef561917223f49e4b289ce79d28f483",
+    "nota.txt": "a1531bf862635cd9f17a14640875f36424fe5de0ff5686ff6164f456692399c4"
+  },
+  "paths_diff": [
+    "_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/checkpoint.json",
+    "_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/nota.txt",
+    "_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/resultado.json",
+    "_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/verificar.py"
+  ],
+  "verificador": {
+    "rc": 0,
+    "stdout": "RETOMA_OK\n"
+  },
+  "comandos_fallidos": [],
+  "comandos_mutadores_git": 1,
+  "extractos_comandos": [
+    {
+      "id": "item_1",
+      "type": "command_execution",
+      "command": "/bin/bash -lc \"pwd; git branch --show-current; git rev-parse HEAD; git status --short; git rev-list --count origin/master..HEAD; python3 - <<'PY'\nfrom pathlib import Path\nimport hashlib,json,subprocess\np=Path('_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion')\nprint('SIGNAL',json.loads(Path('/home/onia-codex-worker/operacion/controles/interrupcion-20261108/continuar.json').read_text()))\nfor f in sorted(p.iterdir()): print(f.name,repr(f.read_bytes()),hashlib.sha256(f.read_bytes()).hexdigest())\ndata=subprocess.check_output(['git','show',':'+str(p/'checkpoint.json')])\nassert data==(p/'checkpoint.json').read_bytes()\nprint('INDICE_BYTES_OK')\nPY\"",
+      "aggregated_output": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108\ncodex/ws-harness-interrupcion-real-20261108\n307f6d30ab71df58854cd8157bce5887e3803f90\nA  _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/checkpoint.json\n?? _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/nota.txt\n0\nSIGNAL {'continuar': True, 'fecha_utc': '2026-11-08T20:17:27.145720+00:00', 'fecha_caracas': '2026-11-08T16:17:27.145720-04:00', 'motivo': 'SIGTERM del único ejecutor de juguete completado'}\ncheckpoint.json b'{\"etapa\":\"antes-interrupcion\",\"valores\":[6,9,12]}\\n' ab0a32d8c67d70450bd6d29dbae11f10aef561917223f49e4b289ce79d28f483\nnota.txt b'Nota sin seguimiento: conservar estos bytes al retomar.\\n' a1531bf862635cd9f17a14640875f36424fe5de0ff5686ff6164f456692399c4\nINDICE_BYTES_OK\n",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "id": "item_2",
+      "type": "command_execution",
+      "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\np=Path('_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion')\nfiles={\n'resultado.json':'{\\\"valores\\\":[6,9,12],\\\"total\\\":27,\\\"checkpoint_sha256\\\":\\\"ab0a32d8c67d70450bd6d29dbae11f10aef561917223f49e4b289ce79d28f483\\\"}\\\\n',\n'verificar.py':'''from pathlib import Path\nimport hashlib\nimport json\nimport sys\n\n\nCHECKPOINT = b'{\\\"etapa\\\":\\\"antes-interrupcion\\\",\\\"valores\\\":[6,9,12]}\\\\\\\\n'\nNOTA = b'Nota sin seguimiento: conservar estos bytes al retomar.\\\\\\\\n'\nSHA256 = \\\"ab0a32d8c67d70450bd6d29dbae11f10aef561917223f49e4b289ce79d28f483\\\"\nRESULTADO = {\\\"valores\\\": [6, 9, 12], \\\"total\\\": 27, \\\"checkpoint_sha256\\\": SHA256}\n\n\ndef objeto_unico(pares):\n    objeto = dict(pares)\n    if len(objeto) \"'!= len(pares):\n        raise ValueError(\"Claves duplicadas en resultado\")\n    return objeto\n\n\ndef verificar():\n    carpeta = Path(__file__).resolve().parent\n    checkpoint = (carpeta / \"checkpoint.json\").read_bytes()\n    if checkpoint != CHECKPOINT:\n        raise ValueError(\"Bytes del checkpoint discrepantes\")\n    if (carpeta / \"nota.txt\").read_bytes() != NOTA:\n        raise ValueError(\"Bytes de la nota discrepantes\")\n    if hashlib.sha256(checkpoint).hexdigest() != SHA256:\n        raise ValueError(\"SHA256 discrepante\")\n    resultado = json.loads(\n        (carpeta / \"resultado.json\").read_text(encoding=\"utf-8\"),\n        object_pairs_hook=objeto_unico,\n    )\n    if json.dumps(resultado, sort_keys=True) != json.dumps(RESULTADO, sort_keys=True):\n        raise ValueError(\"Resultado discrepante\")\n\n\ndef main():\n    try:\n        verificar()\n    except (OSError, ValueError) as error:\n        print(f\"RETOMA_ERROR {error}\", file=sys.stderr)\n        return 1\n    print(\"RETOMA_OK\")\n    return 0\n\n\nif __name__ == \"__main__\":\n    sys.exit(main())\n'\"'''}\nfor name,content in files.items():\n    with (p/name).open('x',encoding='utf-8',newline='\\\\n') as f: f.write(content)\nPY\npython3 _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/verificar.py\npython3 - <<'PY'\nfrom pathlib import Path\nfrom unittest.mock import patch\nimport runpy,json\np=Path('_investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion')\nn=runpy.run_path(str(p/'verificar.py'))\nassert n['main']()==0\noriginal=Path.read_bytes\nfor filename in ['checkpoint.json','nota.txt']:\n    def altered(path, filename=filename):\n        return b'alterado' if path.name==filename else original(path)\n    with patch.object(Path,'read_bytes',altered): assert n['main']()==1\nfor result in [dict(n['RESULTADO'],total=28),dict(n['RESULTADO'],total=27.0),dict(n['RESULTADO'],extra=1)]:\n    with patch.object(Path,'read_text',return_value=json.dumps(result)): assert n['main']()==1\nprint('CASO_CORRECTO_Y_5_DISCREPANCIAS_OK')\nPY\ngit diff --check; git rev-list --count origin/master..HEAD; git status --short\"",
+      "aggregated_output": "RETOMA_OK\nRETOMA_ERROR Bytes del checkpoint discrepantes\nRETOMA_ERROR Bytes de la nota discrepantes\nRETOMA_ERROR Resultado discrepante\nRETOMA_ERROR Resultado discrepante\nRETOMA_ERROR Resultado discrepante\nRETOMA_OK\nCASO_CORRECTO_Y_5_DISCREPANCIAS_OK\n0\nA  _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/checkpoint.json\n?? _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/nota.txt\n?? _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/resultado.json\n?? _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/verificar.py\n",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "id": "item_4",
+      "type": "command_execution",
+      "command": "/bin/bash -lc 'git add -- _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/checkpoint.json _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/nota.txt _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/resultado.json _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/verificar.py && git diff --cached --check && git commit -m \"test: interrupcion y retoma idempotente del harness\" && git push origin HEAD:refs/heads/codex/ws-harness-interrupcion-real-20261108'",
+      "aggregated_output": "[codex/ws-harness-interrupcion-real-20261108 c77d03a] test: interrupcion y retoma idempotente del harness\n 4 files changed, 51 insertions(+)\n create mode 100644 _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/checkpoint.json\n create mode 100644 _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/nota.txt\n create mode 100644 _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/resultado.json\n create mode 100644 _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/verificar.py\nremote: \nremote: Create a pull request for 'codex/ws-harness-interrupcion-real-20261108' on GitHub by visiting:        \nremote:      https://github.com/oninteligenciaartificial/onia/pull/new/codex/ws-harness-interrupcion-real-20261108        \nremote: \nTo github.com:oninteligenciaartificial/onia.git\n * [new branch]      HEAD -> codex/ws-harness-interrupcion-real-20261108\n",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "id": "item_5",
+      "type": "command_execution",
+      "command": "/bin/bash -lc 'python3 _investigacion-onia/base-operativa/05-herramientas/2026-11-08-harness/piloto-interrupcion/verificar.py; git status --short; git rev-parse HEAD; git rev-list --count origin/master..HEAD; git ls-remote origin refs/heads/codex/ws-harness-interrupcion-real-20261108'",
+      "aggregated_output": "RETOMA_OK\nc77d03a0047e82d9b7f4ab627f4f18a628d44926\n1\nc77d03a0047e82d9b7f4ab627f4f18a628d44926\trefs/heads/codex/ws-harness-interrupcion-real-20261108\n",
+      "exit_code": 0,
+      "status": "completed"
+    }
+  ],
+  "runtime_observado": [
+    {
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "workspace-write",
+        "writable_roots": [
+          "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108"
+        ],
+        "network_access": true,
+        "exclude_tmpdir_env_var": false,
+        "exclude_slash_tmp": false
+      }
+    },
+    {
+      "cwd": "/home/onia-codex-worker/repos/onia-ws-harness-interrupcion-real-20261108",
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "workspace-write",
+        "writable_roots": [
+          "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git",
+          "/home/onia-codex-worker/operacion/git/harness-interrupcion-real-20261108.git/worktrees/onia-ws-harness-interrupcion-real-20261108"
+        ],
+        "network_access": true,
+        "exclude_tmpdir_env_var": false,
+        "exclude_slash_tmp": false
+      }
+    }
+  ],
+  "cuota_ultima": {
+    "fecha_utc": "2026-11-08T20:18:44.751Z",
+    "rate_limits": {
+      "limit_id": "codex",
+      "limit_name": null,
+      "primary": {
+        "used_percent": 15.0,
+        "window_minutes": 10080,
+        "resets_at": 1794624432
+      },
+      "secondary": null,
+      "credits": {
+        "has_credits": false,
+        "unlimited": false,
+        "balance": "0"
+      },
+      "individual_limit": null,
+      "spend_control_reached": null,
+      "plan_type": "prolite",
+      "rate_limit_reached_type": null
+    }
+  },
+  "estado_sesion": "finalizada",
+  "rc": 0
+}

@@ -1,0 +1,59 @@
+
+## cerrar-revisar-interrupcion.py
+from interrupcion_util import *
+
+row=readrow();assert len(row['sesiones'])==3 and all(not hs.alive(s) for s in row['sesiones'])
+segments=[]
+for i,s in enumerate(row['sesiones']):
+ data=Path(s['log']).read_bytes();start=s['log_offset'];end=row['sesiones'][i+1]['log_offset'] if i<2 else len(data)
+ events=[]
+ for line in data[start:end].splitlines():
+  try:events.append(json.loads(line))
+  except ValueError:pass
+ ids=[e['thread_id'] for e in events if e.get('type')=='thread.started']
+ assert ids==[row['sesiones'][0]['session_id']]
+ segments.append({'intento':s['intento'],'start':start,'end':end,'segment_sha256':hashlib.sha256(data[start:end]).hexdigest(),'thread_started_reales':ids,'rc':s['rc'],'inicio_utc':s['inicio'],'fin_utc':s.get('fin'),'comando_real':json.loads(Path('/tmp/harness-interrupcion-'+('launch' if i==0 else 'resume'+str(i))+'.json').read_text())['comando']})
+save('tres-intentos-mismo-id.json',{**stamp(),'segmentos':segments,'metodo_senal':'os.pidfd_open + signal.pidfd_send_signal(SIGTERM)','limite_comprobado':'El coordinador tuvo que liberar tres descendientes residuales de un lector sin escrituras; el harness no implementa recuperación automática de huérfanos. Se comprobó cero hijos anteriores vivos antes de reanudar.'})
+files=[p.relative_to(BASE).as_posix() for p in sorted(EVIDENCE.iterdir()) if p.is_file()]
+row=trabajo.update(BASE,IDENT,'en_curso','Interrupción SIGTERM real; bytes, índice y HEAD conservados; dos retomas con el mismo SID; exactamente un commit/push propio.',
+ '125 tests aprobados, 1 omisión Windows. Eventos thread.started de tres intentos iguales; commit c77d03a0047e82d9b7f4ab627f4f18a628d44926 remoto y count1. Segunda retoma sin git add/commit/push. Tres hijos lectores residuales drenados por coordinador antes de retomar; no es limpieza automática del harness.',
+ 'Cerrar y obtener veredicto de revisor distinto.',files,revision=row['revision'],verification='correcta',actor='interrupcion-ejecutor')
+closed=hs.close(BASE,IDENT,OP,row['revision'],'interrupcion-ejecutor',row['resultado'],row['comprobacion'])
+row=readrow();assert row['estado']=='para_revision'
+out=hs.launch(BASE,IDENT,OP,row['revision'],'interrupcion-ejecutor',approved=True,reviewer='interrupcion-revisor',model='gpt-6.1-sol',effort='low',auth_chatgpt=True)
+Path('/tmp/harness-interrupcion-review-launch.json').write_text(json.dumps(out,ensure_ascii=False))
+print(json.dumps({'cerrada':True,'estado':readrow()['estado'],'review_intento':readrow()['sesiones'][-1]['intento'],'commit':row['cierre']['commit']},ensure_ascii=False))
+
+## aceptar-interrupcion.py
+from interrupcion_util import *
+row=readrow();s=row['sesiones'][-1]
+assert s['rol']=='revisor' and s['rc']==0 and not hs.alive(s)
+assert s['session_id'] not in {a['session_id'] for a in row['sesiones'] if a['rol']=='ejecutor'}
+verdict=json.loads(Path(s['veredicto_archivo']).read_text());assert verdict['veredicto']=='bueno'
+events=[]
+with open(s['log'],'rb') as f:
+ f.seek(s['log_offset'])
+ for line in f:
+  try:events.append(json.loads(line))
+  except ValueError:pass
+assert [e['thread_id'] for e in events if e.get('type')=='thread.started']==[s['session_id']]
+commands=[e['item'] for e in events if e.get('type')=='item.completed' and e.get('item',{}).get('type')=='command_execution']
+assert all(c['exit_code']==0 for c in commands)
+runtime=[];quota=None
+for p in Path('/home/onia-codex-worker/.codex/sessions/2026/11/08').glob('*'+s['session_id']+'.jsonl'):
+ for line in p.read_text().splitlines():
+  try:e=json.loads(line)
+  except ValueError:continue
+  payload=e.get('payload',{})
+  if e.get('type')=='turn_context':runtime.append({k:payload.get(k) for k in ('cwd','model','effort','approval_policy','sandbox_policy')})
+  if e.get('type')=='event_msg' and payload.get('rate_limits'):quota={'fecha_utc':e['timestamp'],'rate_limits':payload['rate_limits']}
+assert runtime and all(r['sandbox_policy']['type']=='read-only' for r in runtime)
+hs.collect_review(BASE,IDENT,OP,row['revision']);row=readrow()
+trabajo.accept(BASE,IDENT,row['revision'],'interrupcion-revisor',verdict['criterio']);row=readrow()
+trabajo.assign(BASE,IDENT,row['revision'],actor='interrupcion-ejecutor',release=True);row=readrow()
+assert row['estado']=='aceptado';trabajo.verify(BASE,row)
+status=hs.status(BASE,OP)
+assert all(not hs.alive(a) for a in row['sesiones'])
+assert all(not Path(a['worktree']).exists() for a in row['sesiones'])
+save('revision-aceptacion.json',{**stamp(),'estado_tarea':row['estado'],'revision':row['revision'],'revisor_session_id':s['session_id'],'ejecutor_session_id':row['sesiones'][0]['session_id'],'veredicto':verdict,'aceptacion':row['aceptacion'],'asignacion':row['asignacion'],'runtime_observado':runtime,'cuota_ultima':quota,'comandos_revisor':[c for c in commands if 'cat ' not in c['command']],'worktrees_retirados':True,'sesiones_vivas_piloto':0,'comando_revision':json.loads(Path('/tmp/harness-interrupcion-review-launch.json').read_text())['comando']})
+print(json.dumps({'estado':row['estado'],'revision':row['revision'],'revisor_session_id':s['session_id'],'veredicto':verdict['veredicto'],'worktrees_retirados':True},ensure_ascii=False))
