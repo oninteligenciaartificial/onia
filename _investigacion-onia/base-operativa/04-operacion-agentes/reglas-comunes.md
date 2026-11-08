@@ -44,3 +44,7 @@ Las tareas compartibles usan un único registro canónico versionado y evidencia
 Una entrega lista para revisión no equivale a aceptación. Cotejar evidencia y criterio antes de aceptar; registrar resultado, comprobación, límites y próximo paso. Preservar las evidencias anteriores y rechazar una revisión obsoleta, un briefing alterado o evidencia corrupta. Git, commits y publicación se realizan dentro del encargo autorizado; ningún CLI sincroniza por sí solo las máquinas.
 
 Conservar correcciones específicas útiles en su fuente única y probarlas. Mejorar instrucciones no entrena los pesos del modelo ni garantiza conducta futura. [ESTADO](../00-MAPA/ESTADO.md) resume lo comprobado; el procedimiento y los límites de recuperación están en [CONTINUIDAD](../05-herramientas/cloud/CONTINUIDAD.md).
+
+## Conectores de Codex en el VPS
+
+Regla fija de Sergio, 8 de noviembre de 2026. Codex en el VPS no tiene conectores (MCP): no puede entrar a X, n8n, Notion ni Drive. Toda tarea que requiera esos servicios pasa por Boss o por otro agente con conectores, no por una sesión directa de Codex.
