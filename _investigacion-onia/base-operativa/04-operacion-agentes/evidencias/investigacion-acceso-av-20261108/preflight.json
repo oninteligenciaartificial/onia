@@ -1,0 +1,43 @@
+{
+  "fecha_utc": "2026-11-08T22:03:29.089693+00:00",
+  "autorizacion": "Sergio pidió una sesión para investigar alternativas open source, verificar instalación existente y conectar explícitamente Playwright a Codex; probar navegación/lectura/captura al haber cupo. Correo y perfil persistente sólo propuesta.",
+  "instalacion": "/home/onia-codex-worker/operacion/browser-piloto-20261108",
+  "reporte_sha256": "59bf13138886f73c69c8cf0a13704c1467479e208999af50c6f24e970aacf490",
+  "package_sha256": "381b3b1e38506b816c616d4192e07b67cfd6d8043e279ccc21dc2c24ce1ea6b6",
+  "versiones": {
+    "@playwright/mcp": "0.0.84",
+    "playwright": "1.65.0-alpha-2026-10-30",
+    "playwright-core": "1.65.0-alpha-2026-10-30"
+  },
+  "existente": [
+    "faster-whisper small CPU/int8 en ~/asr/venv",
+    "Chromium1252 local y Playwright MCP0.0.84",
+    "harness con Git privado y máximo3 sesiones principales"
+  ],
+  "necesita": [
+    "inyección MCP explícita pese a --ignore-user-config",
+    "catálogo real y navegación/DOM/captura",
+    "comparar obtención de medio/subtítulos con ASR",
+    "comprobar herencia en un único hijo nativo dentro del cupo"
+  ],
+  "faltantes": [
+    "prueba real del navegador bajo sandbox",
+    "recomendación con evidencias y límites",
+    "revisión independiente"
+  ],
+  "fuentes": [
+    "https://learn.chatgpt.com/docs/extend/mcp?surface=cli",
+    "https://github.com/microsoft/playwright-mcp",
+    "https://github.com/SYSTRAN/faster-whisper",
+    "https://github.com/yt-dlp/yt-dlp"
+  ],
+  "hipotesis": "Overrides -c sobreviven ignore-user-config y anuncian MCP en padre/hijo; sandbox Chromium puede arrancar sin privilegios. Navegador no garantiza extracción YouTube ni acceso autenticado.",
+  "control": "example.com: texto Example Domain y screenshot no vacía; landing pública Erik: URL/título/DOM/captura o bloqueo explícito. Fallo de sandbox NO autoriza deshabilitarlo.",
+  "cuota": "Última lectura común26% semanal usado, saldo extra0; refrescar antes de lanzar.",
+  "plan": "Lanzar mediante harness existente cuando haya <3 vivas; PATH acotado al supervisor con wrapper auditado, sin editar harness ni PATH global. Sol6.1high,1hijo; revisor separado ultra sin MCP.",
+  "cuentas": {
+    "correo": "propuesta, no creado; nombre elegido por Sergio",
+    "perfil_persistente": "propuesta, no creado",
+    "login_youtube": "no implementado"
+  }
+}

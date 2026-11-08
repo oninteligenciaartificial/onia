@@ -1,0 +1,319 @@
+{
+  "schema": 2,
+  "id": "investigacion-acceso-av-20261108",
+  "revision": 7,
+  "compartible": true,
+  "objetivo": "Acceso audiovisual open source y piloto Playwright MCP instalado",
+  "estado": "en_curso",
+  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+  "resultado": "Instalación existente verificada; piloto autorizado, en cola por máximo3 sesiones.",
+  "comprobacion": "REPORTE y package leídos; versiones comprobadas; MCP global vacío. Pruebas aún no ejecutadas.",
+  "verificacion": "pendiente",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
+      "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
+      "bytes": 2390
+    }
+  ],
+  "actualizado": "2026-11-08T22:04:24.173848+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-08T22:03:29.112024+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/investigacion-acceso-av-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-08T22:03:29.187052+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/investigacion-acceso-av-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "acceso-av-ejecutor",
+        "rutas": [
+          "05-herramientas/acceso-av/20261108"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T22:03:29.187038+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-08T22:03:29.208878+00:00",
+      "estado": "preparado",
+      "resultado": "Instalación existente verificada; piloto autorizado, en cola por máximo3 sesiones.",
+      "comprobacion": "REPORTE y package leídos; versiones comprobadas; MCP global vacío. Pruebas aún no ejecutadas.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
+          "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
+          "bytes": 2390
+        }
+      ],
+      "proximo_paso": "Lanzar al liberarse un cupo, con wrapper MCP por proceso.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "acceso-av-ejecutor",
+        "rutas": [
+          "05-herramientas/acceso-av/20261108"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T22:03:29.187038+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-08T22:04:22.957968+00:00",
+      "estado": "en_curso",
+      "resultado": "Instalación existente verificada; piloto autorizado, en cola por máximo3 sesiones.",
+      "comprobacion": "REPORTE y package leídos; versiones comprobadas; MCP global vacío. Pruebas aún no ejecutadas.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
+          "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
+          "bytes": 2390
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "acceso-av-ejecutor",
+        "rutas": [
+          "05-herramientas/acceso-av/20261108"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T22:03:29.187038+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T22:04:22.937080+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-08T22:04:23.025761+00:00",
+      "estado": "en_curso",
+      "resultado": "Instalación existente verificada; piloto autorizado, en cola por máximo3 sesiones.",
+      "comprobacion": "REPORTE y package leídos; versiones comprobadas; MCP global vacío. Pruebas aún no ejecutadas.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
+          "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
+          "bytes": 2390
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "acceso-av-ejecutor",
+        "rutas": [
+          "05-herramientas/acceso-av/20261108"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T22:03:29.187038+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 847271,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467835",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T22:04:22.937080+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-08T22:04:23.100267+00:00",
+      "estado": "en_curso",
+      "resultado": "Instalación existente verificada; piloto autorizado, en cola por máximo3 sesiones.",
+      "comprobacion": "REPORTE y package leídos; versiones comprobadas; MCP global vacío. Pruebas aún no ejecutadas.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
+          "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
+          "bytes": 2390
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "acceso-av-ejecutor",
+        "rutas": [
+          "05-herramientas/acceso-av/20261108"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T22:03:29.187038+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": 847276,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467842",
+          "supervisor_pid": 847271,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467835",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T22:04:22.937080+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/investigacion-acceso-av-20261108.md",
+    "sha256": "5eaec0871d274786b3c989c9cfc8f1120066652a4f6cf43649c1c9067bcb4a10",
+    "bytes": 7073,
+    "contenido": "# Encargo investigacion-acceso-av-20261108\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nAcceso audiovisual open source y piloto Playwright MCP instalado\n\n## Entregable\n\nRecomendación y prueba reproducible en 05-herramientas/acceso-av/20261108\n\n## Criterio de aceptación\n\nInvestigación OSS con fuentes primarias y recomendación accionable; instalación existente inventariada sin reinstalar; inyección explícita documentada y prueba real MCP de catálogo/navegación/DOM/captura en example.com y landing pública o fallo reproducible con causa y salida concreta, sin deshabilitar sandbox. Herencia comprobada o límite documentado con hijo distinto. Cada afirmación sustentada; cuenta/perfil siguen propuestas; Git autónomo sólo carpeta asignada; revisor independiente.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- AUTORIZADO: investigar herramientas open source para recuperar y analizar audiovisual público; comprobar instalación existente y conexión Playwright MCP a Codex, sin reinstalar. Leer ~/operacion/browser-piloto-20261108/REPORTE.md y package.json. No modificar esa instalación ni config global, servicios, app-server, Docker, n8n, producción o ~/repos/onia sucio. No borrar. No compras/API paga ni consumir vidIQ. Login ChatGPT cuota incluida.\n- LEER AGENTS, reglas/boss-memoria/tarea, desarrollar-y-verificar y apoyo research. Leer 05-herramientas/asr-local/README.md y scripts existentes. Diferenciar acceso a medio/captions, transcripción y análisis visual. Inventario primero, luego comparación primaria de yt-dlp, youtube-transcript-api, faster-whisper, whisper.cpp y Playwright MCP. No instalar candidatos ni pesos nuevos. Recomendar por evidencia/costeCPU/compatibilidad/licencia, con URLs oficiales.\n- CONEXIÓN: coordinador inyecta mcp_servers.playwright por -c usando codex-con-playwright.py ya versionado. Conserva --ignore-user-config y sandbox del harness. MCP stdio local, headless, isolated, --sandbox, sin perfil persistente ni cookies. Sólo browser_navigate, browser_snapshot, browser_take_screenshot, browser_close. No intentar ampliar catálogo, no browser_run_code/evaluate/click ni ejecutar nuevo codex exec. No ejecutar navegador paralelo por shell para fingir una prueba MCP. Usar herramientas MCP nativas anunciadas; si no aparecen, registrar catálogo/límite, no simularlas.\n- PRUEBA ACOTADA: catálogo y llamada real browser_navigate a https://example.com, browser_snapshot confirma Example Domain y browser_take_screenshot con nombre example.png. Luego https://cursos.eriktaveras.com/c/hermes-basico/ para URL/título/DOM/captura erik.png. Sólo GET público, no formularios/login/compras/cookies. Si 403/429/captcha/auth requerido, registrar y detener esa ruta, sin evasión. Si falla Chromium sandbox, NO --no-sandbox, sudo ni cambiar kernel: guardar error y salida concreta. Capturas sólo públicas propias de esta prueba. Cerrar navegador con browser_close, no matar procesos ajenos.\n- UN hijo nativo nuevo Sol6.1high sin nietos. Después de cerrar tu navegador, dale tarea leer fuentes OSS, escribir sólo ALTERNATIVAS.md y comprobar que anuncia esas4 herramientas MCP. Si padre funcionó, hijo navega sólo example.com y cierra; guardar evidencia de herencia y SID en su informe. Padre único escritor README.md/EVIDENCIA.md/PRUEBA.json/capturas. Hijo no Git. No compartir navegador concurrentemente. Cerrar hijo al terminar. Si padre no tuvo MCP no inventar herencia: reportar límite.\n- ASR: inspección de versiones sin secretos y evidencia de pruebas ya hechas por grupoC; puede ejecutar una prueba local corta con audio sintético o fragmento público ya autorizado y disponible, small offline, máximo2hilos1worker. No descargar modelos, no transcribir largos; no tratar ASR como visión/escucha integral. No se necesita cuenta para el control público. Correo onia.investigacion y perfil persistente permanecen PROPUESTA; no crear cuentas ni credenciales, no probar disponibilidad de Gmail.\n- ENTREGA sólo 05-herramientas/acceso-av/20261108: README con recomendación concreta y comandos reproducibles; ALTERNATIVAS por hijo; EVIDENCIA con contexto/modelo/catálogo/errores/causa/evidencia/prevención y mapa hijo; PRUEBA.json con cada acción, resultado, fecha, URL, archivos/hash y limitaciones. Distinguir comprobado/propuesto/pendiente. No logs crudos/secretos/medios completos. Commit/push autónomos rama asignada; no master. Revisor distinto read-only después. El éxito de la investigación puede ser un diagnóstico negativo reproducible, pero no afirmar navegador conectado si no llamó sus herramientas. No modificar wrapper sin documentar necesidad y comprobar alcance.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n- [05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/investigacion-acceso-av-20261108.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "acceso-av-ejecutor",
+    "rutas": [
+      "05-herramientas/acceso-av/20261108"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-08T22:03:29.187038+00:00"
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "acceso-av-ejecutor",
+      "pid": 847276,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467842",
+      "supervisor_pid": 847271,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467835",
+      "rama": "codex/ws-investigacion-acceso-av-20261108",
+      "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+      "estado": "ejecutando",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+      "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+      "rutas": [
+        "05-herramientas/acceso-av/20261108"
+      ],
+      "dry_run": false,
+      "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.1.briefing.txt",
+      "inicio": "2026-11-08T22:04:22.937080+00:00",
+      "rc": null,
+      "ultimo_evento": "thread.started",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 1,
+      "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+      "perfil_permisos": "harness-git"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": null
+}

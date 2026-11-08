@@ -58,3 +58,5 @@ Lanzar solo después del sí. Boss revisa el VPS por su cuenta, sin esperar que 
 - Al cierre explicar cómo manejar áreas, tareas, sesiones y revisiones para una empresa de una persona. Documentar el modelo en el repo no activa automatizaciones ni un servicio permanente.
 
 - Durante el estudio, Sergio ofreció iniciar YouTube y consultó cuenta secundaria. Recomendación: cuenta Google exclusiva de OnIA y perfil separado, sin enviar claves/códigos/cookies por chat. Todavía no se creó ni conectó ninguna cuenta. VPS sin navegador interactivo detectado; login en PC/panel no da acceso automático al CLI. LOGIN_REQUIRED no prueba que autenticar resuelva extracción. Mantener fuentes públicas y preparar conexión comprobable antes de pedir login.
+
+- Sergio aclara: toda ejecución de análisis y navegador debe correr en el VPS, nada en la PC. “Local” en ASR/Playwright significa instalado en el VPS; usar esa denominación explícita. GitHub conserva fuente central compartible. Correo y perfil persistente permanecen propuestas, no implementados.

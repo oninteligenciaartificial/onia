@@ -1,0 +1,22 @@
+{
+  "rc": 0,
+  "config_valida": true,
+  "servidor_iniciado": false,
+  "navegador_iniciado": false,
+  "overrides": [
+    "-c",
+    "mcp_servers.playwright.command=\"/usr/bin/node\"",
+    "-c",
+    "mcp_servers.playwright.args=[\"/home/onia-codex-worker/operacion/browser-piloto-20261108/node_modules/@playwright/mcp/cli.js\", \"--headless\", \"--isolated\", \"--sandbox\", \"--executable-path\", \"/home/onia-codex-worker/operacion/browser-piloto-20261108/browsers/chromium-1252/chrome-linux64/chrome\", \"--output-dir\", \"/tmp/onia-browser-config-check/_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/capturas\"]",
+    "-c",
+    "mcp_servers.playwright.enabled=true",
+    "-c",
+    "mcp_servers.playwright.required=true",
+    "-c",
+    "mcp_servers.playwright.startup_timeout_sec=30",
+    "-c",
+    "mcp_servers.playwright.tool_timeout_sec=60",
+    "-c",
+    "mcp_servers.playwright.enabled_tools=[\"browser_navigate\", \"browser_snapshot\", \"browser_take_screenshot\", \"browser_close\"]"
+  ]
+}
