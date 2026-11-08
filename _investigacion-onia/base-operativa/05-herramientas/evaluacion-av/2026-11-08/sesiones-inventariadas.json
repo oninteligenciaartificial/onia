@@ -1,0 +1,301 @@
+{
+  "fecha_utc": "2026-11-08T22:26:10.742865+00:00",
+  "principales": [
+    {
+      "id_tarea": "cerebros-a-20261108",
+      "estado_tarea": "en_curso",
+      "revision": 10,
+      "session_id": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+      "estado_intento": "finalizada",
+      "rc": 0,
+      "modelo_solicitado": "gpt-6.1-sol",
+      "esfuerzo_solicitado": "high",
+      "subagentes_maximos": 1,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-a-20261108",
+      "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+      "modelo_observado": "gpt-6.1-sol",
+      "esfuerzo_observado": "high"
+    },
+    {
+      "id_tarea": "cerebros-b-20261108",
+      "estado_tarea": "en_curso",
+      "revision": 13,
+      "session_id": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+      "estado_intento": "ejecutando",
+      "rc": null,
+      "modelo_solicitado": "gpt-6.1-sol",
+      "esfuerzo_solicitado": "high",
+      "subagentes_maximos": 1,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108",
+      "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+      "modelo_observado": "gpt-6.1-sol",
+      "esfuerzo_observado": "high"
+    },
+    {
+      "id_tarea": "cerebros-c-20261108",
+      "estado_tarea": "en_curso",
+      "revision": 10,
+      "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+      "estado_intento": "finalizada",
+      "rc": 0,
+      "modelo_solicitado": "gpt-6.1-sol",
+      "esfuerzo_solicitado": "high",
+      "subagentes_maximos": 1,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+      "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+      "modelo_observado": "gpt-6.1-sol",
+      "esfuerzo_observado": "high"
+    },
+    {
+      "id_tarea": "investigacion-acceso-av-20261108",
+      "estado_tarea": "en_curso",
+      "revision": 8,
+      "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+      "estado_intento": "finalizada",
+      "rc": 0,
+      "modelo_solicitado": "gpt-6.1-sol",
+      "esfuerzo_solicitado": "high",
+      "subagentes_maximos": 1,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+      "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+      "modelo_observado": "gpt-6.1-sol",
+      "esfuerzo_observado": "high"
+    }
+  ],
+  "hijos_observados": [
+    {
+      "session_id": "01a1bd05-0e36-7ed0-9fdc-1c868983e764",
+      "parent_thread_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+      "agent_path": "/root/gonzalo_teba",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd2a-a440-7593-bf81-869adcf3ea6c",
+      "parent_thread_id": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+      "agent_path": "/root/justin_welsh",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-a-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd20-ebb9-7630-878a-52a0e12ec917",
+      "parent_thread_id": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+      "agent_path": "/root/iman_gadzhi",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-a-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd05-1632-71e1-9841-574101a8cb7d",
+      "parent_thread_id": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+      "agent_path": "/root/erik_taveras",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd23-451f-7761-8973-56406f920d71",
+      "parent_thread_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+      "agent_path": "/root/jeff_nippard",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd32-16a5-7e60-b1f6-ed94623c5330",
+      "parent_thread_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+      "agent_path": "/root/alternativas",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd17-0ed7-7e43-9927-28e4a7e8f894",
+      "parent_thread_id": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+      "agent_path": "/root/victor_heras",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-a-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd0d-1f28-7523-b1ce-442fff7626ed",
+      "parent_thread_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+      "agent_path": "/root/beltran_briones",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd0a-ca4a-78e1-8d8b-48148f8a91de",
+      "parent_thread_id": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+      "agent_path": "/root/enrique_rocha",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd13-546d-7a51-9fba-7fdd970a4da1",
+      "parent_thread_id": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+      "agent_path": "/root/pedro_buerbaum",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-a-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd15-b308-7712-b58d-865364584e3d",
+      "parent_thread_id": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+      "agent_path": "/root/san_munoz",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd32-9faa-7293-8f76-db33e61ea579",
+      "parent_thread_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+      "agent_path": "/root/voltra",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd0f-2637-7170-8171-02c045614492",
+      "parent_thread_id": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+      "agent_path": "/root/ali_abdaal",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd1c-0849-7a71-a4ce-58f718a8c048",
+      "parent_thread_id": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+      "agent_path": "/root/cormac_hayden",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd2a-8d37-7eb2-a814-a3a2ff1ff254",
+      "parent_thread_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+      "agent_path": "/root/alvaro_risoglio",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd23-d91b-7432-9797-857ab47ba14c",
+      "parent_thread_id": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+      "agent_path": "/root/bastian_xu",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd1a-61f3-7ad1-b702-4a3c0dafbe0f",
+      "parent_thread_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+      "agent_path": "/root/nick_bare",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd2e-63d5-7222-8651-18b171fdd482",
+      "parent_thread_id": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+      "agent_path": "/root/alex_carrera",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-a-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd14-6ed7-7ed2-89e5-07d9e47186f8",
+      "parent_thread_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+      "agent_path": "/root/toto_artuso",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    },
+    {
+      "session_id": "01a1bd04-fe19-7311-9f31-0d61ee98dea8",
+      "parent_thread_id": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+      "agent_path": "/root/alex_hormozi",
+      "contexto_observado": {
+        "cwd": "/home/onia-codex-worker/repos/onia-ws-cerebros-a-20261108",
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "approval_policy": "never"
+      }
+    }
+  ],
+  "limite": "Sólo metadatos de sesiones identificadas; no todo su catálogo. Herramientas MCP y ASR efectivas se sustentan además en sus entregas/logs. No se copian prompts ni credenciales.",
+  "evidencia_mcp": {
+    "padre": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+    "hijo": "01a1bd32-16a5-7e60-b1f6-ed94623c5330",
+    "herramientas_anunciadas": [
+      "browser_navigate",
+      "browser_snapshot",
+      "browser_take_screenshot",
+      "browser_close"
+    ],
+    "primera_llamada": "Rechazo por aprobación con policy never",
+    "navegacion_acreditada": false
+  },
+  "historia_panns": "99-archivo/2026-11-06-verificacion-video-ig/PANNs-RESULTADO.md; ensayo Cloud histórico, no instalación presente acreditada"
+}

@@ -1,0 +1,116 @@
+{
+  "fecha_utc": "2026-11-08T22:16:55.307757+00:00",
+  "cpu_logicas": 4,
+  "meminfo": {
+    "MemTotal": "16376008 kB",
+    "MemAvailable": "9689620 kB"
+  },
+  "gpu": {
+    "dev_nvidia": [],
+    "nvidia_smi": null,
+    "limite": "No GPU confirmada; sin consultas a Docker ni servicios"
+  },
+  "entornos": {
+    "/usr/bin/python3": {
+      "faster-whisper": null,
+      "ctranslate2": null,
+      "av": null,
+      "yt-dlp": null,
+      "onnxruntime": null,
+      "numpy": {
+        "version": "1.26.4",
+        "license_expression": null,
+        "license_header": [
+          "Copyright (c) 2005-2023, NumPy Developers."
+        ]
+      },
+      "scenedetect": null,
+      "whisperx": null,
+      "paddleocr": null,
+      "paddlepaddle": null,
+      "paddlex": null,
+      "librosa": null,
+      "torch": null,
+      "torchaudio": null,
+      "transformers": null,
+      "pyannote.audio": null,
+      "opencv-python": null,
+      "opencv-python-headless": null,
+      "panns-inference": null
+    },
+    "/home/onia-codex-worker/asr/venv/bin/python": {
+      "faster-whisper": {
+        "version": "1.2.1",
+        "license_expression": null,
+        "license_header": [
+          "MIT"
+        ]
+      },
+      "ctranslate2": {
+        "version": "4.8.5",
+        "license_expression": null,
+        "license_header": [
+          "MIT"
+        ]
+      },
+      "av": {
+        "version": "18.1.0",
+        "license_expression": "BSD-3-Clause",
+        "license_header": []
+      },
+      "yt-dlp": {
+        "version": "2026.10.26",
+        "license_expression": "Unlicense",
+        "license_header": []
+      },
+      "onnxruntime": {
+        "version": "1.31.1",
+        "license_expression": null,
+        "license_header": [
+          "MIT License"
+        ]
+      },
+      "numpy": {
+        "version": "2.5.4",
+        "license_expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+        "license_header": []
+      },
+      "scenedetect": null,
+      "whisperx": null,
+      "paddleocr": null,
+      "paddlepaddle": null,
+      "paddlex": null,
+      "librosa": null,
+      "torch": null,
+      "torchaudio": null,
+      "transformers": null,
+      "pyannote.audio": null,
+      "opencv-python": null,
+      "opencv-python-headless": null,
+      "panns-inference": null
+    }
+  },
+  "pesos_asr": [
+    {
+      "path": "/home/onia-codex-worker/asr/modelos/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120/model.bin",
+      "bytes": 483546902,
+      "sha256_observado": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+    }
+  ],
+  "ffmpeg": [
+    "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+    "built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)",
+    "configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared"
+  ],
+  "filtros_relevantes": [
+    ".S. astats            A->A       Show time domain statistics about audio frames.",
+    "... ebur128           A->N       EBU R128 scanner.",
+    "... silencedetect     A->A       Detect silence.",
+    "... fps               V->V       Force constant framerate.",
+    "... scdet             V->V       Detect video scene change",
+    "... select            V->N       Select video frames to pass in output.",
+    "... showinfo          V->V       Show textual information for each video frame.",
+    ".S. showspectrum      A->V       Convert input audio to a spectrum video output."
+  ],
+  "limite": "Metadatos y comandos informativos; no inferencias ni nuevas pruebas multimedia."
+}

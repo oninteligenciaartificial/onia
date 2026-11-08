@@ -1,0 +1,116 @@
+{
+  "consultado_utc": "2026-11-08T22:16:54.609184+00:00",
+  "modelos": [
+    {
+      "model": "openbmb/MiniCPM-o-4_5",
+      "url": "https://huggingface.co/api/models/openbmb/MiniCPM-o-4_5?blobs=true",
+      "sha": "eb4141de24550a3a1a4082f718be58f46b761728",
+      "license": "apache-2.0",
+      "gated": false,
+      "tags": [
+        "license:apache-2.0"
+      ],
+      "files": []
+    },
+    {
+      "model": "openbmb/MiniCPM-o-4_5-gguf",
+      "url": "https://huggingface.co/api/models/openbmb/MiniCPM-o-4_5-gguf?blobs=true",
+      "sha": "db25077c33951fe163b42986fba0132e279872a2",
+      "license": "apache-2.0",
+      "gated": false,
+      "tags": [
+        "license:apache-2.0"
+      ],
+      "files": [
+        {
+          "path": "MiniCPM-o-4_5-Q4_K_M.gguf",
+          "size": 5026714400,
+          "sha256": "1237a97ee081b8abebc47aa7dad565701e8f5f904cdc92f6723ac4281bbc0932"
+        },
+        {
+          "path": "audio/MiniCPM-o-4_5-audio-F16.gguf",
+          "size": 660167904,
+          "sha256": "d5b188ac7feaf98e17175c3f9bd14bf269301bfd187439fdaa3e3a494fc32ef7"
+        },
+        {
+          "path": "vision/MiniCPM-o-4_5-vision-F16.gguf",
+          "size": 1095113184,
+          "sha256": "1453678cc4e4fe18de241952962e234f265cb8dda780773526103ab8ba82f421"
+        }
+      ]
+    },
+    {
+      "model": "PaddlePaddle/PP-OCRv5_mobile_det",
+      "url": "https://huggingface.co/api/models/PaddlePaddle/PP-OCRv5_mobile_det?blobs=true",
+      "sha": "0d63e78e2b680928f6b1747d76a08db6e645efb7",
+      "license": "apache-2.0",
+      "gated": false,
+      "tags": [
+        "license:apache-2.0"
+      ],
+      "files": [
+        {
+          "path": "inference.pdiparams",
+          "size": 4692937,
+          "sha256": "afa1820cb16c1fd0dad589d0f8b389139061c1ef6d68019685fd07be997dda5b"
+        }
+      ]
+    },
+    {
+      "model": "PaddlePaddle/latin_PP-OCRv5_mobile_rec",
+      "url": "https://huggingface.co/api/models/PaddlePaddle/latin_PP-OCRv5_mobile_rec?blobs=true",
+      "sha": "ab2cd5cc5fa6309be2e5acdfe66eca2c2c127d57",
+      "license": "apache-2.0",
+      "gated": false,
+      "tags": [
+        "license:apache-2.0"
+      ],
+      "files": [
+        {
+          "path": "inference.pdiparams",
+          "size": 7965915,
+          "sha256": "53cdc8b481a7394bb108f96d0fb3432b0a8f392e22c7d18f06dbb2d42b8b25f9"
+        }
+      ]
+    },
+    {
+      "model": "facebook/wav2vec2-base-10k-voxpopuli-es",
+      "url": "https://huggingface.co/api/models/facebook/wav2vec2-base-10k-voxpopuli-es?blobs=true",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "model": "pyannote/speaker-diarization-community-1",
+      "url": "https://huggingface.co/api/models/pyannote/speaker-diarization-community-1?blobs=true",
+      "sha": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee",
+      "license": "cc-by-4.0",
+      "gated": "auto",
+      "tags": [
+        "license:cc-by-4.0"
+      ],
+      "files": [
+        {
+          "path": "config.yaml",
+          "size": 444,
+          "sha256": null
+        }
+      ]
+    },
+    {
+      "model": "Systran/faster-whisper-small",
+      "url": "https://huggingface.co/api/models/Systran/faster-whisper-small?blobs=true",
+      "sha": "536b0662742c02347bc0e980a01041f333bce120",
+      "license": "mit",
+      "gated": false,
+      "tags": [
+        "license:mit"
+      ],
+      "files": [
+        {
+          "path": "model.bin",
+          "size": 483546902,
+          "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+        }
+      ]
+    }
+  ]
+}

@@ -1,22 +1,27 @@
 {
   "schema": 2,
   "id": "investigacion-acceso-av-20261108",
-  "revision": 7,
+  "revision": 9,
   "compartible": true,
   "objetivo": "Acceso audiovisual open source y piloto Playwright MCP instalado",
-  "estado": "en_curso",
-  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
-  "resultado": "Instalación existente verificada; piloto autorizado, en cola por máximo3 sesiones.",
-  "comprobacion": "REPORTE y package leídos; versiones comprobadas; MCP global vacío. Pruebas aún no ejecutadas.",
+  "estado": "en_espera",
+  "proximo_paso": "Retomar mismo SID con wrapper corregido/versionado y probar lectura/captura, sólo después del sí; luego revisor distinto.",
+  "resultado": "Diagnóstico OSS publicado; MCP anunciado pero navegación bloqueada por aprobación. Commit remoto c2e13506544b44d645c9379781ff4354e4bbaa65.",
+  "comprobacion": "Hash de rama origin cotejado; revisión y aceptación pendientes. Sergio pide no lanzar nada nuevo y STOP tras evaluación audiovisual. No se interrumpió ejecutora; finalizó rc0.",
   "verificacion": "pendiente",
   "evidencias": [
     {
       "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
       "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
       "bytes": 2390
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/espera-sergio-20261108.json",
+      "sha256": "704bb5a9efaf38e29bb499f1879a34562a7ac5ef0511959b817c270f0187b500",
+      "bytes": 661
     }
   ],
-  "actualizado": "2026-11-08T22:04:24.173848+00:00",
+  "actualizado": "2026-11-08T22:29:46.755077+00:00",
   "historial": [
     {
       "revision": 1,
@@ -261,6 +266,133 @@
       ],
       "cierre": null,
       "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-08T22:04:24.173848+00:00",
+      "estado": "en_curso",
+      "resultado": "Instalación existente verificada; piloto autorizado, en cola por máximo3 sesiones.",
+      "comprobacion": "REPORTE y package leídos; versiones comprobadas; MCP global vacío. Pruebas aún no ejecutadas.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
+          "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
+          "bytes": 2390
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "acceso-av-ejecutor",
+        "rutas": [
+          "05-herramientas/acceso-av/20261108"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T22:03:29.187038+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": 847276,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467842",
+          "supervisor_pid": 847271,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467835",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T22:04:22.937080+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-08T22:11:58.328869+00:00",
+      "estado": "en_curso",
+      "resultado": "Instalación existente verificada; piloto autorizado, en cola por máximo3 sesiones.",
+      "comprobacion": "REPORTE y package leídos; versiones comprobadas; MCP global vacío. Pruebas aún no ejecutadas.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
+          "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
+          "bytes": 2390
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "acceso-av-ejecutor",
+        "rutas": [
+          "05-herramientas/acceso-av/20261108"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T22:03:29.187038+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": 847276,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467842",
+          "supervisor_pid": 847271,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467835",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T22:04:22.937080+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:11:58.319395+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -289,7 +421,7 @@
       "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467835",
       "rama": "codex/ws-investigacion-acceso-av-20261108",
       "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
-      "estado": "ejecutando",
+      "estado": "finalizada",
       "operacion": "/home/onia-codex-worker/operacion",
       "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
       "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
@@ -303,15 +435,16 @@
       "reanuda": null,
       "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.1.briefing.txt",
       "inicio": "2026-11-08T22:04:22.937080+00:00",
-      "rc": null,
-      "ultimo_evento": "thread.started",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
       "modelo": "gpt-6.1-sol",
       "esfuerzo": "high",
       "auth_chatgpt": true,
       "subagentes_maximos": 1,
       "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
       "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
-      "perfil_permisos": "harness-git"
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-08T22:11:58.319395+00:00"
     }
   ],
   "revision_independiente": null,
