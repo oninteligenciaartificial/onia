@@ -18,7 +18,7 @@ Todos quedan **estado: parcial**: una síntesis documental utilizable no acredit
 | [Alex Hormozi](alex-hormozi.md) | Tres clases ASR | Condiciones actuales, cierre y sonido/cortes |
 | [Enrique Rocha](enrique-rocha.md) | Captions descritos; dos ASR nuevos bloqueados | Citas literales con tiempo, clases y sonido/cortes |
 | [Iman Gadzhi](iman-gadzhi.md) | Captions descritos; crudo ausente | 2–3 transcripciones, precio final y sonido/cortes |
-| [Justin Welsh](justin-welsh.md) | Corpus escrito; recuperación nueva en registro ASR | 2–3 videos, citas habladas y edición propia |
+| [Justin Welsh](justin-welsh.md) | Corpus escrito + ASR nuevo de entrevista (15:36) | 1–2 muestras adicionales, edición propia y cierre |
 | [Gonzalo Teba](gonzalo-teba.md) | ASR reel de estructura | Clase/oferta, cierre y sonido/cortes |
 | [Beltrán Briones](beltran-briones.md) | Captions descritos; crudo ausente | Citas con minuto, precios y sonido/cortes |
 | [Toto Artuso](toto-artuso.md) | ASR vlog y LinkedIn | Oferta/precio, cierre y sonido/cortes |
