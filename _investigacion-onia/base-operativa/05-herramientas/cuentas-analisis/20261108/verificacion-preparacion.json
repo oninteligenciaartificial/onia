@@ -1,0 +1,108 @@
+{
+  "fecha_caracas": "2026-11-08T18:50:06.712599-04:00",
+  "diagnostico": {
+    "fecha_utc": "2026-11-08T22:46:22Z",
+    "executable_sha256": "e44893f0eb826ba2e9c0e44e182f910e8d8473ce00b9eb7ae7a652512f02cd78",
+    "apparmor_enabled": "Y",
+    "userns_restriction": "1",
+    "launcher_label": "unconfined",
+    "binary_mode": "0o755",
+    "binary_uid": 1004,
+    "observed_labels": [
+      "unconfined"
+    ],
+    "loaded_profile_list": "PermissionError",
+    "exit_code": -6,
+    "error_first_line": "No usable sandbox!",
+    "default_chrome_profile_path": "/opt/google/chrome/chrome",
+    "proposal_already_exists": false
+  },
+  "autorizacion": "Preparar acceso de cuentas secundarias. Instrucción posterior: proponer corrección AppArmor exacta y esperar aprobación antes de aplicarla; no ingresar cuentas ni interrumpir referentes.",
+  "estado": "en_espera_aprobacion_administrativa",
+  "perfil_cargado": false,
+  "navegacion_exitosa": false,
+  "cuenta_creada": false,
+  "pruebas": [
+    {
+      "nombre": "compilacion_sin_carga_AppArmor",
+      "resultado": "correcto",
+      "comando": "apparmor_parser --skip-kernel-load --skip-cache -I /etc/apparmor.d onia-chromium-1252.apparmor"
+    },
+    {
+      "nombre": "sintaxis_shell",
+      "resultado": "correcto",
+      "comando": "bash -n aplicar-apparmor-admin.sh"
+    },
+    {
+      "nombre": "sintaxis_python",
+      "resultado": "correcto",
+      "comando": "python3 -m py_compile browser-vps.py"
+    },
+    {
+      "nombre": "visor_sintetico",
+      "resultado": "Xvfb, xmessage, x11vnc y websockify iniciados; puertos respondieron. Se detuvieron por PID/identidad; ss sin listeners5908/6088.",
+      "limite": "No prueba RFB autenticado, control humano ni navegador."
+    },
+    {
+      "nombre": "chromium_sandbox",
+      "resultado": "fallo: No usable sandbox; dos arranques conservados, segundo para observar etiqueta efectiva."
+    },
+    {
+      "nombre": "autenticacion_RFB_y_tunel",
+      "resultado": "pendiente"
+    },
+    {
+      "nombre": "teclado_raton_y_pagina_publica",
+      "resultado": "pendiente"
+    },
+    {
+      "nombre": "MCP_navegacion",
+      "resultado": "pendiente; fallo previo por aprobación conservado en tarea AV"
+    }
+  ],
+  "cuota_ultima_observada": {
+    "fecha_caracas": "2026-11-08T18:40:38-04:00",
+    "semanal_usado_porcentaje": 33,
+    "saldo_adicional": 0,
+    "alcance": "cuenta compartida; no coste exclusivo de este encargo"
+  },
+  "paquetes_extraidos": [
+    {
+      "archivo": "libvncclient1_0.9.14+dfsg-1ubuntu0.2_amd64.deb",
+      "sha256": "87a569c0c4764edd7571eaf4bdb4977dd2b88a1d99ef1cd22625ee6db6dee3ad"
+    },
+    {
+      "archivo": "libvncserver1_0.9.14+dfsg-1ubuntu0.2_amd64.deb",
+      "sha256": "33706df1bd90624069ab187a0979fca7151beb623f2cd5911f2645b0305c08a0"
+    },
+    {
+      "archivo": "x11vnc_0.9.16-10_amd64.deb",
+      "sha256": "d06a915a3cf2cb590c7b8dbc331a1c061d2bbd33d01923c3db3f5cda29a08e81"
+    }
+  ],
+  "repos_runtime": [
+    {
+      "nombre": "noVNC",
+      "commit": "63107bd06d9e1f6136ff21aeda8cd62cbf0d433e"
+    },
+    {
+      "nombre": "websockify",
+      "commit": "e81894751365afc19fe64fc9d0e5c6fc52655c36"
+    }
+  ],
+  "fuentes": [
+    "https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md",
+    "https://documentation.ubuntu.com/security/security-features/privilege-restriction/apparmor/",
+    "https://github.com/novnc/noVNC",
+    "https://github.com/novnc/websockify",
+    "https://github.com/LibVNC/x11vnc",
+    "https://support.google.com/mail/answer/56256?hl=es"
+  ],
+  "archivos": {
+    "APROBACION-APPARMOR.md": "00f8b01dba738b6dc04a401d86d5c68c5fc0c06667074ad430a924c641ff0da0",
+    "onia-chromium-1252.apparmor": "272c545f4ea37f124187a8674cf6d5bcb58bf4b23466499c76958b6184ec87f2",
+    "aplicar-apparmor-admin.sh": "0f3c01ed55d3abfc68d0e177978eb471c251c2109f518bcf16ad4752d56bcaa4",
+    "browser-vps.py": "b7bc7b387dee23b466bd71139ba66412cd44dfbae86accffe2f50814431e6928"
+  },
+  "privacidad": "No incluye claves del visor, Xauthority, cookies, contenido de perfiles o logs privados; esos archivos permanecen fuera de Git."
+}

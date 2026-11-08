@@ -69,3 +69,7 @@ python3 "$H" retomar ID
 ```
 
 `retomar` consulta; `reanudar` ejecuta la continuación y requiere revisión esperada/actor/sí aplicable. Los comandos completos y límites están en [ORQUESTACION](ORQUESTACION.md); el contrato de registros, en [CONTINUIDAD](../05-herramientas/cloud/CONTINUIDAD.md). Las sesiones CLI del VPS no son chats nuevos de la barra lateral. El reporte al usuario debe dar IDs, estado real, enlaces a entregas y commit publicado.
+
+## Auditoría y extensión propuesta · 8/11, cuentas secundarias
+
+[Modelos efectivos, hijos, selección por tarea y pausas](MODELOS-Y-PAUSAS-20261108.md). Los perfiles declarativos existen; `en_espera` no detiene procesos y el inventario automático de modelos por hijo todavía requiere extensión. No se activa un scheduler.

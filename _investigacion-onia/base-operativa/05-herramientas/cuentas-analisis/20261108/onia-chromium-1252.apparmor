@@ -1,0 +1,8 @@
+# PROPUESTA. No se carga por browser-vps.py. Requiere autorización administrativa.
+# Ruta exacta del Chromium ya instalado. No usa comodines ni modifica sysctl.
+abi <abi/4.0>,
+include <tunables/global>
+
+profile onia-chromium-1252 /home/onia-codex-worker/operacion/browser-piloto-20261108/browsers/chromium-1252/chrome-linux64/chrome flags=(unconfined) {
+  userns,
+}

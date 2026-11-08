@@ -67,3 +67,7 @@ La investigación de fuentes públicas puede avanzar con navegación sin sesión
 ## Decisión posterior de Sergio
 
 Después de esta preparación, Sergio pidió terminar la evaluación audiovisual y hacer STOP. Alta de cuenta, prueba de acceso gráfico, navegador persistente e instalaciones del visor quedan para el siguiente encargo explícito. No hay enlace de acceso operativo que entregar todavía.
+
+## Actualización posterior: preparación autorizada y bloqueo AppArmor
+
+Sergio autorizó preparar el navegador y luego pidió la corrección mínima de AppArmor para revisión previa. [Propuesta, comandos, impacto, reversión y pruebas pendientes](APROBACION-APPARMOR.md). La etiqueta efectiva del Chromium instalado es `unconfined`; falla con `No usable sandbox`. Visor preparado y prueba sintética cerrada; todavía no hay navegador operativo ni cuenta creada. No se cargó ningún perfil del sistema.
