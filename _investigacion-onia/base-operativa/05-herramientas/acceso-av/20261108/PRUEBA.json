@@ -1,0 +1,474 @@
+{
+  "schema_version": 1,
+  "task_id": "investigacion-acceso-av-20261108",
+  "created_at_utc": "2026-11-08T22:10:09Z",
+  "status": "diagnostico_negativo_reproducible; entrega_para_revision",
+  "canonical_task_record": false,
+  "context": {
+    "cwd": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+    "branch": "codex/ws-investigacion-acceso-av-20261108",
+    "initial_head": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+    "initial_status": "clean",
+    "parent_thread_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+    "parent_session_id_env": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+    "codex_version_env": "0.167.0",
+    "parent_model_requested": null,
+    "parent_model_observed": null,
+    "parent_reasoning_effort_requested": null,
+    "parent_reasoning_effort_observed": null,
+    "sandbox": "workspace-write; perfil acotado del harness; sin cambios",
+    "approval_policy": "never"
+  },
+  "catalog": {
+    "method": "ALL_TOOLS filtered by /^mcp__playwright__/",
+    "tools": [
+      "mcp__playwright__browser_close",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_take_screenshot"
+    ],
+    "expected_count": 4,
+    "announced": true,
+    "live_connection_demonstrated": false
+  },
+  "installation_inventory": {
+    "at_utc": "2026-11-08T22:06:16.017635+00:00",
+    "python": "3.12.3",
+    "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+    "node_packages": {
+      "@playwright/mcp": "0.0.84",
+      "playwright": "1.65.0-alpha-2026-10-30",
+      "playwright-core": "1.65.0-alpha-2026-10-30"
+    },
+    "asr_packages": {
+      "faster-whisper": "1.2.1",
+      "yt-dlp": "2026.10.26",
+      "av": "18.1.0",
+      "ctranslate2": "4.8.5",
+      "youtube-transcript-api": null
+    },
+    "command_presence": {
+      "node": "/usr/bin/node",
+      "ffmpeg": "/usr/bin/ffmpeg",
+      "whisper-cli": null,
+      "whisper.cpp": null
+    },
+    "small_snapshots": [
+      "/home/onia-codex-worker/asr/modelos/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120"
+    ],
+    "files_sha256": {
+      "/home/onia-codex-worker/operacion/browser-piloto-20261108/REPORTE.md": "59bf13138886f73c69c8cf0a13704c1467479e208999af50c6f24e970aacf490",
+      "/home/onia-codex-worker/operacion/browser-piloto-20261108/package.json": "381b3b1e38506b816c616d4192e07b67cfd6d8043e279ccc21dc2c24ce1ea6b6",
+      "/home/onia-codex-worker/operacion/browser-piloto-20261108/package-lock.json": "4a5fa7a35a3520abaed387aa2093b535d2763023d733a35485bf032fbd205a94",
+      "/home/onia-codex-worker/asr/transcribir.py": "6e9240030d1a7cbea690519c5534fb4156e1ca33a3e49596e539694188f22b97",
+      "/home/onia-codex-worker/asr/transcribir.sh": "8d382893b8747fc86d040e2b9367da278961e6ffc71c2f3ff35c1f386b428b0c",
+      "/home/onia-codex-worker/operacion/browser-piloto-20261108/node_modules/@playwright/mcp/package.json": "d060ffefae5e5e4ecff63f3b75d462ae352a24791d42055308955429f6d896d8",
+      "/home/onia-codex-worker/operacion/browser-piloto-20261108/node_modules/playwright/package.json": "fe3c6792e66cbf7277d6da6d744afe78db8cfa12138129b6eaa3a83cc1d2da37",
+      "/home/onia-codex-worker/operacion/browser-piloto-20261108/node_modules/playwright-core/package.json": "29b0cb546167aafa439b2a62e4af8caad9f61fce428d34a43b144ce07d69070f"
+    }
+  },
+  "wrapper": {
+    "path": "/home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/codex-con-playwright.py",
+    "sha256": "d9dcea17da14a582f0bdb28cb4fa6990300696c1d57dfbdfdcf535c7a038e095",
+    "present_in_initial_worktree": false,
+    "read_only": true,
+    "executed": false,
+    "modified": false,
+    "versioned_claim": "briefing; commit del wrapper no comprobado en Git ajeno",
+    "observed_source_config": {
+      "command": "/usr/bin/node",
+      "args": [
+        "/home/onia-codex-worker/operacion/browser-piloto-20261108/node_modules/@playwright/mcp/cli.js",
+        "--headless",
+        "--isolated",
+        "--sandbox",
+        "--executable-path",
+        "/home/onia-codex-worker/operacion/browser-piloto-20261108/browsers/chromium-1252/chrome-linux64/chrome",
+        "--output-dir",
+        "<cwd>/_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/capturas"
+      ],
+      "enabled": true,
+      "required": true,
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 60,
+      "default_tools_approval_mode": "approve",
+      "enabled_tools": [
+        "browser_navigate",
+        "browser_snapshot",
+        "browser_take_screenshot",
+        "browser_close"
+      ]
+    },
+    "effective_parent_argv_verified": false,
+    "preserves_harness_arguments_by_source": true,
+    "global_config_changed": false
+  },
+  "actions": [
+    {
+      "id": "A01",
+      "action": "Comprobar cwd/rama/HEAD/cambios y leer instrucciones/directora/apoyo",
+      "at_utc": "2026-11-08",
+      "time_precision": "day",
+      "url": null,
+      "result": "Rama asignada y limpio; fuentes leídas; briefing stdin, no se escribió registro canónico",
+      "files": []
+    },
+    {
+      "id": "A02",
+      "action": "Inventariar instalación existente antes de ensayo",
+      "at_utc": "2026-11-08",
+      "time_precision": "day",
+      "url": null,
+      "result": "REPORTE/package.json, scripts/lock ASR y metadata; sin reinstalar",
+      "files": [
+        {
+          "path": "/home/onia-codex-worker/operacion/browser-piloto-20261108/REPORTE.md",
+          "sha256": "59bf13138886f73c69c8cf0a13704c1467479e208999af50c6f24e970aacf490"
+        },
+        {
+          "path": "/home/onia-codex-worker/operacion/browser-piloto-20261108/package.json",
+          "sha256": "381b3b1e38506b816c616d4192e07b67cfd6d8043e279ccc21dc2c24ce1ea6b6"
+        },
+        {
+          "path": "/home/onia-codex-worker/operacion/browser-piloto-20261108/package-lock.json",
+          "sha256": "4a5fa7a35a3520abaed387aa2093b535d2763023d733a35485bf032fbd205a94"
+        },
+        {
+          "path": "/home/onia-codex-worker/asr/transcribir.py",
+          "sha256": "6e9240030d1a7cbea690519c5534fb4156e1ca33a3e49596e539694188f22b97"
+        },
+        {
+          "path": "/home/onia-codex-worker/asr/transcribir.sh",
+          "sha256": "8d382893b8747fc86d040e2b9367da278961e6ffc71c2f3ff35c1f386b428b0c"
+        },
+        {
+          "path": "/home/onia-codex-worker/operacion/browser-piloto-20261108/node_modules/@playwright/mcp/package.json",
+          "sha256": "d060ffefae5e5e4ecff63f3b75d462ae352a24791d42055308955429f6d896d8"
+        },
+        {
+          "path": "/home/onia-codex-worker/operacion/browser-piloto-20261108/node_modules/playwright/package.json",
+          "sha256": "fe3c6792e66cbf7277d6da6d744afe78db8cfa12138129b6eaa3a83cc1d2da37"
+        },
+        {
+          "path": "/home/onia-codex-worker/operacion/browser-piloto-20261108/node_modules/playwright-core/package.json",
+          "sha256": "29b0cb546167aafa439b2a62e4af8caad9f61fce428d34a43b144ce07d69070f"
+        }
+      ]
+    },
+    {
+      "id": "A03",
+      "action": "Consultar fuentes primarias OSS y política MCP oficial",
+      "at_utc": "2026-11-08",
+      "time_precision": "day",
+      "url": null,
+      "result": "Referencias citadas en README, EVIDENCIA y ALTERNATIVAS; no prueba MCP de navegación",
+      "files": [],
+      "urls": [
+        "https://github.com/microsoft/playwright-mcp",
+        "https://github.com/yt-dlp/yt-dlp",
+        "https://github.com/SYSTRAN/faster-whisper",
+        "https://github.com/jdepoix/youtube-transcript-api",
+        "https://github.com/ggml-org/whisper.cpp",
+        "https://learn.chatgpt.com/docs/extend/mcp?surface=cli",
+        "https://learn.chatgpt.com/docs/config-file/config-reference"
+      ]
+    },
+    {
+      "id": "A04",
+      "action": "Enumerar catálogo MCP",
+      "at_utc": "2026-11-08",
+      "time_precision": "day",
+      "url": null,
+      "result": "Cuatro herramientas anunciadas; no acredita conexión ejecutable",
+      "files": [],
+      "announced_tools": [
+        "mcp__playwright__browser_close",
+        "mcp__playwright__browser_navigate",
+        "mcp__playwright__browser_snapshot",
+        "mcp__playwright__browser_take_screenshot"
+      ]
+    },
+    {
+      "id": "A05",
+      "action": "mcp__playwright__browser_navigate",
+      "at_utc": "2026-11-08T22:05:08Z",
+      "time_precision": "clock_read_immediately_after_call",
+      "url": "https://example.com",
+      "result": "rejected_before_page_result",
+      "files": [],
+      "arguments": {
+        "url": "https://example.com"
+      },
+      "isError": true,
+      "error": "MCP tool call requires approval, but approval policy is never",
+      "http_status": null,
+      "final_url": null,
+      "title": null
+    },
+    {
+      "id": "A06",
+      "action": "mcp__playwright__browser_snapshot para Example Domain",
+      "at_utc": "2026-11-08",
+      "time_precision": "day",
+      "url": "https://example.com",
+      "result": "not_attempted_dependency_blocked",
+      "files": [],
+      "reason": "No página navegada; no sustituir control por about:blank",
+      "dom": null
+    },
+    {
+      "id": "A07",
+      "action": "mcp__playwright__browser_take_screenshot example.png",
+      "at_utc": "2026-11-08",
+      "time_precision": "day",
+      "url": "https://example.com",
+      "result": "not_attempted_dependency_blocked",
+      "files": [
+        {
+          "path": "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/capturas/example.png",
+          "exists": false,
+          "sha256": null
+        }
+      ]
+    },
+    {
+      "id": "A08",
+      "action": "Navegación/DOM/captura landing Erik",
+      "at_utc": "2026-11-08",
+      "time_precision": "day",
+      "url": "https://cursos.eriktaveras.com/c/hermes-basico/",
+      "result": "not_attempted_common_approval_blocker",
+      "files": [
+        {
+          "path": "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/capturas/erik.png",
+          "exists": false,
+          "sha256": null
+        }
+      ],
+      "http_status": null,
+      "final_url": null,
+      "title": null,
+      "dom": null,
+      "reason": "No repetir misma barrera sin cambio de condición; ningún diagnóstico HTTP/Chromium inferido"
+    },
+    {
+      "id": "A09",
+      "action": "mcp__playwright__browser_close",
+      "at_utc": "2026-11-08T22:05:00Z",
+      "time_precision": "minute_only",
+      "url": null,
+      "result": "rejected",
+      "files": [],
+      "arguments": {},
+      "isError": true,
+      "error": "MCP tool call requires approval, but approval policy is never",
+      "closure_confirmed": false,
+      "browser_launch_demonstrated": false
+    },
+    {
+      "id": "A10",
+      "action": "Crear único hijo nativo distinto después de intento de cierre",
+      "at_utc": "2026-11-08",
+      "time_precision": "day",
+      "url": null,
+      "result": "Investigación y catálogo, sin navegación por fallo del padre",
+      "files": [],
+      "child_task_name": "/root/alternativas",
+      "child_thread_id": "01a1bd32-16a5-7e60-b1f6-ed94623c5330",
+      "file": "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/ALTERNATIVAS.md"
+    },
+    {
+      "id": "A11",
+      "action": "Inspeccionar wrapper coordinador de sólo lectura",
+      "at_utc": "2026-11-08",
+      "time_precision": "day",
+      "url": null,
+      "result": "Localizado fuera del worktree; fuente declara approve, pero no se verificó aplicación efectiva",
+      "files": [],
+      "effective_parent_argv_verified": false,
+      "reason_for_missing_argv": "Inspección filtrada de ancestros sólo alcanzó procesos del propio comando dentro del sandbox"
+    },
+    {
+      "id": "A12",
+      "action": "pip check / Node version / comparación script instalado",
+      "at_utc": "2026-11-08",
+      "time_precision": "day",
+      "url": null,
+      "result": "rc0; no dependencias rotas; Node20.20.2; transcribir.py instalado idéntico a versionado",
+      "files": [],
+      "warning": "pip deshabilitó caché home no escribible; no se alteró configuración"
+    },
+    {
+      "id": "A13",
+      "action": "Control ASR sintético offline pequeño",
+      "at_utc": "2026-11-08T22:07:05.564343+00:00",
+      "time_precision": "microseconds",
+      "url": null,
+      "result": "passed_load_and_vad_negative_control",
+      "files": [],
+      "command": "/home/onia-codex-worker/asr/venv/bin/python - <<'PY'\nimport os,json,time,resource\nfrom pathlib import Path\nfrom datetime import datetime,timezone\nos.environ['HF_HUB_OFFLINE']='1'\nos.environ['TRANSFORMERS_OFFLINE']='1'\nos.environ['OMP_NUM_THREADS']='2'\nos.environ['OPENBLAS_NUM_THREADS']='2'\nimport numpy as np\nfrom faster_whisper import WhisperModel\npaths=sorted(Path('/home/onia-codex-worker/asr/modelos/models--Systran--faster-whisper-small/snapshots').glob('*'))\nassert len(paths)==1,'Se necesita exactamente un snapshot local; no descargar.'\nstarted=datetime.now(timezone.utc).isoformat()\nt=time.monotonic()\nmodel=WhisperModel(str(paths[0]),device='cpu',compute_type='int8',cpu_threads=2,num_workers=1,local_files_only=True)\nsegments,info=model.transcribe(np.zeros(32000,dtype=np.float32),language='es',beam_size=5,vad_filter=True)\nrows=[{'start':s.start,'end':s.end,'text':s.text} for s in segments]\nprint(json.dumps({'started_at_utc':started,'ended_at_utc':datetime.now(timezone.utc).isoformat(),'control':'2s silencio sintético, float32,16kHz, VAD activo','model_path':str(paths[0]),'device':'cpu','compute_type':'int8','cpu_threads':2,'num_workers':1,'offline':True,'segments':rows,'duration':info.duration,'duration_after_vad':info.duration_after_vad,'elapsed_seconds':round(time.monotonic()-t,3),'max_rss_kib':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,'limitation':'Control negativo sólo; no mide exactitud en voz ni música/visión.'},ensure_ascii=False,indent=2))\nPY",
+      "measurement": {
+        "started_at_utc": "2026-11-08T22:07:05.564343+00:00",
+        "ended_at_utc": "2026-11-08T22:07:06.910144+00:00",
+        "control": "2s silencio sintético, float32,16kHz, VAD activo",
+        "model_path": "/home/onia-codex-worker/asr/modelos/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+        "device": "cpu",
+        "compute_type": "int8",
+        "cpu_threads": 2,
+        "num_workers": 1,
+        "offline": true,
+        "segments": [],
+        "duration": 2,
+        "duration_after_vad": 0,
+        "elapsed_seconds": 1.346,
+        "max_rss_kib": 620456,
+        "warning": "ONNX Runtime no pudo persistir telemetry device ID; usó identificador en memoria",
+        "limitation": "Control negativo de carga/VAD sólo; no mide exactitud en voz ni música/visión. No se ejercita el decodificador de voz con VAD que elimina todo el audio."
+      },
+      "new_media_downloaded": false,
+      "new_weights_downloaded": false
+    },
+    {
+      "id": "A14",
+      "action": "ldd de Chromium y headless shell existentes",
+      "at_utc": "2026-11-08T22:07:51.545485+00:00",
+      "time_precision": "microseconds",
+      "url": null,
+      "result": "Ambos presentes y rc0; missing_libraries=[]",
+      "files": [],
+      "browser_build": 1252,
+      "browser_execution": false
+    },
+    {
+      "id": "A15",
+      "action": "Finalizar hijo y corrección puntual de enlace por mismo hijo",
+      "at_utc": "2026-11-08",
+      "time_precision": "day",
+      "url": null,
+      "result": "completed; interrupt_agent confirmó completed tras última respuesta final",
+      "files": [],
+      "new_children": 1,
+      "grandchildren": 0,
+      "child_git": false,
+      "native_context_destroyed": false,
+      "limitation": "No existe herramienta de destrucción definitiva de contexto; finalizado sin trabajo activo"
+    },
+    {
+      "id": "A16",
+      "action": "Preparar revisión independiente",
+      "at_utc": "2026-11-08",
+      "time_precision": "day",
+      "url": null,
+      "result": "pending_coordinator_after_close",
+      "files": [],
+      "reviewer_is_child_researcher": false,
+      "new_codex_exec_launched": false
+    }
+  ],
+  "asr_prior_evidence": {
+    "classification": "documental_anterior; no inferencia nueva de esta sesión",
+    "paths": [
+      "_investigacion-onia/base-operativa/03-referentes/asr/ejecucion-2026-11-08.md",
+      "_investigacion-onia/base-operativa/03-referentes/asr/ali-jeff-intentos-2026-11-08.md"
+    ],
+    "documented_seconds": {
+      "Pedro": 66.434,
+      "Cormac_approx": 37.75,
+      "Justin": 935.636
+    },
+    "documented_failures": "YouTube: Sign in to confirm you're not a bot; Ali/Jeff además aviso runtime JavaScript, no causa exclusiva demostrada",
+    "raw_audio_or_private_logs_read": false
+  },
+  "child": {
+    "task_name": "/root/alternativas",
+    "thread_id": "01a1bd32-16a5-7e60-b1f6-ed94623c5330",
+    "thread_id_method": "CODEX_THREAD_ID leído por hijo con allowlist",
+    "session_id_env_inherited": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+    "spawn_returned_uuid": false,
+    "model_requested": "gpt-6.1-sol",
+    "reasoning_effort_requested": "high",
+    "model_observed": null,
+    "reasoning_effort_observed": null,
+    "fork_turns": "none",
+    "exclusive_file": "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/ALTERNATIVAS.md",
+    "announced_tools": [
+      "mcp__playwright__browser_close",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_take_screenshot"
+    ],
+    "mcp_calls": 0,
+    "catalog_inheritance_confirmed": true,
+    "functional_inheritance_confirmed": false,
+    "status": "completed",
+    "context_destroyed": false,
+    "git_operations": 0,
+    "grandchildren": 0
+  },
+  "diagnosis": {
+    "established": "Invocación MCP requiere aprobación y policy never la impide",
+    "configuration_root_cause": null,
+    "chromium_sandbox_tested": false,
+    "network_or_http_tested_via_mcp": false,
+    "landing_access_established": false,
+    "proposed_next_action": "Coordinador debe conciliar política efectiva con wrapper que ya declara approve y revisar overrides de aprobación por las cuatro herramientas, sin cambiar sandbox/config global; repetir control sólo tras cambio identificado",
+    "proposed_fix_tested": false
+  },
+  "proposals": {
+    "research_account": "onia.investigacion: propuesta sin creación ni disponibilidad Gmail comprobada",
+    "persistent_profile": "propuesta; no creado ni usado",
+    "paid_api": false,
+    "vidiq_used": false
+  },
+  "limitations": [
+    "Catálogo no acredita llamada ejecutada ni conexión stdio viva",
+    "No DOM/capturas de ninguna página; no navegador conectado afirmado",
+    "Cierre MCP intentado pero rechazado; no cierre confirmado",
+    "No se ensayó Chromium sandbox: no error suyo observado",
+    "Control ASR sólo silencio/VAD, no exactitud de voz ni percepción audiovisual integral",
+    "Fuentes oficiales ramas móviles; versiones locales separadas",
+    "Política approve leída en wrapper, aplicación efectiva desconocida",
+    "Herencia de catálogo comprobada; herencia funcional no comprobada",
+    "Revisión independiente, aceptación e integración pendientes del coordinador"
+  ],
+  "artifacts": [
+    {
+      "path": "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/ALTERNATIVAS.md",
+      "sha256": "eff333d66c3e6cc1f1f8ceb9f81c13e7227cd861b6a2acb0f69d764fd86e2131",
+      "bytes": 9244
+    },
+    {
+      "path": "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/EVIDENCIA.md",
+      "sha256": "bcffb1c4062f0fabb5876497c5ea658db1a04272919b89f2af7568c8dbd5abaa",
+      "bytes": 11000
+    },
+    {
+      "path": "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/README.md",
+      "sha256": "1c0973e324be11b23465bf92446f61fe2e09e8eb9119c8e8de6b3db827e20d75",
+      "bytes": 8798
+    }
+  ],
+  "artifact_hash_policy": "sha256 de README, EVIDENCIA y ALTERNATIVAS tras finalización del hijo; PRUEBA.json excluye autorreferencia. Commit remoto identifica paquete completo.",
+  "publication": {
+    "target_branch": "codex/ws-investigacion-acceso-av-20261108",
+    "remote": "origin",
+    "force": false,
+    "status_at_write": "pendiente; comprobar hash remoto tras commit y reportar al coordinador",
+    "independent_review": "pendiente; coordinador después de cerrar",
+    "master_integration": "no realizada"
+  },
+  "verification": {
+    "at_utc": "2026-11-08T22:11:30.845139+00:00",
+    "checks_passed": [
+      "JSON válido y claves de evidencia cotejadas",
+      "Cuatro documentos exclusivos en alcance",
+      "Enlaces internos de los tres Markdown resueltos",
+      "Hashes de ocho archivos muestreados de instalación/scripts sin cambios",
+      "Hash del wrapper coordinador sin cambios",
+      "Capturas declaradas ausentes y no fabricadas",
+      "Hilo hijo distinto, completado, sin herencia funcional afirmada",
+      "Rama asignada y ninguna modificación fuera de la ruta"
+    ],
+    "limits": "No suite de producto: sólo documentos y diagnóstico; sin prueba MCP ejecutada de página. Hash propio excluido."
+  }
+}
