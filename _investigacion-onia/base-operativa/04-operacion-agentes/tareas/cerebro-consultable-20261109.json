@@ -1,0 +1,67 @@
+{
+  "schema": 2,
+  "id": "cerebro-consultable-20261109",
+  "revision": 3,
+  "compartible": true,
+  "objetivo": "Hacer consultable el cerebro editorial de OnIA sobre los19referentes revisados, sin rehacer investigación ni inventar cobertura",
+  "estado": "preparado",
+  "proximo_paso": "Lanzar Sol6.1 high sin hijos; revisión distinta ultra antes de aceptar.",
+  "resultado": "Continuación nocturna reafirmada por Sergio.",
+  "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+  "verificacion": "pendiente",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+      "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+      "bytes": 2029
+    }
+  ],
+  "actualizado": "2026-11-09T04:57:26.412183+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-09T04:57:26.306946+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/cerebro-consultable-20261109.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-09T04:57:26.399166+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/cerebro-consultable-20261109.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/cerebro-consultable-20261109.md",
+    "sha256": "03ca87ba9d6dfd98f3ce4481fce5f68db3e6ce3adb0dd7dce7f11ce04cf192b4",
+    "bytes": 6003,
+    "contenido": "# Encargo cerebro-consultable-20261109\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nHacer consultable el cerebro editorial de OnIA sobre los19referentes revisados, sin rehacer investigación ni inventar cobertura\n\n## Entregable\n\nCatálogo trazable, consulta CLI determinista y guía aplicada a workshop/ideas/guiones\n\n## Criterio de aceptación\n\n1. Los19referentes representados con patrones y al menos una pieza concreta por referente, enlazada a su ficha aceptada y fuente pública; cobertura heredada explícita. 2. Propuestas OnIA separadas de hechos de referente; límites de ASR/visual/audio/privado y misma conversación no omitidos. 3. CLI sin LLM/API/embeddings que consulta por tema/uso y devuelve patrones+fuentes+límites; resultado vacío honesto en tema no cubierto. 4. JSON es catálogo de conocimiento, nunca cola de trabajo; no modificar fichas/aceptaciones existentes ni declarar síntesis final aprobada por Boss. 5. Integridad de referencias y casos de consulta útil/sin resultado/entrada inválida o fuente faltante comprobados. 6. Ejemplos para ordenar, vender, enseñar y contenido usando fuentes concretas; no promesas comerciales. 7. Sólo ruta asignada, commit/push propios.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sergio reafirmó estas tareas para esta noche. Una tarea/ruta exclusiva y cero hijos. Ejecutora Sol6.1 high, login ChatGPT incluido; no API paga, instalaciones, sudo, Docker, producción, mensajes, publicaciones, compras o cuentas. No usar Platform ni ONIA-CENTRAL ni tocar ~/repos/onia sucio. No borrar archivos; conservar evidencias y worktree.\n- Leer AGENTS, reglas-comunes, Boss, ESTADO y tu briefing; directora canónica del área, sólo apoyos pertinentes. La tarea/briefing/registro global son del coordinador: no modificarlos. Trabajar sólo carpeta asignada; no crear otro sistema de tareas ni segundo registro canónico. Registrar errores dentro de tu entrega.\n- Tiempo objetivo35–50min, solución mínima útil y comprobable. Si falta dependencia, terminar la parte independiente, dejar evidencia/condición de salida. No inflar documentación ni repetir comprobaciones tras pasar sin cambios. No autolanzar sesiones ni subagentes.\n- Probar casos relevantes y al menos un fallo material. Informe corto con uso exacto, qué funciona realmente, qué sigue pendiente y fuentes. Hacer tu propio commit/push de rama codex/ws-ID sin force; verificar HEAD con ls-remote. Coordinador conserva worktree, cierra, revisa con otro SID ultra e integra master. No dar por terminado sólo por tener archivos.\n- Leer índices A/B/C y COBERTURA de 03-referentes/cerebros-profundos, escoger pasajes patrón/aplicaciones de cada ficha, no volcar79piezas enteras. Estado aceptado está en 04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md; texto histórico para_revision en índices no significa tarea viva. Referentes19: A6,B6,C7. No contar página comercial como pieza ni reanalizar videos.\n- Reutilizar síntesis propuesta y matriz de 01-negocio/workshop-20261108/noche-20261109. Prioridad A y Erik para negocio/workshop. Catálogo usable para recuperar ideas desde archivos existentes, no afirmar entrenamiento, búsqueda semántica ni automatización de redes. Mantener una propuesta de reglas OnIA revisable, Boss/Sergio deciden integración final.\n- CLI stdlib con salida clara JSON/Markdown y comandos exactos. Puede filtrar por tema y uso mediante tags explícitos; describir limitación, no vender matching simple como comprensión. No redes para consultas. No instalar librerías. Pruebas enfocadas en trazabilidad, desconocido e integridad; evitar tests que sólo repitan datos.\n- ID cerebro-consultable-20261109; única carpeta 03-referentes/cerebro-operativo/20261109; rama codex/ws-cerebro-consultable-20261109.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/cerebro-consultable-20261109.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "cerebro-consultable-ejecutor",
+    "rutas": [
+      "03-referentes/cerebro-operativo/20261109"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-09T04:57:26.399153+00:00"
+  }
+}

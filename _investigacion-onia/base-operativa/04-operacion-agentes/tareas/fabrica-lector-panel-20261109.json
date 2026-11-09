@@ -1,0 +1,67 @@
+{
+  "schema": 2,
+  "id": "fabrica-lector-panel-20261109",
+  "revision": 3,
+  "compartible": true,
+  "objetivo": "Conectar fuentes públicas y entregables reales del repo a un panel de consulta de la fábrica, sin activar publicaciones o Telegram",
+  "estado": "preparado",
+  "proximo_paso": "Lanzar Sol6.1 high sin hijos; revisión distinta ultra antes de aceptar.",
+  "resultado": "Continuación nocturna reafirmada por Sergio.",
+  "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+  "verificacion": "pendiente",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+      "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+      "bytes": 2029
+    }
+  ],
+  "actualizado": "2026-11-09T04:57:26.639457+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-09T04:57:26.554936+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/fabrica-lector-panel-20261109.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-09T04:57:26.628523+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/fabrica-lector-panel-20261109.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "fabrica-panel-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-lector-panel"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.628511+00:00"
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/fabrica-lector-panel-20261109.md",
+    "sha256": "b8b3504021c8dec10cb160cd6693687cb06572881a283766ea947cca86c0f3e4",
+    "bytes": 6848,
+    "contenido": "# Encargo fabrica-lector-panel-20261109\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nConectar fuentes públicas y entregables reales del repo a un panel de consulta de la fábrica, sin activar publicaciones o Telegram\n\n## Entregable\n\nLector manual acotado de fuentes, snapshot saneado y panel de sólo lectura con fuentes/ideas/guiones/pendientes reales\n\n## Criterio de aceptación\n\n1. Reusar contratos fábrica20261108 y Telegram20261109, registros únicos y guiones revisados; no otro estado editable ni falsa aceptación. 2. CLI de ingesta manual con fuentes primarias comprobadas, timestamps consulta/publicación separados, deduplicación, timeout/límite de tamaño y fallo por fuente visible; metadatos/resumen breve propio, sin artículos íntegros ni cuentas. 3. Ensayo real de lectura pública al menos2fuentes accesibles, o documentar fallo y usar sólo fuentes ya comprobadas sin fingir actualidad; pruebas sin red para duplicado/fecha ausente/fallo/respuesta insegura. 4. Panel HTML de consulta con datos reales del snapshot: origen, fecha/cobertura, ideas/guiones y estado derivado canónico, revisión técnica separada de permiso publicación. No botón funcional fingido ni envíos; si permite copiar/exportar comentario, es intención local sin cambiar tarea. 5. Abrir en Chromium sandbox sintético e inspeccionar captura, sin servidor permanente ni cuentas. 6. Documentar que no hay scheduler ni ingesta recurrente ni Telegram real; comandos exactos y actualización manual reproducible. 7. Sólo ruta asignada, commit/push propios.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sergio reafirmó estas tareas para esta noche. Una tarea/ruta exclusiva y cero hijos. Ejecutora Sol6.1 high, login ChatGPT incluido; no API paga, instalaciones, sudo, Docker, producción, mensajes, publicaciones, compras o cuentas. No usar Platform ni ONIA-CENTRAL ni tocar ~/repos/onia sucio. No borrar archivos; conservar evidencias y worktree.\n- Leer AGENTS, reglas-comunes, Boss, ESTADO y tu briefing; directora canónica del área, sólo apoyos pertinentes. La tarea/briefing/registro global son del coordinador: no modificarlos. Trabajar sólo carpeta asignada; no crear otro sistema de tareas ni segundo registro canónico. Registrar errores dentro de tu entrega.\n- Tiempo objetivo35–50min, solución mínima útil y comprobable. Si falta dependencia, terminar la parte independiente, dejar evidencia/condición de salida. No inflar documentación ni repetir comprobaciones tras pasar sin cambios. No autolanzar sesiones ni subagentes.\n- Probar casos relevantes y al menos un fallo material. Informe corto con uso exacto, qué funciona realmente, qué sigue pendiente y fuentes. Hacer tu propio commit/push de rama codex/ws-ID sin force; verificar HEAD con ls-remote. Coordinador conserva worktree, cierra, revisa con otro SID ultra e integra master. No dar por terminado sólo por tener archivos.\n- Leer 05-herramientas/fabrica-contenido/20261108/{DISENO.md,CONTRATO.md};20261109-telegram/{README.md,CONTRATO.md};01-negocio/workshop-20261108/noche-20261109/{README-ENTREGA.md,FUENTES-Y-MATRIZ.md,GUION-01-WORKSHOP.md,GUION-02-EVERGREEN.md}. Leer registros canónicos únicamente para proyección de estado; no modificarlos. Mostrar que ambos guiones son borradores técnicamente revisados, todavía no aprobados para publicación.\n- Fuentes primarias permitidas: sitios oficiales Anthropic/Claude,OpenAI,GoogleDeepMind; verificar fuentes/feed reales con documentación/web antes de fijarlas. CLI manual, máximo3fuentes/20items por fuente y lectura acotada, sin cookies ni autenticación ni URLs aportadas por terceros. Priorizar fuentes existentes públicas y no expandir investigación por disponibilidad. No deducir fecha original de fecha consulta ni convertir página de ayuda en noticia de hoy.\n- No n8n API, Telegram API, tokens, mensajes, anuncios, feeds sociales autenticados, instalaciones, embeddings/LLM pagos. No implementes scheduler. Panel es archivo generado consultable en navegador, fuente de estado sigueJSONcanónico del harness; fuentes/snapshot son recibos de consulta no nueva cola. Reusar stdlib/Node ya instalado.\n- Prueba visual con Playwright local ~/operacion/browser-piloto-20261108 y Chromium1252 sandbox:true, perfil propio sintético, sin usar visor/cuentas. Puede escribir capturas del material propio a ruta exclusiva. No --no-sandbox. Prueba caso largo/vacío/error para legibilidad y fallback; no inventar métricas de rendimiento sin medir.\n- ID fabrica-lector-panel-20261109; única carpeta 05-herramientas/fabrica-contenido/20261109-lector-panel; rama codex/ws-fabrica-lector-panel-20261109.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/fabrica-lector-panel-20261109.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "fabrica-panel-ejecutor",
+    "rutas": [
+      "05-herramientas/fabrica-contenido/20261109-lector-panel"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-09T04:57:26.628511+00:00"
+  }
+}

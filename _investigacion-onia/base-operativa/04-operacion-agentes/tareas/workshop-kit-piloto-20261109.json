@@ -1,0 +1,67 @@
+{
+  "schema": 2,
+  "id": "workshop-kit-piloto-20261109",
+  "revision": 3,
+  "compartible": true,
+  "objetivo": "Dejar listo el material práctico y visual para que Sergio ensaye los primeros10min aprobados del workshop",
+  "estado": "preparado",
+  "proximo_paso": "Lanzar Sol6.1 high sin hijos; revisión distinta ultra antes de aceptar.",
+  "resultado": "Continuación nocturna reafirmada por Sergio.",
+  "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+  "verificacion": "pendiente",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+      "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+      "bytes": 2029
+    }
+  ],
+  "actualizado": "2026-11-09T04:57:26.531336+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-09T04:57:26.440596+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/workshop-kit-piloto-20261109.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-09T04:57:26.520946+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/workshop-kit-piloto-20261109.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/workshop-kit-piloto-20261109.md",
+    "sha256": "b4e4e3b0abb12ed4bd7af36638a12b3491e051116ce5cb2778077c00d5fa3700",
+    "bytes": 5929,
+    "contenido": "# Encargo workshop-kit-piloto-20261109\n\nÁrea: marketing\nModo: encargo\nSkill directora: preparar-oferta-y-embudo\n\n## Objetivo\n\nDejar listo el material práctico y visual para que Sergio ensaye los primeros10min aprobados del workshop\n\n## Entregable\n\nLáminas HTML/versión imprimible, hoja de trabajo, guía de facilitación y recibo visual del kit\n\n## Criterio de aceptación\n\n1. Derivar fielmente del piloto revisado noche-20261109, sin reescribir decisiones ni crear clases2/3 antes de revisión de Sergio. 2. Kit abrible sin servicios/red: láminas claras, hoja del participante y referencia del facilitador con tiempos/promptA/B/caso ficticio; texto grande y contraste legible. 3. Muestras escritas identificadas como tales, no capturas falsas de Claude ni resultado de alumno. 4. PDF o impresión reproducible sin dependencias nuevas, guion/hoja alineados en tareas, duraciones y restricciones. 5. Comprobar texto/datos, abrir y capturar material propio en Chromium sandbox aislado y realmente inspeccionar imagen; preservar evidencia. 6. Acceso propio/ensayo humano/locución/canal siguen pendientes; precioBs50 y VIPpropuesto, sin publicar invitación ni comprometer horas. 7. Entrega compacta, uso exacto, commit/push propios y revisión independiente.\n\n## Entrada y alcance\n\nPreparar una oferta, embudo, webinar o brief de contenido.\n\n- Sergio reafirmó estas tareas para esta noche. Una tarea/ruta exclusiva y cero hijos. Ejecutora Sol6.1 high, login ChatGPT incluido; no API paga, instalaciones, sudo, Docker, producción, mensajes, publicaciones, compras o cuentas. No usar Platform ni ONIA-CENTRAL ni tocar ~/repos/onia sucio. No borrar archivos; conservar evidencias y worktree.\n- Leer AGENTS, reglas-comunes, Boss, ESTADO y tu briefing; directora canónica del área, sólo apoyos pertinentes. La tarea/briefing/registro global son del coordinador: no modificarlos. Trabajar sólo carpeta asignada; no crear otro sistema de tareas ni segundo registro canónico. Registrar errores dentro de tu entrega.\n- Tiempo objetivo35–50min, solución mínima útil y comprobable. Si falta dependencia, terminar la parte independiente, dejar evidencia/condición de salida. No inflar documentación ni repetir comprobaciones tras pasar sin cambios. No autolanzar sesiones ni subagentes.\n- Probar casos relevantes y al menos un fallo material. Informe corto con uso exacto, qué funciona realmente, qué sigue pendiente y fuentes. Hacer tu propio commit/push de rama codex/ws-ID sin force; verificar HEAD con ls-remote. Coordinador conserva worktree, cierra, revisa con otro SID ultra e integra master. No dar por terminado sólo por tener archivos.\n- Leer 05-herramientas/2026-11-08-harness/{00-decisiones.md,plan-workshop.md}; 01-negocio/workshop-20261108/noche-20261109/{CLASE1-PRIMEROS10MIN.md,OFERTA-Y-RECORRIDO.md,SINTESIS-PROPUESTA.md,CONTROL-EDITORIAL-Y-PENDIENTES.md}. No ejecutar Claude ni usar cuenta prestada. No se amplía a3clases: se prepara bien el piloto que Sergio revisará a su regreso.\n- Usar sólo texto/gráficos propios, HTML/CSS/JS simples, fuentes del sistema y sin recursos externos. Facilitar imprimir hoja y guía; PDF si Chromium ya instalado lo permite. No comprar assets, generar imágenes con servicios externos ni instalar software.\n- Playwright está en ~/operacion/browser-piloto-20261108/node_modules/playwright; Chromium en browsers/chromium-1252/chrome-linux64/chrome con perfil AppArmor específico ya aprobado. chromiumSandbox:true, nunca --no-sandbox. Perfil sintético propio bajo/tmp o carpeta de evidencia; no tocar ~/operacion/cuentas/analisis-onia ni visor real. Xvfb temporal propio si hace falta, no modificar servicios corrientes; finalizar sólo procesos creados por tu prueba y conservar archivos. Inspeccionar con view_image la captura del kit, no confundir archivo generado con prueba visual.\n- ID workshop-kit-piloto-20261109; única carpeta 01-negocio/workshop-20261108/kit-piloto-20261109; rama codex/ws-workshop-kit-piloto-20261109.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [01-negocio/preparar-oferta-y-embudo/SKILL.md](../../01-negocio/preparar-oferta-y-embudo/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [preparar-campana-meta](../../05-herramientas/compartibles/skills/preparar-campana-meta/SKILL.md)\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-marketing-humanizer](../../05-herramientas/compartibles/terceros/marketing/humanizer/SKILL.md)\n\n## Salidas de referencia del área\n\n- Oferta y recorrido de venta\n- Borradores de las piezas del encargo\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/workshop-kit-piloto-20261109.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "workshop-kit-ejecutor",
+    "rutas": [
+      "01-negocio/workshop-20261108/kit-piloto-20261109"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-09T04:57:26.520937+00:00"
+  }
+}
