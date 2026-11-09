@@ -1,14 +1,14 @@
 {
   "schema": 2,
   "id": "video-euge-20261108",
-  "revision": 7,
+  "revision": 9,
   "compartible": true,
   "objetivo": "Mirar el video de Euge Oller pedido por Sergio y contrastar su operación con OnIA",
-  "estado": "en_curso",
-  "proximo_paso": "Resolver captura y reproducción con un único dueño del perfil; revisar evidencia y publicar sin ampliar permisos.",
-  "resultado": "Sergio autorizó continuación y tres sub sesiones enfocadas en navegador/audio/revisión.",
-  "comprobacion": "Base6c286cb en origin/master; cero CLI vivas, cuota55% usada. Chromium existente superó2:09; audio y cobertura completa pendientes.",
-  "verificacion": "pendiente",
+  "estado": "aceptado",
+  "proximo_paso": "Entrega aceptada dentro del alcance documentado. Conservar evidencia; revisión por Sergio del ensayo de los primeros diez minutos del workshop. Escucha directa y automatización audiovisual completa siguen pendientes; este cierre no despacha otra tarea.",
+  "resultado": "Reproducción y captura de 0:00 a 30:02 por reloj en Chromium existente, pista español original; dos archivos privados con empalme verificado. Análisis de 34 muestras visuales y ASR alineado aplicado a OnIA. Escucha directa y observación perceptiva continua no acreditadas; procedimiento operado, no analizador desatendido.",
+  "comprobacion": "Commit 9f10c3edf46edfc6741321f14869e0916884adf8 publicado y comprobado con fetch, branch -r --contains y ls-remote. Revisor distinto cotejó 29 archivos, 33 entradas de manifiesto y 39 altas del commit. Pruebas de captura, decodificación/truncado, alineación y lock ASR; originales conservados.",
+  "verificacion": "correcta",
   "evidencias": [
     {
       "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/muestra-visual-parcial-v1.json",
@@ -54,9 +54,44 @@
       "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/preflight-tres-sesiones-20261109-v1.json",
       "sha256": "116ada89cf713d77ff02e749fba711c06ae20aa49901aae89342714086d89733",
       "bytes": 1792
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/captura-integral-20261109-v1.json",
+      "sha256": "ce1a84b15adf1051610b5d7f821edf61f48e4639d526f3a4b1a68701d3c7e735",
+      "bytes": 48875
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/cuota-resolucion-20261109-v1.json",
+      "sha256": "2bf67b72d0e975f05538845e008a0f94534a452eb63c46631471c937b3a89f49",
+      "bytes": 341
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/manifest-resolucion-20261109-v1.json",
+      "sha256": "f5dedae8702484f49defefade3409e58a2ad144d5be05f7e6b93409d0beafe9d",
+      "bytes": 4584
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/recursos-resolucion-20261109-v1.json",
+      "sha256": "baa8fa4a2143e382b192fdb4f064ea38b93c58514db40e539b9ac04f864320d8",
+      "bytes": 435
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/revision-resolucion-20261109-v1.json",
+      "sha256": "deb934b23cc79f297b701720e6114c8e3d0f853e21ea66912b37c0fc6129f3b6",
+      "bytes": 9662
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/revision-commit-resolucion-20261109-v1.json",
+      "sha256": "466b0d4a04216a9d0442ac3e3a18d2a4fded7658a9fa5f4b8bfaa7fa70526254",
+      "bytes": 1159
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/cierre-resolucion-20261109-v1.json",
+      "sha256": "c0e06511757078ea921cb077d29dcc626d09fe63de2324c9476286927fb54623",
+      "bytes": 1485
     }
   ],
-  "actualizado": "2026-11-09T11:47:56.995722+00:00",
+  "actualizado": "2026-11-09T13:07:41.389208+00:00",
   "historial": [
     {
       "revision": 1,
@@ -228,6 +263,155 @@
       ],
       "proximo_paso": "Retomar mismoID por interfaz visual del Chromium existente, verificar pista original y completar imágenes/audio; no repetir Playwright sin condición distinta. Sin lanzamiento programado.",
       "aceptacion": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-09T11:47:56.995722+00:00",
+      "estado": "en_curso",
+      "resultado": "Sergio autorizó continuación y tres sub sesiones enfocadas en navegador/audio/revisión.",
+      "comprobacion": "Base6c286cb en origin/master; cero CLI vivas, cuota55% usada. Chromium existente superó2:09; audio y cobertura completa pendientes.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/muestra-visual-parcial-v1.json",
+          "sha256": "d8a05824a428d2a396b444a10aeee9bfc6ef1c8c2d3bb8ee47db9583181c4049",
+          "bytes": 2636
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/reproduccion-nocturna-v1.json",
+          "sha256": "41f2f68fc1a9225c81d2598fe2aa4b2bc2f1dbf462b8333cce69f2a808858bea",
+          "bytes": 5306
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/revision-nocturna-v1.json",
+          "sha256": "844d49cc332f8d19b73b8027d28cb97ddd236027af936c3576acb6b30866b870",
+          "bytes": 2452
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/preflight-controles-20261109-v1.json",
+          "sha256": "383750aba14900ba20ea0bd47f3588ebbccaa69bbe33000a09045d647da4f929",
+          "bytes": 1478
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/controles-visibles-20261109-v1.json",
+          "sha256": "5b8f43985ad07fb086ef22cd134280aa8710ec5f987fa2d120a0aa122c793b88",
+          "bytes": 3523
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/comparacion-visor-20261109-v1.json",
+          "sha256": "cbcc9d0fae3089ef00482d693c81d22282cfc684ffdfa68f72207e75f9c1215b",
+          "bytes": 3930
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/revision-controles-20261109-v1.json",
+          "sha256": "99f76eab7dcf7ff260c69def8b4079a4b761e6e3a4ddfb1f9c845f426e6c8214",
+          "bytes": 1968
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/preflight-tres-sesiones-20261109-v1.json",
+          "sha256": "116ada89cf713d77ff02e749fba711c06ae20aa49901aae89342714086d89733",
+          "bytes": 1792
+        }
+      ],
+      "proximo_paso": "Resolver captura y reproducción con un único dueño del perfil; revisar evidencia y publicar sin ampliar permisos.",
+      "aceptacion": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-09T13:07:41.323253+00:00",
+      "estado": "para_revision",
+      "resultado": "Reproducción y captura de 0:00 a 30:02 por reloj en Chromium existente, pista español original; dos archivos privados con empalme verificado. Análisis de 34 muestras visuales y ASR alineado aplicado a OnIA. Escucha directa y observación perceptiva continua no acreditadas; procedimiento operado, no analizador desatendido.",
+      "comprobacion": "Commit 9f10c3edf46edfc6741321f14869e0916884adf8 publicado y comprobado con fetch, branch -r --contains y ls-remote. Revisor distinto cotejó 29 archivos, 33 entradas de manifiesto y 39 altas del commit. Pruebas de captura, decodificación/truncado, alineación y lock ASR; originales conservados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/muestra-visual-parcial-v1.json",
+          "sha256": "d8a05824a428d2a396b444a10aeee9bfc6ef1c8c2d3bb8ee47db9583181c4049",
+          "bytes": 2636
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/reproduccion-nocturna-v1.json",
+          "sha256": "41f2f68fc1a9225c81d2598fe2aa4b2bc2f1dbf462b8333cce69f2a808858bea",
+          "bytes": 5306
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/revision-nocturna-v1.json",
+          "sha256": "844d49cc332f8d19b73b8027d28cb97ddd236027af936c3576acb6b30866b870",
+          "bytes": 2452
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/preflight-controles-20261109-v1.json",
+          "sha256": "383750aba14900ba20ea0bd47f3588ebbccaa69bbe33000a09045d647da4f929",
+          "bytes": 1478
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/controles-visibles-20261109-v1.json",
+          "sha256": "5b8f43985ad07fb086ef22cd134280aa8710ec5f987fa2d120a0aa122c793b88",
+          "bytes": 3523
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/comparacion-visor-20261109-v1.json",
+          "sha256": "cbcc9d0fae3089ef00482d693c81d22282cfc684ffdfa68f72207e75f9c1215b",
+          "bytes": 3930
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/revision-controles-20261109-v1.json",
+          "sha256": "99f76eab7dcf7ff260c69def8b4079a4b761e6e3a4ddfb1f9c845f426e6c8214",
+          "bytes": 1968
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/preflight-tres-sesiones-20261109-v1.json",
+          "sha256": "116ada89cf713d77ff02e749fba711c06ae20aa49901aae89342714086d89733",
+          "bytes": 1792
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/captura-integral-20261109-v1.json",
+          "sha256": "ce1a84b15adf1051610b5d7f821edf61f48e4639d526f3a4b1a68701d3c7e735",
+          "bytes": 48875
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/cuota-resolucion-20261109-v1.json",
+          "sha256": "2bf67b72d0e975f05538845e008a0f94534a452eb63c46631471c937b3a89f49",
+          "bytes": 341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/manifest-resolucion-20261109-v1.json",
+          "sha256": "f5dedae8702484f49defefade3409e58a2ad144d5be05f7e6b93409d0beafe9d",
+          "bytes": 4584
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/recursos-resolucion-20261109-v1.json",
+          "sha256": "baa8fa4a2143e382b192fdb4f064ea38b93c58514db40e539b9ac04f864320d8",
+          "bytes": 435
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/revision-resolucion-20261109-v1.json",
+          "sha256": "deb934b23cc79f297b701720e6114c8e3d0f853e21ea66912b37c0fc6129f3b6",
+          "bytes": 9662
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/revision-commit-resolucion-20261109-v1.json",
+          "sha256": "466b0d4a04216a9d0442ac3e3a18d2a4fded7658a9fa5f4b8bfaa7fa70526254",
+          "bytes": 1159
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/cierre-resolucion-20261109-v1.json",
+          "sha256": "c0e06511757078ea921cb077d29dcc626d09fe63de2324c9476286927fb54623",
+          "bytes": 1485
+        }
+      ],
+      "proximo_paso": "Aplicar el dictamen bueno de /root/video_revision al commit exacto y publicar el cierre en master.",
+      "aceptacion": null
     }
   ],
   "briefing": {
@@ -236,5 +420,9 @@
     "bytes": 2997,
     "contenido": "# Encargo video-euge-20261108\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nMirar el video de Euge Oller pedido por Sergio y contrastar su operación con OnIA\n\n## Entregable\n\nObservación audiovisual con cobertura y límites explícitos; propuesta aplicada sin activar servicios\n\n## Criterio de aceptación\n\nIdentificar fuente y tiempos; observar imágenes reales, separar audio/ASR/imagen y propuesta; no atribuir secciones no observadas. Declarar cobertura parcial si falla reproducción. Sin cuentas privadas, gasto, instalación o producción; medios privados conservados fuera de Git.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- https://www.youtube.com/watch?v=JuAQILH7dkQ\n- Pedido de Sergio: no sólo transcript, miralo.\n- Registro retrospectivo del trabajo autorizado, no lanzamiento nuevo.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/video-euge-20261108.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
   },
-  "aceptacion": null
+  "aceptacion": {
+    "revisor": "/root/video_revision",
+    "criterio": "Dictamen bueno sobre 9f10c3edf46edfc6741321f14869e0916884adf8: captura 0:00–30:02 por reloj, imágenes reales muestreadas, audio/ASR/imagen y propuesta separados, tiempos aproximados, límites y fallos explícitos. Sin atribuir escucha directa, visión perceptiva continua ni automatización desatendida. Evidencia pública saneada; medios privados fuera de Git.",
+    "fecha": "2026-11-09T13:07:41.389190+00:00"
+  }
 }

@@ -2,6 +2,12 @@
 
 ## Actualización vigente · 9 noviembre 2026 UTC
 
+Video Euge resuelto dentro del alcance revisado: reproducción y captura de0:00 a30:02 por reloj en el VPS, pista original,34 muestras visuales y ASR alineado. Revisor distinto aprobó la entrega9f10c3e; tarea canónica aceptada. [Informe, pruebas y límites](../05-herramientas/video-euge-20261108/RESOLUCION-20261109.md) · [Aplicación a OnIA](../05-herramientas/video-euge-20261108/coordinacion/ANALISIS-ONIA.md). Escucha directa y observación perceptiva continua no acreditadas; el procedimiento requiere operador. Causa del corte de Playwright no aislada. Visor devuelto y sin ASR activo al control13:01UTC; no se despachó otro lote.
+
+Se mantiene la secuencia de negocio: cerebro consultable → ensayo de los primeros diez minutos por Sergio → resto del workshop → automatizaciones acotadas. Telegram real, campaña y scheduler permanecen pendientes; Platform fuera. Límite3 sin ampliación, sin producción ni gastos. Las menciones de video pendiente que siguen son cortes históricos, sustituidos por este resultado y sus límites.
+
+### Antecedentes del cierre nocturno
+
 Continuación nocturna cerrada: cerebro consultable, kit del piloto y lector/panel con fuentes reales aceptados por revisores distintos e integrados en origin/master. PDF corregido tras rechazo de la primera revisión. [Informe, recursos, cuota y commits](../04-operacion-agentes/evidencias/continuacion-noche-20261109/INFORME.md) · [Guía para Sergio](../04-operacion-agentes/evidencias/continuacion-noche-20261109/PARA-SERGIO.md). Ensayo humano, resto del workshop, Telegram real y video completo siguen pendientes. Sin nuevas sesiones ni servicio permanente al cierre.
 
 Lote nocturno cerrado en su alcance: Telegram/n8n de prueba y borradores de workshop/contenido aceptados por revisores distintos e integrados en origin/master. Video Euge sigue en_espera: diagnóstico y capturador corregidos/revisados, sin visionado completo. [Informe, pruebas, cuota, commits y pendientes](../04-operacion-agentes/evidencias/noche-20261109/INFORME.md). No hubo campañas, mensajes ni activaciones; Platform excluida. Scheduler todavía no implementado, con sí limitado al piloto ya registrado.
