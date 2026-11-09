@@ -1,0 +1,68 @@
+{
+  "fecha_utc": "2026-11-09T05:27:24.192553+00:00",
+  "id": "fabrica-lector-panel-20261109",
+  "commit": "ecb18ed45c671ea2816d653d3876620df3fb2589",
+  "rama": "codex/ws-fabrica-lector-panel-20261109",
+  "remoto_confirmado": true,
+  "diff_exclusivo": [
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/ERRORES.md",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/README.md",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/COMPROBACION-02.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/COMPROBACION-03.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/COMPROBACION.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/MANIFIESTO-02.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/MANIFIESTO-03.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/host-02/INSPECCION.md",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/host-02/RECIBO-HOST.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/host-02/error-mobile.png",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/host-02/largo-mobile.png",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/host-02/real-desktop.png",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/host-02/real-mobile.png",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/host-02/resultado.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/host-02/vacio-mobile.png",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/host-fallo-01.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/lectura-real-01/panel.html",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/lectura-real-01/snapshot.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/lectura-real-02/panel.html",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/lectura-real-02/snapshot.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/panel-corregido-01/panel.html",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/panel-corregido-01/snapshot.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/pruebas-02.txt",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/pruebas-03.txt",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/solicitud-host-v2.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/solicitud-host.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/visual-01/error.html",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/visual-01/error.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/visual-01/largo.html",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/visual-01/largo.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/visual-01/resultado.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/visual-01/vacio.html",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/visual-01/vacio.json",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/lector.py",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/panel.py",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/pruebas.py",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/visual.cjs"
+  ],
+  "cuota_pre_revision": {
+    "fecha_utc": "2026-11-09T05:27:15.324Z",
+    "limites": {
+      "limit_id": "codex",
+      "limit_name": null,
+      "primary": {
+        "used_percent": 52.0,
+        "window_minutes": 10080,
+        "resets_at": 1794624432
+      },
+      "secondary": null,
+      "credits": {
+        "has_credits": false,
+        "unlimited": false,
+        "balance": "0"
+      },
+      "individual_limit": null,
+      "spend_control_reached": null,
+      "plan_type": "prolite",
+      "rate_limit_reached_type": null
+    }
+  }
+}

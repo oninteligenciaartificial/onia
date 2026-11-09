@@ -14,3 +14,9 @@ python3 _investigacion-onia/base-operativa/05-herramientas/scripts/harness.py la
 ```
 
 Revisión y cierre usan --conservar-worktree. Sólo aceptar veredicto bueno vigente; integrar uno a uno y verificar origin/master.
+
+## Ajuste durante verificación
+
+El primer recibo host del panel descubrió un defecto nuevo: un hash largo salía de la tarjeta y causaba desborde móvil. Se autorizó dentro de la corrección del encargo una segunda retoma acotada del mismo SID para una sola regla CSS, ya probada en copia. Esto amplía el límite autoimpuesto de una corrección del preflight, no el alcance solicitado por Sergio: sin red nueva, sin nuevos frentes, sin gasto y con cuota51% antes del despacho. Se conservan el fallo y las versiones anteriores. No hay un bucle de reintentos indefinido; si falla la nueva captura se entrega parcial.
+
+La revisión independiente del kit rechazó C4 por un pie desplazado en PDF. Se mantiene esa evidencia y se retoma el mismo SID para corregir impresión y validar contenido por página, con nueva revisión antes de aceptar. Cuota52% previa, sin nuevos frentes. El conteo de páginas previo no bastó; no se declara aprobado el kit hasta el nuevo veredicto.
