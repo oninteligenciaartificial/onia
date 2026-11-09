@@ -138,3 +138,4 @@ Hallazgos y decisiones de Boss (America/La_Paz). Sin secretos ni IPs.
 ### Nombres de máquinas y Tailscale
 - Nombres de máquinas: DESKTOP-0GGGNMF = PC de casa (homelab, nodo Tailscale desktop-0gggnmf). DESKTOP-ENV6SDA = laptop de Sergio (no es homelab).
 - 13:42 (America/La_Paz): tailnet de la cuenta oninteligenciaartificial ya tiene desktop-0gggnmf (Windows) y onia-vps-worker (VPS, autorizado por Sergio). WSL: distro Ubuntu, versión 2, predeterminada. Próximo paso de Codex: usuario onia-worker en WSL sin sudo, /mnt/c restringido y probado.
+- Auditoría de orquestación: [AUDITORIA-ORQUESTACION-20261109.md](AUDITORIA-ORQUESTACION-20261109.md). Veredicto: harness bien diseñado; no reconstruir. Prompt propuesto para Codex (bajar default Sol high + higiene leftovers) pendiente del sí de Sergio.
