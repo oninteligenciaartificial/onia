@@ -150,3 +150,6 @@ Sergio aclara que sólo había PC→VPS; el puerto2222 no fue creado ni reconoci
 
 
 9nov ~16:35 America/La_Paz: Boss documentó revisión Codex + por qué no aprovecha Grok Bot (división de trabajo, handoff cola-boss, prompts). Resultado WSL en PC de casa (~16:33): bwrap presente, ssh active, host ed25519 presente. Cuota Codex 67% a ~14:54. Prompts de auditoría y de reparto esperan sí de Sergio. No se creó cola-boss.md aún. [REPARTO-CODEX-GROKBOT-20261109.md](REPARTO-CODEX-GROKBOT-20261109.md).
+
+
+9nov ~16:45 America/La_Paz: Boss leyó por su cuenta el video de Euge (subtítulos automáticos es-orig vía yt-dlp; página de YouTube; sin TubeAlfred autenticado, sin video bajado, sin VPS ni ASR privado) y lo contrastó con el análisis de Codex (262af0b / a2c161e). El video enseña hablar con un solo Grok Bot capataz, con conectores y rutinas, y montar fábricas en otra máquina persistente para lo que Grok Bot no hace bien. Codex resumió el video con fidelidad, pero tradujo el flujo a harness/VPS y dejó a Grok Bot fuera del diagrama. Propuesta de flujo OnIA y tres decisiones: [EUGE-VIDEO-BOSS-20261109.md](EUGE-VIDEO-BOSS-20261109.md).
