@@ -1,0 +1,56 @@
+{
+  "id": "homelab-conexion-20261109",
+  "fecha": "2026-11-09T17:49:50.948580+00:00",
+  "zona": "America/La_Paz",
+  "fecha_local": "2026-11-09T13:49:50.948580-04:00",
+  "correccion": "Sólo PC→VPS existía; no usar2222; ahora Tailscale para VPS→PC.",
+  "listener_excluido": {
+    "direccion": "127.0.0.1:2222",
+    "uid": 0,
+    "inode": 274038124,
+    "pid": null,
+    "uso_autorizado": false
+  },
+  "tailscale": {
+    "version": "1.104.5",
+    "sha256": "720cbbccbfc03d8b55df72afc19e5a72e31b0f65934700aa6fa38074d4ad7bf7",
+    "modo": "userspace-networking",
+    "sudo": false,
+    "estado_observado": "Running",
+    "vps_online": true,
+    "pc_online": true,
+    "ssh_wsl_probado": false,
+    "persistencia_reinicio_probada": false
+  },
+  "wsl_informado_por_sergio": {
+    "distro": "Ubuntu",
+    "estado": "Running",
+    "version": 2
+  },
+  "usuario_aislado_creado": false,
+  "mnt_c_restringido_probado": false,
+  "wsl_siempre_vivo_probado": false,
+  "benchmark_ejecutado": false,
+  "cuota_inicio": {
+    "used_percent": 64,
+    "timestamp": "2026-11-09T17:23:52.020Z"
+  },
+  "cuota_observada": {
+    "used_percent": 65,
+    "timestamp": "2026-11-09T17:37:56.459Z",
+    "saldo_extra": "0"
+  },
+  "modelo_coordinador_observado": "gpt-6-astra",
+  "esfuerzo_observado": "xhigh",
+  "intentos": 1,
+  "resultado": null,
+  "nota_resultado": "Progreso en espera, no recibo final ni aceptación. Acceso remoto/aislamiento todavía no logrados.",
+  "commits": {
+    "base": "88f40eb7cf607957bcaf2dc0146f267b9f9fdf4d",
+    "entrega": null
+  },
+  "retrabajo": {
+    "hubo": true,
+    "motivo": "Corregir inferencia de acceso y acotar alcance por prioridad de Sergio."
+  }
+}

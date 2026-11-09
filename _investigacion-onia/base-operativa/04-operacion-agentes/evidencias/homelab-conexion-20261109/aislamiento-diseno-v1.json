@@ -1,0 +1,29 @@
+{
+  "id": "homelab-aislamiento-diseno-20261109",
+  "tipo": "asesoria_de_diseno_no_aceptacion",
+  "modelo": "gpt-6.1-sol",
+  "esfuerzo": "high",
+  "cuota_inicio": {
+    "used_percent": 65,
+    "timestamp": "2026-11-09T17:45:17.243Z"
+  },
+  "cuota_final": {
+    "used_percent": 65,
+    "timestamp": "2026-11-09T17:51:31.116Z"
+  },
+  "cuota_metodo": "Lecturas de cuenta compartida observadas por coordinador antes/después; la asesora no observó cuota propia. Delta redondeado0 no implica consumo0.",
+  "intentos": 1,
+  "resultado": null,
+  "estado": "propuesta; aislamiento no ejecutado ni aceptado",
+  "commits": [],
+  "retrabajo": false,
+  "conclusiones": [
+    "Usuario sin sudo por sí solo no bloquea Windows; la shell de login también debe entrar al aislamiento para impedir .bashrc fuera de él.",
+    "Wrapper root-owned, entorno SSH/PAM efectivo controlado antes de Python; cerrar fds salvo0/1/2.",
+    "Probar bwrap user/pid/net/mount namespaces, root vacío, Linux allowlist y home nuevo sin submontajes/sockets; ocultar /usr/lib/wsl.",
+    "No habilitar acceso si userns/AppArmor bloquean; no cambiar restricciones globales.",
+    "Primera etapa puede limitarse a comandos SSH y subida por stdin, sin TTY/forwarding/SFTP ni red dentro de la sesión; esto restringe usos futuros y debe quedar explicado.",
+    "Antes de habilitar llave: sshd -t y -T -C; usuario sin grupos privilegiados; rechazo de /mnt/c, symlink alternativo, Windows interop y sockets del host; fallo de wrapper debe fallar cerrado.",
+    "Probar CapEff0, NoNewPrivs1, bloqueo de nuevos userns y fin de hijos al cerrar SSH. No usar esta propuesta como prueba de seguridad."
+  ]
+}

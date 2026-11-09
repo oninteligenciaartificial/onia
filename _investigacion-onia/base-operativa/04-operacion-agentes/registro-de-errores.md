@@ -436,3 +436,16 @@ Revisión independiente buena para9f10c3edf46edfc6741321f14869e0916884adf8. Info
 
 - Lecturas agrupadas de documentos y fuentes excedieron la salida disponible; se hicieron consultas acotadas de opciones WSL, referencias y metadatos pertinentes. No se consideró inspeccionado lo omitido ni se ejecutó ninguna instrucción de instalación de las fuentes externas.
 - Una búsqueda de pesos sólo en la caché predeterminada devolvió ausencia; no acreditaba ausencia del modelo. Se localizó el archivo small en ~/asr/modelos y se registró la ruta real en homelab/FUENTES-Y-PREFLIGHT.md, sin cargar el modelo. Consultas rg sin coincidencias no son fallo del servicio. Prevenirlo usando la ruta del entorno de ASR ya existente y distinguiendo inventario de ensayo.
+
+
+## 9 noviembre 2026 UTC · conexión HOMELAB autorizada
+
+- **Fallo comprobado:** SSH_AUTH_SOCK estaba definida, pero ssh-add -l falló en host con «No such file or directory» y dentro del sandbox con «Operation not permitted». **Causa precisa:** el socket no resultó utilizable en esos contextos; no se atribuye fallo de sshd PC ni se concluye que no exista acceso desde otra cuenta VPS. **Prevención:** validar disponibilidad real del agente antes de depender de él; usar una llave propia autorizada y comprobar usuario/host. No buscar claves privadas ajenas ni reutilizar la identidad GitHub. Evidencia: homelab-conexion-20261109/preflight-v1.json.
+- Lecturas agrupadas largas se truncaron; el estado SSH se inspeccionó por separado y no se atribuyeron pruebas o contenido a la parte omitida. Ningún fallo de lectura se tomó como permiso para instalar o cambiar servicios.
+
+
+## 9 noviembre 2026 · corrección de acceso y prioridad HOMELAB
+
+- **Qué pasó:** un listener SSH loopback2222 se describió como posible túnel a la PC sin identidad confirmada. **Corrección de Sergio:** sólo existe PC→VPS y no conoce ese listener. **Evidencia:** inspección local posterior devuelve UID0/inode274038124, pero no PID por permisos; nunca hubo login ni confianza de su host key. **Prevención:** no usar un puerto descubierto como acceso autorizado; validar sentido, dueño y host primero. Se excluye2222, no se borra la observación histórica ni se intenta elevar privilegios.
+- **Instalación/login:** `tailscale up --timeout=15s` terminó esperando autorización humana (NeedsLogin); no era fallo del binario ni prueba de conexión. Después del consentimiento se verificó Running y Windows online. No publicar enlace de login, cuenta, tokens, estado o logs crudos. La fuente oficial guessed `/kb/1057/install-rpm` no se pudo abrir; se usó el índice oficial stable para el tar y su checksum, sin instalar RPM.
+- **Lecturas:** algunas salidas combinadas se truncaron; se volvió a consultar sólo los fragmentos necesarios, sin afirmar lectura íntegra. Evitar agrupar documentos largos en una salida pequeña. La cuota compartida pasó de64 a65 en esta ventana; no atribuir el punto íntegramente a una tarea ni transformar porcentaje en USD.

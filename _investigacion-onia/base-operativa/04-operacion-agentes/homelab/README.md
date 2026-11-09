@@ -1,5 +1,15 @@
 # HOMELAB: worker Windows + WSL para OnIA
 
+## Prioridad vigente · 9 noviembre 2026 · America/La_Paz
+
+Hasta el 14-nov se prioriza vender el workshop: kit, ensayo y materiales; cualquier publicación o envío necesita el sí de Sergio. Objetivo inmediato: **cerebro operativo + panel de contenido usable**, [plan corto presentado](../evidencias/cerebro-panel-usable-20261109/PLAN.md), pendiente de su sí antes de implementar.
+
+HOMELAB se limita a **Tailscale, onia-worker sin sudo, archivos Windows restringidos y WSL siempre encendido**. No ejecutar los benchmarks de F1 ni mediciones largas, no implementar scheduler ni limpiar procesos. Después del cerebro+panel, datos/sesiones/orquestación/HOMELAB etapa 1 requieren un nuevo sí. Las fases de abajo son antecedentes, no una cola autorizada.
+
+Tailscale VPS instalado sin sudo y autorizado: nodo `onia-vps-worker` Running, PC Windows online. La distro indicada por Sergio es Ubuntu/WSL2. **Usuario aislado, SSH a WSL y continuidad aún pendientes**; [estado, límites y pasos](CONEXION-EN-CURSO.md). Sólo existía PC→VPS; el listener2222 no pertenece a HOMELAB por evidencia conocida y queda excluido. No se tocó configuración de Windows/WSL, producción ni n8n.
+
+## Antecedente F0 · sólo propuesta en su fecha
+
 F0 · 9 noviembre 2026 UTC · **sólo plan, pendiente del sí explícito de Sergio para F1**. Base leída: `5f1c2134e93cc73cc1dbbb7e11e59e8435b64246`, contrastada con `origin/master`. No se implementó, instaló, conectó la PC, lanzó un ensayo, apagó un proceso ni gastó dinero. Los ejemplos de configuración y comandos de estos documentos no se aplicaron.
 
 El VPS conserva la coordinación, integración Git y registro de tareas. La PC aporta procesamiento pesado; no añade cuota Codex ni autoriza trasladar producción. GitHub sigue siendo la fuente durable de planes, decisiones, código y resultados saneados. Los secretos y medios privados se conservan fuera de Git.

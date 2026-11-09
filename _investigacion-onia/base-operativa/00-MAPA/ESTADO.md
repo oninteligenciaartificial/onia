@@ -2,6 +2,12 @@
 
 ## Actualización vigente · 9 noviembre 2026 UTC
 
+**Prioridad vigente (America/La_Paz):** hasta el14-nov, kit/ensayo/materiales para vender workshop. Cerebro operativo + panel es el objetivo inmediato: [plan corto, alcance, modelos, aceptación y tope2puntos](../04-operacion-agentes/evidencias/cerebro-panel-usable-20261109/PLAN.md), esperando sí antes de implementar. Reusar lo aceptado; no repetir investigación. No producción, n8n real, envíos, compras o publicación de contenido. Datos, mejores sesiones, coordinación/orquestación y HOMELAB etapa1 quedan para otro sí posterior.
+
+HOMELAB sólo esencial: Tailscale VPS instalado sin sudo y autorizado (Running), PC Windows online; Ubuntu/WSL2 confirmada por Sergio. Usuario onia-worker aislado, SSH y WSL siempre vivo siguen pendientes. Acceso existente era PC→VPS; puerto2222 excluido, dueño root pero PID desconocido. [Continuidad y paso humano](../04-operacion-agentes/homelab/CONEXION-EN-CURSO.md). No benchmarks ni mediciones largas. Los párrafos F0 siguientes conservan el estado histórico, no autorización actual.
+
+Recibos de ejecutor/revisor: ID, modelo+esfuerzo, cuota usada inicial/final fechada, intentos, resultado aceptada/rechazada/fallida, commits y retrabajo; no inventar USD. Cuota compartida observada65% a9nov13:37:56 Bolivia, saldoextra0.
+
 HOMELAB F0 documentado: PC Windows/WSL como worker pesado, VPS coordinador y producción intacta. [Plan, checklist y fases](../04-operacion-agentes/homelab/README.md). Sólo presentación: esperar sí explícito para F1 (medición VPS); PC/F2 y scheduler/F3 requieren aprobaciones posteriores. No se implementó, instaló, conectó ni lanzó nada en esta fase. Cuota compartida 64% al 9nov16:58:43UTC, saldo extra 0; no aumenta por sumar la PC.
 
 Video Euge resuelto dentro del alcance revisado: reproducción y captura de0:00 a30:02 por reloj en el VPS, pista original,34 muestras visuales y ASR alineado. Revisor distinto aprobó la entrega9f10c3e; tarea canónica aceptada. [Informe, pruebas y límites](../05-herramientas/video-euge-20261108/RESOLUCION-20261109.md) · [Aplicación a OnIA](../05-herramientas/video-euge-20261108/coordinacion/ANALISIS-ONIA.md). Escucha directa y observación perceptiva continua no acreditadas; el procedimiento requiere operador. Causa del corte de Playwright no aislada. Visor devuelto y sin ASR activo al control13:01UTC; no se despachó otro lote.
