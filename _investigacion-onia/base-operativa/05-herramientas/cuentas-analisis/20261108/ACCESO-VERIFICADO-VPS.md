@@ -13,11 +13,13 @@ No se usan cookies o perfil de Sergio para MCP: esa prueba fue aislada. El visor
 
 ## Abrir desde Windows
 
-Sergio confirmó que ya entra por PowerShell/SSH. En su terminal SSH privada existente, consultar la clave del visor:
+Si la terminal muestra `PS C:\Users\PC>`, está en Windows. Ejecutar el comando completo desde esa ventana de PowerShell para consultar la clave privada en el VPS:
 
-```bash
-cat /home/onia-codex-worker/operacion/cuentas/analisis-onia/clave-visor.txt
+```powershell
+ssh root@187.77.16.63 "cat /home/onia-codex-worker/operacion/cuentas/analisis-onia/clave-visor.txt"
 ```
+
+El `cat /home/...` sin `ssh` sólo corresponde a una consola que ya está dentro del VPS; en PowerShell buscaría una ruta de Windows inexistente.
 
 No pegarla en el chat ni ponerla en URLs. Es una clave del visor, distinta de cualquier contraseña de cuenta.
 
@@ -34,6 +36,8 @@ Abrir en el navegador de Windows:
 ```text
 http://127.0.0.1:6088/vnc.html?autoconnect=1&resize=scale
 ```
+
+`localhost` y `127.0.0.1` señalan el equipo donde está abierto el visor. El túnel transporta la conexión al VPS; no mueve Chromium ni su perfil a Windows. Si la aplicación ofrece otra dirección local con un puerto distinto, no asumir que coincide con 6088: comprobar el canal antes de cambiar la dirección.
 
 Ingresar la clave del visor. Debe verse Chromium del VPS con la página pública. Probar teclado/ratón antes del alta. Chromium, red, archivos y perfil permanecen en el VPS; Windows sólo presenta el visor. No se comprobó aún la autenticación/túnel desde ese equipo.
 
