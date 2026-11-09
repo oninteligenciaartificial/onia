@@ -78,3 +78,5 @@ Sergio pide avanzar mientras duerme: video Euge, Telegram/n8n y fábrica de idea
 El piloto mínimo de carriles sí fue autorizado por Sergio (Workshop/Investigación,3cupos incluidos revisores,máx1hijo,parada/revocación e informe). No confundir ese sí limitado con aprobación del diseño completo ni decir que el scheduler ya existe. El título del diseño pasa a Codex/OnIA.
 
 Cierre nocturno: dos entregas revisadas e integradas, Telegram sólo prueba inactiva/sintética, workshop borradores sin ensayo humano; video completo en_espera por corte y403 observados sin causa confirmada. [Informe](evidencias/noche-20261109/INFORME.md). Sin sesiones CLI activas al cerrar y sin scheduler permanente.
+
+Continuación del9nov: cerebro consultable, kit primeros10min y lector/panel real revisados e integrados. Se corrigieron móvil y un pie PDF que el primer revisor rechazó. [Cierre y guía de mañana](evidencias/continuacion-noche-20261109/INFORME.md). No activar campaña ni atribuir Telegram/video completos; mantener revisión del piloto por Sergio antes del resto. Cuota compartida fechada y monitor cerrados; límite3 sin cambios.

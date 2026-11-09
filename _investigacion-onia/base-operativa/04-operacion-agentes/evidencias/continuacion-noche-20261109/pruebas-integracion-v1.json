@@ -1,0 +1,21 @@
+{
+  "fecha_documentacion_utc": "2026-11-09T05:32:59.136384+00:00",
+  "pruebas_post_integracion": [
+    {
+      "entrega": "cerebro-consultable-20261109",
+      "commit": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+      "comando": "PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s _investigacion-onia/base-operativa/03-referentes/cerebro-operativo/20261109 -p 'test_*.py' -v",
+      "tests": 17,
+      "rc": 0,
+      "evidencia": "Salida de terminal del coordinador en esta sesión; no se inventa log bruto de esa salida."
+    },
+    {
+      "entrega": "fabrica-lector-panel-20261109",
+      "commit": "ecb18ed45c671ea2816d653d3876620df3fb2589",
+      "comando": "PYTHONDONTWRITEBYTECODE=1 python3 -B _investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/pruebas.py",
+      "tests": 22,
+      "rc": 0,
+      "evidencia": "Salida de terminal del coordinador en esta sesión; suite bloquea red por socket."
+    }
+  ]
+}

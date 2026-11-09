@@ -1,0 +1,29 @@
+{
+  "fecha_utc": "2026-11-09T05:40:27.970972+00:00",
+  "commit_entrega": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+  "pruebas": [
+    {
+      "comando": [
+        "python3",
+        "-B",
+        "/home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/01-negocio/workshop-20261108/kit-piloto-20261109/comprobar-texto.py",
+        "/tmp/onia-kit-integracion-mqzj66nz/texto.json"
+      ],
+      "rc": 0,
+      "stdout": "{\"resultado\": \"OK documental; renderizado pendiente\", \"controles\": 58, \"salida\": \"/tmp/onia-kit-integracion-mqzj66nz/texto.json\"}\n",
+      "stderr": ""
+    },
+    {
+      "comando": [
+        "python3",
+        "-B",
+        "/home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/01-negocio/workshop-20261108/kit-piloto-20261109/comprobar-pdf.py",
+        "/home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/01-negocio/workshop-20261108/kit-piloto-20261109/evidencia/host-02"
+      ],
+      "rc": 0,
+      "stdout": "{\"controles_por_pagina\": [{\"documento\": \"laminas\", \"pagina\": 1, \"pie_propio\": true, \"sin_pies_ajenos\": true, \"caracteres\": 319}, {\"documento\": \"laminas\", \"pagina\": 2, \"pie_propio\": true, \"sin_pies_ajenos\": true, \"caracteres\": 559}, {\"documento\": \"laminas\", \"pagina\": 3, \"pie_propio\": true, \"sin_pies_ajenos\": true, \"caracteres\": 596}, {\"documento\": \"laminas\", \"pagina\": 4, \"pie_propio\": true, \"sin_pies_ajenos\": true, \"caracteres\": 437}, {\"documento\": \"laminas\", \"pagina\": 5, \"pie_propio\": true, \"sin_pies_ajenos\": true, \"caracteres\": 420}, {\"documento\": \"laminas\", \"pagina\": 6, \"pie_propio\": true, \"sin_pies_ajenos\": true, \"caracteres\": 394}, {\"documento\": \"laminas\", \"pagina\": 7, \"pie_propio\": true, \"sin_pies_ajenos\": true, \"caracteres\": 411}, {\"documento\": \"hoja\", \"pagina\": 1, \"pie_propio\": true, \"sin_pies_ajenos\": true, \"caracteres\": 1678}, {\"documento\": \"hoja\", \"pagina\": 2, \"pie_propio\": true, \"sin_pies_ajenos\": true, \"caracteres\": 1513}, {\"documento\": \"guia\", \"pagina\": 1, \"pie_propio\": true, \"sin_pies_ajenos\": true, \"caracteres\": 2355}, {\"documento\": \"guia\", \"pagina\": 2, \"pie_propio\": true, \"sin_pies_ajenos\": true, \"caracteres\": 1926}, {\"documento\": \"guia\", \"pagina\": 3, \"pie_propio\": true, \"sin_pies_ajenos\": true, \"caracteres\": 2206}], \"limite\": \"Parser acotado a PDF Chromium con fuentes ToUnicode/Flate; no rasterización ni comprobación general de coordenadas.\"}\n",
+      "stderr": ""
+    }
+  ],
+  "limites": "Reproducción documental/PDF después de integrar; no nueva corrida Chromium ni rasterización."
+}

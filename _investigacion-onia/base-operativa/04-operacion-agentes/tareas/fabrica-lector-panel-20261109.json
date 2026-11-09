@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "id": "fabrica-lector-panel-20261109",
-  "revision": 38,
+  "revision": 39,
   "compartible": true,
   "objetivo": "Conectar fuentes públicas y entregables reales del repo a un panel de consulta de la fábrica, sin activar publicaciones o Telegram",
   "estado": "aceptado",
-  "proximo_paso": "Integrar entrega aceptada a origin/master, verificar hash y reportar pendientes a Sergio; campaña y envíos sin activar.",
+  "proximo_paso": "Panel corregido, revisado e integrado en origin/master. Sergio revisa guiones; actualización manual con recibo nuevo. Telegram real y publicación siguen pendientes de su prueba/permiso específico.",
   "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
   "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
   "verificacion": "correcta",
@@ -36,7 +36,7 @@
       "bytes": 311
     }
   ],
-  "actualizado": "2026-11-09T05:30:56.904327+00:00",
+  "actualizado": "2026-11-09T05:40:02.841489+00:00",
   "historial": [
     {
       "revision": 1,
@@ -4391,6 +4391,227 @@
         "revision_base": 1,
         "fecha": "2026-11-09T04:57:26.628511+00:00"
       },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "fabrica-panel-ejecutor",
+          "pid": 1885424,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193952090",
+          "supervisor_pid": 1885417,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193952072",
+          "rama": "codex/ws-fabrica-lector-panel-20261109",
+          "session_id": "01a1beac-012a-78b2-9b11-74c9a2e30d81",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-lector-panel-20261109.jsonl",
+          "log_rel": "logs/fabrica-lector-panel-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-lector-panel-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-lector-panel"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-lector-panel-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:25.289936+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-lector-panel-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-lector-panel-20261109.git/worktrees/onia-ws-fabrica-lector-panel-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:46.525189+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "fabrica-panel-ejecutor",
+          "pid": 1921381,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034856",
+          "supervisor_pid": 1921353,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034835",
+          "rama": "codex/ws-fabrica-lector-panel-20261109",
+          "session_id": "01a1beac-012a-78b2-9b11-74c9a2e30d81",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-lector-panel-20261109.jsonl",
+          "log_rel": "logs/fabrica-lector-panel-20261109.jsonl",
+          "log_offset": 347067,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-lector-panel-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-lector-panel"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beac-012a-78b2-9b11-74c9a2e30d81",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-lector-panel-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.884374+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-lector-panel-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-lector-panel-20261109.git/worktrees/onia-ws-fabrica-lector-panel-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:21:20.820123+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "fabrica-panel-ejecutor",
+          "pid": 1947140,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194091653",
+          "supervisor_pid": 1947118,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194091638",
+          "rama": "codex/ws-fabrica-lector-panel-20261109",
+          "session_id": "01a1beac-012a-78b2-9b11-74c9a2e30d81",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-lector-panel-20261109.jsonl",
+          "log_rel": "logs/fabrica-lector-panel-20261109.jsonl",
+          "log_offset": 500532,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-lector-panel-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-lector-panel"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beac-012a-78b2-9b11-74c9a2e30d81",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-lector-panel-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:40.925497+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-lector-panel-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-lector-panel-20261109.git/worktrees/onia-ws-fabrica-lector-panel-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:26:39.656812+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "fabrica-lector-panel-20261109-revisor-1",
+          "pid": 1961665,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194126417",
+          "supervisor_pid": 1961661,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194126399",
+          "rama": "(detached)",
+          "session_id": "01a1bec6-9b35-78a2-97c7-bdee247b7b96",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-lector-panel-20261109.revision-4.jsonl",
+          "log_rel": "logs/fabrica-lector-panel-20261109.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-lector-panel-20261109-revision-4",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-lector-panel"
+          ],
+          "dry_run": false,
+          "commit_base": "ecb18ed45c671ea2816d653d3876620df3fb2589",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-lector-panel-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:27:28.482813+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "95511022968ab2b395ba7b79b58daf7897f37f86f3691793f1c6e4a25fe0f959",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-lector-panel-20261109.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-lector-panel-20261109.4.veredicto.json",
+          "fin": "2026-11-09T05:30:03.991021+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "ecb18ed45c671ea2816d653d3876620df3fb2589",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-lector-panel-20261109"
+        ],
+        "fecha": "2026-11-09T05:27:25.834934+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-lector-panel-20261109/cierre-r28-1e6231f8.json",
+          "sha256": "24fea58a1a997ccf80d4c5aa1af97cea7fe0bf960a871e7b687d2808687abca6",
+          "bytes": 311
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "ecb18ed45c671ea2816d653d3876620df3fb2589",
+        "criterio": "Cumple los siete criterios. C1 reutiliza contratos y registros canónicos, con dos borradores técnicamente revisados y permiso editorial pendiente. C2–C3 implementa lectura manual acotada, fechas separadas, deduplicación y fallos visibles. Reproduje las 22 pruebas sin red y cotejé las tres fuentes públicas mediante web. [F01](https://support.claude.com/en/articles/8114491-get-started-with-claude), [F02](https://support.claude.com/en/articles/7996857-my-prompt-isn-t-giving-me-a-helpful-answer), [F06](https://claude.com/resources/articles/claude-enterprise-security-updates). C4 comprobé proyección exacta de tres tareas, dos guiones y dos ideas, render reproducible e integridad de los 19 archivos del manifiesto. C5 inspeccioné las cinco capturas y cotejé los hashes del recibo Chromium con sandbox ejecutado por el host autorizado. C6 documenta actualización manual y límites de recurrencia/Telegram. C7 diff exclusivo de 37 archivos, sin borrados y checkout limpio. Publicación respaldada por referencia local origin y recibos aportados. La consulta adicional ls-remote falló por DNS en esta sesión.",
+        "worktree_conservado": true,
+        "revisor": "fabrica-lector-panel-20261109-revisor-1",
+        "session_id": "01a1bec6-9b35-78a2-97c7-bdee247b7b96",
+        "entrega_sha256": "95511022968ab2b395ba7b79b58daf7897f37f86f3691793f1c6e4a25fe0f959",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-lector-panel-20261109/revision-4-08b53964.json",
+          "sha256": "6d4792b95bca7bd3c65c0a4e306de48b9b8c4ef186ef5c91e24eaf5687720937",
+          "bytes": 1254
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-lector-panel-20261109/revision-4-08b53964.json",
+          "sha256": "6d4792b95bca7bd3c65c0a4e306de48b9b8c4ef186ef5c91e24eaf5687720937",
+          "bytes": 1254
+        }
+      ]
+    },
+    {
+      "revision": 38,
+      "actualizado": "2026-11-09T05:30:56.904327+00:00",
+      "estado": "aceptado",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-panel-v1.md",
+          "sha256": "a548cd3f6b60bd33d7802796391200bbe85517f0256cce7196b7880ccf2080fe",
+          "bytes": 3142
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-panel-v2.md",
+          "sha256": "37752267853d5356adfb7971cb74193dd3a9ce2b5787b4879f3085dff74534b3",
+          "bytes": 1703
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-fabrica-lector-panel-20261109-r27.json",
+          "sha256": "bfdff6c56b7912d0e668b65b6de72632a5b5291536bfef54b79cb85d46aed1de",
+          "bytes": 5514
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-lector-panel-20261109/cierre-r28-1e6231f8.json",
+          "sha256": "24fea58a1a997ccf80d4c5aa1af97cea7fe0bf960a871e7b687d2808687abca6",
+          "bytes": 311
+        }
+      ],
+      "proximo_paso": "Integrar entrega aceptada a origin/master, verificar hash y reportar pendientes a Sergio; campaña y envíos sin activar.",
+      "aceptacion": {
+        "revisor": "fabrica-lector-panel-20261109-revisor-1",
+        "criterio": "Cumple los siete criterios. C1 reutiliza contratos y registros canónicos, con dos borradores técnicamente revisados y permiso editorial pendiente. C2–C3 implementa lectura manual acotada, fechas separadas, deduplicación y fallos visibles. Reproduje las 22 pruebas sin red y cotejé las tres fuentes públicas mediante web. [F01](https://support.claude.com/en/articles/8114491-get-started-with-claude), [F02](https://support.claude.com/en/articles/7996857-my-prompt-isn-t-giving-me-a-helpful-answer), [F06](https://claude.com/resources/articles/claude-enterprise-security-updates). C4 comprobé proyección exacta de tres tareas, dos guiones y dos ideas, render reproducible e integridad de los 19 archivos del manifiesto. C5 inspeccioné las cinco capturas y cotejé los hashes del recibo Chromium con sandbox ejecutado por el host autorizado. C6 documenta actualización manual y límites de recurrencia/Telegram. C7 diff exclusivo de 37 archivos, sin borrados y checkout limpio. Publicación respaldada por referencia local origin y recibos aportados. La consulta adicional ls-remote falló por DNS en esta sesión.",
+        "fecha": "2026-11-09T05:30:56.840203+00:00"
+      },
+      "asignacion": null,
       "sesiones": [
         {
           "intento": 1,

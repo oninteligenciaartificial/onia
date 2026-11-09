@@ -2,6 +2,8 @@
 
 ## Actualización vigente · 9 noviembre 2026 UTC
 
+Continuación nocturna cerrada: cerebro consultable, kit del piloto y lector/panel con fuentes reales aceptados por revisores distintos e integrados en origin/master. PDF corregido tras rechazo de la primera revisión. [Informe, recursos, cuota y commits](../04-operacion-agentes/evidencias/continuacion-noche-20261109/INFORME.md) · [Guía para Sergio](../04-operacion-agentes/evidencias/continuacion-noche-20261109/PARA-SERGIO.md). Ensayo humano, resto del workshop, Telegram real y video completo siguen pendientes. Sin nuevas sesiones ni servicio permanente al cierre.
+
 Lote nocturno cerrado en su alcance: Telegram/n8n de prueba y borradores de workshop/contenido aceptados por revisores distintos e integrados en origin/master. Video Euge sigue en_espera: diagnóstico y capturador corregidos/revisados, sin visionado completo. [Informe, pruebas, cuota, commits y pendientes](../04-operacion-agentes/evidencias/noche-20261109/INFORME.md). No hubo campañas, mensajes ni activaciones; Platform excluida. Scheduler todavía no implementado, con sí limitado al piloto ya registrado.
 
 Retomas cerradas: grupos A/B/C de referentes aceptados con revisores distintos e integrados en origin/master,79 piezas para19 referentes. Navegador/visor y MCP aceptados dentro de su alcance; fábrica de contenido aceptada como diseño y ensayo ficticio de seis controles, sin activar Telegram ni servicios. [Cierre, commits, cuota, pruebas y faltantes](../04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md).

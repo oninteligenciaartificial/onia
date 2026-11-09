@@ -1,0 +1,191 @@
+{
+  "fecha_utc": "2026-11-09T05:39:38.771597+00:00",
+  "muestras": 479,
+  "inicio_utc": "2026-11-09 04:59:01.562773+00:00",
+  "fin_utc": "2026-11-09 05:39:13.054614+00:00",
+  "duracion_s": 2411.491841,
+  "vCPU": 4,
+  "cpu_host_pct": {
+    "mediana": 17.305,
+    "pico": 85.58
+  },
+  "mem_available_min_gib": 9.890373229980469,
+  "mem_total_gib": 15.617378234863281,
+  "swap_ocupada_mib": {
+    "min": 2914.5,
+    "max": 2925.75
+  },
+  "vmstat_delta": {
+    "pswpin": 20,
+    "pswpout": 2952,
+    "oom_kill": 0
+  },
+  "principales_cli_max_observadas": 3,
+  "tres_principales": {
+    "muestras": 157,
+    "intervalos_consecutivos_s": 781.920581,
+    "primera": "2026-11-09T04:59:01.562773+00:00",
+    "ultima": "2026-11-09T05:16:30.527249+00:00"
+  },
+  "fuente_privada": "~/operacion/resultados/medicion-continuacion-20261109.jsonl",
+  "sha256_fuente": "45b45f8e11d330701bb7ee204c8d99388fbf062f9eefa10e6bb5a846b8ee9c27",
+  "sha256_monitor": "8074fc7a1debe16cbf60a2e7655ad1a6240c21c5de393d5c6b7da3fccb7fbd8f",
+  "pressure": {
+    "cpu": {
+      "some": {
+        "avg10_pico_pct": 37.08,
+        "total_delta_us": 130821001.0,
+        "stall_promedio_pct": 5.42489917551415
+      },
+      "full": {
+        "avg10_pico_pct": 0.0,
+        "total_delta_us": 0.0,
+        "stall_promedio_pct": 0.0
+      }
+    },
+    "memory": {
+      "some": {
+        "avg10_pico_pct": 2.51,
+        "total_delta_us": 300051.0,
+        "stall_promedio_pct": 0.012442546762902358
+      },
+      "full": {
+        "avg10_pico_pct": 2.45,
+        "total_delta_us": 273360.0,
+        "stall_promedio_pct": 0.011335721537695222
+      }
+    },
+    "io": {
+      "some": {
+        "avg10_pico_pct": 3.84,
+        "total_delta_us": 5824144.0,
+        "stall_promedio_pct": 0.2415162224884343
+      },
+      "full": {
+        "avg10_pico_pct": 0.39,
+        "total_delta_us": 3054548.0,
+        "stall_promedio_pct": 0.12666632115716953
+      }
+    }
+  },
+  "intentos": [
+    {
+      "id": "cerebro-consultable-20261109",
+      "intento": 1,
+      "rol": "ejecutor",
+      "muestras": 136,
+      "rss_mib_mediana": 385.6953125,
+      "rss_mib_pico": 442.796875,
+      "cpu_pct_mediana": 0.545,
+      "cpu_pct_pico": 3.411
+    },
+    {
+      "id": "cerebro-consultable-20261109",
+      "intento": 2,
+      "rol": "revisor",
+      "muestras": 41,
+      "rss_mib_mediana": 397.93359375,
+      "rss_mib_pico": 559.93359375,
+      "cpu_pct_mediana": 0.844,
+      "cpu_pct_pico": 2.531
+    },
+    {
+      "id": "fabrica-lector-panel-20261109",
+      "intento": 1,
+      "rol": "ejecutor",
+      "muestras": 116,
+      "rss_mib_mediana": 394.1015625,
+      "rss_mib_pico": 468.203125,
+      "cpu_pct_mediana": 0.397,
+      "cpu_pct_pico": 4.259
+    },
+    {
+      "id": "fabrica-lector-panel-20261109",
+      "intento": 2,
+      "rol": "ejecutor",
+      "muestras": 109,
+      "rss_mib_mediana": 398.20703125,
+      "rss_mib_pico": 513.67578125,
+      "cpu_pct_mediana": 0.248,
+      "cpu_pct_pico": 8.952
+    },
+    {
+      "id": "fabrica-lector-panel-20261109",
+      "intento": 3,
+      "rol": "ejecutor",
+      "muestras": 59,
+      "rss_mib_mediana": 417.15234375,
+      "rss_mib_pico": 477.046875,
+      "cpu_pct_mediana": 0.298,
+      "cpu_pct_pico": 3.414
+    },
+    {
+      "id": "fabrica-lector-panel-20261109",
+      "intento": 4,
+      "rol": "revisor",
+      "muestras": 31,
+      "rss_mib_mediana": 413.2734375,
+      "rss_mib_pico": 459.08984375,
+      "cpu_pct_mediana": 0.892,
+      "cpu_pct_pico": 5.852
+    },
+    {
+      "id": "workshop-kit-piloto-20261109",
+      "intento": 1,
+      "rol": "ejecutor",
+      "muestras": 117,
+      "rss_mib_mediana": 389.40625,
+      "rss_mib_pico": 444.015625,
+      "cpu_pct_mediana": 0.347,
+      "cpu_pct_pico": 7.626
+    },
+    {
+      "id": "workshop-kit-piloto-20261109",
+      "intento": 2,
+      "rol": "ejecutor",
+      "muestras": 100,
+      "rss_mib_mediana": 440.47265625,
+      "rss_mib_pico": 463.671875,
+      "cpu_pct_mediana": 0.347,
+      "cpu_pct_pico": 3.382
+    },
+    {
+      "id": "workshop-kit-piloto-20261109",
+      "intento": 3,
+      "rol": "revisor",
+      "muestras": 56,
+      "rss_mib_mediana": 404.013671875,
+      "rss_mib_pico": 501.36328125,
+      "cpu_pct_mediana": 0.521,
+      "cpu_pct_pico": 4.16
+    },
+    {
+      "id": "workshop-kit-piloto-20261109",
+      "intento": 4,
+      "rol": "ejecutor",
+      "muestras": 78,
+      "rss_mib_mediana": 456.63671875,
+      "rss_mib_pico": 474.50390625,
+      "cpu_pct_mediana": 0.3465,
+      "cpu_pct_pico": 10.552
+    },
+    {
+      "id": "workshop-kit-piloto-20261109",
+      "intento": 5,
+      "rol": "revisor",
+      "muestras": 38,
+      "rss_mib_mediana": 406.39453125,
+      "rss_mib_pico": 521.61328125,
+      "cpu_pct_mediana": 0.397,
+      "cpu_pct_pico": 3.42
+    }
+  ],
+  "limites": [
+    "CPU/RAM/swap/PSI del host compartido; sin línea base exclusiva, no atribuir picos ni OOM a una sola sesión.",
+    "RSS suma memoria compartida varias veces; PPID omite procesos reparentados/terminados.",
+    "CPU por árbol normalizada por vCPU host; no CPU de inferencia del proveedor.",
+    "La medición comenzó después del lanzamiento; solape observado no cubre toda la vida de los procesos.",
+    "Un solo lote liviano, sin inferencia audiovisual pesada; no justifica subir de3.",
+    "Los recibos de cuota son compartidos; el uso por intento no equivale a porcentaje de cuota ni costo."
+  ]
+}

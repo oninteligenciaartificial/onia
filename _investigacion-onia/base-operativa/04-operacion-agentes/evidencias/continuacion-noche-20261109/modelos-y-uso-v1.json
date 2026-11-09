@@ -1,0 +1,412 @@
+{
+  "fecha_utc": "2026-11-09T05:39:41.417666+00:00",
+  "tareas": [
+    {
+      "id": "cerebro-consultable-20261109",
+      "revision": 19,
+      "estado": "aceptado",
+      "entrega": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+      "revisor": "01a1beb9-6b5b-7ba0-a584-3a0e90820a46",
+      "intentos": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "sid": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+                  "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 2600550,
+              "cached_input_tokens": 2479360,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 30865,
+              "reasoning_output_tokens": 5894
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "sid": "01a1beb9-6b5b-7ba0-a584-3a0e90820a46",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 1892326,
+              "cached_input_tokens": 1780480,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 7591,
+              "reasoning_output_tokens": 2353
+            }
+          ],
+          "worktree_conservado": true
+        }
+      ],
+      "hijos": [],
+      "entrega_en_origin_master_local_actualizado": true
+    },
+    {
+      "id": "workshop-kit-piloto-20261109",
+      "revision": 45,
+      "estado": "aceptado",
+      "entrega": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+      "revisor": "01a1becd-5a6b-7d42-8e64-be8207566738",
+      "intentos": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "sid": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+                  "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 1315034,
+              "cached_input_tokens": 1252608,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 27587,
+              "reasoning_output_tokens": 5790
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "sid": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+                  "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 5255464,
+              "cached_input_tokens": 5143424,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 38985,
+              "reasoning_output_tokens": 9485
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "sid": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 1680368,
+              "cached_input_tokens": 1560448,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 11459,
+              "reasoning_output_tokens": 4522
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "sid": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+                  "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 8809276,
+              "cached_input_tokens": 8657408,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 48115,
+              "reasoning_output_tokens": 12098
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 5,
+          "rol": "revisor",
+          "sid": "01a1becd-5a6b-7d42-8e64-be8207566738",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 914301,
+              "cached_input_tokens": 821376,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 8020,
+              "reasoning_output_tokens": 3098
+            }
+          ],
+          "worktree_conservado": true
+        }
+      ],
+      "hijos": [],
+      "entrega_en_origin_master_local_actualizado": true
+    },
+    {
+      "id": "fabrica-lector-panel-20261109",
+      "revision": 38,
+      "estado": "aceptado",
+      "entrega": "ecb18ed45c671ea2816d653d3876620df3fb2589",
+      "revisor": "01a1bec6-9b35-78a2-97c7-bdee247b7b96",
+      "intentos": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "sid": "01a1beac-012a-78b2-9b11-74c9a2e30d81",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/fabrica-lector-panel-20261109.git",
+                  "/home/onia-codex-worker/operacion/git/fabrica-lector-panel-20261109.git/worktrees/onia-ws-fabrica-lector-panel-20261109"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 1991968,
+              "cached_input_tokens": 1903616,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 27286,
+              "reasoning_output_tokens": 5755
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "sid": "01a1beac-012a-78b2-9b11-74c9a2e30d81",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/fabrica-lector-panel-20261109.git",
+                  "/home/onia-codex-worker/operacion/git/fabrica-lector-panel-20261109.git/worktrees/onia-ws-fabrica-lector-panel-20261109"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 6030722,
+              "cached_input_tokens": 5907200,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 44038,
+              "reasoning_output_tokens": 10916
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "sid": "01a1beac-012a-78b2-9b11-74c9a2e30d81",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/fabrica-lector-panel-20261109.git",
+                  "/home/onia-codex-worker/operacion/git/fabrica-lector-panel-20261109.git/worktrees/onia-ws-fabrica-lector-panel-20261109"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 8889907,
+              "cached_input_tokens": 8741760,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 52984,
+              "reasoning_output_tokens": 12498
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "sid": "01a1bec6-9b35-78a2-97c7-bdee247b7b96",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 1101078,
+              "cached_input_tokens": 989312,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 5773,
+              "reasoning_output_tokens": 1917
+            }
+          ],
+          "worktree_conservado": true
+        }
+      ],
+      "hijos": [],
+      "entrega_en_origin_master_local_actualizado": true
+    }
+  ],
+  "limites": [
+    "Uso de turn.completed por intento informado por CLI; no porcentaje de cuota ni importe facturado.",
+    "cached_input_tokens es subconjunto, no se suma al input.",
+    "Hijos muestran modelo observado por su contexto; no se agrega su uso para evitar doble conteo.",
+    "Runtime observado no es una medición independiente de los pesos del proveedor."
+  ]
+}
