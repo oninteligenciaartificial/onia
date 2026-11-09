@@ -81,6 +81,9 @@ function validateAgenda(rows,inventory=25){
         report.documentos.push({documento:name,pagina:i+1,captura:file,metrics});
       }
       if(name!=='index'){
+        await page.goto(pathToFileURL(path.join(root,name+'.html')).href);
+        await page.emulateMedia({media:'print'});
+        await page.evaluate(()=>{window.scrollTo(0,0);return document.fonts.ready;});
         const pdf=await page.pdf({path:path.join(out,name+'.pdf'),preferCSSPageSize:true,printBackground:true,displayHeaderFooter:false,tagged:true});
         const pageCount=(pdf.toString('latin1').match(/\/Type\s*\/Page\b/g)||[]).length;
         check(name+': PDF '+count+' páginas sin extras',()=>assert.equal(pageCount,count));

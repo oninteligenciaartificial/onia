@@ -7,3 +7,7 @@ table{border-collapse:collapse;width:100%;text-align:left}th{background:var(--so
 /* El prompt impreso usa texto completo y evita el recorte propio de un textarea. */
 .timeline{font-size:14px;line-height:1.32}
 @media print{.copybox{display:none}.print-only{display:block}.timeline{font-size:10pt;line-height:1.3}}
+
+@media(max-width:600px){.cards,.flow{grid-template-columns:1fr}.home h1{font-size:36px;letter-spacing:-.8px}.slide,.page,.home{overflow-wrap:anywhere}.meta,.math{flex-wrap:wrap}.card,.flow>div{min-width:0}}
+
+@media print{.page .meta{margin-top:10px;padding-top:8px}.page td,.page th{padding-top:5px;padding-bottom:5px}}

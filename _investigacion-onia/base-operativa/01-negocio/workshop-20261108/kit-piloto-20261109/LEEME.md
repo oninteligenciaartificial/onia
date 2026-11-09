@@ -1,6 +1,6 @@
 # Kit del piloto · entrega para revisión
 
-9 noviembre 2026 UTC. Material escrito para ensayar los primeros diez minutos; deriva del piloto `noche-20261109`, sin ampliar clases ni cambiar decisiones. **La aceptación completa sigue pendiente: Chromium no pudo arrancar con sandbox en esta sesión.** No hay capturas del HTML ni PDFs generados y comprobados.
+9 noviembre 2026 UTC. Material escrito para ensayar los primeros diez minutos; deriva del piloto `noche-20261109`, sin ampliar clases ni cambiar decisiones. **Versión corregida y comprobada en el host VPS autorizado:** 21 controles de navegador OK, PDFs de 7/2/3 páginas y capturas reales inspeccionadas por la ejecutora. La revisión independiente y el ensayo humano siguen pendientes. Chromium no se volvió a ejecutar dentro del sandbox de esta sesión.
 
 Abrí [index.html](index.html) directamente en un navegador, sin servidor ni red. Conservá juntos los HTML, `kit.css`, `kit.js` y `evidencia/`. Las láminas también se leen por desplazamiento; hoja y guía conservan el texto sin JavaScript. La práctica en vivo con Claude requiere conexión y acceso propio, todavía pendientes.
 
@@ -9,9 +9,9 @@ Abrí [index.html](index.html) directamente en un navegador, sin servidor ni red
 | [laminas.html](laminas.html) | Mostrar siete láminas; botones ←/→ o teclas izquierda/derecha, PageUp/PageDown. Desplazamiento y enlaces `#s1`…`#s7` también disponibles. |
 | [hoja.html](hoja.html) | Dos páginas A4 diseñadas para el participante. Seleccionar A/B y copiar con Ctrl+C/⌘C o Copiar en móvil; pegar en el chat propio. Los botones seleccionan, no afirman haber copiado. |
 | [guia.html](guia.html) | Tres páginas A4 diseñadas: preparación/tiempos, prompts/referencia, observación/fallos. Leer antes del cronómetro. |
-| [Recibo visual](evidencia/recibo-visual.html) | Mapa gráfico propio del contenido y sus límites. **No es captura del navegador.** |
+| [Recibo visual del host](evidencia/host-01/recibo-visual.html) | Capturas reales de índice, siete láminas, dos hojas y tres guías. |
 
-Para imprimir o guardar PDF: abrir hoja/guía → Imprimir / PDF (o Ctrl+P/⌘P) → A4 vertical, escala 100 %, sin encabezados/pies del navegador. Láminas: A4 horizontal. El CSS define saltos por sección y texto completo de los prompts en impresión, separado del cuadro copiable. **Revisar la vista previa: 7/2/3 páginas son el diseño, no una paginación ya comprobada.** No se instalaron dependencias.
+Para imprimir o guardar PDF: abrir hoja/guía → Imprimir / PDF (o Ctrl+P/⌘P) → A4 vertical, escala 100 %, sin encabezados/pies del navegador. Láminas: A4 horizontal. El CSS define saltos por sección y texto completo de los prompts en impresión, separado del cuadro copiable. Paginación comprobada por Chromium en el host: [7 láminas PDF](evidencia/host-01/laminas.pdf), [2 hojas PDF](evidencia/host-01/hoja.pdf), [3 guías PDF](evidencia/host-01/guia.pdf). Revisar la vista previa al imprimir en otro navegador; no se probó una impresora física. No se instalaron dependencias.
 
 ## Correspondencia con el piloto
 
@@ -27,31 +27,34 @@ Para imprimir o guardar PDF: abrir hoja/guía → Imprimir / PDF (o Ctrl+P/⌘P)
 
 A ocupa 105 de 120 minutos y deja 15 libres. B exige 130: faltan 10; preguntar qué cambiar. No omitir pausa, recortar inventario o desplazar bloques para fabricar éxito. La lámina B invita a calcular; la clave está en hoja 2 y guía. Las muestras son escritas por ONIA, no resultados de Claude ni de alumnos. Otra ordenación válida se admite.
 
-## Evidencia y límite material
+## Comprobación y procedencia
 
-- [texto-v1.json](evidencia/texto-v1.json): comparación de prompts completos con fuente, agenda/ficha, duraciones, intervalos, destinos locales y contraste numérico de los colores del diseño. No valida renderizado.
-- [comprobacion.json](evidencia/comprobacion.json): intento real con Playwright instalado, Chromium1252, `chromiumSandbox:true`, perfil sintético propio `/tmp/onia-kit-sintetico-*` y red deshabilitada. Abortó antes de abrir páginas: `No usable sandbox!`. La etiqueta leída del proceso de ejecución fue `bwrap//&unpriv_bwrap (enforce)`; no se atribuye una causa única. También hubo error al escribir configuración de crashpad en ruta de sólo lectura. No se accedió a perfiles de cuentas.
-- [recibo-visual.png](evidencia/recibo-visual.png): diagrama original del inventario, con bloqueo explícito. Su inspección no sustituye el visionado del HTML.
+- [Recibo del host](evidencia/host-01/recibo-host.json): `rc=0`, Chromium 157.0.8103.15, sandbox activado, perfil sintético propio y copia aislada. Los hashes de los siete archivos finales y la fuente del piloto coinciden con [solicitud-host.json](evidencia/solicitud-host.json) y con este worktree. El coordinador ejecutó la prueba en el host; esta ejecutora recibió los artefactos permitidos y los inspeccionó.
+- [Comprobación de navegador](evidencia/host-01/comprobacion.json): 21 controles OK; lectura offline, navegación por botón/teclado, selección completa de A, A/B exactos, dos rechazos materiales, ausencia de desbordes horizontales a 1280/390 px, páginas sin exceso vertical, PDFs 7/2/3, lectura sin JavaScript y cero errores JS/solicitudes externas observados.
+- [Inspección propia de las capturas](evidencia/host-01/INSPECCION-EJECUTORA.md): `view_image` sobre el recibo conjunto y los trece PNG individuales. Láminas, consignas, tablas y observación legibles. La captura del índice por elemento incluye parte de la barra fija recortada y superpuesta al rótulo superior; el título y las acciones se leen. No se modifica esa evidencia. No hay captura móvil ni rasterización visual de los PDFs: móvil y paginación están comprobados por las mediciones del navegador, y hoja/guía se inspeccionaron en emulación de impresión.
+- [texto-v2.json](evidencia/texto-v2.json): comprobación documental final de prompts, agenda/ficha, aritmética, intervalos, enlaces locales y contraste numérico. `texto-v1.json` conserva los 54 controles de la primera entrega.
 
-Se conservó el intento fallido; no se desactivó el sandbox ni se cambió AppArmor. No se inició Xvfb: el fallo ocurre antes de necesitar pantalla. Ningún navegador quedó disponible y el lanzador informó terminación de su proceso. No se tocaron servicios, cuentas o procesos ajenos.
+Correcciones aplicadas del feedback: grillas a una columna y ajuste de texto a ≤600 px; antes de PDF, recarga del documento, emulación print, desplazamiento al inicio y espera de fuentes; celdas y pies impresos más compactos para evitar el exceso de 12 px en guía 3. No se quitó contenido ni se bajaron las expectativas de 7/2/3 páginas. Los siete archivos capturados permanecen estables desde la solicitud.
 
-Repetición documental (desde esta carpeta, destino nuevo para preservar evidencia):
+Repetición documental desde esta carpeta, usando un destino nuevo:
 
 ```sh
-python3 comprobar-texto.py evidencia/texto-v2.json
+python3 comprobar-texto.py evidencia/texto-v3.json
 node --check kit.js
 node --check comprobar.cjs
 ```
 
-Condición de salida del bloqueo: ejecutar el siguiente comando en un entorno autorizado que permita **este Chromium con sandbox**, manteniendo perfil sintético y aislamiento. El script usa los Playwright/Chromium ya instalados en el VPS; no instala ni modifica el sistema. No usar un perfil autenticado ni desactivar sandbox.
+Para repetir la prueba de navegador, el coordinador utiliza una copia aislada en el host autorizado con los archivos de la solicitud y `../noche-20261109/CLASE1-PRIMEROS10MIN.md`:
 
 ```sh
-node comprobar.cjs evidencia/corrida-v2
+node comprobar.cjs evidencia/host-02
 ```
 
-El script preparado intenta abrir el kit offline, comparar A/B, verificar selección/navegación, restricciones/fallos, desbordes, generar PDFs y capturas por página y recibo conjunto. **Esos controles de navegador no pasaron en esta sesión.** Después de una corrida exitosa se deben inspeccionar realmente sus PNG con `view_image`, registrar hallazgos sobre esa versión y revisar PDFs/paginación. Si algo falla, conservar la corrida y corregir antes de aceptar.
+No ejecutarla de nuevo dentro del sandbox actual ni desactivar aislamiento. Guardar otra corrida, inspeccionar sus imágenes y comparar hashes antes de atribuir el resultado a una versión nueva.
 
-Errores de esta ejecutora: el primer volcado agrupado de fuentes excedió la salida; se releyeron por separado los documentos usados. Al fallar Chromium no se reutilizó una captura histórica para aparentar la comprobación solicitada. La comprobación documental incluye dos rechazos materiales: agenda sin pausa y agenda A reutilizada para B con inventario acortado.
+Historial conservado sin sobrescribir: [fallo original bwrap](evidencia/comprobacion.json), [diagrama original](evidencia/recibo-visual.html), [primera inspección](evidencia/INSPECCION.md) y [manifiesto v1](evidencia/manifiesto-v1.json). El diagrama anterior no es captura y su estado describe la entrega inicial. No se cambiaron AppArmor, bwrap, cuentas ni visor. Sólo se copiaron PNG/PDF y recibos públicos del host, nunca perfiles o cookies.
+
+Errores registrados: un volcado inicial de fuentes se truncó y se releyó; Chromium falló dentro del sandbox; la prueba de propuesta del coordinador detectó desborde móvil, PDF de 6 en vez de 7 páginas tras capturar y exceso vertical en guía 3. Se aplicaron los ajustes acotados, luego se congelaron los archivos y se obtuvo una corrida nueva sobre sus hashes. La prueba previa de propuesta no se presenta como prueba final. Los dos fallos materiales del caso (omitir pausa / acortar inventario de B) siguen rechazados.
 
 ## Pendientes que no se convierten en resultados
 
