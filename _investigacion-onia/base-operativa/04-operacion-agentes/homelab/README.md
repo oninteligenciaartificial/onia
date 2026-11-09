@@ -1,5 +1,16 @@
 # HOMELAB: worker Windows + WSL para OnIA
 
+## Nombres fijos de máquinas
+
+Identidades confirmadas por Sergio el 9 de noviembre de 2026 (America/La_Paz):
+
+| Equipo | Nombre Windows | Rol y acceso |
+| --- | --- | --- |
+| **PC de casa** | `DESKTOP-0GGGNMF` | **HOMELAB**. Nodo Tailscale `desktop-0gggnmf`. Distribución WSL predeterminada `Ubuntu`, versión **2**. |
+| **Laptop de Sergio** | `DESKTOP-ENV6SDA` | **NO es HOMELAB. No configurarla ni usarla.** |
+
+Toda conexión, configuración o trabajo de HOMELAB se limita a la PC de casa. Antes de actuar, cotejar el nodo y la distribución con esta tabla; no inferir que otro equipo de Sergio está autorizado ni usar la laptop como sustituto. Estas identidades no acreditan por sí solas que SSH, el usuario aislado o la continuidad de WSL ya estén configurados.
+
 ## Prioridad vigente · 9 noviembre 2026 · America/La_Paz
 
 Hasta el 14-nov se prioriza vender el workshop: kit, ensayo y materiales; cualquier publicación o envío necesita el sí de Sergio. Objetivo inmediato: **cerebro operativo + panel de contenido usable**, [plan corto presentado](../evidencias/cerebro-panel-usable-20261109/PLAN.md), pendiente de su sí antes de implementar.
