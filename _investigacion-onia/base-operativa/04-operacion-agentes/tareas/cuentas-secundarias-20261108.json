@@ -1,22 +1,27 @@
 {
   "schema": 2,
   "id": "cuentas-secundarias-20261108",
-  "revision": 2,
+  "revision": 3,
   "compartible": true,
   "objetivo": "Preparar acceso privado al navegador del VPS para alta personal de cuenta secundaria por Sergio",
   "estado": "en_espera",
-  "proximo_paso": "Esperar aprobación de Sergio y aplicación por administrador; después verificar sandbox, visor autenticado por SSH, control humano y MCP por separado. No interrumpir referentes.",
-  "resultado": "Visor preparado; Chromium bloqueado por AppArmor. Corrección mínima redactada y compilada sin cargar. No hay cuenta ni navegador operativo.",
-  "comprobacion": "Etiqueta unconfined del ejecutable exacto y fallo No usable sandbox rc-6; sintaxis del perfil correcta; visor sintético cerrado. Pruebas de navegación/control/MCP pendientes.",
+  "proximo_paso": "Administrador aplica el script exacto ya aprobado; luego comprobar sandbox, visor, control humano y MCP. No volver a solicitar la misma aprobación.",
+  "resultado": "Corrección AppArmor aprobada por Sergio. Intento autorizado detenido por falta de UID0; no se aplicó ni hay navegador operativo.",
+  "comprobacion": "Usuario del host UID1004; script rc2 en precondición administrativa, destino AppArmor ausente. No es un rechazo de auto-review.",
   "verificacion": "pendiente",
   "evidencias": [
     {
       "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/verificacion-preparacion.json",
       "sha256": "e46d1879a33c23ce0aa05537fe7e84250993c67a187f3bb93addb920a9f96af1",
       "bytes": 4123
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/aprobacion-y-bloqueo-20261108T2003.json",
+      "sha256": "c9cce18a3f6c509491b993bdb0486a750fa4fad47a6d1540be0f3c02c824613d",
+      "bytes": 1145
     }
   ],
-  "actualizado": "2026-11-08T22:50:30.807420+00:00",
+  "actualizado": "2026-11-09T00:04:47.097333+00:00",
   "historial": [
     {
       "revision": 1,
@@ -27,6 +32,34 @@
       "verificacion": "pendiente",
       "evidencias": [],
       "proximo_paso": "Leer 04-operacion-agentes/encargos/cuentas-secundarias-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "Astra medium/high sólo ante ambigüedad persistente identificada y dentro de cuota autorizada."
+      }
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-08T22:50:30.807420+00:00",
+      "estado": "en_espera",
+      "resultado": "Visor preparado; Chromium bloqueado por AppArmor. Corrección mínima redactada y compilada sin cargar. No hay cuenta ni navegador operativo.",
+      "comprobacion": "Etiqueta unconfined del ejecutable exacto y fallo No usable sandbox rc-6; sintaxis del perfil correcta; visor sintético cerrado. Pruebas de navegación/control/MCP pendientes.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/verificacion-preparacion.json",
+          "sha256": "e46d1879a33c23ce0aa05537fe7e84250993c67a187f3bb93addb920a9f96af1",
+          "bytes": 4123
+        }
+      ],
+      "proximo_paso": "Esperar aprobación de Sergio y aplicación por administrador; después verificar sandbox, visor autenticado por SSH, control humano y MCP por separado. No interrumpir referentes.",
       "aceptacion": null,
       "ejecucion": {
         "perfil": "complejo",

@@ -1,0 +1,16 @@
+{
+  "fecha_caracas": "2026-11-08T20:04:47.077395-04:00",
+  "autorizacion": "Sergio pidió dejar listo ahora el navegador para crear personalmente la cuenta, después de recibir la propuesta exacta y la solicitud de aprobación. Aprobación vigente para ese perfil; no se pide de nuevo.",
+  "comando": "bash /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/05-herramientas/cuentas-analisis/20261108/aplicar-apparmor-admin.sh --aprobado-por-sergio",
+  "usuario_efectivo": "onia-codex-worker",
+  "uid": 1004,
+  "rc": 2,
+  "resultado": "Requiere consola administrativa UID0; no eleva privilegios.",
+  "perfil_destino_existe": false,
+  "cambio_sistema_aplicado": false,
+  "clasificacion": "Privilegios administrativos no disponibles; no fue rechazo de auto-review.",
+  "cuenta_creada": false,
+  "navegador_operativo": false,
+  "siguiente": "Administrador ejecuta el script aprobado desde consola UID0. Después Codex comprueba sandbox, visor privado, control humano y MCP por separado.",
+  "limites": "Sin sudo, sin no-sandbox, sin cambios globales de AppArmor, sin reinicios, sin tocar producción ni referentes."
+}
