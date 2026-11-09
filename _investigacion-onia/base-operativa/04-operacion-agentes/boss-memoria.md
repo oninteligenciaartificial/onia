@@ -134,3 +134,7 @@ Hallazgos y decisiones de Boss (America/La_Paz). Sin secretos ni IPs.
 - Objetivo #1 de Codex: cerebro operativo usable + panel de contenido.
 - Después (con nuevo sí): datos, mejores sesiones, coordinación, orquestación y homelab etapa 1.
 - Comparación de gastos LLM vs resultados: [GASTOS-LLM-VS-RESULTADOS-20261109.md](homelab/GASTOS-LLM-VS-RESULTADOS-20261109.md).
+
+### Nombres de máquinas y Tailscale
+- Nombres de máquinas: DESKTOP-0GGGNMF = PC de casa (homelab, nodo Tailscale desktop-0gggnmf). DESKTOP-ENV6SDA = laptop de Sergio (no es homelab).
+- 13:42 (America/La_Paz): tailnet de la cuenta oninteligenciaartificial ya tiene desktop-0gggnmf (Windows) y onia-vps-worker (VPS, autorizado por Sergio). WSL: distro Ubuntu, versión 2, predeterminada. Próximo paso de Codex: usuario onia-worker en WSL sin sudo, /mnt/c restringido y probado.
