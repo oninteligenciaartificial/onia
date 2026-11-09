@@ -1,0 +1,21 @@
+{
+  "fecha_utc": "2026-11-09T11:25:38.271207+00:00",
+  "autorizacion": "Sergio pide solucionar reproducción y comprobar detección/clic de anuncios con la cuenta ya creada. Se retoma mismo ID, prueba acotada de control visible.",
+  "existente": "Gestor/lease exclusivo, Playwright y Chromium sandbox instalados, perfil autorizado y muestras previas; tarea en_espera.",
+  "hallazgo_codigo": "El capturador nocturno detectaba publicidad y pulsaba Play; excluía explícitamente el botón normal de saltar anuncios.",
+  "hipotesis": "Un control oficial visible de omitir anuncio puede permitir pasar a contenido; no se asume que explique el corte previo sin anuncio.",
+  "control": "Fixture de visible/habilitado/ausente antes de perfil real; una corrida máximo5min, contenido90s objetivo. Sin seek forzado ni cambios de red/autenticación.",
+  "ejecutor": "browser_conexion, auxiliar existente; único dueño del navegador y cero hijos. Coordinador único escritor de tarea y Git.",
+  "cuota": {
+    "fecha_utc": "2026-11-09T11:23:06.384Z",
+    "used_percent": 53,
+    "window_minutes": 10080
+  },
+  "limites": [
+    "Sin instalaciones/gastos/producción/n8n/envíos",
+    "Sólo videoJuAQILH7dkQ y controles oficiales visibles del reproductor",
+    "Capturas del área de reproducción privadas, no cuenta/página completa",
+    "Conservar originales, sandbox y devolver visor",
+    "Sin afirmar escucha ni visionado completo; detener si aparece verificación de acceso"
+  ]
+}
