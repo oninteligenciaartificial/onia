@@ -1,5 +1,9 @@
 # HOMELAB: conexión esencial en curso
 
+## Avance de alta · 9 noviembre 2026 · America/La_Paz
+
+Huella ED25519 confiable recibida de Sergio; el contraste remoto sigue pendiente porque el puerto SSH de la PC no respondió vía Tailscale. Alta y pruebas preparadas en [ALTA-ONIA-WORKER.md](ALTA-ONIA-WORKER.md). Aislamiento probado en VPS con fixture, todavía no aplicado ni probado en WSL. No declarar HOMELAB listo. Estados y siguiente acción sólo en [homelab-conexion-20261109](../tareas/homelab-conexion-20261109.json).
+
 9 noviembre 2026 · America/La_Paz. La autorización actual cubre Tailscale, usuario `onia-worker` sin sudo, restricción de archivos Windows y WSL siempre encendido. No cubre benchmarks/mediciones largas ni scheduler. [Tarea canónica](../tareas/homelab-conexion-20261109.json).
 
 ## Estado comprobado

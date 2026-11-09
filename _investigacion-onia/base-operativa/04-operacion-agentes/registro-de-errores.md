@@ -463,3 +463,13 @@ Revisión independiente buena para9f10c3edf46edfc6741321f14869e0916884adf8. Info
 ## Reglas y recomendaciones de modelo divergentes · 9 noviembre 2026
 
 Qué pasó: AGENTS local mantenía una revisión antigua que excluía a Boss y bloqueaba Git; el config usaba Astra ultra y el manifiesto recomendaba modelos distintos del reparto aprobado. Causa: reglas históricas no sustituidas y confusión entre default personal y lanzamientos con --ignore-user-config. Evidencia: REPARTO-CODEX-GROKBOT-20261109.md y evidencias/reparto-final-20261109/config-agents-v1.json. Corrección: sección vigente, historia conservada, default Sol6.1 low y recomendaciones alineadas. Prevención: argumentos explícitos por intento, comprobar modelo observado y mantener una sola autoridad de estados. No hubo lanzamiento nuevo para probar el modelo; la conversación existente conserva Astra xhigh.
+
+## HOMELAB: SSH aún inaccesible por Tailscale · 9 noviembre 2026
+
+Qué pasó: PC online en Tailscale pero el intento sin autenticación al puerto22 terminó por timeout durante banner SSH. Causa no aislada: online no acredita encaminamiento Windows→WSL ni permiso de firewall. Evidencia: homelab-conexion-20261109/alta-preflight-v3.json. Se pidió modo de red WSL y prueba local de puerto22; no se tocó firewall, no se confió otra host key ni se usó el listener ajeno2222. Prevención: contrastar huella por canal confiable y probar la ruta real antes de declarar worker operativo.
+
+Consulta documental: la ruta upstream bubblewrap.xml devolvió404; la documentación vigente está en bwrap.xml del mismo repositorio oficial. Se conservó la distinción y no se repitió esa ruta para implementar.
+
+## Alta HOMELAB: rechazos de revisión previos a aplicar · 9 noviembre 2026
+
+La primera preparación no cubría herencia SSH/entorno, canales WSL y montajes, ni creación atómica con permisos finales. Segunda revisión detectó privsep /run/sshd y falta de cotejo listener; tercera detectó sintaxis SSH con `=` y montajes ancestros. Causa: pruebas locales parciales no acreditaban rutas alternativas ni orden de activación. Se corrigieron antes de entregar el paso administrativo: SSH separado loopback, seccomp, montaje estricto, control PE sintético, guardas y listener verificado. Cuarta revisión apta para intento local; 9 tests OK. Evidencia: homelab-conexion-20261109/revision-alta-v1.json (hash por intento). Prevención: no equiparar bwrap probado en VPS con WSL/SSH operativos, revisión distinta de permisos, habilitar llave sólo tras controles; conservar fallos cerrados sin bajar protecciones. No hubo intento --apply ni cambio en PC durante estas revisiones.

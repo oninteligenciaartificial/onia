@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "homelab-conexion-20261109",
-  "revision": 5,
+  "revision": 7,
   "compartible": true,
   "objetivo": "Conectar y configurar HOMELAB como worker autorizado, conservando producción y datos existentes.",
   "estado": "en_espera",
-  "proximo_paso": "Preparar alta local acotada de onia-worker y pruebas de aislamiento para Sergio usando inventario bwrap/ssh ya aportado por Boss; verificar huella confiable antes de SSH. Sólo PC DESKTOP-0GGGNMF, sin benchmarks.",
-  "resultado": "Tailscale VPS instalado sin sudo y autorizado; PC online. Usuario WSL/aislamiento/continuidad pendientes. Puerto2222 excluido.",
-  "comprobacion": "Checksum oficial y status Running; Ubuntu/WSL2 informados por Sergio. No se probó SSH ni /mnt/c; evidencia v1 conservada y corregida por v2.",
+  "proximo_paso": "Sergio descarga alta-onia-worker.py revisado y ejecuta el bloque PowerShell de homelab/ALTA-ONIA-WORKER.md. Si alta_local OK, probar loopback2224, preservar/revisar Serve y conectar por Tailscale. Codex compara huella antes de login y prueba aislamiento por SSH; no aceptar aún.",
+  "resultado": "Alta mínima preparada y revisada para intento local; fuente única de fábrica referenciada. WSL todavía sin aplicar ni SSH remoto probado.",
+  "comprobacion": "9 tests de instalador OK y57 de harness/trabajo OK; revisión distinta Sol6.1high aprobó preparación tras3 correcciones. Huella recibida, Tailscale online, puerto22 previo no respondió.",
   "verificacion": "pendiente",
   "evidencias": [
     {
@@ -24,9 +24,24 @@
       "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/aislamiento-diseno-v1.json",
       "sha256": "7efeb1cbf5437e63edb9d63056f499ff9db73ffe58e568f9c88d79fa84413d41",
       "bytes": 1660
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/alta-preflight-v3.json",
+      "sha256": "65b2bcd0bd565304d9e59aac27040791a9cd7dc0d4b368a7c7e7392e8f664b52",
+      "bytes": 1100
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/revision-alta-v1.json",
+      "sha256": "ac144976046c589944b606b48212069f872f54862a4a2d09d7593317df90b4b8",
+      "bytes": 2146
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/alta-preparada-v4.json",
+      "sha256": "7258ed9ab59a4b85e01bdc55d677836b5859e93365da79dac6e75d4c09a32dea",
+      "bytes": 1771
     }
   ],
-  "actualizado": "2026-11-09T22:49:26.913526+00:00",
+  "actualizado": "2026-11-09T23:32:06.366089+00:00",
   "historial": [
     {
       "revision": 1,
@@ -103,6 +118,65 @@
         }
       ],
       "proximo_paso": "Esperar inventario breve de bwrap/sshd y huella pública en Ubuntu solicitado a Sergio; preparar bootstrap acotado. Cerebro+panel espera sí al plan.",
+      "aceptacion": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-09T22:49:26.913526+00:00",
+      "estado": "en_espera",
+      "resultado": "Tailscale VPS instalado sin sudo y autorizado; PC online. Usuario WSL/aislamiento/continuidad pendientes. Puerto2222 excluido.",
+      "comprobacion": "Checksum oficial y status Running; Ubuntu/WSL2 informados por Sergio. No se probó SSH ni /mnt/c; evidencia v1 conservada y corregida por v2.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/preflight-v1.json",
+          "sha256": "6651cbd0419c6aa3bce8dde20db50f30fc9209a2f8ce53b9f438767aac1c9e54",
+          "bytes": 980
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/preflight-v2.json",
+          "sha256": "fbaf6809ee04959552ee99b33336c653684c3be2bb251a7b72d1d59472024e0c",
+          "bytes": 1669
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/aislamiento-diseno-v1.json",
+          "sha256": "7efeb1cbf5437e63edb9d63056f499ff9db73ffe58e568f9c88d79fa84413d41",
+          "bytes": 1660
+        }
+      ],
+      "proximo_paso": "Preparar alta local acotada de onia-worker y pruebas de aislamiento para Sergio usando inventario bwrap/ssh ya aportado por Boss; verificar huella confiable antes de SSH. Sólo PC DESKTOP-0GGGNMF, sin benchmarks.",
+      "aceptacion": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-09T23:17:36.596870+00:00",
+      "estado": "en_curso",
+      "resultado": "Huella confiable recibida; instalador de usuario y aislamiento preparado, pruebas VPS aprobadas; SSH a PC todavía inaccesible.",
+      "comprobacion": "6 pruebas locales OK; Tailscale Running/PC online, SSH sin autenticación termina por timeout; no hubo cambios en WSL.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/preflight-v1.json",
+          "sha256": "6651cbd0419c6aa3bce8dde20db50f30fc9209a2f8ce53b9f438767aac1c9e54",
+          "bytes": 980
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/preflight-v2.json",
+          "sha256": "fbaf6809ee04959552ee99b33336c653684c3be2bb251a7b72d1d59472024e0c",
+          "bytes": 1669
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/aislamiento-diseno-v1.json",
+          "sha256": "7efeb1cbf5437e63edb9d63056f499ff9db73ffe58e568f9c88d79fa84413d41",
+          "bytes": 1660
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/alta-preflight-v3.json",
+          "sha256": "65b2bcd0bd565304d9e59aac27040791a9cd7dc0d4b368a7c7e7392e8f664b52",
+          "bytes": 1100
+        }
+      ],
+      "proximo_paso": "Revisión independiente del instalador; publicar y entregar paso administrativo a Sergio. Resolver modo de red WSL/puerto22, luego comparar huella y probar acceso aislado.",
       "aceptacion": null
     }
   ],

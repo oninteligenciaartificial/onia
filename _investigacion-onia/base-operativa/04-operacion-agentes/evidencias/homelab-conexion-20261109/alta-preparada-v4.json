@@ -1,0 +1,48 @@
+{
+  "id": "homelab-conexion-20261109",
+  "fecha": "2026-11-09T23:32:06.336798+00:00",
+  "ejecutor": {
+    "session_id": "01a1bc0b-65c1-7e13-afef-88fc1482896a",
+    "modelo": "gpt-6-astra",
+    "esfuerzo": "xhigh",
+    "nota": "Conversación existente, no lanzada ahora; default Sol6.1low verificado antes, no cambia modelo activo."
+  },
+  "cuota_inicio": {
+    "used_percent": 68,
+    "fecha": "2026-11-09T23:12:18.333Z",
+    "saldo_extra": "0"
+  },
+  "cuota_fin_observada": {
+    "used_percent": 69,
+    "fecha": "2026-11-09T23:27:57.002Z",
+    "saldo_extra": "0"
+  },
+  "intentos_preparacion": 4,
+  "intentos_alta_wsl": 0,
+  "retrabajo": true,
+  "resultado": "Preparación aceptada para intento local; tarea HOMELAB en_espera, no aceptada",
+  "pruebas": {
+    "alta": {
+      "tests": 9,
+      "resultado": "OK",
+      "segundos": 0.282,
+      "entorno": "VPS usuario sin privilegios; integración bwrap/seccomp y SSH sintético"
+    },
+    "harness_trabajo": {
+      "tests": 57,
+      "resultado": "OK",
+      "segundos": 5.489
+    }
+  },
+  "sha256_finales": {
+    "alta-onia-worker.py": "3b74ec2402b6ff99b641580523f730f9181fc71fd516e5c1b92dfeb13e195d78",
+    "test_alta_onia_worker.py": "c473893c5480063e792c96046b54da23f7bea3793fa535d065c08712d8c7e578"
+  },
+  "fuente_unica_modelo": {
+    "ruta": "04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md",
+    "commit_base": "573b302",
+    "confirmacion": "Sergio confirmó este documento como fuente única; referencias añadidas a reglas comunes y contexto de marketing/video/organizacion del manifiesto."
+  },
+  "commits": "El commit de entrega se registra tras publicar; consultar PUBLICACION-ALTA-v1.md.",
+  "limite_cuota": "Compartida: no atribuir diferencia a una sola sesión ni inventar USD."
+}

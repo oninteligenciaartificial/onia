@@ -1,0 +1,58 @@
+{
+  "id": "homelab-conexion-20261109",
+  "revisor": "/root/revisar_alta_worker",
+  "session_id": "01a1c299-7751-79f0-9be1-94dcf1f6fb26",
+  "modelo_solicitado": "gpt-6.1-sol",
+  "esfuerzo_solicitado": "high",
+  "runtime_observado": {
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "high",
+    "fecha": "2026-11-09T23:29:19.121Z"
+  },
+  "cuota_inicio": {
+    "fecha": "2026-11-09T23:16:49.459Z",
+    "used_percent": 69.0,
+    "saldo_extra": "0"
+  },
+  "cuota_fin": {
+    "fecha": "2026-11-09T23:29:32.241Z",
+    "used_percent": 69.0,
+    "saldo_extra": "0"
+  },
+  "intentos_revision": 4,
+  "retrabajo": true,
+  "commits_propios": [],
+  "revisiones": [
+    {
+      "intento": 1,
+      "resultado": "rechazada",
+      "sha256_instalador": "e3b9283c08673d23301f4992db68bd86816e8f7edc6ecfd0f8de7a3bde587ac8",
+      "criterio": "SSH heredado, sockets WSL, montajes recursivos y permisos de escritura"
+    },
+    {
+      "intento": 2,
+      "resultado": "rechazada",
+      "sha256_instalador": "55c258059686d5782e2c9e963f5ed10ef39d46346062c43a57e4d89052b108bb",
+      "criterio": "Privsep runtime, montajes exactos y comprobación real de listener"
+    },
+    {
+      "intento": 3,
+      "resultado": "rechazada",
+      "sha256_instalador": "44df3ad36a214f002e13a64684c51b167e876e7f20641657600ee69e598059b7",
+      "criterio": "Directivas SSH con igual y montajes ancestros"
+    },
+    {
+      "intento": 4,
+      "resultado": "aceptada_para_intento_local",
+      "sha256_instalador": "3b74ec2402b6ff99b641580523f730f9181fc71fd516e5c1b92dfeb13e195d78",
+      "criterio": "Bloqueantes corregidos; falta aplicar/probar en WSL y conexión remota"
+    }
+  ],
+  "resultado": "aceptada sólo la preparación para intento local por Sergio",
+  "acepta_homelab_operativo": false,
+  "sha256_finales": {
+    "alta-onia-worker.py": "3b74ec2402b6ff99b641580523f730f9181fc71fd516e5c1b92dfeb13e195d78",
+    "test_alta_onia_worker.py": "c473893c5480063e792c96046b54da23f7bea3793fa535d065c08712d8c7e578"
+  },
+  "limites": "No ejecutó --apply ni WSL/PE/SSH remoto. Declaró 9 pruebas del ejecutor. Runtime observado cotejado por coordinador en metadata de esta sesión."
+}

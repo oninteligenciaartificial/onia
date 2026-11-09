@@ -6,6 +6,10 @@ Rige el [acuerdo final de Sergio](REPARTO-CODEX-GROKBOT-20261109.md): ventas org
 
 Consolidación autorizada por Sergio el 6 de noviembre de 2026, America/Caracas. Esta es la única fuente de reglas generales de ONIA. Las instrucciones actuales del usuario prevalecen. Las versiones anteriores se conservan con bytes y hashes en [histórico](../99-archivo/2026-11-06/consolidacion-harness/HISTORICO.md); se consultan por encargo, no como una cola que deba ejecutarse al iniciar.
 
+## Fuente única de one man company y fábrica de contenido
+
+Sergio confirmó el 9/11/2026 [ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md](ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md), recibido en `573b302`, como fuente única de ese modelo. Meta ≥5 videos/día; Contenido es dueño editorial, Boss coordina y Codex/HOMELAB sólo ejecuta ASR CPU, cortes/render FFmpeg y técnica mediante PEDIDO con ID y autorización aplicable. Recuperar sus secciones pertinentes; no repetir investigación ni copiar aquí el modelo. El [reparto aprobado](REPARTO-CODEX-GROKBOT-20261109.md) conserva la autoridad sobre roles, permisos y estados. La confirmación de esta fuente no inicia un lote ni autoriza publicaciones.
+
 ## Alcance y autoridad
 
 - Usar el repositorio privado `oninteligenciaartificial/onia`, rama `master`, y el entorno Cloud `onia`. `onia-harness` queda como referencia conservada. ONIA Platform tiene su propio repositorio de producto. ONIA-CENTRAL está excluido: no consultar ni importar sus reglas, skills o estados.

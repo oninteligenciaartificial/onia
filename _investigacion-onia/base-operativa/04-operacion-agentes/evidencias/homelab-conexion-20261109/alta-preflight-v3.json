@@ -1,0 +1,24 @@
+{
+  "fecha": "2026-11-09T23:17:36.573053+00:00",
+  "id": "homelab-conexion-20261109",
+  "huella_esperada": "SHA256:4ClsP1NH8JWxBWUNjW2DP7Egn4UcHcqMUYBUu3sL1Gk",
+  "procedencia": "Sergio transcribe comprobación local de Boss en DESKTOP-0GGGNMF/Ubuntu WSL2",
+  "huella_remota_observada": null,
+  "identidad_remota_verificada": false,
+  "tailscale": "Running, PC online",
+  "prueba_ssh": "Sin autenticación, puerto22: timeout durante intercambio de banner (ConnectTimeout8s). No se aceptó huella como confiable ni se hizo login.",
+  "alta_wsl_aplicada": false,
+  "pruebas_vps": "6 tests OK en0.209s; incluye aislamiento real bwrap y persistencia, sin root ni instalación de usuario",
+  "limites": "No acredita aislamiento de WSL, SSH remoto, WSL siempre vivo ni ASR instalado.",
+  "cuota_inicio": {
+    "used_percent": 68,
+    "fecha": "2026-11-09T23:12:18.333Z",
+    "saldo_extra": "0"
+  },
+  "ejecutor": {
+    "id": "01a1bc0b-65c1-7e13-afef-88fc1482896a",
+    "modelo": "gpt-6-astra",
+    "esfuerzo": "xhigh",
+    "nota": "Conversación ya abierta; config default Sol6.1low no la modifica."
+  }
+}

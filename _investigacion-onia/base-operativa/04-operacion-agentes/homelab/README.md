@@ -1,5 +1,9 @@
 # HOMELAB: worker Windows + WSL para OnIA
 
+## Avance de alta · 9 noviembre 2026 · America/La_Paz
+
+Huella ED25519 confiable recibida de Sergio; el contraste remoto sigue pendiente porque el puerto SSH de la PC no respondió vía Tailscale. Alta y pruebas preparadas en [ALTA-ONIA-WORKER.md](ALTA-ONIA-WORKER.md). Aislamiento probado en VPS con fixture, todavía no aplicado ni probado en WSL. No declarar HOMELAB listo. Estados y siguiente acción sólo en [homelab-conexion-20261109](../tareas/homelab-conexion-20261109.json).
+
 ## Alcance vigente aprobado · 9 noviembre 2026 · America/La_Paz
 
 Objetivo 1: ventas orgánicas del workshop por Boss + Contenido; Codex sólo recibe trabajo técnico concreto autorizado. Objetivo 2: HOMELAB esencial, onia-worker sin sudo, /mnt/c restringido, aislamiento y huella host verificados, continuidad WSL ya solicitada. Laptop excluida. Se reutilizan cerebro y kit, no se implementa el panel ni scheduler ni benchmarks. [Acuerdo final](../REPARTO-CODEX-GROKBOT-20261109.md).
