@@ -1,5 +1,7 @@
 # Navegador operativo en el VPS; control humano confirmado
 
+**Cuenta informada por Sergio (2026-11-08T22:19:23-04:00):** Google se creó con el usuario `oninvestigaciones220` (dirección Gmail inferida: `oninvestigaciones220@gmail.com`), en lugar del nombre propuesto `onia.investigacion`. Es confirmación del usuario, no inspección del agente de una sesión autenticada. No se verificó la configuración de recuperación ni se capturaron claves/códigos. Instagram aún espera alta o confirmación. [Recibo](../../../04-operacion-agentes/evidencias/cuentas-secundarias-20261108/alta-google-informada-v1.json).
+
 **Actualización 2026-11-08T22:07:54-04:00:** Sergio confirmó en el chat: «Sí, veo el navegador y puedo manejarlo», en respuesta a la prueba de visualización, ratón y teclado. El acceso humano que figura pendiente en la comprobación anterior queda confirmado por el usuario. El alta de Google/Instagram y la disponibilidad de `onia.investigacion` aún no están confirmadas. [Recibo de la confirmación](../../../04-operacion-agentes/evidencias/cuentas-secundarias-20261108/control-humano-confirmado-v1.json).
 
 La comprobación técnica anterior se conserva a continuación con su fecha original.
@@ -68,3 +70,11 @@ Cuota antes de retomar MCP:35% semanal usado a21:44:43Caracas, saldo adicional0;
 - Todas las capturas de pruebas se conservan fuera de Git. Los archivos antiguos y errores MCP anteriores permanecen intactos. No se tocó producción, n8n, Docker, servicios existentes ni el checkout original sucio.
 
 Recibos saneados: [sandbox](../../../04-operacion-agentes/evidencias/cuentas-secundarias-20261108/sandbox-activo-v1.json) y [visor/MCP](../../../04-operacion-agentes/evidencias/cuentas-secundarias-20261108/visor-y-mcp-verificados-v1.json).
+
+## Siguiente paso: acceso para análisis
+
+La prueba MCP existente usa `--headless --isolated --sandbox`; no hereda la sesión del visor. Se cotejó el wrapper `05-herramientas/acceso-av/20261108/codex-con-playwright.py` y el README del paquete ya instalado @playwright/mcp 0.0.84. El Chromium humano arranca sin CDP. El paquete admite perfil persistente, conexión CDP o extensión; una misma carpeta de perfil admite una sola instancia de navegador. No se instaló extensión, abrió puerto CDP ni copió cookies.
+
+Propuesta mínima: terminar primero el alta personal de Instagram; después preparar un único responsable del navegador autenticado en VPS y una prueba acotada de navegación de contenido público. Elegir y comprobar un solo mecanismo de conexión manteniendo sandbox, loopback y perfil privado. Las ejecutoras paralelas reciben evidencia saneada y consultan el navegador por turnos; no abrir tres procesos sobre la misma carpeta. El uso autorizado para investigar no incluye leer correo privado, publicar, enviar mensajes, seguir cuentas ni cambiar recuperación. La conexión y su control de concurrencia no están implementados todavía.
+
+La ampliación audiovisual y el piloto de 60–90 s conservan su aprobación pendiente: crear una cuenta no autoriza instalar OCR/modelos ni descargar material restringido. La lectura del paquete instalado anterior es inventario técnico, no una prueba de acceso autenticado.
