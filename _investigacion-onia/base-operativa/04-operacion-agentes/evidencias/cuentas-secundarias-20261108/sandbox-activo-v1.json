@@ -1,0 +1,105 @@
+{
+  "fecha_utc": "2026-11-09T01:43:33.113Z",
+  "chromiumSandbox": true,
+  "profile": "/home/onia-codex-worker/operacion/cuentas/analisis-onia/prueba-chromium-JujOGe/profile",
+  "pruebas": [],
+  "errores": [],
+  "sandbox_page": "Sandbox Status\nLayer 1 Sandbox\tNamespace\nPID namespaces\tYes\nNetwork namespaces\tYes\nSeccomp-BPF sandbox\tYes\nSeccomp-BPF sandbox supports TSYNC\tYes\nPtrace Protection with Yama LSM (Broker)\tYes\nPtrace Protection with Yama LSM (Non-broker)\tNo\n\nYou are adequately sandboxed.",
+  "public_page": {
+    "url": "https://example.com/",
+    "status": 200,
+    "title": "Example Domain",
+    "heading": []
+  },
+  "screenshot_sha256": "d3be9d2fc2ded008202697ef46909ee3be08d870543fb3af5a56ee0480784f0c",
+  "procesos": [
+    {
+      "pid": 1379176,
+      "type": "browser",
+      "apparmor": "onia-chromium-1252 (unconfined)",
+      "seccomp": "0",
+      "no_new_privs": "0",
+      "sandbox_disabled": false
+    },
+    {
+      "pid": 1379185,
+      "type": "--type=zygote",
+      "apparmor": "onia-chromium-1252 (unconfined)",
+      "seccomp": "0",
+      "no_new_privs": "1",
+      "sandbox_disabled": false
+    },
+    {
+      "pid": 1379186,
+      "type": "--type=zygote",
+      "apparmor": "onia-chromium-1252 (unconfined)",
+      "seccomp": "0",
+      "no_new_privs": "1",
+      "sandbox_disabled": false
+    },
+    {
+      "pid": 1379188,
+      "type": "--type=zygote",
+      "apparmor": "onia-chromium-1252 (unconfined)",
+      "seccomp": "0",
+      "no_new_privs": "1",
+      "sandbox_disabled": false
+    },
+    {
+      "pid": 1379217,
+      "type": "--type=gpu-process",
+      "apparmor": "onia-chromium-1252 (unconfined)",
+      "seccomp": "0",
+      "no_new_privs": "1",
+      "sandbox_disabled": false
+    },
+    {
+      "pid": 1379218,
+      "type": "--type=utility",
+      "apparmor": "onia-chromium-1252 (unconfined)",
+      "seccomp": "0",
+      "no_new_privs": "1",
+      "sandbox_disabled": false
+    },
+    {
+      "pid": 1379220,
+      "type": "--type=utility",
+      "apparmor": "onia-chromium-1252 (unconfined)",
+      "seccomp": "2",
+      "no_new_privs": "1",
+      "sandbox_disabled": false
+    },
+    {
+      "pid": 1379252,
+      "type": "--type=renderer",
+      "apparmor": "onia-chromium-1252 (unconfined)",
+      "seccomp": "2",
+      "no_new_privs": "1",
+      "sandbox_disabled": false
+    },
+    {
+      "pid": 1379319,
+      "type": "--type=renderer",
+      "apparmor": "onia-chromium-1252 (unconfined)",
+      "seccomp": "2",
+      "no_new_privs": "1",
+      "sandbox_disabled": false
+    },
+    {
+      "pid": 1379335,
+      "type": "--type=renderer",
+      "apparmor": "onia-chromium-1252 (unconfined)",
+      "seccomp": "2",
+      "no_new_privs": "1",
+      "sandbox_disabled": false
+    }
+  ],
+  "ok": true,
+  "perfil_archivo": {
+    "path": "/etc/apparmor.d/onia-chromium-1252",
+    "owner": "root:root",
+    "mode": "0644",
+    "sha256": "272c545f4ea37f124187a8674cf6d5bcb58bf4b23466499c76958b6184ec87f2",
+    "restriccion_global": 1
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "fecha_caracas": "2026-11-08T21:47:20.367018-04:00",
+  "vivas_antes": [],
+  "sid": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+  "cuota": {
+    "timestamp": "2026-11-09T01:44:43.356Z",
+    "rate_limits": {
+      "limit_id": "codex",
+      "limit_name": null,
+      "primary": {
+        "used_percent": 35.0,
+        "window_minutes": 10080,
+        "resets_at": 1794624432
+      },
+      "secondary": null,
+      "credits": {
+        "has_credits": false,
+        "unlimited": false,
+        "balance": "0"
+      },
+      "individual_limit": null,
+      "spend_control_reached": null,
+      "plan_type": "prolite",
+      "rate_limit_reached_type": null
+    }
+  },
+  "wrapper_sha256": "d9dcea17da14a582f0bdb28cb4fa6990300696c1d57dfbdfdcf535c7a038e095",
+  "modelo": "gpt-6.1-sol",
+  "esfuerzo": "high",
+  "subagentes_maximos": 0,
+  "alcance": "RETOMA ACOTADA PARA PRUEBA MCP, MISMO SID. Sergio aprobó preparar el navegador, aplicó el perfil AppArmor y pidió continuar. No ampliar investigación ni crear hijos. El coordinador probó Chromium1252 con sandbox: chrome://sandbox indica namespaces y Seccomp activos; página pública HTTP200 y texto leído. El perfil onia-chromium-1252 exacto está cargado, global restriction1 conservada. Tu nuevo proceso recibe el wrapper ya publicado en el coordinador, que añade default_tools_approval_mode=approve sólo a4herramientas MCP. El wrapper usado en tu primer intento no tenía ese ajuste: conservar esa diferencia y su error, no fingir que ya había pasado.\nObjetivo único: probar en ESTA sesión las herramientas nativas playwright browser_navigate, browser_snapshot, browser_take_screenshot, browser_close, con --sandbox y perfil aislado headless. Navegar una vez a https://example.com/ y leer título/DOM real; el HTML actual no tiene h1, título Example Domain y cuerpo explican uso documental. No basar éxito en h1 antiguo. Captura visual pública y cerrar. Leer imagen si la herramienta puede; si no, decirlo. Conservar la captura fuera del commit, informar hash y ruta, no borrar. No usar la cuenta/perfil/visor de Sergio ni inspeccionar cookies. No usar Playwright por shell para ocultar un fallo de herramientas MCP: el control es tool call nativa de Codex sin el bloqueo anterior de aprobación. Si falla, guardar error concreto y terminar, sin otra instalación ni alterar permisos.\nEscribir sólo en tu carpeta asignada 05-herramientas/acceso-av/20261108/ un informe PRUEBA-MCP-RETOMA.md y JSON saneado, preservando evidencia anterior. Consultar wrapper actual en /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/codex-con-playwright.py para documentar hash/configuración por proceso; no cambiarlo. No revisar otras tareas ni web adicional. No cuentas, no n8n, producción, Docker, sudo, servicios, secretos, API paga ni borrados. Publicar sólo esos dos archivos con commit/push autónomos a tu rama existente sin force ni amend. Informar SID, las cuatro llamadas y resultado, commit remoto, límites. Objetivo de duración5min; ante bloqueo terminal documentar y parar.",
+  "comando": "harness.py reanudar investigacion-acceso-av-20261108 --actor acceso-av-ejecutor --si-sergio --modelo gpt-6.1-sol --esfuerzo high --auth-chatgpt --subagentes-maximos 0 (revision actual; wrapper inyectado sólo por PATH del supervisor)"
+}
