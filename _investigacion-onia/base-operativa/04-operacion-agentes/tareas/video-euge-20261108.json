@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "video-euge-20261108",
-  "revision": 6,
+  "revision": 7,
   "compartible": true,
   "objetivo": "Mirar el video de Euge Oller pedido por Sergio y contrastar su operación con OnIA",
-  "estado": "en_espera",
-  "proximo_paso": "Retomar mismoID por interfaz visual del Chromium existente, verificar pista original y completar imágenes/audio; no repetir Playwright sin condición distinta. Sin lanzamiento programado.",
-  "resultado": "Skip probado; Chromium existente avanzó hasta2:09, supera corte Playwright43.760s. Análisis completo pendiente.",
-  "comprobacion": "Ensayos separados con mismo perfil/ejecutable; capturas inspeccionadas, visor disponible. Revisión independiente buena sólo para controlador/diagnóstico Playwright. Sin audio ni continuidad completa acreditada; causas no aisladas. Cuota55% usado al11:38UTC, sin nuevo despacho.",
+  "estado": "en_curso",
+  "proximo_paso": "Resolver captura y reproducción con un único dueño del perfil; revisar evidencia y publicar sin ampliar permisos.",
+  "resultado": "Sergio autorizó continuación y tres sub sesiones enfocadas en navegador/audio/revisión.",
+  "comprobacion": "Base6c286cb en origin/master; cero CLI vivas, cuota55% usada. Chromium existente superó2:09; audio y cobertura completa pendientes.",
   "verificacion": "pendiente",
   "evidencias": [
     {
@@ -49,9 +49,14 @@
       "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/revision-controles-20261109-v1.json",
       "sha256": "99f76eab7dcf7ff260c69def8b4079a4b761e6e3a4ddfb1f9c845f426e6c8214",
       "bytes": 1968
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/preflight-tres-sesiones-20261109-v1.json",
+      "sha256": "116ada89cf713d77ff02e749fba711c06ae20aa49901aae89342714086d89733",
+      "bytes": 1792
     }
   ],
-  "actualizado": "2026-11-09T11:41:24.611654+00:00",
+  "actualizado": "2026-11-09T11:47:56.995722+00:00",
   "historial": [
     {
       "revision": 1,
@@ -170,6 +175,58 @@
         }
       ],
       "proximo_paso": "Ejecutar una prueba hasta5min, conservar evidencia y devolver visor; registrar si supera90s y causa observada sin inferir.",
+      "aceptacion": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-09T11:41:24.611654+00:00",
+      "estado": "en_espera",
+      "resultado": "Skip probado; Chromium existente avanzó hasta2:09, supera corte Playwright43.760s. Análisis completo pendiente.",
+      "comprobacion": "Ensayos separados con mismo perfil/ejecutable; capturas inspeccionadas, visor disponible. Revisión independiente buena sólo para controlador/diagnóstico Playwright. Sin audio ni continuidad completa acreditada; causas no aisladas. Cuota55% usado al11:38UTC, sin nuevo despacho.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/muestra-visual-parcial-v1.json",
+          "sha256": "d8a05824a428d2a396b444a10aeee9bfc6ef1c8c2d3bb8ee47db9583181c4049",
+          "bytes": 2636
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/reproduccion-nocturna-v1.json",
+          "sha256": "41f2f68fc1a9225c81d2598fe2aa4b2bc2f1dbf462b8333cce69f2a808858bea",
+          "bytes": 5306
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/revision-nocturna-v1.json",
+          "sha256": "844d49cc332f8d19b73b8027d28cb97ddd236027af936c3576acb6b30866b870",
+          "bytes": 2452
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/preflight-controles-20261109-v1.json",
+          "sha256": "383750aba14900ba20ea0bd47f3588ebbccaa69bbe33000a09045d647da4f929",
+          "bytes": 1478
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/controles-visibles-20261109-v1.json",
+          "sha256": "5b8f43985ad07fb086ef22cd134280aa8710ec5f987fa2d120a0aa122c793b88",
+          "bytes": 3523
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/comparacion-visor-20261109-v1.json",
+          "sha256": "cbcc9d0fae3089ef00482d693c81d22282cfc684ffdfa68f72207e75f9c1215b",
+          "bytes": 3930
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/revision-controles-20261109-v1.json",
+          "sha256": "99f76eab7dcf7ff260c69def8b4079a4b761e6e3a4ddfb1f9c845f426e6c8214",
+          "bytes": 1968
+        }
+      ],
+      "proximo_paso": "Retomar mismoID por interfaz visual del Chromium existente, verificar pista original y completar imágenes/audio; no repetir Playwright sin condición distinta. Sin lanzamiento programado.",
       "aceptacion": null
     }
   ],

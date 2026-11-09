@@ -1,0 +1,44 @@
+{
+  "tarea": "video-euge-20261108",
+  "base_commit": "6c286cb629d3d01e324466e7185d0bc3a79ac44e",
+  "autorizacion": "Sergio: Dale; Tu tres sesiones enfocadas a solucionar ese problema.",
+  "modo": "Tres sub sesiones nativas visibles de este chat; coordinador conserva registro canónico y publica. No son nuevos procesos CLI del harness.",
+  "cuota": {
+    "fecha": "2026-11-09T11:45:40.957Z",
+    "usado_porcentaje": 55,
+    "ventana_minutos": 10080,
+    "saldo_adicional": "0",
+    "nueva_autorizacion": true
+  },
+  "harness_vivas_antes": 0,
+  "sesiones": [
+    {
+      "nombre": "video_reproduccion",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "ruta": "work/video-resolver-20261109/navegador",
+      "alcance": "Único operador del perfil; comprobar pista y reproducción normal. Sin Playwright real ni reinicios."
+    },
+    {
+      "nombre": "video_audio",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "ruta": "work/video-resolver-20261109/audio",
+      "alcance": "Captura y sincronización de audio con dependencias existentes; coordinar cualquier acceso al visor."
+    },
+    {
+      "nombre": "video_revision",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "ultra",
+      "ruta": "work/video-resolver-20261109/revision",
+      "alcance": "Sólo lectura sobre entregas y evidencia; dictamen separado, sin operar perfil."
+    }
+  ],
+  "restricciones": [
+    "Sin hijos ni cuarta sesión.",
+    "Sin sudo, instalaciones, servicios nuevos, producción, n8n, envíos, gastos o secretos.",
+    "No tocar checkout original sucio; no borrar evidencia.",
+    "Audio/ASR/imágenes no equivalen a comprensión conjunta ni visionado continuo.",
+    "Si una dependencia no está disponible, seguir partes independientes y reportar bloqueo concreto."
+  ]
+}
