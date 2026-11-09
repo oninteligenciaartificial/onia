@@ -1,0 +1,25 @@
+{
+  "guard": "asr-con-lock.py",
+  "sha256": "a5832bedf0b91914c9e4b4ee8ca296cca7f396e30243c1f7b5a78e2214cce822",
+  "date_utc": "2026-11-09",
+  "host_preflight_asr_processes_of_this_task": 0,
+  "fixture": {
+    "child_holds_lock_after_wrapper_terminated": true,
+    "concurrent_launch_rc": 75,
+    "valid_output_rc": 0,
+    "wrong_source_sha256_rc": 1,
+    "symlink_lock_rejected": true,
+    "pid_namespace_recorded": true
+  },
+  "runner_observation": "El supervisor devolvió 143 antes de que las salidas del ASR entero del primer tramo y de una ventana estuvieran listas. Los dos procesos produjeron después sus JSON. Consultar otro namespace de procesos indujo a una recuperación paralela. Se preservan las salidas y se usa el ASR entero como fuente primaria. El guard se prueba aparte para evitar otro lanzamiento concurrente.",
+  "private_state": "Identidades de PID, namespace, boot, tiempos de arranque y eventos de ejecución se conservan sólo en estado privado.",
+  "real_run": {
+    "source_sha256": "d361a9b0611cde233d38d4ba70df8a5c7822b992ed212bc05f03039b5f2ccb73",
+    "started_utc": "2026-11-09T12:41:32.236518+00:00",
+    "host_matching_inference_count": 1,
+    "host_start_and_namespace_match": true,
+    "result_state": "output_valid",
+    "child_rc": 0,
+    "result_utc": "2026-11-09T12:47:48.289483+00:00"
+  }
+}

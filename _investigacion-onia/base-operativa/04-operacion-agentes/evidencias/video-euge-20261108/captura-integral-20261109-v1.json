@@ -1,0 +1,1124 @@
+{
+  "schema": 1,
+  "id": "video-euge-20261108",
+  "fuente": "https://www.youtube.com/watch?v=JuAQILH7dkQ",
+  "metodo": "Chromium humano existente operado por interfaz X11 y captura nativa de una pestaña con su audio",
+  "audio_interfaz": "Spanish (US) original",
+  "escucha_directa": false,
+  "inspeccion_visual": "Muestras en hitos; los WebM conservan el flujo capturado para revisión posterior.",
+  "pista_origen": {
+    "menu_configuracion": {
+      "archivo_privado": "captura-003.png",
+      "sha256": "120c7023659edaffeb9d0d0d7f1cbd059ab50a18687b0f5600bff8d5ded7b438",
+      "bytes": 465829
+    },
+    "audio_ingles_inicial": {
+      "archivo_privado": "captura-005.png",
+      "sha256": "bce57ba3fa31e4c1f13df794fe1aaeee5133a4ab898ac5c629a21ecddbe1963a",
+      "bytes": 460568
+    },
+    "audio_original_seleccionado": {
+      "archivo_privado": "captura-006.png",
+      "sha256": "0ce7f4140e793e6c328091f8d7eeafa8cc07978fb93d1fc43600fb423cbf6c5e",
+      "bytes": 286853
+    },
+    "autoplay_desactivado": {
+      "archivo_privado": "captura-011.png",
+      "sha256": "85de83640127f5f52c8ed01e7bad9426b644deda5fdbd57325457300df3c7f48",
+      "bytes": 524121
+    }
+  },
+  "controladores": {
+    "tramo_1_bytes_preservados_hash_no_registrado_en_arranque": {
+      "sha256": "3c0dbd3312593206b04374391fe4b56e6597ec130e7458ad0b62f420a0a4c0f9",
+      "bytes": 12271
+    },
+    "tramo_2_snapshot_ejecutado": {
+      "sha256": "b01dcf24b33056a1eefe8a10bb9c466a8c3bde7b4803c7441fea53306d47a4bf",
+      "bytes": 12692
+    }
+  },
+  "auxiliar": {
+    "sha256": "e2fbf8f21ad33ac937b63c50b26ad8de3918a4dac64216d6711de408531e14da",
+    "bytes": 6206
+  },
+  "medios": [
+    {
+      "archivo_privado": "piloto.webm",
+      "sha256": "d489df05fde0a28282c815d0979cdf77db0b44aa860c773164f76a84c1bf8847",
+      "bytes": 1988313
+    },
+    {
+      "archivo_privado": "completo.webm",
+      "sha256": "0f93577b175e2097510c2092b671692f158f79dbdec2f82019e3db1c2a791311",
+      "bytes": 103221087
+    },
+    {
+      "archivo_privado": "tramo-2.webm",
+      "sha256": "d361a9b0611cde233d38d4ba70df8a5c7822b992ed212bc05f03039b5f2ccb73",
+      "bytes": 111295969
+    }
+  ],
+  "costura_15_10": {
+    "rectangulo_xyxy": [
+      215,
+      266,
+      1068,
+      746
+    ],
+    "capturas_en_orden": [
+      {
+        "archivo_privado": "captura-066.png",
+        "rgb_sha256": "ed6c7f4fd1c518ab9dac987f4f31ef01e6731fb6e8805be5b5e35c4405b56086",
+        "sha256": "49c9d9bcd1e220b75444f327297c1a137ef801a40775d66b1c81a06b09d93065",
+        "bytes": 311609
+      },
+      {
+        "archivo_privado": "captura-008.png",
+        "rgb_sha256": "ed6c7f4fd1c518ab9dac987f4f31ef01e6731fb6e8805be5b5e35c4405b56086",
+        "sha256": "041cdb4b1797e20c56e07d1bba102796f5f384e14b61aa058abbc1c1659af821",
+        "bytes": 311599
+      }
+    ],
+    "rgb_identico": true
+  },
+  "sesiones": [
+    {
+      "acciones": [
+        {
+          "accion": "lease",
+          "utc": "2026-11-09T11:52:56.922587+00:00",
+          "monotonic": 1964392.25968
+        },
+        {
+          "accion": "abrir_auxiliar",
+          "utc": "2026-11-09T11:53:13.206655+00:00",
+          "monotonic": 1964408.543756,
+          "rc": 0
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:53:20.720793+00:00",
+          "monotonic": 1964416.057907,
+          "captura": 2,
+          "motivo": "Seleccionar campo de duración piloto local"
+        },
+        {
+          "accion": "tecla",
+          "utc": "2026-11-09T11:53:20.722908+00:00",
+          "monotonic": 1964416.060048,
+          "captura": 2,
+          "tecla": "Control+a"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:53:28.227838+00:00",
+          "monotonic": 1964423.564939,
+          "captura": 3,
+          "motivo": "Abrir selector nativo de captura de pestaña"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:53:41.516057+00:00",
+          "monotonic": 1964436.853158,
+          "captura": 5,
+          "motivo": "Seleccionar solamente la pestaña identificada del video de Euge Oller"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:53:48.661526+00:00",
+          "monotonic": 1964443.998628,
+          "captura": 6,
+          "motivo": "Compartir sólo la pestaña confirmada de Euge con audio de pestaña"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:53:56.083124+00:00",
+          "monotonic": 1964451.420225,
+          "captura": 7,
+          "motivo": "Activar la pestaña del video ya seleccionado para captura"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:54:08.804578+00:00",
+          "monotonic": 1964464.141676,
+          "captura": 9,
+          "motivo": "Comenzar piloto audiovisual desde reloj 0:00 y audio no silenciado"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:54:29.361432+00:00",
+          "monotonic": 1964484.698531,
+          "captura": 11,
+          "motivo": "Pausar el video tras actividad breve del piloto"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:54:36.421971+00:00",
+          "monotonic": 1964491.75907,
+          "captura": 12,
+          "motivo": "Consultar estado de la grabación local al vencer el temporizador"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:54:43.470011+00:00",
+          "monotonic": 1964498.807113,
+          "captura": 13,
+          "motivo": "Abrir guardado explícito a carpeta privada del piloto"
+        },
+        {
+          "accion": "tecla",
+          "utc": "2026-11-09T11:54:56.996463+00:00",
+          "monotonic": 1964512.333561,
+          "captura": 15,
+          "motivo": "Seleccionar nombre completo del archivo en selector local",
+          "tecla": "Control+a"
+        },
+        {
+          "accion": "tecla",
+          "utc": "2026-11-09T11:55:06.004802+00:00",
+          "monotonic": 1964521.341904,
+          "captura": 16,
+          "motivo": "Guardar piloto en ruta privada visible y confirmada",
+          "tecla": "Return"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:55:23.198914+00:00",
+          "monotonic": 1964538.536045,
+          "captura": 18,
+          "motivo": "Confirmar Save visible en selector con destino privado validado"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:55:59.388942+00:00",
+          "monotonic": 1964574.726043,
+          "captura": 19,
+          "motivo": "Cerrar sólo el auxiliar del piloto ya guardado"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:56:20.439476+00:00",
+          "monotonic": 1964595.776574,
+          "captura": 22,
+          "motivo": "Enfocar barra del reproductor en su extremo inicial"
+        },
+        {
+          "accion": "tecla",
+          "utc": "2026-11-09T11:56:20.440301+00:00",
+          "monotonic": 1964595.77739,
+          "captura": 22,
+          "motivo": "Llevar reloj a cero exacto con control estándar del reproductor",
+          "tecla": "0"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:56:27.157349+00:00",
+          "monotonic": 1964602.494448,
+          "captura": 23,
+          "motivo": "Verificar pista original y velocidad después de piloto y retorno a0"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:56:34.981012+00:00",
+          "monotonic": 1964610.318111,
+          "captura": 24,
+          "motivo": "Cerrar menú de la pista original confirmada en 0:00"
+        },
+        {
+          "accion": "abrir_auxiliar",
+          "utc": "2026-11-09T11:56:35.099080+00:00",
+          "monotonic": 1964610.436181,
+          "rc": 0
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:56:42.313838+00:00",
+          "monotonic": 1964617.650937,
+          "captura": 25,
+          "motivo": "Enfocar duración de captura completa"
+        },
+        {
+          "accion": "tecla",
+          "utc": "2026-11-09T11:56:42.314716+00:00",
+          "monotonic": 1964617.651806,
+          "captura": 25,
+          "tecla": "Control+a"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:56:49.475208+00:00",
+          "monotonic": 1964624.812309,
+          "captura": 26,
+          "motivo": "Abrir selector oficial de captura completa de pestaña"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:56:57.425499+00:00",
+          "monotonic": 1964632.762596,
+          "captura": 27,
+          "motivo": "Elegir solamente la pestaña final v4 animated de Euge"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:57:04.521165+00:00",
+          "monotonic": 1964639.858265,
+          "captura": 28,
+          "motivo": "Confirmar Share with Audio para la pestaña identificada"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:57:11.733617+00:00",
+          "monotonic": 1964647.070715,
+          "captura": 29,
+          "motivo": "Volver al reproductor de la fuente seleccionada"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:57:27.250367+00:00",
+          "monotonic": 1964662.587469,
+          "captura": 31,
+          "motivo": "Iniciar reproducción completa desde 0:00 con captura de pestaña activa"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T11:59:54.568773+00:00",
+          "monotonic": 1964809.905871,
+          "captura": 36,
+          "motivo": "Omitir anuncio sólo mediante botón oficial visible Skip"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:08:51.546241+00:00",
+          "monotonic": 1965346.883343,
+          "captura": 49,
+          "motivo": "Omitir segundo bloque publicitario con botón oficial Skip visible"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:09:07.908646+00:00",
+          "monotonic": 1965363.245841,
+          "captura": 51,
+          "motivo": "Omitir segundo anuncio del bloque con Skip oficial visible"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:14:41.055044+00:00",
+          "monotonic": 1965696.392146,
+          "captura": 60,
+          "motivo": "Omitir anuncio sólo tras quedar habilitado el botón oficial Skip"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:15:47.825747+00:00",
+          "monotonic": 1965763.162845,
+          "captura": 64,
+          "motivo": "Pausar cerca de 15:00 para la unión de ambos tramos, sin seek"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:16:07.197115+00:00",
+          "monotonic": 1965782.534218,
+          "captura": 66,
+          "motivo": "Detener captura de pestaña tras confirmar imagen pausada en 15:10"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:16:07.198059+00:00",
+          "monotonic": 1965782.53515,
+          "captura": 66,
+          "motivo": "Consultar resultado del primer tramo en auxiliar local"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:16:21.689363+00:00",
+          "monotonic": 1965797.026467,
+          "captura": 68,
+          "motivo": "Abrir guardado explícito del primer tramo audiovisual"
+        },
+        {
+          "accion": "tecla",
+          "utc": "2026-11-09T12:16:34.179168+00:00",
+          "monotonic": 1965809.516267,
+          "captura": 69,
+          "tecla": "Control+a"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:16:42.021273+00:00",
+          "monotonic": 1965817.35837,
+          "captura": 70,
+          "motivo": "Guardar primer tramo en ruta privada validada"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:17:46.617195+00:00",
+          "monotonic": 1965881.954298,
+          "captura": 72,
+          "motivo": "Cerrar exclusivamente auxiliar del primer tramo tras guardar"
+        },
+        {
+          "accion": "fin_lease",
+          "utc": "2026-11-09T12:17:46.618439+00:00",
+          "monotonic": 1965881.95553,
+          "mismo_visor": true
+        }
+      ],
+      "puntos": [
+        {
+          "archivo_privado": "captura-031.png",
+          "utc_captura_terminada": "2026-11-09T11:57:19.608059+00:00",
+          "monotonic_orden_captura": 1964654.627047,
+          "monotonic_captura_terminada": 1964654.945157,
+          "reloj": "0:00",
+          "tipo": "control_inicio",
+          "observacion": "YouTube exacto y 30:02 total; indicador de compartir la pestaña; Play visible, audio sin mute; diagrama con GrokBOT, conectores y fábricas.",
+          "sha256": "c78f5bbdce2a4e863bbb1ee803657e5bf045cc6b8deba1456d4f67ebaec36c0e",
+          "bytes": 302618
+        },
+        {
+          "archivo_privado": "captura-033.png",
+          "utc_captura_terminada": "2026-11-09T11:57:55.472492+00:00",
+          "monotonic_orden_captura": 1964690.438457,
+          "monotonic_captura_terminada": 1964690.809591,
+          "reloj": "0:27",
+          "tipo": "reproduciendo",
+          "observacion": "Panel Fábricas de Euge con carriles de entrada, fábrica, revisión y destino; cuatro filas visibles. Indicador de compartir y botón de pausa.",
+          "sha256": "70d17f594f8999b4cee58143c80915938795ee8c1adcab3cc478c0fa89bb132f",
+          "bytes": 374587
+        },
+        {
+          "archivo_privado": "captura-034.png",
+          "utc_captura_terminada": "2026-11-09T11:58:50.535557+00:00",
+          "monotonic_orden_captura": 1964745.551926,
+          "monotonic_captura_terminada": 1964745.872658,
+          "reloj": "1:22",
+          "tipo": "reproduciendo",
+          "observacion": "Lienzo de Excalidraw con encabezado «1. ChatGPT» y un círculo dibujado; Euge aparece a la derecha.",
+          "sha256": "c462b9932cc719c47b6bd944d56be97ac8982672a0a65480e7ed725185e67b1b",
+          "bytes": 281933
+        },
+        {
+          "archivo_privado": "captura-035.png",
+          "utc_captura_terminada": "2026-11-09T11:59:40.819606+00:00",
+          "monotonic_orden_captura": 1964795.83697,
+          "monotonic_captura_terminada": 1964796.156705,
+          "reloj": "0:29",
+          "tipo": "publicidad",
+          "observacion": "Anuncio 1/2 con barra amarilla y reloj propio 0:29/0:30; no cuenta como contenido.",
+          "sha256": "41d8c9c1a56688c4c16f15335b32a16f6de71fcb6f27719f7fdcfc640bd3415f",
+          "bytes": 346953
+        },
+        {
+          "archivo_privado": "captura-037.png",
+          "utc_captura_terminada": "2026-11-09T11:59:54.891440+00:00",
+          "monotonic_orden_captura": 1964809.906993,
+          "monotonic_captura_terminada": 1964810.228541,
+          "reloj": "0:06",
+          "tipo": "publicidad",
+          "observacion": "Tras pulsar el botón oficial Skip visible en 036 se observó una transición a anuncio 2/2 con reloj propio; no cuenta como contenido.",
+          "sha256": "bf95ceb30777e267c9a41328cc65cee3d812a3645dceaa620b16a0bf05ecb96b",
+          "bytes": 642868
+        },
+        {
+          "archivo_privado": "captura-039.png",
+          "utc_captura_terminada": "2026-11-09T12:00:14.263693+00:00",
+          "monotonic_orden_captura": 1964829.228299,
+          "monotonic_captura_terminada": 1964829.600793,
+          "reloj": "2:01",
+          "tipo": "reproduciendo",
+          "observacion": "Regreso confirmado; en 038 se vio la diapositiva LLM con el ejemplo de la capital de Francia, y en 039 ya aparece la siguiente transición con Euge a la derecha.",
+          "sha256": "89367beb2eeb4e7d44c1e6128117a97772ceaa91196ab34c0161f2e19bc24a5b",
+          "bytes": 245205
+        },
+        {
+          "archivo_privado": "captura-040.png",
+          "utc_captura_terminada": "2026-11-09T12:01:01.749793+00:00",
+          "monotonic_orden_captura": 1964876.570942,
+          "monotonic_captura_terminada": 1964877.086896,
+          "reloj": "2:48",
+          "tipo": "reproduciendo",
+          "observacion": "Diapositiva Generación 2 con una curva roja y eje Más dinero y más datos. Se supera el 2:09 del control anterior.",
+          "sha256": "da9072e49821a4e9e0047cacabb9bdfe427b7c4acf07195f649e798a8f2e5969",
+          "bytes": 261282
+        },
+        {
+          "archivo_privado": "captura-041.png",
+          "utc_captura_terminada": "2026-11-09T12:01:36.881426+00:00",
+          "monotonic_orden_captura": 1964911.896797,
+          "monotonic_captura_terminada": 1964912.218526,
+          "reloj": "3:24",
+          "tipo": "reproduciendo",
+          "observacion": "Diapositiva Generación 2 / Herramientas, con un ejemplo de búsqueda web de una receta reciente.",
+          "sha256": "fcbc9ba5dd9ace96656bbebcaa867ebc4d07f581af1c7625b9b19eeffe852752",
+          "bytes": 265945
+        },
+        {
+          "archivo_privado": "captura-042.png",
+          "utc_captura_terminada": "2026-11-09T12:02:05.801175+00:00",
+          "monotonic_orden_captura": 1964940.822234,
+          "monotonic_captura_terminada": 1964941.138277,
+          "reloj": "3:52",
+          "tipo": "reproduciendo",
+          "observacion": "La animación contrapone una respuesta sin internet o herramientas y un botón de búsqueda en internet.",
+          "sha256": "407070cb7bfaee198162c5b14517549c6add39c7cbeb412fb58b1106f7cf6ea8",
+          "bytes": 300990
+        },
+        {
+          "archivo_privado": "captura-043.png",
+          "utc_captura_terminada": "2026-11-09T12:03:02.849316+00:00",
+          "monotonic_orden_captura": 1964997.752858,
+          "monotonic_captura_terminada": 1964998.186413,
+          "reloj": "4:49",
+          "tipo": "reproduciendo",
+          "observacion": "Generación 3: «Razonar antes de responder» y flujo Pregunta → Razonar → Respuesta o acción.",
+          "sha256": "80f07deebd17baf1d8c265ad42281b47a0a4a2d9fbe17ebc4b54ebec370ab61d",
+          "bytes": 270041
+        },
+        {
+          "archivo_privado": "captura-044.png",
+          "utc_captura_terminada": "2026-11-09T12:03:43.416376+00:00",
+          "monotonic_orden_captura": 1965038.429593,
+          "monotonic_captura_terminada": 1965038.753473,
+          "reloj": "5:30",
+          "tipo": "reproduciendo",
+          "observacion": "Transición con panel cuadriculado vacío y Euge a la derecha; el reloj sigue avanzando.",
+          "sha256": "cd73337c2c055c698aaf3801f82a9c46f2e834797fb7e9d6f6f1eb6c2f0f2877",
+          "bytes": 266900
+        },
+        {
+          "archivo_privado": "captura-045.png",
+          "utc_captura_terminada": "2026-11-09T12:04:42.707377+00:00",
+          "monotonic_orden_captura": 1965097.723417,
+          "monotonic_captura_terminada": 1965098.044488,
+          "reloj": "6:29",
+          "tipo": "reproduciendo",
+          "observacion": "Excalidraw compara Generación 2 y Generación 3: dos nodos LLM, herramientas/documentos y rótulo MCP en el segundo.",
+          "sha256": "476629ccfc7b3a45da81c72051ad12c3581eb0ddcdd489777d3d88d4d5b09101",
+          "bytes": 307503
+        },
+        {
+          "archivo_privado": "captura-046.png",
+          "utc_captura_terminada": "2026-11-09T12:05:42.970267+00:00",
+          "monotonic_orden_captura": 1965157.984208,
+          "monotonic_captura_terminada": 1965158.307367,
+          "reloj": "7:30",
+          "tipo": "reproduciendo",
+          "observacion": "El lienzo se desplaza a la derecha y deja ver el comienzo de un cuarto diagrama junto a las generaciones 2 y 3.",
+          "sha256": "21a2caa1546b83cbc324b106488f6854c0f7accf463ef32666d674b091ae8ef3",
+          "bytes": 301612
+        },
+        {
+          "archivo_privado": "captura-047.png",
+          "utc_captura_terminada": "2026-11-09T12:06:40.468904+00:00",
+          "monotonic_orden_captura": 1965215.487964,
+          "monotonic_captura_terminada": 1965215.80606,
+          "reloj": "8:27",
+          "tipo": "reproduciendo",
+          "observacion": "Excalidraw muestra Generación 3 con modelos razonadores y MCP, y Generación 4 rotulada Agentes proactivos con ordenador.",
+          "sha256": "35de2d4f6181f361f0589adf28929af4f6276577706b52daa4c75dd37cc8414b",
+          "bytes": 299098
+        },
+        {
+          "archivo_privado": "captura-048.png",
+          "utc_captura_terminada": "2026-11-09T12:07:43.078964+00:00",
+          "monotonic_orden_captura": 1965278.099878,
+          "monotonic_captura_terminada": 1965278.416064,
+          "reloj": "9:30",
+          "tipo": "reproduciendo",
+          "observacion": "Diapositiva Generación 4: MCP y Herramientas se acompañan de la etiqueta destacada + Ordenador propio.",
+          "sha256": "26a6680ca4a7fd34dce98301c8258afd92897a39bf1eaea097bcdac0d6bbb7f5",
+          "bytes": 262341
+        },
+        {
+          "archivo_privado": "captura-049.png",
+          "utc_captura_terminada": "2026-11-09T12:08:44.282785+00:00",
+          "monotonic_orden_captura": 1965339.301518,
+          "monotonic_captura_terminada": 1965339.619895,
+          "reloj": "s/r",
+          "tipo": "publicidad",
+          "observacion": "Pantalla final de un anuncio del segundo bloque; reloj de contenido oculto.",
+          "sha256": "1871bbc70545d6ca116ce924ef3163a6be8f76b7350a032578528ac550df3998",
+          "bytes": 129233
+        },
+        {
+          "archivo_privado": "captura-050.png",
+          "utc_captura_terminada": "2026-11-09T12:08:51.870710+00:00",
+          "monotonic_orden_captura": 1965346.884044,
+          "monotonic_captura_terminada": 1965347.20781,
+          "reloj": "0:01",
+          "tipo": "publicidad",
+          "observacion": "Se observa anuncio 2/2 con reloj propio tras Skip oficial del anuncio previo.",
+          "sha256": "2fd48b98c42d1cca6321360f2c1ade5a38402d04d6394b34cf13357a2fc0784a",
+          "bytes": 576242
+        },
+        {
+          "archivo_privado": "captura-051.png",
+          "utc_captura_terminada": "2026-11-09T12:08:59.878066+00:00",
+          "monotonic_orden_captura": 1965354.843914,
+          "monotonic_captura_terminada": 1965355.215173,
+          "reloj": "s/r",
+          "tipo": "publicidad",
+          "observacion": "Segundo anuncio del bloque; se inspecciona Skip oficial visible antes del clic.",
+          "sha256": "148ab2e063963358c2615cd816471bc52f04c8754376b5b4d091787a4a373bed",
+          "bytes": 150191
+        },
+        {
+          "archivo_privado": "captura-053.png",
+          "utc_captura_terminada": "2026-11-09T12:09:15.225159+00:00",
+          "monotonic_orden_captura": 1965370.242294,
+          "monotonic_captura_terminada": 1965370.562257,
+          "reloj": "10:06",
+          "tipo": "reproduciendo",
+          "observacion": "Regreso confirmado. El diagrama de cuarta generación conecta LLM, ordenador, herramientas y un recuadro con nombres de agentes, entre ellos Muse y GrokBot.",
+          "sha256": "debc8aab4c298518df67aaab2800fcc35d228e6d5a74ef34f798e55996115e18",
+          "bytes": 305792
+        },
+        {
+          "archivo_privado": "captura-054.png",
+          "utc_captura_terminada": "2026-11-09T12:10:28.955112+00:00",
+          "monotonic_orden_captura": 1965443.970752,
+          "monotonic_captura_terminada": 1965444.292215,
+          "reloj": "11:20",
+          "tipo": "reproduciendo",
+          "observacion": "El video pasa del diagrama de cuarta generación a una nueva diapositiva titulada Proactividad.",
+          "sha256": "0bc3e98d6f77afe3f8dfc93ecd453d13907832562b86a0037452f996f1542879",
+          "bytes": 283843
+        },
+        {
+          "archivo_privado": "captura-055.png",
+          "utc_captura_terminada": "2026-11-09T12:11:24.152028+00:00",
+          "monotonic_orden_captura": 1965499.168487,
+          "monotonic_captura_terminada": 1965499.489128,
+          "reloj": "12:15",
+          "tipo": "reproduciendo",
+          "observacion": "Tres avisos ilustrativos de GrokBOT: salir a tiempo para un podcast, proponer resolver dos reuniones solapadas y preparar información sobre un contacto.",
+          "sha256": "6c2b4b0bc36abdc1b76dd3f8609c42a4c0c27c67a826ab49dbc4be27d0c9e8a4",
+          "bytes": 294755
+        },
+        {
+          "archivo_privado": "captura-056.png",
+          "utc_captura_terminada": "2026-11-09T12:12:27.606619+00:00",
+          "monotonic_orden_captura": 1965562.624203,
+          "monotonic_captura_terminada": 1965562.943717,
+          "reloj": "13:18",
+          "tipo": "reproduciendo",
+          "observacion": "Interfaz oscura de chat con agente Star y otras conversaciones; una respuesta visible enlaza tablero de fábricas y mapa de las fábricas.",
+          "sha256": "ca72f278fb5f1b0ed41f6a8ecc4c1b6b46c4c9a4b538be8ea51446d2d3d5a419",
+          "bytes": 342761
+        },
+        {
+          "archivo_privado": "captura-057.png",
+          "utc_captura_terminada": "2026-11-09T12:13:34.817376+00:00",
+          "monotonic_orden_captura": 1965629.833644,
+          "monotonic_captura_terminada": 1965630.154473,
+          "reloj": "0:20",
+          "tipo": "publicidad",
+          "observacion": "Tercer bloque: anuncio 1/2 rotulado Sponsored de Grok Bot, reloj de anuncio 0:20/1:40. Sus imágenes no son de Euge aunque compartan tema.",
+          "sha256": "0a1a523cf748174e2d664765df370829e233c3ce658dbc46d9f595d87803e7ac",
+          "bytes": 397648
+        },
+        {
+          "archivo_privado": "captura-059.png",
+          "utc_captura_terminada": "2026-11-09T12:13:50.406040+00:00",
+          "monotonic_orden_captura": 1965645.423218,
+          "monotonic_captura_terminada": 1965645.743135,
+          "reloj": "0:36",
+          "tipo": "publicidad",
+          "observacion": "El mismo anuncio sigue en reloj propio 0:36/1:40. Skip aparece atenuado, sin clic.",
+          "sha256": "c39642d97825cf780bf0be9195f953066b08c83791340d26017cb512e98bdb46",
+          "bytes": 382827
+        },
+        {
+          "archivo_privado": "captura-063.png",
+          "utc_captura_terminada": "2026-11-09T12:15:09.783146+00:00",
+          "monotonic_orden_captura": 1965724.747869,
+          "monotonic_captura_terminada": 1965725.120243,
+          "reloj": "14:32",
+          "tipo": "reproduciendo",
+          "observacion": "Después del tercer bloque, reaparece primero el diagrama operativo en 062 y luego la vista Productos de Clonify, con tarjetas de productos y estados.",
+          "sha256": "218401bbe24abe366e989a9198b9f10df228635614cf4cb12a249a7f4402a3d4",
+          "bytes": 357406
+        },
+        {
+          "archivo_privado": "captura-064.png",
+          "utc_captura_terminada": "2026-11-09T12:15:39.313445+00:00",
+          "monotonic_orden_captura": 1965754.277794,
+          "monotonic_captura_terminada": 1965754.650555,
+          "reloj": "15:01",
+          "tipo": "reproduciendo",
+          "observacion": "Diagrama operativo de Euge en Excalidraw con GrokBOT como nodo central de conectores, ordenador virtual y fábricas.",
+          "sha256": "24b5893452caccf5cba32b29ec0a46584d8cd21b5e20c141be1838707c11f6d8",
+          "bytes": 316150
+        },
+        {
+          "archivo_privado": "captura-065.png",
+          "utc_captura_terminada": "2026-11-09T12:15:48.151349+00:00",
+          "monotonic_orden_captura": 1965763.16361,
+          "monotonic_captura_terminada": 1965763.48845,
+          "reloj": "15:10",
+          "tipo": "pausa_costura",
+          "observacion": "Control Play al pausar y reloj de contenido 15:10/30:02; cuadro de Excalidraw para cotejar con inicio del tramo 2.",
+          "sha256": "e364cc1f3737ac29be57b18ce5fa24468ebab7e3e609571d80b95d149e5a69e9",
+          "bytes": 317404
+        }
+      ]
+    },
+    {
+      "acciones": [
+        {
+          "accion": "lease",
+          "utc": "2026-11-09T12:17:56.182589+00:00",
+          "monotonic": 1965891.519685,
+          "controlador_sha256": "b01dcf24b33056a1eefe8a10bb9c466a8c3bde7b4803c7441fea53306d47a4bf",
+          "auxiliar_sha256": "e2fbf8f21ad33ac937b63c50b26ad8de3918a4dac64216d6711de408531e14da",
+          "identidad_chromium_sha256": "b4b951b131ea39262c1d5db19698d73f9fae4fccbdf18bf5b95ab0ee0904676d"
+        },
+        {
+          "accion": "abrir_auxiliar",
+          "utc": "2026-11-09T12:18:19.084775+00:00",
+          "monotonic": 1965914.421872,
+          "rc": 0
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:18:26.756190+00:00",
+          "monotonic": 1965922.09329,
+          "captura": 3,
+          "motivo": "Fijar margen acotado para 14:52 restantes y posibles anuncios"
+        },
+        {
+          "accion": "tecla",
+          "utc": "2026-11-09T12:18:26.757463+00:00",
+          "monotonic": 1965922.094573,
+          "captura": 3,
+          "tecla": "Control+a"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:18:34.130468+00:00",
+          "monotonic": 1965929.467568,
+          "captura": 4,
+          "motivo": "Abrir selector de pestaña para el tramo restante"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:18:41.495965+00:00",
+          "monotonic": 1965936.833066,
+          "captura": 5,
+          "motivo": "Seleccionar sólo la pestaña YouTube del mismo video en pausa"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:18:49.175166+00:00",
+          "monotonic": 1965944.512263,
+          "captura": 6,
+          "motivo": "Compartir únicamente la pestaña de Euge con audio de pestaña"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:18:56.450391+00:00",
+          "monotonic": 1965951.787494,
+          "captura": 7,
+          "motivo": "Volver al video seleccionado, aún pausado"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:19:11.866745+00:00",
+          "monotonic": 1965967.203845,
+          "captura": 9,
+          "motivo": "Reanudar desde la misma pausa de 15:10 y misma imagen, sin seek"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:22:50.433941+00:00",
+          "monotonic": 1966185.771044,
+          "captura": 14,
+          "motivo": "Omitir anuncio intermedio mediante botón oficial Skip habilitado"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:33:59.470395+00:00",
+          "monotonic": 1966854.807495,
+          "captura": 32,
+          "motivo": "Omitir anuncio largo cuando el botón oficial Skip se muestra habilitado"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:38:49.272327+00:00",
+          "monotonic": 1967144.609428,
+          "captura": 41,
+          "motivo": "Omitir pantalla final del anuncio por el control oficial Skip"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:39:37.046838+00:00",
+          "monotonic": 1967192.38394,
+          "captura": 43,
+          "motivo": "Cerrar el anuncio final mediante Skip oficial visible"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:39:48.453393+00:00",
+          "monotonic": 1967203.790493,
+          "captura": 44,
+          "motivo": "Detener captura al confirmar terminal 30:02/30:02 del video exacto"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:39:48.454301+00:00",
+          "monotonic": 1967203.791395,
+          "captura": 44,
+          "motivo": "Abrir auxiliar para guardar el segundo tramo ya terminado"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:40:11.662445+00:00",
+          "monotonic": 1967226.999549,
+          "captura": 46,
+          "motivo": "Abrir selector de guardado privado del segundo tramo"
+        },
+        {
+          "accion": "tecla",
+          "utc": "2026-11-09T12:40:20.449096+00:00",
+          "monotonic": 1967235.7862,
+          "captura": 47,
+          "tecla": "Control+a"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:40:29.474879+00:00",
+          "monotonic": 1967244.811979,
+          "captura": 48,
+          "motivo": "Confirmar Save de tramo 2 con ruta privada cotejada"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:41:11.995443+00:00",
+          "monotonic": 1967287.332543,
+          "captura": 50,
+          "motivo": "Cerrar sólo la pestaña auxiliar tras guardado confirmado"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:41:29.580734+00:00",
+          "monotonic": 1967304.917837,
+          "captura": 52,
+          "motivo": "Verificar pista original en el terminal tras dejar de compartir"
+        },
+        {
+          "accion": "clic",
+          "utc": "2026-11-09T12:41:45.755766+00:00",
+          "monotonic": 1967321.092869,
+          "captura": 54,
+          "motivo": "Cerrar ajustes y devolver el visor en el final del video"
+        },
+        {
+          "accion": "fin_lease",
+          "utc": "2026-11-09T12:41:57.809528+00:00",
+          "monotonic": 1967333.14663,
+          "mismo_visor": true
+        }
+      ],
+      "puntos": [
+        {
+          "archivo_privado": "captura-002.png",
+          "utc_captura_terminada": "2026-11-09T12:18:12.371116+00:00",
+          "monotonic_orden_captura": 1965907.390766,
+          "monotonic_captura_terminada": 1965907.708215,
+          "reloj": "15:10",
+          "tipo": "pausa_costura",
+          "observacion": "Mismo cuadro del diagrama y reloj visible 15:10 con botón Play antes de compartir la pestaña de nuevo.",
+          "sha256": "b7ff90d4a79a06566619b60aa4b206dbd8ebfc6e7359a21dd434f4f9d4b39caa",
+          "bytes": 334591
+        },
+        {
+          "archivo_privado": "captura-009.png",
+          "utc_captura_terminada": "2026-11-09T12:19:04.281784+00:00",
+          "monotonic_orden_captura": 1965959.251468,
+          "monotonic_captura_terminada": 1965959.618882,
+          "reloj": "15:10",
+          "tipo": "control_inicio",
+          "observacion": "Mismo cuadro y reloj 15:10; banner de compartir la pestaña presente y Play visible antes de reanudar.",
+          "sha256": "a2c380c1ef3b09f32a584d910b17c4e689a5102a5b0b97f3f5c62295ceee5fba",
+          "bytes": 317122
+        },
+        {
+          "archivo_privado": "captura-011.png",
+          "utc_captura_terminada": "2026-11-09T12:19:49.309539+00:00",
+          "monotonic_orden_captura": 1966004.274793,
+          "monotonic_captura_terminada": 1966004.646636,
+          "reloj": "15:47",
+          "tipo": "reproduciendo",
+          "observacion": "Sobre el diagrama operativo se agregan marcas MCP y trazos en los recuadros de Calendar y Gmail. A la derecha, fábricas con rótulos Claude Opus 5.5 y Hetzner.",
+          "sha256": "8cafeb3d593e7d9beaeca9ecb3a1ba2d39328e966e455b51c6017c276121f719",
+          "bytes": 311883
+        },
+        {
+          "archivo_privado": "captura-012.png",
+          "utc_captura_terminada": "2026-11-09T12:20:40.237535+00:00",
+          "monotonic_orden_captura": 1966055.256304,
+          "monotonic_captura_terminada": 1966055.574643,
+          "reloj": "16:38",
+          "tipo": "reproduciendo",
+          "observacion": "El lienzo amplía el esquema con una agrupación de seis figuras en la parte superior y conserva el mapa de conectores y fábricas debajo.",
+          "sha256": "c7e497cc853d27a3885d62e645df396cbdab5021ed070b54105a93a6927dc0c6",
+          "bytes": 323301
+        },
+        {
+          "archivo_privado": "captura-013.png",
+          "utc_captura_terminada": "2026-11-09T12:21:37.664431+00:00",
+          "monotonic_orden_captura": 1966112.680699,
+          "monotonic_captura_terminada": 1966113.001531,
+          "reloj": "17:35",
+          "tipo": "reproduciendo",
+          "observacion": "Diapositiva con el pedido ilustrativo de que una IA dé un video de YouTube ganador.",
+          "sha256": "b594f16bbff6c9947cfef386a4343896a53a71fca1392b1411c54506b0a67dc1",
+          "bytes": 256364
+        },
+        {
+          "archivo_privado": "captura-014.png",
+          "utc_captura_terminada": "2026-11-09T12:22:43.261369+00:00",
+          "monotonic_orden_captura": 1966178.280047,
+          "monotonic_captura_terminada": 1966178.598466,
+          "reloj": "s/r",
+          "tipo": "publicidad",
+          "observacion": "Cuarto bloque observado: anuncio 2/2 rotulado Sponsored. Skip oficial visible, sin confundir reloj de publicidad con contenido.",
+          "sha256": "d7e411c9d21b1358dac911f3dab6e39faa3f74d5f63e5274b6e0555ec0309407",
+          "bytes": 165365
+        },
+        {
+          "archivo_privado": "captura-016.png",
+          "utc_captura_terminada": "2026-11-09T12:22:57.789979+00:00",
+          "monotonic_orden_captura": 1966192.809361,
+          "monotonic_captura_terminada": 1966193.127079,
+          "reloj": "18:01",
+          "tipo": "reproduciendo",
+          "observacion": "Regreso del bloque. En el lienzo aparecen Resultados con Idea, Guion y Miniatura como filas diferenciadas, por encima del mapa operativo.",
+          "sha256": "dcfa56d37af28ef49679da8e2691b99c98fdd5ebeb5ee669b920be205cf7a46f",
+          "bytes": 329581
+        },
+        {
+          "archivo_privado": "captura-017.png",
+          "utc_captura_terminada": "2026-11-09T12:23:47.371426+00:00",
+          "monotonic_orden_captura": 1966242.386046,
+          "monotonic_captura_terminada": 1966242.708541,
+          "reloj": "18:51",
+          "tipo": "reproduciendo",
+          "observacion": "Dentro del video se muestra otra reproducción de YouTube titulada Emprender sin empezar de cero: caso Bending Spoons, como ejemplo del contenido del canal.",
+          "sha256": "64fabdb3ac0fc741c42d3fd845a94dd05894bd3fc150b3c6ba7eea91be15c483",
+          "bytes": 351150
+        },
+        {
+          "archivo_privado": "captura-021.png",
+          "utc_captura_terminada": "2026-11-09T12:25:16.611068+00:00",
+          "monotonic_orden_captura": 1966331.622994,
+          "monotonic_captura_terminada": 1966331.948168,
+          "reloj": "20:20",
+          "tipo": "reproduciendo",
+          "observacion": "El lienzo sigue el mapa operativo y añade marcas alrededor del ordenador virtual, el bloque de resultados y las fábricas; Hetzner aparece subrayado.",
+          "sha256": "9fcc1cf419bd090073420f1b77b76c1e416b6730421360e676817c46f1104321",
+          "bytes": 331056
+        },
+        {
+          "archivo_privado": "captura-022.png",
+          "utc_captura_terminada": "2026-11-09T12:26:13.837068+00:00",
+          "monotonic_orden_captura": 1966388.807742,
+          "monotonic_captura_terminada": 1966389.174169,
+          "reloj": "s/r",
+          "tipo": "reproduciendo",
+          "observacion": "Diapositiva «Como una cadena de montaje» con materiales de entrada, pasos de proceso e Idea como salida. Controles ocultos en este punto.",
+          "sha256": "e267c60649394167c4aa2bc8111291d4f9b87a46e030b9be5cc694bacc30f050",
+          "bytes": 276883
+        },
+        {
+          "archivo_privado": "captura-023.png",
+          "utc_captura_terminada": "2026-11-09T12:26:28.481207+00:00",
+          "monotonic_orden_captura": 1966403.388301,
+          "monotonic_captura_terminada": 1966403.818308,
+          "reloj": "21:32",
+          "tipo": "reproduciendo",
+          "observacion": "El mismo esquema aparece dibujado en Excalidraw con materiales que pasan por varias etapas antes de llegar a Idea.",
+          "sha256": "870373321adf13843282faa404d4d2e5ac21a3bf79a2dcf5729f27362472e0f0",
+          "bytes": 321589
+        },
+        {
+          "archivo_privado": "captura-024.png",
+          "utc_captura_terminada": "2026-11-09T12:27:32.080274+00:00",
+          "monotonic_orden_captura": 1966467.045954,
+          "monotonic_captura_terminada": 1966467.417373,
+          "reloj": "22:36",
+          "tipo": "reproduciendo",
+          "observacion": "La cadena dibujada ahora encuadra materiales e Idea; junto a Idea aparecen notas manuscritas de medición, aprendizaje y mejora.",
+          "sha256": "ac5d50c54a2c49ea952bb882f6e10b363ac13a52db49bdb5f56572198dfabe6d",
+          "bytes": 329417
+        },
+        {
+          "archivo_privado": "captura-025.png",
+          "utc_captura_terminada": "2026-11-09T12:28:37.031901+00:00",
+          "monotonic_orden_captura": 1966532.052255,
+          "monotonic_captura_terminada": 1966532.369024,
+          "reloj": "23:41",
+          "tipo": "reproduciendo",
+          "observacion": "Panel Fábricas de Euge con carriles Anuncios Black Friday, Sala de montaje EA y Taller de código. Abajo se ven Sala de revisión, Buzón de aprobaciones, Almacén, Residuos y Piezas repetidas.",
+          "sha256": "baa765dc2ae8faf26310d18da7d1fc5c9fd078971a7f8f381509134d76072307",
+          "bytes": 387295
+        },
+        {
+          "archivo_privado": "captura-026.png",
+          "utc_captura_terminada": "2026-11-09T12:29:42.039794+00:00",
+          "monotonic_orden_captura": 1966597.057419,
+          "monotonic_captura_terminada": 1966597.376893,
+          "reloj": "24:46",
+          "tipo": "reproduciendo",
+          "observacion": "Demostración de Sala de montaje con preview, pistas de miniaturas, lista de clips con intervalos, campo de comentario ligado al tiempo y botón Generar v2.",
+          "sha256": "ab41c7dacf3a17f631be5e1070556a443f7109d39a1297fcd3116da7b17cb9d8",
+          "bytes": 417723
+        },
+        {
+          "archivo_privado": "captura-027.png",
+          "utc_captura_terminada": "2026-11-09T12:30:43.238607+00:00",
+          "monotonic_orden_captura": 1966658.257543,
+          "monotonic_captura_terminada": 1966658.575704,
+          "reloj": "25:47",
+          "tipo": "reproduciendo",
+          "observacion": "Detalle del carril Canal Euge en Fábricas de Euge con estado de montaje paso 4 de 5 y aviso de un video para revisar.",
+          "sha256": "f25d79945684a887c18a74b0000b42a3a8b677a962528328ea52e90de13fcb64",
+          "bytes": 387154
+        },
+        {
+          "archivo_privado": "captura-029.png",
+          "utc_captura_terminada": "2026-11-09T12:32:05.992857+00:00",
+          "monotonic_orden_captura": 1966740.953174,
+          "monotonic_captura_terminada": 1966741.329955,
+          "reloj": "1:05",
+          "tipo": "publicidad",
+          "observacion": "Quinto bloque observado. Anuncio 1/2 de Claude Code marcado Sponsored, con reloj propio 1:05/5:41. Skip aparece atenuado, sin clic.",
+          "sha256": "2f0a1853cd436b2b63b52f6cb98cd01db102d6eaac076443c34d5f224fa65cf7",
+          "bytes": 493595
+        },
+        {
+          "archivo_privado": "captura-032.png",
+          "utc_captura_terminada": "2026-11-09T12:33:50.743895+00:00",
+          "monotonic_orden_captura": 1966845.759188,
+          "monotonic_captura_terminada": 1966846.080992,
+          "reloj": "2:50",
+          "tipo": "publicidad",
+          "observacion": "El botón oficial Skip pasa a mostrarse blanco y el reloj propio del anuncio muestra 2:50/5:41. Se pulsa una vez y se confirma retorno posterior.",
+          "sha256": "25d1deb84e66f73115c5bf95e884c73fb8d5ed332e77eb11c0a422e40808361b",
+          "bytes": 91462
+        },
+        {
+          "archivo_privado": "captura-035.png",
+          "utc_captura_terminada": "2026-11-09T12:34:15.965005+00:00",
+          "monotonic_orden_captura": 1966870.984147,
+          "monotonic_captura_terminada": 1966871.302102,
+          "reloj": "26:19",
+          "tipo": "reproduciendo",
+          "observacion": "Retorno de Euge confirmado en 034. Se ve interfaz de revisión de un video con Aprobar, Cambios y comentarios ligados al tiempo.",
+          "sha256": "ed9034a6d144f39ce88f68c90d49927d468690bf8e6439008079de1a25622c95",
+          "bytes": 370299
+        },
+        {
+          "archivo_privado": "captura-036.png",
+          "utc_captura_terminada": "2026-11-09T12:35:24.647349+00:00",
+          "monotonic_orden_captura": 1966939.611072,
+          "monotonic_captura_terminada": 1966939.984449,
+          "reloj": "27:28",
+          "tipo": "reproduciendo",
+          "observacion": "Vuelve al mapa de fábricas con carriles diferenciados. Se ven destinos Buffer, YouTube y Meta Ads y pasos de revisión que varían por carril.",
+          "sha256": "d8efe45aad6669a5444acbddbe1bfbc4471c3bc33f1ad29cbc3e5605d784ebea",
+          "bytes": 387701
+        },
+        {
+          "archivo_privado": "captura-037.png",
+          "utc_captura_terminada": "2026-11-09T12:36:41.953705+00:00",
+          "monotonic_orden_captura": 1967016.973597,
+          "monotonic_captura_terminada": 1967017.290802,
+          "reloj": "28:45",
+          "tipo": "reproduciendo",
+          "observacion": "Regreso al mapa de Excalidraw. GrokBOT, ordenador virtual y conectores convergen en el nodo Agente de IA junto al bloque Fábricas.",
+          "sha256": "323f1afbe492792e7309768892b9bcc7205086107d04002969dc3d5ea1a91843",
+          "bytes": 344835
+        },
+        {
+          "archivo_privado": "captura-038.png",
+          "utc_captura_terminada": "2026-11-09T12:37:33.451896+00:00",
+          "monotonic_orden_captura": 1967068.471268,
+          "monotonic_captura_terminada": 1967068.788993,
+          "reloj": "29:37",
+          "tipo": "reproduciendo",
+          "observacion": "Apertura visual de la portada de Clonify, con titular «Tu negocio online, con la IA en el centro» y módulos alrededor de su asistente.",
+          "sha256": "062195e068e9a2f17f14db1f1234e00734e0d9d7fc4b581fa34f67fc4976766d",
+          "bytes": 375864
+        },
+        {
+          "archivo_privado": "captura-039.png",
+          "utc_captura_terminada": "2026-11-09T12:38:02.966163+00:00",
+          "monotonic_orden_captura": 1967097.9804,
+          "monotonic_captura_terminada": 1967098.303259,
+          "reloj": "0:03",
+          "tipo": "publicidad",
+          "observacion": "Aparece anuncio 1/2 de 0:38 cerca del final previsto. El reloj mostrado es el del anuncio.",
+          "sha256": "5f9f714c8909a40675dffd4c151e9ce58f188b6319c240aac6ef3cf11725695d",
+          "bytes": 159285
+        },
+        {
+          "archivo_privado": "captura-042.png",
+          "utc_captura_terminada": "2026-11-09T12:38:49.598873+00:00",
+          "monotonic_orden_captura": 1967144.614329,
+          "monotonic_captura_terminada": 1967144.935972,
+          "reloj": "0:04",
+          "tipo": "publicidad",
+          "observacion": "Se observa anuncio 2/2 con reloj propio 0:04/0:46 después de pulsar Skip oficial en 041.",
+          "sha256": "bcb0adce5107705d23e75ee4f911138ffa5e9159be1ce7ff18b41d077bf10ce3",
+          "bytes": 349714
+        },
+        {
+          "archivo_privado": "captura-044.png",
+          "utc_captura_terminada": "2026-11-09T12:39:37.366235+00:00",
+          "monotonic_orden_captura": 1967192.384734,
+          "monotonic_captura_terminada": 1967192.703336,
+          "reloj": "30:02",
+          "tipo": "terminal",
+          "observacion": "Tras terminar el bloque publicitario final se observa 30:02/30:02, barra completa y control Replay. La pestaña original sigue compartida.",
+          "sha256": "6d18cd791749317e98c253e172fc67d31f194bb7e6e6a14db6427db2dc5c037a",
+          "bytes": 69517
+        },
+        {
+          "archivo_privado": "captura-052.png",
+          "utc_captura_terminada": "2026-11-09T12:41:20.568343+00:00",
+          "monotonic_orden_captura": 1967295.586995,
+          "monotonic_captura_terminada": 1967295.905443,
+          "reloj": "30:02",
+          "tipo": "visor_devuelto",
+          "observacion": "La misma URL queda en 30:02/30:02 con Replay tras detener la captura y cerrar sólo el auxiliar.",
+          "sha256": "e604154a9675b39aba07dc42e32fa6fd46734313f353806cab6054a6d0810c98",
+          "bytes": 593442
+        },
+        {
+          "archivo_privado": "captura-054.png",
+          "utc_captura_terminada": "2026-11-09T12:41:37.678249+00:00",
+          "monotonic_orden_captura": 1967312.698162,
+          "monotonic_captura_terminada": 1967313.015347,
+          "reloj": "30:02",
+          "tipo": "pista_terminal",
+          "observacion": "Los ajustes del reproductor terminal muestran Audio track Spanish (US) original y Subtitles/CC Off.",
+          "sha256": "9c241d774c664eed20f0e289eb7485093ac5c74e9ac5da09cb8669ec678e8293",
+          "bytes": 573107
+        },
+        {
+          "archivo_privado": "captura-055.png",
+          "utc_captura_terminada": "2026-11-09T12:41:46.279461+00:00",
+          "monotonic_orden_captura": 1967321.093643,
+          "monotonic_captura_terminada": 1967321.61656,
+          "reloj": "30:02",
+          "tipo": "visor_devuelto",
+          "observacion": "Menú cerrado, control Replay visible y página autorizada sin indicador de compartir.",
+          "sha256": "09e7697251124baf2e1f7c5454124b4c906f0ed467d31742e19d69d07d23e4bf",
+          "bytes": 593510
+        }
+      ]
+    }
+  ]
+}

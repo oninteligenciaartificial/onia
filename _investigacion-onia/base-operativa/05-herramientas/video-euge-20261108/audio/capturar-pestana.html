@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; media-src blob:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Captura local de pestaña OnIA</title>
+<style>
+  body { font: 18px system-ui; margin: 3rem auto; max-width: 49rem; padding: 0 1rem; }
+  button, input { font: inherit; padding: .5rem; margin: .3rem 0; }
+  pre { white-space: pre-wrap; background: #eee; padding: 1rem; }
+</style>
+<h1>Captura local de pestaña</h1>
+<p>Dejá la pestaña del video en pausa. En el selector de Chromium elegí sólo esa pestaña y activá compartir audio. Reproducí el video una vez que Chromium indique que estás compartiendo.</p>
+<label>Duración máxima (segundos) <input id="seconds" type="number" min="5" max="1860" value="25"></label>
+<div>
+  <button id="start">Elegir pestaña y grabar</button>
+  <button id="stop" disabled>Detener</button>
+  <button id="save" disabled>Guardar WebM en…</button>
+</div>
+<p><a id="fileLink" hidden>Abrir WebM local para guardarlo</a></p>
+<pre id="status" aria-live="polite"></pre>
+<script>
+'use strict';
+const byId = id => document.getElementById(id);
+const start = byId('start');
+const stop = byId('stop');
+const save = byId('save');
+const seconds = byId('seconds');
+const fileLink = byId('fileLink');
+let recording;
+let filename;
+const log = message => {
+  byId('status').textContent += new Date().toISOString() + '  ' + message + '\n';
+};
+const mimeType = 'video/webm;codecs=vp8,opus';
+if (!navigator.mediaDevices?.getDisplayMedia || !window.MediaRecorder?.isTypeSupported(mimeType)) {
+  start.disabled = true;
+  log('Chromium no ofrece getDisplayMedia y MediaRecorder WebM VP8/Opus en esta página.');
+} else {
+  log('API de captura y formato WebM disponibles. Aún no se solicitó una pista.');
+}
+
+start.addEventListener('click', async () => {
+  if (!seconds.checkValidity()) {
+    seconds.reportValidity();
+    return;
+  }
+  const maxSeconds = seconds.valueAsNumber;
+  if (!Number.isInteger(maxSeconds)) {
+    log('Ingresá la duración en segundos enteros.');
+    return;
+  }
+  start.disabled = true;
+  seconds.disabled = true;
+  let stream;
+  try {
+    stream = await navigator.mediaDevices.getDisplayMedia({
+      video: { displaySurface: 'browser', frameRate: { ideal: 24, max: 30 } },
+      audio: true,
+      selfBrowserSurface: 'exclude',
+      monitorTypeSurfaces: 'exclude',
+      systemAudio: 'exclude',
+      windowAudio: 'exclude',
+      surfaceSwitching: 'exclude',
+    });
+    const videos = stream.getVideoTracks();
+    const audios = stream.getAudioTracks();
+    const settings = videos[0]?.getSettings();
+    if (videos.length !== 1 || settings?.displaySurface !== 'browser') {
+      throw new Error('La fuente seleccionada no es una sola pestaña.');
+    }
+    if (audios.length !== 1 || audios[0].readyState !== 'live') {
+      throw new Error('El selector no entregó una pista de audio activa.');
+    }
+
+    const recorder = new MediaRecorder(stream, {
+      mimeType,
+      videoBitsPerSecond: 1500000,
+      audioBitsPerSecond: 128000,
+    });
+    const chunks = [];
+    let endedBy = 'fuente detenida por Chromium';
+    let timer;
+    let recorderError;
+    let monotonicStart;
+    const end = reason => {
+      if (recorder.state !== 'inactive') {
+        endedBy = reason;
+        recorder.stop();
+      }
+    };
+
+    recorder.addEventListener('dataavailable', event => {
+      if (event.data.size) chunks.push(event.data);
+    });
+    recorder.addEventListener('error', event => {
+      recorderError = event.error?.name || 'error de MediaRecorder';
+    });
+    recorder.addEventListener('stop', () => {
+      clearTimeout(timer);
+      stream.getTracks().forEach(track => track.stop());
+      stop.disabled = true;
+      recording = new Blob(chunks, { type: 'video/webm' });
+      const elapsed = (performance.now() - monotonicStart) / 1000;
+      log('Fin por ' + endedBy + '; ' + elapsed.toFixed(3) + ' s de pared; ' + recording.size + ' bytes.');
+      if (recorderError) log('Error durante captura: ' + recorderError + '.');
+      if (!recording.size) {
+        log('WebM vacío. Volvé a abrir el HTML para repetir con otra condición comprobada.');
+        return;
+      }
+      fileLink.href = URL.createObjectURL(recording);
+      fileLink.target = '_blank';
+      fileLink.rel = 'noopener';
+      fileLink.hidden = false;
+      if (typeof window.showSaveFilePicker === 'function') save.disabled = false;
+    }, { once: true });
+    stream.getTracks().forEach(track => {
+      track.addEventListener('mute', () => log(track.kind + ' pasó a estado mute.'));
+      track.addEventListener('unmute', () => log(track.kind + ' salió de estado mute.'));
+      track.addEventListener('ended', () => end('fin de pista ' + track.kind), { once: true });
+    });
+
+    filename = 'euge-pestana-' + new Date().toISOString().replace(/[:.]/g, '-') + '.webm';
+    monotonicStart = performance.now();
+    recorder.start(1000);
+    stop.disabled = false;
+    stop.addEventListener('click', () => end('botón Detener'), { once: true });
+    timer = setTimeout(() => end('límite de tiempo'), maxSeconds * 1000);
+    log('Inicio WebM. Una pista de audio y una de pestaña, ' +
+        settings.width + '×' + settings.height + ' px; audio mute=' + audios[0].muted + '.');
+  } catch (error) {
+    stream?.getTracks().forEach(track => track.stop());
+    log(error.name + ': ' + error.message);
+    start.disabled = false;
+    seconds.disabled = false;
+  }
+});
+
+save.addEventListener('click', async () => {
+  try {
+    const handle = await window.showSaveFilePicker({
+      suggestedName: filename,
+      types: [{ description: 'Grabación local WebM', accept: { 'video/webm': ['.webm'] } }],
+    });
+    const output = await handle.createWritable();
+    try {
+      await output.write(recording);
+      await output.close();
+    } catch (error) {
+      await output.abort().catch(() => {});
+      throw error;
+    }
+    log('WebM guardado en destino seleccionado.');
+  } catch (error) {
+    log('No guardado (' + error.name + '). La grabación sigue disponible en esta pestaña.');
+  }
+});
+</script>

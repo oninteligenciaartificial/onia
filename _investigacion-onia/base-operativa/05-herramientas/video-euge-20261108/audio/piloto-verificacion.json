@@ -1,0 +1,88 @@
+{
+  "sha256": "d489df05fde0a28282c815d0979cdf77db0b44aa860c773164f76a84c1bf8847",
+  "bytes": 1988313,
+  "container_duration_s": null,
+  "tracks": [
+    {
+      "index": 0,
+      "codec_name": "vp8",
+      "codec_type": "video",
+      "width": 1278,
+      "height": 656,
+      "packets": 617,
+      "first_pts_s": 0.0,
+      "last_pts_s": 45.249,
+      "end_pts_s": 45.25,
+      "max_step_s": 1.045,
+      "pts_regressions": 0,
+      "packets_without_pts": 0
+    },
+    {
+      "index": 1,
+      "codec_name": "opus",
+      "codec_type": "audio",
+      "sample_rate": "48000",
+      "channels": 1,
+      "packets": 764,
+      "first_pts_s": 0.005,
+      "last_pts_s": 45.785,
+      "end_pts_s": 45.845,
+      "max_step_s": 0.06,
+      "pts_regressions": 0,
+      "packets_without_pts": 0
+    }
+  ],
+  "decoded_to_eof": true,
+  "input_or_packet_error": false,
+  "decode_error": false,
+  "track_without_timed_packets": false,
+  "ffmpeg_exit": 0,
+  "diagnostics": {
+    "n_samples": [
+      "0",
+      "2200320"
+    ],
+    "silence_start": [
+      "0.005",
+      "40.9499"
+    ],
+    "freeze_start": [
+      "3.164",
+      "13.741",
+      "16.68",
+      "41.62"
+    ],
+    "freeze_duration": [
+      "10.493",
+      "2.891",
+      "3.394",
+      "2.056"
+    ],
+    "freeze_end": [
+      "13.657",
+      "16.632",
+      "20.074",
+      "43.676"
+    ],
+    "silence_end": [
+      "20.1364",
+      "45.845"
+    ],
+    "silence_duration": [
+      "20.1314",
+      "4.89508"
+    ],
+    "mean_volume": [
+      "-19.5"
+    ],
+    "max_volume": [
+      "0.0"
+    ]
+  },
+  "measurement": {
+    "silence": "threshold -45 dBFS, >=0.8 s",
+    "freeze": "scaled grayscale width 360, threshold 0.001, >=2 s",
+    "clock": "timestamps del archivo; no mapean automáticamente al reproductor",
+    "auditory_observation": false
+  }
+}

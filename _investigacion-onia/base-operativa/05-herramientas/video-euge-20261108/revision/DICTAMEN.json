@@ -1,0 +1,237 @@
+{
+  "schema": 1,
+  "tarea": "video-euge-20261108",
+  "revision_tarea_de_entrada": 7,
+  "base_publicada_antes_del_ensayo": "a946e2bbdbbd868065b36ca719914e06cadeefe8",
+  "fecha_utc": "2026-11-09T12:53:38.083982+00:00",
+  "revisor": "/root/video_revision",
+  "fuente": "https://www.youtube.com/watch?v=JuAQILH7dkQ",
+  "veredicto": "bueno",
+  "alcance": "Reproducción comprobada de inicio a fin por el reloj, registro audiovisual en dos partes y análisis aplicado de muestras visuales con ASR local alineado.",
+  "cobertura": {
+    "reproduccion_inicio_a_fin": true,
+    "captura_audio_video_inicio_a_fin_por_reloj": true,
+    "pista_original_en_menu_inicio_y_fin": "Spanish (US) original",
+    "fotogramas_hitos_reproduccion": 34,
+    "hitos_publicidad": 12,
+    "bloques_publicidad": 6,
+    "visionado_perceptivo_continuo_acreditado": false,
+    "escucha_directa_acreditada": false
+  },
+  "costura": {
+    "reloj_visible_s": 910,
+    "rectangulo_xyxy": [
+      215,
+      266,
+      1068,
+      746
+    ],
+    "rgb_sha256": "ed6c7f4fd1c518ab9dac987f4f31ef01e6731fb6e8805be5b5e35c4405b56086",
+    "igualdad_independiente_exacta": true,
+    "reanudar_sin_seek_segun_acciones": true
+  },
+  "verificacion_visor": {
+    "leases_cerradas_con_mismo_visor": 2,
+    "cierre_final_utc": "2026-11-09T12:41:57.809528+00:00",
+    "operador_unico": "/root/video_reproduccion",
+    "revisor_operó_visor": false,
+    "sesiones_nativas_de_esta_tanda": 3
+  },
+  "medios_privados": {
+    "piloto": {
+      "sha256": "d489df05fde0a28282c815d0979cdf77db0b44aa860c773164f76a84c1bf8847",
+      "bytes": 1988313,
+      "reloj_visible_s": [
+        0,
+        20
+      ],
+      "archivo_privado": true
+    },
+    "tramo_1": {
+      "sha256": "0f93577b175e2097510c2092b671692f158f79dbdec2f82019e3db1c2a791311",
+      "bytes": 103221087,
+      "reloj_visible_s": [
+        0,
+        910
+      ],
+      "archivo_privado": true
+    },
+    "tramo_2": {
+      "sha256": "d361a9b0611cde233d38d4ba70df8a5c7822b992ed212bc05f03039b5f2ccb73",
+      "bytes": 111295969,
+      "reloj_visible_s": [
+        910,
+        1802
+      ],
+      "archivo_privado": true
+    }
+  },
+  "asr": {
+    "filas_brutas": 443,
+    "filas_contenido": 379,
+    "filas_publicidad_o_borde": 64,
+    "cotejo_alineado_privado_sha256": {
+      "tramo_1": "f82dc29bfaccfc96e70d4703b1d18589ef52272bbed522872aefb0a25626847a",
+      "tramo_2": "042c2561fce04843c8782c0ebcbe5362914a9ec6ef8dd88880332b07cfdf387f"
+    },
+    "rango_retenido_aproximado_s": {
+      "tramo_1": [
+        0,
+        910.5
+      ],
+      "tramo_2": [
+        910.4,
+        1802
+      ]
+    },
+    "desfase_pcm_pts_final_s": {
+      "tramo_1": 2.85,
+      "tramo_2": 0.824
+    },
+    "mayor_hueco_audio_en_contenido_s": {
+      "tramo_1": 0.13,
+      "tramo_2": 0.06
+    },
+    "atencion": "Los tiempos de ASR son aproximados y los segmentos cerca de fronteras publicitarias se excluyen. La herramienta carece de entrada para escucha directa."
+  },
+  "comprobaciones_independientes": [
+    "Nueve evidencias del registro r7 y briefing cotejados por bytes y SHA.",
+    "Índice del navegador reproducido a partir de capturas, bitácoras y WebM privados con el mismo SHA.",
+    "Identidad del video, pista original seleccionada, relojes de inicio y terminal, costura y límites de anuncios inspeccionados en recortes y muestras puntuales.",
+    "WebM piloto decodificado y contraste de actividad/pausa comprobado. Las dos decodificaciones largas se cotejaron por recibos y demux acotado.",
+    "Truncamiento reproducido con código 0 de FFmpeg y error del lector. El verificador final marcó incompleto y devolvió 1.",
+    "HTML: tres rechazos y guardado permitido en fixture. Controlador: clic bloqueado tras captura fallida y admitido tras captura válida, con visor simulado.",
+    "Alineador: fixture de salto de PTS y exclusión de frontera, más repetición sobre ambos ASR privados con hashes concordantes.",
+    "Guard de ASR: el hijo retiene flock tras terminar supervisor; ejecución concurrente rechazada, JSON válido aceptado, SHA equivocado y symlink rechazados.",
+    "Análisis de coordinación contrastado con las imágenes, ASR alineado y capacidades documentadas de OnIA."
+  ],
+  "limites": [
+    "La reproducción y los archivos llegan al reloj terminal. La observación visual utiliza muestras y la escucha directa queda pendiente.",
+    "El primer WebM contiene intervalos VP8 de 1.255 y 1.468 s tras el primer anuncio. Los huecos Opus efectivos llegan a 0.130 s en el primero y 0.060 s en el segundo. La causa no se atribuye por PTS.",
+    "Los archivos incluyen pausas y anuncios. Los márgenes de exclusión afectan palabras vecinas y el ASR tiene errores.",
+    "El código 143 del supervisor precedió la terminación de procesos de ASR en otro namespace e indujo un solape innecesario. Las salidas se preservaron y el segundo tramo usó el guard comprobado.",
+    "Las pantallas de Euge y sus explicaciones ilustran su flujo. Backend, autonomía y resultados comerciales quedan fuera del alcance."
+  ],
+  "analisis_aplicado": {
+    "resultado": "Propuesta de un lote manual para un guion, con fuentes, formato, revisión y decisión editorial de Sergio. La documentación separa capacidades verificadas, trabajo pendiente y permisos.",
+    "sha256": "a0587fdc209625d013580ea6bd2530238e63de44b823ca9c0e5a265b2c6afd7d"
+  },
+  "archivos_revisados": {
+    "navegador/PROCEDIMIENTO.md": {
+      "sha256": "cc91c9a8288515e2f8dcbeab54e7927715b38830ee5e2bc4280e1d4730dba51f",
+      "bytes": 4588
+    },
+    "navegador/recibo-navegador.json": {
+      "sha256": "ce1a84b15adf1051610b5d7f821edf61f48e4639d526f3a4b1a68701d3c7e735",
+      "bytes": 48875
+    },
+    "navegador/recibo.py": {
+      "sha256": "d41965c66903e746dd8480d6596319ebfdf12dda36eaa421640768010b195c92",
+      "bytes": 5114
+    },
+    "navegador/puntos.tsv": {
+      "sha256": "0ee2b5cd45ea4a6e0c5ff078091c05e37bfa7f76ca8acf9d6b68982c09d78990",
+      "bytes": 3759
+    },
+    "navegador/puntos-tramo2.tsv": {
+      "sha256": "d8f9cca50b3fb319e02561b58f412ca7aa639575a826fd649868c483b57447e9",
+      "bytes": 4102
+    },
+    "navegador/visor-av-tramo1.ejecutado.py": {
+      "sha256": "3c0dbd3312593206b04374391fe4b56e6597ec130e7458ad0b62f420a0a4c0f9",
+      "bytes": 12271
+    },
+    "navegador/visor-av-tramo2.ejecutado.py": {
+      "sha256": "b01dcf24b33056a1eefe8a10bb9c466a8c3bde7b4803c7441fea53306d47a4bf",
+      "bytes": 12692
+    },
+    "navegador/visor-av.py": {
+      "sha256": "b01dcf24b33056a1eefe8a10bb9c466a8c3bde7b4803c7441fea53306d47a4bf",
+      "bytes": 12692
+    },
+    "audio/INFORME.md": {
+      "sha256": "32fa1d598e61c8db9d2d971e9ca6ba7737ea5a138dfcd834194e74d74ee7b0c7",
+      "bytes": 5272
+    },
+    "audio/README.md": {
+      "sha256": "e98575654d96517908bbfb44bbdf91379bea8c5bf0794d68afc94f483b7ca92b",
+      "bytes": 8575
+    },
+    "audio/recibo-guard.json": {
+      "sha256": "50331120a4f35d3d3bf6ca29e52d08921caf3ecd2272a30b7eb566752c0bde2e",
+      "bytes": 1332
+    },
+    "audio/capturar-pestana.html": {
+      "sha256": "e2fbf8f21ad33ac937b63c50b26ad8de3918a4dac64216d6711de408531e14da",
+      "bytes": 6206
+    },
+    "audio/verificar-av.py": {
+      "sha256": "df7cbbd12bd74134acba468f17054ebe8fb8379340b62046376742fedc5bbda8",
+      "bytes": 4473
+    },
+    "audio/alinear-asr.py": {
+      "sha256": "2277e9d387c650d175cd397930de8b5b91f794a17b068d3ded5e1568e4e12aa0",
+      "bytes": 4264
+    },
+    "audio/asr-local.py": {
+      "sha256": "223618177192e29327b4175d670368611854118026d00dc597d667f6e3dbf629",
+      "bytes": 3868
+    },
+    "audio/asr-con-lock.py": {
+      "sha256": "a5832bedf0b91914c9e4b4ee8ca296cca7f396e30243c1f7b5a78e2214cce822",
+      "bytes": 3616
+    },
+    "audio/piloto-asr-resumen.json": {
+      "sha256": "fe63e32f80619d0ba87c54c4e38174a17062d4a50d84a926e39ebe508af21050",
+      "bytes": 554
+    },
+    "audio/piloto-verificacion.json": {
+      "sha256": "135b3876f3c78019d66ec27f5a8f12d0ea538ecd7a0a92e05c6b2f6683fec724",
+      "bytes": 1813
+    },
+    "audio/tramo1-verificacion-final.json": {
+      "sha256": "65cfa46ef20d694c3d7e46e332c11f8faa6f744fced42824e8f42a25e20335e2",
+      "bytes": 5039
+    },
+    "audio/tramo2-verificacion.json": {
+      "sha256": "f420b09f4c6328199af5763a42bae3d4b0988ba7f90f7c6cc0353549794e19ed",
+      "bytes": 5848
+    },
+    "audio/tramo1-asr-resumen.json": {
+      "sha256": "a625460e50b4b2e2e05b4a639aea377d15499998179ec8d2b6f761023d1ef21c",
+      "bytes": 560
+    },
+    "audio/tramo2-asr-resumen.json": {
+      "sha256": "4956b18d02e7875fc38997f6bc65a6ccc249addd74b6225d8ab61e42d383f498",
+      "bytes": 600
+    },
+    "audio/tramo1-mapa.json": {
+      "sha256": "50ba4767a91466e00a0534847ed83dba762f7cdefb73f1556d0924d2766f15d9",
+      "bytes": 1013
+    },
+    "audio/tramo2-mapa.json": {
+      "sha256": "4018afd86651dcec636de713cfc128930fb9e20ab2707bc143081722fae78b1e",
+      "bytes": 1098
+    },
+    "audio/tramo1-asr-alineado-resumen.json": {
+      "sha256": "fa635e77ed1ffccaaeee4ff4d1bef6d59c8ed64afa994a47d90f601b987dd6f4",
+      "bytes": 3036
+    },
+    "audio/tramo2-asr-alineado-resumen.json": {
+      "sha256": "ea8dac908403baca0bb9aeed68323ebeabe59393a92c5eb7b54bf2c08190f833",
+      "bytes": 861
+    },
+    "coordinacion/ANALISIS-ONIA.md": {
+      "sha256": "a0587fdc209625d013580ea6bd2530238e63de44b823ca9c0e5a265b2c6afd7d",
+      "bytes": 7711
+    },
+    "coordinacion/recursos-v1.json": {
+      "sha256": "baa8fa4a2143e382b192fdb4f064ea38b93c58514db40e539b9ac04f864320d8",
+      "bytes": 435
+    },
+    "revision/DICTAMEN.md": {
+      "sha256": "3683ebd9bb87c96af0be7c28b970497b19828c7cc117546cb73d9f798cf3157d",
+      "bytes": 5262
+    }
+  }
+}

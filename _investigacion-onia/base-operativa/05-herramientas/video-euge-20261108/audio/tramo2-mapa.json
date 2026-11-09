@@ -1,0 +1,15 @@
+{
+  "source_id": "JuAQILH7dkQ",
+  "capture_sha256": "d361a9b0611cde233d38d4ba70df8a5c7822b992ed212bc05f03039b5f2ccb73",
+  "recorded_utc": ["2026-11-09T12:18:49.266Z", "2026-11-09T12:39:48.525Z"],
+  "operator_content_clock_s": [910, 1802],
+  "source_max_s": 1802,
+  "uncertainty": "Reloj del reproductor observado a segundos enteros, vinculado al reloj de captura. Tiempos del contenido aproximados.",
+  "windows": [
+    {"pts_s": [22.600745, 187], "offset_s": [-887.922, -887.028], "anchor_ids": [11, 12, 13]},
+    {"pts_s": [243, 730], "offset_s": [-833.794, -833.234], "anchor_ids": [16, 17, 21, 23, 24, 25, 26, 27]},
+    {"pts_s": [912, 1149.7], "offset_s": [-653.619, -652.814], "anchor_ids": [35, 36, 37, 38]}
+  ],
+  "ad_or_boundary_exclusions_pts_s": [[187, 243], [730, 912], [1149.7, 1259.259]],
+  "evidence": "Ad4 acotado a 1 s por el verificador. Ad5 acotado por la revisora; post-roll contrastado a 0.2 s. PTS~1149.6 aún muestra Euge/Clonify, ~1149.8 es transición negra y 1150.0 ya muestra publicidad. Los márgenes conservadores pueden excluir palabras adyacentes del resumen ASR."
+}
