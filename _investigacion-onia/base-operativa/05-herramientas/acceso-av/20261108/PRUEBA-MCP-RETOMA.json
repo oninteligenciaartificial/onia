@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "task_id": "investigacion-acceso-av-20261108",
+  "attempt": "retoma-acotada-MCP-20261109",
+  "record_is_canonical_task": false,
+  "started_at_utc": "2026-11-09T01:49:35.145934+00:00",
+  "recorded_at_utc": "2026-11-09T01:50:16.983565+00:00",
+  "context": {
+    "thread_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+    "session_id_env": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+    "same_sid_as_prior_attempt": true,
+    "codex_version": "0.167.0",
+    "model_observed": null,
+    "reasoning_effort_observed": null,
+    "branch": "codex/ws-investigacion-acceso-av-20261108",
+    "initial_head": "c2e13506544b44d645c9379781ff4354e4bbaa65",
+    "initial_worktree_clean": true,
+    "children_created": 0
+  },
+  "scope": "Únicamente example.com por cuatro herramientas MCP nativas, imagen observada y dos archivos nuevos. Sin web adicional ni nueva investigación.",
+  "wrapper": {
+    "path": "/home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/codex-con-playwright.py",
+    "sha256": "d9dcea17da14a582f0bdb28cb4fa6990300696c1d57dfbdfdcf535c7a038e095",
+    "source_config": {
+      "command": "/usr/bin/node",
+      "args": [
+        "/home/onia-codex-worker/operacion/browser-piloto-20261108/node_modules/@playwright/mcp/cli.js",
+        "--headless",
+        "--isolated",
+        "--sandbox",
+        "--executable-path",
+        "/home/onia-codex-worker/operacion/browser-piloto-20261108/browsers/chromium-1252/chrome-linux64/chrome",
+        "--output-dir",
+        "<cwd>/_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/capturas"
+      ],
+      "enabled": true,
+      "required": true,
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 60,
+      "default_tools_approval_mode": "approve",
+      "enabled_tools": [
+        "browser_navigate",
+        "browser_snapshot",
+        "browser_take_screenshot",
+        "browser_close"
+      ]
+    },
+    "mechanism": "os.execv(Codex existente, overrides -c mcp_servers.playwright.KEY=VALOR, argumentos originales del harness)",
+    "read_only": true,
+    "effective_process_argv_independently_verified": false,
+    "preserves_ignore_user_config_and_harness_arguments_by_source": true
+  },
+  "prior_attempt": {
+    "commit": "c2e13506544b44d645c9379781ff4354e4bbaa65",
+    "navigate_and_close_error": "MCP tool call requires approval, but approval policy is never",
+    "effective_wrapper_argv_verified": false,
+    "coordinator_continuity": "Primer lanzamiento sin ajuste de aprobación; nuevo lanzamiento con default_tools_approval_mode=approve limitado a cuatro herramientas y preparación AppArmor por Sergio.",
+    "source_file_observation_caveat": "La evidencia anterior leyó un archivo del coordinador que ya contenía approve, con el mismo SHA-256 observado hoy. Esa lectura no prueba qué wrapper/configuración recibió el proceso anterior. No presentar aquel intento como exitoso ni atribuirle el ajuste efectivo.",
+    "files_preserved_sha256": {
+      "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/ALTERNATIVAS.md": "eff333d66c3e6cc1f1f8ceb9f81c13e7227cd861b6a2acb0f69d764fd86e2131",
+      "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/EVIDENCIA.md": "bcffb1c4062f0fabb5876497c5ea658db1a04272919b89f2af7568c8dbd5abaa",
+      "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/PRUEBA.json": "6de62d81db579b265250423ba58a433e2255484439162378810fe8e7dc5a1561",
+      "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/README.md": "1c0973e324be11b23465bf92446f61fe2e09e8eb9119c8e8de6b3db827e20d75"
+    }
+  },
+  "coordinator_report_not_retested": {
+    "apparmor_profile": "onia-chromium-1252 cargado por Sergio",
+    "global_restriction": 1,
+    "chromium_control": "Coordinador informó chrome://sandbox con namespaces y Seccomp activos y GET público HTTP200",
+    "independent_kernel_or_chrome_sandbox_inspection_in_this_attempt": false
+  },
+  "catalog": {
+    "method": "ALL_TOOLS filtrado por /^mcp__playwright__/",
+    "tools": [
+      "mcp__playwright__browser_close",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_take_screenshot"
+    ],
+    "count": 4
+  },
+  "calls": [
+    {
+      "tool": "mcp__playwright__browser_navigate",
+      "at_utc": "2026-11-09 01:49:35 UTC",
+      "args": {
+        "url": "https://example.com/"
+      },
+      "result": "success",
+      "page_url": "https://example.com/",
+      "page_title": "Example Domain",
+      "http_status": null,
+      "snapshot_artifact": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108/_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/capturas/page-2026-11-09T01-49-35-844Z.yml"
+    },
+    {
+      "tool": "mcp__playwright__browser_snapshot",
+      "at_utc": "2026-11-09 01:49:43 UTC",
+      "args": {},
+      "result": "success",
+      "page_url": "https://example.com/",
+      "page_title": "Example Domain",
+      "dom_evidence": {
+        "paragraphs_languages": [
+          "en",
+          "ar",
+          "zh",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "spanish_paragraph": "Este dominio está destinado al uso en ejemplos de documentación sin necesidad de permiso. Esto no es un servicio; evitar utilizarlo para realizar pruebas o monitoreos.",
+        "link_label": "Learn more",
+        "link_url": "https://iana.org/help/example-domains",
+        "heading_h1_in_returned_accessibility_tree": false,
+        "success_requires_h1": false
+      },
+      "representation": "Árbol de accesibilidad devuelto por MCP; no serialización HTML completa"
+    },
+    {
+      "tool": "mcp__playwright__browser_take_screenshot",
+      "at_utc": "2026-11-09 01:49:48 UTC",
+      "args": {
+        "filename": "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/capturas/example.png",
+        "scale": "css",
+        "type": "png"
+      },
+      "result": "success",
+      "artifact": {
+        "path": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108/_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/capturas/example.png",
+        "sha256": "d3be9d2fc2ded008202697ef46909ee3be08d870543fb3af5a56ee0480784f0c",
+        "bytes": 82867,
+        "included_in_commit": false,
+        "dimensions": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "tool": "mcp__playwright__browser_close",
+      "at_utc": "2026-11-09 01:49:55 UTC",
+      "args": {},
+      "result": "success",
+      "response": "No open tabs. Navigate to a URL to create one.",
+      "reported_code": "await page.close()",
+      "page_closed": true
+    }
+  ],
+  "image_review": {
+    "tool": "view_image",
+    "result": "success",
+    "path": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108/_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/capturas/example.png",
+    "observed": "Captura1280x720, fondo gris claro, columna centrada con icono de libro, párrafo inglés y traducciones. Coincide con snapshot; texto español parcialmente recortado al borde inferior.",
+    "full_page": false
+  },
+  "result": {
+    "native_mcp_navigation_demonstrated": true,
+    "previous_approval_block_not_reproduced": true,
+    "dom_accessibility_read": true,
+    "screenshot_saved_and_viewed": true,
+    "page_close_confirmed": true,
+    "chromium_sandbox_disabled": false,
+    "wrapper_or_permissions_modified_by_executor": false
+  },
+  "uncommitted_artifacts": [
+    {
+      "path": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108/_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/capturas/example.png",
+      "sha256": "d3be9d2fc2ded008202697ef46909ee3be08d870543fb3af5a56ee0480784f0c",
+      "bytes": 82867,
+      "included_in_commit": false,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108/_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/capturas/page-2026-11-09T01-49-35-844Z.yml",
+      "sha256": "27a94f1e714be975d502118e84745ae3874c37dce85abf00be3e9e27208746cc",
+      "bytes": 1560,
+      "included_in_commit": false
+    }
+  ],
+  "limitations": [
+    "No HTTP status expuesto por respuesta MCP: HTTP200 corresponde sólo al control informado por coordinador.",
+    "Sandbox headless/isolated/--sandbox documentado por wrapper leído; no inspección independiente de argv ni chrome://sandbox en esta retoma.",
+    "No landing Erik, hijos/herencia, ASR ni audiovisual: fuera del objetivo único actual.",
+    "Captura de viewport, no página completa; imagen y YAML automáticos conservados sólo localmente, no disponibles por Git.",
+    "No se usó cuenta, perfil persistente, cookies importadas, visor de Sergio, shell Playwright, sudo, instalaciones, servicios, APIs pagas ni borrados.",
+    "Configuración efectiva anterior no recuperada; diferencia de lanzamiento procede de continuidad del coordinador, no de comparación de argv."
+  ],
+  "publication": {
+    "allowed_files": [
+      "PRUEBA-MCP-RETOMA.md",
+      "PRUEBA-MCP-RETOMA.json"
+    ],
+    "remote": "origin",
+    "branch": "codex/ws-investigacion-acceso-av-20261108",
+    "commit_hash": "reportado al coordinador tras publicar; no autorreferencia",
+    "review": "pendiente coordinador; no aceptación ni master"
+  },
+  "verification": {
+    "at_utc": "2026-11-09T01:51:40.114069+00:00",
+    "json_valid": true,
+    "four_calls_success": true,
+    "same_sid": true,
+    "four_prior_documents_preserved": true,
+    "wrapper_hash_unchanged": true,
+    "capture_hashes_verified": true,
+    "only_new_reports_and_mcp_capture_files": true,
+    "markdown_sha256": "5eb99c8446f75ae221016550315767b0fb7f79b8aabbb67bb1e47e86276dc6b7"
+  }
+}
