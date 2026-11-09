@@ -1,0 +1,71 @@
+{
+  "fecha_registro": "2026-11-09T05:07:38.879393+00:00",
+  "commit_entradas": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+  "pruebas_sin_red": {
+    "comando": "PYTHONDONTWRITEBYTECODE=1 python3 \"$D/pruebas.py\"",
+    "resultado": "OK",
+    "casos": 17,
+    "sockets": "bloqueados en toda la suite",
+    "duracion_reportada_segundos": 0.449
+  },
+  "consulta_real": {
+    "fuentes_exitosas": 2,
+    "fallos": 0,
+    "sha256_snapshot": "d9be4f0a6dbcf7e5b6fdd05ffa33b280eb190034acff7733620aa644f9e941bc"
+  },
+  "proyeccion": {
+    "tareas_con_integridad_verificada": 3,
+    "guiones_coincidentes_con_commit_revisado": 2,
+    "ideas_extraidas": 2,
+    "guiones_sin_permiso_publicacion": 2
+  },
+  "html_estructural": [
+    {
+      "archivo": "evidencia/lectura-real-01/panel.html",
+      "resultado": "OK",
+      "alcance": "parseo estructural sin navegador; no prueba legibilidad visual"
+    },
+    {
+      "archivo": "evidencia/visual-01/largo.html",
+      "resultado": "OK",
+      "alcance": "parseo estructural sin navegador; no prueba legibilidad visual"
+    },
+    {
+      "archivo": "evidencia/visual-01/vacio.html",
+      "resultado": "OK",
+      "alcance": "parseo estructural sin navegador; no prueba legibilidad visual"
+    },
+    {
+      "archivo": "evidencia/visual-01/error.html",
+      "resultado": "OK",
+      "alcance": "parseo estructural sin navegador; no prueba legibilidad visual"
+    }
+  ],
+  "javascript_visual_sintaxis": "node --check visual.cjs: OK",
+  "visual": {
+    "resultado": "PENDIENTE",
+    "criterio_aceptacion": 5,
+    "motivo": "Chromium con sandbox no arranca dentro de bwrap: No usable sandbox",
+    "recibo": "visual-01/resultado.json",
+    "capturas": []
+  },
+  "registro_sandbox_observado": {
+    "apparmor": "bwrap//&unpriv_bwrap (enforce)",
+    "NoNewPrivs": 1,
+    "Seccomp": 2,
+    "CapEff": "0000000000000000"
+  },
+  "efectos": {
+    "scheduler": false,
+    "ingesta_recurrente": false,
+    "telegram_real": false,
+    "publicacion": false,
+    "mutacion_harness": false
+  },
+  "limites": [
+    "Sin inspección de capturas ni aceptación completa",
+    "Sólo dos guías primarias evergreen; no feed de noticias",
+    "Resumen propio revisado manualmente el 9/11, no regenerado por IA",
+    "Sin scheduler, Telegram, cuentas o envíos"
+  ]
+}
