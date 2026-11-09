@@ -1,0 +1,66 @@
+{
+  "schema": 2,
+  "id": "ficcion-fabrica-001",
+  "revision": 3,
+  "compartible": true,
+  "objetivo": "FICTICIO. Adaptador seco sobre contrato 20261108",
+  "estado": "en_curso",
+  "proximo_paso": "Adaptar decisión",
+  "resultado": "Snapshot sintético",
+  "comprobacion": "Sin efectos",
+  "verificacion": "pendiente",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/decision-seca.json",
+      "sha256": "3c9cf3c8f5b0f364829be8a469ac404e7f0cb6aeab5e13dcf226a0ebeff83427",
+      "bytes": 514
+    }
+  ],
+  "actualizado": "2026-11-09T04:39:30.251432+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-09T04:39:30.221015+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Decisión sintética",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-09T04:39:30.235582+00:00",
+      "estado": "en_curso",
+      "resultado": "Snapshot sintético",
+      "comprobacion": "Sin efectos",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/decision-seca.json",
+          "sha256": "3c9cf3c8f5b0f364829be8a469ac404e7f0cb6aeab5e13dcf226a0ebeff83427",
+          "bytes": 514
+        }
+      ],
+      "proximo_paso": "Adaptar decisión",
+      "aceptacion": null
+    }
+  ],
+  "briefing": null,
+  "aceptacion": null,
+  "decisiones": [
+    {
+      "id": "a205aef701b5c2fcb421f2bbae6fdc5c19b004b6998648bfae37d9e833bef45d",
+      "texto": "SIMULADO elegir_para_preparar",
+      "fuente": {
+        "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/decision-seca.json",
+        "sha256": "3c9cf3c8f5b0f364829be8a469ac404e7f0cb6aeab5e13dcf226a0ebeff83427",
+        "bytes": 514
+      },
+      "autor": "Sergio SIMULADO",
+      "sustituye": null,
+      "fecha": "2026-11-09T04:39:30.251420+00:00"
+    }
+  ]
+}

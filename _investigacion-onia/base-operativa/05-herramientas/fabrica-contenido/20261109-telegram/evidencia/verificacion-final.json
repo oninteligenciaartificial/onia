@@ -1,0 +1,105 @@
+{
+  "fecha_utc": "2026-11-09T04:40:13.933121+00:00",
+  "resultado": "OK",
+  "copia_remota": {
+    "id": "p8zbPZgX1ABWHeAT",
+    "get_http": 200,
+    "active": false,
+    "active_version_presente": false,
+    "nodos_conexiones_ajustes_coinciden": true,
+    "ejecuciones_metadata_http": 200,
+    "ejecuciones_en_pagina": 0
+  },
+  "originales_coinciden_con_pre_POST": true,
+  "originales": {
+    "NDXLJiR00ciQx72V": {
+      "active": false,
+      "config_sha256": "326f64e21021e226b4e4608ed4990172272de5d60ea23040a032d8495b06229f"
+    },
+    "QGXVyRSgrArxfolj": {
+      "active": false,
+      "config_sha256": "674dbbf6e44dcfb464e0ddc86acfe7ed3fa507bcfa79c593adebae1b08daed8e"
+    },
+    "nAGwe7DzxNQzMxXk": {
+      "active": false,
+      "config_sha256": "762d89410151533043178ec154d0f5b7347610908fef49f338ea517b397831e8"
+    },
+    "fop5l1FEirkYoZke": {
+      "active": false,
+      "config_sha256": "58584c2f39485ea83589f844b8d7db95dff2a77daa73cd5f5e72a427c593dc91"
+    },
+    "nZkaXaZVKzgtwUqU": {
+      "active": false,
+      "config_sha256": "5b6a1c9ca3f7d21f92cde62286825620d26d5ef0ad0b027c56aa7da15c56ed80"
+    },
+    "b6hjjNJFLuLXhRm3": {
+      "active": false,
+      "config_sha256": "85a9621e6fd6361eef91dfc61b5616edddc4dc07a0fb58ff382b3b53f99baf42"
+    },
+    "vuicWsvh0hwqKhYs": {
+      "active": true,
+      "config_sha256": "8599348cc540220e343fdf2b3c7c4abe245cfdcf053a690a21920969c5062035"
+    }
+  },
+  "privacidad": {
+    "valores_API_key_ids_credenciales_y_destinos_literales_reales": "sin_coincidencias_en_archivos",
+    "patron_token_telegram_y_cabecera_clave_SSH": "sin_coincidencias_en_archivos",
+    "alcance": "Control acotado sobre secretos conocidos y patrones, sin exportar valores"
+  },
+  "comprobaciones_locales": [
+    "20 controles JS",
+    "5 controles harness aislado",
+    "reproduccion-01 OK",
+    "CLI normal preparado_seco,duplicado",
+    "generacion determinista coincide",
+    "AST Python y node --check",
+    "JSON y enlaces locales correctos"
+  ],
+  "limites": [
+    "sin ejecución remota de workflow",
+    "versión instalada sin confirmar",
+    "autenticación y panel reales pendientes",
+    "recibos del adaptador en memoria; persistencia demostrada sólo en harness sintético"
+  ],
+  "archivos_sha256": {
+    "CONTRATO.md": "d8f4ca8a4c59b39f464fcde441e4a0975c4e8bbb971b457b648df630b3f8b9d9",
+    "ERRORES.md": "09fe8bd49e5672a449a86cb7022b8455ccf348151097d52ead6cf09d069e7b7c",
+    "FUENTES.json": "f859db2688b3c50a7d8cb02687eceda60ce2f240390fdc0ab2b40d4c65f5fa30",
+    "README.md": "87f65fb128385f8e3476c4f697e41b39481826dc394a130bcc5a2be0f70eec44",
+    "adaptador.cjs": "b45a42c6b85b02af9900b8a34e5631705f2c8675dca44b621e1e538bf7928075",
+    "ensayo-integracion.py": "a7bd997f3995986b26613fb9122d334b6818554d509de4ba6f3999574502452a",
+    "evidencia/ensayo-01/04-operacion-agentes/evidencias/ficcion-fabrica-001/decision-seca.json": "3c9cf3c8f5b0f364829be8a469ac404e7f0cb6aeab5e13dcf226a0ebeff83427",
+    "evidencia/ensayo-01/04-operacion-agentes/tareas/ficcion-fabrica-001.json": "83829be0d204215de0db37eb4f348dbd2c51b7247b42d0430afceaf0992ec8e7",
+    "evidencia/ensayo-01/adaptador-resultados.json": "3968ba4dcb7360cfa21194e74aa47d11bc60b20700ece8ca06a2eeec3bd3e63f",
+    "evidencia/ensayo-01/locks-conservados/1.json": "2a9bec3901e44a9dea7303d6d48864755c968bc744c5c70869dc2f6a9030b616",
+    "evidencia/ensayo-01/locks-conservados/2.json": "9f0db4c8f664a4620015f5ddc623e3947d7c2ec1a90a1d1836748b9c27f842be",
+    "evidencia/ensayo-01/locks-conservados/3.json": "62135a1da3877d471bb3eb040922d80b28ec760e55efd0b7798d5953ae49030c",
+    "evidencia/ensayo-02/04-operacion-agentes/evidencias/ficcion-fabrica-001/decision-seca.json": "3c9cf3c8f5b0f364829be8a469ac404e7f0cb6aeab5e13dcf226a0ebeff83427",
+    "evidencia/ensayo-02/04-operacion-agentes/tareas/ficcion-fabrica-001.json": "75feebd530a4be1c318d6b3183fa274c5c6dfd01c23a444a139377821a31f869",
+    "evidencia/ensayo-02/adaptador-resultados.json": "3968ba4dcb7360cfa21194e74aa47d11bc60b20700ece8ca06a2eeec3bd3e63f",
+    "evidencia/ensayo-02/locks-conservados/1.json": "054ee1f493b94c99a7d77d67123a95ee8cf9ee1e0ff9fb8f8650cef8352af9b4",
+    "evidencia/ensayo-02/locks-conservados/2.json": "7b2e983c07d8be026fc3f75f24a460dd0fb069ae1ee7b8b8e65a02caab222792",
+    "evidencia/ensayo-02/locks-conservados/3.json": "cee54abf49d7de4370a4b059c7e4ca060f26328669e9bb3119dc85eb8fb68408",
+    "evidencia/ensayo-02/locks-conservados/4.json": "bd3622b5e32560b49fd9a047ad9598d0495bafe5d2f648821e134069dcc1cd0c",
+    "evidencia/ensayo-02/locks-conservados/5.json": "a9929ed791ed86c10e5e8a64ecd40993a4aa45b48a4113adb1ba2bd22254c8e9",
+    "evidencia/ensayo-02/resultado.json": "d15d7aa1d782a46ffdcf7bad7ce87e77aeb20d915cc9a98b0f6229156b02ef50",
+    "evidencia/importacion.json": "602eae6268aa9e406bd13eec86d7cfab2d4248e95d1c0e590738648e9271609a",
+    "evidencia/intento-importacion.json": "fbe523dac44ac092f66cd8fb3829932eaf453986b23d6170ed72cfd982a88283",
+    "evidencia/inventario-inicial.json": "ae3fe775bdaa32c76e161fc4f3946002c87383d21cb3a43d691d0baebe06373c",
+    "evidencia/reproduccion-01/04-operacion-agentes/evidencias/ficcion-fabrica-001/decision-seca.json": "3c9cf3c8f5b0f364829be8a469ac404e7f0cb6aeab5e13dcf226a0ebeff83427",
+    "evidencia/reproduccion-01/04-operacion-agentes/tareas/ficcion-fabrica-001.json": "cb563a8c2644a0b13d56cd7d6806328766281ad332483d1c31961fb792508c31",
+    "evidencia/reproduccion-01/adaptador-resultados.json": "3968ba4dcb7360cfa21194e74aa47d11bc60b20700ece8ca06a2eeec3bd3e63f",
+    "evidencia/reproduccion-01/locks-conservados/1.json": "a5aa62ff0c058c4f53ab1d5383eb7f9d4c043d0fe23bedd1037f095d7398db05",
+    "evidencia/reproduccion-01/locks-conservados/2.json": "bdfb79260a65406e58c787b7f1931e2c6bb9c306ab8ccc541a1dde0fb6533464",
+    "evidencia/reproduccion-01/locks-conservados/3.json": "3b7fe20762fb56ddadf4db8facb83044aa1418185caf521bbb35ae856cecdcf7",
+    "evidencia/reproduccion-01/locks-conservados/4.json": "da580192e4d8cb1e4699c19cb9ac65bd32070f4456a18b2bc79e22057ec52501",
+    "evidencia/reproduccion-01/locks-conservados/5.json": "695d3579405d2b43efef0f9c11d4049f6878a76d99188dc340362f23e6eafab3",
+    "evidencia/reproduccion-01/resultado.json": "d15d7aa1d782a46ffdcf7bad7ce87e77aeb20d915cc9a98b0f6229156b02ef50",
+    "fixture.json": "98f5bc90ac05f93f86d5db0da216c62cc8097f4024f724694d3001bf2ac0482b",
+    "importar-inactivo.py": "4546472523bece8586911503e0efd1ea67604fbe56da39679fdb3ebe27e7c0a8",
+    "inventario.py": "23393f36a0775eb1fff38b1baf43a03ecf81749a364f1b6dc7925d6ac9be6cb9",
+    "preparar.py": "cbb7bb1200c666d161ce55f84f4d7568b12662657d8d378601f11c9a014fb79e",
+    "pruebas.cjs": "55d8d3e259831e1ad6241555edea7a212eb5578c4ad339fb110f8240b77018b8",
+    "workflow-n8n.json": "8cb096a5e17da950fab40edb51f960066464c9c323a828f7120414ef076fd4f2"
+  }
+}

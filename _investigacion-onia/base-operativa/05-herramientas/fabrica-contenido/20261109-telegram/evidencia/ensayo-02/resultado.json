@@ -1,0 +1,43 @@
+{
+  "resultado": "OK",
+  "simulacion": true,
+  "casos_adaptador": 20,
+  "checks_harness": [
+    {
+      "caso": "ensayo_20261108_verificado",
+      "resultado": "6 controles previos e integridad vigentes"
+    },
+    {
+      "caso": "recibo_a_trabajo_decide",
+      "resultado": "una decisión sintética; revisión 2 a 3"
+    },
+    {
+      "caso": "CAS_revision_vieja",
+      "resultado": "rechazado_sin_mutacion"
+    },
+    {
+      "caso": "duplicado_id_harness",
+      "resultado": "rechazado_sin_mutacion"
+    },
+    {
+      "caso": "conciliacion_tras_reinicio",
+      "resultado": "recibo recuperado de decisiones[].fuente"
+    }
+  ],
+  "fuentes": {
+    "ensayo_20261108": "d9a815324a4395ca7057fdb43893059d72077852f4cd5827ae3360b8c37180bf",
+    "fixture_20261108": "6b3e0b85ab0249e87b3d91b4c099128f377decdb626dd144f27f752ab2a130f8",
+    "trabajo_py": "895b2e525a63081ec28f78b10dc0ec3be2bdadcb7c68a070429c40bccd9ea3f1",
+    "adaptador": "b45a42c6b85b02af9900b8a34e5631705f2c8675dca44b621e1e538bf7928075",
+    "workflow": "8cb096a5e17da950fab40edb51f960066464c9c323a828f7120414ef076fd4f2"
+  },
+  "registro_aislado": "04-operacion-agentes/tareas/ficcion-fabrica-001.json",
+  "aceptacion": null,
+  "anterior_sin_cambios": true,
+  "limites": [
+    "sin escritura en registro canónico",
+    "sin decisión humana real",
+    "sin concurrencia distribuida",
+    "locks archivados como en ensayo previo"
+  ]
+}
