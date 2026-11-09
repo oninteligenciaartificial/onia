@@ -451,3 +451,9 @@ Revisión independiente buena para9f10c3edf46edfc6741321f14869e0916884adf8. Info
 - **Lecturas:** algunas salidas combinadas se truncaron; se volvió a consultar sólo los fragmentos necesarios, sin afirmar lectura íntegra. Evitar agrupar documentos largos en una salida pequeña. La cuota compartida pasó de64 a65 en esta ventana; no atribuir el punto íntegramente a una tarea ni transformar porcentaje en USD.
 
 - **Concurrencia Git:** Boss publicó cd3028a/3bd72bd mientras se preparaba esta entrega. El merge encontró conflicto sólo de anexos en boss-memoria.md. Se conservaron ambos anexos completos contra su base común; README fusionó sin conflicto. Prevención: fetch justo antes de integrar, verificar ambas contribuciones y nunca usar push forzado ni sustituir la memoria remota.
+
+## 9 noviembre 2026 · relectura de Euge para HOMELAB
+
+- La consulta web directa del video devolvió Cache miss. No se atribuye a una cuenta, anuncio o bloqueo del reproductor; se usaron los dos ASR alineados y las capturas privadas que coinciden con los hashes del dictamen aceptado. No se repitió reproducción ni ASR.
+- Una búsqueda inicial agrupó demasiadas rutas privadas y se truncó; se localizaron los dos archivos primarios por directorio y se leyó cada tramo completo por separado. Evitar usar fragmentos de salida truncada como cobertura del video.
+- La explicación anterior de HOMELAB se concentró en CPU/memoria. Sergio pidió el modelo de trabajo completo de Euge: entorno persistente, herramientas, fábricas y revisión. Se precisó esa finalidad en README sin convertir la petición de análisis en autorización de scheduler, gastos o envíos.

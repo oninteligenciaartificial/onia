@@ -19,6 +19,12 @@ HOMELAB se limita a **Tailscale, onia-worker sin sudo, archivos Windows restring
 
 Tailscale VPS instalado sin sudo y autorizado: nodo `onia-vps-worker` Running, PC Windows online. La distro indicada por Sergio es Ubuntu/WSL2. **Usuario aislado, SSH a WSL y continuidad aún pendientes**; [estado, límites y pasos](CONEXION-EN-CURSO.md). Sólo existía PC→VPS; el listener2222 no pertenece a HOMELAB por evidencia conocida y queda excluido. No se tocó configuración de Windows/WSL, producción ni n8n.
 
+## Propósito solicitado: el modelo de trabajo de Euge
+
+Sergio pide HOMELAB como entorno persistente para las fábricas de OnIA: archivos, herramientas, tareas, resultados y continuidad entre agentes, conectado con el cerebro y el panel. El apoyo de CPU/memoria al VPS es una parte de ese propósito. [Desglose completo del video, tiempos y adaptación a OnIA](../../05-herramientas/video-euge-20261108/coordinacion/HOMELAB-Y-METODO-EUGE-20261109.md).
+
+Euge muestra un coordinador, conectores, ordenador propio y fábricas con entradas, procesos, revisión y destinos. Dice que el entorno de fábricas podría estar en un ordenador propio; su ejemplo usa nube compartida. Nuestra división VPS coordinador + PC de casa worker es una adaptación. Ni nodo Tailscale online ni SSH por sí solos implementan las fábricas. El alcance ejecutable sigue limitado a lo esencial ya autorizado; cerebro+panel espera sí al plan y la orquestación posterior conserva su aprobación separada.
+
 ## Antecedente F0 · sólo propuesta en su fecha
 
 F0 · 9 noviembre 2026 UTC · **sólo plan, pendiente del sí explícito de Sergio para F1**. Base leída: `5f1c2134e93cc73cc1dbbb7e11e59e8435b64246`, contrastada con `origin/master`. No se implementó, instaló, conectó la PC, lanzó un ensayo, apagó un proceso ni gastó dinero. Los ejemplos de configuración y comandos de estos documentos no se aplicaron.
