@@ -2,6 +2,10 @@
 
 Encargo `cerebros-a-20261108`, grupo venta-oferta. Consulta iniciada el 8 de noviembre de 2026 (UTC). Esta evidencia pertenece al ejecutor; no reemplaza el registro canónico ni la revisión independiente.
 
+## Corte histórico del 8/11/2026
+
+Las secciones siguientes hasta «Retoma del 9/11/2026» conservan el resultado publicado en `84c949a222f5c225b1ce6f38340fe80951fc6300`. Las prohibiciones de ASR nuevo y el conteo Heras1/Carrera1 corresponden a ese corte; la actualización autorizada y sus resultados se documentan al final.
+
 ## Inicio y alcance
 
 - Checkout comprobado: `/home/onia-codex-worker/repos/onia-ws-cerebros-a-20261108`.
@@ -91,3 +95,68 @@ Hashes SHA-256 calculados por el principal después de las seis entregas, sin ed
 - Comparación del alcance con la base inicial y `git diff --cached --check` antes del commit: sólo esta carpeta. El principal es responsable del commit y del push explícito a `origin HEAD:refs/heads/codex/ws-cerebros-a-20261108`, sin force ni amend. El hash y la comprobación de la referencia remota se informan en la respuesta de entrega, evitando autorreferencia del commit en este archivo.
 
 El registro/briefing canónico no se modificó. No se ejecutaron `cerrar`, `revisar`, `aceptar` ni integración a master desde esta sesión. Esas operaciones corresponden al coordinador tras la publicación de esta entrega parcial.
+
+## Retoma del 9/11/2026
+
+Base comprobada al retomar: `84c949a222f5c225b1ce6f38340fe80951fc6300`, misma rama asignada y worktree limpio. Se completan sólo brechas Heras/Carrera. Se releyeron AGENTS, reglas, memoria, estado, decisiones/plan, índice, directora y research pertinentes; las instrucciones y el registro canónico permanecen intactos. La retoma recibida por stdin autoriza exclusivamente el navegador secundario restringido y ASR corto instalado. No se interpreta la restricción histórica de ASR del corte anterior como resultado vigente.
+
+### Acceso primario y límites
+
+El MCP `cuentas_analisis` expuso `browser_navigate`, `browser_snapshot` y `browser_close`. Sólo el padre operó el perfil, mediante destinos públicos exactos autorizados; los hijos recibieron datos saneados y archivos públicos recuperados. No hubo clicks, comentarios, seguimientos, envíos, lectura de correo/DM/feed/perfil propio, extracción de cookies ni cambios de configuración. El snapshot general contiene interfaz incidental; se descartó del material compartible y se extrajeron sólo autor, caption y presencia de reproductor de la publicación objetivo. Los snapshots no prueban el contenido hablado.
+
+El intento de limitar snapshot mediante argumentos fue rechazado por el guard (`-32602`, este perfil no admite argumentos). Se usó la llamada sin argumentos y saneamiento local; no otro perfil ni herramientas para sortear controles. Ninguna captura cruda ni información de la cuenta secundaria se guardó en Git. Los perfiles de Heras y Carrera corroboraron los handles; la identidad se enlaza además con metadata pública de la pieza y las fuentes anteriores. No se acredita identidad legal de cada voz.
+
+Los medios se recuperaron con `yt_dlp` ya disponible mediante GET público, sin cookies ni proxy, caché deshabilitada y límites de tamaño. Ningún rechazo del guard autoriza recuperaciones alternativas para eludirlo. Se conservó cada intento fallido. Para ASR se comprobó antes la duración del medio, siempre ≤180s. Se usó exclusivamente el modelo small local existente, `local_files_only=True`, `HF_HUB_OFFLINE=1`, CPU int8, dos hilos y un trabajador, secuencial, VAD y beam5. No se instaló software, descargó modelo, usó API paga o inició servicio/transcripción de curso. Un aviso de ONNX sobre persistencia de telemetría pasó a memoria; no se modificó configuración global para resolverlo.
+
+La evidencia privada exacta de esta retoma está en **`/tmp/cerebros-a-20261108-retoma-20261109`**, con permiso700 en la raíz y subcarpetas. Incluye medios públicos, metadata filtrada, recibos, ASR íntegros, cuadros y auxiliares. No se borró nada, tampoco fallos o temporales. Es ubicación local de este VPS, potencialmente efímera: **Git no transporta estos archivos a otra VM**. El revisor VPS debe cotejarla antes del retiro del entorno. Las fichas registran subcarpetas y hashes; éstos acreditan integridad, no fidelidad de reconocimiento. Git contiene sólo paráfrasis, citas breves, enlaces, tiempos y hashes.
+
+### Recuperación y revisión de Heras
+
+El mismo hijo `/root/victor_heras` retomó su archivo exclusivo; no se creó reemplazo. Terminó y se liberó mediante `interrupt_agent` antes de reactivar Carrera. Sólo el padre usó navegador/ASR. Ambos vieron el contacto visual y último cuadro de P2; ambos leyeron todos los segmentos ASR de P3/P4. P1 y sus dos relojes A/B permanecen una sola pieza. Los antiguos P2–P6 se conservan en la ficha como R2–R6, con sus fallos y candidatos; su matriz histórica permanece en el commit base.
+
+- **P2 DYur-tjvboE:** audio10,056009s, ASR0 segmentos. Se conservó el resultado vacío y se recuperó el vídeo10,168934s. Se inspeccionaron20 muestras nominales2fps0–9,5s y último cuadroPTS10,0s. Los301 cuadros decodificados no se declaran vistos. Las cinco respuestas se sustentan en el mensaje visual y su secuencia; no se infiere silencio, música, propiedad o causalidad política. Ausencia de PIL resuelta con ffmpeg/PyAV existentes, sin instalar.
+- **P3 DX4rykXv0ia:** medio77,069002s,18 segmentos ASR0–76,68s. Huecos9,08–18,28 y26,28–30,16s, oración incompleta y cifras261/280/300mil conservados como discrepancias; no se reconstruyeron. Caption público y CTA cotejados; voces sin diarización.
+- **P4 DXzUw8jthB3:** medio68,617007s,25 segmentos0–65,54s. Hueco11,96–19,73s y reconocimientos defectuosos declarados. Se analiza guion promocional, no un delito verificado; clase de mayo histórica, no convocatoria vigente. Varias voces, sin atribución personal no sustentada.
+- **DY7vyqCFDOg:** colaboración pública observada como carrusel; sirvió para localizar enlaces autorizados, no sumó pieza ni se contó cada slide.
+
+El padre revisó las cinco respuestas, tiempos, patrón/diferencias, tres propuestas con fuente, separación de hechos/inferencias y página comercial. P2–P4 satisfacen el alcance de contenido dentro de su cobertura declarada, pendiente de revisión independiente; no se afirma escucha ni visión continua.
+
+### Recuperación y revisión de Carrera
+
+Tras liberar a Heras, se reactivó el mismo hijo `/root/alex_carrera`, único escritor de su ficha. P1 y su procedencia previa se conservan, sin convertir el informe visual histórico en visionado nuevo.
+
+- **P2 DfTWAHhNIuV:** navegador público confirmó autor verificado, reproductor y caption ENTRENAMIENTO. Metadata del medio identifica uploader1584735240/alexmcarrera. Medio120,118005s;68segmentos ASR0–120s leídos completos por padre e hijo, con cinco pasos y CTA final. Reconocimiento «Cloud» se mantiene fonético; cifras comerciales no auditadas. `DfTWAHhNIuV-20261109T031310Z/source.m4a`, SHA-256 `00d14d33aad256069b126ac0ee879d5a4224452fec28cdf126e6c8e2b11d98f7`; `asr-20261109T031421Z.json`, SHA-256 `04e276950327a35dcbd0ad47a3b0ae1915534dfc5f69cdb42e9942d32410b834`. ASR50,321s, mismos límites offline.
+- **P3 Ddkwl1ojZw6:** el primer extractor falló en la foto2. Una inspección distinta con tolerancia a falta de formatos enumeró nueve entradas y encontró vídeos1/7/9. Se recuperó el post como **UNA publicación mixta**, no tres piezas. Los vídeos duran4,033333/4/4s, streams sólo vídeo en los archivos recuperados; no se supone el sonido de otras versiones. Se revisaron las seis imágenes estáticas y tres contactos2fps0–3,5s más tres cuadros finalesPTS4/3,966667/3,966667. No hay reloj global ni duración de lectura estática. Padre e hijo vieron los12 archivos; ambos leyeron recibos y límites. Los tres medios tienen SHA-256 `acd2de6dc94400a322839febb0a4d1fa803d0e1f6aea8d5d00ca9b242de35da9`, `09791d8a52cdc38bb09c0348b7cc4c07ff36da82391ed266aa613b488476dc4d` y `f1a624779d3b85787e04027c17467a0d8ea23e9d760e06ace651f01debd0f3c6`. Recibos en `Ddkwl1ojZw6-mixto-20261109T032051Z/entry-{1,7,9}/media-receipt.json`; imágenes, hashes y fuente temporal en `Ddkwl1ojZw6-visual-20261109T032137Z/visual-receipt.json`. Todas estas rutas parten de la raíz privada indicada arriba. Ningún ASR innecesario sobre clips sin pista de audio.
+- **DfDNc-Wn6Gz / DeUxpBunwsA / DeLD36xDiSa / Dd5Qb_qjPp9:** snapshots públicos sin reproductor y extractor sin formatosAV recuperables en8/6/8/9entradas, respectivamente. Los fallos iniciales y `entries-summary.json` se conservan en carpetas con el shortcode. No se confunde ausencia de formatos del extractor con inexistencia universal de audio/vídeo ni se cuenta cada imagen como pieza. Ninguna de estas cuatro candidatas suma al mínimo.
+
+Una búsqueda adicional del padre con handle/IA/YouTube, nombre/«Creador de Ofertas» y nombre/Exposure/entrevista volvió a dar homónimos o fuentes ajenas; se descartaron sin atribuir contenido. El perfil público autorizado mostró el enlace exacto `https://www.instagram.com/alexmcarrera/reel/DOKUVxIDFis/`, una candidata adicional. Se solicitó ampliar ese destino del MCP mediante pregunta asíncrona, por la restricción de destinos exactos; no se navegó ni se trasladó el acceso a otra herramienta para eludir esa restricción.
+
+### Hijos, resultado y cierre de la retoma
+
+Se conservaron los seis hijos originales de contextos iniciales frescos. Esta retoma usó sólo Heras y luego Carrera, secuenciales, sin hijos nuevos ni nietos. Solicitado `gpt-6.1-sol/high`; modelo/esfuerzo observado sigue sin estar expuesto, `null/null`. El padre no escribió ninguna ficha. Heras entregó su final y se liberó; Carrera informó archivo listo, validaciones y ausencia de procesos por mensaje, y el padre interrumpió/liberó su turno final. La consulta posterior de agentes mostró únicamente al padre en ejecución y Carrera `interrupted`, sin hijo escritor vivo. No se presenta la interrupción como un mensaje final completado del runtime.
+
+| Slug | Hijo nativo / archivo exclusivo | Cobertura vigente | Retoma |
+|---|---|---|---|
+| alex-hormozi | `/root/alex_hormozi` · [ficha](alex-hormozi.md) | 4 completas | Sin cambio |
+| pedro-buerbaum | `/root/pedro_buerbaum` · [ficha](pedro-buerbaum.md) | 4 completas | Sin cambio |
+| victor-heras | `/root/victor_heras` · [ficha](victor-heras.md) | 4 completas | Entregado y liberado antes de Carrera |
+| iman-gadzhi | `/root/iman_gadzhi` · [ficha](iman-gadzhi.md) | 6 completas | Sin cambio |
+| justin-welsh | `/root/justin_welsh` · [ficha](justin-welsh.md) | 4 completas | Sin cambio |
+| alex-carrera | `/root/alex_carrera` · [ficha](alex-carrera.md) | 3 completas, parcial | Archivo entregado por mensaje; turno interrumpido/liberado |
+
+**Resultado vigente: grupo PARCIAL, no cumple aceptación global.** Heras pasa de1a4; Carrera de1a3, faltaUNA publicación independiente. No se cambiaron los criterios ni se compensó esa brecha con otros referentes. La candidata DOKUVxIDFis sigue sin contenido cotejado ni ampliación autorizada de destino MCP al corte de esta entrega. Su URL exacta y próximo paso se conservan en la ficha. Se entrega lo recuperable como parcial, sin aceptación fingida. La revisión independiente debe considerar esta brecha; publicación en rama no es aceptación.
+
+El padre revisó P1–P3 de Carrera, sus quince respuestas, comparación, tres aplicaciones ampliadas y el cierre parcial, y pidió corregir la atribución de los nuevos accesos al padre ejecutor. Se mantuvieron separados los cortes históricos de1/2piezas y el vigente de3. El precio y puente comercial de Exposure conservan lo comprobado el8/11. El navegador se cerró mediante `browser_close`, que devolvió cierre confirmado. Todos los subprocesos de adquisición/ASR finalizaron. No se hicieron efectos externos aparte de GET público, MCP autorizado y Git en la rama propia.
+
+### Integridad y comprobaciones de la retoma
+
+Los cuatro archivos completos previos se compararon byte a byte con el commit base y conservan los SHA-256 del corte histórico. Hashes actuales de las dos fichas ampliadas, recalculados después de que sus escritores dejaran de trabajar:
+
+| Archivo | Bytes | SHA-256 |
+|---|---:|---|
+| victor-heras.md | 26184 | `11bba4f81f6d6e9a10a1a7b91856ab824d679b4089a24079fbdc874b95b73d91` |
+| alex-carrera.md | 40097 | `487413a7c01d06874be9bd59e8fdfd378f4ef38d52579cee73565043b5bf89f5` |
+
+El padre recalculó los hashes de los ocho medios nuevos, los cuatro JSON ASR con su hash fuente y límite≤180s, dos imágenes de Heras y doce de Carrera contra sus recibos. Los cuatro ASR contienen18/25/0/68segmentos; el vacío no suma contenido hablado. Los recibos y archivos permanecen en la carpeta privada declarada.
+
+Se ejecutó de nuevo el verificador documental ya existente fueraGit: JSON parseable, seis referentes en orden exacto, campos/tipos, estados coherentes con4/4/4/6/4/3, archivos/IDs/URLs y destinos/anclas de enlaces internos correctos. Se revisaron manualmente las cinco respuestas y límites de cada incorporación. Esta comprobación documental no convierte Carrera en completo. Comparación del diff contra la base de retoma y revisión de espacios: sólo cinco archivos de esta carpeta (dos fichas, README, EVIDENCIA y COBERTURA); nueve archivos de entrega Markdown/JSON, sin medios/transcripciones completas/auxiliares nuevos enGit. Ningún registro, briefing, regla, memoria u otro grupo modificado. Commit/push explícito sólo a la rama asignada, sin force/amend; hash y cotejo remoto se informan en la entrega, sin autorreferencia dentro del commit.

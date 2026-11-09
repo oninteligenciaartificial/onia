@@ -127,7 +127,7 @@
     {
       "slug": "victor-heras",
       "archivo": "victor-heras.md",
-      "estado": "parcial",
+      "estado": "completo",
       "piezas": [
         {
           "id": "P1",
@@ -140,39 +140,30 @@
         },
         {
           "id": "P2",
-          "url": "https://www.youtube.com/watch?v=5faDTz94hnY",
-          "titulo": "Víctor Heras: Así consigo que vean mis vídeos hasta el final · Fernando Miralles",
-          "tipo": "video",
-          "cobertura": "Candidata. Sólo título, descripción y capítulos del HTML primario; conversación/captions inaccesibles.",
-          "fuente_tiempos": "Capítulos editoriales en HTML primario; sin pasajes de conversación cotejados",
-          "completa": false
+          "url": "https://www.instagram.com/victorherasemprendedor/reel/DYur-tjvboE/",
+          "titulo": "Dinero e identidad: mensaje visual (descriptor propio)",
+          "tipo": "reel",
+          "cobertura": "20 muestras visuales nominales 2fps, 0–9,5s más cuadro final PTS10,0s; vídeo10,168934s. ASR0 segmentos no usado para inferir silencio. Cinco respuestas visuales; sin percepción continua ni evaluación sonora.",
+          "fuente_tiempos": "/tmp/cerebros-a-20261108-retoma-20261109/DYur-tjvboE-video-20261109T030919Z/frames/receipt.json; contact-2fps.jpg y last-frame.jpg inspeccionados",
+          "completa": true
         },
         {
           "id": "P3",
-          "url": "https://www.youtube.com/watch?v=zSirZl3bwU0",
-          "titulo": "Técnicas Reales para Crear Contenido Viral sin Pagar Publicidad · Nayo Escobar con Víctor Heras",
-          "tipo": "video",
-          "cobertura": "Candidata. HTML y RSS primarios cotejan identidad; sin conversación/transcript accesible. Duraciones de ediciones distintas.",
-          "fuente_tiempos": "https://feeds.megaphone.fm/DEDOL3603470466, GUID 65a7e556-392b-11f1-ba7f-0f2e3a56f17a; sólo duración declarada, no tiempos de contenido",
-          "completa": false
+          "url": "https://www.instagram.com/victorherasemprendedor/reel/DX4rykXv0ia/",
+          "titulo": "Apariencia y caso Bernardo (descriptor propio)",
+          "tipo": "reel",
+          "cobertura": "Audio público77,069002s; ASR18segmentos,0–76,68s; toda la salida leída. Huecos9,08–18,28 y26,28–30,16s; varias voces sin diarización. Cinco respuestas desde contenido reconocido y caption, sin escucha/visión integral.",
+          "fuente_tiempos": "/tmp/cerebros-a-20261108-retoma-20261109/DX4rykXv0ia-20261109T030832Z/asr-20261109T030948Z.json, segments[].start/end",
+          "completa": true
         },
         {
-          "id": "P5",
-          "url": "https://www.youtube.com/watch?v=HYs-pZqKSvA",
-          "titulo": "La Nueva Era De La Marca Personal Acaba De Empezar · Víctor Heras Media",
-          "tipo": "video",
-          "cobertura": "Candidata. Título/autor primarios cotejados; texto de tercero excluido; sin captions recuperados.",
-          "fuente_tiempos": "No recuperada",
-          "completa": false
-        },
-        {
-          "id": "P6",
-          "url": "https://viralidad.com/gracias-#viralidad-videos",
-          "titulo": "¿Qué es exactamente Viralidad.com?",
-          "tipo": "preview",
-          "cobertura": "Candidata. Correspondencia etiqueta/reproductor 69fa252fbe21ee38533b40a9 cotejada; subtítulos desactivados; no palabras estudiadas.",
-          "fuente_tiempos": "Configuración pública del reproductor sin transcript; duración <2 min sólo anunciada en página, no medida",
-          "completa": false
+          "id": "P4",
+          "url": "https://www.instagram.com/victorherasemprendedor/reel/DXzUw8jthB3/",
+          "titulo": "Ferrari y CLASE: giro promocional (descriptor propio)",
+          "tipo": "reel",
+          "cobertura": "Audio público68,617007s; ASR25segmentos,0–65,54s; toda la salida leída. Hueco11,96–19,73s y errores reconocidos. Cinco respuestas; no se acredita delito, voces individuales ni visión/sonido integral.",
+          "fuente_tiempos": "/tmp/cerebros-a-20261108-retoma-20261109/DXzUw8jthB3-20261109T030934Z/asr-20261109T031118Z.json, segments[].start/end",
+          "completa": true
         }
       ],
       "pagina_comercial": {
@@ -181,10 +172,10 @@
         "limite": "Landing y formulario https://viralidad.com/survey leídos sin envío; no precio ni condiciones finales visibles. Rangos de capital no son precios."
       },
       "faltantes": [
-        "Faltan tres piezas audiovisuales independientes completas, con conversación/captions primarios, tiempos y cinco respuestas.",
-        "P4 de la ficha es candidato de podcast Sinergéticos450 localizado por RSS, sin contraparte audiovisual ni conversación corroboradas; queda fuera de esta matriz audiovisual y del mínimo.",
-        "Recuperar transcripción primaria temporizada de P2/P3/P5 o tres equivalentes; no repetir mismos GET vacíos ni inferir conversación desde capítulos.",
-        "P6 y otros reproductores públicos de preparación no exponen subtítulos activos; no se estudiaron sus palabras."
+        "Sin brecha para mínimo4: P1–P4 sustentan cinco respuestas dentro de sus coberturas declaradas; revisión independiente pendiente.",
+        "Antiguos P2–P6 preservados como R2–R6 en ficha e historial del commit84c949a; siguen sin contenido suficiente y no suman.",
+        "P2 visual muestreado; ASR vacío no prueba silencio. P3/P4 tienen huecos y errores automáticos, varias voces sin diarización; no percepción audiovisual integral ni resultados económicos auditados.",
+        "Auxiliares completos fueraGit en /tmp/cerebros-a-20261108-retoma-20261109, mismaVPS; hashes no los transportan a otraVM."
       ]
     },
     {
@@ -326,6 +317,24 @@
           "cobertura": "ASR íntegro, 22 segmentos, 0–57,06 s; caption/handle corroborados mediante GET público actual. Informes visuales previos releídos, sin nueva percepción AV.",
           "fuente_tiempos": "../../asr/complementario/alex-carrera.json, segmentos 1–22; TXT homónimo. Anclajes visuales previos en ../../fichas/audiovisual/alex-cuadros-completos.md",
           "completa": true
+        },
+        {
+          "id": "P2",
+          "url": "https://www.instagram.com/alexmcarrera/reel/DfTWAHhNIuV/",
+          "titulo": "Cinco pasos para una agencia de IA (descriptor propio)",
+          "tipo": "reel",
+          "cobertura": "Medio120,118005s; ASR68segmentos0–120s, salida íntegra leída padre/hijo. Caption/handle y reproductor públicos corroborados. No escucha/visión integral ni resultados económicos auditados.",
+          "fuente_tiempos": "/tmp/cerebros-a-20261108-retoma-20261109/DfTWAHhNIuV-20261109T031310Z/asr-20261109T031421Z.json, segments[].start/end",
+          "completa": true
+        },
+        {
+          "id": "P3",
+          "url": "https://www.instagram.com/alexmcarrera/reel/Ddkwl1ojZw6/",
+          "titulo": "Agotamiento y oferta: publicación mixta (descriptor propio)",
+          "tipo": "video",
+          "cobertura": "UNA publicación mixta9entradas:3clips4,033333/4/4s sin pista de audio en formatos recuperados y6imágenes. Todas estáticas vistas;3contactos2fps0–3,5s y3últimosPTS4/3,966667/3,966667 vistos. Cinco respuestas visuales, sin reloj global ni duración de lectura estática inventados. No suma cada slide/clip como pieza.",
+          "fuente_tiempos": "/tmp/cerebros-a-20261108-retoma-20261109/Ddkwl1ojZw6-mixto-20261109T032051Z/entry-{1,7,9}/media-receipt.json; Ddkwl1ojZw6-visual-20261109T032137Z/visual-receipt.json, contactos y últimos",
+          "completa": true
         }
       ],
       "pagina_comercial": {
@@ -334,11 +343,11 @@
         "limite": "About público leído sin ingreso/registro. Free y texto de no gratuidad discrepan; precio, condiciones finales y puente postCLASE indeterminados; videos=[] no ofrece preview."
       },
       "faltantes": [
-        "Faltan tres piezas audiovisuales distintas completas. P2–P4 y P5–P6 no se inventan: no hay URLs de piezas adicionales verificadas.",
-        "Obtener tres publicaciones canónicas o entrevistas públicas vinculadas a @alexmcarrera y contenido/captions temporizados; entrenamiento CLASE sólo anunciado, no cuenta sin URL/contenido.",
-        "Perfil y /reels/ devolvieron429; búsquedas primarias alternativas no aportaron otras piezas. No repetir mismo acceso bajo mismas condiciones.",
-        "Reel GET actual señala20/10/2026, metadata histórica21/10; discrepancia conservada sin inventar zona horaria.",
-        "Precio/condiciones de Exposure y vínculo al entrenamiento deben aclararse en fuente pública inequívoca; sin mensajes ni registro."
+        "Falta UNA publicación audiovisual independiente con contenido suficiente para cinco respuestas y tiempos: P1–P3 documentadas. EstadoPARCIAL; no cumple aceptaciónglobal.",
+        "Cuatro candidatas DfDNc-Wn6Gz,DeUxpBunwsA,DeLD36xDiSa,Dd5Qb_qjPp9: carruseles sin formatosAV recuperables en8/6/8/9entradas y sin VideoPlayer en snapshot; no suman.",
+        "Perfil público enlaza https://www.instagram.com/alexmcarrera/reel/DOKUVxIDFis/ como siguiente candidata; ampliación de destinoMCP solicitada, todavía sin permiso/respuesta, contenido no consultado. Alternativa: otra pieza pública autorizada con captions/ASR temporizados.",
+        "Discrepancia de fecha P1(20/10GET,21/10histórica) preservada. Precio/condiciones de Exposure y vínculo al entrenamiento siguen indeterminados.",
+        "Percepción audiovisual integral y resultados no acreditados. Auxiliares nuevos sóloVPS en /tmp/cerebros-a-20261108-retoma-20261109; hashes no trasladan medios."
       ]
     }
   ]
