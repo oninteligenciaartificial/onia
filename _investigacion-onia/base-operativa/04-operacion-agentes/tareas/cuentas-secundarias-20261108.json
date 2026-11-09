@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "cuentas-secundarias-20261108",
-  "revision": 5,
+  "revision": 6,
   "compartible": true,
   "objetivo": "Preparar acceso privado al navegador del VPS para alta personal de cuenta secundaria por Sergio",
   "estado": "en_espera",
-  "proximo_paso": "Sergio abre túnel con su SSH, verifica teclado/ratón en página pública y crea personalmente la cuenta. No declarar cuenta creada ni aceptación antes de su confirmación.",
-  "resultado": "Navegador y visor operativos en VPS; sandbox, autenticación y control sintético verificados. MCP nativo pasó. Falta control humano por túnel y alta personal de cuenta.",
-  "comprobacion": "Recibos de sandbox, puertos loopback, clave negativa/positiva, teclado/ratón y cuatro herramientas MCP cotejados. Perfil y archivos privados fuera de Git.",
+  "proximo_paso": "Sergio crea personalmente la cuenta secundaria en el Chromium del visor y confirma sólo que terminó. Después verificar el alcance pendiente y revisión; no asumir login ni habilitar acceso del perfil a MCP.",
+  "resultado": "Navegador y visor operativos; Sergio confirmó visualización y control de teclado/ratón desde su equipo. Alta personal de cuenta todavía no confirmada.",
+  "comprobacion": "Recibos técnicos anteriores preservados; confirmación directa de Sergio añadida como evidencia de usuario, sin capturas ni lectura de credenciales.",
   "verificacion": "pendiente",
   "evidencias": [
     {
@@ -29,9 +29,14 @@
       "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/visor-y-mcp-verificados-v1.json",
       "sha256": "b9e571ce78e3ee2bc01fd28853cbc4ecb4f640326b823759e00198acbbf139ca",
       "bytes": 3084
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/control-humano-confirmado-v1.json",
+      "sha256": "510da08bb0274d0c8a82b12dfe0089be8aca8b2bf80289eafde9db2db1210406",
+      "bytes": 796
     }
   ],
-  "actualizado": "2026-11-09T01:57:49.194037+00:00",
+  "actualizado": "2026-11-09T02:07:55.008727+00:00",
   "historial": [
     {
       "revision": 1,
@@ -141,6 +146,49 @@
         }
       ],
       "proximo_paso": "Completar prueba del visor y MCP, entregar túnel SSH para control humano sin iniciar cuentas todavía.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "Astra medium/high sólo ante ambigüedad persistente identificada y dentro de cuota autorizada."
+      }
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-09T01:57:49.194037+00:00",
+      "estado": "en_espera",
+      "resultado": "Navegador y visor operativos en VPS; sandbox, autenticación y control sintético verificados. MCP nativo pasó. Falta control humano por túnel y alta personal de cuenta.",
+      "comprobacion": "Recibos de sandbox, puertos loopback, clave negativa/positiva, teclado/ratón y cuatro herramientas MCP cotejados. Perfil y archivos privados fuera de Git.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/verificacion-preparacion.json",
+          "sha256": "e46d1879a33c23ce0aa05537fe7e84250993c67a187f3bb93addb920a9f96af1",
+          "bytes": 4123
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/aprobacion-y-bloqueo-20261108T2003.json",
+          "sha256": "c9cce18a3f6c509491b993bdb0486a750fa4fad47a6d1540be0f3c02c824613d",
+          "bytes": 1145
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/sandbox-activo-v1.json",
+          "sha256": "711b5634e2e6bc9c58a437f3a993126cc5aab12cf9d7d23ab59c72eb9de6d491",
+          "bytes": 3009
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/visor-y-mcp-verificados-v1.json",
+          "sha256": "b9e571ce78e3ee2bc01fd28853cbc4ecb4f640326b823759e00198acbbf139ca",
+          "bytes": 3084
+        }
+      ],
+      "proximo_paso": "Sergio abre túnel con su SSH, verifica teclado/ratón en página pública y crea personalmente la cuenta. No declarar cuenta creada ni aceptación antes de su confirmación.",
       "aceptacion": null,
       "ejecucion": {
         "perfil": "complejo",

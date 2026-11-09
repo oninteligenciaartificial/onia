@@ -1,4 +1,8 @@
-# Navegador operativo en el VPS; acceso humano pendiente
+# Navegador operativo en el VPS; control humano confirmado
+
+**Actualización 2026-11-08T22:07:54-04:00:** Sergio confirmó en el chat: «Sí, veo el navegador y puedo manejarlo», en respuesta a la prueba de visualización, ratón y teclado. El acceso humano que figura pendiente en la comprobación anterior queda confirmado por el usuario. El alta de Google/Instagram y la disponibilidad de `onia.investigacion` aún no están confirmadas. [Recibo de la confirmación](../../../04-operacion-agentes/evidencias/cuentas-secundarias-20261108/control-humano-confirmado-v1.json).
+
+La comprobación técnica anterior se conserva a continuación con su fecha original.
 
 8nov2026,aproximadamente21:55America/Caracas (9novUTC). Sergio aplicó el perfil preparado desde su acceso SSH. Se comprobó el archivo root:root0644 y su hash aprobado; restricción global AppArmor userns=1 conservada.
 
