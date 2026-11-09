@@ -52,3 +52,13 @@ Dependencia / dato necesario: huella host PC de casa ya obtenida por Boss: 256 S
 4. Pruebas del harness con la PC de casa: medir si se puede subir el tope de 3 sesiones en paralelo y cómo trabajar mejor. Es tarea del harness; cualquier cambio de tope pasa por el sí de Sergio.
 5. Cerrar arquitectura (harness + HOMELAB).
 6. Después: foco total en ingresos (workshop y fábrica de contenido en volumen), según ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md.
+
+## Plan fijado para hoy — 2026-11-09 19:56 America/La_Paz
+
+Estado: alta `onia-worker` preparada y revisada por Codex (776aebc, fca3874; 66 pruebas, revisión 4/4 aceptada para intento local). Fuente única ya referenciada en reglas-comunes.md y orquestacion.json.
+
+1. Boss lanza por el harness lo que queda del PEDIDO `reparto-final-20261109` (registrar flujo directo Boss→Codex y revisión de orden, solo lectura salvo cola/registro), Sol low, sin subagentes; Boss revisa al terminar.
+2. Sergio, al llegar a casa, corre el paso PowerShell de ALTA-ONIA-WORKER.md y pasa solo `alta_local: OK` o `ALTA DETENIDA`.
+3. Si OK: Codex conecta por Tailscale Serve TCP (solo tailnet) y se prueba cuántas sesiones en paralelo aguanta; subir el tope de 3 requiere el sí de Sergio.
+4. Arquitectura harness + HOMELAB cerrada y documentada.
+5. Martes 10: Contenido escribe 5 guiones (workshop + marca personal) según ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md — pendiente del sí de Sergio.
