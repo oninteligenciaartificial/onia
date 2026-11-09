@@ -91,3 +91,46 @@ Continuación del9nov: cerebro consultable, kit primeros10min y lector/panel rea
 
 
 9nov, HOMELAB F0 solicitado por Sergio: sólo plan y publicación. PC medida por Sergio: Windows11Pro, i5-12400F 6c/12t,15,8GiB,GT730 sin CUDA útil; Ubuntu26.04 WSL2 10GiB/4GiB swap,12hilos,885GB libres,sshd y FFmpeg; sin Docker/Tailscale. La PC será worker pesado y Codex liviano sólo con cuota; VPS coordina sin tocar producción. [Runbook y checklist](homelab/README.md). F1 espera sí explícito, propone dos puntos de cuota total; lectura 64%/saldo0 a16:58:43UTC. F2 necesita pasos personales, red y prueba de una tarea; F3 scheduler por recursos; F4 GPU/LLM/staging sólo diseño. Ninguna autorización histórica sustituye estos gates. Timeout devuelve tarea a la cola VPS desde checkpoint reconocido, no garantiza recuperar RAM ni habilita duplicar efectos. No asumir SID portable, mirrored conectado o systemd suficiente para mantener WSL vivo. No usar CUDA GT730, QSV, Docker ni compras en F0/F1.
+
+## 2026-11-09 tarde
+
+Hallazgos y decisiones de Boss (America/La_Paz). Sin secretos ni IPs.
+
+### Calendario
+- «Novia» del viernes 13 movida a 18:00–21:00 (instancia única).
+- Ahora solapa con «Llamadas 1 a 1 / Workshops» 18:15–19:15.
+- La clase de las 21:00 del viernes todavía no está en el calendario (oferta pendiente de agregar).
+
+### Homelab PC DESKTOP-0GGGNMF
+- Windows 11 Pro; i5-12400F (6 núcleos / 12 hilos); 15,8 GB RAM.
+- GT 730: sin CUDA útil → ASR en CPU con faster-whisper int8.
+- WSL2 Ubuntu 26.04: 10 GiB RAM, 4 GiB swap, 12 núcleos; ~885 GB libres.
+- Presentes: sshd y ffmpeg. Ausentes: Docker y Tailscale.
+
+### Decisiones de configuración
+- Quedarse en WSL2 por ahora; Linux nativo más adelante, cuando la PC quede dedicada o tenga una GPU buena.
+- Tailscale en el host Windows, no dentro de WSL al mismo tiempo.
+- `.wslconfig`: `networkingMode=mirrored`, `vmIdleTimeout=-1`, memoria ~12 GB.
+- `wsl.conf`: `systemd=true`.
+- Mantener WSL vivo con Programador de tareas; Windows sin suspensión; BIOS restore on AC.
+- Usuario dedicado `onia-worker` sin sudo.
+
+### Estado de acceso
+- Solo existe SSH PC→VPS: clave pública ed25519 con comentario `hp-i5-13va@DESKTOP-0GGGNMF` agregada a `authorized_keys` de `onia-codex-worker`.
+- No existe aún acceso VPS→PC.
+- Boss accedió a la PC por la app de Grok Bot, no por SSH.
+
+### Seguridad
+- En el VPS, `127.0.0.1:2222` escucha y responde como servidor SSH; origen desconocido (no lo creó Boss). Identificarlo en solo lectura (`ss -ltnp` / `lsof` con sudo) antes de usarlo.
+- Riesgo: WSL monta `/mnt/c`; cualquier acceso VPS→PC debe restringir `/mnt/c` para el usuario worker.
+
+### Codex / homelab F0
+- Commit `88f40eb` revisado: bueno, solo documentación.
+- Problema conocido: `ESTADO.md` aún tiene texto viejo de «video en_espera».
+
+### Prioridades
+- Hasta el 14 nov: primero vender el workshop.
+- Homelab: solo lo esencial (Tailscale, `onia-worker`, `/mnt/c` restringido, WSL siempre encendido).
+- Objetivo #1 de Codex: cerebro operativo usable + panel de contenido.
+- Después (con nuevo sí): datos, mejores sesiones, coordinación, orquestación y homelab etapa 1.
+- Comparación de gastos LLM vs resultados: [GASTOS-LLM-VS-RESULTADOS-20261109.md](homelab/GASTOS-LLM-VS-RESULTADOS-20261109.md).

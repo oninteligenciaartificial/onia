@@ -10,6 +10,7 @@ El VPS conserva la coordinación, integración Git y registro de tareas. La PC a
 - [Preparación de la PC, pasos de Sergio y de Codex](PC-PREPARACION.md).
 - [Worker pull, leases, recuperación y scheduler por peso](SCHEDULER.md).
 - [Fuentes oficiales y disponibilidad comprobada](FUENTES-Y-PREFLIGHT.md).
+- [Gastos LLM vs resultados (2026-11-09)](GASTOS-LLM-VS-RESULTADOS-20261109.md).
 
 Integra, sin sustituir sus recibos históricos: [capacidad por recursos](../../05-herramientas/2026-11-08-harness/CAPACIDAD-POR-RECURSOS-PROPUESTA-20261109.md), [medición de tres sesiones](../../05-herramientas/2026-11-08-harness/MEDICION-3-SESIONES-20261108.json) y [diseño de carriles](../../05-herramientas/2026-11-08-harness/ESCALADO-CARRILES-PROPUESTA.md). La constante tres es de diseño. El contexto actual asocia los spikes a ASR/video/Chrome; los registros anteriores no permiten asignar causalmente cada pico a un comando. F1 incorpora esa observabilidad sin reabrir los ensayos anteriores.
 
