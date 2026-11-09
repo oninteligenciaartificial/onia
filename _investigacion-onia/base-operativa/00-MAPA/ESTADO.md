@@ -2,6 +2,8 @@
 
 ## Actualización vigente · 9 noviembre 2026 UTC
 
+HOMELAB F0 documentado: PC Windows/WSL como worker pesado, VPS coordinador y producción intacta. [Plan, checklist y fases](../04-operacion-agentes/homelab/README.md). Sólo presentación: esperar sí explícito para F1 (medición VPS); PC/F2 y scheduler/F3 requieren aprobaciones posteriores. No se implementó, instaló, conectó ni lanzó nada en esta fase. Cuota compartida 64% al 9nov16:58:43UTC, saldo extra 0; no aumenta por sumar la PC.
+
 Video Euge resuelto dentro del alcance revisado: reproducción y captura de0:00 a30:02 por reloj en el VPS, pista original,34 muestras visuales y ASR alineado. Revisor distinto aprobó la entrega9f10c3e; tarea canónica aceptada. [Informe, pruebas y límites](../05-herramientas/video-euge-20261108/RESOLUCION-20261109.md) · [Aplicación a OnIA](../05-herramientas/video-euge-20261108/coordinacion/ANALISIS-ONIA.md). Escucha directa y observación perceptiva continua no acreditadas; el procedimiento requiere operador. Causa del corte de Playwright no aislada. Visor devuelto y sin ASR activo al control13:01UTC; no se despachó otro lote.
 
 Se mantiene la secuencia de negocio: cerebro consultable → ensayo de los primeros diez minutos por Sergio → resto del workshop → automatizaciones acotadas. Telegram real, campaña y scheduler permanecen pendientes; Platform fuera. Límite3 sin ampliación, sin producción ni gastos. Las menciones de video pendiente que siguen son cortes históricos, sustituidos por este resultado y sus límites.

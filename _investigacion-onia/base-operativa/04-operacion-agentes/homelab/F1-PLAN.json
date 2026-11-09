@@ -1,0 +1,128 @@
+{
+  "schema_propuesto": "onia.harness.capacidad.v1",
+  "estado": "propuesta_no_despachable",
+  "fase": "F1",
+  "host": "vps",
+  "base_documentada": "5f1c2134e93cc73cc1dbbb7e11e59e8435b64246",
+  "autorizacion": {
+    "referencia_si": null,
+    "vence_utc": null,
+    "manifiesto_aprobado_sha256": null
+  },
+  "inputs_fijados": false,
+  "muestra_segundos": 5,
+  "fases": [
+    {
+      "nombre": "baseline",
+      "minutos": 10,
+      "livianas": 0,
+      "pesadas": 0
+    },
+    {
+      "nombre": "cinco_livianas",
+      "minutos": 20,
+      "livianas": 5,
+      "pesadas": 0,
+      "ids_propuestos": [
+        "f1-lite-01",
+        "f1-lite-02",
+        "f1-lite-03",
+        "f1-lite-04",
+        "f1-lite-05"
+      ]
+    },
+    {
+      "nombre": "baseline_mixta",
+      "minutos": 10,
+      "livianas": 0,
+      "pesadas": 0
+    },
+    {
+      "nombre": "mixta",
+      "minutos": 20,
+      "livianas": 2,
+      "pesadas": 1,
+      "ids_propuestos": [
+        "f1-mixta-lite-01",
+        "f1-mixta-lite-02",
+        "f1-asr-vps-01"
+      ]
+    }
+  ],
+  "perfil": {
+    "modelo_ejecutor": "gpt-6.1-sol",
+    "esfuerzo_ejecutor": "high",
+    "modelo_revisor": "gpt-6.1-sol",
+    "esfuerzo_revisor": "ultra",
+    "hijos_max": 0,
+    "max_pasadas_asr_secuenciales": 3,
+    "asr_cpu_threads_vps": 2,
+    "asr_compute_type": "int8",
+    "liviana_herramientas_prohibidas": [
+      "chrome",
+      "mcp",
+      "asr",
+      "npm",
+      "builds",
+      "subagentes",
+      "descargas"
+    ],
+    "solo_inferencia_cuenta_existente": true
+  },
+  "cuota": {
+    "max_delta_puntos": 2,
+    "reserva_revision_puntos": 1,
+    "max_edad_segundos": 120,
+    "lectura_referencia": {
+      "utc": "2026-11-09T16:58:43.186Z",
+      "usado_pct": 64,
+      "saldo_extra": "0"
+    },
+    "lectura_inicio_requerida": true,
+    "incluye_instrumentacion_revision_cierre": true
+  },
+  "paradas": {
+    "cpu_no_disponible_pct_media": 75,
+    "cpu_ventana_segundos": 60,
+    "memavailable_pct": 20,
+    "mem_ventana_segundos": 30,
+    "memavailable_inmediato_pct": 10,
+    "psi_memory_full_avg10_pct": 1,
+    "psi_ventana_segundos": 60,
+    "swap_mib_s": 10,
+    "swap_ventana_segundos": 60,
+    "swap_requiere_presion_memoria": true,
+    "oom_delta_max": 0,
+    "muestras_consecutivas_perdidas": 3,
+    "max_minutos_ventanas": 60,
+    "gracia_cierre_minutos": 10,
+    "revision_max_minutos": 10,
+    "parada_solo_arboles_propios": true
+  },
+  "capacidad": {
+    "tope_ordinario_sin_cambio": 3,
+    "excepcion_temporal_livianas": 5,
+    "requiere_registro_global_unico": true,
+    "subida_permanente": false
+  },
+  "restricciones": {
+    "produccion": false,
+    "n8n": false,
+    "envios": false,
+    "gastos": false,
+    "instalaciones_no_enumeradas": false,
+    "homelab": false,
+    "borrados": false
+  },
+  "precondiciones": [
+    "sí explícito referenciado",
+    "instrumentación implementada/revisada y tests sintéticos aprobados",
+    "tareas y hashes de briefing/entrada aprobados",
+    "perfiles de herramientas verificables",
+    "cuota fresca y presupuesto disponible",
+    "ninguna sesión ajena requiere interrupción",
+    "stop de árboles y retoma probados",
+    "métricas y logs disponibles"
+  ],
+  "comandos": "Interfaz propuesta medir-capacidad; no implementada en F0. Flags explícitos deben coincidir con este plan. No existe ejecución autorizada por este JSON."
+}

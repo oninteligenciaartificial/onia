@@ -1,5 +1,7 @@
 # Capacidad por recursos y loop acotado: propuesta de Codex/OnIA
 
+**Integración HOMELAB F0:** [worker Windows/WSL, medición y scheduler VPS↔PC](../../04-operacion-agentes/homelab/README.md). Encargo actual de sólo presentación: F1 espera sí explícito, F2 conexión PC después de pasos personales, F3 política por recursos; sin cambiar el tope ni ejecutar ensayos. Se conservan íntegros los antecedentes siguientes.
+
 9 de noviembre de 2026 UTC. Base contrastada: `7133dac7a2d028b4e283a542f0da023b3b8ebe38` en `origin/master`.
 
 **Recomiendo medir cinco sesiones livianas y una pesada con dos livianas antes de elegir la política de cupos. El tope actual de tres es una decisión del harness, no un límite de infraestructura demostrado.** El ensayo determina qué mezcla soporta este VPS en esas condiciones; no demuestra un N universal ni cuál combinación entrega más trabajo útil. La implementación y ejecución de esta propuesta esperan el sí de Sergio. No se lanzó un benchmark, se cambió el límite ni se apagó un proceso.
