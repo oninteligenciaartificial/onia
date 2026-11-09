@@ -1,0 +1,47 @@
+{
+  "simulado": true,
+  "ideas": [
+    {
+      "id": "idea-a",
+      "ficticia": true,
+      "fuentes": [
+        "noticia-a"
+      ],
+      "patron": "heras-estructura",
+      "propuesta_onia": "Enseñar a distinguir clasificación automática de decisión humana con tres consultas inventadas.",
+      "angulo": "¿Quién revisa cuando la IA etiqueta mal?",
+      "publico": "Dueños de negocio; hipótesis editorial, no audiencia medida."
+    },
+    {
+      "id": "idea-b",
+      "ficticia": true,
+      "fuentes": [
+        "noticia-b"
+      ],
+      "patron": "carrera-evidencia",
+      "propuesta_onia": "Mostrar un borrador incorrecto y una lista de comprobación propia antes de hablar de automatizar.",
+      "angulo": "Un borrador bonito también puede confundir un pedido.",
+      "publico": "Dueños de negocio; hipótesis editorial, no audiencia medida."
+    }
+  ],
+  "patrones": {
+    "heras-estructura": {
+      "ficha": "03-referentes/fichas/lote-01/victor-heras.md",
+      "estado_ficha": "aceptada_tecnicamente_lote_01",
+      "cerebro": "03-referentes/cerebros/victor-heras.md",
+      "estado_cerebro": "parcial",
+      "ancla": "Ficha §3, clase pLH3avh7kY4, 24:59–37:19; procedencia documental previa, sin nuevo visionado.",
+      "patron": "Gancho, contexto, enseñanza y CTA congruente.",
+      "limite": "No copiar citas ASR ni promesas; no acredita ventas ni eficacia."
+    },
+    "carrera-evidencia": {
+      "ficha": "03-referentes/fichas/lote-01/alex-carrera.md",
+      "estado_ficha": "aceptada_tecnicamente_lote_01",
+      "cerebro": "03-referentes/cerebros/alex-carrera.md",
+      "estado_cerebro": "parcial",
+      "ancla": "Ficha §3 y §6; DevcnJYNS7r, 13,4667 s y error a 20/24,8 s según informe previo.",
+      "patron": "Resultado temprano, método, comprobación, límite y siguiente paso.",
+      "limite": "No demuestra ahorro ni autonomía; no se vio la clase prometida."
+    }
+  }
+}

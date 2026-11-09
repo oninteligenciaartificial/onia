@@ -1,0 +1,79 @@
+{
+  "simulado": true,
+  "fuentes": [
+    {
+      "id": "noticia-a",
+      "ficticia": true,
+      "tipo": "primaria_simulada",
+      "autor": "Laboratorio Imaginario Nube",
+      "url": "https://noticias.example.invalid/nota-a",
+      "fecha_hecho": "2026-11-08",
+      "fecha_publicacion": "2026-11-08",
+      "fecha_consulta": "2026-11-09T00:00:00Z",
+      "hecho": "FICTICIO: Nube presenta un clasificador de consultas con revisión humana obligatoria.",
+      "limites": "No hay prueba de exactitud, disponibilidad ni ahorro. Texto creado por OnIA para ensayo."
+    },
+    {
+      "id": "noticia-a-repetida",
+      "ficticia": true,
+      "tipo": "primaria_simulada",
+      "autor": "Laboratorio Imaginario Nube",
+      "url": "https://noticias.example.invalid/nota-a?utm_source=telegram#inicio",
+      "fecha_hecho": "2026-11-08",
+      "fecha_publicacion": "2026-11-08",
+      "fecha_consulta": "2026-11-09T00:01:00Z",
+      "hecho": "FICTICIO: copia de la misma nota; no producir otra idea."
+    },
+    {
+      "id": "noticia-b",
+      "ficticia": true,
+      "tipo": "primaria_simulada",
+      "autor": "Cooperativa Imaginaria Faro",
+      "url": "https://noticias.example.invalid/nota-b",
+      "fecha_hecho": "2026-11-07",
+      "fecha_publicacion": "2026-11-08",
+      "fecha_consulta": "2026-11-09T00:02:00Z",
+      "hecho": "FICTICIO: Faro muestra un borrador de respuesta de IA que confunde dos pedidos.",
+      "limites": "Caso inventado, sin clientes, métricas ni producto real."
+    },
+    {
+      "id": "noticia-pendiente",
+      "ficticia": true,
+      "tipo": "primaria_simulada",
+      "autor": "Fuente Imaginaria Sin Fecha",
+      "url": "https://noticias.example.invalid/pendiente",
+      "fecha_hecho": null,
+      "fecha_publicacion": "2026-11-08",
+      "fecha_consulta": "2026-11-09T00:03:00Z",
+      "hecho": "FICTICIO: afirmación incompleta que no puede usarse en un guion."
+    },
+    {
+      "id": "noticia-fallo",
+      "ficticia": true,
+      "tipo": "primaria_simulada",
+      "autor": "Fuente Imaginaria Inaccesible",
+      "url": "https://noticias.example.invalid/fallo",
+      "fecha_hecho": "2026-11-08",
+      "fecha_publicacion": "2026-11-08",
+      "fecha_consulta": "2026-11-09T00:04:00Z",
+      "error_simulado": "FUENTE_NO_DISPONIBLE",
+      "hecho": null
+    }
+  ],
+  "utilizables": [
+    "noticia-a",
+    "noticia-b"
+  ],
+  "duplicados": [
+    {
+      "id": "noticia-a-repetida",
+      "duplicado_de": "noticia-a"
+    }
+  ],
+  "pendientes": [
+    "noticia-pendiente"
+  ],
+  "fallos": [
+    "noticia-fallo"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "simulado": true,
+  "guiones": [
+    {
+      "id": "guion-a-v1",
+      "idea_id": "idea-a",
+      "ficticio": true,
+      "fuentes": [
+        "noticia-a"
+      ],
+      "patron": "heras-estructura",
+      "propuesta_onia": "Ejercicio y texto originales de OnIA; no palabras ni consejo personal de Heras.",
+      "duracion_objetivo_segundos": 45,
+      "bloques": [
+        {
+          "tipo": "gancho",
+          "texto": "FICTICIO. ¿Dejarías que una etiqueta decida qué pedido atender?",
+          "respaldo": "propuesta_onia"
+        },
+        {
+          "tipo": "contexto",
+          "texto": "En esta noticia inventada, Nube presenta un clasificador de consultas con revisión humana obligatoria.",
+          "respaldo": "noticia-a"
+        },
+        {
+          "tipo": "ensenanza",
+          "texto": "Propuesta OnIA: separá tres mensajes inventados en venta, soporte y duda. Revisá uno que podría pertenecer a dos categorías y explicá tu decisión.",
+          "respaldo": "propuesta_onia"
+        },
+        {
+          "tipo": "limite",
+          "texto": "El ejemplo no prueba exactitud ni ahorro y no representa una herramienta disponible.",
+          "respaldo": "noticia-a"
+        },
+        {
+          "tipo": "cta",
+          "texto": "¿Qué mensaje revisarías primero y por qué?",
+          "respaldo": "propuesta_onia"
+        }
+      ]
+    },
+    {
+      "id": "guion-b-v1",
+      "idea_id": "idea-b",
+      "ficticio": true,
+      "fuentes": [
+        "noticia-b"
+      ],
+      "patron": "carrera-evidencia",
+      "propuesta_onia": "Demostración textual y lista de comprobación originales de OnIA; no método privado de Carrera.",
+      "duracion_objetivo_segundos": 40,
+      "bloques": [
+        {
+          "tipo": "resultado",
+          "texto": "FICTICIO. Este borrador dice que pediste dos cajas; el pedido inventado decía una.",
+          "respaldo": "propuesta_onia"
+        },
+        {
+          "tipo": "contexto",
+          "texto": "En la noticia inventada de Faro, una respuesta de IA confunde dos pedidos.",
+          "respaldo": "noticia-b"
+        },
+        {
+          "tipo": "metodo",
+          "texto": "Propuesta OnIA: compará cantidad, producto y destino antes de usar el borrador.",
+          "respaldo": "propuesta_onia"
+        },
+        {
+          "tipo": "comprobacion",
+          "texto": "En nuestro ejercicio la lista detecta una diferencia de cantidad. Todavía no probamos un sistema real.",
+          "respaldo": "propuesta_onia"
+        },
+        {
+          "tipo": "limite",
+          "texto": "No medimos ahorro ni aseguramos que la lista detecte todos los errores.",
+          "respaldo": "propuesta_onia"
+        },
+        {
+          "tipo": "cta",
+          "texto": "Propuesta de cierre para revisar: compará tu próximo borrador con el pedido antes de responder.",
+          "respaldo": "propuesta_onia"
+        }
+      ]
+    }
+  ]
+}

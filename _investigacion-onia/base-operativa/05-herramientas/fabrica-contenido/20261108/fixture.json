@@ -1,0 +1,249 @@
+{
+  "simulacion": true,
+  "aviso": "FICTICIO: noticias, organizaciones, guiones, revisiones y decisiones de Sergio inventados para el ensayo; ninguna noticia actual ni decisión humana real.",
+  "fuentes": [
+    {
+      "id": "noticia-a",
+      "ficticia": true,
+      "tipo": "primaria_simulada",
+      "autor": "Laboratorio Imaginario Nube",
+      "url": "https://noticias.example.invalid/nota-a",
+      "fecha_hecho": "2026-11-08",
+      "fecha_publicacion": "2026-11-08",
+      "fecha_consulta": "2026-11-09T00:00:00Z",
+      "hecho": "FICTICIO: Nube presenta un clasificador de consultas con revisión humana obligatoria.",
+      "limites": "No hay prueba de exactitud, disponibilidad ni ahorro. Texto creado por OnIA para ensayo."
+    },
+    {
+      "id": "noticia-a-repetida",
+      "ficticia": true,
+      "tipo": "primaria_simulada",
+      "autor": "Laboratorio Imaginario Nube",
+      "url": "https://noticias.example.invalid/nota-a?utm_source=telegram#inicio",
+      "fecha_hecho": "2026-11-08",
+      "fecha_publicacion": "2026-11-08",
+      "fecha_consulta": "2026-11-09T00:01:00Z",
+      "hecho": "FICTICIO: copia de la misma nota; no producir otra idea."
+    },
+    {
+      "id": "noticia-b",
+      "ficticia": true,
+      "tipo": "primaria_simulada",
+      "autor": "Cooperativa Imaginaria Faro",
+      "url": "https://noticias.example.invalid/nota-b",
+      "fecha_hecho": "2026-11-07",
+      "fecha_publicacion": "2026-11-08",
+      "fecha_consulta": "2026-11-09T00:02:00Z",
+      "hecho": "FICTICIO: Faro muestra un borrador de respuesta de IA que confunde dos pedidos.",
+      "limites": "Caso inventado, sin clientes, métricas ni producto real."
+    },
+    {
+      "id": "noticia-pendiente",
+      "ficticia": true,
+      "tipo": "primaria_simulada",
+      "autor": "Fuente Imaginaria Sin Fecha",
+      "url": "https://noticias.example.invalid/pendiente",
+      "fecha_hecho": null,
+      "fecha_publicacion": "2026-11-08",
+      "fecha_consulta": "2026-11-09T00:03:00Z",
+      "hecho": "FICTICIO: afirmación incompleta que no puede usarse en un guion."
+    },
+    {
+      "id": "noticia-fallo",
+      "ficticia": true,
+      "tipo": "primaria_simulada",
+      "autor": "Fuente Imaginaria Inaccesible",
+      "url": "https://noticias.example.invalid/fallo",
+      "fecha_hecho": "2026-11-08",
+      "fecha_publicacion": "2026-11-08",
+      "fecha_consulta": "2026-11-09T00:04:00Z",
+      "error_simulado": "FUENTE_NO_DISPONIBLE",
+      "hecho": null
+    }
+  ],
+  "patrones": {
+    "heras-estructura": {
+      "ficha": "03-referentes/fichas/lote-01/victor-heras.md",
+      "estado_ficha": "aceptada_tecnicamente_lote_01",
+      "cerebro": "03-referentes/cerebros/victor-heras.md",
+      "estado_cerebro": "parcial",
+      "ancla": "Ficha §3, clase pLH3avh7kY4, 24:59–37:19; procedencia documental previa, sin nuevo visionado.",
+      "patron": "Gancho, contexto, enseñanza y CTA congruente.",
+      "limite": "No copiar citas ASR ni promesas; no acredita ventas ni eficacia."
+    },
+    "carrera-evidencia": {
+      "ficha": "03-referentes/fichas/lote-01/alex-carrera.md",
+      "estado_ficha": "aceptada_tecnicamente_lote_01",
+      "cerebro": "03-referentes/cerebros/alex-carrera.md",
+      "estado_cerebro": "parcial",
+      "ancla": "Ficha §3 y §6; DevcnJYNS7r, 13,4667 s y error a 20/24,8 s según informe previo.",
+      "patron": "Resultado temprano, método, comprobación, límite y siguiente paso.",
+      "limite": "No demuestra ahorro ni autonomía; no se vio la clase prometida."
+    }
+  },
+  "ideas": [
+    {
+      "id": "idea-a",
+      "ficticia": true,
+      "fuentes": [
+        "noticia-a"
+      ],
+      "patron": "heras-estructura",
+      "propuesta_onia": "Enseñar a distinguir clasificación automática de decisión humana con tres consultas inventadas.",
+      "angulo": "¿Quién revisa cuando la IA etiqueta mal?",
+      "publico": "Dueños de negocio; hipótesis editorial, no audiencia medida."
+    },
+    {
+      "id": "idea-b",
+      "ficticia": true,
+      "fuentes": [
+        "noticia-b"
+      ],
+      "patron": "carrera-evidencia",
+      "propuesta_onia": "Mostrar un borrador incorrecto y una lista de comprobación propia antes de hablar de automatizar.",
+      "angulo": "Un borrador bonito también puede confundir un pedido.",
+      "publico": "Dueños de negocio; hipótesis editorial, no audiencia medida."
+    }
+  ],
+  "guiones": [
+    {
+      "id": "guion-a-v1",
+      "idea_id": "idea-a",
+      "ficticio": true,
+      "fuentes": [
+        "noticia-a"
+      ],
+      "patron": "heras-estructura",
+      "propuesta_onia": "Ejercicio y texto originales de OnIA; no palabras ni consejo personal de Heras.",
+      "duracion_objetivo_segundos": 45,
+      "bloques": [
+        {
+          "tipo": "gancho",
+          "texto": "FICTICIO. ¿Dejarías que una etiqueta decida qué pedido atender?",
+          "respaldo": "propuesta_onia"
+        },
+        {
+          "tipo": "contexto",
+          "texto": "En esta noticia inventada, Nube presenta un clasificador de consultas con revisión humana obligatoria.",
+          "respaldo": "noticia-a"
+        },
+        {
+          "tipo": "ensenanza",
+          "texto": "Propuesta OnIA: separá tres mensajes inventados en venta, soporte y duda. Revisá uno que podría pertenecer a dos categorías y explicá tu decisión.",
+          "respaldo": "propuesta_onia"
+        },
+        {
+          "tipo": "limite",
+          "texto": "El ejemplo no prueba exactitud ni ahorro y no representa una herramienta disponible.",
+          "respaldo": "noticia-a"
+        },
+        {
+          "tipo": "cta",
+          "texto": "¿Qué mensaje revisarías primero y por qué?",
+          "respaldo": "propuesta_onia"
+        }
+      ]
+    },
+    {
+      "id": "guion-b-v1",
+      "idea_id": "idea-b",
+      "ficticio": true,
+      "fuentes": [
+        "noticia-b"
+      ],
+      "patron": "carrera-evidencia",
+      "propuesta_onia": "Demostración textual y lista de comprobación originales de OnIA; no método privado de Carrera.",
+      "duracion_objetivo_segundos": 40,
+      "bloques": [
+        {
+          "tipo": "resultado",
+          "texto": "FICTICIO. Este borrador dice que pediste dos cajas; el pedido inventado decía una.",
+          "respaldo": "propuesta_onia"
+        },
+        {
+          "tipo": "contexto",
+          "texto": "En la noticia inventada de Faro, una respuesta de IA confunde dos pedidos.",
+          "respaldo": "noticia-b"
+        },
+        {
+          "tipo": "metodo",
+          "texto": "Propuesta OnIA: compará cantidad, producto y destino antes de usar el borrador.",
+          "respaldo": "propuesta_onia"
+        },
+        {
+          "tipo": "comprobacion",
+          "texto": "En nuestro ejercicio la lista detecta una diferencia de cantidad. Todavía no probamos un sistema real.",
+          "respaldo": "propuesta_onia"
+        },
+        {
+          "tipo": "limite",
+          "texto": "No medimos ahorro ni aseguramos que la lista detecte todos los errores.",
+          "respaldo": "propuesta_onia"
+        },
+        {
+          "tipo": "cta",
+          "texto": "Propuesta de cierre para revisar: compará tu próximo borrador con el pedido antes de responder.",
+          "respaldo": "propuesta_onia"
+        }
+      ]
+    }
+  ],
+  "revisiones": [
+    {
+      "simulada": true,
+      "guion_id": "guion-a-v1",
+      "actor": "revisor-ficticio",
+      "veredicto": "bueno",
+      "controles": {
+        "fuentes_y_fechas": true,
+        "atribucion": true,
+        "limites": true,
+        "claridad_y_cta": true,
+        "ficcion_visible": true
+      },
+      "observacion": "Revisión editorial simulada del texto; no revisión independiente del encargo ni comprobación de noticia real.",
+      "fecha": "2026-11-09T00:05:00Z"
+    },
+    {
+      "simulada": true,
+      "guion_id": "guion-b-v1",
+      "actor": "revisor-ficticio",
+      "veredicto": "cambios",
+      "controles": {
+        "fuentes_y_fechas": true,
+        "atribucion": true,
+        "limites": true,
+        "claridad_y_cta": false,
+        "ficcion_visible": true
+      },
+      "observacion": "Pedir un ejercicio concreto en el CTA antes de pasar a decisión positiva.",
+      "fecha": "2026-11-09T00:05:00Z"
+    }
+  ],
+  "decisiones": [
+    {
+      "simulada": true,
+      "guion_id": "guion-a-v1",
+      "autor": "Sergio SIMULADO",
+      "veredicto": "elegir_para_preparar",
+      "nota": "Preparar una futura toma; no autoriza publicar ni enviar.",
+      "fecha": "2026-11-09T00:06:00Z"
+    },
+    {
+      "simulada": true,
+      "guion_id": "guion-b-v1",
+      "autor": "Sergio SIMULADO",
+      "veredicto": "pedir_cambios",
+      "nota": "Cambiar el cierre; no preparar una pieza para publicar.",
+      "fecha": "2026-11-09T00:06:00Z"
+    }
+  ],
+  "entrada_pendiente_real": {
+    "url": "https://www.youtube.com/watch?v=JuAQILH7dkQ",
+    "titulo_aportado_por_coordinador": "Así Utilizo los Agentes de IA a Diario",
+    "autor_aportado_por_coordinador": "Euge Oller",
+    "estado": "pendiente_evidencia_visual_por_coordinador",
+    "utilizada_para_patrones_o_guiones": false,
+    "limite": "Esta sesión no lo miró, no contrastó su contenido ni le atribuye prácticas."
+  }
+}

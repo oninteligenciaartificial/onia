@@ -1,0 +1,47 @@
+{
+  "simulacion": true,
+  "resultado": "OK",
+  "checks": [
+    {
+      "caso": "ingesta_y_duplicado",
+      "resultado": "2 utilizables, 1 duplicado, 1 pendiente, 1 fallo"
+    },
+    {
+      "caso": "revision_obsoleta",
+      "resultado": "rechazado_sin_mutacion",
+      "detalle": "Revisión obsoleta o ausente: esperada 7, actual 8."
+    },
+    {
+      "caso": "decision_en_entrega_cerrada",
+      "resultado": "rechazado_sin_mutacion",
+      "detalle": "Reabrir explícitamente con actualizar antes de cambiar decisiones, ejecución o asignación."
+    },
+    {
+      "caso": "decision_duplicada",
+      "resultado": "rechazado_sin_mutacion",
+      "detalle": "Identificador de decisión inválido o duplicado."
+    },
+    {
+      "caso": "revision_por_guion_y_decisiones",
+      "resultado": "A elegido para preparar; B requiere cambios; cero aceptaciones de harness"
+    },
+    {
+      "caso": "evidencia_alterada_en_memoria",
+      "resultado": "rechazado_sin_mutacion",
+      "detalle": "Evidencia cambió: 04-operacion-agentes/evidencias/ficcion-fabrica-001/ingesta.json"
+    }
+  ],
+  "fixture_sha256": "6b3e0b85ab0249e87b3d91b4c099128f377decdb626dd144f27f752ab2a130f8",
+  "trabajo_py_sha256": "895b2e525a63081ec28f78b10dc0ec3be2bdadcb7c68a070429c40bccd9ea3f1",
+  "tarea_aislada": "04-operacion-agentes/tareas/ficcion-fabrica-001.json",
+  "revision_final": 12,
+  "estado": "para_revision",
+  "sin_aceptacion_real": true,
+  "red": "socket bloqueado en el ensayo; sin clientes API ni subprocess",
+  "limites": [
+    "sin sesiones harness lanzadas",
+    "sin Telegram ni autenticación",
+    "sin scheduler",
+    "revisiones y Sergio simulados"
+  ]
+}
