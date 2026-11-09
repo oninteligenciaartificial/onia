@@ -1,6 +1,6 @@
 # Beltrán Briones · cuatro publicaciones y oferta pública
 
-Consulta y análisis del 8 de noviembre de 2026. Encargo `cerebros-c-20261108`. **Cuatro piezas completas para análisis de contenido editorial y estructura temporal.** Cobertura mediante ASR automático local del audio completo de cuatro clips breves, lectura íntegra de sus resultados y una miniatura pública inspeccionada por pieza. La identidad vocal del presentador queda sin autenticar. La muestra permite estudiar publicaciones vinculadas al referente, con límites para atribuirle personalmente cada palabra o generalizar su razonamiento.
+Consulta inicial del 8 de noviembre y recuperación y cotejo del 9 de noviembre de 2026. Encargo `cerebros-c-20261108`. **Cuatro piezas recuperadas y cotejadas para análisis de contenido editorial y estructura temporal, pendientes de aceptación de la nueva revisión.** Los cuatro MP4 completos, WAV, ASR completos y manifiestos están conservados fuera de Git y disponibles sin red en este VPS mediante las rutas de la sección de evidencia. Se leyeron íntegros los cuatro ASR nuevos y se cotejaron las cinco respuestas por pieza. La inspección visual de una miniatura por pieza corresponde al primer intento. La identidad vocal del presentador queda sin autenticar. La muestra permite estudiar publicaciones vinculadas al referente, con límites para atribuirle personalmente cada palabra o generalizar su razonamiento.
 
 ## Identidad, procedencia y alcance
 
@@ -14,14 +14,14 @@ Se eligieron cuatro publicaciones distintas. P1 permite estudiar una enumeració
 
 ## Registro de piezas
 
-Todas fueron consultadas el **2026-11-08**. Los títulos de la tabla son las descripciones públicas exactas. Las fechas de publicación proceden del campo Unix `taken_at_timestamp` del perfil, convertido a UTC. La autoría editorial de las cuatro es la colaboración `beltranbriones` / `beltran.real.estate` descrita arriba. Hablante individual sin autenticar.
+Todas fueron consultadas el **2026-11-08** y recuperadas y cotejadas de nuevo el **2026-11-09**. Los títulos de la tabla son las descripciones públicas exactas. Las fechas de publicación proceden del campo Unix `taken_at_timestamp` del perfil, convertido a UTC. La autoría editorial de las cuatro es la colaboración `beltranbriones` / `beltran.real.estate` descrita arriba. Hablante individual sin autenticar. Los tiempos verbales del mapa proceden del ASR del WAV y se mantienen dentro de su duración. El contenedor MP4 incluye aproximadamente 112 ms adicionales.
 
 | ID | Título y URL exacta | Publicación UTC | Cobertura real | Fuente de tiempos |
 | --- | --- | --- | --- | --- |
-| P1 | [3 propuestas para Buenos Aires](https://www.instagram.com/p/DfYB5m8KaZ9/) | 2026-11-05 21:48:47 | Audio completo de 52,362438 s procesado y ASR leído. Una miniatura. | FFprobe del WAV, ASR por segmentos y refinamiento por palabras. Metadata del embed 52,359 s. |
-| P2 | [Brasileños inviertan en la Argentina!](https://www.instagram.com/p/De98hnmqNcR/) | 2026-10-26 18:41:53 | MP4 de 83,310340 s, audio completo procesado, 19 segmentos leídos. Una miniatura. | FFprobe del MP4 y ASR por segmentos. Metadata del embed 83,2 s. |
-| P3 | [Si lo aplicas vas a tener resultados](https://www.instagram.com/p/DezHvjjRCcC/) | 2026-10-22 13:47:38 | Audio completo de 113,430875 s procesado, 27 segmentos leídos y cola de 95 s al final refinada. Una miniatura. | FFprobe del WAV, ASR y refinamiento de cola. Metadata del embed 113,433 s. |
-| P4 | [Hace 1 año lo dije. Mandame un DM para invertir en 🇦🇷](https://www.instagram.com/p/DeuVInypD-Y/) | 2026-10-20 17:08:16 | MP4 de 73,465079 s, audio completo procesado, 18 segmentos leídos. Una miniatura. | FFprobe del MP4 y ASR por segmentos. Metadata del embed 73,366 s. |
+| P1 | [3 propuestas para Buenos Aires](https://www.instagram.com/p/DfYB5m8KaZ9/) | 2026-11-05 21:48:47 | Retoma del 9/11, MP4 completo de 52,474240 s y WAV de 52,362438 s conservados. ASR completo leído, 2 segmentos y 175 palabras temporizadas. Miniatura inspeccionada en el primer intento. | FFprobe de MP4 y WAV, ASR por segmentos y palabras. Metadata del embed 52,359 s. |
+| P2 | [Brasileños inviertan en la Argentina!](https://www.instagram.com/p/De98hnmqNcR/) | 2026-10-26 18:41:53 | Retoma del 9/11, MP4 completo de 83,310340 s y WAV de 83,198500 s conservados. ASR completo leído, 19 segmentos y 274 palabras temporizadas. Miniatura inspeccionada en el primer intento. | FFprobe de MP4 y WAV, ASR por segmentos y palabras. Metadata del embed 83,2 s. |
+| P3 | [Si lo aplicas vas a tener resultados](https://www.instagram.com/p/DezHvjjRCcC/) | 2026-10-22 13:47:38 | Retoma del 9/11, MP4 completo de 113,542721 s y WAV de 113,430875 s conservados. ASR completo leído, 28 segmentos y 392 palabras temporizadas. Miniatura inspeccionada en el primer intento. | FFprobe de MP4 y WAV, ASR completo por segmentos y palabras, incluido el cierre. Metadata del embed 113,433 s. |
+| P4 | [Hace 1 año lo dije. Mandame un DM para invertir en 🇦🇷](https://www.instagram.com/p/DeuVInypD-Y/) | 2026-10-20 17:08:16 | Retoma del 9/11, MP4 completo de 73,465079 s y WAV de 73,353250 s conservados. ASR completo leído, 18 segmentos y 231 palabras temporizadas. Miniatura inspeccionada en el primer intento. | FFprobe de MP4 y WAV, ASR por segmentos y palabras. Metadata del embed 73,366 s. |
 
 ## P1 · Enumeración con ejemplos urbanos
 
@@ -35,7 +35,7 @@ Todas fueron consultadas el **2026-11-08**. Los títulos de la tabla son las des
 
 ### 3. Apertura, desarrollo y cierre con tiempos
 
-**HECHO REFERENTE según ASR.** Apertura **00:00–00:01,72**, anuncio de tres propuestas. Desarrollo **00:01,96–00:45,96**, cableado, basura y mantenimiento de fachadas. Cierre **00:46,20–00:51,80**, recapitulación de las tres mejoras. La duración técnica llega a 00:52,36. [P1](https://www.instagram.com/p/DfYB5m8KaZ9/).
+**HECHO REFERENTE según ASR.** Apertura **00:00–00:01,72**, anuncio de tres propuestas. Desarrollo **00:01,96–00:45,96**, cableado, basura y mantenimiento de fachadas. Cierre **00:46,20–00:51,80**, recapitulación de las tres mejoras. El WAV dura 00:52,362 y el contenedor MP4 00:52,474 en la recuperación del 9/11. [P1](https://www.instagram.com/p/DfYB5m8KaZ9/).
 
 ### 4. Técnica concreta de enseñanza o venta
 
@@ -53,11 +53,11 @@ Todas fueron consultadas el **2026-11-08**. Los títulos de la tabla son las des
 
 ### 2. Público y problema
 
-**HECHO REFERENTE según ASR.** En **00:07,37–00:11,37** se dirige explícitamente a sus seguidores de Brasil. **INFERENCIA.** Busca personas que evalúan dónde invertir.
+**HECHO REFERENTE según ASR.** En **00:07,63–00:11,29** se dirige explícitamente a sus seguidores de Brasil. **INFERENCIA.** Busca personas que evalúan dónde invertir.
 
 ### 3. Apertura, desarrollo y cierre con tiempos
 
-**HECHO REFERENTE según ASR.** Apertura **00:00,37–00:11,37**, valoración electoral y destinatario. Desarrollo **00:11,37–01:04,37**, contraste entre países y propiedades. Cierre **01:04,37–01:23,31**, invitación a mandar mensaje y explicación ofrecida. El último cue automático excede el contenedor, por lo que se limita el intervalo a la duración medida. [P2](https://www.instagram.com/p/De98hnmqNcR/).
+**HECHO REFERENTE según ASR recuperado el 9/11.** Apertura **00:00,37–00:11,29**, valoración electoral y destinatario. Desarrollo **00:12,11–01:03,95**, contraste entre países y propiedades. Cierre **01:04,51–01:22,61**, invitación a mandar mensaje y explicación ofrecida. El ASR por palabras sitúa la última despedida dentro del contenedor de 01:23,31. [P2](https://www.instagram.com/p/De98hnmqNcR/).
 
 ### 4. Técnica concreta de enseñanza o venta
 
@@ -79,7 +79,7 @@ Todas fueron consultadas el **2026-11-08**. Los títulos de la tabla son las des
 
 ### 3. Apertura, desarrollo y cierre con tiempos
 
-**HECHO REFERENTE según ASR.** Apertura **00:00,56–00:19,08**, reseña y objeción. Desarrollo **00:19,08–01:35,40**, desafío a aplicar conocimientos, intención de escribir accesiblemente y anécdota sobre un lector. Cierre textual **01:35–01:52,32**, vuelve a cuestionar quién puede desestimar el método. La cola se refinó desde 01:35. La duración técnica termina en 01:53,43. [P3](https://www.instagram.com/p/DezHvjjRCcC/).
+**HECHO REFERENTE según ASR recuperado el 9/11.** Apertura **00:00,56–00:19,02**, reseña y objeción. Desarrollo **00:19,02–01:35,34**, desafío a aplicar conocimientos, intención de escribir accesiblemente y anécdota sobre un lector. Cierre textual **01:35,34–01:52,74**, vuelve a cuestionar quién puede desestimar el método. El nuevo ASR completo incluye este cierre en su última secuencia. El WAV dura 01:53,431 y el contenedor MP4 01:53,543. [P3](https://www.instagram.com/p/DezHvjjRCcC/).
 
 ### 4. Técnica concreta de enseñanza o venta
 
@@ -101,7 +101,7 @@ Todas fueron consultadas el **2026-11-08**. Los títulos de la tabla son las des
 
 ### 3. Apertura, desarrollo y cierre con tiempos
 
-**HECHO REFERENTE según ASR.** Apertura **00:00–00:13,52**, menciona Francia y lo que habría dicho un año antes. Desarrollo **00:13,52–00:59,92**, contraste y enumeración de atributos argentinos. Cierre **00:59,92–01:13,47**, predicción de demanda y precio, urgencia y petición de mensaje para ver opciones. El último cue excede el contenedor y se limita a la duración medida. [P4](https://www.instagram.com/p/DeuVInypD-Y/).
+**HECHO REFERENTE según ASR recuperado el 9/11.** Apertura **00:00–00:13,58**, menciona Francia y lo que habría dicho un año antes. Desarrollo **00:13,58–00:59,94**, contraste y enumeración de atributos argentinos. Cierre **00:59,94–01:12,62**, predicción de demanda y precio, urgencia y petición de mensaje para ver opciones. El último segmento termina dentro del WAV de 01:13,353 y del MP4 de 01:13,465. [P4](https://www.instagram.com/p/DeuVInypD-Y/).
 
 ### 4. Técnica concreta de enseñanza o venta
 
@@ -113,7 +113,7 @@ Todas fueron consultadas el **2026-11-08**. Los títulos de la tabla son las des
 
 ## Superficies comerciales comprobadas
 
-**HECHO REFERENTE.** La landing de *El Método Briones* ofrece un libro sobre promoción y ventas, canales, métricas y construcción de marca para dueños de empresas, emprendedores, profesionales y pymes. Repite el botón de compra a Mercado Libre. Sus declaraciones de liderazgo de ventas son publicidad del titular sin auditoría en esta ficha. El clic se comprobó hasta el producto `MLAU3759673539`, que devolvió **403 Forbidden** en esta consulta. Precio, stock, pago y entrega actuales quedan sin comprobar. La ficha histórica conserva una inspección anterior con otras condiciones, que no se presenta como cotización vigente. [Libro](https://beltranbriones.com/el-metodo-briones), [destino exacto de compra](https://www.mercadolibre.com.ar/libro-el-metodo-briones--beltran-briones/up/MLAU3759673539), [antecedente leído](../../fichas/marketing/gonzalo-beltran-toto.md).
+**HECHO REFERENTE, consulta comercial del 8/11.** La landing de *El Método Briones* ofrece un libro sobre promoción y ventas, canales, métricas y construcción de marca para dueños de empresas, emprendedores, profesionales y pymes. Repite el botón de compra a Mercado Libre. Sus declaraciones de liderazgo de ventas son publicidad del titular sin auditoría en esta ficha. El clic se comprobó hasta el producto `MLAU3759673539`, que devolvió **403 Forbidden** en esa consulta. Precio, stock, pago y entrega actuales quedan sin comprobar. La ficha histórica conserva una inspección anterior con otras condiciones, que no se presenta como cotización vigente. [Libro](https://beltranbriones.com/el-metodo-briones), [destino exacto de compra](https://www.mercadolibre.com.ar/libro-el-metodo-briones--beltran-briones/up/MLAU3759673539), [antecedente leído](../../fichas/marketing/gonzalo-beltran-toto.md).
 
 **HECHO REFERENTE.** La página de charlas ofrece un conferencista para universidades, empresas y eventos latinoamericanos, con temas de real estate, negocio, marketing y ventas. Expone campos de nombre, empresa, email y motivo. Se comprobó esa superficie pública sin enviarla. La extracción no expone tarifa ni disponibilidad. Libro y contratación de charlas tienen destinos diferenciados. [Charlas y eventos](https://beltranbriones.com/charlas-y-eventos).
 
@@ -133,7 +133,11 @@ Las siguientes son **PROPUESTAS ONIA**, sin guion de clase completo. El contexto
 2. **Clase 2.** Preparar un mensaje de venta que identifique comprador, problema, oferta y siguiente acción. Comprobar con un compañero si puede reconocer destinatario y acción solicitada. Es una aplicación de la segmentación y petición de contacto observadas en [P2](https://www.instagram.com/p/De98hnmqNcR/).
 3. **Clase 3.** Elegir una tarea repetitiva y comprobar la salida de un caso antes de presentar cualquier automatización como realizada. Sergio conserva entrada y resultado del ensayo. Pasa si puede repetirlo y detectar un dato faltante. La inspiración es la insistencia en aplicar de [P3](https://www.instagram.com/p/DezHvjjRCcC/). La herramienta y el alcance específico de esa clase siguen sujetos a las decisiones vigentes.
 
-## Método y evidencia durable
+## Método y evidencia para revisión
+
+### Antecedente del primer intento, 8/11
+
+Los medios y ASR del primer intento se eliminaron al entregar. Ese borrado impidió el cotejo independiente del contenido hablado del commit `1e6ce6f487c540b0127656a17506e1d1ce4ec978`. Las paráfrasis y huellas conservadas abajo documentan el antecedente, pero sus archivos originales ya no están disponibles. La recuperación nueva y sus rutas comprobadas se detallan en la sección siguiente.
 
 Se leyeron las instrucciones de entrada, ESTADO, reglas comunes, memoria Boss, ORQUESTACION, inicio Cloud, decisiones vigentes, la directora `preparar-oferta-y-embudo`, el apoyo `research` y la ficha histórica del referente con los apartados pertinentes de sus fuentes comerciales, de criterio y audiovisuales. La delegación de investigación corresponde al principal. Este hijo escribe únicamente esta ficha.
 
@@ -150,15 +154,48 @@ P2 y P4 se recuperaron como MP4 breves de 11.917.989 y 10.067.258 bytes. P1 y P3
 | P3 | WAV `287ac48e232b73d685c0ab0548b6a007e34d0fca80d1c925e0dec73ed17622c2` | `2e13f9e86de5dbb350f62b8d486916550beffe4ea1f36b0437aff14f499b70ba` |
 | P4 | MP4 `309f3c3025c5de75b64ef4777f0f607dc0ad4cf922d84b3904fa59226a485625` | `6a29368a6789188f952ac48d496408242419778e91c8b8f5bad3f2f01dcac529` |
 
-Perfil embed, 226.764 bytes, SHA-256 `aa788f7d13ac80bd06dfe49376b0987a34fe02f21f106d817ebbe7e1e10d2085`. Las huellas permiten cotejar los artefactos de la ejecución. La evidencia compartible de interpretación queda en los identificadores, métodos, duraciones y ventanas parafraseadas de esta ficha, sin depender de una ruta temporal ni conservar transcripciones extensas.
+Perfil embed del primer intento, 226.764 bytes, SHA-256 `aa788f7d13ac80bd06dfe49376b0987a34fe02f21f106d817ebbe7e1e10d2085`. Estas huellas históricas carecen de archivos originales disponibles para revisión. La evidencia accesible corresponde a la recuperación del 9/11 que sigue.
+
+### Recuperación conservada y cotejada, 9/11
+
+La recuperación nueva se ejecutó entre **2026-11-09 03:01:38 y 03:04:19 UTC**. Se hicieron GET ordinarios de los mismos cuatro posts mediante sus embeds públicos y de las URLs de medios declaradas allí. Se conservaron los cuatro MP4 completos, sus WAV mono PCM/16 kHz, los HTML y contextos de procedencia, FFprobe, ASR completo TXT/JSON y manifiestos. La carpeta está fuera de Git y tiene permisos **700**, verificados para el mismo usuario lector de la revisión. Estos archivos se mantienen en este VPS. Su disponibilidad en otra máquina requeriría una transferencia autorizada.
+
+El modelo y ejecutable ya existentes se usaron en modo offline. `faster-whisper`, modelo `small`, snapshot `536b0662742c02347bc0e980a01041f333bce120`, CPU/int8, dos hilos, un trabajador, español, beam 5, VAD y tiempos por palabra para los cuatro clips. Cada clip se descargó y procesó secuencialmente. El nuevo ASR de P3 recuperó el cierre en la pasada completa. Se leyeron **67 segmentos y 1.072 palabras temporizadas**. La lectura completa del TXT se cotejó con la estructura JSON y los campos de duración y fuente.
+
+El [manifiesto privado completo](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/manifest.json) registra fechas, URLs públicas de origen, rutas, métodos, bytes y SHA-256 de cada artefacto. Su SHA-256 es `9f648b1da2b78eda36766b947e46768be679041c30820830d3a3b51dd4fb9ef2`. La [comprobación local](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/comprobacion-local.json) confirma existencia, bytes, huellas, duración WAV y cobertura del ASR. Ambos se pueden leer sin red en este VPS. Los medios, auxiliares y resultados de esta retoma se conservan íntegros.
+
+| ID | MP4 completo | WAV completo | ASR completo temporizado |
+| --- | --- | --- | --- |
+| P1 | [P1.mp4](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P1.mp4) | [P1.wav](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P1.wav) | [TXT](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P1-asr.txt), [JSON con palabras](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P1-asr.json) |
+| P2 | [P2.mp4](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P2.mp4) | [P2.wav](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P2.wav) | [TXT](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P2-asr.txt), [JSON con palabras](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P2-asr.json) |
+| P3 | [P3.mp4](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P3.mp4) | [P3.wav](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P3.wav) | [TXT](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P3-asr.txt), [JSON con palabras](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P3-asr.json) |
+| P4 | [P4.mp4](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P4.mp4) | [P4.wav](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P4.wav) | [TXT](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P4-asr.txt), [JSON con palabras](/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P4-asr.json) |
+
+| ID | SHA-256 MP4 conservado | SHA-256 WAV conservado | SHA-256 ASR JSON conservado |
+| --- | --- | --- | --- |
+| P1 | `df942456f59e765eb8a1c798e63a21fd1d4ab561291de25c956342ddc702b344` | `35e046798efc82e556ff6c1508e5ee1139a87afe86b1845ea56267273007f4e3` | `e8df9c0231e6a2fe61ea8249cfeab33889ceabbf19840df20c37dd9fd18234c7` |
+| P2 | `456375946a8c65bdbf9d6d5d7aca1f97575f2b4bfa6bbe7ee0b77101e64d6490` | `333dbb06f2e8ed2e2f6abd5992f2f5ff764c556ed535c13a36220c56874164e3` | `2ce46906eef06ddccce91855af7be1f3f1564d08e36a3757fafe2a196833f37f` |
+| P3 | `beb3dc0e6135b900fdc2785d97552159a48997a906b1b59f1728271dd27e664e` | `287ac48e232b73d685c0ab0548b6a007e34d0fca80d1c925e0dec73ed17622c2` | `0aca48160dec987f099e7a26974a71a902a31526dc29ed5df9ad958a4ed3de57` |
+| P4 | `309f3c3025c5de75b64ef4777f0f607dc0ad4cf922d84b3904fa59226a485625` | `93567ef697635105292f235c67a48a5258343e11856b03d90abf5637627d7698` | `42472df0ee5d5414afd0b98d8ec83a6e5cf8a0aa47f8084b540376781a5a7b1d` |
+
+Se cotejaron las cinco respuestas de cada pieza con los ASR completos nuevos. El resultado por apartado es el siguiente.
+
+| Pieza | Respuestas 1, 2, 4 y 5 | Respuesta 3, estructura y tiempos |
+| --- | --- | --- |
+| P1 | Idea, público inferido, técnica y propuestas ONIA confirmados en su alcance editorial. | Mapa verbal confirmado. Se precisa la diferencia entre MP4 y WAV. |
+| P2 | Idea, técnica y propuestas confirmadas. En respuesta 2 se corrige la apelación a Brasil a 7,63–11,29 s. | Se ajustan apertura, desarrollo y cierre al nuevo ASR por palabras. Último cue a 82,61 s. |
+| P3 | Idea, público inferido, técnica y propuestas confirmados en su alcance editorial. | Se ajustan fronteras y cierre a 95,34–112,74 s, recuperado por el ASR completo nuevo. |
+| P4 | Idea, público inferido, técnica y propuestas confirmados en su alcance editorial. | Se ajustan fronteras y cierre a 59,94–72,62 s. |
+
+Los dos primeros apartados de hechos se siguen refiriendo al contenido publicado y sus alegaciones. Las inferencias y propuestas mantienen su etiqueta. La conservación permite que la revisora compruebe contenido y tiempos, mientras que la aceptación corresponde a su nuevo veredicto.
 
 ### Precisiones y pendientes
 
-- Los tiempos son aproximaciones del ASR. En P2 el último cue acaba a 84,37 s frente a 83,31 s medidos. En P4 acaba a 74,64 s frente a 73,47 s. Los mapas se acotan a cada contenedor. Esto impide certificar palabras finales mediante el valor del cue.
-- P1 termina verbalmente en el refinamiento a 51,80 s. P3 termina textualmente a 112,32 s, con duración técnica de 113,43 s. Los intervalos restantes carecen de palabras recuperadas y no se califican como silencio oído.
+- Los tiempos son aproximaciones del ASR. El exceso de los últimos cues de P2 y P4 correspondía al primer intento. El nuevo ASR por palabras termina dentro de cada WAV. Últimos cues nuevos de P1/P2/P3/P4 a 51,80/82,61/112,74/72,62 s, respectivamente.
+- Los WAV duran 52,362438/83,198500/113,430875/73,353250 s. Los MP4 duran 52,474240/83,310340/113,542721/73,465079 s. Los intervalos posteriores al último texto recuperado carecen de palabras reconocidas y no se califican como silencio oído.
 - El ASR altera nombres, términos y fragmentos. Se emplearon paráfrasis. La referencia de P3 a un experto lector es una anécdota del emisor, sin identidad ni testimonio independiente cotejados.
 - La recuperación y lectura verbal no acreditan escucha, prosodia, música, SFX, montaje continuo ni fidelidad literal. Una miniatura por pieza sólo respalda lo visible en esa imagen y carece de posición temporal comprobada.
 - El VTT histórico de `_ffz3Eo_wzM` no está conservado en los archivos cotejados de esta sesión. Su resumen anterior queda como antecedente y se excluye del conteo de cuatro. `JKO8AQGZ5tc` tampoco se cuenta como inspeccionado.
 - Las cuatro piezas cumplen las cinco respuestas de contenido editorial con los límites declarados. Para una atribución vocal personal hace falta autoidentificación primaria inequívoca o cotejo autorizado adicional. Para demostrar metodología docente hace falta una clase pública accesible con ejercicio y resultado observables. El checkout comercial requiere una superficie pública que permita leer las condiciones actuales del destino ya identificado.
 
-**Validación.** Cuatro URLs audiovisuales distintas, cuatro mapas temporales, cinco apartados por pieza, consulta comercial con destino y barrera registrados, tres aplicaciones con pieza fuente y categorías HECHO REFERENTE / INFERENCIA / PROPUESTA ONIA diferenciadas. No se afirma cierre perceptual integral ni resultados comerciales comprobados.
+**Validación de la retoma del 9/11.** Cuatro URLs audiovisuales distintas, cuatro MP4 y WAV completos conservados, cuatro ASR completos temporizados leídos, cinco respuestas por pieza cotejadas y rutas locales comprobadas. Se cotejaron existencia, bytes y SHA-256 de medios, WAV, ASR TXT/JSON, FFprobe, HTML y contexto. El pipeline terminó con código 0. La consulta comercial conserva su fecha del 8/11. Permanecen tres aplicaciones con pieza fuente y categorías HECHO REFERENTE / INFERENCIA / PROPUESTA ONIA diferenciadas. Los archivos de esta retoma se conservan para revisión. No se afirma cierre perceptual integral ni resultados comerciales comprobados.
