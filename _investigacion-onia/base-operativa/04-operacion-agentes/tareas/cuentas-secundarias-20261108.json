@@ -1,14 +1,14 @@
 {
   "schema": 2,
   "id": "cuentas-secundarias-20261108",
-  "revision": 8,
+  "revision": 10,
   "compartible": true,
   "objetivo": "Preparar acceso privado al navegador del VPS para alta personal de cuenta secundaria por Sergio",
-  "estado": "en_curso",
-  "proximo_paso": "Validar persistencia de almacenamiento y cookies sintéticas, exclusión y recuperación; probar después MCP nativo en sesión del harness, con destinos públicos acotados.",
-  "resultado": "Sergio informó Instagram y Facebook creados; autoriza conexión del perfil y retoma de investigaciones. Preparación técnica y pruebas sintéticas en curso.",
-  "comprobacion": "Control humano previo confirmado; integración MCP autenticada todavía no probada. Revisión técnica independiente iniciada antes de activación.",
-  "verificacion": "pendiente",
+  "estado": "aceptado",
+  "proximo_paso": "Usar préstamo exclusivo por tarea y recuperar visor al cerrar; reproducción audiovisual y Facebook requieren pruebas específicas.",
+  "resultado": "Navegador/visor VPS y conexión MCP comprobados; revisión técnica independiente favorable.",
+  "comprobacion": "AppArmor aprobado previamente y aplicado por Sergio; sandbox, auth/loopback y control humano comprobados; pruebas MCP separadas y nativas publicadas. No se infiere autenticación por servicio ni percepción audiovisual.",
+  "verificacion": "correcta",
   "evidencias": [
     {
       "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/verificacion-preparacion.json",
@@ -44,9 +44,19 @@
       "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/retoma-cuentas-autorizada-v1.json",
       "sha256": "44380da2cb0755d5da904aa836e166848156e20956a60f0a7f6ce14decc44be3",
       "bytes": 926
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/revision-final-nativa-v1.json",
+      "sha256": "42d77aeea35ee6b2662c1f0486d89e3460a801e8ac7644bb0f8c30083de6077d",
+      "bytes": 906
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/prueba-perfil-final-v1.json",
+      "sha256": "2a6e0f366d0da9496994e4c9a651302d0d1e3451556b7b9dc354f06be0c6fb69",
+      "bytes": 8490
     }
   ],
-  "actualizado": "2026-11-09T02:50:02.686738+00:00",
+  "actualizado": "2026-11-09T03:39:09.310520+00:00",
   "historial": [
     {
       "revision": 1,
@@ -312,6 +322,132 @@
         "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
         "escalamiento": "Astra medium/high sólo ante ambigüedad persistente identificada y dentro de cuota autorizada."
       }
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-09T02:50:02.686738+00:00",
+      "estado": "en_curso",
+      "resultado": "Sergio informó Instagram y Facebook creados; autoriza conexión del perfil y retoma de investigaciones. Preparación técnica y pruebas sintéticas en curso.",
+      "comprobacion": "Control humano previo confirmado; integración MCP autenticada todavía no probada. Revisión técnica independiente iniciada antes de activación.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/verificacion-preparacion.json",
+          "sha256": "e46d1879a33c23ce0aa05537fe7e84250993c67a187f3bb93addb920a9f96af1",
+          "bytes": 4123
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/aprobacion-y-bloqueo-20261108T2003.json",
+          "sha256": "c9cce18a3f6c509491b993bdb0486a750fa4fad47a6d1540be0f3c02c824613d",
+          "bytes": 1145
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/sandbox-activo-v1.json",
+          "sha256": "711b5634e2e6bc9c58a437f3a993126cc5aab12cf9d7d23ab59c72eb9de6d491",
+          "bytes": 3009
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/visor-y-mcp-verificados-v1.json",
+          "sha256": "b9e571ce78e3ee2bc01fd28853cbc4ecb4f640326b823759e00198acbbf139ca",
+          "bytes": 3084
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/control-humano-confirmado-v1.json",
+          "sha256": "510da08bb0274d0c8a82b12dfe0089be8aca8b2bf80289eafde9db2db1210406",
+          "bytes": 796
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/alta-google-informada-v1.json",
+          "sha256": "f5554161da8561b3c0dca830832236ddb224a2d7127fc7657485938392e23553",
+          "bytes": 924
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/retoma-cuentas-autorizada-v1.json",
+          "sha256": "44380da2cb0755d5da904aa836e166848156e20956a60f0a7f6ce14decc44be3",
+          "bytes": 926
+        }
+      ],
+      "proximo_paso": "Validar persistencia de almacenamiento y cookies sintéticas, exclusión y recuperación; probar después MCP nativo en sesión del harness, con destinos públicos acotados.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "Astra medium/high sólo ante ambigüedad persistente identificada y dentro de cuota autorizada."
+      }
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-09T03:39:09.276000+00:00",
+      "estado": "para_revision",
+      "resultado": "Navegador/visor VPS y conexión MCP comprobados; revisión técnica independiente favorable.",
+      "comprobacion": "AppArmor aprobado previamente y aplicado por Sergio; sandbox, auth/loopback y control humano comprobados; pruebas MCP separadas y nativas publicadas. No se infiere autenticación por servicio ni percepción audiovisual.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/verificacion-preparacion.json",
+          "sha256": "e46d1879a33c23ce0aa05537fe7e84250993c67a187f3bb93addb920a9f96af1",
+          "bytes": 4123
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/aprobacion-y-bloqueo-20261108T2003.json",
+          "sha256": "c9cce18a3f6c509491b993bdb0486a750fa4fad47a6d1540be0f3c02c824613d",
+          "bytes": 1145
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/sandbox-activo-v1.json",
+          "sha256": "711b5634e2e6bc9c58a437f3a993126cc5aab12cf9d7d23ab59c72eb9de6d491",
+          "bytes": 3009
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/visor-y-mcp-verificados-v1.json",
+          "sha256": "b9e571ce78e3ee2bc01fd28853cbc4ecb4f640326b823759e00198acbbf139ca",
+          "bytes": 3084
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/control-humano-confirmado-v1.json",
+          "sha256": "510da08bb0274d0c8a82b12dfe0089be8aca8b2bf80289eafde9db2db1210406",
+          "bytes": 796
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/alta-google-informada-v1.json",
+          "sha256": "f5554161da8561b3c0dca830832236ddb224a2d7127fc7657485938392e23553",
+          "bytes": 924
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/retoma-cuentas-autorizada-v1.json",
+          "sha256": "44380da2cb0755d5da904aa836e166848156e20956a60f0a7f6ce14decc44be3",
+          "bytes": 926
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/revision-final-nativa-v1.json",
+          "sha256": "42d77aeea35ee6b2662c1f0486d89e3460a801e8ac7644bb0f8c30083de6077d",
+          "bytes": 906
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/prueba-perfil-final-v1.json",
+          "sha256": "2a6e0f366d0da9496994e4c9a651302d0d1e3451556b7b9dc354f06be0c6fb69",
+          "bytes": 8490
+        }
+      ],
+      "proximo_paso": "Registrar aceptación en alcance del navegador; video y nuevas funciones tienen comprobación separada.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "Astra medium/high sólo ante ambigüedad persistente identificada y dentro de cuota autorizada."
+      }
     }
   ],
   "briefing": {
@@ -320,7 +456,11 @@
     "bytes": 2897,
     "contenido": "# Encargo cuentas-secundarias-20261108\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nPreparar acceso privado al navegador del VPS para alta personal de cuenta secundaria por Sergio\n\n## Entregable\n\nNavegador y visor verificables, procedimiento SSH y evidencia sin secretos\n\n## Criterio de aceptación\n\nAprobación previa de cualquier perfil AppArmor; sandbox efectivo comprobado; visor autenticado sólo loopback y túnel SSH; página pública con teclado/ratón de Sergio; MCP comprobado por separado; no iniciar cuentas durante diagnóstico; no afectar referentes ni producción\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- 05-herramientas/cuentas-analisis/20261108/APROBACION-APPARMOR.md\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/cuentas-secundarias-20261108.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
   },
-  "aceptacion": null,
+  "aceptacion": {
+    "revisor": "auditar_conexion",
+    "criterio": "Aprobación previa AppArmor exacto, sandbox efectivo, visor autenticado loopback y procedimiento SSH, control humano confirmado por Sergio, MCP separado y cinco llamadas nativas comprobados. Siete hashes de evidencia íntegros. Sin inferir identidad de cuenta, Facebook autenticado ni reproducción audiovisual.",
+    "fecha": "2026-11-09T03:39:09.310501+00:00"
+  },
   "ejecucion": {
     "perfil": "complejo",
     "recomendado": {

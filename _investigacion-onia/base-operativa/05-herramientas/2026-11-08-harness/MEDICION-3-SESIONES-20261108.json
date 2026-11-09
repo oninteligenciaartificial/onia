@@ -1,0 +1,359 @@
+{
+  "schema": 1,
+  "decision_propuesta": "Mantener el tope de tres sesiones principales. El solape observado no aporta una prueba sostenida y comparable de cuatro o cinco.",
+  "fuentes": {
+    "v3": {
+      "archivo": "work/paralelo-autenticado-20261108-v3.jsonl",
+      "sha256": "f4592116f5434c65b51354e4bec2978c32c6624485cdca673dd079df64f8ae78",
+      "muestras": 93,
+      "primera_utc": "2026-11-09T03:00:02.861013+00:00",
+      "ultima_utc": "2026-11-09T03:07:43.832260+00:00"
+    },
+    "v4": {
+      "archivo": "work/paralelo-autenticado-20261108-v4.jsonl",
+      "sha256": "02afc5001763c99ca17a2360bf7f647392a16b15bd425bf2efd824a4661cd43c",
+      "muestras": 272,
+      "primera_utc": "2026-11-09T03:07:48.469025+00:00",
+      "ultima_utc": "2026-11-09T03:30:38.084723+00:00"
+    },
+    "monitor": {
+      "archivo": "work/medir-paralelo.py",
+      "sha256": "291c77d72aff7ab6c85671a5b9c1746d4ab037f951b85b49623e6ec8864adb0d",
+      "cadencia_nominal_s": 5,
+      "cierre_v4": {
+        "marcador": "work/paralelo-autenticado-20261108-v4.stop",
+        "creado_utc": "2026-11-09T03:30:42.076597+00:00",
+        "senal_enviada": false
+      }
+    },
+    "sesiones": "04-operacion-agentes/tareas/{cerebros-a-20261108,cerebros-c-20261108,fabrica-contenido-diseno-20261108}.json, unidos por ID e intento. Modelos y esfuerzos contrastados con turn_context en sus rollouts."
+  },
+  "ventanas": [
+    {
+      "ventana": "tres_ejecutoras",
+      "primera_muestra_utc": "2026-11-09T03:03:58.357217+00:00",
+      "ultima_muestra_utc": "2026-11-09T03:08:28.937552+00:00",
+      "lapso_entre_extremos_muestreados_s": 270.580335,
+      "solape_nominal_registro_s": 276.589237,
+      "muestras_host_y_solape": 55,
+      "intervalos_cpu_host_dentro_del_mismo_registro_y_cohorte": 53,
+      "muestras_rss_arbol_solo_v4": 9,
+      "intervalos_cpu_arbol_solo_v4": 8,
+      "muestras_por_archivo": {
+        "v3": 46,
+        "v4": 9
+      },
+      "separacion_muestras_s": {
+        "min": 4.637,
+        "mediana": 5.009,
+        "max": 5.104
+      },
+      "sesiones": [
+        {
+          "id": "cerebros-a-20261108",
+          "intento": 2,
+          "rol": "ejecutor",
+          "inicio": "2026-11-09T03:03:57.221358+00:00",
+          "fin": "2026-11-09T03:27:53.333183+00:00",
+          "rc": 0,
+          "runtime": {
+            "modelo": "gpt-6.1-sol",
+            "esfuerzo": "high",
+            "hijos_max_configurados": 1
+          },
+          "rss_arbol_mib": {
+            "min": 2451.098,
+            "mediana": 2699.41,
+            "max": 2759.07
+          },
+          "cpu_arbol_pct_host": {
+            "min": 15.246,
+            "mediana": 19.738,
+            "max": 40.668
+          },
+          "procesos_observados_por_muestra": {
+            "min": 20.0,
+            "mediana": 21.0,
+            "max": 21.0
+          }
+        },
+        {
+          "id": "cerebros-c-20261108",
+          "intento": 3,
+          "rol": "ejecutor",
+          "inicio": "2026-11-09T02:59:30.681965+00:00",
+          "fin": "2026-11-09T03:13:10.932523+00:00",
+          "rc": 0,
+          "runtime": {
+            "modelo": "gpt-6.1-sol",
+            "esfuerzo": "high",
+            "hijos_max_configurados": 1
+          },
+          "rss_arbol_mib": {
+            "min": 422.215,
+            "mediana": 426.969,
+            "max": 432.176
+          },
+          "cpu_arbol_pct_host": {
+            "min": 0.245,
+            "mediana": 0.545,
+            "max": 1.677
+          },
+          "procesos_observados_por_muestra": {
+            "min": 5.0,
+            "mediana": 5.0,
+            "max": 5.0
+          }
+        },
+        {
+          "id": "fabrica-contenido-diseno-20261108",
+          "intento": 1,
+          "rol": "ejecutor",
+          "inicio": "2026-11-09T02:59:34.509329+00:00",
+          "fin": "2026-11-09T03:08:33.810595+00:00",
+          "rc": 0,
+          "runtime": {
+            "modelo": "gpt-6.1-sol",
+            "esfuerzo": "high",
+            "hijos_max_configurados": 0
+          },
+          "rss_arbol_mib": {
+            "min": 393.41,
+            "mediana": 394.957,
+            "max": 417.48
+          },
+          "cpu_arbol_pct_host": {
+            "min": 0.396,
+            "mediana": 0.961,
+            "max": 2.129
+          },
+          "procesos_observados_por_muestra": {
+            "min": 5.0,
+            "mediana": 5.0,
+            "max": 6.0
+          }
+        }
+      ],
+      "host": {
+        "mem_total_gib": {
+          "min": 15.617,
+          "mediana": 15.617,
+          "max": 15.617
+        },
+        "mem_available_gib": {
+          "min": 9.091,
+          "mediana": 9.446,
+          "max": 10.035
+        },
+        "swap_total_mib": {
+          "min": 8191.992,
+          "mediana": 8191.992,
+          "max": 8191.992
+        },
+        "swap_usado_mib": {
+          "min": 2855.25,
+          "mediana": 2855.25,
+          "max": 2859.75
+        },
+        "cpu_ocupada_pct": {
+          "min": 16.75,
+          "mediana": 43.56,
+          "max": 90.34
+        },
+        "rss_suma_arboles_gib": {
+          "min": 3.195,
+          "mediana": 3.434,
+          "max": 3.508
+        }
+      }
+    },
+    {
+      "ventana": "ejecutora_y_dos_revisoras",
+      "primera_muestra_utc": "2026-11-09T03:15:19.154806+00:00",
+      "ultima_muestra_utc": "2026-11-09T03:18:56.622880+00:00",
+      "lapso_entre_extremos_muestreados_s": 217.468074,
+      "solape_nominal_registro_s": 220.565052,
+      "muestras_host_y_solape": 44,
+      "intervalos_cpu_host_dentro_del_mismo_registro_y_cohorte": 43,
+      "muestras_rss_arbol_solo_v4": 44,
+      "intervalos_cpu_arbol_solo_v4": 43,
+      "muestras_por_archivo": {
+        "v4": 44
+      },
+      "separacion_muestras_s": {
+        "min": 5.037,
+        "mediana": 5.048,
+        "max": 5.141
+      },
+      "sesiones": [
+        {
+          "id": "cerebros-a-20261108",
+          "intento": 2,
+          "rol": "ejecutor",
+          "inicio": "2026-11-09T03:03:57.221358+00:00",
+          "fin": "2026-11-09T03:27:53.333183+00:00",
+          "rc": 0,
+          "runtime": {
+            "modelo": "gpt-6.1-sol",
+            "esfuerzo": "high",
+            "hijos_max_configurados": 1
+          },
+          "rss_arbol_mib": {
+            "min": 2412.246,
+            "mediana": 2490.609,
+            "max": 2659.848
+          },
+          "cpu_arbol_pct_host": {
+            "min": 3.471,
+            "mediana": 7.594,
+            "max": 28.32
+          },
+          "procesos_observados_por_muestra": {
+            "min": 21.0,
+            "mediana": 21.0,
+            "max": 29.0
+          }
+        },
+        {
+          "id": "cerebros-c-20261108",
+          "intento": 4,
+          "rol": "revisor",
+          "inicio": "2026-11-09T03:14:35.695295+00:00",
+          "fin": "2026-11-09T03:20:05.330511+00:00",
+          "rc": 0,
+          "runtime": {
+            "modelo": "gpt-6.1-sol",
+            "esfuerzo": "ultra",
+            "hijos_max_configurados": 0
+          },
+          "rss_arbol_mib": {
+            "min": 382.477,
+            "mediana": 387.824,
+            "max": 450.27
+          },
+          "cpu_arbol_pct_host": {
+            "min": 0.293,
+            "mediana": 0.644,
+            "max": 2.54
+          },
+          "procesos_observados_por_muestra": {
+            "min": 5.0,
+            "mediana": 5.0,
+            "max": 5.0
+          }
+        },
+        {
+          "id": "fabrica-contenido-diseno-20261108",
+          "intento": 2,
+          "rol": "revisor",
+          "inicio": "2026-11-09T03:15:18.546634+00:00",
+          "fin": "2026-11-09T03:18:59.111686+00:00",
+          "rc": 0,
+          "runtime": {
+            "modelo": "gpt-6.1-sol",
+            "esfuerzo": "ultra",
+            "hijos_max_configurados": 0
+          },
+          "rss_arbol_mib": {
+            "min": 64.344,
+            "mediana": 386.582,
+            "max": 447.039
+          },
+          "cpu_arbol_pct_host": {
+            "min": 0.149,
+            "mediana": 0.493,
+            "max": 4.111
+          },
+          "procesos_observados_por_muestra": {
+            "min": 2.0,
+            "mediana": 5.0,
+            "max": 8.0
+          }
+        }
+      ],
+      "host": {
+        "mem_total_gib": {
+          "min": 15.617,
+          "mediana": 15.617,
+          "max": 15.617
+        },
+        "mem_available_gib": {
+          "min": 8.961,
+          "mediana": 9.356,
+          "max": 9.655
+        },
+        "swap_total_mib": {
+          "min": 8191.992,
+          "mediana": 8191.992,
+          "max": 8191.992
+        },
+        "swap_usado_mib": {
+          "min": 2868.5,
+          "mediana": 2868.5,
+          "max": 2881.5
+        },
+        "cpu_ocupada_pct": {
+          "min": 20.35,
+          "mediana": 42.88,
+          "max": 92.28
+        },
+        "rss_suma_arboles_gib": {
+          "min": 2.884,
+          "mediana": 3.191,
+          "max": 3.346
+        }
+      }
+    }
+  ],
+  "cuota_compartida": {
+    "rollout_raiz": "rollout-2026-11-08T16-43-45-01a1bc0b-65c1-7e13-afef-88fc1482896a.jsonl",
+    "campo": "payload.rate_limits.primary y payload.rate_limits.credits",
+    "al_inicio_muestreado_del_primer_solape": {
+      "linea": 5471,
+      "sha256_linea_con_salto": "ad897904bd126fc6f6b8fd904dda0b5ded48359988b1f3f91a64c9b6563b73b5",
+      "fecha_utc": "2026-11-09T03:03:57.544Z",
+      "ventana_min": 10080,
+      "usada_pct": 39.0,
+      "reinicio_utc": "2026-11-14T02:47:12+00:00",
+      "saldo_adicional": "0"
+    },
+    "durante_el_primer_solape": {
+      "linea": 5506,
+      "sha256_linea_con_salto": "5df3962b99e63dd847e49d51b6c8ebcfb2b4f1ab32e6c0c2dd5fac8e71adfc05",
+      "fecha_utc": "2026-11-09T03:07:48.426Z",
+      "ventana_min": 10080,
+      "usada_pct": 40.0,
+      "reinicio_utc": "2026-11-14T02:47:12+00:00",
+      "saldo_adicional": "0"
+    },
+    "durante_el_segundo_solape": {
+      "linea": 5625,
+      "sha256_linea_con_salto": "e03881dbecb2f7d842b7387b59434c2df7065a1b183ed8d519fba4ce1e2143ae",
+      "fecha_utc": "2026-11-09T03:17:56.258Z",
+      "ventana_min": 10080,
+      "usada_pct": 41.0,
+      "reinicio_utc": "2026-11-14T02:47:12+00:00",
+      "saldo_adicional": "0"
+    },
+    "ultima_observacion_al_extraer": {
+      "linea": 5875,
+      "sha256_linea_con_salto": "3158c993d308bec61e670e7b33dba1cddca096a582436d16be37a33781f146cb",
+      "fecha_utc": "2026-11-09T03:34:40.335Z",
+      "ventana_min": 10080,
+      "usada_pct": 43.0,
+      "reinicio_utc": "2026-11-14T02:47:12+00:00",
+      "saldo_adicional": "0"
+    }
+  },
+  "metodo_y_limites": [
+    "Las muestras exigen los tres IDs e intentos exactos y muestran los PID de Codex y supervisor. El solape nominal se calcula con max(inicio) y min(fin) del registro, y el lapso medido con los extremos de las muestras.",
+    "CPU de árbol por delta de utime+stime de procesos visibles por PPID y misma identidad PID+inicio, dividido por frecuencia de ticks, tiempo transcurrido y os.cpu_count() del host. CPU de host por delta de /proc/stat, tratando idle+iowait como inactividad. Se excluye el primer delta de cada segmento de cohorte o reinicio del monitor.",
+    "CPU por árbol omite ciclos de procesos muy breves, terminados, reparentados o sin delta utilizable. Host incluye cargas ajenas. Muestreo de alrededor de cinco segundos, sin contadores dedicados de cgroups, PSI, OOM ni cuota por proceso.",
+    "v3 registra los PID principales y supervisores, no árboles completos. Las estadísticas de árbol usan v4 exclusivamente. Los datos globales de host y concurrencia usan ambas versiones.",
+    "RSS de árbol suma páginas residentes por proceso y puede contar memoria compartida varias veces. Se suma por muestra antes de obtener estadísticas. MemAvailable viene de /proc/meminfo y corresponde al host, no a una reserva garantizada.",
+    "Los máximos de hijos se configuran por intento y no prueban cuántos estuvieron activos. El monitor observa procesos, no mide de forma exhaustiva hilos nativos del modelo.",
+    "La cuota semanal es compartida. Los porcentajes con fecha son snapshots del rollout raíz y no se asignan a una tarea. El saldo adicional observado no es un importe gastado.",
+    "La captura es observacional, sin línea base equivalente controlada, ensayos de cuatro o cinco, ni medida comparable de rendimiento de entregas aceptadas. rc=0 acredita salida del proceso, no aceptación.",
+    "Los valores de CPU son porcentaje de la capacidad del host medida, sin comprobación de límites de cgroup por intento."
+  ]
+}

@@ -1,0 +1,1194 @@
+{
+  "fecha_utc": "2026-11-09T03:50:35.940398+00:00",
+  "tareas": [
+    {
+      "id": "cerebros-a-20261108",
+      "revision": 40,
+      "estado": "aceptado",
+      "entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4",
+      "revisor": "01a1be65-87d7-7b32-8707-e6712f49e7bb",
+      "intentos": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "sid": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 1,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git/worktrees/onia-ws-cerebros-a-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 38885012,
+              "cached_input_tokens": 38567936,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 79852,
+              "reasoning_output_tokens": 44589
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "sid": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 1,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git/worktrees/onia-ws-cerebros-a-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 60819133,
+              "cached_input_tokens": 59980544,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 123232,
+              "reasoning_output_tokens": 62753
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "sid": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 1,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git/worktrees/onia-ws-cerebros-a-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 65126226,
+              "cached_input_tokens": 64192000,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 134118,
+              "reasoning_output_tokens": 65736
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "sid": "01a1be65-87d7-7b32-8707-e6712f49e7bb",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 4264155,
+              "cached_input_tokens": 4054016,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 13901,
+              "reasoning_output_tokens": 6027
+            }
+          ],
+          "worktree_conservado": true
+        }
+      ],
+      "hijos": [
+        {
+          "sid": "01a1bd2a-a440-7593-bf81-869adcf3ea6c",
+          "padre": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+          "profundidad": 1,
+          "nombre": "/root/justin_welsh",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git/worktrees/onia-ws-cerebros-a-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd20-ebb9-7630-878a-52a0e12ec917",
+          "padre": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+          "profundidad": 1,
+          "nombre": "/root/iman_gadzhi",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git/worktrees/onia-ws-cerebros-a-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd17-0ed7-7e43-9927-28e4a7e8f894",
+          "padre": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+          "profundidad": 1,
+          "nombre": "/root/victor_heras",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git/worktrees/onia-ws-cerebros-a-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd13-546d-7a51-9fba-7fdd970a4da1",
+          "padre": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+          "profundidad": 1,
+          "nombre": "/root/pedro_buerbaum",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git/worktrees/onia-ws-cerebros-a-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd2e-63d5-7222-8651-18b171fdd482",
+          "padre": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+          "profundidad": 1,
+          "nombre": "/root/alex_carrera",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git/worktrees/onia-ws-cerebros-a-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd04-fe19-7311-9f31-0d61ee98dea8",
+          "padre": "01a1bd04-5786-7510-8a8c-d190a9b6e8f8",
+          "profundidad": 1,
+          "nombre": "/root/alex_hormozi",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-a-20261108.git/worktrees/onia-ws-cerebros-a-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        }
+      ],
+      "entrega_en_origin_master_local_actualizado": true
+    },
+    {
+      "id": "cerebros-b-20261108",
+      "revision": 27,
+      "estado": "aceptado",
+      "entrega": "493bbb78e447e8a456262f5d4f39470124dcd9af",
+      "revisor": "01a1be2f-cb65-7292-8377-18e5d6cd3b35",
+      "intentos": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "sid": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 1,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 25120204,
+              "cached_input_tokens": 24921088,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 63885,
+              "reasoning_output_tokens": 30300
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "sid": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 1,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 50988758,
+              "cached_input_tokens": 50460672,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 125166,
+              "reasoning_output_tokens": 68391
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "sid": "01a1be2f-cb65-7292-8377-18e5d6cd3b35",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 5384246,
+              "cached_input_tokens": 5175936,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 19104,
+              "reasoning_output_tokens": 7841
+            }
+          ],
+          "worktree_conservado": true
+        }
+      ],
+      "hijos": [
+        {
+          "sid": "01a1bd05-1632-71e1-9841-574101a8cb7d",
+          "padre": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+          "profundidad": 1,
+          "nombre": "/root/erik_taveras",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd0a-ca4a-78e1-8d8b-48148f8a91de",
+          "padre": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+          "profundidad": 1,
+          "nombre": "/root/enrique_rocha",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd15-b308-7712-b58d-865364584e3d",
+          "padre": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+          "profundidad": 1,
+          "nombre": "/root/san_munoz",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd0f-2637-7170-8171-02c045614492",
+          "padre": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+          "profundidad": 1,
+          "nombre": "/root/ali_abdaal",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd1c-0849-7a71-a4ce-58f718a8c048",
+          "padre": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+          "profundidad": 1,
+          "nombre": "/root/cormac_hayden",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd23-d91b-7432-9797-857ab47ba14c",
+          "padre": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+          "profundidad": 1,
+          "nombre": "/root/bastian_xu",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        }
+      ],
+      "entrega_en_origin_master_local_actualizado": true
+    },
+    {
+      "id": "cerebros-c-20261108",
+      "revision": 40,
+      "estado": "aceptado",
+      "entrega": "5332f2499864eb35993d189b075d0d812660f16c",
+      "revisor": "01a1be4c-f290-72d3-85d8-bce7ebb6e5bd",
+      "intentos": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "sid": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 1,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 23867060,
+              "cached_input_tokens": 23650304,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 62517,
+              "reasoning_output_tokens": 26240
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "sid": "01a1be30-2972-7083-8b3c-21e6e8a9312d",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 2524139,
+              "cached_input_tokens": 2345728,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 13273,
+              "reasoning_output_tokens": 6767
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "sid": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 1,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 33895288,
+              "cached_input_tokens": 33375232,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 85586,
+              "reasoning_output_tokens": 38218
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "sid": "01a1be4c-f290-72d3-85d8-bce7ebb6e5bd",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 2773600,
+              "cached_input_tokens": 2571776,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 11543,
+              "reasoning_output_tokens": 4511
+            }
+          ],
+          "worktree_conservado": true
+        }
+      ],
+      "hijos": [
+        {
+          "sid": "01a1bd05-0e36-7ed0-9fdc-1c868983e764",
+          "padre": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "profundidad": 1,
+          "nombre": "/root/gonzalo_teba",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd23-451f-7761-8973-56406f920d71",
+          "padre": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "profundidad": 1,
+          "nombre": "/root/jeff_nippard",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd0d-1f28-7523-b1ce-442fff7626ed",
+          "padre": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "profundidad": 1,
+          "nombre": "/root/beltran_briones",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd32-9faa-7293-8f76-db33e61ea579",
+          "padre": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "profundidad": 1,
+          "nombre": "/root/voltra",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd2a-8d37-7eb2-a814-a3a2ff1ff254",
+          "padre": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "profundidad": 1,
+          "nombre": "/root/alvaro_risoglio",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd1a-61f3-7ad1-b702-4a3c0dafbe0f",
+          "padre": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "profundidad": 1,
+          "nombre": "/root/nick_bare",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        },
+        {
+          "sid": "01a1bd14-6ed7-7ed2-89e5-07d9e47186f8",
+          "padre": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "profundidad": 1,
+          "nombre": "/root/toto_artuso",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        }
+      ],
+      "entrega_en_origin_master_local_actualizado": true
+    },
+    {
+      "id": "investigacion-acceso-av-20261108",
+      "revision": 35,
+      "estado": "aceptado",
+      "entrega": "8e347793e6032729c88d757444bccc846e52c542",
+      "revisor": "01a1be5c-eb89-7250-9be2-390ea9f050ba",
+      "intentos": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "sid": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 1,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 2665839,
+              "cached_input_tokens": 2578944,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 18895,
+              "reasoning_output_tokens": 3152
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "sid": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 4062677,
+              "cached_input_tokens": 3958528,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 25272,
+              "reasoning_output_tokens": 3843
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "sid": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 5842744,
+              "cached_input_tokens": 5720832,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 32155,
+              "reasoning_output_tokens": 5030
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "sid": "01a1be5c-eb89-7250-9be2-390ea9f050ba",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 1228530,
+              "cached_input_tokens": 1108224,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 11027,
+              "reasoning_output_tokens": 5752
+            }
+          ],
+          "worktree_conservado": true
+        }
+      ],
+      "hijos": [
+        {
+          "sid": "01a1bd32-16a5-7e60-b1f6-ed94623c5330",
+          "padre": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "profundidad": 1,
+          "nombre": "/root/alternativas",
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ]
+        }
+      ],
+      "entrega_en_origin_master_local_actualizado": true
+    },
+    {
+      "id": "fabrica-contenido-diseno-20261108",
+      "revision": 42,
+      "estado": "aceptado",
+      "entrega": "3a835e2f7060a353fd967fb1ab593e13f9e84422",
+      "revisor": "01a1be63-8b23-77e1-a1c8-37ee44f6c092",
+      "intentos": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "sid": "01a1be3f-3209-79e0-9376-ab94ba1b7a82",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/fabrica-contenido-diseno-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/fabrica-contenido-diseno-20261108.git/worktrees/onia-ws-fabrica-contenido-diseno-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 1394241,
+              "cached_input_tokens": 1318016,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 20828,
+              "reasoning_output_tokens": 3576
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "sid": "01a1be4d-9b0a-73b2-ae8b-b7de5f60c2d5",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 1112866,
+              "cached_input_tokens": 1011456,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 7724,
+              "reasoning_output_tokens": 2975
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "sid": "01a1be5c-c8de-7950-8b24-de24baf6b023",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 434565,
+              "cached_input_tokens": 354432,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 6037,
+              "reasoning_output_tokens": 2228
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "sid": "01a1be3f-3209-79e0-9376-ab94ba1b7a82",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/fabrica-contenido-diseno-20261108.git",
+                  "/home/onia-codex-worker/operacion/git/fabrica-contenido-diseno-20261108.git/worktrees/onia-ws-fabrica-contenido-diseno-20261108"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 2228849,
+              "cached_input_tokens": 2131840,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 24693,
+              "reasoning_output_tokens": 4115
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 5,
+          "rol": "revisor",
+          "sid": "01a1be63-8b23-77e1-a1c8-37ee44f6c092",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 675436,
+              "cached_input_tokens": 587520,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 6507,
+              "reasoning_output_tokens": 1936
+            }
+          ],
+          "worktree_conservado": true
+        }
+      ],
+      "hijos": [],
+      "entrega_en_origin_master_local_actualizado": true
+    }
+  ],
+  "limites": [
+    "Uso de turn.completed por intento informado por CLI; no porcentaje de cuota ni importe facturado.",
+    "cached_input_tokens es subconjunto, no se suma al input.",
+    "Hijos muestran modelo observado por su contexto; no se agrega su uso para evitar doble conteo.",
+    "Runtime observado no es una medición independiente de los pesos del proveedor."
+  ]
+}

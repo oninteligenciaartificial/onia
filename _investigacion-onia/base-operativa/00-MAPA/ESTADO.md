@@ -1,5 +1,12 @@
 # Estado vigente de ONIA
 
+## Actualización vigente · 9 noviembre 2026 UTC
+
+Retomas cerradas: grupos A/B/C de referentes aceptados con revisores distintos e integrados en origin/master,79 piezas para19 referentes. Navegador/visor y MCP aceptados dentro de su alcance; fábrica de contenido aceptada como diseño y ensayo ficticio de seis controles, sin activar Telegram ni servicios. [Cierre, commits, cuota, pruebas y faltantes](../04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md).
+
+El video solicitado de Euge queda en_espera con tres fotogramas inspeccionados y reproducción parcial; no es un análisis completo. El scheduler por carriles sigue propuesto y espera el sí de Sergio; límite global3 sin ampliación. [Diseño medido](../05-herramientas/2026-11-08-harness/ESCALADO-CARRILES-PROPUESTA.md) · [Cómo usar varias sesiones](../04-operacion-agentes/SESIONES-EJEMPLO-20261108.md). Los cortes históricos siguientes se conservan y no sustituyen esta actualización ni los registros canónicos.
+
+
 8 de noviembre de 2026: la base quedó en ocho carpetas. Este archivo sigue siendo el único estado vigente. La regla de dónde guardar trabajo nuevo está en [ESTRUCTURA](ESTRUCTURA.md) y el árbol, en [MAPA](MAPA.md).
 
 6 de noviembre de 2026 · America/Caracas. Este resumen distingue lo comprobado de lo pendiente. El [estado completo anterior](../99-archivo/2026-11-06/consolidacion-harness/HISTORICO.md) se conserva sin pérdida de bytes y se consulta por tema; no es una cola automática de nuevas tareas.

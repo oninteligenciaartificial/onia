@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "id": "cerebros-b-20261108",
-  "revision": 27,
+  "revision": 28,
   "compartible": true,
   "objetivo": "Cerebros profundos de referentes, grupo B: ia-ensenanza",
   "estado": "aceptado",
-  "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+  "proximo_paso": "Entrega 493bbb78e447e8a456262f5d4f39470124dcd9af aceptada e integrada en origin/master; remoto verificado 5e722e859014aae9482e20224517e7d8c8a007ad. No hay nueva ejecución autorizada por este cierre.",
   "resultado": "Entrega publicada por ejecutora en 493bbb78e447e8a456262f5d4f39470124dcd9af; lista para revisión independiente.",
   "comprobacion": "Commit remoto, diff exclusivo, JSON y conteos declarados cotejados. Calidad de cada pieza pendiente de revisor. Conservar worktree completo.",
   "verificacion": "correcta",
@@ -36,7 +36,7 @@
       "bytes": 301
     }
   ],
-  "actualizado": "2026-11-09T03:08:29.867277+00:00",
+  "actualizado": "2026-11-09T03:51:59.037231+00:00",
   "historial": [
     {
       "revision": 1,
@@ -2765,6 +2765,192 @@
         "revision_base": 1,
         "fecha": "2026-11-08T21:14:11.142704+00:00"
       },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-b",
+          "pid": 690923,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191175937",
+          "supervisor_pid": 690917,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191175922",
+          "rama": "codex/ws-cerebros-b-20261108",
+          "session_id": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.jsonl",
+          "log_rel": "logs/cerebros-b-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/b"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:43.799965+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:03:41.778656+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-b",
+          "pid": 871593,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191524764",
+          "supervisor_pid": 871588,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191524756",
+          "rama": "codex/ws-cerebros-b-20261108",
+          "session_id": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.jsonl",
+          "log_rel": "logs/cerebros-b-20261108.jsonl",
+          "log_offset": 583477,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/b"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": "01a1bd04-65c5-7e83-9a79-4280d37b1016",
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.2.briefing.txt",
+          "inicio": "2026-11-08T22:13:52.155015+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-b-20261108.git/worktrees/onia-ws-cerebros-b-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:47:29.952531+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-b",
+          "pid": 1529559,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193138037",
+          "supervisor_pid": 1529557,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193138026",
+          "rama": "(detached)",
+          "session_id": "01a1be2f-cb65-7292-8377-18e5d6cd3b35",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.revision-3.jsonl",
+          "log_rel": "logs/cerebros-b-20261108.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-b-20261108-revision-3",
+          "rutas": [
+            "03-referentes/cerebros-profundos/b"
+          ],
+          "dry_run": false,
+          "commit_base": "493bbb78e447e8a456262f5d4f39470124dcd9af",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.3.briefing.txt",
+          "inicio": "2026-11-09T02:42:44.828265+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "38479e3231e2c146f70c3ee354bfffc7b894ee9da089d15bfd25f70b16855049",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-b-20261108.3.veredicto.json",
+          "fin": "2026-11-09T02:52:00.882634+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "493bbb78e447e8a456262f5d4f39470124dcd9af",
+        "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+        "ramas_origin": [
+          "origin/codex/ws-cerebros-b-20261108"
+        ],
+        "fecha": "2026-11-09T02:42:42.092438+00:00",
+        "dry_run": false,
+        "intento": 2,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-b-20261108/cierre-r16-2fa9a108.json",
+          "sha256": "2313d55c046526482024ccf4589dc2e35d4b631ae990a677d93345dc0c2b34f3",
+          "bytes": 301
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "493bbb78e447e8a456262f5d4f39470124dcd9af",
+        "criterio": "Cumple. Cotejadas 25 piezas distintas, cinco respuestas y tiempos sustentados por pieza. Erik aporta 5 y los demás 4 cada uno. Las seis fichas incluyen página comercial, patrón y tres aplicaciones con hechos, inferencias y propuestas separados. Halos se recuperó desde su [portada](https://www.halos.sh/pricing). JSON válido, 257 enlaces comprobados, hashes coincidentes, diff exclusivo y publicación remota verificada. Seis hijos y cierre documentados. Límites explícitos de ASR automático, muestreo visual, relojes editoriales de Ali, temporales y modelo efectivo de hijos no observado.",
+        "worktree_conservado": true,
+        "revisor": "cerebros-revisor-b",
+        "session_id": "01a1be2f-cb65-7292-8377-18e5d6cd3b35",
+        "entrega_sha256": "38479e3231e2c146f70c3ee354bfffc7b894ee9da089d15bfd25f70b16855049",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-b-20261108/revision-3-1400b3d6.json",
+          "sha256": "775a6f94cee34eb30bebbeb6d41997310a7b6ce3a0abd7f986e261021645487f",
+          "bytes": 729
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-b-20261108/revision-3-1400b3d6.json",
+          "sha256": "775a6f94cee34eb30bebbeb6d41997310a7b6ce3a0abd7f986e261021645487f",
+          "bytes": 729
+        }
+      ]
+    },
+    {
+      "revision": 27,
+      "actualizado": "2026-11-09T03:08:29.867277+00:00",
+      "estado": "aceptado",
+      "resultado": "Entrega publicada por ejecutora en 493bbb78e447e8a456262f5d4f39470124dcd9af; lista para revisión independiente.",
+      "comprobacion": "Commit remoto, diff exclusivo, JSON y conteos declarados cotejados. Calidad de cada pieza pendiente de revisor. Conservar worktree completo.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-b-20261108/preflight.json",
+          "sha256": "85a62c88b1750a0c77a82466bfcb1125a1df3f89dc605ac1be584756e9bf4bc2",
+          "bytes": 637
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-b-20261108/recuperacion-r8.json",
+          "sha256": "ca7b4eea1afd60f468cc050fcb3ccdecf197c93a0d7a244c14a2f8ef93748627",
+          "bytes": 2560
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-b-20261108/espera-revision-20261108-r14.json",
+          "sha256": "a73b343a8f10865a4dd171f488eaec72b8a0ad19b542b73052a164f8d9d6a738",
+          "bytes": 807
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-b-20261108/preflight-revision-retoma-r15.json",
+          "sha256": "f56fdf8602a20782de6b1e1c85d51069f63e731533aa713688b11f0d43d4229d",
+          "bytes": 7507
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-b-20261108/cierre-r16-2fa9a108.json",
+          "sha256": "2313d55c046526482024ccf4589dc2e35d4b631ae990a677d93345dc0c2b34f3",
+          "bytes": 301
+        }
+      ],
+      "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+      "aceptacion": {
+        "revisor": "cerebros-revisor-b",
+        "criterio": "Cumple. Cotejadas 25 piezas distintas, cinco respuestas y tiempos sustentados por pieza. Erik aporta 5 y los demás 4 cada uno. Las seis fichas incluyen página comercial, patrón y tres aplicaciones con hechos, inferencias y propuestas separados. Halos se recuperó desde su [portada](https://www.halos.sh/pricing). JSON válido, 257 enlaces comprobados, hashes coincidentes, diff exclusivo y publicación remota verificada. Seis hijos y cierre documentados. Límites explícitos de ASR automático, muestreo visual, relojes editoriales de Ali, temporales y modelo efectivo de hijos no observado.",
+        "fecha": "2026-11-09T03:08:29.798687+00:00"
+      },
+      "asignacion": null,
       "sesiones": [
         {
           "intento": 1,

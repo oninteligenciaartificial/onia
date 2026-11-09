@@ -1,0 +1,68 @@
+{
+  "fecha_utc": "2026-11-09T03:49:48.039116+00:00",
+  "fuente": "https://www.youtube.com/watch?v=JuAQILH7dkQ",
+  "alcance": "Muestreo visual parcial sin audio; no visionado completo.",
+  "corridas": [
+    {
+      "directorio_privado": "/home/onia-codex-worker/operacion/video-referencia-JuAQILH7dkQ/privado/muestra-20261109T033018Z-8uf336pn",
+      "manifest_sha256": "c5713b5dd9bcd1871d76944c9937ac6f5ebb5958dd962aa0607f91decc6aa048",
+      "estado": "sin_fotogramas",
+      "diagnostico": "DESTINO_DISTINTO",
+      "publicidad": null,
+      "frames": []
+    },
+    {
+      "directorio_privado": "/home/onia-codex-worker/operacion/video-referencia-JuAQILH7dkQ/privado/muestra-20261109T033320Z-34coh1gj",
+      "manifest_sha256": "ccc202d1f55767b2034b36d0a97dbec81c4125c33de93e849b5e918dcbba1aa5",
+      "estado": "sin_fotogramas",
+      "diagnostico": "PUBLICIDAD_EN_CURSO",
+      "publicidad": null,
+      "frames": []
+    },
+    {
+      "directorio_privado": "/home/onia-codex-worker/operacion/video-referencia-JuAQILH7dkQ/privado/muestra-20261109T034130Z-rkofri_i",
+      "manifest_sha256": "6e9d8644ddb0332f740c2721bf0979653378dbd6f63e2e624a6649d1ff790626",
+      "estado": "parcial",
+      "diagnostico": "REPRODUCTOR_CAMBIO",
+      "publicidad": {
+        "observada": true,
+        "avance_observado": true,
+        "espera_reproductor_ms": 51058,
+        "activa_al_final": false
+      },
+      "frames": [
+        {
+          "archivo": "frame-001.png",
+          "tiempo_real_s": 0.481,
+          "sha256": "264284d603b3c1ff0e43ea01833c4ac7ed5d09c7c39c7e6b380abe4e9ac5cfd4"
+        },
+        {
+          "archivo": "frame-002.png",
+          "tiempo_real_s": 25.5,
+          "sha256": "e573412ecd9f0e8155e9757c09600b2f0a5ddaf8af5791efb7645cc621f891eb"
+        },
+        {
+          "archivo": "frame-003.png",
+          "tiempo_real_s": 50.5,
+          "sha256": "fea09399823e46b0b6e8044a098e6ed396b7fc2cf0752a05c6090a70eacc7b54"
+        }
+      ]
+    },
+    {
+      "directorio_privado": "/home/onia-codex-worker/operacion/video-referencia-JuAQILH7dkQ/privado/muestra-20261109T034543Z-qe6kzbau",
+      "manifest_sha256": "9eb34a4f24a335ccd5eced9c2c4bb77208d9a7311e4b2ba20ca27b54e35bfd2b",
+      "estado": "sin_fotogramas",
+      "diagnostico": "SIN_VIDEO_REPRODUCIBLE",
+      "publicidad": {
+        "observada": true,
+        "avance_observado": true,
+        "espera_reproductor_ms": 75265,
+        "activa_al_final": false
+      },
+      "frames": []
+    }
+  ],
+  "fotogramas_inspeccionados": 3,
+  "observador": "coordinador mediante view_image",
+  "medios": "Conservados sólo en VPS privado; no incluidos en Git."
+}

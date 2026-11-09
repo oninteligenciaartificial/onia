@@ -1,0 +1,15 @@
+{
+  "fecha_utc": "2026-11-09T03:38:52.573362+00:00",
+  "revisor": "/root/auditar_conexion",
+  "origen": "subagente nativo independiente en esta conversación; no sesión CLI del harness",
+  "veredicto": "bueno",
+  "revision_cotejada": 8,
+  "criterio": "Aprobación previa AppArmor exacto, sandbox efectivo, visor autenticado loopback y procedimiento SSH, control humano confirmado por Sergio, MCP separado y cinco llamadas nativas comprobados. Siete hashes de evidencia íntegros. Sin inferir identidad de cuenta, Facebook autenticado ni reproducción audiovisual.",
+  "commit_prueba_mcp": "8e347793e6032729c88d757444bccc846e52c542",
+  "commit_integracion": "91f1606",
+  "limites": [
+    "Alta Google/Instagram/Facebook informada por Sergio, no auditoría de identidad.",
+    "Sin reproducción audiovisual acreditada.",
+    "Registro aceptado sólo para preparar y comprobar navegador/visor y MCP."
+  ]
+}

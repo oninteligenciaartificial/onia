@@ -1,0 +1,15 @@
+{
+  "fecha_utc": "2026-11-09T03:24:59.380Z",
+  "html_sha256": "04ec69b5ca4e3c64bd1a1765011dcf16df6bb040270909f87482d6e6b1f0a208",
+  "captura": "04-operacion-agentes/evidencias/fabrica-contenido-diseno-20261108/panel-inspeccionado.png",
+  "captura_sha256": "1e6d593992b26df2438663a48770009e3ed07e3001269cbdaefe4e96da6ad50b",
+  "titulo": "OnIA · Ensayo ficticio",
+  "texto_visible": "OnIA · Ideas y guiones\nFICTICIO · sin conexión · sin envíos · sin autenticación\n\nTarea ficcion-fabrica-001 · revisión 12 · para_revision\n\nguion-a-v1: elegir_para_preparar\nguion-b-v1: pedir_cambios\n\n2 fuentes utilizables · 1 duplicado · 1 pendiente · 1 fallo.\n\nProyección estática del JSON aislado. Las decisiones son simuladas; no se ha aceptado el encargo real.\n\nPróximo paso: Revisión real del encargo por coordinador; Telegram/panel/scheduler siguen sin integración",
+  "solicitudes_http_rechazadas": [],
+  "visual_inspeccionada": true,
+  "inspector": "coordinador principal mediante view_image",
+  "observaciones": "1440×1080: título, advertencia FICTICIO, tarea revisión12 para_revision y decisiones A/B legibles, sin recortes ni solapamientos; contadores 2 utilizables/1 duplicado/1 pendiente/1 fallo y próximo paso coinciden con JSON aislado. No se prueba interacción, móvil ni autenticación.",
+  "commit": "17a87d7c919439015402475b64fcc1606e3909e3",
+  "fuente_cotejo": "ensayos/ejecucion-02/resultado.json y 04-operacion-agentes/tareas/ficcion-fabrica-001.json; ingesta.json",
+  "instrucciones_revisor": "Abrir captura con view_image y cotejar HTML/JSON; no necesita lanzar Chromium ni escribir en sandbox read-only. Revisión de diseño y ensayo ficticio, no de interfaz funcional."
+}
