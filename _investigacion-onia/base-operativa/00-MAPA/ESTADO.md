@@ -72,3 +72,5 @@ B (01a1b251-c3f8-7781-9fcf-1874844c401f) arrancó desde el snapshot 9cf3e40 y re
 8nov, preparación de cuentas secundarias: visor privado preparado y control sintético cerrado; Chromium falla por sandbox/AppArmor. [Corrección exacta pendiente de aprobación y pruebas separadas](../05-herramientas/cuentas-analisis/20261108/APROBACION-APPARMOR.md). Cuenta no creada; no se modificó AppArmor. [Mapa de modelos y pausas propuesto](../04-operacion-agentes/MODELOS-Y-PAUSAS-20261108.md).
 
 8nov~21:55Caracas: [navegador y visor operativos en VPS](../05-herramientas/cuentas-analisis/20261108/ACCESO-VERIFICADO-VPS.md), sandbox y controles sintéticos comprobados; MCP nativo funcionó al retomar. Falta prueba desde Windows y alta personal de cuenta. No se declara tarea aceptada ni cuenta existente.
+
+9nov2026UTC, **controles del video probados y comparación positiva del visor**: Chromium existente llegó2:09 tras omitir un anuncio mediante control visible; Playwright volvió a cortarse43.760s. Diagnóstico y controlador revisados; análisis audiovisual completo sigue abierto. [Informe y límites](../05-herramientas/video-euge-20261108/control-visible-20261109/README.md).

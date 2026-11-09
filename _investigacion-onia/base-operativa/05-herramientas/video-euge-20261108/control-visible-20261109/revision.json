@@ -1,0 +1,31 @@
+{
+  "tarea": "video-euge-20261108",
+  "revisor": "/root/auditar_conexion",
+  "veredicto": "bueno",
+  "alcance": "Observación histórica Playwright y código corregido; no aceptación audiovisual ni auditoría funcional del comparador X11.",
+  "comprobacion": "Cotejo de8hashes de scripts y3artefactos históricos; inspección del PNG. Cobertura repetida en memoria incluyendo avance1.5s/0.6s de pared rechazado. Fixture DOM/Chromium sandbox ejecutado por autor, rc0.",
+  "hallazgos_corregidos": [
+    "Localizador del clic exige anuncio activo; opacidad propia y ancestros.",
+    "Deriva acumulada del reloj descartada; 90s no acredita visionado completo."
+  ],
+  "limites": [
+    "Errores DNS observados no establecen causa.",
+    "43.287s histórico es avance entre muestras según algoritmo anterior, no continuidad acreditada.",
+    "Sin nueva reproducción real de la versión corregida."
+  ],
+  "scripts_sha256": {
+    "comparar-visor.py": "17b22eeb69f0c15727c1a729d9772d66bae248d5d8241cad40fe14208dc6e49c",
+    "control.cjs": "52ec2d2cc3f4febd0f0ee11f0f0bd5e7dc5b1bda578f755ab8492b53fe65940d",
+    "control.ejecutado.cjs": "356ffb7361a0e27943ad724879bf9bd1e9efec7ab5d6b9ead48025749b9e5ed1",
+    "ejecutar.ejecutado.py": "49d3e1e8d3b63386e4fc987e0102de887f87de5d71dc0d02c4fddde82b154b84",
+    "ejecutar.py": "1f665e2cd6e5a4ad0e841ce69ffae90de475dd0320ef1acd1810d2e19be5a685",
+    "muestra-seek-anterior.cjs": "a50bfde79fde191f684d507ca0f7b974fb4891915b226decfed845f0670961df",
+    "probar-cobertura.cjs": "6bf381c765927a2c6c957876b7447ba1b3ea9ac553ea1c549faf08d1f80fad8d",
+    "probar.cjs": "fbf5ffe98da34309c9841550709da8e3e37c2008ca70094d081b19d62dad0740"
+  },
+  "evidencia_sha256": {
+    "muestra.json": "fa3ec64e127a4623a76926bb89ad52ddba1d8e15372345f1756638e067203ed8",
+    "salida.json": "0b57576abe94c5b19c860356698f6bcf7b7cb71e6ae15e95d9b65ee9a066120e",
+    "reproductor-25.png": "a9c5d776ee8a948156d07502239f5b1cf3821e6420d1e3d71441b35d98051626"
+  }
+}

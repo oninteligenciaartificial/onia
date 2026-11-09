@@ -1,0 +1,115 @@
+{
+  "inicio_utc": "2026-11-09T11:35:14.206479+00:00",
+  "url": "https://www.youtube.com/watch?v=JuAQILH7dkQ",
+  "metodo": "Chromium existente e interfaz X11",
+  "reinicio_chromium": false,
+  "visionado_completo_acreditado": false,
+  "audio_analizado": false,
+  "acciones": [
+    {
+      "utc": "2026-11-09T11:35:14.327481+00:00",
+      "accion": "abrir_url",
+      "rc": 0,
+      "mismo_chromium": true
+    },
+    {
+      "utc": "2026-11-09T11:35:22.722845+00:00",
+      "accion": "captura",
+      "archivo": "captura-01.png",
+      "rc": 0
+    },
+    {
+      "utc": "2026-11-09T11:35:32.829303+00:00",
+      "accion": "clic",
+      "x": 830,
+      "y": 625,
+      "motivo": "Botón Skip visible en captura-01, dentro del reproductor"
+    },
+    {
+      "utc": "2026-11-09T11:35:54.461080+00:00",
+      "accion": "captura",
+      "archivo": "captura-02.png",
+      "rc": 0
+    },
+    {
+      "utc": "2026-11-09T11:36:35.603214+00:00",
+      "accion": "captura",
+      "archivo": "captura-03.png",
+      "rc": 0
+    },
+    {
+      "utc": "2026-11-09T11:37:10.369341+00:00",
+      "accion": "captura",
+      "archivo": "captura-04.png",
+      "rc": 0
+    },
+    {
+      "utc": "2026-11-09T11:37:42.368665+00:00",
+      "accion": "clic",
+      "x": 58,
+      "y": 684,
+      "motivo": "Pausar mediante control visible tras verificar avance mayor de90s en captura-04"
+    },
+    {
+      "utc": "2026-11-09T11:37:42.587095+00:00",
+      "accion": "captura",
+      "archivo": "captura-05.png",
+      "rc": 0
+    },
+    {
+      "utc": "2026-11-09T11:37:50.340289+00:00",
+      "accion": "fin",
+      "mismo_chromium": true
+    }
+  ],
+  "fin_utc": "2026-11-09T11:37:50.339781+00:00",
+  "mismo_chromium_al_final": true,
+  "visor_listo": true,
+  "tarea": "video-euge-20261108",
+  "ensayo": "comparacion-normal-v1",
+  "objetivo_90s_observado": true,
+  "continuidad_total_acreditada": false,
+  "maximo_reloj_visible_s": 129,
+  "evidencias_redistribuidas": false,
+  "observaciones": [
+    {
+      "archivo": "captura-01.png",
+      "hecho": "Botón Skip visible dentro del anuncio; se pulsa después de inspeccionarlo."
+    },
+    {
+      "archivo": "captura-02.png",
+      "hecho": "Contenido de Euge con panel Fábricas; controles ocultos, sin tiempo preciso."
+    },
+    {
+      "archivo": "captura-03.png",
+      "reloj_visible": "1:02 / 30:02",
+      "hecho": "Diagrama agente de IA, ordenador virtual y herramientas."
+    },
+    {
+      "archivo": "captura-04.png",
+      "reloj_visible": "1:37 / 30:02",
+      "hecho": "Diagrama ChatGPT/LLM, presentador a la derecha."
+    },
+    {
+      "archivo": "captura-05.png",
+      "reloj_visible": "2:09 / 30:02",
+      "hecho": "Lámina Chat + GPT después de pulsar pausa."
+    },
+    {
+      "archivo": "captura-verificar-pausa.png",
+      "hecho": "Misma imagen de contenido en comprobación posterior; controles ocultos."
+    }
+  ],
+  "limite": "Comparación de dos ensayos, no experimento causal controlado. Capturas muestreadas; sin escucha de audio ni visionado completo.",
+  "acciones_auxiliares": "Dos movimientos de puntero vía XTest para mostrar controles y una captura posterior de verificación; sin clic adicional.",
+  "evidencia_sha256": {
+    "captura-01.png": "51be98abee98479e3970d0d8a2cd080625983aeb6d8f1216ff74df265f3d9e73",
+    "captura-02.png": "ec118d22ebfecf611656982ef71b7929934f6551729f421df4d79dfd301f6d26",
+    "captura-03.png": "dc448566aa2817f3293a0162b8d53eb4d7d348245e92469130952975cd01fe05",
+    "captura-04.png": "3ef95c0dcbc9259343b80c89f0396d200517bce92f49cd092d22508b24f4fafb",
+    "captura-05.png": "cb9c8a61e2c66926545891f5c810c00ab88f2d27e309b98d82830567efcc3c2e",
+    "captura-verificar-pausa.png": "521fd40c613a458013bb7df837ba72aac722ab28f6ff872b9ac622e165fb63cb",
+    "recibo.json": "9d7feadfd987f5f073ebdbacd3e5afa04173ad1a0172166bb560e9fecd4b9e48"
+  },
+  "ruta_privada": "~/operacion/video-referencia-JuAQILH7dkQ/privado/visor-normal-8o2s6p_x"
+}

@@ -1,0 +1,99 @@
+{
+  "tarea": "video-euge-20261108",
+  "base_revision": "8bfccb5",
+  "ensayos_reales": 1,
+  "inicio_utc": "2026-11-09T11:27:33Z",
+  "fin_utc": "2026-11-09T11:29:19.265952+00:00",
+  "max_navegador_s": 300,
+  "rc": 3,
+  "fuente": "https://www.youtube.com/watch?v=JuAQILH7dkQ",
+  "estado_visual": "parcial",
+  "objetivo_control_cumplido": false,
+  "visionado_completo_acreditado": false,
+  "audio_analizado": false,
+  "skip": {
+    "visible": true,
+    "habilitado": true,
+    "intentos": 1,
+    "exitos": 1,
+    "fallos": 0,
+    "evidencia": "DOM y transición, sin imagen del botón"
+  },
+  "play": {
+    "intentos": 2,
+    "exitos": 2,
+    "fallos": 0
+  },
+  "transiciones": [
+    {
+      "tras_s": null,
+      "espera_s": 6.315,
+      "clic_ok": true,
+      "contenido_verificado": true
+    }
+  ],
+  "duracion_s": 1802.921,
+  "objetivos_s": [
+    25,
+    55,
+    90
+  ],
+  "frames": [
+    {
+      "file": "reproductor-25.png",
+      "objetivo_s": 25,
+      "antes_s": 25.129,
+      "despues_s": 25.337,
+      "readyState": 4
+    }
+  ],
+  "estado_final_medio": {
+    "readyState": 0,
+    "networkState": 0,
+    "mediaError": null,
+    "pausado": true,
+    "buscando": false,
+    "anuncio": false,
+    "id_coincide": true
+  },
+  "diagnostico": "AVANCE_DETENIDO",
+  "red_media": {
+    "respuestas": 22,
+    "http": {},
+    "fallos": {
+      "net::ERR_NAME_NOT_RESOLVED": 6
+    }
+  },
+  "limite_causal": "Se observó ERR_NAME_NOT_RESOLVED; no se estableció la causa del corte.",
+  "visor": {
+    "estado": "listo",
+    "chromium_humano_restaurado": true,
+    "display_vnc_web_conservaron_procesos": true
+  },
+  "ruta_evidencia_privada": "~/operacion/video-referencia-JuAQILH7dkQ/privado/control-20261109T112733Z-ymbh9q_5",
+  "evidencia_sha256": {
+    "muestra.json": "fa3ec64e127a4623a76926bb89ad52ddba1d8e15372345f1756638e067203ed8",
+    "salida.json": "0b57576abe94c5b19c860356698f6bcf7b7cb71e6ae15e95d9b65ee9a066120e",
+    "reproductor-25.png": "a9c5d776ee8a948156d07502239f5b1cf3821e6420d1e3d71441b35d98051626"
+  },
+  "scripts_sha256": {
+    "comparar-visor.py": "17b22eeb69f0c15727c1a729d9772d66bae248d5d8241cad40fe14208dc6e49c",
+    "control.cjs": "52ec2d2cc3f4febd0f0ee11f0f0bd5e7dc5b1bda578f755ab8492b53fe65940d",
+    "control.ejecutado.cjs": "356ffb7361a0e27943ad724879bf9bd1e9efec7ab5d6b9ead48025749b9e5ed1",
+    "ejecutar.ejecutado.py": "49d3e1e8d3b63386e4fc987e0102de887f87de5d71dc0d02c4fddde82b154b84",
+    "ejecutar.py": "1f665e2cd6e5a4ad0e841ce69ffae90de475dd0320ef1acd1810d2e19be5a685",
+    "muestra-seek-anterior.cjs": "a50bfde79fde191f684d507ca0f7b974fb4891915b226decfed845f0670961df",
+    "probar-cobertura.cjs": "6bf381c765927a2c6c957876b7447ba1b3ea9ac553ea1c549faf08d1f80fad8d",
+    "probar.cjs": "fbf5ffe98da34309c9841550709da8e3e37c2008ca70094d081b19d62dad0740"
+  },
+  "verificacion_publicable": {
+    "playwright_fixture": "node work/video-control-20261109/probar.cjs · rc0, incluidos botón/ancestro transparente y anuncio que termina antes del clic",
+    "cobertura": "node work/video-control-20261109/probar-cobertura.cjs · rc0, reloj simulado concordante, salto, interrupción y deriva acumulada",
+    "limite": "terminal_result con estado en_curso, rc124, expired=True, con y sin fotogramas · rc0",
+    "nuevo_ensayo_real": false
+  },
+  "maximo_reloj_medio_s": 43.76,
+  "max_avance_entre_muestras_historico_s": 43.287,
+  "continuidad_acreditada": false,
+  "criterio_historico": "El contador histórico filtraba saltos por muestra sin contrastar el avance acumulado con el reloj monotónico."
+}
