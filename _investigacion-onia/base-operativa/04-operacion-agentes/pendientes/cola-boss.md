@@ -43,3 +43,12 @@ No autorizado: force-push; subagentes; ultra; gastar; publicar; n8n; cambios en 
 Antisolape: un solo escritor por archivo/tarea. Boss solo escribe boss-memoria.md, cola-boss.md y sus propios .md en 04-operacion-agentes; Codex el resto técnico. Si hay choque, parar y anotarlo acá.
 Dependencia / dato necesario: huella host PC de casa ya obtenida por Boss: 256 SHA256:4ClsP1NH8JWxBWUNjW2DP7Egn4UcHcqMUYBUu3sL1Gk root@DESKTOP-0GGGNMF (ED25519). Con eso sigue el alta de onia-worker (pasos administrativos los ejecuta Sergio).
 ```
+
+## Orden acordado con Sergio — 2026-11-09 19:30 America/La_Paz
+
+1. Codex termina su tarea actual (instalación `onia-worker` en HOMELAB). Boss no lanza nada mientras el árbol de `onia-coordinador` tenga cambios sin commit.
+2. Boss revisa el resultado por su cuenta (sin que Sergio avise), compara con su propio enfoque y reporta a Sergio.
+3. Boss lanza por el harness el PEDIDO `reparto-final-20261109` (Sol low, sin subagentes).
+4. Pruebas del harness con la PC de casa: medir si se puede subir el tope de 3 sesiones en paralelo y cómo trabajar mejor. Es tarea del harness; cualquier cambio de tope pasa por el sí de Sergio.
+5. Cerrar arquitectura (harness + HOMELAB).
+6. Después: foco total en ingresos (workshop y fábrica de contenido en volumen), según ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md.
