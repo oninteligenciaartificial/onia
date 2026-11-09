@@ -1,6 +1,12 @@
 # Alex Carrera · @alexmcarrera
 
+Actualización vigente del 9 de noviembre de 2026, después de incorporar P4. **Cuatro publicaciones distintas con contenido primario cotejado y cinco respuestas por pieza. Mínimo documental de cuatro cubierto con límites de cobertura. Revisión independiente pendiente.** El corpus consta de tres reels y una publicación mixta con tres componentes de video contados como un solo post. P4 añade un relato personal, a partir de ASR íntegro leído por este hijo y procedencia pública comprobada por el padre ejecutor. La evaluación audiovisual integral y las brechas comerciales se conservan.
+
+Corte anterior parcial de tres, conservado sin sustituir su evidencia.
+
 Actualización del 9 de noviembre de 2026. **Estado parcial. Tres publicaciones distintas con contenido primario cotejado y cinco respuestas desarrolladas por pieza, dos reels y una publicación mixta con tres componentes de video. El mínimo de cuatro piezas sigue incumplido.** P2 tiene ASR íntegro leído por este hijo. P3 tiene inspección propia de imágenes y contactos de video. La procedencia pública y los medios nuevos fueron recuperados por el padre ejecutor.
+
+Registro del pendiente en aquel corte de tres. La ampliación de autorización MCP y la recuperación se completaron posteriormente, según la evidencia P4 al final de esta ficha.
 
 Pendiente actual para el mínimo, una pieza adicional. El padre ejecutor descubrió la candidata [DOKUVxIDFis](https://www.instagram.com/alexmcarrera/reel/DOKUVxIDFis/) en el perfil público. Su destino de navegación requiere ampliar la autorización disponible y su contenido sigue sin cotejar. Queda fuera del contador hasta recuperar y revisar la evidencia.
 
@@ -23,6 +29,9 @@ La cobertura visual citada pertenece a la inspección del 5/11. Esa fuente decla
 | P1 | *De un equipo de edición a una persona con IA*. Publicación de @alexmcarrera, título descriptivo propio | Reel público. https://www.instagram.com/reel/DevcnJYNS7r/ | 8/11. ASR íntegro, 22 segmentos, 0–57,06 s. Caption público recuperado. Informes visuales anteriores íntegros releídos | JSON ASR, segmentos 1–22. Cuadros históricos n0–1716 para anclajes visuales | Sí para las cinco respuestas documentales. Percepción audiovisual integral pendiente |
 | P2 | *Así armas tu primer negocio online de IA*. Publicación de @alexmcarrera, título descriptivo basado en caption cotejado por el padre ejecutor | Reel público. https://www.instagram.com/alexmcarrera/reel/DfTWAHhNIuV/ | 9/11. ASR íntegro, 68 segmentos, 0–120 s. Audio vinculado al video público por metadata y comprobación del padre ejecutor | ASR privado `DfTWAHhNIuV-20261109T031310Z/asr-20261109T031421Z.json`, segmentos 1–68. Procedencia y hashes abajo | Sí para las cinco respuestas documentales. Percepción audiovisual integral pendiente |
 | P3 | *Quemado de clientes*. Publicación de Alex Carrera, @alexmcarrera, título visible abreviado | Publicación mixta, una unidad. https://www.instagram.com/alexmcarrera/reel/Ddkwl1ojZw6/ | 9/11. Seis imágenes estáticas completas, tres contactos a 2 fps y tres cuadros finales abiertos por este hijo. Las nueve entradas están representadas | Videos entry-1, 0–4,033333 s, entry-7 y entry-9, 0–4 s cada uno. Muestras nominales 0–3,5 s y últimos PTS 4/3,966667/3,966667. Estáticas sin reloj asignado. Recibos privados citados abajo | Sí para cinco respuestas documentales de una publicación mixta. Video muestreado, sin percepción continua |
+| P4 | *Vos elegís qué hacer con las cartas que te tocaron*. Publicación de Alex Carrera, @alexmcarrera, título descriptivo derivado del caption público | Reel público. https://www.instagram.com/alexmcarrera/reel/DOKUVxIDFis/ | 9/11. ASR íntegro leído por este hijo, 24 segmentos, 0–80,42 s. Metadata y recibo de interfaz pública cotejados. Audio vinculado a reproductor y autor | ASR privado `DOKUVxIDFis-20261109T033516Z/asr-20261109T033618Z.json`, segmentos 1–24. Audio 80,690998 s. Recibos y hashes abajo | Sí para las cinco respuestas documentales. Percepción audiovisual integral pendiente |
+
+Los contadores del párrafo siguiente describen cortes anteriores a P4. El mínimo vigente está cubierto por las cuatro filas de esta matriz.
 
 Registro histórico del 8/11, superado para P2 y P3 por las filas anteriores. P2–P4 seguían sin identificar. P5–P6 tampoco tenían una selección verificable. Perfil, snippets, Exposure, miniatura del entrenamiento y republicaciones hipotéticas no añaden unidades al corpus. La clase de treinta minutos ofrecida en P1 tiene existencia anunciada, pero carece de URL pública comprobada y contenido revisado. El corte intermedio del 9/11, tras añadir P2, aún necesitaba P3 y P4. El corte posterior, tras añadir P3, necesita al menos P4.
 
@@ -132,6 +141,41 @@ Los tres videos recuperados contienen únicamente una pista de video según sus 
 
 **PROPUESTA ONIA.** Para C1, utilizar una comparación visible entre semana inicial y semana ordenada. Para C2, adaptar los cuatro campos a una oferta de un negocio local y exigir que la promesa tenga respaldo propio. Para C3, explicar el orden de los componentes antes de mostrar una herramienta, indicando qué salida depende del paso anterior. La aplicación principal corresponde a C2, basada en video entry-7 y estática entry-8. La plantilla de adaptación tendría cuatro campos y su control verificaría que cada afirmación esté respaldada por datos del negocio. Precios, márgenes y resultados del referente quedan fuera de las decisiones comerciales de ONIA.
 
+## P4 · Cinco respuestas
+
+Consulta del 9/11/2026. El padre ejecutor navegó el destino exacto mediante MCP aprobado y registró handle verificado, reproductor y caption público. La metadata identifica uploader Alex Carrera, ID `1584735240`, canal `alexmcarrera` y shortcode `DOKUVxIDFis`. Este hijo leyó íntegros los 24 segmentos del ASR y cotejó sus recibos y hashes. Los hechos biográficos siguientes se tratan como relato del autor. [Publicación canónica](https://www.instagram.com/alexmcarrera/reel/DOKUVxIDFis/).
+
+### 1. Idea central en una frase
+
+**HECHO REFERENTE.** La pieza narra una etapa de adversidad personal y propone reinterpretar la experiencia para decidir una siguiente acción, enlazándola con una trayectoria posterior declarada de trabajo y negocio. El marco se desarrolla en s12–s16, 30,64–50,08 s, y la apelación final en s22–s24, 69,22–80,42 s. El caption corrobora la metáfora de las cartas como tema, pero las palabras exactas del último segmento quedan inciertas.
+
+### 2. Público y problema
+
+**INFERENCIA.** La apelación final sugiere una audiencia amplia que se siente condicionada por su origen o por circunstancias difíciles. La trayectoria laboral y de contenido declarada puede conectar con seguidores que buscan comenzar un proyecto, aunque el desarrollo central aborda sentido y capacidad de actuar. Fuente P4 s17–s23, 50,24–77,88 s. El ASR no permite atribuir necesidades clínicas a esa audiencia ni evaluar la respuesta emocional que produjo el reel.
+
+### 3. Apertura, desarrollo y cierre con tiempos
+
+| Fase | Tiempo respaldado por ASR P4 | Contenido y función |
+|---|---|---|
+| Apertura | s1, 0–3,88 s | Pregunta provocadora que presenta una experiencia familiar dolorosa como punto de giro. Instala una tensión que el relato desarrolla |
+| Contexto autobiográfico | s2–s11, 4,04–30,52 s | Expone una etapa personal de pérdida y dificultad. La ficha conserva sólo la función narrativa y evita reproducir los detalles |
+| Reinterpretación | s12–s16, 30,64–50,08 s | Introduce atribuciones filosóficas del guion y propone decidir la respuesta ante lo ocurrido |
+| Trayectoria declarada | s17–s19, 50,24–61,12 s | Describe cambios posteriores de actividad, trabajo con contenido y negocio. Son alegatos autobiográficos |
+| Matiz del relato | s20–s21, 61,34–69,22 s | Aclara el valor que sigue dando al vínculo familiar y enlaza esa valoración con la posibilidad de comenzar |
+| Apelación final | s22–s24, 69,22–80,42 s | Pasa de la historia propia al espectador y vuelve al tema de responder a las circunstancias. El último segmento, 77,88–80,42 s, está muy deformado |
+
+La duración del audio es 80,690998 s y el ASR llega a 80,42 s. Los pasajes de s7 y s24 presentan errores o ambigüedad que impiden reconstruir una cita literal fiable. Las referencias filosóficas reconocidas se registran como atribuciones del guion. Su autoría textual y formulación no fueron comprobadas. Este análisis usa la estructura reconocible del relato y el caption como evidencia separada del tema final.
+
+### 4. Técnica concreta de enseñanza y venta
+
+**HECHO REFERENTE.** La secuencia emplea pregunta inicial, historia autobiográfica, cambio de interpretación, trayectoria declarada y apelación al espectador. El tramo 61,34–69,22 s introduce un matiz que conserva el peso de la experiencia antes del cierre. El ASR íntegro revisado termina con una apelación personal y carece de una oferta o solicitud comercial reconocida. Fuente P4 s1–s24, 0–80,42 s.
+
+**INFERENCIA.** La historia presenta el origen de una manera de decidir y puede ayudar a que el público conozca al creador. Ese efecto de identificación y confianza sigue siendo una hipótesis de función comunicativa. La experiencia y la trayectoria declaradas no aportan una prueba causal de resultados de negocio. P1–P3 cierran mediante comentarios para solicitar recursos, mientras P4 desarrolla una pieza de identidad personal. Esta diferencia amplía la muestra de usos del contenido dentro de su marca.
+
+### 5. Qué tomar y para qué clase
+
+**PROPUESTA ONIA.** Tomar la secuencia dificultad, interpretación inicial, acción y aprendizaje para relatar un problema operativo cotidiano. En C1 puede aplicarse a una agenda desordenada, en C2 a una consulta comercial que quedó sin responder y en C3 a una tarea repetida con un error detectado. La referencia es el cambio de marco P4 s12–s16, 30,64–50,08 s, y su paso a una acción personal en s22–s23, 69,22–77,88 s. Los ejemplos deben mostrar datos y una siguiente acción comprobable. El material de adaptación se limita a dificultades de trabajo y conserva como referencia formal la estructura del relato.
+
 ## Patrón de razonamiento observado en la muestra
 
 ### Corte histórico del 8/11, P1
@@ -164,6 +208,14 @@ Las dos muestras permiten comparar organización argumental y destinatario suger
 
 **INFERENCIA.** La coincidencia más estable de esta muestra ampliada es vincular una dificultad reconocible, un mecanismo empaquetado y un recurso pedido mediante comentario. La diferencia de P3 reside en enseñar una estructura escrita que puede inspeccionarse por campos y ejemplos. Esto permite comparar su forma de hacer tangible una oferta, aunque siguen pendientes las pruebas del producto entregado y la experiencia del alumno. P3 aporta una cadena explícita de decisiones comerciales que en P1 está condensada alrededor del equipo y las herramientas.
 
+### Ampliación vigente con P4, 9/11
+
+**HECHO REFERENTE.** En P1–P3 el hilo conduce desde un problema comercial hasta una operación, plantilla o recurso solicitado por comentario. P4 conduce desde una experiencia personal hacia una reinterpretación y una apelación a actuar, s12–s24, 30,64–80,42 s. Su tramo de negocio, s17–s19, aporta trayectoria declarada dentro de ese relato. La conclusión reconocida en el ASR mantiene una función personal y carece de un recurso comercial pedido al espectador. [P4](https://www.instagram.com/alexmcarrera/reel/DOKUVxIDFis/).
+
+**INFERENCIA.** El patrón común más amplio de las cuatro publicaciones es volver concreta una dificultad, proponer un cambio de marco y darle una salida comprensible. La forma de esa salida varía según la pieza. P1 presenta edición con referencias, P2 ordena un modelo comercial, P3 estructura una oferta y P4 explica una posición personal ante las circunstancias. Esta muestra permite distinguir explicación de mecanismo, captación de interés por un recurso y construcción de identidad. Las métricas de audiencia, aprendizaje, confianza o ventas siguen fuera de la evidencia.
+
+P4 funciona como contrapunto a las tres piezas comerciales. Aporta narración autobiográfica y una elección personal como mecanismo argumental. Las atribuciones filosóficas y los cambios de vida se conservan como contenido declarado. La incertidumbre textual del ASR limita las citas y la comprobación de interfaz del padre ejecutor sólo acredita el objetivo público, el autor y el reproductor. El análisis no permite evaluar prosodia, música, pausas perceptuales, mezcla o edición de imagen de P4.
+
 ## Tres aplicaciones concretas para ONIA
 
 Las tres propuestas siguientes conservan el corte del 8/11 basado en P1. La actualización posterior incorpora P2 sin sustituirlas.
@@ -177,6 +229,8 @@ Las tres propuestas siguientes conservan el corte del 8/11 basado en P1. La actu
 Actualización de las tres aplicaciones con P2, 9/11. **PROPUESTA ONIA.** Para C1, añadir al inicio de la entrada ficticia una pregunta que permita al dueño expresar qué tarea le causa el problema de organización, tomando P2 s21–s26, 41,12–50,58 s. Para C2, acompañar el mensaje revisado con un cálculo explícito de consultas que quedaron sin atender y supuestos revisables, inspirado en P2 s43–s50, 77,60–90,78 s. El entregable sería una hoja con datos aportados y supuestos separados, y su control cotejaría cada cifra con la entrada. Para C3, numerar la secuencia de consulta, clasificación y respuesta, usando la enumeración de P2 como recurso de explicación. El control exige localizar el paso que necesita intervención y registrar qué salida se comprobó. Son extensiones propuestas, sin clases completas producidas ni resultados económicos atribuidos a ONIA.
 
 Ampliación con P3 para las mismas tres aplicaciones, 9/11. **PROPUESTA ONIA.** En C1, presentar semana inicial y salida ordenada en un cuadro comparable, tomando la función didáctica de la comparación de P3 entry-3. En C2, especificar cliente, mecanismo, promesa respaldada y entrega para el mensaje comercial propuesto, a partir de P3 video entry-7 y estática entry-8. En C3, mostrar dependencias entre pasos antes de la demo y comprobar una a una sus salidas, inspirado en el orden presentado por P3 entry-6. Los tres entregables siguen acotados a un ejemplo del pequeño negocio. Su preparación y ensayo pertenecen al trabajo posterior de clases.
+
+Ampliación con P4 de las mismas tres aplicaciones, 9/11. **PROPUESTA ONIA.** En C1, el facilitador puede narrar una dificultad diaria de agenda, indicar qué supuesto cambió al usar Claude y mostrar la próxima acción. Entregable propuesto, un ejemplo inicial y su decisión revisada, con control de horarios y tareas. En C2, puede relatar una consulta mal respondida, mostrar qué dato faltaba y revisar el mensaje, con control de precio y condiciones. En C3, puede describir un error cotidiano en una tarea repetida, mostrar cómo lo detectó y ubicar la intervención humana. Entregable propuesto, entrada, error y salida revisada. La fuente formal compartida es P4 s12–s16, 30,64–50,08 s, y s22–s23, 69,22–77,88 s. Estas extensiones usan aprendizaje de trabajo cotidiano y una acción comprobable, sin incorporar el duelo personal a la venta del workshop.
 
 ## Página comercial separada
 
@@ -236,7 +290,7 @@ El padre ejecutor informó un fallo inicial al tratar la segunda entrada estáti
 
 Otros cuatro candidatos del mismo perfil, consultados el 9/11, quedaron excluidos del mínimo audiovisual. Sus resúmenes públicos recuperados contienen 8, 6, 8 y 9 entradas respectivamente, todas con `format_count=0`. El padre ejecutor informó ausencia de reproductor en lo observado. Este hijo leyó esos resúmenes. Ese alcance permite descartar los candidatos de esta selección y conserva la posibilidad de que existan otros formatos fuera de la recuperación. [DfDNc-Wn6Gz](https://www.instagram.com/alexmcarrera/reel/DfDNc-Wn6Gz/) · [DeUxpBunwsA](https://www.instagram.com/alexmcarrera/reel/DeUxpBunwsA/) · [DeLD36xDiSa](https://www.instagram.com/alexmcarrera/reel/DeLD36xDiSa/) · [Dd5Qb_qjPp9](https://www.instagram.com/alexmcarrera/reel/Dd5Qb_qjPp9/).
 
-### Cierre parcial vigente del 9/11
+### Cierre parcial anterior del 9/11, previo a P4
 
 El mínimo necesita **una publicación audiovisual distinta adicional**. Próximo paso exacto del padre ejecutor, resolver la autorización MCP pendiente del destino público [DOKUVxIDFis](https://www.instagram.com/alexmcarrera/reel/DOKUVxIDFis/), verificar identidad y reproductor, y recuperar contenido o subtítulos temporales permitidos. Después, este mismo hijo podrá añadir P4 con sus cinco respuestas y ampliar comparación y aplicaciones. Descubrimiento de URL, autorización de navegación y revisión del contenido son estados separados. P4 conserva únicamente el primero en este corte.
 
@@ -245,3 +299,21 @@ La página comercial conserva el corte comprobado del 8/11. Su precio y sus cond
 Comprobación final de esta retoma, quince respuestas numeradas y enlaces locales resueltos. Se recalcularon dieciséis hashes de medios e imágenes, audio P2, tres videos P3, seis estáticas P3, tres contactos y tres cuadros finales, todos coincidentes con sus recibos. El ASR íntegro nuevo se conserva en la evidencia privada y en Git sólo se incorporan paráfrasis, tiempos, procedencia y hashes. El padre ejecutor confirmó el cierre del navegador. Este hijo conserva su identidad `/root/alex_carrera`, modelo y esfuerzo solicitados `gpt-6.1-sol/high`, observados `null/null`. Único escritor de esta ficha, sin otros escritores ni procesos pendientes al entregar este corte parcial.
 
 La publicación de esta entrega corresponde al padre ejecutor. El coordinador canónico mantiene registro, cierre del harness, revisión y aceptación.
+
+### Evidencia P4 y cierre vigente del mínimo documental, 9/11
+
+El padre ejecutor recibió la ampliación de autorización MCP y navegó la URL exacta de P4. El recibo público saneado registra handle `alexmcarrera`, etiqueta verificada, reproductor y caption sobre elegir cómo responder a las cartas recibidas. La referencia visible `61w` se conserva como dato relativo de interfaz y no se convierte en una fecha de publicación. El recibo acredita comprobación pública del objetivo. Las palabras analizadas proceden del ASR automático. [P4 canónica](https://www.instagram.com/alexmcarrera/reel/DOKUVxIDFis/).
+
+La evidencia privada temporal está en `/tmp/cerebros-a-20261108-retoma-20261109/DOKUVxIDFis-20261109T033516Z/`. Este hijo leyó metadata, recibos de medio e interfaz y los 24 segmentos completos del ASR. Los textos largos y el medio permanecen en esa ubicación privada.
+
+| Archivo o control | Resultado cotejado |
+|---|---|
+| `metadata.json` | Uploader Alex Carrera, ID `1584735240`, canal `alexmcarrera`, post `DOKUVxIDFis`. SHA-256 `886c76b2d3422178bc3b207f64a335ecf8dcec85437a35a81df9765bf526e663` |
+| `browser-public-receipt.json` | MCP aprobado, perfil verificado y reproductor público observados por el padre ejecutor el 9/11. SHA-256 `f2e1e08efb6c581d8a293f60818e1ebbb583f7e96f9da7d3a7f17b66f28301a9` |
+| `media-receipt.json` | Consulta 03:35:19 UTC, 654.897 bytes, audio 80,690998 s. SHA-256 del recibo `a74c23e28ff9e58b191039c52029d6ccc42e1c206d147ffdf5eb67360d96a80b` |
+| `source.m4a` | SHA-256 recalculado por este hijo y coincidente con recibo y ASR `deb55c87e074cc310f01d761c899c5417eb9b6c44a1fe0c9f8b1f211e9a04c0a` |
+| `asr-20261109T033618Z.json` | SHA-256 recalculado `9da2c6d73d889bb96e3db9de3812969e291000ffd5580b3cf7bcbcb327bfb91a`. Small offline CPU/int8, dos hilos, un worker, VAD, beam5. Procesamiento 35,626 s. Lectura completa de 24 segmentos, 0–80,42 s |
+
+**El mínimo documental de cuatro publicaciones distintas queda cubierto con veinte respuestas, sujeto a revisión independiente.** P3 cuenta una unidad mixta y sus tres videos conservan tiempos locales. Las cinco respuestas de P4 se apoyan en contenido primario leído íntegro, con los errores del ASR declarados. Los cierres parciales y sus bloqueos anteriores permanecen como historial. El siguiente paso del padre ejecutor es verificar esta ampliación y publicarla para revisión. El coordinador canónico conserva cierre, revisión y aceptación.
+
+La página de Exposure mantiene su consulta comprobada del 8/11 y sus condiciones ambiguas. Continúan sin comprobar el recurso entregado tras cada keyword, conversiones, resultados económicos y experiencia de alumnos. La percepción audiovisual integral mantiene límites por pieza. Modelo y esfuerzo solicitados `gpt-6.1-sol/high`, observados `null/null` para este hijo. El padre ejecutor confirmó término del ASR y cierre del navegador. Único escritor de esta ficha, sin otros escritores ni procesos propios pendientes al entregar la ampliación.

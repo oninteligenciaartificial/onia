@@ -96,7 +96,9 @@ Hashes SHA-256 calculados por el principal después de las seis entregas, sin ed
 
 El registro/briefing canónico no se modificó. No se ejecutaron `cerrar`, `revisar`, `aceptar` ni integración a master desde esta sesión. Esas operaciones corresponden al coordinador tras la publicación de esta entrega parcial.
 
-## Retoma del 9/11/2026
+## Retoma del 9/11/2026 · corte parcial c328edd
+
+Este corte y sus estados de tres piezas de Carrera se conservan como historial. La ampliación autorizada posterior de P4 se documenta al final.
 
 Base comprobada al retomar: `84c949a222f5c225b1ce6f38340fe80951fc6300`, misma rama asignada y worktree limpio. Se completan sólo brechas Heras/Carrera. Se releyeron AGENTS, reglas, memoria, estado, decisiones/plan, índice, directora y research pertinentes; las instrucciones y el registro canónico permanecen intactos. La retoma recibida por stdin autoriza exclusivamente el navegador secundario restringido y ASR corto instalado. No se interpreta la restricción histórica de ASR del corte anterior como resultado vigente.
 
@@ -160,3 +162,35 @@ Los cuatro archivos completos previos se compararon byte a byte con el commit ba
 El padre recalculó los hashes de los ocho medios nuevos, los cuatro JSON ASR con su hash fuente y límite≤180s, dos imágenes de Heras y doce de Carrera contra sus recibos. Los cuatro ASR contienen18/25/0/68segmentos; el vacío no suma contenido hablado. Los recibos y archivos permanecen en la carpeta privada declarada.
 
 Se ejecutó de nuevo el verificador documental ya existente fueraGit: JSON parseable, seis referentes en orden exacto, campos/tipos, estados coherentes con4/4/4/6/4/3, archivos/IDs/URLs y destinos/anclas de enlaces internos correctos. Se revisaron manualmente las cinco respuestas y límites de cada incorporación. Esta comprobación documental no convierte Carrera en completo. Comparación del diff contra la base de retoma y revisión de espacios: sólo cinco archivos de esta carpeta (dos fichas, README, EVIDENCIA y COBERTURA); nueve archivos de entrega Markdown/JSON, sin medios/transcripciones completas/auxiliares nuevos enGit. Ningún registro, briefing, regla, memoria u otro grupo modificado. Commit/push explícito sólo a la rama asignada, sin force/amend; hash y cotejo remoto se informan en la entrega, sin autorreferencia dentro del commit.
+
+## Ampliación autorizada de P4 Carrera · 9/11/2026
+
+Retoma recibida por stdin para **sólo la cuarta pieza de Carrera**. Base publicada y preservada `c328edd13691fce271b3dfb06c39bb4c0836b12f`, misma rama asignada y worktree limpio al iniciar. El coordinador amplió los destinos públicos autorizados a DOKUVxIDFis; sustituye la autorización pendiente del corte parcial anterior. No se modificó el registro ni el briefing canónico. Se releyeron AGENTS, reglas, memoria, estado, selección pertinente de ORQUESTACION, directora preparar-oferta-y-embudo, apoyo research, decisiones, plan-workshop, índice de cerebros y cerebro previo Carrera. Se preservó el contexto de Claude/C1, Bs50 aprobado y VIP propuesto; no se prepararon clases ni una síntesis transversal.
+
+Sólo el padre navegó a `https://www.instagram.com/alexmcarrera/reel/DOKUVxIDFis/` mediante MCP nativo `cuentas_analisis`; devolvió «Destino aprobado abierto». Snapshot sin argumentos saneado: handle alexmcarrera con rótulo Verified, reproductor de vídeo, antigüedad visible61w y caption sobre elegir cómo responder a las cartas recibidas. Sólo se conservó un recibo de esos campos públicos; no snapshot crudo ni datos incidentales de la cuenta. Sin clicks, cookies, mensajes o acceso a datos privados. `browser_close` confirmó cierre después de la adquisición.
+
+El GET público acotado mediante el auxiliar ya existente recuperó un medio asociado al shortcode y uploader1584735240/canalalexmcarrera; sin cookies ni proxy, caché deshabilitada y límite25MiB. Metadatos sin duración declarada; antes del ASR se midió el medio con PyAV: **80,690998s**, bajo el límite180s. Se ejecutó exclusivamente small ya instalado, offline con `local_files_only=True`, CPU int8, dos hilos y un trabajador, secuencial, VAD/beam5. Duró35,626s. Sin instalar, descargar modelos, API paga, servicios ni borrar archivos.
+
+Evidencia privada persistida sin sobrescribir la anterior: **`/tmp/cerebros-a-20261108-retoma-20261109/DOKUVxIDFis-20261109T033516Z/`**. Sigue siendo local de este VPS y potencialmente efímera; Git no transporta el medio ni la transcripción íntegra a otra VM.
+
+| Archivo | Bytes / cobertura | SHA-256 |
+|---|---|---|
+| `source.m4a` | 654897;80,690998s | `deb55c87e074cc310f01d761c899c5417eb9b6c44a1fe0c9f8b1f211e9a04c0a` |
+| `asr-20261109T033618Z.json` | 24segmentos;0–80,42s; salida íntegra leída | `9da2c6d73d889bb96e3db9de3812969e291000ffd5580b3cf7bcbcb327bfb91a` |
+
+La carpeta conserva además `metadata.json`, `media-receipt.json` y `browser-public-receipt.json` saneado. El padre recalculó hash del medio y del ASR, cotejó su hash fuente y duración, y leyó los24 segmentos. La ficha aporta referencias exactas sin copiar la transcripción completa. Navegar y leer ASR no acreditan visión continua, identidad vocal, música o escucha. Las atribuciones a pensadores y los detalles biográficos son declaraciones del relato; no hechos corroborados independientemente. El último segmento77,88–80,42s está deformado y no se reconstruye como cita literal; el caption sólo aporta corroboración separada de su metáfora final.
+
+El mismo hijo nativo `/root/alex_carrera` retomó su archivo exclusivo; no se creó hijo nuevo ni nietos. Modelo/esfuerzo solicitados `gpt-6.1-sol/high`, efectivos observados `null/null`. Leyó íntegros los24 segmentos y metadata/recibos saneados, recalculó hashes y escribió sólo [alex-carrera.md](alex-carrera.md). Entregó mensaje final completo, declaró ausencia de procesos/escritores y se liberó mediante `interrupt_agent` tras estado `completed`. El padre escribió sólo README, matriz y esta evidencia; revisó el diff de la ficha y su P4 contra el ASR. No hubo escritores simultáneos ni navegación del hijo.
+
+**Resultado vigente para revisión: seis referentes con mínimo de contenido cubierto; conteos4/4/4/6/4/4 en el orden asignado.** Carrera contiene veinte respuestas numeradas para cuatro publicaciones distintas. Su P4 contrasta relato personal con los recursos comerciales de P1–P3; patrón y tres aplicaciones propuestas tienen referencias a sus segmentos. La revisión del ejecutor no es aceptación independiente. Persisten errores ASR, límites audiovisuales y condiciones comerciales no comprobadas; las fichas los conservan. Los cortes parciales anteriores permanecen como historia, no se oculta la brecha que existía.
+
+| Slug | Hijo nativo / archivo exclusivo | Modelo/esfuerzo solicitado → observado | Cobertura final |
+|---|---|---|---|
+| alex-hormozi | `/root/alex_hormozi` · `alex-hormozi.md` | `gpt-6.1-sol/high` → `null/null` | 4; sin cambio |
+| pedro-buerbaum | `/root/pedro_buerbaum` · `pedro-buerbaum.md` | `gpt-6.1-sol/high` → `null/null` | 4; sin cambio |
+| victor-heras | `/root/victor_heras` · `victor-heras.md` | `gpt-6.1-sol/high` → `null/null` | 4; sin cambio |
+| iman-gadzhi | `/root/iman_gadzhi` · `iman-gadzhi.md` | `gpt-6.1-sol/high` → `null/null` | 6; sin cambio |
+| justin-welsh | `/root/justin_welsh` · `justin-welsh.md` | `gpt-6.1-sol/high` → `null/null` | 4; sin cambio |
+| alex-carrera | `/root/alex_carrera` · `alex-carrera.md` | `gpt-6.1-sol/high` → `null/null` | 4; retoma P4 entregada y liberada |
+
+Comprobaciones de esta ampliación: JSON/campos/estados/IDs/URLs coherentes y162 enlaces internos con destinos/anclas válidos mediante el verificador existente fueraGit; veinte apartados numerados de Carrera, cinco por pieza, cotejados también manualmente; hash de Carrera52014bytes, SHA-256 `52fd0a528d5686a1cf7f83db5ae078e5b6a73e9aa3c3444567c0045bee2fd6a2`. Los cuerpos P1–P3 de Carrera se compararon exactamente contra c328edd y se conservaron. Las otras cinco fichas permanecen byte a byte iguales a esa base. Diff sólo en Carrera, README, COBERTURA y EVIDENCIA dentro de la carpeta exclusiva; nueve entregables, sin medios/transcripciones completas enGit. `git diff --check` correcto. Navegador cerrado y ASR terminado. Commit y push propios sólo a `origin HEAD:refs/heads/codex/ws-cerebros-a-20261108`, sin force/amend; hash/cotejo remoto se informan fuera del commit. El coordinador conserva cierre, revisión independiente, aceptación e integración; no se ejecutaron esas operaciones desde este intento.
