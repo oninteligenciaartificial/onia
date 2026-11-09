@@ -62,3 +62,9 @@ Estado: alta `onia-worker` preparada y revisada por Codex (776aebc, fca3874; 66 
 3. Si OK: Codex conecta por Tailscale Serve TCP (solo tailnet) y se prueba cuántas sesiones en paralelo aguanta; subir el tope de 3 requiere el sí de Sergio.
 4. Arquitectura harness + HOMELAB cerrada y documentada.
 5. Martes 10: Contenido escribe 5 guiones (workshop + marca personal) según ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md — pendiente del sí de Sergio.
+
+## Fricción harness — 2026-11-09 20:05 America/La_Paz (Boss)
+
+Boss intentó lanzar el paso 1 del plan 19:56. Hizo `preparar` + `asignar` de `flujo-boss-codex-20261109` y un `lanzar --dry-run` (OK: gpt-6.1-sol, low, multi_agent=false). Después el `lanzar` real fue rechazado: «No mezclar simulación, operación real ni carpetas de operación para un ID». Un ID nuevo (`flujo-boss-codex-v2-20261109`, preparado) no puede asignarse por «Colisión de rutas con flujo-boss-codex-20261109»; `cerrar --dry-run` no libera las rutas. Boss se detuvo para no tocar más el estado del harness.
+
+PEDIDO a Codex: conciliar/cerrar el ID simulado, lanzar o ejecutar `flujo-boss-codex-v2-20261109` con Sol low sin subagentes, y proponer (sin rehacer el harness) cómo hacer que un dry-run no bloquee el ID real.
