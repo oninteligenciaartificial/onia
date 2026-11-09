@@ -1,14 +1,14 @@
 {
   "schema": 2,
   "id": "workshop-kit-piloto-20261109",
-  "revision": 32,
+  "revision": 45,
   "compartible": true,
   "objetivo": "Dejar listo el material práctico y visual para que Sergio ensaye los primeros10min aprobados del workshop",
-  "estado": "en_curso",
-  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
-  "resultado": "Resolver C4 del veredicto independiente; leer /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
-  "comprobacion": "Revisión independiente detectó fallo real C4: el pie2de7 pasa a página3 en PDF, aunque conteo total sea7. Coordinador reprodujo extrayendo texto por página. Conservar todos los originales y el veredicto.\nLa propuesta mínima ya pasó en copia: /tmp/onia-kit-pdf-ajuste-rzrm0nl7/repo/_investigacion-onia/base-operativa/01-negocio/workshop-20261108/kit-piloto-20261109/\nCambios propuestos: kit.css agrega sólo @media print{.slide table{font-size:16pt}.slide th,.slide td{padding:4px 8px}}; comprobar.cjs emula print también para láminas antes de capturar/medir, no sólo hoja/guía. Cotejá y aplicá. No reducir contenido/prompts. Incorporá comprobar-pdf.py de esa copia: parser stdlib acotado a este PDF Chromium, comprueba pie propio en cada página y ningún pie ajeno. La propuesta pasó21controles navegador y12páginas PDF; el control nuevo rechaza host-01 original en página2. No afirmar rasterización general de PDF.\nAntes de congelar: index/links de evidencia final apuntan a host-02, conservar los links históricos documentados. Integrá comprobador PDF al flujo de verificación o documentá ambos comandos; registrar rechazo original y nuevo éxito. Podés agregar comprobación de prompts completos por PDF si ayuda. No instalar herramientas ni ejecutar navegador dentro de bwrap.\nEscribir evidencia/solicitud-host-v2.json con lista:true y archivos:7archivos anteriores+comprobar-pdf.py y cualquier dependencia nueva necesaria. Esperar máximo300s /home/onia-codex-worker/operacion/controles/continuacion-noche-20261109/kit-resultado-v2.json. No modificar archivos congelados durante espera. Coordinador corre sobre copia en host y comprueba páginas. Si rc0 y hashes coinciden, copiar sólo artefactos públicos permitidos a evidencia/host-02, inspeccionar capturas especialmente láminas2/3 en print, actualizar LEEME/manifiesto nuevos. No sobrescribir host-01. Publicar mismoSID/rama y hash remoto. Cierre requiere otro revisor distinto y veredicto vigente. Sin otras correcciones de alcance ni nuevos servicios.\n",
-  "verificacion": "pendiente",
+  "estado": "aceptado",
+  "proximo_paso": "Integrar entrega aceptada a origin/master, verificar hash y reportar pendientes a Sergio; campaña y envíos sin activar.",
+  "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+  "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+  "verificacion": "correcta",
   "evidencias": [
     {
       "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
@@ -34,9 +34,19 @@
       "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
       "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
       "bytes": 2039
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r34.json",
+      "sha256": "42ed4a8879c38751239cec5fa810794983f47e6bebb4d78a945906d37d5bf12c",
+      "bytes": 8931
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+      "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+      "bytes": 310
     }
   ],
-  "actualizado": "2026-11-09T05:28:48.420804+00:00",
+  "actualizado": "2026-11-09T05:39:11.563845+00:00",
   "historial": [
     {
       "revision": 1,
@@ -3605,6 +3615,3098 @@
           "bytes": 1228
         }
       ]
+    },
+    {
+      "revision": 32,
+      "actualizado": "2026-11-09T05:28:48.420804+00:00",
+      "estado": "en_curso",
+      "resultado": "Resolver C4 del veredicto independiente; leer /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+      "comprobacion": "Revisión independiente detectó fallo real C4: el pie2de7 pasa a página3 en PDF, aunque conteo total sea7. Coordinador reprodujo extrayendo texto por página. Conservar todos los originales y el veredicto.\nLa propuesta mínima ya pasó en copia: /tmp/onia-kit-pdf-ajuste-rzrm0nl7/repo/_investigacion-onia/base-operativa/01-negocio/workshop-20261108/kit-piloto-20261109/\nCambios propuestos: kit.css agrega sólo @media print{.slide table{font-size:16pt}.slide th,.slide td{padding:4px 8px}}; comprobar.cjs emula print también para láminas antes de capturar/medir, no sólo hoja/guía. Cotejá y aplicá. No reducir contenido/prompts. Incorporá comprobar-pdf.py de esa copia: parser stdlib acotado a este PDF Chromium, comprueba pie propio en cada página y ningún pie ajeno. La propuesta pasó21controles navegador y12páginas PDF; el control nuevo rechaza host-01 original en página2. No afirmar rasterización general de PDF.\nAntes de congelar: index/links de evidencia final apuntan a host-02, conservar los links históricos documentados. Integrá comprobador PDF al flujo de verificación o documentá ambos comandos; registrar rechazo original y nuevo éxito. Podés agregar comprobación de prompts completos por PDF si ayuda. No instalar herramientas ni ejecutar navegador dentro de bwrap.\nEscribir evidencia/solicitud-host-v2.json con lista:true y archivos:7archivos anteriores+comprobar-pdf.py y cualquier dependencia nueva necesaria. Esperar máximo300s /home/onia-codex-worker/operacion/controles/continuacion-noche-20261109/kit-resultado-v2.json. No modificar archivos congelados durante espera. Coordinador corre sobre copia en host y comprueba páginas. Si rc0 y hashes coinciden, copiar sólo artefactos públicos permitidos a evidencia/host-02, inspeccionar capturas especialmente láminas2/3 en print, actualizar LEEME/manifiesto nuevos. No sobrescribir host-01. Publicar mismoSID/rama y hash remoto. Cierre requiere otro revisor distinto y veredicto vigente. Sin otras correcciones de alcance ni nuevos servicios.\n",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r17.json",
+          "sha256": "dec9081003e9a6475336b28dfd44d5956e5d66a80b9ae12898161207f8204f3e",
+          "bytes": 5366
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r18-13ad4497.json",
+          "sha256": "e284db2af6bbaebfd57db6bdc88ad2e70a87b808657368d3aaa0c5d6144dc551",
+          "bytes": 310
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+          "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
+          "bytes": 2039
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": 0,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:20:33.048898+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-1",
+          "pid": 1945613,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088384",
+          "supervisor_pid": 1945611,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088372",
+          "rama": "(detached)",
+          "session_id": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-3",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:08.281006+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2028d1bb195492a163183ba42447b0dfcc15eefa53a754dd1a458aabada56ad",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.veredicto.json",
+          "fin": "2026-11-09T05:25:54.692473+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1963480,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130107",
+          "supervisor_pid": 1963475,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 459605,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:28:05.481526+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
+          "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
+          "bytes": 1228
+        }
+      ]
+    },
+    {
+      "revision": 33,
+      "actualizado": "2026-11-09T05:34:36.119045+00:00",
+      "estado": "en_curso",
+      "resultado": "Resolver C4 del veredicto independiente; leer /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+      "comprobacion": "Revisión independiente detectó fallo real C4: el pie2de7 pasa a página3 en PDF, aunque conteo total sea7. Coordinador reprodujo extrayendo texto por página. Conservar todos los originales y el veredicto.\nLa propuesta mínima ya pasó en copia: /tmp/onia-kit-pdf-ajuste-rzrm0nl7/repo/_investigacion-onia/base-operativa/01-negocio/workshop-20261108/kit-piloto-20261109/\nCambios propuestos: kit.css agrega sólo @media print{.slide table{font-size:16pt}.slide th,.slide td{padding:4px 8px}}; comprobar.cjs emula print también para láminas antes de capturar/medir, no sólo hoja/guía. Cotejá y aplicá. No reducir contenido/prompts. Incorporá comprobar-pdf.py de esa copia: parser stdlib acotado a este PDF Chromium, comprueba pie propio en cada página y ningún pie ajeno. La propuesta pasó21controles navegador y12páginas PDF; el control nuevo rechaza host-01 original en página2. No afirmar rasterización general de PDF.\nAntes de congelar: index/links de evidencia final apuntan a host-02, conservar los links históricos documentados. Integrá comprobador PDF al flujo de verificación o documentá ambos comandos; registrar rechazo original y nuevo éxito. Podés agregar comprobación de prompts completos por PDF si ayuda. No instalar herramientas ni ejecutar navegador dentro de bwrap.\nEscribir evidencia/solicitud-host-v2.json con lista:true y archivos:7archivos anteriores+comprobar-pdf.py y cualquier dependencia nueva necesaria. Esperar máximo300s /home/onia-codex-worker/operacion/controles/continuacion-noche-20261109/kit-resultado-v2.json. No modificar archivos congelados durante espera. Coordinador corre sobre copia en host y comprueba páginas. Si rc0 y hashes coinciden, copiar sólo artefactos públicos permitidos a evidencia/host-02, inspeccionar capturas especialmente láminas2/3 en print, actualizar LEEME/manifiesto nuevos. No sobrescribir host-01. Publicar mismoSID/rama y hash remoto. Cierre requiere otro revisor distinto y veredicto vigente. Sin otras correcciones de alcance ni nuevos servicios.\n",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r17.json",
+          "sha256": "dec9081003e9a6475336b28dfd44d5956e5d66a80b9ae12898161207f8204f3e",
+          "bytes": 5366
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r18-13ad4497.json",
+          "sha256": "e284db2af6bbaebfd57db6bdc88ad2e70a87b808657368d3aaa0c5d6144dc551",
+          "bytes": 310
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+          "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
+          "bytes": 2039
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": 0,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:20:33.048898+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-1",
+          "pid": 1945613,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088384",
+          "supervisor_pid": 1945611,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088372",
+          "rama": "(detached)",
+          "session_id": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-3",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:08.281006+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2028d1bb195492a163183ba42447b0dfcc15eefa53a754dd1a458aabada56ad",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.veredicto.json",
+          "fin": "2026-11-09T05:25:54.692473+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1963480,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130107",
+          "supervisor_pid": 1963475,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 459605,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:28:05.481526+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:34:36.091371+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
+          "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
+          "bytes": 1228
+        }
+      ]
+    },
+    {
+      "revision": 34,
+      "actualizado": "2026-11-09T05:34:46.387680+00:00",
+      "estado": "en_curso",
+      "resultado": "Resolver C4 del veredicto independiente; leer /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+      "comprobacion": "Revisión independiente detectó fallo real C4: el pie2de7 pasa a página3 en PDF, aunque conteo total sea7. Coordinador reprodujo extrayendo texto por página. Conservar todos los originales y el veredicto.\nLa propuesta mínima ya pasó en copia: /tmp/onia-kit-pdf-ajuste-rzrm0nl7/repo/_investigacion-onia/base-operativa/01-negocio/workshop-20261108/kit-piloto-20261109/\nCambios propuestos: kit.css agrega sólo @media print{.slide table{font-size:16pt}.slide th,.slide td{padding:4px 8px}}; comprobar.cjs emula print también para láminas antes de capturar/medir, no sólo hoja/guía. Cotejá y aplicá. No reducir contenido/prompts. Incorporá comprobar-pdf.py de esa copia: parser stdlib acotado a este PDF Chromium, comprueba pie propio en cada página y ningún pie ajeno. La propuesta pasó21controles navegador y12páginas PDF; el control nuevo rechaza host-01 original en página2. No afirmar rasterización general de PDF.\nAntes de congelar: index/links de evidencia final apuntan a host-02, conservar los links históricos documentados. Integrá comprobador PDF al flujo de verificación o documentá ambos comandos; registrar rechazo original y nuevo éxito. Podés agregar comprobación de prompts completos por PDF si ayuda. No instalar herramientas ni ejecutar navegador dentro de bwrap.\nEscribir evidencia/solicitud-host-v2.json con lista:true y archivos:7archivos anteriores+comprobar-pdf.py y cualquier dependencia nueva necesaria. Esperar máximo300s /home/onia-codex-worker/operacion/controles/continuacion-noche-20261109/kit-resultado-v2.json. No modificar archivos congelados durante espera. Coordinador corre sobre copia en host y comprueba páginas. Si rc0 y hashes coinciden, copiar sólo artefactos públicos permitidos a evidencia/host-02, inspeccionar capturas especialmente láminas2/3 en print, actualizar LEEME/manifiesto nuevos. No sobrescribir host-01. Publicar mismoSID/rama y hash remoto. Cierre requiere otro revisor distinto y veredicto vigente. Sin otras correcciones de alcance ni nuevos servicios.\n",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r17.json",
+          "sha256": "dec9081003e9a6475336b28dfd44d5956e5d66a80b9ae12898161207f8204f3e",
+          "bytes": 5366
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r18-13ad4497.json",
+          "sha256": "e284db2af6bbaebfd57db6bdc88ad2e70a87b808657368d3aaa0c5d6144dc551",
+          "bytes": 310
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+          "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
+          "bytes": 2039
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:20:33.048898+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-1",
+          "pid": 1945613,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088384",
+          "supervisor_pid": 1945611,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088372",
+          "rama": "(detached)",
+          "session_id": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-3",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:08.281006+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2028d1bb195492a163183ba42447b0dfcc15eefa53a754dd1a458aabada56ad",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.veredicto.json",
+          "fin": "2026-11-09T05:25:54.692473+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1963480,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130107",
+          "supervisor_pid": 1963475,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 459605,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:28:05.481526+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:34:36.091371+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
+          "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
+          "bytes": 1228
+        }
+      ]
+    },
+    {
+      "revision": 35,
+      "actualizado": "2026-11-09T05:34:47.024800+00:00",
+      "estado": "en_curso",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r17.json",
+          "sha256": "dec9081003e9a6475336b28dfd44d5956e5d66a80b9ae12898161207f8204f3e",
+          "bytes": 5366
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r18-13ad4497.json",
+          "sha256": "e284db2af6bbaebfd57db6bdc88ad2e70a87b808657368d3aaa0c5d6144dc551",
+          "bytes": 310
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+          "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
+          "bytes": 2039
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r34.json",
+          "sha256": "42ed4a8879c38751239cec5fa810794983f47e6bebb4d78a945906d37d5bf12c",
+          "bytes": 8931
+        }
+      ],
+      "proximo_paso": "Cerrar conservando worktree y revisar entrega independiente.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:20:33.048898+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-1",
+          "pid": 1945613,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088384",
+          "supervisor_pid": 1945611,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088372",
+          "rama": "(detached)",
+          "session_id": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-3",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:08.281006+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2028d1bb195492a163183ba42447b0dfcc15eefa53a754dd1a458aabada56ad",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.veredicto.json",
+          "fin": "2026-11-09T05:25:54.692473+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1963480,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130107",
+          "supervisor_pid": 1963475,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 459605,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:28:05.481526+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:34:36.091371+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
+          "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
+          "bytes": 1228
+        }
+      ]
+    },
+    {
+      "revision": 36,
+      "actualizado": "2026-11-09T05:34:48.553475+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r17.json",
+          "sha256": "dec9081003e9a6475336b28dfd44d5956e5d66a80b9ae12898161207f8204f3e",
+          "bytes": 5366
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r18-13ad4497.json",
+          "sha256": "e284db2af6bbaebfd57db6bdc88ad2e70a87b808657368d3aaa0c5d6144dc551",
+          "bytes": 310
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+          "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
+          "bytes": 2039
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r34.json",
+          "sha256": "42ed4a8879c38751239cec5fa810794983f47e6bebb4d78a945906d37d5bf12c",
+          "bytes": 8931
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:20:33.048898+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-1",
+          "pid": 1945613,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088384",
+          "supervisor_pid": 1945611,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088372",
+          "rama": "(detached)",
+          "session_id": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-3",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:08.281006+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2028d1bb195492a163183ba42447b0dfcc15eefa53a754dd1a458aabada56ad",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.veredicto.json",
+          "fin": "2026-11-09T05:25:54.692473+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1963480,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130107",
+          "supervisor_pid": 1963475,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 459605,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:28:05.481526+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:34:36.091371+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-workshop-kit-piloto-20261109"
+        ],
+        "fecha": "2026-11-09T05:34:48.520890+00:00",
+        "dry_run": false,
+        "intento": 4,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
+          "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
+          "bytes": 1228
+        }
+      ]
+    },
+    {
+      "revision": 37,
+      "actualizado": "2026-11-09T05:34:50.940748+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r17.json",
+          "sha256": "dec9081003e9a6475336b28dfd44d5956e5d66a80b9ae12898161207f8204f3e",
+          "bytes": 5366
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r18-13ad4497.json",
+          "sha256": "e284db2af6bbaebfd57db6bdc88ad2e70a87b808657368d3aaa0c5d6144dc551",
+          "bytes": 310
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+          "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
+          "bytes": 2039
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r34.json",
+          "sha256": "42ed4a8879c38751239cec5fa810794983f47e6bebb4d78a945906d37d5bf12c",
+          "bytes": 8931
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:20:33.048898+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-1",
+          "pid": 1945613,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088384",
+          "supervisor_pid": 1945611,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088372",
+          "rama": "(detached)",
+          "session_id": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-3",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:08.281006+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2028d1bb195492a163183ba42447b0dfcc15eefa53a754dd1a458aabada56ad",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.veredicto.json",
+          "fin": "2026-11-09T05:25:54.692473+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1963480,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130107",
+          "supervisor_pid": 1963475,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 459605,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:28:05.481526+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:34:36.091371+00:00"
+        },
+        {
+          "intento": 5,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-2",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-5",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.briefing.txt",
+          "inicio": "2026-11-09T05:34:50.909743+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "ac99c6655cb5bacce5473cdc294cb043b377f2f21f0892f088417fc7a537d54c",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-workshop-kit-piloto-20261109"
+        ],
+        "fecha": "2026-11-09T05:34:48.520890+00:00",
+        "dry_run": false,
+        "intento": 4,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
+          "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
+          "bytes": 1228
+        }
+      ]
+    },
+    {
+      "revision": 38,
+      "actualizado": "2026-11-09T05:34:51.077817+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r17.json",
+          "sha256": "dec9081003e9a6475336b28dfd44d5956e5d66a80b9ae12898161207f8204f3e",
+          "bytes": 5366
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r18-13ad4497.json",
+          "sha256": "e284db2af6bbaebfd57db6bdc88ad2e70a87b808657368d3aaa0c5d6144dc551",
+          "bytes": 310
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+          "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
+          "bytes": 2039
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r34.json",
+          "sha256": "42ed4a8879c38751239cec5fa810794983f47e6bebb4d78a945906d37d5bf12c",
+          "bytes": 8931
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:20:33.048898+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-1",
+          "pid": 1945613,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088384",
+          "supervisor_pid": 1945611,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088372",
+          "rama": "(detached)",
+          "session_id": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-3",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:08.281006+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2028d1bb195492a163183ba42447b0dfcc15eefa53a754dd1a458aabada56ad",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.veredicto.json",
+          "fin": "2026-11-09T05:25:54.692473+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1963480,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130107",
+          "supervisor_pid": 1963475,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 459605,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:28:05.481526+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:34:36.091371+00:00"
+        },
+        {
+          "intento": 5,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-2",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 1981258,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170638",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-5",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.briefing.txt",
+          "inicio": "2026-11-09T05:34:50.909743+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "ac99c6655cb5bacce5473cdc294cb043b377f2f21f0892f088417fc7a537d54c",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-workshop-kit-piloto-20261109"
+        ],
+        "fecha": "2026-11-09T05:34:48.520890+00:00",
+        "dry_run": false,
+        "intento": 4,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
+          "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
+          "bytes": 1228
+        }
+      ]
+    },
+    {
+      "revision": 39,
+      "actualizado": "2026-11-09T05:34:51.215168+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r17.json",
+          "sha256": "dec9081003e9a6475336b28dfd44d5956e5d66a80b9ae12898161207f8204f3e",
+          "bytes": 5366
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r18-13ad4497.json",
+          "sha256": "e284db2af6bbaebfd57db6bdc88ad2e70a87b808657368d3aaa0c5d6144dc551",
+          "bytes": 310
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+          "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
+          "bytes": 2039
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r34.json",
+          "sha256": "42ed4a8879c38751239cec5fa810794983f47e6bebb4d78a945906d37d5bf12c",
+          "bytes": 8931
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:20:33.048898+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-1",
+          "pid": 1945613,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088384",
+          "supervisor_pid": 1945611,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088372",
+          "rama": "(detached)",
+          "session_id": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-3",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:08.281006+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2028d1bb195492a163183ba42447b0dfcc15eefa53a754dd1a458aabada56ad",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.veredicto.json",
+          "fin": "2026-11-09T05:25:54.692473+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1963480,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130107",
+          "supervisor_pid": 1963475,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 459605,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:28:05.481526+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:34:36.091371+00:00"
+        },
+        {
+          "intento": 5,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-2",
+          "pid": 1981299,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170652",
+          "supervisor_pid": 1981258,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170638",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-5",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.briefing.txt",
+          "inicio": "2026-11-09T05:34:50.909743+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "ac99c6655cb5bacce5473cdc294cb043b377f2f21f0892f088417fc7a537d54c",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-workshop-kit-piloto-20261109"
+        ],
+        "fecha": "2026-11-09T05:34:48.520890+00:00",
+        "dry_run": false,
+        "intento": 4,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
+          "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
+          "bytes": 1228
+        }
+      ]
+    },
+    {
+      "revision": 40,
+      "actualizado": "2026-11-09T05:34:51.853403+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r17.json",
+          "sha256": "dec9081003e9a6475336b28dfd44d5956e5d66a80b9ae12898161207f8204f3e",
+          "bytes": 5366
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r18-13ad4497.json",
+          "sha256": "e284db2af6bbaebfd57db6bdc88ad2e70a87b808657368d3aaa0c5d6144dc551",
+          "bytes": 310
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+          "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
+          "bytes": 2039
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r34.json",
+          "sha256": "42ed4a8879c38751239cec5fa810794983f47e6bebb4d78a945906d37d5bf12c",
+          "bytes": 8931
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:20:33.048898+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-1",
+          "pid": 1945613,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088384",
+          "supervisor_pid": 1945611,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088372",
+          "rama": "(detached)",
+          "session_id": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-3",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:08.281006+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2028d1bb195492a163183ba42447b0dfcc15eefa53a754dd1a458aabada56ad",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.veredicto.json",
+          "fin": "2026-11-09T05:25:54.692473+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1963480,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130107",
+          "supervisor_pid": 1963475,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 459605,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:28:05.481526+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:34:36.091371+00:00"
+        },
+        {
+          "intento": 5,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-2",
+          "pid": 1981299,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170652",
+          "supervisor_pid": 1981258,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170638",
+          "rama": "(detached)",
+          "session_id": "01a1becd-5a6b-7d42-8e64-be8207566738",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-5",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.briefing.txt",
+          "inicio": "2026-11-09T05:34:50.909743+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "ac99c6655cb5bacce5473cdc294cb043b377f2f21f0892f088417fc7a537d54c",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-workshop-kit-piloto-20261109"
+        ],
+        "fecha": "2026-11-09T05:34:48.520890+00:00",
+        "dry_run": false,
+        "intento": 4,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
+          "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
+          "bytes": 1228
+        }
+      ]
+    },
+    {
+      "revision": 41,
+      "actualizado": "2026-11-09T05:35:50.580525+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r17.json",
+          "sha256": "dec9081003e9a6475336b28dfd44d5956e5d66a80b9ae12898161207f8204f3e",
+          "bytes": 5366
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r18-13ad4497.json",
+          "sha256": "e284db2af6bbaebfd57db6bdc88ad2e70a87b808657368d3aaa0c5d6144dc551",
+          "bytes": 310
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+          "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
+          "bytes": 2039
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r34.json",
+          "sha256": "42ed4a8879c38751239cec5fa810794983f47e6bebb4d78a945906d37d5bf12c",
+          "bytes": 8931
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:20:33.048898+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-1",
+          "pid": 1945613,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088384",
+          "supervisor_pid": 1945611,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088372",
+          "rama": "(detached)",
+          "session_id": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-3",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:08.281006+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2028d1bb195492a163183ba42447b0dfcc15eefa53a754dd1a458aabada56ad",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.veredicto.json",
+          "fin": "2026-11-09T05:25:54.692473+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1963480,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130107",
+          "supervisor_pid": 1963475,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 459605,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:28:05.481526+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:34:36.091371+00:00"
+        },
+        {
+          "intento": 5,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-2",
+          "pid": 1981299,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170652",
+          "supervisor_pid": 1981258,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170638",
+          "rama": "(detached)",
+          "session_id": "01a1becd-5a6b-7d42-8e64-be8207566738",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-5",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.briefing.txt",
+          "inicio": "2026-11-09T05:34:50.909743+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "ac99c6655cb5bacce5473cdc294cb043b377f2f21f0892f088417fc7a537d54c",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-workshop-kit-piloto-20261109"
+        ],
+        "fecha": "2026-11-09T05:34:48.520890+00:00",
+        "dry_run": false,
+        "intento": 4,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
+          "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
+          "bytes": 1228
+        }
+      ]
+    },
+    {
+      "revision": 42,
+      "actualizado": "2026-11-09T05:38:07.213599+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r17.json",
+          "sha256": "dec9081003e9a6475336b28dfd44d5956e5d66a80b9ae12898161207f8204f3e",
+          "bytes": 5366
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r18-13ad4497.json",
+          "sha256": "e284db2af6bbaebfd57db6bdc88ad2e70a87b808657368d3aaa0c5d6144dc551",
+          "bytes": 310
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+          "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
+          "bytes": 2039
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r34.json",
+          "sha256": "42ed4a8879c38751239cec5fa810794983f47e6bebb4d78a945906d37d5bf12c",
+          "bytes": 8931
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:20:33.048898+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-1",
+          "pid": 1945613,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088384",
+          "supervisor_pid": 1945611,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088372",
+          "rama": "(detached)",
+          "session_id": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-3",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:08.281006+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2028d1bb195492a163183ba42447b0dfcc15eefa53a754dd1a458aabada56ad",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.veredicto.json",
+          "fin": "2026-11-09T05:25:54.692473+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1963480,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130107",
+          "supervisor_pid": 1963475,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 459605,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:28:05.481526+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:34:36.091371+00:00"
+        },
+        {
+          "intento": 5,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-2",
+          "pid": 1981299,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170652",
+          "supervisor_pid": 1981258,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170638",
+          "rama": "(detached)",
+          "session_id": "01a1becd-5a6b-7d42-8e64-be8207566738",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-5",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.briefing.txt",
+          "inicio": "2026-11-09T05:34:50.909743+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "ac99c6655cb5bacce5473cdc294cb043b377f2f21f0892f088417fc7a537d54c",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.veredicto.json",
+          "fin": "2026-11-09T05:38:07.178254+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-workshop-kit-piloto-20261109"
+        ],
+        "fecha": "2026-11-09T05:34:48.520890+00:00",
+        "dry_run": false,
+        "intento": 4,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
+          "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
+          "bytes": 1228
+        }
+      ]
+    },
+    {
+      "revision": 43,
+      "actualizado": "2026-11-09T05:39:11.387805+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r17.json",
+          "sha256": "dec9081003e9a6475336b28dfd44d5956e5d66a80b9ae12898161207f8204f3e",
+          "bytes": 5366
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r18-13ad4497.json",
+          "sha256": "e284db2af6bbaebfd57db6bdc88ad2e70a87b808657368d3aaa0c5d6144dc551",
+          "bytes": 310
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+          "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
+          "bytes": 2039
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r34.json",
+          "sha256": "42ed4a8879c38751239cec5fa810794983f47e6bebb4d78a945906d37d5bf12c",
+          "bytes": 8931
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:20:33.048898+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-1",
+          "pid": 1945613,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088384",
+          "supervisor_pid": 1945611,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088372",
+          "rama": "(detached)",
+          "session_id": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-3",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:08.281006+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2028d1bb195492a163183ba42447b0dfcc15eefa53a754dd1a458aabada56ad",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.veredicto.json",
+          "fin": "2026-11-09T05:25:54.692473+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1963480,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130107",
+          "supervisor_pid": 1963475,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 459605,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:28:05.481526+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:34:36.091371+00:00"
+        },
+        {
+          "intento": 5,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-2",
+          "pid": 1981299,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170652",
+          "supervisor_pid": 1981258,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170638",
+          "rama": "(detached)",
+          "session_id": "01a1becd-5a6b-7d42-8e64-be8207566738",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-5",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.briefing.txt",
+          "inicio": "2026-11-09T05:34:50.909743+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "ac99c6655cb5bacce5473cdc294cb043b377f2f21f0892f088417fc7a537d54c",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.veredicto.json",
+          "fin": "2026-11-09T05:38:07.178254+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-workshop-kit-piloto-20261109"
+        ],
+        "fecha": "2026-11-09T05:34:48.520890+00:00",
+        "dry_run": false,
+        "intento": 4,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+        "criterio": "C1: fiel al piloto y decisiones vigentes, sin desarrollar clases 2/3. C2: kit local completo, legible y coherente en tiempos, tareas y restricciones. C3: muestras identificadas como escritas, sin atribuciones falsas. C4: reproducidos 58 controles documentales; PDFs de 7/2/3 páginas con pies correctos y prompts completos. El PDF anterior sigue rechazándose en página 2. C5: inspeccionados los 13 PNG individuales y el recibo visual; integridad de 67 archivos y ocho hashes coincidentes con la prueba aislada del host, que acredita 21 controles con Chromium sandbox activo. No se reejecutó Chromium dentro del sandbox revisor. C6: acceso propio, ensayo humano, locución y canal siguen pendientes; Bs 50 aprobado y VIP propuesto, sin compromisos nuevos. C7: 68 archivos añadidos exclusivamente en la ruta asignada, publicación acreditada por el recibo de cierre y checkout limpio. Revisión realizada sin modificaciones ni aceptación. Sin hallazgos bloqueantes; impresión física y rasterización del PDF permanecen fuera de lo probado.",
+        "worktree_conservado": true,
+        "revisor": "workshop-kit-piloto-20261109-revisor-2",
+        "session_id": "01a1becd-5a6b-7d42-8e64-be8207566738",
+        "entrega_sha256": "ac99c6655cb5bacce5473cdc294cb043b377f2f21f0892f088417fc7a537d54c",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-5-5ea7c3ee.json",
+          "sha256": "fc4bce68ee049bb69035e8a221738b36bbc6f7eb2736c186e4af028515b66de7",
+          "bytes": 1176
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
+          "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
+          "bytes": 1228
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-5-5ea7c3ee.json",
+          "sha256": "fc4bce68ee049bb69035e8a221738b36bbc6f7eb2736c186e4af028515b66de7",
+          "bytes": 1176
+        }
+      ]
+    },
+    {
+      "revision": 44,
+      "actualizado": "2026-11-09T05:39:11.511365+00:00",
+      "estado": "aceptado",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r17.json",
+          "sha256": "dec9081003e9a6475336b28dfd44d5956e5d66a80b9ae12898161207f8204f3e",
+          "bytes": 5366
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r18-13ad4497.json",
+          "sha256": "e284db2af6bbaebfd57db6bdc88ad2e70a87b808657368d3aaa0c5d6144dc551",
+          "bytes": 310
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v2.md",
+          "sha256": "99e3611b8dd75d2b99e7656c6239fe605ed2432a8bd27948b69a0aa84ef73923",
+          "bytes": 2039
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-workshop-kit-piloto-20261109-r34.json",
+          "sha256": "42ed4a8879c38751239cec5fa810794983f47e6bebb4d78a945906d37d5bf12c",
+          "bytes": 8931
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Integrar entrega aceptada a origin/master, verificar hash y reportar pendientes a Sergio; campaña y envíos sin activar.",
+      "aceptacion": {
+        "revisor": "workshop-kit-piloto-20261109-revisor-2",
+        "criterio": "C1: fiel al piloto y decisiones vigentes, sin desarrollar clases 2/3. C2: kit local completo, legible y coherente en tiempos, tareas y restricciones. C3: muestras identificadas como escritas, sin atribuciones falsas. C4: reproducidos 58 controles documentales; PDFs de 7/2/3 páginas con pies correctos y prompts completos. El PDF anterior sigue rechazándose en página 2. C5: inspeccionados los 13 PNG individuales y el recibo visual; integridad de 67 archivos y ocho hashes coincidentes con la prueba aislada del host, que acredita 21 controles con Chromium sandbox activo. No se reejecutó Chromium dentro del sandbox revisor. C6: acceso propio, ensayo humano, locución y canal siguen pendientes; Bs 50 aprobado y VIP propuesto, sin compromisos nuevos. C7: 68 archivos añadidos exclusivamente en la ruta asignada, publicación acreditada por el recibo de cierre y checkout limpio. Revisión realizada sin modificaciones ni aceptación. Sin hallazgos bloqueantes; impresión física y rasterización del PDF permanecen fuera de lo probado.",
+        "fecha": "2026-11-09T05:39:11.511345+00:00"
+      },
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:20:33.048898+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-1",
+          "pid": 1945613,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088384",
+          "supervisor_pid": 1945611,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194088372",
+          "rama": "(detached)",
+          "session_id": "01a1bec0-ccf6-7dc3-b5c3-0d70ea5c0881",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-3",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.briefing.txt",
+          "inicio": "2026-11-09T05:21:08.281006+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2028d1bb195492a163183ba42447b0dfcc15eefa53a754dd1a458aabada56ad",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.3.veredicto.json",
+          "fin": "2026-11-09T05:25:54.692473+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1963480,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130107",
+          "supervisor_pid": 1963475,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 459605,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
+          "inicio": "2026-11-09T05:28:05.481526+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:34:36.091371+00:00"
+        },
+        {
+          "intento": 5,
+          "rol": "revisor",
+          "responsable": "workshop-kit-piloto-20261109-revisor-2",
+          "pid": 1981299,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170652",
+          "supervisor_pid": 1981258,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170638",
+          "rama": "(detached)",
+          "session_id": "01a1becd-5a6b-7d42-8e64-be8207566738",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-5",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.briefing.txt",
+          "inicio": "2026-11-09T05:34:50.909743+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "ac99c6655cb5bacce5473cdc294cb043b377f2f21f0892f088417fc7a537d54c",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.veredicto.json",
+          "fin": "2026-11-09T05:38:07.178254+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-workshop-kit-piloto-20261109"
+        ],
+        "fecha": "2026-11-09T05:34:48.520890+00:00",
+        "dry_run": false,
+        "intento": 4,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+          "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+        "criterio": "C1: fiel al piloto y decisiones vigentes, sin desarrollar clases 2/3. C2: kit local completo, legible y coherente en tiempos, tareas y restricciones. C3: muestras identificadas como escritas, sin atribuciones falsas. C4: reproducidos 58 controles documentales; PDFs de 7/2/3 páginas con pies correctos y prompts completos. El PDF anterior sigue rechazándose en página 2. C5: inspeccionados los 13 PNG individuales y el recibo visual; integridad de 67 archivos y ocho hashes coincidentes con la prueba aislada del host, que acredita 21 controles con Chromium sandbox activo. No se reejecutó Chromium dentro del sandbox revisor. C6: acceso propio, ensayo humano, locución y canal siguen pendientes; Bs 50 aprobado y VIP propuesto, sin compromisos nuevos. C7: 68 archivos añadidos exclusivamente en la ruta asignada, publicación acreditada por el recibo de cierre y checkout limpio. Revisión realizada sin modificaciones ni aceptación. Sin hallazgos bloqueantes; impresión física y rasterización del PDF permanecen fuera de lo probado.",
+        "worktree_conservado": true,
+        "revisor": "workshop-kit-piloto-20261109-revisor-2",
+        "session_id": "01a1becd-5a6b-7d42-8e64-be8207566738",
+        "entrega_sha256": "ac99c6655cb5bacce5473cdc294cb043b377f2f21f0892f088417fc7a537d54c",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-5-5ea7c3ee.json",
+          "sha256": "fc4bce68ee049bb69035e8a221738b36bbc6f7eb2736c186e4af028515b66de7",
+          "bytes": 1176
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
+          "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
+          "bytes": 1228
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-5-5ea7c3ee.json",
+          "sha256": "fc4bce68ee049bb69035e8a221738b36bbc6f7eb2736c186e4af028515b66de7",
+          "bytes": 1176
+        }
+      ]
     }
   ],
   "briefing": {
@@ -3613,15 +6715,12 @@
     "bytes": 5929,
     "contenido": "# Encargo workshop-kit-piloto-20261109\n\nÁrea: marketing\nModo: encargo\nSkill directora: preparar-oferta-y-embudo\n\n## Objetivo\n\nDejar listo el material práctico y visual para que Sergio ensaye los primeros10min aprobados del workshop\n\n## Entregable\n\nLáminas HTML/versión imprimible, hoja de trabajo, guía de facilitación y recibo visual del kit\n\n## Criterio de aceptación\n\n1. Derivar fielmente del piloto revisado noche-20261109, sin reescribir decisiones ni crear clases2/3 antes de revisión de Sergio. 2. Kit abrible sin servicios/red: láminas claras, hoja del participante y referencia del facilitador con tiempos/promptA/B/caso ficticio; texto grande y contraste legible. 3. Muestras escritas identificadas como tales, no capturas falsas de Claude ni resultado de alumno. 4. PDF o impresión reproducible sin dependencias nuevas, guion/hoja alineados en tareas, duraciones y restricciones. 5. Comprobar texto/datos, abrir y capturar material propio en Chromium sandbox aislado y realmente inspeccionar imagen; preservar evidencia. 6. Acceso propio/ensayo humano/locución/canal siguen pendientes; precioBs50 y VIPpropuesto, sin publicar invitación ni comprometer horas. 7. Entrega compacta, uso exacto, commit/push propios y revisión independiente.\n\n## Entrada y alcance\n\nPreparar una oferta, embudo, webinar o brief de contenido.\n\n- Sergio reafirmó estas tareas para esta noche. Una tarea/ruta exclusiva y cero hijos. Ejecutora Sol6.1 high, login ChatGPT incluido; no API paga, instalaciones, sudo, Docker, producción, mensajes, publicaciones, compras o cuentas. No usar Platform ni ONIA-CENTRAL ni tocar ~/repos/onia sucio. No borrar archivos; conservar evidencias y worktree.\n- Leer AGENTS, reglas-comunes, Boss, ESTADO y tu briefing; directora canónica del área, sólo apoyos pertinentes. La tarea/briefing/registro global son del coordinador: no modificarlos. Trabajar sólo carpeta asignada; no crear otro sistema de tareas ni segundo registro canónico. Registrar errores dentro de tu entrega.\n- Tiempo objetivo35–50min, solución mínima útil y comprobable. Si falta dependencia, terminar la parte independiente, dejar evidencia/condición de salida. No inflar documentación ni repetir comprobaciones tras pasar sin cambios. No autolanzar sesiones ni subagentes.\n- Probar casos relevantes y al menos un fallo material. Informe corto con uso exacto, qué funciona realmente, qué sigue pendiente y fuentes. Hacer tu propio commit/push de rama codex/ws-ID sin force; verificar HEAD con ls-remote. Coordinador conserva worktree, cierra, revisa con otro SID ultra e integra master. No dar por terminado sólo por tener archivos.\n- Leer 05-herramientas/2026-11-08-harness/{00-decisiones.md,plan-workshop.md}; 01-negocio/workshop-20261108/noche-20261109/{CLASE1-PRIMEROS10MIN.md,OFERTA-Y-RECORRIDO.md,SINTESIS-PROPUESTA.md,CONTROL-EDITORIAL-Y-PENDIENTES.md}. No ejecutar Claude ni usar cuenta prestada. No se amplía a3clases: se prepara bien el piloto que Sergio revisará a su regreso.\n- Usar sólo texto/gráficos propios, HTML/CSS/JS simples, fuentes del sistema y sin recursos externos. Facilitar imprimir hoja y guía; PDF si Chromium ya instalado lo permite. No comprar assets, generar imágenes con servicios externos ni instalar software.\n- Playwright está en ~/operacion/browser-piloto-20261108/node_modules/playwright; Chromium en browsers/chromium-1252/chrome-linux64/chrome con perfil AppArmor específico ya aprobado. chromiumSandbox:true, nunca --no-sandbox. Perfil sintético propio bajo/tmp o carpeta de evidencia; no tocar ~/operacion/cuentas/analisis-onia ni visor real. Xvfb temporal propio si hace falta, no modificar servicios corrientes; finalizar sólo procesos creados por tu prueba y conservar archivos. Inspeccionar con view_image la captura del kit, no confundir archivo generado con prueba visual.\n- ID workshop-kit-piloto-20261109; única carpeta 01-negocio/workshop-20261108/kit-piloto-20261109; rama codex/ws-workshop-kit-piloto-20261109.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [01-negocio/preparar-oferta-y-embudo/SKILL.md](../../01-negocio/preparar-oferta-y-embudo/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [preparar-campana-meta](../../05-herramientas/compartibles/skills/preparar-campana-meta/SKILL.md)\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-marketing-humanizer](../../05-herramientas/compartibles/terceros/marketing/humanizer/SKILL.md)\n\n## Salidas de referencia del área\n\n- Oferta y recorrido de venta\n- Borradores de las piezas del encargo\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/workshop-kit-piloto-20261109.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
   },
-  "aceptacion": null,
-  "asignacion": {
-    "responsable": "workshop-kit-ejecutor",
-    "rutas": [
-      "01-negocio/workshop-20261108/kit-piloto-20261109"
-    ],
-    "revision_base": 1,
-    "fecha": "2026-11-09T04:57:26.520937+00:00"
+  "aceptacion": {
+    "revisor": "workshop-kit-piloto-20261109-revisor-2",
+    "criterio": "C1: fiel al piloto y decisiones vigentes, sin desarrollar clases 2/3. C2: kit local completo, legible y coherente en tiempos, tareas y restricciones. C3: muestras identificadas como escritas, sin atribuciones falsas. C4: reproducidos 58 controles documentales; PDFs de 7/2/3 páginas con pies correctos y prompts completos. El PDF anterior sigue rechazándose en página 2. C5: inspeccionados los 13 PNG individuales y el recibo visual; integridad de 67 archivos y ocho hashes coincidentes con la prueba aislada del host, que acredita 21 controles con Chromium sandbox activo. No se reejecutó Chromium dentro del sandbox revisor. C6: acceso propio, ensayo humano, locución y canal siguen pendientes; Bs 50 aprobado y VIP propuesto, sin compromisos nuevos. C7: 68 archivos añadidos exclusivamente en la ruta asignada, publicación acreditada por el recibo de cierre y checkout limpio. Revisión realizada sin modificaciones ni aceptación. Sin hallazgos bloqueantes; impresión física y rasterización del PDF permanecen fuera de lo probado.",
+    "fecha": "2026-11-09T05:39:11.511345+00:00"
   },
+  "asignacion": null,
   "sesiones": [
     {
       "intento": 1,
@@ -3648,7 +6747,7 @@
       "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
       "inicio": "2026-11-09T04:58:19.990103+00:00",
       "rc": 0,
-      "ultimo_evento": "item.completed",
+      "ultimo_evento": "turn.completed",
       "modelo": "gpt-6.1-sol",
       "esfuerzo": "high",
       "auth_chatgpt": true,
@@ -3683,7 +6782,7 @@
       "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
       "inicio": "2026-11-09T05:12:12.087790+00:00",
       "rc": 0,
-      "ultimo_evento": "item.completed",
+      "ultimo_evento": "turn.completed",
       "modelo": "gpt-6.1-sol",
       "esfuerzo": "high",
       "auth_chatgpt": true,
@@ -3738,7 +6837,7 @@
       "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194130094",
       "rama": "codex/ws-workshop-kit-piloto-20261109",
       "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
-      "estado": "ejecutando",
+      "estado": "cerrada",
       "operacion": "/home/onia-codex-worker/operacion",
       "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
       "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
@@ -3752,24 +6851,93 @@
       "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
       "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.4.briefing.txt",
       "inicio": "2026-11-09T05:28:05.481526+00:00",
-      "rc": null,
-      "ultimo_evento": "item.completed",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
       "modelo": "gpt-6.1-sol",
       "esfuerzo": "high",
       "auth_chatgpt": true,
       "subagentes_maximos": 0,
       "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
       "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
-      "perfil_permisos": "harness-git"
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-09T05:34:36.091371+00:00"
+    },
+    {
+      "intento": 5,
+      "rol": "revisor",
+      "responsable": "workshop-kit-piloto-20261109-revisor-2",
+      "pid": 1981299,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170652",
+      "supervisor_pid": 1981258,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194170638",
+      "rama": "(detached)",
+      "session_id": "01a1becd-5a6b-7d42-8e64-be8207566738",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+      "log_rel": "logs/workshop-kit-piloto-20261109.revision-5.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109-revision-5",
+      "rutas": [
+        "01-negocio/workshop-20261108/kit-piloto-20261109"
+      ],
+      "dry_run": false,
+      "commit_base": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.briefing.txt",
+      "inicio": "2026-11-09T05:34:50.909743+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "ultra",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "ac99c6655cb5bacce5473cdc294cb043b377f2f21f0892f088417fc7a537d54c",
+      "schema": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.5.veredicto.json",
+      "fin": "2026-11-09T05:38:07.178254+00:00"
     }
   ],
-  "revision_independiente": null,
-  "cierre": null,
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+    "criterio": "C1: fiel al piloto y decisiones vigentes, sin desarrollar clases 2/3. C2: kit local completo, legible y coherente en tiempos, tareas y restricciones. C3: muestras identificadas como escritas, sin atribuciones falsas. C4: reproducidos 58 controles documentales; PDFs de 7/2/3 páginas con pies correctos y prompts completos. El PDF anterior sigue rechazándose en página 2. C5: inspeccionados los 13 PNG individuales y el recibo visual; integridad de 67 archivos y ocho hashes coincidentes con la prueba aislada del host, que acredita 21 controles con Chromium sandbox activo. No se reejecutó Chromium dentro del sandbox revisor. C6: acceso propio, ensayo humano, locución y canal siguen pendientes; Bs 50 aprobado y VIP propuesto, sin compromisos nuevos. C7: 68 archivos añadidos exclusivamente en la ruta asignada, publicación acreditada por el recibo de cierre y checkout limpio. Revisión realizada sin modificaciones ni aceptación. Sin hallazgos bloqueantes; impresión física y rasterización del PDF permanecen fuera de lo probado.",
+    "worktree_conservado": true,
+    "revisor": "workshop-kit-piloto-20261109-revisor-2",
+    "session_id": "01a1becd-5a6b-7d42-8e64-be8207566738",
+    "entrega_sha256": "ac99c6655cb5bacce5473cdc294cb043b377f2f21f0892f088417fc7a537d54c",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-5-5ea7c3ee.json",
+      "sha256": "fc4bce68ee049bb69035e8a221738b36bbc6f7eb2736c186e4af028515b66de7",
+      "bytes": 1176
+    }
+  },
+  "cierre": {
+    "commit": "514a2a0ac9d63d12486a83d618bcecfaab010cdb",
+    "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+    "ramas_origin": [
+      "origin/codex/ws-workshop-kit-piloto-20261109"
+    ],
+    "fecha": "2026-11-09T05:34:48.520890+00:00",
+    "dry_run": false,
+    "intento": 4,
+    "worktree_conservado": true,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/cierre-r35-e4a3ef05.json",
+      "sha256": "f02a88b49042bf9e37425bb01c6587a311f49a6578c6414de877bd6d6e8f66a9",
+      "bytes": 310
+    }
+  },
   "evidencias_revision": [
     {
       "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-3-a62debbc.json",
       "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542",
       "bytes": 1228
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/workshop-kit-piloto-20261109/revision-5-5ea7c3ee.json",
+      "sha256": "fc4bce68ee049bb69035e8a221738b36bbc6f7eb2736c186e4af028515b66de7",
+      "bytes": 1176
     }
   ]
 }
