@@ -1,0 +1,481 @@
+{
+  "fecha_inicio_utc": "2026-11-09T15:45:46.386062+00:00",
+  "fecha_fin_utc": "2026-11-09T15:45:51.513508+00:00",
+  "intervalo_s": 5.092,
+  "tipo": "Instantánea diagnóstica; no baseline ni ensayo de capacidad",
+  "cpu_logicas": 4,
+  "cpu_ejecucion_pct": 9.14,
+  "iowait_pct": 0.05,
+  "steal_pct": 7.49,
+  "memoria_kib": {
+    "MemTotal": 16376008,
+    "MemAvailable": 11350428,
+    "SwapTotal": 8388600,
+    "SwapFree": 4893432
+  },
+  "swap_in_mib_s": 0.0,
+  "swap_out_mib_s": 0.0,
+  "oom_delta": 0,
+  "psi": {
+    "cpu": "some avg10=4.06 avg60=5.62 avg300=4.36 total=57575484672\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0",
+    "memory": "some avg10=0.00 avg60=0.00 avg300=0.00 total=167100486\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=152425225",
+    "io": "some avg10=0.00 avg60=0.04 avg300=0.00 total=3122486481\nfull avg10=0.00 avg60=0.02 avg300=0.00 total=2334871821"
+  },
+  "limites_cgroup_lector_no_sesiones": [
+    {
+      "depth": 7,
+      "cpu_max": "max 100000",
+      "cpuset": null,
+      "memory_max": "max"
+    },
+    {
+      "depth": 6,
+      "cpu_max": "max 100000",
+      "cpuset": null,
+      "memory_max": "max"
+    },
+    {
+      "depth": 5,
+      "cpu_max": "max 100000",
+      "cpuset": "0-3",
+      "memory_max": "max"
+    },
+    {
+      "depth": 4,
+      "cpu_max": null,
+      "cpuset": "0-3",
+      "memory_max": null
+    }
+  ],
+  "procesos": [
+    {
+      "pid": 818,
+      "ppid": 1,
+      "start_ticks": 2338,
+      "class": "containerd",
+      "comm": "containerd",
+      "uid": 0,
+      "age_h": 549.54,
+      "rss_mib": 69.21,
+      "swap_mib": 6.8,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.245
+    },
+    {
+      "pid": 1014,
+      "ppid": 1,
+      "start_ticks": 2446,
+      "class": "dockerd",
+      "comm": "dockerd",
+      "uid": 0,
+      "age_h": 549.54,
+      "rss_mib": 151.78,
+      "swap_mib": 46.41,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.589
+    },
+    {
+      "pid": 1932,
+      "ppid": 1610,
+      "start_ticks": 2673,
+      "class": "litellm",
+      "comm": "litellm",
+      "uid": 0,
+      "age_h": 549.54,
+      "rss_mib": 7.7,
+      "swap_mib": 582.37,
+      "container": true,
+      "service": null,
+      "cpu_pct_host_5s": 0.049
+    },
+    {
+      "pid": 3107,
+      "ppid": 2888,
+      "start_ticks": 3112,
+      "class": "next",
+      "comm": "next-server (v",
+      "uid": 1001,
+      "age_h": 549.54,
+      "rss_mib": 196.42,
+      "swap_mib": 46.85,
+      "container": true,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 10155,
+      "ppid": 10102,
+      "start_ticks": 8779,
+      "class": "rails/ruby",
+      "comm": "ruby",
+      "uid": 0,
+      "age_h": 549.52,
+      "rss_mib": 256.48,
+      "swap_mib": 91.48,
+      "container": true,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 802461,
+      "ppid": 802450,
+      "start_ticks": 181067323,
+      "class": "codex",
+      "comm": "codex",
+      "uid": 1004,
+      "age_h": 46.58,
+      "rss_mib": 309.92,
+      "swap_mib": 2.62,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.491
+    },
+    {
+      "pid": 1440125,
+      "ppid": 1440099,
+      "start_ticks": 129205010,
+      "class": "next",
+      "comm": "next-server (v1",
+      "uid": 0,
+      "age_h": 190.64,
+      "rss_mib": 111.81,
+      "swap_mib": 13.89,
+      "container": true,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 1440793,
+      "ppid": 1440766,
+      "start_ticks": 129206106,
+      "class": "next",
+      "comm": "next-server (v",
+      "uid": 0,
+      "age_h": 190.64,
+      "rss_mib": 57.96,
+      "swap_mib": 54.48,
+      "container": true,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 1464278,
+      "ppid": 1,
+      "start_ticks": 172194926,
+      "class": "codex",
+      "comm": "codex",
+      "uid": 1003,
+      "age_h": 71.23,
+      "rss_mib": 40.74,
+      "swap_mib": 13.96,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 2823464,
+      "ppid": 1,
+      "start_ticks": 196297359,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 4.28,
+      "rss_mib": 321.7,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": "user@1004.service",
+      "cpu_pct_host_5s": 0.049
+    },
+    {
+      "pid": 2823466,
+      "ppid": 1,
+      "start_ticks": 196297364,
+      "class": "chromium",
+      "comm": "chrome_crashpad",
+      "uid": 1004,
+      "age_h": 4.28,
+      "rss_mib": 3.98,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 2823468,
+      "ppid": 1,
+      "start_ticks": 196297364,
+      "class": "chromium",
+      "comm": "chrome_crashpad",
+      "uid": 1004,
+      "age_h": 4.28,
+      "rss_mib": 3.32,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 2823472,
+      "ppid": 2823464,
+      "start_ticks": 196297365,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 4.28,
+      "rss_mib": 72.74,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 2823473,
+      "ppid": 2823464,
+      "start_ticks": 196297365,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 4.28,
+      "rss_mib": 73.17,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 2823475,
+      "ppid": 2823473,
+      "start_ticks": 196297371,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 4.28,
+      "rss_mib": 19.41,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 2823521,
+      "ppid": 2823472,
+      "start_ticks": 196297379,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 4.28,
+      "rss_mib": 185.82,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.049
+    },
+    {
+      "pid": 2823522,
+      "ppid": 2823464,
+      "start_ticks": 196297380,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 4.28,
+      "rss_mib": 144.87,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.049
+    },
+    {
+      "pid": 2823527,
+      "ppid": 2823475,
+      "start_ticks": 196297383,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 4.28,
+      "rss_mib": 58.91,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 2823577,
+      "ppid": 2823475,
+      "start_ticks": 196297392,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 4.28,
+      "rss_mib": 150.16,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 2823582,
+      "ppid": 2823475,
+      "start_ticks": 196297398,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 4.28,
+      "rss_mib": 112.33,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 2823750,
+      "ppid": 2823475,
+      "start_ticks": 196297708,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 4.27,
+      "rss_mib": 452.54,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.786
+    },
+    {
+      "pid": 2839148,
+      "ppid": 2823475,
+      "start_ticks": 196332963,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 4.18,
+      "rss_mib": 160.98,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 2839287,
+      "ppid": 2823464,
+      "start_ticks": 196333169,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 4.18,
+      "rss_mib": 97.63,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": "user@1004.service",
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 2947138,
+      "ppid": 2823475,
+      "start_ticks": 196591439,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 3.46,
+      "rss_mib": 79.71,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    },
+    {
+      "pid": 2947310,
+      "ppid": 2823475,
+      "start_ticks": 196591654,
+      "class": "chromium",
+      "comm": "chrome",
+      "uid": 1004,
+      "age_h": 3.46,
+      "rss_mib": 79.72,
+      "swap_mib": 0.0,
+      "container": false,
+      "service": null,
+      "cpu_pct_host_5s": 0.0
+    }
+  ],
+  "cuota_compartida": {
+    "timestamp": "2026-11-09T15:45:29.395Z",
+    "primary": {
+      "used_percent": 63.0,
+      "window_minutes": 10080,
+      "resets_at": 1794624432
+    },
+    "secondary": null,
+    "credits": {
+      "balance": "0",
+      "has_credits": false,
+      "unlimited": false
+    },
+    "source_sha256_line": "e328da1be5ead4b5308e60279d09faf706c3888288a7b82af8e7f640070ac339"
+  },
+  "limites": [
+    "RSS suma páginas compartidas; no es PSS.",
+    "VmSwap no incluye todo el swap compartido.",
+    "Un intervalo no acredita inactividad ni autoriza cerrar un proceso.",
+    "No se leen ni publican entornos, argumentos completos, perfiles o credenciales."
+  ],
+  "historial_recalculado": {
+    "fuentes_sha256_verificadas": [
+      {
+        "archivo": "work/paralelo-autenticado-20261108-v3.jsonl",
+        "sha256": "f4592116f5434c65b51354e4bec2978c32c6624485cdca673dd079df64f8ae78"
+      },
+      {
+        "archivo": "work/paralelo-autenticado-20261108-v4.jsonl",
+        "sha256": "02afc5001763c99ca17a2360bf7f647392a16b15bd425bf2efd824a4661cd43c"
+      }
+    ],
+    "picos_mayores90_registros_completos": [
+      {
+        "fecha_utc": "2026-11-09T03:04:03.374788+00:00",
+        "cpu_pct": 90.34
+      },
+      {
+        "fecha_utc": "2026-11-09T03:10:05.243766+00:00",
+        "cpu_pct": 90.91
+      },
+      {
+        "fecha_utc": "2026-11-09T03:17:30.566694+00:00",
+        "cpu_pct": 92.28
+      }
+    ],
+    "ventanas": [
+      {
+        "ventana": "tres_ejecutoras",
+        "muestras": 55,
+        "cpu_validas": 54,
+        "cpu_max": 90.34,
+        "muestras_mayores90": 1,
+        "limite": "Muestreo; no demuestra duración exacta de cada pico ni atribución a servicios.",
+        "cpu_intervalos_internos": 53,
+        "cpu_p50_intervalos_internos": 43.56,
+        "cpu_p50_cruda_incluye_fronteras": 44.165000000000006,
+        "metodo": "Para p50 comparable, excluir primer delta de cada archivo/ventana, cuyo origen puede estar fuera de la cohorte."
+      },
+      {
+        "ventana": "ejecutora_y_dos_revisoras",
+        "muestras": 44,
+        "cpu_validas": 44,
+        "cpu_max": 92.28,
+        "muestras_mayores90": 1,
+        "limite": "Muestreo; no demuestra duración exacta de cada pico ni atribución a servicios.",
+        "cpu_intervalos_internos": 43,
+        "cpu_p50_intervalos_internos": 42.88,
+        "cpu_p50_cruda_incluye_fronteras": 42.215,
+        "metodo": "Para p50 comparable, excluir primer delta de cada archivo/ventana, cuyo origen puede estar fuera de la cohorte."
+      }
+    ]
+  },
+  "script_lector": {
+    "archivo": "work/auditar-capacidad-20261109-v2.py",
+    "sha256": "108d003af9261ef28a5ac89444b1a7383dc6b8d7c804b8ad7c4815af65706568",
+    "disponibilidad": "VPS, workspace; no se cambió el harness ni se instaló instrumentación."
+  },
+  "estado_propuesta": "pendiente del sí; benchmark y limpieza no ejecutados"
+}
