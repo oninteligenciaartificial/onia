@@ -93,7 +93,7 @@ def render(s):
 <meta name="referrer" content="no-referrer"><title>Fábrica OnIA · consulta manual</title>
 <style>
 :root{{font-family:system-ui,sans-serif;color:#182b3a;background:#f2f5f4;line-height:1.6}}
-*{{box-sizing:border-box}}body{{margin:0}}a{{color:#075b79;text-underline-offset:3px}}a:focus-visible,summary:focus-visible{{outline:3px solid #a55a00;outline-offset:4px}}
+*{{box-sizing:border-box}}body{{margin:0;overflow-wrap:anywhere}}a{{color:#075b79;text-underline-offset:3px}}a:focus-visible,summary:focus-visible{{outline:3px solid #a55a00;outline-offset:4px}}
 header{{background:#142f40;color:#fff;padding:38px max(22px,calc((100vw - 1160px)/2)) 30px}}header a{{color:#c9eff3}}h1{{font-size:clamp(2rem,4vw,3rem);margin:6px 0}}h2{{font-size:1.55rem;margin:34px 0 12px}}h3{{font-size:1.05rem;line-height:1.4;margin:9px 0 13px;overflow-wrap:anywhere}}p{{margin:12px 0}}
 main{{max-width:1204px;margin:auto;padding:22px}}nav{{display:flex;gap:22px;flex-wrap:wrap}}.eyebrow{{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700}}.intro{{max-width:850px;color:#e0eaef}}
 .notice{{border-left:5px solid #a55a00;background:#fff3d7;padding:16px 20px;border-radius:6px}}.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:18px}}.tasks{{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}}

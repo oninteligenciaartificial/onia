@@ -14,3 +14,10 @@ Registro sólo dentro de la ruta asignada; no modifica el registro de errores gl
 - Pasaron 22 pruebas sin red. La sanitización y la lista cerrada incluyen ahora sólo ese artículo concreto de claude.com; fecha ausente/discrepante y fallo material no se completan por inferencia.
 - El coordinador ejecutó la solicitud final con hashes coincidentes, Chromium1252 y sandbox en el host. Escritorio pasó; móvil falló por desborde horizontal, rc1. La ejecutora inspeccionó la única captura de escritorio con `view_image`: la jerarquía y fuentes están visibles, pero hashes largos del próximo paso canónico salen de una tarjeta. El chequeo global de escritorio no detecta desborde interno. Los otros tres casos no se ejecutaron.
 - Se preservó código/snapshot/HTML de la solicitud; no se repitió navegador ni se exportaron capturas del intento con rc1. Se conserva recibo público propio, con hash de imagen inspeccionada. Coordinación indicó cerrar parcial y preparar otra corrección acotada. Criterio 5 sigue pendiente; no se declara aceptación visual.
+
+## Corrección final del desborde
+
+- El coordinador localizó el desborde en el párrafo de próximo paso canónico: un hash largo no se partía. Se cotejó su propuesta con `diff`: sólo añadió `overflow-wrap:anywhere` a `body`. Se aplicó ese cambio sin ocultar contenido ni cambiar datos.
+- Se creó `panel-corregido-01`: snapshot idéntico al de lectura-real-02 y HTML regenerado sin red. Las 22 pruebas Python pasaron. Los recibos anteriores, incluido el fallo, permanecen intactos.
+- El host ejecutó la solicitud v2 final con hashes coincidentes: cinco casos OK, sandbox activo, perfil sintético propio y navegador cerrado. Esta ejecutora inspeccionó los cinco PNG autorizados. El texto largo permanece dentro de tarjetas; los casos vacío/error conservan fallos explícitos. Las imágenes móviles muy altas se reducen en el visor; no se atribuye lectura fina de todos sus caracteres.
+- La prueba de navegador fue del coordinador/host, no de bwrap. La verificación del artefacto no acepta la tarea canónica ni autoriza publicaciones. No se modificaron las fuentes después de capturarlas.
