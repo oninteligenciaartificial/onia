@@ -1,0 +1,142 @@
+{
+  "resultado": "OK",
+  "casos": 20,
+  "checks": [
+    {
+      "caso": "caso_bueno",
+      "esperado": "preparado_seco",
+      "observado": "preparado_seco",
+      "lecturas": 1
+    },
+    {
+      "caso": "dato_invalido",
+      "esperado": "DATO_INVALIDO",
+      "observado": "DATO_INVALIDO",
+      "lecturas": 0
+    },
+    {
+      "caso": "comando_arbitrario",
+      "esperado": "COMANDO_INVALIDO",
+      "observado": "COMANDO_INVALIDO",
+      "lecturas": 0
+    },
+    {
+      "caso": "identidad_ajena",
+      "esperado": "IDENTIDAD_RECHAZADA",
+      "observado": "IDENTIDAD_RECHAZADA",
+      "lecturas": 0
+    },
+    {
+      "caso": "grupo",
+      "esperado": "IDENTIDAD_RECHAZADA",
+      "observado": "IDENTIDAD_RECHAZADA",
+      "lecturas": 0
+    },
+    {
+      "caso": "ingreso_no_verificado",
+      "esperado": "TRANSPORTE_NO_VALIDADO",
+      "observado": "TRANSPORTE_NO_VALIDADO",
+      "lecturas": 0
+    },
+    {
+      "caso": "modo_real_bloqueado",
+      "esperado": "TRANSPORTE_NO_VALIDADO",
+      "observado": "TRANSPORTE_NO_VALIDADO",
+      "lecturas": 0
+    },
+    {
+      "caso": "tarea_ajena",
+      "esperado": "TAREA_NO_PERMITIDA",
+      "observado": "TAREA_NO_PERMITIDA",
+      "lecturas": 0
+    },
+    {
+      "caso": "revision_vieja",
+      "esperado": "REVISION_VIEJA",
+      "observado": "REVISION_VIEJA",
+      "lecturas": 1
+    },
+    {
+      "caso": "tarea_cerrada",
+      "esperado": "TAREA_CERRADA",
+      "observado": "TAREA_CERRADA",
+      "lecturas": 1
+    },
+    {
+      "caso": "fallo_dependencia",
+      "esperado": "DEPENDENCIA_NO_DISPONIBLE",
+      "observado": "DEPENDENCIA_NO_DISPONIBLE",
+      "lecturas": 1
+    },
+    {
+      "caso": "evidencia_alterada",
+      "esperado": "HASH_GUION_INVALIDO",
+      "observado": "HASH_GUION_INVALIDO",
+      "lecturas": 1
+    },
+    {
+      "caso": "revision_otro_hash",
+      "esperado": "REVISION_EDITORIAL_INVALIDA",
+      "observado": "REVISION_EDITORIAL_INVALIDA",
+      "lecturas": 1
+    },
+    {
+      "caso": "guion_con_cambios",
+      "esperado": "GUION_CON_CAMBIOS",
+      "observado": "GUION_CON_CAMBIOS",
+      "lecturas": 1
+    },
+    {
+      "caso": "pedir_cambios",
+      "esperado": "preparado_seco",
+      "observado": "preparado_seco",
+      "lecturas": 1
+    },
+    {
+      "caso": "descartar",
+      "esperado": "preparado_seco",
+      "observado": "preparado_seco",
+      "lecturas": 1
+    },
+    {
+      "caso": "duplicado_transporte_tras_avance_revision",
+      "esperado": "duplicado",
+      "observado": "duplicado"
+    },
+    {
+      "caso": "duplicado_negocio",
+      "esperado": "duplicado",
+      "observado": "duplicado"
+    },
+    {
+      "caso": "replay_conflictivo",
+      "esperado": "REPLAY_CONFLICTIVO",
+      "observado": "REPLAY_CONFLICTIVO"
+    },
+    {
+      "caso": "workflow_code_en_vm",
+      "esperado": "preparado_seco,duplicado",
+      "observado": "preparado_seco,duplicado"
+    }
+  ],
+  "receipt": {
+    "simulacion": true,
+    "decision_id": "telegram-a205aef701b5c2fcb421f2bbae6fdc5c19b004b6998648bfae37d9e833bef45d",
+    "tarea": "ficcion-fabrica-001",
+    "revision_esperada": 2,
+    "guion_id": "guion-a-v1",
+    "guion_sha256": "2775d255436869a55cd652fc993f0cd44bea759bd6228b8364b90ec23c3fa630",
+    "revision_sha256": "2de51d0ae8f94155db612ac2b26dd00c623daa8afb4cd23ed8b07b55dc5dcbc5",
+    "veredicto": "elegir_para_preparar",
+    "motivo": "",
+    "autor": "Sergio SIMULADO",
+    "alcance": "decision_editorial_sin_efectos"
+  },
+  "limites": [
+    "VM Node local",
+    "sin ejecución remota n8n",
+    "identidad fixture",
+    "recibos sólo en memoria por invocación",
+    "sin mutación canónica ni envíos"
+  ]
+}

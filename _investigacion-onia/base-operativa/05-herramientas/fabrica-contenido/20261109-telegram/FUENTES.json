@@ -1,0 +1,71 @@
+{
+  "consulta_utc": "2026-11-09",
+  "documentacion_oficial": [
+    {
+      "titulo": "n8n REST authentication",
+      "url": "https://docs.n8n.io/connect/n8n-api/authentication.md",
+      "uso": "Autenticación mediante X-N8N-API-KEY. El secreto se cargó únicamente en el proceso."
+    },
+    {
+      "titulo": "n8n REST Workflow",
+      "url": "https://docs.n8n.io/connect/n8n-api/workflow.md",
+      "uso": "Listado filtrado por nombre, GET por ID y POST con name, nodes, connections y settings. active es de sólo lectura. Su estado se comprobó en la respuesta y GET."
+    },
+    {
+      "titulo": "n8n Manual Trigger",
+      "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md",
+      "uso": "Entrada manual de prueba sin disparador automático."
+    },
+    {
+      "titulo": "n8n Code node",
+      "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/",
+      "uso": "JavaScript y modo Run Once for All Items. Se observó Code v2 en los workflows de la instancia y se comprobó importación de la copia."
+    },
+    {
+      "titulo": "n8n Enable modules in Code node",
+      "url": "https://docs.n8n.io/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-modules-in-code-node.md",
+      "uso": "La importación crypto requiere permiso en instalaciones propias. El runner remoto quedó sin ejecutar y ese permiso permanece sin comprobar."
+    },
+    {
+      "titulo": "Telegram Bot API",
+      "url": "https://core.telegram.org/bots/api#getting-updates",
+      "uso": "Polling y webhook son mutuamente excluyentes. update_id ayuda a deduplicar. secret_token permite comprobar una cabecera del ingreso configurado. Se conservó la conexión actual."
+    },
+    {
+      "titulo": "Telegram getWebhookInfo",
+      "url": "https://core.telegram.org/bots/api#getwebhookinfo",
+      "uso": "Referencia para una futura verificación privada del webhook. Sin consulta Telegram en este encargo."
+    }
+  ],
+  "fuentes_locales_relativas_a_base_operativa": [
+    "00-MAPA/ESTADO.md",
+    "00-MAPA/ESTRUCTURA.md",
+    "04-operacion-agentes/reglas-comunes.md",
+    "04-operacion-agentes/boss-memoria.md",
+    "04-operacion-agentes/ORQUESTACION.md",
+    "04-operacion-agentes/orquestacion.json",
+    "04-operacion-agentes/registro-de-errores.md",
+    "05-herramientas/accesos.md",
+    "05-herramientas/cloud/INICIO-SESION.md",
+    "05-herramientas/cloud/n8n-inventory.py",
+    "05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md",
+    "05-herramientas/fabrica-contenido/20261108/DISENO.md",
+    "05-herramientas/fabrica-contenido/20261108/CONTRATO.md",
+    "05-herramientas/fabrica-contenido/20261108/README.md",
+    "05-herramientas/fabrica-contenido/20261108/ensayo.py",
+    "05-herramientas/fabrica-contenido/20261108/fixture.json",
+    "05-herramientas/fabrica-contenido/20261108/ensayos/ejecucion-02/resultado.json",
+    "05-herramientas/scripts/trabajo.py"
+  ],
+  "otras_fuentes": [
+    "AGENTS.md del worktree",
+    "Briefing recibido por stdin y reproducido en la conversación",
+    "Reglas privadas REST leídas sin copiar su contenido",
+    "Skill cloud-environment-runtime leída desde su ruta del catálogo"
+  ],
+  "licencias_y_dependencias": {
+    "implementacion": "Python estándar y módulos incorporados de Node ya presentes. Sin dependencias nuevas ni código de terceros copiado.",
+    "n8n": "Uso de la instancia existente por REST. Sin redistribuir, instalar ni modificar el runtime.",
+    "fixture": "Datos ficticios del ensayo ONIA 20261108 conservados en el repositorio."
+  }
+}

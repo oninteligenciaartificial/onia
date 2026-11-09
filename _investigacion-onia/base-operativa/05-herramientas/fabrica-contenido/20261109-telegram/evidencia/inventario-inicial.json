@@ -1,0 +1,583 @@
+{
+  "fecha_utc": "2026-11-09T04:30:13.869142+00:00",
+  "solo_lectura": true,
+  "ejecuciones": "última metadata por workflow, sin payloads",
+  "workflows": [
+    {
+      "id": "NDXLJiR00ciQx72V",
+      "alias": "Guiones Diarios",
+      "http": 200,
+      "active": false,
+      "nodos": [
+        {
+          "tipo": "n8n-nodes-base.scheduleTrigger",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.code",
+          "version": 2,
+          "deshabilitado": false,
+          "credenciales": [],
+          "indicios_codigo": {
+            "telegram": false,
+            "chat_id": false,
+            "user_id": false,
+            "update_id": false,
+            "revision": false,
+            "harness": false
+          }
+        },
+        {
+          "tipo": "@n8n/n8n-nodes-langchain.openAi",
+          "version": 2.3,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "openAiApi",
+              "alias": "credencial-1",
+              "referencia_presente": true
+            }
+          ]
+        },
+        {
+          "tipo": "n8n-nodes-base.code",
+          "version": 2,
+          "deshabilitado": false,
+          "credenciales": [],
+          "indicios_codigo": {
+            "telegram": false,
+            "chat_id": false,
+            "user_id": false,
+            "update_id": false,
+            "revision": false,
+            "harness": false
+          }
+        },
+        {
+          "tipo": "n8n-nodes-base.telegram",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "telegramApi",
+              "alias": "credencial-2",
+              "referencia_presente": true
+            }
+          ],
+          "destino_configurado": true,
+          "destino_expresion": false,
+          "destino_alias": "destino-1"
+        }
+      ],
+      "probado_en_esta_sesion": false,
+      "ejecucion_metadata_http": 200,
+      "ultima_ejecucion": null
+    },
+    {
+      "id": "QGXVyRSgrArxfolj",
+      "alias": "Radar",
+      "http": 200,
+      "active": false,
+      "nodos": [
+        {
+          "tipo": "n8n-nodes-base.scheduleTrigger",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.ssh",
+          "version": 1,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "sshPrivateKey",
+              "alias": "credencial-3",
+              "referencia_presente": true
+            }
+          ]
+        },
+        {
+          "tipo": "n8n-nodes-base.code",
+          "version": 2,
+          "deshabilitado": false,
+          "credenciales": [],
+          "indicios_codigo": {
+            "telegram": true,
+            "chat_id": false,
+            "user_id": false,
+            "update_id": false,
+            "revision": false,
+            "harness": false
+          }
+        },
+        {
+          "tipo": "n8n-nodes-base.if",
+          "version": 2.2,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.telegram",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "telegramApi",
+              "alias": "credencial-2",
+              "referencia_presente": true
+            }
+          ],
+          "destino_configurado": true,
+          "destino_expresion": false,
+          "destino_alias": "destino-1"
+        }
+      ],
+      "probado_en_esta_sesion": false,
+      "ejecucion_metadata_http": 200,
+      "ultima_ejecucion": null
+    },
+    {
+      "id": "nAGwe7DzxNQzMxXk",
+      "alias": "Video Intake",
+      "http": 200,
+      "active": false,
+      "nodos": [
+        {
+          "tipo": "n8n-nodes-base.telegramTrigger",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "telegramApi",
+              "alias": "credencial-2",
+              "referencia_presente": true
+            }
+          ],
+          "destino_configurado": false,
+          "destino_expresion": false
+        },
+        {
+          "tipo": "n8n-nodes-base.code",
+          "version": 2,
+          "deshabilitado": false,
+          "credenciales": [],
+          "indicios_codigo": {
+            "telegram": false,
+            "chat_id": false,
+            "user_id": false,
+            "update_id": false,
+            "revision": false,
+            "harness": false
+          }
+        },
+        {
+          "tipo": "n8n-nodes-base.httpRequest",
+          "version": 4.2,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.telegram",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "telegramApi",
+              "alias": "credencial-2",
+              "referencia_presente": true
+            }
+          ],
+          "destino_configurado": true,
+          "destino_expresion": true,
+          "destino_alias": "destino-2"
+        }
+      ],
+      "probado_en_esta_sesion": false,
+      "ejecucion_metadata_http": 200,
+      "ultima_ejecucion": null
+    },
+    {
+      "id": "fop5l1FEirkYoZke",
+      "alias": "demo4campos",
+      "http": 200,
+      "active": false,
+      "nodos": [
+        {
+          "tipo": "n8n-nodes-base.webhook",
+          "version": 2.1,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.set",
+          "version": 3.5,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.if",
+          "version": 2.3,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.googleSheets",
+          "version": 4.7,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "googleSheetsOAuth2Api",
+              "alias": "credencial-4",
+              "referencia_presente": true
+            }
+          ]
+        },
+        {
+          "tipo": "n8n-nodes-base.telegram",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "telegramApi",
+              "alias": "credencial-2",
+              "referencia_presente": true
+            }
+          ],
+          "destino_configurado": true,
+          "destino_expresion": false,
+          "destino_alias": "destino-3"
+        },
+        {
+          "tipo": "n8n-nodes-base.telegram",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "telegramApi",
+              "alias": "credencial-2",
+              "referencia_presente": true
+            }
+          ],
+          "destino_configurado": true,
+          "destino_expresion": false,
+          "destino_alias": "destino-3"
+        }
+      ],
+      "probado_en_esta_sesion": false,
+      "ejecucion_metadata_http": 200,
+      "ultima_ejecucion": null
+    },
+    {
+      "id": "nZkaXaZVKzgtwUqU",
+      "alias": "borradores",
+      "http": 200,
+      "active": false,
+      "nodos": [
+        {
+          "tipo": "n8n-nodes-base.scheduleTrigger",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.ssh",
+          "version": 1,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "sshPrivateKey",
+              "alias": "credencial-3",
+              "referencia_presente": true
+            }
+          ]
+        },
+        {
+          "tipo": "n8n-nodes-base.code",
+          "version": 2,
+          "deshabilitado": false,
+          "credenciales": [],
+          "indicios_codigo": {
+            "telegram": true,
+            "chat_id": false,
+            "user_id": false,
+            "update_id": false,
+            "revision": false,
+            "harness": false
+          }
+        },
+        {
+          "tipo": "n8n-nodes-base.if",
+          "version": 2.3,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.telegram",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "telegramApi",
+              "alias": "credencial-2",
+              "referencia_presente": true
+            }
+          ],
+          "destino_configurado": true,
+          "destino_expresion": false,
+          "destino_alias": "destino-1"
+        }
+      ],
+      "probado_en_esta_sesion": false,
+      "ejecucion_metadata_http": 200,
+      "ultima_ejecucion": null
+    },
+    {
+      "id": "b6hjjNJFLuLXhRm3",
+      "alias": "digest",
+      "http": 200,
+      "active": false,
+      "nodos": [
+        {
+          "tipo": "n8n-nodes-base.scheduleTrigger",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.ssh",
+          "version": 1,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "sshPrivateKey",
+              "alias": "credencial-3",
+              "referencia_presente": true
+            }
+          ]
+        },
+        {
+          "tipo": "n8n-nodes-base.code",
+          "version": 2,
+          "deshabilitado": false,
+          "credenciales": [],
+          "indicios_codigo": {
+            "telegram": false,
+            "chat_id": false,
+            "user_id": false,
+            "update_id": false,
+            "revision": false,
+            "harness": false
+          }
+        },
+        {
+          "tipo": "n8n-nodes-base.telegram",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "telegramApi",
+              "alias": "credencial-2",
+              "referencia_presente": true
+            }
+          ],
+          "destino_configurado": true,
+          "destino_expresion": false,
+          "destino_alias": "destino-1"
+        }
+      ],
+      "probado_en_esta_sesion": false,
+      "ejecucion_metadata_http": 200,
+      "ultima_ejecucion": null
+    },
+    {
+      "id": "vuicWsvh0hwqKhYs",
+      "alias": "Command Center",
+      "http": 200,
+      "active": true,
+      "nodos": [
+        {
+          "tipo": "n8n-nodes-base.telegramTrigger",
+          "version": 1.3,
+          "deshabilitado": true,
+          "credenciales": [
+            {
+              "tipo": "telegramApi",
+              "alias": "credencial-5",
+              "referencia_presente": true
+            }
+          ],
+          "destino_configurado": false,
+          "destino_expresion": false
+        },
+        {
+          "tipo": "n8n-nodes-base.set",
+          "version": 3.4,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.code",
+          "version": 2,
+          "deshabilitado": false,
+          "credenciales": [],
+          "indicios_codigo": {
+            "telegram": true,
+            "chat_id": false,
+            "user_id": false,
+            "update_id": false,
+            "revision": false,
+            "harness": false
+          }
+        },
+        {
+          "tipo": "n8n-nodes-base.telegram",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "telegramApi",
+              "alias": "credencial-2",
+              "referencia_presente": true
+            }
+          ],
+          "destino_configurado": true,
+          "destino_expresion": true,
+          "destino_alias": "destino-4"
+        },
+        {
+          "tipo": "n8n-nodes-base.if",
+          "version": 2.2,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.code",
+          "version": 2,
+          "deshabilitado": false,
+          "credenciales": [],
+          "indicios_codigo": {
+            "telegram": false,
+            "chat_id": false,
+            "user_id": false,
+            "update_id": false,
+            "revision": false,
+            "harness": false
+          }
+        },
+        {
+          "tipo": "n8n-nodes-base.googleCalendar",
+          "version": 1.3,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "googleCalendarOAuth2Api",
+              "alias": "credencial-6",
+              "referencia_presente": true
+            }
+          ]
+        },
+        {
+          "tipo": "n8n-nodes-base.telegram",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "telegramApi",
+              "alias": "credencial-2",
+              "referencia_presente": true
+            }
+          ],
+          "destino_configurado": true,
+          "destino_expresion": true,
+          "destino_alias": "destino-5"
+        },
+        {
+          "tipo": "n8n-nodes-base.webhook",
+          "version": 2,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.set",
+          "version": 3.4,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.httpRequest",
+          "version": 4.2,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.if",
+          "version": 2.2,
+          "deshabilitado": false,
+          "credenciales": []
+        },
+        {
+          "tipo": "n8n-nodes-base.telegram",
+          "version": 1.2,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "telegramApi",
+              "alias": "credencial-2",
+              "referencia_presente": true
+            }
+          ],
+          "destino_configurado": false,
+          "destino_expresion": false
+        },
+        {
+          "tipo": "n8n-nodes-base.code",
+          "version": 2,
+          "deshabilitado": false,
+          "credenciales": [],
+          "indicios_codigo": {
+            "telegram": false,
+            "chat_id": false,
+            "user_id": false,
+            "update_id": false,
+            "revision": false,
+            "harness": false
+          }
+        },
+        {
+          "tipo": "n8n-nodes-base.ssh",
+          "version": 1,
+          "deshabilitado": false,
+          "credenciales": [
+            {
+              "tipo": "sshPrivateKey",
+              "alias": "credencial-3",
+              "referencia_presente": true
+            }
+          ]
+        },
+        {
+          "tipo": "n8n-nodes-base.code",
+          "version": 2,
+          "deshabilitado": false,
+          "credenciales": [],
+          "indicios_codigo": {
+            "telegram": false,
+            "chat_id": false,
+            "user_id": false,
+            "update_id": false,
+            "revision": false,
+            "harness": false
+          }
+        }
+      ],
+      "probado_en_esta_sesion": false,
+      "ejecucion_metadata_http": 200,
+      "ultima_ejecucion": null
+    }
+  ],
+  "version_instancia": null,
+  "version_http": 200
+}

@@ -1,0 +1,170 @@
+{
+  "aviso": "FICTICIO. Identidades, transporte y decisión simulados. Sin conexión a panel o Telegram.",
+  "policy": {
+    "mode": "fixture",
+    "transportVerified": true,
+    "botAlias": "bot-sintetico",
+    "userId": 900001,
+    "chatId": 900002,
+    "taskIds": [
+      "ficcion-fabrica-001"
+    ]
+  },
+  "snapshot": {
+    "verified": true,
+    "task": {
+      "id": "ficcion-fabrica-001",
+      "revision": 2,
+      "estado": "en_curso"
+    },
+    "scripts": {
+      "guion-a-v1": {
+        "id": "guion-a-v1",
+        "idea_id": "idea-a",
+        "ficticio": true,
+        "fuentes": [
+          "noticia-a"
+        ],
+        "patron": "heras-estructura",
+        "propuesta_onia": "Ejercicio y texto originales de OnIA; no palabras ni consejo personal de Heras.",
+        "duracion_objetivo_segundos": 45,
+        "bloques": [
+          {
+            "tipo": "gancho",
+            "texto": "FICTICIO. ¿Dejarías que una etiqueta decida qué pedido atender?",
+            "respaldo": "propuesta_onia"
+          },
+          {
+            "tipo": "contexto",
+            "texto": "En esta noticia inventada, Nube presenta un clasificador de consultas con revisión humana obligatoria.",
+            "respaldo": "noticia-a"
+          },
+          {
+            "tipo": "ensenanza",
+            "texto": "Propuesta OnIA: separá tres mensajes inventados en venta, soporte y duda. Revisá uno que podría pertenecer a dos categorías y explicá tu decisión.",
+            "respaldo": "propuesta_onia"
+          },
+          {
+            "tipo": "limite",
+            "texto": "El ejemplo no prueba exactitud ni ahorro y no representa una herramienta disponible.",
+            "respaldo": "noticia-a"
+          },
+          {
+            "tipo": "cta",
+            "texto": "¿Qué mensaje revisarías primero y por qué?",
+            "respaldo": "propuesta_onia"
+          }
+        ]
+      },
+      "guion-b-v1": {
+        "id": "guion-b-v1",
+        "idea_id": "idea-b",
+        "ficticio": true,
+        "fuentes": [
+          "noticia-b"
+        ],
+        "patron": "carrera-evidencia",
+        "propuesta_onia": "Demostración textual y lista de comprobación originales de OnIA; no método privado de Carrera.",
+        "duracion_objetivo_segundos": 40,
+        "bloques": [
+          {
+            "tipo": "resultado",
+            "texto": "FICTICIO. Este borrador dice que pediste dos cajas; el pedido inventado decía una.",
+            "respaldo": "propuesta_onia"
+          },
+          {
+            "tipo": "contexto",
+            "texto": "En la noticia inventada de Faro, una respuesta de IA confunde dos pedidos.",
+            "respaldo": "noticia-b"
+          },
+          {
+            "tipo": "metodo",
+            "texto": "Propuesta OnIA: compará cantidad, producto y destino antes de usar el borrador.",
+            "respaldo": "propuesta_onia"
+          },
+          {
+            "tipo": "comprobacion",
+            "texto": "En nuestro ejercicio la lista detecta una diferencia de cantidad. Todavía no probamos un sistema real.",
+            "respaldo": "propuesta_onia"
+          },
+          {
+            "tipo": "limite",
+            "texto": "No medimos ahorro ni aseguramos que la lista detecte todos los errores.",
+            "respaldo": "propuesta_onia"
+          },
+          {
+            "tipo": "cta",
+            "texto": "Propuesta de cierre para revisar: compará tu próximo borrador con el pedido antes de responder.",
+            "respaldo": "propuesta_onia"
+          }
+        ]
+      }
+    },
+    "reviews": {
+      "guion-a-v1": {
+        "simulada": true,
+        "guion_id": "guion-a-v1",
+        "actor": "revisor-ficticio",
+        "veredicto": "bueno",
+        "controles": {
+          "fuentes_y_fechas": true,
+          "atribucion": true,
+          "limites": true,
+          "claridad_y_cta": true,
+          "ficcion_visible": true
+        },
+        "observacion": "Revisión editorial simulada del texto; no revisión independiente del encargo ni comprobación de noticia real.",
+        "fecha": "2026-11-09T00:05:00Z",
+        "guion_sha256": "2775d255436869a55cd652fc993f0cd44bea759bd6228b8364b90ec23c3fa630"
+      },
+      "guion-b-v1": {
+        "simulada": true,
+        "guion_id": "guion-b-v1",
+        "actor": "revisor-ficticio",
+        "veredicto": "cambios",
+        "controles": {
+          "fuentes_y_fechas": true,
+          "atribucion": true,
+          "limites": true,
+          "claridad_y_cta": false,
+          "ficcion_visible": true
+        },
+        "observacion": "Pedir un ejercicio concreto en el CTA antes de pasar a decisión positiva.",
+        "fecha": "2026-11-09T00:05:00Z",
+        "guion_sha256": "1c2397b39180373701d2d7f75a5ec8149a3d2b685d05598b38c148a880334d55"
+      }
+    }
+  },
+  "events": [
+    {
+      "synthetic": true,
+      "update_id": 1,
+      "message": {
+        "from": {
+          "id": 900001,
+          "is_bot": false
+        },
+        "chat": {
+          "id": 900002,
+          "type": "private"
+        },
+        "text": "/elegir ficcion-fabrica-001 guion-a-v1 2 2775d255436869a55cd652fc993f0cd44bea759bd6228b8364b90ec23c3fa630"
+      }
+    },
+    {
+      "synthetic": true,
+      "update_id": 1,
+      "message": {
+        "from": {
+          "id": 900001,
+          "is_bot": false
+        },
+        "chat": {
+          "id": 900002,
+          "type": "private"
+        },
+        "text": "/elegir ficcion-fabrica-001 guion-a-v1 2 2775d255436869a55cd652fc993f0cd44bea759bd6228b8364b90ec23c3fa630"
+      }
+    }
+  ]
+}
