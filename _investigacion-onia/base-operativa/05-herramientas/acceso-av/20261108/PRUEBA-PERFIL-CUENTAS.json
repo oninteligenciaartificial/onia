@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "task_id": "investigacion-acceso-av-20261108",
+  "attempt": "perfil-secundario-cuentas-analisis-20261109",
+  "canonical_task_record": false,
+  "context": {
+    "started_at_utc": "2026-11-09T02:56:55.737402+00:00",
+    "thread_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+    "session_id_env": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+    "same_sid_as_prior_attempts": true,
+    "codex_version_env": "0.167.0",
+    "model_observed": null,
+    "reasoning_effort_observed": null,
+    "branch": "codex/ws-investigacion-acceso-av-20261108",
+    "initial_head": "ec24b88b5511009dc3eac3e63f3fea007fe3dacd",
+    "initial_status": "Sin cambios versionados; capturas/ anterior sin seguimiento",
+    "children_created": 0
+  },
+  "instructions_read": [
+    "AGENTS.md",
+    "04-operacion-agentes/reglas-comunes.md",
+    "04-operacion-agentes/boss-memoria.md",
+    "05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md",
+    "Briefing stdin/chat y continuidad actual; no registro canónico editado"
+  ],
+  "authorization_scope": {
+    "source": "Continuidad actual de Sergio",
+    "server": "cuentas_analisis",
+    "approved_navigation_targets": [
+      "https://example.com/",
+      "https://www.instagram.com/victorherasemprendedor/"
+    ],
+    "native_tools_only": true,
+    "read_only_public_content": true,
+    "snapshot_filename_used": false,
+    "captures_requested": false,
+    "downloads_requested": false,
+    "account_data_read_from_files": false,
+    "cookies_or_storage_read": false
+  },
+  "catalog": {
+    "method": "ALL_TOOLS filtrado por /^mcp__cuentas_analisis__/",
+    "tools": [
+      "mcp__cuentas_analisis__browser_close",
+      "mcp__cuentas_analisis__browser_navigate",
+      "mcp__cuentas_analisis__browser_snapshot"
+    ],
+    "count": 3
+  },
+  "calls": [
+    {
+      "tool": "mcp__cuentas_analisis__browser_navigate",
+      "at_utc": "2026-11-09T02:57:03Z",
+      "arguments": {
+        "url": "https://example.com/"
+      },
+      "result": "success",
+      "response": "Destino aprobado abierto.",
+      "final_url_reported": null,
+      "title_reported": null,
+      "http_status_reported": null
+    },
+    {
+      "tool": "mcp__cuentas_analisis__browser_snapshot",
+      "at_utc": "2026-11-09T02:57:07Z",
+      "arguments": {},
+      "result": "success",
+      "public_content_summary": "Texto documental del dominio en varios idiomas; enlace Learn more a IANA. Compatible con control example.com solicitado.",
+      "full_dom_stored": false,
+      "heading_required": false
+    },
+    {
+      "tool": "mcp__cuentas_analisis__browser_navigate",
+      "at_utc": "2026-11-09T02:57:10Z",
+      "arguments": {
+        "url": "https://www.instagram.com/victorherasemprendedor/"
+      },
+      "result": "success",
+      "response": "Destino aprobado abierto.",
+      "final_url_reported": null,
+      "title_reported": null,
+      "http_status_reported": null
+    },
+    {
+      "tool": "mcp__cuentas_analisis__browser_snapshot",
+      "at_utc": "2026-11-09T02:57:15Z",
+      "arguments": {},
+      "result": "success",
+      "public_content_summary": "Perfil Víctor Heras, heading victorherasemprendedor, categoría Digital creator, biografía y enlaces visibles a publicaciones/reels.",
+      "public_post_links_sample": [
+        "https://www.instagram.com/victorherasemprendedor/p/DY7vyqCFDOg/",
+        "https://www.instagram.com/victorherasemprendedor/reel/DYur-tjvboE/",
+        "https://www.instagram.com/victorherasemprendedor/reel/DX4rykXv0ia/"
+      ],
+      "sample_links_opened": false,
+      "login_form_observed": false,
+      "challenge_prompt_observed": false,
+      "observation_limit": "Ausencia de login/challenge sólo en este snapshot; autenticación e identidad de la sesión no verificadas independientemente.",
+      "full_dom_stored": false,
+      "secondary_account_identifiers_stored": false
+    },
+    {
+      "tool": "mcp__cuentas_analisis__browser_close",
+      "at_utc": "2026-11-09T02:57:19Z",
+      "arguments": {},
+      "result": "success",
+      "response": "Navegador de análisis cerrado.",
+      "closure_reported_by_bridge": true,
+      "return_to_viewer_verified": false
+    }
+  ],
+  "findings": {
+    "native_bridge_calls_succeeded": true,
+    "public_control_text_read": true,
+    "public_reference_profile_content_read": true,
+    "post_links_visible": true,
+    "login_or_challenge_in_observed_snapshot": false,
+    "authentication_proven": false,
+    "secondary_account_identity_verified": false,
+    "public_profile_visit_only": true,
+    "viewer_return": "Previsto por gestor al finalizar proceso Codex, según briefing; no observado en esta prueba"
+  },
+  "sanitization": {
+    "full_dom_written_to_repo": false,
+    "account_data_written_to_repo": false,
+    "cookies_localStorage_credentials_inspected": false,
+    "snapshot_filename": false,
+    "screenshots_taken": false,
+    "raw_logs_opened_or_copied": false,
+    "raw_console_log_reference": "Devuelta incidentalmente por herramienta; no abierta ni copiada al informe"
+  },
+  "preservation": {
+    "previous_head": "ec24b88b5511009dc3eac3e63f3fea007fe3dacd",
+    "all_six_prior_reports_and_two_capture_artifacts_preserved": true,
+    "previous_capture_directory_remains_untracked": true,
+    "new_browser_capture_artifacts_requested": 0
+  },
+  "limits": [
+    "Respuestas navigate no exponen status HTTP, título ni URL final: no inferirlos.",
+    "Snapshot acredita contenido de página, no autenticación completa ni verificación de identidad de cuenta.",
+    "No se abrió perfil propio, feed, correo, mensajes, ajustes, recuperación ni enlaces de posts/reels.",
+    "No cookies/localStorage/credenciales, clics, follows, publicaciones, mensajes, capturas, evaluate, descargas ni shellPlaywright.",
+    "Google y Facebook secundarios no se probaron; no inspección de archivos del perfil.",
+    "No cambios de sandbox, permisos, configuración, instalación, producción o servicios; no APIs pagas ni vidIQ.",
+    "Retorno del perfil al visor depende del gestor al salir este proceso; no comprobado desde Codex.",
+    "Esta prueba no acepta el encargo audiovisual completo ni sustituye revisión independiente."
+  ],
+  "publication": {
+    "files": [
+      "PRUEBA-PERFIL-CUENTAS.md",
+      "PRUEBA-PERFIL-CUENTAS.json"
+    ],
+    "remote": "origin",
+    "branch": "codex/ws-investigacion-acceso-av-20261108",
+    "force": false,
+    "amend": false,
+    "commit": "Se informa tras publicación, sin autorreferencia",
+    "review": "Pendiente coordinador: cerrar y revisión distinta read-only"
+  },
+  "next_step": "Coordinador recoge commit y revisión independiente; cualquier investigación posterior requiere su encargo acotado.",
+  "verification": {
+    "at_utc": "2026-11-09T02:59:21.014729+00:00",
+    "json_valid": true,
+    "expected_five_native_calls": true,
+    "exact_two_destinations": true,
+    "prior_reports_and_capture_hashes_preserved": {
+      "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/ALTERNATIVAS.md": "eff333d66c3e6cc1f1f8ceb9f81c13e7227cd861b6a2acb0f69d764fd86e2131",
+      "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/EVIDENCIA.md": "bcffb1c4062f0fabb5876497c5ea658db1a04272919b89f2af7568c8dbd5abaa",
+      "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/PRUEBA-MCP-RETOMA.json": "183ea95ecdb20e37ce10aa9d66b8c0228cabaed3bb9824a0371bce1d89e302ce",
+      "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/PRUEBA-MCP-RETOMA.md": "5eb99c8446f75ae221016550315767b0fb7f79b8aabbb67bb1e47e86276dc6b7",
+      "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/PRUEBA.json": "6de62d81db579b265250423ba58a433e2255484439162378810fe8e7dc5a1561",
+      "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/README.md": "1c0973e324be11b23465bf92446f61fe2e09e8eb9119c8e8de6b3db827e20d75",
+      "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/capturas/example.png": "d3be9d2fc2ded008202697ef46909ee3be08d870543fb3af5a56ee0480784f0c",
+      "_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/capturas/page-2026-11-09T01-49-35-844Z.yml": "27a94f1e714be975d502118e84745ae3874c37dce85abf00be3e9e27208746cc"
+    },
+    "no_tracked_modifications": true,
+    "only_two_new_reports_and_previous_capture_files": true,
+    "markdown_sha256": "4af67cd9e15fd60209afd58cc0bc8251ac01b3fd866128de51bf12c681148c00",
+    "full_dom_stored": false
+  }
+}
