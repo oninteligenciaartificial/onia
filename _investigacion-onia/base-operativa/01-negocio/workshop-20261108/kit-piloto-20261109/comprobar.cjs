@@ -70,7 +70,7 @@ function validateAgenda(rows,inventory=25){
         check('navegación con botón y teclado',()=>{});
       }
       const selector=name==='laminas'?'.slide':name==='index'?'.home':'.page';
-      if(name==='hoja'||name==='guia')await page.emulateMedia({media:'print'});
+      if(name!=='index')await page.emulateMedia({media:'print'});
       const sections=page.locator(selector);const count=await sections.count();
       for(let i=0;i<count;i++){
         const file=name+'-'+(i+1)+'.png';const el=sections.nth(i);

@@ -11,3 +11,5 @@ table{border-collapse:collapse;width:100%;text-align:left}th{background:var(--so
 @media(max-width:600px){.cards,.flow{grid-template-columns:1fr}.home h1{font-size:36px;letter-spacing:-.8px}.slide,.page,.home{overflow-wrap:anywhere}.meta,.math{flex-wrap:wrap}.card,.flow>div{min-width:0}}
 
 @media print{.page .meta{margin-top:10px;padding-top:8px}.page td,.page th{padding-top:5px;padding-bottom:5px}}
+
+@media print{.slide table{font-size:16pt}.slide th,.slide td{padding:4px 8px}}
