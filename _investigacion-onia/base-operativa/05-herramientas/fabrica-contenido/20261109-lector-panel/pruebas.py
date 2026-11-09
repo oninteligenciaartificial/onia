@@ -18,6 +18,8 @@ import panel
 def page(source=lector.SOURCES[0], date=True, title=None):
     title = title or source['titulo_esperado']
     return (f'<html><title>{title}</title>' +
+            ('<meta property="article:published_time" content="2026-11-05"><span>November 5, 2026</span>'
+             if date and source.get('tipo_contenido') == 'noticia' else '') +
             ('<time datetime="2026-03-16T21:18:18Z">March 16, 2026</time>' if date else '') +
             '<script>DO_NOT_EXECUTE</script></html>').encode()
 
@@ -86,7 +88,7 @@ class Tests(unittest.TestCase):
             if url == lector.SOURCES[0]['url']:
                 raise urllib.error.HTTPError(url, 403, 'no', {}, None)
             return page(lector.SOURCES[1])
-        result = lector.ingest(transport=transport)
+        result = lector.ingest(lector.SOURCES[:2], transport=transport)
         self.assertEqual([x['resultado'] for x in result['consultas']], ['fallo', 'leida'])
         self.assertEqual(result['consultas'][0]['error'], 'HTTP_403')
         self.assertEqual(result['items'][0]['id'], 'F02')
@@ -108,11 +110,55 @@ class Tests(unittest.TestCase):
                     'https://support.claude.com.evil.invalid/en/articles/test',
                     'https://user:secret@support.claude.com/en/articles/test',
                     'https://support.claude.com/en/articles/test?token=secret',
-                    'https://support.claude.com:443/en/articles/test']:
+                    'https://support.claude.com:443/en/articles/test',
+                    'https://claude.com/resources/articles/otra-noticia',
+                    lector.SOURCES[2]['url'] + '/otro',
+                    lector.SOURCES[2]['url'] + '?redirect=https://evil.invalid',
+                    lector.SOURCES[2]['url'].replace('claude.com', 'claude.com.evil.invalid')]:
             with self.subTest(url=url), self.assertRaises(ValueError):
                 lector.canonical_url(url)
         with self.assertRaises(lector.Rejected):
             lector.fetch('https://support.claude.com/en/articles/no-catalogada')
+
+    def test_articulo_concreto_permitido_y_deduplicado(self):
+        source = lector.SOURCES[2]
+        self.assertEqual(lector.canonical_url(source['url'] + '?utm_source=test#x'), source['url'])
+        result = lector.ingest([source, dict(source, url=source['url'] + '?utm_source=test')], lambda _: page(source))
+        self.assertEqual(len(result['items']), 1)
+        self.assertEqual(result['consultas'][1]['resultado'], 'duplicado')
+
+    def test_noticia_fecha_primaria_cotejada_no_consulta(self):
+        source = lector.SOURCES[2]
+        item = lector.parse_page(page(source), source, '2026-11-09T12:00:00+00:00')
+        self.assertEqual(item['fecha_publicacion'], '2026-11-05')
+        self.assertEqual(item['fecha_hecho'], '2026-11-05')
+        self.assertEqual(item['fecha_visible']['precision'], 'dia')
+        self.assertTrue(item['elegible_noticia'])
+        self.assertFalse(item['seleccionada_para_guiones'])
+        self.assertIn('Free', item['pendiente'])
+
+    def test_noticia_sin_fecha_no_toma_consulta_ni_referencia_previa(self):
+        source = lector.SOURCES[2]
+        item = lector.parse_page(page(source, date=False), source, lector.now())
+        self.assertIsNone(item['fecha_publicacion'])
+        self.assertIsNone(item['fecha_hecho'])
+        self.assertFalse(item['elegible_noticia'])
+
+    def test_noticia_fecha_insegura_o_discrepante_rechazada(self):
+        source = lector.SOURCES[2]
+        for raw in [page(source).replace(b'content="2026-11-05"', b'content="<script>"'),
+                    page(source).replace(b'November 5, 2026', b'November 6, 2026'),
+                    page(source).replace(b'content="2026-11-05"', b'content="2026-11-06"')]:
+            with self.subTest(raw=raw[:70]), self.assertRaises(lector.Rejected):
+                lector.parse_page(raw, source, lector.now())
+
+    def test_articulo_fallido_conserva_referencia_sin_fingir_lectura(self):
+        source = lector.SOURCES[2]
+        def broken(_):
+            raise TimeoutError()
+        result = lector.ingest([source], broken)
+        self.assertEqual(result['items'], [])
+        self.assertIn('referencia_previa_sin_lectura_nueva', result['consultas'][0])
 
     def test_redireccion_nunca_se_sigue(self):
         with self.assertRaisesRegex(lector.Rejected, 'REDIRECCION_RECHAZADA'):
@@ -179,6 +225,10 @@ class Tests(unittest.TestCase):
         self.assertIn('&lt;img', html)
         self.assertNotIn('<script', html)
         self.assertIn("default-src 'none'", html)
+        self.assertIn('Noticia candidata · no seleccionada para guiones', html)
+        self.assertIn('Guía atemporal · no noticia de hoy', html)
+        snapshot['fuentes']['items'][2]['resumen'] = '<iframe src="javascript:alert(1)"></iframe>'
+        self.assertNotIn('<iframe', panel.render(snapshot))
 
     def test_panel_vacio_y_fallo_legibles(self):
         s = {'schema': 'onia-lector-panel-v1', 'fuentes': {}, 'generado': lector.now(),

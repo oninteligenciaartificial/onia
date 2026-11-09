@@ -1,0 +1,45 @@
+{
+  "fecha_registro": "2026-11-09T05:20:35.601970+00:00",
+  "commit_entradas": "cf43c113a7a29fdea27b9d278899aef36f02cd67",
+  "pruebas_sin_red": {
+    "resultado": "OK",
+    "casos": 22,
+    "evidencia": "pruebas-02.txt"
+  },
+  "consulta_real": {
+    "resultado": "OK",
+    "fuentes": 3,
+    "guias": 2,
+    "noticias_candidatas_no_elegidas": 1,
+    "publicacion_noticia": "2026-11-05",
+    "snapshot_sha256": "59963841dd2eed96c6ba48f8fecf38ad09c1849ccf9d7b56deb2d58771c44465"
+  },
+  "proyeccion": {
+    "tareas_con_integridad_verificada": 3,
+    "guiones_con_integridad_verificada": 2,
+    "permiso_publicacion": false
+  },
+  "host": {
+    "rc": 1,
+    "hashes_coinciden": true,
+    "casos_aprobados": [
+      "real-desktop"
+    ],
+    "caso_fallido": "real-mobile: desborde horizontal",
+    "casos_no_ejecutados": [
+      "largo-mobile",
+      "vacio-mobile",
+      "error-mobile"
+    ],
+    "evidencia": "host-fallo-01.json",
+    "inspeccion_parcial_ejecutora": true,
+    "criterio_5": "PENDIENTE"
+  },
+  "efectos": {
+    "scheduler": false,
+    "ingesta_recurrente": false,
+    "telegram_real": false,
+    "publicacion": false,
+    "mutacion_harness": false
+  }
+}

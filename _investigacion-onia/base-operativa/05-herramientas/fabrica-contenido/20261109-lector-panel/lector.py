@@ -37,6 +37,12 @@ SOURCES = (
      "autor": "Anthropic", "titulo_esperado": "My prompt",
      "resumen": "Guía para pedir con claridad, aportar contexto, dividir tareas y dar seguimiento. No valida nuestros ejemplos ni garantiza resultados.",
      "cobertura": "Título y fecha visible extraídos automáticamente; recomendaciones cotejadas manualmente el 9/11/2026. No se siguen enlaces."},
+    {"id": "F06", "url": "https://claude.com/resources/articles/claude-enterprise-security-updates",
+     "autor": "Anthropic", "titulo_esperado": "More visibility and control over Claude Enterprise for security teams",
+     "tipo_contenido": "noticia", "publicacion_esperada": "2026-11-05",
+     "resumen": "Anuncio de controles de seguridad y administración para Claude Enterprise, con condiciones y funciones beta. No acredita disponibilidad en Free ni despliegue en una cuenta propia.",
+     "cobertura": "Título, fecha visible y metadato de publicación cotejados; introducción, controles y condiciones leídos manualmente el 9/11/2026. No se siguen enlaces.",
+     "referencia_previa": "FUENTES-Y-MATRIZ.md, F06/N01: artículo comprobado el 9/11/2026; anuncio del 5/11. Esta referencia no sustituye una consulta nueva."},
 )
 
 
@@ -59,15 +65,18 @@ class Rejected(ValueError):
 def canonical_url(url):
     """Identidad por URL; sólo parámetros de seguimiento conocidos se descartan."""
     u = urllib.parse.urlsplit(url)
-    if (u.scheme != "https" or u.hostname != "support.claude.com" or u.port
-            or u.username or u.password or not u.path.startswith("/en/articles/")
+    if (u.scheme != "https" or u.port
+            or u.username or u.password
             or any(c in url for c in "\r\n\\")):
         raise Rejected("URL_NO_PERMITIDA")
     params = [(k, v) for k, v in urllib.parse.parse_qsl(u.query)
               if not k.lower().startswith("utm_") and k.lower() not in {"fbclid", "gclid"}]
     if params:
         raise Rejected("PARAMETROS_NO_PERMITIDOS")
-    return urllib.parse.urlunsplit(("https", "support.claude.com", u.path.rstrip("/"), "", ""))
+    normalized = urllib.parse.urlunsplit(("https", u.hostname, u.path.rstrip("/"), "", ""))
+    if normalized not in {s["url"] for s in SOURCES}:
+        raise Rejected("URL_NO_PERMITIDA")
+    return normalized
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -121,6 +130,8 @@ class Metadata(HTMLParser):
         self.title = []
         self.times = []
         self.time = None
+        self.publication = []
+        self.date_labels = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -128,12 +139,16 @@ class Metadata(HTMLParser):
             self.in_title = True
         if tag == "time":
             self.time = {"valor": attrs.get("datetime"), "etiqueta": attrs.get("title", ""), "texto": ""}
+        if tag == "meta" and attrs.get("property") == "article:published_time":
+            self.publication.append(attrs.get("content", ""))
 
     def handle_data(self, data):
         if self.in_title:
             self.title.append(data)
         if self.time is not None:
             self.time["texto"] += data
+        if re.fullmatch(r"[A-Z][a-z]+ \d{1,2}, \d{4}", data.strip()):
+            self.date_labels.append(data.strip())
 
     def handle_endtag(self, tag):
         if tag == "title":
@@ -163,14 +178,31 @@ def parse_page(data, source, consulted):
             break
         except ValueError:
             continue
+    news = source.get("tipo_contenido") == "noticia"
+    published = None
+    if news and parser.publication:
+        candidate = parser.publication[0]
+        try:
+            parsed = datetime.strptime(candidate, "%Y-%m-%d")
+            label = parsed.strftime("%B") + f" {parsed.day}, {parsed.year}"
+        except ValueError:
+            raise Rejected("FECHA_PUBLICACION_INVALIDA")
+        if (set(parser.publication) != {source["publicacion_esperada"]}
+                or label not in parser.date_labels):
+            raise Rejected("FECHA_PUBLICACION_NO_COINCIDE")
+        published = candidate  # precisión de día, sin fabricar hora ni zona
+        visible = {"valor": published, "etiqueta": "Date", "texto": label,
+                   "funcion": "publicacion_explicita", "precision": "dia"}
     return {
         "id": source["id"], "url_original": source["url"], "url_canonica": canonical_url(source["url"]),
-        "autor": source["autor"], "tipo": "primaria", "tipo_contenido": "guia_evergreen",
-        "titulo": title, "fecha_consulta": consulted, "fecha_publicacion": None,
-        "fecha_hecho": None, "fecha_visible": visible, "resumen": source["resumen"],
+        "autor": source["autor"], "tipo": "primaria", "tipo_contenido": "noticia" if news else "guia_evergreen",
+        "titulo": title, "fecha_consulta": consulted, "fecha_publicacion": published,
+        "fecha_hecho": published, "fecha_visible": visible, "resumen": source["resumen"],
         "cobertura": source["cobertura"], "sha256_respuesta": sha(data), "bytes_respuesta": len(data),
-        "ficticio": False, "alias": [], "error": None, "elegible_noticia": False,
-        "pendiente": "Publicación original y fecha del hecho desconocidas; no presentar como noticia de hoy.",
+        "ficticio": False, "alias": [], "error": None, "elegible_noticia": bool(published),
+        "seleccionada_para_guiones": False if news else None,
+        "pendiente": ("Candidata no seleccionada para G01/G02. Fecha del hecho: anuncio, no despliegue individual. No trasladar Enterprise a Free."
+                      if published else "Publicación original y fecha del hecho desconocidas; no presentar como noticia de hoy."),
     }
 
 
@@ -208,6 +240,8 @@ def ingest(sources=SOURCES, transport=fetch):
             else:
                 code = "LECTURA_FALLIDA"
             receipt.update(resultado="fallo", error=code)
+            if source.get("referencia_previa"):
+                receipt["referencia_previa_sin_lectura_nueva"] = source["referencia_previa"]
         receipt["consulta_finalizada"] = now()
         receipts.append(receipt)
     return {"consultas": receipts, "items": items, "limites": {
@@ -327,7 +361,7 @@ def write_new(path, data):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--fuente", action="append", choices=[s["id"] for s in SOURCES], help="Por defecto ambas páginas comprobadas")
+    parser.add_argument("--fuente", action="append", choices=[s["id"] for s in SOURCES], help="Por defecto las tres fuentes comprobadas")
     parser.add_argument("--salida", required=True, type=Path, help="Directorio NUEVO dentro de esta entrega")
     args = parser.parse_args()
     selected = [next(s for s in SOURCES if s["id"] == key) for key in (args.fuente or [s["id"] for s in SOURCES])]

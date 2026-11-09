@@ -34,15 +34,19 @@ def render(s):
     sources_html = []
     for item in items:
         visible = item.get("fecha_visible") or {}
+        news = item.get("tipo_contenido") == "noticia"
+        kind = ('Noticia candidata · no seleccionada para guiones' if item.get('elegible_noticia') else 'Candidata con fecha pendiente') if news else 'Guía atemporal · no noticia de hoy'
+        date_note = 'Publicación explícita cotejada con fecha visible; precisión de día. Fecha del hecho: anuncio, sin probar despliegue.' if news and item.get('fecha_publicacion') else 'Actualización o fecha visible; no acredita publicación original.'
         sources_html.append(f'''<article class="card source">
           <div class="eyebrow">{e(item['id'])} · {e(item['autor'])} · {e(item['tipo'])}</div>
           <h3>{link(item['url_canonica'], item['titulo'])}</h3>
-          {badge('Guía atemporal · no noticia de hoy')}
+          {badge(kind)}
           <p>{e(item['resumen'])}</p>
           <dl><dt>Consulta UTC</dt><dd>{e(item['fecha_consulta'])}</dd>
           <dt>Publicación original</dt><dd>{e(item.get('fecha_publicacion') or 'Desconocida')}</dd>
           <dt>Fecha del hecho</dt><dd>{e(item.get('fecha_hecho') or 'Sin hecho noticioso determinado')}</dd>
-          <dt>Fecha visible / función</dt><dd>{e(visible.get('valor') or 'Ausente')} · {e(visible.get('texto', ''))}<br>Actualización o fecha visible; no acredita publicación original.</dd></dl>
+          <dt>Fecha visible / función</dt><dd>{e(visible.get('valor') or 'Ausente')} · {e(visible.get('texto', ''))}<br>{e(date_note)}</dd></dl>
+          <p class="small">{e(item.get('pendiente', ''))}</p>
           <p class="small">{e(item['cobertura'])}</p>
           <details><summary>Huella y procedencia</summary><p class="mono">{e(item['url_original'])}</p>
           <p class="mono">SHA-256 respuesta: {e(item['sha256_respuesta'])}<br>{e(item['bytes_respuesta'])} bytes leídos; HTML remoto no conservado.</p></details>
@@ -52,7 +56,7 @@ def render(s):
     consultations = []
     for c in public.get("consultas", []):
         consultations.append(f'<li><strong>{e(c["fuente"])} · {e(c["resultado"])}</strong> '
-                             f'{e(c.get("error", ""))}<br><span class="small">{e(c["consulta_iniciada"])} → {e(c["consulta_finalizada"])}</span></li>')
+                             f'{e(c.get("error", ""))}<br><span class="small">{e(c["consulta_iniciada"])} → {e(c["consulta_finalizada"])}<br>{e(c.get("referencia_previa_sin_lectura_nueva", ""))}</span></li>')
     ideas = ''.join(f'<article class="card"><div class="eyebrow">{e(i["id"])} → {e(i["guion"])} · {e(i["tipo"])}</div>'
                     f'<p>{e(i["texto"])}</p><p class="small">Fuente: {e(", ".join(i["fuentes"]))}. Origen: {e(i["origen"])}</p></article>'
                     for i in s.get("ideas", [])) or '<p class="empty">Sin ideas verificables en este recibo.</p>'

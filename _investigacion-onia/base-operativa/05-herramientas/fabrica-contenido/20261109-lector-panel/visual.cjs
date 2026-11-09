@@ -55,6 +55,7 @@ for (const [name, value] of Object.entries(variants)) {
     assert(processes.length > 0, 'Proceso Chromium del perfil propio comprobado');
     assert(processes.every(line => !line.includes('--no-sandbox')), 'Sandbox no desactivado');
     report.proceso_sin_no_sandbox = true;
+    report.contexto_ejecucion = 'Prueba ejecutada donde se invoca este script; en la entrega final: host autorizado del coordinador, copia aislada.';
     const external = [];
     await context.route(/^https?:/, async route => { external.push(route.request().url()); await route.abort(); });
     const cases = [
@@ -81,6 +82,12 @@ for (const [name, value] of Object.entries(variants)) {
       assert.equal(metrics.buttons, 0, name + ': sin controles de mutación ni scripts');
       assert.equal(errors.length, 0);
       assert(metrics.text.includes('Sin aprobación de publicación'));
+      if (name.startsWith('real-')) {
+        assert.equal(await page.locator('.source').count(), 3, 'Tres fuentes reales');
+        assert(metrics.text.includes('Noticia candidata · no seleccionada para guiones'));
+        assert(metrics.text.includes('Guía atemporal · no noticia de hoy'));
+        assert.equal(await page.locator('.script').count(), 2, 'Dos guiones reales');
+      }
       if (name === 'vacio-mobile') assert(metrics.text.includes('Sin fuentes leídas'));
       if (name === 'error-mobile') {
         await page.locator('#fuentes details').evaluate(node => { node.open = true; });

@@ -7,3 +7,10 @@
 - `git diff --cached --check` encontró un espacio final en el texto sintético largo. Se normalizaron sólo ese fixture y su generador; el recibo del fallo Chromium y el snapshot público real se conservaron intactos. No se repitió el navegador porque su condición de arranque no cambió.
 
 Registro sólo dentro de la ruta asignada; no modifica el registro de errores global, el JSON de tarea ni el briefing del coordinador.
+
+## Retoma: tercera fuente y prueba de host
+
+- Se corrigió la falta de noticia: F06 se releyó públicamente y conserva publicación/anuncio 5/11/2026 cotejados en metadato y texto visible. Sigue candidata no elegida para guiones; no se atribuyen funciones Enterprise a Free. Las dos guías y la lectura anterior se conservan.
+- Pasaron 22 pruebas sin red. La sanitización y la lista cerrada incluyen ahora sólo ese artículo concreto de claude.com; fecha ausente/discrepante y fallo material no se completan por inferencia.
+- El coordinador ejecutó la solicitud final con hashes coincidentes, Chromium1252 y sandbox en el host. Escritorio pasó; móvil falló por desborde horizontal, rc1. La ejecutora inspeccionó la única captura de escritorio con `view_image`: la jerarquía y fuentes están visibles, pero hashes largos del próximo paso canónico salen de una tarjeta. El chequeo global de escritorio no detecta desborde interno. Los otros tres casos no se ejecutaron.
+- Se preservó código/snapshot/HTML de la solicitud; no se repitió navegador ni se exportaron capturas del intento con rc1. Se conserva recibo público propio, con hash de imagen inspeccionada. Coordinación indicó cerrar parcial y preparar otra corrección acotada. Criterio 5 sigue pendiente; no se declara aceptación visual.

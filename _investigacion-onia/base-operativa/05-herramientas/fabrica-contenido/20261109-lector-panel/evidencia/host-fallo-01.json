@@ -1,0 +1,56 @@
+{
+  "fecha_registro": "2026-11-09T05:20:35.600446+00:00",
+  "fecha_prueba_host": "2026-11-09T05:17:54.541598+00:00",
+  "id": "fabrica-lector-panel-20261109",
+  "rc": 1,
+  "entorno": "Host VPS autorizado, Chromium sandbox:true, perfil sintético propio; sin cuentas/visor, sin cambios AppArmor.",
+  "hashes_fuente": {
+    "lector.py": "4fa98fe4e9b2b9eeb5014a7b5013513270234dfc55af0f2596eab89c4e4ec464",
+    "panel.py": "15ddf435b594bf0a31ddb448001e9bfa1e3e8bd2e803abe997d838f662cadf8a",
+    "visual.cjs": "42206feafb77e5264d2d5f81201dc566734b467346f2b5196b5d4f8e886d91d3",
+    "evidencia/lectura-real-02/snapshot.json": "59963841dd2eed96c6ba48f8fecf38ad09c1849ccf9d7b56deb2d58771c44465",
+    "evidencia/lectura-real-02/panel.html": "46b54493004886402c1855d0ac217286386588c9720e77187053dddec43aad0d"
+  },
+  "hashes_coinciden": true,
+  "resultado_comprobador": {
+    "fecha": "2026-11-09T05:17:53.250Z",
+    "executable": "/home/onia-codex-worker/operacion/browser-piloto-20261108/browsers/chromium-1252/chrome-linux64/chrome",
+    "chromiumSandbox": true,
+    "perfil": "temporal propio sintético, sin cuentas; conservado en /tmp",
+    "servidor": false,
+    "casos": [
+      {
+        "nombre": "real-desktop",
+        "width": 1440,
+        "height": 1000,
+        "desborde": false,
+        "controles_mutacion": 0,
+        "errores_js": [],
+        "secciones": [
+          "Guiones reales · borradores",
+          "Fuentes públicas · 3 páginas leídas",
+          "Ideas que originaron los guiones",
+          "Estado derivado y próximos pasos"
+        ],
+        "captura": "real-desktop.png"
+      }
+    ],
+    "browser": "157.0.8103.15",
+    "proceso_sin_no_sandbox": true,
+    "contexto_ejecucion": "Prueba ejecutada donde se invoca este script; en la entrega final: host autorizado del coordinador, copia aislada.",
+    "resultado": "FALLO",
+    "error": "AssertionError [ERR_ASSERTION]: real-mobile: sin desborde horizontal\n\ntrue !== false\n",
+    "navegador_cerrado": true
+  },
+  "capturas_exportadas": [],
+  "inspeccion_ejecutora": {
+    "metodo": "view_image",
+    "archivo_inspeccionado": "real-desktop.png en ruta temporal autorizada del host",
+    "sha256_imagen": "e6602e6a141bd3f0f96e363a52e1dd40359d904c47c0b8bb93dee7b033aece4e",
+    "cobertura": "Una captura completa de escritorio; no captura móvil ni casos largo/vacío/error.",
+    "observacion": "Guiones y tres fuentes visibles, con noticia diferenciada de guías. Hashes largos del próximo paso canónico sobresalen de la tarjeta; el assert global de escritorio no detecta este desborde interno.",
+    "aprobacion_visual": false
+  },
+  "observacion_coordinador": "Host inició Chromium con sandbox y pasó desktop, pero falló real-mobile por desborde horizontal. Conservar evidencia y cerrar entrega parcial; se preparará corrección acotada. No declarar aprobación visual.",
+  "siguiente_paso": "Corrección acotada posterior del quiebre de cadenas largas y nueva prueba visual; esta retoma se entrega parcial sin relanzar."
+}
