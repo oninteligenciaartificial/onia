@@ -385,3 +385,5 @@ No hubo rechazo de aprobación automática: el bloqueo es AppArmor del VPS y req
 - **Consultas n8n:** dos rutas documentales históricas devolvieron404; se consultó la referencia oficial vigente. No usar rutas404 como evidencia de capacidad ni reinstalar por ello. Fuente en ERRORES de la entrega.
 - **Workshop:** comprobador inicial detectó dos enlaces a evidencias todavía no escritas; se completaron y el paquete final pasó57enlaces/anclas. Ver evidencia/COMPROBACIONES de la entrega; verificar el conjunto final, no un paquete incompleto.
 - **Coordinación:** dos lecturas fallaron por asumir README.md en vez de README-ENTREGA.md y por buscar el archivo de Telegram en el worktree de Workshop. Se corrigieron con rutas absolutas existentes; no hubo cambios ni pérdida de datos. Usar inventario rg y checkout de cada entrega antes de leer.
+
+- **Revisión Telegram:** la revisora read-only no pudo resolver DNS para ls-remote. No se amplió su sandbox; cotejó los recibos y el coordinador reconfirmó ambos hashes remotos por ls-remote. Distinguir límite de red de revisión de fallo de publicación.
