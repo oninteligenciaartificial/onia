@@ -1,6 +1,6 @@
 # Propuesta de Codex/OnIA para despachar por carriles
 
-**Estado propuesto para aprobación de Sergio.** El carril agrupa tareas del mismo frente y reserva sus rutas. El cupo se asigna a la siguiente tarea elegible cuando termina una sesión. Arrancar con tres sesiones principales como máximo, contando revisores. La primera versión sería un ciclo que el coordinador inicia y puede detener para un lote aprobado y con vencimiento.
+**Piloto mínimo autorizado por Sergio; implementación del scheduler pendiente.** El sí cubre un solo lote de Workshop e Investigación, tres cupos globales incluidos revisores, máximo un hijo por sesión, comando de parada/revocación e informe medido. Platform queda fuera. No autoriza el diseño completo ni producción, n8n, envíos o gastos desde ese loop. La preparación nocturna de Telegram tiene su encargo manual específico y no amplía este piloto. Las secciones siguientes conservan el diseño para evaluar; no acreditan código implementado. El carril agrupa tareas del mismo frente y reserva sus rutas. El cupo se asigna a la siguiente tarea elegible cuando termina una sesión. Arrancar con tres sesiones principales como máximo, contando revisores. La primera versión sería un ciclo que el coordinador inicia y puede detener para un lote aprobado y con vencimiento.
 
 ## Base disponible
 

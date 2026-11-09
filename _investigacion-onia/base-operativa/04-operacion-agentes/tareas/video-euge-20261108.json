@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "video-euge-20261108",
-  "revision": 3,
+  "revision": 4,
   "compartible": true,
   "objetivo": "Mirar el video de Euge Oller pedido por Sergio y contrastar su operación con OnIA",
-  "estado": "en_curso",
-  "proximo_paso": "Inspeccionar cobertura real, devolver visor y publicar análisis/limitaciones.",
-  "resultado": "Ayudante nativo browser_conexion prueba reproducción normal1× bajo lease del perfil VPS.",
-  "comprobacion": "Prueba anterior cortó por publicidad; nuevo límite acotado y evidencia privada, sin saltar controles.",
+  "estado": "en_espera",
+  "proximo_paso": "Retomar cuando cambie condición: reproducción humana verificada en visor o copia audiovisual autorizada; no repetir mismo fallo ni afirmar escucha.",
+  "resultado": "Reproducción parcial y diagnóstico revisado; video completo no disponible.",
+  "comprobacion": "Último intento44.114s,2frames,6respuestas403 del CDN entre30; causa no determinada. Visor restituido. Código corregido y suite sintética rc0, revisión independiente buena sólo para diagnóstico/capturador.",
   "verificacion": "pendiente",
   "evidencias": [
     {
@@ -19,9 +19,19 @@
       "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
       "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
       "bytes": 2071
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/reproduccion-nocturna-v1.json",
+      "sha256": "41f2f68fc1a9225c81d2598fe2aa4b2bc2f1dbf462b8333cce69f2a808858bea",
+      "bytes": 5306
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/revision-nocturna-v1.json",
+      "sha256": "844d49cc332f8d19b73b8027d28cb97ddd236027af936c3576acb6b30866b870",
+      "bytes": 2452
     }
   ],
-  "actualizado": "2026-11-09T04:27:44.503419+00:00",
+  "actualizado": "2026-11-09T04:40:49.963321+00:00",
   "historial": [
     {
       "revision": 1,
@@ -49,6 +59,28 @@
         }
       ],
       "proximo_paso": "Resolver reproducción/seek en piloto acotado del analizador, completar cobertura y revisar; sin más reintentos automáticos en esta tanda.",
+      "aceptacion": null
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-09T04:27:44.503419+00:00",
+      "estado": "en_curso",
+      "resultado": "Ayudante nativo browser_conexion prueba reproducción normal1× bajo lease del perfil VPS.",
+      "comprobacion": "Prueba anterior cortó por publicidad; nuevo límite acotado y evidencia privada, sin saltar controles.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/muestra-visual-parcial-v1.json",
+          "sha256": "d8a05824a428d2a396b444a10aeee9bfc6ef1c8c2d3bb8ee47db9583181c4049",
+          "bytes": 2636
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Inspeccionar cobertura real, devolver visor y publicar análisis/limitaciones.",
       "aceptacion": null
     }
   ],

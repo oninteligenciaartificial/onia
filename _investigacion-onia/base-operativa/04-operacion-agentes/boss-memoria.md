@@ -70,3 +70,9 @@ Lanzar solo después del sí. Boss revisa el VPS por su cuenta, sin esperar que 
 - 8nov~21:55Caracas: Sergio aplicó el perfil AppArmor y confirmó uso SSH. Chromium con sandbox, visor autenticado en loopback y prueba sintética teclado/ratón pasaron. Retoma MCP mismo SID pasó cuatro herramientas y publicó ec24b88; revisión AV pendiente. Visor queda abierto para Sergio; acceso Windows y cuenta no confirmados. Fuente vigente cuentas-analisis/20261108/ACCESO-VERIFICADO-VPS.md.
 
 - 2026-11-08T22:19:23-04:00: Sergio informó alta Google con un nombre distinto del propuesto; ver recibo saneado `evidencias/cuentas-secundarias-20261108/alta-google-informada-v1.json`. Control humano del visor ya confirmado; Instagram y perfil autenticado para análisis aún pendientes. Pidió cómo abrir frentes y continuar: secuencia concreta en EMPRESA-UNIPERSONAL.md, sin nuevos despachos ni activación de servicios.
+
+## Encargo nocturno vigente · 9 noviembre 2026 UTC
+
+Sergio pide avanzar mientras duerme: video Euge, Telegram/n8n y fábrica de ideas/guiones para preparar workshop y campaña. OnIA Platform excluida. Se prioriza cerebro aplicado → primeros10min workshop → automatización probada. Sol6.1 high, revisores distintos ultra; no gasto adicional, campañas, mensajes ni producción. Dos tareas del harness con rutas exclusivas, sin hijos, más ayudante existente de video; límite3 conservado y nuevo despacho suspendido al55% de cuota compartida. El contenido y la campaña son borradores hasta revisión editorial y decisiones pendientes. [Plan del lote](evidencias/noche-20261109/PLAN.md).
+
+El piloto mínimo de carriles sí fue autorizado por Sergio (Workshop/Investigación,3cupos incluidos revisores,máx1hijo,parada/revocación e informe). No confundir ese sí limitado con aprobación del diseño completo ni decir que el scheduler ya existe. El título del diseño pasa a Codex/OnIA.

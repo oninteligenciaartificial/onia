@@ -1,0 +1,159 @@
+{
+  "tarea": "video-euge-20261108",
+  "fuente": "https://www.youtube.com/watch?v=JuAQILH7dkQ",
+  "estado": "en_espera",
+  "alcance": {
+    "visual_puntual": true,
+    "visionado_completo": false,
+    "audio_analizado": false
+  },
+  "scripts": {
+    "ejecutar.py": "097670e2c25ea85ef0873e36dd342f34088c6d9f02aa457cbc52d0a5908b44a4",
+    "muestra-seek-anterior.cjs": "a50bfde79fde191f684d507ca0f7b974fb4891915b226decfed845f0670961df",
+    "probar.py": "a17b8e19fe767131b17cc31e82c707e55837b2e9fcaaa124699286f30ae8e361",
+    "prueba-limites.cjs": "1af6a6a363c58e4eb7e4b83180cd437a6569cf14817d84e5fdfde3536b686e9c",
+    "prueba-reproduccion.cjs": "dfee637431ed7c190c089eee57f397dc0d3715cc360f667f247a90e8b6820b43",
+    "reproduccion.antes-play-normal.cjs": "0fcaf4250ac56676b63bf2b55e7e5dae2059bbe2f8afcdd0e7a56cc0fa6b0a40",
+    "reproduccion.antes-reloj-publicidad.cjs": "9253f81f18d55877edac216381ab91b4cf4774c0eb5ed74780b76154323a78e2",
+    "reproduccion.cjs": "d83a3c60147dad7b606e0a2dcc77ff1a9b79d4ce600ba22dc050365d0ba78351"
+  },
+  "manifiestos": [
+    {
+      "etapa": "muestra_previa",
+      "ruta_privada": "~/operacion/video-referencia-JuAQILH7dkQ/privado/muestra-20261109T034130Z-rkofri_i/muestra.json",
+      "sha256": "6e9d8644ddb0332f740c2721bf0979653378dbd6f63e2e624a6649d1ff790626",
+      "resultado": "parcial",
+      "diagnostico": "REPRODUCTOR_CAMBIO",
+      "http_pagina": 200,
+      "duracion_s": 1802.921,
+      "avance_maximo_s": null,
+      "intervalo_nominal_s": 25,
+      "fotogramas_s": [
+        0.481,
+        25.5,
+        50.5
+      ],
+      "publicidad": {
+        "observada": true,
+        "avance_observado": true,
+        "espera_reproductor_ms": 51058,
+        "activa_al_final": false
+      },
+      "reanudacion_solicitada": null,
+      "estado_final_medio": null,
+      "red_media": null
+    },
+    {
+      "etapa": "reproduccion_preroll_120",
+      "ruta_privada": "~/operacion/video-referencia-JuAQILH7dkQ/privado/reproduccion-20261109T042202Z-d339gz9x/muestra.json",
+      "sha256": "d5ed8251aa17aaf56a1785b39e98f39bce30866a278cbac00db0838986c1e754",
+      "resultado": "sin_fotogramas",
+      "diagnostico": "PUBLICIDAD_EN_CURSO",
+      "http_pagina": 200,
+      "duracion_s": null,
+      "avance_maximo_s": null,
+      "intervalo_nominal_s": 25,
+      "fotogramas_s": [],
+      "publicidad": [
+        {
+          "tras_s": null,
+          "espera_s": 120.486,
+          "activa_al_final": true
+        }
+      ],
+      "reanudacion_solicitada": null,
+      "estado_final_medio": {
+        "readyState": 4,
+        "networkState": 2,
+        "mediaError": null,
+        "pausado": false,
+        "buscando": false,
+        "anuncio": true,
+        "id_coincide": true
+      },
+      "red_media": null
+    },
+    {
+      "etapa": "reproduccion_reloj_publicidad",
+      "ruta_privada": "~/operacion/video-referencia-JuAQILH7dkQ/privado/reproduccion-20261109T042521Z-j2mypq_o/muestra.json",
+      "sha256": "be1dc6414aa37da7892951c2a43d5382115d5aa73670f1a43bdb3eeb5b560e68",
+      "resultado": "parcial",
+      "diagnostico": "AVANCE_DETENIDO",
+      "http_pagina": 200,
+      "duracion_s": 1802.921,
+      "avance_maximo_s": 44.384,
+      "intervalo_nominal_s": 25,
+      "fotogramas_s": [
+        1.098,
+        25.266
+      ],
+      "publicidad": [],
+      "reanudacion_solicitada": null,
+      "estado_final_medio": {
+        "readyState": 0,
+        "networkState": 0,
+        "mediaError": null,
+        "pausado": true,
+        "buscando": false,
+        "anuncio": false,
+        "id_coincide": true
+      },
+      "red_media": null
+    },
+    {
+      "etapa": "reproduccion_play_y_red",
+      "ruta_privada": "~/operacion/video-referencia-JuAQILH7dkQ/privado/reproduccion-20261109T043005Z-vfzfizuc/muestra.json",
+      "sha256": "fd223c1404e17653baf72e2f25299b85d221b0303425c6335d02a14535c2ec27",
+      "resultado": "parcial",
+      "diagnostico": "AVANCE_DETENIDO",
+      "http_pagina": 200,
+      "duracion_s": 1802.921,
+      "avance_maximo_s": 44.114,
+      "intervalo_nominal_s": 25,
+      "fotogramas_s": [
+        0.821,
+        25.683
+      ],
+      "publicidad": [
+        {
+          "tras_s": null,
+          "espera_s": 42.715,
+          "avance_observado": true,
+          "reinicios_reloj": 1,
+          "activa_al_final": false
+        }
+      ],
+      "reanudacion_solicitada": true,
+      "estado_final_medio": {
+        "readyState": 0,
+        "networkState": 0,
+        "mediaError": null,
+        "pausado": true,
+        "buscando": false,
+        "anuncio": false,
+        "id_coincide": true
+      },
+      "red_media": {
+        "respuestas": 30,
+        "http": {
+          "403": 6
+        },
+        "fallos": {}
+      }
+    }
+  ],
+  "prueba": {
+    "comando": "python3 -B work/video-noche-20261109/probar.py",
+    "perfil": "sintetico_en_tmp",
+    "entorno": "VPS con Chromium sandbox y Xvfb aislado",
+    "resultado": "rc0"
+  },
+  "visor_final": {
+    "estado": "listo",
+    "chromium_humano_restaurado": true,
+    "display_vnc_web_conservaron_procesos": true,
+    "lease_liberado": true
+  },
+  "observacion": "El medio queda vacío sin seek y hubo 6 respuestas 403 de 30 observadas en googlevideo.com.",
+  "limite_causal": "No se estableció el motivo de los 403 ni su relación causal específica con el reinicio del medio."
+}

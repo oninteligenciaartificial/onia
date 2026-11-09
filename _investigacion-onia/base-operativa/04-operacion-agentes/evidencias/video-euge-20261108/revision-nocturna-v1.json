@@ -1,0 +1,44 @@
+{
+  "fecha_utc": "2026-11-09T04:40:49.938725+00:00",
+  "revisor": "/root/auditar_conexion",
+  "veredicto": "bueno",
+  "alcance": "Código de muestreo y diagnóstico parcial; no visionado completo.",
+  "comprobaciones_revisor": [
+    "8 hashes de scripts y4manifiestos históricos",
+    "3fotogramas inspeccionados",
+    "Falso completo reproducido antes y corregido después mediante mock en memoria",
+    "Prueba terminal stdlib rc0",
+    "No repitió navegador ni consultó perfil vivo"
+  ],
+  "comprobaciones_coordinador": {
+    "suite": "python3 -B 05-herramientas/video-euge-20261108/nocturno-20261109/probar.py",
+    "rc": 0,
+    "entorno": "Chromium sandbox, Xvfb y medios sintéticos aislados; perfil real no abierto",
+    "imagenes_inspeccionadas_s": [
+      0.821,
+      25.683
+    ]
+  },
+  "hallazgos_corregidos": [
+    "Completo falso al saltar reloj al final",
+    "Manifiesto en_curso tras muerte del hijo: resumen terminal separado",
+    "CDN403 sin inferir segmento ni causa",
+    "Comando canónico y límite de recibo si restauración falla"
+  ],
+  "hashes_actuales": {
+    "prueba-reproduccion.cjs": "6527001a8e1f3c6b701eae954010d6dfe10056182ee3a38729573e6f444a1074",
+    "reproduccion.antes-revision.cjs": "d83a3c60147dad7b606e0a2dcc77ff1a9b79d4ce600ba22dc050365d0ba78351",
+    "ejecutar.py": "b4d24bb775f2f27041aad57d363501cfd26d0f5bb247729f99542022b7fc69e9",
+    "reproduccion.antes-play-normal.cjs": "0fcaf4250ac56676b63bf2b55e7e5dae2059bbe2f8afcdd0e7a56cc0fa6b0a40",
+    "ejecutar.antes-revision.py": "097670e2c25ea85ef0873e36dd342f34088c6d9f02aa457cbc52d0a5908b44a4",
+    "INFORME.md": "3c5359a6f8cadfbf32a3a04cbee40f0d51275433aeb4aae43ab40bee21ec2658",
+    "prueba-terminal.py": "703bbd6c2930f7a79d590f14f9cab79b88dfa1bf085dbd2884a34ffa9e2e462e",
+    "muestra-seek-anterior.cjs": "a50bfde79fde191f684d507ca0f7b974fb4891915b226decfed845f0670961df",
+    "prueba-limites.cjs": "4d81fd8b0e397f1141e4af5549109914c0078480260d9107cb4a2ceb50f9d5df",
+    "probar.py": "5882324902d035c7735fdc8d4c2723444cd74af43abf82f18eaa72266d95f527",
+    "reproduccion.cjs": "99334fd55bb23d1261ea23fdaca6be8412babbd909b6bbbf2d12d1fea7920db5",
+    "reproduccion.antes-reloj-publicidad.cjs": "9253f81f18d55877edac216381ab91b4cf4774c0eb5ed74780b76154323a78e2",
+    "INTEGRACION.md": "9bfcf52e59f584a1047aebb12cdb12e595423406e7186a4ed44d099eadd40321"
+  },
+  "pendiente": "Video completo y audio; no nuevas pruebas hasta condición de acceso distinta."
+}

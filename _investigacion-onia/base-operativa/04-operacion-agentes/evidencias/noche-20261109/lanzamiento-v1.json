@@ -1,0 +1,35 @@
+{
+  "sesiones": [
+    {
+      "pid": 1809297,
+      "supervisor_pid": 1809273,
+      "session_id": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+      "rol": "ejecutor",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "subagentes_maximos": 0,
+      "inicio": "2026-11-09T04:28:47.212969+00:00",
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+      "rama": "codex/ws-noche-telegram-20261109",
+      "id": "noche-telegram-20261109",
+      "viva": true
+    },
+    {
+      "pid": 1809660,
+      "supervisor_pid": 1809654,
+      "session_id": "01a1be90-f195-7c33-a0fc-108ad8e207a5",
+      "rol": "ejecutor",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "subagentes_maximos": 0,
+      "inicio": "2026-11-09T04:28:51.793243+00:00",
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+      "rama": "codex/ws-noche-workshop-contenido-20261109",
+      "id": "noche-workshop-contenido-20261109",
+      "viva": true
+    }
+  ],
+  "monitor_pid": 1810655,
+  "monitor": "~/operacion/resultados/medicion-noche-20261109.jsonl",
+  "limites": "CPU/RAM host y árboles CLI observados; video independiente comparte host, no atribución exacta."
+}

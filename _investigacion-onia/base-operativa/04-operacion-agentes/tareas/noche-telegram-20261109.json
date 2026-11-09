@@ -1,22 +1,32 @@
 {
   "schema": 2,
   "id": "noche-telegram-20261109",
-  "revision": 3,
+  "revision": 17,
   "compartible": true,
   "objetivo": "Preparar y probar integración mínima de fábrica de guiones con Telegram/n8n, reutilizando workflows existentes sin tocar producción",
-  "estado": "preparado",
-  "proximo_paso": "Lanzar Sol6.1 high sin hijos; revisión distinta ultra al publicar.",
-  "resultado": "Encargo nocturno acotado aprobado por Sergio.",
-  "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
-  "verificacion": "pendiente",
+  "estado": "para_revision",
+  "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+  "resultado": "Adaptador y preparación Telegram/n8n con pruebas sintéticas; verificar alcance real y distinguir importado de ejecutado, nunca envíos.",
+  "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+  "verificacion": "correcta",
   "evidencias": [
     {
       "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
       "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
       "bytes": 2071
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-telegram-20261109-r9.json",
+      "sha256": "3c405cbeeb5f848a63e312f7c2b4351fe84e1e26f83752f51296a5356b5b446f",
+      "bytes": 6193
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+      "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+      "bytes": 305
     }
   ],
-  "actualizado": "2026-11-09T04:27:44.346129+00:00",
+  "actualizado": "2026-11-09T04:41:43.331125+00:00",
   "historial": [
     {
       "revision": 1,
@@ -47,6 +57,1183 @@
         "revision_base": 1,
         "fecha": "2026-11-09T04:27:44.334648+00:00"
       }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-09T04:27:44.346129+00:00",
+      "estado": "preparado",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Lanzar Sol6.1 high sin hijos; revisión distinta ultra al publicar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-09T04:28:47.240137+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-09T04:28:47.332437+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 1809273,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-09T04:28:47.463407+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": 1809297,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774278",
+          "supervisor_pid": 1809273,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-09T04:28:51.997377+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": 1809297,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774278",
+          "supervisor_pid": 1809273,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-09T04:29:10.289627+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": 1809297,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774278",
+          "supervisor_pid": 1809273,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-09T04:41:07.875759+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": 1809297,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774278",
+          "supervisor_pid": 1809273,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.864693+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-09T04:41:34.508777+00:00",
+      "estado": "en_curso",
+      "resultado": "Adaptador y preparación Telegram/n8n con pruebas sintéticas; verificar alcance real y distinguir importado de ejecutado, nunca envíos.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-telegram-20261109-r9.json",
+          "sha256": "3c405cbeeb5f848a63e312f7c2b4351fe84e1e26f83752f51296a5356b5b446f",
+          "bytes": 6193
+        }
+      ],
+      "proximo_paso": "Cerrar conservando worktree y revisar entrega independiente.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": 1809297,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774278",
+          "supervisor_pid": 1809273,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.864693+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-09T04:41:35.781796+00:00",
+      "estado": "para_revision",
+      "resultado": "Adaptador y preparación Telegram/n8n con pruebas sintéticas; verificar alcance real y distinguir importado de ejecutado, nunca envíos.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-telegram-20261109-r9.json",
+          "sha256": "3c405cbeeb5f848a63e312f7c2b4351fe84e1e26f83752f51296a5356b5b446f",
+          "bytes": 6193
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": 1809297,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774278",
+          "supervisor_pid": 1809273,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.864693+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+        "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+        "ramas_origin": [
+          "origin/codex/ws-noche-telegram-20261109"
+        ],
+        "fecha": "2026-11-09T04:41:35.769489+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-09T04:41:38.512727+00:00",
+      "estado": "para_revision",
+      "resultado": "Adaptador y preparación Telegram/n8n con pruebas sintéticas; verificar alcance real y distinguir importado de ejecutado, nunca envíos.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-telegram-20261109-r9.json",
+          "sha256": "3c405cbeeb5f848a63e312f7c2b4351fe84e1e26f83752f51296a5356b5b446f",
+          "bytes": 6193
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": 1809297,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774278",
+          "supervisor_pid": 1809273,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.864693+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "noche-telegram-20261109-revisor-1",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.revision-2.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T04:41:38.491509+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "23fdbbfd0b116c7f3673748eed621f7ae697fb11bf7cdc4628220445e2da8857",
+          "schema": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+        "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+        "ramas_origin": [
+          "origin/codex/ws-noche-telegram-20261109"
+        ],
+        "fecha": "2026-11-09T04:41:35.769489+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-09T04:41:38.605974+00:00",
+      "estado": "para_revision",
+      "resultado": "Adaptador y preparación Telegram/n8n con pruebas sintéticas; verificar alcance real y distinguir importado de ejecutado, nunca envíos.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-telegram-20261109-r9.json",
+          "sha256": "3c405cbeeb5f848a63e312f7c2b4351fe84e1e26f83752f51296a5356b5b446f",
+          "bytes": 6193
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": 1809297,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774278",
+          "supervisor_pid": 1809273,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.864693+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "noche-telegram-20261109-revisor-1",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 1843792,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193851392",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.revision-2.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T04:41:38.491509+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "23fdbbfd0b116c7f3673748eed621f7ae697fb11bf7cdc4628220445e2da8857",
+          "schema": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+        "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+        "ramas_origin": [
+          "origin/codex/ws-noche-telegram-20261109"
+        ],
+        "fecha": "2026-11-09T04:41:35.769489+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-09T04:41:38.705983+00:00",
+      "estado": "para_revision",
+      "resultado": "Adaptador y preparación Telegram/n8n con pruebas sintéticas; verificar alcance real y distinguir importado de ejecutado, nunca envíos.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-telegram-20261109-r9.json",
+          "sha256": "3c405cbeeb5f848a63e312f7c2b4351fe84e1e26f83752f51296a5356b5b446f",
+          "bytes": 6193
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": 1809297,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774278",
+          "supervisor_pid": 1809273,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.864693+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "noche-telegram-20261109-revisor-1",
+          "pid": 1843794,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193851402",
+          "supervisor_pid": 1843792,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193851392",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.revision-2.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T04:41:38.491509+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "23fdbbfd0b116c7f3673748eed621f7ae697fb11bf7cdc4628220445e2da8857",
+          "schema": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+        "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+        "ramas_origin": [
+          "origin/codex/ws-noche-telegram-20261109"
+        ],
+        "fecha": "2026-11-09T04:41:35.769489+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-09T04:41:39.321787+00:00",
+      "estado": "para_revision",
+      "resultado": "Adaptador y preparación Telegram/n8n con pruebas sintéticas; verificar alcance real y distinguir importado de ejecutado, nunca envíos.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-telegram-20261109-r9.json",
+          "sha256": "3c405cbeeb5f848a63e312f7c2b4351fe84e1e26f83752f51296a5356b5b446f",
+          "bytes": 6193
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": 1809297,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774278",
+          "supervisor_pid": 1809273,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.864693+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "noche-telegram-20261109-revisor-1",
+          "pid": 1843794,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193851402",
+          "supervisor_pid": 1843792,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193851392",
+          "rama": "(detached)",
+          "session_id": "01a1be9c-a3bb-7a83-93b9-c704b4c91afd",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.revision-2.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T04:41:38.491509+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "23fdbbfd0b116c7f3673748eed621f7ae697fb11bf7cdc4628220445e2da8857",
+          "schema": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+        "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+        "ramas_origin": [
+          "origin/codex/ws-noche-telegram-20261109"
+        ],
+        "fecha": "2026-11-09T04:41:35.769489+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 16,
+      "actualizado": "2026-11-09T04:41:42.560146+00:00",
+      "estado": "para_revision",
+      "resultado": "Adaptador y preparación Telegram/n8n con pruebas sintéticas; verificar alcance real y distinguir importado de ejecutado, nunca envíos.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-telegram-20261109-r9.json",
+          "sha256": "3c405cbeeb5f848a63e312f7c2b4351fe84e1e26f83752f51296a5356b5b446f",
+          "bytes": 6193
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": 1809297,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774278",
+          "supervisor_pid": 1809273,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.864693+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "noche-telegram-20261109-revisor-1",
+          "pid": 1843794,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193851402",
+          "supervisor_pid": 1843792,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193851392",
+          "rama": "(detached)",
+          "session_id": "01a1be9c-a3bb-7a83-93b9-c704b4c91afd",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.revision-2.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T04:41:38.491509+00:00",
+          "rc": null,
+          "ultimo_evento": "turn.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "23fdbbfd0b116c7f3673748eed621f7ae697fb11bf7cdc4628220445e2da8857",
+          "schema": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+        "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+        "ramas_origin": [
+          "origin/codex/ws-noche-telegram-20261109"
+        ],
+        "fecha": "2026-11-09T04:41:35.769489+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      },
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -63,5 +1250,93 @@
     ],
     "revision_base": 1,
     "fecha": "2026-11-09T04:27:44.334648+00:00"
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "noche-telegram-ejecutor",
+      "pid": 1809297,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774278",
+      "supervisor_pid": 1809273,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+      "rama": "codex/ws-noche-telegram-20261109",
+      "session_id": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+      "estado": "cerrada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+      "log_rel": "logs/noche-telegram-20261109.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+      "rutas": [
+        "05-herramientas/fabrica-contenido/20261109-telegram"
+      ],
+      "dry_run": false,
+      "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+      "inicio": "2026-11-09T04:28:47.212969+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-09T04:41:07.864693+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "revisor",
+      "responsable": "noche-telegram-20261109-revisor-1",
+      "pid": 1843794,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193851402",
+      "supervisor_pid": 1843792,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193851392",
+      "rama": "(detached)",
+      "session_id": "01a1be9c-a3bb-7a83-93b9-c704b4c91afd",
+      "estado": "ejecutando",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.revision-2.jsonl",
+      "log_rel": "logs/noche-telegram-20261109.revision-2.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109-revision-2",
+      "rutas": [
+        "05-herramientas/fabrica-contenido/20261109-telegram"
+      ],
+      "dry_run": false,
+      "commit_base": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.briefing.txt",
+      "inicio": "2026-11-09T04:41:38.491509+00:00",
+      "rc": null,
+      "ultimo_evento": "item.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "ultra",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "23fdbbfd0b116c7f3673748eed621f7ae697fb11bf7cdc4628220445e2da8857",
+      "schema": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.veredicto.json"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": {
+    "commit": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+    "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+    "ramas_origin": [
+      "origin/codex/ws-noche-telegram-20261109"
+    ],
+    "fecha": "2026-11-09T04:41:35.769489+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "worktree_conservado": true,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+      "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+      "bytes": 305
+    }
   }
 }

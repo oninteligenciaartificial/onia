@@ -1,22 +1,32 @@
 {
   "schema": 2,
   "id": "noche-workshop-contenido-20261109",
-  "revision": 3,
+  "revision": 16,
   "compartible": true,
   "objetivo": "Convertir cerebros aceptados en borradores prácticos para el workshop y primeros guiones de contenido de OnIA",
-  "estado": "preparado",
-  "proximo_paso": "Lanzar Sol6.1 high sin hijos; revisión distinta ultra al publicar.",
-  "resultado": "Encargo nocturno acotado aprobado por Sergio.",
-  "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
-  "verificacion": "pendiente",
+  "estado": "para_revision",
+  "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+  "resultado": "Síntesis propuesta, primeros10min y guiones con fuentes; comprobar decisiones vigentes, cobertura y hechos frente a propuestas.",
+  "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+  "verificacion": "correcta",
   "evidencias": [
     {
       "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
       "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
       "bytes": 2071
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-workshop-contenido-20261109-r9.json",
+      "sha256": "af7bfcf6ebc59049af0b04895a39ecc3045ee7dbf4a0f03bbd0660ef1c63509d",
+      "bytes": 2018
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+      "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+      "bytes": 315
     }
   ],
-  "actualizado": "2026-11-09T04:27:44.484797+00:00",
+  "actualizado": "2026-11-09T04:43:10.904078+00:00",
   "historial": [
     {
       "revision": 1,
@@ -47,6 +57,1060 @@
         "revision_base": 1,
         "fecha": "2026-11-09T04:27:44.464253+00:00"
       }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-09T04:27:44.484797+00:00",
+      "estado": "preparado",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Lanzar Sol6.1 high sin hijos; revisión distinta ultra al publicar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-workshop-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/noche-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.464253+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-09T04:28:51.816434+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-workshop-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/noche-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.464253+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-workshop-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-noche-workshop-contenido-20261109",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:51.793243+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-09T04:28:51.903600+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-workshop-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/noche-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.464253+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-workshop-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 1809654,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774723",
+          "rama": "codex/ws-noche-workshop-contenido-20261109",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:51.793243+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-09T04:28:52.119963+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-workshop-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/noche-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.464253+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-workshop-ejecutor",
+          "pid": 1809660,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774743",
+          "supervisor_pid": 1809654,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774723",
+          "rama": "codex/ws-noche-workshop-contenido-20261109",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:51.793243+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-09T04:28:52.718309+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-workshop-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/noche-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.464253+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-workshop-ejecutor",
+          "pid": 1809660,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774743",
+          "supervisor_pid": 1809654,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774723",
+          "rama": "codex/ws-noche-workshop-contenido-20261109",
+          "session_id": "01a1be90-f195-7c33-a0fc-108ad8e207a5",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:51.793243+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-09T04:29:10.310417+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-workshop-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/noche-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.464253+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-workshop-ejecutor",
+          "pid": 1809660,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774743",
+          "supervisor_pid": 1809654,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774723",
+          "rama": "codex/ws-noche-workshop-contenido-20261109",
+          "session_id": "01a1be90-f195-7c33-a0fc-108ad8e207a5",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:51.793243+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-09T04:41:07.286736+00:00",
+      "estado": "en_curso",
+      "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+      "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-workshop-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/noche-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.464253+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-workshop-ejecutor",
+          "pid": 1809660,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774743",
+          "supervisor_pid": 1809654,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774723",
+          "rama": "codex/ws-noche-workshop-contenido-20261109",
+          "session_id": "01a1be90-f195-7c33-a0fc-108ad8e207a5",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:51.793243+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.273509+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-09T04:41:43.149483+00:00",
+      "estado": "en_curso",
+      "resultado": "Síntesis propuesta, primeros10min y guiones con fuentes; comprobar decisiones vigentes, cobertura y hechos frente a propuestas.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-workshop-contenido-20261109-r9.json",
+          "sha256": "af7bfcf6ebc59049af0b04895a39ecc3045ee7dbf4a0f03bbd0660ef1c63509d",
+          "bytes": 2018
+        }
+      ],
+      "proximo_paso": "Cerrar conservando worktree y revisar entrega independiente.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-workshop-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/noche-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.464253+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-workshop-ejecutor",
+          "pid": 1809660,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774743",
+          "supervisor_pid": 1809654,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774723",
+          "rama": "codex/ws-noche-workshop-contenido-20261109",
+          "session_id": "01a1be90-f195-7c33-a0fc-108ad8e207a5",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:51.793243+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.273509+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-09T04:41:44.506391+00:00",
+      "estado": "para_revision",
+      "resultado": "Síntesis propuesta, primeros10min y guiones con fuentes; comprobar decisiones vigentes, cobertura y hechos frente a propuestas.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-workshop-contenido-20261109-r9.json",
+          "sha256": "af7bfcf6ebc59049af0b04895a39ecc3045ee7dbf4a0f03bbd0660ef1c63509d",
+          "bytes": 2018
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+          "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-workshop-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/noche-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.464253+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-workshop-ejecutor",
+          "pid": 1809660,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774743",
+          "supervisor_pid": 1809654,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774723",
+          "rama": "codex/ws-noche-workshop-contenido-20261109",
+          "session_id": "01a1be90-f195-7c33-a0fc-108ad8e207a5",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:51.793243+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.273509+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+        "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+        "ramas_origin": [
+          "origin/codex/ws-noche-workshop-contenido-20261109"
+        ],
+        "fecha": "2026-11-09T04:41:44.492985+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+          "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-09T04:41:46.859639+00:00",
+      "estado": "para_revision",
+      "resultado": "Síntesis propuesta, primeros10min y guiones con fuentes; comprobar decisiones vigentes, cobertura y hechos frente a propuestas.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-workshop-contenido-20261109-r9.json",
+          "sha256": "af7bfcf6ebc59049af0b04895a39ecc3045ee7dbf4a0f03bbd0660ef1c63509d",
+          "bytes": 2018
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+          "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-workshop-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/noche-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.464253+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-workshop-ejecutor",
+          "pid": 1809660,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774743",
+          "supervisor_pid": 1809654,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774723",
+          "rama": "codex/ws-noche-workshop-contenido-20261109",
+          "session_id": "01a1be90-f195-7c33-a0fc-108ad8e207a5",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:51.793243+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.273509+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "noche-workshop-contenido-20261109-revisor-1",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.revision-2.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109-revision-2",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T04:41:46.840503+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "9cfbc26368114b9f756420d7e0539ac782d2d801e2fb073bdf54e0a6edbd888d",
+          "schema": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+        "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+        "ramas_origin": [
+          "origin/codex/ws-noche-workshop-contenido-20261109"
+        ],
+        "fecha": "2026-11-09T04:41:44.492985+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+          "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-09T04:41:46.947874+00:00",
+      "estado": "para_revision",
+      "resultado": "Síntesis propuesta, primeros10min y guiones con fuentes; comprobar decisiones vigentes, cobertura y hechos frente a propuestas.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-workshop-contenido-20261109-r9.json",
+          "sha256": "af7bfcf6ebc59049af0b04895a39ecc3045ee7dbf4a0f03bbd0660ef1c63509d",
+          "bytes": 2018
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+          "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-workshop-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/noche-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.464253+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-workshop-ejecutor",
+          "pid": 1809660,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774743",
+          "supervisor_pid": 1809654,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774723",
+          "rama": "codex/ws-noche-workshop-contenido-20261109",
+          "session_id": "01a1be90-f195-7c33-a0fc-108ad8e207a5",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:51.793243+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.273509+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "noche-workshop-contenido-20261109-revisor-1",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 1844327,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193852227",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.revision-2.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109-revision-2",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T04:41:46.840503+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "9cfbc26368114b9f756420d7e0539ac782d2d801e2fb073bdf54e0a6edbd888d",
+          "schema": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+        "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+        "ramas_origin": [
+          "origin/codex/ws-noche-workshop-contenido-20261109"
+        ],
+        "fecha": "2026-11-09T04:41:44.492985+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+          "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-09T04:41:47.041891+00:00",
+      "estado": "para_revision",
+      "resultado": "Síntesis propuesta, primeros10min y guiones con fuentes; comprobar decisiones vigentes, cobertura y hechos frente a propuestas.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-workshop-contenido-20261109-r9.json",
+          "sha256": "af7bfcf6ebc59049af0b04895a39ecc3045ee7dbf4a0f03bbd0660ef1c63509d",
+          "bytes": 2018
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+          "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-workshop-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/noche-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.464253+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-workshop-ejecutor",
+          "pid": 1809660,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774743",
+          "supervisor_pid": 1809654,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774723",
+          "rama": "codex/ws-noche-workshop-contenido-20261109",
+          "session_id": "01a1be90-f195-7c33-a0fc-108ad8e207a5",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:51.793243+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.273509+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "noche-workshop-contenido-20261109-revisor-1",
+          "pid": 1844338,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193852236",
+          "supervisor_pid": 1844327,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193852227",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.revision-2.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109-revision-2",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T04:41:46.840503+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "9cfbc26368114b9f756420d7e0539ac782d2d801e2fb073bdf54e0a6edbd888d",
+          "schema": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+        "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+        "ramas_origin": [
+          "origin/codex/ws-noche-workshop-contenido-20261109"
+        ],
+        "fecha": "2026-11-09T04:41:44.492985+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+          "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-09T04:41:47.670403+00:00",
+      "estado": "para_revision",
+      "resultado": "Síntesis propuesta, primeros10min y guiones con fuentes; comprobar decisiones vigentes, cobertura y hechos frente a propuestas.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-workshop-contenido-20261109-r9.json",
+          "sha256": "af7bfcf6ebc59049af0b04895a39ecc3045ee7dbf4a0f03bbd0660ef1c63509d",
+          "bytes": 2018
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+          "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-workshop-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/noche-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.464253+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-workshop-ejecutor",
+          "pid": 1809660,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774743",
+          "supervisor_pid": 1809654,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774723",
+          "rama": "codex/ws-noche-workshop-contenido-20261109",
+          "session_id": "01a1be90-f195-7c33-a0fc-108ad8e207a5",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:51.793243+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.273509+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "noche-workshop-contenido-20261109-revisor-1",
+          "pid": 1844338,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193852236",
+          "supervisor_pid": 1844327,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193852227",
+          "rama": "(detached)",
+          "session_id": "01a1be9c-c464-77a3-9c72-675a80d834b5",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.revision-2.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109-revision-2",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T04:41:46.840503+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "9cfbc26368114b9f756420d7e0539ac782d2d801e2fb073bdf54e0a6edbd888d",
+          "schema": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+        "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+        "ramas_origin": [
+          "origin/codex/ws-noche-workshop-contenido-20261109"
+        ],
+        "fecha": "2026-11-09T04:41:44.492985+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+          "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -63,5 +1127,93 @@
     ],
     "revision_base": 1,
     "fecha": "2026-11-09T04:27:44.464253+00:00"
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "noche-workshop-ejecutor",
+      "pid": 1809660,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774743",
+      "supervisor_pid": 1809654,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774723",
+      "rama": "codex/ws-noche-workshop-contenido-20261109",
+      "session_id": "01a1be90-f195-7c33-a0fc-108ad8e207a5",
+      "estado": "cerrada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+      "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+      "rutas": [
+        "01-negocio/workshop-20261108/noche-20261109"
+      ],
+      "dry_run": false,
+      "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+      "inicio": "2026-11-09T04:28:51.793243+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-09T04:41:07.273509+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "revisor",
+      "responsable": "noche-workshop-contenido-20261109-revisor-1",
+      "pid": 1844338,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193852236",
+      "supervisor_pid": 1844327,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193852227",
+      "rama": "(detached)",
+      "session_id": "01a1be9c-c464-77a3-9c72-675a80d834b5",
+      "estado": "ejecutando",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.revision-2.jsonl",
+      "log_rel": "logs/noche-workshop-contenido-20261109.revision-2.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109-revision-2",
+      "rutas": [
+        "01-negocio/workshop-20261108/noche-20261109"
+      ],
+      "dry_run": false,
+      "commit_base": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.briefing.txt",
+      "inicio": "2026-11-09T04:41:46.840503+00:00",
+      "rc": null,
+      "ultimo_evento": "item.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "ultra",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "9cfbc26368114b9f756420d7e0539ac782d2d801e2fb073bdf54e0a6edbd888d",
+      "schema": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.veredicto.json"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": {
+    "commit": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+    "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+    "ramas_origin": [
+      "origin/codex/ws-noche-workshop-contenido-20261109"
+    ],
+    "fecha": "2026-11-09T04:41:44.492985+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "worktree_conservado": true,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+      "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+      "bytes": 315
+    }
   }
 }
