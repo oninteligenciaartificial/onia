@@ -111,3 +111,26 @@ No se activan rutinas nuevas, Telegram real, publicación, n8n ni compras por es
 1. ¿Confirmás este mapa: Boss es el capataz (como el Grok Bot de Euge) y Codex + HOMELAB son las fábricas para lo que Grok Bot no hace bien?
 2. ¿Arrancamos ya la fábrica de contenido del workshop con Boss y Contenido, sin gastar Codex?
 3. ¿Qué hacemos con Codex hasta el 14: le pegamos los prompts que ya están listos (bajar el default a Sol high, regla de ahorro y alta de `onia-worker`) o lo pausamos para no subir del 67% hasta el reset del viernes 13 a las 22:47 America/La_Paz?
+
+
+## Segundo video
+
+Sergio pidió también mirar [Dame 25 minutos y nunca volverás a usar la IA igual](https://youtu.be/xPJbP9yZE1I) (Euge Oller, `xPJbP9yZE1I`, 26:35, 8 nov 2026). Lectura completa, con aplicación al harness y a Grok Bot: [EUGE-VIDEO2-BOSS-20261109.md](EUGE-VIDEO2-BOSS-20261109.md). En resumen: el arnés es un paraguas de contexto (memorias, instrucciones, herramientas, a veces RAG) encima del modelo; hoy conviene que sea simple; se construye con la IA y se guarda en una carpeta persistente, no solo en la memoria del chat; el prompt perfecto importa menos que los ejemplos y el criterio; no hace falta el razonamiento máximo para todo; un agente es modelo + contexto + herramientas + objetivo; las fábricas encadenan varios pasos o modelos. Eso refuerza no reconstruir el harness de OnIA, documentar en GitHub y usar a Boss como capataz.
+
+## Backlog posterior (después del harness)
+
+Sergio pide tenerlo en mente y avisar, **sin lanzarlo ahora**. Primero hay que terminar el harness y la infraestructura principal; sin eso no se puede trabajar lo demás.
+
+Cuando esa base esté lista, quiere:
+
+1. Un lugar en Grok Bot para ir hablando con Boss y dejar anotadas propuestas de negocio, ideas, dudas y correcciones, de modo que no se pierdan.
+2. Un plan de caja para no quedarse en la calle. Hoy Boss no tiene ese plan armado.
+3. Un tema de Binance para conversar. Existe un compañero o conector de Binance; no se usa en esta etapa.
+4. Análisis de cómo generar ingresos, posibles startups y posibles negocios físicos potenciados con inteligencia artificial.
+
+Dónde debería vivir, como propuesta y **sin crearlo en este commit**:
+
+- **Dueño:** Boss (el capataz). Sergio habla con Boss; Boss anota, hace preguntas y encarga el análisis. El compañero de Binance entra solo en ese tema cuando Sergio lo pida, en lectura o consulta, sin operar ni gastar sin un sí explícito.
+- **Captura viva:** una base de Notion (el conector ya está). Cada fila tendría tipo (idea, startup, negocio físico con IA, ingreso, duda, Binance), estado (capturada, en análisis, aparcada, decidida), próxima pregunta y enlace al escrito. Encaja con ir hablando y no perder nada.
+- **Escritos ya analizados y plan de caja:** la carpeta que ya existe, [`01-negocio`](../01-negocio/) (`PLAN.md`, workshop y oferta). Ahí irían resúmenes y, más adelante, un plan de caja con números que dé Sergio. No claves, no cookies, no credenciales ni saldos crudos de exchanges o bancos.
+- **Qué no hacer ahora:** no crear la base de Notion, no agregar una carpeta nueva, no abrir el tema Binance, no diseñar startups ni negocios físicos, y no gastar. Hasta el 14 sigue mandando el workshop y lo esencial del harness/HOMELAB.

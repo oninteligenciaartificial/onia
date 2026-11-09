@@ -153,3 +153,6 @@ Sergio aclara que sólo había PC→VPS; el puerto2222 no fue creado ni reconoci
 
 
 9nov ~16:45 America/La_Paz: Boss leyó por su cuenta el video de Euge (subtítulos automáticos es-orig vía yt-dlp; página de YouTube; sin TubeAlfred autenticado, sin video bajado, sin VPS ni ASR privado) y lo contrastó con el análisis de Codex (262af0b / a2c161e). El video enseña hablar con un solo Grok Bot capataz, con conectores y rutinas, y montar fábricas en otra máquina persistente para lo que Grok Bot no hace bien. Codex resumió el video con fidelidad, pero tradujo el flujo a harness/VPS y dejó a Grok Bot fuera del diagrama. Propuesta de flujo OnIA y tres decisiones: [EUGE-VIDEO-BOSS-20261109.md](EUGE-VIDEO-BOSS-20261109.md).
+
+
+9nov ~16:50 America/La_Paz: Boss leyó el segundo video de Euge (https://youtu.be/xPJbP9yZE1I, Dame 25 minutos…, subtítulos es-orig; TubeAlfred sin auth; sin video bajado). Enseña contexto frente a prompt, arnés simple y persistente, revisión humana y fábricas. Aplicación y backlog posterior (ideas, plan de caja, Binance, ingresos/startups/negocios físicos+IA), sin crear la base: [EUGE-VIDEO2-BOSS-20261109.md](EUGE-VIDEO2-BOSS-20261109.md) y sección al final de [EUGE-VIDEO-BOSS-20261109.md](EUGE-VIDEO-BOSS-20261109.md). Primero sigue el harness y la infraestructura.
