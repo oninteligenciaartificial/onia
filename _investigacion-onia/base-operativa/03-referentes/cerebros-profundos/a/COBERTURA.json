@@ -1,0 +1,363 @@
+{
+  "grupo": "a",
+  "referentes": [
+    {
+      "slug": "alex-hormozi",
+      "archivo": "alex-hormozi.md",
+      "estado": "completo",
+      "piezas": [
+        {
+          "id": "P1",
+          "url": "https://www.acquisition.com/training/offers4",
+          "titulo": "The Value Equation",
+          "tipo": "clase",
+          "cobertura": "ASR local íntegro, 252 segmentos, 00:00.00–11:30.68; no percepción audiovisual integral nueva.",
+          "fuente_tiempos": "../../asr/complementario/hormozi-offers4.txt, líneas 1–252; JSON homónimo segments[].start/end",
+          "completa": true
+        },
+        {
+          "id": "P2",
+          "url": "https://www.acquisition.com/training/leads5",
+          "titulo": "Mozi Media Content Method Pt I",
+          "tipo": "clase",
+          "cobertura": "ASR local íntegro, 654 segmentos, 00:00.00–29:47.66; no percepción audiovisual integral nueva.",
+          "fuente_tiempos": "../../asr/complementario/hormozi-leads5.txt, líneas 1–654; JSON homónimo segments[].start/end",
+          "completa": true
+        },
+        {
+          "id": "P3",
+          "url": "https://www.acquisition.com/training/leads6",
+          "titulo": "Mozi Media Content Method Pt II",
+          "tipo": "clase",
+          "cobertura": "ASR local íntegro, 854 segmentos, 00:00.00–35:48.24; no percepción audiovisual integral nueva.",
+          "fuente_tiempos": "../../asr/complementario/hormozi-leads6.txt, líneas 1–854; JSON homónimo segments[].start/end",
+          "completa": true
+        },
+        {
+          "id": "P4",
+          "url": "https://www.linkedin.com/posts/alexhormozi_you-need-people-to-listen-to-your-directions-activity-7505294536655454209-6mPR",
+          "titulo": "You need people to listen to your directions to succeed in business and life.",
+          "tipo": "video",
+          "cobertura": "SRT primario íntegro, 21 cues, 00:00.080–00:54.470; texto igual a VideoObject.transcript tras normalizar espacios. Esquema PT52S: no se convierten relojes.",
+          "fuente_tiempos": "Post canónico → VideoObject.caption.contentUrl; asset D4E05AQFUt84bePOhog; 21 cues y SHA-256 c028a13982f37e5dc969bbcc4990297842528abae2a0d6cc3bfba8ca2c332426 en ficha",
+          "completa": true
+        },
+        {
+          "id": "P5",
+          "url": "https://www.instagram.com/hormozi/reel/DfTSZcnovSg/",
+          "titulo": "Reel DfTSZcnovSg · diagnóstico de capacidad comercial (rótulo descriptivo)",
+          "tipo": "reel",
+          "cobertura": "Candidato; informe previo leído, ASR e imágenes exactos no disponibles en checkout. Excluido del mínimo.",
+          "fuente_tiempos": "../../fichas/audiovisual/hormozi.md y guiones-faltantes.md: sólo antecedente; cuerpo primario no recuperado en esta sesión",
+          "completa": false
+        },
+        {
+          "id": "P6",
+          "url": "https://www.instagram.com/hormozi/reel/DfSV88LohWW/",
+          "titulo": "Reel DfSV88LohWW · analogía de cierre (rótulo descriptivo)",
+          "tipo": "reel",
+          "cobertura": "Candidato; informe previo leído, ASR e imágenes exactos no disponibles en checkout. Excluido del mínimo.",
+          "fuente_tiempos": "../../fichas/audiovisual/hormozi.md y guiones-faltantes.md: sólo antecedente; cuerpo primario no recuperado en esta sesión",
+          "completa": false
+        }
+      ],
+      "pagina_comercial": {
+        "url": "https://www.acquisition.com/workshop-marketing",
+        "comprobada": true,
+        "limite": "Texto comercial reabierto el 8/11/2026. Fechas y plazas contradictorias; disponibilidad, llamada y compra sin comprobar."
+      },
+      "faltantes": [
+        "Sin brecha para el mínimo de cuatro piezas con cinco respuestas: P1–P4 completas.",
+        "P4: duración declarada 52 s frente a captions hasta54,470 s, sin sincronía acreditada; atribución pública de perfil, sin backlink propio ni auditoría de control de cuenta.",
+        "P5/P6 incompletas por ASR exactos ausentes. BizNinja permanece en recuperación por cuerpo directo insuficiente/redirección/HTTP403; Capitalism es anexo de audio, excluido del mínimo.",
+        "Percepción audiovisual integral, funcionamiento comercial y resultados de alumnos no acreditados; fuera del análisis cerrado de contenido."
+      ]
+    },
+    {
+      "slug": "pedro-buerbaum",
+      "archivo": "pedro-buerbaum.md",
+      "estado": "completo",
+      "piezas": [
+        {
+          "id": "P1",
+          "url": "https://www.instagram.com/pedrobuerbaum/reel/Dd6oC4EkRX1/",
+          "titulo": "Mejorar una oferta en cinco pasos (título descriptivo)",
+          "tipo": "reel",
+          "cobertura": "ASR íntegro existente del MP4: 20 segmentos, 0–90,20 s de pista 90,3479 s. Imagen previa sólo documental; sin percepción AV nueva.",
+          "fuente_tiempos": "../../asr/asr-vad-resultados.json, files[3].segments[0..19] y words; base cero",
+          "completa": true
+        },
+        {
+          "id": "P2",
+          "url": "https://www.instagram.com/pedrobuerbaum/reel/DfVKglhEtc1/",
+          "titulo": "Disfrutar lo conseguido (título descriptivo)",
+          "tipo": "reel",
+          "cobertura": "ASR íntegro existente del MP4: 20 segmentos, 0–65,78 s de pista 66,4337 s. Imagen previa sólo documental; sin percepción AV nueva.",
+          "fuente_tiempos": "../../asr/complementario/pedro66.json, segments[0..19]; TXT homónimo",
+          "completa": true
+        },
+        {
+          "id": "P3",
+          "url": "https://www.instagram.com/pedrobuerbaum/reel/Dem097KgI-A/",
+          "titulo": "Un negocio que depende del dueño (título descriptivo)",
+          "tipo": "reel",
+          "cobertura": "ASR íntegro existente del MP4: 13 segmentos, 0–74,64 s de pista 74,8173 s. Imagen previa sólo documental; sin percepción AV nueva.",
+          "fuente_tiempos": "../../asr/complementario/dem097kgi-a.json, segments[0..12]; TXT homónimo",
+          "completa": true
+        },
+        {
+          "id": "P4",
+          "url": "https://www.instagram.com/pedrobuerbaum/reel/DehhvYDAWDl/",
+          "titulo": "Oferta, tráfico y capacidad: caso de chefs (título descriptivo)",
+          "tipo": "reel",
+          "cobertura": "ASR íntegro existente del MP4: 17 segmentos, 0,02–101,10 s de pista 101,6546 s. Imagen previa sólo documental; sin percepción AV nueva.",
+          "fuente_tiempos": "../../asr/complementario/dehhvydawdl.json, segments[0..16]; TXT homónimo",
+          "completa": true
+        }
+      ],
+      "pagina_comercial": {
+        "url": "https://masterclass.pedrobuerbaum.com/",
+        "comprobada": true,
+        "limite": "Landing y términos leídos el 8/11/2026; contradicción EUR/USD, importe final/checkout sin comprobar. Página pagada no cursada ni contada como pieza."
+      },
+      "faltantes": [
+        "Sin brecha para el mínimo de cuatro piezas con cinco respuestas. Quedan fuera del alcance cerrado la percepción AV integral, clase extensa, entrega de DM y cierre privado, expresamente no acreditados."
+      ]
+    },
+    {
+      "slug": "victor-heras",
+      "archivo": "victor-heras.md",
+      "estado": "completo",
+      "piezas": [
+        {
+          "id": "P1",
+          "url": "https://cdn.converteai.net/7999d283-8b2c-4b68-8e10-b8ee1bcf16f0/6ac3bbf9e3eaa635739e0dd2/main.m3u8",
+          "titulo": "VSL Viralidad · VSL JET V1/V2 (variantes de una pieza)",
+          "tipo": "video",
+          "cobertura": "ASR íntegros cotejados con JSON: 136/142 segmentos; V1 hasta634,58 s de637,589; V2 hasta633,22 s de637,141. Variantes A/B contadas como UNA pieza. VSL embebida en https://viralidad.com/; URL de esta entrada es el HLS primario V1, V2 identificada en ficha. La landing comercial no suma otra pieza.",
+          "fuente_tiempos": "../../asr/complementario/heras-vsl-v1.txt y .json; heras-vsl-v2.txt y .json; relojes independientes",
+          "completa": true
+        },
+        {
+          "id": "P2",
+          "url": "https://www.instagram.com/victorherasemprendedor/reel/DYur-tjvboE/",
+          "titulo": "Dinero e identidad: mensaje visual (descriptor propio)",
+          "tipo": "reel",
+          "cobertura": "20 muestras visuales nominales 2fps, 0–9,5s más cuadro final PTS10,0s; vídeo10,168934s. ASR0 segmentos no usado para inferir silencio. Cinco respuestas visuales; sin percepción continua ni evaluación sonora.",
+          "fuente_tiempos": "/tmp/cerebros-a-20261108-retoma-20261109/DYur-tjvboE-video-20261109T030919Z/frames/receipt.json; contact-2fps.jpg y last-frame.jpg inspeccionados",
+          "completa": true
+        },
+        {
+          "id": "P3",
+          "url": "https://www.instagram.com/victorherasemprendedor/reel/DX4rykXv0ia/",
+          "titulo": "Apariencia y caso Bernardo (descriptor propio)",
+          "tipo": "reel",
+          "cobertura": "Audio público77,069002s; ASR18segmentos,0–76,68s; toda la salida leída. Huecos9,08–18,28 y26,28–30,16s; varias voces sin diarización. Cinco respuestas desde contenido reconocido y caption, sin escucha/visión integral.",
+          "fuente_tiempos": "/tmp/cerebros-a-20261108-retoma-20261109/DX4rykXv0ia-20261109T030832Z/asr-20261109T030948Z.json, segments[].start/end",
+          "completa": true
+        },
+        {
+          "id": "P4",
+          "url": "https://www.instagram.com/victorherasemprendedor/reel/DXzUw8jthB3/",
+          "titulo": "Ferrari y CLASE: giro promocional (descriptor propio)",
+          "tipo": "reel",
+          "cobertura": "Audio público68,617007s; ASR25segmentos,0–65,54s; toda la salida leída. Hueco11,96–19,73s y errores reconocidos. Cinco respuestas; no se acredita delito, voces individuales ni visión/sonido integral.",
+          "fuente_tiempos": "/tmp/cerebros-a-20261108-retoma-20261109/DXzUw8jthB3-20261109T030934Z/asr-20261109T031118Z.json, segments[].start/end",
+          "completa": true
+        }
+      ],
+      "pagina_comercial": {
+        "url": "https://viralidad.com/",
+        "comprobada": true,
+        "limite": "Landing y formulario https://viralidad.com/survey leídos sin envío; no precio ni condiciones finales visibles. Rangos de capital no son precios."
+      },
+      "faltantes": [
+        "Sin brecha para mínimo4: P1–P4 sustentan cinco respuestas dentro de sus coberturas declaradas; revisión independiente pendiente.",
+        "Antiguos P2–P6 preservados como R2–R6 en ficha e historial del commit84c949a; siguen sin contenido suficiente y no suman.",
+        "P2 visual muestreado; ASR vacío no prueba silencio. P3/P4 tienen huecos y errores automáticos, varias voces sin diarización; no percepción audiovisual integral ni resultados económicos auditados.",
+        "Auxiliares completos fueraGit en /tmp/cerebros-a-20261108-retoma-20261109, mismaVPS; hashes no los transportan a otraVM."
+      ]
+    },
+    {
+      "slug": "iman-gadzhi",
+      "archivo": "iman-gadzhi.md",
+      "estado": "completo",
+      "piezas": [
+        {
+          "id": "P1",
+          "url": "https://www.linkedin.com/posts/iman-gadzhi_no-one-is-saying-your-content-shouldnt-be-activity-7271917428610121728-56dl",
+          "titulo": "Enseñar dentro de una pieza comercial (título descriptivo)",
+          "tipo": "video",
+          "cobertura": "VTT primario íntegro, 10 cues, 00:00.080–00:32.060, cotejado con transcript de VideoObject; asset D4D05AQH79gYkl8uRJg. Reloj de captions, sin percepción AV nueva.",
+          "fuente_tiempos": "https://www.linkedin.com/posts/iman-gadzhi_no-one-is-saying-your-content-shouldnt-be-activity-7271917428610121728-56dl → VideoObject.caption.contentUrl, VTT, cues 1–10; rango y SHA-256 en ficha",
+          "completa": true
+        },
+        {
+          "id": "P2",
+          "url": "https://www.linkedin.com/posts/iman-gadzhi_stop-restricting-yourself-to-your-niche-activity-7270080066133377024-9_le",
+          "titulo": "Stop restricting yourself to your niche.",
+          "tipo": "video",
+          "cobertura": "VTT primario íntegro, 12 cues, 00:00.110–00:36.030, cotejado con transcript de VideoObject; asset D4D05AQEgaWFeeGdl1g. Reloj de captions, sin percepción AV nueva.",
+          "fuente_tiempos": "https://www.linkedin.com/posts/iman-gadzhi_stop-restricting-yourself-to-your-niche-activity-7270080066133377024-9_le → VideoObject.caption.contentUrl, VTT, cues 1–12; rango y SHA-256 en ficha",
+          "completa": true
+        },
+        {
+          "id": "P3",
+          "url": "https://www.linkedin.com/posts/iman-gadzhi_i-use-this-one-trick-to-get-incredible-ctr-activity-7276980466459570177-jG4L",
+          "titulo": "I use this one trick to get incredible CTR on each one of my YouTube videos",
+          "tipo": "video",
+          "cobertura": "SRT primario íntegro, 12 cues, 00:00.100–00:32.600, cotejado con transcript de VideoObject; asset D4D05AQFtVVznj5f0rg. Reloj de captions, sin percepción AV nueva.",
+          "fuente_tiempos": "https://www.linkedin.com/posts/iman-gadzhi_i-use-this-one-trick-to-get-incredible-ctr-activity-7276980466459570177-jG4L → VideoObject.caption.contentUrl, SRT, cues 1–12; rango y SHA-256 en ficha",
+          "completa": true
+        },
+        {
+          "id": "P4",
+          "url": "https://www.linkedin.com/posts/iman-gadzhi_it-doesnt-matter-if-youre-trying-to-set-activity-7266832992256339969-fvmg",
+          "titulo": "It doesn't matter if you're trying to set up a subscription service... (título abreviado)",
+          "tipo": "video",
+          "cobertura": "VTT primario íntegro, 15 cues, 00:00.060–00:42.600, cotejado con transcript de VideoObject; asset D4D05AQG7QNqNKD3I-A. Reloj de captions, sin percepción AV nueva.",
+          "fuente_tiempos": "https://www.linkedin.com/posts/iman-gadzhi_it-doesnt-matter-if-youre-trying-to-set-activity-7266832992256339969-fvmg → VideoObject.caption.contentUrl, VTT, cues 1–15; rango y SHA-256 en ficha",
+          "completa": true
+        },
+        {
+          "id": "P5",
+          "url": "https://www.linkedin.com/posts/consulting.com_our-ceo-iman-gadzhi-on-the-small-things-quietly-activity-7480328859603873792-UBgc",
+          "titulo": "Our CEO Iman Gadzhi on the small things quietly costing your business money.",
+          "tipo": "video",
+          "cobertura": "VTT primario íntegro, 14 cues, 00:00.130–00:34.140, cotejado con transcript de VideoObject; asset D4D05AQGnrXDyvEJtOQ. Reloj de captions, sin percepción AV nueva.",
+          "fuente_tiempos": "https://www.linkedin.com/posts/consulting.com_our-ceo-iman-gadzhi-on-the-small-things-quietly-activity-7480328859603873792-UBgc → VideoObject.caption.contentUrl, VTT, cues 1–14; rango y SHA-256 en ficha",
+          "completa": true
+        },
+        {
+          "id": "P6",
+          "url": "https://www.linkedin.com/posts/ryanserhant_ever-wondered-how-a-23-year-old-multi-millionaire-activity-7132755393755144194-Bnp0",
+          "titulo": "Ever wondered how a 23-year-old multi-millionaire spends his time? · Ryan Serhant con Iman",
+          "tipo": "video",
+          "cobertura": "VTT primario íntegro, 46 cues, 00:00.060–02:00.470, cotejado con transcript de VideoObject; asset D4E05AQEvE-dped6dfg. Reloj de captions, sin percepción AV nueva.",
+          "fuente_tiempos": "https://www.linkedin.com/posts/ryanserhant_ever-wondered-how-a-23-year-old-multi-millionaire-activity-7132755393755144194-Bnp0 → VideoObject.caption.contentUrl, VTT, cues 1–46; rango y SHA-256 en ficha",
+          "completa": true
+        }
+      ],
+      "pagina_comercial": {
+        "url": "https://consulting.com/monetise",
+        "comprobada": true,
+        "limite": "Propuesta, entregables y disponibilidad leídos el 8/11/2026; inscripciones cerradas/lista de espera; precio final, garantía y entrega privada sin comprobar."
+      },
+      "faltantes": [
+        "Sin brecha para el mínimo de cuatro: seis pistas primarias completas con cinco respuestas.",
+        "Captions terminan 2–2,6 s después de duration declarada: no se convierten al reloj del video ni se acredita sincronía.",
+        "P6 sin diarización: atribución contextual explícita; CTA/edición pertenecen al anfitrión. Titularidad del perfil por backlink propio no corroborada; identidad por concordancia pública.",
+        "Inspección audiovisual integral y docencia prolongada no comprobadas; no exigidas para este análisis de contenido."
+      ]
+    },
+    {
+      "slug": "justin-welsh",
+      "archivo": "justin-welsh.md",
+      "estado": "completo",
+      "piezas": [
+        {
+          "id": "P1",
+          "url": "https://www.youtube.com/watch?v=XAyQMUSjs2w",
+          "titulo": "Justin Welsh – How a LinkedIn legend expanded into Twitter and Email · Creator Science 109",
+          "tipo": "video",
+          "cobertura": "Transcripción primaria: apertura0:00–5:15, bloques16:53–20:31,37:54–51:30,52:29–57:17 y cierre desde57:17. Muestreo textual amplio suficiente para cinco respuestas; no lectura íntegra ni visionado.",
+          "fuente_tiempos": "https://creatorscience.com/podcast/justin-welsh/; botones temporizados vinculados al video; duración exacta/anuncios dinámicos sin certificar",
+          "completa": true
+        },
+        {
+          "id": "P2",
+          "url": "https://www.youtube.com/watch?v=Pv24uWUJ794",
+          "titulo": "Justin Welsh on How to Find a Profitable Niche Worth $2.25 Million · Productive Insights 240",
+          "tipo": "video",
+          "cobertura": "Cuerpo primario completo y capítulos0:00–14:02. ASR previo de MP3 de935,636s leído como complemento en reloj separado; no cuenta otra pieza.",
+          "fuente_tiempos": "https://www.productiveinsights.com/podcast/justin-welsh-on-how-to-find-profitable-niche; capítulos del video. Complemento ../../asr/9674a5070ccc-20261108T155711133648Z.md sólo reloj MP3",
+          "completa": true
+        },
+        {
+          "id": "P3",
+          "url": "https://www.youtube.com/watch?v=pvdRasifN0M",
+          "titulo": "Justin Welsh $2.25m/yr Content Strategy & Roadmap · Productive Insights 242",
+          "tipo": "video",
+          "cobertura": "Cuerpo primario completo y capítulos0:00–11:11, con cierre del anfitrión. Edición temática distinta de conversación compartida conP2/P4.",
+          "fuente_tiempos": "https://www.productiveinsights.com/podcast/justin-welsh-content-strategy-and-road-map; capítulos y transcripción del video",
+          "completa": true
+        },
+        {
+          "id": "P4",
+          "url": "https://www.youtube.com/watch?v=m_AQfKsUAwQ",
+          "titulo": "Justin Welsh – LinkedIn 3-Step Growth System · Productive Insights 246",
+          "tipo": "video",
+          "cobertura": "Cuerpo primario completo y capítulos0:00–9:14, con cierre del anfitrión. Edición temática distinta de conversación compartida conP2/P3.",
+          "fuente_tiempos": "https://www.productiveinsights.com/podcast/how-to-grow-on-linkedin-in2024-justin-welsh; capítulos y transcripción del video",
+          "completa": true
+        }
+      ],
+      "pagina_comercial": {
+        "url": "https://learn.justinwelsh.me/content",
+        "comprobada": true,
+        "limite": "Texto, temario y FAQ leídos; CTA siguió en landing. Precio final de checkout, garantía, compra y entrega privada no comprobados."
+      },
+      "faltantes": [
+        "Sin brecha para el mínimo de cuatro piezas con cinco respuestas. P1 es muestreo primario amplio, declarado sin fingir transcripción íntegra.",
+        "P2–P4 son ediciones temáticas distintas de una entrevista compartida, no tres corroboraciones independientes. El MP3 de P2 no suma otra pieza.",
+        "Duración exacta de cada edición, sincronía y percepción audiovisual integral pendientes. El reloj del MP3 no se traslada al video.",
+        "Curso pagado, cierre privado y resultados económicos o de alumnos no acreditados."
+      ]
+    },
+    {
+      "slug": "alex-carrera",
+      "archivo": "alex-carrera.md",
+      "estado": "completo",
+      "piezas": [
+        {
+          "id": "P1",
+          "url": "https://www.instagram.com/reel/DevcnJYNS7r/",
+          "titulo": "De un equipo de edición a una persona con IA (título descriptivo)",
+          "tipo": "reel",
+          "cobertura": "ASR íntegro, 22 segmentos, 0–57,06 s; caption/handle corroborados mediante GET público actual. Informes visuales previos releídos, sin nueva percepción AV.",
+          "fuente_tiempos": "../../asr/complementario/alex-carrera.json, segmentos 1–22; TXT homónimo. Anclajes visuales previos en ../../fichas/audiovisual/alex-cuadros-completos.md",
+          "completa": true
+        },
+        {
+          "id": "P2",
+          "url": "https://www.instagram.com/alexmcarrera/reel/DfTWAHhNIuV/",
+          "titulo": "Cinco pasos para una agencia de IA (descriptor propio)",
+          "tipo": "reel",
+          "cobertura": "Medio120,118005s; ASR68segmentos0–120s, salida íntegra leída padre/hijo. Caption/handle y reproductor públicos corroborados. No escucha/visión integral ni resultados económicos auditados.",
+          "fuente_tiempos": "/tmp/cerebros-a-20261108-retoma-20261109/DfTWAHhNIuV-20261109T031310Z/asr-20261109T031421Z.json, segments[].start/end",
+          "completa": true
+        },
+        {
+          "id": "P3",
+          "url": "https://www.instagram.com/alexmcarrera/reel/Ddkwl1ojZw6/",
+          "titulo": "Agotamiento y oferta: publicación mixta (descriptor propio)",
+          "tipo": "video",
+          "cobertura": "UNA publicación mixta9entradas:3clips4,033333/4/4s sin pista de audio en formatos recuperados y6imágenes. Todas estáticas vistas;3contactos2fps0–3,5s y3últimosPTS4/3,966667/3,966667 vistos. Cinco respuestas visuales, sin reloj global ni duración de lectura estática inventados. No suma cada slide/clip como pieza.",
+          "fuente_tiempos": "/tmp/cerebros-a-20261108-retoma-20261109/Ddkwl1ojZw6-mixto-20261109T032051Z/entry-{1,7,9}/media-receipt.json; Ddkwl1ojZw6-visual-20261109T032137Z/visual-receipt.json, contactos y últimos",
+          "completa": true
+        },
+        {
+          "id": "P4",
+          "url": "https://www.instagram.com/alexmcarrera/reel/DOKUVxIDFis/",
+          "titulo": "Adversidad y elección: relato autobiográfico (descriptor propio)",
+          "tipo": "reel",
+          "cobertura": "Medio público80,690998s; ASR24segmentos0–80,42s, salida íntegra leída por padre/hijo. Identidad del publicador y reproductor cotejados con MCP y metadata. Último segmento deformado; caption final tratado como fuente separada. Sin escucha, identificación vocal o percepción audiovisual integral; relato y citas no auditados.",
+          "fuente_tiempos": "/tmp/cerebros-a-20261108-retoma-20261109/DOKUVxIDFis-20261109T033516Z/asr-20261109T033618Z.json, segments[0..23].start/end; media-receipt.json y browser-public-receipt.json",
+          "completa": true
+        }
+      ],
+      "pagina_comercial": {
+        "url": "https://www.skool.com/exposure-editors/about",
+        "comprobada": true,
+        "limite": "About público leído sin ingreso/registro. Free y texto de no gratuidad discrepan; precio, condiciones finales y puente postCLASE indeterminados; videos=[] no ofrece preview."
+      },
+      "faltantes": [
+        "Sin brecha para mínimo4 de contenido: P1–P4 sustentan cinco respuestas y tiempos dentro de las coberturas declaradas; revisión independiente y aceptación pendientes.",
+        "P4: ASR automático con errores y último segmento77,88–80,42s deformado; no se reconstruye cita. Caption corrobora metáfora de cierre por separado. Biografía y atribuciones filosóficas son declaraciones del relato, sin auditoría.",
+        "P3 cuentaUNA publicación mixta, sin reloj global ni tiempos inventados de estáticas. DfDNc-Wn6Gz,DeUxpBunwsA,DeLD36xDiSa,Dd5Qb_qjPp9 conservan límites/fallos, excluidas del mínimo.",
+        "Discrepancia fechaP1(20/10GET,21/10histórica), precio/condiciones de Exposure y puente hacia recursos siguen indeterminados. Percepción audiovisual integral y resultados no acreditados.",
+        "Auxiliares completos fueraGit en /tmp/cerebros-a-20261108-retoma-20261109, sóloVPS; hashes no trasladan medios. Historia parcial1/2/3 preservada en ficha y commits anteriores."
+      ]
+    }
+  ]
+}
