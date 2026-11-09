@@ -1,0 +1,1646 @@
+{
+  "version": 1,
+  "naturaleza": "catalogo_de_conocimiento_editorial",
+  "corte_documental": "2026-11-09",
+  "base_git": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+  "alcance_propio": "Lectura documental de índices, coberturas y pasajes de las 19 fichas. Selección editorial y etiquetas manuales.",
+  "cobertura_total_heredada": {
+    "referentes": 19,
+    "piezas": 79,
+    "grupos": {
+      "a": 26,
+      "b": 25,
+      "c": 28
+    }
+  },
+  "reglas_propuestas_onia": {
+    "autoridad": "Propuesta revisable. Boss conserva síntesis final, Sergio decide adopción.",
+    "antecedentes": [
+      "sintesis-propuesta",
+      "matriz-workshop"
+    ],
+    "reglas": [
+      "Partir de una dificultad concreta y una entrega comprobable.",
+      "Mostrar una acción propia y pedir una revisión observable.",
+      "El cuerpo cumple el gancho y deja un siguiente paso pertinente.",
+      "Separar interés, entrega de recurso, pago y acceso, con evidencia propia para cada paso."
+    ]
+  },
+  "limites_comunes": {
+    "lectura": "Recuperación de investigación aceptada. La sesión actual leyó documentos, sin nuevo ASR, visionado o escucha.",
+    "asr": "ASR y captions automáticos conservan errores, huecos y relojes propios. Las ventanas son localizadores heredados.",
+    "visual": "Fotogramas y storyboards son muestreo. Visión continua, cortes y sincronía fina quedan limitados por ficha.",
+    "audio": "Música, prosodia, mezcla y silencio requieren escucha, sin acreditación nueva. Un ASR vacío deja sonido desconocido.",
+    "privado": "CTA público observado no demuestra DM, entrega privada, checkout, cobro, aprendizaje o conversión.",
+    "portabilidad": "Las rutas temporales en fuente_tiempos son procedencia histórica. Este paquete requiere las fichas versionadas y sus pasajes, sin depender de los medios temporales.",
+    "vigencia": "URLs públicas son atribución histórica. Su accesibilidad actual y especificaciones de productos requieren verificación separada.",
+    "consulta": "Coincidencia exacta de etiquetas normalizadas. Varios temas usan OR, varios usos OR, tema y uso se combinan con AND.",
+    "aplicacion": "Ejercicios y comprobaciones OnIA son propuestas pendientes de ensayo humano. Su resultado comercial carece de medición."
+  },
+  "fuentes": [
+    {
+      "id": "cobertura-a",
+      "ruta": "03-referentes/cerebros-profundos/a/COBERTURA.json",
+      "sha256": "c020cc6de0a3ce2bb00e47afbdaaf63a3dad559013f927927357a068a48b0f70"
+    },
+    {
+      "id": "indice-a",
+      "ruta": "03-referentes/cerebros-profundos/a/README.md",
+      "sha256": "b3747e619392160507c64e0f02e6f02cbf35b2304029f58d68d9e431440b0089"
+    },
+    {
+      "id": "alex-hormozi",
+      "ruta": "03-referentes/cerebros-profundos/a/alex-hormozi.md",
+      "sha256": "194dcbfc57f3468ef4ed5597806bf1311101c7a023f1961540d3a2d1d85a5b2e"
+    },
+    {
+      "id": "pedro-buerbaum",
+      "ruta": "03-referentes/cerebros-profundos/a/pedro-buerbaum.md",
+      "sha256": "a9af5abe5826d9e2e06dba0887b662c66ee8c31e978ab4464e699aa2616a66cd"
+    },
+    {
+      "id": "victor-heras",
+      "ruta": "03-referentes/cerebros-profundos/a/victor-heras.md",
+      "sha256": "11bba4f81f6d6e9a10a1a7b91856ab824d679b4089a24079fbdc874b95b73d91"
+    },
+    {
+      "id": "iman-gadzhi",
+      "ruta": "03-referentes/cerebros-profundos/a/iman-gadzhi.md",
+      "sha256": "d93c2075b98a45c6d91692c3e4d2fafede044a42806aa0387f517339d025f176"
+    },
+    {
+      "id": "justin-welsh",
+      "ruta": "03-referentes/cerebros-profundos/a/justin-welsh.md",
+      "sha256": "d1400c96d4b75c99b52047b93ce5270059034b5b883ef22c98906e3a72311695"
+    },
+    {
+      "id": "alex-carrera",
+      "ruta": "03-referentes/cerebros-profundos/a/alex-carrera.md",
+      "sha256": "52fd0a528d5686a1cf7f83db5ae078e5b6a73e9aa3c3444567c0045bee2fd6a2"
+    },
+    {
+      "id": "cobertura-b",
+      "ruta": "03-referentes/cerebros-profundos/b/COBERTURA.json",
+      "sha256": "6635a06854e9fcea3373484765aac1d6f4d1485b3f5e97c4e94cf5e16d1060bd"
+    },
+    {
+      "id": "indice-b",
+      "ruta": "03-referentes/cerebros-profundos/b/README.md",
+      "sha256": "201d19432d5e246792b1342a2dad0d1ccb0a09ff462636fc40a250e5f1a2cfa1"
+    },
+    {
+      "id": "erik-taveras",
+      "ruta": "03-referentes/cerebros-profundos/b/erik-taveras.md",
+      "sha256": "e8d5f524464ad2276413936d59a88ac8afcc89ebaaa70bdea459a62dcc0bb1c3"
+    },
+    {
+      "id": "enrique-rocha",
+      "ruta": "03-referentes/cerebros-profundos/b/enrique-rocha.md",
+      "sha256": "71c591b4ef9f2c36919159107b638bf4edf38d0ea7de7f4739bad79ea6198a63"
+    },
+    {
+      "id": "ali-abdaal",
+      "ruta": "03-referentes/cerebros-profundos/b/ali-abdaal.md",
+      "sha256": "e55407c87c805a9abaecb41bec6d1d51750a0e46fd65eaf74e8239243540b862"
+    },
+    {
+      "id": "san-munoz",
+      "ruta": "03-referentes/cerebros-profundos/b/san-munoz.md",
+      "sha256": "893115bce9457ea762d7df7cbcfa7fcf155b2aa4989d870ecaeef91766087b0a"
+    },
+    {
+      "id": "cormac-hayden",
+      "ruta": "03-referentes/cerebros-profundos/b/cormac-hayden.md",
+      "sha256": "3ac86c3bddbf6abb8bf617725e4b75b4c99afc72ece24f167206d6ac93493735"
+    },
+    {
+      "id": "bastian-xu",
+      "ruta": "03-referentes/cerebros-profundos/b/bastian-xu.md",
+      "sha256": "b834465cf30cb35ca8722a1638cd5676ede5a558e178c621b4834e41fa61ebfa"
+    },
+    {
+      "id": "cobertura-c",
+      "ruta": "03-referentes/cerebros-profundos/c/COBERTURA.json",
+      "sha256": "d14bbfa9129ce18de9a59b80cd0cff99ac9ebe3f3fddab0fa66a5d049971f147"
+    },
+    {
+      "id": "indice-c",
+      "ruta": "03-referentes/cerebros-profundos/c/README.md",
+      "sha256": "d21bc554a10000ea73ede906574ac114a446913d8dd50b2584d7d0515e2186cf"
+    },
+    {
+      "id": "gonzalo-teba",
+      "ruta": "03-referentes/cerebros-profundos/c/gonzalo-teba.md",
+      "sha256": "8e239472ff556d1ed518c0a076e55410181663e120f0773e03c7552e049db331"
+    },
+    {
+      "id": "beltran-briones",
+      "ruta": "03-referentes/cerebros-profundos/c/beltran-briones.md",
+      "sha256": "e6bff97b32d472765158995d309750caf8b37f025ae60c2ef979b81cf6d0accb"
+    },
+    {
+      "id": "toto-artuso",
+      "ruta": "03-referentes/cerebros-profundos/c/toto-artuso.md",
+      "sha256": "507b92f83e9745ce44cdc6ccb4032b02729199dd331b40c68a41e514f622e6f5"
+    },
+    {
+      "id": "nick-bare",
+      "ruta": "03-referentes/cerebros-profundos/c/nick-bare.md",
+      "sha256": "8b63fc20cfd0253bdd263086d695f8a0db6b0a9fc1c3e597a66b1c65ab1b3417"
+    },
+    {
+      "id": "jeff-nippard",
+      "ruta": "03-referentes/cerebros-profundos/c/jeff-nippard.md",
+      "sha256": "cf178824926a3244c13c32a91f0a9dd643a24d6551746171cc21d6d49c06f472"
+    },
+    {
+      "id": "alvaro-risoglio",
+      "ruta": "03-referentes/cerebros-profundos/c/alvaro-risoglio.md",
+      "sha256": "1d52aa524a0115e4542aed8be873f58dc97d101c415e061bc73c27c3cd476d92"
+    },
+    {
+      "id": "voltra",
+      "ruta": "03-referentes/cerebros-profundos/c/voltra.md",
+      "sha256": "99095a5d4b2ce639ac4fe591ee6969870218c39c5be27ab1bed1e5e215f0d675"
+    },
+    {
+      "id": "cierre-aceptado",
+      "ruta": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md",
+      "sha256": "ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb"
+    },
+    {
+      "id": "sintesis-propuesta",
+      "ruta": "01-negocio/workshop-20261108/noche-20261109/SINTESIS-PROPUESTA.md",
+      "sha256": "40c4cf56570c7a33204c9f82558b74488e5f114dced9c55e9bacd9d040442bda"
+    },
+    {
+      "id": "matriz-workshop",
+      "ruta": "01-negocio/workshop-20261108/noche-20261109/FUENTES-Y-MATRIZ.md",
+      "sha256": "48b545089f4083dd14d72676862676af10e20bf5c66a9905313920e2951a4706"
+    }
+  ],
+  "referentes": [
+    {
+      "id": "alex-hormozi",
+      "nombre": "Alex Hormozi",
+      "grupo": "a",
+      "prioridad_editorial": true,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4"
+      },
+      "patron_en_ficha": {
+        "fuente": "alex-hormozi",
+        "desde": 185,
+        "hasta": 191,
+        "sha256": "395a1570f9a4cde4bd4c238fc8986a31b020adea65555b6ce1dc8a7ab7dae8ae"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-a",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [
+          "Sin brecha para el mínimo de cuatro piezas con cinco respuestas: P1–P4 completas.",
+          "P4: duración declarada 52 s frente a captions hasta54,470 s, sin sincronía acreditada; atribución pública de perfil, sin backlink propio ni auditoría de control de cuenta.",
+          "P5/P6 incompletas por ASR exactos ausentes. BizNinja permanece en recuperación por cuerpo directo insuficiente/redirección/HTTP403; Capitalism es anexo de audio, excluido del mínimo.",
+          "Percepción audiovisual integral, funcionamiento comercial y resultados de alumnos no acreditados; fuera del análisis cerrado de contenido."
+        ],
+        "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://www.acquisition.com/training/offers4",
+          "titulo": "The Value Equation",
+          "tipo": "clase",
+          "cobertura": "ASR local íntegro, 252 segmentos, 00:00.00–11:30.68; no percepción audiovisual integral nueva.",
+          "fuente_tiempos": "../../asr/complementario/hormozi-offers4.txt, líneas 1–252; JSON homónimo segments[].start/end",
+          "completa": true
+        },
+        {
+          "id": "P2",
+          "url": "https://www.acquisition.com/training/leads5",
+          "titulo": "Mozi Media Content Method Pt I",
+          "tipo": "clase",
+          "cobertura": "ASR local íntegro, 654 segmentos, 00:00.00–29:47.66; no percepción audiovisual integral nueva.",
+          "fuente_tiempos": "../../asr/complementario/hormozi-leads5.txt, líneas 1–654; JSON homónimo segments[].start/end",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": []
+    },
+    {
+      "id": "pedro-buerbaum",
+      "nombre": "Pedro Buerbaum",
+      "grupo": "a",
+      "prioridad_editorial": true,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4"
+      },
+      "patron_en_ficha": {
+        "fuente": "pedro-buerbaum",
+        "desde": 68,
+        "hasta": 72,
+        "sha256": "68dd98bc53b8355cb14301a0eda0c4cced51a96391b8676736e420571e50b914"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-a",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [
+          "Sin brecha para el mínimo de cuatro piezas con cinco respuestas. Quedan fuera del alcance cerrado la percepción AV integral, clase extensa, entrega de DM y cierre privado, expresamente no acreditados."
+        ],
+        "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://www.instagram.com/pedrobuerbaum/reel/Dd6oC4EkRX1/",
+          "titulo": "Mejorar una oferta en cinco pasos (título descriptivo)",
+          "tipo": "reel",
+          "cobertura": "ASR íntegro existente del MP4: 20 segmentos, 0–90,20 s de pista 90,3479 s. Imagen previa sólo documental; sin percepción AV nueva.",
+          "fuente_tiempos": "../../asr/asr-vad-resultados.json, files[3].segments[0..19] y words; base cero",
+          "completa": true
+        },
+        {
+          "id": "P3",
+          "url": "https://www.instagram.com/pedrobuerbaum/reel/Dem097KgI-A/",
+          "titulo": "Un negocio que depende del dueño (título descriptivo)",
+          "tipo": "reel",
+          "cobertura": "ASR íntegro existente del MP4: 13 segmentos, 0–74,64 s de pista 74,8173 s. Imagen previa sólo documental; sin percepción AV nueva.",
+          "fuente_tiempos": "../../asr/complementario/dem097kgi-a.json, segments[0..12]; TXT homónimo",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": []
+    },
+    {
+      "id": "victor-heras",
+      "nombre": "Víctor Heras",
+      "grupo": "a",
+      "prioridad_editorial": true,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4"
+      },
+      "patron_en_ficha": {
+        "fuente": "victor-heras",
+        "desde": 100,
+        "hasta": 102,
+        "sha256": "8c7aeb4bf81262210eb7f4c6d2ea0fda66933bfd620da46bba803a49689769a3"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-a",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [
+          "Sin brecha para mínimo4: P1–P4 sustentan cinco respuestas dentro de sus coberturas declaradas; revisión independiente pendiente.",
+          "Antiguos P2–P6 preservados como R2–R6 en ficha e historial del commit84c949a; siguen sin contenido suficiente y no suman.",
+          "P2 visual muestreado; ASR vacío no prueba silencio. P3/P4 tienen huecos y errores automáticos, varias voces sin diarización; no percepción audiovisual integral ni resultados económicos auditados.",
+          "Auxiliares completos fueraGit en /tmp/cerebros-a-20261108-retoma-20261109, mismaVPS; hashes no los transportan a otraVM."
+        ],
+        "dependencia_entre_piezas": "VSL P1 V1/V2 son variantes A/B de una pieza, con relojes propios. P2 tiene ASR vacío, que deja el sonido desconocido."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://cdn.converteai.net/7999d283-8b2c-4b68-8e10-b8ee1bcf16f0/6ac3bbf9e3eaa635739e0dd2/main.m3u8",
+          "titulo": "VSL Viralidad · VSL JET V1/V2 (variantes de una pieza)",
+          "tipo": "video",
+          "cobertura": "ASR íntegros cotejados con JSON: 136/142 segmentos; V1 hasta634,58 s de637,589; V2 hasta633,22 s de637,141. Variantes A/B contadas como UNA pieza. VSL embebida en https://viralidad.com/; URL de esta entrada es el HLS primario V1, V2 identificada en ficha. La landing comercial no suma otra pieza.",
+          "fuente_tiempos": "../../asr/complementario/heras-vsl-v1.txt y .json; heras-vsl-v2.txt y .json; relojes independientes",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": []
+    },
+    {
+      "id": "iman-gadzhi",
+      "nombre": "Iman Gadzhi",
+      "grupo": "a",
+      "prioridad_editorial": true,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4"
+      },
+      "patron_en_ficha": {
+        "fuente": "iman-gadzhi",
+        "desde": 96,
+        "hasta": 100,
+        "sha256": "2f273257e5866433801d61508539903d6525f6f0a5139f9e0656f16084cfd7ad"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-a",
+        "piezas_completas": 6,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [
+          "Sin brecha para el mínimo de cuatro: seis pistas primarias completas con cinco respuestas.",
+          "Captions terminan 2–2,6 s después de duration declarada: no se convierten al reloj del video ni se acredita sincronía.",
+          "P6 sin diarización: atribución contextual explícita; CTA/edición pertenecen al anfitrión. Titularidad del perfil por backlink propio no corroborada; identidad por concordancia pública.",
+          "Inspección audiovisual integral y docencia prolongada no comprobadas; no exigidas para este análisis de contenido."
+        ],
+        "dependencia_entre_piezas": "P1–P4 son clips distintos. Grabación larga común sin determinar, duraciones de captions y metadata discrepantes."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://www.linkedin.com/posts/iman-gadzhi_no-one-is-saying-your-content-shouldnt-be-activity-7271917428610121728-56dl",
+          "titulo": "Enseñar dentro de una pieza comercial (título descriptivo)",
+          "tipo": "video",
+          "cobertura": "VTT primario íntegro, 10 cues, 00:00.080–00:32.060, cotejado con transcript de VideoObject; asset D4D05AQH79gYkl8uRJg. Reloj de captions, sin percepción AV nueva.",
+          "fuente_tiempos": "https://www.linkedin.com/posts/iman-gadzhi_no-one-is-saying-your-content-shouldnt-be-activity-7271917428610121728-56dl → VideoObject.caption.contentUrl, VTT, cues 1–10; rango y SHA-256 en ficha",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": []
+    },
+    {
+      "id": "justin-welsh",
+      "nombre": "Justin Welsh",
+      "grupo": "a",
+      "prioridad_editorial": true,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4"
+      },
+      "patron_en_ficha": {
+        "fuente": "justin-welsh",
+        "desde": 68,
+        "hasta": 74,
+        "sha256": "316df585dfd28c0eb4f98f84d83196fdd5b12ca94404d39f15b3c32df54ae87d"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-a",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [
+          "Sin brecha para el mínimo de cuatro piezas con cinco respuestas. P1 es muestreo primario amplio, declarado sin fingir transcripción íntegra.",
+          "P2–P4 son ediciones temáticas distintas de una entrevista compartida, no tres corroboraciones independientes. El MP3 de P2 no suma otra pieza.",
+          "Duración exacta de cada edición, sincronía y percepción audiovisual integral pendientes. El reloj del MP3 no se traslada al video.",
+          "Curso pagado, cierre privado y resultados económicos o de alumnos no acreditados."
+        ],
+        "dependencia_entre_piezas": "P2–P4 son ediciones de la misma conversación con Ash Roy. Constituyen una familia de evidencia, sin corroboración independiente entre ellas. P1 tiene muestreo textual amplio."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P4",
+          "url": "https://www.youtube.com/watch?v=m_AQfKsUAwQ",
+          "titulo": "Justin Welsh – LinkedIn 3-Step Growth System · Productive Insights 246",
+          "tipo": "video",
+          "cobertura": "Cuerpo primario completo y capítulos0:00–9:14, con cierre del anfitrión. Edición temática distinta de conversación compartida conP2/P3.",
+          "fuente_tiempos": "https://www.productiveinsights.com/podcast/how-to-grow-on-linkedin-in2024-justin-welsh; capítulos y transcripción del video",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": []
+    },
+    {
+      "id": "alex-carrera",
+      "nombre": "Alex Carrera",
+      "grupo": "a",
+      "prioridad_editorial": true,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4"
+      },
+      "patron_en_ficha": {
+        "fuente": "alex-carrera",
+        "desde": 211,
+        "hasta": 217,
+        "sha256": "b5c84f1fb628029396c236bed146c2f9d11bd8c45b6fc99313a6759be4accca6"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-a",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [
+          "Sin brecha para mínimo4 de contenido: P1–P4 sustentan cinco respuestas y tiempos dentro de las coberturas declaradas; revisión independiente y aceptación pendientes.",
+          "P4: ASR automático con errores y último segmento77,88–80,42s deformado; no se reconstruye cita. Caption corrobora metáfora de cierre por separado. Biografía y atribuciones filosóficas son declaraciones del relato, sin auditoría.",
+          "P3 cuentaUNA publicación mixta, sin reloj global ni tiempos inventados de estáticas. DfDNc-Wn6Gz,DeUxpBunwsA,DeLD36xDiSa,Dd5Qb_qjPp9 conservan límites/fallos, excluidas del mínimo.",
+          "Discrepancia fechaP1(20/10GET,21/10histórica), precio/condiciones de Exposure y puente hacia recursos siguen indeterminados. Percepción audiovisual integral y resultados no acreditados.",
+          "Auxiliares completos fueraGit en /tmp/cerebros-a-20261108-retoma-20261109, sóloVPS; hashes no trasladan medios. Historia parcial1/2/3 preservada en ficha y commits anteriores."
+        ],
+        "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P2",
+          "url": "https://www.instagram.com/alexmcarrera/reel/DfTWAHhNIuV/",
+          "titulo": "Cinco pasos para una agencia de IA (descriptor propio)",
+          "tipo": "reel",
+          "cobertura": "Medio120,118005s; ASR68segmentos0–120s, salida íntegra leída padre/hijo. Caption/handle y reproductor públicos corroborados. No escucha/visión integral ni resultados económicos auditados.",
+          "fuente_tiempos": "/tmp/cerebros-a-20261108-retoma-20261109/DfTWAHhNIuV-20261109T031310Z/asr-20261109T031421Z.json, segments[].start/end",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": []
+    },
+    {
+      "id": "erik-taveras",
+      "nombre": "Erik Taveras",
+      "grupo": "b",
+      "prioridad_editorial": true,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "493bbb78e447e8a456262f5d4f39470124dcd9af"
+      },
+      "patron_en_ficha": {
+        "fuente": "erik-taveras",
+        "desde": 106,
+        "hasta": 110,
+        "sha256": "8094ef96cda4843f1d8875fdb946d8b68fb80d4c07e2aa0522ad69cdd4986892"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-b",
+        "piezas_completas": 5,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [],
+        "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://cursos.eriktaveras.com/c/hermes-basico/preview/",
+          "titulo": "Introducción al curso Hermes básico",
+          "tipo": "preview",
+          "cobertura": "Lectura íntegra de 12 segmentos ASR 00:00–00:58,40 sobre pista 61,674687 s; sin escucha ni visión continua. Cinco respuestas sustentadas.",
+          "fuente_tiempos": "../../../99-archivo/recuperacion-secundaria/erik-asr.txt",
+          "completa": true
+        },
+        {
+          "id": "P2",
+          "url": "https://www.instagram.com/reel/DfcPRmlxlbr/",
+          "titulo": "Dos días con el equipo de tecnología de Supermercados Bravo (descriptivo)",
+          "tipo": "reel",
+          "cobertura": "Medio público200 de eriktaveras, 59.625986 s medidos. 14 segmentos ASR íntegros 0–57,12 s; imágenes 0/29,80/59 s. Small offline CPU/int8,2hilos,1worker. Sin escucha ni reproducción continua.",
+          "fuente_tiempos": "/tmp/onia-erik-retoma-20261108-jzkgnwkt/DfcPRmlxlbr-asr.json",
+          "completa": true
+        },
+        {
+          "id": "P4",
+          "url": "https://www.instagram.com/reel/DfP6T1XJliW/",
+          "titulo": "Qué hacen mis 25 automatizaciones y cuánto cuestan (descriptivo)",
+          "tipo": "reel",
+          "cobertura": "Medio público200 de eriktaveras, 105.555057 s medidos. 30 segmentos ASR íntegros 0–105,48 s; imágenes 0/52,73/104,87 s. Cifras del emisor sin auditoría. Small offline CPU/int8,2hilos,1worker. Sin escucha ni reproducción continua.",
+          "fuente_tiempos": "/tmp/onia-erik-retoma-20261108-jzkgnwkt/DfP6T1XJliW-asr.json",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": [
+        "Preview, recapitulación y reels seleccionados. Clase completa, práctica corregida y resultados del alumno quedan sin observación.",
+        "P2–P5 tienen tres fotogramas por clip, con intervalos sin observar. Prosodia, música, cortes y percepción sonora integral quedan sin evaluación.",
+        "Costes y volúmenes de P4 son declaraciones del autor. CTA público sin entrega de DM, recurso, pago o cierre privado comprobados."
+      ]
+    },
+    {
+      "id": "enrique-rocha",
+      "nombre": "Enrique Rocha / tododeia",
+      "grupo": "b",
+      "prioridad_editorial": false,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "493bbb78e447e8a456262f5d4f39470124dcd9af"
+      },
+      "patron_en_ficha": {
+        "fuente": "enrique-rocha",
+        "desde": 129,
+        "hasta": 133,
+        "sha256": "e9fd9636b93d64e042fdf9fb2fb95c1641518adb1eedc252577658d65fee9ad0"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-b",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [],
+        "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://www.instagram.com/p/DfeYbLOCU-A/",
+          "titulo": "Claude como editor de video y Motion",
+          "tipo": "reel",
+          "cobertura": "MP4 50.895283 s; WAV 50.7834375 s; 16 segmentos ASR íntegros. 0–50,76 s; resultado, iteración, guía. 4 cuadros. Sin escucha ni visión continua, tiempos de WAV sin offset supuesto.",
+          "fuente_tiempos": "/tmp/onia-enrique-retoma-xhha7ogo/DfeYbLOCU-A.asr.json",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": [
+        "Cuatro clips seleccionados desde un embed de perfil. La selección deja frecuencia del método y eficacia comercial sin determinar.",
+        "ASR íntegro reconocido y 16 imágenes entre las cuatro piezas. Prosodia, música y sincronía fina quedan sin escucha evaluada.",
+        "Invitaciones a recurso en P1/P4. Entrega por privado, pago y clase completa quedaron sin observación."
+      ]
+    },
+    {
+      "id": "ali-abdaal",
+      "nombre": "Ali Abdaal",
+      "grupo": "b",
+      "prioridad_editorial": false,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "493bbb78e447e8a456262f5d4f39470124dcd9af"
+      },
+      "patron_en_ficha": {
+        "fuente": "ali-abdaal",
+        "desde": 71,
+        "hasta": 73,
+        "sha256": "4648acfc38054f7caa1d88832f051248e480e9715f3922dd6746364e31a0d480"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-b",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [],
+        "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://www.youtube.com/watch?v=WHyenWUGrKk",
+          "titulo": "Building Multiple Income Streams as a Content Creator",
+          "tipo": "video",
+          "cobertura": "Transcript primario por segmentos 00:00–01:17,36:09–38:25,44:30–46:13,54:58–58:29,1:11:49–1:12:04; cinco respuestas sustentadas. Nathan anfitrión, Ali invitado; sin escucha ni frames.",
+          "fuente_tiempos": "https://nathanbarry.com/048-ali-abdaal-building-multiple-income-streams-content-creator/",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": [
+        "Muestra de cuatro conversaciones, dos con el mismo anfitrión. La frecuencia en su canal y eficacia comercial quedan sin acreditar.",
+        "P1 usa segmentos textuales de una transcripción del anfitrión. Voz, imagen, edición, clases completas y aprendizaje siguen fuera de esa cobertura."
+      ]
+    },
+    {
+      "id": "san-munoz",
+      "nombre": "San Muñoz / Santiago Munoz / Horizontes IA",
+      "grupo": "b",
+      "prioridad_editorial": false,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "493bbb78e447e8a456262f5d4f39470124dcd9af"
+      },
+      "patron_en_ficha": {
+        "fuente": "san-munoz",
+        "desde": 172,
+        "hasta": 176,
+        "sha256": "a2cb8aedcbedfe4fb74c97468190643d14ab11cc56a24ac6cfb04c958a1cdf63"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-b",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [],
+        "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://www.youtube.com/watch?v=anrAaNvbp4M",
+          "titulo": "Convertí a Claude en mi editor de videos (nivel 1 vs nivel 3)",
+          "tipo": "video",
+          "cobertura": "Texto derivado completo y cues cotejados en rangos declarados;1115 cues. Captions con texto1,390–1268,305s;medio1266,433333s. Sobreextensión automática1,872s, no audio adicional.",
+          "fuente_tiempos": "../../../99-archivo/recuperacion-secundaria/anrAaNvbp4M-subtitulos.json",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": [
+        "Tres piezas de edición y una de agendamiento. La selección temática limita generalización a otras tareas o clases.",
+        "La lectura completa de texto derivado y cotejos temporales dejan escucha, reproducción continua y sincronía fina pendientes.",
+        "Efectividad pedagógica, conversiones, fiabilidad técnica y cierre privado siguen sin medición. El salto de edición al workshop requiere adaptación y ensayo."
+      ]
+    },
+    {
+      "id": "cormac-hayden",
+      "nombre": "Cormac Hayden",
+      "grupo": "b",
+      "prioridad_editorial": false,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "493bbb78e447e8a456262f5d4f39470124dcd9af"
+      },
+      "patron_en_ficha": {
+        "fuente": "cormac-hayden",
+        "desde": 158,
+        "hasta": 162,
+        "sha256": "5c1cefdac44cbefb492a0aad9e8fd009b83b2ecf48a5ccea0457255b4636159a"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-b",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [],
+        "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://www.instagram.com/reel/DfWLWspIruU/",
+          "titulo": "Video by cormachdn — agentes con acceso al escritorio (descriptivo)",
+          "tipo": "reel",
+          "cobertura": "ASR exacto íntegro 0–37,64s de37,78s; ficha visual previa atribuida como antecedente, sin nueva escucha. Cinco respuestas sustentadas.",
+          "fuente_tiempos": "../../asr/1a51646a8ecd-20261108T155356159083Z.json",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": [
+        "Dos montajes y dos reels. Clase larga, resultados de alumnos y cierre privado quedan sin observación.",
+        "P1 afirma integración de herramientas. Instalación, ejecución y verificación completas, autonomía y exactitud quedan sin prueba.",
+        "ASR y antecedente visual por ficha, sin nueva escucha. Las afirmaciones sanitarias de P4 y gráficos del montaje quedan sin validación."
+      ]
+    },
+    {
+      "id": "bastian-xu",
+      "nombre": "Bastian Xu",
+      "grupo": "b",
+      "prioridad_editorial": false,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "493bbb78e447e8a456262f5d4f39470124dcd9af"
+      },
+      "patron_en_ficha": {
+        "fuente": "bastian-xu",
+        "desde": 83,
+        "hasta": 87,
+        "sha256": "b9fa3e850cb2fd1367fe63c99cb85121ccf1ec2b1ae3a42f897a18281d48e0a4"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-b",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [],
+        "dependencia_entre_piezas": "P2/P3 tienen cuerpos diferentes y cierre reutilizado. P1 es diálogo de otro canal, con turnos sin atribución automática al invitado."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://www.youtube.com/watch?v=c4S0EJAdL5I",
+          "titulo": "EP17. - Producción Efectiva de Videos para TikTok - Bastian Xu - Concept Studio Podcast",
+          "tipo": "video",
+          "cobertura": "Captions primarios por segmentos:00:00–01:20,02:30–03:40,11:20–12:40,15:00–17:00,20:00–20:40,24:30–25:40,32:30–33:52,64. Bastian invitado de Creators Latam; cues sin etiquetas de voz, no atribución individual automática.",
+          "fuente_tiempos": "../../../99-archivo/recuperacion-secundaria/c4S0EJAdL5I-subtitulos.json",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": [
+        "P1 es diálogo producido por otro canal y con cues sin etiquetas de voz. Las palabras requieren atribución por turnos antes de una cita personal.",
+        "P2/P3 tienen cuerpos distintos y cierre reutilizado. Ese cierre constituye material compartido, sin dos pruebas independientes de entrega.",
+        "Storyboards y captions selectivos dejan menos detalle verbal de los Shorts, sin escucha ni visionado continuo. Rendimiento, compra y cierre privado quedan sin verificar."
+      ]
+    },
+    {
+      "id": "gonzalo-teba",
+      "nombre": "Gonzalo Teba",
+      "grupo": "c",
+      "prioridad_editorial": false,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "5332f2499864eb35993d189b075d0d812660f16c"
+      },
+      "patron_en_ficha": {
+        "fuente": "gonzalo-teba",
+        "desde": 242,
+        "hasta": 246,
+        "sha256": "67bbb5a6e21a1f83f27bb1ff579fcd342b8bb592bba66675ef0f463885c31383"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-c",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [
+          "P5 y P6 incompletas, excluidas del mínimo.",
+          "Oferta detallada y registro funcional no recuperados.",
+          "Sin escucha/visión continua ni conversiones verificadas; no exigidas para contenido/estructura."
+        ],
+        "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://www.instagram.com/gonzaloteba/reel/DfWtlXMsWCs/",
+          "titulo": "Necesitas estructura",
+          "tipo": "reel",
+          "cobertura": "ASR existente íntegro, 20 segmentos; no escucha ni visión continua.",
+          "fuente_tiempos": "../../asr/complementario/gonzalo-alternativa.json; gonzalo-teba.md, P1 §3 (00:00.34–01:58.42)",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": []
+    },
+    {
+      "id": "beltran-briones",
+      "nombre": "Beltrán Briones",
+      "grupo": "c",
+      "prioridad_editorial": false,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "5332f2499864eb35993d189b075d0d812660f16c"
+      },
+      "patron_en_ficha": {
+        "fuente": "beltran-briones",
+        "desde": 122,
+        "hasta": 126,
+        "sha256": "e253848006171d7fd4f22509d94ee70e4f3ff35840e6ab22d9011007e0076dd8"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-c",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [
+          "Voz personal no autenticada: se estudia contenido editorial de publicaciones colaborativas oficiales, no se atribuyen palabras por apariencia.",
+          "Sin escucha/visión continua ni clase pública larga; muestra no prueba metodología docente completa.",
+          "Checkout actual del libro bloqueado 403; VTT histórico ausente excluido del mínimo."
+        ],
+        "dependencia_entre_piezas": "Publicaciones colaborativas oficiales. Atribución editorial, sin autenticación de la voz personal."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://www.instagram.com/p/DfYB5m8KaZ9/",
+          "titulo": "3 propuestas para Buenos Aires",
+          "tipo": "reel",
+          "cobertura": "Recuperado y cotejado 2026-11-09: MP4 completo 52.474240 s y WAV 52.362437 s conservados; ASR íntegro leído por hijo y principal, 2 segmentos/175 palabras temporizadas. Publicación colaborativa, sin autenticación vocal ni escucha integral; miniatura del primer intento.",
+          "fuente_tiempos": "/tmp/onia-cerebros-c-retoma-20261109/beltran-briones/recuperacion-20261109T030037Z/P1-asr.json (segments y words, último cue 51.80 s); P1-asr.txt, P1.mp4 y P1.wav en la misma carpeta privada; manifest.json y beltran-briones.md P1 §3.",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": []
+    },
+    {
+      "id": "toto-artuso",
+      "nombre": "Toto / Tomás Artuso",
+      "grupo": "c",
+      "prioridad_editorial": false,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "5332f2499864eb35993d189b075d0d812660f16c"
+      },
+      "patron_en_ficha": {
+        "fuente": "toto-artuso",
+        "desde": 85,
+        "hasta": 89,
+        "sha256": "2421912635c3bb1482cc329fc65cc6d19db43d1d9d80fddaf33159adb7184cc6"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-c",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [
+          "Sin escucha/visión continua ni resultados comerciales auditados.",
+          "Fechas de publicación exactas de P2–P4 no recuperadas; consulta sí registrada.",
+          "Fragmento dudoso final P4 y cifras P2 pendientes de literalidad; no sustentan conclusiones.",
+          "Producto, checkout y conversión no ejecutados."
+        ],
+        "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://www.youtube.com/watch?v=hxt0RC2XS8s",
+          "titulo": "mi vida creando una startup en mis 20s",
+          "tipo": "video",
+          "cobertura": "ASR existente íntegro, 1833.153 s, 462 segmentos; apertura visual histórica; sin escucha nueva.",
+          "fuente_tiempos": "../../asr/complementario/toto.json y toto-artuso.md, P1 §3; texto de 23.18–1832.49 s.",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": []
+    },
+    {
+      "id": "nick-bare",
+      "nombre": "Nick Bare",
+      "grupo": "c",
+      "prioridad_editorial": false,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "5332f2499864eb35993d189b075d0d812660f16c"
+      },
+      "patron_en_ficha": {
+        "fuente": "nick-bare",
+        "desde": 197,
+        "hasta": 201,
+        "sha256": "aeeddd9ecbea0c046f9ffbc5bdecc8b8d17a9e016a8ad1addb6ccd1b5fd94f06"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-c",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [
+          "P3/P4 complementarias y fuera del mínimo por poco desarrollo explicativo.",
+          "Sin escucha/visión continua, literalidad dudosa en partes del ASR.",
+          "Fechas exactas reposts P5/P6 pendientes; posible superposición visual breve sin resolver, guiones y estructuras diferenciados.",
+          "Precio final/renovación/cancelación actuales no comprobados."
+        ],
+        "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://www.youtube.com/watch?v=SVHKZkD1r_A",
+          "titulo": "DAY IN THE LIFE | CEO, Hybrid Athlete & Dad",
+          "tipo": "video",
+          "cobertura": "Captions disponibles completos, 1011 cues; discurso principal 53.569–1661.360 s. Sin escucha.",
+          "fuente_tiempos": "../../../99-archivo/recuperacion-secundaria/SVHKZkD1r_A-subtitulos.json; nick-bare.md P1 §3; hueco final 20.487 s declarado.",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": []
+    },
+    {
+      "id": "jeff-nippard",
+      "nombre": "Jeff Nippard",
+      "grupo": "c",
+      "prioridad_editorial": false,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "5332f2499864eb35993d189b075d0d812660f16c"
+      },
+      "patron_en_ficha": {
+        "fuente": "jeff-nippard",
+        "desde": 72,
+        "hasta": 76,
+        "sha256": "d4234b54600b9b252f3834eb9d2022e1b5031907ae83a3f3191a8bfebdfcf75f"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-c",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [
+          "Tres piezas de una misma serie limitan diversidad de la muestra.",
+          "Sin escucha/visión continua, validación científica ni eficacia/ventas medidas.",
+          "Precio final/compra/entrega no comprobados.",
+          "VTT histórico de cinco niveles ausente y excluido del cómputo."
+        ],
+        "dependencia_entre_piezas": "P2–P4 comparten serie pull/push/legs. Limita diversidad y corroboración independiente."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P2",
+          "url": "https://www.instagram.com/reel/DC1ywxKJ0U8/",
+          "titulo": "Full pull workout explained! (Back, biceps and rear delts)",
+          "tipo": "reel",
+          "cobertura": "MP4 íntegro 57.629 s; 26 segmentos ASR y caption completos, 13 imágenes; serie pull/push/legs.",
+          "fuente_tiempos": "jeff-nippard.md P2 §3 (0–57.629 s); ASR completo/caption/PTS, cierre acotado, método/huellas.",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": []
+    },
+    {
+      "id": "alvaro-risoglio",
+      "nombre": "Álvaro Risoglio",
+      "grupo": "c",
+      "prioridad_editorial": false,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "5332f2499864eb35993d189b075d0d812660f16c"
+      },
+      "patron_en_ficha": {
+        "fuente": "alvaro-risoglio",
+        "desde": 151,
+        "hasta": 155,
+        "sha256": "16ec8fb896ee73deabe1744472fd477e1b9fe780c1987f8c59b931e10667c91e"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-c",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [
+          "P4 tiene publicador empresarial y presencia en perfil personal asociado; no se recuperó coauthor_producers ni se autentica voz. No satisface una eventual condición adicional de subida exclusiva por cuenta personal.",
+          "Oferta formativa personal no localizada en búsqueda delimitada.",
+          "Sin escucha/visión continua ni resultados comerciales auditados; contradicciones de tienda preservadas.",
+          "Tres teasers insuficientes/duplicado descartados, fuera del inventario."
+        ],
+        "dependencia_entre_piezas": "P4 tiene publicador empresarial asociado. Las voces de P1 pertenecen a varios participantes sin atribución personal automática."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://www.youtube.com/watch?v=oZ9UKXve3Dk",
+          "titulo": "24HS Vendiendo Un Paquete Por Minuto.",
+          "tipo": "video",
+          "cobertura": "Captions existentes íntegros, 1257 cues, acotados a contenedor 1380.233333 s. Visual histórico explícito.",
+          "fuente_tiempos": "../../../99-archivo/recuperacion-secundaria/oZ9UKXve3Dk-subtitulos.json; alvaro-risoglio.md P1 §3; exceso final 1.926 s declarado.",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": []
+    },
+    {
+      "id": "voltra",
+      "nombre": "VOLTRA Argentina",
+      "grupo": "c",
+      "prioridad_editorial": false,
+      "aceptacion": {
+        "fuente": "cierre-aceptado",
+        "commit_entrega": "5332f2499864eb35993d189b075d0d812660f16c"
+      },
+      "patron_en_ficha": {
+        "fuente": "voltra",
+        "desde": 157,
+        "hasta": 161,
+        "sha256": "f4323b203951ba60d20c338ec8e03d9bb54c725bfcaac043a7f080a005c6c05c"
+      },
+      "cobertura_heredada": {
+        "fuente": "cobertura-c",
+        "piezas_completas": 4,
+        "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+        "limites": [
+          "Sin escucha/visión continua ni todos los cortes comprobados.",
+          "Muestra de cuatro creativos de un solo producto; no representa toda la marca.",
+          "Claims de potencia/ahorro/condiciones sólo atribuidos, sin comprobación transaccional.",
+          "P2 apertura verbal incompleta cubierta visualmente; P3 hueco ASR con desarrollo visual por PTS."
+        ],
+        "dependencia_entre_piezas": "Cuatro creativos de un mismo producto. El catálogo selecciona uno y conserva la limitación de muestra de marca."
+      },
+      "piezas_seleccionadas": [
+        {
+          "id": "P1",
+          "url": "https://voltra.com.ar/cdn/shop/videos/c/vp/a081891a8e224825ac38370d1b22d62c/a081891a8e224825ac38370d1b22d62c.HD-1080p-7.2Mbps-64052188.mp4?v=0",
+          "titulo": "Presentación, usos y cierre hacia la web (descriptivo, no oficial)",
+          "tipo": "video",
+          "cobertura": "ASR existente leído + mapa visual heredado 108 muestras",
+          "fuente_tiempos": "../../asr/complementario/voltra.json (words) y voltra.md P1 §3, mapa visual heredado; 0–21 s.",
+          "completa": true
+        }
+      ],
+      "limites_adicionales_ficha": []
+    }
+  ],
+  "patrones": [
+    {
+      "id": "alex-hormozi-p1",
+      "referente": "alex-hormozi",
+      "pieza": "P1",
+      "titulo": "Primer avance y resultado final",
+      "temas": [
+        "oferta",
+        "agenda"
+      ],
+      "usos": [
+        "ordenar",
+        "ensenar",
+        "workshop",
+        "ideas"
+      ],
+      "hecho_documentado": "Distingue el tiempo hasta el primer avance del tiempo hasta el resultado final.",
+      "inferencia_acotada": "La distinción ofrece preguntas para revisar el alcance inicial de una clase.",
+      "pasaje": {
+        "fuente": "alex-hormozi",
+        "desde": 54,
+        "hasta": 64,
+        "sha256": "684eb878fcaa5aafe274deec88cea848e300b303498b96645d86ac1b63f7f752"
+      },
+      "localizacion_temporal_heredada": "ASR 05:37.86–07:29.38",
+      "propuesta_onia": {
+        "aplicacion": "Mostrar una jornada ficticia antes y después de corregir una incompatibilidad.",
+        "comprobacion_pendiente": "El participante identifica el cambio y lo repite con otra tarea."
+      }
+    },
+    {
+      "id": "alex-hormozi-p2",
+      "referente": "alex-hormozi",
+      "pieza": "P2",
+      "titulo": "Cumplir la promesa del contenido",
+      "temas": [
+        "contenido",
+        "gancho"
+      ],
+      "usos": [
+        "contenido",
+        "guiones",
+        "ideas",
+        "vender"
+      ],
+      "hecho_documentado": "Descompone una unidad de contenido en captar, retener y recompensar, y contrasta promesa y entrega.",
+      "inferencia_acotada": "El marco permite auditar el cuerpo de un guion contra su apertura.",
+      "pasaje": {
+        "fuente": "alex-hormozi",
+        "desde": 94,
+        "hasta": 104,
+        "sha256": "7f9112a2c6604400e993b28eb9c93fa528a00db3cafe4966753370cda578a32e"
+      },
+      "localizacion_temporal_heredada": "ASR 24:41.52–25:39.94",
+      "propuesta_onia": {
+        "aplicacion": "Prometer tres datos de una agenda y mostrar los tres antes del cierre.",
+        "comprobacion_pendiente": "Marcar en el cuerpo dónde se entrega cada elemento anunciado."
+      }
+    },
+    {
+      "id": "pedro-buerbaum-p1",
+      "referente": "pedro-buerbaum",
+      "pieza": "P1",
+      "titulo": "Especificidad de una oferta",
+      "temas": [
+        "oferta"
+      ],
+      "usos": [
+        "vender",
+        "workshop",
+        "ideas",
+        "guiones"
+      ],
+      "hecho_documentado": "Contrasta una propuesta amplia con otra que especifica destinatario y problema.",
+      "inferencia_acotada": "Separar esos campos permite revisar qué se ofrece realmente.",
+      "pasaje": {
+        "fuente": "pedro-buerbaum",
+        "desde": 22,
+        "hasta": 30,
+        "sha256": "a613e476d9e95b15ea96bf6b4fdf99710f2b8f9ba9e7908ba30b516094e8e40f"
+      },
+      "localizacion_temporal_heredada": "ASR 03.36–33.14 s",
+      "propuesta_onia": {
+        "aplicacion": "Redactar para una panadería ficticia comprador, problema y entrega revisable.",
+        "comprobacion_pendiente": "Otro lector identifica esos tres campos y cada afirmación tiene respaldo en la entrada."
+      }
+    },
+    {
+      "id": "pedro-buerbaum-p3",
+      "referente": "pedro-buerbaum",
+      "pieza": "P3",
+      "titulo": "Dependencia del dueño y siguiente paso",
+      "temas": [
+        "proceso",
+        "cta"
+      ],
+      "usos": [
+        "automatizar",
+        "vender",
+        "contenido",
+        "ideas"
+      ],
+      "hecho_documentado": "Describe un negocio que concentra captación, cierre y operación en el dueño y pide comentario para acceso a un webinar.",
+      "inferencia_acotada": "El CTA hace visible interés por un recurso, con recorrido privado pendiente de observar.",
+      "pasaje": {
+        "fuente": "pedro-buerbaum",
+        "desde": 46,
+        "hasta": 54,
+        "sha256": "3bf1e8e596625d8fad6762d5f5350bc63fb1e57fb4c3714c0ee1ad213bd170a1"
+      },
+      "localizacion_temporal_heredada": "ASR 00–74.64 s, CTA 70.06–74.64 s",
+      "propuesta_onia": {
+        "aplicacion": "Mapear una consulta recurrente con responsable y punto de revisión antes de proponer asistencia.",
+        "comprobacion_pendiente": "Resolver manualmente una consulta completa y señalar qué falta en otra incompleta."
+      }
+    },
+    {
+      "id": "victor-heras-p1",
+      "referente": "victor-heras",
+      "pieza": "P1",
+      "titulo": "Atención y siguiente acción comercial",
+      "temas": [
+        "cta",
+        "oferta"
+      ],
+      "usos": [
+        "vender",
+        "contenido",
+        "guiones",
+        "ideas"
+      ],
+      "hecho_documentado": "La VSL distingue atención y compra, explica tres pilares, presenta casos y solicita una aplicación.",
+      "inferencia_acotada": "El recorrido permite estudiar el vínculo entre problema, mecanismo y acción.",
+      "pasaje": {
+        "fuente": "victor-heras",
+        "desde": 38,
+        "hasta": 56,
+        "sha256": "f6e21cb989059c46da5ad9b7ee017ae2f3fec9e485ee03b6ff323fd4537033c9"
+      },
+      "localizacion_temporal_heredada": "V1 ASR 03:45.66–05:21.38, V2 tiene otro reloj",
+      "propuesta_onia": {
+        "aplicacion": "Escribir un borrador que resuelva una duda de compra y deje un siguiente paso relacionado.",
+        "comprobacion_pendiente": "Otro lector reconoce la duda resuelta y el destino de la acción."
+      }
+    },
+    {
+      "id": "iman-gadzhi-p1",
+      "referente": "iman-gadzhi",
+      "pieza": "P1",
+      "titulo": "Utilidad dentro de una explicación comercial",
+      "temas": [
+        "contenido",
+        "oferta"
+      ],
+      "usos": [
+        "vender",
+        "contenido",
+        "guiones",
+        "ideas"
+      ],
+      "hecho_documentado": "El clip diagnostica exceso de promoción y presenta la propia VSL como entrenamiento.",
+      "inferencia_acotada": "Una tesis seguida de consecuencia y ejemplo permite examinar qué utilidad entrega una pieza.",
+      "pasaje": {
+        "fuente": "iman-gadzhi",
+        "desde": 17,
+        "hasta": 23,
+        "sha256": "08bec8a37e0af1c5d05997e50ade2d3bf413a03801c5739f213ee3235c491bea"
+      },
+      "localizacion_temporal_heredada": "Captions 00:00.080–00:32.060, sin conversión a reloj de video",
+      "propuesta_onia": {
+        "aplicacion": "Mostrar una revisión propia de un mensaje y señalar expresamente la oferta al invitar.",
+        "comprobacion_pendiente": "El ejemplo entrega una acción utilizable y la invitación identifica su alcance."
+      }
+    },
+    {
+      "id": "justin-welsh-p4",
+      "referente": "justin-welsh",
+      "pieza": "P4",
+      "titulo": "Una publicación con destino comprensible",
+      "temas": [
+        "contenido",
+        "cta"
+      ],
+      "usos": [
+        "vender",
+        "contenido",
+        "guiones",
+        "ideas"
+      ],
+      "hecho_documentado": "Explica publicación, perfil y simplificación mediante capítulos de la conversación editada.",
+      "inferencia_acotada": "Puede servir para revisar si una sola enseñanza y su acción siguiente se entienden.",
+      "pasaje": {
+        "fuente": "justin-welsh",
+        "desde": 52,
+        "hasta": 58,
+        "sha256": "c2904931bc92295b62d349a8a77ac5f9763f6c60ada71fc0109a601ee5dfbfde"
+      },
+      "localizacion_temporal_heredada": "Capítulos 00:57, 02:37 y 03:35 del video, reloj distinto del MP3",
+      "propuesta_onia": {
+        "aplicacion": "Escribir una pieza con una dificultad, un ejemplo propio y una única acción final.",
+        "comprobacion_pendiente": "Un lector identifica qué aprendió y qué hacer después."
+      }
+    },
+    {
+      "id": "alex-carrera-p2",
+      "referente": "alex-carrera",
+      "pieza": "P2",
+      "titulo": "Problema y pasos con artefactos",
+      "temas": [
+        "proceso",
+        "oferta"
+      ],
+      "usos": [
+        "ordenar",
+        "vender",
+        "automatizar",
+        "workshop",
+        "ideas"
+      ],
+      "hecho_documentado": "Numera un recorrido comercial y relaciona pasos con nicho, prompt, lista, calculadora y guion aludidos.",
+      "inferencia_acotada": "La enumeración vuelve inspeccionable el recorrido, aunque las menciones no permiten evaluar las plantillas.",
+      "pasaje": {
+        "fuente": "alex-carrera",
+        "desde": 99,
+        "hasta": 107,
+        "sha256": "ad1601f0556da94e2deda7b42de2efb2e2330b23bac731bcfefd41253e310272"
+      },
+      "localizacion_temporal_heredada": "ASR 46.52–104.60 s",
+      "propuesta_onia": {
+        "aplicacion": "Numerar consulta, clasificación y respuesta de un negocio ficticio, verificando cada salida.",
+        "comprobacion_pendiente": "Señalar una entrada incompleta y el paso que requiere intervención."
+      }
+    },
+    {
+      "id": "erik-taveras-p1",
+      "referente": "erik-taveras",
+      "pieza": "P1",
+      "titulo": "Destinatario y recorrido antes de la práctica",
+      "temas": [
+        "ensenanza",
+        "agenda"
+      ],
+      "usos": [
+        "ordenar",
+        "ensenar",
+        "workshop",
+        "guiones",
+        "ideas"
+      ],
+      "hecho_documentado": "La preview delimita destinatario, recorrido, resultado anunciado e invitación.",
+      "inferencia_acotada": "La orientación inicial puede adaptarse a una tarea cercana del dueño del negocio.",
+      "pasaje": {
+        "fuente": "erik-taveras",
+        "desde": 33,
+        "hasta": 36,
+        "sha256": "bafc8c6bf5e1782d5af593f99fc29b0a4991254fb2c4de6cff420a48f740c758"
+      },
+      "localizacion_temporal_heredada": "ASR 00:00–00:23.22, preview de unos 61 s",
+      "propuesta_onia": {
+        "aplicacion": "Anunciar pedir, revisar, ajustar y guardar antes de practicar con una lista ficticia.",
+        "comprobacion_pendiente": "El participante explica el recorrido y ajusta una prioridad por su cuenta."
+      }
+    },
+    {
+      "id": "erik-taveras-p2",
+      "referente": "erik-taveras",
+      "pieza": "P2",
+      "titulo": "Actividad narrada y preguntas",
+      "temas": [
+        "ensenanza",
+        "revision"
+      ],
+      "usos": [
+        "ordenar",
+        "ensenar",
+        "workshop",
+        "ideas"
+      ],
+      "hecho_documentado": "Relata una actividad con un equipo y destaca preguntas y aprendizaje frente al mero acceso.",
+      "inferencia_acotada": "El relato sugiere un criterio de práctica, con aprendizaje efectivo por comprobar.",
+      "pasaje": {
+        "fuente": "erik-taveras",
+        "desde": 47,
+        "hasta": 50,
+        "sha256": "1ff090534bef7710e48e86294e4181926211b84349c214dbd296694aed3bd3c9"
+      },
+      "localizacion_temporal_heredada": "ASR 00:21.72–00:46.52",
+      "propuesta_onia": {
+        "aplicacion": "Pedir a un principiante que modifique una restricción y explique el cambio de agenda.",
+        "comprobacion_pendiente": "Registrar su respuesta y la ayuda que necesitó durante el ensayo."
+      }
+    },
+    {
+      "id": "erik-taveras-p4",
+      "referente": "erik-taveras",
+      "pieza": "P4",
+      "titulo": "Casos por función y recurso relacionado",
+      "temas": [
+        "proceso",
+        "cta"
+      ],
+      "usos": [
+        "automatizar",
+        "vender",
+        "contenido",
+        "ideas"
+      ],
+      "hecho_documentado": "Agrupa usos por función, declara costes propios y ofrece guía por palabra clave.",
+      "inferencia_acotada": "Las categorías ayudan a escoger un caso pequeño y vincularlo con un recurso.",
+      "pasaje": {
+        "fuente": "erik-taveras",
+        "desde": 75,
+        "hasta": 78,
+        "sha256": "7d19c1c13c358b21f1f84dd0e62ed1fbe6b288987929eb55d2e4afaa3fc8f0f1"
+      },
+      "localizacion_temporal_heredada": "ASR 00:39.90–00:50.68 y 01:31.24–01:45.48",
+      "propuesta_onia": {
+        "aplicacion": "Elegir un aviso ficticio y dibujar entrada, pasos, salida y revisión humana.",
+        "comprobacion_pendiente": "Un segundo caso con dato faltante se mantiene pendiente de revisión."
+      }
+    },
+    {
+      "id": "enrique-rocha-p1",
+      "referente": "enrique-rocha",
+      "pieza": "P1",
+      "titulo": "Iteración con criterio explícito",
+      "temas": [
+        "revision",
+        "demostracion"
+      ],
+      "usos": [
+        "ordenar",
+        "vender",
+        "ensenar",
+        "workshop",
+        "ideas"
+      ],
+      "hecho_documentado": "Presenta un resultado de edición, admite iteraciones y describe referencias y correcciones.",
+      "inferencia_acotada": "Resultado, dificultad y condiciones permiten explicar por qué revisar una primera salida.",
+      "pasaje": {
+        "fuente": "enrique-rocha",
+        "desde": 31,
+        "hasta": 35,
+        "sha256": "7802a0d851788a172415c2fe759e7f3ef9b83d64b4aefd50a68f376645c2a437"
+      },
+      "localizacion_temporal_heredada": "ASR 24.36–38.28 s",
+      "propuesta_onia": {
+        "aplicacion": "Comparar un mensaje inicial con una revisión que preserve los datos del negocio ficticio.",
+        "comprobacion_pendiente": "Identificar la corrección y cotejar producto, precio y condiciones con la entrada."
+      }
+    },
+    {
+      "id": "ali-abdaal-p1",
+      "referente": "ali-abdaal",
+      "pieza": "P1",
+      "titulo": "Hitos visibles de progreso",
+      "temas": [
+        "ensenanza",
+        "agenda"
+      ],
+      "usos": [
+        "ordenar",
+        "ensenar",
+        "workshop",
+        "ideas"
+      ],
+      "hecho_documentado": "El diálogo convierte progreso abstracto en una tabla de colores y ejemplos concretos.",
+      "inferencia_acotada": "Los hitos pueden hacer observable el avance de un ejercicio.",
+      "pasaje": {
+        "fuente": "ali-abdaal",
+        "desde": 17,
+        "hasta": 21,
+        "sha256": "5b8458d9dd2a8e9c4daad68a4d10624510d188c0b215c20a72cd23145b766e3b"
+      },
+      "localizacion_temporal_heredada": "Transcripción del anfitrión 54:58–58:29",
+      "propuesta_onia": {
+        "aplicacion": "Marcar cargar tareas, obtener propuesta y corregirla en tres casillas.",
+        "comprobacion_pendiente": "Cada casilla tiene un artefacto verificable y el alumno conserva la decisión."
+      }
+    },
+    {
+      "id": "san-munoz-p1",
+      "referente": "san-munoz",
+      "pieza": "P1",
+      "titulo": "Comparar sobre una misma entrada",
+      "temas": [
+        "comparacion",
+        "revision"
+      ],
+      "usos": [
+        "ordenar",
+        "vender",
+        "ensenar",
+        "workshop",
+        "contenido",
+        "ideas"
+      ],
+      "hecho_documentado": "Mantiene el material de partida, modifica instrucciones, presenta resultados y verbaliza una corrección.",
+      "inferencia_acotada": "La entrada común permite comparar cambios sin perder de vista los datos originales.",
+      "pasaje": {
+        "fuente": "san-munoz",
+        "desde": 60,
+        "hasta": 66,
+        "sha256": "915b0e1f798a54b43b5167a646c818fcab618e15b008243192e1d5c001110ab0"
+      },
+      "localizacion_temporal_heredada": "Captions 11:20–12:25 y 19:50–20:48",
+      "propuesta_onia": {
+        "aplicacion": "Pasar las mismas notas ficticias a una lista y a una agenda, y revisar su correspondencia.",
+        "comprobacion_pendiente": "Cada tarea y compromiso de la entrada aparece con sus datos conservados."
+      }
+    },
+    {
+      "id": "cormac-hayden-p1",
+      "referente": "cormac-hayden",
+      "pieza": "P1",
+      "titulo": "Pregunta y mecanismo concreto",
+      "temas": [
+        "demostracion",
+        "proceso"
+      ],
+      "usos": [
+        "ordenar",
+        "contenido",
+        "guiones",
+        "ideas"
+      ],
+      "hecho_documentado": "El reel parte de una pregunta amplia, nombra acceso al escritorio y Halos, enumera usos y vuelve a la pregunta.",
+      "inferencia_acotada": "Nombrar un mecanismo puede concretar una promesa que aún exige demostración.",
+      "pasaje": {
+        "fuente": "cormac-hayden",
+        "desde": 45,
+        "hasta": 49,
+        "sha256": "55cf6a6b6fdd95df43b636dd9939a1096ccf79ed00cb371b0385e21b690512b4"
+      },
+      "localizacion_temporal_heredada": "ASR 00:00–00:14.68",
+      "propuesta_onia": {
+        "aplicacion": "Abrir con una dificultad de agenda y mostrar un ejemplo propio corregido.",
+        "comprobacion_pendiente": "El ejemplo conserva entradas y permite explicar la corrección humana."
+      }
+    },
+    {
+      "id": "bastian-xu-p1",
+      "referente": "bastian-xu",
+      "pieza": "P1",
+      "titulo": "Proceso de producción antes de herramientas",
+      "temas": [
+        "proceso",
+        "contenido"
+      ],
+      "usos": [
+        "automatizar",
+        "contenido",
+        "guiones",
+        "ideas"
+      ],
+      "hecho_documentado": "El diálogo ordena ideas, selección, guion y grabación, y asocia herramientas con etapas.",
+      "inferencia_acotada": "Una secuencia permite decidir qué parte del proceso necesita apoyo.",
+      "pasaje": {
+        "fuente": "bastian-xu",
+        "desde": 35,
+        "hasta": 39,
+        "sha256": "9c6a3df25ed1fb4bfcbc803c386dfe794463d363a3b291c3f86274cf723bbfb9"
+      },
+      "localizacion_temporal_heredada": "Captions 16:35.16–16:58.25 y 24:58.44–25:27.83",
+      "propuesta_onia": {
+        "aplicacion": "Representar idea, selección, borrador y revisión con una ficha propia por etapa.",
+        "comprobacion_pendiente": "Otro lector puede seguir la secuencia y localizar qué salida necesita revisión."
+      }
+    },
+    {
+      "id": "gonzalo-teba-p1",
+      "referente": "gonzalo-teba",
+      "pieza": "P1",
+      "titulo": "Ejemplo cotidiano y repetición",
+      "temas": [
+        "proceso",
+        "agenda"
+      ],
+      "usos": [
+        "ordenar",
+        "automatizar",
+        "contenido",
+        "ideas"
+      ],
+      "hecho_documentado": "Ilustra su tesis de repetición con una rutina autorreportada y contrasta proceso diario con resultado editado.",
+      "inferencia_acotada": "La conducta concreta puede inspirar un procedimiento repetible del negocio.",
+      "pasaje": {
+        "fuente": "gonzalo-teba",
+        "desde": 43,
+        "hasta": 49,
+        "sha256": "dbd128db566d32caca357969b06485e5d45020af64f225e7fa319204893a3f62"
+      },
+      "localizacion_temporal_heredada": "ASR 00:23.72–01:01.24 y 01:01.24–01:21.76",
+      "propuesta_onia": {
+        "aplicacion": "Registrar tres pedidos ficticios con la misma plantilla y marcar campos faltantes.",
+        "comprobacion_pendiente": "Los tres conservan producto, cantidad y fecha, y el incompleto requiere revisión."
+      }
+    },
+    {
+      "id": "beltran-briones-p1",
+      "referente": "beltran-briones",
+      "pieza": "P1",
+      "titulo": "Enumeración y recapitulación",
+      "temas": [
+        "contenido",
+        "ensenanza"
+      ],
+      "usos": [
+        "ordenar",
+        "ensenar",
+        "workshop",
+        "guiones",
+        "ideas"
+      ],
+      "hecho_documentado": "La publicación colaborativa anuncia tres propuestas urbanas, las desarrolla y las recapitula.",
+      "inferencia_acotada": "Una cantidad anunciada permite comprobar la correspondencia con el cierre.",
+      "pasaje": {
+        "fuente": "beltran-briones",
+        "desde": 38,
+        "hasta": 46,
+        "sha256": "92106f3c86146d2cd055e98dc0d455a5085935476c859a1ddfb63bfa0650f373"
+      },
+      "localizacion_temporal_heredada": "ASR 00:00–00:51.80, atribución editorial de publicación colaborativa",
+      "propuesta_onia": {
+        "aplicacion": "Abrir con tres tareas ficticias y cerrar comprobando las tres salidas.",
+        "comprobacion_pendiente": "El participante localiza cada salida y modifica una por su cuenta."
+      }
+    },
+    {
+      "id": "toto-artuso-p1",
+      "referente": "toto-artuso",
+      "pieza": "P1",
+      "titulo": "Problema vivido y decisión concreta",
+      "temas": [
+        "proceso",
+        "contenido"
+      ],
+      "usos": [
+        "ordenar",
+        "contenido",
+        "guiones",
+        "ideas"
+      ],
+      "hecho_documentado": "El vlog explica problemas, decisiones de producto y persistencia dentro de una semana de trabajo.",
+      "inferencia_acotada": "El problema vivido permite dar contexto a una decisión que se vuelve narrable.",
+      "pasaje": {
+        "fuente": "toto-artuso",
+        "desde": 25,
+        "hasta": 31,
+        "sha256": "1fe2253c43c155be8515b112e5260b6d397b09d677a310cb503f9846bb0bf301"
+      },
+      "localizacion_temporal_heredada": "ASR 1655.31–1751.33 s, sin diarización de todo el diálogo",
+      "propuesta_onia": {
+        "aplicacion": "Documentar un error real saneado o un caso ficticio rotulado, la corrección y su razón.",
+        "comprobacion_pendiente": "El guion permite distinguir el dato inicial, la decisión y la salida revisada."
+      }
+    },
+    {
+      "id": "nick-bare-p1",
+      "referente": "nick-bare",
+      "pieza": "P1",
+      "titulo": "Prioridades ante una interrupción",
+      "temas": [
+        "agenda",
+        "revision"
+      ],
+      "usos": [
+        "ordenar",
+        "ensenar",
+        "workshop",
+        "contenido",
+        "ideas"
+      ],
+      "hecho_documentado": "El relato plantea prioridades, atraviesa una llamada interrumpida por cuidados y hace balance posterior.",
+      "inferencia_acotada": "La incidencia permite discutir cómo revisar un plan cuando cambian sus restricciones.",
+      "pasaje": {
+        "fuente": "nick-bare",
+        "desde": 36,
+        "hasta": 51,
+        "sha256": "75cce8009d15917755705210bf0a4de74469c7fd1fe6125c6bd185c9d8063687"
+      },
+      "localizacion_temporal_heredada": "Captions aproximadamente 16:10–18:25 y 22:00–23:20",
+      "propuesta_onia": {
+        "aplicacion": "Insertar una urgencia ficticia en una agenda y comparar el plan previo y el revisado.",
+        "comprobacion_pendiente": "El participante explica qué se desplazó y qué compromiso conserva horario."
+      }
+    },
+    {
+      "id": "jeff-nippard-p2",
+      "referente": "jeff-nippard",
+      "pieza": "P2",
+      "titulo": "Acción, motivo y ajuste",
+      "temas": [
+        "ensenanza",
+        "revision"
+      ],
+      "usos": [
+        "ordenar",
+        "ensenar",
+        "workshop",
+        "guiones",
+        "ideas"
+      ],
+      "hecho_documentado": "El reel de la serie explica una secuencia, motivos de elección y ajustes concretos.",
+      "inferencia_acotada": "La relación entre acción y motivo puede transferirse como recurso comunicativo.",
+      "pasaje": {
+        "fuente": "jeff-nippard",
+        "desde": 38,
+        "hasta": 42,
+        "sha256": "eb0b6624a718bcafdc0a1d4de1647e0b22f8eeefd4a0b295f3ee6de36ddb277c"
+      },
+      "localizacion_temporal_heredada": "ASR 02.88–39.72 s",
+      "propuesta_onia": {
+        "aplicacion": "Explicar qué restricción se comprueba antes de aceptar cada paso de una agenda.",
+        "comprobacion_pendiente": "El participante señala una duración y una restricción que justifican su corrección."
+      }
+    },
+    {
+      "id": "alvaro-risoglio-p1",
+      "referente": "alvaro-risoglio",
+      "pieza": "P1",
+      "titulo": "Decisión comercial con restricciones",
+      "temas": [
+        "oferta",
+        "revision"
+      ],
+      "usos": [
+        "vender",
+        "ordenar",
+        "automatizar",
+        "workshop",
+        "ideas"
+      ],
+      "hecho_documentado": "Compara producto, promoción, margen y coste de cuotas, y el relato incluye un error de confirmación de pago.",
+      "inferencia_acotada": "Mostrar modificación y restricción vuelve revisable una decisión operativa.",
+      "pasaje": {
+        "fuente": "alvaro-risoglio",
+        "desde": 48,
+        "hasta": 54,
+        "sha256": "2022845566f394442e56a02da107fe451919009b18c42a3988b1b573c12c6f74"
+      },
+      "localizacion_temporal_heredada": "Captions 07:41–09:39 y error 04:43–05:09",
+      "propuesta_onia": {
+        "aplicacion": "Comparar una oferta ficticia antes y después con datos de coste declarados y control de pago separado.",
+        "comprobacion_pendiente": "Cada condición se coteja con la entrada y el pago incompleto conserva estado pendiente."
+      }
+    },
+    {
+      "id": "voltra-p1",
+      "referente": "voltra",
+      "pieza": "P1",
+      "titulo": "Demostración, destino y condiciones",
+      "temas": [
+        "demostracion",
+        "cta"
+      ],
+      "usos": [
+        "vender",
+        "contenido",
+        "guiones",
+        "ideas"
+      ],
+      "hecho_documentado": "El creativo presenta atributos y usos, dirige a la web y termina con condiciones comerciales.",
+      "inferencia_acotada": "La operación visible puede hacer concreta una utilidad y su siguiente paso.",
+      "pasaje": {
+        "fuente": "voltra",
+        "desde": 38,
+        "hasta": 51,
+        "sha256": "7c33257e6a834ee4f374e1e100c2bc32e31e5618af532e2b0bcde58a7ed4201f"
+      },
+      "localizacion_temporal_heredada": "ASR por palabra 12.16–14.76 y 16.46–18.20 s; mapa visual heredado",
+      "propuesta_onia": {
+        "aplicacion": "Mostrar un solo resultado propio y terminar con una invitación cuyo destino esté definido.",
+        "comprobacion_pendiente": "Un lector reconoce qué se muestra, para quién sirve y qué acción se solicita."
+      }
+    }
+  ]
+}

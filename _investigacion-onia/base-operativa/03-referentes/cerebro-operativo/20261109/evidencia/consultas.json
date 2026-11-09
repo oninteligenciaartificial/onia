@@ -1,0 +1,435 @@
+{
+  "fecha_utc": "2026-11-09T05:08:13.916537+00:00",
+  "python": "3.12.3",
+  "casos": [
+    {
+      "caso": "ordenar",
+      "argumentos": [
+        "consultar",
+        "--tema",
+        "agenda",
+        "--uso",
+        "workshop",
+        "--formato",
+        "json"
+      ],
+      "codigo": 0,
+      "cantidad": 4,
+      "mensaje": "Coincidencias por etiquetas explícitas.",
+      "resultados": [
+        {
+          "id": "alex-hormozi-p1",
+          "url": "https://www.acquisition.com/training/offers4",
+          "modalidad": "ASR local íntegro, 252 segmentos, 00:00.00–11:30.68; no percepción audiovisual integral nueva.",
+          "pasaje": {
+            "fuente": "alex-hormozi",
+            "desde": 54,
+            "hasta": 64,
+            "sha256": "684eb878fcaa5aafe274deec88cea848e300b303498b96645d86ac1b63f7f752"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        },
+        {
+          "id": "erik-taveras-p1",
+          "url": "https://cursos.eriktaveras.com/c/hermes-basico/preview/",
+          "modalidad": "Lectura íntegra de 12 segmentos ASR 00:00–00:58,40 sobre pista 61,674687 s; sin escucha ni visión continua. Cinco respuestas sustentadas.",
+          "pasaje": {
+            "fuente": "erik-taveras",
+            "desde": 33,
+            "hasta": 36,
+            "sha256": "bafc8c6bf5e1782d5af593f99fc29b0a4991254fb2c4de6cff420a48f740c758"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        },
+        {
+          "id": "ali-abdaal-p1",
+          "url": "https://www.youtube.com/watch?v=WHyenWUGrKk",
+          "modalidad": "Transcript primario por segmentos 00:00–01:17,36:09–38:25,44:30–46:13,54:58–58:29,1:11:49–1:12:04; cinco respuestas sustentadas. Nathan anfitrión, Ali invitado; sin escucha ni frames.",
+          "pasaje": {
+            "fuente": "ali-abdaal",
+            "desde": 17,
+            "hasta": 21,
+            "sha256": "5b8458d9dd2a8e9c4daad68a4d10624510d188c0b215c20a72cd23145b766e3b"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        },
+        {
+          "id": "nick-bare-p1",
+          "url": "https://www.youtube.com/watch?v=SVHKZkD1r_A",
+          "modalidad": "Captions disponibles completos, 1011 cues; discurso principal 53.569–1661.360 s. Sin escucha.",
+          "pasaje": {
+            "fuente": "nick-bare",
+            "desde": 36,
+            "hasta": 51,
+            "sha256": "75cce8009d15917755705210bf0a4de74469c7fd1fe6125c6bd185c9d8063687"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        }
+      ]
+    },
+    {
+      "caso": "vender",
+      "argumentos": [
+        "consultar",
+        "--tema",
+        "oferta",
+        "--uso",
+        "vender",
+        "--formato",
+        "json"
+      ],
+      "codigo": 0,
+      "cantidad": 5,
+      "mensaje": "Coincidencias por etiquetas explícitas.",
+      "resultados": [
+        {
+          "id": "alex-carrera-p2",
+          "url": "https://www.instagram.com/alexmcarrera/reel/DfTWAHhNIuV/",
+          "modalidad": "Medio120,118005s; ASR68segmentos0–120s, salida íntegra leída padre/hijo. Caption/handle y reproductor públicos corroborados. No escucha/visión integral ni resultados económicos auditados.",
+          "pasaje": {
+            "fuente": "alex-carrera",
+            "desde": 99,
+            "hasta": 107,
+            "sha256": "ad1601f0556da94e2deda7b42de2efb2e2330b23bac731bcfefd41253e310272"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        },
+        {
+          "id": "iman-gadzhi-p1",
+          "url": "https://www.linkedin.com/posts/iman-gadzhi_no-one-is-saying-your-content-shouldnt-be-activity-7271917428610121728-56dl",
+          "modalidad": "VTT primario íntegro, 10 cues, 00:00.080–00:32.060, cotejado con transcript de VideoObject; asset D4D05AQH79gYkl8uRJg. Reloj de captions, sin percepción AV nueva.",
+          "pasaje": {
+            "fuente": "iman-gadzhi",
+            "desde": 17,
+            "hasta": 23,
+            "sha256": "08bec8a37e0af1c5d05997e50ade2d3bf413a03801c5739f213ee3235c491bea"
+          },
+          "dependencia": "P1–P4 son clips distintos. Grabación larga común sin determinar, duraciones de captions y metadata discrepantes."
+        },
+        {
+          "id": "pedro-buerbaum-p1",
+          "url": "https://www.instagram.com/pedrobuerbaum/reel/Dd6oC4EkRX1/",
+          "modalidad": "ASR íntegro existente del MP4: 20 segmentos, 0–90,20 s de pista 90,3479 s. Imagen previa sólo documental; sin percepción AV nueva.",
+          "pasaje": {
+            "fuente": "pedro-buerbaum",
+            "desde": 22,
+            "hasta": 30,
+            "sha256": "a613e476d9e95b15ea96bf6b4fdf99710f2b8f9ba9e7908ba30b516094e8e40f"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        },
+        {
+          "id": "victor-heras-p1",
+          "url": "https://cdn.converteai.net/7999d283-8b2c-4b68-8e10-b8ee1bcf16f0/6ac3bbf9e3eaa635739e0dd2/main.m3u8",
+          "modalidad": "ASR íntegros cotejados con JSON: 136/142 segmentos; V1 hasta634,58 s de637,589; V2 hasta633,22 s de637,141. Variantes A/B contadas como UNA pieza. VSL embebida en https://viralidad.com/; URL de esta entrada es el HLS primario V1, V2 identificada en ficha. La landing comercial no suma otra pieza.",
+          "pasaje": {
+            "fuente": "victor-heras",
+            "desde": 38,
+            "hasta": 56,
+            "sha256": "f6e21cb989059c46da5ad9b7ee017ae2f3fec9e485ee03b6ff323fd4537033c9"
+          },
+          "dependencia": "VSL P1 V1/V2 son variantes A/B de una pieza, con relojes propios. P2 tiene ASR vacío, que deja el sonido desconocido."
+        },
+        {
+          "id": "alvaro-risoglio-p1",
+          "url": "https://www.youtube.com/watch?v=oZ9UKXve3Dk",
+          "modalidad": "Captions existentes íntegros, 1257 cues, acotados a contenedor 1380.233333 s. Visual histórico explícito.",
+          "pasaje": {
+            "fuente": "alvaro-risoglio",
+            "desde": 48,
+            "hasta": 54,
+            "sha256": "2022845566f394442e56a02da107fe451919009b18c42a3988b1b573c12c6f74"
+          },
+          "dependencia": "P4 tiene publicador empresarial asociado. Las voces de P1 pertenecen a varios participantes sin atribución personal automática."
+        }
+      ]
+    },
+    {
+      "caso": "ensenar",
+      "argumentos": [
+        "consultar",
+        "--tema",
+        "ensenanza",
+        "--tema",
+        "revision",
+        "--uso",
+        "enseñar",
+        "--formato",
+        "json"
+      ],
+      "codigo": 0,
+      "cantidad": 8,
+      "mensaje": "Coincidencias por etiquetas explícitas.",
+      "resultados": [
+        {
+          "id": "erik-taveras-p1",
+          "url": "https://cursos.eriktaveras.com/c/hermes-basico/preview/",
+          "modalidad": "Lectura íntegra de 12 segmentos ASR 00:00–00:58,40 sobre pista 61,674687 s; sin escucha ni visión continua. Cinco respuestas sustentadas.",
+          "pasaje": {
+            "fuente": "erik-taveras",
+            "desde": 33,
+            "hasta": 36,
+            "sha256": "bafc8c6bf5e1782d5af593f99fc29b0a4991254fb2c4de6cff420a48f740c758"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        },
+        {
+          "id": "erik-taveras-p2",
+          "url": "https://www.instagram.com/reel/DfcPRmlxlbr/",
+          "modalidad": "Medio público200 de eriktaveras, 59.625986 s medidos. 14 segmentos ASR íntegros 0–57,12 s; imágenes 0/29,80/59 s. Small offline CPU/int8,2hilos,1worker. Sin escucha ni reproducción continua.",
+          "pasaje": {
+            "fuente": "erik-taveras",
+            "desde": 47,
+            "hasta": 50,
+            "sha256": "1ff090534bef7710e48e86294e4181926211b84349c214dbd296694aed3bd3c9"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        },
+        {
+          "id": "ali-abdaal-p1",
+          "url": "https://www.youtube.com/watch?v=WHyenWUGrKk",
+          "modalidad": "Transcript primario por segmentos 00:00–01:17,36:09–38:25,44:30–46:13,54:58–58:29,1:11:49–1:12:04; cinco respuestas sustentadas. Nathan anfitrión, Ali invitado; sin escucha ni frames.",
+          "pasaje": {
+            "fuente": "ali-abdaal",
+            "desde": 17,
+            "hasta": 21,
+            "sha256": "5b8458d9dd2a8e9c4daad68a4d10624510d188c0b215c20a72cd23145b766e3b"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        },
+        {
+          "id": "beltran-briones-p1",
+          "url": "https://www.instagram.com/p/DfYB5m8KaZ9/",
+          "modalidad": "Recuperado y cotejado 2026-11-09: MP4 completo 52.474240 s y WAV 52.362437 s conservados; ASR íntegro leído por hijo y principal, 2 segmentos/175 palabras temporizadas. Publicación colaborativa, sin autenticación vocal ni escucha integral; miniatura del primer intento.",
+          "pasaje": {
+            "fuente": "beltran-briones",
+            "desde": 38,
+            "hasta": 46,
+            "sha256": "92106f3c86146d2cd055e98dc0d455a5085935476c859a1ddfb63bfa0650f373"
+          },
+          "dependencia": "Publicaciones colaborativas oficiales. Atribución editorial, sin autenticación de la voz personal."
+        },
+        {
+          "id": "enrique-rocha-p1",
+          "url": "https://www.instagram.com/p/DfeYbLOCU-A/",
+          "modalidad": "MP4 50.895283 s; WAV 50.7834375 s; 16 segmentos ASR íntegros. 0–50,76 s; resultado, iteración, guía. 4 cuadros. Sin escucha ni visión continua, tiempos de WAV sin offset supuesto.",
+          "pasaje": {
+            "fuente": "enrique-rocha",
+            "desde": 31,
+            "hasta": 35,
+            "sha256": "7802a0d851788a172415c2fe759e7f3ef9b83d64b4aefd50a68f376645c2a437"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        },
+        {
+          "id": "jeff-nippard-p2",
+          "url": "https://www.instagram.com/reel/DC1ywxKJ0U8/",
+          "modalidad": "MP4 íntegro 57.629 s; 26 segmentos ASR y caption completos, 13 imágenes; serie pull/push/legs.",
+          "pasaje": {
+            "fuente": "jeff-nippard",
+            "desde": 38,
+            "hasta": 42,
+            "sha256": "eb0b6624a718bcafdc0a1d4de1647e0b22f8eeefd4a0b295f3ee6de36ddb277c"
+          },
+          "dependencia": "P2–P4 comparten serie pull/push/legs. Limita diversidad y corroboración independiente."
+        },
+        {
+          "id": "nick-bare-p1",
+          "url": "https://www.youtube.com/watch?v=SVHKZkD1r_A",
+          "modalidad": "Captions disponibles completos, 1011 cues; discurso principal 53.569–1661.360 s. Sin escucha.",
+          "pasaje": {
+            "fuente": "nick-bare",
+            "desde": 36,
+            "hasta": 51,
+            "sha256": "75cce8009d15917755705210bf0a4de74469c7fd1fe6125c6bd185c9d8063687"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        },
+        {
+          "id": "san-munoz-p1",
+          "url": "https://www.youtube.com/watch?v=anrAaNvbp4M",
+          "modalidad": "Texto derivado completo y cues cotejados en rangos declarados;1115 cues. Captions con texto1,390–1268,305s;medio1266,433333s. Sobreextensión automática1,872s, no audio adicional.",
+          "pasaje": {
+            "fuente": "san-munoz",
+            "desde": 60,
+            "hasta": 66,
+            "sha256": "915b0e1f798a54b43b5167a646c818fcab618e15b008243192e1d5c001110ab0"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        }
+      ]
+    },
+    {
+      "caso": "ideas",
+      "argumentos": [
+        "consultar",
+        "--tema",
+        "contenido",
+        "--uso",
+        "ideas",
+        "--formato",
+        "json"
+      ],
+      "codigo": 0,
+      "cantidad": 6,
+      "mensaje": "Coincidencias por etiquetas explícitas.",
+      "resultados": [
+        {
+          "id": "alex-hormozi-p2",
+          "url": "https://www.acquisition.com/training/leads5",
+          "modalidad": "ASR local íntegro, 654 segmentos, 00:00.00–29:47.66; no percepción audiovisual integral nueva.",
+          "pasaje": {
+            "fuente": "alex-hormozi",
+            "desde": 94,
+            "hasta": 104,
+            "sha256": "7f9112a2c6604400e993b28eb9c93fa528a00db3cafe4966753370cda578a32e"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        },
+        {
+          "id": "iman-gadzhi-p1",
+          "url": "https://www.linkedin.com/posts/iman-gadzhi_no-one-is-saying-your-content-shouldnt-be-activity-7271917428610121728-56dl",
+          "modalidad": "VTT primario íntegro, 10 cues, 00:00.080–00:32.060, cotejado con transcript de VideoObject; asset D4D05AQH79gYkl8uRJg. Reloj de captions, sin percepción AV nueva.",
+          "pasaje": {
+            "fuente": "iman-gadzhi",
+            "desde": 17,
+            "hasta": 23,
+            "sha256": "08bec8a37e0af1c5d05997e50ade2d3bf413a03801c5739f213ee3235c491bea"
+          },
+          "dependencia": "P1–P4 son clips distintos. Grabación larga común sin determinar, duraciones de captions y metadata discrepantes."
+        },
+        {
+          "id": "justin-welsh-p4",
+          "url": "https://www.youtube.com/watch?v=m_AQfKsUAwQ",
+          "modalidad": "Cuerpo primario completo y capítulos0:00–9:14, con cierre del anfitrión. Edición temática distinta de conversación compartida conP2/P3.",
+          "pasaje": {
+            "fuente": "justin-welsh",
+            "desde": 52,
+            "hasta": 58,
+            "sha256": "c2904931bc92295b62d349a8a77ac5f9763f6c60ada71fc0109a601ee5dfbfde"
+          },
+          "dependencia": "P2–P4 son ediciones de la misma conversación con Ash Roy. Constituyen una familia de evidencia, sin corroboración independiente entre ellas. P1 tiene muestreo textual amplio."
+        },
+        {
+          "id": "bastian-xu-p1",
+          "url": "https://www.youtube.com/watch?v=c4S0EJAdL5I",
+          "modalidad": "Captions primarios por segmentos:00:00–01:20,02:30–03:40,11:20–12:40,15:00–17:00,20:00–20:40,24:30–25:40,32:30–33:52,64. Bastian invitado de Creators Latam; cues sin etiquetas de voz, no atribución individual automática.",
+          "pasaje": {
+            "fuente": "bastian-xu",
+            "desde": 35,
+            "hasta": 39,
+            "sha256": "9c6a3df25ed1fb4bfcbc803c386dfe794463d363a3b291c3f86274cf723bbfb9"
+          },
+          "dependencia": "P2/P3 tienen cuerpos diferentes y cierre reutilizado. P1 es diálogo de otro canal, con turnos sin atribución automática al invitado."
+        },
+        {
+          "id": "beltran-briones-p1",
+          "url": "https://www.instagram.com/p/DfYB5m8KaZ9/",
+          "modalidad": "Recuperado y cotejado 2026-11-09: MP4 completo 52.474240 s y WAV 52.362437 s conservados; ASR íntegro leído por hijo y principal, 2 segmentos/175 palabras temporizadas. Publicación colaborativa, sin autenticación vocal ni escucha integral; miniatura del primer intento.",
+          "pasaje": {
+            "fuente": "beltran-briones",
+            "desde": 38,
+            "hasta": 46,
+            "sha256": "92106f3c86146d2cd055e98dc0d455a5085935476c859a1ddfb63bfa0650f373"
+          },
+          "dependencia": "Publicaciones colaborativas oficiales. Atribución editorial, sin autenticación de la voz personal."
+        },
+        {
+          "id": "toto-artuso-p1",
+          "url": "https://www.youtube.com/watch?v=hxt0RC2XS8s",
+          "modalidad": "ASR existente íntegro, 1833.153 s, 462 segmentos; apertura visual histórica; sin escucha nueva.",
+          "pasaje": {
+            "fuente": "toto-artuso",
+            "desde": 25,
+            "hasta": 31,
+            "sha256": "1fe2253c43c155be8515b112e5260b6d397b09d677a310cb503f9846bb0bf301"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        }
+      ]
+    },
+    {
+      "caso": "guiones",
+      "argumentos": [
+        "consultar",
+        "--tema",
+        "gancho",
+        "--tema",
+        "cta",
+        "--uso",
+        "guiones",
+        "--formato",
+        "json"
+      ],
+      "codigo": 0,
+      "cantidad": 4,
+      "mensaje": "Coincidencias por etiquetas explícitas.",
+      "resultados": [
+        {
+          "id": "alex-hormozi-p2",
+          "url": "https://www.acquisition.com/training/leads5",
+          "modalidad": "ASR local íntegro, 654 segmentos, 00:00.00–29:47.66; no percepción audiovisual integral nueva.",
+          "pasaje": {
+            "fuente": "alex-hormozi",
+            "desde": 94,
+            "hasta": 104,
+            "sha256": "7f9112a2c6604400e993b28eb9c93fa528a00db3cafe4966753370cda578a32e"
+          },
+          "dependencia": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+        },
+        {
+          "id": "justin-welsh-p4",
+          "url": "https://www.youtube.com/watch?v=m_AQfKsUAwQ",
+          "modalidad": "Cuerpo primario completo y capítulos0:00–9:14, con cierre del anfitrión. Edición temática distinta de conversación compartida conP2/P3.",
+          "pasaje": {
+            "fuente": "justin-welsh",
+            "desde": 52,
+            "hasta": 58,
+            "sha256": "c2904931bc92295b62d349a8a77ac5f9763f6c60ada71fc0109a601ee5dfbfde"
+          },
+          "dependencia": "P2–P4 son ediciones de la misma conversación con Ash Roy. Constituyen una familia de evidencia, sin corroboración independiente entre ellas. P1 tiene muestreo textual amplio."
+        },
+        {
+          "id": "victor-heras-p1",
+          "url": "https://cdn.converteai.net/7999d283-8b2c-4b68-8e10-b8ee1bcf16f0/6ac3bbf9e3eaa635739e0dd2/main.m3u8",
+          "modalidad": "ASR íntegros cotejados con JSON: 136/142 segmentos; V1 hasta634,58 s de637,589; V2 hasta633,22 s de637,141. Variantes A/B contadas como UNA pieza. VSL embebida en https://viralidad.com/; URL de esta entrada es el HLS primario V1, V2 identificada en ficha. La landing comercial no suma otra pieza.",
+          "pasaje": {
+            "fuente": "victor-heras",
+            "desde": 38,
+            "hasta": 56,
+            "sha256": "f6e21cb989059c46da5ad9b7ee017ae2f3fec9e485ee03b6ff323fd4537033c9"
+          },
+          "dependencia": "VSL P1 V1/V2 son variantes A/B de una pieza, con relojes propios. P2 tiene ASR vacío, que deja el sonido desconocido."
+        },
+        {
+          "id": "voltra-p1",
+          "url": "https://voltra.com.ar/cdn/shop/videos/c/vp/a081891a8e224825ac38370d1b22d62c/a081891a8e224825ac38370d1b22d62c.HD-1080p-7.2Mbps-64052188.mp4?v=0",
+          "modalidad": "ASR existente leído + mapa visual heredado 108 muestras",
+          "pasaje": {
+            "fuente": "voltra",
+            "desde": 38,
+            "hasta": 51,
+            "sha256": "7c33257e6a834ee4f374e1e100c2bc32e31e5618af532e2b0bcde58a7ed4201f"
+          },
+          "dependencia": "Cuatro creativos de un mismo producto. El catálogo selecciona uno y conserva la limitación de muestra de marca."
+        }
+      ]
+    },
+    {
+      "caso": "sin_cobertura",
+      "argumentos": [
+        "consultar",
+        "--tema",
+        "tributacion",
+        "--uso",
+        "workshop",
+        "--formato",
+        "json"
+      ],
+      "codigo": 0,
+      "cantidad": 0,
+      "mensaje": "Sin resultados en las etiquetas del catálogo. La ausencia se limita a esta selección documental.",
+      "resultados": []
+    }
+  ]
+}
