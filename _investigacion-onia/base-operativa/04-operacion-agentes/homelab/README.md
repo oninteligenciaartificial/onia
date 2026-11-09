@@ -1,5 +1,11 @@
 # HOMELAB: worker Windows + WSL para OnIA
 
+## Alcance vigente aprobado · 9 noviembre 2026 · America/La_Paz
+
+Objetivo 1: ventas orgánicas del workshop por Boss + Contenido; Codex sólo recibe trabajo técnico concreto autorizado. Objetivo 2: HOMELAB esencial, onia-worker sin sudo, /mnt/c restringido, aislamiento y huella host verificados, continuidad WSL ya solicitada. Laptop excluida. Se reutilizan cerebro y kit, no se implementa el panel ni scheduler ni benchmarks. [Acuerdo final](../REPARTO-CODEX-GROKBOT-20261109.md).
+
+Boss ya informó bwrap en /usr/bin/bwrap, ssh activo y host key presente en Ubuntu. Falta el alta administrativa local, contraste confiable de huella y pruebas de acceso/aislamiento. No se repite ese inventario ni se usa el listener desconocido 2222. Para la fábrica de esta semana preparar ASR CPU y cortes/render sólo por PEDIDO con ID, archivo autorizado y aceptación; no hay procesamiento autónomo activo. Las prioridades y fases antiguas que siguen quedan como antecedentes cuando contradigan esta actualización.
+
 ## Nombres fijos de máquinas
 
 Identidades confirmadas por Sergio el 9 de noviembre de 2026 (America/La_Paz):

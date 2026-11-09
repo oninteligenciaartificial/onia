@@ -1,3 +1,69 @@
+# Reparto aprobado Boss ↔ Codex
+
+## Acuerdo vigente aprobado por Sergio · 9 noviembre 2026 · America/La_Paz
+
+Esta sección sustituye las propuestas históricas de abajo. Fuente: mensaje de Sergio «VERSIÓN FINAL (con mi sí)», seguido del pedido de confirmación y cambio de modelo. Es autorización para aplicar este reparto y documentarlo en GitHub; no es autorización general para publicar contenido, gastar o activar producción.
+
+**Objetivo 1 hasta el 14: INGRESOS orgánicos.** Vender «Tu negocio con IA» con la marca personal de Sergio, único canal de clientes actual: jueves 12 (hora no indicada en esta aprobación), viernes 13 a las 21:00 y sábado 14 a las 14:00, America/La_Paz; Bs 50 grupal. Sin publicidad paga. Boss + Contenido preparan página, posts, invitación, guiones y CTA; Sergio aprueba y publica. Codex sólo interviene ante un PEDIDO técnico concreto y con autorización aplicable. No se reabre investigación ya aceptada ni se crea una oferta VIP por inferencia.
+
+**Cerebro:** contexto en GitHub: reglas, decisiones, `03-referentes/cerebros*` y `01-negocio/workshop-20261108`. Recuperar el material pertinente, no releer ni investigar todo de nuevo. El panel nuevo, Platform, benchmarks, scheduler y el «Jefe de Codex» propuesto quedan aparcados.
+
+| Responsable | Trabajo y límite |
+| --- | --- |
+| Sergio | Objetivos, gastos, publicaciones y acciones sensibles; aprobación del contenido final. |
+| Boss (Grok Bot) | Entrada principal, contexto de negocio, conectores y prioridades dentro de lo aprobado; coordina Calendario, Contenido y Operaciones. |
+| Contenido | Guiones, selección de cortes, copies y CTA usando el cerebro. |
+| Codex / HOMELAB | Código, harness, diagnóstico, pruebas y pasos técnicos pesados por ID; decide detalles rutinarios y lee las fuentes necesarias para su tarea. |
+| Revisor distinto | Coteja entrega y aceptación antes de aceptar. Entregar no equivale a aprobar. |
+
+**Fábrica:** idea o video crudo de Sergio → Boss + Contenido → PEDIDO técnico cuando haga falta → Codex/HOMELAB → revisión distinta → Sergio aprueba y publica. Conectores y cuentas disponibles no conceden permiso de envío/publicación.
+
+### Preparación técnica mínima para esta semana
+
+Reutilizar FFmpeg y faster-whisper donde estén disponibles; no instalar ni iniciar procesamientos por la mera existencia de esta lista. Completar primero el aislamiento del HOMELAB. No repetir investigación de referentes ni implementar una fábrica automática.
+
+| Paso técnico | Entrada necesaria del PEDIDO | Entrega y comprobación |
+| --- | --- | --- |
+| Transcripción ASR CPU | Archivo autorizado y finalidad; ID y ruta privada accesible. | Texto con tiempos y SRT/VTT si se solicita; señalar palabras dudosas, cotejar pasajes usados como citas con el audio. No deducir música o tono del ASR. |
+| Cortes y render con FFmpeg | Lista de intervalos aprobada por Contenido, formato/dimensiones y texto final de subtítulos. | MP4 de borrador, duración, sincronía, audio y encuadre comprobados. No decidir la propuesta comercial ni publicar. |
+| Corrección técnica de la página | Sólo si Boss identifica un fallo concreto: reproducción y criterio de aceptación. | Cambio de código probado; publicación/despliegue requiere el sí específico. |
+
+Los medios originales, perfiles y cuentas quedan fuera de Git. GitHub conserva código, instrucciones y evidencia saneada. No se promete ejecución autónoma nocturna ni disponibilidad del worker antes de las pruebas.
+
+### Un registro y un buzón
+
+El JSON del harness es la **única fuente de estados**. [cola-boss.md](pendientes/cola-boss.md) sólo intercambia pedidos/entregas vinculados a ese ID, con destinatario, resultado esperado, aceptación, fuentes/commit, autorización y exclusiones. «HECHO» significa entregado, no aceptado. Un PEDIDO no es autorización de Sergio. El estado se consulta con `harness.py retomar ID`, no se mantiene otra cola de estados en Markdown.
+
+**El despachador automático no existe.** El harness lanza/reanuda una tarea cuando se lo invoca; no sigue despachando solo cuando Boss agota cuota. No se implementa un loop por este acuerdo. Se conservan los tres cupos actuales, revisores incluidos.
+
+### Modelo y evidencia de cada lanzamiento
+
+Predeterminado `gpt-6.1-sol`; esfuerzo `low` para lo simple, `high` para diseño/fallos difíciles. `ultra` únicamente ante pedido explícito de Sergio, también para revisiones. No hay escalamiento automático a Astra/Terra/Luna. Los perfiles de `orquestacion.json` son recomendaciones, no un cambio de runtime.
+
+`~/.codex/config.toml` quedó aplicado con `model = "gpt-6.1-sol"` y `model_reasoning_effort = "low"`; los demás campos se conservaron. El harness usa `--ignore-user-config`: en cada lanzamiento o retoma autorizado indicar `--modelo gpt-6.1-sol --esfuerzo low` (o `high` justificado), además de los demás argumentos. La retoma no debe heredar accidentalmente un modelo/esfuerzo anterior. No lanzar tareas sin su autorización aplicable.
+
+Guardar por intento ID de tarea y sesión, modelo/esfuerzo solicitado y **observado** en metadatos `turn_context` de esa misma sesión. Revisar hijos si los hay; no confundir configuración/recomendación con observación. Sin evidencia, observado queda `null`; si no coincide, detener nuevos pasos de esa tarea y corregir dentro del alcance autorizado. No publicar prompts completos ni logs privados. Cambiar el default no cambia el modelo de una conversación abierta.
+
+Recibo de ejecutor y revisor: ID, rol, modelo+esfuerzo real, `used_percent` inicial/final y hora, saldo extra observado, intentos, commits, retrabajo y resultado. Si aún no hay veredicto, decir «pendiente de revisión»; al resolverlo registrar aceptada/rechazada/fallida según corresponda. La cuota es compartida: una diferencia de puntos no es consumo exclusivo demostrado de una sesión, ni USD.
+
+### Objetivo 2 y límites
+
+HOMELAB esencial: `onia-worker` sin sudo, acceso Windows `/mnt/c` restringido, pruebas de aislamiento y huella host SSH verificada por canal confiable; continuidad WSL dentro de lo ya pedido. Sólo `DESKTOP-0GGGNMF`, nodo `desktop-0gggnmf`, Ubuntu WSL2. Laptop `DESKTOP-ENV6SDA` excluida. Boss ya informó bwrap presente y ssh activo: no pedir de nuevo ese inventario. Falta alta administrativa local y verificación real de acceso/aislamiento; nodo online no acredita worker listo.
+
+Prohibido borrar archivos, gastar, `--no-sandbox`, desactivar AppArmor/userns, secretos en Git, activar/borrar n8n o tocar producción. Publicaciones/envíos requieren autorización específica. El push documental a este repositorio privado está autorizado por este encargo.
+
+### Aplicación y reversión
+
+Se conserva respaldo privado del config original y del AGENTS local. Se cambian sólo modelo/esfuerzo, recomendaciones declarativas y documentos; no runner, permisos del sandbox, servicios o scheduler. Revertir con una nueva edición/commit que restaure esos campos o recomendaciones, tras cotejar cambios posteriores; no restaurar ciegamente un config completo ni borrar historia. AGENTS conserva abajo el texto anterior como obsoleto.
+
+Fuente técnica: [configuración oficial de Codex](https://learn.chatgpt.com/docs/config-file/config-basic), CLI y `harness_sesiones.command` locales. La disponibilidad en catálogo no prueba un lanzamiento real. Evidencia: [entrega técnica](evidencias/reparto-final-20261109/ENTREGA-v1.md).
+
+---
+
+## HISTÓRICO OBSOLETO COMO INSTRUCCIÓN — propuesta anterior, conservada íntegra
+
+Las afirmaciones sobre defaults, rol «Codex hace todo», prioridades, permisos o aprobaciones pendientes que siguen describen su fecha; no prevalecen sobre el acuerdo de arriba.
+
 # Reparto Codex ↔ Grok Bot · 9 noviembre 2026
 
 America/La_Paz. Lectura solo (VPS y repo). Sin secretos ni IPs. Autor: Boss (Grok Bot) tras pedido de Sergio.

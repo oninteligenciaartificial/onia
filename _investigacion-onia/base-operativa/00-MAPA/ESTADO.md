@@ -1,5 +1,9 @@
 # Estado vigente de ONIA
 
+## Prioridad aprobada vigente · 9 noviembre 2026 · America/La_Paz
+
+[Reparto final](../04-operacion-agentes/REPARTO-CODEX-GROKBOT-20261109.md): ingresos orgánicos del workshop hasta el 14, Boss + Contenido; Codex sólo PEDIDO técnico autorizado y HOMELAB esencial. Se reutilizan cerebro y kit existentes. El panel nuevo y el resto quedan aparcados. Modelo predeterminado aplicado Sol6.1 low; cada lanzamiento necesita evidencia del modelo real. No existe despachador automático. Los apartados anteriores por fecha que siguen son cortes históricos; el estado de cada tarea se consulta en el registro del harness, no en este resumen.
+
 ## Actualización vigente · 9 noviembre 2026 UTC
 
 **Prioridad vigente (America/La_Paz):** hasta el14-nov, kit/ensayo/materiales para vender workshop. Cerebro operativo + panel es el objetivo inmediato: [plan corto, alcance, modelos, aceptación y tope2puntos](../04-operacion-agentes/evidencias/cerebro-panel-usable-20261109/PLAN.md), esperando sí antes de implementar. Reusar lo aceptado; no repetir investigación. No producción, n8n real, envíos, compras o publicación de contenido. Datos, mejores sesiones, coordinación/orquestación y HOMELAB etapa1 quedan para otro sí posterior.

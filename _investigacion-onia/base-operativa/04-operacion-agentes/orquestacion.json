@@ -3,31 +3,31 @@
   "reglas": "04-operacion-agentes/reglas-comunes.md",
   "perfiles_ejecucion": {
     "extraccion": {
-      "modelo": "gpt-6-luna",
-      "esfuerzo": "high",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
       "criterio": "Extracción o clasificación repetible con fuente y esquema cerrados; candidato, no ganador probado.",
-      "escalamiento": "Comparar con Sol high si pierde datos críticos; no escalar por permisos o herramientas ausentes."
+      "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
     },
     "multifuente": {
       "modelo": "gpt-6.1-sol",
-      "esfuerzo": "medium",
+      "esfuerzo": "low",
       "criterio": "Coordinar contexto y entregas de varias fuentes con criterios verificables.",
-      "escalamiento": "Subir a high ante fallo de razonamiento identificado; reducir sólo conservando la calidad medida."
+      "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
     },
     "cambio-acotado": {
-      "modelo": "gpt-6.1-terra",
-      "esfuerzo": "medium",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
       "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
-      "escalamiento": "Comparar con Sol medium cuando falle el criterio; separar incompatibilidad de herramientas."
+      "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
     },
     "complejo": {
       "modelo": "gpt-6.1-sol",
       "esfuerzo": "high",
       "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
-      "escalamiento": "Astra medium/high sólo ante ambigüedad persistente identificada y dentro de cuota autorizada."
+      "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
     }
   },
-  "limite_modelos": "Recomendaciones declarativas del 6/11/2026; no cambian runtime, permisos, herramientas ni modelo efectivo. Fuentes: https://learn.chatgpt.com/docs/models y https://developers.openai.com/api/docs/guides/model-selection. Comparar antes de atribuir calidad o ahorro.",
+  "limite_modelos": "Política aprobada por Sergio 9/11/2026: Sol6.1 low para simple, high para diseño/fallos difíciles, ultra sólo bajo pedido explícito. Recomendaciones declarativas: no configuran runtime ni permisos. Registrar solicitado y observado por lanzamiento; fuente REPARTO-CODEX-GROKBOT-20261109.md.",
   "contexto_comun": [
     "00-MAPA/ESTADO.md",
     "04-operacion-agentes/ORQUESTACION.md"

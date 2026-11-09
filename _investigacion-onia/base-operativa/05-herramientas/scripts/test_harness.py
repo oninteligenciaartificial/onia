@@ -309,7 +309,8 @@ class HarnessTests(unittest.TestCase):
     def test_profile_recommends_without_claiming_requested_or_effective_model(self):
         result = harness.prepare(self.base, "perfil-1", "desarrollo", "Objetivo", "Entrega", "Prueba", profile="cambio-acotado")
         execution = result["tarea"]["ejecucion"]
-        self.assertEqual(execution["recomendado"]["modelo"], "gpt-6.1-terra")
+        self.assertEqual(execution["recomendado"]["modelo"], "gpt-6.1-sol")
+        self.assertEqual(execution["recomendado"]["esfuerzo"], "low")
         self.assertIsNone(execution["solicitado"])
         self.assertIsNone(execution["observado"])
         with self.assertRaisesRegex(ValueError, "Perfil"):

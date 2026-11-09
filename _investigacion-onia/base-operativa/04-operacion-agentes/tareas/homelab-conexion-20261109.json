@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "id": "homelab-conexion-20261109",
-  "revision": 4,
+  "revision": 5,
   "compartible": true,
   "objetivo": "Conectar y configurar HOMELAB como worker autorizado, conservando producción y datos existentes.",
   "estado": "en_espera",
-  "proximo_paso": "Esperar inventario breve de bwrap/sshd y huella pública en Ubuntu solicitado a Sergio; preparar bootstrap acotado. Cerebro+panel espera sí al plan.",
+  "proximo_paso": "Preparar alta local acotada de onia-worker y pruebas de aislamiento para Sergio usando inventario bwrap/ssh ya aportado por Boss; verificar huella confiable antes de SSH. Sólo PC DESKTOP-0GGGNMF, sin benchmarks.",
   "resultado": "Tailscale VPS instalado sin sudo y autorizado; PC online. Usuario WSL/aislamiento/continuidad pendientes. Puerto2222 excluido.",
   "comprobacion": "Checksum oficial y status Running; Ubuntu/WSL2 informados por Sergio. No se probó SSH ni /mnt/c; evidencia v1 conservada y corregida por v2.",
   "verificacion": "pendiente",
@@ -26,7 +26,7 @@
       "bytes": 1660
     }
   ],
-  "actualizado": "2026-11-09T17:53:07.050855+00:00",
+  "actualizado": "2026-11-09T22:49:26.913526+00:00",
   "historial": [
     {
       "revision": 1,
@@ -76,6 +76,33 @@
         }
       ],
       "proximo_paso": "Preparar bootstrap local mínimo para Ubuntu; Sergio ejecuta alta administrativa; después verificar host key, aislamiento y continuidad. Sin benchmark ni etapa1.",
+      "aceptacion": null
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-09T17:53:07.050855+00:00",
+      "estado": "en_espera",
+      "resultado": "Tailscale VPS instalado sin sudo y autorizado; PC online. Usuario WSL/aislamiento/continuidad pendientes. Puerto2222 excluido.",
+      "comprobacion": "Checksum oficial y status Running; Ubuntu/WSL2 informados por Sergio. No se probó SSH ni /mnt/c; evidencia v1 conservada y corregida por v2.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/preflight-v1.json",
+          "sha256": "6651cbd0419c6aa3bce8dde20db50f30fc9209a2f8ce53b9f438767aac1c9e54",
+          "bytes": 980
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/preflight-v2.json",
+          "sha256": "fbaf6809ee04959552ee99b33336c653684c3be2bb251a7b72d1d59472024e0c",
+          "bytes": 1669
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/aislamiento-diseno-v1.json",
+          "sha256": "7efeb1cbf5437e63edb9d63056f499ff9db73ffe58e568f9c88d79fa84413d41",
+          "bytes": 1660
+        }
+      ],
+      "proximo_paso": "Esperar inventario breve de bwrap/sshd y huella pública en Ubuntu solicitado a Sergio; preparar bootstrap acotado. Cerebro+panel espera sí al plan.",
       "aceptacion": null
     }
   ],

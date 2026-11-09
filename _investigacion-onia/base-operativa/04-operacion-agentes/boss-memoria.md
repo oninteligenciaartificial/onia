@@ -1,5 +1,11 @@
 # Memoria de Boss (reglas de trabajo) — 8 nov 2026
 
+## Reparto vigente · 9 noviembre 2026 · America/La_Paz
+
+Rige el [acuerdo final de Sergio](REPARTO-CODEX-GROKBOT-20261109.md): ventas orgánicas del workshop hasta el 14 a cargo de Boss + Contenido; Codex sólo técnica por PEDIDO autorizado y HOMELAB esencial. Modelo gpt-6.1-sol, low/simple, high/diseño o fallo difícil, ultra sólo si Sergio lo pide. Harness = única fuente de estados; cola-boss = buzón, HECHO no es aceptación, PEDIDO no autoriza. No existe despachador automático. Esta actualización prevalece sobre repartos y ejemplos históricos incompatibles.
+
+El resto se conserva como memoria histórica. «Boss sólo planifica/Codex hace todo», exclusión de Grok, PC identificada como laptop y continuidad automática sin Boss quedaron obsoletos. PC autorizada: DESKTOP-0GGGNMF; laptop DESKTOP-ENV6SDA excluida. Brain/kit existentes se reutilizan; cerebro+panel nuevo y otras áreas aparcados. Bwrap y ssh WSL ya informados por Boss, huella/acceso/aislamiento por probar.
+
 Copia de las reglas y correcciones que Boss (Grok Bot) tiene guardadas, para que Codex pueda seguir solo si se acaba la cuota de Grok. Sin secretos ni datos privados.
 
 ## Roles

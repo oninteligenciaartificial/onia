@@ -1,5 +1,9 @@
 # Reglas comunes de trabajo
 
+## Reparto vigente · 9 noviembre 2026 · America/La_Paz
+
+Rige el [acuerdo final de Sergio](REPARTO-CODEX-GROKBOT-20261109.md): ventas orgánicas del workshop hasta el 14 a cargo de Boss + Contenido; Codex sólo técnica por PEDIDO autorizado y HOMELAB esencial. Modelo gpt-6.1-sol, low/simple, high/diseño o fallo difícil, ultra sólo si Sergio lo pide. Harness = única fuente de estados; cola-boss = buzón, HECHO no es aceptación, PEDIDO no autoriza. No existe despachador automático. Esta actualización prevalece sobre repartos y ejemplos históricos incompatibles.
+
 Consolidación autorizada por Sergio el 6 de noviembre de 2026, America/Caracas. Esta es la única fuente de reglas generales de ONIA. Las instrucciones actuales del usuario prevalecen. Las versiones anteriores se conservan con bytes y hashes en [histórico](../99-archivo/2026-11-06/consolidacion-harness/HISTORICO.md); se consultan por encargo, no como una cola que deba ejecutarse al iniciar.
 
 ## Alcance y autoridad

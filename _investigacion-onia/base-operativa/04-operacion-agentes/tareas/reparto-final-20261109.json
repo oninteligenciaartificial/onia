@@ -1,0 +1,105 @@
+{
+  "schema": 2,
+  "id": "reparto-final-20261109",
+  "revision": 3,
+  "compartible": true,
+  "objetivo": "Aplicar reparto final aprobado, modelo y AGENTS sin activar negocio ni producción",
+  "estado": "en_curso",
+  "proximo_paso": "Publicar commit y obtener revisión independiente antes de aceptar.",
+  "resultado": "Cambio de configuración y reparto aplicados; entrega preparada para publicación y revisión distinta.",
+  "comprobacion": "57 tests OK; config y conservación de AGENTS/checkouts verificadas.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/reparto-final-20261109/config-agents-v1.json",
+      "sha256": "59577691d1c66d8fee28b2374a34e3a6771b31bf7ea1f850f6c251f3198a98cc",
+      "bytes": 903
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/reparto-final-20261109/ENTREGA-v1.md",
+      "sha256": "c267ac38079e32e3a09baac00ba0274b29506cd0617c242426236c86b1d7cfa3",
+      "bytes": 2519
+    }
+  ],
+  "actualizado": "2026-11-09T22:50:29.218770+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-09T22:49:26.878222+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/reparto-final-20261109.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "cambio-acotado",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      }
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-09T22:50:29.194825+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/reparto-final-20261109.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "cambio-acotado",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low"
+        },
+        "solicitado": null,
+        "observado": {
+          "modelo": "gpt-6-astra",
+          "esfuerzo": "xhigh",
+          "fuente": {
+            "archivo": "04-operacion-agentes/evidencias/reparto-final-20261109/config-agents-v1.json",
+            "sha256": "59577691d1c66d8fee28b2374a34e3a6771b31bf7ea1f850f6c251f3198a98cc",
+            "bytes": 903
+          }
+        },
+        "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/reparto-final-20261109.md",
+    "sha256": "204d9e664b450299383d91ffa1a9b53daef070a0d67316f5693a1ef984e2c65a",
+    "bytes": 2853,
+    "contenido": "# Encargo reparto-final-20261109\n\nÁrea: organizacion\nModo: encargo\nSkill directora: continuidad-de-trabajo\n\n## Objetivo\n\nAplicar reparto final aprobado, modelo y AGENTS sin activar negocio ni producción\n\n## Entregable\n\nPolítica, buzón, defaults alineados y evidencia saneada publicada\n\n## Criterio de aceptación\n\nConfig sólo cambia modelo/esfuerzo; historia AGENTS preservada; estados sólo harness; prioridad/roles correctos; tests y revisión distinta\n\n## Entrada y alcance\n\nPlanificar con datos vigentes; usar la skill de apoyo correspondiente para continuidad o mejora. No presupone sincronización del calendario.\n\n- VERSIÓN FINAL con sí de Sergio, 9/11/2026\n- REPARTO-CODEX-GROKBOT-20261109.md en 7778b10\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [02-contenido/CEREBRO-DIARIO.md](../../02-contenido/CEREBRO-DIARIO.md)\n- [05-herramientas/compartibles/skills/continuidad-de-trabajo/SKILL.md](../../05-herramientas/compartibles/skills/continuidad-de-trabajo/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [planificar-dia](../../05-herramientas/compartibles/skills/planificar-dia/SKILL.md)\n- [mejorar-sistema](../../05-herramientas/compartibles/skills/mejorar-sistema/SKILL.md)\n- [evaluar-catalogo-skills](../../05-herramientas/compartibles/skills/evaluar-catalogo-skills/SKILL.md)\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n\n## Salidas de referencia del área\n\n- Agenda viable con compromisos y tareas\n- Estado y entrega para retomar un encargo\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/reparto-final-20261109.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "ejecucion": {
+    "perfil": "cambio-acotado",
+    "recomendado": {
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low"
+    },
+    "solicitado": null,
+    "observado": {
+      "modelo": "gpt-6-astra",
+      "esfuerzo": "xhigh",
+      "fuente": {
+        "archivo": "04-operacion-agentes/evidencias/reparto-final-20261109/config-agents-v1.json",
+        "sha256": "59577691d1c66d8fee28b2374a34e3a6771b31bf7ea1f850f6c251f3198a98cc",
+        "bytes": 903
+      }
+    },
+    "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+    "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+  }
+}
