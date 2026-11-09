@@ -1,4 +1,4 @@
-# Propuesta de Grokbot para despachar por carriles
+# Propuesta de Codex/OnIA para despachar por carriles
 
 **Estado propuesto para aprobación de Sergio.** El carril agrupa tareas del mismo frente y reserva sus rutas. El cupo se asigna a la siguiente tarea elegible cuando termina una sesión. Arrancar con tres sesiones principales como máximo, contando revisores. La primera versión sería un ciclo que el coordinador inicia y puede detener para un lote aprobado y con vencimiento.
 

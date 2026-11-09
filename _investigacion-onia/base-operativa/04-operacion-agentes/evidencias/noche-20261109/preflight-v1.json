@@ -1,0 +1,44 @@
+{
+  "fecha_utc": "2026-11-09T04:27:44.244601+00:00",
+  "base_commit": "d08b67167482c45be058f472848f4672a3d993af",
+  "autorizacion": "Sergio pide trabajar durante la noche: video Euge, Telegram en n8n, cerebro/workshop/contenido; Platform fuera; sin producción, publicaciones, envíos ni gasto adicional.",
+  "existente": "19 cerebros/79 piezas aceptados, fábrica diseño+ensayo ficticio, harness y navegador VPS; n8n con workflows anteriores que deben releerse antes de duplicar.",
+  "disponible": [
+    "Git privado y push de ejecutoras",
+    "Sol6.1 por login ChatGPT",
+    "Python stdlib",
+    "n8n REST, archivo privado legible 0600 sin revelar valores",
+    "browser/Playwright VPS bajo lease exclusivo"
+  ],
+  "cuota": {
+    "fecha_utc": "2026-11-09T04:25:37.782Z",
+    "used_percent": 46,
+    "window_minutes": 10080,
+    "resets_at": 1794624432,
+    "credits_balance": "0",
+    "limite_nuevos_despachos_pct": 55,
+    "limite": "Cuota compartida; no atribuir diferencias a un agente de forma exacta."
+  },
+  "concurrencia": "2 ejecutoras CLI y 1 ayudante nativo de video; no más de 3 trabajadores concurrentes incluidos revisores. Cada CLI sin hijos. Revisiones reemplazan ejecutoras terminadas.",
+  "modelos": {
+    "ejecutor": "gpt-6.1-sol",
+    "esfuerzo": "high",
+    "revisor": "gpt-6.1-sol",
+    "esfuerzo_revisor": "ultra"
+  },
+  "faltantes": [
+    "Prueba real de Telegram autorizada con destino inequívoco",
+    "Video completo: publicidad impidió reproducción anterior",
+    "Materiales aplicados al workshop y fuentes de noticias actuales",
+    "Decisiones comerciales y acceso legítimo de alumnos"
+  ],
+  "limites": [
+    "No activar/desactivar/borrar workflows",
+    "No sustituir webhook del bot existente",
+    "No Telegram real ni campañas",
+    "No paid APIs",
+    "No Platform ni ONIA-CENTRAL",
+    "Conservar originales, worktrees y evidencias"
+  ],
+  "detencion": "El coordinador no despacha al llegar a 55% de cuota o a un bloqueo sin alternativa. Una corrección acotada por entrega. No hay loop permanente ni scheduler instalado."
+}

@@ -1,0 +1,67 @@
+{
+  "schema": 2,
+  "id": "noche-telegram-20261109",
+  "revision": 3,
+  "compartible": true,
+  "objetivo": "Preparar y probar integración mínima de fábrica de guiones con Telegram/n8n, reutilizando workflows existentes sin tocar producción",
+  "estado": "preparado",
+  "proximo_paso": "Lanzar Sol6.1 high sin hijos; revisión distinta ultra al publicar.",
+  "resultado": "Encargo nocturno acotado aprobado por Sergio.",
+  "comprobacion": "Preflight de herramientas, cuota y límites publicado.",
+  "verificacion": "pendiente",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+      "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+      "bytes": 2071
+    }
+  ],
+  "actualizado": "2026-11-09T04:27:44.346129+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-09T04:27:44.265150+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/noche-telegram-20261109.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-09T04:27:44.334662+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/noche-telegram-20261109.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "noche-telegram-ejecutor",
+        "rutas": [
+          "05-herramientas/fabrica-contenido/20261109-telegram"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:27:44.334648+00:00"
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/noche-telegram-20261109.md",
+    "sha256": "8512ea3bb5328e87e5ec75e29bfb6f046662c0382b651d06b79896b2f8134ecb",
+    "bytes": 7280,
+    "contenido": "# Encargo noche-telegram-20261109\n\nÁrea: automatizaciones\nModo: encargo\nSkill directora: automatizar-n8n\n\n## Objetivo\n\nPreparar y probar integración mínima de fábrica de guiones con Telegram/n8n, reutilizando workflows existentes sin tocar producción\n\n## Entregable\n\nAdaptador determinista y workflow de prueba importable/inactivo, pruebas sintéticas, contrato con panel/harness e informe de integración real disponible\n\n## Criterio de aceptación\n\n1. Inventario actual saneado de Radar, Guiones, Video Intake y Command Center, distinguiendo activo/configurado/probado; sin secretos. 2. Reusar contrato y ensayo de fábrica 20261108 y registro único del harness; no otra cola canónica. 3. Entrega ejecutable y workflow n8n de prueba con entrada sintética/manual y salidas secas: nunca envío, webhook real ni LLM pago; puede preparar copia inactiva propia en n8n únicamente si creación no ejecuta nodos y se verifica active=false antes/después. No modificar workflows existentes. 4. Ruta clara panel→decisión Sergio→validación revision/idempotencia→adaptador; no afirmar panel operativo si sólo fixture. 5. Pruebas de caso bueno, dato inválido, duplicado, revisión vieja y fallo de dependencia; evidencia reproducible. 6. Documento con qué bot/credencial/destino existe, SIN valores privados ni tokens ni chat_id en Git, qué necesita autorización/prueba real y reversión que conserva originales. 7. Commit/push propios y revisor independiente antes de aceptar.\n\n## Entrada y alcance\n\nUn evento y resultado definido para la instancia existente de n8n.\n\n- Encargo nocturno explícito de Sergio. Una tarea por sesión, cero hijos. Sol6.1 high por login ChatGPT incluido; no API paga, instalaciones, sudo, Docker, servicios, producción, envíos, publicaciones externas ni compras. No modificar ~/repos/onia ni leer ONIA-CENTRAL. Conservar archivos; no rm ni limpieza destructiva.\n- Leer AGENTS.md, reglas-comunes, boss-memoria y 00-MAPA/ESTADO, la skill directora y sólo apoyos pertinentes. Instrucción actual prevalece sobre notas históricas. El coordinador es el único escritor de registros canónicos; no cambiar tarea/briefing/registro-de-errores. Registrar errores de esta entrega en tu carpeta para integración.\n- Tiempo de trabajo objetivo 35–45 minutos; resolver el alcance mínimo comprobable. Si una dependencia externa impide, terminar la parte independiente y documentar paso exacto faltante. No perseguir alternativas indefinidamente ni inventar pruebas. Nada de cuentas, contraseñas o tokens por chat/commit.\n- Hacer pruebas proporcionales y un informe breve con qué existe, qué funciona probado, qué falta, límites y siguiente acción. Guardar todas las fuentes y evidencia saneada. Git add sólo rutas propias, commit y push autónomos de tu rama codex/ws-ID; verificar ls-remote coincide. No integrar master: coordinador cierra y obtiene revisor distinto ultra.\n- Leer 05-herramientas/fabrica-contenido/20261108/{DISENO.md,CONTRATO.md,ensayo.py,README.md} y skill automatizar-n8n. Consultar documentación oficial actual de n8n/Telegram para capacidades usadas, sin instalar. No inspeccionar ONIA-CENTRAL aunque un workflow lo referencie; excluirlo.\n- No hay plugin n8n disponible: usar REST existente. Leer ~/operacion/reglas-n8n.txt. Credenciales en ~/.config/onia/n8n.env (0600): cargar sólo en proceso, nunca imprimir contenido, headers, URL con token ni excepciones con secretos. GET acotados; guardar evidencia sólo whitelist saneada. No exportar credenciales descifradas. Requests no siguen redirect y tienen timeout.\n- IDs históricos a comprobar: NDXLJiR00ciQx72V (Guiones Diarios), QGXVyRSgrArxfolj (Radar), nAGwe7DzxNQzMxXk (Video Intake), fop5l1FEirkYoZke (demo4campos), nZkaXaZVKzgtwUqU (borradores), b6hjjNJFLuLXhRm3 (digest), vuicWsvh0hwqKhYs (Command Center, activo histórico: jamás modificar ni reemplazar webhook). Un bot admite un webhook: no usar getUpdates ni setWebhook/deleteWebhook contra bot existente. No enviar mensajes de prueba.\n- Si preparás copia inactiva en n8n, nombre inequívoco ONIA · PILOTO NOCTURNO 20261109 · SIN ENVIOS, sólo nodos deterministas Manual Trigger/Code/Set, ningún Schedule/Telegram Trigger/HTTP saliente/LLM. Debe sumar a la prueba y no duplicar sin necesidad. POST sólo una vez tras buscar por nombre; si timeout reconciliar GET, jamás repetir a ciegas. Referencias Telegram/credenciales quedan en plan separado no ejecutable. No activar, ejecutar vía API ni tocar otros workflows. Si esto no es viable, JSON importable probado y causa precisa.\n- Implementación mínima, sin instalar servidor/panel persistente. Se permite panel de prueba estático/interactivo aislado con datos sintéticos y esquema de comando hacia adaptador; cualquier decisión debe validar identidad/autorización en capa explícita antes de futuros eventos reales. No llamar seguro/autenticado a una maqueta. Fuentes actuales de noticias se preparan en otra sesión: acá integrar formato determinista y deduplicación, no generar contenido.\n- ID noche-telegram-20261109; carpeta exclusiva 05-herramientas/fabrica-contenido/20261109-telegram; rama codex/ws-noche-telegram-20261109.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [05-herramientas/accesos.md](../../05-herramientas/accesos.md)\n- [05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md](../../05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Flujo n8n con referencias a credenciales\n- Pruebas y manejo de fallos\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/noche-telegram-20261109.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "noche-telegram-ejecutor",
+    "rutas": [
+      "05-herramientas/fabrica-contenido/20261109-telegram"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-09T04:27:44.334648+00:00"
+  }
+}

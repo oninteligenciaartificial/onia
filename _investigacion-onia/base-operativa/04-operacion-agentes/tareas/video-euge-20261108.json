@@ -1,22 +1,27 @@
 {
   "schema": 2,
   "id": "video-euge-20261108",
-  "revision": 2,
+  "revision": 3,
   "compartible": true,
   "objetivo": "Mirar el video de Euge Oller pedido por Sergio y contrastar su operación con OnIA",
-  "estado": "en_espera",
-  "proximo_paso": "Resolver reproducción/seek en piloto acotado del analizador, completar cobertura y revisar; sin más reintentos automáticos en esta tanda.",
-  "resultado": "Tres fotogramas de 00:00,481/00:25,500/00:50,500 inspeccionados; visionado integral pendiente.",
-  "comprobacion": "Destino/ID y tiempo de captura cotejados. Continuación no produjo imágenes por seek no verificable y readyState0; visor devuelto. Sin escucha de audio ni inferencias sobre resto del video.",
+  "estado": "en_curso",
+  "proximo_paso": "Inspeccionar cobertura real, devolver visor y publicar análisis/limitaciones.",
+  "resultado": "Ayudante nativo browser_conexion prueba reproducción normal1× bajo lease del perfil VPS.",
+  "comprobacion": "Prueba anterior cortó por publicidad; nuevo límite acotado y evidencia privada, sin saltar controles.",
   "verificacion": "pendiente",
   "evidencias": [
     {
       "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/muestra-visual-parcial-v1.json",
       "sha256": "d8a05824a428d2a396b444a10aeee9bfc6ef1c8c2d3bb8ee47db9583181c4049",
       "bytes": 2636
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+      "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+      "bytes": 2071
     }
   ],
-  "actualizado": "2026-11-09T03:49:48.086994+00:00",
+  "actualizado": "2026-11-09T04:27:44.503419+00:00",
   "historial": [
     {
       "revision": 1,
@@ -27,6 +32,23 @@
       "verificacion": "pendiente",
       "evidencias": [],
       "proximo_paso": "Leer 04-operacion-agentes/encargos/video-euge-20261108.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-09T03:49:48.086994+00:00",
+      "estado": "en_espera",
+      "resultado": "Tres fotogramas de 00:00,481/00:25,500/00:50,500 inspeccionados; visionado integral pendiente.",
+      "comprobacion": "Destino/ID y tiempo de captura cotejados. Continuación no produjo imágenes por seek no verificable y readyState0; visor devuelto. Sin escucha de audio ni inferencias sobre resto del video.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/video-euge-20261108/muestra-visual-parcial-v1.json",
+          "sha256": "d8a05824a428d2a396b444a10aeee9bfc6ef1c8c2d3bb8ee47db9583181c4049",
+          "bytes": 2636
+        }
+      ],
+      "proximo_paso": "Resolver reproducción/seek en piloto acotado del analizador, completar cobertura y revisar; sin más reintentos automáticos en esta tanda.",
       "aceptacion": null
     }
   ],
