@@ -1,22 +1,32 @@
 {
   "schema": 2,
   "id": "cerebro-consultable-20261109",
-  "revision": 3,
+  "revision": 19,
   "compartible": true,
   "objetivo": "Hacer consultable el cerebro editorial de OnIA sobre los19referentes revisados, sin rehacer investigación ni inventar cobertura",
-  "estado": "preparado",
-  "proximo_paso": "Lanzar Sol6.1 high sin hijos; revisión distinta ultra antes de aceptar.",
-  "resultado": "Continuación nocturna reafirmada por Sergio.",
-  "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
-  "verificacion": "pendiente",
+  "estado": "aceptado",
+  "proximo_paso": "Integrar entrega aceptada a origin/master, verificar hash y reportar pendientes a Sergio; campaña y envíos sin activar.",
+  "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+  "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+  "verificacion": "correcta",
   "evidencias": [
     {
       "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
       "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
       "bytes": 2029
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-cerebro-consultable-20261109-r9.json",
+      "sha256": "7d36ae760202f856543085d980be4ab804772939ca94b89c33253f0329856e31",
+      "bytes": 1823
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+      "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+      "bytes": 310
     }
   ],
-  "actualizado": "2026-11-09T04:57:26.412183+00:00",
+  "actualizado": "2026-11-09T05:18:05.270773+00:00",
   "historial": [
     {
       "revision": 1,
@@ -47,6 +57,1476 @@
         "revision_base": 1,
         "fecha": "2026-11-09T04:57:26.399153+00:00"
       }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-09T04:57:26.412183+00:00",
+      "estado": "preparado",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Lanzar Sol6.1 high sin hijos; revisión distinta ultra antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-09T04:58:16.098152+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-09T04:58:16.191057+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-09T04:58:16.287903+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": 1884676,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-09T04:58:20.204185+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": 1884676,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-09T04:58:20.476223+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": 1884676,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-09T05:10:25.245651+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": 1884676,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:10:25.233540+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-09T05:13:00.701814+00:00",
+      "estado": "en_curso",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-cerebro-consultable-20261109-r9.json",
+          "sha256": "7d36ae760202f856543085d980be4ab804772939ca94b89c33253f0329856e31",
+          "bytes": 1823
+        }
+      ],
+      "proximo_paso": "Cerrar conservando worktree y revisar entrega independiente.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": 1884676,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:10:25.233540+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-09T05:13:02.196373+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-cerebro-consultable-20261109-r9.json",
+          "sha256": "7d36ae760202f856543085d980be4ab804772939ca94b89c33253f0329856e31",
+          "bytes": 1823
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": 1884676,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:10:25.233540+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-cerebro-consultable-20261109"
+        ],
+        "fecha": "2026-11-09T05:13:02.178001+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-09T05:13:04.667969+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-cerebro-consultable-20261109-r9.json",
+          "sha256": "7d36ae760202f856543085d980be4ab804772939ca94b89c33253f0329856e31",
+          "bytes": 1823
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": 1884676,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:10:25.233540+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebro-consultable-20261109-revisor-1",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109-revision-2",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:13:04.649388+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "8c50a7865b25843c331c390ea3c670924a31702cae57391c94f202dde160fab7",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-cerebro-consultable-20261109"
+        ],
+        "fecha": "2026-11-09T05:13:02.178001+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-09T05:13:04.757018+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-cerebro-consultable-20261109-r9.json",
+          "sha256": "7d36ae760202f856543085d980be4ab804772939ca94b89c33253f0329856e31",
+          "bytes": 1823
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": 1884676,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:10:25.233540+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebro-consultable-20261109-revisor-1",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 1923821,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194040008",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109-revision-2",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:13:04.649388+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "8c50a7865b25843c331c390ea3c670924a31702cae57391c94f202dde160fab7",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-cerebro-consultable-20261109"
+        ],
+        "fecha": "2026-11-09T05:13:02.178001+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-09T05:13:04.850393+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-cerebro-consultable-20261109-r9.json",
+          "sha256": "7d36ae760202f856543085d980be4ab804772939ca94b89c33253f0329856e31",
+          "bytes": 1823
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": 1884676,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:10:25.233540+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebro-consultable-20261109-revisor-1",
+          "pid": 1923823,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194040017",
+          "supervisor_pid": 1923821,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194040008",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109-revision-2",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:13:04.649388+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "8c50a7865b25843c331c390ea3c670924a31702cae57391c94f202dde160fab7",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-cerebro-consultable-20261109"
+        ],
+        "fecha": "2026-11-09T05:13:02.178001+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-09T05:13:05.452473+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-cerebro-consultable-20261109-r9.json",
+          "sha256": "7d36ae760202f856543085d980be4ab804772939ca94b89c33253f0329856e31",
+          "bytes": 1823
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": 1884676,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:10:25.233540+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebro-consultable-20261109-revisor-1",
+          "pid": 1923823,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194040017",
+          "supervisor_pid": 1923821,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194040008",
+          "rama": "(detached)",
+          "session_id": "01a1beb9-6b5b-7ba0-a584-3a0e90820a46",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109-revision-2",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:13:04.649388+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "8c50a7865b25843c331c390ea3c670924a31702cae57391c94f202dde160fab7",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-cerebro-consultable-20261109"
+        ],
+        "fecha": "2026-11-09T05:13:02.178001+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 16,
+      "actualizado": "2026-11-09T05:16:34.888036+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-cerebro-consultable-20261109-r9.json",
+          "sha256": "7d36ae760202f856543085d980be4ab804772939ca94b89c33253f0329856e31",
+          "bytes": 1823
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": 1884676,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:10:25.233540+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebro-consultable-20261109-revisor-1",
+          "pid": 1923823,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194040017",
+          "supervisor_pid": 1923821,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194040008",
+          "rama": "(detached)",
+          "session_id": "01a1beb9-6b5b-7ba0-a584-3a0e90820a46",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109-revision-2",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:13:04.649388+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "8c50a7865b25843c331c390ea3c670924a31702cae57391c94f202dde160fab7",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.veredicto.json",
+          "fin": "2026-11-09T05:16:34.868479+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-cerebro-consultable-20261109"
+        ],
+        "fecha": "2026-11-09T05:13:02.178001+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 17,
+      "actualizado": "2026-11-09T05:18:05.123947+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-cerebro-consultable-20261109-r9.json",
+          "sha256": "7d36ae760202f856543085d980be4ab804772939ca94b89c33253f0329856e31",
+          "bytes": 1823
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": 1884676,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:10:25.233540+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebro-consultable-20261109-revisor-1",
+          "pid": 1923823,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194040017",
+          "supervisor_pid": 1923821,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194040008",
+          "rama": "(detached)",
+          "session_id": "01a1beb9-6b5b-7ba0-a584-3a0e90820a46",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109-revision-2",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:13:04.649388+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "8c50a7865b25843c331c390ea3c670924a31702cae57391c94f202dde160fab7",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.veredicto.json",
+          "fin": "2026-11-09T05:16:34.868479+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-cerebro-consultable-20261109"
+        ],
+        "fecha": "2026-11-09T05:13:02.178001+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+        "criterio": "Cumple los siete criterios. Catálogo con 19 referentes, 23 patrones y piezas seleccionadas, 79 piezas heredadas y 28 fuentes verificadas. Paráfrasis cotejadas con fichas aceptadas; propuestas, límites audiovisuales, privados y dependencias explícitos. CLI determinista sin servicios externos; consultas útiles, vacías e inválidas comprobadas. Reproducidas 17/17 pruebas, con catálogos alterados en memoria para respetar sólo lectura. Los seis recibos de consulta coinciden y 44 enlaces locales resuelven. Guía concreta para ordenar, vender, enseñar y contenido, sin promesas comerciales. Diff exclusivo de la ruta asignada; rama remota confirmada idéntica mediante GitHub. Ensayo humano, adopción editorial e integración siguen pendientes del coordinador.",
+        "worktree_conservado": true,
+        "revisor": "cerebro-consultable-20261109-revisor-1",
+        "session_id": "01a1beb9-6b5b-7ba0-a584-3a0e90820a46",
+        "entrega_sha256": "8c50a7865b25843c331c390ea3c670924a31702cae57391c94f202dde160fab7",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/revision-2-bd508d0e.json",
+          "sha256": "b85be644201759177814d3cbd49c6afc445a738e564ccb8ce5237829a0637a37",
+          "bytes": 901
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/revision-2-bd508d0e.json",
+          "sha256": "b85be644201759177814d3cbd49c6afc445a738e564ccb8ce5237829a0637a37",
+          "bytes": 901
+        }
+      ]
+    },
+    {
+      "revision": 18,
+      "actualizado": "2026-11-09T05:18:05.239433+00:00",
+      "estado": "aceptado",
+      "resultado": "Entrega publicada dentro de su ruta exclusiva; cotejar el criterio completo, pruebas, fuentes, límites y evidencia visual si corresponde.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/entrega-cerebro-consultable-20261109-r9.json",
+          "sha256": "7d36ae760202f856543085d980be4ab804772939ca94b89c33253f0329856e31",
+          "bytes": 1823
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Integrar entrega aceptada a origin/master, verificar hash y reportar pendientes a Sergio; campaña y envíos sin activar.",
+      "aceptacion": {
+        "revisor": "cerebro-consultable-20261109-revisor-1",
+        "criterio": "Cumple los siete criterios. Catálogo con 19 referentes, 23 patrones y piezas seleccionadas, 79 piezas heredadas y 28 fuentes verificadas. Paráfrasis cotejadas con fichas aceptadas; propuestas, límites audiovisuales, privados y dependencias explícitos. CLI determinista sin servicios externos; consultas útiles, vacías e inválidas comprobadas. Reproducidas 17/17 pruebas, con catálogos alterados en memoria para respetar sólo lectura. Los seis recibos de consulta coinciden y 44 enlaces locales resuelven. Guía concreta para ordenar, vender, enseñar y contenido, sin promesas comerciales. Diff exclusivo de la ruta asignada; rama remota confirmada idéntica mediante GitHub. Ensayo humano, adopción editorial e integración siguen pendientes del coordinador.",
+        "fecha": "2026-11-09T05:18:05.239410+00:00"
+      },
+      "asignacion": {
+        "responsable": "cerebro-consultable-ejecutor",
+        "rutas": [
+          "03-referentes/cerebro-operativo/20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.399153+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebro-consultable-ejecutor",
+          "pid": 1884676,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+          "supervisor_pid": 1884653,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+          "rama": "codex/ws-cerebro-consultable-20261109",
+          "session_id": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:16.075473+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:10:25.233540+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebro-consultable-20261109-revisor-1",
+          "pid": 1923823,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194040017",
+          "supervisor_pid": 1923821,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194040008",
+          "rama": "(detached)",
+          "session_id": "01a1beb9-6b5b-7ba0-a584-3a0e90820a46",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_rel": "logs/cerebro-consultable-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109-revision-2",
+          "rutas": [
+            "03-referentes/cerebro-operativo/20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:13:04.649388+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "8c50a7865b25843c331c390ea3c670924a31702cae57391c94f202dde160fab7",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.veredicto.json",
+          "fin": "2026-11-09T05:16:34.868479+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+        "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+        "ramas_origin": [
+          "origin/codex/ws-cerebro-consultable-20261109"
+        ],
+        "fecha": "2026-11-09T05:13:02.178001+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+          "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+        "criterio": "Cumple los siete criterios. Catálogo con 19 referentes, 23 patrones y piezas seleccionadas, 79 piezas heredadas y 28 fuentes verificadas. Paráfrasis cotejadas con fichas aceptadas; propuestas, límites audiovisuales, privados y dependencias explícitos. CLI determinista sin servicios externos; consultas útiles, vacías e inválidas comprobadas. Reproducidas 17/17 pruebas, con catálogos alterados en memoria para respetar sólo lectura. Los seis recibos de consulta coinciden y 44 enlaces locales resuelven. Guía concreta para ordenar, vender, enseñar y contenido, sin promesas comerciales. Diff exclusivo de la ruta asignada; rama remota confirmada idéntica mediante GitHub. Ensayo humano, adopción editorial e integración siguen pendientes del coordinador.",
+        "worktree_conservado": true,
+        "revisor": "cerebro-consultable-20261109-revisor-1",
+        "session_id": "01a1beb9-6b5b-7ba0-a584-3a0e90820a46",
+        "entrega_sha256": "8c50a7865b25843c331c390ea3c670924a31702cae57391c94f202dde160fab7",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/revision-2-bd508d0e.json",
+          "sha256": "b85be644201759177814d3cbd49c6afc445a738e564ccb8ce5237829a0637a37",
+          "bytes": 901
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/revision-2-bd508d0e.json",
+          "sha256": "b85be644201759177814d3cbd49c6afc445a738e564ccb8ce5237829a0637a37",
+          "bytes": 901
+        }
+      ]
     }
   ],
   "briefing": {
@@ -55,13 +1535,119 @@
     "bytes": 6003,
     "contenido": "# Encargo cerebro-consultable-20261109\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nHacer consultable el cerebro editorial de OnIA sobre los19referentes revisados, sin rehacer investigación ni inventar cobertura\n\n## Entregable\n\nCatálogo trazable, consulta CLI determinista y guía aplicada a workshop/ideas/guiones\n\n## Criterio de aceptación\n\n1. Los19referentes representados con patrones y al menos una pieza concreta por referente, enlazada a su ficha aceptada y fuente pública; cobertura heredada explícita. 2. Propuestas OnIA separadas de hechos de referente; límites de ASR/visual/audio/privado y misma conversación no omitidos. 3. CLI sin LLM/API/embeddings que consulta por tema/uso y devuelve patrones+fuentes+límites; resultado vacío honesto en tema no cubierto. 4. JSON es catálogo de conocimiento, nunca cola de trabajo; no modificar fichas/aceptaciones existentes ni declarar síntesis final aprobada por Boss. 5. Integridad de referencias y casos de consulta útil/sin resultado/entrada inválida o fuente faltante comprobados. 6. Ejemplos para ordenar, vender, enseñar y contenido usando fuentes concretas; no promesas comerciales. 7. Sólo ruta asignada, commit/push propios.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sergio reafirmó estas tareas para esta noche. Una tarea/ruta exclusiva y cero hijos. Ejecutora Sol6.1 high, login ChatGPT incluido; no API paga, instalaciones, sudo, Docker, producción, mensajes, publicaciones, compras o cuentas. No usar Platform ni ONIA-CENTRAL ni tocar ~/repos/onia sucio. No borrar archivos; conservar evidencias y worktree.\n- Leer AGENTS, reglas-comunes, Boss, ESTADO y tu briefing; directora canónica del área, sólo apoyos pertinentes. La tarea/briefing/registro global son del coordinador: no modificarlos. Trabajar sólo carpeta asignada; no crear otro sistema de tareas ni segundo registro canónico. Registrar errores dentro de tu entrega.\n- Tiempo objetivo35–50min, solución mínima útil y comprobable. Si falta dependencia, terminar la parte independiente, dejar evidencia/condición de salida. No inflar documentación ni repetir comprobaciones tras pasar sin cambios. No autolanzar sesiones ni subagentes.\n- Probar casos relevantes y al menos un fallo material. Informe corto con uso exacto, qué funciona realmente, qué sigue pendiente y fuentes. Hacer tu propio commit/push de rama codex/ws-ID sin force; verificar HEAD con ls-remote. Coordinador conserva worktree, cierra, revisa con otro SID ultra e integra master. No dar por terminado sólo por tener archivos.\n- Leer índices A/B/C y COBERTURA de 03-referentes/cerebros-profundos, escoger pasajes patrón/aplicaciones de cada ficha, no volcar79piezas enteras. Estado aceptado está en 04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md; texto histórico para_revision en índices no significa tarea viva. Referentes19: A6,B6,C7. No contar página comercial como pieza ni reanalizar videos.\n- Reutilizar síntesis propuesta y matriz de 01-negocio/workshop-20261108/noche-20261109. Prioridad A y Erik para negocio/workshop. Catálogo usable para recuperar ideas desde archivos existentes, no afirmar entrenamiento, búsqueda semántica ni automatización de redes. Mantener una propuesta de reglas OnIA revisable, Boss/Sergio deciden integración final.\n- CLI stdlib con salida clara JSON/Markdown y comandos exactos. Puede filtrar por tema y uso mediante tags explícitos; describir limitación, no vender matching simple como comprensión. No redes para consultas. No instalar librerías. Pruebas enfocadas en trazabilidad, desconocido e integridad; evitar tests que sólo repitan datos.\n- ID cerebro-consultable-20261109; única carpeta 03-referentes/cerebro-operativo/20261109; rama codex/ws-cerebro-consultable-20261109.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/cerebro-consultable-20261109.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
   },
-  "aceptacion": null,
-  "asignacion": {
-    "responsable": "cerebro-consultable-ejecutor",
-    "rutas": [
-      "03-referentes/cerebro-operativo/20261109"
+  "aceptacion": {
+    "revisor": "cerebro-consultable-20261109-revisor-1",
+    "criterio": "Cumple los siete criterios. Catálogo con 19 referentes, 23 patrones y piezas seleccionadas, 79 piezas heredadas y 28 fuentes verificadas. Paráfrasis cotejadas con fichas aceptadas; propuestas, límites audiovisuales, privados y dependencias explícitos. CLI determinista sin servicios externos; consultas útiles, vacías e inválidas comprobadas. Reproducidas 17/17 pruebas, con catálogos alterados en memoria para respetar sólo lectura. Los seis recibos de consulta coinciden y 44 enlaces locales resuelven. Guía concreta para ordenar, vender, enseñar y contenido, sin promesas comerciales. Diff exclusivo de la ruta asignada; rama remota confirmada idéntica mediante GitHub. Ensayo humano, adopción editorial e integración siguen pendientes del coordinador.",
+    "fecha": "2026-11-09T05:18:05.239410+00:00"
+  },
+  "asignacion": null,
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "cerebro-consultable-ejecutor",
+      "pid": 1884676,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951161",
+      "supervisor_pid": 1884653,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951151",
+      "rama": "codex/ws-cerebro-consultable-20261109",
+      "session_id": "01a1beab-dc88-7d43-96d7-fa115341cbc8",
+      "estado": "cerrada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.jsonl",
+      "log_rel": "logs/cerebro-consultable-20261109.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109",
+      "rutas": [
+        "03-referentes/cerebro-operativo/20261109"
+      ],
+      "dry_run": false,
+      "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.1.briefing.txt",
+      "inicio": "2026-11-09T04:58:16.075473+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/cerebro-consultable-20261109.git/worktrees/onia-ws-cerebro-consultable-20261109",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-09T05:10:25.233540+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "revisor",
+      "responsable": "cerebro-consultable-20261109-revisor-1",
+      "pid": 1923823,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194040017",
+      "supervisor_pid": 1923821,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194040008",
+      "rama": "(detached)",
+      "session_id": "01a1beb9-6b5b-7ba0-a584-3a0e90820a46",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.revision-2.jsonl",
+      "log_rel": "logs/cerebro-consultable-20261109.revision-2.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebro-consultable-20261109-revision-2",
+      "rutas": [
+        "03-referentes/cerebro-operativo/20261109"
+      ],
+      "dry_run": false,
+      "commit_base": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.briefing.txt",
+      "inicio": "2026-11-09T05:13:04.649388+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "ultra",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "8c50a7865b25843c331c390ea3c670924a31702cae57391c94f202dde160fab7",
+      "schema": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebro-consultable-20261109.2.veredicto.json",
+      "fin": "2026-11-09T05:16:34.868479+00:00"
+    }
+  ],
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+    "criterio": "Cumple los siete criterios. Catálogo con 19 referentes, 23 patrones y piezas seleccionadas, 79 piezas heredadas y 28 fuentes verificadas. Paráfrasis cotejadas con fichas aceptadas; propuestas, límites audiovisuales, privados y dependencias explícitos. CLI determinista sin servicios externos; consultas útiles, vacías e inválidas comprobadas. Reproducidas 17/17 pruebas, con catálogos alterados en memoria para respetar sólo lectura. Los seis recibos de consulta coinciden y 44 enlaces locales resuelven. Guía concreta para ordenar, vender, enseñar y contenido, sin promesas comerciales. Diff exclusivo de la ruta asignada; rama remota confirmada idéntica mediante GitHub. Ensayo humano, adopción editorial e integración siguen pendientes del coordinador.",
+    "worktree_conservado": true,
+    "revisor": "cerebro-consultable-20261109-revisor-1",
+    "session_id": "01a1beb9-6b5b-7ba0-a584-3a0e90820a46",
+    "entrega_sha256": "8c50a7865b25843c331c390ea3c670924a31702cae57391c94f202dde160fab7",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/revision-2-bd508d0e.json",
+      "sha256": "b85be644201759177814d3cbd49c6afc445a738e564ccb8ce5237829a0637a37",
+      "bytes": 901
+    }
+  },
+  "cierre": {
+    "commit": "61551b82716645d59731e0e8cd330ce7531f3fd7",
+    "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+    "ramas_origin": [
+      "origin/codex/ws-cerebro-consultable-20261109"
     ],
-    "revision_base": 1,
-    "fecha": "2026-11-09T04:57:26.399153+00:00"
-  }
+    "fecha": "2026-11-09T05:13:02.178001+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "worktree_conservado": true,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/cierre-r10-15001695.json",
+      "sha256": "fe87dd272623f1603d06fc197af4fe10f0602b81022c0f60ea59aa14a343f1ca",
+      "bytes": 310
+    }
+  },
+  "evidencias_revision": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/cerebro-consultable-20261109/revision-2-bd508d0e.json",
+      "sha256": "b85be644201759177814d3cbd49c6afc445a738e564ccb8ce5237829a0637a37",
+      "bytes": 901
+    }
+  ]
 }

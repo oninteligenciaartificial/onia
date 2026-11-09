@@ -1,22 +1,27 @@
 {
   "schema": 2,
   "id": "workshop-kit-piloto-20261109",
-  "revision": 3,
+  "revision": 15,
   "compartible": true,
   "objetivo": "Dejar listo el material práctico y visual para que Sergio ensaye los primeros10min aprobados del workshop",
-  "estado": "preparado",
-  "proximo_paso": "Lanzar Sol6.1 high sin hijos; revisión distinta ultra antes de aceptar.",
-  "resultado": "Continuación nocturna reafirmada por Sergio.",
-  "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+  "estado": "en_curso",
+  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+  "resultado": "Retoma de corrección visual y completitud. Leer obligatoriamente feedback del coordinador en /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+  "comprobacion": "Corrección acotada dentro del mismo ID/SID y ruta. El coordinador pudo abrir Chromium con sandbox activo desde el host autorizado, sobre copias sintéticas. No cambies AppArmor, bwrap ni sandbox; no repitas navegador dentro de tu sandbox. Conservá intentos previos. Aplicá correcciones y dejá los archivos finales estables ANTES de pedir captura. No borres ni sobrescribas evidencias anteriores.\n\nPara la captura final: escribí evidencia/solicitud-host.json en TU carpeta con {\"lista\":true,\"archivos\":{ruta_relativa:sha256},\"snapshot\":ruta_relativa_si_panel}. Incluir código del comprobador, HTML/CSS/JS o lector/panel/snapshot necesarios. Después no modificar esos archivos hasta recibir el resultado. Esperá con Python leyendo cada1s (no escribir en carpeta de operación) el archivo de respuesta indicado abajo; máximo300s. Así el coordinador ejecuta tu prueba exacta en una copia aislada. El tiempo de espera no hace llamadas al modelo.\n\nSi la respuesta tiene rc0 y hashes coinciden, copiá sólo capturas/PDF/recibo público permitido a evidencia/host-01 nueva, nunca perfiles, cookies, secretos o material externo. Inspeccioná vos las imágenes con view_image y documentá los límites. Actualizá LEEME/README/manifiesto después; mantené estables los archivos que se capturaron. No afirmar que tu sandbox abrió Chromium: la prueba fue del coordinador/host. Publicá tu nuevo commit en la misma rama y verificá hash remoto. Si falla, conservar corrección parcial y causa; no relanzar indefinidamente.\n\nLa copia del coordinador detectó y corrigió tres fallos reales:\n1. En móvil390px, cards/grilla y textos largos desbordan. Agregar media<=600px: cards/flow una columna, min-width0 en cards/hijos, overflow-wrap:anywhere y flex-wrap en meta/math; h1home36px.\n2. PDF daba6páginas en vez7 tras screenshots que desplazan la página. Recargar documento, emular print y scrollTo(0,0)/fonts.ready antes de page.pdf lo corrigió, sin bajar expectativas.\n3. Guía impresa página3 desbordaba12px. Reducir padding vertical de celdas a5px y meta margin-top10px/padding-top8px en print lo corrigió sin quitar contenido.\nLa propuesta exacta está en /tmp/onia-kit-coordinador-_vrrbsun/kit-piloto-20261109/{kit.css,comprobar.cjs}; cotejar contra tu versión y aplicar únicamente esos cambios. No copiar versiones HTML antiguas sobre las tuyas. Suite propuesta pasó21controles con7láminas+2hojas+3guías PDF y ceroerrores; /tmp/onia-kit-coordinador-_vrrbsun/evidencia-ajuste-03/ conserva resultados. Es prueba de propuesta, no atribuirla a tus bytes finales hasta nueva captura.\nAntes de solicitud-host, cambiar el índice a texto neutral: consultar recibo host y PDFs cuando presentes, sin afirmar fallo actual de host ni éxito antes de probar. Enlaces a evidencia/host-01/ apropiados. Preservar intento original bwrap y tu diagrama, distinguirlo de capturas reales. solicitud-host.archivos incluye index.html,laminas.html,hoja.html,guia.html,kit.css,kit.js,comprobar.cjs. El lector de la prueba necesita ../noche-20261109/CLASE1-PRIMEROS10MIN.md (coordinador copia esa fuente).\n\nRespuesta del coordinador a esperar: /home/onia-codex-worker/operacion/controles/continuacion-noche-20261109/kit-resultado.json\n",
   "verificacion": "pendiente",
   "evidencias": [
     {
       "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
       "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
       "bytes": 2029
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+      "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+      "bytes": 3225
     }
   ],
-  "actualizado": "2026-11-09T04:57:26.531336+00:00",
+  "actualizado": "2026-11-09T05:12:46.870455+00:00",
   "historial": [
     {
       "revision": 1,
@@ -47,6 +52,891 @@
         "revision_base": 1,
         "fecha": "2026-11-09T04:57:26.520937+00:00"
       }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-09T04:57:26.531336+00:00",
+      "estado": "preparado",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Lanzar Sol6.1 high sin hijos; revisión distinta ultra antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-09T04:58:20.013011+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-09T04:58:20.102434+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-09T04:58:20.311989+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-09T04:58:25.484438+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-09T04:59:01.862958+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-09T05:08:50.135032+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuación nocturna reafirmada por Sergio.",
+      "comprobacion": "Preflight de recursos, cuota, límites y trabajo previo registrado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-09T05:12:11.773434+00:00",
+      "estado": "en_curso",
+      "resultado": "Retoma de corrección visual y completitud. Leer obligatoriamente feedback del coordinador en /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+      "comprobacion": "Corrección acotada dentro del mismo ID/SID y ruta. El coordinador pudo abrir Chromium con sandbox activo desde el host autorizado, sobre copias sintéticas. No cambies AppArmor, bwrap ni sandbox; no repitas navegador dentro de tu sandbox. Conservá intentos previos. Aplicá correcciones y dejá los archivos finales estables ANTES de pedir captura. No borres ni sobrescribas evidencias anteriores.\n\nPara la captura final: escribí evidencia/solicitud-host.json en TU carpeta con {\"lista\":true,\"archivos\":{ruta_relativa:sha256},\"snapshot\":ruta_relativa_si_panel}. Incluir código del comprobador, HTML/CSS/JS o lector/panel/snapshot necesarios. Después no modificar esos archivos hasta recibir el resultado. Esperá con Python leyendo cada1s (no escribir en carpeta de operación) el archivo de respuesta indicado abajo; máximo300s. Así el coordinador ejecuta tu prueba exacta en una copia aislada. El tiempo de espera no hace llamadas al modelo.\n\nSi la respuesta tiene rc0 y hashes coinciden, copiá sólo capturas/PDF/recibo público permitido a evidencia/host-01 nueva, nunca perfiles, cookies, secretos o material externo. Inspeccioná vos las imágenes con view_image y documentá los límites. Actualizá LEEME/README/manifiesto después; mantené estables los archivos que se capturaron. No afirmar que tu sandbox abrió Chromium: la prueba fue del coordinador/host. Publicá tu nuevo commit en la misma rama y verificá hash remoto. Si falla, conservar corrección parcial y causa; no relanzar indefinidamente.\n\nLa copia del coordinador detectó y corrigió tres fallos reales:\n1. En móvil390px, cards/grilla y textos largos desbordan. Agregar media<=600px: cards/flow una columna, min-width0 en cards/hijos, overflow-wrap:anywhere y flex-wrap en meta/math; h1home36px.\n2. PDF daba6páginas en vez7 tras screenshots que desplazan la página. Recargar documento, emular print y scrollTo(0,0)/fonts.ready antes de page.pdf lo corrigió, sin bajar expectativas.\n3. Guía impresa página3 desbordaba12px. Reducir padding vertical de celdas a5px y meta margin-top10px/padding-top8px en print lo corrigió sin quitar contenido.\nLa propuesta exacta está en /tmp/onia-kit-coordinador-_vrrbsun/kit-piloto-20261109/{kit.css,comprobar.cjs}; cotejar contra tu versión y aplicar únicamente esos cambios. No copiar versiones HTML antiguas sobre las tuyas. Suite propuesta pasó21controles con7láminas+2hojas+3guías PDF y ceroerrores; /tmp/onia-kit-coordinador-_vrrbsun/evidencia-ajuste-03/ conserva resultados. Es prueba de propuesta, no atribuirla a tus bytes finales hasta nueva captura.\nAntes de solicitud-host, cambiar el índice a texto neutral: consultar recibo host y PDFs cuando presentes, sin afirmar fallo actual de host ni éxito antes de probar. Enlaces a evidencia/host-01/ apropiados. Preservar intento original bwrap y tu diagrama, distinguirlo de capturas reales. solicitud-host.archivos incluye index.html,laminas.html,hoja.html,guia.html,kit.css,kit.js,comprobar.cjs. El lector de la prueba necesita ../noche-20261109/CLASE1-PRIMEROS10MIN.md (coordinador copia esa fuente).\n\nRespuesta del coordinador a esperar: /home/onia-codex-worker/operacion/controles/continuacion-noche-20261109/kit-resultado.json\n",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        }
+      ],
+      "proximo_paso": "Aplicar correcciones, pedir captura mediante solicitud-host, esperar resultado, inspeccionar y publicar mismoSID/rama.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-09T05:12:12.111299+00:00",
+      "estado": "en_curso",
+      "resultado": "Retoma de corrección visual y completitud. Leer obligatoriamente feedback del coordinador en /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+      "comprobacion": "Corrección acotada dentro del mismo ID/SID y ruta. El coordinador pudo abrir Chromium con sandbox activo desde el host autorizado, sobre copias sintéticas. No cambies AppArmor, bwrap ni sandbox; no repitas navegador dentro de tu sandbox. Conservá intentos previos. Aplicá correcciones y dejá los archivos finales estables ANTES de pedir captura. No borres ni sobrescribas evidencias anteriores.\n\nPara la captura final: escribí evidencia/solicitud-host.json en TU carpeta con {\"lista\":true,\"archivos\":{ruta_relativa:sha256},\"snapshot\":ruta_relativa_si_panel}. Incluir código del comprobador, HTML/CSS/JS o lector/panel/snapshot necesarios. Después no modificar esos archivos hasta recibir el resultado. Esperá con Python leyendo cada1s (no escribir en carpeta de operación) el archivo de respuesta indicado abajo; máximo300s. Así el coordinador ejecuta tu prueba exacta en una copia aislada. El tiempo de espera no hace llamadas al modelo.\n\nSi la respuesta tiene rc0 y hashes coinciden, copiá sólo capturas/PDF/recibo público permitido a evidencia/host-01 nueva, nunca perfiles, cookies, secretos o material externo. Inspeccioná vos las imágenes con view_image y documentá los límites. Actualizá LEEME/README/manifiesto después; mantené estables los archivos que se capturaron. No afirmar que tu sandbox abrió Chromium: la prueba fue del coordinador/host. Publicá tu nuevo commit en la misma rama y verificá hash remoto. Si falla, conservar corrección parcial y causa; no relanzar indefinidamente.\n\nLa copia del coordinador detectó y corrigió tres fallos reales:\n1. En móvil390px, cards/grilla y textos largos desbordan. Agregar media<=600px: cards/flow una columna, min-width0 en cards/hijos, overflow-wrap:anywhere y flex-wrap en meta/math; h1home36px.\n2. PDF daba6páginas en vez7 tras screenshots que desplazan la página. Recargar documento, emular print y scrollTo(0,0)/fonts.ready antes de page.pdf lo corrigió, sin bajar expectativas.\n3. Guía impresa página3 desbordaba12px. Reducir padding vertical de celdas a5px y meta margin-top10px/padding-top8px en print lo corrigió sin quitar contenido.\nLa propuesta exacta está en /tmp/onia-kit-coordinador-_vrrbsun/kit-piloto-20261109/{kit.css,comprobar.cjs}; cotejar contra tu versión y aplicar únicamente esos cambios. No copiar versiones HTML antiguas sobre las tuyas. Suite propuesta pasó21controles con7láminas+2hojas+3guías PDF y ceroerrores; /tmp/onia-kit-coordinador-_vrrbsun/evidencia-ajuste-03/ conserva resultados. Es prueba de propuesta, no atribuirla a tus bytes finales hasta nueva captura.\nAntes de solicitud-host, cambiar el índice a texto neutral: consultar recibo host y PDFs cuando presentes, sin afirmar fallo actual de host ni éxito antes de probar. Enlaces a evidencia/host-01/ apropiados. Preservar intento original bwrap y tu diagrama, distinguirlo de capturas reales. solicitud-host.archivos incluye index.html,laminas.html,hoja.html,guia.html,kit.css,kit.js,comprobar.cjs. El lector de la prueba necesita ../noche-20261109/CLASE1-PRIMEROS10MIN.md (coordinador copia esa fuente).\n\nRespuesta del coordinador a esperar: /home/onia-codex-worker/operacion/controles/continuacion-noche-20261109/kit-resultado.json\n",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-09T05:12:12.213381+00:00",
+      "estado": "en_curso",
+      "resultado": "Retoma de corrección visual y completitud. Leer obligatoriamente feedback del coordinador en /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+      "comprobacion": "Corrección acotada dentro del mismo ID/SID y ruta. El coordinador pudo abrir Chromium con sandbox activo desde el host autorizado, sobre copias sintéticas. No cambies AppArmor, bwrap ni sandbox; no repitas navegador dentro de tu sandbox. Conservá intentos previos. Aplicá correcciones y dejá los archivos finales estables ANTES de pedir captura. No borres ni sobrescribas evidencias anteriores.\n\nPara la captura final: escribí evidencia/solicitud-host.json en TU carpeta con {\"lista\":true,\"archivos\":{ruta_relativa:sha256},\"snapshot\":ruta_relativa_si_panel}. Incluir código del comprobador, HTML/CSS/JS o lector/panel/snapshot necesarios. Después no modificar esos archivos hasta recibir el resultado. Esperá con Python leyendo cada1s (no escribir en carpeta de operación) el archivo de respuesta indicado abajo; máximo300s. Así el coordinador ejecuta tu prueba exacta en una copia aislada. El tiempo de espera no hace llamadas al modelo.\n\nSi la respuesta tiene rc0 y hashes coinciden, copiá sólo capturas/PDF/recibo público permitido a evidencia/host-01 nueva, nunca perfiles, cookies, secretos o material externo. Inspeccioná vos las imágenes con view_image y documentá los límites. Actualizá LEEME/README/manifiesto después; mantené estables los archivos que se capturaron. No afirmar que tu sandbox abrió Chromium: la prueba fue del coordinador/host. Publicá tu nuevo commit en la misma rama y verificá hash remoto. Si falla, conservar corrección parcial y causa; no relanzar indefinidamente.\n\nLa copia del coordinador detectó y corrigió tres fallos reales:\n1. En móvil390px, cards/grilla y textos largos desbordan. Agregar media<=600px: cards/flow una columna, min-width0 en cards/hijos, overflow-wrap:anywhere y flex-wrap en meta/math; h1home36px.\n2. PDF daba6páginas en vez7 tras screenshots que desplazan la página. Recargar documento, emular print y scrollTo(0,0)/fonts.ready antes de page.pdf lo corrigió, sin bajar expectativas.\n3. Guía impresa página3 desbordaba12px. Reducir padding vertical de celdas a5px y meta margin-top10px/padding-top8px en print lo corrigió sin quitar contenido.\nLa propuesta exacta está en /tmp/onia-kit-coordinador-_vrrbsun/kit-piloto-20261109/{kit.css,comprobar.cjs}; cotejar contra tu versión y aplicar únicamente esos cambios. No copiar versiones HTML antiguas sobre las tuyas. Suite propuesta pasó21controles con7láminas+2hojas+3guías PDF y ceroerrores; /tmp/onia-kit-coordinador-_vrrbsun/evidencia-ajuste-03/ conserva resultados. Es prueba de propuesta, no atribuirla a tus bytes finales hasta nueva captura.\nAntes de solicitud-host, cambiar el índice a texto neutral: consultar recibo host y PDFs cuando presentes, sin afirmar fallo actual de host ni éxito antes de probar. Enlaces a evidencia/host-01/ apropiados. Preservar intento original bwrap y tu diagrama, distinguirlo de capturas reales. solicitud-host.archivos incluye index.html,laminas.html,hoja.html,guia.html,kit.css,kit.js,comprobar.cjs. El lector de la prueba necesita ../noche-20261109/CLASE1-PRIMEROS10MIN.md (coordinador copia esa fuente).\n\nRespuesta del coordinador a esperar: /home/onia-codex-worker/operacion/controles/continuacion-noche-20261109/kit-resultado.json\n",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-09T05:12:12.315797+00:00",
+      "estado": "en_curso",
+      "resultado": "Retoma de corrección visual y completitud. Leer obligatoriamente feedback del coordinador en /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+      "comprobacion": "Corrección acotada dentro del mismo ID/SID y ruta. El coordinador pudo abrir Chromium con sandbox activo desde el host autorizado, sobre copias sintéticas. No cambies AppArmor, bwrap ni sandbox; no repitas navegador dentro de tu sandbox. Conservá intentos previos. Aplicá correcciones y dejá los archivos finales estables ANTES de pedir captura. No borres ni sobrescribas evidencias anteriores.\n\nPara la captura final: escribí evidencia/solicitud-host.json en TU carpeta con {\"lista\":true,\"archivos\":{ruta_relativa:sha256},\"snapshot\":ruta_relativa_si_panel}. Incluir código del comprobador, HTML/CSS/JS o lector/panel/snapshot necesarios. Después no modificar esos archivos hasta recibir el resultado. Esperá con Python leyendo cada1s (no escribir en carpeta de operación) el archivo de respuesta indicado abajo; máximo300s. Así el coordinador ejecuta tu prueba exacta en una copia aislada. El tiempo de espera no hace llamadas al modelo.\n\nSi la respuesta tiene rc0 y hashes coinciden, copiá sólo capturas/PDF/recibo público permitido a evidencia/host-01 nueva, nunca perfiles, cookies, secretos o material externo. Inspeccioná vos las imágenes con view_image y documentá los límites. Actualizá LEEME/README/manifiesto después; mantené estables los archivos que se capturaron. No afirmar que tu sandbox abrió Chromium: la prueba fue del coordinador/host. Publicá tu nuevo commit en la misma rama y verificá hash remoto. Si falla, conservar corrección parcial y causa; no relanzar indefinidamente.\n\nLa copia del coordinador detectó y corrigió tres fallos reales:\n1. En móvil390px, cards/grilla y textos largos desbordan. Agregar media<=600px: cards/flow una columna, min-width0 en cards/hijos, overflow-wrap:anywhere y flex-wrap en meta/math; h1home36px.\n2. PDF daba6páginas en vez7 tras screenshots que desplazan la página. Recargar documento, emular print y scrollTo(0,0)/fonts.ready antes de page.pdf lo corrigió, sin bajar expectativas.\n3. Guía impresa página3 desbordaba12px. Reducir padding vertical de celdas a5px y meta margin-top10px/padding-top8px en print lo corrigió sin quitar contenido.\nLa propuesta exacta está en /tmp/onia-kit-coordinador-_vrrbsun/kit-piloto-20261109/{kit.css,comprobar.cjs}; cotejar contra tu versión y aplicar únicamente esos cambios. No copiar versiones HTML antiguas sobre las tuyas. Suite propuesta pasó21controles con7láminas+2hojas+3guías PDF y ceroerrores; /tmp/onia-kit-coordinador-_vrrbsun/evidencia-ajuste-03/ conserva resultados. Es prueba de propuesta, no atribuirla a tus bytes finales hasta nueva captura.\nAntes de solicitud-host, cambiar el índice a texto neutral: consultar recibo host y PDFs cuando presentes, sin afirmar fallo actual de host ni éxito antes de probar. Enlaces a evidencia/host-01/ apropiados. Preservar intento original bwrap y tu diagrama, distinguirlo de capturas reales. solicitud-host.archivos incluye index.html,laminas.html,hoja.html,guia.html,kit.css,kit.js,comprobar.cjs. El lector de la prueba necesita ../noche-20261109/CLASE1-PRIMEROS10MIN.md (coordinador copia esa fuente).\n\nRespuesta del coordinador a esperar: /home/onia-codex-worker/operacion/controles/continuacion-noche-20261109/kit-resultado.json\n",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-09T05:12:13.130044+00:00",
+      "estado": "en_curso",
+      "resultado": "Retoma de corrección visual y completitud. Leer obligatoriamente feedback del coordinador en /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+      "comprobacion": "Corrección acotada dentro del mismo ID/SID y ruta. El coordinador pudo abrir Chromium con sandbox activo desde el host autorizado, sobre copias sintéticas. No cambies AppArmor, bwrap ni sandbox; no repitas navegador dentro de tu sandbox. Conservá intentos previos. Aplicá correcciones y dejá los archivos finales estables ANTES de pedir captura. No borres ni sobrescribas evidencias anteriores.\n\nPara la captura final: escribí evidencia/solicitud-host.json en TU carpeta con {\"lista\":true,\"archivos\":{ruta_relativa:sha256},\"snapshot\":ruta_relativa_si_panel}. Incluir código del comprobador, HTML/CSS/JS o lector/panel/snapshot necesarios. Después no modificar esos archivos hasta recibir el resultado. Esperá con Python leyendo cada1s (no escribir en carpeta de operación) el archivo de respuesta indicado abajo; máximo300s. Así el coordinador ejecuta tu prueba exacta en una copia aislada. El tiempo de espera no hace llamadas al modelo.\n\nSi la respuesta tiene rc0 y hashes coinciden, copiá sólo capturas/PDF/recibo público permitido a evidencia/host-01 nueva, nunca perfiles, cookies, secretos o material externo. Inspeccioná vos las imágenes con view_image y documentá los límites. Actualizá LEEME/README/manifiesto después; mantené estables los archivos que se capturaron. No afirmar que tu sandbox abrió Chromium: la prueba fue del coordinador/host. Publicá tu nuevo commit en la misma rama y verificá hash remoto. Si falla, conservar corrección parcial y causa; no relanzar indefinidamente.\n\nLa copia del coordinador detectó y corrigió tres fallos reales:\n1. En móvil390px, cards/grilla y textos largos desbordan. Agregar media<=600px: cards/flow una columna, min-width0 en cards/hijos, overflow-wrap:anywhere y flex-wrap en meta/math; h1home36px.\n2. PDF daba6páginas en vez7 tras screenshots que desplazan la página. Recargar documento, emular print y scrollTo(0,0)/fonts.ready antes de page.pdf lo corrigió, sin bajar expectativas.\n3. Guía impresa página3 desbordaba12px. Reducir padding vertical de celdas a5px y meta margin-top10px/padding-top8px en print lo corrigió sin quitar contenido.\nLa propuesta exacta está en /tmp/onia-kit-coordinador-_vrrbsun/kit-piloto-20261109/{kit.css,comprobar.cjs}; cotejar contra tu versión y aplicar únicamente esos cambios. No copiar versiones HTML antiguas sobre las tuyas. Suite propuesta pasó21controles con7láminas+2hojas+3guías PDF y ceroerrores; /tmp/onia-kit-coordinador-_vrrbsun/evidencia-ajuste-03/ conserva resultados. Es prueba de propuesta, no atribuirla a tus bytes finales hasta nueva captura.\nAntes de solicitud-host, cambiar el índice a texto neutral: consultar recibo host y PDFs cuando presentes, sin afirmar fallo actual de host ni éxito antes de probar. Enlaces a evidencia/host-01/ apropiados. Preservar intento original bwrap y tu diagrama, distinguirlo de capturas reales. solicitud-host.archivos incluye index.html,laminas.html,hoja.html,guia.html,kit.css,kit.js,comprobar.cjs. El lector de la prueba necesita ../noche-20261109/CLASE1-PRIMEROS10MIN.md (coordinador copia esa fuente).\n\nRespuesta del coordinador a esperar: /home/onia-codex-worker/operacion/controles/continuacion-noche-20261109/kit-resultado.json\n",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/preflight-v1.json",
+          "sha256": "974e65b82f3daaff83e6398288d705f1968784429f4efe76a7f0d3587c7dad8e",
+          "bytes": 2029
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/continuacion-noche-20261109/feedback-kit-v1.md",
+          "sha256": "c3756ae70c936780bbddcba645cc8f351e2252f10d3d5316127661d0cef56e1f",
+          "bytes": 3225
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "workshop-kit-ejecutor",
+        "rutas": [
+          "01-negocio/workshop-20261108/kit-piloto-20261109"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-09T04:57:26.520937+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1885027,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+          "supervisor_pid": 1885022,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:58:19.990103+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T05:08:50.120355+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "workshop-kit-ejecutor",
+          "pid": 1921144,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+          "supervisor_pid": 1921139,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+          "rama": "codex/ws-workshop-kit-piloto-20261109",
+          "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+          "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+          "log_offset": 317808,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/kit-piloto-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+          "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T05:12:12.087790+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -63,5 +953,78 @@
     ],
     "revision_base": 1,
     "fecha": "2026-11-09T04:57:26.520937+00:00"
-  }
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "workshop-kit-ejecutor",
+      "pid": 1885027,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951563",
+      "supervisor_pid": 1885022,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193951542",
+      "rama": "codex/ws-workshop-kit-piloto-20261109",
+      "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+      "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+      "rutas": [
+        "01-negocio/workshop-20261108/kit-piloto-20261109"
+      ],
+      "dry_run": false,
+      "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.1.briefing.txt",
+      "inicio": "2026-11-09T04:58:19.990103+00:00",
+      "rc": 0,
+      "ultimo_evento": "item.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-09T05:08:50.120355+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "ejecutor",
+      "responsable": "workshop-kit-ejecutor",
+      "pid": 1921144,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034763",
+      "supervisor_pid": 1921139,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:194034753",
+      "rama": "codex/ws-workshop-kit-piloto-20261109",
+      "session_id": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+      "estado": "ejecutando",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.jsonl",
+      "log_rel": "logs/workshop-kit-piloto-20261109.jsonl",
+      "log_offset": 317808,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-kit-piloto-20261109",
+      "rutas": [
+        "01-negocio/workshop-20261108/kit-piloto-20261109"
+      ],
+      "dry_run": false,
+      "commit_base": "fa9a6e6f1714cd9dccbb5cab3f7baad177938c20",
+      "reanuda": "01a1beab-ec37-7d52-b7af-462402dd5dfd",
+      "briefing": "/home/onia-codex-worker/operacion/logs/workshop-kit-piloto-20261109.2.briefing.txt",
+      "inicio": "2026-11-09T05:12:12.087790+00:00",
+      "rc": null,
+      "ultimo_evento": "item.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/workshop-kit-piloto-20261109.git/worktrees/onia-ws-workshop-kit-piloto-20261109",
+      "perfil_permisos": "harness-git"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": null
 }
