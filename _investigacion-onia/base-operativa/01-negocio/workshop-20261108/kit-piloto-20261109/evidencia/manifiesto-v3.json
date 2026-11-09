@@ -1,0 +1,354 @@
+{
+  "base_commit": "b832bc48656accea3b659dc6ceba2cb9142f04d7",
+  "nota": "Versión nueva tras C4; evidencia previa intacta. Integridad, no aceptación independiente. Excluye este manifiesto.",
+  "archivos_congelados": {
+    "index.html": "9e770595a8920f42c042a811f8d6d4e81d400e77ad4bf2f7b82923c32c0d157d",
+    "laminas.html": "1a2768ae9ef88e38cb6c961c7e0ce882bc35d7a00224cd80049614e43b8cdf75",
+    "hoja.html": "2615e90e15664b050a78f40b8e5608510d72139845c96bc48807eb35bc5a617a",
+    "guia.html": "4cdbd0ea941a31dcee266a2b249ec96ad66bfb8a3a020fc475349d2d2f023e21",
+    "kit.css": "6fa847148f0e2889194e7725c3ccab3c36d7341cead7732e992b742f11fbd012",
+    "kit.js": "00a68a08d3441cfe2537d8c43b11f50d0b8778909e091249b9fc2846e9ba49f2",
+    "comprobar.cjs": "7c3584e9a68a3752f1cf213b8aec6068d0e8a2d61be1f108e0cb502b8b87b656",
+    "comprobar-pdf.py": "fa5d9d88509bacdaa711d352adfd6562fd32226c57d1db30568451606a676fa8"
+  },
+  "evidencias_anteriores_intactas": 30,
+  "artefactos_host_copiados": 20,
+  "pdf_paginas_con_pie_propio_y_sin_ajenos": 12,
+  "archivos": [
+    {
+      "ruta": "LEEME.md",
+      "bytes": 10165,
+      "sha256": "039b00e45f878e0e918af567f46d25b05b8022abccc442bf7edf29a90d4b6d94"
+    },
+    {
+      "ruta": "comprobar-pdf.py",
+      "bytes": 2514,
+      "sha256": "fa5d9d88509bacdaa711d352adfd6562fd32226c57d1db30568451606a676fa8"
+    },
+    {
+      "ruta": "comprobar-texto.py",
+      "bytes": 8401,
+      "sha256": "eaa5d4240b57bb3d6e0dae1a72ab536bfa34625642d5913bbe2c1fcf3733a306"
+    },
+    {
+      "ruta": "comprobar.cjs",
+      "bytes": 9789,
+      "sha256": "7c3584e9a68a3752f1cf213b8aec6068d0e8a2d61be1f108e0cb502b8b87b656"
+    },
+    {
+      "ruta": "evidencia/INSPECCION.md",
+      "bytes": 1715,
+      "sha256": "9d8a535e3a02870979a474752a9edcca5dbfa4636cdccc44ccdf37e0abd0596c"
+    },
+    {
+      "ruta": "evidencia/comprobacion.json",
+      "bytes": 8398,
+      "sha256": "254318e598c788c67536c3bce2ba8a1d0e88bc50ef78948050cca0edea999755"
+    },
+    {
+      "ruta": "evidencia/host-01/INSPECCION-EJECUTORA.md",
+      "bytes": 3059,
+      "sha256": "32664d19435b52a741feb185011c05da135091db863eb9b9d8d149b540ed213c"
+    },
+    {
+      "ruta": "evidencia/host-01/comprobacion.json",
+      "bytes": 6560,
+      "sha256": "5aeaa1c0bd708a8001e3d9faef9f2b222a30cd4044405ae9be193f2c8cf2f7a2"
+    },
+    {
+      "ruta": "evidencia/host-01/guia-1.png",
+      "bytes": 174735,
+      "sha256": "abbd93e1aea1069a81d7222b3464517a5059dac8505b359c327c2e718f2ab8e8"
+    },
+    {
+      "ruta": "evidencia/host-01/guia-2.png",
+      "bytes": 145618,
+      "sha256": "5fb5af562aea8aa03e6cd30deebaa13c1cef1af8ce316a0255a60933629aeb42"
+    },
+    {
+      "ruta": "evidencia/host-01/guia-3.png",
+      "bytes": 165589,
+      "sha256": "bf93fa601f14179d1eaffea1e65dc798c3b6472fc3156f6d8dc4d47ebc9759d8"
+    },
+    {
+      "ruta": "evidencia/host-01/guia.pdf",
+      "bytes": 80610,
+      "sha256": "6a0c6bcdb212dfe9c23c167e4a66bdd5e1f8d5c5f5df1d6aac8e6f9cd063da71"
+    },
+    {
+      "ruta": "evidencia/host-01/hoja-1.png",
+      "bytes": 129638,
+      "sha256": "e514e0228af2f343fe41b2f231f82da4fceb03fe3cf34210b7c97da3c37a4cb5"
+    },
+    {
+      "ruta": "evidencia/host-01/hoja-2.png",
+      "bytes": 127401,
+      "sha256": "aa31d2a55dd532a4f53d154b56d66a9b8840248b50a363c50c1f3d7d269ea9d8"
+    },
+    {
+      "ruta": "evidencia/host-01/hoja.pdf",
+      "bytes": 59813,
+      "sha256": "a0c6e4223588e0782345ac20da988889ebf5d73ba6335c38509a019d0710337f"
+    },
+    {
+      "ruta": "evidencia/host-01/index-1.png",
+      "bytes": 203793,
+      "sha256": "64404b4ea727491df3f29a71d376d2e1016597dd8e8095454922c55d24242b38"
+    },
+    {
+      "ruta": "evidencia/host-01/laminas-1.png",
+      "bytes": 62192,
+      "sha256": "3ca8f77326e6911c0f4dca5683f3cf513e7c73a1a33e5862037afa9073c7e599"
+    },
+    {
+      "ruta": "evidencia/host-01/laminas-2.png",
+      "bytes": 97087,
+      "sha256": "a1dfdbda9515b89d8eb23a829956ee1b3dd2b29b4874af4193025c8dea69ee00"
+    },
+    {
+      "ruta": "evidencia/host-01/laminas-3.png",
+      "bytes": 117100,
+      "sha256": "b4742ad65a9883af2688d2b76c605b54f01f09445944685be4f3295e46dc91f9"
+    },
+    {
+      "ruta": "evidencia/host-01/laminas-4.png",
+      "bytes": 78986,
+      "sha256": "d9a1eb8aeb1ef8f21779c9ba20cd6fba1fb095aaaf8593362b4662371686ed7a"
+    },
+    {
+      "ruta": "evidencia/host-01/laminas-5.png",
+      "bytes": 81548,
+      "sha256": "bdd62dff85dced9ab9401e934949687961e1dcf7751201efb75f106b447082d1"
+    },
+    {
+      "ruta": "evidencia/host-01/laminas-6.png",
+      "bytes": 69750,
+      "sha256": "5b0f847256f97962ae404b7ee3f16cc388d59114578308334ef7aa74a67b1e88"
+    },
+    {
+      "ruta": "evidencia/host-01/laminas-7.png",
+      "bytes": 78891,
+      "sha256": "3e845ba86f9668169845b1f9224e467e7f97cd8a63f4e9fd7fdc2a7615bc0448"
+    },
+    {
+      "ruta": "evidencia/host-01/laminas.pdf",
+      "bytes": 73044,
+      "sha256": "4eb8fde85281a27c75e341de12683699f295fe78fbbd117b1fe661e4ce152a9d"
+    },
+    {
+      "ruta": "evidencia/host-01/recibo-host.json",
+      "bytes": 2506,
+      "sha256": "5a1308b24aa78d088498276a00381b7f6b34f6db59fbf460101ee8be1e2aa56b"
+    },
+    {
+      "ruta": "evidencia/host-01/recibo-visual.html",
+      "bytes": 1572,
+      "sha256": "9f197a26c5cbd950472ff93c42270d14d266d90e361581bfbcd396a965122dbc"
+    },
+    {
+      "ruta": "evidencia/host-01/recibo-visual.png",
+      "bytes": 554324,
+      "sha256": "dc7176dc2d3661de88a7599f0467cae068a3211a4326477184681c9458ad5279"
+    },
+    {
+      "ruta": "evidencia/host-02/INSPECCION-EJECUTORA.md",
+      "bytes": 2830,
+      "sha256": "4d5c013346e74ac2981ac42f51edb1044e67d0ab05ebbfc07299eb0e32a40e6c"
+    },
+    {
+      "ruta": "evidencia/host-02/comprobacion.json",
+      "bytes": 6681,
+      "sha256": "0e82f9c7bd345583cbc5c086fb49b473660a5dbb20cd2cce16c63a47e141cc3d"
+    },
+    {
+      "ruta": "evidencia/host-02/guia-1.png",
+      "bytes": 174735,
+      "sha256": "abbd93e1aea1069a81d7222b3464517a5059dac8505b359c327c2e718f2ab8e8"
+    },
+    {
+      "ruta": "evidencia/host-02/guia-2.png",
+      "bytes": 145618,
+      "sha256": "5fb5af562aea8aa03e6cd30deebaa13c1cef1af8ce316a0255a60933629aeb42"
+    },
+    {
+      "ruta": "evidencia/host-02/guia-3.png",
+      "bytes": 165589,
+      "sha256": "bf93fa601f14179d1eaffea1e65dc798c3b6472fc3156f6d8dc4d47ebc9759d8"
+    },
+    {
+      "ruta": "evidencia/host-02/guia.pdf",
+      "bytes": 80610,
+      "sha256": "15e8749e26db30a132f3e285b037bb28d52d1a0e1593d090595b974626fd708b"
+    },
+    {
+      "ruta": "evidencia/host-02/hoja-1.png",
+      "bytes": 129638,
+      "sha256": "e514e0228af2f343fe41b2f231f82da4fceb03fe3cf34210b7c97da3c37a4cb5"
+    },
+    {
+      "ruta": "evidencia/host-02/hoja-2.png",
+      "bytes": 127401,
+      "sha256": "aa31d2a55dd532a4f53d154b56d66a9b8840248b50a363c50c1f3d7d269ea9d8"
+    },
+    {
+      "ruta": "evidencia/host-02/hoja.pdf",
+      "bytes": 59813,
+      "sha256": "187eb870dd30e52ca749d4978f9af86f5c9c0c88216ecc40fc3da9d0f8118892"
+    },
+    {
+      "ruta": "evidencia/host-02/index-1.png",
+      "bytes": 203793,
+      "sha256": "64404b4ea727491df3f29a71d376d2e1016597dd8e8095454922c55d24242b38"
+    },
+    {
+      "ruta": "evidencia/host-02/laminas-1.png",
+      "bytes": 63106,
+      "sha256": "7ea1ba78dd51bb0fabdfae2dc317eca11042c87c4d45b45513d00c5653f3eeca"
+    },
+    {
+      "ruta": "evidencia/host-02/laminas-2.png",
+      "bytes": 87975,
+      "sha256": "136c20019f1f15dee37dddb694bc66138afa9930946d02a8e07484d3b033677f"
+    },
+    {
+      "ruta": "evidencia/host-02/laminas-3.png",
+      "bytes": 112232,
+      "sha256": "35500862b890bf56ecf2ec2a934d0e935ec7df7163c805c7ea387341878a6542"
+    },
+    {
+      "ruta": "evidencia/host-02/laminas-4.png",
+      "bytes": 81270,
+      "sha256": "19f19bc334544f1b9d29c60113db210f8915694dc9c1763e3c96dc789dc2d051"
+    },
+    {
+      "ruta": "evidencia/host-02/laminas-5.png",
+      "bytes": 81000,
+      "sha256": "644bdeae1c3f3bc3ce601271a370c3faaa111331a6e23443ab98ac54301ac4a9"
+    },
+    {
+      "ruta": "evidencia/host-02/laminas-6.png",
+      "bytes": 74185,
+      "sha256": "5e0f98db918879851db3f2ca1356ab0c97753c5da4bb79ec1d47518bf50b59c4"
+    },
+    {
+      "ruta": "evidencia/host-02/laminas-7.png",
+      "bytes": 82292,
+      "sha256": "acb6cc53f79b5372784f3b2efe3d8c66aeb2047fa7d327f3c07eea2c3205f402"
+    },
+    {
+      "ruta": "evidencia/host-02/laminas.pdf",
+      "bytes": 73413,
+      "sha256": "9f062a4a1dfe2499e387c36cddd51b82acc7f39051041fe71e810a69f72c983a"
+    },
+    {
+      "ruta": "evidencia/host-02/pdf-paginas-ejecutora.json",
+      "bytes": 1384,
+      "sha256": "f111d974a034c73a54f8f906e5ede0fb5a359f0ec66fc84082fff842e8771cf5"
+    },
+    {
+      "ruta": "evidencia/host-02/pdf-paginas-host.json",
+      "bytes": 1581,
+      "sha256": "9a598a73d4cf402a72e9521bcd7232b2194930dde6abd3593e27f654a8ee66d5"
+    },
+    {
+      "ruta": "evidencia/host-02/recibo-host.json",
+      "bytes": 2763,
+      "sha256": "5ac37e848a7442c37b64e70cac9dd96823944436f9db6e7f2ffe22e76838d5e8"
+    },
+    {
+      "ruta": "evidencia/host-02/recibo-visual.html",
+      "bytes": 1572,
+      "sha256": "9f197a26c5cbd950472ff93c42270d14d266d90e361581bfbcd396a965122dbc"
+    },
+    {
+      "ruta": "evidencia/host-02/recibo-visual.png",
+      "bytes": 622825,
+      "sha256": "f90eea9365dc1522963b62940b526ebd6c7fcfe77ff9d27806b624f9603cfe36"
+    },
+    {
+      "ruta": "evidencia/manifiesto-v1.json",
+      "bytes": 2306,
+      "sha256": "bcd07421f0676ceeee54ce141b822d7ab3a84c304108668eb6b012acc0b2944e"
+    },
+    {
+      "ruta": "evidencia/manifiesto-v2.json",
+      "bytes": 7361,
+      "sha256": "0d67dc0ee5fbb7bf551cf7af0e986432545af697d49fba59071755bfea9fe02a"
+    },
+    {
+      "ruta": "evidencia/rechazo-c4-host-01.json",
+      "bytes": 278,
+      "sha256": "69b74b3297ff483afde7f565a6138834d2d9b06501bddfd9d686c7cd0673c2a3"
+    },
+    {
+      "ruta": "evidencia/recibo-visual.html",
+      "bytes": 1083,
+      "sha256": "2cb521132c073f172643bc9c7d588a703999e3734d7751db08154fa5d1b07e78"
+    },
+    {
+      "ruta": "evidencia/recibo-visual.png",
+      "bytes": 111593,
+      "sha256": "f805e17f52cea0c77e00111c56efc957e9f0dd132e49067cfc0a06dcb3aabe9d"
+    },
+    {
+      "ruta": "evidencia/revision-c4-b832bc4.json",
+      "bytes": 1228,
+      "sha256": "beccfc2ce95b94bab790ff13f298e8669a9071cf7a49c1e0efceedc406b84542"
+    },
+    {
+      "ruta": "evidencia/solicitud-host-v2.json",
+      "bytes": 730,
+      "sha256": "63cb21dfac7082c9dc081177f7eadf1287613b1f6e6f5867a8bde2a3331c4569"
+    },
+    {
+      "ruta": "evidencia/solicitud-host.json",
+      "bytes": 638,
+      "sha256": "fb623673ba56c915d213619499514651807ffbb3293ae22a655cfd47407fa996"
+    },
+    {
+      "ruta": "evidencia/texto-v1.json",
+      "bytes": 6646,
+      "sha256": "55a81fe6aa50a3a8926b290eabc8654b4d19e359b3dfeb5399a194394d6220a1"
+    },
+    {
+      "ruta": "evidencia/texto-v2.json",
+      "bytes": 7086,
+      "sha256": "54cae355ff941a5890e077c5abb36c519485b351f136d6e89932eaf198efe7a9"
+    },
+    {
+      "ruta": "evidencia/texto-v3.json",
+      "bytes": 7086,
+      "sha256": "3dc300f96a3d825c5af3aff4a6bf7117277270721d57e76b97d97a88143ed4e6"
+    },
+    {
+      "ruta": "guia.html",
+      "bytes": 9319,
+      "sha256": "4cdbd0ea941a31dcee266a2b249ec96ad66bfb8a3a020fc475349d2d2f023e21"
+    },
+    {
+      "ruta": "hoja.html",
+      "bytes": 6623,
+      "sha256": "2615e90e15664b050a78f40b8e5608510d72139845c96bc48807eb35bc5a617a"
+    },
+    {
+      "ruta": "index.html",
+      "bytes": 2772,
+      "sha256": "9e770595a8920f42c042a811f8d6d4e81d400e77ad4bf2f7b82923c32c0d157d"
+    },
+    {
+      "ruta": "kit.css",
+      "bytes": 6557,
+      "sha256": "6fa847148f0e2889194e7725c3ccab3c36d7341cead7732e992b742f11fbd012"
+    },
+    {
+      "ruta": "kit.js",
+      "bytes": 1372,
+      "sha256": "00a68a08d3441cfe2537d8c43b11f50d0b8778909e091249b9fc2846e9ba49f2"
+    },
+    {
+      "ruta": "laminas.html",
+      "bytes": 6308,
+      "sha256": "1a2768ae9ef88e38cb6c961c7e0ce882bc35d7a00224cd80049614e43b8cdf75"
+    }
+  ]
+}
