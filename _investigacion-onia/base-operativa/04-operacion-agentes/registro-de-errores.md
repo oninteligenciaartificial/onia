@@ -387,3 +387,5 @@ No hubo rechazo de aprobación automática: el bloqueo es AppArmor del VPS y req
 - **Coordinación:** dos lecturas fallaron por asumir README.md en vez de README-ENTREGA.md y por buscar el archivo de Telegram en el worktree de Workshop. Se corrigieron con rutas absolutas existentes; no hubo cambios ni pérdida de datos. Usar inventario rg y checkout de cada entrega antes de leer.
 
 - **Revisión Telegram:** la revisora read-only no pudo resolver DNS para ls-remote. No se amplió su sandbox; cotejó los recibos y el coordinador reconfirmó ambos hashes remotos por ls-remote. Distinguir límite de red de revisión de fallo de publicación.
+
+- **Cierre nocturno del coordinador:** primera llamada a trabajo.mutate usó un argumento de acción donde la API espera función y falló TypeError antes de mutar la tarea. Se consultó la firma, se corrigió callback/return y se retomó sólo el cierre, leyendo los recibos CPU/cuota/conservación ya creados sin sobrescribirlos. Evitar asumir firmas internas; comprobarlas antes de un helper de mutación. Evidencia: helpers `work/cerrar-informe-noche.py` y `work/cerrar-informe-noche-continuar.py`, recibos fechados del lote.

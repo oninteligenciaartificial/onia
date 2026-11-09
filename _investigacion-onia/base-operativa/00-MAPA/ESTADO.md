@@ -2,7 +2,7 @@
 
 ## Actualización vigente · 9 noviembre 2026 UTC
 
-Trabajo nocturno autorizado y lanzado: [plan y límites](../04-operacion-agentes/evidencias/noche-20261109/PLAN.md), dos ejecutoras Sol6.1 high sin hijos para Telegram/n8n en prueba y borradores de workshop/contenido; ayudante nativo para el video Euge. Entregas todavía en curso, con revisión distinta ultra al finalizar. Platform excluida; sin campañas, mensajes ni activaciones. El piloto mínimo de carriles ya tiene aprobación limitada de Sergio, pero su scheduler no está implementado.
+Lote nocturno cerrado en su alcance: Telegram/n8n de prueba y borradores de workshop/contenido aceptados por revisores distintos e integrados en origin/master. Video Euge sigue en_espera: diagnóstico y capturador corregidos/revisados, sin visionado completo. [Informe, pruebas, cuota, commits y pendientes](../04-operacion-agentes/evidencias/noche-20261109/INFORME.md). No hubo campañas, mensajes ni activaciones; Platform excluida. Scheduler todavía no implementado, con sí limitado al piloto ya registrado.
 
 Retomas cerradas: grupos A/B/C de referentes aceptados con revisores distintos e integrados en origin/master,79 piezas para19 referentes. Navegador/visor y MCP aceptados dentro de su alcance; fábrica de contenido aceptada como diseño y ensayo ficticio de seis controles, sin activar Telegram ni servicios. [Cierre, commits, cuota, pruebas y faltantes](../04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md).
 

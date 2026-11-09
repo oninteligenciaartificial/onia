@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "id": "noche-workshop-contenido-20261109",
-  "revision": 20,
+  "revision": 21,
   "compartible": true,
   "objetivo": "Convertir cerebros aceptados en borradores prácticos para el workshop y primeros guiones de contenido de OnIA",
   "estado": "aceptado",
-  "proximo_paso": "Integrar entrega aceptada a origin/master, verificar hash y reportar pendientes a Sergio; campaña y envíos sin activar.",
+  "proximo_paso": "Entrega documental revisada e integrada en origin/master. Sergio/Boss revisan síntesis y guiones; ensayar primeros10min con acceso propio y completar datos comerciales antes de publicar.",
   "resultado": "Síntesis propuesta, primeros10min y guiones con fuentes; comprobar decisiones vigentes, cobertura y hechos frente a propuestas.",
   "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
   "verificacion": "correcta",
@@ -26,7 +26,7 @@
       "bytes": 315
     }
   ],
-  "actualizado": "2026-11-09T04:46:10.909071+00:00",
+  "actualizado": "2026-11-09T04:49:54.431558+00:00",
   "historial": [
     {
       "revision": 1,
@@ -1541,6 +1541,147 @@
         "revision_base": 1,
         "fecha": "2026-11-09T04:27:44.464253+00:00"
       },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-workshop-ejecutor",
+          "pid": 1809660,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774743",
+          "supervisor_pid": 1809654,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774723",
+          "rama": "codex/ws-noche-workshop-contenido-20261109",
+          "session_id": "01a1be90-f195-7c33-a0fc-108ad8e207a5",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:51.793243+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.273509+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "noche-workshop-contenido-20261109-revisor-1",
+          "pid": 1844338,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193852236",
+          "supervisor_pid": 1844327,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193852227",
+          "rama": "(detached)",
+          "session_id": "01a1be9c-c464-77a3-9c72-675a80d834b5",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.revision-2.jsonl",
+          "log_rel": "logs/noche-workshop-contenido-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-workshop-contenido-20261109-revision-2",
+          "rutas": [
+            "01-negocio/workshop-20261108/noche-20261109"
+          ],
+          "dry_run": false,
+          "commit_base": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T04:41:46.840503+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "9cfbc26368114b9f756420d7e0539ac782d2d801e2fb073bdf54e0a6edbd888d",
+          "schema": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/noche-workshop-contenido-20261109.2.veredicto.json",
+          "fin": "2026-11-09T04:45:07.984028+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+        "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+        "ramas_origin": [
+          "origin/codex/ws-noche-workshop-contenido-20261109"
+        ],
+        "fecha": "2026-11-09T04:41:44.492985+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+          "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+        "criterio": "Cumple los ocho criterios como entrega documental: decisiones y cobertura A/B/C respetadas; síntesis propuesta con piezas concretas; piloto con Claude, caso ficticio y acceso legítimo pendiente; dos guiones revisables, uno para workshop y otro evergreen; seis fuentes oficiales cotejadas y cinco referentes seleccionados. La [noticia Enterprise](https://claude.com/resources/articles/claude-enterprise-security-updates) confirma la fecha declarada. Mantiene Bs50 aprobado, VIP propuesto y condiciones comerciales pendientes; incluye checklist, automatización posible, controles editoriales y lagunas. Reproduje sin fallos 57 enlaces/anclas, nueve hashes, aritmética A/B y whitespace. Los 11 archivos están exclusivamente en la ruta asignada; registros y briefing intactos. La referencia local de origin coincide con el commit y los recibos de publicación aportados. Acceso, ensayo humano, locución y operación comercial siguen pendientes explícitos. Revisión de sólo lectura, sin aceptación ni publicaciones.",
+        "worktree_conservado": true,
+        "revisor": "noche-workshop-contenido-20261109-revisor-1",
+        "session_id": "01a1be9c-c464-77a3-9c72-675a80d834b5",
+        "entrega_sha256": "9cfbc26368114b9f756420d7e0539ac782d2d801e2fb073bdf54e0a6edbd888d",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/revision-2-499fe476.json",
+          "sha256": "688d43ef5ee2faf958332e0655dd89398e3ac9c821eb7542a02dbe11d5e30eaf",
+          "bytes": 1152
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/revision-2-499fe476.json",
+          "sha256": "688d43ef5ee2faf958332e0655dd89398e3ac9c821eb7542a02dbe11d5e30eaf",
+          "bytes": 1152
+        }
+      ]
+    },
+    {
+      "revision": 20,
+      "actualizado": "2026-11-09T04:46:10.909071+00:00",
+      "estado": "aceptado",
+      "resultado": "Síntesis propuesta, primeros10min y guiones con fuentes; comprobar decisiones vigentes, cobertura y hechos frente a propuestas.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-workshop-contenido-20261109-r9.json",
+          "sha256": "af7bfcf6ebc59049af0b04895a39ecc3045ee7dbf4a0f03bbd0660ef1c63509d",
+          "bytes": 2018
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/cierre-r10-5594054d.json",
+          "sha256": "e466f10a06e09b1da3fa1d962c477f34c264ed88a9f90ab5798922ed07ce0945",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Integrar entrega aceptada a origin/master, verificar hash y reportar pendientes a Sergio; campaña y envíos sin activar.",
+      "aceptacion": {
+        "revisor": "noche-workshop-contenido-20261109-revisor-1",
+        "criterio": "Cumple los ocho criterios como entrega documental: decisiones y cobertura A/B/C respetadas; síntesis propuesta con piezas concretas; piloto con Claude, caso ficticio y acceso legítimo pendiente; dos guiones revisables, uno para workshop y otro evergreen; seis fuentes oficiales cotejadas y cinco referentes seleccionados. La [noticia Enterprise](https://claude.com/resources/articles/claude-enterprise-security-updates) confirma la fecha declarada. Mantiene Bs50 aprobado, VIP propuesto y condiciones comerciales pendientes; incluye checklist, automatización posible, controles editoriales y lagunas. Reproduje sin fallos 57 enlaces/anclas, nueve hashes, aritmética A/B y whitespace. Los 11 archivos están exclusivamente en la ruta asignada; registros y briefing intactos. La referencia local de origin coincide con el commit y los recibos de publicación aportados. Acceso, ensayo humano, locución y operación comercial siguen pendientes explícitos. Revisión de sólo lectura, sin aceptación ni publicaciones.",
+        "fecha": "2026-11-09T04:46:10.874794+00:00"
+      },
+      "asignacion": null,
       "sesiones": [
         {
           "intento": 1,

@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "id": "noche-telegram-20261109",
-  "revision": 21,
+  "revision": 22,
   "compartible": true,
   "objetivo": "Preparar y probar integración mínima de fábrica de guiones con Telegram/n8n, reutilizando workflows existentes sin tocar producción",
   "estado": "aceptado",
-  "proximo_paso": "Integrar entrega aceptada a origin/master, verificar hash y reportar pendientes a Sergio; campaña y envíos sin activar.",
+  "proximo_paso": "Entrega revisada e integrada en origin/master. Identificar bot y destinatario autorizados en privado; comprobar runner y plan de prueba real sin interferir webhook; no activar ni enviar sin sí aplicable.",
   "resultado": "Adaptador y preparación Telegram/n8n con pruebas sintéticas; verificar alcance real y distinguir importado de ejecutado, nunca envíos.",
   "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
   "verificacion": "correcta",
@@ -26,7 +26,7 @@
       "bytes": 305
     }
   ],
-  "actualizado": "2026-11-09T04:45:25.320517+00:00",
+  "actualizado": "2026-11-09T04:49:54.395726+00:00",
   "historial": [
     {
       "revision": 1,
@@ -1664,6 +1664,147 @@
         "revision_base": 1,
         "fecha": "2026-11-09T04:27:44.334648+00:00"
       },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "noche-telegram-ejecutor",
+          "pid": 1809297,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774278",
+          "supervisor_pid": 1809273,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193774265",
+          "rama": "codex/ws-noche-telegram-20261109",
+          "session_id": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.1.briefing.txt",
+          "inicio": "2026-11-09T04:28:47.212969+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T04:41:07.864693+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "noche-telegram-20261109-revisor-1",
+          "pid": 1843794,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193851402",
+          "supervisor_pid": 1843792,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193851392",
+          "rama": "(detached)",
+          "session_id": "01a1be9c-a3bb-7a83-93b9-c704b4c91afd",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.revision-2.jsonl",
+          "log_rel": "logs/noche-telegram-20261109.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-noche-telegram-20261109-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-contenido/20261109-telegram"
+          ],
+          "dry_run": false,
+          "commit_base": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.briefing.txt",
+          "inicio": "2026-11-09T04:41:38.491509+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "23fdbbfd0b116c7f3673748eed621f7ae697fb11bf7cdc4628220445e2da8857",
+          "schema": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/noche-telegram-20261109.2.veredicto.json",
+          "fin": "2026-11-09T04:44:44.789035+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+        "commit_base": "241a50d2336d9e78951859cd7357d5523c3e6a75",
+        "ramas_origin": [
+          "origin/codex/ws-noche-telegram-20261109"
+        ],
+        "fecha": "2026-11-09T04:41:35.769489+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+        "criterio": "Cumple los siete criterios dentro del alcance preparatorio: inventario saneado; reutilización del contrato y harness; workflow determinista con evidencia de importación inactiva y originales conservados; frontera de identidad explícita y panel identificado como fixture; veinte pruebas JS reproducidas correctamente; credenciales/destinos representados por alias, límites y reversión documentados; publicación respaldada por los recibos aportados. Verificados 39 hashes, generación determinista e integridad de los registros sintéticos y sus cinco controles del harness. El ensayo que escribe archivos no se repitió por el entorno de sólo lectura. Diff exclusivo de 40 archivos y checkout limpio. No se acredita ejecución remota en n8n, autenticación real ni envíos Telegram. La comprobación adicional con ls-remote falló por DNS; se conserva como respaldo la evidencia remota del coordinador.",
+        "worktree_conservado": true,
+        "revisor": "noche-telegram-20261109-revisor-1",
+        "session_id": "01a1be9c-a3bb-7a83-93b9-c704b4c91afd",
+        "entrega_sha256": "23fdbbfd0b116c7f3673748eed621f7ae697fb11bf7cdc4628220445e2da8857",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/revision-2-de24d034.json",
+          "sha256": "e489743e7a8b344e13d22ce1904bd428e19179f95c3ec9d5cd9c2c3f344048d2",
+          "bytes": 1040
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/revision-2-de24d034.json",
+          "sha256": "e489743e7a8b344e13d22ce1904bd428e19179f95c3ec9d5cd9c2c3f344048d2",
+          "bytes": 1040
+        }
+      ]
+    },
+    {
+      "revision": 21,
+      "actualizado": "2026-11-09T04:45:25.320517+00:00",
+      "estado": "aceptado",
+      "resultado": "Adaptador y preparación Telegram/n8n con pruebas sintéticas; verificar alcance real y distinguir importado de ejecutado, nunca envíos.",
+      "comprobacion": "Commit remoto y diff exclusivos comprobados. Revisor debe reproducir pruebas permitidas y cotejar fuentes/evidencia. Sin asumir prueba externa ni publicación de campaña.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/preflight-v1.json",
+          "sha256": "f9ada44a6c6bb67d3129e099bc4aa7075c6486eacd1edc736a9cb182c9318740",
+          "bytes": 2071
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-20261109/entrega-noche-telegram-20261109-r9.json",
+          "sha256": "3c405cbeeb5f848a63e312f7c2b4351fe84e1e26f83752f51296a5356b5b446f",
+          "bytes": 6193
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/cierre-r10-5bd8857d.json",
+          "sha256": "62a638920002d248ea3c0255c416af902b1e2c73df273be3b148be3b910bbe2e",
+          "bytes": 305
+        }
+      ],
+      "proximo_paso": "Integrar entrega aceptada a origin/master, verificar hash y reportar pendientes a Sergio; campaña y envíos sin activar.",
+      "aceptacion": {
+        "revisor": "noche-telegram-20261109-revisor-1",
+        "criterio": "Cumple los siete criterios dentro del alcance preparatorio: inventario saneado; reutilización del contrato y harness; workflow determinista con evidencia de importación inactiva y originales conservados; frontera de identidad explícita y panel identificado como fixture; veinte pruebas JS reproducidas correctamente; credenciales/destinos representados por alias, límites y reversión documentados; publicación respaldada por los recibos aportados. Verificados 39 hashes, generación determinista e integridad de los registros sintéticos y sus cinco controles del harness. El ensayo que escribe archivos no se repitió por el entorno de sólo lectura. Diff exclusivo de 40 archivos y checkout limpio. No se acredita ejecución remota en n8n, autenticación real ni envíos Telegram. La comprobación adicional con ls-remote falló por DNS; se conserva como respaldo la evidencia remota del coordinador.",
+        "fecha": "2026-11-09T04:45:25.270495+00:00"
+      },
+      "asignacion": null,
       "sesiones": [
         {
           "intento": 1,

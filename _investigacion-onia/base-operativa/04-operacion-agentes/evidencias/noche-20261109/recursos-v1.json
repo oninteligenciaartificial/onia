@@ -1,0 +1,71 @@
+{
+  "fecha_utc": "2026-11-09T04:49:06.867312+00:00",
+  "muestras": 204,
+  "inicio_utc": "2026-11-09T04:29:10.185941+00:00",
+  "fin_utc": "2026-11-09T04:46:13.152007+00:00",
+  "duracion_s": 1022.966066,
+  "cpu_host_pct": {
+    "mediana": 16.13,
+    "pico": 88.49
+  },
+  "mem_available_min_gib": 9.53952407836914,
+  "mem_total_gib": 15.617378234863281,
+  "swap_ocupada_mib": {
+    "min": 2879.0,
+    "max": 2892.75
+  },
+  "principales_cli_max_observadas": 2,
+  "intentos": [
+    {
+      "id": "noche-telegram-20261109",
+      "intento": 1,
+      "rol": "ejecutor",
+      "muestras": 143,
+      "rss_mib_mediana": 390.375,
+      "rss_mib_pico": 466.375,
+      "cpu_host_pct_mediana": 0.3955,
+      "cpu_host_pct_pico": 3.677
+    },
+    {
+      "id": "noche-telegram-20261109",
+      "intento": 2,
+      "rol": "revisor",
+      "muestras": 37,
+      "rss_mib_mediana": 395.3828125,
+      "rss_mib_pico": 451.46875,
+      "cpu_host_pct_mediana": 0.447,
+      "cpu_host_pct_pico": 2.832
+    },
+    {
+      "id": "noche-workshop-contenido-20261109",
+      "intento": 1,
+      "rol": "ejecutor",
+      "muestras": 143,
+      "rss_mib_mediana": 398.33984375,
+      "rss_mib_pico": 568.8125,
+      "cpu_host_pct_mediana": 0.545,
+      "cpu_host_pct_pico": 6.215
+    },
+    {
+      "id": "noche-workshop-contenido-20261109",
+      "intento": 2,
+      "rol": "revisor",
+      "muestras": 40,
+      "rss_mib_mediana": 403.3984375,
+      "rss_mib_pico": 453.890625,
+      "cpu_host_pct_mediana": 0.7945,
+      "cpu_host_pct_pico": 3.726
+    }
+  ],
+  "fuente_privada": "~/operacion/resultados/medicion-noche-20261109.jsonl",
+  "sha256_fuente": "d6c76efaefa648ab7b456ec4a94476c72b8e1d9edee6371b692c7aec289e5a43",
+  "sha256_monitor": "83105ae5dfd66f54003a73fc5853237dea7ca40c53ebb7fe628cf402b8358253",
+  "limites": [
+    "Host compartido con servicios y navegador; sin línea base exclusiva.",
+    "Árboles por PPID: omiten procesos terminados/reparentados; RSS suma memoria compartida.",
+    "CPU normalizada por4vCPU observadas, no uso del proveedor del modelo.",
+    "Video/ayudante nativo comparten host, no hay atribución separada de su CPU/RAM.",
+    "No tasas de swap/PSI/OOM; no evidencia para aumentar a4o5.",
+    "Máximo2CLI medidos en este lote; tercer trabajo nativo acotado aparte. No es nuevo piloto3CLI."
+  ]
+}

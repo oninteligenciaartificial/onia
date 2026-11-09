@@ -1,0 +1,163 @@
+{
+  "fecha_utc": "2026-11-09T04:47:29.046980+00:00",
+  "tareas": [
+    {
+      "id": "noche-telegram-20261109",
+      "revision": 21,
+      "estado": "aceptado",
+      "entrega": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+      "revisor": "01a1be9c-a3bb-7a83-93b9-c704b4c91afd",
+      "intentos": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "sid": "01a1be90-df7a-7592-9ddc-05e87d6805e8",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git",
+                  "/home/onia-codex-worker/operacion/git/noche-telegram-20261109.git/worktrees/onia-ws-noche-telegram-20261109"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 2879294,
+              "cached_input_tokens": 2778880,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 33536,
+              "reasoning_output_tokens": 9415
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "sid": "01a1be9c-a3bb-7a83-93b9-c704b4c91afd",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 739287,
+              "cached_input_tokens": 634240,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 8026,
+              "reasoning_output_tokens": 2429
+            }
+          ],
+          "worktree_conservado": true
+        }
+      ],
+      "hijos": [],
+      "entrega_en_origin_master_local_actualizado": true
+    },
+    {
+      "id": "noche-workshop-contenido-20261109",
+      "revision": 20,
+      "estado": "aceptado",
+      "entrega": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+      "revisor": "01a1be9c-c464-77a3-9c72-675a80d834b5",
+      "intentos": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "sid": "01a1be90-f195-7c33-a0fc-108ad8e207a5",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "high",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "high",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "workspace-write",
+                "writable_roots": [
+                  "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git",
+                  "/home/onia-codex-worker/operacion/git/noche-workshop-contenido-20261109.git/worktrees/onia-ws-noche-workshop-contenido-20261109"
+                ],
+                "network_access": true,
+                "exclude_tmpdir_env_var": false,
+                "exclude_slash_tmp": false
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 2878187,
+              "cached_input_tokens": 2750464,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 29341,
+              "reasoning_output_tokens": 5074
+            }
+          ],
+          "worktree_conservado": true
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "sid": "01a1be9c-c464-77a3-9c72-675a80d834b5",
+          "rc": 0,
+          "modelo_solicitado": "gpt-6.1-sol",
+          "esfuerzo_solicitado": "ultra",
+          "hijos_maximos": 0,
+          "runtime_observado": [
+            {
+              "model": "gpt-6.1-sol",
+              "effort": "ultra",
+              "approval_policy": "never",
+              "sandbox_policy": {
+                "type": "read-only"
+              }
+            }
+          ],
+          "uso_reportado": [
+            {
+              "input_tokens": 1510764,
+              "cached_input_tokens": 1382016,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 7618,
+              "reasoning_output_tokens": 2325
+            }
+          ],
+          "worktree_conservado": true
+        }
+      ],
+      "hijos": [],
+      "entrega_en_origin_master_local_actualizado": true
+    }
+  ],
+  "limites": [
+    "Uso de turn.completed por intento informado por CLI; no porcentaje de cuota ni importe facturado.",
+    "cached_input_tokens es subconjunto, no se suma al input.",
+    "Hijos muestran modelo observado por su contexto; no se agrega su uso para evitar doble conteo.",
+    "Runtime observado no es una medición independiente de los pesos del proveedor."
+  ]
+}
