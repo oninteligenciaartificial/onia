@@ -1,0 +1,119 @@
+{
+  "fecha_caracas": "2026-11-08T21:57:49.178489-04:00",
+  "visor": {
+    "fecha_utc": "2026-11-09T01:55:12.137Z",
+    "run": "/home/onia-codex-worker/operacion/cuentas/analisis-onia/prueba-visor-real-sionAT",
+    "pruebas": [
+      {
+        "nombre": "clave_incorrecta",
+        "ok": true,
+        "mensaje": "New connection has been rejected with reason: password check failed!"
+      },
+      {
+        "nombre": "clave_correcta_websocket",
+        "ok": true
+      },
+      {
+        "nombre": "teclado_via_visor",
+        "ok": true
+      },
+      {
+        "nombre": "raton_via_visor",
+        "ok": true
+      },
+      {
+        "nombre": "pagina_publica_en_visor",
+        "ok": true
+      }
+    ],
+    "usuario_windows_verificado": false,
+    "canvas": {
+      "box": {
+        "x": 0,
+        "y": 37.5,
+        "width": 1400,
+        "height": 875
+      },
+      "width": 1280,
+      "height": 800
+    },
+    "ok": true
+  },
+  "listeners": [
+    "127.0.0.1:5908",
+    "127.0.0.1:6088"
+  ],
+  "permisos": {
+    "directorio_privado": "0700",
+    "perfil": "0700",
+    "clave_visor": "0600"
+  },
+  "mcp": {
+    "sid": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+    "rc": 0,
+    "subagentes_maximos": 0,
+    "llamadas": [
+      {
+        "server": "playwright",
+        "tool": "browser_navigate",
+        "status": "completed",
+        "error": null
+      },
+      {
+        "server": "playwright",
+        "tool": "browser_snapshot",
+        "status": "completed",
+        "error": null
+      },
+      {
+        "server": "playwright",
+        "tool": "browser_take_screenshot",
+        "status": "completed",
+        "error": null
+      },
+      {
+        "server": "playwright",
+        "tool": "browser_close",
+        "status": "completed",
+        "error": null
+      }
+    ],
+    "runtime_ultimo": {
+      "fecha_utc": "2026-11-09T01:49:10.026Z",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high"
+    },
+    "commit_rama": "ec24b88b5511009dc3eac3e63f3fea007fe3dacd",
+    "verificacion_remota": "ls-remote coincide",
+    "revision_independiente": false
+  },
+  "cuota_previa": {
+    "timestamp": "2026-11-09T01:44:43.356Z",
+    "rate_limits": {
+      "limit_id": "codex",
+      "limit_name": null,
+      "primary": {
+        "used_percent": 35.0,
+        "window_minutes": 10080,
+        "resets_at": 1794624432
+      },
+      "secondary": null,
+      "credits": {
+        "has_credits": false,
+        "unlimited": false,
+        "balance": "0"
+      },
+      "individual_limit": null,
+      "spend_control_reached": null,
+      "plan_type": "prolite",
+      "rate_limit_reached_type": null
+    }
+  },
+  "pendiente": "Túnel desde Windows y control humano por Sergio; alta/login de cuenta; revisión completa de tarea AV.",
+  "cuenta_creada": false,
+  "material_privado": "Capturas, perfiles, claves y logs completos permanecen fuera de Git.",
+  "capturas_sha256": {
+    "control-antes-raton.png": "99ce925d90d0a3db7904d42e2d43be5a0822f1635ad4a737299d5c3cc19812c7",
+    "pagina-publica.png": "c374daf0981e91b0d6b52ea254835c0fd883cc2f866dc6958608022f306fd795"
+  }
+}

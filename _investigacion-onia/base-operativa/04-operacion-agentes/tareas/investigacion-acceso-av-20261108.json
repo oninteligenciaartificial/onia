@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "investigacion-acceso-av-20261108",
-  "revision": 10,
+  "revision": 16,
   "compartible": true,
   "objetivo": "Acceso audiovisual open source y piloto Playwright MCP instalado",
-  "estado": "en_curso",
-  "proximo_paso": "RETOMA ACOTADA PARA PRUEBA MCP, MISMO SID. Sergio aprobó preparar el navegador, aplicó el perfil AppArmor y pidió continuar. No ampliar investigación ni crear hijos. El coordinador probó Chromium1252 con sandbox: chrome://sandbox indica namespaces y Seccomp activos; página pública HTTP200 y texto leído. El perfil onia-chromium-1252 exacto está cargado, global restriction1 conservada. Tu nuevo proceso recibe el wrapper ya publicado en el coordinador, que añade default_tools_approval_mode=approve sólo a4herramientas MCP. El wrapper usado en tu primer intento no tenía ese ajuste: conservar esa diferencia y su error, no fingir que ya había pasado.\nObjetivo único: probar en ESTA sesión las herramientas nativas playwright browser_navigate, browser_snapshot, browser_take_screenshot, browser_close, con --sandbox y perfil aislado headless. Navegar una vez a https://example.com/ y leer título/DOM real; el HTML actual no tiene h1, título Example Domain y cuerpo explican uso documental. No basar éxito en h1 antiguo. Captura visual pública y cerrar. Leer imagen si la herramienta puede; si no, decirlo. Conservar la captura fuera del commit, informar hash y ruta, no borrar. No usar la cuenta/perfil/visor de Sergio ni inspeccionar cookies. No usar Playwright por shell para ocultar un fallo de herramientas MCP: el control es tool call nativa de Codex sin el bloqueo anterior de aprobación. Si falla, guardar error concreto y terminar, sin otra instalación ni alterar permisos.\nEscribir sólo en tu carpeta asignada 05-herramientas/acceso-av/20261108/ un informe PRUEBA-MCP-RETOMA.md y JSON saneado, preservando evidencia anterior. Consultar wrapper actual en /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/codex-con-playwright.py para documentar hash/configuración por proceso; no cambiarlo. No revisar otras tareas ni web adicional. No cuentas, no n8n, producción, Docker, sudo, servicios, secretos, API paga ni borrados. Publicar sólo esos dos archivos con commit/push autónomos a tu rama existente sin force ni amend. Informar SID, las cuatro llamadas y resultado, commit remoto, límites. Objetivo de duración5min; ante bloqueo terminal documentar y parar.",
-  "resultado": "Se prepara retoma acotada MCP tras corrección AppArmor aplicada por Sergio.",
-  "comprobacion": "Chromium y sandbox comprobados por coordinador; falta llamada MCP en sesión Codex con wrapper corregido.",
+  "estado": "en_espera",
+  "proximo_paso": "Preservar capturas y obtener revisión independiente del encargo AV cuando se retome; no retirar el worktree con archivos sin seguimiento.",
+  "resultado": "Prueba MCP de retoma exitosa; informe publicado autónomamente en ec24b88b5511009dc3eac3e63f3fea007fe3dacd.",
+  "comprobacion": "Cuatro llamadas nativas completed, mismo SID, rc0, Solhigh observado, sin hijos. Commit remoto verificado. Capturas sin seguimiento conservadas; revisión completa pendiente.",
   "verificacion": "pendiente",
   "evidencias": [
     {
@@ -24,9 +24,14 @@
       "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight-retoma-mcp-v2.json",
       "sha256": "90a30362e1a39187ffa975b2dc5da9daffff17877cc24af5440a8f85ede59049",
       "bytes": 3359
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/resultado-retoma-mcp-v2.json",
+      "sha256": "1ac53273e5461536889bd6041fa441bcf5b2b69e2ac1ce3e443339e8ee8d8d0d",
+      "bytes": 885
     }
   ],
-  "actualizado": "2026-11-09T01:47:20.380278+00:00",
+  "actualizado": "2026-11-09T01:57:49.215105+00:00",
   "historial": [
     {
       "revision": 1,
@@ -467,6 +472,621 @@
       ],
       "cierre": null,
       "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-09T01:47:20.380278+00:00",
+      "estado": "en_curso",
+      "resultado": "Se prepara retoma acotada MCP tras corrección AppArmor aplicada por Sergio.",
+      "comprobacion": "Chromium y sandbox comprobados por coordinador; falta llamada MCP en sesión Codex con wrapper corregido.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
+          "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
+          "bytes": 2390
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/espera-sergio-20261108.json",
+          "sha256": "704bb5a9efaf38e29bb499f1879a34562a7ac5ef0511959b817c270f0187b500",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight-retoma-mcp-v2.json",
+          "sha256": "90a30362e1a39187ffa975b2dc5da9daffff17877cc24af5440a8f85ede59049",
+          "bytes": 3359
+        }
+      ],
+      "proximo_paso": "RETOMA ACOTADA PARA PRUEBA MCP, MISMO SID. Sergio aprobó preparar el navegador, aplicó el perfil AppArmor y pidió continuar. No ampliar investigación ni crear hijos. El coordinador probó Chromium1252 con sandbox: chrome://sandbox indica namespaces y Seccomp activos; página pública HTTP200 y texto leído. El perfil onia-chromium-1252 exacto está cargado, global restriction1 conservada. Tu nuevo proceso recibe el wrapper ya publicado en el coordinador, que añade default_tools_approval_mode=approve sólo a4herramientas MCP. El wrapper usado en tu primer intento no tenía ese ajuste: conservar esa diferencia y su error, no fingir que ya había pasado.\nObjetivo único: probar en ESTA sesión las herramientas nativas playwright browser_navigate, browser_snapshot, browser_take_screenshot, browser_close, con --sandbox y perfil aislado headless. Navegar una vez a https://example.com/ y leer título/DOM real; el HTML actual no tiene h1, título Example Domain y cuerpo explican uso documental. No basar éxito en h1 antiguo. Captura visual pública y cerrar. Leer imagen si la herramienta puede; si no, decirlo. Conservar la captura fuera del commit, informar hash y ruta, no borrar. No usar la cuenta/perfil/visor de Sergio ni inspeccionar cookies. No usar Playwright por shell para ocultar un fallo de herramientas MCP: el control es tool call nativa de Codex sin el bloqueo anterior de aprobación. Si falla, guardar error concreto y terminar, sin otra instalación ni alterar permisos.\nEscribir sólo en tu carpeta asignada 05-herramientas/acceso-av/20261108/ un informe PRUEBA-MCP-RETOMA.md y JSON saneado, preservando evidencia anterior. Consultar wrapper actual en /home/onia-codex-worker/repos/onia-coordinador/_investigacion-onia/base-operativa/05-herramientas/acceso-av/20261108/codex-con-playwright.py para documentar hash/configuración por proceso; no cambiarlo. No revisar otras tareas ni web adicional. No cuentas, no n8n, producción, Docker, sudo, servicios, secretos, API paga ni borrados. Publicar sólo esos dos archivos con commit/push autónomos a tu rama existente sin force ni amend. Informar SID, las cuatro llamadas y resultado, commit remoto, límites. Objetivo de duración5min; ante bloqueo terminal documentar y parar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "acceso-av-ejecutor",
+        "rutas": [
+          "05-herramientas/acceso-av/20261108"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T22:03:29.187038+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": 847276,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467842",
+          "supervisor_pid": 847271,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467835",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T22:04:22.937080+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:11:58.319395+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-09T01:49:06.682572+00:00",
+      "estado": "en_curso",
+      "resultado": "Se prepara retoma acotada MCP tras corrección AppArmor aplicada por Sergio.",
+      "comprobacion": "Chromium y sandbox comprobados por coordinador; falta llamada MCP en sesión Codex con wrapper corregido.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
+          "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
+          "bytes": 2390
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/espera-sergio-20261108.json",
+          "sha256": "704bb5a9efaf38e29bb499f1879a34562a7ac5ef0511959b817c270f0187b500",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight-retoma-mcp-v2.json",
+          "sha256": "90a30362e1a39187ffa975b2dc5da9daffff17877cc24af5440a8f85ede59049",
+          "bytes": 3359
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "acceso-av-ejecutor",
+        "rutas": [
+          "05-herramientas/acceso-av/20261108"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T22:03:29.187038+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": 847276,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467842",
+          "supervisor_pid": 847271,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467835",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T22:04:22.937080+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:11:58.319395+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 228772,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T01:49:06.656836+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-09T01:49:06.756100+00:00",
+      "estado": "en_curso",
+      "resultado": "Se prepara retoma acotada MCP tras corrección AppArmor aplicada por Sergio.",
+      "comprobacion": "Chromium y sandbox comprobados por coordinador; falta llamada MCP en sesión Codex con wrapper corregido.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
+          "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
+          "bytes": 2390
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/espera-sergio-20261108.json",
+          "sha256": "704bb5a9efaf38e29bb499f1879a34562a7ac5ef0511959b817c270f0187b500",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight-retoma-mcp-v2.json",
+          "sha256": "90a30362e1a39187ffa975b2dc5da9daffff17877cc24af5440a8f85ede59049",
+          "bytes": 3359
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "acceso-av-ejecutor",
+        "rutas": [
+          "05-herramientas/acceso-av/20261108"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T22:03:29.187038+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": 847276,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467842",
+          "supervisor_pid": 847271,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467835",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T22:04:22.937080+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:11:58.319395+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 1393864,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:192816207",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 228772,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T01:49:06.656836+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-09T01:49:06.849254+00:00",
+      "estado": "en_curso",
+      "resultado": "Se prepara retoma acotada MCP tras corrección AppArmor aplicada por Sergio.",
+      "comprobacion": "Chromium y sandbox comprobados por coordinador; falta llamada MCP en sesión Codex con wrapper corregido.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
+          "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
+          "bytes": 2390
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/espera-sergio-20261108.json",
+          "sha256": "704bb5a9efaf38e29bb499f1879a34562a7ac5ef0511959b817c270f0187b500",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight-retoma-mcp-v2.json",
+          "sha256": "90a30362e1a39187ffa975b2dc5da9daffff17877cc24af5440a8f85ede59049",
+          "bytes": 3359
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "acceso-av-ejecutor",
+        "rutas": [
+          "05-herramientas/acceso-av/20261108"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T22:03:29.187038+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": 847276,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467842",
+          "supervisor_pid": 847271,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467835",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T22:04:22.937080+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:11:58.319395+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": 1393869,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:192816217",
+          "supervisor_pid": 1393864,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:192816207",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 228772,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T01:49:06.656836+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-09T01:49:08.945402+00:00",
+      "estado": "en_curso",
+      "resultado": "Se prepara retoma acotada MCP tras corrección AppArmor aplicada por Sergio.",
+      "comprobacion": "Chromium y sandbox comprobados por coordinador; falta llamada MCP en sesión Codex con wrapper corregido.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
+          "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
+          "bytes": 2390
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/espera-sergio-20261108.json",
+          "sha256": "704bb5a9efaf38e29bb499f1879a34562a7ac5ef0511959b817c270f0187b500",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight-retoma-mcp-v2.json",
+          "sha256": "90a30362e1a39187ffa975b2dc5da9daffff17877cc24af5440a8f85ede59049",
+          "bytes": 3359
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "acceso-av-ejecutor",
+        "rutas": [
+          "05-herramientas/acceso-av/20261108"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T22:03:29.187038+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": 847276,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467842",
+          "supervisor_pid": 847271,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467835",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T22:04:22.937080+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:11:58.319395+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": 1393869,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:192816217",
+          "supervisor_pid": 1393864,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:192816207",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 228772,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T01:49:06.656836+00:00",
+          "rc": null,
+          "ultimo_evento": "turn.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-09T01:52:02.033094+00:00",
+      "estado": "en_curso",
+      "resultado": "Se prepara retoma acotada MCP tras corrección AppArmor aplicada por Sergio.",
+      "comprobacion": "Chromium y sandbox comprobados por coordinador; falta llamada MCP en sesión Codex con wrapper corregido.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight.json",
+          "sha256": "75b17d2790c23b5e368e89a2107831d93b874d30b72717e4f2ad9f18473afb70",
+          "bytes": 2390
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/espera-sergio-20261108.json",
+          "sha256": "704bb5a9efaf38e29bb499f1879a34562a7ac5ef0511959b817c270f0187b500",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/investigacion-acceso-av-20261108/preflight-retoma-mcp-v2.json",
+          "sha256": "90a30362e1a39187ffa975b2dc5da9daffff17877cc24af5440a8f85ede59049",
+          "bytes": 3359
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "acceso-av-ejecutor",
+        "rutas": [
+          "05-herramientas/acceso-av/20261108"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T22:03:29.187038+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": 847276,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467842",
+          "supervisor_pid": 847271,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191467835",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T22:04:22.937080+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:11:58.319395+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "ejecutor",
+          "responsable": "acceso-av-ejecutor",
+          "pid": 1393869,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:192816217",
+          "supervisor_pid": 1393864,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:192816207",
+          "rama": "codex/ws-investigacion-acceso-av-20261108",
+          "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+          "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+          "log_offset": 228772,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+          "rutas": [
+            "05-herramientas/acceso-av/20261108"
+          ],
+          "dry_run": false,
+          "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+          "reanuda": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+          "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T01:49:06.656836+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-09T01:52:02.000605+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -519,6 +1139,41 @@
       "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
       "perfil_permisos": "harness-git",
       "fin": "2026-11-08T22:11:58.319395+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "ejecutor",
+      "responsable": "acceso-av-ejecutor",
+      "pid": 1393869,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:192816217",
+      "supervisor_pid": 1393864,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:192816207",
+      "rama": "codex/ws-investigacion-acceso-av-20261108",
+      "session_id": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.jsonl",
+      "log_rel": "logs/investigacion-acceso-av-20261108.jsonl",
+      "log_offset": 228772,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-investigacion-acceso-av-20261108",
+      "rutas": [
+        "05-herramientas/acceso-av/20261108"
+      ],
+      "dry_run": false,
+      "commit_base": "c21792a8bd557d50188d55edfb8a3d3e5603c203",
+      "reanuda": "01a1bd30-efe1-7f90-b6e0-811def9bf063",
+      "briefing": "/home/onia-codex-worker/operacion/logs/investigacion-acceso-av-20261108.2.briefing.txt",
+      "inicio": "2026-11-09T01:49:06.656836+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/investigacion-acceso-av-20261108.git/worktrees/onia-ws-investigacion-acceso-av-20261108",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-09T01:52:02.000605+00:00"
     }
   ],
   "revision_independiente": null,
