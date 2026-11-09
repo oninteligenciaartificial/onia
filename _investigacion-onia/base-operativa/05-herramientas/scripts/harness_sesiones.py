@@ -642,7 +642,17 @@ def clean_worktree(repo, worktree):
     git(repo, 'worktree', 'remove', str(worktree))
 
 
-def close(base, ident, root, revision, actor, result, check, dry_run=False):
+def validate_retained_worktree(worktree, commit):
+    if not worktree.is_dir() or Path(git(worktree, 'rev-parse', '--show-toplevel')) != worktree:
+        raise ValueError('Falta el worktree de la sesión; conciliar antes de conservarlo.')
+    if git(worktree, 'rev-parse', 'HEAD') != commit:
+        raise ValueError('HEAD del worktree no coincide con el commit de entrega.')
+    if git(worktree, '--no-optional-locks', 'status', '--porcelain', '--untracked-files=no',
+           '--ignore-submodules=untracked'):
+        raise ValueError('Worktree con cambios versionados; deben coincidir con el commit de entrega.')
+
+
+def close(base, ident, root, revision, actor, result, check, dry_run=False, *, retain_worktree=False):
     base = Path(base).resolve()
     result = trabajo.nonempty(result, 'resultado')
     check = trabajo.nonempty(check, 'comprobación')
@@ -676,12 +686,16 @@ def close(base, ident, root, revision, actor, result, check, dry_run=False):
             git(git_owner, 'merge-base', '--is-ancestor', session['commit_base'], commit)
             branches = ensure_remote(repo, commit, session['rama'])
             worktree = Path(session['worktree'])
-            if worktree.exists():
+            if retain_worktree:
+                validate_retained_worktree(worktree, commit)
+            elif worktree.exists():
                 if git(worktree, 'rev-parse', 'HEAD') != commit:
                     raise ValueError('HEAD del worktree no coincide con la rama asignada.')
                 clean_worktree(git_owner, worktree)
         receipt = dict(commit=commit, commit_base=session['commit_base'], ramas_origin=branches,
                        fecha=trabajo.now(), dry_run=dry_run, intento=session['intento'])
+        if retain_worktree and not dry_run:
+            receipt['worktree_conservado'] = True
         ref = write_evidence(base, row, f'cierre-r{row["revision"]}-{uuid.uuid4().hex[:8]}.json', receipt)
         def finish(current):
             current['cierre'] = dict(receipt, evidencia=ref)
@@ -698,7 +712,7 @@ def close(base, ident, root, revision, actor, result, check, dry_run=False):
                 else 'Commit comprobado en origin; rama conservada, revisión pendiente. Integrar a master antes de dar el trabajo por terminado.'}
 
 
-def collect_review(base, ident, root, revision):
+def collect_review(base, ident, root, revision, *, retain_worktree=False):
     base = Path(base).resolve()
     root = operation(root)
     with registry_lock(root):
@@ -720,12 +734,16 @@ def collect_review(base, ident, root, revision):
                 or verdict.get('commit') != row['cierre']['commit']):
             raise ValueError('Veredicto inválido o referido a otro commit.')
         trabajo.nonempty(verdict.get('criterio'), 'criterio del veredicto')
-        worktree = Path(session['worktree'])
-        if worktree.exists():
-            clean_worktree(repo_for(base), worktree)
         existing = row.get('revision_independiente')
         if existing and existing['session_id'] == session['session_id']:
             return {'tarea': trabajo.brief_view(row), 'nota': 'Veredicto ya recogido e íntegro.'}
+        worktree = Path(session['worktree'])
+        verdict = {key: verdict[key] for key in ('veredicto', 'commit', 'criterio')}
+        if retain_worktree:
+            validate_retained_worktree(worktree, verdict['commit'])
+            verdict['worktree_conservado'] = True
+        elif worktree.exists():
+            clean_worktree(repo_for(base), worktree)
         ref = write_evidence(base, row, f'revision-{session["intento"]}-{uuid.uuid4().hex[:8]}.json', verdict)
         def finish(current):
             current.setdefault('evidencias_revision', []).append(ref)

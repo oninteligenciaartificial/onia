@@ -179,9 +179,10 @@ class SessionTests(unittest.TestCase):
             self.git('push', 'origin', 'codex/ws-' + ident, repo=worktree)
         return commit
 
-    def close(self, ident='toy', dry=False):
+    def close(self, ident='toy', dry=False, *, retain_worktree=False):
         return sessions.close(self.base, ident, self.op, self.row(ident)['revision'], 'executor',
-                              'Entrega lista', 'Prueba sintética correcta', dry)
+                              'Entrega lista', 'Prueba sintética correcta', dry,
+                              retain_worktree=retain_worktree)
 
     def test_dry_run_entire_flow_and_fourth_rejected_without_subprocess(self):
         for i in range(4):
@@ -361,6 +362,72 @@ class SessionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'ignorados'):
             self.close()
         self.assertTrue(ignored.exists())
+
+    def test_preserve_executor_and_reviewer_worktrees_without_sharing_private_files(self):
+        self.prepare()
+        self.launch()
+        executor = self.wait_finished()['sesiones'][0]
+        commit = self.deliver()
+        worktree = Path(executor['worktree'])
+        local_files = {'captura.bin': b'captura privada', '.agents/cache.bin': b'cache privada'}
+        for name, content in local_files.items():
+            (worktree / name).write_bytes(content)
+
+        # Ambos estados del índice deben impedir el cierre, aunque se conserve el checkout.
+        (worktree / '.gitignore').write_text('cambio sin publicar\n')
+        with self.assertRaisesRegex(ValueError, 'cambios versionados'):
+            self.close(retain_worktree=True)
+        self.git('add', '.gitignore', repo=worktree)
+        with self.assertRaisesRegex(ValueError, 'cambios versionados'):
+            self.close(retain_worktree=True)
+        self.assertEqual(self.row()['estado'], 'en_curso')
+        self.git('restore', '--source=HEAD', '--staged', '--worktree', '.gitignore', repo=worktree)
+
+        cli = [sys.executable, str(Path(harness.__file__)), '--base', str(self.base), '--operacion', str(self.op)]
+
+        def call(*args):
+            completed = subprocess.run(cli + list(args) + ['--revision-esperada', str(self.row()['revision']),
+                                                           '--conservar-worktree'], capture_output=True, text=True)
+            self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
+
+        call('cerrar', 'toy', '--actor', 'executor', '--resultado', 'Entrega lista',
+             '--comprobacion', 'Prueba sintética correcta')
+        closure = self.row()['cierre']
+        self.assertEqual(closure['commit'], commit)
+        self.assertTrue(closure['worktree_conservado'])
+        closure_receipt = (self.base / closure['evidencia']['archivo']).read_text()
+        self.assertTrue(json.loads(closure_receipt)['worktree_conservado'])
+        for name, content in local_files.items():
+            self.assertNotIn(name, closure_receipt)
+            self.assertEqual((worktree / name).read_bytes(), content)
+        self.assertEqual(self.git('rev-parse', 'HEAD', repo=worktree), commit)
+
+        self.launch(reviewer='reviewer')
+        reviewer = self.wait_finished()['sesiones'][-1]
+        snapshot = Path(reviewer['worktree'])
+        self.assertNotEqual(snapshot, worktree)
+        self.assertEqual(self.git('rev-parse', 'HEAD', repo=snapshot), commit)
+        for name in local_files:
+            self.assertFalse((snapshot / name).exists())
+        scratch = snapshot / '.agents/revision.bin'
+        scratch.write_bytes(b'archivo local de prueba')
+        self.git('switch', '--detach', executor['commit_base'], repo=snapshot)
+        with self.assertRaisesRegex(ValueError, 'HEAD del worktree'):
+            sessions.collect_review(self.base, 'toy', self.op, self.row()['revision'], retain_worktree=True)
+        self.assertIsNone(self.row()['revision_independiente'])
+        self.git('switch', '--detach', commit, repo=snapshot)
+
+        call('revisar', 'toy', '--recoger')
+        row = self.row()
+        review = row['revision_independiente']
+        review_receipt = json.loads((self.base / review['evidencia']['archivo']).read_text())
+        self.assertTrue(review['worktree_conservado'])
+        self.assertTrue(review_receipt['worktree_conservado'])
+        sessions.collect_review(self.base, 'toy', self.op, row['revision'])
+        self.assertEqual(self.row()['revision'], row['revision'])
+        self.assertEqual(scratch.read_bytes(), b'archivo local de prueba')
+        self.assertEqual(trabajo.accept(self.base, 'toy', row['revision'], 'reviewer', 'Verificado')['estado'],
+                         'aceptado')
 
     def test_live_process_blocks_fourth_close_and_resume(self):
         for i in range(4):

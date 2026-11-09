@@ -1,5 +1,7 @@
 # Navegador operativo en el VPS; control humano confirmado
 
+**Actualización vigente:** Sergio informó Instagram y Facebook creados. [Conexión MCP, prueba nativa y límites](CONEXION-MCP-VERIFICADA.md) ya documentados; los bloques anteriores conservan su fecha y no sustituyen esta comprobación.
+
 **Cuenta informada por Sergio (2026-11-08T22:19:23-04:00):** Google se creó con el usuario `oninvestigaciones220` (dirección Gmail inferida: `oninvestigaciones220@gmail.com`), en lugar del nombre propuesto `onia.investigacion`. Es confirmación del usuario, no inspección del agente de una sesión autenticada. No se verificó la configuración de recuperación ni se capturaron claves/códigos. Instagram aún espera alta o confirmación. [Recibo](../../../04-operacion-agentes/evidencias/cuentas-secundarias-20261108/alta-google-informada-v1.json).
 
 **Actualización 2026-11-08T22:07:54-04:00:** Sergio confirmó en el chat: «Sí, veo el navegador y puedo manejarlo», en respuesta a la prueba de visualización, ratón y teclado. El acceso humano que figura pendiente en la comprobación anterior queda confirmado por el usuario. El alta de Google/Instagram y la disponibilidad de `onia.investigacion` aún no están confirmadas. [Recibo de la confirmación](../../../04-operacion-agentes/evidencias/cuentas-secundarias-20261108/control-humano-confirmado-v1.json).

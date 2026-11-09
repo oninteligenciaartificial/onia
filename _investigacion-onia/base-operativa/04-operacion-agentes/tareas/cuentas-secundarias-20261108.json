@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "cuentas-secundarias-20261108",
-  "revision": 7,
+  "revision": 8,
   "compartible": true,
   "objetivo": "Preparar acceso privado al navegador del VPS para alta personal de cuenta secundaria por Sergio",
-  "estado": "en_espera",
-  "proximo_paso": "Completar personalmente Instagram; luego conectar y probar el acceso de investigación mediante un único responsable del navegador. Preservar perfil; no asumir acceso automático de ejecutoras ni aprobación del piloto audiovisual. Revisión final pendiente.",
-  "resultado": "Visor y control humano comprobados. Sergio informó alta Google con usuario oninvestigaciones220; Instagram y conexión de ese perfil a MCP pendientes.",
-  "comprobacion": "Confirmación contextual del usuario registrada, sin inspección de sesión, recuperación ni credenciales. Wrapper MCP comprobado: perfil aislado distinto del visor.",
+  "estado": "en_curso",
+  "proximo_paso": "Validar persistencia de almacenamiento y cookies sintéticas, exclusión y recuperación; probar después MCP nativo en sesión del harness, con destinos públicos acotados.",
+  "resultado": "Sergio informó Instagram y Facebook creados; autoriza conexión del perfil y retoma de investigaciones. Preparación técnica y pruebas sintéticas en curso.",
+  "comprobacion": "Control humano previo confirmado; integración MCP autenticada todavía no probada. Revisión técnica independiente iniciada antes de activación.",
   "verificacion": "pendiente",
   "evidencias": [
     {
@@ -39,9 +39,14 @@
       "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/alta-google-informada-v1.json",
       "sha256": "f5554161da8561b3c0dca830832236ddb224a2d7127fc7657485938392e23553",
       "bytes": 924
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/retoma-cuentas-autorizada-v1.json",
+      "sha256": "44380da2cb0755d5da904aa836e166848156e20956a60f0a7f6ce14decc44be3",
+      "bytes": 926
     }
   ],
-  "actualizado": "2026-11-09T02:19:23.963202+00:00",
+  "actualizado": "2026-11-09T02:50:02.686738+00:00",
   "historial": [
     {
       "revision": 1,
@@ -242,6 +247,59 @@
         }
       ],
       "proximo_paso": "Sergio crea personalmente la cuenta secundaria en el Chromium del visor y confirma sólo que terminó. Después verificar el alcance pendiente y revisión; no asumir login ni habilitar acceso del perfil a MCP.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "Astra medium/high sólo ante ambigüedad persistente identificada y dentro de cuota autorizada."
+      }
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-09T02:19:23.963202+00:00",
+      "estado": "en_espera",
+      "resultado": "Visor y control humano comprobados. Sergio informó alta Google con usuario oninvestigaciones220; Instagram y conexión de ese perfil a MCP pendientes.",
+      "comprobacion": "Confirmación contextual del usuario registrada, sin inspección de sesión, recuperación ni credenciales. Wrapper MCP comprobado: perfil aislado distinto del visor.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/verificacion-preparacion.json",
+          "sha256": "e46d1879a33c23ce0aa05537fe7e84250993c67a187f3bb93addb920a9f96af1",
+          "bytes": 4123
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/aprobacion-y-bloqueo-20261108T2003.json",
+          "sha256": "c9cce18a3f6c509491b993bdb0486a750fa4fad47a6d1540be0f3c02c824613d",
+          "bytes": 1145
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/sandbox-activo-v1.json",
+          "sha256": "711b5634e2e6bc9c58a437f3a993126cc5aab12cf9d7d23ab59c72eb9de6d491",
+          "bytes": 3009
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/visor-y-mcp-verificados-v1.json",
+          "sha256": "b9e571ce78e3ee2bc01fd28853cbc4ecb4f640326b823759e00198acbbf139ca",
+          "bytes": 3084
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/control-humano-confirmado-v1.json",
+          "sha256": "510da08bb0274d0c8a82b12dfe0089be8aca8b2bf80289eafde9db2db1210406",
+          "bytes": 796
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cuentas-secundarias-20261108/alta-google-informada-v1.json",
+          "sha256": "f5554161da8561b3c0dca830832236ddb224a2d7127fc7657485938392e23553",
+          "bytes": 924
+        }
+      ],
+      "proximo_paso": "Completar personalmente Instagram; luego conectar y probar el acceso de investigación mediante un único responsable del navegador. Preservar perfil; no asumir acceso automático de ejecutoras ni aprobación del piloto audiovisual. Revisión final pendiente.",
       "aceptacion": null,
       "ejecucion": {
         "perfil": "complejo",

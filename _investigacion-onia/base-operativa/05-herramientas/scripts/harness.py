@@ -260,6 +260,8 @@ def main(argv=None):
         if name == "revisar":
             p.add_argument("--revisor")
             p.add_argument("--recoger", action="store_true")
+            p.add_argument("--conservar-worktree", action="store_true",
+                           help="Con --recoger, conservar el checkout revisor con sus archivos locales.")
     p = commands.add_parser("estado")
     p.add_argument("--dry-run", action="store_true")
     p = commands.add_parser("cerrar")
@@ -269,6 +271,8 @@ def main(argv=None):
     p.add_argument("--resultado", required=True)
     p.add_argument("--comprobacion", required=True)
     p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--conservar-worktree", action="store_true",
+                   help="Conservar el checkout y sus archivos locales. Exige HEAD y archivos versionados al día.")
     p = commands.add_parser("aceptar")
     p.add_argument("id")
     p.add_argument("--revision-esperada", type=int, required=True)
@@ -291,12 +295,16 @@ def main(argv=None):
                 result = sessions.link_skills(sessions.repo_for(args.base), args.base, args.dry_run)
             elif args.command == "cerrar":
                 result = sessions.close(args.base, args.id, args.operacion, args.revision_esperada,
-                                        args.actor, args.resultado, args.comprobacion, args.dry_run)
+                                        args.actor, args.resultado, args.comprobacion, args.dry_run,
+                                        retain_worktree=args.conservar_worktree)
             elif args.command == "revisar" and args.recoger:
                 if args.dry_run:
                     raise ValueError("Una simulación no produce un veredicto real.")
-                result = sessions.collect_review(args.base, args.id, args.operacion, args.revision_esperada)
+                result = sessions.collect_review(args.base, args.id, args.operacion, args.revision_esperada,
+                                                 retain_worktree=args.conservar_worktree)
             else:
+                if args.command == "revisar" and args.conservar_worktree:
+                    raise ValueError("--conservar-worktree requiere --recoger al revisar.")
                 if args.command == "revisar" and not args.revisor:
                     raise ValueError("Revisar requiere --revisor distinto del ejecutor.")
                 result = sessions.launch(args.base, args.id, args.operacion, args.revision_esperada,

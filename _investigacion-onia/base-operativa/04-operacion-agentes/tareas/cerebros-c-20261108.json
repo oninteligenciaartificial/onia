@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "cerebros-c-20261108",
-  "revision": 11,
+  "revision": 27,
   "compartible": true,
   "objetivo": "Cerebros profundos de referentes, grupo C: contenido-marca",
-  "estado": "en_espera",
-  "proximo_paso": "Cerrar y lanzar revisor distinto ultra al reanudarse; no aceptar sólo por conteo.",
-  "resultado": "Entrega declara7referentes×4piezas; falta revisión independiente. Commit remoto 1e6ce6f487c540b0127656a17506e1d1ce4ec978.",
-  "comprobacion": "Hash de rama origin cotejado; revisión y aceptación pendientes. Sergio pide no lanzar nada nuevo y STOP tras evaluación audiovisual. No se interrumpió ejecutora; finalizó rc0.",
+  "estado": "en_curso",
+  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+  "resultado": "Revisión independiente pidió recuperar evidencia temporizada primaria de Beltrán; retoma para corrección.",
+  "comprobacion": "Veredicto conservado; fuentes anteriores no acreditan por sí solas contenido hablado.",
   "verificacion": "pendiente",
   "evidencias": [
     {
@@ -19,9 +19,24 @@
       "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
       "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
       "bytes": 588
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+      "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+      "bytes": 2341
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+      "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+      "bytes": 301
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/retoma-correccion-r20.json",
+      "sha256": "74ea7e3b07466fb8d53d588347d1718467745481dffa4ebe4c9d0ea001584dc0",
+      "bytes": 3118
     }
   ],
-  "actualizado": "2026-11-08T22:29:46.738353+00:00",
+  "actualizado": "2026-11-09T03:08:29.247808+00:00",
   "historial": [
     {
       "revision": 1,
@@ -519,6 +534,2087 @@
       ],
       "cierre": null,
       "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-08T22:29:46.738353+00:00",
+      "estado": "en_espera",
+      "resultado": "Entrega declara7referentes×4piezas; falta revisión independiente. Commit remoto 1e6ce6f487c540b0127656a17506e1d1ce4ec978.",
+      "comprobacion": "Hash de rama origin cotejado; revisión y aceptación pendientes. Sergio pide no lanzar nada nuevo y STOP tras evaluación audiovisual. No se interrumpió ejecutora; finalizó rc0.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        }
+      ],
+      "proximo_paso": "Cerrar y lanzar revisor distinto ultra al reanudarse; no aceptar sólo por conteo.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-09T02:43:05.238156+00:00",
+      "estado": "en_curso",
+      "resultado": "Entrega publicada por ejecutora en 1e6ce6f487c540b0127656a17506e1d1ce4ec978; lista para revisión independiente.",
+      "comprobacion": "Commit remoto, diff exclusivo, JSON y conteos declarados cotejados. Calidad de cada pieza pendiente de revisor. Conservar worktree completo.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        }
+      ],
+      "proximo_paso": "Cerrar conservando archivos y lanzar revisor distinto Sol6.1 ultra.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-09T02:43:06.764737+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada por ejecutora en 1e6ce6f487c540b0127656a17506e1d1ce4ec978; lista para revisión independiente.",
+      "comprobacion": "Commit remoto, diff exclusivo, JSON y conteos declarados cotejados. Calidad de cada pieza pendiente de revisor. Conservar worktree completo.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+        "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+        "ramas_origin": [
+          "origin/codex/ws-cerebros-c-20261108"
+        ],
+        "fecha": "2026-11-09T02:43:06.733162+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-09T02:43:09.275635+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada por ejecutora en 1e6ce6f487c540b0127656a17506e1d1ce4ec978; lista para revisión independiente.",
+      "comprobacion": "Commit remoto, diff exclusivo, JSON y conteos declarados cotejados. Calidad de cada pieza pendiente de revisor. Conservar worktree completo.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-c",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T02:43:09.251398+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+        "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+        "ramas_origin": [
+          "origin/codex/ws-cerebros-c-20261108"
+        ],
+        "fecha": "2026-11-09T02:43:06.733162+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-09T02:43:09.378856+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada por ejecutora en 1e6ce6f487c540b0127656a17506e1d1ce4ec978; lista para revisión independiente.",
+      "comprobacion": "Commit remoto, diff exclusivo, JSON y conteos declarados cotejados. Calidad de cada pieza pendiente de revisor. Conservar worktree completo.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-c",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 1531795,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140469",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T02:43:09.251398+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+        "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+        "ramas_origin": [
+          "origin/codex/ws-cerebros-c-20261108"
+        ],
+        "fecha": "2026-11-09T02:43:06.733162+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 16,
+      "actualizado": "2026-11-09T02:43:09.473020+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada por ejecutora en 1e6ce6f487c540b0127656a17506e1d1ce4ec978; lista para revisión independiente.",
+      "comprobacion": "Commit remoto, diff exclusivo, JSON y conteos declarados cotejados. Calidad de cada pieza pendiente de revisor. Conservar worktree completo.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-c",
+          "pid": 1531799,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140478",
+          "supervisor_pid": 1531795,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140469",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T02:43:09.251398+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+        "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+        "ramas_origin": [
+          "origin/codex/ws-cerebros-c-20261108"
+        ],
+        "fecha": "2026-11-09T02:43:06.733162+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 17,
+      "actualizado": "2026-11-09T02:43:10.076895+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada por ejecutora en 1e6ce6f487c540b0127656a17506e1d1ce4ec978; lista para revisión independiente.",
+      "comprobacion": "Commit remoto, diff exclusivo, JSON y conteos declarados cotejados. Calidad de cada pieza pendiente de revisor. Conservar worktree completo.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-c",
+          "pid": 1531799,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140478",
+          "supervisor_pid": 1531795,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140469",
+          "rama": "(detached)",
+          "session_id": "01a1be30-2972-7083-8b3c-21e6e8a9312d",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T02:43:09.251398+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+        "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+        "ramas_origin": [
+          "origin/codex/ws-cerebros-c-20261108"
+        ],
+        "fecha": "2026-11-09T02:43:06.733162+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 18,
+      "actualizado": "2026-11-09T02:47:57.516489+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada por ejecutora en 1e6ce6f487c540b0127656a17506e1d1ce4ec978; lista para revisión independiente.",
+      "comprobacion": "Commit remoto, diff exclusivo, JSON y conteos declarados cotejados. Calidad de cada pieza pendiente de revisor. Conservar worktree completo.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-c",
+          "pid": 1531799,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140478",
+          "supervisor_pid": 1531795,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140469",
+          "rama": "(detached)",
+          "session_id": "01a1be30-2972-7083-8b3c-21e6e8a9312d",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T02:43:09.251398+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+        "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+        "ramas_origin": [
+          "origin/codex/ws-cerebros-c-20261108"
+        ],
+        "fecha": "2026-11-09T02:43:06.733162+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 19,
+      "actualizado": "2026-11-09T02:49:43.735556+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada por ejecutora en 1e6ce6f487c540b0127656a17506e1d1ce4ec978; lista para revisión independiente.",
+      "comprobacion": "Commit remoto, diff exclusivo, JSON y conteos declarados cotejados. Calidad de cada pieza pendiente de revisor. Conservar worktree completo.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-c",
+          "pid": 1531799,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140478",
+          "supervisor_pid": 1531795,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140469",
+          "rama": "(detached)",
+          "session_id": "01a1be30-2972-7083-8b3c-21e6e8a9312d",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T02:43:09.251398+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json",
+          "fin": "2026-11-09T02:49:43.713325+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+        "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+        "ramas_origin": [
+          "origin/codex/ws-cerebros-c-20261108"
+        ],
+        "fecha": "2026-11-09T02:43:06.733162+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 20,
+      "actualizado": "2026-11-09T02:59:30.331366+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada por ejecutora en 1e6ce6f487c540b0127656a17506e1d1ce4ec978; lista para revisión independiente.",
+      "comprobacion": "Commit remoto, diff exclusivo, JSON y conteos declarados cotejados. Calidad de cada pieza pendiente de revisor. Conservar worktree completo.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-c",
+          "pid": 1531799,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140478",
+          "supervisor_pid": 1531795,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140469",
+          "rama": "(detached)",
+          "session_id": "01a1be30-2972-7083-8b3c-21e6e8a9312d",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T02:43:09.251398+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json",
+          "fin": "2026-11-09T02:49:43.713325+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+        "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+        "ramas_origin": [
+          "origin/codex/ws-cerebros-c-20261108"
+        ],
+        "fecha": "2026-11-09T02:43:06.733162+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "cambios",
+        "commit": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+        "criterio": "Pasan integridad, diff exclusivo de diez archivos, JSON, conteos declarados y 50 enlaces internos. Bloquea la aceptación Beltrán P1–P4: EVIDENCIA.md:58 declara eliminados los ASR y reconoce que el principal sólo corroboró embeds y propietarios, sin cotejar contenido hablado. Esta revisión tampoco pudo recuperar las piezas: lector web limitado y GET público sin resolución de red. Las paráfrasis y huellas conservadas no permiten completar ese cotejo independiente. Recuperar evidencia primaria temporizada revisable de las cuatro piezas, comprobar las cinco respuestas y actualizar ficha, matriz e índice; mantenerlas como pendientes de verificación hasta entonces. No se modificó ni aceptó la tarea.",
+        "worktree_conservado": true,
+        "revisor": "cerebros-revisor-c",
+        "session_id": "01a1be30-2972-7083-8b3c-21e6e8a9312d",
+        "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/revision-2-19f75b08.json",
+          "sha256": "85b95479a575676ac4714c02a1e89231238fb6f45e9c73d8777b221efce15adb",
+          "bytes": 850
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/revision-2-19f75b08.json",
+          "sha256": "85b95479a575676ac4714c02a1e89231238fb6f45e9c73d8777b221efce15adb",
+          "bytes": 850
+        }
+      ]
+    },
+    {
+      "revision": 21,
+      "actualizado": "2026-11-09T02:59:30.427890+00:00",
+      "estado": "en_curso",
+      "resultado": "Revisión independiente pidió recuperar evidencia temporizada primaria de Beltrán; retoma para corrección.",
+      "comprobacion": "Veredicto conservado; fuentes anteriores no acreditan por sí solas contenido hablado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/retoma-correccion-r20.json",
+          "sha256": "74ea7e3b07466fb8d53d588347d1718467745481dffa4ebe4c9d0ea001584dc0",
+          "bytes": 3118
+        }
+      ],
+      "proximo_paso": "RETOMA AUTORIZADA POR SERGIO MISMO SID para corregir el veredicto independiente adjunto. Prioridad única Beltrán P1–P4: recuperar evidencia primaria temporizada revisable de las cuatro piezas, cotejar las cinco respuestas y corregir ficha/COBERTURA/README/EVIDENCIA. No fingir que las transcripciones eliminadas siguen disponibles. Reusar URLs exactas del repo, GET público ordinario y ASR existente en ~/asr/venv, faster-whisper small offline CPUint8 max2hilos1worker, secuencial y acotado por pieza; no instalar/descargar modelos ni cursos pagos. Si reutilizás el hijo original de Beltrán, un hijo máximo Sol6.1high, sin nietos, un escritor. Guardar medios/transcripciones completas fuera de Git en carpeta privada propia conservada; NO BORRAR NADA, tampoco temporales. En Git sólo referencias, hashes, tiempos, análisis/paráfrasis y citas muy breves redistribuibles; indicar ruta privada exacta para que la nueva revisora en este VPS pueda cotejar el contenido sin depender de red. Un hash solo no prueba contenido. No usar navegador de cuentas, cookies, shellPlaywright ni otra sesión: el perfil está en prueba por otro responsable. Fuentes inaccesibles tras alternativas razonables quedan PARCIAL con próximos pasos, sin reducir la aceptación. Corregir lo necesario de esta revisión, conservar otras fichas y decisiones. Publicar commit/push propios sólo en la misma rama y carpeta, sinforce/amend. Sin n8n/producción/gasto/mensajes/secretos ni borrados. Al terminar informar cobertura, evidencia primaria recuperada y commit; revisión distinta seguirá después.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-c",
+          "pid": 1531799,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140478",
+          "supervisor_pid": 1531795,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140469",
+          "rama": "(detached)",
+          "session_id": "01a1be30-2972-7083-8b3c-21e6e8a9312d",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T02:43:09.251398+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json",
+          "fin": "2026-11-09T02:49:43.713325+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/revision-2-19f75b08.json",
+          "sha256": "85b95479a575676ac4714c02a1e89231238fb6f45e9c73d8777b221efce15adb",
+          "bytes": 850
+        }
+      ]
+    },
+    {
+      "revision": 22,
+      "actualizado": "2026-11-09T02:59:30.715223+00:00",
+      "estado": "en_curso",
+      "resultado": "Revisión independiente pidió recuperar evidencia temporizada primaria de Beltrán; retoma para corrección.",
+      "comprobacion": "Veredicto conservado; fuentes anteriores no acreditan por sí solas contenido hablado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/retoma-correccion-r20.json",
+          "sha256": "74ea7e3b07466fb8d53d588347d1718467745481dffa4ebe4c9d0ea001584dc0",
+          "bytes": 3118
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-c",
+          "pid": 1531799,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140478",
+          "supervisor_pid": 1531795,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140469",
+          "rama": "(detached)",
+          "session_id": "01a1be30-2972-7083-8b3c-21e6e8a9312d",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T02:43:09.251398+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json",
+          "fin": "2026-11-09T02:49:43.713325+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 980245,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.3.briefing.txt",
+          "inicio": "2026-11-09T02:59:30.681965+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/revision-2-19f75b08.json",
+          "sha256": "85b95479a575676ac4714c02a1e89231238fb6f45e9c73d8777b221efce15adb",
+          "bytes": 850
+        }
+      ]
+    },
+    {
+      "revision": 23,
+      "actualizado": "2026-11-09T02:59:30.811891+00:00",
+      "estado": "en_curso",
+      "resultado": "Revisión independiente pidió recuperar evidencia temporizada primaria de Beltrán; retoma para corrección.",
+      "comprobacion": "Veredicto conservado; fuentes anteriores no acreditan por sí solas contenido hablado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/retoma-correccion-r20.json",
+          "sha256": "74ea7e3b07466fb8d53d588347d1718467745481dffa4ebe4c9d0ea001584dc0",
+          "bytes": 3118
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-c",
+          "pid": 1531799,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140478",
+          "supervisor_pid": 1531795,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140469",
+          "rama": "(detached)",
+          "session_id": "01a1be30-2972-7083-8b3c-21e6e8a9312d",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T02:43:09.251398+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json",
+          "fin": "2026-11-09T02:49:43.713325+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 1578977,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193238612",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 980245,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.3.briefing.txt",
+          "inicio": "2026-11-09T02:59:30.681965+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/revision-2-19f75b08.json",
+          "sha256": "85b95479a575676ac4714c02a1e89231238fb6f45e9c73d8777b221efce15adb",
+          "bytes": 850
+        }
+      ]
+    },
+    {
+      "revision": 24,
+      "actualizado": "2026-11-09T02:59:30.930372+00:00",
+      "estado": "en_curso",
+      "resultado": "Revisión independiente pidió recuperar evidencia temporizada primaria de Beltrán; retoma para corrección.",
+      "comprobacion": "Veredicto conservado; fuentes anteriores no acreditan por sí solas contenido hablado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/retoma-correccion-r20.json",
+          "sha256": "74ea7e3b07466fb8d53d588347d1718467745481dffa4ebe4c9d0ea001584dc0",
+          "bytes": 3118
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-c",
+          "pid": 1531799,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140478",
+          "supervisor_pid": 1531795,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140469",
+          "rama": "(detached)",
+          "session_id": "01a1be30-2972-7083-8b3c-21e6e8a9312d",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T02:43:09.251398+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json",
+          "fin": "2026-11-09T02:49:43.713325+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 1578987,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193238624",
+          "supervisor_pid": 1578977,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193238612",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 980245,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.3.briefing.txt",
+          "inicio": "2026-11-09T02:59:30.681965+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/revision-2-19f75b08.json",
+          "sha256": "85b95479a575676ac4714c02a1e89231238fb6f45e9c73d8777b221efce15adb",
+          "bytes": 850
+        }
+      ]
+    },
+    {
+      "revision": 25,
+      "actualizado": "2026-11-09T02:59:34.673589+00:00",
+      "estado": "en_curso",
+      "resultado": "Revisión independiente pidió recuperar evidencia temporizada primaria de Beltrán; retoma para corrección.",
+      "comprobacion": "Veredicto conservado; fuentes anteriores no acreditan por sí solas contenido hablado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/retoma-correccion-r20.json",
+          "sha256": "74ea7e3b07466fb8d53d588347d1718467745481dffa4ebe4c9d0ea001584dc0",
+          "bytes": 3118
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-c",
+          "pid": 1531799,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140478",
+          "supervisor_pid": 1531795,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140469",
+          "rama": "(detached)",
+          "session_id": "01a1be30-2972-7083-8b3c-21e6e8a9312d",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T02:43:09.251398+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json",
+          "fin": "2026-11-09T02:49:43.713325+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 1578987,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193238624",
+          "supervisor_pid": 1578977,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193238612",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 980245,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.3.briefing.txt",
+          "inicio": "2026-11-09T02:59:30.681965+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/revision-2-19f75b08.json",
+          "sha256": "85b95479a575676ac4714c02a1e89231238fb6f45e9c73d8777b221efce15adb",
+          "bytes": 850
+        }
+      ]
+    },
+    {
+      "revision": 26,
+      "actualizado": "2026-11-09T03:03:56.663849+00:00",
+      "estado": "en_curso",
+      "resultado": "Revisión independiente pidió recuperar evidencia temporizada primaria de Beltrán; retoma para corrección.",
+      "comprobacion": "Veredicto conservado; fuentes anteriores no acreditan por sí solas contenido hablado.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight.json",
+          "sha256": "c71e71989a2530663288dc27a8288a5ce524026a6bbe569194f37eb8dedcddba",
+          "bytes": 661
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/espera-sergio-20261108.json",
+          "sha256": "485a931c06cbf8d0389b6290155af425482ad4e75cd38f67f37c7e16d7190235",
+          "bytes": 588
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/preflight-revision-retoma-r11.json",
+          "sha256": "3e210ab90c35bae74d9ed1199185293d850b019ff379756b6f009146a772ff31",
+          "bytes": 2341
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/cierre-r12-1ba0bb14.json",
+          "sha256": "e5c6118835c54ce104c1a4977ce356f2eb5a6443500985295d280277c05ed9da",
+          "bytes": 301
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/retoma-correccion-r20.json",
+          "sha256": "74ea7e3b07466fb8d53d588347d1718467745481dffa4ebe4c9d0ea001584dc0",
+          "bytes": 3118
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "cerebros-ejecutor-c",
+        "rutas": [
+          "03-referentes/cerebros-profundos/c"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-08T21:14:11.259750+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 691245,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176306",
+          "supervisor_pid": 691239,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
+          "inicio": "2026-11-08T21:15:47.440781+00:00",
+          "rc": 0,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-08T22:15:46.349891+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "cerebros-revisor-c",
+          "pid": 1531799,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140478",
+          "supervisor_pid": 1531795,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140469",
+          "rama": "(detached)",
+          "session_id": "01a1be30-2972-7083-8b3c-21e6e8a9312d",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+          "inicio": "2026-11-09T02:43:09.251398+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "ultra",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+          "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json",
+          "fin": "2026-11-09T02:49:43.713325+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "cerebros-ejecutor-c",
+          "pid": 1578987,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193238624",
+          "supervisor_pid": 1578977,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193238612",
+          "rama": "codex/ws-cerebros-c-20261108",
+          "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+          "log_rel": "logs/cerebros-c-20261108.jsonl",
+          "log_offset": 980245,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+          "rutas": [
+            "03-referentes/cerebros-profundos/c"
+          ],
+          "dry_run": false,
+          "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+          "reanuda": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+          "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.3.briefing.txt",
+          "inicio": "2026-11-09T02:59:30.681965+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/revision-2-19f75b08.json",
+          "sha256": "85b95479a575676ac4714c02a1e89231238fb6f45e9c73d8777b221efce15adb",
+          "bytes": 850
+        }
+      ]
     }
   ],
   "briefing": {
@@ -547,7 +2643,7 @@
       "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:191176288",
       "rama": "codex/ws-cerebros-c-20261108",
       "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
-      "estado": "finalizada",
+      "estado": "cerrada",
       "operacion": "/home/onia-codex-worker/operacion",
       "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
       "log_rel": "logs/cerebros-c-20261108.jsonl",
@@ -562,7 +2658,7 @@
       "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.1.briefing.txt",
       "inicio": "2026-11-08T21:15:47.440781+00:00",
       "rc": 0,
-      "ultimo_evento": "turn.completed",
+      "ultimo_evento": "item.started",
       "modelo": "gpt-6.1-sol",
       "esfuerzo": "high",
       "auth_chatgpt": true,
@@ -571,8 +2667,84 @@
       "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
       "perfil_permisos": "harness-git",
       "fin": "2026-11-08T22:15:46.349891+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "revisor",
+      "responsable": "cerebros-revisor-c",
+      "pid": 1531799,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140478",
+      "supervisor_pid": 1531795,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193140469",
+      "rama": "(detached)",
+      "session_id": "01a1be30-2972-7083-8b3c-21e6e8a9312d",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.revision-2.jsonl",
+      "log_rel": "logs/cerebros-c-20261108.revision-2.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108-revision-2",
+      "rutas": [
+        "03-referentes/cerebros-profundos/c"
+      ],
+      "dry_run": false,
+      "commit_base": "1e6ce6f487c540b0127656a17506e1d1ce4ec978",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.briefing.txt",
+      "inicio": "2026-11-09T02:43:09.251398+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "ultra",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "81b1ce6afd55f112699a9267bac1c55b5980bf9c237d4d32af8fdf1e041151fd",
+      "schema": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.2.veredicto.json",
+      "fin": "2026-11-09T02:49:43.713325+00:00"
+    },
+    {
+      "intento": 3,
+      "rol": "ejecutor",
+      "responsable": "cerebros-ejecutor-c",
+      "pid": 1578987,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193238624",
+      "supervisor_pid": 1578977,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:193238612",
+      "rama": "codex/ws-cerebros-c-20261108",
+      "session_id": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+      "estado": "ejecutando",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.jsonl",
+      "log_rel": "logs/cerebros-c-20261108.jsonl",
+      "log_offset": 980245,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-cerebros-c-20261108",
+      "rutas": [
+        "03-referentes/cerebros-profundos/c"
+      ],
+      "dry_run": false,
+      "commit_base": "e286d4564127945cb007e7b3db69cf2208e6dad7",
+      "reanuda": "01a1bd04-7410-7ca0-9c8a-3b3128703832",
+      "briefing": "/home/onia-codex-worker/operacion/logs/cerebros-c-20261108.3.briefing.txt",
+      "inicio": "2026-11-09T02:59:30.681965+00:00",
+      "rc": null,
+      "ultimo_evento": "item.started",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 1,
+      "git_repo": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/cerebros-c-20261108.git/worktrees/onia-ws-cerebros-c-20261108",
+      "perfil_permisos": "harness-git"
     }
   ],
   "revision_independiente": null,
-  "cierre": null
+  "cierre": null,
+  "evidencias_revision": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/cerebros-c-20261108/revision-2-19f75b08.json",
+      "sha256": "85b95479a575676ac4714c02a1e89231238fb6f45e9c73d8777b221efce15adb",
+      "bytes": 850
+    }
+  ]
 }
