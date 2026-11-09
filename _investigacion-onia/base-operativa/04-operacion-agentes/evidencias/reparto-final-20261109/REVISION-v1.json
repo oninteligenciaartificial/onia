@@ -1,0 +1,31 @@
+{
+  "id": "reparto-final-20261109",
+  "tipo_revision": "subagente nativo distinto, sólo lectura",
+  "revisor": "/root/revision_reparto_final",
+  "session_id": "01a1c282-af37-72b3-b127-2273fc9c38c4",
+  "modelo_solicitado": "gpt-6.1-sol",
+  "esfuerzo_solicitado": "low",
+  "runtime_observado": {
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "low",
+    "fecha": "2026-11-09T22:51:50.175Z"
+  },
+  "cuota_inicio": {
+    "fecha": "2026-11-09T22:51:53.512Z",
+    "used_percent": 68.0,
+    "saldo_extra": "0"
+  },
+  "cuota_fin": {
+    "fecha": "2026-11-09T22:52:13.361Z",
+    "used_percent": 68.0,
+    "saldo_extra": "0"
+  },
+  "intentos": 1,
+  "retrabajo": false,
+  "resultado": "aceptada",
+  "commit_revisado": "9f1ec0bbf2e577050ea06b358ac4eb4cad3f2cb6",
+  "commits_propios": [],
+  "veredicto": "bueno",
+  "criterio": "Reparto y límites vigentes, horarios/precio, modelo declarativo/observado, buzón sin estado paralelo y conservación de historia conformes; sin hallazgos materiales.",
+  "limites": "Reviewer verificó diff, referencias y hash AGENTS; TOML/40 archivos/57 tests cotejados en evidencia del ejecutor, sin abrir config completo ni repetir pruebas. Cuota compartida; diferencia redondeada 0 puntos no prueba consumo cero."
+}
