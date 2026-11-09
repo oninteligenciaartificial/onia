@@ -1,0 +1,350 @@
+{
+  "schema": 2,
+  "id": "ficcion-fabrica-001",
+  "revision": 12,
+  "compartible": true,
+  "objetivo": "FICTICIO: dos ideas y guiones con revisión y decisión simuladas",
+  "estado": "para_revision",
+  "proximo_paso": "Revisión real del encargo por coordinador; Telegram/panel/scheduler siguen sin integración",
+  "resultado": "Ensayo completo; A elegido, B con cambios (todo simulado)",
+  "comprobacion": "Trazabilidad, duplicado, pendiente, fallo y conflictos comprobados",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ingesta.json",
+      "sha256": "dad2d5dd694023e7aaa2b69615a5edeffd9161af5f79520cacf05fd386d64600",
+      "bytes": 2560
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ideas.json",
+      "sha256": "d37f500e407359ee6ea0984bf730193d5cb8a4361e1a76c35948969a54936da6",
+      "bytes": 1928
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/guiones.json",
+      "sha256": "04d3f7ccb172dba238534d00904b8af89331faf9a83fbd67804033ae090b1fb5",
+      "bytes": 2930
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/revisiones.json",
+      "sha256": "4a38556d0af463b10cdc4df44f67ee97812adfa79bd420f707107908723fcaa5",
+      "bytes": 1088
+    }
+  ],
+  "actualizado": "2026-11-09T03:03:49.055534+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-09T03:03:48.486587+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Clasificar fuentes ficticias",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-09T03:03:48.510488+00:00",
+      "estado": "en_curso",
+      "resultado": "Comienza ensayo sin sesiones ni servicios",
+      "comprobacion": "Fixture declarada ficticia",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Ingestión",
+      "aceptacion": null
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-09T03:03:48.538601+00:00",
+      "estado": "en_espera",
+      "resultado": "Fuente sin fecha retenida",
+      "comprobacion": "No entra en ningún guion",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ingesta.json",
+          "sha256": "dad2d5dd694023e7aaa2b69615a5edeffd9161af5f79520cacf05fd386d64600",
+          "bytes": 2560
+        }
+      ],
+      "proximo_paso": "Coordinador: resolver fecha antes de usar esa fuente",
+      "aceptacion": null
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-09T03:03:48.566343+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuar con fuentes completas",
+      "comprobacion": "Pendiente conservado en evidencia",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ingesta.json",
+          "sha256": "dad2d5dd694023e7aaa2b69615a5edeffd9161af5f79520cacf05fd386d64600",
+          "bytes": 2560
+        }
+      ],
+      "proximo_paso": "Evaluar fallo",
+      "aceptacion": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-09T03:03:48.600332+00:00",
+      "estado": "en_espera",
+      "resultado": "Fallo de fuente simulado",
+      "comprobacion": "Sin acceso real ni reintento de red",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ingesta.json",
+          "sha256": "dad2d5dd694023e7aaa2b69615a5edeffd9161af5f79520cacf05fd386d64600",
+          "bytes": 2560
+        }
+      ],
+      "proximo_paso": "Coordinador: recuperar fuente o descartarla; no rellenar su contenido",
+      "aceptacion": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-09T03:03:48.630951+00:00",
+      "estado": "en_curso",
+      "resultado": "Continuar lote independiente",
+      "comprobacion": "Dos fuentes utilizables",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ingesta.json",
+          "sha256": "dad2d5dd694023e7aaa2b69615a5edeffd9161af5f79520cacf05fd386d64600",
+          "bytes": 2560
+        }
+      ],
+      "proximo_paso": "Preparar ideas",
+      "aceptacion": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-09T03:03:48.660881+00:00",
+      "estado": "en_curso",
+      "resultado": "Dos ideas trazables convertidas en guiones",
+      "comprobacion": "Cada bloque distingue fuente y propuesta OnIA",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ingesta.json",
+          "sha256": "dad2d5dd694023e7aaa2b69615a5edeffd9161af5f79520cacf05fd386d64600",
+          "bytes": 2560
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ideas.json",
+          "sha256": "d37f500e407359ee6ea0984bf730193d5cb8a4361e1a76c35948969a54936da6",
+          "bytes": 1928
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/guiones.json",
+          "sha256": "04d3f7ccb172dba238534d00904b8af89331faf9a83fbd67804033ae090b1fb5",
+          "bytes": 2930
+        }
+      ],
+      "proximo_paso": "Revisión individual",
+      "aceptacion": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-09T03:03:48.707348+00:00",
+      "estado": "para_revision",
+      "resultado": "Lote editorial con revisiones simuladas",
+      "comprobacion": "A bueno; B cambios; no revisión independiente real",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ingesta.json",
+          "sha256": "dad2d5dd694023e7aaa2b69615a5edeffd9161af5f79520cacf05fd386d64600",
+          "bytes": 2560
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ideas.json",
+          "sha256": "d37f500e407359ee6ea0984bf730193d5cb8a4361e1a76c35948969a54936da6",
+          "bytes": 1928
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/guiones.json",
+          "sha256": "04d3f7ccb172dba238534d00904b8af89331faf9a83fbd67804033ae090b1fb5",
+          "bytes": 2930
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/revisiones.json",
+          "sha256": "4a38556d0af463b10cdc4df44f67ee97812adfa79bd420f707107908723fcaa5",
+          "bytes": 1088
+        }
+      ],
+      "proximo_paso": "Decisión simulada por guion",
+      "aceptacion": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-09T03:03:48.805350+00:00",
+      "estado": "en_curso",
+      "resultado": "Abrir fase de decisión editorial simulada",
+      "comprobacion": "Se conserva evidencia anterior",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ingesta.json",
+          "sha256": "dad2d5dd694023e7aaa2b69615a5edeffd9161af5f79520cacf05fd386d64600",
+          "bytes": 2560
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ideas.json",
+          "sha256": "d37f500e407359ee6ea0984bf730193d5cb8a4361e1a76c35948969a54936da6",
+          "bytes": 1928
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/guiones.json",
+          "sha256": "04d3f7ccb172dba238534d00904b8af89331faf9a83fbd67804033ae090b1fb5",
+          "bytes": 2930
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/revisiones.json",
+          "sha256": "4a38556d0af463b10cdc4df44f67ee97812adfa79bd420f707107908723fcaa5",
+          "bytes": 1088
+        }
+      ],
+      "proximo_paso": "Registrar decisiones",
+      "aceptacion": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-09T03:03:48.884179+00:00",
+      "estado": "en_curso",
+      "resultado": "Abrir fase de decisión editorial simulada",
+      "comprobacion": "Se conserva evidencia anterior",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ingesta.json",
+          "sha256": "dad2d5dd694023e7aaa2b69615a5edeffd9161af5f79520cacf05fd386d64600",
+          "bytes": 2560
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ideas.json",
+          "sha256": "d37f500e407359ee6ea0984bf730193d5cb8a4361e1a76c35948969a54936da6",
+          "bytes": 1928
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/guiones.json",
+          "sha256": "04d3f7ccb172dba238534d00904b8af89331faf9a83fbd67804033ae090b1fb5",
+          "bytes": 2930
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/revisiones.json",
+          "sha256": "4a38556d0af463b10cdc4df44f67ee97812adfa79bd420f707107908723fcaa5",
+          "bytes": 1088
+        }
+      ],
+      "proximo_paso": "Registrar decisiones",
+      "aceptacion": null,
+      "decisiones": [
+        {
+          "id": "decision-guion-a-v1",
+          "texto": "SIMULADO: elegir_para_preparar",
+          "fuente": {
+            "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/decision-guion-a-v1.json",
+            "sha256": "37ddd6dd798f6e31bf39730bc4dd0f86f6e1cdc109df63846eb1eac6943fc007",
+            "bytes": 366
+          },
+          "autor": "Sergio SIMULADO",
+          "sustituye": null,
+          "fecha": "2026-11-09T03:03:48.884159+00:00"
+        }
+      ]
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-09T03:03:48.933902+00:00",
+      "estado": "en_curso",
+      "resultado": "Abrir fase de decisión editorial simulada",
+      "comprobacion": "Se conserva evidencia anterior",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ingesta.json",
+          "sha256": "dad2d5dd694023e7aaa2b69615a5edeffd9161af5f79520cacf05fd386d64600",
+          "bytes": 2560
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/ideas.json",
+          "sha256": "d37f500e407359ee6ea0984bf730193d5cb8a4361e1a76c35948969a54936da6",
+          "bytes": 1928
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/guiones.json",
+          "sha256": "04d3f7ccb172dba238534d00904b8af89331faf9a83fbd67804033ae090b1fb5",
+          "bytes": 2930
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/revisiones.json",
+          "sha256": "4a38556d0af463b10cdc4df44f67ee97812adfa79bd420f707107908723fcaa5",
+          "bytes": 1088
+        }
+      ],
+      "proximo_paso": "Registrar decisiones",
+      "aceptacion": null,
+      "decisiones": [
+        {
+          "id": "decision-guion-a-v1",
+          "texto": "SIMULADO: elegir_para_preparar",
+          "fuente": {
+            "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/decision-guion-a-v1.json",
+            "sha256": "37ddd6dd798f6e31bf39730bc4dd0f86f6e1cdc109df63846eb1eac6943fc007",
+            "bytes": 366
+          },
+          "autor": "Sergio SIMULADO",
+          "sustituye": null,
+          "fecha": "2026-11-09T03:03:48.884159+00:00"
+        },
+        {
+          "id": "decision-guion-b-v1",
+          "texto": "SIMULADO: pedir_cambios",
+          "fuente": {
+            "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/decision-guion-b-v1.json",
+            "sha256": "a1d0949bba2f4f5456db2bb66216ee8d9f12b13cc57ddf925efa65013a7fac0d",
+            "bytes": 357
+          },
+          "autor": "Sergio SIMULADO",
+          "sustituye": null,
+          "fecha": "2026-11-09T03:03:48.933882+00:00"
+        }
+      ]
+    }
+  ],
+  "briefing": null,
+  "aceptacion": null,
+  "decisiones": [
+    {
+      "id": "decision-guion-a-v1",
+      "texto": "SIMULADO: elegir_para_preparar",
+      "fuente": {
+        "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/decision-guion-a-v1.json",
+        "sha256": "37ddd6dd798f6e31bf39730bc4dd0f86f6e1cdc109df63846eb1eac6943fc007",
+        "bytes": 366
+      },
+      "autor": "Sergio SIMULADO",
+      "sustituye": null,
+      "fecha": "2026-11-09T03:03:48.884159+00:00"
+    },
+    {
+      "id": "decision-guion-b-v1",
+      "texto": "SIMULADO: pedir_cambios",
+      "fuente": {
+        "archivo": "04-operacion-agentes/evidencias/ficcion-fabrica-001/decision-guion-b-v1.json",
+        "sha256": "a1d0949bba2f4f5456db2bb66216ee8d9f12b13cc57ddf925efa65013a7fac0d",
+        "bytes": 357
+      },
+      "autor": "Sergio SIMULADO",
+      "sustituye": null,
+      "fecha": "2026-11-09T03:03:48.933882+00:00"
+    }
+  ]
+}
