@@ -1,22 +1,32 @@
 {
   "schema": 2,
   "id": "homelab-enfoque-euge-20261109",
-  "revision": 2,
+  "revision": 5,
   "compartible": true,
   "objetivo": "Revisar todo el contexto del video de Euge y explicar su aplicación a HOMELAB y al trabajo de OnIA.",
-  "estado": "en_curso",
-  "proximo_paso": "Publicar entrega de análisis y obtener veredicto distinto sobre su commit.",
-  "resultado": "Análisis por tramos redactado y cotejado; pendiente revisión independiente.",
-  "comprobacion": "379 fragmentos ASR íntegros por hash; 10 imágenes inspeccionadas y cotejadas; sin nuevas capturas/inferencia.",
-  "verificacion": "pendiente",
+  "estado": "aceptado",
+  "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+  "resultado": "Análisis publicado y revisión independiente buena para262af0ba7c098c6378809ef47bb1f8bb4e55d8dc.",
+  "comprobacion": "Fuentes y10imágenes cotejadas por ejecutor; revisora distinta cotejó379fragmentos, metadatos visuales, hash, enlaces y permisos.",
+  "verificacion": "correcta",
   "evidencias": [
     {
       "archivo": "04-operacion-agentes/evidencias/homelab-enfoque-euge-20261109/cotejo-v1.json",
       "sha256": "f77c117aca4129564f2bc00e2f78cd701080e74420dcb08f9b7b89c28b0df7d5",
       "bytes": 2656
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/homelab-enfoque-euge-20261109/revision-v1.json",
+      "sha256": "d7f54ab99dfbdcbaf539d8a62427566d58f6fff7fb307ac1cc82fb7c7880475a",
+      "bytes": 1269
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/homelab-enfoque-euge-20261109/ejecucion-v1.json",
+      "sha256": "46448c20ac72dd2e19ae2fb866e94941f8864bff15db5b44d10b66a9c7712f76",
+      "bytes": 1203
     }
   ],
-  "actualizado": "2026-11-09T18:49:53.702213+00:00",
+  "actualizado": "2026-11-09T18:53:19.134404+00:00",
   "historial": [
     {
       "revision": 1,
@@ -28,6 +38,67 @@
       "evidencias": [],
       "proximo_paso": "Leer 04-operacion-agentes/encargos/homelab-enfoque-euge-20261109.md y ejecutar el encargo dentro de su alcance.",
       "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-09T18:49:53.702213+00:00",
+      "estado": "en_curso",
+      "resultado": "Análisis por tramos redactado y cotejado; pendiente revisión independiente.",
+      "comprobacion": "379 fragmentos ASR íntegros por hash; 10 imágenes inspeccionadas y cotejadas; sin nuevas capturas/inferencia.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-enfoque-euge-20261109/cotejo-v1.json",
+          "sha256": "f77c117aca4129564f2bc00e2f78cd701080e74420dcb08f9b7b89c28b0df7d5",
+          "bytes": 2656
+        }
+      ],
+      "proximo_paso": "Publicar entrega de análisis y obtener veredicto distinto sobre su commit.",
+      "aceptacion": null
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-09T18:51:37.363367+00:00",
+      "estado": "para_revision",
+      "resultado": "Análisis publicado en262af0ba7c098c6378809ef47bb1f8bb4e55d8dc; revisión nativa distinta en curso.",
+      "comprobacion": "Fetch explícito y branch-r --contains acreditan entrega en origin; hashes ASR e imágenes cotejados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-enfoque-euge-20261109/cotejo-v1.json",
+          "sha256": "f77c117aca4129564f2bc00e2f78cd701080e74420dcb08f9b7b89c28b0df7d5",
+          "bytes": 2656
+        }
+      ],
+      "proximo_paso": "Recoger veredicto de euge_homelab_revision; aceptar sólo si bueno para este commit.",
+      "aceptacion": null
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-09T18:53:19.104830+00:00",
+      "estado": "para_revision",
+      "resultado": "Análisis publicado y revisión independiente buena para262af0ba7c098c6378809ef47bb1f8bb4e55d8dc.",
+      "comprobacion": "Fuentes y10imágenes cotejadas por ejecutor; revisora distinta cotejó379fragmentos, metadatos visuales, hash, enlaces y permisos.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-enfoque-euge-20261109/cotejo-v1.json",
+          "sha256": "f77c117aca4129564f2bc00e2f78cd701080e74420dcb08f9b7b89c28b0df7d5",
+          "bytes": 2656
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-enfoque-euge-20261109/revision-v1.json",
+          "sha256": "d7f54ab99dfbdcbaf539d8a62427566d58f6fff7fb307ac1cc82fb7c7880475a",
+          "bytes": 1269
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-enfoque-euge-20261109/ejecucion-v1.json",
+          "sha256": "46448c20ac72dd2e19ae2fb866e94941f8864bff15db5b44d10b66a9c7712f76",
+          "bytes": 1203
+        }
+      ],
+      "proximo_paso": "Aceptar únicamente este análisis documental; no habilita configuración ni plan pendiente.",
+      "aceptacion": null
     }
   ],
   "briefing": {
@@ -36,5 +107,9 @@
     "bytes": 3037,
     "contenido": "# Encargo homelab-enfoque-euge-20261109\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nRevisar todo el contexto del video de Euge y explicar su aplicación a HOMELAB y al trabajo de OnIA.\n\n## Entregable\n\nAnálisis completo por tramos con fuentes, contraste visual, diferencias entre demostración y propuesta, estado real y límites.\n\n## Criterio de aceptación\n\nCobertura de principio a fin; tiempos/fuentes; material cotejado; sin atribuciones no observadas, secretos, transcripción completa, nuevas instalaciones o ampliación de permisos; revisión distinta del análisis.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Reusar RESOLUCION-20261109 y evidencia privada cotejada.\n- No implica aprobación del plan cerebro+panel ni scheduler.\n- Conservar nombres fijos: PC de casa DESKTOP-0GGGNMF; laptop DESKTOP-ENV6SDA excluida.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/homelab-enfoque-euge-20261109.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
   },
-  "aceptacion": null
+  "aceptacion": {
+    "revisor": "/root/euge_homelab_revision",
+    "criterio": "Dictamen bueno en revision-v1.json para262af0ba7c098c6378809ef47bb1f8bb4e55d8dc; se acepta el análisis, no la operación de HOMELAB ni el plan de implementación pendiente.",
+    "fecha": "2026-11-09T18:53:19.134386+00:00"
+  }
 }
