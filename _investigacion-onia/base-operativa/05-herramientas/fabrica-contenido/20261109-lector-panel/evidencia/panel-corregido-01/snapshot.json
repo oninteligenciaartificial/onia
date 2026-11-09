@@ -1,0 +1,280 @@
+{
+  "schema": "onia-lector-panel-v1",
+  "generado": "2026-11-09T05:14:35.974113+00:00",
+  "commit_entradas_repo": "cf43c113a7a29fdea27b9d278899aef36f02cd67",
+  "alcance": "Recibo de consulta manual y proyección; no es registro de tareas ni cola editable.",
+  "fuentes": {
+    "consultas": [
+      {
+        "fuente": "F01",
+        "url": "https://support.claude.com/en/articles/8114491-get-started-with-claude",
+        "consulta_iniciada": "2026-11-09T05:14:34.965535+00:00",
+        "resultado": "leida",
+        "item": "F01",
+        "consulta_finalizada": "2026-11-09T05:14:35.301539+00:00"
+      },
+      {
+        "fuente": "F02",
+        "url": "https://support.claude.com/en/articles/7996857-my-prompt-isn-t-giving-me-a-helpful-answer",
+        "consulta_iniciada": "2026-11-09T05:14:35.301550+00:00",
+        "resultado": "leida",
+        "item": "F02",
+        "consulta_finalizada": "2026-11-09T05:14:35.664711+00:00"
+      },
+      {
+        "fuente": "F06",
+        "url": "https://claude.com/resources/articles/claude-enterprise-security-updates",
+        "consulta_iniciada": "2026-11-09T05:14:35.664722+00:00",
+        "resultado": "leida",
+        "item": "F06",
+        "consulta_finalizada": "2026-11-09T05:14:35.855404+00:00"
+      }
+    ],
+    "items": [
+      {
+        "id": "F01",
+        "url_original": "https://support.claude.com/en/articles/8114491-get-started-with-claude",
+        "url_canonica": "https://support.claude.com/en/articles/8114491-get-started-with-claude",
+        "autor": "Anthropic",
+        "tipo": "primaria",
+        "tipo_contenido": "guia_evergreen",
+        "titulo": "Get started with Claude | Claude Help Center",
+        "fecha_consulta": "2026-11-09T05:14:34.965535+00:00",
+        "fecha_publicacion": null,
+        "fecha_hecho": null,
+        "fecha_visible": {
+          "valor": "2026-10-30T17:08:37+00:00",
+          "etiqueta": "October 30, 2026",
+          "texto": "Updated over a week ago",
+          "funcion": "visible_no_acredita_publicacion_original"
+        },
+        "resumen": "Guía de acceso y primeros pasos con Claude. El acceso personal y los límites de uso requieren comprobación propia.",
+        "cobertura": "Título y fecha visible extraídos automáticamente; contenido de acceso y primeros pasos cotejado manualmente el 9/11/2026. No se siguen enlaces.",
+        "sha256_respuesta": "28910a2a7c439b510934a9cf28fef2f40ade260ab7c8bc13a1fd2a33839b87ec",
+        "bytes_respuesta": 217645,
+        "ficticio": false,
+        "alias": [],
+        "error": null,
+        "elegible_noticia": false,
+        "seleccionada_para_guiones": null,
+        "pendiente": "Publicación original y fecha del hecho desconocidas; no presentar como noticia de hoy."
+      },
+      {
+        "id": "F02",
+        "url_original": "https://support.claude.com/en/articles/7996857-my-prompt-isn-t-giving-me-a-helpful-answer",
+        "url_canonica": "https://support.claude.com/en/articles/7996857-my-prompt-isn-t-giving-me-a-helpful-answer",
+        "autor": "Anthropic",
+        "tipo": "primaria",
+        "tipo_contenido": "guia_evergreen",
+        "titulo": "My prompt isn’t giving me a helpful answer. | Claude Help Center",
+        "fecha_consulta": "2026-11-09T05:14:35.301550+00:00",
+        "fecha_publicacion": null,
+        "fecha_hecho": null,
+        "fecha_visible": {
+          "valor": "2026-03-16T21:18:18+00:00",
+          "etiqueta": "Updated over 8 months ago",
+          "texto": "March 16, 2026",
+          "funcion": "visible_no_acredita_publicacion_original"
+        },
+        "resumen": "Guía para pedir con claridad, aportar contexto, dividir tareas y dar seguimiento. No valida nuestros ejemplos ni garantiza resultados.",
+        "cobertura": "Título y fecha visible extraídos automáticamente; recomendaciones cotejadas manualmente el 9/11/2026. No se siguen enlaces.",
+        "sha256_respuesta": "b7c93b50bcc3bc241fba4511ee6968d82ee7069b0453806bb482d841697aca5a",
+        "bytes_respuesta": 195355,
+        "ficticio": false,
+        "alias": [],
+        "error": null,
+        "elegible_noticia": false,
+        "seleccionada_para_guiones": null,
+        "pendiente": "Publicación original y fecha del hecho desconocidas; no presentar como noticia de hoy."
+      },
+      {
+        "id": "F06",
+        "url_original": "https://claude.com/resources/articles/claude-enterprise-security-updates",
+        "url_canonica": "https://claude.com/resources/articles/claude-enterprise-security-updates",
+        "autor": "Anthropic",
+        "tipo": "primaria",
+        "tipo_contenido": "noticia",
+        "titulo": "More visibility and control over Claude Enterprise for security teams | Claude by Anthropic",
+        "fecha_consulta": "2026-11-09T05:14:35.664722+00:00",
+        "fecha_publicacion": "2026-11-05",
+        "fecha_hecho": "2026-11-05",
+        "fecha_visible": {
+          "valor": "2026-11-05",
+          "etiqueta": "Date",
+          "texto": "November 5, 2026",
+          "funcion": "publicacion_explicita",
+          "precision": "dia"
+        },
+        "resumen": "Anuncio de controles de seguridad y administración para Claude Enterprise, con condiciones y funciones beta. No acredita disponibilidad en Free ni despliegue en una cuenta propia.",
+        "cobertura": "Título, fecha visible y metadato de publicación cotejados; introducción, controles y condiciones leídos manualmente el 9/11/2026. No se siguen enlaces.",
+        "sha256_respuesta": "07acb8806b42169515406c4bca6ea31bc4fb8ed59193a0b7f6473eb21926e2ba",
+        "bytes_respuesta": 501248,
+        "ficticio": false,
+        "alias": [],
+        "error": null,
+        "elegible_noticia": true,
+        "seleccionada_para_guiones": false,
+        "pendiente": "Candidata no seleccionada para G01/G02. Fecha del hecho: anuncio, no despliegue individual. No trasladar Enterprise a Free."
+      }
+    ],
+    "limites": {
+      "max_fuentes": 3,
+      "max_items_por_fuente": 20,
+      "items_por_pagina": 1,
+      "timeout_total_segundos_por_fuente": 12,
+      "max_bytes_por_fuente": 524288,
+      "redirecciones": false,
+      "reintentos": 0
+    }
+  },
+  "tareas": [
+    {
+      "id": "fabrica-contenido-diseno-20261108",
+      "origen": "04-operacion-agentes/tareas/fabrica-contenido-diseno-20261108.json",
+      "integridad": "verificada",
+      "revision_tecnica": {
+        "buena": true,
+        "commit": "3a835e2f7060a353fd967fb1ab593e13f9e84422",
+        "revisor": "fabrica-contenido-diseno-20261108-revisor-final",
+        "fecha": "2026-11-09T03:42:35.618939+00:00",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-contenido-diseno-20261108/revision-5-7ff0e3f2.json",
+          "sha256": "b6cfcbab47ff6505b46dbc9ce27d77cd0e09f27afd6cd2dc17fbe21fd5629d07",
+          "bytes": 768
+        }
+      },
+      "estado": "aceptado",
+      "revision": 43,
+      "actualizado": "2026-11-09T03:51:59.232786+00:00",
+      "sha256_registro": "cd06c426130946f708b6d8c7d2c097a8482606fd786b00ad857161b3ef530c36",
+      "proximo_paso": "Entrega 3a835e2f7060a353fd967fb1ab593e13f9e84422 aceptada e integrada en origin/master; remoto verificado 5e722e859014aae9482e20224517e7d8c8a007ad. No hay nueva ejecución autorizada por este cierre."
+    },
+    {
+      "id": "noche-telegram-20261109",
+      "origen": "04-operacion-agentes/tareas/noche-telegram-20261109.json",
+      "integridad": "verificada",
+      "revision_tecnica": {
+        "buena": true,
+        "commit": "1027bbaa1a07bc0826004c065b75c6d909cd01e6",
+        "revisor": "noche-telegram-20261109-revisor-1",
+        "fecha": "2026-11-09T04:45:25.270495+00:00",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-telegram-20261109/revision-2-de24d034.json",
+          "sha256": "e489743e7a8b344e13d22ce1904bd428e19179f95c3ec9d5cd9c2c3f344048d2",
+          "bytes": 1040
+        }
+      },
+      "estado": "aceptado",
+      "revision": 22,
+      "actualizado": "2026-11-09T04:49:54.395726+00:00",
+      "sha256_registro": "2b71a357adcb705828f5c09bf74f7e90e91faf3283c116858cdceef337ae56de",
+      "proximo_paso": "Entrega revisada e integrada en origin/master. Identificar bot y destinatario autorizados en privado; comprobar runner y plan de prueba real sin interferir webhook; no activar ni enviar sin sí aplicable."
+    },
+    {
+      "id": "noche-workshop-contenido-20261109",
+      "origen": "04-operacion-agentes/tareas/noche-workshop-contenido-20261109.json",
+      "integridad": "verificada",
+      "revision_tecnica": {
+        "buena": true,
+        "commit": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+        "revisor": "noche-workshop-contenido-20261109-revisor-1",
+        "fecha": "2026-11-09T04:46:10.874794+00:00",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/revision-2-499fe476.json",
+          "sha256": "688d43ef5ee2faf958332e0655dd89398e3ac9c821eb7542a02dbe11d5e30eaf",
+          "bytes": 1152
+        }
+      },
+      "estado": "aceptado",
+      "revision": 21,
+      "actualizado": "2026-11-09T04:49:54.431558+00:00",
+      "sha256_registro": "e4af4146c991d7b229de9ee9b7dfcbf074b9d05b17fb42dd6a0a66f85bdf5439",
+      "proximo_paso": "Entrega documental revisada e integrada en origin/master. Sergio/Boss revisan síntesis y guiones; ensayar primeros10min con acceso propio y completar datos comerciales antes de publicar."
+    }
+  ],
+  "guiones": [
+    {
+      "id": "G01",
+      "origen": "01-negocio/workshop-20261108/noche-20261109/GUION-01-WORKSHOP.md",
+      "integridad": "verificada",
+      "texto": "# G01 · Tu lista necesita tres datos\n\n9/11/2026 UTC · v1 · borrador listo para revisión editorial, sin aprobación de publicación. Pieza para el workshop. Audiencia: dueños de pequeños negocios de Santa Cruz que recién empiezan con IA. Objetivo: mostrar cómo preparar una petición útil y recibir solicitudes de información del workshop. Formato propuesto: video vertical de 65–80 s, Sergio a cámara y ficha/agenda propias. Canal por elegir; duración estimada, sin locución cronometrada.\n\nIdea I01: mostrar tareas, duración y restricciones antes de pedir una agenda. El ejemplo es ficticio y usa el [caso del piloto](CLASE1-PRIMEROS10MIN.md). La agenda dibujada sirve como referencia; una captura real de Claude requiere ejecución propia y revisión antes de grabar.\n\n## Texto y apoyos propuestos\n\n| Tiempo orientativo | Locución exacta para revisión | Imagen / texto visible |\n|---|---|---|\n| 00–08 s · gancho | «Si tenés un negocio en Santa Cruz y tu lista de pendientes nunca termina, probá darle estos tres datos a Claude antes de pedirle una agenda». | Sergio + rótulo «Tareas · duración · límites». Sobre el caso: «Negocio ficticio» |\n| 08–21 s · contexto | «En esta tienda inventada hay que revisar caja, confirmar pedidos, contar inventario y preparar entregas. Sólo decir “ordená mi mañana” deja afuera información importante». | Lista de cuatro tareas. No usar fotos o nombre de un cliente real |\n| 21–39 s · desarrollo | «Sumamos cuánto lleva cada tarea y qué horarios no se mueven: proveedor de diez y diez a diez y media; pausa hasta las diez y cuarenta y cinco. Con esos datos pedimos una tabla con inicio y fin». | Ficha exacta del piloto; acercar bloques fijos. Son horarios del ejercicio, no del workshop |\n| 39–53 s · recompensa | «Después revisamos: ¿los pedidos terminan antes de las diez? ¿Respeta la pausa? Si algo no coincide, señalamos el dato y pedimos un ajuste. La agenda sirve cuando vos podés comprobarla». | Marcas sobre pedidos 09:10–09:30 y pausa 10:30–10:45. Rótulo «Muestra escrita para explicar el ejercicio» si se usa la tabla de referencia |\n| 53–68 s · invitación | «Eso vamos a practicar al comenzar Tu negocio con IA: ordena, vende y automatiza. Tres clases, el doce, trece y catorce de noviembre. Bs cincuenta grupal. La primera es con Claude». | Nombre, «12 · 13 · 14 nov 2026», «Bs 50 grupal», «Clase 1: Claude». No añadir hora, canal o cupo |\n| 68–76 s · CTA único | «Comentá NEGOCIO si querés conocer los requisitos del workshop». | «NEGOCIO · pedir información». No mostrar «DM automático», pago o plaza reservada |\n\nTexto de apoyo propuesto: «Un pedido para ordenar trabajo necesita datos que vos puedas revisar. Ejemplo ficticio de una mañana de negocio. Workshop Tu negocio con IA: ordena, vende y automatiza · 12, 13 y 14 de noviembre de 2026 · Bs 50 grupal. Primera clase con Claude. Comentá NEGOCIO para pedir información sobre requisitos». Este texto acompaña el mismo CTA; no añade otra acción.\n\n## Trazabilidad por bloque\n\n| Afirmación / decisión | Respaldo y límite |\n|---|---|\n| Dar datos claros y contexto; pedir ajustes | [Ayuda oficial de Claude](https://support.claude.com/en/articles/7996857-my-prompt-isn-t-giving-me-a-helpful-answer), fecha visible 16/3/2026, consulta propia 9/11/2026 UTC. Orientación general, sin garantía de que Claude acierte |\n| Tareas, horas y revisión mostradas | Caso ficticio y cálculo propios del [piloto](CLASE1-PRIMEROS10MIN.md). No es prueba de uso real ni promesa de ahorro |\n| Público, nombre, fechas, precio y Claude | [Decisiones](../../../05-herramientas/2026-11-08-harness/00-decisiones.md), leídas 9/11/2026, y [ficha única](OFERTA-Y-RECORRIDO.md). La promesa completa y los materiales siguen sujetos a preparación/ensayo |\n| Patrón editorial | Pedro P1, ASR 03,36–33,14 s, especificidad; Erik P1, 00:00–00:23,22, orientación; Hormozi P2, 24:41,52–25:39,94, gancho/entrega. [Matriz de referentes](FUENTES-Y-MATRIZ.md). Son fichas documentales previas, sin nuevo visionado |\n\nLa adaptación, el caso, las frases y el CTA son propuesta OnIA. Ningún referente dijo este guion ni demostró resultados del workshop. No se les imita voz, puesta en escena o testimonios.\n\n## Condiciones antes de usarlo\n\nSergio debe ensayar el piloto y confirmar que el comienzo enseñado coincide con lo anunciado. Resolver acceso propio, horarios con zona, canal de clases, capacidad y condiciones de inscripción/pago en la ficha. Elegir plataforma de publicación y responsable de atender «NEGOCIO» con información completa. El CTA expresa interés; no crea inscripción ni autoriza un DM. Si ese recorrido no está disponible, este borrador no se publica.\n\nRevisión editorial independiente y decisión de Sergio pendientes, vinculadas a la versión/hash de este archivo. En esta sesión no se grabó, envió, publicó ni anunció la pieza.\n",
+      "publicacion": "Sin aprobación de publicación; borrador",
+      "revision_editorial": "Pendiente de Sergio/Boss",
+      "titulo": "G01 · Tu lista necesita tres datos",
+      "sha256": "b31522ea345b86a9fd3f16365712c6c173b0af800bffb049edd7282d26360209",
+      "bytes": 4959,
+      "revision_tecnica": {
+        "buena": true,
+        "commit": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+        "revisor": "noche-workshop-contenido-20261109-revisor-1",
+        "fecha": "2026-11-09T04:46:10.874794+00:00",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/revision-2-499fe476.json",
+          "sha256": "688d43ef5ee2faf958332e0655dd89398e3ac9c821eb7542a02dbe11d5e30eaf",
+          "bytes": 1152
+        }
+      },
+      "idea": "I01",
+      "fuentes": [
+        "F02"
+      ],
+      "pendientes": "Condiciones antes de usarlo\n\nSergio debe ensayar el piloto y confirmar que el comienzo enseñado coincide con lo anunciado. Resolver acceso propio, horarios con zona, canal de clases, capacidad y condiciones de inscripción/pago en la ficha. Elegir plataforma de publicación y responsable de atender «NEGOCIO» con información completa. El CTA expresa interés; no crea inscripción ni autoriza un DM. Si ese recorrido no está disponible, este borrador no se publica.\n\nRevisión editorial independiente y decisión de Sergio pendientes, vinculadas a la versión/hash de este archivo. En esta sesión no se grabó, envió, publicó ni anunció la pieza."
+    },
+    {
+      "id": "G02",
+      "origen": "01-negocio/workshop-20261108/noche-20261109/GUION-02-EVERGREEN.md",
+      "integridad": "verificada",
+      "texto": "# G02 · Cuando la agenda no cabe\n\n9/11/2026 UTC · v1 · evergreen explícito, listo para revisión editorial. Audiencia: dueños de pequeños negocios que empiezan a planificar con IA. Objetivo: enseñar a reconocer una agenda imposible antes de aceptarla. Formato propuesto: video vertical de 55–70 s con ficha y suma; canal pendiente. Tiempo estimado, sin prueba de locución.\n\nIdea I02: un dato nuevo puede volver inviable un plan. Se eligió utilidad evergreen aunque se encontró una noticia reciente real de Enterprise: sus funciones y público no son necesarios para este ejercicio. No se presenta esta pieza como novedad del 9 de noviembre ni como fallo observado de Claude.\n\n## Texto y apoyos propuestos\n\n| Tiempo orientativo | Locución exacta para revisión | Imagen / texto visible |\n|---|---|---|\n| 00–07 s · gancho | «Una agenda puede verse perfecta y ser imposible. Antes de usar la que te propone una IA, hacé esta cuenta». | Tabla dibujada + «Caso ficticio». No fabricar una captura de error de Claude |\n| 07–21 s · contexto | «En esta tienda tenemos dos horas para trabajar. Las tareas, el proveedor y la pausa ocupan ciento cinco minutos. Quedan quince libres». | «120 disponibles − 105 ocupados = 15 libres». Mostrar ficha de referencia |\n| 21–36 s · desarrollo | «Pero contar inventario iba a llevar veinticinco minutos y ahora lleva cincuenta. Son veinticinco minutos más: el total sube a ciento treinta. Nos faltan diez». | Cambiar 25 → 50. «105 + 25 = 130 · faltan 10». Mantener rótulo ficticio |\n| 36–54 s · instrucción útil | «A Claude le podés pedir: “Revisá cuánto tiempo falta y preguntame antes de recortar o mover tareas”. Después comprobá la suma y los horarios. El pedido ayuda a explicar el problema; la decisión de qué cambiar sigue siendo tuya». | Seguimiento B del piloto abreviado en pantalla. No mostrar una salida generada que no se haya obtenido |\n| 54–63 s · CTA único | «Guardá este ejemplo para revisar tu próxima agenda». | «Sumá · compará · decidí» + símbolo de guardar como propuesta visual |\n\nTexto de apoyo propuesto: «Caso ficticio: 120 minutos disponibles y 130 necesarios. Antes de aceptar una agenda, revisá duración, bloques fijos y qué decisión hace falta. Guardá este ejemplo para tu próxima planificación». No promete automatización, ahorro medido ni acceso ilimitado.\n\n## Fuentes, fecha y autoría\n\n- **Hechos del ejemplo:** aritmética y datos ficticios del [piloto, muestra de referencia](CLASE1-PRIMEROS10MIN.md). Comprobación documental y aritmética el 9/11/2026 UTC. No se ha probado la respuesta de Claude a A/B.\n- **Uso de instrucciones y seguimiento:** [guía oficial de Claude](https://support.claude.com/en/articles/7996857-my-prompt-isn-t-giving-me-a-helpful-answer), fecha visible 16/3/2026, consulta propia 9/11/2026 UTC. Recomienda claridad, contexto, dividir y dar seguimiento; no certifica esta fórmula ni garantiza que el modelo detecte incompatibilidades.\n- **Patrón adoptado:** Hormozi P1, ASR 05:37,86–07:29,38, separar primer avance y esfuerzo; Jeff P2, ASR 02,88–39,72 s, acción/motivo/ajuste; Justin P4, capítulos 00:57/03:35, claridad y simplificación. [Fichas y cobertura](FUENTES-Y-MATRIZ.md). La transferencia al caso de agenda es propuesta OnIA; no se atribuye la cuenta a esos autores.\n\nEl control de suma, la ficción, el texto y la decisión editorial son propios. No se reutilizan las noticias ficticias del ensayo de fábrica, no se afirma vigilancia continua de noticias y no se atribuyen prácticas a Euge Oller.\n\n## Pendiente de revisión y producción\n\nSergio revisa lenguaje y ejemplo; revisora distinta coteja esta versión. Para una toma real de Claude, usar acceso propio, conservar entrada/salida y corregir el texto si el comportamiento no coincide. Si sólo se usa la ficha dibujada, mantener visible «caso ficticio / ejemplo escrito». Falta elegir canal y autorizar producción/publicación; no se necesitan datos de pago para enseñar esta cuenta. Esta entrega no contiene video producido.\n",
+      "publicacion": "Sin aprobación de publicación; borrador",
+      "revision_editorial": "Pendiente de Sergio/Boss",
+      "titulo": "G02 · Cuando la agenda no cabe",
+      "sha256": "79381290bb8be6e59f97b5c5230808d2992f9fd2aef4db2728a43e934dead4e4",
+      "bytes": 4084,
+      "revision_tecnica": {
+        "buena": true,
+        "commit": "b0274cb74726ffbb0aa3758d43aef9fcd4fb431e",
+        "revisor": "noche-workshop-contenido-20261109-revisor-1",
+        "fecha": "2026-11-09T04:46:10.874794+00:00",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/noche-workshop-contenido-20261109/revision-2-499fe476.json",
+          "sha256": "688d43ef5ee2faf958332e0655dd89398e3ac9c821eb7542a02dbe11d5e30eaf",
+          "bytes": 1152
+        }
+      },
+      "idea": "I02",
+      "fuentes": [
+        "F02"
+      ],
+      "pendientes": "Pendiente de revisión y producción\n\nSergio revisa lenguaje y ejemplo; revisora distinta coteja esta versión. Para una toma real de Claude, usar acceso propio, conservar entrada/salida y corregir el texto si el comportamiento no coincide. Si sólo se usa la ficha dibujada, mantener visible «caso ficticio / ejemplo escrito». Falta elegir canal y autorizar producción/publicación; no se necesitan datos de pago para enseñar esta cuenta. Esta entrega no contiene video producido."
+    }
+  ],
+  "ideas": [
+    {
+      "id": "I01",
+      "texto": "Idea I01: mostrar tareas, duración y restricciones antes de pedir una agenda. El ejemplo es ficticio y usa el [caso del piloto](CLASE1-PRIMEROS10MIN.md). La agenda dibujada sirve como referencia; una captura real de Claude requiere ejecución propia y revisión antes de grabar.",
+      "guion": "G01",
+      "origen": "01-negocio/workshop-20261108/noche-20261109/GUION-01-WORKSHOP.md",
+      "fuentes": [
+        "F02"
+      ],
+      "tipo": "evergreen / propuesta OnIA"
+    },
+    {
+      "id": "I02",
+      "texto": "Idea I02: un dato nuevo puede volver inviable un plan. Se eligió utilidad evergreen aunque se encontró una noticia reciente real de Enterprise: sus funciones y público no son necesarios para este ejercicio. No se presenta esta pieza como novedad del 9 de noviembre ni como fallo observado de Claude.",
+      "guion": "G02",
+      "origen": "01-negocio/workshop-20261108/noche-20261109/GUION-02-EVERGREEN.md",
+      "fuentes": [
+        "F02"
+      ],
+      "tipo": "evergreen / propuesta OnIA"
+    }
+  ],
+  "efectos": {
+    "scheduler": false,
+    "ingesta_recurrente": false,
+    "telegram_real": false,
+    "publicacion": false,
+    "mutacion_harness": false
+  }
+}

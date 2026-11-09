@@ -1,0 +1,90 @@
+{
+  "fecha_registro": "2026-11-09T05:26:10.125947+00:00",
+  "cambio": "Sólo overflow-wrap:anywhere en body de panel.py",
+  "pruebas_python": {
+    "resultado": "OK",
+    "numero_real": 22,
+    "sockets_bloqueados": true,
+    "recibo": "pruebas-03.txt"
+  },
+  "render": {
+    "red_nueva": false,
+    "snapshot_identico_a": "lectura-real-02/snapshot.json",
+    "sha256_snapshot": "59963841dd2eed96c6ba48f8fecf38ad09c1849ccf9d7b56deb2d58771c44465",
+    "solo_cambio_css_en_html": true,
+    "fechas_y_estados_preservados": true
+  },
+  "visual": {
+    "rc": 0,
+    "casos": 5,
+    "host": "coordinador en copia aislada",
+    "chromiumSandbox": true,
+    "proceso_sin_no_sandbox": true,
+    "hashes_fuentes_coinciden": true,
+    "navegador_cerrado": true,
+    "peticiones_http_automaticas": [],
+    "capturas": [
+      {
+        "ruta": "evidencia/host-02/real-desktop.png",
+        "sha256": "df8085cb8ce11d40237230c42c1b7535dd6e12934ce852555f1f566a27a4de01",
+        "dimensiones_png": [
+          1440,
+          3192
+        ],
+        "inspeccionada_con_view_image": true,
+        "material": "snapshot_real02"
+      },
+      {
+        "ruta": "evidencia/host-02/real-mobile.png",
+        "sha256": "e7969e48dc3ce73e403e8f30dc3f4827bb78bd7c4722e795e564755ac9b69b1e",
+        "dimensiones_png": [
+          390,
+          7559
+        ],
+        "inspeccionada_con_view_image": true,
+        "material": "snapshot_real02"
+      },
+      {
+        "ruta": "evidencia/host-02/largo-mobile.png",
+        "sha256": "67897f4455ac067be940a5e1926d78b78e23346894466c47303ce0e8ab096db6",
+        "dimensiones_png": [
+          390,
+          12348
+        ],
+        "inspeccionada_con_view_image": true,
+        "material": "fixture_sintetico"
+      },
+      {
+        "ruta": "evidencia/host-02/vacio-mobile.png",
+        "sha256": "3e9bb1812b30d6c9dcd548396cf37e3621f93dc735e420be8a34a644068f405b",
+        "dimensiones_png": [
+          390,
+          2082
+        ],
+        "inspeccionada_con_view_image": true,
+        "material": "fixture_sintetico"
+      },
+      {
+        "ruta": "evidencia/host-02/error-mobile.png",
+        "sha256": "983bfb5532f0cc9740b09be2a9c56fc52384a21daa0072a49b6b30463e1c0b9c",
+        "dimensiones_png": [
+          390,
+          2851
+        ],
+        "inspeccionada_con_view_image": true,
+        "material": "fixture_sintetico"
+      }
+    ],
+    "inspeccion": "host-02/INSPECCION.md",
+    "limite": "Las imágenes móviles completas se reducen en el visor; no se acredita lectura fina de cada carácter ni dispositivo físico."
+  },
+  "aceptacion_harness": "No ejecutada; coordinador revisa e integra",
+  "efectos": {
+    "mutacion_harness": false,
+    "ingesta_recurrente": false,
+    "scheduler": false,
+    "telegram": false,
+    "mensajes": false,
+    "publicacion_contenido": false
+  }
+}

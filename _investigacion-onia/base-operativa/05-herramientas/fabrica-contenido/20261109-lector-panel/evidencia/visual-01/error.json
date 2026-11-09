@@ -1,0 +1,45 @@
+{
+  "schema": "onia-lector-panel-v1",
+  "generado": "ENSAYO SINTÉTICO · 2026-11-09T05:03:03.141956+00:00",
+  "commit_entradas_repo": "SINTETICO",
+  "alcance": "ENSAYO SINTÉTICO VISUAL · error; no es un recibo real ni una tarea.",
+  "fuentes": {
+    "items": [],
+    "consultas": [
+      {
+        "fuente": "SINTETICA",
+        "resultado": "fallo",
+        "error": "HTTP_403 · ensayo sintético",
+        "consulta_iniciada": "2026-11-09T05:03:03.141956+00:00",
+        "consulta_finalizada": "2026-11-09T05:03:03.141956+00:00"
+      }
+    ]
+  },
+  "tareas": [
+    {
+      "id": "SINTETICA",
+      "integridad": "fallo",
+      "origen": "SINTETICO",
+      "error": "EVIDENCIA_CANONICA_NO_VERIFICABLE",
+      "proximo_paso": "Conciliar con coordinación; no rehashear la evidencia."
+    }
+  ],
+  "guiones": [
+    {
+      "id": "G-SINTETICO",
+      "origen": "SINTETICO / archivo alterado",
+      "integridad": "fallo",
+      "error": "GUION_NO_COINCIDE_CON_REVISION_TECNICA",
+      "revision_editorial": "No acreditada",
+      "texto": ""
+    }
+  ],
+  "ideas": [],
+  "efectos": {
+    "scheduler": false,
+    "ingesta_recurrente": false,
+    "telegram_real": false,
+    "publicacion": false,
+    "mutacion_harness": false
+  }
+}

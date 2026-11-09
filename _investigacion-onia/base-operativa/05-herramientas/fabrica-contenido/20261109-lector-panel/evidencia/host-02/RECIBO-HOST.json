@@ -1,0 +1,28 @@
+{
+  "fecha_utc": "2026-11-09T05:23:19.257632+00:00",
+  "inicio_utc": "2026-11-09T05:23:15.365735+00:00",
+  "id": "fabrica-lector-panel-20261109",
+  "tipo": "panel",
+  "rc": 0,
+  "hashes_fuente": {
+    "lector.py": "4fa98fe4e9b2b9eeb5014a7b5013513270234dfc55af0f2596eab89c4e4ec464",
+    "panel.py": "9c02a3c64ad8004987ba6e61d02e979538833fc51f07f74767261ef70bb97c0b",
+    "visual.cjs": "42206feafb77e5264d2d5f81201dc566734b467346f2b5196b5d4f8e886d91d3",
+    "evidencia/panel-corregido-01/snapshot.json": "59963841dd2eed96c6ba48f8fecf38ad09c1849ccf9d7b56deb2d58771c44465",
+    "evidencia/panel-corregido-01/panel.html": "7fcfa548f00f40ee0588558214fae5f1362977c0e645e9094bb3787cff9089b5"
+  },
+  "stdout": "{\"resultado\":\"OK\",\"casos\":5,\"salida\":\"evidencia/host-02\"}\n",
+  "stderr": "",
+  "entorno": "Host VPS autorizado, Chromium sandbox:true, perfil sintético propio; sin cuentas/visor, sin cambios AppArmor.",
+  "visual_inspeccionada": true,
+  "observacion_visual": "Coordinador abrió con view_image los5PNG: escritorio legible sin hashes fuera de tarjetas; móvil y texto largo conservan una columna sin recortes aparentes; vacío/error muestran límites y fallo sintético. Las imágenes móviles completas están reducidas en el visor: la lectura fina de cada carácter no se acredita por esas miniaturas. Cinco controles DOM/flujo pasaron; no hubo red automática, servidor, cuentas ni envíos.",
+  "archivos_copiados": [
+    "resultado.json",
+    "real-desktop.png",
+    "real-mobile.png",
+    "largo-mobile.png",
+    "vacio-mobile.png",
+    "error-mobile.png"
+  ],
+  "hashes_coinciden": true
+}
