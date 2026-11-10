@@ -203,6 +203,8 @@ Escribir y revisar paquetes en GitHub, no. Grabar, no (eso lo hacés vos). Publi
 
 **Cambio aprobado por Sergio el 2026-11-09 20:27 America/La_Paz** («Quiero la automática completa hoy aunque cambie el plan»). La v2 deja de esperar al 14 y se construye hoy. Todo lo demás de este archivo sigue fijo. Publicar, gastar, activar n8n y tocar la PC siguen necesitando su sí.
 
+**Corrección de Sergio, 2026-11-09 20:30 La Paz:** el vlog diario no se corta. Se publica entero y sin edición. Los 5 videos salen de una sola tanda grabada con los 5 guiones del día (venta, marca seria, noticia o evergreen, un segundo de venta o marca, trial reel). Donde abajo dice «vlog», léase «grabación de la tanda».
+
 Cadena automática de hoy, en orden de construcción:
 
 1. **Cola de entrada del vlog** (Codex): carpeta privada fuera de Git (en HOMELAB `/var/lib/onia-worker/work/entrada/` cuando el alta quede OK; mientras tanto, en el VPS bajo `~/operacion/fabrica/entrada/`). Sergio deja el video crudo; nada de esto va a GitHub.
