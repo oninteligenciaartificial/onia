@@ -216,6 +216,20 @@ Cadena automática de hoy, en orden de construcción:
 
 Lo que sigue igual que antes: el harness no despacha solo (lo dispara Boss), n8n no se toca, y el render es en CPU (sin GPU útil), así que un vlog largo tarda y queda en cola.
 
+### Fábrica de edición tal como la muestra Euge (releído 2026-11-09 20:40 La Paz)
+
+Fuente: video 1 [17:58–28:31](https://www.youtube.com/watch?v=JuAQILH7dkQ&t=1078s) y video 2 [24:00–26:35](https://youtu.be/xPJbP9yZE1I?t=1440).
+
+- Grok Bot no edita: la edición la hace un modelo fuerte en otra máquina persistente (él usa Opus; en OnIA, Codex en VPS/HOMELAB). Grok Bot ayuda a montar la fábrica y a revisar.
+- Pasos visibles de su fábrica de video: **recibe → escucha → cortar → montar**, con un tablero que muestra «paso 4 de 5» y avisa si algo falló.
+- Cadena de varios agentes (video 2, 25:04): uno recorta lo mejor; otro revisa y propone imágenes/B-roll para insertar; el modelo fuerte termina la edición (subtítulos, motion graphics, clips externos).
+- **Sala de montaje**: ver cómo van los videos, comentar «cambiame esto» y pedir otra versión; cada comentario se guarda en el procedimiento.
+- **Enseñar con antes/después**: él edita uno a mano (CapCut, cortes de silencio) y le da entrada y salida; si la duración no coincide, la fábrica investiga qué criterio falló y lo corrige.
+- Ciclo **medir → aprender → mejorar**; la primera vez no sale bien.
+- Disparo: cuando dejás un input o de forma recurrente (a las 9).
+
+Carpetas en el Drive de Sergio (creadas por Boss, solo IDs públicos de carpeta, sin contenido en Git): Fábrica OnIA `1TGezto0pbmnijtWm3rPEEnt-gX-Hs42I` con 1 Entrada `1OWW5GGfF1GQrXFer7HmLEoIf9sQRGrWp`, 2 B-roll `1ogk1iwL3rgr_OKpBV70PdzgSmwAIClot`, 3 Sala de montaje `1bZs-7y3BkPm3qDC7vUxqVAt_s5GLbGmA`, 4 Ejemplos antes/después `1-2dzLYGFGk_zNnii7-Qz2VI__p0JvtHf`. Boss mueve archivos Drive ↔ cola privada; Codex no toca Drive. La infraestructura se mejora día a día por el harness.
+
 ## Fábrica de contenido v2 · texto original (antes del cambio)
 
 Cuando termine el workshop, la misma cadena se vuelve más automática y se mide. No se lanza en este archivo.
