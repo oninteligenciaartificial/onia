@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "id": "fabrica-plataforma-mapa-20261110",
-  "revision": 3,
+  "revision": 8,
   "compartible": true,
   "objetivo": "Diseñar el mapa de fábricas de OnIA estilo Euge (columnas: lo que entra, fábrica, revisión, destino) para las automatizaciones que pidió Sergio el 10nov: DMs y comentarios IG/Facebook por palabra clave del guion; WhatsApp de venta (curso y ONIA Platform; entra texto, audio, imagen); sala de montaje (videos horizontales y verticales según guion); guiones y calendario por formato y tipo (noticias IA, B-roll, personal, venta); anuncios Meta Ads (artes, UGC, ugly ads, talking head); contenido con IA para marca personal; código. Proponer otras nuevas a corto plazo y un orden de docs y repos sin borrar nada.",
-  "estado": "preparado",
-  "proximo_paso": "Boss consulta revisión y lanza dentro del permiso; revisión distinta antes de aceptar.",
+  "estado": "en_curso",
+  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
   "resultado": "Pedido delegado registrado; sin lanzar.",
   "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
   "verificacion": "pendiente",
@@ -16,7 +16,7 @@
       "bytes": 2472
     }
   ],
-  "actualizado": "2026-11-10T19:12:03.868711+00:00",
+  "actualizado": "2026-11-10T20:10:14.557702+00:00",
   "historial": [
     {
       "revision": 1,
@@ -69,6 +69,338 @@
         "revision_base": 1,
         "fecha": "2026-11-10T19:12:03.771597+00:00"
       }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-10T19:12:03.868711+00:00",
+      "estado": "preparado",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-plataforma-mapa-20261110/PEDIDO-v1.md",
+          "sha256": "1d692851eb75654a9a585ad9e729abe0d67b542e06107795c4d72d8480819470",
+          "bytes": 2472
+        }
+      ],
+      "proximo_paso": "Boss consulta revisión y lanza dentro del permiso; revisión distinta antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-plataforma-mapa-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/6-plataforma/trabajos/fabrica-plataforma-mapa-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T19:12:03.771597+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-10T20:02:13.699332+00:00",
+      "estado": "en_curso",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-plataforma-mapa-20261110/PEDIDO-v1.md",
+          "sha256": "1d692851eb75654a9a585ad9e729abe0d67b542e06107795c4d72d8480819470",
+          "bytes": 2472
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-plataforma-mapa-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/6-plataforma/trabajos/fabrica-plataforma-mapa-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T19:12:03.771597+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-fabrica-plataforma-mapa-20261110",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-fabrica-plataforma-mapa-20261110",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-plataforma-mapa-20261110.jsonl",
+          "log_rel": "logs/fabrica-plataforma-mapa-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-plataforma-mapa-20261110",
+          "rutas": [
+            "05-herramientas/fabrica-onia/6-plataforma/trabajos/fabrica-plataforma-mapa-20261110"
+          ],
+          "dry_run": false,
+          "commit_base": "14651f86b901678542249b3aff6e82e002ea09ee",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-plataforma-mapa-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T20:02:13.607482+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-plataforma-mapa-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-plataforma-mapa-20261110.git/worktrees/onia-ws-fabrica-plataforma-mapa-20261110",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-10T20:02:13.920999+00:00",
+      "estado": "en_curso",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-plataforma-mapa-20261110/PEDIDO-v1.md",
+          "sha256": "1d692851eb75654a9a585ad9e729abe0d67b542e06107795c4d72d8480819470",
+          "bytes": 2472
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-plataforma-mapa-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/6-plataforma/trabajos/fabrica-plataforma-mapa-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T19:12:03.771597+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-fabrica-plataforma-mapa-20261110",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 3433327,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208014923",
+          "rama": "codex/ws-fabrica-plataforma-mapa-20261110",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-plataforma-mapa-20261110.jsonl",
+          "log_rel": "logs/fabrica-plataforma-mapa-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-plataforma-mapa-20261110",
+          "rutas": [
+            "05-herramientas/fabrica-onia/6-plataforma/trabajos/fabrica-plataforma-mapa-20261110"
+          ],
+          "dry_run": false,
+          "commit_base": "14651f86b901678542249b3aff6e82e002ea09ee",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-plataforma-mapa-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T20:02:13.607482+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-plataforma-mapa-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-plataforma-mapa-20261110.git/worktrees/onia-ws-fabrica-plataforma-mapa-20261110",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-10T20:02:14.333333+00:00",
+      "estado": "en_curso",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-plataforma-mapa-20261110/PEDIDO-v1.md",
+          "sha256": "1d692851eb75654a9a585ad9e729abe0d67b542e06107795c4d72d8480819470",
+          "bytes": 2472
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-plataforma-mapa-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/6-plataforma/trabajos/fabrica-plataforma-mapa-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T19:12:03.771597+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-fabrica-plataforma-mapa-20261110",
+          "pid": 3433341,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208014964",
+          "supervisor_pid": 3433327,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208014923",
+          "rama": "codex/ws-fabrica-plataforma-mapa-20261110",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-plataforma-mapa-20261110.jsonl",
+          "log_rel": "logs/fabrica-plataforma-mapa-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-plataforma-mapa-20261110",
+          "rutas": [
+            "05-herramientas/fabrica-onia/6-plataforma/trabajos/fabrica-plataforma-mapa-20261110"
+          ],
+          "dry_run": false,
+          "commit_base": "14651f86b901678542249b3aff6e82e002ea09ee",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-plataforma-mapa-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T20:02:13.607482+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-plataforma-mapa-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-plataforma-mapa-20261110.git/worktrees/onia-ws-fabrica-plataforma-mapa-20261110",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-10T20:02:16.072741+00:00",
+      "estado": "en_curso",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-plataforma-mapa-20261110/PEDIDO-v1.md",
+          "sha256": "1d692851eb75654a9a585ad9e729abe0d67b542e06107795c4d72d8480819470",
+          "bytes": 2472
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-plataforma-mapa-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/6-plataforma/trabajos/fabrica-plataforma-mapa-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T19:12:03.771597+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-fabrica-plataforma-mapa-20261110",
+          "pid": 3433341,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208014964",
+          "supervisor_pid": 3433327,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208014923",
+          "rama": "codex/ws-fabrica-plataforma-mapa-20261110",
+          "session_id": "01a1c70d-d772-7300-b994-ea548b05416a",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-plataforma-mapa-20261110.jsonl",
+          "log_rel": "logs/fabrica-plataforma-mapa-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-plataforma-mapa-20261110",
+          "rutas": [
+            "05-herramientas/fabrica-onia/6-plataforma/trabajos/fabrica-plataforma-mapa-20261110"
+          ],
+          "dry_run": false,
+          "commit_base": "14651f86b901678542249b3aff6e82e002ea09ee",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-plataforma-mapa-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T20:02:13.607482+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-plataforma-mapa-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-plataforma-mapa-20261110.git/worktrees/onia-ws-fabrica-plataforma-mapa-20261110",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -96,5 +428,44 @@
     ],
     "revision_base": 1,
     "fecha": "2026-11-10T19:12:03.771597+00:00"
-  }
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "boss-fabrica-plataforma-mapa-20261110",
+      "pid": 3433341,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208014964",
+      "supervisor_pid": 3433327,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208014923",
+      "rama": "codex/ws-fabrica-plataforma-mapa-20261110",
+      "session_id": "01a1c70d-d772-7300-b994-ea548b05416a",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/fabrica-plataforma-mapa-20261110.jsonl",
+      "log_rel": "logs/fabrica-plataforma-mapa-20261110.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-plataforma-mapa-20261110",
+      "rutas": [
+        "05-herramientas/fabrica-onia/6-plataforma/trabajos/fabrica-plataforma-mapa-20261110"
+      ],
+      "dry_run": false,
+      "commit_base": "14651f86b901678542249b3aff6e82e002ea09ee",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-plataforma-mapa-20261110.1.briefing.txt",
+      "inicio": "2026-11-10T20:02:13.607482+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-plataforma-mapa-20261110.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-plataforma-mapa-20261110.git/worktrees/onia-ws-fabrica-plataforma-mapa-20261110",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-10T20:10:14.543445+00:00"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": null
 }
