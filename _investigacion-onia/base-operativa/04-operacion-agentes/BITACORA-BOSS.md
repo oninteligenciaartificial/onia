@@ -2,6 +2,13 @@
 
 Qué hizo Boss, por qué, en qué estado quedó y qué sigue. La más reciente va primero. Los estados de tareas se consultan sólo en el harness; esto es contexto, no estado canónico.
 
+## 10 nov 2026, 18:20 La Paz · acuse de REGLAS-BOSS.md
+
+- Observado: Boss leyó `04-operacion-agentes/REGLAS-BOSS.md` en master, commit 6f46f64 (18:09).
+- Hecho: se actualizaron los textos guardados de dos rutinas de Boss para que lean ese archivo antes de actuar. `retorno-codex-boss-webhook` ahora separa el fin del ejecutor (cerrar, revisar el commit exacto y solicitar `revisar`) del fin del revisor (`recoger` y verificar el veredicto, sin cerrar), y deduplica sin nonces nuevos. `lanzar-pruebas-de-entregas-tras-el-corte-diario` (20:10) comprueba primero si ya existe el trabajo de pruebas, por ejemplo el que Sergio pida a Codex, antes de registrar.
+- No probado: que las rutinas apliquen las reglas. Se comprueba en el próximo aviso de una tarea ya autorizada, sin lanzar pilotos.
+- Leer las reglas no autorizó lotes, permisos ni pruebas nuevas.
+
 ## 10 nov 2026, 17:40 La Paz · paquete para revisión de Sergio con Codex
 
 Entregas cerradas por el puente. Boss ya las revisó; **ninguna está aceptada**, porque aceptar le toca a Sergio. Las rutas son relativas a `_investigacion-onia/base-operativa/`.
