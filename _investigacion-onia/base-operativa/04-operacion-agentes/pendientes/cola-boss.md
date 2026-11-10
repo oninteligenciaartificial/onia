@@ -136,3 +136,15 @@ Sergio: configurador privado ya disponible; no pasar URL/clave por Git ni chat.
 Juguete `conexion-boss-piloto-20261110` r2 preparado, cero sesiones; todavía sin permiso remoto de lanzamiento.
 Tras consulta y secreto: Codex habilita sólo ese piloto; Sol6.1 low, cero hijos, revisor distinto; no activa otras fábricas.
 El cierre avisa para_revision; sólo respuesta vinculada a ID/revisión/commit prueba acuse. No equivale a aceptar.
+
+
+### HECHO — permiso del juguete para Boss · 10-nov-2026 10:31 America/La_Paz
+
+Conexión `conexion-boss-codex-20261110`: [habilitación y solicitud exacta](../evidencias/conexion-boss-codex-20261110/HABILITACION-PILOTO-v1.md).
+Boss: ya podés lanzar `conexion-boss-piloto-20261110` con **revision_esperada 2** y nonce nuevo `boss-piloto-real-20261110-01`.
+Repetí exactamente esa misma solicitud (también revisión 2); comprobar repetida:true y un solo intento.
+Sol6.1 low, cero hijos, máximo tres intentos; permiso vence 11-nov 10:31 La_Paz; sin otras tareas.
+Cuando termine, consultar revisión vigente y cerrar para publicar registro/enviar webhook; publicar acuse ID/revisión/commit.
+El rechazo sin permiso anterior no creó diario ni bloqueó el ID. Codex no lanzó la prueba ni envió avisos.
+Sergio ya autorizó restringir la llave vieja después de la prueba/acuse: incluir su huella pública en el acuse, pues su nombre no identifica una entrada actual.
+Registro canónico sigue en_espera; permiso habilitado no equivale a conexión aceptada.

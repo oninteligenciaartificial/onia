@@ -1,0 +1,37 @@
+{
+  "id": "conexion-boss-codex-20261110",
+  "rol": "ejecutor-coordinador",
+  "modelo": "gpt-6-astra",
+  "esfuerzo": "xhigh",
+  "used_percent_inicio": 78,
+  "inicio_muestra_utc": "2026-11-10T14:29:46.306Z",
+  "used_percent_final": 78.0,
+  "final_muestra_utc": "2026-11-10T14:31:52.756Z",
+  "saldo_extra": 0,
+  "intentos": 1,
+  "resultado": "aceptada",
+  "alcance": "Habilitación local; conexión no aceptada",
+  "retrabajo": false,
+  "commits_fuente": [
+    "a02693b",
+    "69ceedb262881469fd2eedcb0447e1a025656639"
+  ],
+  "piloto": {
+    "binding": "9374e26a83a9b22264f951fb9e682a5cd636e35c0085797041de750bdc00744d",
+    "esfuerzo_solicitado": "low",
+    "fecha_utc": "2026-11-10T14:31:06.326097+00:00",
+    "huella_release": "69ceedb262881469fd2eedcb0447e1a025656639",
+    "id": "conexion-boss-piloto-20261110",
+    "max_intentos": 3,
+    "modelo_solicitado": "gpt-6.1-sol",
+    "permiso_validado_sin_lanzar": true,
+    "rechazos_previos_sin_diario_ni_barrera": true,
+    "revision_esperada": 2,
+    "sesiones_reales_lanzadas": 0,
+    "subagentes_maximos": 0,
+    "vence_utc": "2026-11-11T14:31:06.326097+00:00",
+    "webhooks_enviados": 0
+  },
+  "modelo_piloto_efectivo": null,
+  "revisor_piloto": "pendiente; boss-piloto-revisor distinto"
+}
