@@ -586,3 +586,7 @@ Al contrastar la propuesta de Boss se volcó una respuesta de listado completa d
 - Primer intento de cuatro tests sobre la release produjo cuatro errores porque el fixture deducía BASE desde la carpeta de release, sin metadatos del repo. Se corrigió sólo la ubicación del fixture; los cuatro casos pasaron con módulos instalados. El runtime usa base explícita de configuración, que no se modificó.
 - Una lectura posterior usó cwd incorrecto y no encontró un archivo relativo; se repitió con el checkout explícito. No hubo edición por ese fallo.
 - Se preparó un piloto de cinco consultas antes de validar que el control de cuota pudiera respetar el presupuesto autorizado. El revisor detectó cuota compartida/retrasada y ruta de salida insuficientemente validada del wrapper. No se lanzó ni instaló; se revocó la variante. Lección: validar primero la admisión por presupuesto y el supervisor, sin prometer una capacidad o techo todavía no demostrados. [Recibo](evidencias/delegacion-sin-cupo-20261110/INSTALACION.md).
+
+## 10/11/2026 · publicación tras recoger dictámenes
+
+El puente publicó dos revisiones en master mientras el checkout documental mantenía una referencia remota anterior. El push atómico fue rechazado sin publicar ninguna de sus ramas. Se recuperaron e integraron los commits remotos preservando todo el historial. Comprobación preventiva: después de una operación del puente que publica, actualizar origin/master antes del siguiente push del coordinador.
