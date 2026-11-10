@@ -1,0 +1,101 @@
+{
+  "id": "fabrica-chatbot-whatsapp-20261110",
+  "fecha_utc": "2026-11-10T19:20:49.196891+00:00",
+  "resultado": "entrega_tecnica_comprobada_pendiente_revision_independiente",
+  "modelo_solicitado": "gpt-6.1-sol",
+  "esfuerzo_solicitado": "high",
+  "modelo_observado": null,
+  "esfuerzo_observado": null,
+  "limite_modelo": "El contexto identifica familia GPT-6, sin metadatos verificables del identificador y esfuerzo efectivos; no se acredita Sol6.1 high observado.",
+  "cuota": {
+    "inicial": {
+      "valor": null,
+      "unidad": "porcentaje_semanal_usado",
+      "fecha_observacion_utc": "2026-11-10T19:11:58Z",
+      "estado": "desconocida"
+    },
+    "final": {
+      "valor": null,
+      "unidad": "porcentaje_semanal_usado",
+      "fecha_observacion_utc": "2026-11-10T19:20:49.196891+00:00",
+      "estado": "desconocida"
+    },
+    "antecedente_documental": {
+      "valor": 80,
+      "fecha_utc": "2026-11-10T16:42:00Z",
+      "fuente": "04-operacion-agentes/pendientes/PEDIDO-CODEX-TRES-FABRICAS-20261110.md",
+      "limite": "Muestra historica del pedido, no medicion propia al lanzamiento o cierre."
+    },
+    "reserva_10_por_ciento": "No comprobable por esta ejecutora; no se lanzaron otras sesiones. El coordinador verifica antes de lanzar revision."
+  },
+  "intentos": {
+    "ejecutora_en_este_encargo": 1,
+    "revisora_lanzada_por_esta_ejecutora": 0,
+    "limite_total_segun_briefing": 2,
+    "hijos": 0
+  },
+  "retrabajo": {
+    "por_rechazo_independiente": 0,
+    "fallos_de_tests_observados": 0,
+    "limite": "Sin revision independiente ejecutada; no se atribuye aceptacion."
+  },
+  "git": {
+    "rama": "codex/ws-fabrica-chatbot-whatsapp-20261110",
+    "base_observada": "66818ec66e396b53773bfe4a89e88df6ca9822f6",
+    "commit_artefactos_y_pruebas": "7acc03198cb0276538d3b9071b092f75a4eb89f9",
+    "commit_recibo": "Este archivo se agrega en el commit siguiente; su hash se informa en la entrega final y se obtiene con git log sobre RECIBO.json.",
+    "publicacion": "Una sola operacion push explicita a la rama asignada tras completar este recibo; la verificacion remota se informa en el chat final."
+  },
+  "evidencia": {
+    "manifest": "evidencia/manifest.json",
+    "manifest_sha256": "c3bdf61f8b0fceb0d8e42509f6134a54262c53d3800d1b7850aafd78ca8e1134",
+    "pruebas": "evidencia/pruebas.tap",
+    "total": 40,
+    "correctas": 40,
+    "fallidas": 0,
+    "omitidas": 0,
+    "recorrido": "evidencia/recorrido.json",
+    "diff_check": "correcto"
+  },
+  "lectura": {
+    "directora_anunciada_en_catalogo": true,
+    "directora_leida": "05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md",
+    "apoyo_leido": "05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md",
+    "instrucciones_cloud_leidas_explicitas": true,
+    "inicio_automatico_acreditado": false,
+    "briefing": "recibido por el mensaje del encargo; no se modifico su proyeccion ni JSON canonico"
+  },
+  "efectos": {
+    "meta_invocado": false,
+    "n8n_invocado": false,
+    "workflow_importado": false,
+    "workflow_active": false,
+    "envios": 0,
+    "ventas_acreditadas": 0,
+    "pagos_reales": 0,
+    "gastos": 0,
+    "servicios_iniciados": 0
+  },
+  "pendientes": [
+    {
+      "falta": "Revision tecnica distinta del commit entregado",
+      "responsable": "coordinador y revisor independiente",
+      "condicion": "Cierre, revision y veredicto vigente bueno antes de aceptar e integrar"
+    },
+    {
+      "falta": "Validacion comercial y editorial",
+      "responsable": "Operaciones, Contenido y Sergio",
+      "condicion": "Validar textos, condiciones de pago, soporte y excepciones"
+    },
+    {
+      "falta": "Numero, credenciales, QR, acceso, adaptadores autenticados y persistencia",
+      "responsable": "Sergio y desarrollo en otro encargo autorizado",
+      "condicion": "Entradas privadas, alcance explicito y pruebas autorizadas; detalle en FALTANTES.md"
+    },
+    {
+      "falta": "Autorizacion de uso real y activacion",
+      "responsable": "Sergio",
+      "condicion": "Si explicito aplicable despues de revision y validacion comercial"
+    }
+  ]
+}
