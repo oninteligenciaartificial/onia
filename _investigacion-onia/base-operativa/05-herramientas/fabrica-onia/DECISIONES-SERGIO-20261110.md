@@ -37,3 +37,8 @@ Sergio eligió: «Tu negocio con IA: ordena, vende y automatiza». Se descarta �
 ## Nombre final del workshop (10 nov 2026 16:21 La Paz)
 
 Reemplaza la entrada de las 16:20. Nombre final: «Claude de 0 a 100: tu negocio con IA». No usar el logo de Claude/Anthropic como propio; mencionar el nombre está bien. Aplicar en guiones-tanda-20261111 y materiales de venta.
+
+## Alcance de anuncios, guiones y canales (10 nov 2026 17:31 La Paz)
+
+- Los tipos de anuncio y de guion nombrados (artes, UGC, ugly ads, talking head; noticia IA, B-roll, personal, venta) son ejemplos, no una lista cerrada. El panel y cada encargo deben contemplar todos los tipos relevantes (p. ej. carrusel, testimonio, demo de pantalla, antes/después, oferta directa, retargeting, historias, lead ads, mensajes a WhatsApp) e incorporar los que Sergio vaya mencionando.
+- Cada canal (Instagram, Facebook, TikTok, YouTube, X, WhatsApp, comunidad, Meta Ads) debe quedar documentado y probado de punta a punta (entrada, respuesta, derivación, pago, acceso, soporte y medición) antes de considerarse listo. Documentado o conectado no equivale a probado.
