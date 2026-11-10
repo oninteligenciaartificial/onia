@@ -1,0 +1,109 @@
+{
+  "id": "preguntar-boss-20261110",
+  "resultado": "código probado y revisión buena; activación se acredita en recibo posterior",
+  "modelo_consultas_solicitado": "gpt-6.1-sol",
+  "esfuerzo_consultas": "low",
+  "modelo_efectivo": null,
+  "nota_modelo": "CLI fijado a Sol low; sin evento que acredite modelo efectivo. No inferido del banner ni del texto.",
+  "used_percent_inicio": 85,
+  "fecha_inicio": "2026-11-10T20:38:52.353Z",
+  "used_percent_final": 87,
+  "fecha_final": "2026-11-10T20:59:33.932Z",
+  "nota_cuota": "Compartida, no atribuir el delta sólo a esta tarea; consultas efímeras no aportan muestra final propia. No USD.",
+  "intentos_reales_consulta": 5,
+  "retrabajo": true,
+  "pilotos": [
+    {
+      "id_pregunta": "piloto-preguntar-20261110-1",
+      "inicio": "2026-11-10T20:51:08.691341+00:00",
+      "fin": "2026-11-10T20:51:16.851097+00:00",
+      "estado": "fallida",
+      "duracion_s": 8.291,
+      "modelo_solicitado": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "cuota_inicio": {
+        "fecha": "2026-11-10T20:51:08.415000+00:00",
+        "used_percent": 86.0
+      },
+      "cuota_final": null
+    },
+    {
+      "id_pregunta": "piloto-preguntar-20261110-2",
+      "inicio": "2026-11-10T20:51:53.806845+00:00",
+      "fin": "2026-11-10T20:51:58.220951+00:00",
+      "estado": "fallida",
+      "duracion_s": 4.537,
+      "modelo_solicitado": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "cuota_inicio": {
+        "fecha": "2026-11-10T20:51:53.524000+00:00",
+        "used_percent": 86.0
+      },
+      "cuota_final": null
+    },
+    {
+      "id_pregunta": "piloto-preguntar-20261110-3",
+      "inicio": "2026-11-10T20:52:46.142207+00:00",
+      "fin": "2026-11-10T20:52:50.407606+00:00",
+      "estado": "fallida",
+      "duracion_s": 4.393,
+      "modelo_solicitado": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "cuota_inicio": {
+        "fecha": "2026-11-10T20:52:45.839000+00:00",
+        "used_percent": 86.0
+      },
+      "cuota_final": null
+    },
+    {
+      "id_pregunta": "piloto-preguntar-20261110-4",
+      "inicio": "2026-11-10T20:53:21.303388+00:00",
+      "fin": "2026-11-10T20:53:26.974478+00:00",
+      "estado": "respondida",
+      "duracion_s": 5.791,
+      "modelo_solicitado": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "cuota_inicio": {
+        "fecha": "2026-11-10T20:53:21.038000+00:00",
+        "used_percent": 86.0
+      },
+      "cuota_final": null
+    },
+    {
+      "id_pregunta": "piloto-preguntar-20261110-5",
+      "inicio": "2026-11-10T20:54:47.824800+00:00",
+      "fin": "2026-11-10T20:54:55.170724+00:00",
+      "estado": "respondida",
+      "duracion_s": 7.476,
+      "modelo_solicitado": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "cuota_inicio": {
+        "fecha": "2026-11-10T20:54:47.552000+00:00",
+        "used_percent": 86.0
+      },
+      "cuota_final": null
+    }
+  ],
+  "canario": {
+    "repeticion": true,
+    "canario_no_expuesto": true,
+    "archivo_no_creado": true,
+    "cupo_liberado": true
+  },
+  "sandbox_directo": {
+    "read_denied": true,
+    "write_denied": true
+  },
+  "archivos_privados_no_publicados": "auth, logs crudos, tokens, contenido del canario y configuración local",
+  "operaciones_sensibles": false,
+  "tests": {
+    "suite_total": 200,
+    "pasaron": 199,
+    "omitidos": 1,
+    "fallos": 0,
+    "duracion_s": 81.481,
+    "dirigidos_nuevos": 15,
+    "bash_n": true,
+    "preflight_nuevos_datos": true
+  }
+}

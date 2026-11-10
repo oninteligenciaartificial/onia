@@ -1,7 +1,7 @@
 # Sergio y ONIA: entrada del espacio de trabajo
 
 Para encargos de Sergio y ONIA, la base vigente está en `_investigacion-onia/base-operativa/`.
-Leé `00-MAPA/ESTADO.md` y `04-operacion-agentes/reglas-comunes.md` allí antes de continuar trabajo de ese sistema. La guía de carpetas es `00-MAPA/ESTRUCTURA.md`. Son referencias a una sola fuente; no copies sus reglas a cada proyecto.
+Primero leé `04-operacion-agentes/BITACORA-BOSS.md` y `05-herramientas/fabrica-onia/DECISIONES-SERGIO-20261110.md` allí; después `00-MAPA/ESTADO.md` y `04-operacion-agentes/reglas-comunes.md`, antes de continuar trabajo de ese sistema. La guía de carpetas es `00-MAPA/ESTRUCTURA.md`. Son referencias a una sola fuente; no copies sus reglas a cada proyecto.
 
 Las instrucciones actuales de Sergio prevalecen sobre propuestas históricas. ONIA-CENTRAL está excluido como fuente: no consultar ni importar sus reglas, skills o estados para este trabajo.
 
@@ -10,6 +10,8 @@ Consultá `privado/contexto.md` sólo si la tarea necesita datos personales, hor
 Las skills propias tienen sus fuentes editables en `base-operativa/05-herramientas/compartibles/skills`, salvo `preparar-oferta-y-embudo`, que está en `base-operativa/01-negocio/preparar-oferta-y-embudo`; los enlaces de `.agents/skills` dependen de la preparación del entorno. Al iniciar un encargo, aplicar la selección y lectura por área de `base-operativa/04-operacion-agentes/ORQUESTACION.md`; cargar sólo las pertinentes. En Cloud seguir `base-operativa/05-herramientas/cloud/INICIO-SESION.md`, incluyendo recuperación por ID/commit si el encargo la pide. El historial se consulta sólo cuando es pertinente. La existencia de instrucciones no acredita su carga automática, conexiones, tareas cloud o resultados.
 
 ## Arranque y cierre de una sesión del harness
+
+Al inicio de **toda sesión**, leer primero `_investigacion-onia/base-operativa/04-operacion-agentes/BITACORA-BOSS.md` y `_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/DECISIONES-SERGIO-20261110.md`, antes de elegir o ejecutar pasos. La bitácora da contexto; los estados se cotejan en el registro del harness. Las decisiones vigentes de Sergio prevalecen sobre ejemplos anteriores. Si falta alguno, informar el faltante sin inventar su contenido ni reconstruirlo. Esta regla no interrumpe ni reinicia sesiones ya abiertas.
 
 1. Comprobar `pwd`, rama, HEAD y cambios. Leer las reglas comunes, `04-operacion-agentes/boss-memoria.md` y la tarea/briefing recibidos, bajo `_investigacion-onia/base-operativa/`. Recuperar su ID con `harness.py retomar ID` desde el checkout coordinador cuando corresponda. No asumir contexto del chat anterior.
 2. Trabajar una sola tarea en el worktree asignado y sólo sus rutas. El coordinador mantiene el registro canónico; no crear una segunda copia de tarea ni modificar la proyección del briefing. Leer la directora canónica pertinente.

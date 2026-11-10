@@ -77,7 +77,7 @@ def private_write(path, value):
 
 
 @contextmanager
-def locked(root):
+def locked(root, nonblocking=False):
     root = no_links(root)
     root.mkdir(parents=True, exist_ok=True, mode=0o700)
     if root.stat().st_uid != os.getuid() or root.stat().st_mode & 0o077:
@@ -87,7 +87,10 @@ def locked(root):
         info = os.fstat(stream.fileno())
         if not stat.S_ISREG(info.st_mode) or info.st_uid != os.getuid() or info.st_mode & 0o077:
             raise Rejected('lock_invalido')
-        fcntl.flock(stream, fcntl.LOCK_EX)
+        try:
+            fcntl.flock(stream, fcntl.LOCK_EX | (fcntl.LOCK_NB if nonblocking else 0))
+        except BlockingIOError:
+            raise Rejected("puente_ocupado_reintentar") from None
         yield
 
 
@@ -99,6 +102,9 @@ def request(value):
     if not isinstance(value, dict) or value.get('version') != 1 or type(value['version']) is not int:
         raise Rejected('protocolo_invalido')
     op = value.get('operacion')
+    if op == 'preguntar':
+        import harness_preguntas
+        return harness_preguntas.parse(value)
     if op in {'registrar', 'habilitar'}:
         import harness_delegacion
         checked_id(value.get('id'))
@@ -198,6 +204,9 @@ def invoke(config, value, row, grant):
 
 def handle(config, value, config_path=None):
     value = request(value)
+    if value['operacion'] == 'preguntar':
+        import harness_preguntas
+        return harness_preguntas.handle(config, value, config_path)
     if value['operacion'] in {'registrar', 'habilitar'}:
         import harness_delegacion
         return harness_delegacion.handle(config, value, config_path)
