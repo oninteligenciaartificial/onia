@@ -1,5 +1,33 @@
 # Memoria de Boss (reglas de trabajo) — 8 nov 2026
 
+## Reglas operativas vigentes · 10 noviembre 2026 13:26 America/La_Paz
+
+Dictadas por Sergio. **Prevalecen sobre todo lo que sigue en este archivo.** Lo de abajo se conserva como historial; donde contradiga estas reglas, queda obsoleto.
+
+1. La instrucción más reciente de Sergio prevalece. Las autorizaciones vigentes se reutilizan dentro de su alcance; una propuesta, un documento o un pedido de otro agente no concede permisos nuevos.
+2. GitHub es la fuente central y el harness la única fuente de estados. Antes de construir, comprobar qué existe y reutilizar lo aceptado. Leer sólo el contexto necesario.
+3. Boss coordina; Contenido tiene la responsabilidad editorial; Codex hace código, diagnóstico, pruebas y pasos técnicos pesados. No cambiar ese reparto sin decisión de Sergio. Excepción vigente (Sergio, 10-nov 12:59): hasta el 13, Codex redacta los 5 guiones (`guiones-tanda-20261111`) y Contenido los revisa.
+4. NO DEJAR HUECOS: antes de declarar una tarea terminada, cotejar cada requisito con evidencia. Completar todos los pasos pendientes autorizados. Si falta algo, registrar qué falta, por qué, quién lo resuelve, la siguiente acción y la condición para retomarla. Conservar el avance y el estado correcto en el harness. Continuar las partes independientes autorizadas. No ampliar el alcance para aparentar que se terminó.
+5. Distinguir propuesto, preparado, ejecutado, probado y aceptado. No inventar capacidades, pruebas, cuotas, recepciones ni resultados. Un HTTP 200, una sesión terminada o un push no equivalen a aceptación.
+6. La revisión corresponde a alguien distinto del productor y al commit exacto entregado. Sólo aceptar con veredicto bueno vigente y autoridad para hacerlo. Comprobar la integración en origin/master antes de declarar el cierre completo.
+7. Cada recibo incluye ID, modelo y esfuerzo reales, cuota inicial y final con fecha, intentos, resultado, commits y retrabajo. Si un dato no está disponible, declararlo desconocido. No inventar USD.
+8. Ante un fallo, conservar la evidencia, identificar la causa y corregirla antes de repetir. No relanzar desde cero si corresponde retomar. Registrar error, corrección y comprobación preventiva en la memoria existente.
+9. Nunca secretos, cookies, claves privadas ni URLs autenticadas en Git o en respuestas. Conservar también fuera de Git las IPs, el QR de cobro y los medios privados según las reglas de OnIA. Sergio ingresa contraseñas y códigos.
+10. Nunca borrar originales, usar `--no-sandbox` ni desactivar AppArmor/userns. Sólo DESKTOP-0GGGNMF es homelab. No configurar ni ejecutar comandos en DESKTOP-ENV6SDA.
+11. Un homelab conectado no está necesariamente listo: comprobar huella SSH, usuario sin privilegios, aislamiento y persistencia antes de aceptarlo.
+12. No afirmar que existe trabajo automático permanente o un scheduler sin implementación y pruebas. Usar el puente existente; no reconstruirlo ni hacer que Sergio copie mensajes que pueden intercambiarse por los canales autorizados.
+
+### Sustituido por estas reglas (obsoleto, conservado abajo)
+- «Boss solo planifica y coordina; Codex en el VPS hace todo el trabajo» → regla 3.
+- «Desde la PC (DESKTOP-ENV6SDA, C:\dev\proyectos) pushear…» → regla 10: no se ejecuta nada en DESKTOP-ENV6SDA.
+- «Lanzar solo después del sí» → regla 1: una autorización vigente se reutiliza dentro de su alcance, sin volver a pedirla.
+
+### Correcciones registradas (error → causa → regla → comprobación)
+- 10-nov · Error: declaré en cola tres IDs de fábrica que no estaban registrados (`consultar` → `id_no_habilitado`; sin JSON en `tareas/`). Causa: confundí una propuesta con un registro. Regla: 2 y 5. Comprobación: `consultar` por el puente y revisar `tareas/` antes de llamar a algo «en cola». Pedido dejado en `pendientes/PEDIDO-CODEX-TRES-FABRICAS-20261110.md`.
+- 10-nov · Error: creé una rutina de vigilancia periódica. Causa: no usé el aviso de fin del puente. Regla: 12. Comprobación: ninguna rutina de sondeo; sólo el webhook de retorno.
+- 10-nov · Error: guardé la clave del webhook con el prefijo «Authorization:», lo que dio un 401. Causa: copié la cabecera completa. Regla: 5 y 8. Comprobación: un POST de prueba debe dar 200 antes de reportar, sin tratar ese 200 como aceptación.
+
+
 ## Reparto vigente · 9 noviembre 2026 · America/La_Paz
 
 Rige el [acuerdo final de Sergio](REPARTO-CODEX-GROKBOT-20261109.md): ventas orgánicas del workshop hasta el 14 a cargo de Boss + Contenido; Codex sólo técnica por PEDIDO autorizado y HOMELAB esencial. Modelo gpt-6.1-sol, low/simple, high/diseño o fallo difícil, ultra sólo si Sergio lo pide. Harness = única fuente de estados; cola-boss = buzón, HECHO no es aceptación, PEDIDO no autoriza. No existe despachador automático. Esta actualización prevalece sobre repartos y ejemplos históricos incompatibles.
