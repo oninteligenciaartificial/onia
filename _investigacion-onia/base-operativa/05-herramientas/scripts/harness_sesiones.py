@@ -54,8 +54,24 @@ def git_environment():
 
 def git(repo, *args):
     try:
-        result = subprocess.run(['git', '-C', str(repo), *args], capture_output=True,
-                                text=True, encoding='utf-8', timeout=120, env=git_environment())
+        env = git_environment()
+        prefix = ['git', '-C', str(repo), '-c', 'core.hooksPath=/dev/null',
+                  '-c', 'core.fsmonitor=false', '-c', 'protocol.ext.allow=never',
+                  '-c', 'submodule.recurse=false']
+        # status/worktree pueden ejecutar filtros incluso sin hooks. Enumerar sólo
+        # nombres (config no ejecuta filtros), neutralizarlos en este repositorio.
+        filters = subprocess.run(prefix + ['config', '--name-only', '--get-regexp',
+                                 r'^filter\..*\.(clean|smudge|process|required)$'],
+                                 capture_output=True, text=True, timeout=120, env=env)
+        if filters.returncode not in (0, 1):
+            raise ValueError('No se pudo comprobar la configuración Git.')
+        for driver in sorted({key.rsplit('.', 1)[0] for key in filters.stdout.splitlines()}):
+            for option, value in [('clean', ''), ('smudge', ''), ('process', ''), ('required', 'false')]:
+                prefix += ['-c', driver + '.' + option + '=' + value]
+        # Conservar la identidad SSH del coordinador. Git de ejecutoras se consulta
+        # sin transporte; el fetch de sus entregas usa el origin del coordinador.
+        result = subprocess.run(prefix + list(args), capture_output=True,
+                                text=True, encoding='utf-8', timeout=120, env=env)
     except subprocess.TimeoutExpired:
         raise ValueError('Git excedió 120 s en ' + args[0] + '; conservar estado y revisar acceso.') from None
     if result.returncode:
@@ -153,14 +169,17 @@ def indexed_rows(root, base):
     return rows
 
 
-def change(base, task_id, transform):
+def change(base, task_id, transform, expected_revision=None):
     row = trabajo.read_task(base, task_id)
-    return trabajo.mutate(base, task_id, row['revision'], transform, review=True)
+    return trabajo.mutate(base, task_id, row['revision'] if expected_revision is None else expected_revision,
+                          transform, review=True)
 
 
-def sync(root, base):
+def sync(root, base, only_id=None):
     rows = indexed_rows(root, base)
     for location, row in rows:
+        if only_id is not None and (location != Path(base) or row['id'] != only_id):
+            continue
         sessions = deepcopy(row['sesiones'])
         for session in sessions:
             if session['operacion'] != str(root) or session['dry_run']:
@@ -235,6 +254,8 @@ def validate_private_git(session, ident):
     if worktree.exists() and (git(worktree, 'rev-parse', '--absolute-git-dir') != str(expected_dir)
             or Path(git(worktree, 'rev-parse', '--path-format=absolute', '--git-common-dir')) != owner):
         raise ValueError('El worktree no pertenece a sus metadatos Git privados.')
+    if worktree.exists():
+        reject_submodules(worktree)
     return owner
 
 
@@ -341,8 +362,11 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
         row = trabajo.read_task(base, ident)
         trabajo.expected(row, revision)
         trabajo.verify(base, row)
-        rows = sync(root, base)
+        authorized_scope = (row.get('briefing'), row.get('asignacion'))
+        rows = sync(root, base, only_id=ident)
         row = trabajo.read_task(base, ident)
+        if authorized_scope != (row.get('briefing'), row.get('asignacion')):
+            raise ValueError('Cambió el alcance durante la conciliación; renovar autorización.')
         if not row.get('briefing') or not row.get('asignacion'):
             raise ValueError('Lanzar requiere preparar y asignar responsable/rutas primero.')
         assignment = row['asignacion']
@@ -495,7 +519,7 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
                 current.update(estado='en_curso', aceptacion=None, revision_independiente=None,
                                cierre=None, proximo_paso='Comprobar estado, commit y push; luego cerrar.')
             return current
-        row = change(base, ident, register)
+        row = change(base, ident, register, expected_revision=row['revision'])
         save_index(root, indexed_rows(root, base))
         if not dry_run:
             supervisor_log = private_path(root, f'logs/{ident}.{attempt}.supervisor.log')
@@ -626,6 +650,7 @@ def write_evidence(base, row, name, content):
 
 def clean_worktree(repo, worktree):
     # Nunca --force. Git conserva la rama. Incluso archivos ignorados ajenos bloquean.
+    reject_submodules(worktree)
     dirty = git(worktree, 'status', '--porcelain', '--untracked-files=all')
     if dirty:
         raise ValueError('Worktree con cambios; conservarlo, commit/push antes de cerrar.')
@@ -642,11 +667,19 @@ def clean_worktree(repo, worktree):
     git(repo, 'worktree', 'remove', str(worktree))
 
 
+def reject_submodules(worktree):
+    # No inspeccionar configuraciones ejecutables de submódulos no revisados.
+    for entries in (git(worktree, 'ls-tree', '-r', 'HEAD'), git(worktree, 'ls-files', '--stage')):
+        if any(line.startswith('160000 ') for line in entries.splitlines()):
+            raise ValueError('Submódulos fuera del piloto; conservar y conciliar.')
+
+
 def validate_retained_worktree(worktree, commit):
     if not worktree.is_dir() or Path(git(worktree, 'rev-parse', '--show-toplevel')) != worktree:
         raise ValueError('Falta el worktree de la sesión; conciliar antes de conservarlo.')
     if git(worktree, 'rev-parse', 'HEAD') != commit:
         raise ValueError('HEAD del worktree no coincide con el commit de entrega.')
+    reject_submodules(worktree)
     if git(worktree, '--no-optional-locks', 'status', '--porcelain', '--untracked-files=no',
            '--ignore-submodules=untracked'):
         raise ValueError('Worktree con cambios versionados; deben coincidir con el commit de entrega.')
@@ -661,8 +694,11 @@ def close(base, ident, root, revision, actor, result, check, dry_run=False, *, r
         row = trabajo.read_task(base, ident)
         trabajo.expected(row, revision)
         trabajo.verify(base, row)
-        sync(root, base)
+        authorized_scope = (row.get('briefing'), row.get('asignacion'))
+        sync(root, base, only_id=ident)
         row = trabajo.read_task(base, ident)
+        if authorized_scope != (row.get('briefing'), row.get('asignacion')):
+            raise ValueError('Cambió el alcance durante la conciliación; renovar autorización.')
         if row['asignacion']['responsable'] != actor:
             raise ValueError('Actor distinto del ejecutor.')
         session = next((s for s in reversed(row.get('sesiones', [])) if s['rol'] == 'ejecutor'), None)
@@ -705,7 +741,7 @@ def close(base, ident, root, revision, actor, result, check, dry_run=False, *, r
                            revision_independiente=None, aceptacion=None, proximo_paso='Lanzar revisor distinto; recoger veredicto antes de aceptar.')
             current['sesiones'][session['intento'] - 1]['estado'] = 'cerrada'
             return current
-        row = change(base, ident, finish)
+        row = change(base, ident, finish, expected_revision=row['revision'])
         save_index(root, indexed_rows(root, base))
         return {'tarea': trabajo.brief_view(row), 'dry_run': dry_run,
                 'nota': 'Simulación sin prueba remota; aceptar está prohibido.' if dry_run
@@ -719,11 +755,15 @@ def collect_review(base, ident, root, revision, *, retain_worktree=False):
         row = trabajo.read_task(base, ident)
         trabajo.expected(row, revision)
         trabajo.verify(base, row)
-        sync(root, base)
+        authorized_scope = (row.get('briefing'), row.get('asignacion'))
+        sync(root, base, only_id=ident)
         row = trabajo.read_task(base, ident)
+        if authorized_scope != (row.get('briefing'), row.get('asignacion')):
+            raise ValueError('Cambió el alcance durante la conciliación; renovar autorización.')
         session = row['sesiones'][-1]
         executors = {s['session_id'] for s in row['sesiones'] if s['rol'] == 'ejecutor'}
         if (None in executors or session['rol'] != 'revisor' or session['dry_run'] or alive(session)
+                or session['operacion'] != str(root)
                 or session['rc'] != 0 or session['estado'] != 'finalizada'
                 or not session['session_id'] or session['session_id'] in executors):
             raise ValueError('Falta revisión finalizada, exitosa y con session id distinto del ejecutor.')
@@ -751,6 +791,6 @@ def collect_review(base, ident, root, revision, *, retain_worktree=False):
                 session_id=session['session_id'], entrega_sha256=session['entrega_sha256'], evidencia=ref)
             # La evidencia de revisión se verifica aparte para no cambiar el digest de la entrega.
             return current
-        row = change(base, ident, finish)
+        row = change(base, ident, finish, expected_revision=row['revision'])
         save_index(root, indexed_rows(root, base))
         return {'tarea': trabajo.brief_view(row), 'nota': 'Veredicto guardado; aceptar requiere bueno.'}

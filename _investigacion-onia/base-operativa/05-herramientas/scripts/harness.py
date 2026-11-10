@@ -265,6 +265,7 @@ def main(argv=None):
     p = commands.add_parser("estado")
     p.add_argument("--dry-run", action="store_true")
     p = commands.add_parser("cerrar")
+    p.add_argument("--retorno-boss", action="store_true", help="Publicar registro y avisar al webhook privado de Boss tras cerrar; sólo IDs configurados.")
     p.add_argument("id")
     p.add_argument("--revision-esperada", type=int, required=True)
     p.add_argument("--actor", required=True)
@@ -280,6 +281,8 @@ def main(argv=None):
     p.add_argument("--criterio", required=True)
     p = commands.add_parser("skills", help="Crear enlaces faltantes de skills propias sin reemplazar existentes.")
     p.add_argument("--dry-run", action="store_true")
+    p = commands.add_parser("notificar-boss", help="Publicar registro cerrado y enviar su aviso deduplicado a Boss.")
+    p.add_argument("id")
     p = commands.add_parser("_ejecutar", help=argparse.SUPPRESS)
     p.add_argument("id")
     p.add_argument("--intento", type=int, required=True)
@@ -294,9 +297,15 @@ def main(argv=None):
             elif args.command == "skills":
                 result = sessions.link_skills(sessions.repo_for(args.base), args.base, args.dry_run)
             elif args.command == "cerrar":
+                if args.dry_run and args.retorno_boss:
+                    raise ValueError("Una simulación no publica ni notifica a Boss.")
                 result = sessions.close(args.base, args.id, args.operacion, args.revision_esperada,
                                         args.actor, args.resultado, args.comprobacion, args.dry_run,
                                         retain_worktree=args.conservar_worktree)
+                if args.retorno_boss:
+                    import harness_retorno
+                    result['retorno_boss'] = harness_retorno.configured(args.base, args.operacion, args.id,
+                                                                      expected_revision=result['tarea']['revision'])
             elif args.command == "revisar" and args.recoger:
                 if args.dry_run:
                     raise ValueError("Una simulación no produce un veredicto real.")
@@ -313,6 +322,9 @@ def main(argv=None):
                     model=args.modelo, effort=args.esfuerzo, auth_chatgpt=args.auth_chatgpt,
                     subagents=args.subagentes_maximos)
             code = 0
+        elif args.command == "notificar-boss":
+            import harness_retorno
+            result, code = harness_retorno.configured(args.base, args.operacion, args.id), 0
         elif args.command == "asignar":
             result = trabajo.assign(args.base.resolve(), args.id, args.revision_esperada,
                                     args.responsable, args.ruta, actor=args.actor)
