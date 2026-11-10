@@ -1,16 +1,22 @@
 {
   "schema": 2,
   "id": "conexion-boss-piloto-20261110",
-  "revision": 2,
+  "revision": 8,
   "compartible": true,
   "objetivo": "Comprobar el despacho Boss→harness, entrega única, revisión distinta y aviso con acuse; sólo juguete sin sistemas externos.",
-  "estado": "preparado",
-  "proximo_paso": "Leer 04-operacion-agentes/encargos/conexion-boss-piloto-20261110.md y ejecutar el encargo dentro de su alcance.",
-  "resultado": "",
-  "comprobacion": "",
-  "verificacion": "pendiente",
-  "evidencias": [],
-  "actualizado": "2026-11-10T12:15:26.247129+00:00",
+  "estado": "para_revision",
+  "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+  "resultado": "Entrega del juguete publicada en origin; contenido exacto y revisión independiente pendientes de cotejo.",
+  "comprobacion": "Cierre comprueba commit en origin y worktree conservado. No acredita aceptación, producto integrado ni acuse de Boss.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/cierre-r7-d5712ff5.json",
+      "sha256": "ee41f653a1266bc85e421cbfb7a1424994017b6b4f504e28cf58abe35569ed1b",
+      "bytes": 311
+    }
+  ],
+  "actualizado": "2026-11-10T15:39:21.021103+00:00",
   "historial": [
     {
       "revision": 1,
@@ -22,6 +28,311 @@
       "evidencias": [],
       "proximo_paso": "Leer 04-operacion-agentes/encargos/conexion-boss-piloto-20261110.md y ejecutar el encargo dentro de su alcance.",
       "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-10T12:15:26.247129+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/conexion-boss-piloto-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "boss-piloto-ejecutor",
+        "rutas": [
+          "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T12:15:26.247115+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-10T14:44:16.730318+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "boss-piloto-ejecutor",
+        "rutas": [
+          "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T12:15:26.247115+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-piloto-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-conexion-boss-piloto-20261110",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.jsonl",
+          "log_rel": "logs/conexion-boss-piloto-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-conexion-boss-piloto-20261110",
+          "rutas": [
+            "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+          ],
+          "dry_run": false,
+          "commit_base": "0e47986a408a16e0c176fb3f7bfcc3c26a88e367",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T14:44:16.678322+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git/worktrees/onia-ws-conexion-boss-piloto-20261110",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-10T14:44:16.838596+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "boss-piloto-ejecutor",
+        "rutas": [
+          "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T12:15:26.247115+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-piloto-ejecutor",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 2619600,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206107216",
+          "rama": "codex/ws-conexion-boss-piloto-20261110",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.jsonl",
+          "log_rel": "logs/conexion-boss-piloto-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-conexion-boss-piloto-20261110",
+          "rutas": [
+            "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+          ],
+          "dry_run": false,
+          "commit_base": "0e47986a408a16e0c176fb3f7bfcc3c26a88e367",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T14:44:16.678322+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git/worktrees/onia-ws-conexion-boss-piloto-20261110",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-10T14:44:16.980142+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "boss-piloto-ejecutor",
+        "rutas": [
+          "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T12:15:26.247115+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-piloto-ejecutor",
+          "pid": 2619612,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206107230",
+          "supervisor_pid": 2619600,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206107216",
+          "rama": "codex/ws-conexion-boss-piloto-20261110",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.jsonl",
+          "log_rel": "logs/conexion-boss-piloto-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-conexion-boss-piloto-20261110",
+          "rutas": [
+            "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+          ],
+          "dry_run": false,
+          "commit_base": "0e47986a408a16e0c176fb3f7bfcc3c26a88e367",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T14:44:16.678322+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git/worktrees/onia-ws-conexion-boss-piloto-20261110",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-10T14:44:18.097799+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "boss-piloto-ejecutor",
+        "rutas": [
+          "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T12:15:26.247115+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-piloto-ejecutor",
+          "pid": 2619612,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206107230",
+          "supervisor_pid": 2619600,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206107216",
+          "rama": "codex/ws-conexion-boss-piloto-20261110",
+          "session_id": "01a1c5ea-bca3-7290-ba02-24b8e14bce5c",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.jsonl",
+          "log_rel": "logs/conexion-boss-piloto-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-conexion-boss-piloto-20261110",
+          "rutas": [
+            "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+          ],
+          "dry_run": false,
+          "commit_base": "0e47986a408a16e0c176fb3f7bfcc3c26a88e367",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T14:44:16.678322+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git/worktrees/onia-ws-conexion-boss-piloto-20261110",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-10T14:44:55.637599+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "boss-piloto-ejecutor",
+        "rutas": [
+          "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T12:15:26.247115+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-piloto-ejecutor",
+          "pid": 2619612,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206107230",
+          "supervisor_pid": 2619600,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206107216",
+          "rama": "codex/ws-conexion-boss-piloto-20261110",
+          "session_id": "01a1c5ea-bca3-7290-ba02-24b8e14bce5c",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.jsonl",
+          "log_rel": "logs/conexion-boss-piloto-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-conexion-boss-piloto-20261110",
+          "rutas": [
+            "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+          ],
+          "dry_run": false,
+          "commit_base": "0e47986a408a16e0c176fb3f7bfcc3c26a88e367",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T14:44:16.678322+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git/worktrees/onia-ws-conexion-boss-piloto-20261110",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-10T14:44:55.630999+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -38,5 +349,59 @@
     ],
     "revision_base": 1,
     "fecha": "2026-11-10T12:15:26.247115+00:00"
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "boss-piloto-ejecutor",
+      "pid": 2619612,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206107230",
+      "supervisor_pid": 2619600,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206107216",
+      "rama": "codex/ws-conexion-boss-piloto-20261110",
+      "session_id": "01a1c5ea-bca3-7290-ba02-24b8e14bce5c",
+      "estado": "cerrada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.jsonl",
+      "log_rel": "logs/conexion-boss-piloto-20261110.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-conexion-boss-piloto-20261110",
+      "rutas": [
+        "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+      ],
+      "dry_run": false,
+      "commit_base": "0e47986a408a16e0c176fb3f7bfcc3c26a88e367",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.1.briefing.txt",
+      "inicio": "2026-11-10T14:44:16.678322+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git/worktrees/onia-ws-conexion-boss-piloto-20261110",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-10T14:44:55.630999+00:00"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": {
+    "commit": "9b9348702555b87bf09e76eb2c86a09af3f93b5c",
+    "commit_base": "0e47986a408a16e0c176fb3f7bfcc3c26a88e367",
+    "ramas_origin": [
+      "origin/codex/ws-conexion-boss-piloto-20261110"
+    ],
+    "fecha": "2026-11-10T15:39:21.012570+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "worktree_conservado": true,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/cierre-r7-d5712ff5.json",
+      "sha256": "ee41f653a1266bc85e421cbfb7a1424994017b6b4f504e28cf58abe35569ed1b",
+      "bytes": 311
+    }
   }
 }
