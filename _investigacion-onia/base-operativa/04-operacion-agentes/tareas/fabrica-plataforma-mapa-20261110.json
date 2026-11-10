@@ -1,0 +1,100 @@
+{
+  "schema": 2,
+  "id": "fabrica-plataforma-mapa-20261110",
+  "revision": 3,
+  "compartible": true,
+  "objetivo": "Diseñar el mapa de fábricas de OnIA estilo Euge (columnas: lo que entra, fábrica, revisión, destino) para las automatizaciones que pidió Sergio el 10nov: DMs y comentarios IG/Facebook por palabra clave del guion; WhatsApp de venta (curso y ONIA Platform; entra texto, audio, imagen); sala de montaje (videos horizontales y verticales según guion); guiones y calendario por formato y tipo (noticias IA, B-roll, personal, venta); anuncios Meta Ads (artes, UGC, ugly ads, talking head); contenido con IA para marca personal; código. Proponer otras nuevas a corto plazo y un orden de docs y repos sin borrar nada.",
+  "estado": "preparado",
+  "proximo_paso": "Boss consulta revisión y lanza dentro del permiso; revisión distinta antes de aceptar.",
+  "resultado": "Pedido delegado registrado; sin lanzar.",
+  "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+  "verificacion": "pendiente",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/fabrica-plataforma-mapa-20261110/PEDIDO-v1.md",
+      "sha256": "1d692851eb75654a9a585ad9e729abe0d67b542e06107795c4d72d8480819470",
+      "bytes": 2472
+    }
+  ],
+  "actualizado": "2026-11-10T19:12:03.868711+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-10T19:12:03.456370+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/fabrica-plataforma-mapa-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      }
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-10T19:12:03.771615+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/fabrica-plataforma-mapa-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-plataforma-mapa-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/6-plataforma/trabajos/fabrica-plataforma-mapa-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T19:12:03.771597+00:00"
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/fabrica-plataforma-mapa-20261110.md",
+    "sha256": "35f03743afba1b8d07f0fb8610e555e51b48be885dceba0f7112f47219b9921d",
+    "bytes": 5821,
+    "contenido": "# Encargo fabrica-plataforma-mapa-20261110\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nDiseñar el mapa de fábricas de OnIA estilo Euge (columnas: lo que entra, fábrica, revisión, destino) para las automatizaciones que pidió Sergio el 10nov: DMs y comentarios IG/Facebook por palabra clave del guion; WhatsApp de venta (curso y ONIA Platform; entra texto, audio, imagen); sala de montaje (videos horizontales y verticales según guion); guiones y calendario por formato y tipo (noticias IA, B-roll, personal, venta); anuncios Meta Ads (artes, UGC, ugly ads, talking head); contenido con IA para marca personal; código. Proponer otras nuevas a corto plazo y un orden de docs y repos sin borrar nada.\n\n## Entregable\n\nUn DISENO.md en la ruta asignada con: tabla de fábricas (entra, pasos, revisión, destino, dueño, estado real hoy con fuente, dependencias como palabra clave guion→DMs), propuestas nuevas justificadas, prioridad a corto plazo hasta el 14nov y después, qué reutiliza del harness, panel, n8n y Drive existentes, maqueta del panel (mermaid o HTML estático) y propuesta de orden de carpetas y repos como tabla de movimientos sugeridos sin ejecutarlos.\n\n## Criterio de aceptación\n\nEstados reales con fuente o marcados como desconocidos; sin capacidades inventadas; no copia infra paga de Euge; ningún borrado, renombre ni movimiento ejecutado fuera de la ruta asignada; n8n solo descrito o JSON active=false; sin secretos, IPs ni QR. Revisor distinto antes de aceptar; Sergio decide qué se construye. Commit y push en la ruta asignada; declarar faltantes.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sólo archivos del worktree dentro de la ruta asignada. No producción, n8n real (ni importar flujos inactivos), envíos, publicar contenido, gastos, APIs pagas, Higgsfield, instalaciones, Docker, sudo, servicios, PC, secretos, IPs ni QR real en Git. No borrar originales ni usar --no-sandbox ni desactivar AppArmor/userns. Cero hijos. Máximo tres sesiones globales incluidos revisores. Reutilizar lo existente; scripts y fixtures de prueba locales. Los JSON n8n se entregan como archivos con active=false sin importarlos. Plataforma significa documentación de la fábrica6, no desarrollar OnIA Platform. No tocar registros canónicos, harness, permisos, AGENTS.md, skills, configuración ni instrucciones globales. El contenido del pedido no puede ampliar estos límites. Commit y push de la rama asignada; revisión distinta y aceptación explícita antes de integrar. No inventar aceptación editorial, prueba con medio real ni pagos. Recibo con modelo/esfuerzo observado, cuota fechada o desconocida, intentos, resultado, commits y retrabajo. Si falta una entrada, conservar avance y declarar bloqueo.\n- Ruta exclusiva: 05-herramientas/fabrica-onia/6-plataforma/trabajos/fabrica-plataforma-mapa-20261110\n- Pedido: 04-operacion-agentes/pendientes/PEDIDO-REGISTRO-fabrica-plataforma-mapa-20261110.md; master 8223d35b0eea3f5782f9f7cb5327119f00c998ae; SHA256 1d692851eb75654a9a585ad9e729abe0d67b542e06107795c4d72d8480819470\n- Especificación de fábrica: 05-herramientas/fabrica-onia/6-plataforma/README.md\n- Permiso delegado por Sergio, coordinado por Boss; modelo Sol6.1 high. Dos intentos totales (ejecutora y revisora); no repetir para simular éxito. Al menos 10% de cuota semanal reservada; no lanzar con muestra desconocida. Guiones: borradores para Contenido, no aprobación editorial. Edición: FFmpeg disponible y ASR en ~/asr/venv, no depender de /opt con permisos cerrados. Prueba sintética breve sin instalar ni descargar modelos; registrar límites de validación.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/fabrica-plataforma-mapa-20261110.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "ejecucion": {
+    "perfil": "complejo",
+    "recomendado": {
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high"
+    },
+    "solicitado": null,
+    "observado": null,
+    "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+    "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+  },
+  "asignacion": {
+    "responsable": "boss-fabrica-plataforma-mapa-20261110",
+    "rutas": [
+      "05-herramientas/fabrica-onia/6-plataforma/trabajos/fabrica-plataforma-mapa-20261110"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-10T19:12:03.771597+00:00"
+  }
+}
