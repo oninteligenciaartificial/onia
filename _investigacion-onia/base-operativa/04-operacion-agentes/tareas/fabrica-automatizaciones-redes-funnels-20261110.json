@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "id": "fabrica-automatizaciones-redes-funnels-20261110",
-  "revision": 3,
+  "revision": 8,
   "compartible": true,
   "objetivo": "Análisis completo para OnIA de redes sociales (Instagram, Facebook, TikTok, YouTube, X, WhatsApp), funnels y comunidades, reutilizando el cerebro y los referentes aceptados. Integrar las decisiones de Sergio del 10nov 16:08: la automatización responde la palabra clave del guion en comentarios y DMs; VIP es llamada privada sobre el caso; cero devoluciones; soporte por grupos de WhatsApp privados o públicos más comunidad pública, como flujo constante para recompra (otro workshop, comunidad u otra oferta).",
-  "estado": "preparado",
-  "proximo_paso": "Boss consulta revisión y lanza dentro del permiso; revisión distinta antes de aceptar.",
+  "estado": "en_curso",
+  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
   "resultado": "Pedido delegado registrado; sin lanzar.",
   "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
   "verificacion": "pendiente",
@@ -16,7 +16,7 @@
       "bytes": 2433
     }
   ],
-  "actualizado": "2026-11-10T20:19:36.657095+00:00",
+  "actualizado": "2026-11-10T20:31:30.650980+00:00",
   "historial": [
     {
       "revision": 1,
@@ -69,6 +69,338 @@
         "revision_base": 1,
         "fecha": "2026-11-10T20:19:36.628359+00:00"
       }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-10T20:19:36.657095+00:00",
+      "estado": "preparado",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-redes-funnels-20261110/PEDIDO-v1.md",
+          "sha256": "013b320217e9a7874dfa30b8f67bcc40cd9b84b2c4ad493b6ef806ba05f64fbf",
+          "bytes": 2433
+        }
+      ],
+      "proximo_paso": "Boss consulta revisión y lanza dentro del permiso; revisión distinta antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-automatizaciones-redes-funnels-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/trabajos/fabrica-automatizaciones-redes-funnels-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T20:19:36.628359+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-10T20:20:22.773081+00:00",
+      "estado": "en_curso",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-redes-funnels-20261110/PEDIDO-v1.md",
+          "sha256": "013b320217e9a7874dfa30b8f67bcc40cd9b84b2c4ad493b6ef806ba05f64fbf",
+          "bytes": 2433
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-automatizaciones-redes-funnels-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/trabajos/fabrica-automatizaciones-redes-funnels-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T20:19:36.628359+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-fabrica-automatizaciones-redes-funnels-20261110",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-fabrica-automatizaciones-redes-funnels-20261110",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-redes-funnels-20261110.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-redes-funnels-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-redes-funnels-20261110",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/trabajos/fabrica-automatizaciones-redes-funnels-20261110"
+          ],
+          "dry_run": false,
+          "commit_base": "2f5cd1fad5cd373670872a44a8a0f61366530764",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-redes-funnels-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T20:20:22.709810+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-redes-funnels-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-redes-funnels-20261110.git/worktrees/onia-ws-fabrica-automatizaciones-redes-funnels-20261110",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-10T20:20:22.936177+00:00",
+      "estado": "en_curso",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-redes-funnels-20261110/PEDIDO-v1.md",
+          "sha256": "013b320217e9a7874dfa30b8f67bcc40cd9b84b2c4ad493b6ef806ba05f64fbf",
+          "bytes": 2433
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-automatizaciones-redes-funnels-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/trabajos/fabrica-automatizaciones-redes-funnels-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T20:19:36.628359+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-fabrica-automatizaciones-redes-funnels-20261110",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 3478989,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208123825",
+          "rama": "codex/ws-fabrica-automatizaciones-redes-funnels-20261110",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-redes-funnels-20261110.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-redes-funnels-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-redes-funnels-20261110",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/trabajos/fabrica-automatizaciones-redes-funnels-20261110"
+          ],
+          "dry_run": false,
+          "commit_base": "2f5cd1fad5cd373670872a44a8a0f61366530764",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-redes-funnels-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T20:20:22.709810+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-redes-funnels-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-redes-funnels-20261110.git/worktrees/onia-ws-fabrica-automatizaciones-redes-funnels-20261110",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-10T20:20:23.166221+00:00",
+      "estado": "en_curso",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-redes-funnels-20261110/PEDIDO-v1.md",
+          "sha256": "013b320217e9a7874dfa30b8f67bcc40cd9b84b2c4ad493b6ef806ba05f64fbf",
+          "bytes": 2433
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-automatizaciones-redes-funnels-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/trabajos/fabrica-automatizaciones-redes-funnels-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T20:19:36.628359+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-fabrica-automatizaciones-redes-funnels-20261110",
+          "pid": 3479001,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208123847",
+          "supervisor_pid": 3478989,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208123825",
+          "rama": "codex/ws-fabrica-automatizaciones-redes-funnels-20261110",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-redes-funnels-20261110.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-redes-funnels-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-redes-funnels-20261110",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/trabajos/fabrica-automatizaciones-redes-funnels-20261110"
+          ],
+          "dry_run": false,
+          "commit_base": "2f5cd1fad5cd373670872a44a8a0f61366530764",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-redes-funnels-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T20:20:22.709810+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-redes-funnels-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-redes-funnels-20261110.git/worktrees/onia-ws-fabrica-automatizaciones-redes-funnels-20261110",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-10T20:20:24.387778+00:00",
+      "estado": "en_curso",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-redes-funnels-20261110/PEDIDO-v1.md",
+          "sha256": "013b320217e9a7874dfa30b8f67bcc40cd9b84b2c4ad493b6ef806ba05f64fbf",
+          "bytes": 2433
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-automatizaciones-redes-funnels-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/trabajos/fabrica-automatizaciones-redes-funnels-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T20:19:36.628359+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-fabrica-automatizaciones-redes-funnels-20261110",
+          "pid": 3479001,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208123847",
+          "supervisor_pid": 3478989,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208123825",
+          "rama": "codex/ws-fabrica-automatizaciones-redes-funnels-20261110",
+          "session_id": "01a1c71e-7350-79a3-993b-27ca29ac23c5",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-redes-funnels-20261110.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-redes-funnels-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-redes-funnels-20261110",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/trabajos/fabrica-automatizaciones-redes-funnels-20261110"
+          ],
+          "dry_run": false,
+          "commit_base": "2f5cd1fad5cd373670872a44a8a0f61366530764",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-redes-funnels-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T20:20:22.709810+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-redes-funnels-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-redes-funnels-20261110.git/worktrees/onia-ws-fabrica-automatizaciones-redes-funnels-20261110",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -96,5 +428,44 @@
     ],
     "revision_base": 1,
     "fecha": "2026-11-10T20:19:36.628359+00:00"
-  }
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "boss-fabrica-automatizaciones-redes-funnels-20261110",
+      "pid": 3479001,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208123847",
+      "supervisor_pid": 3478989,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208123825",
+      "rama": "codex/ws-fabrica-automatizaciones-redes-funnels-20261110",
+      "session_id": "01a1c71e-7350-79a3-993b-27ca29ac23c5",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-redes-funnels-20261110.jsonl",
+      "log_rel": "logs/fabrica-automatizaciones-redes-funnels-20261110.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-redes-funnels-20261110",
+      "rutas": [
+        "05-herramientas/fabrica-onia/3-automatizaciones/trabajos/fabrica-automatizaciones-redes-funnels-20261110"
+      ],
+      "dry_run": false,
+      "commit_base": "2f5cd1fad5cd373670872a44a8a0f61366530764",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-redes-funnels-20261110.1.briefing.txt",
+      "inicio": "2026-11-10T20:20:22.709810+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-redes-funnels-20261110.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-redes-funnels-20261110.git/worktrees/onia-ws-fabrica-automatizaciones-redes-funnels-20261110",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-10T20:31:30.637023+00:00"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": null
 }
