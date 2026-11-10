@@ -1,0 +1,35 @@
+{
+  "id": "conexion-boss-codex-20261110",
+  "rol": "Codex, diagnóstico y preparación; revisión de Boss pendiente",
+  "modelo": "gpt-6-astra",
+  "esfuerzo": "xhigh",
+  "fecha_utc": "2026-11-10T11:26:57.656430+00:00",
+  "used_percent_inicio": 75,
+  "fecha_primera_muestra_utc": "2026-11-10T11:22:18.384Z",
+  "used_percent_final": 75.0,
+  "fecha_ultima_muestra_utc": "2026-11-10T11:26:29.178Z",
+  "saldo_extra": "0",
+  "nota_cuota": "Primera muestra durante el trabajo, no al instante exacto del mensaje. Cuota semanal compartida; no atribuir diferencias como coste individual ni USD. No hubo nuevos lanzamientos ni modelos contratados.",
+  "intentos": 1,
+  "retrabajo": false,
+  "resultado": "diseño y encargo publicados; conexión sin configurar y tarea en_espera de revisión/capacidades de Boss",
+  "aceptacion": null,
+  "commits": [
+    "89f842b245531e35330bed196427504cbbcbfaa4"
+  ],
+  "remoto_verificado": "89f842b245531e35330bed196427504cbbcbfaa4",
+  "validacion": {
+    "harness": "integridad correcta",
+    "fuentes_intactas": 5,
+    "enlaces_locales": 15,
+    "append_only": true,
+    "diff_check": "correcto",
+    "patrones_sensibles": "ninguno detectado"
+  },
+  "limites": [
+    "No se verificó acceso de Boss al VPS",
+    "No se instalaron conectores ni configuraron claves/rutinas",
+    "No se implementó adaptador ni scheduler",
+    "No hay prueba de ida y vuelta ni dictamen de Boss"
+  ]
+}
