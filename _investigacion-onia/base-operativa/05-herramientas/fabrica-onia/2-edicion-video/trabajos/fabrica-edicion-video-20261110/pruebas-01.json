@@ -1,0 +1,133 @@
+{
+  "tests": 9,
+  "failures": 0,
+  "errors": 0,
+  "casos": {
+    "vlog": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "Tipo excluido. Vlog fuera de esta cadena."
+    },
+    "missing-source": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "Entrada o dependencia local inválida o ausente."
+    },
+    "missing-transcript": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "Entrada o dependencia local inválida o ausente."
+    },
+    "outside": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "Intervalo fuera de rango, desordenado o solapado."
+    },
+    "overlap": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "Intervalo fuera de rango, desordenado o solapado."
+    },
+    "nan": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "Tiempo inválido. Usar segundos finitos no negativos."
+    },
+    "boolean": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "Tiempo inválido. Usar segundos finitos no negativos."
+    },
+    "tiny": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "Intervalo vacío o fuera de rango al ajustar a 30 fps."
+    },
+    "unknown": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "Campo desconocido en el plan."
+    },
+    "missing-broll": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "Entrada o dependencia local inválida o ausente."
+    },
+    "short-broll": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "B-roll más corto que el intervalo solicitado."
+    },
+    "outside-broll": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "B-roll fuera de salida, desordenado o solapado."
+    },
+    "partial-sentence": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "Un corte atraviesa un segmento. Ajustar intervalos o transcripción."
+    },
+    "subtitle-bounds": {
+      "white_pixel_bbox_360x640": [
+        73,
+        537,
+        286,
+        568
+      ],
+      "frames_checked": 30
+    },
+    "asr-python-absent": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "Entrada o dependencia local inválida o ausente."
+    },
+    "asr-model-absent": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "Proceso local falló. Verificar dependencias, pistas y formato."
+    },
+    "render-a": {
+      "rc": 0,
+      "resultado": "renderizada_pendiente_revision",
+      "error": null,
+      "sha256": "671d1a930757d558ca3d1cbaea31adf01ec9b6f207a409f6f504a9f9a41f68fd",
+      "frames": 60,
+      "duration": 2.0,
+      "center_pixels": [
+        [
+          253,
+          0,
+          0
+        ],
+        [
+          253,
+          253,
+          0
+        ],
+        [
+          0,
+          0,
+          254
+        ]
+      ],
+      "original_preserved": true,
+      "identical_second_render": true
+    },
+    "render-b": {
+      "rc": 0,
+      "resultado": "renderizada_pendiente_revision",
+      "error": null
+    },
+    "silent-source": {
+      "rc": 0,
+      "resultado": "renderizada_pendiente_revision",
+      "error": null
+    },
+    "silent-needs-asr": {
+      "rc": 2,
+      "resultado": "fallida",
+      "error": "ASR requiere audio o una transcripción aportada."
+    }
+  }
+}
