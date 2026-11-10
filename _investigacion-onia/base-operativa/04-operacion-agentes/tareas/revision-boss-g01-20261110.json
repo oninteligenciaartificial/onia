@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "revision-boss-g01-20261110",
-  "revision": 2,
+  "revision": 3,
   "compartible": true,
   "objetivo": "Obtener una revisión acotada de Boss y Contenido sobre G01 existente y el recorrido NEGOCIO hasta QR/acceso, sin implementar ni activar la fábrica.",
   "estado": "en_espera",
   "proximo_paso": "Sergio señala este ID al chat de Boss. Contenido entrega su revisión y Boss coteja como revisor distinto; coordinador recibe los commits y actualiza este mismo registro.",
-  "resultado": "Paquete de revisión preparado y vinculado al buzón; falta recepción y respuesta reales de Boss/Contenido. No se lanzó Grok ni otra sesión Codex.",
-  "comprobacion": "Fuentes cotejadas desde master; originales intactos; búsqueda de plugin Grok sin resultados. Preparación no equivale a revisión ni aceptación.",
+  "resultado": "Paquete y pedido publicados en origin/master en 5250aff76c11342f2dbac8a596619df1aceaf7f1. Recepción y dictámenes de Boss/Contenido aún pendientes.",
+  "comprobacion": "Integridad del registro, ocho fuentes intactas, 21 enlaces y buzón añadido comprobados; hash remoto de la entrega verificado. Preparación no equivale a aceptación editorial.",
   "verificacion": "pendiente",
   "evidencias": [
     {
@@ -24,9 +24,14 @@
       "archivo": "04-operacion-agentes/evidencias/revision-boss-g01-20261110/RECIBO-PREPARACION-v1.json",
       "sha256": "90b4c4ab72af957aa994cb36abb0ec3da21a1736c7d9f9423eee8d69ff2e6498",
       "bytes": 1101
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/revision-boss-g01-20261110/RECIBO-PUBLICACION-v2.json",
+      "sha256": "c996c8621a2b49346fb6b5f48d8f85397841003bd116269273bbfb95a65ce21d",
+      "bytes": 1363
     }
   ],
-  "actualizado": "2026-11-10T07:56:15.749937+00:00",
+  "actualizado": "2026-11-10T08:00:42.578880+00:00",
   "historial": [
     {
       "revision": 1,
@@ -37,6 +42,33 @@
       "verificacion": "pendiente",
       "evidencias": [],
       "proximo_paso": "Leer 04-operacion-agentes/encargos/revision-boss-g01-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-10T07:56:15.749937+00:00",
+      "estado": "en_espera",
+      "resultado": "Paquete de revisión preparado y vinculado al buzón; falta recepción y respuesta reales de Boss/Contenido. No se lanzó Grok ni otra sesión Codex.",
+      "comprobacion": "Fuentes cotejadas desde master; originales intactos; búsqueda de plugin Grok sin resultados. Preparación no equivale a revisión ni aceptación.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/revision-boss-g01-20261110/PAQUETE-REVISION-v1.md",
+          "sha256": "06f5fa51f3d56def7cf9414bc61956b3a9aea8a5015e1e6694db4e3af732fec7",
+          "bytes": 6763
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/revision-boss-g01-20261110/FUENTES-v1.json",
+          "sha256": "7c1d484a7d47f2089bda93ded1bec692a6ededf4e0e01f12e36e13753d32192d",
+          "bytes": 1801
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/revision-boss-g01-20261110/RECIBO-PREPARACION-v1.json",
+          "sha256": "90b4c4ab72af957aa994cb36abb0ec3da21a1736c7d9f9423eee8d69ff2e6498",
+          "bytes": 1101
+        }
+      ],
+      "proximo_paso": "Sergio señala este ID al chat de Boss. Contenido entrega su revisión y Boss coteja como revisor distinto; coordinador recibe los commits y actualiza este mismo registro.",
       "aceptacion": null
     }
   ],

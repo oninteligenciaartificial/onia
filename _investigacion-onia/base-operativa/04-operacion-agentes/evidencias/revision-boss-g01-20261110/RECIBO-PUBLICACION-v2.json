@@ -1,0 +1,32 @@
+{
+  "id": "revision-boss-g01-20261110",
+  "rol": "preparación y publicación del traspaso; revisión editorial pendiente",
+  "modelo_observado": "gpt-6-astra",
+  "esfuerzo_observado": "xhigh",
+  "fecha_cierre_preparacion_utc": "2026-11-10T08:00:42.563260+00:00",
+  "used_percent_inicio": null,
+  "used_percent_final": 75.0,
+  "muestra_final_utc": "2026-11-10T08:00:06.810Z",
+  "ventana_minutos": 10080,
+  "saldo_extra": "0",
+  "nota_cuota": "No hubo muestra al inicio del turno; no se calcula un consumo individual con la cuota semanal compartida. La muestra final refleja la fecha indicada, no el consumo futuro de Boss/Contenido.",
+  "intentos": 1,
+  "retrabajo": false,
+  "resultado": "traspaso publicado; estado canónico en_espera hasta recepción y dictámenes externos",
+  "aceptacion": null,
+  "commits": [
+    "5250aff76c11342f2dbac8a596619df1aceaf7f1"
+  ],
+  "remoto_verificado": "refs/heads/master == 5250aff76c11342f2dbac8a596619df1aceaf7f1",
+  "validacion": {
+    "harness_integridad": "correcta",
+    "fuentes_intactas": 8,
+    "enlaces_nuevos_validos": 21,
+    "buzon": "añadido sin borrar historial",
+    "diff_check": "correcto",
+    "patrones_sensibles": "ninguno detectado"
+  },
+  "lanzamientos_nuevos": 0,
+  "dictamenes_recibidos": 0,
+  "sustituye_recibo_de_preparacion": "RECIBO-PREPARACION-v1.json, conservado como evidencia histórica"
+}
