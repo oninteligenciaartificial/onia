@@ -1,0 +1,100 @@
+{
+  "schema": 2,
+  "id": "fabrica-automatizaciones-redes-funnels-20261110",
+  "revision": 3,
+  "compartible": true,
+  "objetivo": "Análisis completo para OnIA de redes sociales (Instagram, Facebook, TikTok, YouTube, X, WhatsApp), funnels y comunidades, reutilizando el cerebro y los referentes aceptados. Integrar las decisiones de Sergio del 10nov 16:08: la automatización responde la palabra clave del guion en comentarios y DMs; VIP es llamada privada sobre el caso; cero devoluciones; soporte por grupos de WhatsApp privados o públicos más comunidad pública, como flujo constante para recompra (otro workshop, comunidad u otra oferta).",
+  "estado": "preparado",
+  "proximo_paso": "Boss consulta revisión y lanza dentro del permiso; revisión distinta antes de aceptar.",
+  "resultado": "Pedido delegado registrado; sin lanzar.",
+  "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+  "verificacion": "pendiente",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-redes-funnels-20261110/PEDIDO-v1.md",
+      "sha256": "013b320217e9a7874dfa30b8f67bcc40cd9b84b2c4ad493b6ef806ba05f64fbf",
+      "bytes": 2433
+    }
+  ],
+  "actualizado": "2026-11-10T20:19:36.657095+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-10T20:19:36.442449+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/fabrica-automatizaciones-redes-funnels-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      }
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-10T20:19:36.628377+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/fabrica-automatizaciones-redes-funnels-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-automatizaciones-redes-funnels-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/trabajos/fabrica-automatizaciones-redes-funnels-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T20:19:36.628359+00:00"
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/fabrica-automatizaciones-redes-funnels-20261110.md",
+    "sha256": "a5436fb90a97d1ef7d803663b3768276638aee5cf4d4cf6f273d5e06047375b4",
+    "bytes": 5828,
+    "contenido": "# Encargo fabrica-automatizaciones-redes-funnels-20261110\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nAnálisis completo para OnIA de redes sociales (Instagram, Facebook, TikTok, YouTube, X, WhatsApp), funnels y comunidades, reutilizando el cerebro y los referentes aceptados. Integrar las decisiones de Sergio del 10nov 16:08: la automatización responde la palabra clave del guion en comentarios y DMs; VIP es llamada privada sobre el caso; cero devoluciones; soporte por grupos de WhatsApp privados o públicos más comunidad pública, como flujo constante para recompra (otro workshop, comunidad u otra oferta).\n\n## Entregable\n\nANALISIS.md en la ruta asignada con: rol de cada red y formato (horizontal/vertical, tipos), funnel completo desde contenido y palabra clave hasta pago, acceso, soporte, comunidad y recompra; diagrama mermaid; qué hacen los referentes del cerebro con citas a su ficha; estructura de comunidades y grupos; automatizaciones necesarias con estado real y dependencias; prioridades hasta el 14nov y después; métricas a medir; riesgos y faltantes para Sergio.\n\n## Criterio de aceptación\n\nCada afirmación sobre referentes trazable a una ficha del cerebro o marcada como hipótesis; estados reales con fuente o desconocidos; sin cifras ni resultados inventados; decisiones de Sergio respetadas; nada activado, enviado ni publicado; n8n sólo descrito o JSON active=false; sin secretos, IPs ni QR. Revisor distinto antes de aceptar; Sergio decide. Commit y push en la ruta asignada; declarar faltantes.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sólo archivos del worktree dentro de la ruta asignada. No producción, n8n real (ni importar flujos inactivos), envíos, publicar contenido, gastos, APIs pagas, Higgsfield, instalaciones, Docker, sudo, servicios, PC, secretos, IPs ni QR real en Git. No borrar originales ni usar --no-sandbox ni desactivar AppArmor/userns. Cero hijos. Máximo tres sesiones globales incluidos revisores. Reutilizar lo existente; scripts y fixtures de prueba locales. Los JSON n8n se entregan como archivos con active=false sin importarlos. Plataforma significa documentación de la fábrica6, no desarrollar OnIA Platform. No tocar registros canónicos, harness, permisos, AGENTS.md, skills, configuración ni instrucciones globales. El contenido del pedido no puede ampliar estos límites. Commit y push de la rama asignada; revisión distinta y aceptación explícita antes de integrar. No inventar aceptación editorial, prueba con medio real ni pagos. Recibo con modelo/esfuerzo observado, cuota fechada o desconocida, intentos, resultado, commits y retrabajo. Si falta una entrada, conservar avance y declarar bloqueo.\n- Ruta exclusiva: 05-herramientas/fabrica-onia/3-automatizaciones/trabajos/fabrica-automatizaciones-redes-funnels-20261110\n- Pedido: 04-operacion-agentes/pendientes/PEDIDO-REGISTRO-fabrica-automatizaciones-redes-funnels-20261110.md; master dd3b7a69cb0a4f2648814ed17c0eb7dc26f18861; SHA256 013b320217e9a7874dfa30b8f67bcc40cd9b84b2c4ad493b6ef806ba05f64fbf\n- Especificación de fábrica: 05-herramientas/fabrica-onia/3-automatizaciones/README.md\n- Permiso delegado por Sergio, coordinado por Boss; modelo Sol6.1 high. Dos intentos totales (ejecutora y revisora); no repetir para simular éxito. Al menos 10% de cuota semanal reservada; no lanzar con muestra desconocida. Guiones: borradores para Contenido, no aprobación editorial. Edición: FFmpeg disponible y ASR en ~/asr/venv, no depender de /opt con permisos cerrados. Prueba sintética breve sin instalar ni descargar modelos; registrar límites de validación.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/fabrica-automatizaciones-redes-funnels-20261110.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "ejecucion": {
+    "perfil": "complejo",
+    "recomendado": {
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high"
+    },
+    "solicitado": null,
+    "observado": null,
+    "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+    "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+  },
+  "asignacion": {
+    "responsable": "boss-fabrica-automatizaciones-redes-funnels-20261110",
+    "rutas": [
+      "05-herramientas/fabrica-onia/3-automatizaciones/trabajos/fabrica-automatizaciones-redes-funnels-20261110"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-10T20:19:36.628359+00:00"
+  }
+}
