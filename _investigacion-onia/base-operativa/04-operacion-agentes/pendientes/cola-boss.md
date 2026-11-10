@@ -170,3 +170,14 @@ Aviso automático al terminar revisor3: snapshotr20 en0c7f671, HTTP200, respuest
 `recoger` por el puente ahora publica el veredicto en master; no hace falta shell libre ni vigilancia.
 Release fija b2a977d; suite171:170correctas/1omitida. Avisos sólo IDs habilitados, sin scheduler ni autorización para otras fábricas.
 [Informe y uso](../evidencias/conexion-boss-codex-20261110/CIERRE-PUENTE-v1.md); [recibos](../evidencias/conexion-boss-codex-20261110/RECIBO-CIERRE-v1.json).
+
+
+## HECHO — delegación Boss · 10nov2026
+- ID: `delegacion-boss-20261110`; registro del harness y [recibo](../evidencias/delegacion-boss-20261110/RECIBO-INSTALACION-v1.json).
+- Puente instalado desde `118f791a40f11cdd9ca24bc942347a3bbb285fa6`: registrar y habilitar dentro de seis fábricas, sin permiso manual por tarea.
+- Preparadas r3: `fabrica-chatbot-whatsapp-20261110` high; `guiones-tanda-20261111` low; `fabrica-edicion-video-20261110` high; todas Sol6.1, cero hijos.
+- Ninguna lanzada por Codex; consultar revisión actual antes de ejecutar. [Continuación exacta](../evidencias/delegacion-boss-20261110/CONTINUAR-BOSS-v1.md).
+- Tres cupos globales, dos intentos por ID, permiso24h renovable, seis altas/díaUTC, no lanzar con cuota≥90% o muestra vieja/desconocida.
+- Fin de sesión avisa por webhook y recoger publica revisión; recepción no equivale a aceptación. Sin producción/n8n/envíos/gasto/publicación comercial.
+- Homelab: corrección revisada en master940f9ae, [retoma](../homelab/RETOMA-REVISADA-20261110.md); PC pendiente. Su ID ya admite consulta de sólo lectura por el puente.
+- HECHO significa entregado. La ampliación administrativa tiene dictamen independiente bueno; las tres fábricas y la PC no están aceptadas.

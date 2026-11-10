@@ -1,0 +1,85 @@
+{
+  "id": "delegacion-boss-20261110",
+  "fecha": "2026-11-10T18:08:33.320217+00:00",
+  "commit_codigo_instalado": "118f791a40f11cdd9ca24bc942347a3bbb285fa6",
+  "archivos_manifest_verificados": 9,
+  "modelo_coordinadora_observado": "gpt-6-astra",
+  "esfuerzo_coordinadora_observado": "xhigh",
+  "nota_modelo": "Sesión coordinadora existente; nuevas ejecutoras fijadas a Sol. No se afirma que esta conversación haya cambiado de modelo.",
+  "used_percent_inicio": 81,
+  "fecha_cuota_inicio": "2026-11-10T17:33:35.481Z",
+  "used_percent_final": 84.0,
+  "fecha_cuota_final": "2026-11-10T18:08:33.096000+00:00",
+  "saldo_extra_observado": 0,
+  "cuota_es_compartida_no_atribuible": true,
+  "intentos_codex_fabricas": 0,
+  "altas_reales": 3,
+  "repeticion_identica": {
+    "misma_revision": true,
+    "mismo_commit": true,
+    "sesiones_nuevas": 0
+  },
+  "pruebas": {
+    "suite": {
+      "total": 185,
+      "pasaron": 184,
+      "omitidas": 1,
+      "fallos": 0
+    },
+    "delegacion_tras_ajustes_finales": {
+      "total": 14,
+      "fallos": 0
+    },
+    "instalador": {
+      "total": 12,
+      "pasaron": 11,
+      "omitidas": 1,
+      "fallos": 0
+    },
+    "bash_n": true,
+    "cli_ultra_rechazado": true
+  },
+  "retrabajo": true,
+  "resultado": "aceptada la ampliacion administrativa en VPS; fabricas preparadas sin entrega; prueba desde Boss y PC pendientes",
+  "tareas": [
+    {
+      "id": "fabrica-chatbot-whatsapp-20261110",
+      "revision": 3,
+      "estado": "preparado",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "max_intentos": 2,
+      "vence": "2026-11-11T18:06:23.944412+00:00",
+      "ruta": "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110",
+      "sesiones": 0
+    },
+    {
+      "id": "guiones-tanda-20261111",
+      "revision": 3,
+      "estado": "preparado",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "max_intentos": 2,
+      "vence": "2026-11-11T18:06:27.278199+00:00",
+      "ruta": "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111",
+      "sesiones": 0
+    },
+    {
+      "id": "fabrica-edicion-video-20261110",
+      "revision": 3,
+      "estado": "preparado",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "max_intentos": 2,
+      "vence": "2026-11-11T18:06:30.621103+00:00",
+      "ruta": "05-herramientas/fabrica-onia/2-edicion-video/trabajos/fabrica-edicion-video-20261110",
+      "sesiones": 0
+    }
+  ],
+  "homelab": {
+    "aplicado_en_pc_por_codex": false,
+    "instalador_sha256": "0521e2f4286f50734e0c2c01be09d05abb0393edd74bf6a5196ec3ecd98fe871",
+    "commit_publicado": "940f9ae5c0f727076771ab88f1fa99ab5947c586"
+  },
+  "webhook": "Mecanismo existente; aviso de este cierre se registra separadamente; HTTP200 no acredita lectura de Boss."
+}

@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "homelab-conexion-20261109",
-  "revision": 8,
+  "revision": 9,
   "compartible": true,
   "objetivo": "Conectar y configurar HOMELAB como worker autorizado, conservando producción y datos existentes.",
   "estado": "en_espera",
-  "proximo_paso": "Sergio descarga alta-onia-worker.py revisado y ejecuta el bloque PowerShell de homelab/ALTA-ONIA-WORKER.md. Si alta_local OK, probar loopback2224, preservar/revisar Serve y conectar por Tailscale. Codex compara huella antes de login y prueba aislamiento por SSH; no aceptar aún.",
-  "resultado": "Alta mínima preparada y revisada para intento local; fuente única de fábrica referenciada. WSL todavía sin aplicar ni SSH remoto probado.",
-  "comprobacion": "9 tests de instalador OK y57 de harness/trabajo OK; revisión distinta Sol6.1high aprobó preparación tras3 correcciones. Huella recibida, Tailscale online, puerto22 previo no respondió. Publicación y hash remoto confirmados en 05ef1af5ff05cfd7ca5ece6255b05d7f35e57a77.",
+  "proximo_paso": "Boss/Sergio siguen homelab/RETOMA-REVISADA-20261110.md conservando originales; luego Codex verifica huella y aislamiento remoto. No aceptar aun.",
+  "resultado": "Instalador corregido para sudo-rs y retoma del alta parcial; codigo y runbook publicados; sin aplicar PC desde Codex.",
+  "comprobacion": "Revision independiente buena;12 pruebas (11pass,1skip), huella nueva verificada. Falta validacion real en WSL y SSH remoto.",
   "verificacion": "pendiente",
   "evidencias": [
     {
@@ -44,9 +44,14 @@
       "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/PUBLICACION-ALTA-v1.md",
       "sha256": "48c62c41a510f81e049076f7cd005ba191523355de7d463bfd864419c627e5a0",
       "bytes": 1769
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/RETOMA-SUDO-RS-v1.md",
+      "sha256": "c07b73e33cf9d585bfc4c78defb3144ffb4ef9b08ec175a86db23d1daeb32408",
+      "bytes": 850
     }
   ],
-  "actualizado": "2026-11-09T23:34:09.844012+00:00",
+  "actualizado": "2026-11-10T18:08:33.635105+00:00",
   "historial": [
     {
       "revision": 1,
@@ -221,6 +226,53 @@
           "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/alta-preparada-v4.json",
           "sha256": "7258ed9ab59a4b85e01bdc55d677836b5859e93365da79dac6e75d4c09a32dea",
           "bytes": 1771
+        }
+      ],
+      "proximo_paso": "Sergio descarga alta-onia-worker.py revisado y ejecuta el bloque PowerShell de homelab/ALTA-ONIA-WORKER.md. Si alta_local OK, probar loopback2224, preservar/revisar Serve y conectar por Tailscale. Codex compara huella antes de login y prueba aislamiento por SSH; no aceptar aún.",
+      "aceptacion": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-09T23:34:09.844012+00:00",
+      "estado": "en_espera",
+      "resultado": "Alta mínima preparada y revisada para intento local; fuente única de fábrica referenciada. WSL todavía sin aplicar ni SSH remoto probado.",
+      "comprobacion": "9 tests de instalador OK y57 de harness/trabajo OK; revisión distinta Sol6.1high aprobó preparación tras3 correcciones. Huella recibida, Tailscale online, puerto22 previo no respondió. Publicación y hash remoto confirmados en 05ef1af5ff05cfd7ca5ece6255b05d7f35e57a77.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/preflight-v1.json",
+          "sha256": "6651cbd0419c6aa3bce8dde20db50f30fc9209a2f8ce53b9f438767aac1c9e54",
+          "bytes": 980
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/preflight-v2.json",
+          "sha256": "fbaf6809ee04959552ee99b33336c653684c3be2bb251a7b72d1d59472024e0c",
+          "bytes": 1669
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/aislamiento-diseno-v1.json",
+          "sha256": "7efeb1cbf5437e63edb9d63056f499ff9db73ffe58e568f9c88d79fa84413d41",
+          "bytes": 1660
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/alta-preflight-v3.json",
+          "sha256": "65b2bcd0bd565304d9e59aac27040791a9cd7dc0d4b368a7c7e7392e8f664b52",
+          "bytes": 1100
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/revision-alta-v1.json",
+          "sha256": "ac144976046c589944b606b48212069f872f54862a4a2d09d7593317df90b4b8",
+          "bytes": 2146
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/alta-preparada-v4.json",
+          "sha256": "7258ed9ab59a4b85e01bdc55d677836b5859e93365da79dac6e75d4c09a32dea",
+          "bytes": 1771
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/homelab-conexion-20261109/PUBLICACION-ALTA-v1.md",
+          "sha256": "48c62c41a510f81e049076f7cd005ba191523355de7d463bfd864419c627e5a0",
+          "bytes": 1769
         }
       ],
       "proximo_paso": "Sergio descarga alta-onia-worker.py revisado y ejecuta el bloque PowerShell de homelab/ALTA-ONIA-WORKER.md. Si alta_local OK, probar loopback2224, preservar/revisar Serve y conectar por Tailscale. Codex compara huella antes de login y prueba aislamiento por SSH; no aceptar aún.",

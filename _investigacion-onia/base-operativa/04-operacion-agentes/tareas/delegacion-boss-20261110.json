@@ -1,0 +1,216 @@
+{
+  "schema": 2,
+  "id": "delegacion-boss-20261110",
+  "revision": 5,
+  "compartible": true,
+  "objetivo": "Habilitar registro delegado y lanzamientos de Boss dentro de seis fabricas, conservando controles del harness.",
+  "estado": "aceptado",
+  "proximo_paso": "Boss lee CONTINUAR-BOSS-v1, consulta desde su llave, lanza tareas y devuelve acuse; homelab continúa en su ID en_espera.",
+  "resultado": "Delegacion instalada, tres tareas preparadas y permisos publicados; instalador corregido en master.",
+  "comprobacion": "185 tests sin fallos (1 omitido), 14 dirigidos finales, nueve hashes runtime, registro real y repeticion sin duplicar ni lanzar.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/USO-Y-LIMITES.md",
+      "sha256": "5d426a439c2bb4ad7d1182abe7fe6d490c79421e5abe2b6e16d6c4a9af1daae3",
+      "bytes": 5678
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/REVISION-INDEPENDIENTE-v1.md",
+      "sha256": "ff25a1c3cd62d1e6b2806ea91313ab471da7a0a9a6d92a8e8989f3bc99093c9f",
+      "bytes": 1842
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/RECIBO-INSTALACION-v1.json",
+      "sha256": "2a39a6e57ebfe5022f75735e860ae90370d9e78dc7eac432e6ed27e7c6a39eea",
+      "bytes": 2812
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/CONTINUAR-BOSS-v1.md",
+      "sha256": "3395d87a6b617f07a3b61df194b29fa591d445f930e884b629d087646c0a420c",
+      "bytes": 2464
+    }
+  ],
+  "actualizado": "2026-11-10T18:08:33.575700+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-10T18:08:33.346887+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/delegacion-boss-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-10T18:08:33.496441+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/delegacion-boss-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "codex-coordinador-delegacion",
+        "rutas": [
+          "04-operacion-agentes/evidencias/delegacion-boss-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T18:08:33.496424+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-10T18:08:33.517867+00:00",
+      "estado": "para_revision",
+      "resultado": "Delegacion instalada, tres tareas preparadas y permisos publicados; instalador corregido en master.",
+      "comprobacion": "185 tests sin fallos (1 omitido), 14 dirigidos finales, nueve hashes runtime, registro real y repeticion sin duplicar ni lanzar.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/USO-Y-LIMITES.md",
+          "sha256": "5d426a439c2bb4ad7d1182abe7fe6d490c79421e5abe2b6e16d6c4a9af1daae3",
+          "bytes": 5678
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/REVISION-INDEPENDIENTE-v1.md",
+          "sha256": "ff25a1c3cd62d1e6b2806ea91313ab471da7a0a9a6d92a8e8989f3bc99093c9f",
+          "bytes": 1842
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/RECIBO-INSTALACION-v1.json",
+          "sha256": "2a39a6e57ebfe5022f75735e860ae90370d9e78dc7eac432e6ed27e7c6a39eea",
+          "bytes": 2812
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/CONTINUAR-BOSS-v1.md",
+          "sha256": "3395d87a6b617f07a3b61df194b29fa591d445f930e884b629d087646c0a420c",
+          "bytes": 2464
+        }
+      ],
+      "proximo_paso": "Recoger dictamen independiente y avisar a Boss; PC y entregas comerciales siguen pendientes.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "codex-coordinador-delegacion",
+        "rutas": [
+          "04-operacion-agentes/evidencias/delegacion-boss-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T18:08:33.496424+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-10T18:08:33.548583+00:00",
+      "estado": "para_revision",
+      "resultado": "Delegacion instalada, tres tareas preparadas y permisos publicados; instalador corregido en master.",
+      "comprobacion": "185 tests sin fallos (1 omitido), 14 dirigidos finales, nueve hashes runtime, registro real y repeticion sin duplicar ni lanzar.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/USO-Y-LIMITES.md",
+          "sha256": "5d426a439c2bb4ad7d1182abe7fe6d490c79421e5abe2b6e16d6c4a9af1daae3",
+          "bytes": 5678
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/REVISION-INDEPENDIENTE-v1.md",
+          "sha256": "ff25a1c3cd62d1e6b2806ea91313ab471da7a0a9a6d92a8e8989f3bc99093c9f",
+          "bytes": 1842
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/RECIBO-INSTALACION-v1.json",
+          "sha256": "2a39a6e57ebfe5022f75735e860ae90370d9e78dc7eac432e6ed27e7c6a39eea",
+          "bytes": 2812
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/CONTINUAR-BOSS-v1.md",
+          "sha256": "3395d87a6b617f07a3b61df194b29fa591d445f930e884b629d087646c0a420c",
+          "bytes": 2464
+        }
+      ],
+      "proximo_paso": "Recoger dictamen independiente y avisar a Boss; PC y entregas comerciales siguen pendientes.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "codex-coordinador-delegacion",
+        "rutas": [
+          "04-operacion-agentes/evidencias/delegacion-boss-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T18:08:33.496424+00:00"
+      },
+      "cierre": {
+        "tipo": "coordinacion_manual_sin_sesion_harness",
+        "commit": "118f791a40f11cdd9ca24bc942347a3bbb285fa6",
+        "ramas_origin": [
+          "origin/master"
+        ],
+        "dry_run": false,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/RECIBO-INSTALACION-v1.json",
+          "sha256": "2a39a6e57ebfe5022f75735e860ae90370d9e78dc7eac432e6ed27e7c6a39eea",
+          "bytes": 2812
+        },
+        "nota": "Entrega administrativa real de la coordinadora, no final de una sesion ejecutora ni simulacion."
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "revisor": "revision_puente_boss",
+        "commit": "118f791a40f11cdd9ca24bc942347a3bbb285fa6",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/REVISION-INDEPENDIENTE-v1.md",
+          "sha256": "ff25a1c3cd62d1e6b2806ea91313ab471da7a0a9a6d92a8e8989f3bc99093c9f",
+          "bytes": 1842
+        },
+        "tipo": "revision_nativa_independiente_sin_sesion_harness"
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/delegacion-boss-20261110.md",
+    "sha256": "34485102c5992752898c90f3d1bed4c67a54773ecf59c585409ae43d8cfe298e",
+    "bytes": 3074,
+    "contenido": "# Encargo delegacion-boss-20261110\n\nÁrea: organizacion\nModo: encargo\nSkill directora: continuidad-de-trabajo\n\n## Objetivo\n\nHabilitar registro delegado y lanzamientos de Boss dentro de seis fabricas, conservando controles del harness.\n\n## Entregable\n\nAdaptador revisado, pruebas, version fijada, permisos y tres fichas publicadas; correccion de instalador enlazada sin ejecutar PC.\n\n## Criterio de aceptación\n\nRegistro idempotente, modelo/alcance fijos, control de cuota y revisores, recibo y commits verificables; no nuevas sesiones ni acciones sensibles por esta entrega.\n\n## Entrada y alcance\n\nPlanificar con datos vigentes; usar la skill de apoyo correspondiente para continuidad o mejora. No presupone sincronización del calendario.\n\n- 04-operacion-agentes/evidencias/delegacion-boss-20261110/USO-Y-LIMITES.md\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [02-contenido/CEREBRO-DIARIO.md](../../02-contenido/CEREBRO-DIARIO.md)\n- [04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md](../ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md)\n- [05-herramientas/compartibles/skills/continuidad-de-trabajo/SKILL.md](../../05-herramientas/compartibles/skills/continuidad-de-trabajo/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [planificar-dia](../../05-herramientas/compartibles/skills/planificar-dia/SKILL.md)\n- [mejorar-sistema](../../05-herramientas/compartibles/skills/mejorar-sistema/SKILL.md)\n- [evaluar-catalogo-skills](../../05-herramientas/compartibles/skills/evaluar-catalogo-skills/SKILL.md)\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n\n## Salidas de referencia del área\n\n- Agenda viable con compromisos y tareas\n- Estado y entrega para retomar un encargo\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/delegacion-boss-20261110.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": {
+    "revisor": "revision_puente_boss",
+    "criterio": "Dictamen bueno del revisor independiente más comprobación real de registro/permisos/instalación. Acepta capacidad administrativa del VPS; no acepta productos de fábricas ni PC.",
+    "fecha": "2026-11-10T18:08:33.575682+00:00"
+  },
+  "asignacion": {
+    "responsable": "codex-coordinador-delegacion",
+    "rutas": [
+      "04-operacion-agentes/evidencias/delegacion-boss-20261110"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-10T18:08:33.496424+00:00"
+  },
+  "cierre": {
+    "tipo": "coordinacion_manual_sin_sesion_harness",
+    "commit": "118f791a40f11cdd9ca24bc942347a3bbb285fa6",
+    "ramas_origin": [
+      "origin/master"
+    ],
+    "dry_run": false,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/RECIBO-INSTALACION-v1.json",
+      "sha256": "2a39a6e57ebfe5022f75735e860ae90370d9e78dc7eac432e6ed27e7c6a39eea",
+      "bytes": 2812
+    },
+    "nota": "Entrega administrativa real de la coordinadora, no final de una sesion ejecutora ni simulacion."
+  },
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "revisor": "revision_puente_boss",
+    "commit": "118f791a40f11cdd9ca24bc942347a3bbb285fa6",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/delegacion-boss-20261110/REVISION-INDEPENDIENTE-v1.md",
+      "sha256": "ff25a1c3cd62d1e6b2806ea91313ab471da7a0a9a6d92a8e8989f3bc99093c9f",
+      "bytes": 1842
+    },
+    "tipo": "revision_nativa_independiente_sin_sesion_harness"
+  }
+}
