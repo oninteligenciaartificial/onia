@@ -1,16 +1,32 @@
 {
   "schema": 2,
   "id": "euge-dos-videos-20261110",
-  "revision": 2,
+  "revision": 3,
   "compartible": true,
   "objetivo": "Comprender los dos videos de Euge solicitados por Sergio mediante imagen directa y contenido hablado, diferenciando límites de percepción.",
-  "estado": "en_curso",
-  "proximo_paso": "Completar cobertura visual del segundo video, documentar interpretación y límites y publicar evidencia saneada.",
-  "resultado": "Inspección visual y lectura original en curso desde esta sesión coordinadora; no se lanzó otro LLM.",
-  "comprobacion": "Primer video: 119 imágenes muestreadas inspeccionadas; segundo reproduciendo en navegador existente, pista original y subtítulos es-orig.",
-  "verificacion": "pendiente",
-  "evidencias": [],
-  "actualizado": "2026-11-10T02:48:35.976018+00:00",
+  "estado": "para_revision",
+  "proximo_paso": "Revisión independiente pendiente de Sergio/Boss; no autoaceptar ni iniciar la fábrica por este análisis.",
+  "resultado": "Análisis propio entregado en origin/master, commit b5eba34517f40b61b8bb55ccd9b2ef2e8e4f8935: imágenes de ambos videos, ASR/subtítulos completos, límites y propuesta OnIA; no escucha directa.",
+  "comprobacion": "228 fotogramas de contenido/detalle inspeccionados (119+109); anuncios separados; segundo reproductor al final26:34, captura decodificada y visor liberado. JSON, enlaces, saneamiento y briefing comprobados. Git fetch y branch -r --contains confirman origin/master.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/euge-dos-videos-20261110/ANALISIS.md",
+      "sha256": "f9c7df0fcf3d8ab5f6d72e853a1f960e502125c43fb140112bab0c6fac7d87c9",
+      "bytes": 7864
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/euge-dos-videos-20261110/COBERTURA.json",
+      "sha256": "add4deeb33eb4304a798db16ce0c4c837194955af610ebf2a49bbaa04820a870",
+      "bytes": 52760
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/euge-dos-videos-20261110/RECIBO.json",
+      "sha256": "18d0bbc4f81c65d839674bef5cd8d52c40446597af78445548866fce496249fb",
+      "bytes": 1369
+    }
+  ],
+  "actualizado": "2026-11-10T02:59:23.186407+00:00",
   "historial": [
     {
       "revision": 1,
@@ -21,6 +37,17 @@
       "verificacion": "pendiente",
       "evidencias": [],
       "proximo_paso": "Leer 04-operacion-agentes/encargos/euge-dos-videos-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-10T02:48:35.976018+00:00",
+      "estado": "en_curso",
+      "resultado": "Inspección visual y lectura original en curso desde esta sesión coordinadora; no se lanzó otro LLM.",
+      "comprobacion": "Primer video: 119 imágenes muestreadas inspeccionadas; segundo reproduciendo en navegador existente, pista original y subtítulos es-orig.",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Completar cobertura visual del segundo video, documentar interpretación y límites y publicar evidencia saneada.",
       "aceptacion": null
     }
   ],
