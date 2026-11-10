@@ -88,3 +88,16 @@ Codex deberá contrastar la huella remota y probar usuario sin privilegios, Wind
 Mantené PC enchufada y Ubuntu abierto durante la prueba; el arranque/persistencia de WSL y recuperación tras corte requieren su comprobación, no se deducen de Tailscale online.
 El harness actual lanza en el VPS: SSH listo no implementa un backend PC ni un despachador automático. Boss puede invocarlo para tareas ya aprobadas; el buzón no ejecuta procesos.
 Para automatizar luego: un sí específico al adaptador de pasos pesados VPS→worker y al disparador/cola, con entradas autorizadas, límites, parada y revisión distinta; mantener3cupos hasta otra decisión medida.
+
+
+## PEDIDO — revisión acotada autorizada · 10-nov-2026 America/La_Paz
+
+- **ID harness:** `revision-boss-g01-20261110`. [Registro único](../tareas/revision-boss-g01-20261110.json); no se mantiene estado duplicado en este buzón.
+- **De / destinatario:** Sergio vía Codex → Boss; Contenido propone y Boss revisa como autor distinto.
+- **Resultado y aceptación:** revisar G01 y recorrido NEGOCIO→información→QR→acceso; dictamen por criterio, cambios mínimos propuestos, huecos y un ejemplo de corrección comprobable. [Paquete completo](../evidencias/revision-boss-g01-20261110/PAQUETE-REVISION-v1.md).
+- **Fuentes / commit base:** `d56abd96172b27631cf3cb6c55c514c936973a8c`; G01, controles, ficha, modelo único, reparto y análisis Euge, congelados en [FUENTES-v1](../evidencias/revision-boss-g01-20261110/FUENTES-v1.json).
+- **Sí aplicable:** Sergio «Ok do it», 10-nov03:50 America/La_Paz, después de la propuesta de revisión acotada con Boss/Contenido. Esta excepción autoriza revisar G01; no reactiva producción ni las otras tareas del stop anterior.
+- **Autorizado:** leer fuentes pertinentes, una pasada de Contenido y una de Boss, escribir sus dos dictámenes saneados en la carpeta exclusiva del paquete y publicarlos en GitHub. Sin crear bots.
+- **No autorizado:** modificar originales comerciales o harness, lanzar Codex, activar la rutina07:00, implementar/publicar la fábrica, n8n, PC, producción, DMs, cobros, gasto, generación con créditos, borrados, secretos/IPs. Los restantes permisos sensibles siguen siendo específicos.
+- **Devolución:** `REVISION-CONTENIDO-v1.md` y `REVISION-BOSS-v1.md`, cada uno con su autor/recibo y commit; no editar JSON ni briefing. Coordinador integra la evidencia en el mismo ID. HECHO es entrega, no aceptación.
+- **Dependencia:** falta confirmación de lectura de Boss. No hay canal directo verificado ni scheduler; Sergio debe señalarle el enlace/ID en su chat. No afirmar recepción por el solo push.
