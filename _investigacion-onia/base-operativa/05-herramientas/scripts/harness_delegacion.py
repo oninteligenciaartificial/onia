@@ -233,9 +233,8 @@ def handle(config, value, config_path):
             if not ident.startswith(prefix) or ident in trabajo.all_ids(base):
                 raise boss.Rejected('id_existente_o_fuera_de_fabrica')
             today = datetime.now(timezone.utc).date().isoformat()
-            events = [boss.private_read(f) for f in (root/'altas').glob('*.json')]
-            if sum(e.get('fecha_dia') == today for e in events) >= 6:
-                raise boss.Rejected('limite_seis_altas_diarias')
+            # La fecha se conserva como evidencia, no como cupo de admisión.
+            # Registrar no ejecuta: cuota y concurrencia se verifican al lanzar.
             reservation = root/'altas'/(ident+'.json')
             if reservation.exists():
                 raise boss.Rejected('id_reservado_conciliar')

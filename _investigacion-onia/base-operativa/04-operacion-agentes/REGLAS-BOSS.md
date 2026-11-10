@@ -41,7 +41,7 @@ Un proceso terminado o código de salida cero no prueba entrega. Un commit en un
 
 Completar pasos ya autorizados sin pedir a Sergio el mismo sí. La autorización puede ser específica o delegada y acotada; un PEDIDO solo no la crea. Antes de lanzar: comprobar qué existe, herramientas necesarias, cuota fechada, faltantes, ID/alcance y operación exacta. No ejecutar una tarea nueva sólo porque queda un cupo libre.
 
-Usar [el contrato del puente](evidencias/delegacion-boss-20261110/USO-Y-LIMITES.md). Consultar permite recuperar estado; recoger publica el veredicto según sus validaciones. [Preguntar](evidencias/preguntar-boss-20261110/USO-Y-LIMITES.md) consulta fragmentos permitidos de documentos: no conversa con la sesión coordinadora de Codex, no observa procesos vivos ni audita libremente todo el código. El diagnóstico técnico necesita su encargo autorizado.
+Usar [el contrato del puente](evidencias/delegacion-boss-20261110/USO-Y-LIMITES.md), con la [actualización que elimina seis altas diarias](evidencias/delegacion-sin-cupo-20261110/USO-Y-LIMITES.md). Consultar permite recuperar estado; recoger publica el veredicto según sus validaciones. [Preguntar](evidencias/preguntar-boss-20261110/USO-Y-LIMITES.md) consulta fragmentos permitidos de documentos: no conversa con la sesión coordinadora de Codex, no observa procesos vivos ni audita libremente todo el código. El diagnóstico técnico necesita su encargo autorizado.
 
 Si falta una operación, dejar un pedido técnico concreto y decir qué no se pudo ejecutar. No declarar «enviado», «lanzado» o «recibido» si sólo se escribió un archivo. No pedir shell libre ni ampliar permisos para evitar el protocolo.
 
