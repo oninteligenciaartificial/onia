@@ -536,3 +536,8 @@ El primer push de la comparación de transportes (f2b1564) fue rechazado con `fe
 ### 2026-11-10 — comprobación final de sesiones del puente
 
 Una consulta auxiliar de sólo lectura pasó una tupla `(base, tarea)` a `alive`, que espera una sesión. Evidencia: `AttributeError: tuple object has no attribute get`. No alteró datos ni lanzó procesos. Se corrigió recorriendo las sesiones de cada tarea; resultado: cero sesiones vivas. Prevención: respetar el contrato de `indexed_rows` y comprobar cada registro de sesión.
+
+
+### 2026-11-10 — filtrar metadatos al consultar GitHub
+
+Al contrastar la propuesta de Boss se volcó una respuesta de listado completa del conector. Incluía URLs temporales de descarga autenticada y excedió el presupuesto de salida. No se copian aquí esas URLs ni sus parámetros. Causa: serializar la respuesta completa en lugar de seleccionar campos. Corrección comprobada: procesar el listado en memoria y emitir sólo nombres y existencia de los tres IDs; los tres no estaban registrados en master. Prevención: salida por lista explícita de campos permitidos; excluir download_url, parámetros de autenticación y metadatos sin filtrar. No se modificaron permisos, tareas ni servicios en esta comprobación.
