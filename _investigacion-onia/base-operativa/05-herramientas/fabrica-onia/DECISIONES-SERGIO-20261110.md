@@ -29,3 +29,7 @@ Pendiente: la verificación del número en Meta, que es un paso humano de Sergio
 - VIP: llamada privada viendo el caso del negocio o personal de la persona.
 - Política de devolución: cero devoluciones.
 - Soporte: al terminar el workshop, grupos de WhatsApp (privados o públicos) más la comunidad pública, como flujo constante para que quien ya hizo un workshop vuelva a contratar.
+
+## Nombre del workshop (10 nov 2026 16:20 La Paz)
+
+Sergio eligió: «Tu negocio con IA: ordena, vende y automatiza». Se descarta «Automatiza tu vida y sé más saludable con IA». Los guiones T01–T05 de guiones-tanda-20261111 mantienen el enfoque negocio; aplicar los cambios de texto de Contenido.
