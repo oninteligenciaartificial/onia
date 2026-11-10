@@ -548,3 +548,11 @@ Al contrastar la propuesta de Boss se volcó una respuesta de listado completa d
 - ASR: comprobar el venv histórico en /opt devolvió PermissionError; no se intentó ampliar permisos. Se recuperó asr-local/README: ~/asr/venv sí tiene faster-whisper1.2.1 y modelo small descargado. Prevención: usar el runtime vigente accesible, no el contenedor histórico.
 - Instalador: el primer parche colocó los helpers dentro del string WRAPPER por coincidir con un def main interno; tres tests fallaron por atributo ausente. Se movieron al módulo exterior, suite12 sin fallos (1integración omitida) y comparación AST confirmó wrapper intacto. Prevención: anclar al main del instalador y comprobar el código generado.
 - Revisión homelab: faltaba excluir otros usuarios con GID1001, alias de grupo y ausencia de sudo en retoma. Corregidos con casos adversos, revisor distinto dio bueno para intento local.
+
+
+## 10 noviembre2026 · delegación acotada Boss
+
+- Push del instalador rechazado por avance concurrente de Boss. Causa: master cambió a4ad4020 durante la revisión. Evidencia: push non-fast-forward; integración normal940f9ae conservó ambos cambios. Prevención: fetch y merge, sin force/reset.
+- Preparación de tests: una edición relativa apuntó al cwd equivocado y no escribió; import directo de una clase fixture duplicó tests; tras cambiar firma del validador dos fixtures quedaron antiguos. Se corrigieron rutas absolutas, import por módulo y fixtures; suite185 sin fallos. Prevención: inspeccionar cwd y contabilizar pruebas reales, no afirmar que pruebas duplicadas son cobertura nueva.
+- Revisión independiente detectó riesgos de restaurar permisos al renovar y de comprobar un diff incompleto o en Git controlado por el ejecutor. Se corrigieron con relectura del permiso actual, reserva durable, ficha exacta en master, locks y revisión de todos los commits sobre SHA fijo en Git del coordinador. Evidencia y límites: `evidencias/delegacion-boss-20261110/REVISION-INDEPENDIENTE-v1.md`. No prometer aislamiento de red/credenciales que este adaptador no implementa.
+- Smoke CLI: el primer fixture omitió newline y recibió `peticion_excesiva_o_sin_fin`; se corrigió el cliente a JSON por línea y se comprobó rechazo tipado de ultra. El protocolo funcionó según diseño; no hubo alta ni ejecución.

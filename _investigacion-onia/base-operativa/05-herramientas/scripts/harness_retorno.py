@@ -57,19 +57,25 @@ def publish(config, row):
             refs.append(row[field]['evidencia'])
     git(repo, 'fetch', 'origin', 'refs/heads/master:refs/remotes/origin/master')
     remote = git(repo, 'rev-parse', 'refs/remotes/origin/master')
-    remote_task = git(repo, 'rev-parse', remote + ':' + relative)
-    remote_row = json.loads(git(repo, 'show', remote + ':' + relative))
+    remote_entry = git(repo, 'ls-tree', remote, '--', relative)
+    remote_task = git(repo, 'rev-parse', remote + ':' + relative) if remote_entry else None
+    remote_row = json.loads(git(repo, 'show', remote + ':' + relative)) if remote_entry else None
     local_task = git(repo, 'hash-object', '--stdin', data=task_bytes)
     marker = root / 'publicaciones' / (ident + '.json')
     old = private_read(marker) if marker.exists() else None
     # Una publicación manual verificada puede adelantar HEAD desde el último
     # aviso; no exigir que un marcador de transporte sea el estado canónico.
-    known = {git(repo, 'rev-parse', 'HEAD:' + relative), local_task}
+    head_entry = git(repo, 'ls-tree', 'HEAD', '--', relative)
+    known = {local_task}
+    if head_entry:
+        known.add(git(repo, 'rev-parse', 'HEAD:' + relative))
     if old:
         known.add(old['task_blob'])
-    if remote_task not in known:
+    if remote_task is not None and remote_task not in known:
         raise Rejected('registro_remoto_cambio_no_sobrescribir')
-    if remote_row['revision'] > row['revision'] or (remote_row['revision'] == row['revision'] and remote_task != local_task):
+    if remote_task is None and (head_entry or old):
+        raise Rejected('registro_remoto_desaparecido')
+    if remote_row and (remote_row['revision'] > row['revision'] or (remote_row['revision'] == row['revision'] and remote_task != local_task)):
         raise Rejected('revision_remota_no_retroceder')
     index = root / ('indice-' + uuid.uuid4().hex)
     git(repo, 'read-tree', remote, index=index)

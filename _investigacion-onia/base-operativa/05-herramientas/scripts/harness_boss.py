@@ -12,6 +12,9 @@ import sys
 import uuid
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+if __name__ == '__main__':
+    # Los módulos auxiliares y serve deben compartir la clase Rejected.
+    sys.modules['harness_boss'] = sys.modules[__name__]
 import trabajo
 import harness_sesiones as sessions
 
@@ -96,6 +99,10 @@ def request(value):
     if not isinstance(value, dict) or value.get('version') != 1 or type(value['version']) is not int:
         raise Rejected('protocolo_invalido')
     op = value.get('operacion')
+    if op in {'registrar', 'habilitar'}:
+        import harness_delegacion
+        checked_id(value.get('id'))
+        return harness_delegacion.parse(value)
     if op not in READ | WRITE:
         raise Rejected('operacion_no_permitida')
     keys = {'version', 'operacion', 'id'}
@@ -172,8 +179,11 @@ def invoke(config, value, row, grant):
                         reviewer=grant.get('revisor') if action == 'revisar' else None,
                         model=grant['modelo'], effort=grant['esfuerzo'], auth_chatgpt=True, subagents=0)
     elif action == 'cerrar':
+        import harness_delegacion
         result = sessions.close(base, ident, op, revision, actor, grant['resultado_cierre'],
-                                grant['comprobacion_cierre'], retain_worktree=True)
+                                grant['comprobacion_cierre'], retain_worktree=True,
+                                commit_validator=lambda current, session, commit:
+                                    harness_delegacion.check_product_scope(config, current, grant, session, commit))
         revision = result['tarea']['revision']
     elif action == 'recoger':
         result = sessions.collect_review(base, ident, op, revision, retain_worktree=True)
@@ -188,6 +198,9 @@ def invoke(config, value, row, grant):
 
 def handle(config, value, config_path=None):
     value = request(value)
+    if value['operacion'] in {'registrar', 'habilitar'}:
+        import harness_delegacion
+        return harness_delegacion.handle(config, value, config_path)
     ident, action = value['id'], value['operacion']
     ids = config.get('lectura_ids')
     if not isinstance(ids, list) or any(not isinstance(x, str) or not SAFE.fullmatch(x) for x in ids):
@@ -226,6 +239,9 @@ def handle(config, value, config_path=None):
         if count >= 24:
             raise Rejected('limite_solicitudes_coordinador')
         trabajo.expected(row, value['revision_esperada'])
+        if action in {'ejecutar', 'reanudar', 'revisar'}:
+            import harness_delegacion
+            harness_delegacion.check_launch(config, grant)
         record = {'hash': digest(value), 'id': ident, 'fase': 'iniciada',
                   'intentos_previos': len(row.get('sesiones', [])), 'operacion': action}
         barrier_record = {'solicitud': value['solicitud'], 'fase': 'iniciada', 'contador': count + 1}

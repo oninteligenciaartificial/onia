@@ -720,7 +720,7 @@ def validate_retained_worktree(worktree, commit):
         raise ValueError('Worktree con cambios versionados; deben coincidir con el commit de entrega.')
 
 
-def close(base, ident, root, revision, actor, result, check, dry_run=False, *, retain_worktree=False):
+def close(base, ident, root, revision, actor, result, check, dry_run=False, *, retain_worktree=False, commit_validator=None):
     base = Path(base).resolve()
     result = trabajo.nonempty(result, 'resultado')
     check = trabajo.nonempty(check, 'comprobación')
@@ -756,6 +756,8 @@ def close(base, ident, root, revision, actor, result, check, dry_run=False, *, r
                 raise ValueError('No hay commit de entrega nuevo; tarea abierta.')
             git(git_owner, 'merge-base', '--is-ancestor', session['commit_base'], commit)
             branches = ensure_remote(repo, commit, session['rama'])
+            if commit_validator is not None:
+                commit_validator(row, session, commit)
             worktree = Path(session['worktree'])
             if retain_worktree:
                 validate_retained_worktree(worktree, commit)
