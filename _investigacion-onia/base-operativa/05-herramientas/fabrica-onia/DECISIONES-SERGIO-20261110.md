@@ -33,3 +33,7 @@ Pendiente: la verificación del número en Meta, que es un paso humano de Sergio
 ## Nombre del workshop (10 nov 2026 16:20 La Paz)
 
 Sergio eligió: «Tu negocio con IA: ordena, vende y automatiza». Se descarta «Automatiza tu vida y sé más saludable con IA». Los guiones T01–T05 de guiones-tanda-20261111 mantienen el enfoque negocio; aplicar los cambios de texto de Contenido.
+
+## Nombre final del workshop (10 nov 2026 16:21 La Paz)
+
+Reemplaza la entrada de las 16:20. Nombre final: «Claude de 0 a 100: tu negocio con IA». No usar el logo de Claude/Anthropic como propio; mencionar el nombre está bien. Aplicar en guiones-tanda-20261111 y materiales de venta.
