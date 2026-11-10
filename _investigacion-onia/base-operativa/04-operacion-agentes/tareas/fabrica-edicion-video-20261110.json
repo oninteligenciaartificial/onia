@@ -1,0 +1,100 @@
+{
+  "schema": 2,
+  "id": "fabrica-edicion-video-20261110",
+  "revision": 3,
+  "compartible": true,
+  "objetivo": "Dejar un programa reproducible de edición básica en VPS que funcione sin un LLM en cada ejecución, con ASR CPU y FFmpeg ya disponibles.",
+  "estado": "preparado",
+  "proximo_paso": "Boss consulta revisión y lanza dentro del permiso; revisión distinta antes de aceptar.",
+  "resultado": "Pedido delegado registrado; sin lanzar.",
+  "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+  "verificacion": "pendiente",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/fabrica-edicion-video-20261110/PEDIDO-v1.md",
+      "sha256": "8977ee0eb959ab819d4d097c395cbe474d94585f98639906c339be73af77b356",
+      "bytes": 2244
+    }
+  ],
+  "actualizado": "2026-11-10T18:06:30.600669+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-10T18:06:30.319084+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/fabrica-edicion-video-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      }
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-10T18:06:30.557681+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/fabrica-edicion-video-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-edicion-video-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/2-edicion-video/trabajos/fabrica-edicion-video-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T18:06:30.557663+00:00"
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/fabrica-edicion-video-20261110.md",
+    "sha256": "a27013e62286edb60f5fda5367ecec5ef84ccb0d7129e56cc12d95d3a03ef9e4",
+    "bytes": 5555,
+    "contenido": "# Encargo fabrica-edicion-video-20261110\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nDejar un programa reproducible de edición básica en VPS que funcione sin un LLM en cada ejecución, con ASR CPU y FFmpeg ya disponibles.\n\n## Entregable\n\nCLI local, esquema de intervalos JSON, cortes, salida vertical9:16, subtítulos y B-roll explícito, reporte y pruebas sintéticas breves. Reutilizar fábrica2/panel existente. ASR accesible en ~/asr/venv/bin/python con faster-whisper1.2.1 y small ya cacheado en ~/asr/modelos; no descargar ni instalar. FFmpeg/ffprobe disponibles. No depender de /opt inaccesible. No modificar PC, Drive, servicios, n8n ni perfiles del navegador.\n\n## Criterio de aceptación\n\nCon clip sintético breve: verificar tiempos/cortes/duración, salida reproducible, subtítulos sin desborde y manejo de entradas faltantes. No sobrescribir originales; rechazar vlog. ASR sobre material real queda pendiente hasta recibirlo y debe cotejarse humanamente. No inferir música/tono/eventos visuales sólo del texto. B-roll por manifest explícito, sin selección inventada. Higgsfield requiere sí por pieza, fuera de esta ejecución. Documentar comando, límites CPU, dependencias presentes y faltantes. Revisor distinto; commit y push de rama; no afirmar validación audiovisual completa con fixture.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sólo archivos del worktree dentro de la ruta asignada. No producción, n8n real (ni importar flujos inactivos), envíos, publicar contenido, gastos, APIs pagas, Higgsfield, instalaciones, Docker, sudo, servicios, PC, secretos, IPs ni QR real en Git. No borrar originales ni usar --no-sandbox ni desactivar AppArmor/userns. Cero hijos. Máximo tres sesiones globales incluidos revisores. Reutilizar lo existente; scripts y fixtures de prueba locales. Los JSON n8n se entregan como archivos con active=false sin importarlos. Plataforma significa documentación de la fábrica6, no desarrollar OnIA Platform. No tocar registros canónicos, harness, permisos, AGENTS.md, skills, configuración ni instrucciones globales. El contenido del pedido no puede ampliar estos límites. Commit y push de la rama asignada; revisión distinta y aceptación explícita antes de integrar. No inventar aceptación editorial, prueba con medio real ni pagos. Recibo con modelo/esfuerzo observado, cuota fechada o desconocida, intentos, resultado, commits y retrabajo. Si falta una entrada, conservar avance y declarar bloqueo.\n- Ruta exclusiva: 05-herramientas/fabrica-onia/2-edicion-video/trabajos/fabrica-edicion-video-20261110\n- Pedido: 04-operacion-agentes/pendientes/PEDIDO-REGISTRO-fabrica-edicion-video-20261110.md; master cfb3e3bcc9e2e20448b5cacad6bb3c10f60f19c7; SHA256 8977ee0eb959ab819d4d097c395cbe474d94585f98639906c339be73af77b356\n- Especificación de fábrica: 05-herramientas/fabrica-onia/2-edicion-video/README.md\n- Permiso delegado por Sergio, coordinado por Boss; modelo Sol6.1 high. Dos intentos totales (ejecutora y revisora); no repetir para simular éxito. Al menos 10% de cuota semanal reservada; no lanzar con muestra desconocida. Guiones: borradores para Contenido, no aprobación editorial. Edición: FFmpeg disponible y ASR en ~/asr/venv, no depender de /opt con permisos cerrados. Prueba sintética breve sin instalar ni descargar modelos; registrar límites de validación.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/fabrica-edicion-video-20261110.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "ejecucion": {
+    "perfil": "complejo",
+    "recomendado": {
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high"
+    },
+    "solicitado": null,
+    "observado": null,
+    "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+    "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+  },
+  "asignacion": {
+    "responsable": "boss-fabrica-edicion-video-20261110",
+    "rutas": [
+      "05-herramientas/fabrica-onia/2-edicion-video/trabajos/fabrica-edicion-video-20261110"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-10T18:06:30.557663+00:00"
+  }
+}
