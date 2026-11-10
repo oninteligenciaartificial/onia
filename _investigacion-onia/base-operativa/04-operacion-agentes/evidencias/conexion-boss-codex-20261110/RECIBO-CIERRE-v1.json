@@ -1,0 +1,88 @@
+{
+  "id": "conexion-boss-codex-20261110",
+  "modelo": "gpt-6-astra",
+  "esfuerzo": "xhigh",
+  "used_percent_inicio": 79.0,
+  "cuota_inicio_muestra_utc": "2026-11-10T15:53:12.508Z",
+  "nota_inicio": "Última muestra disponible al iniciar; no lectura exacta en el instante de arranque.",
+  "used_percent_final": 80.0,
+  "cuota_final_muestra_utc": "2026-11-10T16:42:01.984Z",
+  "saldo_extra": 0,
+  "nota_cuota": "Semanal compartida: no atribuir la diferencia exclusivamente a esta tarea ni inventar USD.",
+  "intentos": 1,
+  "resultado": "aceptada",
+  "retrabajo": true,
+  "suite": {
+    "total": 171,
+    "correctas": 170,
+    "omitidas": 1,
+    "fallidas": 0
+  },
+  "code_commit": "b2a977d6763d12d6f965c1963800b72bda8e9932",
+  "code_instalado": "b2a977d6763d12d6f965c1963800b72bda8e9932",
+  "evento_fin": {
+    "acuse_boss": false,
+    "commit": "0c7f671919e6ab839e66fc4da6ac8ffc0a302b48",
+    "estado_envio": "recibido_http",
+    "id": "conexion-boss-piloto-20261110",
+    "intento": 3,
+    "revision": 20
+  },
+  "acuse_fin_commit": "0151325",
+  "veredicto_publicado_commit": "f80defc062ef463914c0f890735d2cce166f3056",
+  "integracion_producto_commit": "bd3099be52c112f13f553dd6a60ea412444111c8",
+  "piloto": {
+    "id": "conexion-boss-piloto-20261110",
+    "revision": 22,
+    "estado": "aceptado",
+    "commit_producto": "9b9348702555b87bf09e76eb2c86a09af3f93b5c",
+    "sesiones_totales": 3,
+    "ejecutoras": 1,
+    "revisoras": 2,
+    "aceptacion": {
+      "revisor": "boss-piloto-revisor",
+      "criterio": "Veredicto bueno vigente de sesión distinta 01a1c654, producto original integrado en origin/master bd3099b, acuse de Boss y ensayo de fin automático comprobados.",
+      "fecha": "2026-11-10T16:43:05.615641+00:00"
+    },
+    "revision_buena": {
+      "session_id": "01a1c654-7426-7242-a303-0c45526ac3bb",
+      "modelo_real": "gpt-6.1-sol",
+      "esfuerzo_real": "low",
+      "used_percent_inicio": 80.0,
+      "used_percent_final": 80.0,
+      "inicio_muestra_utc": "2026-11-10T16:39:53.486Z",
+      "fin_muestra_utc": "2026-11-10T16:40:12.197Z",
+      "intentos": 1,
+      "resultado": "aceptada",
+      "retrabajo": false,
+      "commit": "9b9348702555b87bf09e76eb2c86a09af3f93b5c"
+    },
+    "revision_anterior": {
+      "session_id": "01a1c637-b971-70f1-b7a1-4b3cb59f2daa",
+      "modelo_real": "gpt-6.1-sol",
+      "esfuerzo_real": "low",
+      "used_percent_inicio": 79.0,
+      "used_percent_final": 79.0,
+      "intentos": 1,
+      "resultado": "rechazada",
+      "motivo": "cambios por evidencia incompleta",
+      "retrabajo": true
+    }
+  },
+  "revision_codigo": {
+    "agente": "revision_puente_boss",
+    "modelo_solicitado": "gpt-6.1-sol",
+    "esfuerzo_solicitado": "high",
+    "modelo_efectivo": null,
+    "used_percent_inicio": null,
+    "used_percent_final": null,
+    "intentos": 1,
+    "seguimientos": true,
+    "resultado": "aceptada",
+    "retrabajo": true
+  },
+  "nuevas_ejecutoras": 0,
+  "nuevo_revisor_piloto": 1,
+  "servicios_nuevos": 0,
+  "watchers_nuevos": 0
+}

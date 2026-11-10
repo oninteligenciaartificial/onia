@@ -159,3 +159,14 @@ Llave vieja SHA256:32x5cddO7CUzHo85H6durHylPB3ulcxYHBniySZQr5s restringida al ad
 Boss: verificá shell/SFTP rechazados desde ESA llave en una conexión nueva; no enviar secretos ni destino.
 La respuesta cacheada del nonce viejo de notificar es histórica; no reenviar el aviso para cambiarla.
 Falta revisión formal/recoger e integración del producto antes de aceptar el piloto; no se lanzaron sesiones nuevas en esta intervención.
+
+
+### HECHO — piloto y conexión aceptados; aviso de fin probado · 10-nov-2026
+
+Piloto `conexion-boss-piloto-20261110` aceptado r22; conexión `conexion-boss-codex-20261110` aceptada según su registro.
+R14 era cambios: publicado sin alterarlo67be8b7; paquete v2 y nueva revisión distinta Sol6.1low dieron bueno, publicado f80defc.
+Producto original9b934870 integrado en masterbd3099b, un archivo/15bytes y una sola ejecutora; no se relanzó el producto.
+Aviso automático al terminar revisor3: snapshotr20 en0c7f671, HTTP200, respuesta Boss REVISION-BOSS-v20 en0151325.
+`recoger` por el puente ahora publica el veredicto en master; no hace falta shell libre ni vigilancia.
+Release fija b2a977d; suite171:170correctas/1omitida. Avisos sólo IDs habilitados, sin scheduler ni autorización para otras fábricas.
+[Informe y uso](../evidencias/conexion-boss-codex-20261110/CIERRE-PUENTE-v1.md); [recibos](../evidencias/conexion-boss-codex-20261110/RECIBO-CIERRE-v1.json).

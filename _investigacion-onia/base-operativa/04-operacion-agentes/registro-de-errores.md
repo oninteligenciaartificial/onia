@@ -531,3 +531,8 @@ El primer push de la comparación de transportes (f2b1564) fue rechazado con `fe
 - El primer borrador del aviso podía perder el evento si cerrar/retomar ganaba la carrera, y bloqueaba recuperación aun sin POST. El revisor independiente lo detectó antes de instalar. Corrección: snapshot/validación en el mismo lock, buscar el intento terminado aunque ya esté cerrado, recuperación explícita sólo de pendientes sin envío y whitelist de aviso separada de lectura.
 - Primera regresión completa del aviso: dos tests fallaron porque el helper suponía que sesión finalizada implicaba salida física del supervisor. Con el callback, éste puede estar publicando. Se mantuvieron las aserciones de preservación/interrupción y se ajustó wait_finished para esperar ambos procesos cuando el ensayo necesita ausencia física. Se agregan pruebas separadas de la nueva semántica de alive.
 - Un parche no encontró el contexto y no se aplicó; se corrigió el fragmento y se reaplicó. Sin cambios parciales por ese intento.
+
+
+### 2026-11-10 — comprobación final de sesiones del puente
+
+Una consulta auxiliar de sólo lectura pasó una tupla `(base, tarea)` a `alive`, que espera una sesión. Evidencia: `AttributeError: tuple object has no attribute get`. No alteró datos ni lanzó procesos. Se corrigió recorriendo las sesiones de cada tarea; resultado: cero sesiones vivas. Prevención: respetar el contrato de `indexed_rows` y comprobar cada registro de sesión.

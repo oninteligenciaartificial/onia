@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "id": "conexion-boss-piloto-20261110",
-  "revision": 21,
+  "revision": 22,
   "compartible": true,
   "objetivo": "Comprobar el despacho Boss→harness, entrega única, revisión distinta y aviso con acuse; sólo juguete sin sistemas externos.",
-  "estado": "para_revision",
-  "proximo_paso": "Revisar mismo producto con paquete v2 mediante sesión distinta; aceptar sólo si veredicto bueno vigente.",
+  "estado": "aceptado",
+  "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
   "resultado": "Mismo producto publicado; paquete de evidencia completado tras dictamen cambios r14, sin repetir ejecutora.",
   "comprobacion": "Veredicto r14 conservado; acuse, duplicación, permiso previo, configuración y corrección del webhook adjuntos con límites temporales. Nueva revisión independiente pendiente.",
   "verificacion": "correcta",
@@ -51,7 +51,7 @@
       "bytes": 4880
     }
   ],
-  "actualizado": "2026-11-10T16:40:53.898064+00:00",
+  "actualizado": "2026-11-10T16:43:05.615664+00:00",
   "historial": [
     {
       "revision": 1,
@@ -2254,6 +2254,215 @@
           "bytes": 639
         }
       ]
+    },
+    {
+      "revision": 21,
+      "actualizado": "2026-11-10T16:40:53.898064+00:00",
+      "estado": "para_revision",
+      "resultado": "Mismo producto publicado; paquete de evidencia completado tras dictamen cambios r14, sin repetir ejecutora.",
+      "comprobacion": "Veredicto r14 conservado; acuse, duplicación, permiso previo, configuración y corrección del webhook adjuntos con límites temporales. Nueva revisión independiente pendiente.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/cierre-r7-d5712ff5.json",
+          "sha256": "ee41f653a1266bc85e421cbfb7a1424994017b6b4f504e28cf58abe35569ed1b",
+          "bytes": 311
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/PAQUETE-REVISION-v2.md",
+          "sha256": "6548d02701ccd7bd3da7237bd5592aca5b31f8c794504dd7725ada813c7682c1",
+          "bytes": 2559
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/EVIDENCIA-PARA-REVISOR-v2.json",
+          "sha256": "f8f76ee01717beb0734500e74f4feff8a6e972f6c8a2e55a66d73dae05b6fbcc",
+          "bytes": 2856
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/ACUSE-BOSS-v1.md",
+          "sha256": "cef6f0d2a8ab4bc5ca0d01e85b99f89a3a059f67ed04690d9d3382c87b8d5ce7",
+          "bytes": 1933
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/REVISION-BOSS-v8.md",
+          "sha256": "5c002d323165a0ed182f261100f637c2c0b3e9884d95052fe787c04cb45112d8",
+          "bytes": 1269
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/HABILITACION-PILOTO-v1.md",
+          "sha256": "3c1d9784b8335211ebe01fcba8a04bc22ab4a399271e5426cdf79dad369ea678",
+          "bytes": 4507
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/RECIBO-HABILITACION-v1.json",
+          "sha256": "d0506c6f93d48e7188119c17609ff794361ad766e4842e8459b1b58d112e43ae",
+          "bytes": 1245
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/CONCILIACION-R8-v1.md",
+          "sha256": "022f12b085ed1cd749559a6496e7f411936c79115eda435fbcc00f52d1cc9052",
+          "bytes": 4880
+        }
+      ],
+      "proximo_paso": "Revisar mismo producto con paquete v2 mediante sesión distinta; aceptar sólo si veredicto bueno vigente.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "boss-piloto-ejecutor",
+        "rutas": [
+          "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T12:15:26.247115+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-piloto-ejecutor",
+          "pid": 2619612,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206107230",
+          "supervisor_pid": 2619600,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206107216",
+          "rama": "codex/ws-conexion-boss-piloto-20261110",
+          "session_id": "01a1c5ea-bca3-7290-ba02-24b8e14bce5c",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.jsonl",
+          "log_rel": "logs/conexion-boss-piloto-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-conexion-boss-piloto-20261110",
+          "rutas": [
+            "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+          ],
+          "dry_run": false,
+          "commit_base": "0e47986a408a16e0c176fb3f7bfcc3c26a88e367",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T14:44:16.678322+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/conexion-boss-piloto-20261110.git/worktrees/onia-ws-conexion-boss-piloto-20261110",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-10T14:44:55.630999+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "boss-piloto-revisor",
+          "pid": 2825450,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206611783",
+          "supervisor_pid": 2825448,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206611771",
+          "rama": "(detached)",
+          "session_id": "01a1c637-b971-70f1-b7a1-4b3cb59f2daa",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.revision-2.jsonl",
+          "log_rel": "logs/conexion-boss-piloto-20261110.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-conexion-boss-piloto-20261110-revision-2",
+          "rutas": [
+            "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+          ],
+          "dry_run": false,
+          "commit_base": "9b9348702555b87bf09e76eb2c86a09af3f93b5c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.2.briefing.txt",
+          "inicio": "2026-11-10T16:08:22.263004+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a388b0b57c4d922d859bf8458ce33208554027e6c01654bea2480254843fea34",
+          "schema": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.2.veredicto.json",
+          "fin": "2026-11-10T16:08:49.093739+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "boss-piloto-revisor",
+          "pid": 2919985,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206800065",
+          "supervisor_pid": 2919983,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:206800049",
+          "rama": "(detached)",
+          "session_id": "01a1c654-7426-7242-a303-0c45526ac3bb",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.revision-3.jsonl",
+          "log_rel": "logs/conexion-boss-piloto-20261110.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-conexion-boss-piloto-20261110-revision-3",
+          "rutas": [
+            "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto"
+          ],
+          "dry_run": false,
+          "commit_base": "9b9348702555b87bf09e76eb2c86a09af3f93b5c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.3.briefing.txt",
+          "inicio": "2026-11-10T16:39:44.984149+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "7e9149c72cef715067c434cf63bf80ca184f9452893587eaf8c8aaf86f56a519",
+          "schema": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/conexion-boss-piloto-20261110.3.veredicto.json",
+          "fin": "2026-11-10T16:40:13.441749+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "9b9348702555b87bf09e76eb2c86a09af3f93b5c",
+        "commit_base": "0e47986a408a16e0c176fb3f7bfcc3c26a88e367",
+        "ramas_origin": [
+          "origin/codex/ws-conexion-boss-piloto-20261110"
+        ],
+        "fecha": "2026-11-10T15:39:21.012570+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/cierre-r7-d5712ff5.json",
+          "sha256": "ee41f653a1266bc85e421cbfb7a1424994017b6b4f504e28cf58abe35569ed1b",
+          "bytes": 311
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "9b9348702555b87bf09e76eb2c86a09af3f93b5c",
+        "criterio": "Verificados diff exclusivo de resultado.txt, 15 bytes exactos ONIA PUENTE OK seguidos de LF, único commit sobre la base y referencia origin de la rama asignada. La evidencia adjunta acredita repetición sin nueva ejecutora, revisión distinta, permiso vigente previo, conservación del worktree y acuse de Boss vinculado al registro r8 en master. Webhook configurado antes del lanzamiento, con autenticación corregida posteriormente y reenvío conciliado HTTP 200. Revisión de sólo lectura. Aceptación e integración corresponden al coordinador.",
+        "worktree_conservado": true,
+        "revisor": "boss-piloto-revisor",
+        "session_id": "01a1c654-7426-7242-a303-0c45526ac3bb",
+        "entrega_sha256": "7e9149c72cef715067c434cf63bf80ca184f9452893587eaf8c8aaf86f56a519",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/revision-3-ffe9b59a.json",
+          "sha256": "65e637f2f88f856cebeb24f143d714e34abc720b3282ad288bbdb9c1b8aea32a",
+          "bytes": 682
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/revision-2-402790d0.json",
+          "sha256": "de7e48c60f49f415abeaa67f949e88e071872a9571b2519d75eed0bc2d658409",
+          "bytes": 639
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/revision-3-ffe9b59a.json",
+          "sha256": "65e637f2f88f856cebeb24f143d714e34abc720b3282ad288bbdb9c1b8aea32a",
+          "bytes": 682
+        }
+      ]
     }
   ],
   "briefing": {
@@ -2262,7 +2471,11 @@
     "bytes": 3212,
     "contenido": "# Encargo conexion-boss-piloto-20261110\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nComprobar el despacho Boss→harness, entrega única, revisión distinta y aviso con acuse; sólo juguete sin sistemas externos.\n\n## Entregable\n\nCrear exclusivamente 04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/producto/resultado.txt con la línea exacta ONIA PUENTE OK y salto de línea. Commit y push de la rama asignada. No modificar registro, briefing ni otros archivos; no lanzar subagentes. No APIs pagas, servicios, PC, n8n, mensajes ni borrados.\n\n## Criterio de aceptación\n\nUn archivo con bytes UTF-8 ONIA PUENTE OK seguido de LF, un único commit de producto publicado, respuesta repetida sin nuevo intento, revisor diferente y acuse de Boss vinculado al registro en master. Antes de lanzar: permiso local vigente y webhook configurado; conservar evidencia y worktree.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- 04-operacion-agentes/evidencias/conexion-boss-codex-20261110/ADAPTADOR-v1.md\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/conexion-boss-piloto-20261110.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
   },
-  "aceptacion": null,
+  "aceptacion": {
+    "revisor": "boss-piloto-revisor",
+    "criterio": "Veredicto bueno vigente de sesión distinta 01a1c654, producto original integrado en origin/master bd3099b, acuse de Boss y ensayo de fin automático comprobados.",
+    "fecha": "2026-11-10T16:43:05.615641+00:00"
+  },
   "asignacion": {
     "responsable": "boss-piloto-ejecutor",
     "rutas": [
