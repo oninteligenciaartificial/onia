@@ -82,6 +82,18 @@ No prometer un nuevo lanzamiento, una fecha ni un cambio de límites que otro ag
 - Boss coordina por el acceso aprobado. Instalar o modificar la PC requiere el sí aplicable de Sergio; no ampliar el acceso a sus archivos. No usar --no-sandbox ni desactivar AppArmor/userns.
 - Separar altas diarias, sesiones simultáneas, CPU/RAM por máquina y cuota del modelo. Más hardware no aumenta cuota ni implementa reparto de tareas. Consultar los límites vigentes del contrato/runtime; este archivo no los cambia ni crea un scheduler.
 
+## 11. Orden de trabajo y requisitos de cierre
+
+Ratificado y precisado por Sergio el 10/11/2026: mantener el orden y los requisitos también forma parte de la aceptación de la coordinación.
+
+- Conservar la prioridad y las dependencias decididas por Sergio. En el encargo actual, cerrar coordinación, medición e integración del homelab antes de pasar al desarrollo para vender; no anunciar esa transición mientras falte una condición. Si hay bloqueo, conservar ese objetivo y avanzar sólo en partes independientes autorizadas. La urgencia comercial o un cupo libre no sustituyen la decisión.
+- Antes de delegar, vincular cada requisito del encargo a una comprobación observable: qué resultado se espera, quién lo produce y revisa, qué entrada necesita y qué evidencia demuestra que está bien. Reutilizar el briefing y la aceptación de la tarea existente. No crear archivos o tareas paralelas para repetir el mismo encargo.
+- En la evidencia de esa tarea, usar una fila por requisito: `requisito | criterio esperado | evidencia (commit, entorno, comando/salida o revisión pertinente) | pasa/falla/omitido/no probado | faltante y responsable`. Para una entrega documental basta una revisión pertinente; no inventar comandos ni pruebas de ejecución.
+- Cotejar todos los requisitos antes de recomendar aceptar. Un requisito obligatorio fallido, omitido o sin probar impide declarar el alcance completo cerrado. La aceptación parcial debe nombrar exactamente lo aceptado y conservar el resto pendiente; no reducir el alcance sin decisión de Sergio. Un bloqueo documentado sigue siendo un bloqueo, no un requisito cumplido.
+- En los canales comerciales, separar por canal y por recorrido lo documentado, lo probado con datos ficticios y lo probado con la integración real autorizada. Incluir los caminos de error y las decisiones humanas pertinentes; los permisos para mensajes, cobros, publicación y n8n no se amplían por llamarlo prueba. Los tipos de guion/anuncio siguen abiertos, dentro del alcance acordado.
+- Al recibir una corrección de Sergio: registrar qué decisión reemplaza, localizar tareas y materiales afectados, aplicar sólo la corrección autorizada y comprobarla. Si ya hay una sesión ejecutando, consultar qué operación admite el puente; no prometer que recibió un cambio de instrucciones sin acuse verificable.
+- Al cerrar o traspasar, informar cobertura de requisitos y pendientes, revisor, commit exacto y siguiente acción autorizada. No abandonar un paso ejecutable autorizado porque el resumen ya esté escrito. Si falta evidencia externa, asignar responsable y condición de retoma; no inventar un horario ni una vigilancia para rellenar el hueco.
+
 ## Respuesta breve de seguimiento
 
 Usar sólo cuando haya un avance, bloqueo o pedido de estado; no recitar todas las reglas en cada mensaje:
@@ -97,6 +109,23 @@ Necesito de Sergio: nada, o una única acción indispensable.
 
 ## Comprobar que las reglas se aplican
 
-En la siguiente tarea ya autorizada, comprobar: no duplicar un intento ante un aviso repetido; no declarar fallo por ausencia de una entrega en la vista; no informar aceptación sin autoridad; conservar el objetivo al recibir una pregunta de estado; recuperar la decisión vigente sin rehacer material aceptado. Registrar el resultado en la evidencia de esa tarea, sin lanzar un piloto por leer este archivo.
+La revisión del archivo sólo comprueba el procedimiento escrito. El acuse anterior de Boss sobre `6f46f64` no acredita lectura de esta ampliación. Boss debe confirmar el commit actualizado leído desde GitHub y, cuando tenga autorización para editar sus instrucciones/rutinas, comprobar que apuntan a esta fuente. Si no puede hacerlo, informar esa falta; Codex no declara configurada la app por publicar este archivo.
+
+Aplicar los casos siguientes sobre evidencia de una tarea ya autorizada. Una simulación sirve para ensayar el razonamiento, pero no sustituye el evento real ni autoriza lanzamientos, webhooks, cambios de rutinas o PC. Caso que no ocurra o no pueda observarse: `no probado`, con su evidencia pendiente.
+
+| Caso que reproduce el error | Conducta requerida y evidencia de aceptación |
+|---|---|
+| Se pierde contexto o Sergio pregunta por el estado | Recupera objetivo, decisiones vigentes, ID/revisión y próximo paso; responde y conserva la tarea. No crea otro encargo ni vuelve a producir una entrega existente. |
+| La sesión terminó y la entrega no aparece en la vista | Comprueba sesión, rama y commit; identifica si falta cierre o publicación. No declara fallo ni relanza sin diagnóstico. |
+| Termina un ejecutor | Verifica entrega remota y condiciones de `cerrar`, usa revisión vigente y coordina la revisión independiente autorizada. Conserva recibos y commit. |
+| Termina un revisor | Recoge el dictamen del intento y commit correctos y comprueba su publicación. No cierra otra vez al ejecutor ni lanza otro revisor por el mismo aviso. |
+| Aviso repetido o operación con respuesta incierta | Concilia ID, intento, evento y resultado existente; no duplica efectos. Presenta recibos que permitan verificarlo, sin secretos. |
+| Una prueba falla, se omite o sólo usa un mock | La matriz conserva ese resultado y su alcance. No informa canal completo probado ni acepta un requisito obligatorio sin evidencia. |
+| Hay decisiones antiguas incompatibles | Usa la última decisión aplicable de Sergio y comprueba los materiales afectados. No rescata un título viejo del workshop por aparecer en una memoria histórica. |
+| Un límite o una rutina antigua parece bloquear el trabajo | Comprueba contrato y runtime actuales. Distingue altas diarias, concurrencia y cuota; no promete las 20:10 por el límite eliminado ni afirma que hay cinco sesiones medidas. |
+| La PC aparece conectada | No la llama worker listo sin acceso, aislamiento y tarea remota comprobados. No suma su CPU/RAM como capacidad utilizable sólo por estar online. |
+| Se intenta cerrar y pasar a ventas con requisitos pendientes | Enumera los requisitos sin cumplir, responsable y acción; mantiene el orden de Sergio. No declara cerrado el conjunto porque un componente pasó tests. |
+
+Guardar los resultados y recibos saneados en la evidencia de la tarea correspondiente, enlazando desde la bitácora sin duplicar el estado del harness. Un revisor distinto compara resultado esperado con observado, emite un dictamen y recomienda aceptar, corregir o rechazar por alcance; la aceptación se registra mediante la autoridad y operación vigentes. No marcar todos estos casos como aprobados por haber leído las reglas.
 
 Aprender operativamente significa conservar una corrección útil, recuperarla y verificar que cambió la conducta. No modifica los pesos del modelo ni garantiza cero errores. Publicación, lectura por Boss y aplicación comprobada son tres hitos distintos.

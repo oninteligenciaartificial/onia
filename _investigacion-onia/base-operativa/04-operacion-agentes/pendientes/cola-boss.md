@@ -201,3 +201,10 @@ Release fija b2a977d; suite171:170correctas/1omitida. Avisos sólo IDs habilitad
 - Registrar no lanza. Continúan máximo tres simultáneas y reserva ordinaria de cuota al 90%; no anunciar sesiones comerciales iniciadas con cuota superior.
 - Sergio autorizó hasta dos puntos (91→93) sólo para medir. Ensayo no lanzado: control de presupuesto insuficiente, variante revocada. No hay nueva capacidad demostrada ni homelab validado por este cambio.
 - [Instalación, evidencia y límites](../evidencias/delegacion-sin-cupo-20261110/INSTALACION.md). HECHO no significa aceptación de otras tareas.
+
+## HECHO · requisitos de coordinación de Boss · 10/11/2026
+
+- Encargo directo de Sergio: mantener el orden y comprobar los requisitos para evitar los errores de contexto, seguimiento y cierre ya observados.
+- Se amplía la fuente existente [REGLAS-BOSS.md](../REGLAS-BOSS.md), sección 11 y casos de comprobación, sin otro registro de tareas ni cambios de runtime.
+- Boss debe recuperar la versión actual por GitHub, confirmar su commit y aplicar la matriz de requisitos a las tareas pertinentes. El acuse anterior de `6f46f64` no acredita esta versión.
+- Publicación, lectura y aplicación real siguen separados. Los casos no observados quedan no probados; este mensaje no autoriza otro piloto ni modifica rutinas, límites o permisos.
