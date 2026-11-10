@@ -558,3 +558,5 @@ Al contrastar la propuesta de Boss se volcó una respuesta de listado completa d
 - Smoke CLI: el primer fixture omitió newline y recibió `peticion_excesiva_o_sin_fin`; se corrigió el cliente a JSON por línea y se comprobó rechazo tipado de ultra. El protocolo funcionó según diseño; no hubo alta ni ejecución.
 
 - Publicación final: el scanner integral marcó un patrón de dirección preexistente en el historial inmutable del ID homelab, ya en master; no se imprimió ni se agregó una dirección. Se comprobó el diff nuevo y todas las evidencias nuevas, sin alterar historia ni debilitar el scanner del puente. Una copia posterior dependiente quedó sin lista al fallar el preflight; se detuvo sin escribir y se repitió tras comprobar la causa.
+
+- El push del recibo del webhook coincidió con el acuse4e0a456 publicado por Boss y se rechazó por avance remoto. Se hizo fetch y merge normal conservando ambos; evidencia `evidencias/delegacion-boss-20261110/RECEPCION-CONFIRMADA-v1.md`. La respuesta de Boss acredita lectura, pero su rutina no tenía SSH: no confundirla con prueba de lanzamiento.
