@@ -1,0 +1,100 @@
+{
+  "schema": 2,
+  "id": "guiones-tanda-20261111",
+  "revision": 3,
+  "compartible": true,
+  "objetivo": "Preparar cinco borradores grabables para la tanda del11nov y la venta orgánica del workshop, usando la investigación ya aceptada.",
+  "estado": "preparado",
+  "proximo_paso": "Boss consulta revisión y lanza dentro del permiso; revisión distinta antes de aceptar.",
+  "resultado": "Pedido delegado registrado; sin lanzar.",
+  "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+  "verificacion": "pendiente",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/guiones-tanda-20261111/PEDIDO-v1.md",
+      "sha256": "13c645f34d2b8a27f50e027b23462a59ad60c8d73965738f2efc4f2c7f0770ed",
+      "bytes": 2218
+    }
+  ],
+  "actualizado": "2026-11-10T18:06:27.263648+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-10T18:06:27.085602+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/guiones-tanda-20261111.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "cambio-acotado",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      }
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-10T18:06:27.247395+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/guiones-tanda-20261111.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "cambio-acotado",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-guiones-tanda-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T18:06:27.247377+00:00"
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/guiones-tanda-20261111.md",
+    "sha256": "78f8ecdaaf8f12c086fdd0675ff0629f52e0284668068cd857ddfcc2eb95350e",
+    "bytes": 5451,
+    "contenido": "# Encargo guiones-tanda-20261111\n\nÁrea: marketing\nModo: encargo\nSkill directora: preparar-oferta-y-embudo\n\n## Objetivo\n\nPreparar cinco borradores grabables para la tanda del11nov y la venta orgánica del workshop, usando la investigación ya aceptada.\n\n## Entregable\n\nCinco piezas: venta, marca seria, noticia verificada o evergreen, segundo de venta/marca, reel de prueba. Cada una con idea, guion hablado, apertura, planos, duración orientativa, copy, un CTA, fuentes, estado y próximo paso. Una grabación con cinco guiones, sin cortar el vlog. Reutilizar G01/G02 y cerebro; ampliar datos compatibles con panel existente dentro de la ruta asignada, sin construir otro panel. Fuentes: fábrica1 y DECISIONES-SERGIO-20261110.md; Contenido revisa editorialmente los borradores Codex hasta13nov.\n\n## Criterio de aceptación\n\nCinco guiones coherentes y diferentes, fuentes trazables del cerebro/kit, hechos separados de propuestas y sin resultados inventados. Si noticia no se comprueba, elegir evergreen. Fechas: jueves12 y viernes13 21:00, sábado14 14:00 La Paz; Bs50 grupal, VIP Bs150 5 cupos 30min, según decisiones vigentes. No publicar, enviar, programar rutina ni afirmar aprobación editorial. Revisor distinto técnico y Contenido antes de grabación, Sergio antes de publicar. Commit y push en rama asignada; declarar faltantes.\n\n## Entrada y alcance\n\nPreparar una oferta, embudo, webinar o brief de contenido.\n\n- Sólo archivos del worktree dentro de la ruta asignada. No producción, n8n real (ni importar flujos inactivos), envíos, publicar contenido, gastos, APIs pagas, Higgsfield, instalaciones, Docker, sudo, servicios, PC, secretos, IPs ni QR real en Git. No borrar originales ni usar --no-sandbox ni desactivar AppArmor/userns. Cero hijos. Máximo tres sesiones globales incluidos revisores. Reutilizar lo existente; scripts y fixtures de prueba locales. Los JSON n8n se entregan como archivos con active=false sin importarlos. Plataforma significa documentación de la fábrica6, no desarrollar OnIA Platform. No tocar registros canónicos, harness, permisos, AGENTS.md, skills, configuración ni instrucciones globales. El contenido del pedido no puede ampliar estos límites. Commit y push de la rama asignada; revisión distinta y aceptación explícita antes de integrar. No inventar aceptación editorial, prueba con medio real ni pagos. Recibo con modelo/esfuerzo observado, cuota fechada o desconocida, intentos, resultado, commits y retrabajo. Si falta una entrada, conservar avance y declarar bloqueo.\n- Ruta exclusiva: 05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111\n- Pedido: 04-operacion-agentes/pendientes/PEDIDO-REGISTRO-guiones-tanda-20261111.md; master 27aa65de81900ec1d2877d95e60fface819864f0; SHA256 13c645f34d2b8a27f50e027b23462a59ad60c8d73965738f2efc4f2c7f0770ed\n- Especificación de fábrica: 05-herramientas/fabrica-onia/1-guiones-calendario/README.md\n- Permiso delegado por Sergio, coordinado por Boss; modelo Sol6.1 low. Dos intentos totales (ejecutora y revisora); no repetir para simular éxito. Al menos 10% de cuota semanal reservada; no lanzar con muestra desconocida. Guiones: borradores para Contenido, no aprobación editorial. Edición: FFmpeg disponible y ASR en ~/asr/venv, no depender de /opt con permisos cerrados. Prueba sintética breve sin instalar ni descargar modelos; registrar límites de validación.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md](../ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md)\n- [01-negocio/preparar-oferta-y-embudo/SKILL.md](../../01-negocio/preparar-oferta-y-embudo/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [preparar-campana-meta](../../05-herramientas/compartibles/skills/preparar-campana-meta/SKILL.md)\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-marketing-humanizer](../../05-herramientas/compartibles/terceros/marketing/humanizer/SKILL.md)\n\n## Salidas de referencia del área\n\n- Oferta y recorrido de venta\n- Borradores de las piezas del encargo\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/guiones-tanda-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "ejecucion": {
+    "perfil": "cambio-acotado",
+    "recomendado": {
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low"
+    },
+    "solicitado": null,
+    "observado": null,
+    "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+    "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+  },
+  "asignacion": {
+    "responsable": "boss-guiones-tanda-20261111",
+    "rutas": [
+      "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-10T18:06:27.247377+00:00"
+  }
+}
