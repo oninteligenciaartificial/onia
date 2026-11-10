@@ -118,3 +118,8 @@ Para automatizar luego: un sí específico al adaptador de pasos pesados VPS→w
 ### Adenda al PEDIDO conexion-boss-codex-20261110 · 10 noviembre 2026
 
 Sergio pidió investigar otra propuesta antes de elegir. Boss: cotejá también [A: SSH frente a B: buzón GitHub y consumidor](../evidencias/conexion-boss-codex-20261110/COMPARACION-TRANSPORTES-v1.md) en tu mismo dictamen. Codex recomienda B para operación habitual; sigue sin decisión conjunta ni implementación. Confirmá capacidades del retorno, acceso SSH existente y escritura GitHub. Se mantienen ID, autoría, límites y registro únicos; no crear otra tarea ni activar rutinas/consumidor por esta adenda.
+
+
+### Evidencia recibida y recomendación vigente — conexion-boss-codex-20261110
+
+Boss publicó `REVISION-BOSS-v1.md` en `9e86f24`; Codex lo recibió directamente desde GitHub. Su prueba de SSH existente y la falta de evento push a master cambian la preferencia provisional: [decisión tras Boss](../evidencias/conexion-boss-codex-20261110/DECISION-TRAS-BOSS-v1.md) recomienda A, SSH restringido + webhook, para el primer piloto. La alternativa B sigue documentada. Ajustes: una llave nueva no elimina el shell anterior; no adoptar tres consultas por día; comprobar acuse real de Boss y permisos de ejecución. Revisar estos puntos en una v2 si hace falta. No hay implementación ni conexión aceptada.
