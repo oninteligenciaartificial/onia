@@ -37,3 +37,7 @@ Reversión, sólo si hiciera falta: tomar el mismo lock del puente, comprobar la
 El [plan F1 existente](../../homelab/F1-MEDICION.md) sigue siendo propuesta, no comando instalado ni resultado. Eliminar seis altas no valida cuatro o cinco sesiones ni configura reparto al homelab. El ensayo real necesita observación, perfil, presupuesto y autorización compatibles con el control de cuota. Las pruebas sintéticas de este cambio no dimensionan el VPS o la PC.
 
 La lectura inicial fue 90% usado a `2026-11-10T23:08:11.742Z` (19:08 La Paz). Por el control vigente no se lanza el ensayo real ni una tarea comercial para validar este arreglo. No se elimina silenciosamente esa reserva ni se presenta como una restricción del proveedor.
+
+## Resultado posterior
+
+La release quedó instalada y comprobada. Sergio autorizó después un ensayo acotado de 91% a 93%, exclusivamente para medir; no se ejecutó porque la revisión detectó un control insuficiente del presupuesto. Los límites ordinarios no cambian. Evidencia y dictámenes separados en [INSTALACION.md](INSTALACION.md).

@@ -191,3 +191,13 @@ Release fija b2a977d; suite171:170correctas/1omitida. Avisos sólo IDs habilitad
 - Lectura de documentos permitidos de master; sin shell libre, escritura ni conectores. Logs privados, sin credenciales. No crea tareas ni acepta productos.
 - AGENTS exige bitácora y decisiones al iniciar; no se modificó BITACORA-BOSS.md ni se reiniciaron sesiones existentes.
 - Pruebas200:199pass,1skip; pilotos reales, canario, rechazo de escritura/lectura externa, replay y cupo liberado. Recibo de activación publicado en la carpeta del ID.
+
+## HECHO · eliminación de seis altas diarias · 10/11/2026
+
+- Encargo directo de Sergio en su conversación con Codex; referencia documental `delegacion-sin-cupo-20261110`, sin crear un ID ficticio en el harness.
+- Código publicado e instalado: `0efe1d5dace130892c1f4ed457fe382cceaad7a4`; siete/ocho altas ya no se rechazan por cantidad diaria.
+- Pruebas: suite 160/160; cuatro sobre módulos instalados; diez hashes y consulta local de entrada correctos. Revisión distinta: buena para este cambio.
+- Ya no hay que esperar a las 20:10 por el cupo diario. Esa rutina de Boss no fue editada desde Codex; conciliar trabajo existente antes de cualquier intento.
+- Registrar no lanza. Continúan máximo tres simultáneas y reserva ordinaria de cuota al 90%; no anunciar sesiones comerciales iniciadas con cuota superior.
+- Sergio autorizó hasta dos puntos (91→93) sólo para medir. Ensayo no lanzado: control de presupuesto insuficiente, variante revocada. No hay nueva capacidad demostrada ni homelab validado por este cambio.
+- [Instalación, evidencia y límites](../evidencias/delegacion-sin-cupo-20261110/INSTALACION.md). HECHO no significa aceptación de otras tareas.
