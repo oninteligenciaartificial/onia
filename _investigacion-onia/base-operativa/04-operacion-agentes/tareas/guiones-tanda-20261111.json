@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "id": "guiones-tanda-20261111",
-  "revision": 14,
+  "revision": 15,
   "compartible": true,
   "objetivo": "Preparar cinco borradores grabables para la tanda del11nov y la venta orgánica del workshop, usando la investigación ya aceptada.",
   "estado": "para_revision",
@@ -21,7 +21,7 @@
       "bytes": 304
     }
   ],
-  "actualizado": "2026-11-10T20:04:13.362629+00:00",
+  "actualizado": "2026-11-10T23:53:00.600483+00:00",
   "historial": [
     {
       "revision": 1,
@@ -1092,6 +1092,136 @@
         }
       },
       "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-10T20:04:13.362629+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega publicada en origin; revisión y aceptación pendientes.",
+      "comprobacion": "Cierre verifica commit remoto y conserva worktree; no acredita calidad ni producción.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-20261111/PEDIDO-v1.md",
+          "sha256": "13c645f34d2b8a27f50e027b23462a59ad60c8d73965738f2efc4f2c7f0770ed",
+          "bytes": 2218
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-20261111/cierre-r8-84f36016.json",
+          "sha256": "c200b704a2b685d34dfbbbf40c855289a34d355858f6d199aefdf838606e44ff",
+          "bytes": 304
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "cambio-acotado",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-guiones-tanda-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T18:06:27.247377+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-guiones-tanda-20261111",
+          "pid": 3310235,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:207709458",
+          "supervisor_pid": 3310223,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:207709423",
+          "rama": "codex/ws-guiones-tanda-20261111",
+          "session_id": "01a1c6df-3871-7540-87ad-1af45a1b12ff",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "66818ec66e396b53773bfe4a89e88df6ca9822f6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.1.briefing.txt",
+          "inicio": "2026-11-10T19:11:18.663830+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-20261111.git/worktrees/onia-ws-guiones-tanda-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-10T19:14:53.773043+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revision-guiones-tanda-20261111",
+          "pid": 3437206,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208022190",
+          "supervisor_pid": 3437183,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208022163",
+          "rama": "(detached)",
+          "session_id": "01a1c70e-f25e-7940-b307-94675a800dbc",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c5fe870e25ea82fc476fcb5b7addfc822a96989c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.2.briefing.txt",
+          "inicio": "2026-11-10T20:03:26.144390+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "ecc8cb410502b3fb00761e2f809d4adb0ae4218ec1fd3e91f2851ed7eceeed69",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.2.veredicto.json",
+          "fin": "2026-11-10T20:04:13.339942+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "c5fe870e25ea82fc476fcb5b7addfc822a96989c",
+        "commit_base": "66818ec66e396b53773bfe4a89e88df6ca9822f6",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-20261111"
+        ],
+        "fecha": "2026-11-10T20:02:56.622278+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-20261111/cierre-r8-84f36016.json",
+          "sha256": "c200b704a2b685d34dfbbbf40c855289a34d355858f6d199aefdf838606e44ff",
+          "bytes": 304
+        }
+      },
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -1192,7 +1322,20 @@
       "fin": "2026-11-10T20:04:13.339942+00:00"
     }
   ],
-  "revision_independiente": null,
+  "revision_independiente": {
+    "veredicto": "cambios",
+    "commit": "c5fe870e25ea82fc476fcb5b7addfc822a96989c",
+    "criterio": "Los cinco borradores cumplen slots, campos, trazabilidad, condiciones comerciales y separación entre ficción y hechos. Cambios limitados a la ruta autorizada; enlaces, hashes y textos del JSON comprobados, diff sin errores. Falta evidencia del preflight exigido: RECIBO.md declara cuota inicial/final y modelo/esfuerzo efectivos desconocidos, sin acreditar la reserva semanal mínima del 10%. El coordinador debe aportar evidencia fechada del lanzamiento y conciliar el recibo, sin inventar mediciones retrospectivas. La revisión editorial de Contenido y aprobación de Sergio siguen pendientes y no se consideran realizadas.",
+    "worktree_conservado": true,
+    "revisor": "revision-guiones-tanda-20261111",
+    "session_id": "01a1c70e-f25e-7940-b307-94675a800dbc",
+    "entrega_sha256": "ecc8cb410502b3fb00761e2f809d4adb0ae4218ec1fd3e91f2851ed7eceeed69",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/guiones-tanda-20261111/revision-2-0082d0bb.json",
+      "sha256": "ab7989b1ce9e682efc98613bc2b05d799453421c8fe0529403d83607313d21fe",
+      "bytes": 762
+    }
+  },
   "cierre": {
     "commit": "c5fe870e25ea82fc476fcb5b7addfc822a96989c",
     "commit_base": "66818ec66e396b53773bfe4a89e88df6ca9822f6",
@@ -1208,5 +1351,12 @@
       "sha256": "c200b704a2b685d34dfbbbf40c855289a34d355858f6d199aefdf838606e44ff",
       "bytes": 304
     }
-  }
+  },
+  "evidencias_revision": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/guiones-tanda-20261111/revision-2-0082d0bb.json",
+      "sha256": "ab7989b1ce9e682efc98613bc2b05d799453421c8fe0529403d83607313d21fe",
+      "bytes": 762
+    }
+  ]
 }
