@@ -1,22 +1,27 @@
 {
   "schema": 2,
   "id": "fabrica-edicion-video-20261110",
-  "revision": 8,
+  "revision": 9,
   "compartible": true,
   "objetivo": "Dejar un programa reproducible de edición básica en VPS que funcione sin un LLM en cada ejecución, con ASR CPU y FFmpeg ya disponibles.",
-  "estado": "en_curso",
-  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
-  "resultado": "Pedido delegado registrado; sin lanzar.",
-  "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
-  "verificacion": "pendiente",
+  "estado": "para_revision",
+  "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+  "resultado": "Entrega publicada en origin; revisión y aceptación pendientes.",
+  "comprobacion": "Cierre verifica commit remoto y conserva worktree; no acredita calidad ni producción.",
+  "verificacion": "correcta",
   "evidencias": [
     {
       "archivo": "04-operacion-agentes/evidencias/fabrica-edicion-video-20261110/PEDIDO-v1.md",
       "sha256": "8977ee0eb959ab819d4d097c395cbe474d94585f98639906c339be73af77b356",
       "bytes": 2244
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/fabrica-edicion-video-20261110/cierre-r8-688b869a.json",
+      "sha256": "cedcedc605085825f016ff96a3c38e8f55346c32b34b6f6ca6d7107d4f82876d",
+      "bytes": 312
     }
   ],
-  "actualizado": "2026-11-10T20:36:36.794975+00:00",
+  "actualizado": "2026-11-10T21:27:55.250053+00:00",
   "historial": [
     {
       "revision": 1,
@@ -401,6 +406,81 @@
       ],
       "cierre": null,
       "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-10T20:36:36.794975+00:00",
+      "estado": "en_curso",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-edicion-video-20261110/PEDIDO-v1.md",
+          "sha256": "8977ee0eb959ab819d4d097c395cbe474d94585f98639906c339be73af77b356",
+          "bytes": 2244
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-fabrica-edicion-video-20261110",
+        "rutas": [
+          "05-herramientas/fabrica-onia/2-edicion-video/trabajos/fabrica-edicion-video-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T18:06:30.557663+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-fabrica-edicion-video-20261110",
+          "pid": 3483739,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208134255",
+          "supervisor_pid": 3483727,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208134234",
+          "rama": "codex/ws-fabrica-edicion-video-20261110",
+          "session_id": "01a1c720-0955-7040-acdb-e855f92769b5",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-edicion-video-20261110.jsonl",
+          "log_rel": "logs/fabrica-edicion-video-20261110.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-edicion-video-20261110",
+          "rutas": [
+            "05-herramientas/fabrica-onia/2-edicion-video/trabajos/fabrica-edicion-video-20261110"
+          ],
+          "dry_run": false,
+          "commit_base": "d22b0b29f62e1403d84571b7602c9eb55ec91575",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-edicion-video-20261110.1.briefing.txt",
+          "inicio": "2026-11-10T20:22:06.793570+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-edicion-video-20261110.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-edicion-video-20261110.git/worktrees/onia-ws-fabrica-edicion-video-20261110",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-10T20:36:36.778266+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -440,7 +520,7 @@
       "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:208134234",
       "rama": "codex/ws-fabrica-edicion-video-20261110",
       "session_id": "01a1c720-0955-7040-acdb-e855f92769b5",
-      "estado": "finalizada",
+      "estado": "cerrada",
       "operacion": "/home/onia-codex-worker/operacion",
       "log": "/home/onia-codex-worker/operacion/logs/fabrica-edicion-video-20261110.jsonl",
       "log_rel": "logs/fabrica-edicion-video-20261110.jsonl",
@@ -467,5 +547,20 @@
     }
   ],
   "revision_independiente": null,
-  "cierre": null
+  "cierre": {
+    "commit": "9c9a8a06c1eb00a6322aa9d2724fa11f9fe0c573",
+    "commit_base": "d22b0b29f62e1403d84571b7602c9eb55ec91575",
+    "ramas_origin": [
+      "origin/codex/ws-fabrica-edicion-video-20261110"
+    ],
+    "fecha": "2026-11-10T21:27:55.234197+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "worktree_conservado": true,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/fabrica-edicion-video-20261110/cierre-r8-688b869a.json",
+      "sha256": "cedcedc605085825f016ff96a3c38e8f55346c32b34b6f6ca6d7107d4f82876d",
+      "bytes": 312
+    }
+  }
 }
