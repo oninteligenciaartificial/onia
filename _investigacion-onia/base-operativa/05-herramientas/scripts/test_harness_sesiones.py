@@ -161,7 +161,11 @@ class SessionTests(unittest.TestCase):
         while time.monotonic() < deadline:
             row = self.row(ident)
             session = row['sesiones'][-1]
-            if session['estado'] not in sessions.ACTIVE and not sessions.alive(session):
+            # Los ensayos siguientes alteran archivos/estado como si no quedara
+            # ningún proceso. alive() ya separa sesión de supervisor publicando.
+            supervisor_alive = (session.get('supervisor_pid') and session.get('supervisor_inicio')
+                                and sessions.process_start(session['supervisor_pid']) == session['supervisor_inicio'])
+            if session['estado'] not in sessions.ACTIVE and not sessions.alive(session) and not supervisor_alive:
                 return row
             time.sleep(0.05)
         self.fail('El proceso sintético no terminó: ' + str(row))

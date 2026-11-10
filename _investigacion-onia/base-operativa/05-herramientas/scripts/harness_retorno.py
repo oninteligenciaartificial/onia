@@ -62,8 +62,12 @@ def publish(config, row):
     local_task = git(repo, 'hash-object', '--stdin', data=task_bytes)
     marker = root / 'publicaciones' / (ident + '.json')
     old = private_read(marker) if marker.exists() else None
-    known = old['task_blob'] if old else git(repo, 'rev-parse', 'HEAD:' + relative)
-    if remote_task not in {known, local_task}:
+    # Una publicación manual verificada puede adelantar HEAD desde el último
+    # aviso; no exigir que un marcador de transporte sea el estado canónico.
+    known = {git(repo, 'rev-parse', 'HEAD:' + relative), local_task}
+    if old:
+        known.add(old['task_blob'])
+    if remote_task not in known:
         raise Rejected('registro_remoto_cambio_no_sobrescribir')
     if remote_row['revision'] > row['revision'] or (remote_row['revision'] == row['revision'] and remote_task != local_task):
         raise Rejected('revision_remota_no_retroceder')
@@ -143,7 +147,7 @@ def post(secret, payload):
         return response.status == 200
 
 
-def deliver(config, ident, sender=post, expected_revision=None, expected_binding=None):
+def deliver(config, ident, sender=post, expected_revision=None, expected_binding=None, finished_attempt=None, on_snapshot=None):
     ident = checked_id(ident)
     if not isinstance(config.get('lectura_ids'), list) or ident not in config['lectura_ids']:
         raise Rejected('id_no_habilitado')
@@ -153,28 +157,35 @@ def deliver(config, ident, sender=post, expected_revision=None, expected_binding
         if ((expected_revision is not None and row['revision'] != expected_revision)
                 or (expected_binding is not None and binding(row) != expected_binding)):
             raise Rejected('snapshot_autorizado_cambio')
-        if not row.get('compartible') or not row.get('cierre'):
-            raise Rejected('sin_cierre_compartible')
+        if not row.get('compartible'):
+            raise Rejected('tarea_no_compartible')
         trabajo.verify(base, row)
-        if row['cierre'].get('dry_run'):
-            raise Rejected('sin_avisos_de_simulacion')
+        if finished_attempt is not None:
+            terminal_session(row, finished_attempt, config['operacion'])
+        else:
+            if not row.get('cierre'):
+                raise Rejected('sin_cierre_compartible')
+            if row['cierre'].get('dry_run'):
+                raise Rejected('sin_avisos_de_simulacion')
+        if on_snapshot is not None:
+            on_snapshot(row)
         event = root / 'retornos' / (ident + '-r' + str(row['revision']) + '.json')
         if event.exists():
             prior = private_read(event)
             if prior['estado_envio'] in {'enviando', 'incierto', 'recibido_http'}:
                 return {'estado_envio': prior['estado_envio'], 'repetido': True,
-                        'acuse_boss': False, 'commit': prior['payload']['commit']}
+                        'acuse_boss': False, 'commit': prior['payload']['commit'], 'revision': row['revision']}
         try:
             commit = publish(config, row)
         except Exception:
-            return {'estado_envio': 'pendiente_publicacion', 'acuse_boss': False}
+            return {'estado_envio': 'pendiente_publicacion', 'acuse_boss': False, 'revision': row['revision']}
         payload = {k: row[k] for k in ('id', 'revision', 'estado')}
         payload['commit'] = commit  # Snapshot in master containing THIS task revision.
         record = {'payload': payload, 'estado_envio': 'pendiente_configuracion'}
         private_write(event, record)
         secret_path = root / 'webhook.json'
         if not secret_path.exists():
-            return {'estado_envio': record['estado_envio'], 'acuse_boss': False, 'commit': commit}
+            return {'estado_envio': record['estado_envio'], 'acuse_boss': False, 'commit': commit, 'revision': row['revision']}
         secret = private_read(secret_path)
         validate_secret(secret)
         private_write(event, dict(record, estado_envio='enviando'))
@@ -184,7 +195,78 @@ def deliver(config, ident, sender=post, expected_revision=None, expected_binding
             received = False
         status = 'recibido_http' if received else 'incierto'
         private_write(event, dict(record, estado_envio=status))
-        return {'estado_envio': status, 'acuse_boss': False, 'commit': commit}
+        return {'estado_envio': status, 'acuse_boss': False, 'commit': commit, 'revision': row['revision']}
+
+
+def terminal_session(row, attempt, operation):
+    import harness_sesiones as sessions
+    matches = [s for s in row.get('sesiones', []) if s['intento'] == attempt]
+    if (len(matches) != 1 or type(attempt) is not int
+            or matches[0]['operacion'] != str(operation) or matches[0]['dry_run']
+            or matches[0]['estado'] not in {'finalizada', 'fallida', 'interrumpida', 'cerrada'}
+            or not matches[0].get('fin') or sessions.alive(matches[0])):
+        raise Rejected('sin_fin_de_sesion_comprobado')
+    return matches[0]
+
+
+def session_finished(base, operation, ident, attempt, retry_pending=False):
+    """Callback optativo, una vez por intento; no crea vigilancia ni sesiones."""
+    root = no_links(Path(operation) / 'puente-boss')
+    config_path = root / 'config.json'
+    if not config_path.exists():
+        return None
+    with locked(root):
+        config = private_read(config_path)
+        if (config.get('avisar_fin_sesion') is not True or config.get('pausado') is not False
+                or not isinstance(config.get('lectura_ids'), list) or ident not in config['lectura_ids']
+                or not isinstance(config.get('avisos_fin_ids'), list) or ident not in config['avisos_fin_ids']):
+            return None
+        if (Path(config['base']) != Path(base) or Path(config['operacion']) != Path(operation)
+                or Path(config['privado']) != root):
+            raise Rejected('base_no_configurada')
+        checked_id(ident)
+        if type(attempt) is not int or attempt < 1:
+            raise Rejected('intento_invalido')
+        marker = root / 'fines' / (ident + '-i' + str(attempt) + '.json')
+        expected = None
+        if marker.exists():
+            # Incluso una caída entre POST y registro impide despertar dos veces.
+            prior = private_read(marker)
+            if not retry_pending or prior['estado_envio'] not in {'pendiente_publicacion', 'pendiente_configuracion'}:
+                return dict(prior, repetido=True)
+            expected = prior['revision']  # Cambio de snapshot exige conciliación explícita.
+        pending = {'id': ident, 'intento': attempt, 'revision': expected, 'estado_envio': 'iniciando'}
+        def remember(row):
+            pending['revision'] = row['revision']
+            private_write(marker, pending)  # Snapshot válido; antes de publicar o POST.
+        try:
+            # Elegir/verificar el snapshot ocurre una sola vez bajo el lock de
+            # tarea de deliver; admite un intento terminado ya cerrado/anterior.
+            result = deliver(config, ident, expected_revision=expected, finished_attempt=attempt, on_snapshot=remember)
+        except Exception:
+            if marker.exists():
+                private_write(marker, dict(pending, estado_envio='requiere_conciliacion'))
+            raise
+        private_write(marker, dict(pending, **result))
+        return result
+
+
+def publish_review(config, ident, expected_revision):
+    """Recoger publica el veredicto para que Boss pueda leerlo sin shell libre."""
+    base = no_links(config['base'])
+    with locked(no_links(config['privado']) / 'retornos'), trabajo.locked(base, ident):
+        row = trabajo.read_task(base, ident)
+        trabajo.expected(row, expected_revision)
+        if not row.get('revision_independiente'):
+            raise Rejected('sin_revision_recogida')
+        trabajo.verify(base, row)
+        try:
+            commit = publish(config, row)
+        except Exception:
+            # El veredicto ya está guardado: un nuevo recoger puede publicarlo
+            # sin lanzar revisor ni bloquear toda la tarea por un fallo Git.
+            return {'estado_publicacion': 'pendiente_publicacion', 'revision': row['revision']}
+        return {'estado_publicacion': 'publicado', 'commit': commit}
 
 
 def configured(base, operation, ident, expected_revision=None):

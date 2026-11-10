@@ -100,9 +100,14 @@ def process_start(pid):
 
 def alive(session):
     # PID + arranque del proceso + boot id evitan confundir un PID reutilizado.
+    pairs = [('pid', 'pid_inicio')]
+    # Tras persistir el fin, el supervisor puede estar publicando el aviso; ya
+    # no mantiene viva la sesión de trabajo ni impide recoger su revisión.
+    if session.get('estado') not in {'finalizada', 'fallida', 'interrumpida', 'cerrada'}:
+        pairs.append(('supervisor_pid', 'supervisor_inicio'))
     return any(session.get(key) and session.get(start) and
                process_start(session[key]) == session[start]
-               for key, start in (('pid', 'pid_inicio'), ('supervisor_pid', 'supervisor_inicio')))
+               for key, start in pairs)
 
 
 def scan_log(path, offset=0):
@@ -487,6 +492,12 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
                        'Cotejá la entrega con cada criterio de aceptación y la evidencia.\n'
                        'Commit a revisar: ' + row['cierre']['commit'] + '\n'
                        'Comparar con commit base: ' + row['cierre']['commit_base'] + '\n'
+                       'Revisor asignado a este intento: ' + reviewer + '\n'
+                       'Registro canónico al preparar la revisión: ' + str(row['revision']) + '.\n'
+                       'El worktree está fijado al producto: su JSON histórico NO es el estado canónico actual.\n'
+                       'Sesiones anteriores (metadatos del coordinador): ' + json.dumps([
+                           {k: s.get(k) for k in ('intento', 'rol', 'responsable', 'session_id', 'estado')}
+                           for s in row.get('sesiones', [])]) + '\n'
                        'Resultado y comprobación declarados: ' + row['resultado'] + '\n' + row['comprobacion'] + '\n'
                        'Inventario de evidencia (no sustituye su lectura): ' + json.dumps(row['evidencias']) + '\n'
                        'Emití el veredicto JSON conforme al esquema; cambios si falta evidencia.\n')
@@ -551,6 +562,30 @@ def child_environment(session):
 
 
 def worker(base, ident, root, attempt):
+    completed = False
+    try:
+        code = _worker(base, ident, root, attempt)
+        completed = True
+        return code
+    finally:
+        # El aviso no modifica el exit code ni el veredicto de Codex. No es un
+        # watcher: ocurre aquí al salir del worker, fuera del lock del registro.
+        if completed:
+            try:
+                import harness_retorno
+                notice = harness_retorno.session_finished(base, root, ident, attempt)
+                event = ({'type': 'harness.aviso_fin', 'resultado': notice}
+                         if notice is not None else None)
+            except Exception:
+                event = {'type': 'harness.aviso_fin_pendiente', 'id': ident, 'intento': attempt}
+            if event is not None:
+                try:
+                    print(json.dumps(dict(event, fecha=trabajo.now())), flush=True)
+                except OSError:
+                    pass  # Un log cerrado no altera el resultado del worker.
+
+
+def _worker(base, ident, root, attempt):
     root, base = Path(root), Path(base).resolve()
     with registry_lock(root):
         row = trabajo.read_task(base, ident)
@@ -561,7 +596,7 @@ def worker(base, ident, root, attempt):
             validate_private_git(session, ident)
         codex = shutil.which('codex')
         if not codex:
-            session_update(root, base, ident, attempt, estado='fallida', rc=127)
+            session_update(root, base, ident, attempt, estado='fallida', rc=127, fin=trabajo.now())
             return 127
         try:
             with Path(session['briefing']).open('rb') as prompt, Path(session['log']).open('ab') as output, \
@@ -588,7 +623,7 @@ def worker(base, ident, root, attempt):
                     if gate_write is not None:
                         os.close(gate_write)
         except OSError:
-            session_update(root, base, ident, attempt, estado='fallida', rc=126)
+            session_update(root, base, ident, attempt, estado='fallida', rc=126, fin=trabajo.now())
             return 126
     last_sid = None
     while child.poll() is None:

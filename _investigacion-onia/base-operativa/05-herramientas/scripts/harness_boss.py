@@ -178,6 +178,8 @@ def invoke(config, value, row, grant):
     elif action == 'recoger':
         result = sessions.collect_review(base, ident, op, revision, retain_worktree=True)
         revision = result['tarea']['revision']
+        import harness_retorno
+        return harness_retorno.publish_review(config, ident, revision)
     if action in {'cerrar', 'notificar'}:
         import harness_retorno
         return harness_retorno.deliver(config, ident, expected_revision=revision, expected_binding=binding(row))

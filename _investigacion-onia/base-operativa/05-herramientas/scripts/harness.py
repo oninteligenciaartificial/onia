@@ -283,6 +283,9 @@ def main(argv=None):
     p.add_argument("--dry-run", action="store_true")
     p = commands.add_parser("notificar-boss", help="Publicar registro cerrado y enviar su aviso deduplicado a Boss.")
     p.add_argument("id")
+    p = commands.add_parser("notificar-fin-boss", help="Publicar aviso de un intento terminado o recuperar pendiente; nunca reenvía inciertos.")
+    p.add_argument("id")
+    p.add_argument("--intento", type=int, required=True)
     p = commands.add_parser("_ejecutar", help=argparse.SUPPRESS)
     p.add_argument("id")
     p.add_argument("--intento", type=int, required=True)
@@ -325,6 +328,10 @@ def main(argv=None):
         elif args.command == "notificar-boss":
             import harness_retorno
             result, code = harness_retorno.configured(args.base, args.operacion, args.id), 0
+        elif args.command == "notificar-fin-boss":
+            import harness_retorno
+            result, code = harness_retorno.session_finished(args.base.resolve(), args.operacion,
+                                                           args.id, args.intento, retry_pending=True), 0
         elif args.command == "asignar":
             result = trabajo.assign(args.base.resolve(), args.id, args.revision_esperada,
                                     args.responsable, args.ruta, actor=args.actor)

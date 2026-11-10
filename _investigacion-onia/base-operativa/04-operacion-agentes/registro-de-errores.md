@@ -523,3 +523,11 @@ El primer push de la comparación de transportes (f2b1564) fue rechazado con `fe
 - Evidencia: evento privado r8 preservado, acuse vinculado al snapshot 5a0769d, y CONCILIACION-R8-v1. La protección contra duplicados impidió que notificar reenviara por sí solo.
 - Corrección autorizada por Sergio: cotejar acuse/snapshot, conservar el evento incierto, registrar intención durable y reenviar exactamente una vez desde el VPS; resultado observado 200 y evento recibido_http. Verificación posterior no invocó otro POST. No relanzar ejecutora ni cambiar r8.
 - Prevención: cargar sólo la clave, no el encabezado; distinguir validación estructural de autenticación aceptada. Ante un envío incierto, revisar recepción y autorizar conciliación específica antes de repetir. Los nonces cacheados conservan respuestas históricas; no crean un estado nuevo del evento.
+
+
+## 10 noviembre 2026 — Revisión r14 y aviso de fin
+
+- Qué pasó: el revisor del piloto emitió cambios, aunque verificó el archivo correcto. Causa: el coordinador había adjuntado sólo el cierre; el worktree de producto conservaba el registro histórico r2 y faltaban acuse, prueba de duplicación y permiso. Evidencia: revisión-2-402790d0.json publicada en 67be8b7. Corrección: preservar el dictamen, completar evidencia en r15 y clarificar en el prompt revisión canónica, actor y sesiones. No inventar un bueno ni repetir la ejecutora.
+- El primer borrador del aviso podía perder el evento si cerrar/retomar ganaba la carrera, y bloqueaba recuperación aun sin POST. El revisor independiente lo detectó antes de instalar. Corrección: snapshot/validación en el mismo lock, buscar el intento terminado aunque ya esté cerrado, recuperación explícita sólo de pendientes sin envío y whitelist de aviso separada de lectura.
+- Primera regresión completa del aviso: dos tests fallaron porque el helper suponía que sesión finalizada implicaba salida física del supervisor. Con el callback, éste puede estar publicando. Se mantuvieron las aserciones de preservación/interrupción y se ajustó wait_finished para esperar ambos procesos cuando el ensayo necesita ausencia física. Se agregan pruebas separadas de la nueva semántica de alive.
+- Un parche no encontró el contexto y no se aplicó; se corrigió el fragmento y se reaplicó. Sin cambios parciales por ese intento.

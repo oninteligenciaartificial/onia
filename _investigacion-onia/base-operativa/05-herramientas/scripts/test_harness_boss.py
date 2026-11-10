@@ -60,6 +60,21 @@ class BridgeTests(unittest.TestCase):
         boss.private_write(self.root / 'webhook.json', {'url': 'https://example.invalid/hook',
                                                         'clave': 'test-secret-not-a-real-key'})
 
+    def finished_fixture(self, state='finalizada'):
+        # Sólo datos de runtime sintéticos; jamás llama a Codex ni al remoto real.
+        boss.sessions.launch(self.base, 'toy', self.op, 2, 'executor', approved=True, dry_run=True)
+        row = trabajo.read_task(self.base, 'toy')
+        def finish(current):
+            current['sesiones'][-1].update(dry_run=False, operacion=str(self.op), estado=state,
+                                          rc=0 if state == 'finalizada' else 1, fin=trabajo.now())
+            if state == 'fallida':
+                current['estado'] = 'en_espera'
+            return current
+        self.row = trabajo.mutate(self.base, 'toy', row['revision'], finish, actor='executor')
+        boss.private_write(self.root / 'config.json', dict(self.config, avisar_fin_sesion=True, avisos_fin_ids=['toy']))
+        self.secret()
+        return self.row
+
     def test_read_has_no_mutations_or_private_fields(self):
         files = list(self.base.rglob('*')) + list(self.root.rglob('*'))
         before = {str(p): p.read_bytes() for p in files if p.is_file()}
@@ -258,6 +273,147 @@ class BridgeTests(unittest.TestCase):
         with patch.object(boss.sessions, 'launch') as launch, self.assertRaisesRegex(boss.Rejected, 'puente_pausado'):
             boss.handle(self.config, self.req(), config_path=config_path)
         launch.assert_not_called()
+
+    def test_finished_session_publishes_without_close_once_per_attempt(self):
+        self.finished_fixture()
+        sender = Mock(return_value=True)
+        original = retorno.deliver
+        def send(*args, **kwargs):
+            return original(*args, sender=sender, **kwargs)
+        with patch.object(retorno, 'deliver', side_effect=send):
+            result = retorno.session_finished(self.base, self.op, 'toy', 1)
+            self.assertEqual(result['estado_envio'], 'recibido_http')
+            self.assertEqual(sender.call_args.args[1]['estado'], 'en_curso')
+            row = trabajo.read_task(self.base, 'toy')
+            trabajo.mutate(self.base, 'toy', row['revision'], lambda x:dict(x, resultado='otra nota'), actor='executor')
+            again = retorno.session_finished(self.base, self.op, 'toy', 1)
+            self.assertTrue(again['repetido'])
+        self.assertEqual(sender.call_count, 1)
+
+    def test_failed_session_notifies_without_claiming_close(self):
+        self.finished_fixture('fallida')
+        sender = Mock(return_value=True)
+        result = retorno.deliver(self.config, 'toy', sender=sender, finished_attempt=1)
+        self.assertEqual(result['estado_envio'], 'recibido_http')
+        self.assertEqual(sender.call_args.args[1]['estado'], 'en_espera')
+        self.assertIsNone(trabajo.read_task(self.base, 'toy').get('cierre'))
+
+    def test_terminal_supervisor_does_not_keep_finished_session_alive(self):
+        data = {'pid':12, 'pid_inicio':'child', 'supervisor_pid':13, 'supervisor_inicio':'supervisor'}
+        with patch.object(boss.sessions, 'process_start', side_effect=lambda p:'supervisor' if p==13 else None):
+            self.assertFalse(boss.sessions.alive(dict(data, estado='finalizada')))
+            self.assertTrue(boss.sessions.alive(dict(data, estado='ejecutando')))
+        with patch.object(boss.sessions, 'process_start', return_value='child'):
+            self.assertTrue(boss.sessions.alive(dict(data, estado='finalizada')))
+
+    def test_finishing_callback_is_opt_in_and_rejects_live_or_dry(self):
+        self.finished_fixture()
+        boss.private_write(self.root / 'config.json', self.config)
+        with patch.object(retorno, 'deliver') as send:
+            self.assertIsNone(retorno.session_finished(self.base, self.op, 'toy', 1))
+            send.assert_not_called()
+        for patch_values in [{'dry_run':True}, {'estado':'ejecutando'}, {'fin':None}]:
+            row = json.loads(json.dumps(self.row)); row['sesiones'][-1].update(patch_values)
+            with self.assertRaises(boss.Rejected):retorno.terminal_session(row, 1, self.op)
+
+    def test_finishing_callback_preserves_uncertain_attempt(self):
+        self.finished_fixture()
+        def interrupted(*args, **kwargs):
+            kwargs['on_snapshot'](self.row)
+            raise RuntimeError('private')
+        with patch.object(retorno, 'deliver', side_effect=interrupted) as send:
+            with self.assertRaises(RuntimeError):retorno.session_finished(self.base, self.op, 'toy', 1)
+            again = retorno.session_finished(self.base, self.op, 'toy', 1)
+            self.assertEqual(again['estado_envio'], 'requiere_conciliacion')
+            self.assertEqual(send.call_count, 1)
+
+    def test_finish_after_close_and_after_next_attempt_still_notifies(self):
+        self.finished_fixture()
+        row = trabajo.read_task(self.base, 'toy')
+        def advance(current):
+            current['sesiones'][0]['estado'] = 'cerrada'
+            following = json.loads(json.dumps(current['sesiones'][0]))
+            following.update(intento=2, estado='iniciando', fin=None)
+            current['sesiones'].append(following)
+            return current
+        trabajo.mutate(self.base, 'toy', row['revision'], advance, actor='executor')
+        sender = Mock(return_value=True); original = retorno.deliver
+        with patch.object(retorno, 'deliver', side_effect=lambda *a,**k: original(*a,sender=sender,**k)):
+            result = retorno.session_finished(self.base, self.op, 'toy', 1)
+        self.assertEqual(result['estado_envio'], 'recibido_http')
+        self.assertEqual(sender.call_count, 1)
+
+    def test_pending_publication_recovery_is_explicit(self):
+        self.finished_fixture()
+        with patch.object(retorno, 'publish', side_effect=ValueError('Git')):
+            first = retorno.session_finished(self.base, self.op, 'toy', 1)
+        self.assertEqual(first['estado_envio'], 'pendiente_publicacion')
+        with patch.object(retorno, 'deliver') as sender:
+            self.assertTrue(retorno.session_finished(self.base, self.op, 'toy', 1)['repetido'])
+            sender.assert_not_called()
+        original = retorno.deliver; sender = Mock(return_value=True)
+        with patch.object(retorno, 'deliver', side_effect=lambda *a,**k:original(*a,sender=sender,**k)):
+            final = retorno.session_finished(self.base, self.op, 'toy', 1, retry_pending=True)
+        self.assertEqual(final['estado_envio'], 'recibido_http');self.assertEqual(sender.call_count,1)
+
+    def test_pending_configuration_can_retry_but_uncertain_cannot(self):
+        self.finished_fixture()
+        secret = self.root/'webhook.json'; secret.rename(self.root/'webhook.guardado.json')
+        first = retorno.session_finished(self.base, self.op, 'toy', 1)
+        self.assertEqual(first['estado_envio'], 'pendiente_configuracion')
+        self.secret();original = retorno.deliver;sender=Mock(side_effect=TimeoutError)
+        with patch.object(retorno, 'deliver', side_effect=lambda *a,**k:original(*a,sender=sender,**k)):
+            second=retorno.session_finished(self.base,self.op,'toy',1,retry_pending=True)
+            third=retorno.session_finished(self.base,self.op,'toy',1,retry_pending=True)
+        self.assertEqual(second['estado_envio'],'incierto');self.assertTrue(third['repetido'])
+        self.assertEqual(sender.call_count,1)
+
+    def test_live_attempt_does_not_poison_future_notification(self):
+        self.finished_fixture()
+        row=trabajo.read_task(self.base,'toy')
+        def live(current):
+            current['sesiones'][0]['estado']='ejecutando'
+            return current
+        trabajo.mutate(self.base,'toy',row['revision'],live,actor='executor')
+        with self.assertRaises(boss.Rejected):retorno.session_finished(self.base,self.op,'toy',1)
+        self.assertFalse((self.root/'fines/toy-i1.json').exists())
+
+    def test_worker_reject_does_not_notify_and_broken_log_preserves_exit(self):
+        with patch.object(boss.sessions,'_worker',side_effect=ValueError('not authorized')),patch.object(retorno,'session_finished') as notify:
+            with self.assertRaises(ValueError):boss.sessions.worker(self.base,'toy',self.op,1)
+            notify.assert_not_called()
+        with patch.object(boss.sessions,'_worker',return_value=7),patch.object(retorno,'session_finished',return_value={'estado_envio':'incierto'}),patch('builtins.print',side_effect=BrokenPipeError):
+            self.assertEqual(boss.sessions.worker(self.base,'toy',self.op,1),7)
+
+    def test_worker_finally_calls_callback_and_preserves_result(self):
+        with patch.object(boss.sessions, '_worker', return_value=126), patch.object(retorno, 'session_finished', return_value=None) as notify:
+            self.assertEqual(boss.sessions.worker(self.base, 'toy', self.op, 1), 126)
+            notify.assert_called_once_with(self.base, self.op, 'toy', 1)
+        with patch.object(boss.sessions, '_worker', return_value=0), patch.object(retorno, 'session_finished', side_effect=RuntimeError('secret')), patch('builtins.print') as output:
+            self.assertEqual(boss.sessions.worker(self.base, 'toy', self.op, 1), 0)
+            self.assertNotIn('secret', str(output.call_args))
+
+    def test_manual_publication_can_advance_transport_marker(self):
+        self.close_fixture(); retorno.publish(self.config, self.row)
+        self.fixture.git('add', '.')
+        self.fixture.git('commit', '-m', 'publicación manual del mismo registro')
+        # Sólo el registro local; integrar sin sobrescribir el snapshot publicado.
+        self.fixture.git('merge', '--no-edit', 'origin/master')
+        self.fixture.git('push', 'origin', 'master')
+        row = trabajo.read_task(self.base, 'toy')
+        new = trabajo.mutate(self.base, 'toy', row['revision'], lambda d:dict(d, resultado='avance manual'), actor='executor')
+        self.fixture.git('add', '.'); self.fixture.git('commit', '-m', 'avance manual'); self.fixture.git('push', 'origin', 'master')
+        final = trabajo.mutate(self.base, 'toy', new['revision'], lambda d:dict(d, resultado='siguiente aviso'), actor='executor')
+        self.assertTrue(retorno.publish(self.config, final))
+
+    def test_review_publication_failure_keeps_verdict_retryable(self):
+        row=self.close_fixture()
+        row=trabajo.mutate(self.base,'toy',row['revision'],lambda d:dict(d,
+            revision_independiente={'veredicto':'bueno','evidencia':d['evidencias'][0]}),actor='executor')
+        with patch.object(retorno,'publish',side_effect=ValueError('Git no disponible')):
+            result=retorno.publish_review(self.config,'toy',row['revision'])
+        self.assertEqual(result,{'estado_publicacion':'pendiente_publicacion','revision':row['revision']})
+        self.assertEqual(trabajo.read_task(self.base,'toy')['revision_independiente'],row['revision_independiente'])
 
 
 if __name__ == '__main__':
