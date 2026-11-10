@@ -1,4 +1,4 @@
-# Registro delegado: analisis-redes-funnels-20261110
+# Registro delegado: fabrica-automatizaciones-redes-funnels-20261110
 
 10 noviembre 2026, 16:10 La Paz. Autorización: Sergio pidió (16:08) «un análisis completo de todas las redes sociales, cómo lo podemos armar, los funnel, las comunidades, con los referentes y el cerebro que ya teníamos… mandalo a la sesión de Codex». Es análisis y diseño; no habilita activar n8n, enviar, publicar ni gastar.
 
@@ -6,7 +6,7 @@ Fuentes: [decisiones vigentes](../../05-herramientas/fabrica-onia/DECISIONES-SER
 
 ```onia-pedido-v1
 {
-  "id": "analisis-redes-funnels-20261110",
+  "id": "fabrica-automatizaciones-redes-funnels-20261110",
   "fabrica": "automatizaciones",
   "esfuerzo": "high",
   "objetivo": "Análisis completo para OnIA de redes sociales (Instagram, Facebook, TikTok, YouTube, X, WhatsApp), funnels y comunidades, reutilizando el cerebro y los referentes aceptados. Integrar las decisiones de Sergio del 10nov 16:08: la automatización responde la palabra clave del guion en comentarios y DMs; VIP es llamada privada sobre el caso; cero devoluciones; soporte por grupos de WhatsApp privados o públicos más comunidad pública, como flujo constante para recompra (otro workshop, comunidad u otra oferta).",
