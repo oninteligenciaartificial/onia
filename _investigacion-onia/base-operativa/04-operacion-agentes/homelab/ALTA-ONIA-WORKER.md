@@ -88,3 +88,8 @@ El modelo editorial vive exclusivamente en [ONE-MAN-COMPANY-FABRICA-CONTENIDO-20
 ASR y FFmpeg no se ejecutaron en este encargo. La red dentro del worker está cerrada: modelos y archivos tendrán que estar disponibles mediante transferencia autorizada antes del primer trabajo; no descargar pesos a ciegas ni copiar cuentas. No hay scheduler.
 
 Fuentes técnicas primarias: [Bubblewrap](https://raw.githubusercontent.com/containers/bubblewrap/main/bwrap.xml), [OpenSSH](https://man.openbsd.org/sshd.8), [libseccomp](https://raw.githubusercontent.com/seccomp/libseccomp/main/include/seccomp.h.in), [formato PE](https://learn.microsoft.com/en-us/windows/win32/debug/pe-format), [Tailscale Serve](https://tailscale.com/docs/reference/tailscale-cli/serve). Las pruebas acotan el resultado; no prueban aislamiento absoluto ante vulnerabilidades del kernel o cambios administrativos posteriores.
+
+
+## Retoma tras el corte del 10 noviembre
+
+Para la cuenta parcialmente creada del informe ALTA-DETENIDA, usar [RETOMA-REVISADA-20261110](RETOMA-REVISADA-20261110.md): nuevo hash, validación de sudo-rs y `--resume-backup` explícito. El bloque anterior se conserva como antecedente de alta inicial y no debe repetirse sobre la cuenta existente.

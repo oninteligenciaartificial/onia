@@ -541,3 +541,10 @@ Una consulta auxiliar de sólo lectura pasó una tupla `(base, tarea)` a `alive`
 ### 2026-11-10 — filtrar metadatos al consultar GitHub
 
 Al contrastar la propuesta de Boss se volcó una respuesta de listado completa del conector. Incluía URLs temporales de descarga autenticada y excedió el presupuesto de salida. No se copian aquí esas URLs ni sus parámetros. Causa: serializar la respuesta completa en lugar de seleccionar campos. Corrección comprobada: procesar el listado en memoria y emitir sólo nombres y existencia de los tres IDs; los tres no estaban registrados en master. Prevención: salida por lista explícita de campos permitidos; excluir download_url, parámetros de autenticación y metadatos sin filtrar. No se modificaron permisos, tareas ni servicios en esta comprobación.
+
+
+### 2026-11-10 — preparación de delegación y retoma homelab
+
+- ASR: comprobar el venv histórico en /opt devolvió PermissionError; no se intentó ampliar permisos. Se recuperó asr-local/README: ~/asr/venv sí tiene faster-whisper1.2.1 y modelo small descargado. Prevención: usar el runtime vigente accesible, no el contenedor histórico.
+- Instalador: el primer parche colocó los helpers dentro del string WRAPPER por coincidir con un def main interno; tres tests fallaron por atributo ausente. Se movieron al módulo exterior, suite12 sin fallos (1integración omitida) y comparación AST confirmó wrapper intacto. Prevención: anclar al main del instalador y comprobar el código generado.
+- Revisión homelab: faltaba excluir otros usuarios con GID1001, alias de grupo y ausencia de sudo en retoma. Corregidos con casos adversos, revisor distinto dio bueno para intento local.

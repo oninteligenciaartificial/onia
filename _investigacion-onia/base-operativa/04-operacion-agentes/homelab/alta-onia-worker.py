@@ -12,6 +12,7 @@ import json
 import os
 from pathlib import Path
 import pwd
+import grp
 import shlex
 import shutil
 import socket
@@ -377,9 +378,56 @@ def check_effective():
     if values.get('acceptenv') or values.get('setenv'):
         raise RuntimeError('No se acepta entorno externo en el SSH worker')
 
+def sudo_policy_denied(policy, hostname):
+    # sudo clásico y sudo-rs difieren en rc. Una frase exacta de denegación
+    # sin líneas adicionales es obligatoria; rc=0 solo nunca acredita seguridad.
+    expected = f'User {USER} is not allowed to run sudo on {hostname}.'
+    return (policy.returncode in (0, 1) and
+            (policy.stdout + policy.stderr).strip() == expected)
+
+
+def validate_closed_account(account, backup):
+    """Sólo retoma el corte documentado previo a crear ROOT/llaves/servicio."""
+    if (account.pw_uid != 1001 or account.pw_gid != 1001 or
+            account.pw_dir != str(ROOT/'login') or
+            account.pw_shell != '/usr/sbin/nologin' or
+            os.getgrouplist(USER, account.pw_gid) != [account.pw_gid]):
+        raise RuntimeError('Cuenta previa distinta del intento cerrado revisado; no retomar')
+    group = grp.getgrnam(USER)
+    if group.gr_gid != account.pw_gid or group.gr_mem:
+        raise RuntimeError('Grupo previo no exclusivo; no retomar')
+    if any(a.pw_name != USER and (a.pw_uid == account.pw_uid or a.pw_gid == account.pw_gid)
+           for a in pwd.getpwall()):
+        raise RuntimeError('UID o grupo primario compartido; no retomar')
+    if any(g.gr_name != USER and g.gr_gid == account.pw_gid for g in grp.getgrall()):
+        raise RuntimeError('Alias de grupo compartido; no retomar')
+    if not os.access('/usr/bin/sudo', os.X_OK):
+        raise RuntimeError('Falta sudo observado en el intento previo; no retomar')
+    entries = [line.split(':') for line in Path('/etc/shadow').read_text().splitlines()
+               if line.split(':', 1)[0] == USER]
+    if len(entries) != 1 or entries[0][1] != '*':
+        raise RuntimeError('Password previa no coincide con cuenta cerrada; no retomar')
+    backup = Path(backup)
+    if (backup.parent != Path('/root') or not backup.name.startswith('onia-worker-originales-')
+            or any(p.is_symlink() for p in (backup, *backup.parents))):
+        raise RuntimeError('Respaldo de retoma inválido')
+    info = backup.stat()
+    if not stat.S_ISDIR(info.st_mode) or info.st_uid != 0 or info.st_mode & 0o077:
+        raise RuntimeError('Respaldo no privado de root')
+    for name in ('passwd', 'group', 'shadow', 'gshadow'):
+        original = backup/name
+        info = original.lstat()
+        if not stat.S_ISREG(info.st_mode) or info.st_uid != 0 or info.st_mode & 0o022:
+            raise RuntimeError('Original de respaldo no seguro')
+        if any(line.split(':', 1)[0] == USER for line in original.read_text().splitlines()):
+            raise RuntimeError('La cuenta ya existía antes del intento; no retomar')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--apply', action='store_true', help='Sergio ejecuta localmente como root en la PC autorizada')
+    parser.add_argument('--resume-backup', type=Path,
+                        help='Retoma sólo la cuenta cerrada uid/gid1001; respaldo original privado en /root')
     args = parser.parse_args()
     if not args.apply:
         print('Preparado; no aplicado. Requiere --apply local como root en DESKTOP-0GGGNMF/Ubuntu.')
@@ -393,9 +441,14 @@ def main():
         raise RuntimeError('Huella host distinta: detener y verificar, no aceptar automáticamente')
     for binary in ('/usr/bin/bwrap','/usr/bin/python3','/usr/bin/setpriv','/usr/sbin/sshd','/usr/sbin/useradd','/usr/sbin/usermod'):
         if not os.access(binary, os.X_OK): raise RuntimeError('Falta dependencia: ' + binary)
-    try: pwd.getpwnam(USER)
-    except KeyError: pass
-    else: raise RuntimeError('onia-worker ya existe; conservar y revisar antes de modificarlo')
+    try: existing = pwd.getpwnam(USER)
+    except KeyError: existing = None
+    if existing:
+        if args.resume_backup is None:
+            raise RuntimeError('onia-worker ya existe; conservar y revisar antes de modificarlo')
+        validate_closed_account(existing, args.resume_backup)
+    elif args.resume_backup is not None:
+        raise RuntimeError('Retoma solicitada sin cuenta previa; detener')
     os.umask(0o022)
     for path in (ROOT, SHELL, KEY_DIR, UNIT, RUNTIME):
         if os.path.lexists(path): raise RuntimeError('Ruta existente; no sobrescribir: ' + str(path))
@@ -416,8 +469,9 @@ def main():
     for original in ('/etc/passwd','/etc/group','/etc/shadow','/etc/gshadow','/etc/ssh/sshd_config'):
         if Path(original).exists(): shutil.copy2(original,backup/Path(original).name)
     # Until ALL local checks pass the account has no key and a nologin shell.
-    run(['/usr/sbin/useradd','--no-create-home','--user-group','--home-dir',str(ROOT/'login'),
-         '--shell','/usr/sbin/nologin','--password','*',USER])
+    if existing is None:
+        run(['/usr/sbin/useradd','--no-create-home','--user-group','--home-dir',str(ROOT/'login'),
+             '--shell','/usr/sbin/nologin','--password','*',USER])
     account = pwd.getpwnam(USER)
     groups = os.getgrouplist(USER,account.pw_gid)
     if groups != [account.pw_gid]: raise RuntimeError('Worker con grupos suplementarios; no habilitar')
@@ -425,7 +479,7 @@ def main():
         # Root's local policy query only; never executes a sudo command as worker.
         policy=subprocess.run(['/usr/bin/sudo','-n','-l','-U',USER],capture_output=True,text=True,
                               env={'PATH':'/usr/sbin:/usr/bin:/sbin:/bin','LC_ALL':'C'})
-        if policy.returncode != 1 or 'not allowed to run sudo' not in (policy.stdout+policy.stderr):
+        if not sudo_policy_denied(policy, socket.gethostname()):
             raise RuntimeError('Política sudo del worker requiere revisión; no habilitar')
     ROOT.mkdir(mode=0o755)
     for name in ('login','work','etc'):

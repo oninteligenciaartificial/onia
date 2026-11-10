@@ -6,6 +6,8 @@ import shlex
 import subprocess
 import tempfile
 import unittest
+import stat
+from types import SimpleNamespace
 from unittest.mock import patch
 
 SOURCE = Path(__file__).with_name('alta-onia-worker.py')
@@ -15,6 +17,55 @@ spec.loader.exec_module(alta)
 
 
 class BootstrapSafety(unittest.TestCase):
+    def test_sudo_classic_and_rs_exact_denial(self):
+        message = 'User onia-worker is not allowed to run sudo on DESKTOP-0GGGNMF.\n'
+        for code in (0, 1):
+            for stdout, stderr in ((message, ''), ('', message)):
+                self.assertTrue(alta.sudo_policy_denied(SimpleNamespace(
+                    returncode=code, stdout=stdout, stderr=stderr), 'DESKTOP-0GGGNMF'))
+
+    def test_sudo_denial_rejects_grants_errors_and_other_identity(self):
+        denial = 'User onia-worker is not allowed to run sudo on DESKTOP-0GGGNMF.'
+        for text, code in [(denial, 2), ('', 0), ('parse error', 1),
+                           (denial+'\n(ALL) ALL', 0), (denial.replace('onia-worker', 'otro'), 0),
+                           (denial.replace('DESKTOP-0GGGNMF', 'otro'), 1),
+                           ('User onia-worker may run the following commands: (ALL) ALL', 0)]:
+            self.assertFalse(alta.sudo_policy_denied(SimpleNamespace(
+                returncode=code, stdout=text, stderr=''), 'DESKTOP-0GGGNMF'))
+
+    def test_resume_closed_account_and_reject_any_changed_identity(self):
+        account = SimpleNamespace(pw_uid=1001, pw_gid=1001, pw_name=alta.USER,
+            pw_dir=str(alta.ROOT/'login'), pw_shell='/usr/sbin/nologin')
+        def data(path, *args, **kwargs):
+            return 'onia-worker:*:1:0:99999:7:::\n' if str(path)=='/etc/shadow' else 'root:x:0:0:root:/root:/bin/bash\n'
+        def info(path, *args, **kwargs):
+            return SimpleNamespace(st_uid=0, st_mode=(stat.S_IFDIR|0o700) if path.name.startswith('onia-worker-originales-') else (stat.S_IFREG|0o600))
+        with patch.object(alta.os, 'getgrouplist', return_value=[1001]), \
+             patch.object(alta.grp, 'getgrnam', return_value=SimpleNamespace(gr_gid=1001, gr_mem=[])), \
+             patch.object(alta.grp, 'getgrall', return_value=[SimpleNamespace(gr_name=alta.USER,gr_gid=1001)]), \
+             patch.object(alta.os, 'access', return_value=True), \
+             patch.object(alta.pwd, 'getpwall', return_value=[account]), \
+             patch.object(Path, 'read_text', data), patch.object(Path, 'stat', info), \
+             patch.object(Path, 'lstat', info):
+            alta.validate_closed_account(account, '/root/onia-worker-originales-test')
+            for changes in ({'pw_uid':0}, {'pw_gid':27}, {'pw_shell':'/bin/bash'}, {'pw_dir':'/home/otro'}):
+                with self.subTest(changes=changes), self.assertRaises(RuntimeError):
+                    alta.validate_closed_account(SimpleNamespace(**(vars(account)|changes)), '/root/onia-worker-originales-test')
+            with patch.object(alta.os,'getgrouplist',return_value=[1001,27]), self.assertRaises(RuntimeError):
+                alta.validate_closed_account(account,'/root/onia-worker-originales-test')
+            with patch.object(Path,'read_text',return_value='onia-worker:!hash:1:0:99999:7:::\n'), self.assertRaises(RuntimeError):
+                alta.validate_closed_account(account,'/root/onia-worker-originales-test')
+            with self.assertRaises(RuntimeError):
+                alta.validate_closed_account(account,'/tmp/onia-worker-originales-test')
+            with patch.object(Path,'is_symlink',return_value=True), self.assertRaises(RuntimeError):
+                alta.validate_closed_account(account,'/root/onia-worker-originales-test')
+            with patch.object(alta.pwd,'getpwall',return_value=[account,SimpleNamespace(pw_name='otro',pw_uid=1002,pw_gid=1001)]), self.assertRaises(RuntimeError):
+                alta.validate_closed_account(account,'/root/onia-worker-originales-test')
+            with patch.object(alta.grp,'getgrall',return_value=[SimpleNamespace(gr_name='alias',gr_gid=1001)]), self.assertRaises(RuntimeError):
+                alta.validate_closed_account(account,'/root/onia-worker-originales-test')
+            with patch.object(alta.os,'access',return_value=False), self.assertRaises(RuntimeError):
+                alta.validate_closed_account(account,'/root/onia-worker-originales-test')
+
     def test_default_never_applies(self):
         result = subprocess.run(['python3', str(SOURCE)], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0)
