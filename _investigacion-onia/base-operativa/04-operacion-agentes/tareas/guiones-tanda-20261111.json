@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "id": "guiones-tanda-20261111",
-  "revision": 3,
+  "revision": 8,
   "compartible": true,
   "objetivo": "Preparar cinco borradores grabables para la tanda del11nov y la venta orgánica del workshop, usando la investigación ya aceptada.",
-  "estado": "preparado",
-  "proximo_paso": "Boss consulta revisión y lanza dentro del permiso; revisión distinta antes de aceptar.",
+  "estado": "en_curso",
+  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
   "resultado": "Pedido delegado registrado; sin lanzar.",
   "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
   "verificacion": "pendiente",
@@ -16,7 +16,7 @@
       "bytes": 2218
     }
   ],
-  "actualizado": "2026-11-10T18:06:27.263648+00:00",
+  "actualizado": "2026-11-10T19:14:53.787515+00:00",
   "historial": [
     {
       "revision": 1,
@@ -69,6 +69,338 @@
         "revision_base": 1,
         "fecha": "2026-11-10T18:06:27.247377+00:00"
       }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-10T18:06:27.263648+00:00",
+      "estado": "preparado",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-20261111/PEDIDO-v1.md",
+          "sha256": "13c645f34d2b8a27f50e027b23462a59ad60c8d73965738f2efc4f2c7f0770ed",
+          "bytes": 2218
+        }
+      ],
+      "proximo_paso": "Boss consulta revisión y lanza dentro del permiso; revisión distinta antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "cambio-acotado",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-guiones-tanda-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T18:06:27.247377+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-10T19:11:18.742722+00:00",
+      "estado": "en_curso",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-20261111/PEDIDO-v1.md",
+          "sha256": "13c645f34d2b8a27f50e027b23462a59ad60c8d73965738f2efc4f2c7f0770ed",
+          "bytes": 2218
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "cambio-acotado",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-guiones-tanda-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T18:06:27.247377+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-guiones-tanda-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-guiones-tanda-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "66818ec66e396b53773bfe4a89e88df6ca9822f6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.1.briefing.txt",
+          "inicio": "2026-11-10T19:11:18.663830+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-20261111.git/worktrees/onia-ws-guiones-tanda-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-10T19:11:18.915612+00:00",
+      "estado": "en_curso",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-20261111/PEDIDO-v1.md",
+          "sha256": "13c645f34d2b8a27f50e027b23462a59ad60c8d73965738f2efc4f2c7f0770ed",
+          "bytes": 2218
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "cambio-acotado",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-guiones-tanda-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T18:06:27.247377+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-guiones-tanda-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 3310223,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:207709423",
+          "rama": "codex/ws-guiones-tanda-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "66818ec66e396b53773bfe4a89e88df6ca9822f6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.1.briefing.txt",
+          "inicio": "2026-11-10T19:11:18.663830+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-20261111.git/worktrees/onia-ws-guiones-tanda-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-10T19:11:19.274162+00:00",
+      "estado": "en_curso",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-20261111/PEDIDO-v1.md",
+          "sha256": "13c645f34d2b8a27f50e027b23462a59ad60c8d73965738f2efc4f2c7f0770ed",
+          "bytes": 2218
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "cambio-acotado",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-guiones-tanda-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T18:06:27.247377+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-guiones-tanda-20261111",
+          "pid": 3310235,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:207709458",
+          "supervisor_pid": 3310223,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:207709423",
+          "rama": "codex/ws-guiones-tanda-20261111",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "66818ec66e396b53773bfe4a89e88df6ca9822f6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.1.briefing.txt",
+          "inicio": "2026-11-10T19:11:18.663830+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-20261111.git/worktrees/onia-ws-guiones-tanda-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-10T19:11:21.196005+00:00",
+      "estado": "en_curso",
+      "resultado": "Pedido delegado registrado; sin lanzar.",
+      "comprobacion": "Ficha cotejada con master; copia de evidencia inmutable.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-20261111/PEDIDO-v1.md",
+          "sha256": "13c645f34d2b8a27f50e027b23462a59ad60c8d73965738f2efc4f2c7f0770ed",
+          "bytes": 2218
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "cambio-acotado",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Cambio de código acotado, interfaz o lectura visual con comprobación concreta.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "boss-guiones-tanda-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T18:06:27.247377+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "boss-guiones-tanda-20261111",
+          "pid": 3310235,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:207709458",
+          "supervisor_pid": 3310223,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:207709423",
+          "rama": "codex/ws-guiones-tanda-20261111",
+          "session_id": "01a1c6df-3871-7540-87ad-1af45a1b12ff",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "66818ec66e396b53773bfe4a89e88df6ca9822f6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.1.briefing.txt",
+          "inicio": "2026-11-10T19:11:18.663830+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-20261111.git/worktrees/onia-ws-guiones-tanda-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -96,5 +428,44 @@
     ],
     "revision_base": 1,
     "fecha": "2026-11-10T18:06:27.247377+00:00"
-  }
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "boss-guiones-tanda-20261111",
+      "pid": 3310235,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:207709458",
+      "supervisor_pid": 3310223,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:207709423",
+      "rama": "codex/ws-guiones-tanda-20261111",
+      "session_id": "01a1c6df-3871-7540-87ad-1af45a1b12ff",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.jsonl",
+      "log_rel": "logs/guiones-tanda-20261111.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-20261111",
+      "rutas": [
+        "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111"
+      ],
+      "dry_run": false,
+      "commit_base": "66818ec66e396b53773bfe4a89e88df6ca9822f6",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-20261111.1.briefing.txt",
+      "inicio": "2026-11-10T19:11:18.663830+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-20261111.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-20261111.git/worktrees/onia-ws-guiones-tanda-20261111",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-10T19:14:53.773043+00:00"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": null
 }
