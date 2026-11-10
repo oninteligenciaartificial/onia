@@ -1,0 +1,144 @@
+{
+  "id": "flujo-boss-codex-v2-20261109",
+  "fecha": "2026-11-10T00:20:27.767867+00:00",
+  "sesiones": [
+    {
+      "session_id": "01a1c2c6-0d71-7ab0-8733-e445173f6713",
+      "runtime": {
+        "fecha": "2026-11-10T00:05:24.204Z",
+        "modelo": "gpt-6.1-sol",
+        "esfuerzo": "low"
+      },
+      "cuota_inicio": {
+        "fecha": "2026-11-10T00:05:30.652Z",
+        "used_percent": 70.0,
+        "saldo_extra": "0"
+      },
+      "cuota_final": {
+        "fecha": "2026-11-10T00:07:24.622Z",
+        "used_percent": 70.0,
+        "saldo_extra": "0"
+      },
+      "nota_cuota": "Contador compartido; el delta no atribuye consumo individual ni USD.",
+      "id": "flujo-boss-codex-v2-20261109",
+      "rol": "ejecutor",
+      "responsable": "codex",
+      "intento_harness": 1,
+      "subagentes_maximos": 0,
+      "resultado": "aceptada",
+      "rc": 0,
+      "retrabajo": true,
+      "intentos_rol": 1,
+      "commits": [
+        "14c36cfe8a273448b0a7cf64b10907b5023be590"
+      ],
+      "nota": "Una ejecución; coordinación añadió bloques/evidencia después de finalizar. Aceptación final después de corregir la publicación de enlaces; sin reanudar ejecutora."
+    },
+    {
+      "session_id": "01a1c2cc-9e9b-78d0-ba21-c249a6be8807",
+      "runtime": {
+        "fecha": "2026-11-10T00:12:34.286Z",
+        "modelo": "gpt-6.1-sol",
+        "esfuerzo": "low"
+      },
+      "cuota_inicio": {
+        "fecha": "2026-11-10T00:12:38.734Z",
+        "used_percent": 70.0,
+        "saldo_extra": "0"
+      },
+      "cuota_final": {
+        "fecha": "2026-11-10T00:13:07.433Z",
+        "used_percent": 70.0,
+        "saldo_extra": "0"
+      },
+      "nota_cuota": "Contador compartido; el delta no atribuye consumo individual ni USD.",
+      "id": "flujo-boss-codex-v2-20261109",
+      "rol": "revisor",
+      "responsable": "revisor-flujo-boss-codex-v2",
+      "intento_harness": 2,
+      "subagentes_maximos": 0,
+      "resultado": "rechazada",
+      "rc": 0,
+      "retrabajo": true,
+      "intentos_rol": 2,
+      "commits": [
+        "03e7f89af6e034f82db6c77330c61a58fe2cae4a"
+      ],
+      "veredicto": {
+        "veredicto": "cambios",
+        "commit": "03e7f89af6e034f82db6c77330c61a58fe2cae4a",
+        "criterio": "El flujo respeta roles y permisos; HECHO identifica incoherencias y el diff sólo toca las rutas asignadas, sin errores de whitespace. Falta disponibilidad de evidencia en la entrega: los enlaces PROPUESTA-DRY-RUN.md e INVENTARIO-v1.json apuntan a archivos ausentes del commit. El contenido recibido por stdin permite revisarlos, pero no resuelve los enlaces publicados. El coordinador debe publicar esos artefactos saneados y someter la entrega resultante a revisión."
+      }
+    },
+    {
+      "session_id": "01a1c2d2-1933-7132-80cc-edb891cba3d7",
+      "runtime": {
+        "fecha": "2026-11-10T00:18:32.833Z",
+        "modelo": "gpt-6.1-sol",
+        "esfuerzo": "low"
+      },
+      "cuota_inicio": {
+        "fecha": "2026-11-10T00:18:37.588Z",
+        "used_percent": 71.0,
+        "saldo_extra": "0"
+      },
+      "cuota_final": {
+        "fecha": "2026-11-10T00:19:08.767Z",
+        "used_percent": 71.0,
+        "saldo_extra": "0"
+      },
+      "nota_cuota": "Contador compartido; el delta no atribuye consumo individual ni USD.",
+      "id": "flujo-boss-codex-v2-20261109",
+      "rol": "revisor",
+      "responsable": "revisor-flujo-boss-codex-v2",
+      "intento_harness": 3,
+      "subagentes_maximos": 0,
+      "resultado": "aceptada",
+      "rc": 0,
+      "retrabajo": true,
+      "intentos_rol": 2,
+      "commits": [
+        "015a9cfd9a665746a7c6c44ef0412c82b1311573"
+      ],
+      "veredicto": {
+        "veredicto": "bueno",
+        "commit": "015a9cfd9a665746a7c6c44ef0412c82b1311573",
+        "criterio": "Flujo y permisos preservados. HECHO cumple 10 líneas, identifica incoherencias y documenta la fricción dry-run con propuesta enlazada. Evidencias disponibles y hashes coincidentes. Diff dentro de rutas asignadas, sin secretos ni IPs añadidos. bash -n y diff --check pasan. Las 130 pruebas constan en el recibo ejecutor (129 aprobadas, 1 omitida), sin repetición en esta revisión de sólo lectura."
+      }
+    }
+  ],
+  "coordinador": {
+    "session_id": "01a1bc0b-65c1-7e13-afef-88fc1482896a",
+    "runtime": {
+      "fecha": "2026-11-10T00:16:11.721Z",
+      "modelo": "gpt-6-astra",
+      "esfuerzo": "xhigh"
+    },
+    "cuota_inicio": {
+      "used_percent": 70,
+      "fecha": "2026-11-10T00:02:25.804Z",
+      "saldo_extra": "0"
+    },
+    "cuota_final": {
+      "fecha": "2026-11-10T00:20:15.933Z",
+      "used_percent": 71.0,
+      "saldo_extra": "0"
+    },
+    "nota_cuota": "Contador compartido; el delta no atribuye consumo individual ni USD.",
+    "rol": "coordinador",
+    "nota": "El chat coordinador preexistente sigue en su modelo real; no es la ejecutora ni revisora Sol low solicitadas. Cuota inicial corresponde a este encargo, no al inicio del chat."
+  },
+  "intentos": {
+    "ejecutor": 1,
+    "revisor": 2
+  },
+  "resultado": "aceptada",
+  "retrabajo": true,
+  "commits": {
+    "ejecucion": "14c36cfe8a273448b0a7cf64b10907b5023be590",
+    "complemento": "03e7f89af6e034f82db6c77330c61a58fe2cae4a",
+    "evidencias": "6ec21b5059ae889c42f44640056be3b3a71c240b",
+    "entrega_revisada": "015a9cfd9a665746a7c6c44ef0412c82b1311573"
+  },
+  "nota": "Recibos históricos saneados, no registro de estados. Registro canónico privado del harness conservado; sin USD."
+}

@@ -1,0 +1,46 @@
+{
+  "id": "flujo-boss-codex-v2-20261109",
+  "fecha": "2026-11-10T00:20:27.853342+00:00",
+  "revision_canonica": 26,
+  "estado_observado": "aceptado",
+  "asignacion_observada": null,
+  "entrega_revisada": "015a9cfd9a665746a7c6c44ef0412c82b1311573",
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "015a9cfd9a665746a7c6c44ef0412c82b1311573",
+    "criterio": "Flujo y permisos preservados. HECHO cumple 10 líneas, identifica incoherencias y documenta la fricción dry-run con propuesta enlazada. Evidencias disponibles y hashes coincidentes. Diff dentro de rutas asignadas, sin secretos ni IPs añadidos. bash -n y diff --check pasan. Las 130 pruebas constan en el recibo ejecutor (129 aprobadas, 1 omitida), sin repetición en esta revisión de sólo lectura.",
+    "worktree_conservado": true,
+    "revisor": "revisor-flujo-boss-codex-v2",
+    "session_id": "01a1c2d2-1933-7132-80cc-edb891cba3d7",
+    "entrega_sha256": "8c2216c2a0f629879e22b4d0fd3bf3631327fcc6f6cf3da1aa1899c1e0eadfb0",
+    "evidencia": {
+      "archivo": "operacion/evidencias/flujo-boss-codex-v2-20261109/revision-3-9c6f6daa.json",
+      "sha256": "8fbe80d19fbee51b5c6927a182ef1bea5b3310a9ee4b06737b4c415377c662b0",
+      "bytes": 533
+    }
+  },
+  "ensayo": {
+    "id": "flujo-boss-codex-20261109",
+    "estado": "en_espera",
+    "sesion_cerrada": true,
+    "sin_reservas": true,
+    "evidencias_y_log_intactos": true,
+    "nota": "Anulado operativamente; schema2 no tiene cancelado. Nunca aceptado como ejecución real."
+  },
+  "sesiones_vivas": [],
+  "cupos_globales": 3,
+  "worktrees_conservados": true,
+  "propuesta_dry_run": "Sólo documento; no cambia harness ni crea despachador.",
+  "siguiente": "Paso humano del bloque EN CASA; no ejecutado en este encargo.",
+  "pruebas": {
+    "total": 130,
+    "ok": 129,
+    "omitidas": 1,
+    "bash_n": "OK",
+    "git_diff_check": "OK",
+    "hecho_lineas": 10,
+    "casa_lineas": 8,
+    "enlaces_evidencia_en_commit": true
+  },
+  "nota": "Snapshot de auditoría; única fuente de estados sigue siendo el registro del harness."
+}
