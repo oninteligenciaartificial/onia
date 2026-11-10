@@ -181,3 +181,13 @@ Release fija b2a977d; suite171:170correctas/1omitida. Avisos sólo IDs habilitad
 - Fin de sesión avisa por webhook y recoger publica revisión; recepción no equivale a aceptación. Sin producción/n8n/envíos/gasto/publicación comercial.
 - Homelab: corrección revisada en master940f9ae, [retoma](../homelab/RETOMA-REVISADA-20261110.md); PC pendiente. Su ID ya admite consulta de sólo lectura por el puente.
 - HECHO significa entregado. La ampliación administrativa tiene dictamen independiente bueno; las tres fábricas y la PC no están aceptadas.
+
+
+## HECHO — preguntar disponible · 10nov2026
+- ID harness: `preguntar-boss-20261110`; entrega administrativa aceptada con revisión independiente.
+- Código instalado: `6896ac62c7fc1950475ed720492c4b2f2ca773e6`. [Uso y límites](../evidencias/preguntar-boss-20261110/USO-Y-LIMITES.md).
+- Entrada JSON: `{"version":1,"operacion":"preguntar","id_pregunta":"consulta-unica","texto":"Tu pregunta"}`; respuesta textual en `respuesta`.
+- Sol6.1 low,120s,20/día La Paz; comparte cupo global3 sólo mientras responde; mismo ID/texto devuelve cache.
+- Lectura de documentos permitidos de master; sin shell libre, escritura ni conectores. Logs privados, sin credenciales. No crea tareas ni acepta productos.
+- AGENTS exige bitácora y decisiones al iniciar; no se modificó BITACORA-BOSS.md ni se reiniciaron sesiones existentes.
+- Pruebas200:199pass,1skip; pilotos reales, canario, rechazo de escritura/lectura externa, replay y cupo liberado. Recibo de activación publicado en la carpeta del ID.

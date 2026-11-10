@@ -1,0 +1,50 @@
+{
+  "id": "preguntar-boss-20261110",
+  "fecha": "2026-11-10T21:06:29.392738+00:00",
+  "resultado": "aceptada",
+  "commit_codigo_instalado": "6896ac62c7fc1950475ed720492c4b2f2ca773e6",
+  "manifiesto_archivos": 10,
+  "coordinadora_observada": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh"
+  },
+  "consultas": {
+    "modelo_solicitado": "gpt-6.1-sol",
+    "esfuerzo": "low",
+    "modelo_observado": null,
+    "intentos_reales": 5,
+    "fallidos_corregidos": 3,
+    "respondidos": 2,
+    "repeticion_sin_nueva_inferencia": true,
+    "cupo_liberado": true
+  },
+  "revisor": {
+    "identidad": "revision_puente_boss",
+    "modelo_solicitado": "gpt-6.1-sol",
+    "esfuerzo_solicitado": "high",
+    "modelo_observado": null,
+    "used_percent_inicio": null,
+    "used_percent_final": null,
+    "dictamen": "bueno"
+  },
+  "used_percent_inicio": 85,
+  "fecha_cuota_inicio": "2026-11-10T20:38:52.353Z",
+  "used_percent_final": 87.0,
+  "fecha_cuota_final": "2026-11-10T21:06:29.268000+00:00",
+  "cuota_compartida": true,
+  "retrabajo": true,
+  "tests": {
+    "total": 200,
+    "pasaron": 199,
+    "omitidos": 1,
+    "fallos": 0,
+    "nuevos_dirigidos": 15
+  },
+  "entrada_instalada": {
+    "replay": true,
+    "comando_extra_rechazado": true,
+    "nuevas_inferencias": 0
+  },
+  "produccion_servicios_pc_n8n": false,
+  "nota": "Sin USD. Código instalado y prueba real; no implica aceptación de productos de otras tareas. El modelo de la coordinadora existente no se cambió; consultas tienen perfil Sol low fijo."
+}
