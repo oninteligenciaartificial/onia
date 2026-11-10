@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "conexion-boss-codex-20261110",
-  "revision": 6,
+  "revision": 7,
   "compartible": true,
   "objetivo": "Conectar Boss con las tareas y resultados del harness para eliminar el traslado manual de prompts, con revisión técnica desde ambos extremos.",
   "estado": "en_espera",
-  "proximo_paso": "Sergio elige tras la comparación; Boss puede revisar los ajustes en REVISION-BOSS-v2.md. Si se elige A, continuar adaptador y prueba acotada con permisos aplicables, sin consulta tres veces al día.",
-  "resultado": "Informe de Boss recibido por GitHub (9e86f24). Con evidencia de SSH ya operativo y ausencia de evento push a master en su cuenta, Codex recomienda A: SSH restringido + webhook. Comparación B conservada; nada implementado ni aceptado. Comparación conciliada publicada en 0b43ff41075d855b42bd707abbba4a58485c3f84.",
-  "comprobacion": "Revisión distinta de Boss publicada, veredicto cambios. Codex incorporó el informe y contrastó alternativas; la prueba de SSH se atribuye a Boss. No hay prueba conjunta de tarea y notificación.",
+  "proximo_paso": "Sergio carga URL/clave con configurar-retorno.sh; Boss publica PRUEBA-SSH-BOSS-v1.md usando su llave nueva. Codex habilita sólo el juguete tras ambas comprobaciones; luego revisión distinta, acuse, master y restricción autorizada de llave anterior.",
+  "resultado": "Adaptador revisado, publicado e instalado con release fija; nueva llave restringida agregada conservando originales. Juguete preparado sin lanzamiento. Conexión completa pendiente.",
+  "comprobacion": "158 pruebas: 157 correctas y 1 omitida. Consulta local correcta; cuatro comandos ajenos y lanzamiento sin permiso rechazados. No hay todavía SSH probado desde Boss, configuración de webhook ni acuse real.",
   "verificacion": "pendiente",
   "evidencias": [
     {
@@ -44,9 +44,34 @@
       "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/RECIBO-COMPARACION-v1.json",
       "sha256": "75b43b2204fd1c99d2fd19be8375f2188ac5990bb68dca23a2dcb61dff33001f",
       "bytes": 1532
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/REVISION-BOSS-v2.md",
+      "sha256": "d575490c58918c27d2172a3259723f2e22195d6e254c9c7bd48fdf67d274ecc6",
+      "bytes": 3188
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/ADAPTADOR-v1.md",
+      "sha256": "1aeac4e277d5fde09e79dfc8f3e5f2537d39dbc0fe712836302144d901a4f7d2",
+      "bytes": 9223
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/REVISION-TECNICA-v1.md",
+      "sha256": "8448ad6eb11f0452f1ce96917ef537b49da5dd7d8cc23f2517ff29b574ef5121",
+      "bytes": 2005
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/INSTALACION-v1.md",
+      "sha256": "f84578d8aa2fc87f697b050ba0a7996ab25c1e1f73e078fe762d3fb4b6478cf9",
+      "bytes": 5388
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/RECIBO-IMPLEMENTACION-v1.json",
+      "sha256": "b8bb318501cfa1616f951df0935a4add783514da1fff882151357cde1ea6aa08",
+      "bytes": 1619
     }
   ],
-  "actualizado": "2026-11-10T11:38:56.012942+00:00",
+  "actualizado": "2026-11-10T12:18:18.106552+00:00",
   "historial": [
     {
       "revision": 1,
@@ -177,6 +202,53 @@
           "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/DECISION-TRAS-BOSS-v1.md",
           "sha256": "19e54949351274ca74e5c9ee7a86b9e6de252a6346af7ad2ae5d67eec832186d",
           "bytes": 5544
+        }
+      ],
+      "proximo_paso": "Sergio elige tras la comparación; Boss puede revisar los ajustes en REVISION-BOSS-v2.md. Si se elige A, continuar adaptador y prueba acotada con permisos aplicables, sin consulta tres veces al día.",
+      "aceptacion": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-10T11:38:56.012942+00:00",
+      "estado": "en_espera",
+      "resultado": "Informe de Boss recibido por GitHub (9e86f24). Con evidencia de SSH ya operativo y ausencia de evento push a master en su cuenta, Codex recomienda A: SSH restringido + webhook. Comparación B conservada; nada implementado ni aceptado. Comparación conciliada publicada en 0b43ff41075d855b42bd707abbba4a58485c3f84.",
+      "comprobacion": "Revisión distinta de Boss publicada, veredicto cambios. Codex incorporó el informe y contrastó alternativas; la prueba de SSH se atribuye a Boss. No hay prueba conjunta de tarea y notificación.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/CONEXION-Y-ENCARGO-v1.md",
+          "sha256": "7b75987bd3b4d885ce8d44200b7362c0eef001997498da9781259b25e9b88713",
+          "bytes": 10306
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/INVENTARIO-v1.json",
+          "sha256": "24e32b1917b35ee3ad20e0a5448adbb63e98e3adc3e92c67c91dba0fa433c2d6",
+          "bytes": 1338
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/RECIBO-PREPARACION-v1.json",
+          "sha256": "7b4c0cd35106c897fbda2ff0f17ad042ad92d3a2e77a01f78086f2b274d6bcbd",
+          "bytes": 1410
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/COMPARACION-TRANSPORTES-v1.md",
+          "sha256": "e67039587a58ea9d8e3b4e46789a8c13155838d79feb53722f7a90c93e688eac",
+          "bytes": 9486
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/REVISION-BOSS-v1.md",
+          "sha256": "b52cc59c2c577cd5fcf4b8f895a155aee7c85aa4ab430e1137f19aa32135905f",
+          "bytes": 6973
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/DECISION-TRAS-BOSS-v1.md",
+          "sha256": "19e54949351274ca74e5c9ee7a86b9e6de252a6346af7ad2ae5d67eec832186d",
+          "bytes": 5544
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/RECIBO-COMPARACION-v1.json",
+          "sha256": "75b43b2204fd1c99d2fd19be8375f2188ac5990bb68dca23a2dcb61dff33001f",
+          "bytes": 1532
         }
       ],
       "proximo_paso": "Sergio elige tras la comparación; Boss puede revisar los ajustes en REVISION-BOSS-v2.md. Si se elige A, continuar adaptador y prueba acotada con permisos aplicables, sin consulta tres veces al día.",

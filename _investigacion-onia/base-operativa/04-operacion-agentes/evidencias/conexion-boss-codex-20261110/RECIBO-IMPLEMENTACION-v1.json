@@ -1,0 +1,47 @@
+{
+  "id": "conexion-boss-codex-20261110",
+  "rol": "ejecutor-coordinador",
+  "modelo": "gpt-6-astra",
+  "esfuerzo": "xhigh",
+  "nota_modelo": "Modelo real heredado de esta conversación; no fue Sol. La revisión se pidió a Sol 6.1 high y el piloto queda Sol 6.1 low.",
+  "used_percent_inicio": null,
+  "used_percent_final": 78.0,
+  "cuota_final_fecha_utc": "2026-11-10T12:16:19.064Z",
+  "cuota_final_fecha_la_paz": "2026-11-10T08:16:19.064-04:00",
+  "muestra_intermedia": {
+    "used_percent": 77.0,
+    "fecha_utc": "2026-11-10T12:08:20.806Z"
+  },
+  "nota_cuota": "No hubo medición al inicio exacto del turno. Cuota semanal compartida, no atribuir la diferencia exclusivamente a esta tarea.",
+  "saldo_extra": 0,
+  "intentos": 1,
+  "retrabajo": true,
+  "resultado": "rechazada",
+  "alcance_resultado": "La aceptación global sigue pendiente: código aprobado para piloto, conexión real sin prueba completa.",
+  "commits": [
+    "69ceedb262881469fd2eedcb0447e1a025656639",
+    "d919c98fdf9f8599e4faa8099ba10edd08e6cacc"
+  ],
+  "tests": {
+    "total": 158,
+    "correctos": 157,
+    "omitidos": 1,
+    "fallidos": 0,
+    "puente": 28
+  },
+  "sesiones_ejecutoras_reales_lanzadas": 0,
+  "webhooks_reales_enviados": 0,
+  "revision_distinta": {
+    "agente": "revision_puente_boss",
+    "modelo_solicitado": "gpt-6.1-sol",
+    "esfuerzo_solicitado": "high",
+    "modelo_efectivo": null,
+    "esfuerzo_efectivo": null,
+    "used_percent_inicio": null,
+    "used_percent_final": null,
+    "intentos": 1,
+    "retrabajo": true,
+    "resultado": "aceptada",
+    "alcance": "código para piloto sin submódulos; no E2E"
+  }
+}

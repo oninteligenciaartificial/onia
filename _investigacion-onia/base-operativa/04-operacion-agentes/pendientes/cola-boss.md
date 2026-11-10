@@ -123,3 +123,16 @@ Sergio pidió investigar otra propuesta antes de elegir. Boss: cotejá también 
 ### Evidencia recibida y recomendación vigente — conexion-boss-codex-20261110
 
 Boss publicó `REVISION-BOSS-v1.md` en `9e86f24`; Codex lo recibió directamente desde GitHub. Su prueba de SSH existente y la falta de evento push a master cambian la preferencia provisional: [decisión tras Boss](../evidencias/conexion-boss-codex-20261110/DECISION-TRAS-BOSS-v1.md) recomienda A, SSH restringido + webhook, para el primer piloto. La alternativa B sigue documentada. Ajustes: una llave nueva no elimina el shell anterior; no adoptar tres consultas por día; comprobar acuse real de Boss y permisos de ejecución. Revisar estos puntos en una v2 si hace falta. No hay implementación ni conexión aceptada.
+
+
+### HECHO parcial — puente Boss–Codex · 10 noviembre 2026
+
+ID `conexion-boss-codex-20261110`; manda su [registro](../tareas/conexion-boss-codex-20261110.json), conexión aún sin aceptación.
+Código `69ceedb`, integrado en master `d919c98`; [instalación y comandos](../evidencias/conexion-boss-codex-20261110/INSTALACION-v1.md).
+Llave nueva habilitada con comando forzado y restrict; versiones fijas, originales preservados; llave vieja aún amplia.
+Tests: 158, 157 correctos/1 omitido; consulta local y rechazos comprobados, sin SSH real desde Boss todavía.
+Boss: probá consulta y rechazos con TU llave nueva; publicá PRUEBA-SSH-BOSS-v1.md sin destino/IP/secretos.
+Sergio: configurador privado ya disponible; no pasar URL/clave por Git ni chat.
+Juguete `conexion-boss-piloto-20261110` r2 preparado, cero sesiones; todavía sin permiso remoto de lanzamiento.
+Tras consulta y secreto: Codex habilita sólo ese piloto; Sol6.1 low, cero hijos, revisor distinto; no activa otras fábricas.
+El cierre avisa para_revision; sólo respuesta vinculada a ID/revisión/commit prueba acuse. No equivale a aceptar.
