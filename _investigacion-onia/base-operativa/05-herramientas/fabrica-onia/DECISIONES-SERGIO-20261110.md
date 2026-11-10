@@ -16,3 +16,9 @@
 | Confirmación de pagos | Sergio, a mano. Una captura no basta para confirmar. |
 
 Pendiente: la verificación del número en Meta, que es un paso humano de Sergio.
+
+## Agregado 08:22: guiones y plan B
+
+- **Hasta el viernes 13:** Codex escribe los 5 guiones diarios mediante el harness, Contenido los revisa como editor y Sergio los ve y aprueba en el panel.
+- **Desde el sábado 14:** Contenido escribe los guiones con las reglas que deje Codex.
+- **Plan B, si la venta no alcanza la meta:** se paga Claude, que reemplaza a Codex en los guiones y el trabajo pesado. El harness y el panel siguen iguales; sólo cambia el modelo ejecutor. El gasto lo aprueba Sergio con un sí explícito.
