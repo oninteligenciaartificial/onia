@@ -208,3 +208,7 @@ Release fija b2a977d; suite171:170correctas/1omitida. Avisos sólo IDs habilitad
 - Se amplía la fuente existente [REGLAS-BOSS.md](../REGLAS-BOSS.md), sección 11 y casos de comprobación, sin otro registro de tareas ni cambios de runtime.
 - Boss debe recuperar la versión actual por GitHub, confirmar su commit y aplicar la matriz de requisitos a las tareas pertinentes. El acuse anterior de `6f46f64` no acredita esta versión.
 - Publicación, lectura y aplicación real siguen separados. Los casos no observados quedan no probados; este mensaje no autoriza otro piloto ni modifica rutinas, límites o permisos.
+
+## PEDIDO · cierre operativo ya autorizado · 10/11/2026
+
+Sergio pidió resolver el frente pendiente antes de seguir con Boss. [Pedido y acuse esperado](../evidencias/conexion-boss-codex-20261110/PEDIDO-CIERRE-OPERATIVO-20261110.md), vinculado a `conexion-boss-codex-20261110` y `homelab-conexion-20261109`; no reabre tareas aceptadas ni crea otro registro. Codex recogió los dos dictámenes terminados (chatbot y guiones v1): ambos cambios, r15, sin aceptación ni nuevas sesiones. Boss debe comprobar lectura/aplicación de reglas y disponibilidad de su acceso local a la PC para continuar la retoma revisada. El ensayo de cuota91→93 permanece detenido.
