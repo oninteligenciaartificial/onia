@@ -1,0 +1,34 @@
+{
+  "schema": 2,
+  "id": "euge-dos-videos-20261110",
+  "revision": 2,
+  "compartible": true,
+  "objetivo": "Comprender los dos videos de Euge solicitados por Sergio mediante imagen directa y contenido hablado, diferenciando límites de percepción.",
+  "estado": "en_curso",
+  "proximo_paso": "Completar cobertura visual del segundo video, documentar interpretación y límites y publicar evidencia saneada.",
+  "resultado": "Inspección visual y lectura original en curso desde esta sesión coordinadora; no se lanzó otro LLM.",
+  "comprobacion": "Primer video: 119 imágenes muestreadas inspeccionadas; segundo reproduciendo en navegador existente, pista original y subtítulos es-orig.",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-10T02:48:35.976018+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-10T02:48:12.993030+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/euge-dos-videos-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/euge-dos-videos-20261110.md",
+    "sha256": "68bb193d54f5e75949b8c188fc42a31f70d45604b3dd4c9656dce192f62fa664",
+    "bytes": 2920,
+    "contenido": "# Encargo euge-dos-videos-20261110\n\nÁrea: video\nModo: encargo\nSkill directora: producir-video\n\n## Objetivo\n\nComprender los dos videos de Euge solicitados por Sergio mediante imagen directa y contenido hablado, diferenciando límites de percepción.\n\n## Entregable\n\nAnálisis propio con fuentes y tiempos, cobertura visual comprobada, límites y diferencias frente a los resúmenes de Boss; sin implementar la fábrica.\n\n## Criterio de aceptación\n\nInspección visual distribuida por ambos videos, texto hablado contrastado, separación de observación e interpretación OnIA; sin afirmar escucha directa; medios y transcripciones íntegros fuera de Git.\n\n## Entrada y alcance\n\nProducir una pieza con los materiales indicados en el encargo.\n\n- 04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md\n- 04-operacion-agentes/FABRICA-DESGLOSE-20261109.md\n- 05-herramientas/video-euge-20261108/RESOLUCION-20261109.md\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md](../ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md)\n- [05-herramientas/compartibles/skills/producir-video/SKILL.md](../../05-herramientas/compartibles/skills/producir-video/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-visual-hyperframes-plan](../../05-herramientas/compartibles/terceros/visual/27-hyperframes/USO-ONIA.md)\n\n## Salidas de referencia del área\n\n- Composición editable en HyperFrames\n- Video y verificación audiovisual\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/euge-dos-videos-20261110.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": "euge-dos-videos-20261110",
+  "rol": "ejecutor-coordinador",
+  "modelo_observado": "gpt-6-astra",
+  "esfuerzo_observado": "xhigh",
+  "nota_modelo": "Runtime heredado del chat; no se cambió a Sol ni se lanzó otra sesión. El default para futuros lanzamientos no acredita el modelo de este chat.",
+  "used_percent_inicio": {
+    "fecha_utc": "2026-11-10T02:28:35.853Z",
+    "used_percent": 71.0,
+    "saldo_extra": "0"
+  },
+  "used_percent_final_observado": {
+    "fecha_utc": "2026-11-10T02:56:30.511Z",
+    "used_percent": 74.0,
+    "saldo_extra": "0"
+  },
+  "cuota": "Contador semanal compartido, delta no atribuible exclusivamente a este trabajo; no se estima USD.",
+  "intentos": {
+    "analisis": 1,
+    "descarga_directa_media_v2": 1,
+    "captura_v2_completa": 1,
+    "extraccion_visual_v1": 2
+  },
+  "retrabajo": true,
+  "motivo_retrabajo": "Corregido mapeo temporal de la primera extracción; original conservado y excluido de cobertura válida.",
+  "resultado": "entregado; aceptación independiente pendiente",
+  "aceptada": false,
+  "rechazada": false,
+  "fallida": false,
+  "commits": [],
+  "siguiente": "Publicar documentación y pasar el registro a para_revision sin autoaceptarlo.",
+  "revisor": null,
+  "sesiones_adicionales": 0,
+  "gasto_api_o_compra": false
+}
