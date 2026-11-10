@@ -1,0 +1,26 @@
+{
+  "id": "conexion-boss-codex-20261110",
+  "rol": "investigación comparativa y conciliación con revisión distinta de Boss",
+  "modelo": "gpt-6-astra",
+  "esfuerzo": "xhigh",
+  "fecha_utc": "2026-11-10T11:38:55.969124+00:00",
+  "used_percent_inicio": 76,
+  "fecha_primera_muestra_utc": "2026-11-10T11:31:50.707Z",
+  "used_percent_final": 76.0,
+  "fecha_ultima_muestra_utc": "2026-11-10T11:38:19.907Z",
+  "saldo_extra": "0",
+  "nota_cuota": "Primera muestra tomada durante este encargo; ventana semanal compartida, no coste individual ni USD. Sin nuevos lanzamientos de Codex. Uso de Grok no visible desde esta sesión.",
+  "intentos": 1,
+  "intentos_publicacion_entrega": 2,
+  "retrabajo": true,
+  "motivo_retrabajo": "Nueva evidencia de Boss confirmó SSH existente; se ajustó la preferencia provisional y se conservó la investigación previa. Push inicial rechazado por concurrencia, integrado sin force.",
+  "resultado": "comparación entregada; conexión en_espera y sin aceptación; revisión de Boss con cambios",
+  "aceptacion": null,
+  "commits": {
+    "investigacion": "f2b15646d61dc5b56ce2a5e2e30a038b74e3d393",
+    "revision_boss": "9e86f24c43d6e90ff246716dbd4d688aac097d09",
+    "entrega_conciliada": "0b43ff41075d855b42bd707abbba4a58485c3f84"
+  },
+  "remoto_verificado": "0b43ff41075d855b42bd707abbba4a58485c3f84",
+  "validacion": "Integridad de tarea y evidencias, enlaces locales y diff-check correctos. No tests de ejecución: sólo documentos. No instalados adaptador, consumidor, webhook ni nuevas llaves."
+}
