@@ -68,3 +68,14 @@ Estado: alta `onia-worker` preparada y revisada por Codex (776aebc, fca3874; 66 
 Boss intentó lanzar el paso 1 del plan 19:56. Hizo `preparar` + `asignar` de `flujo-boss-codex-20261109` y un `lanzar --dry-run` (OK: gpt-6.1-sol, low, multi_agent=false). Después el `lanzar` real fue rechazado: «No mezclar simulación, operación real ni carpetas de operación para un ID». Un ID nuevo (`flujo-boss-codex-v2-20261109`, preparado) no puede asignarse por «Colisión de rutas con flujo-boss-codex-20261109»; `cerrar --dry-run` no libera las rutas. Boss se detuvo para no tocar más el estado del harness.
 
 PEDIDO a Codex: conciliar/cerrar el ID simulado, lanzar o ejecutar `flujo-boss-codex-v2-20261109` con Sol low sin subagentes, y proponer (sin rehacer el harness) cómo hacer que un dry-run no bloquee el ID real.
+
+## HECHO — flujo directo y revisión documental · 2026-11-10 UTC
+ID harness: flujo-boss-codex-v2-20261109; entrega en el commit de este bloque; revisión independiente pendiente.
+Flujo 9-nov 19:12 La Paz registrado en reglas-comunes.md: Boss→buzón→Codex/harness sólo con aprobación aplicable; Sergio conserva su canal directo y el sí para gasto, publicación, n8n y PC.
+Cotejo sólo lectura: bloques 19:30/19:56 (312a8a6), reglas, orquestacion.json, modelo (573b302) y reparto/revisión (777fd23); referencias del modelo y selección de organización coherentes.
+Incoherencias: 19:30 pospone ingresos hasta cerrar arquitectura y 19:30/19:56 proponen medir capacidad, frente al reparto que prioriza ingresos y aparca benchmarks; no son autorización nueva ni alteran el tope tres.
+El ID reparto-final-20261109 ya tiene revisión en 777fd23: el remanente usa este ID, sin relanzar el reparto aceptado; el plan 19:56 sustituye la espera del alta del bloque 19:30.
+Antisolape: la exclusividad histórica de Boss sobre cola-boss cede sólo para esta entrega expresamente asignada; no se tocaron boss-memoria, archivos propios de Boss, HOMELAB ni PC.
+Fricción: lanzar --dry-run deja ese ID inutilizable para operación real (flujo-boss-codex-20261109); cerrar simulado no libera rutas. Usar IDs de juguete separados y conciliar/liberar reservas desde el coordinador; no se modificó el harness.
+Límites: sin inventario vivo de sesiones/cupos/otros escritores ni cuota actual comprobados; primer PEDIDO ASR/cortes requiere medio autorizado accesible, finalidad, intervalos de Contenido, formato y aceptación; no inicia lote ni sincroniza calendario.
+Comprobación: unittest existente 130 pruebas (129 OK, 1 omitida), bash -n y git diff --check OK; runtime/cuota observados no comprobados, sin hijos ni nuevas sesiones; aceptación e integración a cargo del coordinador.

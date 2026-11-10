@@ -19,6 +19,8 @@ Sergio confirmó el 9/11/2026 [ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md](ON
 
 ## Autonomía y permisos
 
+Flujo directo aprobado por Sergio el 9/11/2026 a las 19:12 America/La_Paz: Boss pasa pedidos a Codex por [cola-boss.md](pendientes/cola-boss.md) y puede lanzar por el harness tareas ya aprobadas, con el sí aplicable a ese lanzamiento y las rutas asignadas; la sesión directa de Sergio prevalece sobre el buzón. Gastar, publicar, tocar n8n o cambiar la PC de Sergio sigue requiriendo su sí aplicable; se mantienen el checklist, el único escritor y la revisión independiente.
+
 Completar el trabajo autorizado y reversible sin pedir de nuevo decisiones ya tomadas. Una solicitud de construir o configurar requiere ejecución y comprobación, no sólo una propuesta. Continuar las partes independientes mientras se resuelve una dependencia.
 
 Después de analizar, convertir los hallazgos en una próxima acción concreta, con entregable, comprobación y responsable. Ejecutar la parte ya autorizada. Pedir únicamente el acceso, decisión o acción personal indispensable, con una solución viable y sus límites.
