@@ -1,0 +1,42 @@
+{
+  "session_id": "01a1c2cc-9e9b-78d0-ba21-c249a6be8807",
+  "runtime": {
+    "fecha": "2026-11-10T00:12:34.286Z",
+    "modelo": "gpt-6.1-sol",
+    "esfuerzo": "low"
+  },
+  "cuota_inicio": {
+    "fecha": "2026-11-10T00:12:38.734Z",
+    "used_percent": 70.0,
+    "saldo_extra": "0"
+  },
+  "cuota_final": {
+    "fecha": "2026-11-10T00:13:07.433Z",
+    "used_percent": 70.0,
+    "saldo_extra": "0"
+  },
+  "nota_cuota": "Contador compartido; el delta no atribuye consumo individual ni USD.",
+  "id": "flujo-boss-codex-v2-20261109",
+  "rol": "revisor",
+  "intentos_revisor": 1,
+  "intento_harness": 2,
+  "resultado": "rechazada",
+  "retrabajo": true,
+  "commits": [
+    "03e7f89af6e034f82db6c77330c61a58fe2cae4a"
+  ],
+  "veredicto": {
+    "veredicto": "cambios",
+    "commit": "03e7f89af6e034f82db6c77330c61a58fe2cae4a",
+    "criterio": "El flujo respeta roles y permisos; HECHO identifica incoherencias y el diff sólo toca las rutas asignadas, sin errores de whitespace. Falta disponibilidad de evidencia en la entrega: los enlaces PROPUESTA-DRY-RUN.md e INVENTARIO-v1.json apuntan a archivos ausentes del commit. El contenido recibido por stdin permite revisarlos, pero no resuelve los enlaces publicados. El coordinador debe publicar esos artefactos saneados y someter la entrega resultante a revisión.",
+    "worktree_conservado": true,
+    "revisor": "revisor-flujo-boss-codex-v2",
+    "session_id": "01a1c2cc-9e9b-78d0-ba21-c249a6be8807",
+    "entrega_sha256": "d14c046b173d3dcf25a66ae4f1419fe173e4e457dec7274e105aad7e3ea6c8c2",
+    "evidencia": {
+      "archivo": "operacion/evidencias/flujo-boss-codex-v2-20261109/revision-2-36d6135b.json",
+      "sha256": "e5be5af9611e276fd399df85a8606d2d30863982bb93417c38c405d72e7efed3",
+      "bytes": 603
+    }
+  }
+}

@@ -477,3 +477,13 @@ La primera preparación no cubría herencia SSH/entorno, canales WSL y montajes,
 ## Merge de publicación sin identidad de committer · 9 noviembre 2026
 
 Qué pasó: el commit local pasó con identidad acotada, pero `git merge --no-edit origin/master` falló al entrar commits nuevos de Boss porque faltaba identidad local. Causa: los flags -c del commit no se propagan al comando siguiente. Evidencia: publicación del alta homelab (776aebc e integración05ef1af). Se corrigió repitiendo merge con identidad -c en ese comando; no hubo force ni cambios globales. Prevención: usar identidad explícita también en merges que puedan crear un commit, y comprobar HEAD remoto antes de cerrar.
+
+## Dry-run bloqueó ID y rutas de un encargo real · 9 noviembre 2026 America/La_Paz
+
+Qué pasó: Boss simuló flujo-boss-codex-20261109 y el lanzamiento real fue rechazado por mezcla de modos; v2 chocó con sus rutas. Causa: mismo registro canónico para la simulación y asignación persistente tras cerrar. Evidencia: flujo-boss-codex-v2-20261109/CONCILIACION-v1.json; cierre y log privados conservados. Se finalizó el ensayo sin aceptación productiva y se liberó la asignación con revisión/actor; v2 lanzó con Sol6.1low y0 hijos. Prevención propuesta (no implementada): previsualización no mutante y fixtures de pruebas separados, sin suprimir el control de mezcla.
+
+Durante la lectura coordinadora, tres consultas usaron cwd Documents/Codex para rutas del checkout y fallaron con No such file or directory; se repitieron desde onia-coordinador sin cambios ni reconstrucción de archivos. Prevención: rutas absolutas o workdir explícito por lote. El chequeo de PID dentro del sandbox dio falso no-vivo; se confirmó vivo desde el host por identidad de proceso, sin detenerlo.
+
+## 9-nov-2026 — Evidencias enlazadas fuera del commit de entrega
+
+Qué pasó: la revisión de flujo-boss-codex-v2-20261109 rechazó 03e7f89 porque HECHO enlazaba PROPUESTA-DRY-RUN e INVENTARIO que aún no estaban versionados en esa entrega. Causa: el coordinador los había adjuntado al briefing desde su checkout, suponiendo integrarlos después de revisar. Evidencia: veredicto cambios conservado en REVISION-1-v1.json de la carpeta de evidencias de este ID. Corrección: incluir los artefactos saneados en el commit revisable y repetir la revisión independiente. Prevención: comprobar que cada enlace local existe en el árbol del commit antes de cerrar, aunque el revisor reciba una copia por stdin.
