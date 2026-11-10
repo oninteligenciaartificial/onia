@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "conexion-boss-codex-20261110",
-  "revision": 3,
+  "revision": 4,
   "compartible": true,
   "objetivo": "Conectar Boss con las tareas y resultados del harness para eliminar el traslado manual de prompts, con revisión técnica desde ambos extremos.",
   "estado": "en_espera",
-  "proximo_paso": "Boss lee CONEXION-Y-ENCARGO-v1.md y publica REVISION-BOSS-v1.md; Codex elige con esa evidencia el transporte mínimo y continúa la implementación autorizada.",
-  "resultado": "Diseño y encargo publicados en origin/master en 89f842b245531e35330bed196427504cbbcbfaa4. Falta comprobación de capacidades y revisión de Boss para continuar la conexión.",
-  "comprobacion": "Se identificaron transporte por comando y retorno por evento documentados, y el efecto mutante de estado. No hay pruebas de acceso desde Boss ni de ida y vuelta.",
+  "proximo_paso": "Boss compara A y B en REVISION-BOSS-v1.md según la adenda. Sergio elige después de ver la comparación y capacidades; implementar sólo el alcance autorizado y comprobar ida y vuelta.",
+  "resultado": "Comparación A (SSH) y B (buzón GitHub con consumidor) documentada. Codex recomienda B para operación habitual; no se eligió ni implementó el transporte, falta revisión de Boss y decisión de Sergio.",
+  "comprobacion": "Fuentes oficiales de GitHub/Grok consultadas; master cotejado. Se distingue consumidor propuesto de harness existente y se exige retorno real. Sin ensayos, instalaciones ni nuevos lanzamientos.",
   "verificacion": "pendiente",
   "evidencias": [
     {
@@ -24,9 +24,14 @@
       "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/RECIBO-PREPARACION-v1.json",
       "sha256": "7b4c0cd35106c897fbda2ff0f17ad042ad92d3a2e77a01f78086f2b274d6bcbd",
       "bytes": 1410
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/COMPARACION-TRANSPORTES-v1.md",
+      "sha256": "e67039587a58ea9d8e3b4e46789a8c13155838d79feb53722f7a90c93e688eac",
+      "bytes": 9486
     }
   ],
-  "actualizado": "2026-11-10T11:26:57.677123+00:00",
+  "actualizado": "2026-11-10T11:35:08.400547+00:00",
   "historial": [
     {
       "revision": 1,
@@ -56,6 +61,33 @@
           "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/INVENTARIO-v1.json",
           "sha256": "24e32b1917b35ee3ad20e0a5448adbb63e98e3adc3e92c67c91dba0fa433c2d6",
           "bytes": 1338
+        }
+      ],
+      "proximo_paso": "Boss lee CONEXION-Y-ENCARGO-v1.md y publica REVISION-BOSS-v1.md; Codex elige con esa evidencia el transporte mínimo y continúa la implementación autorizada.",
+      "aceptacion": null
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-10T11:26:57.677123+00:00",
+      "estado": "en_espera",
+      "resultado": "Diseño y encargo publicados en origin/master en 89f842b245531e35330bed196427504cbbcbfaa4. Falta comprobación de capacidades y revisión de Boss para continuar la conexión.",
+      "comprobacion": "Se identificaron transporte por comando y retorno por evento documentados, y el efecto mutante de estado. No hay pruebas de acceso desde Boss ni de ida y vuelta.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/CONEXION-Y-ENCARGO-v1.md",
+          "sha256": "7b75987bd3b4d885ce8d44200b7362c0eef001997498da9781259b25e9b88713",
+          "bytes": 10306
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/INVENTARIO-v1.json",
+          "sha256": "24e32b1917b35ee3ad20e0a5448adbb63e98e3adc3e92c67c91dba0fa433c2d6",
+          "bytes": 1338
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/RECIBO-PREPARACION-v1.json",
+          "sha256": "7b4c0cd35106c897fbda2ff0f17ad042ad92d3a2e77a01f78086f2b274d6bcbd",
+          "bytes": 1410
         }
       ],
       "proximo_paso": "Boss lee CONEXION-Y-ENCARGO-v1.md y publica REVISION-BOSS-v1.md; Codex elige con esa evidencia el transporte mínimo y continúa la implementación autorizada.",

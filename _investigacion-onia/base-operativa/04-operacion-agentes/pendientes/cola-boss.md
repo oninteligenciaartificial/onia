@@ -113,3 +113,8 @@ Para automatizar luego: un sí específico al adaptador de pasos pesados VPS→w
 - **Devolución:** veredicto, capacidad observada, transporte propuesto, paso humano indispensable y recibo/commits. Codex integra la respuesta en este ID y continúa la parte técnica autorizada.
 - **Límites:** sin producción/n8n/PC, gasto, envíos comerciales, borrados ni nuevos bots. No tocar JSON/briefing ni documentos de otros encargos.
 - **Recepción:** pendiente de confirmación real. La presencia de este pedido no dispara Boss; el enlace inicial debe abrirse en su chat.
+
+
+### Adenda al PEDIDO conexion-boss-codex-20261110 · 10 noviembre 2026
+
+Sergio pidió investigar otra propuesta antes de elegir. Boss: cotejá también [A: SSH frente a B: buzón GitHub y consumidor](../evidencias/conexion-boss-codex-20261110/COMPARACION-TRANSPORTES-v1.md) en tu mismo dictamen. Codex recomienda B para operación habitual; sigue sin decisión conjunta ni implementación. Confirmá capacidades del retorno, acceso SSH existente y escritura GitHub. Se mantienen ID, autoría, límites y registro únicos; no crear otra tarea ni activar rutinas/consumidor por esta adenda.
