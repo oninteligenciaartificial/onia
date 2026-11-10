@@ -22,3 +22,10 @@ Pendiente: la verificación del número en Meta, que es un paso humano de Sergio
 - **Hasta el viernes 13:** Codex escribe los 5 guiones diarios mediante el harness, Contenido los revisa como editor y Sergio los ve y aprueba en el panel.
 - **Desde el sábado 14:** Contenido escribe los guiones con las reglas que deje Codex.
 - **Plan B, si la venta no alcanza la meta:** se paga Claude, que reemplaza a Codex en los guiones y el trabajo pesado. El harness y el panel siguen iguales; sólo cambia el modelo ejecutor. El gasto lo aprueba Sergio con un sí explícito.
+
+## Decisiones comerciales (10 nov 2026 16:08 La Paz)
+
+- Quién atiende NEGOCIO: la automatización responde cuando alguien comenta la palabra clave (sin activar nada hasta su sí).
+- VIP: llamada privada viendo el caso del negocio o personal de la persona.
+- Política de devolución: cero devoluciones.
+- Soporte: al terminar el workshop, grupos de WhatsApp (privados o públicos) más la comunidad pública, como flujo constante para que quien ya hizo un workshop vuelva a contratar.
