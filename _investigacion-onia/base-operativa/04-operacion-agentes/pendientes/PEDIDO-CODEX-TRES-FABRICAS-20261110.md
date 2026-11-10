@@ -19,10 +19,12 @@ Modelo `gpt-6.1-sol`, 0 hijos, máximo 1 ejecutora + 1 revisora distinta por ID,
 - Esfuerzo: `high`. Responsable: Codex. Revisor: sesión distinta, `high`.
 - Falta comprobar: si el QR ya está en el VPS, y si existen la app de Meta y el número.
 
-## 2. Guiones (ID por decidir)
-- Conflicto: el README propone `fabrica-guiones-paquete-20261110` (comprobador sin modelo) y el dictamen propone `guiones-tanda-20261111` (Codex redacta 5 guiones).
-- Además, la regla 5 de Sergio (12:53) asigna la responsabilidad editorial a Contenido, y la decisión de las 08:22 decía que Codex escribe hasta el 13. **Decide Sergio** antes de registrar.
-- Rutas: `05-herramientas/fabrica-onia/1-guiones-calendario/` (salida/). Esfuerzo `low`.
+## 2. `guiones-tanda-20261111`
+- Decisión de Sergio, 10-nov-2026 12:59 La Paz: **hasta el 13, Codex redacta los 5 guiones y Contenido los revisa como editor**. Sergio aprueba en el panel. Desde el 14 los escribe Contenido. Es una excepción acotada a la regla 5.
+- No reutilizar `fabrica-guiones-paquete-20261110`: es el comprobador sin modelo y queda propuesto aparte, con prioridad baja.
+- Objetivo: cinco paquetes para grabar el 11 (venta, marca, noticia o evergreen, segunda venta o marca, reel de prueba), siguiendo el cerebro, G01/G02 y `CALENDARIO-SEMANA-20261110-14.md`.
+- Rutas exclusivas: `05-herramientas/fabrica-onia/1-guiones-calendario/salida/`. Esfuerzo `low`.
+- Aceptación: un solo CTA por pieza, hora y precio iguales a las decisiones de Sergio, el slot 4 no se etiqueta como corte del vlog, y queda la revisión de Contenido registrada.
 
 ## 3. `fabrica-edicion-video-20261110`
 - Objetivo: comando local con ASR por CPU, cortes FFmpeg, subtítulos 9:16, B-roll de lista explícita y recibo con dudas.
