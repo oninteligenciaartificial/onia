@@ -112,3 +112,13 @@ Frente 1. Prioridad máxima de implementación, después de que Sergio elija la 
 - **Criterio de aceptación:** prueba con datos ficticios: mensaje de interés → ficha → pendiente → entrega de un QR de prueba (no el real en Git) → marca de pago confirmado → mensaje de acceso de prueba. Captura sola no pasa a «pagado».
 - **Tests:** casos de duplicado, timeout de pago, referencia repetida y rechazo a guardar el QR en el repo. Sin envíos reales.
 - **Qué no tocar:** workflows existentes de n8n, Telegram real, G01/G02 salvo lectura, el plan fijado, secretos, el QR verdadero, activar el flujo, publicar o cobrar.
+
+## Decisión de Sergio, 10-nov-2026 07:58 America/La_Paz
+
+**Canal: WhatsApp Cloud API de Meta, con n8n.** Queda descartada la app WhatsApp Business manual. Esto cambia el pedido de arriba:
+
+- **Codex** primero comprueba qué existe: la app de Meta, el número, la verificación del webhook y la credencial en n8n. Hay rastros de una configuración previa de verificación de WhatsApp en el entorno de Boss, pero no se afirma que funcione. Después construye el flujo n8n con respuestas fijas: información, inscripción pendiente, QR y aviso a Sergio. El flujo queda **inactivo**.
+- **El paso humano lo hace Sergio** en Meta: el número, la verificación del negocio si la pide y aceptar los permisos. Las contraseñas y tokens los escribe él, nunca en el chat ni en Git.
+- **La activación** del flujo de n8n y del webhook de Meta necesita el sí de Sergio, después de una prueba con un número de prueba.
+- **El pago** lo sigue confirmando Sergio a mano. El bot no da por pagado a nadie.
+- **Riesgo de tiempo:** la verificación de Meta puede demorar. Si el jueves 12 no está aprobada, el plan B es que Sergio responda a mano con los mismos textos fijos.
