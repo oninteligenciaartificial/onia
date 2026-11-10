@@ -199,7 +199,22 @@ El diseño documental de ideas y guiones ya existe en [fabrica-contenido/2026110
 
 Escribir y revisar paquetes en GitHub, no. Grabar, no (eso lo hacés vos). Publicar cada pieza, sí. Un PEDIDO de ASR o corte sobre un archivo concreto, sí (o el sí ya dado al alcance técnico del reparto, si el archivo y la ruta están autorizados). Abrir inscripciones, cobrar, mandar DMs o activar n8n, sí específico y aparte.
 
-## Fábrica de contenido v2 · después del 14
+## Fábrica de contenido v2 · adelantada a hoy, 9 nov 2026
+
+**Cambio aprobado por Sergio el 2026-11-09 20:27 America/La_Paz** («Quiero la automática completa hoy aunque cambie el plan»). La v2 deja de esperar al 14 y se construye hoy. Todo lo demás de este archivo sigue fijo. Publicar, gastar, activar n8n y tocar la PC siguen necesitando su sí.
+
+Cadena automática de hoy, en orden de construcción:
+
+1. **Cola de entrada del vlog** (Codex): carpeta privada fuera de Git (en HOMELAB `/var/lib/onia-worker/work/entrada/` cuando el alta quede OK; mientras tanto, en el VPS bajo `~/operacion/fabrica/entrada/`). Sergio deja el video crudo; nada de esto va a GitHub.
+2. **Transcripción y cortes** (Codex): un comando `fabrica.py procesar <video>` que hace ASR en CPU (faster-whisper int8), corta con FFmpeg según una lista de intervalos en JSON, saca 9:16 con subtítulos quemados y deja los borradores en `salida/AAAA-MM-DD/`. Probado con un video de prueba y tests.
+3. **Guiones e intervalos del día** (Boss): rutina diaria de Grok Bot a las 07:00 La Paz que lee el cerebro y las noticias de IA, escribe los 5 guiones (los 5 slots fijos) en `02-contenido/fabrica-diaria/AAAA-MM-DD.md` y, si hay transcripción del vlog, la lista de cortes en JSON para el paso 2.
+4. **Disparo de Codex** (Boss): Boss lanza `procesar` por el harness con Sol low y sin subagentes; revisor distinto antes de entregar.
+5. **Revisión y publicación** (Sergio): ve los 5 borradores, aprueba y publica. No hay publicación automática.
+6. **Medir y mejorar**: Boss anota qué se publicó y cómo fue, y guarda el criterio en el procedimiento.
+
+Lo que sigue igual que antes: el harness no despacha solo (lo dispara Boss), n8n no se toca, y el render es en CPU (sin GPU útil), así que un vlog largo tarda y queda en cola.
+
+## Fábrica de contenido v2 · texto original (antes del cambio)
 
 Cuando termine el workshop, la misma cadena se vuelve más automática y se mide. No se lanza en este archivo.
 
