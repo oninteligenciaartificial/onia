@@ -1,0 +1,23 @@
+{
+  "id": "flujo-boss-codex-v2-20261109",
+  "ejecutor": "01a1c2c6-0d71-7ab0-8733-e445173f6713",
+  "modelo": "gpt-6.1-sol",
+  "esfuerzo": "low",
+  "subagentes": 0,
+  "intentos_ejecutor": 1,
+  "rc": 0,
+  "commit_ejecutor": "14c36cfe8a273448b0a7cf64b10907b5023be590",
+  "commit_complemento_coordinador": "03e7f89af6e034f82db6c77330c61a58fe2cae4a",
+  "resultado": "entregada para revisión independiente",
+  "retrabajo": "Complemento coordinador solicitado: inventario/cuota, propuesta y8 líneas de casa; sin reanudar la ejecutora.",
+  "tests": {
+    "total": 130,
+    "aprobados": 129,
+    "omitidos": 1,
+    "segundos": 45.355,
+    "bash_n": "OK",
+    "diff_check": "OK"
+  },
+  "fuente_tests": "Eventos command_execution completados con exit_code0 del log privado de la sesión; log íntegro permanece fuera de Git.",
+  "restricciones": "Diff de entrega sólo cola-boss.md y reglas-comunes.md; sin código harness ni homelab, PC, boss-memoria, n8n, secretos/IPs."
+}

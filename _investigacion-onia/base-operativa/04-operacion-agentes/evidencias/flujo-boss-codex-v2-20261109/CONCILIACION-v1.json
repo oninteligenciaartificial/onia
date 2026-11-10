@@ -1,0 +1,45 @@
+{
+  "id_simulado": "flujo-boss-codex-20261109",
+  "id_real": "flujo-boss-codex-v2-20261109",
+  "fecha": "2026-11-10T00:05:15.954541+00:00",
+  "revision_previa": 4,
+  "estado_previo": "para_revision",
+  "asignacion_previa": {
+    "responsable": "codex",
+    "rutas": [
+      "04-operacion-agentes/pendientes/cola-boss.md",
+      "04-operacion-agentes/reglas-comunes.md"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-09T23:57:53.965487+00:00"
+  },
+  "cierre_simulado_previo": {
+    "commit": "simulado",
+    "commit_base": "simulado",
+    "ramas_origin": [
+      "origin/simulado"
+    ],
+    "fecha": "2026-11-09T23:58:38.586767+00:00",
+    "dry_run": true,
+    "intento": 1,
+    "evidencia": {
+      "archivo": "operacion/evidencias/flujo-boss-codex-20261109/cierre-r3-7ab6b918.json",
+      "sha256": "e0e829c6e15bcc71408fba62de9ff3a45b5a6e383a4c99a1edd6032cc5393329",
+      "bytes": 185
+    }
+  },
+  "sesion_simulada_cerrada": true,
+  "sesiones_reales": 0,
+  "evidencias_preservadas": [
+    {
+      "archivo": "operacion/evidencias/flujo-boss-codex-20261109/cierre-r3-7ab6b918.json",
+      "sha256": "e0e829c6e15bcc71408fba62de9ff3a45b5a6e383a4c99a1edd6032cc5393329",
+      "bytes": 185
+    }
+  ],
+  "sha256_log_simulado": "4b525988f2f820ad05960a306b4d6931d1ba52f4b833eb786c3e13baf32fcd53",
+  "nota": "Sin estado cancelado en schema2: se conserva en_espera identificado como ensayo finalizado, sin aceptación real ni rutas. Cierre previo permanece en historial/evidencia.",
+  "revision_conciliada": 6,
+  "estado_final": "en_espera",
+  "rutas_liberadas": true
+}
