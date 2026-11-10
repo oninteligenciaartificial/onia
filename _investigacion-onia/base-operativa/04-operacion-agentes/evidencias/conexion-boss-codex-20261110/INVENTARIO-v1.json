@@ -1,0 +1,33 @@
+{
+  "id": "conexion-boss-codex-20261110",
+  "commit_base": "ffad730d786ca46154828921b397d66adecebacc",
+  "fuentes": [
+    {
+      "archivo": "05-herramientas/scripts/harness.py",
+      "sha256": "95d081f2122453738dfad690c1c3aafd3c29f4722dd564938971aff881aff6e5"
+    },
+    {
+      "archivo": "05-herramientas/scripts/harness_sesiones.py",
+      "sha256": "45261084709d85321bcf91808e9ebc30e8409665faa9d3dd04b218402d2bbd5c"
+    },
+    {
+      "archivo": "05-herramientas/scripts/trabajo.py",
+      "sha256": "895b2e525a63081ec28f78b10dc0ec3be2bdadcb7c68a070429c40bccd9ea3f1"
+    },
+    {
+      "archivo": "04-operacion-agentes/reglas-comunes.md",
+      "sha256": "cab9cd0a3bacb6c776961aeea215297ccaa0a624632e4805b411285a858eb059"
+    },
+    {
+      "archivo": "04-operacion-agentes/REPARTO-CODEX-GROKBOT-20261109.md",
+      "sha256": "c9f5e8e0cea450d3bad61f25621df9e8db031e6a598996ede186dbf03487ed00"
+    }
+  ],
+  "comprobaciones": {
+    "repo": "checkout coordinador limpio antes de este encargo; master cotejado",
+    "SSH": "metadatos de archivos presentes; ninguna llave atribuida a Boss ni conexión remota probada",
+    "consulta_estado": "status llama sync; no es sólo lectura",
+    "Grok": "sin herramienta directa disponible en esta sesión; falta comprobación de la cuenta de Boss"
+  },
+  "sin_cambios_de_configuracion": true
+}

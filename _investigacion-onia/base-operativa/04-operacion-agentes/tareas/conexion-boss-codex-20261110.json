@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "id": "conexion-boss-codex-20261110",
+  "revision": 2,
+  "compartible": true,
+  "objetivo": "Conectar Boss con las tareas y resultados del harness para eliminar el traslado manual de prompts, con revisión técnica desde ambos extremos.",
+  "estado": "en_espera",
+  "proximo_paso": "Boss lee CONEXION-Y-ENCARGO-v1.md y publica REVISION-BOSS-v1.md; Codex elige con esa evidencia el transporte mínimo y continúa la implementación autorizada.",
+  "resultado": "Diseño y encargo conjunto preparados tras cotejar harness y documentación oficial. Conexión aún no configurada; falta revisión y capacidades reales de Boss.",
+  "comprobacion": "Se identificaron transporte por comando y retorno por evento documentados, y el efecto mutante de estado. No hay pruebas de acceso desde Boss ni de ida y vuelta.",
+  "verificacion": "pendiente",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/CONEXION-Y-ENCARGO-v1.md",
+      "sha256": "7b75987bd3b4d885ce8d44200b7362c0eef001997498da9781259b25e9b88713",
+      "bytes": 10306
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/INVENTARIO-v1.json",
+      "sha256": "24e32b1917b35ee3ad20e0a5448adbb63e98e3adc3e92c67c91dba0fa433c2d6",
+      "bytes": 1338
+    }
+  ],
+  "actualizado": "2026-11-10T11:25:43.409438+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-10T11:25:43.392426+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/conexion-boss-codex-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/conexion-boss-codex-20261110.md",
+    "sha256": "f985ecc03870321f47a9f128850586e01a403486b3d378786646a4324e9f7e85",
+    "bytes": 3261,
+    "contenido": "# Encargo conexion-boss-codex-20261110\n\nÁrea: organizacion\nModo: encargo\nSkill directora: continuidad-de-trabajo\n\n## Objetivo\n\nConectar Boss con las tareas y resultados del harness para eliminar el traslado manual de prompts, con revisión técnica desde ambos extremos.\n\n## Entregable\n\nDiseño acotado, comprobación de capacidades de Boss, adaptador mínimo y prueba de ida y vuelta; no declarar conexión por publicar documentos.\n\n## Criterio de aceptación\n\nBoss puede solicitar una tarea autorizada, recibir su estado y entrega, revisar y continuar por ID sin copia manual, sin duplicados ni ampliación de permisos; evidencia de prueba y commits en master.\n\n## Entrada y alcance\n\nPlanificar con datos vigentes; usar la skill de apoyo correspondiente para continuidad o mejora. No presupone sincronización del calendario.\n\n- 04-operacion-agentes/evidencias/conexion-boss-codex-20261110/CONEXION-Y-ENCARGO-v1.md\n- 04-operacion-agentes/evidencias/conexion-boss-codex-20261110/INVENTARIO-v1.json\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [02-contenido/CEREBRO-DIARIO.md](../../02-contenido/CEREBRO-DIARIO.md)\n- [04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md](../ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md)\n- [05-herramientas/compartibles/skills/continuidad-de-trabajo/SKILL.md](../../05-herramientas/compartibles/skills/continuidad-de-trabajo/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [planificar-dia](../../05-herramientas/compartibles/skills/planificar-dia/SKILL.md)\n- [mejorar-sistema](../../05-herramientas/compartibles/skills/mejorar-sistema/SKILL.md)\n- [evaluar-catalogo-skills](../../05-herramientas/compartibles/skills/evaluar-catalogo-skills/SKILL.md)\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n\n## Salidas de referencia del área\n\n- Agenda viable con compromisos y tareas\n- Estado y entrega para retomar un encargo\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/conexion-boss-codex-20261110.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null
+}

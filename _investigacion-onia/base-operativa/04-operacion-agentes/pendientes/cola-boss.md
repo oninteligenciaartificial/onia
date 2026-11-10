@@ -101,3 +101,15 @@ Para automatizar luego: un sí específico al adaptador de pasos pesados VPS→w
 - **No autorizado:** modificar originales comerciales o harness, lanzar Codex, activar la rutina07:00, implementar/publicar la fábrica, n8n, PC, producción, DMs, cobros, gasto, generación con créditos, borrados, secretos/IPs. Los restantes permisos sensibles siguen siendo específicos.
 - **Devolución:** `REVISION-CONTENIDO-v1.md` y `REVISION-BOSS-v1.md`, cada uno con su autor/recibo y commit; no editar JSON ni briefing. Coordinador integra la evidencia en el mismo ID. HECHO es entrega, no aceptación.
 - **Dependencia:** falta confirmación de lectura de Boss. No hay canal directo verificado ni scheduler; Sergio debe señalarle el enlace/ID en su chat. No afirmar recepción por el solo push.
+
+
+## PEDIDO — conexión Boss–Codex · 10 noviembre 2026 America/La_Paz
+
+- **ID harness:** `conexion-boss-codex-20261110`; [registro único](../tareas/conexion-boss-codex-20261110.json).
+- **Destinatario:** Boss, contraparte y revisor del diseño técnico de Codex; Sergio pidió explícitamente que ambos estén alineados.
+- **Objetivo:** encargar, consultar y devolver trabajo del harness sin copiar prompts y sin un panel nuevo.
+- **Encargo completo y aceptación:** [conexión y revisión de capacidades](../evidencias/conexion-boss-codex-20261110/CONEXION-Y-ENCARGO-v1.md). Base `ffad730d786ca46154828921b397d66adecebacc`.
+- **Autorizado ahora a Boss:** leer y comprobar capacidades existentes sin secretos, revisar alternativas y publicar `REVISION-BOSS-v1.md` en esa carpeta. No crear conectores/rutinas/llaves ni lanzar tareas para esta revisión.
+- **Devolución:** veredicto, capacidad observada, transporte propuesto, paso humano indispensable y recibo/commits. Codex integra la respuesta en este ID y continúa la parte técnica autorizada.
+- **Límites:** sin producción/n8n/PC, gasto, envíos comerciales, borrados ni nuevos bots. No tocar JSON/briefing ni documentos de otros encargos.
+- **Recepción:** pendiente de confirmación real. La presencia de este pedido no dispara Boss; el enlace inicial debe abrirse en su chat.
