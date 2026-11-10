@@ -1,0 +1,182 @@
+{
+  "simulacion": true,
+  "resultados": [
+    {
+      "resultado": "procesado",
+      "nuevos": [
+        {
+          "id": "cliente:fixture-info:0",
+          "tipo": "informacion",
+          "destino": "fixture-cliente-a",
+          "texto": "Gracias por tu interés en Tu negocio con IA: ordena, vende y automatiza, para dueños de pequeños negocios de Santa Cruz. Son tres clases por Google Meet: jueves 12 y viernes 13 de noviembre de 2026 a las 21:00; sábado 14 a las 14:00, hora de La Paz. Grupal: Bs 50, sin cupo fijado. VIP: Bs 150, 5 cupos en total, con llamada de 30 minutos. La primera clase es práctica con Claude, con cuenta propia. Para solicitar inscripción, respondé GRUPAL o VIP. La disponibilidad VIP se comprueba al confirmar el pago; pedir información no reserva plaza.",
+          "ficticio": true
+        }
+      ]
+    },
+    {
+      "resultado": "procesado",
+      "nuevos": [
+        {
+          "id": "cliente:fixture-inscripcion:0",
+          "tipo": "pendiente",
+          "destino": "fixture-cliente-a",
+          "texto": "Tu solicitud queda pendiente de pago. Modalidad: grupal, importe: Bs 50 (bolivianos). No hay plaza reservada. Sergio verifica manualmente el movimiento, importe, moneda y destino. Una captura no confirma el pago.",
+          "ficticio": true
+        },
+        {
+          "id": "cliente:fixture-inscripcion:1",
+          "tipo": "qr",
+          "destino": "fixture-cliente-a",
+          "texto": "ENSAYO FICTICIO: QR_FICTICIO_SIN_VALOR. No sirve para pagar. Tras el pago se revisa la referencia; una captura sólo inicia revisión manual.",
+          "ficticio": true
+        },
+        {
+          "id": "cliente:fixture-inscripcion:2",
+          "tipo": "aviso_operador",
+          "destino": "operador-ficticio",
+          "texto": "ENSAYO: revisar inscripción fixture-cliente-a; motivo: INSCRIPCION_PENDIENTE. No se ha enviado ninguna notificación real.",
+          "ficticio": true
+        }
+      ]
+    },
+    {
+      "resultado": "procesado",
+      "nuevos": [
+        {
+          "id": "cliente:fixture-comprobante:0",
+          "tipo": "captura",
+          "destino": "fixture-cliente-a",
+          "texto": "Recibimos el comprobante para revisión. Seguís pendiente: Sergio debe verificar el movimiento real antes de confirmar.",
+          "ficticio": true
+        },
+        {
+          "id": "cliente:fixture-comprobante:1",
+          "tipo": "aviso_operador",
+          "destino": "operador-ficticio",
+          "texto": "ENSAYO: revisar inscripción fixture-cliente-a; motivo: COMPROBANTE_NO_VERIFICADO. No se ha enviado ninguna notificación real.",
+          "ficticio": true
+        }
+      ]
+    },
+    {
+      "resultado": "procesado",
+      "nuevos": [
+        {
+          "id": "operador:fixture-confirmacion:0",
+          "tipo": "confirmado",
+          "destino": "fixture-cliente-a",
+          "texto": "ENSAYO FICTICIO: pago marcado como confirmado por el operador de prueba. Acceso de prueba por este chat: ACCESO_FICTICIO_NO_VALIDO. No es una sala de Meet. Usá tu cuenta propia; no compartimos credenciales. Para VIP, la llamada de 30 minutos queda por coordinar.",
+          "ficticio": true
+        }
+      ]
+    },
+    {
+      "resultado": "duplicado",
+      "nuevos": []
+    }
+  ],
+  "snapshot": {
+    "version": 1,
+    "reloj": 4000,
+    "clientes": {
+      "fixture-cliente-a": {
+        "estado": "confirmado",
+        "cese": false,
+        "plan": "grupal",
+        "importe": 50,
+        "vence": 86402000,
+        "referencia": "FICTICIO-PAGO-A"
+      }
+    },
+    "referencias": {
+      "FICTICIO-PAGO-A": "fixture-cliente-a"
+    },
+    "vistos": {
+      "cliente:fixture-info": "{\"accion\":\"interes\",\"cliente\":\"fixture-cliente-a\",\"ficticio\":true,\"id\":\"fixture-info\"}",
+      "cliente:fixture-inscripcion": "{\"accion\":\"inscribir\",\"cliente\":\"fixture-cliente-a\",\"ficticio\":true,\"id\":\"fixture-inscripcion\",\"plan\":\"grupal\"}",
+      "cliente:fixture-comprobante": "{\"accion\":\"captura\",\"cliente\":\"fixture-cliente-a\",\"ficticio\":true,\"id\":\"fixture-comprobante\",\"referencia\":\"FICTICIO-PAGO-A\"}",
+      "operador:fixture-confirmacion": "{\"cliente\":\"fixture-cliente-a\",\"decision\":\"confirmar\",\"destinoVerificado\":true,\"ficticio\":true,\"id\":\"fixture-confirmacion\",\"importe\":50,\"moneda\":\"BOB\",\"movimientoVerificado\":true,\"operador\":\"operador-ficticio\",\"referencia\":\"FICTICIO-PAGO-A\"}"
+    },
+    "salida": [
+      {
+        "id": "cliente:fixture-info:0",
+        "tipo": "informacion",
+        "destino": "fixture-cliente-a",
+        "texto": "Gracias por tu interés en Tu negocio con IA: ordena, vende y automatiza, para dueños de pequeños negocios de Santa Cruz. Son tres clases por Google Meet: jueves 12 y viernes 13 de noviembre de 2026 a las 21:00; sábado 14 a las 14:00, hora de La Paz. Grupal: Bs 50, sin cupo fijado. VIP: Bs 150, 5 cupos en total, con llamada de 30 minutos. La primera clase es práctica con Claude, con cuenta propia. Para solicitar inscripción, respondé GRUPAL o VIP. La disponibilidad VIP se comprueba al confirmar el pago; pedir información no reserva plaza.",
+        "ficticio": true
+      },
+      {
+        "id": "cliente:fixture-inscripcion:0",
+        "tipo": "pendiente",
+        "destino": "fixture-cliente-a",
+        "texto": "Tu solicitud queda pendiente de pago. Modalidad: grupal, importe: Bs 50 (bolivianos). No hay plaza reservada. Sergio verifica manualmente el movimiento, importe, moneda y destino. Una captura no confirma el pago.",
+        "ficticio": true
+      },
+      {
+        "id": "cliente:fixture-inscripcion:1",
+        "tipo": "qr",
+        "destino": "fixture-cliente-a",
+        "texto": "ENSAYO FICTICIO: QR_FICTICIO_SIN_VALOR. No sirve para pagar. Tras el pago se revisa la referencia; una captura sólo inicia revisión manual.",
+        "ficticio": true
+      },
+      {
+        "id": "cliente:fixture-inscripcion:2",
+        "tipo": "aviso_operador",
+        "destino": "operador-ficticio",
+        "texto": "ENSAYO: revisar inscripción fixture-cliente-a; motivo: INSCRIPCION_PENDIENTE. No se ha enviado ninguna notificación real.",
+        "ficticio": true
+      },
+      {
+        "id": "cliente:fixture-comprobante:0",
+        "tipo": "captura",
+        "destino": "fixture-cliente-a",
+        "texto": "Recibimos el comprobante para revisión. Seguís pendiente: Sergio debe verificar el movimiento real antes de confirmar.",
+        "ficticio": true
+      },
+      {
+        "id": "cliente:fixture-comprobante:1",
+        "tipo": "aviso_operador",
+        "destino": "operador-ficticio",
+        "texto": "ENSAYO: revisar inscripción fixture-cliente-a; motivo: COMPROBANTE_NO_VERIFICADO. No se ha enviado ninguna notificación real.",
+        "ficticio": true
+      },
+      {
+        "id": "operador:fixture-confirmacion:0",
+        "tipo": "confirmado",
+        "destino": "fixture-cliente-a",
+        "texto": "ENSAYO FICTICIO: pago marcado como confirmado por el operador de prueba. Acceso de prueba por este chat: ACCESO_FICTICIO_NO_VALIDO. No es una sala de Meet. Usá tu cuenta propia; no compartimos credenciales. Para VIP, la llamada de 30 minutos queda por coordinar.",
+        "ficticio": true
+      }
+    ],
+    "auditoria": [
+      {
+        "id": "cliente:fixture-info",
+        "resultado": "procesado",
+        "ahora": 1000,
+        "cliente": "fixture-cliente-a",
+        "estado": "interesado"
+      },
+      {
+        "id": "cliente:fixture-inscripcion",
+        "resultado": "procesado",
+        "ahora": 2000,
+        "cliente": "fixture-cliente-a",
+        "estado": "pendiente"
+      },
+      {
+        "id": "cliente:fixture-comprobante",
+        "resultado": "procesado",
+        "ahora": 3000,
+        "cliente": "fixture-cliente-a",
+        "estado": "pendiente"
+      },
+      {
+        "id": "operador:fixture-confirmacion",
+        "resultado": "procesado",
+        "ahora": 4000,
+        "cliente": "fixture-cliente-a",
+        "estado": "confirmado"
+      }
+    ]
+  }
+}

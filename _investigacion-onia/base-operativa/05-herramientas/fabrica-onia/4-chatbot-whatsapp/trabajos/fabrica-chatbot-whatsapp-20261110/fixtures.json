@@ -1,0 +1,51 @@
+{
+  "ficticio": true,
+  "pasos": [
+    {
+      "canal": "meta", "ahora": 1000,
+      "payload": {
+        "ficticio": true, "object": "whatsapp_business_account",
+        "entry": [{"id": "fixture-cuenta", "changes": [{"field": "messages", "value": {
+          "messages": [{"id": "fixture-info", "from": "fixture-cliente-a", "type": "text", "text": {"body": "NEGOCIO"}}]
+        }}]}]
+      }
+    },
+    {
+      "canal": "meta", "ahora": 2000,
+      "payload": {
+        "ficticio": true, "object": "whatsapp_business_account",
+        "entry": [{"id": "fixture-cuenta", "changes": [{"field": "messages", "value": {
+          "messages": [{"id": "fixture-inscripcion", "from": "fixture-cliente-a", "type": "text", "text": {"body": "GRUPAL"}}]
+        }}]}]
+      }
+    },
+    {
+      "canal": "meta", "ahora": 3000,
+      "payload": {
+        "ficticio": true, "object": "whatsapp_business_account",
+        "entry": [{"id": "fixture-cuenta", "changes": [{"field": "messages", "value": {
+          "messages": [{"id": "fixture-comprobante", "from": "fixture-cliente-a", "type": "image", "image": {"id": "fixture-imagen-no-descargable", "caption": "FICTICIO-PAGO-A"}}],
+          "statuses": [{"id": "fixture-inscripcion", "status": "delivered"}]
+        }}]}]
+      }
+    },
+    {
+      "canal": "operador", "ahora": 4000,
+      "evento": {
+        "ficticio": true, "id": "fixture-confirmacion", "cliente": "fixture-cliente-a",
+        "operador": "operador-ficticio", "decision": "confirmar",
+        "referencia": "FICTICIO-PAGO-A", "importe": 50, "moneda": "BOB",
+        "movimientoVerificado": true, "destinoVerificado": true
+      }
+    },
+    {
+      "canal": "operador", "ahora": 5000,
+      "evento": {
+        "ficticio": true, "id": "fixture-confirmacion", "cliente": "fixture-cliente-a",
+        "operador": "operador-ficticio", "decision": "confirmar",
+        "referencia": "FICTICIO-PAGO-A", "importe": 50, "moneda": "BOB",
+        "movimientoVerificado": true, "destinoVerificado": true
+      }
+    }
+  ]
+}
