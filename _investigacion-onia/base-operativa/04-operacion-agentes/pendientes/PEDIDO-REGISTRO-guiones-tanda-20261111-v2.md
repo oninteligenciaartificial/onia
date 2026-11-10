@@ -1,4 +1,4 @@
-# Registro delegado: fabrica-guiones-aplicar-tanda-20261111
+# Registro delegado: guiones-tanda-20261111-v2
 
 10 noviembre 2026, 16:26 La Paz. Autorización: Sergio respondió (16:22) «Dale con tu recomendación» a cómo seguir; esa recomendación era terminar los guiones de mañana con los textos de Contenido. Es aplicación editorial en una nueva entrega; no habilita registrar otras sesiones, grabar, publicar, enviar, gastar ni activar n8n.
 
@@ -6,7 +6,7 @@ Fuentes: [textos finales de Contenido](../../05-herramientas/fabrica-onia/1-guio
 
 ```onia-pedido-v1
 {
-  "id": "fabrica-guiones-aplicar-tanda-20261111",
+  "id": "guiones-tanda-20261111-v2",
   "fabrica": "guiones",
   "esfuerzo": "low",
   "objetivo": "Aplicar los textos finales de Contenido de 05-herramientas/fabrica-onia/1-guiones-calendario/TEXTOS-CONTENIDO-guiones-tanda-20261111.md a T01–T05 y a guiones-panel.json de la tanda guiones-tanda-20261111. Partir de la entrega c5fe870 en codex/ws-guiones-tanda-20261111 (salida/guiones-tanda-20261111/). Copiar el guion hablado de cada pieza de forma literal desde ese archivo. Nombre exacto del workshop: «Claude de 0 a 100: tu negocio con IA». No usar el logo de Claude/Anthropic como propio en ningún plano; el nombre solo en texto. Conservar la estructura de cada pieza. Actualizar apertura, copy y CTA solo cuando el texto de Contenido lo implique, sin inventar datos. En T05 no hay reemplazo íntegro de Contenido: aplicar únicamente el cambio opcional documentado (sacar «ficticia» de la voz; cierre «Comentá A o B según cuál te deja más claro qué se ofrece.»). No publicar, no grabar, no integrar a master, no activar n8n ni enviar.",
