@@ -69,13 +69,22 @@ Boss intentó lanzar el paso 1 del plan 19:56. Hizo `preparar` + `asignar` de `f
 
 PEDIDO a Codex: conciliar/cerrar el ID simulado, lanzar o ejecutar `flujo-boss-codex-v2-20261109` con Sol low sin subagentes, y proponer (sin rehacer el harness) cómo hacer que un dry-run no bloquee el ID real.
 
-## HECHO — flujo directo y revisión documental · 2026-11-10 UTC
-ID harness: flujo-boss-codex-v2-20261109; entrega en el commit de este bloque; revisión independiente pendiente.
-Flujo 9-nov 19:12 La Paz registrado en reglas-comunes.md: Boss→buzón→Codex/harness sólo con aprobación aplicable; Sergio conserva su canal directo y el sí para gasto, publicación, n8n y PC.
-Cotejo sólo lectura: bloques 19:30/19:56 (312a8a6), reglas, orquestacion.json, modelo (573b302) y reparto/revisión (777fd23); referencias del modelo y selección de organización coherentes.
-Incoherencias: 19:30 pospone ingresos hasta cerrar arquitectura y 19:30/19:56 proponen medir capacidad, frente al reparto que prioriza ingresos y aparca benchmarks; no son autorización nueva ni alteran el tope tres.
-El ID reparto-final-20261109 ya tiene revisión en 777fd23: el remanente usa este ID, sin relanzar el reparto aceptado; el plan 19:56 sustituye la espera del alta del bloque 19:30.
-Antisolape: la exclusividad histórica de Boss sobre cola-boss cede sólo para esta entrega expresamente asignada; no se tocaron boss-memoria, archivos propios de Boss, HOMELAB ni PC.
-Fricción: lanzar --dry-run deja ese ID inutilizable para operación real (flujo-boss-codex-20261109); cerrar simulado no libera rutas. Usar IDs de juguete separados y conciliar/liberar reservas desde el coordinador; no se modificó el harness.
-Límites: sin inventario vivo de sesiones/cupos/otros escritores ni cuota actual comprobados; primer PEDIDO ASR/cortes requiere medio autorizado accesible, finalidad, intervalos de Contenido, formato y aceptación; no inicia lote ni sincroniza calendario.
-Comprobación: unittest existente 130 pruebas (129 OK, 1 omitida), bash -n y git diff --check OK; runtime/cuota observados no comprobados, sin hijos ni nuevas sesiones; aceptación e integración a cargo del coordinador.
+## HECHO — flujo-boss-codex-v2-20261109 · 9-nov, America/La_Paz
+Entrega ejecutora: 14c36cfe8a273448b0a7cf64b10907b5023be590; Sol6.1 low observado, 0 hijos; aceptación se consulta en el registro, HECHO sólo entrega.
+Flujo directo registrado en reglas-comunes: Boss→buzón→harness/Codex sólo para tareas ya aprobadas; el canal directo de Sergio prevalece y los permisos sensibles siguen siendo específicos.
+Cotejo de 19:30/19:56 con reglas, manifiesto, 573b302 y777fd23: fuente y roles coherentes; posponer ingresos y proponer benchmarks contradice el reparto vigente y no autoriza mediciones ni subir3cupos.
+19:56 sustituye la espera de19:30; reparto-final-20261109 ya fue aceptado y no se relanza: el remanente corresponde a este ID; alta_local OK tampoco acredita todavía SSH/aislamiento remoto.
+Ensayo flujo-boss-codex-20261109 finalizado sin aceptación real: sesión cerrada, rutas liberadas, log/evidencias/historial conservados; schema2 lo mantiene en_espera identificado como anulado.
+Propuesta, no implementada: previsualización --dry-run sin mutar tarea/índice/reservas; fixtures separados para ensayar asignación; detalle y tests propuestos en [PROPUESTA-DRY-RUN](../evidencias/flujo-boss-codex-v2-20261109/PROPUESTA-DRY-RUN.md).
+Foto de coordinación: 0sesiones vivas/3cupos, 6IDs no aceptados y25worktrees de sesiones conservados; único escritor asignado codex/v2 en su worktree, rutas y alcance en [INVENTARIO](../evidencias/flujo-boss-codex-v2-20261109/INVENTARIO-v1.json).
+Pruebas ejecutora:130 (129OK,1omitida), bash -n y diff OK; cuota compartida70% a10-nov00:02UTC/9-nov20:02Bolivia, extra0; sin USD ni atribución por sesión, recibos al cerrar.
+Primer PEDIDO ASR/cortes: ID, autorización y medio privado accesible, idioma/salida, intervalos y formato de Contenido, aceptación y revisor; sin tocar homelab, PC, boss-memoria o n8n.
+
+## EN CASA — alta onia-worker y automatización posterior
+Sólo DESKTOP-0GGGNMF, Ubuntu WSL2; laptop fuera. Abrí [ALTA-ONIA-WORKER](../homelab/ALTA-ONIA-WORKER.md#paso-de-sergio-ahora), descargá el instalador revisado y ejecutá su bloque PowerShell con verificación de hash.
+Mandá sólo alta_local: OK o ALTA DETENIDA; no repitas el alta ante fallo ni mandes claves, contraseñas o respaldos. La huella pública ya está recibida.
+Si OK, hacé el chequeo local del puerto del documento; antes de habilitar Serve, cotejar/preservar su configuración y no sustituir un forward existente; acceso sólo tailnet, nunca Funnel.
+Codex deberá contrastar la huella remota y probar usuario sin privilegios, Windows inaccesible, persistencia de archivos y rechazo de forwarding antes de aceptar el worker.
+Mantené PC enchufada y Ubuntu abierto durante la prueba; el arranque/persistencia de WSL y recuperación tras corte requieren su comprobación, no se deducen de Tailscale online.
+El harness actual lanza en el VPS: SSH listo no implementa un backend PC ni un despachador automático. Boss puede invocarlo para tareas ya aprobadas; el buzón no ejecuta procesos.
+Para automatizar luego: un sí específico al adaptador de pasos pesados VPS→worker y al disparador/cola, con entradas autorizadas, límites, parada y revisión distinta; mantener3cupos hasta otra decisión medida.
