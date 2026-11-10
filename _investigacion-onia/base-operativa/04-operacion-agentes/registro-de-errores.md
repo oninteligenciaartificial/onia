@@ -515,3 +515,11 @@ El primer push de la comparación de transportes (f2b1564) fue rechazado con `fe
 - Qué pasó: list_artifacts de la app no respondió y se interrumpió la llamada de lectura. Causa externa no determinada. Evidencia: llamada pendiente sin resultado; ninguna creación había empezado en esa celda. Continuidad: worktree Git aislado creado explícitamente desde origin/master; no afirmar que la app lo adjuntó.
 
 - Publicación del puente (10-nov): el primer git add del worktree aislado falló por índice en metadatos Git fuera del sandbox escribible. No cambió archivos ni índice. Se repitió con la autorización de escritura necesaria para la publicación ya pedida; no hubo rechazo de aprobación automática. Prevención: distinguir rutas del checkout y metadatos compartidos, sin tocar el checkout sucio.
+
+
+## 10 noviembre 2026 — Retorno Boss r8 incierto por configuración de autenticación
+
+- Qué pasó: cierre del juguete publicado, evento de retorno quedó incierto. Boss informó HTTP 401 y clave con prefijo de encabezado, luego corrigió webhook.json y probó su rutina con 200. Causa de configuración según ACUSE-BOSS-v1 (7506ad2); Codex no reprodujo el valor anterior ni imprimió secretos.
+- Evidencia: evento privado r8 preservado, acuse vinculado al snapshot 5a0769d, y CONCILIACION-R8-v1. La protección contra duplicados impidió que notificar reenviara por sí solo.
+- Corrección autorizada por Sergio: cotejar acuse/snapshot, conservar el evento incierto, registrar intención durable y reenviar exactamente una vez desde el VPS; resultado observado 200 y evento recibido_http. Verificación posterior no invocó otro POST. No relanzar ejecutora ni cambiar r8.
+- Prevención: cargar sólo la clave, no el encabezado; distinguir validación estructural de autenticación aceptada. Ante un envío incierto, revisar recepción y autorizar conciliación específica antes de repetir. Los nonces cacheados conservan respuestas históricas; no crean un estado nuevo del evento.

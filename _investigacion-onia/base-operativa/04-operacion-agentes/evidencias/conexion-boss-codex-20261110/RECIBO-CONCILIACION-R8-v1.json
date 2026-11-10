@@ -1,0 +1,50 @@
+{
+  "id": "conexion-boss-codex-20261110",
+  "tarea_aviso": "conexion-boss-piloto-20261110",
+  "revision_aviso": 8,
+  "payload": {
+    "commit": "5a0769ddff7c504f4add723ec8798fbe3d459b92",
+    "estado": "para_revision",
+    "id": "conexion-boss-piloto-20261110",
+    "revision": 8
+  },
+  "acuse_previo_commit": "7506ad2",
+  "fecha_inicio_utc": "2026-11-10T15:49:20.783038+00:00",
+  "fecha_fin_utc": "2026-11-10T15:49:21.216397+00:00",
+  "estado_envio": "recibido_http",
+  "http_status": 200,
+  "reenvios_autorizados_desde_vps": 1,
+  "sha256_evento_incierto_preservado": "a312cbcc4e8c5e31f57d55cb614da43b02b2ff5586d07144f5ed04c6820f532e",
+  "registro_piloto_alterado": false,
+  "repeticion_sin_segundo_post_comprobada": true,
+  "llave_vieja": {
+    "backup_nombre": "authorized_keys.pre-restriccion-boss-vieja-20261110T154921Z",
+    "fecha_utc": "2026-11-10T15:49:21.225957+00:00",
+    "huella": "SHA256:32x5cddO7CUzHo85H6durHylPB3ulcxYHBniySZQr5s",
+    "misma_entrada_conservada": true,
+    "otras_entradas_identicas": true,
+    "prueba_ssh_vieja_desde_boss": "pendiente",
+    "restringida": true,
+    "servicios_reiniciados": false,
+    "sesiones_previas_interrumpidas": false,
+    "sha256_antes": "59d811d3ab5bcfcefaac8f35aaee9ba87a61409be6d68cde279842ff7c09bc60",
+    "sha256_despues": "c45dd1114d6b38c7787e9e1575a6dccd98d541121742a42469244a1d586d4524"
+  },
+  "modelo": "gpt-6-astra",
+  "esfuerzo": "xhigh",
+  "used_percent_inicio": 78.0,
+  "cuota_inicio_muestra_utc": "2026-11-10T15:46:58.537Z",
+  "used_percent_final": 78.0,
+  "cuota_final_muestra_utc": "2026-11-10T15:50:20.860Z",
+  "saldo_extra": 0,
+  "intentos": 1,
+  "retrabajo": false,
+  "resultado": "aceptada",
+  "alcance": "Conciliación, reenvío único y restricción configurada; no aceptación formal del piloto.",
+  "commits_fuente": [
+    "7506ad2",
+    "5a0769ddff7c504f4add723ec8798fbe3d459b92",
+    "69ceedb262881469fd2eedcb0447e1a025656639"
+  ],
+  "nuevas_sesiones_codex": 0
+}

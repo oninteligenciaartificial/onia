@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "conexion-boss-codex-20261110",
-  "revision": 8,
+  "revision": 9,
   "compartible": true,
   "objetivo": "Conectar Boss con las tareas y resultados del harness para eliminar el traslado manual de prompts, con revisión técnica desde ambos extremos.",
   "estado": "en_espera",
-  "proximo_paso": "Boss envía el JSON de HABILITACION-PILOTO-v1, lo repite idéntico y cierra con la revisión vigente; publica acuse y huella pública de llave vieja. Tras prueba y acuse, Codex restringe sólo la entrada identificada, con original conservado; revisión distinta antes de aceptar.",
-  "resultado": "Boss comprobó la nueva llave por SSH y publicó evidencia; webhook privado validado. Permiso del único juguete habilitado, aún sin lanzamiento por Codex.",
-  "comprobacion": "Permiso validado contra binding y revisión 2, caducidad 24 h, Sol6.1 low, cero hijos y máximo tres intentos. Rechazo previo sin diario/barrera. Consulta local conserva tarea. Prueba real y acuse pendientes.",
+  "proximo_paso": "Boss comprueba nuevas conexiones con la llave vieja restringida y completa revisión por actor distinto; recoger veredicto, integrar producto y aceptar mediante harness. No reenviar evento r8 ni relanzar ejecutora.",
+  "resultado": "Piloto ejecutado por Boss con intento único y acuse r8 publicado. Retorno incierto conciliado y reenviado una vez desde VPS: HTTP200. Llave vieja identificada restringida al mismo adaptador; originales y otros accesos preservados.",
+  "comprobacion": "Snapshot y evento coinciden; mismo payload, tarea r8 intacta; repetición posterior no llamó al sender. Authorized_keys modificó sólo la entrada autorizada y conserva modo600. Pendiente prueba desde llave vieja y revisión formal del piloto.",
   "verificacion": "pendiente",
   "evidencias": [
     {
@@ -84,9 +84,29 @@
       "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/RECIBO-HABILITACION-v1.json",
       "sha256": "d0506c6f93d48e7188119c17609ff794361ad766e4842e8459b1b58d112e43ae",
       "bytes": 1245
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/CONCILIACION-R8-v1.md",
+      "sha256": "022f12b085ed1cd749559a6496e7f411936c79115eda435fbcc00f52d1cc9052",
+      "bytes": 4880
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/RECIBO-CONCILIACION-R8-v1.json",
+      "sha256": "335689f429c579f11e9a5d65050dec95e5cfc11b43b3adc42ac1e46dfd864ecc",
+      "bytes": 1949
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/ACUSE-BOSS-v1.md",
+      "sha256": "cef6f0d2a8ab4bc5ca0d01e85b99f89a3a059f67ed04690d9d3382c87b8d5ce7",
+      "bytes": 1933
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/conexion-boss-piloto-20261110/REVISION-BOSS-v8.md",
+      "sha256": "5c002d323165a0ed182f261100f637c2c0b3e9884d95052fe787c04cb45112d8",
+      "bytes": 1269
     }
   ],
-  "actualizado": "2026-11-10T14:33:45.344402+00:00",
+  "actualizado": "2026-11-10T15:52:19.032095+00:00",
   "historial": [
     {
       "revision": 1,
@@ -339,6 +359,93 @@
         }
       ],
       "proximo_paso": "Sergio carga URL/clave con configurar-retorno.sh; Boss publica PRUEBA-SSH-BOSS-v1.md usando su llave nueva. Codex habilita sólo el juguete tras ambas comprobaciones; luego revisión distinta, acuse, master y restricción autorizada de llave anterior.",
+      "aceptacion": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-10T14:33:45.344402+00:00",
+      "estado": "en_espera",
+      "resultado": "Boss comprobó la nueva llave por SSH y publicó evidencia; webhook privado validado. Permiso del único juguete habilitado, aún sin lanzamiento por Codex.",
+      "comprobacion": "Permiso validado contra binding y revisión 2, caducidad 24 h, Sol6.1 low, cero hijos y máximo tres intentos. Rechazo previo sin diario/barrera. Consulta local conserva tarea. Prueba real y acuse pendientes.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/CONEXION-Y-ENCARGO-v1.md",
+          "sha256": "7b75987bd3b4d885ce8d44200b7362c0eef001997498da9781259b25e9b88713",
+          "bytes": 10306
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/INVENTARIO-v1.json",
+          "sha256": "24e32b1917b35ee3ad20e0a5448adbb63e98e3adc3e92c67c91dba0fa433c2d6",
+          "bytes": 1338
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/RECIBO-PREPARACION-v1.json",
+          "sha256": "7b4c0cd35106c897fbda2ff0f17ad042ad92d3a2e77a01f78086f2b274d6bcbd",
+          "bytes": 1410
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/COMPARACION-TRANSPORTES-v1.md",
+          "sha256": "e67039587a58ea9d8e3b4e46789a8c13155838d79feb53722f7a90c93e688eac",
+          "bytes": 9486
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/REVISION-BOSS-v1.md",
+          "sha256": "b52cc59c2c577cd5fcf4b8f895a155aee7c85aa4ab430e1137f19aa32135905f",
+          "bytes": 6973
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/DECISION-TRAS-BOSS-v1.md",
+          "sha256": "19e54949351274ca74e5c9ee7a86b9e6de252a6346af7ad2ae5d67eec832186d",
+          "bytes": 5544
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/RECIBO-COMPARACION-v1.json",
+          "sha256": "75b43b2204fd1c99d2fd19be8375f2188ac5990bb68dca23a2dcb61dff33001f",
+          "bytes": 1532
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/REVISION-BOSS-v2.md",
+          "sha256": "d575490c58918c27d2172a3259723f2e22195d6e254c9c7bd48fdf67d274ecc6",
+          "bytes": 3188
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/ADAPTADOR-v1.md",
+          "sha256": "1aeac4e277d5fde09e79dfc8f3e5f2537d39dbc0fe712836302144d901a4f7d2",
+          "bytes": 9223
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/REVISION-TECNICA-v1.md",
+          "sha256": "8448ad6eb11f0452f1ce96917ef537b49da5dd7d8cc23f2517ff29b574ef5121",
+          "bytes": 2005
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/INSTALACION-v1.md",
+          "sha256": "f84578d8aa2fc87f697b050ba0a7996ab25c1e1f73e078fe762d3fb4b6478cf9",
+          "bytes": 5388
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/RECIBO-IMPLEMENTACION-v1.json",
+          "sha256": "b8bb318501cfa1616f951df0935a4add783514da1fff882151357cde1ea6aa08",
+          "bytes": 1619
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/PRUEBA-SSH-BOSS-v1.md",
+          "sha256": "4ce5cc1f1a254aec738d72c0cf0a1b0f98a20eb22fb14be4e6ad15225f9b65a1",
+          "bytes": 2245
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/HABILITACION-PILOTO-v1.md",
+          "sha256": "3c1d9784b8335211ebe01fcba8a04bc22ab4a399271e5426cdf79dad369ea678",
+          "bytes": 4507
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/conexion-boss-codex-20261110/RECIBO-HABILITACION-v1.json",
+          "sha256": "d0506c6f93d48e7188119c17609ff794361ad766e4842e8459b1b58d112e43ae",
+          "bytes": 1245
+        }
+      ],
+      "proximo_paso": "Boss envía el JSON de HABILITACION-PILOTO-v1, lo repite idéntico y cierra con la revisión vigente; publica acuse y huella pública de llave vieja. Tras prueba y acuse, Codex restringe sólo la entrada identificada, con original conservado; revisión distinta antes de aceptar.",
       "aceptacion": null
     }
   ],

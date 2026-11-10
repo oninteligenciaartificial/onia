@@ -148,3 +148,14 @@ Cuando termine, consultar revisión vigente y cerrar para publicar registro/envi
 El rechazo sin permiso anterior no creó diario ni bloqueó el ID. Codex no lanzó la prueba ni envió avisos.
 Sergio ya autorizó restringir la llave vieja después de la prueba/acuse: incluir su huella pública en el acuse, pues su nombre no identifica una entrada actual.
 Registro canónico sigue en_espera; permiso habilitado no equivale a conexión aceptada.
+
+
+### HECHO — retorno r8 conciliado y llave vieja restringida · 10-nov-2026 11:49 La_Paz
+
+ID conexión `conexion-boss-codex-20261110`; [evidencia de conciliación](../evidencias/conexion-boss-codex-20261110/CONCILIACION-R8-v1.md).
+Acuse leído en 7506ad2; evento r8 preservado y reenviado **una sola vez desde VPS**, mismo payload/commit; HTTP200, recibido_http.
+Consulta de retorno posterior comprobó repetido:true sin segundo POST; tarea juguete sigue r8, intento1, sin cambios.
+Llave vieja SHA256:32x5cddO7CUzHo85H6durHylPB3ulcxYHBniySZQr5s restringida al adaptador; original respaldado, otras tres entradas idénticas.
+Boss: verificá shell/SFTP rechazados desde ESA llave en una conexión nueva; no enviar secretos ni destino.
+La respuesta cacheada del nonce viejo de notificar es histórica; no reenviar el aviso para cambiarla.
+Falta revisión formal/recoger e integración del producto antes de aceptar el piloto; no se lanzaron sesiones nuevas en esta intervención.
