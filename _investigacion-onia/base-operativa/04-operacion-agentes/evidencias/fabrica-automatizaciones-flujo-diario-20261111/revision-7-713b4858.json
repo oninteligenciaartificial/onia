@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "b931d3cc87893a27fc7d885c945e0c1ef7280309",
+  "criterio": "P2 en programacion.py, líneas 64–86. Una tanda anterior cerrada y pendiente de revisora queda bloqueada tras medianoche. Antes de las 17:00 recibe MODELO_NO_DISPONIBLE y durante la ventana vigente se autoriza exclusivamente el ID del día actual, produciendo AUTORIZACION_PENDIENTE para la anterior. Reproducido con dobles en memoria para una tanda del 12 durante los días 13 y 14. Corregir la selección de ciclos pendientes dentro de la vigencia autorizada y agregar una regresión de recuperación tras medianoche. Pasaron 21 pruebas ejecutables en sólo lectura. Otras 34 quedaron bloqueadas por la imposibilidad de crear temporales. Programación comprobada como deshabilitada.",
+  "worktree_conservado": true
+}
