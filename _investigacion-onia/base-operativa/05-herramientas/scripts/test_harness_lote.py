@@ -216,6 +216,30 @@ class BatchTests(unittest.TestCase):
         self.assert_blocked(self.tick(), 'Autenticación ChatGPT')
         self.assertFalse(self.adapter.calls)
 
+    def test_quota_expires_during_provider_check_does_not_dispatch(self):
+        self.now += 115
+        def slow_provider():
+            self.now += 10
+            return True
+        self.adapter.provider = slow_provider
+        result = self.tick()
+        self.assertIn('caducada', json.dumps(result, ensure_ascii=False))
+        self.assertFalse(self.adapter.calls)
+
+    def test_failed_executor_with_verified_delivery_closes_without_retry(self):
+        self.manifest['tareas'][0]['prioridad'] = 10
+        self.save()
+        self.tick()
+        row = self.adapter.rows['uno']
+        row['sesiones'][-1].update(estado='fallida', rc=1)
+        self.adapter.calls.clear()
+        self.save(cierres={'uno': dict(commit='b' * 40, verificacion='correcta',
+                  resultado='Entrega publicada antes del fallo', comprobacion='Commit comprobado')})
+        self.tick()
+        self.assertEqual(self.adapter.calls, [('cerrar', 'uno')])
+        self.assertEqual(row['estado'], 'para_revision')
+        self.assertEqual(len(row['sesiones']), 1)
+
     def test_missing_quota_still_allows_collect(self):
         self.review_ready()
         self.tick()

@@ -301,7 +301,7 @@ class Dispatcher:
                     'Dependencia sin aceptación vigente del commit esperado.')
             require(self.adapter.integrated(dep['commit'], refresh=refresh), 'Dependencia pendiente en origin/master.')
 
-    def candidate(self, task, row):
+    def candidate(self, task, row, observation=None):
         history = row.get('sesiones', [])
         if any(sessions.alive(s) for s in history):
             return None
@@ -334,6 +334,13 @@ class Dispatcher:
             return 'lanzar'
         last = writers[-1]
         if row['estado'] == 'en_curso' and last['estado'] == 'finalizada' and last.get('rc') == 0:
+            return 'cerrar'
+        receipt = (observation or {}).get('cierres', {}).get(task['id'], {})
+        if (row['estado'] in {'en_espera', 'en_curso'}
+                and last['estado'] in {'fallida', 'interrumpida', 'finalizada'}
+                and receipt.get('verificacion') == 'correcta'
+                and re.fullmatch(r'[0-9a-f]{40,64}', receipt.get('commit', ''))):
+            # El cierre vuelve a comprobar commit remoto, alcance y ausencia de procesos.
             return 'cerrar'
         require(row['estado'] in {'en_espera', 'en_curso'} and last.get('session_id')
                 and task.get('reanudar_sid') == last['session_id'], 'Retoma requiere SID autorizado y conciliación.')
@@ -508,7 +515,7 @@ class Dispatcher:
                     continue
                 try:
                     require(ident not in unresolved, 'Intención incierta ' + unresolved.get(ident, '') + '. Conciliar SID/commit.')
-                    op = self.candidate(task, rows[ident])
+                    op = self.candidate(task, rows[ident], self.observation(observation_path))
                     require(op not in DISPATCH or not self.stalled(ident, rows[ident]),
                             'Dos fallos sin progreso. Diagnóstico de coordinadora requerido.')
                     if op:
@@ -527,6 +534,7 @@ class Dispatcher:
                     current = self.row(task)
                     trabajo.expected(current, row['revision'])
                     self.permitted(effect=True)
+                    require(self.observation(observation_path) == observation, 'Observación cambió durante comprobaciones.')
                 except (ValueError, OSError, KeyError) as exc:
                     report.append(dict(id=ident, op=op, bloqueo=str(exc)))
                     continue
@@ -543,6 +551,7 @@ class Dispatcher:
                                      modelo_observado=None)
                 try:
                     self.permitted(effect=True)
+                    require(self.observation(observation_path) == observation, 'Observación cambió antes del efecto.')
                     self.adapter.invoke(op, task, row, observation)
                     after = self.row(task)
                     self.recover({**rows, ident: after})
