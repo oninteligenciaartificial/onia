@@ -1,0 +1,13 @@
+{
+  "fecha": "2026-11-11T17:18:56.052719+00:00",
+  "cliente": "HTTP Python sobre servidor.py CLI",
+  "ensayo": "SINTETICO sobre T01 histórico",
+  "browser": "bloqueado, declarado por separado",
+  "pasos": [
+    "GET 200 con cabecera y meta same-origin; POST con Origin ausente/null/wildcard/ajeno 403; POST de origen exacto 303",
+    "Proceso nuevo recuperó de SQLite la revisión v1 pendiente y el original de T01"
+  ],
+  "resultado": "OK",
+  "servidores_cerrados": true,
+  "datos": "SQLite sintética conservada fuera de Git en /tmp"
+}

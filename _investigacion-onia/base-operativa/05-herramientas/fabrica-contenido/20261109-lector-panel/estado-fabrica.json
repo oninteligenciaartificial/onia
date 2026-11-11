@@ -1,0 +1,97 @@
+{
+  "schema": "onia-fabrica-estado-v1",
+  "id": "cerebro-panel-usable-20261109",
+  "fabrica": "panel",
+  "estado": "para_revision",
+  "generado": "2026-11-11T21:35:25.614989+00:00",
+  "fuente": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-CEREBRO.md",
+  "pasos": [
+    {
+      "id": "cerebro",
+      "nombre": "Consultar autoría conciliada, fuentes y reglas aprobadas",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-CEREBRO.md"
+      ]
+    },
+    {
+      "id": "correcciones",
+      "nombre": "Probar sugerencia, versión local, reintento y export a coordinación",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/correccion-cerebro-20261111/pruebas.txt",
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/correccion-cerebro-20261111/recorrido-cli.json"
+      ]
+    },
+    {
+      "id": "contrato",
+      "nombre": "Exigir S01 íntegra y rechazar versiones de sección obsoletas",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/CONTRATO-COORDINACION.md",
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/correccion-cerebro-20261111/pruebas.txt"
+      ]
+    },
+    {
+      "id": "privado",
+      "nombre": "Preparar origen externo explícito, autenticación y servicio deshabilitado",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-CEREBRO.md"
+      ]
+    },
+    {
+      "id": "browser",
+      "nombre": "Probar código corregido en navegador escritorio y móvil",
+      "estado": "bloqueado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/correccion-cerebro-20261111/intento-browser-01/resultado.json"
+      ]
+    },
+    {
+      "id": "host-base",
+      "nombre": "Incorporar y abrir evidencia host de b8019ec, cinco casos con persistencia",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/cerebro-20261111/host-coordinadora-01/PROCEDENCIA.json"
+      ]
+    },
+    {
+      "id": "revision",
+      "nombre": "Revisión independiente e integración por coordinación",
+      "estado": "pendiente",
+      "evidencias": []
+    }
+  ],
+  "entregables": [
+    {
+      "nombre": "Preview cerebro y correcciones",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/correccion-cerebro-20261111/preview/panel.html"
+    },
+    {
+      "nombre": "Guía de uso, reinicio y acceso privado",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-CEREBRO.md"
+    },
+    {
+      "nombre": "Contrato y dependencias de coordinación",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/CONTRATO-COORDINACION.md"
+    }
+  ],
+  "pendientes": [
+    {
+      "motivo": "Productor de estrategias publicado en rama, aún ausente de este checkout",
+      "responsable": "Coordinadora y productor",
+      "siguiente": "Reunir export y fuentes vigentes en el checkout y actualizar el control histórico del productor"
+    },
+    {
+      "motivo": "Sandbox de Chromium no utilizable en la ejecutora",
+      "responsable": "Coordinadora desde host compatible",
+      "siguiente": "Ejecutar visual-cerebro.cjs y abrir las capturas nuevas"
+    },
+    {
+      "motivo": "TLS/proxy, configuración de credenciales, servicio y teléfono real pendientes de instalación y prueba",
+      "responsable": "Coordinadora y Sergio",
+      "siguiente": "Adaptar plantilla deshabilitada al despliegue privado autorizado y comprobar acceso/reinicio"
+    }
+  ]
+}

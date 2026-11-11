@@ -1,0 +1,40 @@
+test_api_existente_con_revision_subagentes_cero_y_sin_shell (test_flujo.AdapterTests.test_api_existente_con_revision_subagentes_cero_y_sin_shell) ... ok
+test_generador_privado_rechaza_raiz_publica_y_respeta_dia_la_paz (test_flujo.AdapterTests.test_generador_privado_rechaza_raiz_publica_y_respeta_dia_la_paz) ... ok
+test_programacion_deshabilitada_y_hora_pendiente (test_flujo.AdapterTests.test_programacion_deshabilitada_y_hora_pendiente) ... ok
+test_raiz_privada_no_git_no_enlaces_y_escape (test_flujo.AdapterTests.test_raiz_privada_no_git_no_enlaces_y_escape) ... ok
+test_registrar_preparar_y_asignar_en_api_unica (test_flujo.AdapterTests.test_registrar_preparar_y_asignar_en_api_unica) ... ok
+test_bloqueo_global_por_mismo_directorio (test_flujo.FlowTests.test_bloqueo_global_por_mismo_directorio) ... ok
+test_caida_antes_despacho_reanuda_una_vez (test_flujo.FlowTests.test_caida_antes_despacho_reanuda_una_vez) ... ok
+test_caida_despues_despacho_concilia_sid (test_flujo.FlowTests.test_caida_despues_despacho_concilia_sid) ... ok
+test_cambio_commit_revalida_textos_antes_de_aplicar_dictamen (test_flujo.FlowTests.test_cambio_commit_revalida_textos_antes_de_aplicar_dictamen) ... ok
+test_cambio_dia_la_paz_no_utc (test_flujo.FlowTests.test_cambio_dia_la_paz_no_utc) ... ok
+test_candidato_sin_critica_o_fuente_de_otro_pedido_rechazado (test_flujo.FlowTests.test_candidato_sin_critica_o_fuente_de_otro_pedido_rechazado) ... ok
+test_ciclo_completo_y_evento_duplicado (test_flujo.FlowTests.test_ciclo_completo_y_evento_duplicado) ... ok
+test_commit_nuevo_invalido_no_hereda_revision_y_conserva_original (test_flujo.FlowTests.test_commit_nuevo_invalido_no_hereda_revision_y_conserva_original) ... ok
+test_correccion_versionada_conserva_original_aprobado_o_grabado (test_flujo.FlowTests.test_correccion_versionada_conserva_original_aprobado_o_grabado) ... ok
+test_envio_incierto_no_reintenta_ni_filtra_excepcion (test_flujo.FlowTests.test_envio_incierto_no_reintenta_ni_filtra_excepcion) ... ok
+test_error_fuente_conserva_exito_y_resultado (test_flujo.FlowTests.test_error_fuente_conserva_exito_y_resultado) ... ok
+test_fallo_publicacion_conserva_export_anterior (test_flujo.FlowTests.test_fallo_publicacion_conserva_export_anterior) ... ok
+test_fuente_caida_no_es_evergreen_ni_sin_novedades (test_flujo.FlowTests.test_fuente_caida_no_es_evergreen_ni_sin_novedades) ... ok
+test_intencion_de_pedido_se_recupera_tras_corte_antes_de_archivo (test_flujo.FlowTests.test_intencion_de_pedido_se_recupera_tras_corte_antes_de_archivo) ... ok
+test_noticia_invalida_visible_sin_exito_inventado (test_flujo.FlowTests.test_noticia_invalida_visible_sin_exito_inventado) ... ok
+test_pedido_derivado_ausente_se_recupera_desde_journal (test_flujo.FlowTests.test_pedido_derivado_ausente_se_recupera_desde_journal) ... ok
+test_recupera_caida_despues_ensamblado_y_rechaza_salida_alterada (test_flujo.FlowTests.test_recupera_caida_despues_ensamblado_y_rechaza_salida_alterada) ... ok
+test_resultado_invalido_no_sobrepone_original (test_flujo.FlowTests.test_resultado_invalido_no_sobrepone_original) ... ok
+test_revision_con_cambios_no_lanza_correcion_automatica (test_flujo.FlowTests.test_revision_con_cambios_no_lanza_correcion_automatica) ... ok
+test_revision_obsoleta_no_se_aplica (test_flujo.FlowTests.test_revision_obsoleta_no_se_aplica) ... ok
+test_revision_obsoleta_o_alcance_cambiado_bloquea (test_flujo.FlowTests.test_revision_obsoleta_o_alcance_cambiado_bloquea) ... ok
+test_tres_cupos_y_falta_modelo_o_permiso (test_flujo.FlowTests.test_tres_cupos_y_falta_modelo_o_permiso) ... ok
+test_error_no_se_convierte_en_lista_vacia_exitosa (test_flujo.SourcesTests.test_error_no_se_convierte_en_lista_vacia_exitosa) ... ok
+test_indice_rotacion_limites_y_no_redirecciones (test_flujo.SourcesTests.test_indice_rotacion_limites_y_no_redirecciones) ... ok
+test_metadatos_reales_precision_dia_y_rechazos (test_flujo.SourcesTests.test_metadatos_reales_precision_dia_y_rechazos) ... ok
+test_activar_exige_hora_autorizacion_y_vigencia (test_programacion.ScheduledTests.test_activar_exige_hora_autorizacion_y_vigencia) ... ok
+test_apagado_no_crea_datos_ni_consulta (test_programacion.ScheduledTests.test_apagado_no_crea_datos_ni_consulta) ... ok
+test_hora_la_paz_deduplicacion_y_consulta_acotada (test_programacion.ScheduledTests.test_hora_la_paz_deduplicacion_y_consulta_acotada) ... ok
+test_no_acepta_aumentar_cupos_ni_proveedor_sustituto (test_programacion.ScheduledTests.test_no_acepta_aumentar_cupos_ni_proveedor_sustituto) ... ok
+test_vigencia_vencida_no_lanza_y_conserva_novedad (test_programacion.ScheduledTests.test_vigencia_vencida_no_lanza_y_conserva_novedad) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 3.652s
+
+OK

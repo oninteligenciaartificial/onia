@@ -1,0 +1,78 @@
+{
+  "fecha": "2026-11-11T21:58:48.016983+00:00",
+  "coordinadora": "sesion directa de Sergio",
+  "base_probada": "a9067cd919902acb5392d60af325468196b8eef8",
+  "codigo_cerebro": "4a3477100f04fb6028caaab635c0232aed205606",
+  "dependencia_flujo": "b931d3cc87893a27fc7d885c945e0c1ef7280309",
+  "cambio_css": "Menú sin palabras partidas; capturas finales abiertas por coordinadora",
+  "python_lector": {
+    "tests": 22,
+    "resultado": "OK",
+    "segundos": 0.52
+  },
+  "python_suite": {
+    "tests": 57,
+    "resultado": "OK",
+    "segundos": 20.657
+  },
+  "navegador": {
+    "fecha": "2026-11-11T21:57:08.520Z",
+    "ensayo": "SINTETICO sobre T01 histórico",
+    "chromiumSandbox": true,
+    "casos": [
+      "desktop · cerebro y estado contractual de estrategias visibles, sin overflow",
+      "mobile · cerebro y estado contractual de estrategias visibles, sin overflow",
+      "Sugerencia pendiente → aplicación local explícita → nueva versión pendiente con original",
+      "Proceso nuevo conserva versión local privada",
+      "Corrección canónica exportada con ID y dependencias, pendiente"
+    ],
+    "commit_checkout": "a9067cd919902acb5392d60af325468196b8eef8",
+    "codigo_sha256": {
+      "cerebro.py": "c71dca860c238331c69668c959e18e65df7139780b7fe080c0eba2c5b552f2a5",
+      "servidor.py": "7c448c8647331a90dc80b651ee29b61923dc1a25b6b8bbb9d2f22f4092dffd12",
+      "operacion.py": "3e3052efecd5f14875ffeee82398ed4394d735b1f1388babfe0a5b8f8032db42",
+      "diseno.py": "b9b357867dccc58c3c63033368571d141aa023fa8cb43e33a6269d25e95babb0",
+      "panel.py": "0077e5ea92ea16e4e3b02ebefd49cbc42190cb1532d9cdb2bfdb10f5446ab250",
+      "correcciones.py": "2b6050eba260a7ccb92076aa7438d0d1f86ae2df895bf4965d1fcffeba1c1a38",
+      "vistas_cerebro.py": "72eab652c1dd1716023f748af85e916adc06024f73b34ea9392f5ab844ee8402",
+      "diseno.css": "fdf1dae8890933e237b1816033a4e900b88791adccafbfd20b74d6d191ca1ca9",
+      "visual-cerebro.cjs": "6190aea6ff4043d2c12e26c9ce836595be21ad5374bda7232c313adaa13570a5"
+    },
+    "resultado": "OK",
+    "errores_js": [],
+    "peticiones_externas": [],
+    "servidor_cerrado": true,
+    "navegador_cerrado": true,
+    "datos": "SQLite sintética conservada fuera de Git en /tmp"
+  },
+  "archivos_runtime": {
+    "diseno.css": "fdf1dae8890933e237b1816033a4e900b88791adccafbfd20b74d6d191ca1ca9",
+    "panel.py": "0077e5ea92ea16e4e3b02ebefd49cbc42190cb1532d9cdb2bfdb10f5446ab250",
+    "test_cerebro.py": "4141d8b982bac7a888de4e2ce9b7665a50475d54e00c15619469337e68908228",
+    "correcciones.py": "2b6050eba260a7ccb92076aa7438d0d1f86ae2df895bf4965d1fcffeba1c1a38",
+    "vistas_cerebro.py": "72eab652c1dd1716023f748af85e916adc06024f73b34ea9392f5ab844ee8402",
+    "pruebas.py": "22ccb4baca89a0c35b204a73929f9fd34d18845882132bad97ea5da7998ed61c",
+    "diario.js": "b104f270601214d357671625a27756046b2d10ec786e6d5b1ff454b7a4302e05",
+    "diario.py": "308b82cbeb65c22c03272172c4ca206b923bc1a077fa397b049149c6c87eeee8",
+    "test_operacion.py": "4c997613a5200a7c92b0bc11781d065224331a567897cc9b85d0fa469a6cfc30",
+    "operacion.py": "3e3052efecd5f14875ffeee82398ed4394d735b1f1388babfe0a5b8f8032db42",
+    "acceso.py": "fda26bca682d4d5bde4edb8596cc9d65d0fbeb153d65f8decee129699e4d4af0",
+    "test_tanda.py": "ccea30c05f48af5b2bc0ddb6530b8f0bed529db58f39c2f14a96e847f7149b9c",
+    "tanda.py": "e119cba47134fa84c4eb4f4c2280842c2d5b04f52239456abd7cf412217cdcd8",
+    "diseno.py": "b9b357867dccc58c3c63033368571d141aa023fa8cb43e33a6269d25e95babb0",
+    "lector.py": "4fa98fe4e9b2b9eeb5014a7b5013513270234dfc55af0f2596eab89c4e4ec464",
+    "test_diario.py": "fccbb49694131534695819324aa1e236dceed74601049b1df8b7ca79928aeecd",
+    "servidor.py": "7c448c8647331a90dc80b651ee29b61923dc1a25b6b8bbb9d2f22f4092dffd12",
+    "test_diseno.py": "10b4c2a137de1a45f7ee8a154308bbb0a436375885b43dcdb15a93dcb2a7d7a4",
+    "cerebro.py": "c71dca860c238331c69668c959e18e65df7139780b7fe080c0eba2c5b552f2a5"
+  },
+  "capturas_abiertas": [
+    "host-final-04/desktop-estrategias.png",
+    "host-final-04/mobile-estrategias.png"
+  ],
+  "limites": [
+    "Teléfono físico y HTTPS no probados",
+    "Estrategia disponible con divergencia técnicaS08 visible, por conciliar tras integrar panel",
+    "Fuentes y contexto actualizados desde master; no servicios activados"
+  ]
+}

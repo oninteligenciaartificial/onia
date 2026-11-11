@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "fb86bb2701b9e13c3fb645a56f7de4e080698f31",
+  "criterio": "Dos fallos reproducidos en memoria requieren corrección.\n\n[P1] flujo-diario/motor.py, líneas 199–205. Tras una corrección canónica del commit A al B, conserva el resultado cacheado de A y aplica el veredicto bueno de B. El ciclo queda para revisión editorial con textos anteriores. Vincular cada resultado al commit exacto y revalidar los artefactos cuando cambie. Añadir cobertura de esta transición.\n\n[P2] 20261109-lector-panel/servidor.py, líneas 30–42. Una proyección sin resultado.huella pasa read y fragment, reemplaza la caché válida y luego falla en attach con KeyError, provocando HTTP 400. Validar todos los campos consumidos antes de adoptar la proyección y probar que este fallo conserva la anterior.\n\nLas 30 huellas de la evidencia de coordinación coinciden. Los logs documentan 62 pruebas correctas. La reproducción completa quedó bloqueada por las escrituras temporales del sandbox de sólo lectura.",
+  "worktree_conservado": true
+}

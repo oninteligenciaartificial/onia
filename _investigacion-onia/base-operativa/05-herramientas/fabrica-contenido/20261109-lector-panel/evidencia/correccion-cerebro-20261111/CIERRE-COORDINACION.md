@@ -1,0 +1,7 @@
+# Corrección y prueba integrada por coordinación
+
+Las correcciones de4a34771 permanecen. Se integró contexto master86572f2 y dependencia del flujo b931d3c en esta rama, todavía pendientes de integración final. La prueba sintética falló primero por D11 histórico; el flujo corrigió explícitamente sólo la huella de la decisión conocida, sin cambiar la fuente ni aceptar cambios futuros a ciegas. Después pasaron57tests de panel y22dellector. Se conserva el primer fracaso como hallazgo en el informe de coordinación; no se contabiliza como pasado.
+
+host-coordinadora-02 corresponde a4a34771 antes de combinar contexto. host-integracion-03 prueba combinación de panel, decisiones, estrategias y flujo. host-final-04 prueba esa combinación más el ajuste de espaciado/tamaño del menú, después de detectar palabras partidas en las capturas. Los dos screenshots finales desktop/móvil se abrieron y revisaron. Cada recorrido conserva cinco casos, Chromium con sandbox, cero erroresJS y cero solicitudes externas.
+
+RECIBO-HOST-FINAL.json fija hashes del código probado. La entrega posterior añade esta evidencia y las capturas, sin otros cambios de runtime. antes-cerebro-r28.json ya está presente en el contexto integrado. S01 coincide con la estrategia. S08 es el código de operaciones ampliado; su diferencia permanece visible y requiere conciliación del productor, no impide leer el borrador ni equivale a aprobación editorial. Teléfono, TLS y servicio permanente siguen pendientes.

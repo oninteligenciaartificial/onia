@@ -1,0 +1,14 @@
+# Inicio17:00 y objetivo18:00 America/La_Paz, del12 al14nov; sin renovación.
+# Plantilla revisable. No instalada ni activada por esta entrega.
+[Unit]
+Description=ONIA: un paso del flujo diario autorizado
+
+[Service]
+Type=oneshot
+# El harness administra sus supervisoras; cerrar este disparador no las cancela.
+KillMode=process
+Environment=PATH=/home/onia-codex-worker/.local/bin:/usr/local/bin:/usr/bin:/bin
+WorkingDirectory=%h/operacion/fabrica-diaria/codigo
+ExecStart=/usr/bin/python3 -B %h/operacion/fabrica-diaria/codigo/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/programacion.py --tick --config %h/operacion/fabrica-diaria/config.json --datos %h/operacion/fabrica-diaria/datos --coordinador-base %h/repos/onia-coordinador/_investigacion-onia/base-operativa
+TimeoutStartSec=5min
+UMask=0077

@@ -1,0 +1,92 @@
+{
+  "schema": "onia-fabrica-estado-v1",
+  "id": "guiones-tanda-estrategias-20261111",
+  "fabrica": "estrategias",
+  "estado": "para_revision",
+  "generado": "2026-11-11T20:37:40+00:00",
+  "fuente": "01-negocio/estrategias-operativas-20261111/README.md",
+  "pasos": [
+    {
+      "id": "paquete",
+      "nombre": "Preparar workshop, piezas y biblioteca versionada",
+      "estado": "completado",
+      "evidencias": [
+        "01-negocio/estrategias-operativas-20261111/ESTRATEGIA-WORKSHOP-v1.md",
+        "01-negocio/estrategias-operativas-20261111/PIEZAS-v1.md",
+        "01-negocio/estrategias-operativas-20261111/BIBLIOTECA-v1.md"
+      ]
+    },
+    {
+      "id": "contrato",
+      "nombre": "Preparar contrato y comprobar datos, escenarios y enlaces",
+      "estado": "completado",
+      "evidencias": [
+        "01-negocio/estrategias-operativas-20261111/CONTRATO.md",
+        "01-negocio/estrategias-operativas-20261111/evidencia/comprobaciones.json"
+      ]
+    },
+    {
+      "id": "revision",
+      "nombre": "Obtener revisión independiente y editorial del commit/versiones",
+      "estado": "pendiente",
+      "evidencias": []
+    },
+    {
+      "id": "integracion",
+      "nombre": "Incorporar productor y vista al panel existente",
+      "estado": "pendiente",
+      "evidencias": [
+        "01-negocio/estrategias-operativas-20261111/CONTRATO.md"
+      ]
+    },
+    {
+      "id": "ensayo",
+      "nombre": "Ensayar voz, NEGOCIO y recorrido autorizado con activos privados",
+      "estado": "pendiente",
+      "evidencias": []
+    }
+  ],
+  "entregables": [
+    {
+      "nombre": "Estrategia workshop",
+      "ruta": "01-negocio/estrategias-operativas-20261111/ESTRATEGIA-WORKSHOP-v1.md"
+    },
+    {
+      "nombre": "Guiones, VSL, anuncios y mensajes",
+      "ruta": "01-negocio/estrategias-operativas-20261111/PIEZAS-v1.md"
+    },
+    {
+      "nombre": "Biblioteca y criterios",
+      "ruta": "01-negocio/estrategias-operativas-20261111/BIBLIOTECA-v1.md"
+    },
+    {
+      "nombre": "Export versionado",
+      "ruta": "01-negocio/estrategias-operativas-20261111/export-estrategias-v1.json"
+    },
+    {
+      "nombre": "Contrato de datos e integración",
+      "ruta": "01-negocio/estrategias-operativas-20261111/CONTRATO.md"
+    },
+    {
+      "nombre": "Recibo y límites",
+      "ruta": "01-negocio/estrategias-operativas-20261111/RECIBO.md"
+    }
+  ],
+  "pendientes": [
+    {
+      "motivo": "Revisión independiente del commit y decisión editorial pendientes",
+      "responsable": "Coordinadora, revisor distinto, Contenido y Sergio",
+      "siguiente": "Cerrar y revisar rama publicada; cotejar texto y voz por versión"
+    },
+    {
+      "motivo": "Productor estrategias y raíz no admitidos en panel actual",
+      "responsable": "Escritora del panel y coordinadora",
+      "siguiente": "Incorporar contrato y vista en su alcance; comprobar flujo y móvil"
+    },
+    {
+      "motivo": "Ensayo de voz, NEGOCIO, QR/Meet/requisitos, materiales y permiso comercial pendientes",
+      "responsable": "Sergio, Contenido y Operaciones",
+      "siguiente": "Completar entradas privadas, ensayar recorrido autorizado y decidir publicación concreta"
+    }
+  ]
+}

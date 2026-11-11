@@ -1,0 +1,71 @@
+{
+  "schema": "onia-panel-recibo-v1",
+  "tarea": "cerebro-panel-usable-20261109",
+  "generado": "2026-11-11T21:20:21.192156+00:00",
+  "base": "624529cc33128c3c2aac60a052bc437be455215f",
+  "rama": "codex/ws-cerebro-panel-usable-20261109",
+  "modelo_solicitado": "Sol high",
+  "hijos": 0,
+  "runtime_observado": null,
+  "cuota_atribuible": null,
+  "pruebas_python": {
+    "lector": 22,
+    "tanda": 3,
+    "operacion": 23,
+    "diseno": 7,
+    "diario": 6,
+    "cerebro": 15,
+    "total": 76,
+    "omitidas": 0,
+    "resultado": "OK"
+  },
+  "comandos_y_salidas": "pruebas.txt",
+  "recorrido_procesos": "recorrido-cli.json",
+  "productor_estrategias_leido": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+  "estrategias": {
+    "contrato": "onia-estrategias-v1",
+    "prueba": "Export real y fuentes leídos del commit publicado en copias temporales",
+    "estado_checkout": "Ruta ausente. Coordinación debe integrar productos y conciliar fuentes"
+  },
+  "browser": {
+    "resultado": "BLOCKED",
+    "recibo": "intento-01/resultado.json",
+    "capturas_nuevas": 0
+  },
+  "acceso_privado": {
+    "backend": "Control de Host/Origin configurado y autenticación probados por HTTP de ensayo",
+    "despliegue": "Plantilla deshabilitada, pendiente de coordinación",
+    "telefono_real": "pendiente"
+  },
+  "datos_operacion": "SQLite privada fuera de Git. Fixtures y operaciones de prueba identificados como ensayo.",
+  "hashes_codigo": {
+    "operacion.py": "3e3052efecd5f14875ffeee82398ed4394d735b1f1388babfe0a5b8f8032db42",
+    "servidor.py": "7c448c8647331a90dc80b651ee29b61923dc1a25b6b8bbb9d2f22f4092dffd12",
+    "diseno.py": "b9b357867dccc58c3c63033368571d141aa023fa8cb43e33a6269d25e95babb0",
+    "diseno.css": "dc400425e3b7b2c8972fb3b4b2b415ef9db374265fb0d41389db52347c5f9eb0",
+    "panel.py": "0077e5ea92ea16e4e3b02ebefd49cbc42190cb1532d9cdb2bfdb10f5446ab250",
+    "cerebro.py": "2cbb32581a9286cf877cab2de1adf9f5ea548b5bf6c5cbb2c97761d162fa71ec",
+    "correcciones.py": "2b6050eba260a7ccb92076aa7438d0d1f86ae2df895bf4965d1fcffeba1c1a38",
+    "acceso.py": "fda26bca682d4d5bde4edb8596cc9d65d0fbeb153d65f8decee129699e4d4af0",
+    "vistas_cerebro.py": "72eab652c1dd1716023f748af85e916adc06024f73b34ea9392f5ab844ee8402",
+    "diario.py": "308b82cbeb65c22c03272172c4ca206b923bc1a077fa397b049149c6c87eeee8",
+    "diario.js": "b104f270601214d357671625a27756046b2d10ec786e6d5b1ff454b7a4302e05",
+    "visual-cerebro.cjs": "1eae41407f4c0fed4b1777e63c2fbd90e4d5b1e25f5023dbc4d0efae5507574b",
+    "test_cerebro.py": "956755a8dea0d79c59e514227dd6425041b60199eed45fb9ada7a16d99c2f610",
+    "test_operacion.py": "4c997613a5200a7c92b0bc11781d065224331a567897cc9b85d0fa469a6cfc30"
+  },
+  "limites": [
+    "Navegador no inició dentro del sandbox de la ejecutora",
+    "Productor de estrategias todavía fuera del checkout de esta tarea",
+    "TLS/proxy, servicio privado y teléfono real pendientes de instalación y prueba por coordinación/Sergio",
+    "Solicitudes canónicas y LLM conservan estado pendiente; versiones locales requieren revisión"
+  ],
+  "preview": {
+    "archivo": "preview-final/panel.html",
+    "validacion": "preview-validacion.json",
+    "enlaces": 96,
+    "ids_unicos": 46,
+    "formularios_privados": 0,
+    "scripts": 0
+  }
+}

@@ -2,6 +2,8 @@
 
 ## Actualización de decisiones · 11 noviembre 2026
 
+Primera tanda entregada y detenida: [revisión de la coordinadora](../04-operacion-agentes/evidencias/tanda-fabricas-20261111/REVISION-COORDINADORA-v1.md). El panel necesita corregir el guardado; guiones y WhatsApp tienen pruebas locales, sin operación diaria/comercial acreditada. El [plan existente](../05-herramientas/fabrica-onia/CIERRE-VENTA-20261111.md#funcionamiento-diario-y-siguiente-tramo--propuesta-del-11-nov) explica el flujo y el próximo tramo propuesto. Los productos de esa tanda siguen en sus ramas para revisión; no hay segunda tanda activada por ese documento.
+
 Rigen las [confirmaciones directas de Sergio en Codex](../05-herramientas/fabrica-onia/DECISIONES-SERGIO-20261110.md#confirmaciones-directas-en-codex--11-nov-2026): clases viernes 13 20:00, sábado 14 14:00 y lunes 16 20:00, La Paz; QR/seguimiento con pago manual; ampliar el panel existente y las fábricas para vender. El [cierre técnico y propuesta de sesiones](../05-herramientas/fabrica-onia/CIERRE-VENTA-20261111.md) separa entregas ya verificadas de la ampliación todavía propuesta. No hubo lanzamientos por este Q&A; el estado de tareas sigue en el harness. Las prioridades, horarios y muestras de cuota de los cortes históricos que siguen no sustituyen esta actualización.
 
 ## Prioridad del 9 noviembre 2026 · America/La_Paz (antecedente)

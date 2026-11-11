@@ -1,0 +1,22 @@
+{
+  "tipo": "resumen_saneado_de_salidas_observadas_no_traza_integra",
+  "fecha": "2026-11-11",
+  "fallos": [
+    {
+      "paso": "generador_temporal",
+      "salida": "StopIteration, línea de selección de encabezado",
+      "rc": 1,
+      "causa": "DOTALL permitió al título consumir saltos de línea",
+      "correccion": "Título limitado a caracteres sin salto; export regenerado",
+      "control_preventivo": "Diez entradas de piezas y texto literal cotejado con Markdown"
+    },
+    {
+      "paso": "primera_ejecucion_comprobar_py",
+      "salida": "resultado=fallo; error='disponible'",
+      "rc": 1,
+      "causa": "Campo disponible consultado fuera del objeto documento devuelto por parser",
+      "correccion": "Consultar entregable.documento.disponible",
+      "control_preventivo": "Comprobar seis entregables y once targets bajo ampliación sólo en memoria"
+    }
+  ]
+}

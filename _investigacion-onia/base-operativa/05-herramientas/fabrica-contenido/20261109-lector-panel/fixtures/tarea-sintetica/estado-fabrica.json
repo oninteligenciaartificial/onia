@@ -1,0 +1,16 @@
+{
+  "schema": "onia-fabrica-estado-v1",
+  "id": "ensayo-tarea-local",
+  "fabrica": "guiones",
+  "estado": "para_revision",
+  "generado": "2026-11-11T12:00:00Z",
+  "fuente": "05-herramientas/fabrica-contenido/20261109-lector-panel/fixtures/tarea-sintetica/resultado.md",
+  "ensayo": "SINTETICO",
+  "pasos": [
+    {"id": "entrada", "nombre": "Recibir una entrada concreta de prueba", "estado": "completado", "evidencias": ["05-herramientas/fabrica-contenido/20261109-lector-panel/fixtures/tarea-sintetica/resultado.md"]},
+    {"id": "resultado", "nombre": "Evaluar el resultado original v1", "estado": "completado", "evidencias": ["05-herramientas/fabrica-contenido/20261109-lector-panel/fixtures/tarea-sintetica/resultado.md"]},
+    {"id": "revision", "nombre": "Revisar y proponer una corrección local", "estado": "pendiente", "evidencias": []}
+  ],
+  "entregables": [{"nombre": "Resultado original v1 · ENSAYO SINTÉTICO", "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/fixtures/tarea-sintetica/resultado.md"}],
+  "pendientes": [{"motivo": "Revisión humana de la propuesta sintética", "responsable": "Sergio y coordinadora", "siguiente": "Leer el original, registrar una corrección y recargar el panel"}]
+}
