@@ -1,5 +1,7 @@
 # Estrategias de ONIA · entrega para revisión
 
+Estado actualizado: [integración local con el panel](INTEGRACION-PANEL-20261111.md); evidencia anterior conservada. Despliegue y teléfono pendientes.
+
 11 noviembre 2026 · v1. Encargo `guiones-tanda-estrategias-20261111`, base `aeb116090aed97763fa3be050f514bdea8aadde1`. Paquete comercial preparado; revisión independiente, editorial y autorización comercial pendientes. No es otro registro del harness.
 
 Empezá por [la estrategia del workshop](ESTRATEGIA-WORKSHOP-v1.md), seguí con [los guiones, VSL, anuncios y mensajes](PIEZAS-v1.md) y revisá las dependencias antes de usar una pieza. [Biblioteca](BIBLIOTECA-v1.md) y [plantilla](PLANTILLA.md) sirven para evaluar futuros proyectos sin iniciarlos.
