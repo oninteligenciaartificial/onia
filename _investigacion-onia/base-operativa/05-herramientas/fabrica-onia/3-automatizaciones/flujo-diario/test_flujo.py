@@ -163,6 +163,21 @@ class FlowTests(unittest.TestCase):
         self.assertIsNone(current['revision_tecnica'])
         self.assertEqual(current['resultado'], old)
 
+    def test_caida_entre_noticia_y_pedido_no_pierde_entrada(self):
+        from unittest.mock import patch
+        with patch.object(motor, 'make_request', side_effect=OSError('Interrupción inducida')):
+            with self.assertRaises(OSError):
+                self.step(report(), 'entrada')
+        self.assertEqual(len(self.engine.store.rows('noticia')), 1)
+        self.assertEqual(self.engine.store.rows('ciclo'), [])
+        self.restart()
+        recovered = self.step()  # retoma desde journal, sin depender de otra descarga
+        self.assertEqual(len(recovered['ciclos']), 1)
+        self.assertTrue(self.engine.store.get('pedido', DAY)['sintetico'])
+        self.assertEqual(self.fake.calls, ['registrar'])
+        self.step(report(), 'entrada')
+        self.assertEqual(self.fake.calls.count('registrar'), 1)
+
     def test_caida_antes_despacho_reanuda_una_vez(self):
         self.step(report(), 'entrada')
         def crash(stage, op):

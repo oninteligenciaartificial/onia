@@ -102,7 +102,7 @@ class Engine:
         self.store = Store(root)
         self.root, self.adapter, self.clock, self.hook = self.store.root, adapter, clock, hook
 
-    def ingest(self, report):
+    def ingest(self, report, queue_input=True):
         meta = self.store.get('meta', 'fuentes', {})
         meta.update(ultimo_intento=report['consulta'], errores=report['errores'], cursor=report['cursor'])
         if not report['errores']:
@@ -116,6 +116,10 @@ class Engine:
             require(published <= datetime.fromisoformat(item['consultada']).date(), 'FUENTE_FUTURA')
             old = self.store.get('noticia', item['url'])
             if old is None:
+                # Persistir la obligación antes de deduplicar la noticia: una caída no la pierde.
+                editorial_day = datetime.fromisoformat(self.clock()).astimezone(ZONE).date().isoformat()
+                if queue_input:
+                    self.store.put('entrada_pendiente', editorial_day, {'sintetico': report.get('sintetico', False)})
                 fresh.append(item)
             # Mantener la primera fecha observada y las correcciones del artículo, sin crear otro trabajo.
             self.store.put('noticia', item['url'], {**item, 'primera_consulta': (old or item).get('primera_consulta', item['consultada'])})
@@ -131,9 +135,10 @@ class Engine:
         source_failed = bool(self.store.get('meta', 'fuentes', {}).get('errores'))
         unfinished_request = self.store.get('pedido', day)
         fresh_urls = {n['url'] for n in fresh}
-        if cycle is None and (unfinished_request or any(n['url'] in fresh_urls for n in eligible)
+        pending_input = self.store.get('entrada_pendiente', day) or {}
+        if cycle is None and (unfinished_request or (pending_input and eligible) or any(n['url'] in fresh_urls for n in eligible)
                               or (trigger == 'horario' and not source_failed)):
-            request = unfinished_request or make_request(day, eligible[:20], stamp, (report or {}).get('sintetico', False))
+            request = unfinished_request or make_request(day, eligible[:20], stamp, (report or pending_input or {}).get('sintetico', False))
             self.store.put('pedido', day, request)  # intención durable antes del archivo derivado
             folder = private_root(self.root / 'pedidos')
             path = folder / (task_id(day) + '.json')
@@ -141,6 +146,8 @@ class Engine:
             cycle = {'dia': day, 'id': task_id(day), 'pedido_sha256': digest(request),
                      'pedido': path.name, 'fase': 'pendiente_redaccion', 'creado': request['creado'], 'error': None}
             self.store.put('ciclo', day, cycle)
+        if cycle is not None:
+            self.store.put('entrada_pendiente', day, False)
         # Reconciliar ciclos previos también, sin lanzar el trabajo de ayer con un permiso para hoy.
         for candidate in self.store.rows('ciclo')[-14:]:
             if candidate['dia'] != day:

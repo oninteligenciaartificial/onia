@@ -62,7 +62,7 @@ def tick(config, root, coordinator=None, clock=now, adapter_factory=LocalHarness
             last = meta.get('ultimo_intento')
             # Se consultan novedades antes de la hora editorial, sin congelar la tanda demasiado pronto.
             if last is None or (current - instant(last)).total_seconds() >= 3600:
-                engine.ingest(collect(cursor=meta.get('cursor', 0), clock=clock))
+                engine.ingest(collect(cursor=meta.get('cursor', 0), clock=clock), queue_input=False)
             ident = task_id(local.date().isoformat()) if due and config['redaccion_autorizada'] else None
             projection = engine.step('horario' if due else 'reconciliar', authorized_id=ident, provider=provider)
             projection['programacion'] = {'habilitada': True, 'zona': config['zona'], 'hora_tanda': config['hora_tanda'],
