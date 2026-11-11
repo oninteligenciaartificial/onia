@@ -1,6 +1,8 @@
 """Proyección opcional del ciclo privado. No consulta ni modifica el harness."""
 import hashlib
 import json
+import re
+from datetime import date, datetime
 from pathlib import Path
 
 import lector
@@ -23,7 +25,40 @@ def read(path):
             operacion.require([r['id'] for r in rows] == ['T01','T02','T03','T04','T05'], 'Cinco piezas requeridas')
             for row in rows:
                 operacion.require(hashlib.sha256(row['texto'].encode()).hexdigest() == row['sha256'], 'Texto diario alterado')
+    validate(data)
     return data
+
+
+
+def validate(data):
+    # Cotejar TODOS los campos usados por fragment/attach antes de adoptar la caché.
+    for field in ('candidatas', 'ciclos', 'errores'):
+        operacion.require(isinstance(data[field], list), 'Lista diaria inválida')
+    schedule = data.get('programacion') or {}
+    operacion.require(isinstance(schedule, dict), 'Programación inválida')
+    for item in data['candidatas']:
+        for field in ('titulo', 'url', 'publicada', 'consultada'):
+            operacion.text(item[field], 2000)
+    for item in data['errores']:
+        for field in ('codigo', 'siguiente'):
+            operacion.text(item[field], 2000)
+    for cycle in data['ciclos']:
+        for field in ('id', 'dia', 'fase'):
+            operacion.text(cycle[field], 200)
+        date.fromisoformat(cycle['dia'])
+        operacion.require(isinstance(cycle.get('harness') or {}, dict), 'Harness inválido')
+        operacion.require(isinstance(cycle.get('revision_tecnica') or {}, dict), 'Dictamen inválido')
+        result = cycle.get('resultado')
+        if result is None:
+            continue
+        for field in ('huella', 'version', 'generado'):
+            operacion.text(result[field], 200)
+        operacion.require(re.fullmatch(r'[a-f0-9]{64}', result['huella']), 'Huella inválida')
+        operacion.require(datetime.fromisoformat(result['generado']).tzinfo is not None, 'Fecha sin zona')
+        operacion.require(type(result.get('sintetico')) is bool, 'Procedencia inválida')
+        for row in result['piezas']:
+            for field in ('id', 'titulo', 'texto', 'sha256', 'version_editorial'):
+                operacion.text(row[field], 200000)
 
 
 def attach(model, data):
@@ -43,7 +78,7 @@ def attach(model, data):
         scripts.append(script)
     model['tanda'] = {'schema': 'onia-lector-panel-v1', 'fecha_tanda': cycle['dia'],
                       'generado': result['generado'], 'guiones': scripts,
-                      'alcance': 'Proyección privada; aprobación editorial pendiente', 'commit_entradas_repo': (cycle.get('harness') or {}).get('commit')}
+                      'alcance': 'Proyección privada; aprobación editorial pendiente', 'commit_entradas_repo': result.get('commit')}
     model['tanda_ruta'], model['tanda_historica'] = source, False
 
 

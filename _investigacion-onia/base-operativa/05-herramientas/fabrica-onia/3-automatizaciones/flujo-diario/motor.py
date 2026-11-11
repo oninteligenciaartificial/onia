@@ -155,7 +155,7 @@ class Engine:
         return self.projection()
 
     def advance(self, cycle, authorized_id, provider):
-        if cycle['fase'] in {'para_revision_editorial', 'correccion_pendiente_revision'}:
+        if cycle['fase'] == 'correccion_pendiente_revision':
             return
         try:
             folder = private_root(self.root / 'pedidos')
@@ -196,11 +196,14 @@ class Engine:
             if row['exists']:
                 writers = [s for s in row.get('sessions', []) if s['role'] == 'ejecutor']
                 reviewers = [s for s in row.get('sessions', []) if s['role'] == 'revisor']
-                if row.get('commit') and not cycle.get('resultado'):
+                if row.get('commit') != cycle.get('resultado_commit'):
+                    cycle['revision_tecnica'] = None
+                    cycle['fase'] = 'validando_entrega'
+                if row.get('commit') and (not cycle.get('resultado') or row['commit'] != cycle.get('resultado_commit')):
                     self.accept_result(cycle, request, *self.adapter.result(request))
                 if (row.get('review') or {}).get('verdict'):
                     review = row['review']
-                    require(review.get('commit') == row.get('commit'), 'REVISION_OBSOLETA')
+                    require(review.get('commit') == row.get('commit') == cycle.get('resultado_commit'), 'REVISION_OBSOLETA')
                     cycle['revision_tecnica'] = review
                     cycle['fase'] = 'para_revision_editorial' if review['verdict'] == 'bueno' else 'correccion_pendiente'
                     cycle['error'] = None if review['verdict'] == 'bueno' else 'REVISION_CON_CAMBIOS'
@@ -268,7 +271,8 @@ class Engine:
             validate_result(request, brief, sources, draft)
             require(g.stamp(brief['generado']) <= g.stamp(self.clock()), 'REDACCION_FECHADA_EN_FUTURO')
             corrected, _ = g.apply_corrections(draft, corrections)
-            version = digest({'brief': brief, 'sources': sources, 'draft': draft, 'corrections': corrections})
+            source_commit = (cycle.get('harness') or {}).get('commit') if not corrections else None
+            version = digest({'brief': brief, 'sources': sources, 'draft': draft, 'corrections': corrections, 'commit': source_commit})
             root = private_root(self.root / 'v3')
             output = no_links(root / (cycle['id'] + '-' + version[:16]))
             if output.exists():
@@ -284,18 +288,20 @@ class Engine:
             else:
                 g.build(brief, sources, draft, corrections, output, output_root=root)
             result = {'generado': brief['generado'], 'version': corrected['version'], 'huella': version,
-                      'sintetico': request['sintetico'], 'piezas': []}
+                      'sintetico': request['sintetico'], 'commit': source_commit, 'piezas': []}
             for row in g.load(output / 'guiones-panel.json')['guiones']:
                 result['piezas'].append({k: row[k] for k in ('id', 'titulo', 'texto', 'sha256', 'version_editorial')})
             # Versiones anteriores son inmutables. Ni aprobadas ni grabadas se pisan.
             self.store.put('resultado', version, result)
             cycle['resultado'], cycle['error'] = version, None
+            cycle['resultado_commit'] = source_commit
             if corrections:
                 cycle['revision_tecnica'] = None
                 cycle['fase'] = 'correccion_pendiente_revision'
             self.store.put('ciclo', cycle['dia'], cycle)
         except (OSError, ValueError, KeyError, TypeError, AttributeError, StopIteration, UnicodeError):
             cycle['error'] = 'RESULTADO_INVALIDO'
+            cycle['fase'] = 'resultado_invalido'
             self.store.put('ciclo', cycle['dia'], cycle)
             raise
 

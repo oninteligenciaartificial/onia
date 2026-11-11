@@ -137,6 +137,32 @@ class FlowTests(unittest.TestCase):
         self.assertEqual(self.engine.projection()['ciclos'][0]['resultado'], before)
         self.assertEqual(self.fake.calls.count('lanzar'), 1)
 
+    def test_cambio_commit_revalida_textos_antes_de_aplicar_dictamen(self):
+        old = self.complete()['ciclos'][0]['resultado']
+        self.fake.row['commit'] = 'b'*40
+        self.fake.row['review'] = {'verdict': 'bueno', 'commit': 'b'*40}
+        brief, sources, draft = fixture(self.fake.input)
+        draft['guiones'][0]['titulo'] = 'Título corregido en el commit B'
+        self.fake.result_data = (brief, sources, draft)
+        current = self.step()['ciclos'][0]
+        self.assertEqual(current['resultado']['commit'], 'b'*40)
+        self.assertEqual(current['revision_tecnica']['commit'], 'b'*40)
+        self.assertEqual(current['resultado']['piezas'][0]['titulo'], 'Título corregido en el commit B')
+        self.assertNotEqual(current['resultado']['huella'], old['huella'])
+        self.assertEqual(self.engine.store.get('resultado', old['huella']), old)
+
+    def test_commit_nuevo_invalido_no_hereda_revision_y_conserva_original(self):
+        old = self.complete()['ciclos'][0]['resultado']
+        self.fake.row['commit'] = 'b'*40
+        self.fake.row['review'] = {'verdict': 'bueno', 'commit': 'b'*40}
+        brief, sources, draft = fixture(self.fake.input)
+        draft['guiones'].pop()
+        self.fake.result_data = (brief, sources, draft)
+        current = self.step()['ciclos'][0]
+        self.assertEqual(current['error'], 'RESULTADO_INVALIDO')
+        self.assertIsNone(current['revision_tecnica'])
+        self.assertEqual(current['resultado'], old)
+
     def test_caida_antes_despacho_reanuda_una_vez(self):
         self.step(report(), 'entrada')
         def crash(stage, op):

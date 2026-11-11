@@ -85,6 +85,23 @@ class DailyPanelTests(unittest.TestCase):
         new_app = servidor.Application(Path(self.tmp.name), flujo_path=self.flow.root/'panel.json')
         self.assertIsNone(new_app.daily())
 
+    def test_proyeccion_incompleta_no_reemplaza_cache_ni_rompe_pagina(self):
+        self.assertEqual(self.request('GET', '/')[0], 200)
+        original = copy.deepcopy(self.app.last_daily)
+        for field in ('huella', 'generado', 'version'):
+            with self.subTest(field=field):
+                malformed = copy.deepcopy(self.data)
+                del malformed['ciclos'][0]['resultado'][field]
+                atomic(self.flow.root/'panel.json', malformed)
+                self.assertEqual(self.request('GET', '/')[0], 200)
+                self.assertEqual(self.app.last_daily, original)
+                self.assertTrue(self.app.daily_stale)
+        malformed = copy.deepcopy(self.data)
+        del malformed['ciclos'][0]['resultado']['piezas'][0]['version_editorial']
+        atomic(self.flow.root/'panel.json', malformed)
+        self.assertEqual(self.request('GET', '/')[0], 200)
+        self.assertEqual(self.app.last_daily, original)
+
     def test_host_origin_csrf_huella_inyeccion_y_rutas_privadas(self):
         self.assertEqual(self.request('GET', '/flujo', extra={'Host': 'evil.test'})[0], 403)
         self.assertEqual(self.request('GET', '/flujo?archivo=/etc/passwd')[0], 404)
