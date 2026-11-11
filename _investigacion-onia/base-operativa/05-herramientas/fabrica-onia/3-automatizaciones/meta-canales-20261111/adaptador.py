@@ -193,6 +193,14 @@ def load_offer(now):
     return valid, reply
 
 
+def checked_offer(now, loader=None):
+    """Falla cerrado ante fuentes ausentes, corruptas o de formato inválido."""
+    try:
+        return (loader or load_offer)(now)
+    except (OSError, ValueError, KeyError, TypeError, Rejected):
+        return False, ""
+
+
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS binding (id INTEGER PRIMARY KEY CHECK(id=1), fingerprint TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS contacts (
@@ -286,9 +294,16 @@ class Store:
             # Ningún resultado incierto se reintenta. Todo permanece exclusivamente simulado.
             status = {"exito": "exito_simulado", "rechazo": "fallo_simulado",
                       "timeout": "incierto_simulado", "incierto": "incierto_simulado"}[outcome]
+            attempted = outcome
             if now - row["event_time"] > 3600:
                 status = "cancelado_caducidad_local"
-            db.execute("UPDATE outbox SET status=?, outcome=? WHERE id=?", (status, outcome, row["id"]))
+                attempted = None
+            elif not checked_offer(now)[0]:
+                # Validar al consumir, dentro de la misma transacción que retira el
+                # pendiente. Una preparación previa no acredita vigencia actual.
+                status = "cancelado_oferta_no_vigente"
+                attempted = None
+            db.execute("UPDATE outbox SET status=?, outcome=? WHERE id=?", (status, attempted, row["id"]))
             return {"modo": "simulacion", "canal": row["channel"], "resultado": status, "envios_reales": 0}
 
     def summary(self):
@@ -330,10 +345,7 @@ class Adapter:
         expected = "sha256=" + hmac.new(self.config["app_secret"].encode(), raw, hashlib.sha256).hexdigest()
         require(match(r"sha256=[0-9a-f]{64}", signature) and hmac.compare_digest(signature, expected), "FIRMA_INVALIDA", 403)
         events = normalize(strict_json(raw), self.config["cuentas"], now)
-        try:
-            offer_valid, reply = self.offer_loader(now)
-        except (OSError, ValueError, KeyError, TypeError, Rejected):
-            # La baja no depende de la disponibilidad del catálogo comercial.
-            offer_valid, reply = False, ""
+        # La baja no depende de la disponibilidad del catálogo comercial.
+        offer_valid, reply = checked_offer(now, self.offer_loader)
         results = self.store.ingest(events, now, offer_valid, reply, self.config.get("whatsapp_destino"))
         return {"status": 200, "modo": "simulacion", "envios_reales": 0, "resultados": results}

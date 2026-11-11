@@ -2,6 +2,7 @@
 from concurrent.futures import ThreadPoolExecutor
 from copy import deepcopy
 from dataclasses import asdict
+from datetime import datetime
 import json
 import os
 from pathlib import Path
@@ -119,6 +120,91 @@ class ChannelsTest(unittest.TestCase):
     def test_expiry_before_simulation(self):
         post(self.adapter, self.payload())
         self.assertEqual(self.store.simulate_one("exito", NOW + 3601)["resultado"], "cancelado_caducidad_local")
+
+    def test_pending_offer_expiry_cancels_fresh_event_each_channel(self):
+        manifest = json.loads((a.ROOT / "oferta-referencia.json").read_text())
+        offer = json.loads((a.BASE / manifest["catalogo"]).read_text())["oferta"]
+        expiry = int(datetime.fromisoformat(offer["clases"][-1]).timestamp())
+        for index, scenario in enumerate(self.scenarios):
+            with self.subTest(channel=scenario["canal"]):
+                store = a.Store(Path(self.directory.name) / f"vencimiento-{index}.sqlite", self.cfg["cuentas"])
+                payload = self.payload(index, delta=expiry - 1 - NOW)
+                self.assertEqual(post(a.Adapter(self.cfg, store), payload, expiry - 1)["resultados"][0]["resultado"],
+                                 "informacion_preparada")
+                self.assertFalse(a.load_offer(expiry)[0])
+                self.assertEqual(store.simulate_one("exito", expiry)["resultado"], "cancelado_oferta_no_vigente")
+                with store.transaction() as db:
+                    row = db.execute("SELECT status,outcome FROM outbox").fetchone()
+                    self.assertEqual(tuple(row), ("cancelado_oferta_no_vigente", None))
+                restarted = a.Store(store.path, self.cfg["cuentas"])
+                self.assertEqual(restarted.simulate_one("exito", expiry)["resultado"], "sin_pendientes")
+
+    def test_pending_offer_source_change_cancels_after_restart(self):
+        original = Path.read_bytes
+        for source in ("DECISIONES-SERGIO-20261110.md", "mensajes.json"):
+            def changed(path):
+                raw = original(path)
+                if path.name != source:
+                    return raw
+                if source.endswith(".md"):
+                    return raw + b"\n"
+                catalog = json.loads(raw)
+                catalog["oferta"]["nombre"] += " FICTICIO_CAMBIO"
+                return json.dumps(catalog).encode()
+            for index, scenario in enumerate(self.scenarios):
+                with self.subTest(channel=scenario["canal"], source=source):
+                    store = a.Store(Path(self.directory.name) / f"fuente-{source}-{index}.sqlite", self.cfg["cuentas"])
+                    post(a.Adapter(self.cfg, store), self.payload(index))
+                    restarted = a.Store(store.path, self.cfg["cuentas"])
+                    with patch.object(Path, "read_bytes", changed):
+                        self.assertFalse(a.load_offer(NOW + 1)[0])
+                        result = restarted.simulate_one("exito", NOW + 1)
+                    self.assertEqual(result["resultado"], "cancelado_oferta_no_vigente")
+                    self.assertEqual(result["envios_reales"], 0)
+                    self.assertEqual(restarted.simulate_one("exito", NOW + 2)["resultado"], "sin_pendientes")
+
+    def test_pending_offer_missing_or_invalid_source_fails_closed(self):
+        original = Path.read_bytes
+        for source in ("DECISIONES-SERGIO-20261110.md", "mensajes.json", "oferta-referencia.json"):
+            for failure in ("ausente", "json_invalido"):
+                def unavailable(path):
+                    if path.name == source:
+                        if failure == "ausente":
+                            raise FileNotFoundError("FUENTE_FICTICIA_NO_DISPONIBLE")
+                        # Una decisión alterada falla por hash; los JSON por parseo.
+                        return b"{"
+                    return original(path)
+                with self.subTest(source=source, failure=failure):
+                    store = a.Store(Path(self.directory.name) / f"ausente-{source}-{failure}.sqlite", self.cfg["cuentas"])
+                    post(a.Adapter(self.cfg, store), self.payload())
+                    with patch.object(Path, "read_bytes", unavailable):
+                        self.assertEqual(store.simulate_one("timeout", NOW + 1)["resultado"],
+                                         "cancelado_oferta_no_vigente")
+                    with store.transaction() as db:
+                        self.assertIsNone(db.execute("SELECT outcome FROM outbox").fetchone()[0])
+                    self.assertEqual(store.simulate_one("exito", NOW + 2)["resultado"], "sin_pendientes")
+
+    def test_pending_offer_changed_also_cancels_whatsapp_routing(self):
+        cfg = {**self.cfg, "whatsapp_destino": "https://wa.me/" + "1" + "0" * 10}  # FICTICIO
+        original = Path.read_bytes
+        def changed(path):
+            raw = original(path)
+            return raw + b"\n" if path.name == "DECISIONES-SERGIO-20261110.md" else raw
+        for index in (1, 3):
+            with self.subTest(channel=self.scenarios[index]["canal"]):
+                store = a.Store(Path(self.directory.name) / f"derivacion-{index}.sqlite", cfg["cuentas"])
+                adapter = a.Adapter(cfg, store)
+                post(adapter, self.payload(index))
+                self.assertEqual(store.simulate_one("exito", NOW)["resultado"], "exito_simulado")
+                routing = post(adapter, self.payload(index, "WHATSAPP", delta=1, suffix="_derivacion"))
+                self.assertEqual(routing["resultados"][0]["resultado"], "derivacion_preparada")
+                with patch.object(Path, "read_bytes", changed):
+                    self.assertEqual(store.simulate_one("exito", NOW + 2)["resultado"], "cancelado_oferta_no_vigente")
+                self.assertEqual(store.simulate_one("exito", NOW + 3)["resultado"], "sin_pendientes")
+
+    def test_pending_offer_is_checked_only_when_there_is_pending_work(self):
+        with patch.object(a, "load_offer", side_effect=AssertionError("NO_HAY_PENDIENTES")):
+            self.assertEqual(self.store.simulate_one("exito", NOW)["resultado"], "sin_pendientes")
 
     def test_injection_has_no_action_and_no_interpolation(self):
         samples = ["NEGOCIO; echo secreto", "$(touch /tmp/FICTICIO)", "<script>NEGOCIO</script>",
