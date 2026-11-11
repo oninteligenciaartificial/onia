@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Plan local de edición de fábrica 2, versión 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "tipo", "entrada", "intervalos"],
+  "properties": {
+    "version": {"const": 1, "type": "integer"},
+    "tipo": {"enum": ["reel", "talking_head"]},
+    "entrada": {"type": "string", "minLength": 1},
+    "transcripcion": {"type": "string", "minLength": 1},
+    "intervalos": {
+      "type": "array", "minItems": 1, "maxItems": 40,
+      "items": {"$ref": "#/$defs/intervalo"}
+    },
+    "broll": {
+      "type": "array", "maxItems": 40,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["archivo", "start", "end", "source_start"],
+        "properties": {
+          "archivo": {"type": "string", "minLength": 1},
+          "start": {"$ref": "#/$defs/segundos"},
+          "end": {"$ref": "#/$defs/segundos"},
+          "source_start": {"$ref": "#/$defs/segundos"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "segundos": {"type": "number", "minimum": 0, "maximum": 1800},
+    "intervalo": {
+      "type": "object", "additionalProperties": false,
+      "required": ["start", "end"],
+      "properties": {
+        "start": {"$ref": "#/$defs/segundos"},
+        "end": {"$ref": "#/$defs/segundos"}
+      }
+    },
+    "transcripcion": {
+      "description": "Contrato compatible con segments del piloto asr-local. Otros metadatos se conservan en su archivo original.",
+      "type": "object", "required": ["segments"],
+      "properties": {
+        "segments": {
+          "type": "array", "minItems": 1, "maxItems": 20000,
+          "items": {
+            "type": "object", "required": ["start", "end", "text"],
+            "properties": {
+              "start": {"$ref": "#/$defs/segundos"},
+              "end": {"$ref": "#/$defs/segundos"},
+              "text": {"type": "string", "minLength": 1, "maxLength": 10000},
+              "avg_logprob": {"type": "number"},
+              "no_speech_prob": {"type": "number", "minimum": 0, "maximum": 1}
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -69,3 +69,16 @@ Esta ejecutora abrió con `view_image` los cinco PNG copiados a [host-02](eviden
 `real-desktop`/`real-mobile` muestran datos de la lectura real02 y los guiones existentes; los otros tres casos son fixtures rotulados SINTÉTICO, no lecturas nuevas ni tareas reales. Se conserva el [fallo anterior](evidencia/host-fallo-01.json) de escritorio/móvil y el intento bwrap, sin sobrescribirlos. Sólo se copiaron cinco PNG y recibos públicos: ningún perfil, cookie o material externo. No se cambió AppArmor/bwrap ni se ejecutó Chromium en el sandbox de la ejecutora. Falta la revisión independiente y aceptación/integración del coordinador.
 
 No hay scheduler, cron, ingesta recurrente, conexión Telegram real, n8n API, LLM pago, publicación de contenido ni despacho de agentes. La publicación autorizada de esta entrega es exclusivamente Git en su rama. Coordinación conserva cierre, revisión independiente e integración a master. Las comprobaciones [inicial](evidencia/COMPROBACION.json) y [parcial](evidencia/COMPROBACION-02.json) se conservan como históricas.
+
+
+## Consultar la tanda de cinco guiones · 11 nov
+
+Se amplía este panel, sin otro servicio ni panel nuevo. Desde la raíz del repo:
+
+```sh
+P=_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel
+T=_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v2/guiones-panel.json
+python3 -B "$P/tanda.py" --tanda "$T" --salida "$P/evidencia/tanda-consulta-nueva"
+```
+
+Abrir panel.html en la salida. El destino debe ser nuevo. La proyección comprueba bytes y conserva revisión técnica pendiente; no consulta noticias, no modifica harness, no aprueba guiones. Si la tanda aún difiere del commit local, lo dice en vez de atribuir sus bytes a HEAD. La suite existente22/22 y tres pruebas nuevas de tanda pasaron.

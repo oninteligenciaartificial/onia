@@ -1,0 +1,17 @@
+# Recibo · guiones-tanda-20261111-v2
+
+ID: guiones-tanda-20261111-v2. Fecha inicial/final del control documental: 2026-11-10T20:29:48.479073+00:00. Base de sesión: b696c8f742674a05a891436427332c1db1b1d6b6; rama codex/ws-guiones-tanda-20261111-v2, árbol inicial limpio. Fuente de entrega: c5fe870, recuperada por fetch explícito de la rama de origen, sin modificar originales. Briefing recibido por stdin/mensaje; JSON y proyección canónicos intactos.
+
+Modelo solicitado: gpt-6.1-sol (Sol6.1); esfuerzo solicitado: low. Modelo observable por instrucciones: GPT-6; identificador efectivo de runtime: unknown; esfuerzo efectivo: unknown. Cuota inicial: unknown (2026-11-10T20:29:48.479073+00:00); cuota final: unknown (2026-11-10T20:29:48.479073+00:00). No hay medición disponible; no se acredita reserva semanal del 10% ni preflight del coordinador. Conciliar estos faltantes con evidencia del lanzamiento; no se lanzaron sesiones adicionales. USD: unknown, sin cálculo ni gasto solicitado.
+
+Intentos: 1 ejecutora observada, 0 hijos, 0 relanzamientos; segunda sesión prevista de revisión independiente pendiente, a cargo del coordinador. Resultado: entrega documental preparada para revisión, sin aceptación. Retrabajo: sustitución acotada de textos y sincronización del panel; sin nueva redacción de voz. La ausencia inicial del objeto c5fe870 se resolvió recuperando su rama desde origin, sin reconstruir originales.
+
+Los textos hablados de T01–T04 coinciden literalmente con los bloques del archivo de Contenido (sin las comillas exteriores delimitadoras). T05 coincide con su base documentada aplicando exclusivamente quitar «ficticia» de la voz y sustituir el cierre por «Comentá A o B según cuál te deja más claro qué se ofrece.», también en CTA y cierre del copy. No existe bloque íntegro nuevo de Contenido para T05. Estructura, cinco slots y duraciones orientativas conservados. Nombre exacto en T01 y T04: «Claude de 0 a 100: tu negocio con IA». Restricción de logos aplicable a todos los planos de la tanda en README y reiterada en T01–T04; T05 conserva sus planos originales.
+
+Comprobación: comparación literal de voz contra Contenido y base c5fe870; paridad Markdown/JSON, bytes y SHA256; mismos encabezados por pieza; diferencia de T05 limitada al cambio opcional; enlaces relativos y git diff --check. Validación documental local, sin web ni modelos. Prueba sintética FFmpeg breve registrada en la salida de sesión; no acredita ASR, escucha, ensayo hablado, legibilidad ni edición real. No hay crudo ni voz autorizados para transcribir. Duraciones heredadas pendientes de ensayo.
+
+Directora preparar-oferta-y-embudo anunciada en catálogo y leída en fuente canónica. Reglas comunes, boss-memoria, estado, orquestación, especificación y textos de Contenido leídos explícitamente. No se ejecutaron instaladores ni harness. Sólo escritura en ruta asignada.
+
+Commits: origen c5fe870; base de sesión arriba; entrega identificada por el commit que incorpora este recibo y su árbol, sin hash autorreferente. Hash final y comprobación remota informados al terminar la sesión. Sin integración a master.
+
+Nada grabado, publicado, enviado ni activado. No n8n ni servicios. Faltan revisión independiente de persona/sesión distinta sobre el commit exacto, aceptación explícita y sí de Sergio antes de grabar o publicar. Coordinador: cerrar y solicitar revisión; Sergio: ensayo y decisión; Boss: resolver condiciones operativas/comerciales pendientes del README. Esta entrega no equivale a aceptación.
