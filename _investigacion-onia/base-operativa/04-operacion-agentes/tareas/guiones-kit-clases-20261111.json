@@ -1,0 +1,64 @@
+{
+  "schema": 2,
+  "id": "guiones-kit-clases-20261111",
+  "revision": 2,
+  "compartible": true,
+  "objetivo": "Completar materiales utilizables de las tres clases del workshop, reutilizando el piloto y estrategia existentes.",
+  "estado": "preparado",
+  "proximo_paso": "Leer 04-operacion-agentes/encargos/guiones-kit-clases-20261111.md y ejecutar el encargo dentro de su alcance.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-11T21:02:38.163444+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-11T21:02:37.886954+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/guiones-kit-clases-20261111.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/guiones-kit-clases-20261111.md",
+    "sha256": "46c979f827c7c2eb7024276b7bb3ef2291c05729106c70ff1c476157aaa2d893",
+    "bytes": 4599,
+    "contenido": "# Encargo guiones-kit-clases-20261111\n\nÁrea: marketing\nModo: encargo\nSkill directora: preparar-oferta-y-embudo\n\n## Objetivo\n\nCompletar materiales utilizables de las tres clases del workshop, reutilizando el piloto y estrategia existentes.\n\n## Entregable\n\nGuía docente, ejercicios/plantillas de alumnos y continuidad sin Codex; guion de ensayo con pendientes reales.\n\n## Criterio de aceptación\n\nOferta vigente coherente, materiales concretos abribles sin modelos pagos; casos ficticios rotulados y demo real pendiente, ninguna publicación ni promesa de función no comprobada.\n\n## Entrada y alcance\n\nPreparar una oferta, embudo, webinar o brief de contenido.\n\n- Lote autorizado CIERRE-VENTA, preparación de clases13/14/16 antes del corte14nov. Regla52fb1c8. Primero inventariar 01-negocio/workshop-20261108/kit-piloto-20261109, CLASE1-PRIMEROS10MIN.md y estrategia integrada19e2d7d; no rehacer lo que ya sirve. Aplicar preparar-oferta-y-embudo y directora del área.\n- Única ruta de escritura 01-negocio/workshop-20261108/materiales-tres-clases-20261111. No tocar kit histórico, estrategia, panel, decisiones ni harness. Cero hijos, Sol high. Sin gasto, cuentas, envíos, servicios ni publicación comercial.\n- Nombre Claude de0a100:tunegocioconIA; clases13nov20h,14nov14h,16nov20h LaPaz,60a90min. Confirmar decisiones vigentes. Clase1ordenar,2vender,3automatizar. Bs50/Bs150VIP5cupos30min; no datos privados. Cuenta prestada y capacidades deben verificarse por Sergio, no garantizar acceso ni cuota de asistentes.\n- Para cada clase: resultado concreto, preparación, escaleta didáctica60min con extensión opcional30, explicación breve, ejercicio guiado con datos ficticios, plantilla editable en Markdown/HTML estático, ejemplo resuelto claramente ficticio, criterio de autoevaluación y alternativa manual si servicio no responde. Reutilizar material del primer piloto con referencias; no inventar ensayo real hecho.\n- Clase3 presenta capacidades reales de OnIA y sus límites; no enseñar demo fallida como producto operativo ni requerir Codex el16. Preparar checklist de ensayo previo y procedimiento sin Codex para abrir plantillas y conducir clase. GuíaVIP y soporte propuestos, sin nuevos compromisos de calendario/devoluciones/grabaciones.\n- Entregar README, materiales y recibo de comprobaciones de enlaces/coherencia comercial/apertura local si es posible. No tests triviales que sólo repitan texto. Diferenciar revisión técnica/editorial, ensayo pendiente y aprobación. Commit+push rama; coordinadora revisa e integra.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md](../ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md)\n- [01-negocio/preparar-oferta-y-embudo/SKILL.md](../../01-negocio/preparar-oferta-y-embudo/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [preparar-campana-meta](../../05-herramientas/compartibles/skills/preparar-campana-meta/SKILL.md)\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-marketing-humanizer](../../05-herramientas/compartibles/terceros/marketing/humanizer/SKILL.md)\n\n## Salidas de referencia del área\n\n- Oferta y recorrido de venta\n- Borradores de las piezas del encargo\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/guiones-kit-clases-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "ejecucion": {
+    "perfil": "complejo",
+    "recomendado": {
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high"
+    },
+    "solicitado": null,
+    "observado": null,
+    "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+    "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+  },
+  "asignacion": {
+    "responsable": "codex-kit-clases-20261111",
+    "rutas": [
+      "01-negocio/workshop-20261108/materiales-tres-clases-20261111"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-11T21:02:38.163425+00:00"
+  }
+}
