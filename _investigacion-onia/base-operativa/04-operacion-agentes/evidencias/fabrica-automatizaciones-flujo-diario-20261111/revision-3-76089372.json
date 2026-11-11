@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "81d3352d472618fae028f247a818eabc3daae876",
+  "criterio": "P2 en flujo-diario/motor.py, líneas 117–137. La noticia queda persistida antes de guardar la intención del pedido. Reproduje una interrupción en make_request usando SQLite en memoria. Al reconstruir el motor y repetir la entrada, devuelve una candidata, cero ciclos y errores vacíos. La deduplicación impide recuperar el trabajo pendiente. Persistir la intención de forma recuperable y agregar una prueba de reinicio en ese punto. Los 30 hashes de evidencia coinciden y seis pruebas sin escritura pasan. Las suites completas quedaron bloqueadas por el filesystem de sólo lectura. El ensayo real de modelo y servicio continúa pendiente según el alcance.",
+  "worktree_conservado": true
+}
