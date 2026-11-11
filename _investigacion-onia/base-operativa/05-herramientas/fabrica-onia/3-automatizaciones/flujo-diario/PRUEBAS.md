@@ -72,3 +72,17 @@ Las pruebas del adaptador usan las llamadas reales con mocks: no se llama `sessi
 `test_programacion.py` cubre apagado sin datos/red, hora LaPaz, consulta horaria, ningún modelo antes del 12/después del 14/desde las 18:00, creación a17:00, fecha de corte no ampliable y recogida del dictamen del 14 después de medianoche sin renovación ni otro ciclo. Se valida la sintaxis de la plantilla del calendario; no se instala.
 
 La prueba viva sólo obtuvo un fallo de arranque RPC (filesystem de sólo lectura, sin stdout). El recibo conserva esa limitación y la cuota desconocida. No se produjo una lectura positiva ni un modelo real y no se presentan los mocks como tales.
+
+
+## Corrección del dictamen7: recuperación12→13→14
+
+Base revisada: `b931d3cc87893a27fc7d885c945e0c1ef7280309`. La reproducción previa de `test_recuperacion_medianoche.py` falló6 de9 casos: antes de17:00 aparecía `MODELO_NO_DISPONIBLE` y después `AUTORIZACION_PENDIENTE`. La salida se conserva en `evidencia/recuperacion-medianoche-v7/reproduccion-antes.txt`; no se cambian los recibos anteriores.
+
+```bash
+python3 -B -m unittest discover -s "$F" -p test_recuperacion_medianoche.py -v
+python3 -B -m unittest discover -s "$F" -p 'test_*.py' -v
+```
+
+Las9 regresiones utilizan un doble con tareas separadas por ID y cupos compartidos. Cubren una entrega del12 pendiente de revisión el13/el14, antes y después de17:00; prioridad frente a la tanda actual; recorrido secuencial12→13→14 y recogida el15; prohibición de nueva revisora tras el corte; revocación; tres cupos ocupados; y una tarea anterior sin escritora que no se redacta retroactivamente. Se comprueban pedido original intacto, commit coincidente, una escritora/una revisora por ID, máximo un efecto por tick y devolución a revisión editorial.
+
+La suite completa de `flujo-diario` tiene64 pruebas (55 existentes y9 nuevas). La evidencia actual incluye logs, hashes y configuración deshabilitada. No se ejecutan modelos, RPC vivo, red, tareas reales, instalación, revisión independiente ni integración en estas regresiones. Panel, generador, preflight y harness conservan sus comprobaciones anteriores; sus suites externas no se repiten para este cambio.

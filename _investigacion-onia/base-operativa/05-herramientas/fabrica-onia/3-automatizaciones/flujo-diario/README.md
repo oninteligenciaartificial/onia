@@ -87,7 +87,7 @@ Una corrección usa `Engine.accept_result(..., corrections=...)` bajo el lock y 
 
 La continuidad vigente fija **inicio a las 17:00 y entrega objetivo a las 18:00 America/La_Paz, del 12 al 14 de noviembre 2026**. `config.ejemplo.json` sigue con `habilitada:false`, `redaccion_autorizada:false` y autorización null. No se restauran las 07:00. La hora las 18:00 es un objetivo, no una promesa de terminar si faltan cuota, revisión o entradas.
 
-`programacion.py --tick` puede iniciar modelos desde las17:00 de esas tres fechas; las18:00 son objetivo de entrega y una demora no cancela la tanda, con constancia de autorización, vigencia y preflight positivo. El corte máximo exclusivo es **2026-11-15T00:00:00-04:00**, fin del 14; puede adelantarse, nunca ampliarse mediante configuración. No renueva una suscripción ni presume la disponibilidad hasta esa fecha. Antes del inicio y después del corte de suscripción se impiden nuevos modelos, pero con la autorización existente aún se pueden cerrar/recoger trabajos ya iniciados; una falta de cuota no bloquea recuperar su resultado. Toda activación sigue a cargo de la coordinadora después de revisión.
+`programacion.py --tick` puede iniciar modelos desde las17:00 de esas tres fechas; las18:00 son objetivo de entrega y una demora no cancela la tanda, con constancia de autorización, vigencia y preflight positivo. El corte máximo exclusivo es **2026-11-15T00:00:00-04:00**, fin del 14; puede adelantarse, nunca ampliarse mediante configuración. No renueva una suscripción ni presume la disponibilidad hasta esa fecha. Las escritoras de la tanda nueva esperan hasta las 17:00; una entrega de un día anterior puede continuar su revisión antes de esa hora mientras siga la vigencia autorizada. Después del corte no se inician modelos, pero con la autorización existente aún se pueden cerrar/recoger trabajos ya iniciados; una falta de cuota no bloquea recuperar su resultado. Toda activación sigue a cargo de la coordinadora después de revisión.
 
 Para UN disparo temporal determinista sin modelo ni instalación:
 
@@ -131,3 +131,12 @@ python3 -B "$F/programacion.py"
 ```
 
 Código0 del preflight: lectura positiva de esa invocación. Código2: pendiente, sin habilitar un modelo. En este sandbox el App Server no pudo arrancar por filesystem de sólo lectura (rc1, sin stdout); el lector original también falló aquí. Se conserva el intento saneado en `evidencia/cuota-programacion-v5/`. **Cuota y login en vivo quedan desconocidos en esta retoma**; la coordinadora debe repetirlo en el host autorizado. No se ampliaron permisos ni se maquilló una muestra histórica como vigente.
+
+
+### Recuperación tras medianoche · dictamen7
+
+La tanda nueva conserva el inicio17:00 y la entrega objetivo18:00. La recuperación de una entrega anterior ya iniciada se selecciona antes que la nueva, también antes de17:00 del día siguiente. Dentro de los días12–14 y de `modelo_hasta` puede lanzar su revisora, siempre con el preflight y los cupos del harness. El día15 sólo puede cerrar/recoger: no se renueva ni se altera el corte.
+
+La selección exige un commit observado o la intención durable de un despacho de escritora (`enviando`/`confirmado`), dentro del rango autorizado y con día anterior. No autoriza empezar una escritora atrasada con fecha inventada ni una corrección automática. Las fases de revisión editorial, corrección o resultado inválido quedan fuera de esta selección. Los datos del journal sólo proponen un ID; el motor vuelve a cotejar pedido, alcance, revisión, SID y commit con el registro canónico antes de actuar.
+
+Cada tick conserva un único ID autorizado y un máximo de un efecto. Cuando termina la recuperación, la tanda del día continúa con su propio pedido, creado desde17:00; no se mezclan fechas ni resultados. Las evidencias de la revisión7 y del código anterior se conservan. Regresión y comprobación de esta corrección: `evidencia/recuperacion-medianoche-v7/`.

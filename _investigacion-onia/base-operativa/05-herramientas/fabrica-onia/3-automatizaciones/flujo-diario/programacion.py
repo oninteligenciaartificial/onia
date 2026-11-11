@@ -61,8 +61,7 @@ def tick(config, root, coordinator=None, clock=now, adapter_factory=LocalHarness
     in_dates = FIRST_DAY <= local.date() <= LAST_DAY
     # Las18:00 son objetivo editorial; una demora no cancela la tanda.
     due = in_dates and config['hora_tanda'] <= local.strftime('%H:%M')
-    provider = bool(due and config['redaccion_autorizada'] and current < instant(config['modelo_hasta']))
-    require(not provider or coordinator is not None, 'FALTA_COORDINADOR_CANONICO')
+    model_valid = bool(in_dates and config['redaccion_autorizada'] and current < instant(config['modelo_hasta']))
     with locked(root):
         adapter = adapter_factory(coordinator, Path.home() / 'operacion') if coordinator is not None else None
         engine = motor.Engine(root, adapter, clock=clock)
@@ -72,18 +71,31 @@ def tick(config, root, coordinator=None, clock=now, adapter_factory=LocalHarness
             # Se consultan novedades antes de la hora editorial, sin congelar la tanda demasiado pronto.
             if last is None or (current - instant(last)).total_seconds() >= 3600:
                 engine.ingest(collect(cursor=meta.get('cursor', 0), clock=clock), queue_input=False)
-            ident = task_id(local.date().isoformat()) if due and config['redaccion_autorizada'] else None
-            if ident is None and config['redaccion_autorizada']:
-                # Fuera del horario/corte: sólo cerrar/recoger tareas ya autorizadas.
-                pending = [c for c in engine.store.rows('ciclo')[-14:]
-                           if FIRST_DAY.isoformat() <= c['dia'] <= LAST_DAY.isoformat()
-                           and c['fase'] not in {'para_revision_editorial', 'correccion_pendiente_revision', 'correccion_pendiente'}]
+            ident = None
+            if config['redaccion_autorizada']:
+                # Recuperar antes de iniciar otra tanda, incluso antes de17:00 del día nuevo.
+                # Los estados del journal sólo proponen el ID: Engine vuelve a cotejar el harness.
+                pending = []
+                for cycle in engine.store.rows('ciclo')[-14:]:
+                    if not (FIRST_DAY.isoformat() <= cycle['dia'] <= LAST_DAY.isoformat()
+                            and cycle['dia'] < local.date().isoformat()):
+                        continue
+                    if cycle['fase'] in {'para_revision_editorial', 'correccion_pendiente_revision',
+                                         'correccion_pendiente', 'resultado_invalido'}:
+                        continue
+                    dispatched = engine.store.get('efecto', cycle['id'] + ':lanzar', {})
+                    if ((cycle.get('harness') or {}).get('commit')
+                            or dispatched.get('fase') in {'enviando', 'confirmado'}):
+                        pending.append(cycle)
                 if pending:
-                    # No dejar que una tanda sin modelo tape un dictamen ya terminado.
                     priority = {'harness_revisar': 0, 'revision_tecnica_en_curso': 0,
                                 'harness_lanzar': 1, 'redaccion_en_curso': 1,
                                 'harness_recoger': 2, 'harness_cerrar': 3}
-                    ident = min(pending, key=lambda c: priority.get(c['fase'], 4))['id']
+                    ident = min(pending, key=lambda c: (priority.get(c['fase'], 4), c['dia']))['id']
+                elif due:
+                    ident = task_id(local.date().isoformat())
+            provider = bool(model_valid and ident is not None)
+            require(not provider or coordinator is not None, 'FALTA_COORDINADOR_CANONICO')
             projection = engine.step('horario' if due else 'reconciliar', authorized_id=ident, provider=provider)
             projection['programacion'] = {'habilitada': True, 'zona': config['zona'], 'hora_tanda': config['hora_tanda'],
                 'redaccion_autorizada': provider, 'modelo_hasta': config['modelo_hasta'],
