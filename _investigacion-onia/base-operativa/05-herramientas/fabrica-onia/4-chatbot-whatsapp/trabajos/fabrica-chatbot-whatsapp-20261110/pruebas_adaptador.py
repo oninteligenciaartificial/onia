@@ -218,12 +218,52 @@ class PruebasAdaptador(unittest.TestCase):
         codigo, _ = self.http("/operador/despachar", auth="Bearer " + self.cfg["operator_token"])
         self.assertEqual(codigo, 401)
 
+    def test_configuracion_invalida_y_qr_faltante_fallan_sin_transporte(self):
+        cierre = int(datetime.fromisoformat("2026-11-16T20:00:00-04:00").timestamp())
+        a.validar_config({**self.cfg, "cierre_inscripcion_epoch": cierre}, False)
+        for cambios in [
+            {"pago_ttl_segundos": 0}, {"pago_ttl_segundos": True},
+            {"cierre_inscripcion_epoch": cierre + 1},
+            {"envios_habilitados": "false"}, {"envios_habilitados": 1},
+            {"operator_token": self.cfg["verify_token"]},
+        ]:
+            with self.subTest(campos=list(cambios)), self.assertRaises(ValueError):
+                a.crear_app(self.base, {**self.cfg, **cambios}, transporte=self.transporte)
+        for campo in ["qr_media_id", "meet_urls", "graph_token", "dispatcher_token"]:
+            cfg = {**self.cfg, "envios_habilitados": True}
+            del cfg[campo]
+            with self.subTest(falta=campo), self.assertRaisesRegex(ValueError, campo):
+                a.crear_app(self.base, cfg, True, self.transporte)
+        self.assertEqual(self.enviados, [])
+        self.assertEqual(self.sql("SELECT * FROM salida"), [])
+
+    def test_lunes_16_cierre_en_inicio_sin_inventar_hora_final(self):
+        self.habilitar_falso()
+        cierre = int(datetime.fromisoformat("2026-11-16T20:00:00-04:00").timestamp())
+        self.cfg["cierre_inscripcion_epoch"] = cierre
+        self.ahora = cierre - 60
+        self.iniciar(permitir=True)
+        self.meta(self.mensaje("alta-lunes", "GRUPAL"))
+        self.assertEqual(self.sql("SELECT vence FROM clientes"), [(cierre,)])
+        self.meta(self.mensaje("foto-lunes", type="image", image={"id": "000002"}))
+        self.assertEqual(self.sql("SELECT estado FROM clientes"), [("pendiente",)])
+        self.assertEqual(self.operador("confirmar", self.pago())[0], 200)
+        self.assertEqual(self.operador("despachar")[1]["resultado"], "aceptado")
+        self.assertEqual(len(self.enviados), 1)
+        self.ahora = cierre
+        otro = "999000000002"
+        self.meta(self.mensaje("alta-al-cierre", "GRUPAL", otro))
+        self.assertEqual(self.operador("confirmar", self.pago(otro, "FICTICIO-LUNES")),
+                         (409, {"resultado": "INSCRIPCION_CERRADA"}))
+        self.assertEqual(self.sql("SELECT count(*) FROM salida WHERE tipo = 'confirmado'"), [(1,)])
+
     def test_flujo_salida_de_ficha_qr_captura_acceso(self):
         self.habilitar_falso()
         self.meta(self.mensaje("info"), self.mensaje("alta", "VIP"))
         for _ in range(3):
             self.assertEqual(self.operador("despachar")[1]["resultado"], "aceptado")
         self.assertIn(a.OFERTA["nombre"], self.enviados[0]["text"]["body"])
+        self.assertIn("lunes 16 a las 20:00", self.enviados[0]["text"]["body"])
         self.assertNotIn("meet.google.com", self.enviados[0]["text"]["body"])
         self.assertIn("Bs 150", self.enviados[1]["text"]["body"])
         self.assertEqual(self.enviados[2]["image"]["id"], CONF["qr_media_id"])
