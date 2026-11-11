@@ -41,3 +41,5 @@ La lectura inicial fue 90% usado a `2026-11-10T23:08:11.742Z` (19:08 La Paz). Po
 ## Resultado posterior
 
 La release quedó instalada y comprobada. Sergio autorizó después un ensayo acotado de 91% a 93%, exclusivamente para medir; no se ejecutó porque la revisión detectó un control insuficiente del presupuesto. Los límites ordinarios no cambian. Evidencia y dictámenes separados en [INSTALACION.md](INSTALACION.md).
+
+La implementación posterior permite una [política privada explícita de cuota](POLITICA-CUOTA.md), conservando90 por defecto. La instalación no equivale a autorizar ni aplicar otro límite; consultar el recibo y la configuración real.

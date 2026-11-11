@@ -1,5 +1,7 @@
 # HOMELAB: conexión esencial en curso
 
+> **Procedimiento vigente para el alta parcial del10/11:** comenzar por [RETOMA-REVISADA-20261110.md](RETOMA-REVISADA-20261110.md), que valida el estado dejado por el instalador anterior y su nuevo hash. No repetir el bloque de alta inicial ni usar su hash histórico sobre esa cuenta. Las pruebas de SSH/aislamiento y el estado de la tarea siguen pendientes hasta comprobarse; este índice no acredita la disponibilidad actual de la PC. Las decisiones actuales de Sergio prevalecen sobre prioridades y propuestas fechadas que siguen abajo.
+
 ## Avance de alta · 9 noviembre 2026 · America/La_Paz
 
 Huella ED25519 confiable recibida de Sergio; el contraste remoto sigue pendiente porque el puerto SSH de la PC no respondió vía Tailscale. Alta y pruebas preparadas en [ALTA-ONIA-WORKER.md](ALTA-ONIA-WORKER.md). Aislamiento probado en VPS con fixture, todavía no aplicado ni probado en WSL. No declarar HOMELAB listo. Estados y siguiente acción sólo en [homelab-conexion-20261109](../tareas/homelab-conexion-20261109.json).

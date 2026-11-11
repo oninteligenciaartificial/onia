@@ -13,3 +13,9 @@ Se conservan permisos y fábricas, rutas, Sol low/high, cero hijos, máximo3 sim
 Pruebas de componentes:74 correctas en40.966s, sin modelos ni mensajes reales, en delegación/preguntas/puente. Revisión independiente estática de `/root/revisar_reglas_boss`: buena para preparar. La activación se documentará con el valor decidido, respaldo privado, release, hashes y comprobación posterior; hasta entonces no afirmar que Boss puede lanzar por encima de90.
 
 Prueba adicional de integración de preguntar: configuración privada95 permite fixture94 y bloquea95 antes de registrar/ejecutar, con una prueba correcta. No se aplicó95 al VPS. Salidas: [suite](tests-politica.txt) y [caso de preguntar](test-politica-pregunta.txt).
+
+## Instalación posterior
+
+Código instalado: `ffa10a0abed8c0445e6c1dd233ded47a5cf05c9e`, a2026-11-11T00:03:39UTC (10/11,20:03 LaPaz), con respaldo privado. Sólo cambian dos módulos runtime; los diez hashes coinciden. Configuración, claves y webhook se conservaron durante esta instalación. Límite efectivo comprobado:90; la admisión real sigue rechazando `tope_cuota_90`. No se seleccionó un valor nuevo mientras está pendiente la decisión de Sergio.
+
+Seis pruebas adicionales con los módulos instalados:6 correctas,0 errores,0 omisiones; fixtures, sin Codex real. Incluyen política inválida, límite/default, intento remoto de cambiarla, gate anterior al lanzamiento, ocho altas y preguntar con política privada. Sólo se fijó BASE del fixture a los metadatos del checkout; la configuración operativa no se sustituyó por datos de prueba. [Recibo](INSTALACION-POLITICA.json), [resumen](tests-politica-instalada.json), [salida](tests-politica-instalada.txt).
