@@ -307,3 +307,20 @@ Referencias: lecturas existentes de los dos videos de Euge (`EUGE-VIDEO-BOSS-202
 Sergio aprobó: «Ok, vamos con el plan ve desarrollando te dejo», y agregó un apartado que arme estrategias documentadas para la venta actual y futuros proyectos/ventas. Queda autorizado el lote técnico presentado, incluida integración revisada y despliegue privado; se mantienen aprobaciones comerciales y gasto. El bloque anterior deja de ser sólo propuesta para ese alcance. Hora diaria y verificación Meta siguen pendientes.
 
 Estrategias: biblioteca versionada por proyecto con diagnóstico, evidencia/supuestos, audiencia, oferta, canal, recorrido de venta, acciones priorizadas, piezas, responsable, dependencias, métricas reales y revisión. Primera estrategia: workshop y objetivo de Bs 3000. Futuros proyectos quedan como propuestas evaluables, sin iniciar gastos ni desarrollar cada idea. Integrar su consulta/corrección al panel mediante contrato, con un solo escritor de UI.
+
+## Auditoría de huecos del lote — 11 noviembre, ejecución autorizada
+
+| Brecha observada | Responsable y siguiente paso | Evidencia de cierre requerida |
+|---|---|---|
+| Regla de cierre estaba en memoria de Boss pero no explícita para Codex | Coordinadora: incorporada en reglas-comunes | Regla publicada y aplicada a este lote |
+| Flujo/generador revisados seguían sin integración | Coordinadora: merge realizado, prueba combinada en curso | Tests y hash en master |
+| Loop general no existe probado | Sesión fabrica-codigo-continuidad-lote-20261111 ejecutándose | Dictamen y ensayo de avance/reinicio real |
+| Estrategias aún sin entrega | Sesión guiones-tanda-estrategias-20261111 ejecutándose | Estrategia workshop, biblioteca y revisión |
+| Cerebro/correcciones/panel y acceso teléfono incompletos | Coordinadora prepara siguiente sesión de panel tras integrar dependencias | Corrección aplicada, persistencia, acceso privado real |
+| WhatsApp preparado sin ensayo comercial | Coordinadora integra entrega revisada; Sergio completa acceso Meta/QR/Meet | Recorrido real autorizado, pago manual y acceso |
+| IG/FB, anuncios/IA y montaje incompletos | Sesiones sucesivas del lote aprobado, rutas separadas | Pruebas por canal y material real; generación por pieza autorizada |
+| Hora diaria no confirmada | Sergio: pregunta pendiente; no restaurar 07:00 | Hora de entrega e inicio medido, disparador probado |
+| Homelab online sin worker aceptado | Diagnóstico PE local y validación SSH/aislamiento | Una ejecución segura en worker; no basta presencia Tailscale |
+| Modelo después del14 sin continuidad garantizada | Preparar scripts/materiales y operación con Contenido | Proveedor disponible o procedimiento manual comprobado |
+
+Esta tabla registra pendientes reales; anotarlos no equivale a resolverlos. El lote sigue abierto hasta sus comprobaciones, sin exigir otro prompt para trabajo técnico ya autorizado.
