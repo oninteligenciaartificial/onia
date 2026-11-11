@@ -1,0 +1,97 @@
+{
+  "fecha": "2026-11-11T17:11:32.022Z",
+  "ensayo": "SINTETICO de revisión sobre la tanda v2 histórica",
+  "chromiumSandbox": true,
+  "viewports": [
+    {
+      "name": "objetivo",
+      "width": 1487,
+      "height": 1058,
+      "deviceScaleFactor": 1,
+      "captura": "objetivo.png",
+      "overflow": false
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "deviceScaleFactor": 1,
+      "captura": "desktop.png",
+      "overflow": false
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1,
+      "captura": "mobile.png",
+      "overflow": false
+    }
+  ],
+  "pasos": [
+    "Navegación nativa por cinco secciones y selección de seis fábricas"
+  ],
+  "cabeceras_formulario": [],
+  "comparacion_visual": "Pendiente de abrir capturas junto a la referencia exacta",
+  "resultado": "FALLO",
+  "error": "TimeoutError: locator.waitFor: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#guion-T01') to be visible\u001b[22m\n\u001b[2m    10 × locator resolved to hidden <article class=\"script\" id=\"guion-T01\">…</article>\u001b[22m\n",
+  "stack": "locator.waitFor: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#guion-T01') to be visible\u001b[22m\n\u001b[2m    10 × locator resolved to hidden <article class=\"script\" id=\"guion-T01\">…</article>\u001b[22m\n\n    at /tmp/onia-panel-diseno-coordinadora-diagnostico2.cjs:107:38",
+  "dom": {
+    "hash": "#guion-T01",
+    "ids": [
+      "guion-T01",
+      "guion-T02",
+      "guion-T03",
+      "guion-T04",
+      "guion-T05"
+    ],
+    "screens": [
+      {
+        "id": "fabricas",
+        "display": "none"
+      },
+      {
+        "id": "hoy",
+        "display": "none"
+      },
+      {
+        "id": "guiones",
+        "display": "block"
+      },
+      {
+        "id": "calendario",
+        "display": "none"
+      },
+      {
+        "id": "cerebro",
+        "display": "none"
+      },
+      {
+        "id": "montaje",
+        "display": "none"
+      },
+      {
+        "id": "fuentes",
+        "display": "none"
+      },
+      {
+        "id": "ideas",
+        "display": "none"
+      },
+      {
+        "id": "pendientes",
+        "display": "none"
+      }
+    ],
+    "links": [
+      "#guion-T01",
+      "#guion-T02",
+      "#guion-T03",
+      "#guion-T04",
+      "#guion-T05"
+    ]
+  },
+  "servidor_cerrado": true,
+  "navegador_cerrado": true,
+  "datos": "SQLite sintética conservada fuera de Git en /tmp"
+}
