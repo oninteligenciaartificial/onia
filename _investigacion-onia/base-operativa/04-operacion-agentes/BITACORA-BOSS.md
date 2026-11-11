@@ -44,3 +44,9 @@ Error de Boss: durante cerca de una hora trató sesiones con viva=false y sesion
 - Comprobado: el commit existe en origin/master y coincide con el aviso. No pude correr `consultar` desde esta rutina (destino del puente no disponible en el entorno de la rutina); estado del harness no verificado aquí.
 - Inferido: no hay entrega nueva ni veredicto que recoger; ningún efecto de cerrar/revisar/recoger corresponde a este aviso.
 - Pendiente para el chat principal de Boss: confirmar con Sergio la decisión (autor del commit es Codex), y elegir siguiente tarea de ingresos ya autorizada desde entregas existentes. Homelab: no repetir retoma v2. Sin cambios en publicación, cobro, gasto, n8n ni producción.
+
+## 10 nov 2026, 21:55 La Paz · aviso `pedido_coordinacion` homelab-diagnostico-pe-20261111-1
+- Observado: webhook tipo pedido_coordinacion (no fin de sesión) para `homelab-conexion-20261109` r10 en_espera, commit df8beea («registrar revisión independiente del diagnóstico PE»). El commit existe y `homelab/RETOMA-PE-20261111.md` está en master. Pide desde el chat principal: copiar el script como v3 conservando v1/v2, verificar SHA256 3e64…be, correr UNA VEZ el diagnóstico `--diagnose-pe` con `/usr/bin/python3 -I -B` en DESKTOP-0GGGNMF y publicar el JSON saneado en `homelab/DIAGNOSTICO-PE-BOSS-20261111.md`.
+- Comprobado: la PC de Sergio figura offline en este momento. No ejecuté nada en la PC (la rutina no toca la PC). `consultar` no disponible desde la rutina; estado del harness no verificado aquí.
+- Inferido: no hay entrega ni veredicto; no corresponde cerrar/revisar/recoger.
+- Siguiente paso: derivado al chat principal de Boss; con la PC encendida, correr el diagnóstico una vez. Si control_pe.ok no es true, no aplicar ni repetir.
