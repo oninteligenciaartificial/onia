@@ -1,0 +1,937 @@
+{
+  "naturaleza": "Criterio editorial propuesto; hipótesis, no audiencia investigada",
+  "candidatas": [
+    {
+      "id": "I01",
+      "pieza": "T01",
+      "decision": "seleccionada",
+      "motivo": "Venta mediante una preparación concreta de agenda, hereda v2/G01 y especificidad de Pedro."
+    },
+    {
+      "id": "I02",
+      "pieza": "T02",
+      "decision": "seleccionada",
+      "motivo": "Marca por criterio visible: entrada, omisión y corrección. Sin autobiografía inventada."
+    },
+    {
+      "id": "I03",
+      "pieza": "T03",
+      "decision": "seleccionada",
+      "motivo": "Noticia primaria del 10-nov: condiciones y límite de prueba; útil para distinguir anuncio de demo."
+    },
+    {
+      "id": "I04",
+      "pieza": "T04",
+      "decision": "seleccionada",
+      "motivo": "Segunda venta: decisión grupal/VIP con condiciones verificables."
+    },
+    {
+      "id": "I05",
+      "pieza": "T05",
+      "decision": "seleccionada",
+      "motivo": "Prueba A/B de claridad de mensajes; sin inferir conversión."
+    },
+    {
+      "id": "I06",
+      "decision": "descartada",
+      "motivo": "Relato sobre el día de Sergio: faltan hechos reales y permiso; usar T02 de marca."
+    },
+    {
+      "id": "I07",
+      "decision": "descartada",
+      "motivo": "Búsqueda web en Claude anunciada en marzo de 2025: no es novedad del día. Primaria consultada, no usada como noticia de esta tanda."
+    },
+    {
+      "id": "I08",
+      "decision": "reserva_evergreen",
+      "motivo": "Agenda imposible de v2 T03, rotular evergreen si no hay noticia primaria fechada; no quinto tema adicional."
+    }
+  ],
+  "seleccion": [
+    {
+      "pieza": "T01",
+      "motivo": "I01 elegida: mantiene la entrada concreta de v2 T01, actualiza fechas con D11 y entrega lo que promete la apertura. Pedro orienta especificidad; Erik, orientación; Hormozi, promesa/entrega.",
+      "patrones": [
+        {
+          "id": "alex-hormozi-p2",
+          "referente": "alex-hormozi",
+          "pieza": "P2",
+          "titulo": "Cumplir la promesa del contenido",
+          "temas": [
+            "contenido",
+            "gancho"
+          ],
+          "usos": [
+            "contenido",
+            "guiones",
+            "ideas",
+            "vender"
+          ],
+          "hecho_documentado": "Descompone una unidad de contenido en captar, retener y recompensar, y contrasta promesa y entrega.",
+          "inferencia_acotada": "El marco permite auditar el cuerpo de un guion contra su apertura.",
+          "pasaje": {
+            "fuente": "alex-hormozi",
+            "desde": 94,
+            "hasta": 104,
+            "sha256": "7f9112a2c6604400e993b28eb9c93fa528a00db3cafe4966753370cda578a32e"
+          },
+          "localizacion_temporal_heredada": "ASR 24:41.52–25:39.94",
+          "propuesta_onia": {
+            "aplicacion": "Prometer tres datos de una agenda y mostrar los tres antes del cierre.",
+            "comprobacion_pendiente": "Marcar en el cuerpo dónde se entrega cada elemento anunciado."
+          },
+          "nombre": "Alex Hormozi",
+          "ficha": {
+            "id": "alex-hormozi",
+            "ruta": "03-referentes/cerebros-profundos/a/alex-hormozi.md",
+            "sha256": "194dcbfc57f3468ef4ed5597806bf1311101c7a023f1961540d3a2d1d85a5b2e"
+          },
+          "patron_en_ficha": {
+            "fuente": "alex-hormozi",
+            "desde": 185,
+            "hasta": 191,
+            "sha256": "395a1570f9a4cde4bd4c238fc8986a31b020adea65555b6ce1dc8a7ab7dae8ae"
+          },
+          "fuente_publica": {
+            "id": "P2",
+            "url": "https://www.acquisition.com/training/leads5",
+            "titulo": "Mozi Media Content Method Pt I",
+            "tipo": "clase",
+            "cobertura": "ASR local íntegro, 654 segmentos, 00:00.00–29:47.66; no percepción audiovisual integral nueva.",
+            "fuente_tiempos": "../../asr/complementario/hormozi-leads5.txt, líneas 1–654; JSON homónimo segments[].start/end",
+            "completa": true
+          },
+          "aceptacion": {
+            "fuente": "cierre-aceptado",
+            "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4",
+            "documento": {
+              "id": "cierre-aceptado",
+              "ruta": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md",
+              "sha256": "ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb"
+            }
+          },
+          "cobertura_heredada_referente": {
+            "fuente": "cobertura-a",
+            "piezas_completas": 4,
+            "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+            "limites": [
+              "Sin brecha para el mínimo de cuatro piezas con cinco respuestas: P1–P4 completas.",
+              "P4: duración declarada 52 s frente a captions hasta54,470 s, sin sincronía acreditada; atribución pública de perfil, sin backlink propio ni auditoría de control de cuenta.",
+              "P5/P6 incompletas por ASR exactos ausentes. BizNinja permanece en recuperación por cuerpo directo insuficiente/redirección/HTTP403; Capitalism es anexo de audio, excluido del mínimo.",
+              "Percepción audiovisual integral, funcionamiento comercial y resultados de alumnos no acreditados; fuera del análisis cerrado de contenido."
+            ],
+            "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+          },
+          "limites_adicionales_ficha": []
+        },
+        {
+          "id": "erik-taveras-p1",
+          "referente": "erik-taveras",
+          "pieza": "P1",
+          "titulo": "Destinatario y recorrido antes de la práctica",
+          "temas": [
+            "ensenanza",
+            "agenda"
+          ],
+          "usos": [
+            "ordenar",
+            "ensenar",
+            "workshop",
+            "guiones",
+            "ideas"
+          ],
+          "hecho_documentado": "La preview delimita destinatario, recorrido, resultado anunciado e invitación.",
+          "inferencia_acotada": "La orientación inicial puede adaptarse a una tarea cercana del dueño del negocio.",
+          "pasaje": {
+            "fuente": "erik-taveras",
+            "desde": 33,
+            "hasta": 36,
+            "sha256": "bafc8c6bf5e1782d5af593f99fc29b0a4991254fb2c4de6cff420a48f740c758"
+          },
+          "localizacion_temporal_heredada": "ASR 00:00–00:23.22, preview de unos 61 s",
+          "propuesta_onia": {
+            "aplicacion": "Anunciar pedir, revisar, ajustar y guardar antes de practicar con una lista ficticia.",
+            "comprobacion_pendiente": "El participante explica el recorrido y ajusta una prioridad por su cuenta."
+          },
+          "nombre": "Erik Taveras",
+          "ficha": {
+            "id": "erik-taveras",
+            "ruta": "03-referentes/cerebros-profundos/b/erik-taveras.md",
+            "sha256": "e8d5f524464ad2276413936d59a88ac8afcc89ebaaa70bdea459a62dcc0bb1c3"
+          },
+          "patron_en_ficha": {
+            "fuente": "erik-taveras",
+            "desde": 106,
+            "hasta": 110,
+            "sha256": "8094ef96cda4843f1d8875fdb946d8b68fb80d4c07e2aa0522ad69cdd4986892"
+          },
+          "fuente_publica": {
+            "id": "P1",
+            "url": "https://cursos.eriktaveras.com/c/hermes-basico/preview/",
+            "titulo": "Introducción al curso Hermes básico",
+            "tipo": "preview",
+            "cobertura": "Lectura íntegra de 12 segmentos ASR 00:00–00:58,40 sobre pista 61,674687 s; sin escucha ni visión continua. Cinco respuestas sustentadas.",
+            "fuente_tiempos": "../../../99-archivo/recuperacion-secundaria/erik-asr.txt",
+            "completa": true
+          },
+          "aceptacion": {
+            "fuente": "cierre-aceptado",
+            "commit_entrega": "493bbb78e447e8a456262f5d4f39470124dcd9af",
+            "documento": {
+              "id": "cierre-aceptado",
+              "ruta": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md",
+              "sha256": "ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb"
+            }
+          },
+          "cobertura_heredada_referente": {
+            "fuente": "cobertura-b",
+            "piezas_completas": 5,
+            "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+            "limites": [],
+            "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+          },
+          "limites_adicionales_ficha": [
+            "Preview, recapitulación y reels seleccionados. Clase completa, práctica corregida y resultados del alumno quedan sin observación.",
+            "P2–P5 tienen tres fotogramas por clip, con intervalos sin observar. Prosodia, música, cortes y percepción sonora integral quedan sin evaluación.",
+            "Costes y volúmenes de P4 son declaraciones del autor. CTA público sin entrega de DM, recurso, pago o cierre privado comprobados."
+          ]
+        },
+        {
+          "id": "pedro-buerbaum-p1",
+          "referente": "pedro-buerbaum",
+          "pieza": "P1",
+          "titulo": "Especificidad de una oferta",
+          "temas": [
+            "oferta"
+          ],
+          "usos": [
+            "vender",
+            "workshop",
+            "ideas",
+            "guiones"
+          ],
+          "hecho_documentado": "Contrasta una propuesta amplia con otra que especifica destinatario y problema.",
+          "inferencia_acotada": "Separar esos campos permite revisar qué se ofrece realmente.",
+          "pasaje": {
+            "fuente": "pedro-buerbaum",
+            "desde": 22,
+            "hasta": 30,
+            "sha256": "a613e476d9e95b15ea96bf6b4fdf99710f2b8f9ba9e7908ba30b516094e8e40f"
+          },
+          "localizacion_temporal_heredada": "ASR 03.36–33.14 s",
+          "propuesta_onia": {
+            "aplicacion": "Redactar para una panadería ficticia comprador, problema y entrega revisable.",
+            "comprobacion_pendiente": "Otro lector identifica esos tres campos y cada afirmación tiene respaldo en la entrada."
+          },
+          "nombre": "Pedro Buerbaum",
+          "ficha": {
+            "id": "pedro-buerbaum",
+            "ruta": "03-referentes/cerebros-profundos/a/pedro-buerbaum.md",
+            "sha256": "a9af5abe5826d9e2e06dba0887b662c66ee8c31e978ab4464e699aa2616a66cd"
+          },
+          "patron_en_ficha": {
+            "fuente": "pedro-buerbaum",
+            "desde": 68,
+            "hasta": 72,
+            "sha256": "68dd98bc53b8355cb14301a0eda0c4cced51a96391b8676736e420571e50b914"
+          },
+          "fuente_publica": {
+            "id": "P1",
+            "url": "https://www.instagram.com/pedrobuerbaum/reel/Dd6oC4EkRX1/",
+            "titulo": "Mejorar una oferta en cinco pasos (título descriptivo)",
+            "tipo": "reel",
+            "cobertura": "ASR íntegro existente del MP4: 20 segmentos, 0–90,20 s de pista 90,3479 s. Imagen previa sólo documental; sin percepción AV nueva.",
+            "fuente_tiempos": "../../asr/asr-vad-resultados.json, files[3].segments[0..19] y words; base cero",
+            "completa": true
+          },
+          "aceptacion": {
+            "fuente": "cierre-aceptado",
+            "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4",
+            "documento": {
+              "id": "cierre-aceptado",
+              "ruta": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md",
+              "sha256": "ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb"
+            }
+          },
+          "cobertura_heredada_referente": {
+            "fuente": "cobertura-a",
+            "piezas_completas": 4,
+            "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+            "limites": [
+              "Sin brecha para el mínimo de cuatro piezas con cinco respuestas. Quedan fuera del alcance cerrado la percepción AV integral, clase extensa, entrega de DM y cierre privado, expresamente no acreditados."
+            ],
+            "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+          },
+          "limites_adicionales_ficha": []
+        }
+      ]
+    },
+    {
+      "pieza": "T02",
+      "motivo": "I02 elegida: reusa v2 T02. Jeff aporta acción/motivo/ajuste y San comparación de una misma entrada. La transferencia es comunicativa; no demuestra aprendizaje real.",
+      "patrones": [
+        {
+          "id": "jeff-nippard-p2",
+          "referente": "jeff-nippard",
+          "pieza": "P2",
+          "titulo": "Acción, motivo y ajuste",
+          "temas": [
+            "ensenanza",
+            "revision"
+          ],
+          "usos": [
+            "ordenar",
+            "ensenar",
+            "workshop",
+            "guiones",
+            "ideas"
+          ],
+          "hecho_documentado": "El reel de la serie explica una secuencia, motivos de elección y ajustes concretos.",
+          "inferencia_acotada": "La relación entre acción y motivo puede transferirse como recurso comunicativo.",
+          "pasaje": {
+            "fuente": "jeff-nippard",
+            "desde": 38,
+            "hasta": 42,
+            "sha256": "eb0b6624a718bcafdc0a1d4de1647e0b22f8eeefd4a0b295f3ee6de36ddb277c"
+          },
+          "localizacion_temporal_heredada": "ASR 02.88–39.72 s",
+          "propuesta_onia": {
+            "aplicacion": "Explicar qué restricción se comprueba antes de aceptar cada paso de una agenda.",
+            "comprobacion_pendiente": "El participante señala una duración y una restricción que justifican su corrección."
+          },
+          "nombre": "Jeff Nippard",
+          "ficha": {
+            "id": "jeff-nippard",
+            "ruta": "03-referentes/cerebros-profundos/c/jeff-nippard.md",
+            "sha256": "cf178824926a3244c13c32a91f0a9dd643a24d6551746171cc21d6d49c06f472"
+          },
+          "patron_en_ficha": {
+            "fuente": "jeff-nippard",
+            "desde": 72,
+            "hasta": 76,
+            "sha256": "d4234b54600b9b252f3834eb9d2022e1b5031907ae83a3f3191a8bfebdfcf75f"
+          },
+          "fuente_publica": {
+            "id": "P2",
+            "url": "https://www.instagram.com/reel/DC1ywxKJ0U8/",
+            "titulo": "Full pull workout explained! (Back, biceps and rear delts)",
+            "tipo": "reel",
+            "cobertura": "MP4 íntegro 57.629 s; 26 segmentos ASR y caption completos, 13 imágenes; serie pull/push/legs.",
+            "fuente_tiempos": "jeff-nippard.md P2 §3 (0–57.629 s); ASR completo/caption/PTS, cierre acotado, método/huellas.",
+            "completa": true
+          },
+          "aceptacion": {
+            "fuente": "cierre-aceptado",
+            "commit_entrega": "5332f2499864eb35993d189b075d0d812660f16c",
+            "documento": {
+              "id": "cierre-aceptado",
+              "ruta": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md",
+              "sha256": "ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb"
+            }
+          },
+          "cobertura_heredada_referente": {
+            "fuente": "cobertura-c",
+            "piezas_completas": 4,
+            "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+            "limites": [
+              "Tres piezas de una misma serie limitan diversidad de la muestra.",
+              "Sin escucha/visión continua, validación científica ni eficacia/ventas medidas.",
+              "Precio final/compra/entrega no comprobados.",
+              "VTT histórico de cinco niveles ausente y excluido del cómputo."
+            ],
+            "dependencia_entre_piezas": "P2–P4 comparten serie pull/push/legs. Limita diversidad y corroboración independiente."
+          },
+          "limites_adicionales_ficha": []
+        },
+        {
+          "id": "san-munoz-p1",
+          "referente": "san-munoz",
+          "pieza": "P1",
+          "titulo": "Comparar sobre una misma entrada",
+          "temas": [
+            "comparacion",
+            "revision"
+          ],
+          "usos": [
+            "ordenar",
+            "vender",
+            "ensenar",
+            "workshop",
+            "contenido",
+            "ideas"
+          ],
+          "hecho_documentado": "Mantiene el material de partida, modifica instrucciones, presenta resultados y verbaliza una corrección.",
+          "inferencia_acotada": "La entrada común permite comparar cambios sin perder de vista los datos originales.",
+          "pasaje": {
+            "fuente": "san-munoz",
+            "desde": 60,
+            "hasta": 66,
+            "sha256": "915b0e1f798a54b43b5167a646c818fcab618e15b008243192e1d5c001110ab0"
+          },
+          "localizacion_temporal_heredada": "Captions 11:20–12:25 y 19:50–20:48",
+          "propuesta_onia": {
+            "aplicacion": "Pasar las mismas notas ficticias a una lista y a una agenda, y revisar su correspondencia.",
+            "comprobacion_pendiente": "Cada tarea y compromiso de la entrada aparece con sus datos conservados."
+          },
+          "nombre": "San Muñoz / Santiago Munoz / Horizontes IA",
+          "ficha": {
+            "id": "san-munoz",
+            "ruta": "03-referentes/cerebros-profundos/b/san-munoz.md",
+            "sha256": "893115bce9457ea762d7df7cbcfa7fcf155b2aa4989d870ecaeef91766087b0a"
+          },
+          "patron_en_ficha": {
+            "fuente": "san-munoz",
+            "desde": 172,
+            "hasta": 176,
+            "sha256": "a2cb8aedcbedfe4fb74c97468190643d14ab11cc56a24ac6cfb04c958a1cdf63"
+          },
+          "fuente_publica": {
+            "id": "P1",
+            "url": "https://www.youtube.com/watch?v=anrAaNvbp4M",
+            "titulo": "Convertí a Claude en mi editor de videos (nivel 1 vs nivel 3)",
+            "tipo": "video",
+            "cobertura": "Texto derivado completo y cues cotejados en rangos declarados;1115 cues. Captions con texto1,390–1268,305s;medio1266,433333s. Sobreextensión automática1,872s, no audio adicional.",
+            "fuente_tiempos": "../../../99-archivo/recuperacion-secundaria/anrAaNvbp4M-subtitulos.json",
+            "completa": true
+          },
+          "aceptacion": {
+            "fuente": "cierre-aceptado",
+            "commit_entrega": "493bbb78e447e8a456262f5d4f39470124dcd9af",
+            "documento": {
+              "id": "cierre-aceptado",
+              "ruta": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md",
+              "sha256": "ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb"
+            }
+          },
+          "cobertura_heredada_referente": {
+            "fuente": "cobertura-b",
+            "piezas_completas": 4,
+            "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+            "limites": [],
+            "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+          },
+          "limites_adicionales_ficha": [
+            "Tres piezas de edición y una de agendamiento. La selección temática limita generalización a otras tareas o clases.",
+            "La lectura completa de texto derivado y cotejos temporales dejan escucha, reproducción continua y sincronía fina pendientes.",
+            "Efectividad pedagógica, conversiones, fiabilidad técnica y cierre privado siguen sin medición. El salto de edición al workshop requiere adaptación y ensayo."
+          ]
+        }
+      ]
+    },
+    {
+      "pieza": "T03",
+      "motivo": "I03 elegida por hecho primario del 10-nov y utilidad para evaluar herramientas. Iman orienta tesis/consecuencia/ejemplo y Hormozi limita la promesa del gancho. No se usó el anuncio antiguo N25 como novedad.",
+      "patrones": [
+        {
+          "id": "alex-hormozi-p2",
+          "referente": "alex-hormozi",
+          "pieza": "P2",
+          "titulo": "Cumplir la promesa del contenido",
+          "temas": [
+            "contenido",
+            "gancho"
+          ],
+          "usos": [
+            "contenido",
+            "guiones",
+            "ideas",
+            "vender"
+          ],
+          "hecho_documentado": "Descompone una unidad de contenido en captar, retener y recompensar, y contrasta promesa y entrega.",
+          "inferencia_acotada": "El marco permite auditar el cuerpo de un guion contra su apertura.",
+          "pasaje": {
+            "fuente": "alex-hormozi",
+            "desde": 94,
+            "hasta": 104,
+            "sha256": "7f9112a2c6604400e993b28eb9c93fa528a00db3cafe4966753370cda578a32e"
+          },
+          "localizacion_temporal_heredada": "ASR 24:41.52–25:39.94",
+          "propuesta_onia": {
+            "aplicacion": "Prometer tres datos de una agenda y mostrar los tres antes del cierre.",
+            "comprobacion_pendiente": "Marcar en el cuerpo dónde se entrega cada elemento anunciado."
+          },
+          "nombre": "Alex Hormozi",
+          "ficha": {
+            "id": "alex-hormozi",
+            "ruta": "03-referentes/cerebros-profundos/a/alex-hormozi.md",
+            "sha256": "194dcbfc57f3468ef4ed5597806bf1311101c7a023f1961540d3a2d1d85a5b2e"
+          },
+          "patron_en_ficha": {
+            "fuente": "alex-hormozi",
+            "desde": 185,
+            "hasta": 191,
+            "sha256": "395a1570f9a4cde4bd4c238fc8986a31b020adea65555b6ce1dc8a7ab7dae8ae"
+          },
+          "fuente_publica": {
+            "id": "P2",
+            "url": "https://www.acquisition.com/training/leads5",
+            "titulo": "Mozi Media Content Method Pt I",
+            "tipo": "clase",
+            "cobertura": "ASR local íntegro, 654 segmentos, 00:00.00–29:47.66; no percepción audiovisual integral nueva.",
+            "fuente_tiempos": "../../asr/complementario/hormozi-leads5.txt, líneas 1–654; JSON homónimo segments[].start/end",
+            "completa": true
+          },
+          "aceptacion": {
+            "fuente": "cierre-aceptado",
+            "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4",
+            "documento": {
+              "id": "cierre-aceptado",
+              "ruta": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md",
+              "sha256": "ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb"
+            }
+          },
+          "cobertura_heredada_referente": {
+            "fuente": "cobertura-a",
+            "piezas_completas": 4,
+            "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+            "limites": [
+              "Sin brecha para el mínimo de cuatro piezas con cinco respuestas: P1–P4 completas.",
+              "P4: duración declarada 52 s frente a captions hasta54,470 s, sin sincronía acreditada; atribución pública de perfil, sin backlink propio ni auditoría de control de cuenta.",
+              "P5/P6 incompletas por ASR exactos ausentes. BizNinja permanece en recuperación por cuerpo directo insuficiente/redirección/HTTP403; Capitalism es anexo de audio, excluido del mínimo.",
+              "Percepción audiovisual integral, funcionamiento comercial y resultados de alumnos no acreditados; fuera del análisis cerrado de contenido."
+            ],
+            "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+          },
+          "limites_adicionales_ficha": []
+        },
+        {
+          "id": "iman-gadzhi-p1",
+          "referente": "iman-gadzhi",
+          "pieza": "P1",
+          "titulo": "Utilidad dentro de una explicación comercial",
+          "temas": [
+            "contenido",
+            "oferta"
+          ],
+          "usos": [
+            "vender",
+            "contenido",
+            "guiones",
+            "ideas"
+          ],
+          "hecho_documentado": "El clip diagnostica exceso de promoción y presenta la propia VSL como entrenamiento.",
+          "inferencia_acotada": "Una tesis seguida de consecuencia y ejemplo permite examinar qué utilidad entrega una pieza.",
+          "pasaje": {
+            "fuente": "iman-gadzhi",
+            "desde": 17,
+            "hasta": 23,
+            "sha256": "08bec8a37e0af1c5d05997e50ade2d3bf413a03801c5739f213ee3235c491bea"
+          },
+          "localizacion_temporal_heredada": "Captions 00:00.080–00:32.060, sin conversión a reloj de video",
+          "propuesta_onia": {
+            "aplicacion": "Mostrar una revisión propia de un mensaje y señalar expresamente la oferta al invitar.",
+            "comprobacion_pendiente": "El ejemplo entrega una acción utilizable y la invitación identifica su alcance."
+          },
+          "nombre": "Iman Gadzhi",
+          "ficha": {
+            "id": "iman-gadzhi",
+            "ruta": "03-referentes/cerebros-profundos/a/iman-gadzhi.md",
+            "sha256": "d93c2075b98a45c6d91692c3e4d2fafede044a42806aa0387f517339d025f176"
+          },
+          "patron_en_ficha": {
+            "fuente": "iman-gadzhi",
+            "desde": 96,
+            "hasta": 100,
+            "sha256": "2f273257e5866433801d61508539903d6525f6f0a5139f9e0656f16084cfd7ad"
+          },
+          "fuente_publica": {
+            "id": "P1",
+            "url": "https://www.linkedin.com/posts/iman-gadzhi_no-one-is-saying-your-content-shouldnt-be-activity-7271917428610121728-56dl",
+            "titulo": "Enseñar dentro de una pieza comercial (título descriptivo)",
+            "tipo": "video",
+            "cobertura": "VTT primario íntegro, 10 cues, 00:00.080–00:32.060, cotejado con transcript de VideoObject; asset D4D05AQH79gYkl8uRJg. Reloj de captions, sin percepción AV nueva.",
+            "fuente_tiempos": "https://www.linkedin.com/posts/iman-gadzhi_no-one-is-saying-your-content-shouldnt-be-activity-7271917428610121728-56dl → VideoObject.caption.contentUrl, VTT, cues 1–10; rango y SHA-256 en ficha",
+            "completa": true
+          },
+          "aceptacion": {
+            "fuente": "cierre-aceptado",
+            "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4",
+            "documento": {
+              "id": "cierre-aceptado",
+              "ruta": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md",
+              "sha256": "ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb"
+            }
+          },
+          "cobertura_heredada_referente": {
+            "fuente": "cobertura-a",
+            "piezas_completas": 6,
+            "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+            "limites": [
+              "Sin brecha para el mínimo de cuatro: seis pistas primarias completas con cinco respuestas.",
+              "Captions terminan 2–2,6 s después de duration declarada: no se convierten al reloj del video ni se acredita sincronía.",
+              "P6 sin diarización: atribución contextual explícita; CTA/edición pertenecen al anfitrión. Titularidad del perfil por backlink propio no corroborada; identidad por concordancia pública.",
+              "Inspección audiovisual integral y docencia prolongada no comprobadas; no exigidas para este análisis de contenido."
+            ],
+            "dependencia_entre_piezas": "P1–P4 son clips distintos. Grabación larga común sin determinar, duraciones de captions y metadata discrepantes."
+          },
+          "limites_adicionales_ficha": []
+        }
+      ]
+    },
+    {
+      "pieza": "T04",
+      "motivo": "I04 elegida: v2 T04 aporta comparación de opciones; Pedro ayuda a concretar la entrega y Justin a mantener una sola acción. Condiciones actualizadas por D11.",
+      "patrones": [
+        {
+          "id": "justin-welsh-p4",
+          "referente": "justin-welsh",
+          "pieza": "P4",
+          "titulo": "Una publicación con destino comprensible",
+          "temas": [
+            "contenido",
+            "cta"
+          ],
+          "usos": [
+            "vender",
+            "contenido",
+            "guiones",
+            "ideas"
+          ],
+          "hecho_documentado": "Explica publicación, perfil y simplificación mediante capítulos de la conversación editada.",
+          "inferencia_acotada": "Puede servir para revisar si una sola enseñanza y su acción siguiente se entienden.",
+          "pasaje": {
+            "fuente": "justin-welsh",
+            "desde": 52,
+            "hasta": 58,
+            "sha256": "c2904931bc92295b62d349a8a77ac5f9763f6c60ada71fc0109a601ee5dfbfde"
+          },
+          "localizacion_temporal_heredada": "Capítulos 00:57, 02:37 y 03:35 del video, reloj distinto del MP3",
+          "propuesta_onia": {
+            "aplicacion": "Escribir una pieza con una dificultad, un ejemplo propio y una única acción final.",
+            "comprobacion_pendiente": "Un lector identifica qué aprendió y qué hacer después."
+          },
+          "nombre": "Justin Welsh",
+          "ficha": {
+            "id": "justin-welsh",
+            "ruta": "03-referentes/cerebros-profundos/a/justin-welsh.md",
+            "sha256": "d1400c96d4b75c99b52047b93ce5270059034b5b883ef22c98906e3a72311695"
+          },
+          "patron_en_ficha": {
+            "fuente": "justin-welsh",
+            "desde": 68,
+            "hasta": 74,
+            "sha256": "316df585dfd28c0eb4f98f84d83196fdd5b12ca94404d39f15b3c32df54ae87d"
+          },
+          "fuente_publica": {
+            "id": "P4",
+            "url": "https://www.youtube.com/watch?v=m_AQfKsUAwQ",
+            "titulo": "Justin Welsh – LinkedIn 3-Step Growth System · Productive Insights 246",
+            "tipo": "video",
+            "cobertura": "Cuerpo primario completo y capítulos0:00–9:14, con cierre del anfitrión. Edición temática distinta de conversación compartida conP2/P3.",
+            "fuente_tiempos": "https://www.productiveinsights.com/podcast/how-to-grow-on-linkedin-in2024-justin-welsh; capítulos y transcripción del video",
+            "completa": true
+          },
+          "aceptacion": {
+            "fuente": "cierre-aceptado",
+            "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4",
+            "documento": {
+              "id": "cierre-aceptado",
+              "ruta": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md",
+              "sha256": "ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb"
+            }
+          },
+          "cobertura_heredada_referente": {
+            "fuente": "cobertura-a",
+            "piezas_completas": 4,
+            "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+            "limites": [
+              "Sin brecha para el mínimo de cuatro piezas con cinco respuestas. P1 es muestreo primario amplio, declarado sin fingir transcripción íntegra.",
+              "P2–P4 son ediciones temáticas distintas de una entrevista compartida, no tres corroboraciones independientes. El MP3 de P2 no suma otra pieza.",
+              "Duración exacta de cada edición, sincronía y percepción audiovisual integral pendientes. El reloj del MP3 no se traslada al video.",
+              "Curso pagado, cierre privado y resultados económicos o de alumnos no acreditados."
+            ],
+            "dependencia_entre_piezas": "P2–P4 son ediciones de la misma conversación con Ash Roy. Constituyen una familia de evidencia, sin corroboración independiente entre ellas. P1 tiene muestreo textual amplio."
+          },
+          "limites_adicionales_ficha": []
+        },
+        {
+          "id": "pedro-buerbaum-p1",
+          "referente": "pedro-buerbaum",
+          "pieza": "P1",
+          "titulo": "Especificidad de una oferta",
+          "temas": [
+            "oferta"
+          ],
+          "usos": [
+            "vender",
+            "workshop",
+            "ideas",
+            "guiones"
+          ],
+          "hecho_documentado": "Contrasta una propuesta amplia con otra que especifica destinatario y problema.",
+          "inferencia_acotada": "Separar esos campos permite revisar qué se ofrece realmente.",
+          "pasaje": {
+            "fuente": "pedro-buerbaum",
+            "desde": 22,
+            "hasta": 30,
+            "sha256": "a613e476d9e95b15ea96bf6b4fdf99710f2b8f9ba9e7908ba30b516094e8e40f"
+          },
+          "localizacion_temporal_heredada": "ASR 03.36–33.14 s",
+          "propuesta_onia": {
+            "aplicacion": "Redactar para una panadería ficticia comprador, problema y entrega revisable.",
+            "comprobacion_pendiente": "Otro lector identifica esos tres campos y cada afirmación tiene respaldo en la entrada."
+          },
+          "nombre": "Pedro Buerbaum",
+          "ficha": {
+            "id": "pedro-buerbaum",
+            "ruta": "03-referentes/cerebros-profundos/a/pedro-buerbaum.md",
+            "sha256": "a9af5abe5826d9e2e06dba0887b662c66ee8c31e978ab4464e699aa2616a66cd"
+          },
+          "patron_en_ficha": {
+            "fuente": "pedro-buerbaum",
+            "desde": 68,
+            "hasta": 72,
+            "sha256": "68dd98bc53b8355cb14301a0eda0c4cced51a96391b8676736e420571e50b914"
+          },
+          "fuente_publica": {
+            "id": "P1",
+            "url": "https://www.instagram.com/pedrobuerbaum/reel/Dd6oC4EkRX1/",
+            "titulo": "Mejorar una oferta en cinco pasos (título descriptivo)",
+            "tipo": "reel",
+            "cobertura": "ASR íntegro existente del MP4: 20 segmentos, 0–90,20 s de pista 90,3479 s. Imagen previa sólo documental; sin percepción AV nueva.",
+            "fuente_tiempos": "../../asr/asr-vad-resultados.json, files[3].segments[0..19] y words; base cero",
+            "completa": true
+          },
+          "aceptacion": {
+            "fuente": "cierre-aceptado",
+            "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4",
+            "documento": {
+              "id": "cierre-aceptado",
+              "ruta": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md",
+              "sha256": "ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb"
+            }
+          },
+          "cobertura_heredada_referente": {
+            "fuente": "cobertura-a",
+            "piezas_completas": 4,
+            "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+            "limites": [
+              "Sin brecha para el mínimo de cuatro piezas con cinco respuestas. Quedan fuera del alcance cerrado la percepción AV integral, clase extensa, entrega de DM y cierre privado, expresamente no acreditados."
+            ],
+            "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+          },
+          "limites_adicionales_ficha": []
+        }
+      ]
+    },
+    {
+      "pieza": "T05",
+      "motivo": "I05 elegida: conserva el contraste A/B de v2 T05, concreta entrega con Pedro y una acción con Justin. San orienta mantener entrada y condiciones de comparación; no convierte comentarios en experimento controlado.",
+      "patrones": [
+        {
+          "id": "justin-welsh-p4",
+          "referente": "justin-welsh",
+          "pieza": "P4",
+          "titulo": "Una publicación con destino comprensible",
+          "temas": [
+            "contenido",
+            "cta"
+          ],
+          "usos": [
+            "vender",
+            "contenido",
+            "guiones",
+            "ideas"
+          ],
+          "hecho_documentado": "Explica publicación, perfil y simplificación mediante capítulos de la conversación editada.",
+          "inferencia_acotada": "Puede servir para revisar si una sola enseñanza y su acción siguiente se entienden.",
+          "pasaje": {
+            "fuente": "justin-welsh",
+            "desde": 52,
+            "hasta": 58,
+            "sha256": "c2904931bc92295b62d349a8a77ac5f9763f6c60ada71fc0109a601ee5dfbfde"
+          },
+          "localizacion_temporal_heredada": "Capítulos 00:57, 02:37 y 03:35 del video, reloj distinto del MP3",
+          "propuesta_onia": {
+            "aplicacion": "Escribir una pieza con una dificultad, un ejemplo propio y una única acción final.",
+            "comprobacion_pendiente": "Un lector identifica qué aprendió y qué hacer después."
+          },
+          "nombre": "Justin Welsh",
+          "ficha": {
+            "id": "justin-welsh",
+            "ruta": "03-referentes/cerebros-profundos/a/justin-welsh.md",
+            "sha256": "d1400c96d4b75c99b52047b93ce5270059034b5b883ef22c98906e3a72311695"
+          },
+          "patron_en_ficha": {
+            "fuente": "justin-welsh",
+            "desde": 68,
+            "hasta": 74,
+            "sha256": "316df585dfd28c0eb4f98f84d83196fdd5b12ca94404d39f15b3c32df54ae87d"
+          },
+          "fuente_publica": {
+            "id": "P4",
+            "url": "https://www.youtube.com/watch?v=m_AQfKsUAwQ",
+            "titulo": "Justin Welsh – LinkedIn 3-Step Growth System · Productive Insights 246",
+            "tipo": "video",
+            "cobertura": "Cuerpo primario completo y capítulos0:00–9:14, con cierre del anfitrión. Edición temática distinta de conversación compartida conP2/P3.",
+            "fuente_tiempos": "https://www.productiveinsights.com/podcast/how-to-grow-on-linkedin-in2024-justin-welsh; capítulos y transcripción del video",
+            "completa": true
+          },
+          "aceptacion": {
+            "fuente": "cierre-aceptado",
+            "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4",
+            "documento": {
+              "id": "cierre-aceptado",
+              "ruta": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md",
+              "sha256": "ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb"
+            }
+          },
+          "cobertura_heredada_referente": {
+            "fuente": "cobertura-a",
+            "piezas_completas": 4,
+            "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+            "limites": [
+              "Sin brecha para el mínimo de cuatro piezas con cinco respuestas. P1 es muestreo primario amplio, declarado sin fingir transcripción íntegra.",
+              "P2–P4 son ediciones temáticas distintas de una entrevista compartida, no tres corroboraciones independientes. El MP3 de P2 no suma otra pieza.",
+              "Duración exacta de cada edición, sincronía y percepción audiovisual integral pendientes. El reloj del MP3 no se traslada al video.",
+              "Curso pagado, cierre privado y resultados económicos o de alumnos no acreditados."
+            ],
+            "dependencia_entre_piezas": "P2–P4 son ediciones de la misma conversación con Ash Roy. Constituyen una familia de evidencia, sin corroboración independiente entre ellas. P1 tiene muestreo textual amplio."
+          },
+          "limites_adicionales_ficha": []
+        },
+        {
+          "id": "pedro-buerbaum-p1",
+          "referente": "pedro-buerbaum",
+          "pieza": "P1",
+          "titulo": "Especificidad de una oferta",
+          "temas": [
+            "oferta"
+          ],
+          "usos": [
+            "vender",
+            "workshop",
+            "ideas",
+            "guiones"
+          ],
+          "hecho_documentado": "Contrasta una propuesta amplia con otra que especifica destinatario y problema.",
+          "inferencia_acotada": "Separar esos campos permite revisar qué se ofrece realmente.",
+          "pasaje": {
+            "fuente": "pedro-buerbaum",
+            "desde": 22,
+            "hasta": 30,
+            "sha256": "a613e476d9e95b15ea96bf6b4fdf99710f2b8f9ba9e7908ba30b516094e8e40f"
+          },
+          "localizacion_temporal_heredada": "ASR 03.36–33.14 s",
+          "propuesta_onia": {
+            "aplicacion": "Redactar para una panadería ficticia comprador, problema y entrega revisable.",
+            "comprobacion_pendiente": "Otro lector identifica esos tres campos y cada afirmación tiene respaldo en la entrada."
+          },
+          "nombre": "Pedro Buerbaum",
+          "ficha": {
+            "id": "pedro-buerbaum",
+            "ruta": "03-referentes/cerebros-profundos/a/pedro-buerbaum.md",
+            "sha256": "a9af5abe5826d9e2e06dba0887b662c66ee8c31e978ab4464e699aa2616a66cd"
+          },
+          "patron_en_ficha": {
+            "fuente": "pedro-buerbaum",
+            "desde": 68,
+            "hasta": 72,
+            "sha256": "68dd98bc53b8355cb14301a0eda0c4cced51a96391b8676736e420571e50b914"
+          },
+          "fuente_publica": {
+            "id": "P1",
+            "url": "https://www.instagram.com/pedrobuerbaum/reel/Dd6oC4EkRX1/",
+            "titulo": "Mejorar una oferta en cinco pasos (título descriptivo)",
+            "tipo": "reel",
+            "cobertura": "ASR íntegro existente del MP4: 20 segmentos, 0–90,20 s de pista 90,3479 s. Imagen previa sólo documental; sin percepción AV nueva.",
+            "fuente_tiempos": "../../asr/asr-vad-resultados.json, files[3].segments[0..19] y words; base cero",
+            "completa": true
+          },
+          "aceptacion": {
+            "fuente": "cierre-aceptado",
+            "commit_entrega": "ad1d2fb5e47221ac4b8e515488b1612a7f0f6ce4",
+            "documento": {
+              "id": "cierre-aceptado",
+              "ruta": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md",
+              "sha256": "ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb"
+            }
+          },
+          "cobertura_heredada_referente": {
+            "fuente": "cobertura-a",
+            "piezas_completas": 4,
+            "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+            "limites": [
+              "Sin brecha para el mínimo de cuatro piezas con cinco respuestas. Quedan fuera del alcance cerrado la percepción AV integral, clase extensa, entrega de DM y cierre privado, expresamente no acreditados."
+            ],
+            "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+          },
+          "limites_adicionales_ficha": []
+        },
+        {
+          "id": "san-munoz-p1",
+          "referente": "san-munoz",
+          "pieza": "P1",
+          "titulo": "Comparar sobre una misma entrada",
+          "temas": [
+            "comparacion",
+            "revision"
+          ],
+          "usos": [
+            "ordenar",
+            "vender",
+            "ensenar",
+            "workshop",
+            "contenido",
+            "ideas"
+          ],
+          "hecho_documentado": "Mantiene el material de partida, modifica instrucciones, presenta resultados y verbaliza una corrección.",
+          "inferencia_acotada": "La entrada común permite comparar cambios sin perder de vista los datos originales.",
+          "pasaje": {
+            "fuente": "san-munoz",
+            "desde": 60,
+            "hasta": 66,
+            "sha256": "915b0e1f798a54b43b5167a646c818fcab618e15b008243192e1d5c001110ab0"
+          },
+          "localizacion_temporal_heredada": "Captions 11:20–12:25 y 19:50–20:48",
+          "propuesta_onia": {
+            "aplicacion": "Pasar las mismas notas ficticias a una lista y a una agenda, y revisar su correspondencia.",
+            "comprobacion_pendiente": "Cada tarea y compromiso de la entrada aparece con sus datos conservados."
+          },
+          "nombre": "San Muñoz / Santiago Munoz / Horizontes IA",
+          "ficha": {
+            "id": "san-munoz",
+            "ruta": "03-referentes/cerebros-profundos/b/san-munoz.md",
+            "sha256": "893115bce9457ea762d7df7cbcfa7fcf155b2aa4989d870ecaeef91766087b0a"
+          },
+          "patron_en_ficha": {
+            "fuente": "san-munoz",
+            "desde": 172,
+            "hasta": 176,
+            "sha256": "a2cb8aedcbedfe4fb74c97468190643d14ab11cc56a24ac6cfb04c958a1cdf63"
+          },
+          "fuente_publica": {
+            "id": "P1",
+            "url": "https://www.youtube.com/watch?v=anrAaNvbp4M",
+            "titulo": "Convertí a Claude en mi editor de videos (nivel 1 vs nivel 3)",
+            "tipo": "video",
+            "cobertura": "Texto derivado completo y cues cotejados en rangos declarados;1115 cues. Captions con texto1,390–1268,305s;medio1266,433333s. Sobreextensión automática1,872s, no audio adicional.",
+            "fuente_tiempos": "../../../99-archivo/recuperacion-secundaria/anrAaNvbp4M-subtitulos.json",
+            "completa": true
+          },
+          "aceptacion": {
+            "fuente": "cierre-aceptado",
+            "commit_entrega": "493bbb78e447e8a456262f5d4f39470124dcd9af",
+            "documento": {
+              "id": "cierre-aceptado",
+              "ruta": "04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md",
+              "sha256": "ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb"
+            }
+          },
+          "cobertura_heredada_referente": {
+            "fuente": "cobertura-b",
+            "piezas_completas": 4,
+            "alcance": "Completitud documental según cobertura aceptada, con límites de modalidad y muestra.",
+            "limites": [],
+            "dependencia_entre_piezas": "Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia."
+          },
+          "limites_adicionales_ficha": [
+            "Tres piezas de edición y una de agendamiento. La selección temática limita generalización a otras tareas o clases.",
+            "La lectura completa de texto derivado y cotejos temporales dejan escucha, reproducción continua y sincronía fina pendientes.",
+            "Efectividad pedagógica, conversiones, fiabilidad técnica y cierre privado siguen sin medición. El salto de edición al workshop requiere adaptación y ensayo."
+          ]
+        }
+      ]
+    }
+  ]
+}

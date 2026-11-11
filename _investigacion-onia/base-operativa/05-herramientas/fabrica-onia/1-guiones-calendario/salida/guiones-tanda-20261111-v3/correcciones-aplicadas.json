@@ -1,0 +1,57 @@
+{
+  "entrada_sha256": "148a3bd01c2ff42c4b7db1ac04fe4fe77be722eb5cd2430dc2bb82cd861fa230",
+  "salida_sha256": "85d91467c144ef5e4dce7b44477694b512ef7a689d7061acabde7281a5e72ea4",
+  "version_base": "r1",
+  "version_nueva": "r2",
+  "cambios": [
+    {
+      "regla": "C01-canal-no-probado",
+      "pieza": "T01",
+      "campo": "guion_hablado",
+      "motivo": "El canal no tiene prueba de punta a punta. Eliminar promesa personal de respuesta heredada de v2 y mantener una invitación coherente; sigue bloqueada publicación hasta prueba real. Se aplica en una segunda salida local a las dos ventas.",
+      "antes_sha256": "ef762a67437de9caad4ce2ed7a0e0cc44b3af68bbc937172cd03caacbe26e9d4",
+      "despues_sha256": "4bb13e714439bf24f0fa1679a1ce707b2f901f3ce854cf8d5b640cdaef14fba4"
+    },
+    {
+      "regla": "C01-canal-no-probado",
+      "pieza": "T01",
+      "campo": "copy",
+      "motivo": "El canal no tiene prueba de punta a punta. Eliminar promesa personal de respuesta heredada de v2 y mantener una invitación coherente; sigue bloqueada publicación hasta prueba real. Se aplica en una segunda salida local a las dos ventas.",
+      "antes_sha256": "203fdaac26b1c90739f1443084ccdf6e5824afd8034243cbb24941caed92324f",
+      "despues_sha256": "535e358383f7a3d492e5d541f0a6413839b2e194489f299b00403b99df4c9ea7"
+    },
+    {
+      "regla": "C01-canal-no-probado",
+      "pieza": "T01",
+      "campo": "cta",
+      "motivo": "El canal no tiene prueba de punta a punta. Eliminar promesa personal de respuesta heredada de v2 y mantener una invitación coherente; sigue bloqueada publicación hasta prueba real. Se aplica en una segunda salida local a las dos ventas.",
+      "antes_sha256": "740026310433e09a1090ae7a5bc63f1a86dfa9166c5d38ee90dcc0d7c46bfe7c",
+      "despues_sha256": "f030f7af77ca9e55dc110c43cf4456441ace547e4dd4e260c60ff3d41cfa3671"
+    },
+    {
+      "regla": "C01-canal-no-probado",
+      "pieza": "T04",
+      "campo": "guion_hablado",
+      "motivo": "El canal no tiene prueba de punta a punta. Eliminar promesa personal de respuesta heredada de v2 y mantener una invitación coherente; sigue bloqueada publicación hasta prueba real. Se aplica en una segunda salida local a las dos ventas.",
+      "antes_sha256": "5055e739318024cca01c5f2ed32199ec76ead5308c0289c15a64fe53b335f4a0",
+      "despues_sha256": "2830ec0c4f5ac39fcd5b82e15ad97754a0b1ad75862e0a7fe8c7325bb655f581"
+    },
+    {
+      "regla": "C01-canal-no-probado",
+      "pieza": "T04",
+      "campo": "copy",
+      "motivo": "El canal no tiene prueba de punta a punta. Eliminar promesa personal de respuesta heredada de v2 y mantener una invitación coherente; sigue bloqueada publicación hasta prueba real. Se aplica en una segunda salida local a las dos ventas.",
+      "antes_sha256": "9118ba3d1d9e88f0afde34edff6e77f4437c2da112e64e58a3f2094bb15b99ec",
+      "despues_sha256": "3b3f3a1e19f148ec9cfacb4578a27d9a090d1d6f1055a6e80d4da8a249af908a"
+    },
+    {
+      "regla": "C01-canal-no-probado",
+      "pieza": "T04",
+      "campo": "cta",
+      "motivo": "El canal no tiene prueba de punta a punta. Eliminar promesa personal de respuesta heredada de v2 y mantener una invitación coherente; sigue bloqueada publicación hasta prueba real. Se aplica en una segunda salida local a las dos ventas.",
+      "antes_sha256": "740026310433e09a1090ae7a5bc63f1a86dfa9166c5d38ee90dcc0d7c46bfe7c",
+      "despues_sha256": "f030f7af77ca9e55dc110c43cf4456441ace547e4dd4e260c60ff3d41cfa3671"
+    }
+  ],
+  "naturaleza": "Corrección local declarada por productor; no revisión independiente ni aprobación"
+}

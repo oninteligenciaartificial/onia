@@ -8,19 +8,39 @@ import sqlite3
 from urllib.parse import parse_qs, urlsplit
 
 import lector
+import diario
 import operacion
 import panel
 
 
 class Application:
-    def __init__(self, data_directory, exports=(), tanda_path=operacion.HISTORIC_TANDA):
+    def __init__(self, data_directory, exports=(), tanda_path=operacion.HISTORIC_TANDA, flujo_path=None):
         self.reviews = operacion.Reviews(data_directory)
         self.exports = tuple(exports)
         self.tanda_path = tanda_path
         self.csrf = secrets.token_urlsafe(32)
+        self.flujo_path = flujo_path
+        self.last_daily = None
+        self.daily_stale = False
+
+    def daily(self):
+        if not self.flujo_path:
+            return None
+        try:
+            current = diario.read(self.flujo_path)
+            # Render antes de adoptar: un export mal formado conserva el anterior.
+            diario.fragment(current)
+            self.last_daily, self.daily_stale = current, False
+        except (OSError, ValueError, TypeError, KeyError, AttributeError):
+            self.daily_stale = True
+        return self.last_daily
 
     def model(self):
         model = operacion.build(self.exports, self.tanda_path)
+        daily = self.daily()
+        if daily:
+            diario.attach(model, daily)
+        model['daily_stale'] = self.daily_stale
         model['histories'] = {}
         model['revisiones_anteriores'] = []
         for row in self.reviews.history():
@@ -41,7 +61,7 @@ class Application:
         model['guardado'] = query.get('guardado') == ['1']
         snapshot = model['tanda'] or {'schema': 'onia-lector-panel-v1', 'generado': model['generado'],
                                     'alcance': 'Tanda pendiente de reconciliar.', 'commit_entradas_repo': 'Sin anclar'}
-        return panel.render(snapshot, model, {'csrf': self.csrf})
+        return panel.render(snapshot, model, {'csrf': self.csrf, 'daily_script_hash': diario.script_hash() if self.flujo_path else None})
 
     def save(self, fields):
         operacion.require(set(fields) == {'csrf', 'target', 'source_hash', 'version', 'motivo', 'correccion'}
@@ -73,7 +93,8 @@ def handler_for(app):
             self.send_header('Cache-Control', 'no-store')
             self.send_header('X-Content-Type-Options', 'nosniff')
             self.send_header('Referrer-Policy', 'same-origin')
-            self.send_header('Content-Security-Policy', "default-src 'none'; img-src 'self' data:; font-src data:; style-src 'unsafe-inline'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'")
+            script_policy = ("; script-src 'sha256-" + diario.script_hash() + "'; connect-src 'self'") if app.flujo_path else ''
+            self.send_header('Content-Security-Policy', "default-src 'none'; img-src 'self' data:; font-src data:; style-src 'unsafe-inline'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'" + script_policy)
             if location:
                 self.send_header('Location', location)
             self.end_headers()
@@ -89,6 +110,11 @@ def handler_for(app):
                 route = urlsplit(self.path)
                 operacion.require(not route.scheme and not route.netloc, 'Ruta inválida')
                 query = parse_qs(route.query, keep_blank_values=True, max_num_fields=8, errors='strict')
+                if route.path == '/flujo' and not query and app.flujo_path:
+                    data = app.daily()
+                    if data is None:
+                        return self.send(503, 'Ciclo pendiente; productor sin proyección válida')
+                    return self.send(200, diario.fragment(data, app.daily_stale))
                 if route.path == '/favicon.ico' and not query:
                     return self.send(204, '')
                 if route.path == '/':
@@ -166,11 +192,12 @@ def main():
     parser.add_argument('--datos', type=Path, required=True, help='Directorio privado fuera de cualquier repositorio Git')
     parser.add_argument('--estado', action='append', default=[], help='Ruta relativa a base-operativa, repetible')
     parser.add_argument('--tanda', default=operacion.HISTORIC_TANDA, help='Paquete editorial relativo a base-operativa')
+    parser.add_argument('--flujo', type=Path, help='panel.json saneado del ciclo, privado y fuera de Git')
     parser.add_argument('--puerto', type=int, default=8765)
     parser.add_argument('--preview', type=Path, help='HTML estático en un directorio nuevo dentro de la ruta asignada')
     args = parser.parse_args()
     try:
-        app = Application(args.datos, args.estado, args.tanda)
+        app = Application(args.datos, args.estado, args.tanda, args.flujo)
         if args.preview:
             preview(app, args.preview)
             print('Preview HTML generado. Revisiones locales en el directorio privado indicado.')

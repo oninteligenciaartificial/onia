@@ -1,0 +1,11 @@
+# Plantilla revisable. No instalada ni activada por esta entrega.
+[Unit]
+Description=ONIA: reconciliar el ciclo cada minuto
+
+[Timer]
+OnCalendar=*-*-* *:*:00 America/La_Paz
+Persistent=true
+Unit=onia-flujo-diario.service
+
+[Install]
+WantedBy=timers.target
