@@ -1,0 +1,76 @@
+{
+  "schema": "onia-fabrica-estado-v1",
+  "id": "cerebro-panel-usable-20261109",
+  "fabrica": "panel",
+  "estado": "para_revision",
+  "generado": "2026-11-11T17:27:25.697153+00:00",
+  "fuente": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION-DISENO.md",
+  "pasos": [
+    {
+      "id": "diseno",
+      "nombre": "Implementar Propuesta 1 en el render existente",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION-DISENO.md"
+      ]
+    },
+    {
+      "id": "regresiones",
+      "nombre": "Conservar lector, tanda y operación y probar política de origen",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/pruebas.txt"
+      ]
+    },
+    {
+      "id": "guardado",
+      "nombre": "Verificar formulario nativo same-origin en navegador",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/design-qa.md",
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/host-final-02/resultado.json"
+      ]
+    },
+    {
+      "id": "visual",
+      "nombre": "Comparar referencia y capturas a 1487, 1440 y 390 px",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/design-qa.md",
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/host-final-02/resultado.json"
+      ]
+    },
+    {
+      "id": "revision",
+      "nombre": "Revisión de Sergio y coordinadora sobre commit final",
+      "estado": "pendiente",
+      "evidencias": []
+    }
+  ],
+  "entregables": [
+    {
+      "nombre": "Preview Propuesta 1",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/preview-coordinadora/panel.html"
+    },
+    {
+      "nombre": "Guía de revisión del diseño",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION-DISENO.md"
+    },
+    {
+      "nombre": "QA visual y funcional completado en host",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/design-qa.md"
+    }
+  ],
+  "pendientes": [
+    {
+      "motivo": "Tanda v2 histórica y exports de productores paralelos pendientes de reunir",
+      "responsable": "Coordinadora y productores",
+      "siguiente": "Seleccionar los exports validados al revisar la entrega"
+    },
+    {
+      "motivo": "Revisión humana solicitada de Propuesta 1",
+      "responsable": "Sergio y coordinadora",
+      "siguiente": "Revisar el commit publicado y decidir la continuación"
+    }
+  ]
+}

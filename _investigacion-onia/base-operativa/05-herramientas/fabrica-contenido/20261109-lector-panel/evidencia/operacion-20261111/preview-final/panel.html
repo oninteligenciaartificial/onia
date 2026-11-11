@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer"><title>Fábrica OnIA · consulta manual</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#182b3a;background:#f2f5f4;line-height:1.6}
+*{box-sizing:border-box}body{margin:0;overflow-wrap:anywhere}a{color:#075b79;text-underline-offset:3px}a:focus-visible,summary:focus-visible{outline:3px solid #a55a00;outline-offset:4px}
+header{background:#142f40;color:#fff;padding:38px max(22px,calc((100vw - 1160px)/2)) 30px}header a{color:#c9eff3}h1{font-size:clamp(2rem,4vw,3rem);margin:6px 0}h2{scroll-margin-top:18px;font-size:1.55rem;margin:34px 0 12px}h3{font-size:1.05rem;line-height:1.4;margin:9px 0 13px;overflow-wrap:anywhere}p{margin:12px 0}
+main{max-width:1204px;margin:auto;padding:22px}nav{display:flex;gap:22px;flex-wrap:wrap}.eyebrow{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700}.intro{max-width:850px;color:#e0eaef}
+.notice{border-left:5px solid #a55a00;background:#fff3d7;padding:16px 20px;border-radius:6px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:18px}.tasks{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.card{background:white;border:1px solid #cfdbdc;border-radius:12px;padding:22px;min-width:0}.badge{display:inline-block;border-radius:5px;padding:3px 8px;margin:3px 5px 3px 0;font-size:.78rem;font-weight:700}.good{background:#d9eee8;color:#174a3e}.pending{background:#fff0cb;color:#704100}
+.small{font-size:.84rem;color:#415663}.mono{font: .78rem/1.65 ui-monospace,monospace;overflow-wrap:anywhere}dl{font-size:.85rem}dt{font-weight:700;margin-top:9px}dd{margin:0;overflow-wrap:anywhere}summary{cursor:pointer;color:#075b79;font-weight:650;padding:10px 0}pre{font: .88rem/1.7 system-ui,sans-serif;white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f7f7;padding:16px;border-radius:7px;max-width:100%}.empty{background:#fff;padding:20px;border:1px dashed #718692}li{margin:12px 0;overflow-wrap:anywhere}footer{border-top:1px solid #cad7d9;padding:26px 0;margin-top:32px}code{overflow-wrap:anywhere}@media(max-width:480px){main{padding:14px}header{padding:26px 18px}.card{padding:17px}}
+input,textarea,select,button{font:inherit;max-width:100%;border:1px solid #718692;border-radius:5px;padding:9px}textarea{width:100%;min-height:100px}label{display:block;margin-top:12px}button{background:#075b79;color:white;cursor:pointer;margin-top:12px}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #a55a00;outline-offset:3px}.flow{padding-left:22px}.flow>li{border-left:3px solid #cfdbdc;padding:0 0 16px 14px}.history{border-left:3px solid #a55a00;padding-left:14px}.calendar{display:flex;gap:18px;flex-wrap:wrap}.calendar article{flex:1;min-width:min(100%,220px)}.factory-nav{margin:18px 0;display:flex;gap:14px;flex-wrap:wrap}
+</style></head><body>
+<header><div class="eyebrow">OnIA / revisión local</div><h1>Fábricas y revisión</h1>
+<p class="intro">5 borradores para revisar con sus fuentes y límites. La revisión técnica y el permiso de publicación se muestran por separado.</p>
+<nav aria-label="Secciones"><a href="#fabricas">Fábricas</a><a href="#calendario">Calendario</a><a href="#cerebro">Cerebro</a><a href="#guiones">Guiones</a><a href="#fuentes">Fuentes</a><a href="#ideas">Ideas</a><a href="#pendientes">Estado y pendientes</a></nav></header>
+<main><aside class="notice"><strong>Fotografía manual · no se actualiza sola</strong><br>Generada: 2026-11-11T13:46:36.315449+00:00. Reconsultar antes de usar afirmaciones de producto.
+<br>Sin aprobación de publicación. No hay scheduler, ingesta recurrente ni Telegram real.</aside>
+<section id="fabricas"><h2>Fábricas</h2>
+    <p>Resúmenes fechados de productores. El harness conserva la autoridad de las tareas. Cada export conserva su fecha y fuente.</p>
+    <nav class="factory-nav" aria-label="Seis fábricas"><a href="#fabrica-guiones">Guiones y calendario</a><a href="#fabrica-edicion">Edición de video</a><a href="#fabrica-automatizaciones">Automatizaciones</a><a href="#fabrica-whatsapp">Chatbot de WhatsApp</a><a href="#fabrica-codigo">Código</a><a href="#fabrica-plataforma">Plataforma</a></nav>
+    <div class="grid"><article class="card" id="fabrica-guiones">
+        <h3>Guiones y calendario</h3><p class="notice"><strong>ENSAYO SINTÉTICO</strong> · fixture de prueba local</p><span class="badge pending">para_revision</span><p class="mono">Resumen del productor generado 2026-11-11T12:00:00Z<br>
+    Export 05-herramientas/fabrica-contenido/20261109-lector-panel/fixtures/tarea-sintetica/estado-fabrica.json<br>SHA-256 39aaf6f87309c5286464a44cfd10ec5808dc4b9dc12e41e60767789cdc85df06</p>
+    <p>Informe o recibo · <a href="../../../fixtures/tarea-sintetica/resultado.md">05-herramientas/fabrica-contenido/20261109-lector-panel/fixtures/tarea-sintetica/resultado.md</a></p>
+    <ol class="flow"><li><strong>Recibir una entrada concreta de prueba</strong> <span class="badge pending">completado</span>
+        <ul><li><a href="../../../fixtures/tarea-sintetica/resultado.md">05-herramientas/fabrica-contenido/20261109-lector-panel/fixtures/tarea-sintetica/resultado.md</a></li></ul>
+        <details id="revision-b942f7f559114ed3d37086832c7df2b42658fe9e047cc318e055da2b3f6c9634"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details></li><li><strong>Evaluar el resultado original v1</strong> <span class="badge pending">completado</span>
+        <ul><li><a href="../../../fixtures/tarea-sintetica/resultado.md">05-herramientas/fabrica-contenido/20261109-lector-panel/fixtures/tarea-sintetica/resultado.md</a></li></ul>
+        <details id="revision-73d250bcd09fd953eb172a8dbeac89a9c8c725f47403e0dcbc386e8b39aa7195"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details></li><li><strong>Revisar y proponer una corrección local</strong> <span class="badge pending">pendiente</span>
+        <ul><li>Evidencia pendiente de aportar por el productor.</li></ul>
+        <details id="revision-907e3e8b37a585e593a00a54b8d0dfe802edc5098fe30ce4e7626926bead199a"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details></li></ol>
+    <h4>Entregas</h4><article><h4>Resultado original v1 · ENSAYO SINTÉTICO</h4><p><a href="../../../fixtures/tarea-sintetica/resultado.md">05-herramientas/fabrica-contenido/20261109-lector-panel/fixtures/tarea-sintetica/resultado.md</a></p>
+                         <details id="revision-13c43c4b2a114470561861b43575ad60ddfe59acaef4d47a5da6e36dd4bb7f80"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details></article>
+    <h4>Bloqueos y pendientes</h4><ul><li>Revisión humana de la propuesta sintética<br>Responsable Sergio y coordinadora<br>
+                      Siguiente paso · Leer el original, registrar una corrección y recargar el panel</li></ul><details><summary>Documentación existente</summary>
+        <p><a href="../../../../../fabrica-onia/1-guiones-calendario/README.md">05-herramientas/fabrica-onia/1-guiones-calendario/README.md</a></p><p class="small">Antecedente documental con su fecha de origen.</p></details></article><article class="card" id="fabrica-edicion">
+        <h3>Edición de video</h3><p>Estado pendiente de recibir en un export validado.</p><p>Responsable · coordinadora y productor. Siguiente paso · aportar estado-fabrica.json y sus evidencias para esta fábrica. La conexión y prueba real quedan pendientes.</p><details><summary>Documentación existente</summary>
+        <p><a href="../../../../../fabrica-onia/2-edicion-video/README.md">05-herramientas/fabrica-onia/2-edicion-video/README.md</a></p><p class="small">Antecedente documental con su fecha de origen.</p></details></article><article class="card" id="fabrica-automatizaciones">
+        <h3>Automatizaciones</h3><p>Estado pendiente de recibir en un export validado.</p><p>Responsable · coordinadora y productor. Siguiente paso · aportar estado-fabrica.json y sus evidencias para esta fábrica. La conexión y prueba real quedan pendientes.</p><details><summary>Documentación existente</summary>
+        <p><a href="../../../../../fabrica-onia/3-automatizaciones/README.md">05-herramientas/fabrica-onia/3-automatizaciones/README.md</a></p><p class="small">Antecedente documental con su fecha de origen.</p></details></article><article class="card" id="fabrica-whatsapp">
+        <h3>Chatbot de WhatsApp</h3><p>Estado pendiente de recibir en un export validado.</p><p>Responsable · coordinadora y productor. Siguiente paso · aportar estado-fabrica.json y sus evidencias para esta fábrica. La conexión y prueba real quedan pendientes.</p><details><summary>Documentación existente</summary>
+        <p><a href="../../../../../fabrica-onia/4-chatbot-whatsapp/README.md">05-herramientas/fabrica-onia/4-chatbot-whatsapp/README.md</a></p><p class="small">Antecedente documental con su fecha de origen.</p></details></article><article class="card" id="fabrica-codigo">
+        <h3>Código</h3><p>Estado pendiente de recibir en un export validado.</p><p>Responsable · coordinadora y productor. Siguiente paso · aportar estado-fabrica.json y sus evidencias para esta fábrica. La conexión y prueba real quedan pendientes.</p><details><summary>Documentación existente</summary>
+        <p><a href="../../../../../fabrica-onia/5-codigo/README.md">05-herramientas/fabrica-onia/5-codigo/README.md</a></p><p class="small">Antecedente documental con su fecha de origen.</p></details></article><article class="card" id="fabrica-plataforma">
+        <h3>Plataforma</h3><p>Estado pendiente de recibir en un export validado.</p><p>Responsable · coordinadora y productor. Siguiente paso · aportar estado-fabrica.json y sus evidencias para esta fábrica. La conexión y prueba real quedan pendientes.</p><details><summary>Documentación existente</summary>
+        <p><a href="../../../../../fabrica-onia/6-plataforma/README.md">05-herramientas/fabrica-onia/6-plataforma/README.md</a></p><p class="small">Antecedente documental con su fecha de origen.</p></details></article></div><span class="badge pending">para_revision</span><p class="mono">Resumen del productor generado 2026-11-11T13:39:45.260692+00:00<br>
+    Export 05-herramientas/fabrica-contenido/20261109-lector-panel/estado-fabrica.json<br>SHA-256 0f4df065694e074c0daa4a31b5f422aa1fcd528858129ad0b699cfd0f2b18d82</p>
+    <p>Informe o recibo · <a href="../../../GUIA-REVISION.md">05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION.md</a></p>
+    <ol class="flow"><li><strong>Conservar lector22 y tanda3 con procedencia</strong> <span class="badge pending">completado</span>
+        <ul><li><a href="../pruebas.txt">05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/pruebas.txt</a></li></ul>
+        <details id="revision-19e0b39f347f6f4b0df24b2154f278fd77b3ab0fce9abd8288fce82ec184cfb4"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details></li><li><strong>Probar tarea, corrección, reinicio y original conservado en ensayo local</strong> <span class="badge pending">completado</span>
+        <ul><li><a href="../pruebas.txt">05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/pruebas.txt</a></li><li><a href="../recorrido-cli.json">05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/recorrido-cli.json</a></li></ul>
+        <details id="revision-5b175631b481126f1dfb1c2fbfca703d6e72d01f95ff7acddc750bd838764c2e"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details></li><li><strong>Validar contratos, rutas, XSS y concurrencia local</strong> <span class="badge pending">completado</span>
+        <ul><li><a href="../pruebas.txt">05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/pruebas.txt</a></li></ul>
+        <details id="revision-e1909e3a9f44a5bcdca0b264748ff71fe619dc313cb02878bb70bed6d2355f3c"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details></li><li><strong>Comprobar escritorio y móvil con Chromium existente</strong> <span class="badge pending">bloqueado</span>
+        <ul><li><a href="../visual/resultado.json">05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/visual/resultado.json</a></li></ul>
+        <details id="revision-300e5d60f0fc9b5d7106698f90d77da102b3a8bc0510650bcfa8b9c245376c70"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details></li><li><strong>Revisión de Sergio y coordinadora sobre la entrega publicada</strong> <span class="badge pending">pendiente</span>
+        <ul><li>Evidencia pendiente de aportar por el productor.</li></ul>
+        <details id="revision-0c182a6de2679133b1d694a89eec273d9bfe1ce7e08671061c48c6e5eeb99d5f"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details></li></ol>
+    <h4>Entregas</h4><article><h4>Panel ampliado · preview fechado</h4><p><a href="panel.html">05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/preview-final/panel.html</a></p>
+                         <details id="revision-64b1d23821028609cbff933975e2c41d6aeb645367b7601fd29e4bdb40247eab"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details></article><article><h4>Guía y recorrido para Sergio</h4><p><a href="../../../GUIA-REVISION.md">05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION.md</a></p>
+                         <details id="revision-ca3d3edbb4c91930738fcfb7c912d6f9655af5d6d4ae7cc9209a41ad8351f314"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details></article>
+    <h4>Bloqueos y pendientes</h4><ul><li>Chromium falla al arrancar con sandbox habilitado en este entorno<br>Responsable Coordinadora con host compatible<br>
+                      Siguiente paso · Ejecutar visual-operacion.cjs y revisar desktop y móvil</li><li>Exports nuevos de guiones y WhatsApp todavía ausentes en este checkout<br>Responsable Productores y coordinadora<br>
+                      Siguiente paso · Añadir las rutas explícitas de estado-fabrica.json y el nuevo guiones-panel.json al invocar servidor.py</li><li>La tanda v2 conserva horarios históricos<br>Responsable Contenido y Sergio<br>
+                      Siguiente paso · Revisar la tanda nueva con fechas confirmadas antes de usarla para la venta</li><li>Revisión humana solicitada al entregar esta primera tanda<br>Responsable Sergio y coordinadora<br>
+                      Siguiente paso · Revisar el commit publicado y decidir la continuación</li></ul></section>
+    <section id="calendario"><h2>Calendario del workshop</h2><p>America/La_Paz · confirmación de Sergio del 11 de noviembre de 2026.</p>
+    <div class="calendar"><article class="card"><h3>Ordenar</h3><time datetime="2026-11-13T20:00:00-04:00">2026-11-13 · 20:00</time></article><article class="card"><h3>Vender</h3><time datetime="2026-11-14T14:00:00-04:00">2026-11-14 · 14:00</time></article><article class="card"><h3>Automatizar</h3><time datetime="2026-11-16T20:00:00-04:00">2026-11-16 · 20:00</time></article></div><p>Claude de 0 a 100: tu negocio con IA · grupo Bs 50 · VIP Bs 150, 5 cupos, llamada de 30 minutos.</p>
+    <p>QR y seguimiento con confirmación manual de cada pago por Sergio. Calendar/Meet y canales reales requieren conciliación y prueba.</p>
+    <details><summary>Fuente del calendario y alcance</summary><p><a href="../../../../../fabrica-onia/DECISIONES-SERGIO-20261110.md">05-herramientas/fabrica-onia/DECISIONES-SERGIO-20261110.md</a></p>
+    <p class="mono">SHA-256 db0adcee868c465496c8b93a61b6eb2edeb4cc5d83c09ef5535fa83af4379ba4</p><p><a href="../../../../../../04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md">04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md</a></p></details>
+    <h3>Tanda en consulta</h3><p>Fecha editorial declarada 2026-11-11 · cinco piezas T01–T05. Salidas horizontal y vertical pendientes de prueba en esta vista.</p><ul><li>T01 · venta · Tu lista necesita tres datos</li><li>T02 · marca seria · Una prueba que se pueda revisar</li><li>T03 · evergreen · Cuando la agenda no cabe</li><li>T04 · segunda venta · Qué incluye cada modalidad</li><li>T05 · reel de prueba · ¿Cuál mensaje permite decidir?</li></ul><p class="notice">Tanda v2 histórica · contiene horarios sustituidos. Revisar una versión nueva del productor antes de usarla para la venta.</p><p class="mono">05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v2/guiones-panel.json</p>
+    <p><a href="#guiones">Abrir los cinco resultados y registrar una revisión</a></p></section>
+    <section id="cerebro"><h2>Cerebro editorial existente</h2><p><a href="../../../../../../03-referentes/cerebro-operativo/20261109/README.md">03-referentes/cerebro-operativo/20261109/README.md</a></p><p>Consulta interactiva disponible en el modo local de revisión.</p><p>Coincidencias por etiquetas explícitas. 6 patrones.</p><div class="grid"><article class="card"><h3>Actividad narrada y preguntas</h3><p>Erik Taveras · P2</p>
+            <p>Relata una actividad con un equipo y destaca preguntas y aprendizaje frente al mero acceso.</p><p>Inferencia<br>El relato sugiere un criterio de práctica, con aprendizaje efectivo por comprobar.</p>
+            <p>Aplicación propuesta<br>Pedir a un principiante que modifique una restricción y explique el cambio de agenda.</p>
+            <p>Comprobación pendiente<br>Registrar su respuesta y la ayuda que necesitó durante el ensayo.</p>
+            <details><summary>Fuente, pasaje y límites heredados</summary><pre>{
+  &quot;id&quot;: &quot;erik-taveras-p2&quot;,
+  &quot;referente&quot;: &quot;erik-taveras&quot;,
+  &quot;pieza&quot;: &quot;P2&quot;,
+  &quot;titulo&quot;: &quot;Actividad narrada y preguntas&quot;,
+  &quot;temas&quot;: [
+    &quot;ensenanza&quot;,
+    &quot;revision&quot;
+  ],
+  &quot;usos&quot;: [
+    &quot;ordenar&quot;,
+    &quot;ensenar&quot;,
+    &quot;workshop&quot;,
+    &quot;ideas&quot;
+  ],
+  &quot;hecho_documentado&quot;: &quot;Relata una actividad con un equipo y destaca preguntas y aprendizaje frente al mero acceso.&quot;,
+  &quot;inferencia_acotada&quot;: &quot;El relato sugiere un criterio de práctica, con aprendizaje efectivo por comprobar.&quot;,
+  &quot;pasaje&quot;: {
+    &quot;fuente&quot;: &quot;erik-taveras&quot;,
+    &quot;desde&quot;: 47,
+    &quot;hasta&quot;: 50,
+    &quot;sha256&quot;: &quot;1ff090534bef7710e48e86294e4181926211b84349c214dbd296694aed3bd3c9&quot;
+  },
+  &quot;localizacion_temporal_heredada&quot;: &quot;ASR 00:21.72–00:46.52&quot;,
+  &quot;propuesta_onia&quot;: {
+    &quot;aplicacion&quot;: &quot;Pedir a un principiante que modifique una restricción y explique el cambio de agenda.&quot;,
+    &quot;comprobacion_pendiente&quot;: &quot;Registrar su respuesta y la ayuda que necesitó durante el ensayo.&quot;
+  },
+  &quot;nombre&quot;: &quot;Erik Taveras&quot;,
+  &quot;ficha&quot;: {
+    &quot;id&quot;: &quot;erik-taveras&quot;,
+    &quot;ruta&quot;: &quot;03-referentes/cerebros-profundos/b/erik-taveras.md&quot;,
+    &quot;sha256&quot;: &quot;e8d5f524464ad2276413936d59a88ac8afcc89ebaaa70bdea459a62dcc0bb1c3&quot;
+  },
+  &quot;patron_en_ficha&quot;: {
+    &quot;fuente&quot;: &quot;erik-taveras&quot;,
+    &quot;desde&quot;: 106,
+    &quot;hasta&quot;: 110,
+    &quot;sha256&quot;: &quot;8094ef96cda4843f1d8875fdb946d8b68fb80d4c07e2aa0522ad69cdd4986892&quot;
+  },
+  &quot;fuente_publica&quot;: {
+    &quot;id&quot;: &quot;P2&quot;,
+    &quot;url&quot;: &quot;https://www.instagram.com/reel/DfcPRmlxlbr/&quot;,
+    &quot;titulo&quot;: &quot;Dos días con el equipo de tecnología de Supermercados Bravo (descriptivo)&quot;,
+    &quot;tipo&quot;: &quot;reel&quot;,
+    &quot;cobertura&quot;: &quot;Medio público200 de eriktaveras, 59.625986 s medidos. 14 segmentos ASR íntegros 0–57,12 s; imágenes 0/29,80/59 s. Small offline CPU/int8,2hilos,1worker. Sin escucha ni reproducción continua.&quot;,
+    &quot;fuente_tiempos&quot;: &quot;/tmp/onia-erik-retoma-20261108-jzkgnwkt/DfcPRmlxlbr-asr.json&quot;,
+    &quot;completa&quot;: true
+  },
+  &quot;aceptacion&quot;: {
+    &quot;fuente&quot;: &quot;cierre-aceptado&quot;,
+    &quot;commit_entrega&quot;: &quot;493bbb78e447e8a456262f5d4f39470124dcd9af&quot;,
+    &quot;documento&quot;: {
+      &quot;id&quot;: &quot;cierre-aceptado&quot;,
+      &quot;ruta&quot;: &quot;04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md&quot;,
+      &quot;sha256&quot;: &quot;ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb&quot;
+    }
+  },
+  &quot;cobertura_heredada_referente&quot;: {
+    &quot;fuente&quot;: &quot;cobertura-b&quot;,
+    &quot;piezas_completas&quot;: 5,
+    &quot;alcance&quot;: &quot;Completitud documental según cobertura aceptada, con límites de modalidad y muestra.&quot;,
+    &quot;limites&quot;: [],
+    &quot;dependencia_entre_piezas&quot;: &quot;Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia.&quot;
+  },
+  &quot;limites_adicionales_ficha&quot;: [
+    &quot;Preview, recapitulación y reels seleccionados. Clase completa, práctica corregida y resultados del alumno quedan sin observación.&quot;,
+    &quot;P2–P5 tienen tres fotogramas por clip, con intervalos sin observar. Prosodia, música, cortes y percepción sonora integral quedan sin evaluación.&quot;,
+    &quot;Costes y volúmenes de P4 son declaraciones del autor. CTA público sin entrega de DM, recurso, pago o cierre privado comprobados.&quot;
+  ]
+}</pre></details></article><article class="card"><h3>Decisión comercial con restricciones</h3><p>Álvaro Risoglio · P1</p>
+            <p>Compara producto, promoción, margen y coste de cuotas, y el relato incluye un error de confirmación de pago.</p><p>Inferencia<br>Mostrar modificación y restricción vuelve revisable una decisión operativa.</p>
+            <p>Aplicación propuesta<br>Comparar una oferta ficticia antes y después con datos de coste declarados y control de pago separado.</p>
+            <p>Comprobación pendiente<br>Cada condición se coteja con la entrada y el pago incompleto conserva estado pendiente.</p>
+            <details><summary>Fuente, pasaje y límites heredados</summary><pre>{
+  &quot;id&quot;: &quot;alvaro-risoglio-p1&quot;,
+  &quot;referente&quot;: &quot;alvaro-risoglio&quot;,
+  &quot;pieza&quot;: &quot;P1&quot;,
+  &quot;titulo&quot;: &quot;Decisión comercial con restricciones&quot;,
+  &quot;temas&quot;: [
+    &quot;oferta&quot;,
+    &quot;revision&quot;
+  ],
+  &quot;usos&quot;: [
+    &quot;vender&quot;,
+    &quot;ordenar&quot;,
+    &quot;automatizar&quot;,
+    &quot;workshop&quot;,
+    &quot;ideas&quot;
+  ],
+  &quot;hecho_documentado&quot;: &quot;Compara producto, promoción, margen y coste de cuotas, y el relato incluye un error de confirmación de pago.&quot;,
+  &quot;inferencia_acotada&quot;: &quot;Mostrar modificación y restricción vuelve revisable una decisión operativa.&quot;,
+  &quot;pasaje&quot;: {
+    &quot;fuente&quot;: &quot;alvaro-risoglio&quot;,
+    &quot;desde&quot;: 48,
+    &quot;hasta&quot;: 54,
+    &quot;sha256&quot;: &quot;2022845566f394442e56a02da107fe451919009b18c42a3988b1b573c12c6f74&quot;
+  },
+  &quot;localizacion_temporal_heredada&quot;: &quot;Captions 07:41–09:39 y error 04:43–05:09&quot;,
+  &quot;propuesta_onia&quot;: {
+    &quot;aplicacion&quot;: &quot;Comparar una oferta ficticia antes y después con datos de coste declarados y control de pago separado.&quot;,
+    &quot;comprobacion_pendiente&quot;: &quot;Cada condición se coteja con la entrada y el pago incompleto conserva estado pendiente.&quot;
+  },
+  &quot;nombre&quot;: &quot;Álvaro Risoglio&quot;,
+  &quot;ficha&quot;: {
+    &quot;id&quot;: &quot;alvaro-risoglio&quot;,
+    &quot;ruta&quot;: &quot;03-referentes/cerebros-profundos/c/alvaro-risoglio.md&quot;,
+    &quot;sha256&quot;: &quot;1d52aa524a0115e4542aed8be873f58dc97d101c415e061bc73c27c3cd476d92&quot;
+  },
+  &quot;patron_en_ficha&quot;: {
+    &quot;fuente&quot;: &quot;alvaro-risoglio&quot;,
+    &quot;desde&quot;: 151,
+    &quot;hasta&quot;: 155,
+    &quot;sha256&quot;: &quot;16ec8fb896ee73deabe1744472fd477e1b9fe780c1987f8c59b931e10667c91e&quot;
+  },
+  &quot;fuente_publica&quot;: {
+    &quot;id&quot;: &quot;P1&quot;,
+    &quot;url&quot;: &quot;https://www.youtube.com/watch?v=oZ9UKXve3Dk&quot;,
+    &quot;titulo&quot;: &quot;24HS Vendiendo Un Paquete Por Minuto.&quot;,
+    &quot;tipo&quot;: &quot;video&quot;,
+    &quot;cobertura&quot;: &quot;Captions existentes íntegros, 1257 cues, acotados a contenedor 1380.233333 s. Visual histórico explícito.&quot;,
+    &quot;fuente_tiempos&quot;: &quot;../../../99-archivo/recuperacion-secundaria/oZ9UKXve3Dk-subtitulos.json; alvaro-risoglio.md P1 §3; exceso final 1.926 s declarado.&quot;,
+    &quot;completa&quot;: true
+  },
+  &quot;aceptacion&quot;: {
+    &quot;fuente&quot;: &quot;cierre-aceptado&quot;,
+    &quot;commit_entrega&quot;: &quot;5332f2499864eb35993d189b075d0d812660f16c&quot;,
+    &quot;documento&quot;: {
+      &quot;id&quot;: &quot;cierre-aceptado&quot;,
+      &quot;ruta&quot;: &quot;04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md&quot;,
+      &quot;sha256&quot;: &quot;ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb&quot;
+    }
+  },
+  &quot;cobertura_heredada_referente&quot;: {
+    &quot;fuente&quot;: &quot;cobertura-c&quot;,
+    &quot;piezas_completas&quot;: 4,
+    &quot;alcance&quot;: &quot;Completitud documental según cobertura aceptada, con límites de modalidad y muestra.&quot;,
+    &quot;limites&quot;: [
+      &quot;P4 tiene publicador empresarial y presencia en perfil personal asociado; no se recuperó coauthor_producers ni se autentica voz. No satisface una eventual condición adicional de subida exclusiva por cuenta personal.&quot;,
+      &quot;Oferta formativa personal no localizada en búsqueda delimitada.&quot;,
+      &quot;Sin escucha/visión continua ni resultados comerciales auditados; contradicciones de tienda preservadas.&quot;,
+      &quot;Tres teasers insuficientes/duplicado descartados, fuera del inventario.&quot;
+    ],
+    &quot;dependencia_entre_piezas&quot;: &quot;P4 tiene publicador empresarial asociado. Las voces de P1 pertenecen a varios participantes sin atribución personal automática.&quot;
+  },
+  &quot;limites_adicionales_ficha&quot;: []
+}</pre></details></article><article class="card"><h3>Iteración con criterio explícito</h3><p>Enrique Rocha / tododeia · P1</p>
+            <p>Presenta un resultado de edición, admite iteraciones y describe referencias y correcciones.</p><p>Inferencia<br>Resultado, dificultad y condiciones permiten explicar por qué revisar una primera salida.</p>
+            <p>Aplicación propuesta<br>Comparar un mensaje inicial con una revisión que preserve los datos del negocio ficticio.</p>
+            <p>Comprobación pendiente<br>Identificar la corrección y cotejar producto, precio y condiciones con la entrada.</p>
+            <details><summary>Fuente, pasaje y límites heredados</summary><pre>{
+  &quot;id&quot;: &quot;enrique-rocha-p1&quot;,
+  &quot;referente&quot;: &quot;enrique-rocha&quot;,
+  &quot;pieza&quot;: &quot;P1&quot;,
+  &quot;titulo&quot;: &quot;Iteración con criterio explícito&quot;,
+  &quot;temas&quot;: [
+    &quot;revision&quot;,
+    &quot;demostracion&quot;
+  ],
+  &quot;usos&quot;: [
+    &quot;ordenar&quot;,
+    &quot;vender&quot;,
+    &quot;ensenar&quot;,
+    &quot;workshop&quot;,
+    &quot;ideas&quot;
+  ],
+  &quot;hecho_documentado&quot;: &quot;Presenta un resultado de edición, admite iteraciones y describe referencias y correcciones.&quot;,
+  &quot;inferencia_acotada&quot;: &quot;Resultado, dificultad y condiciones permiten explicar por qué revisar una primera salida.&quot;,
+  &quot;pasaje&quot;: {
+    &quot;fuente&quot;: &quot;enrique-rocha&quot;,
+    &quot;desde&quot;: 31,
+    &quot;hasta&quot;: 35,
+    &quot;sha256&quot;: &quot;7802a0d851788a172415c2fe759e7f3ef9b83d64b4aefd50a68f376645c2a437&quot;
+  },
+  &quot;localizacion_temporal_heredada&quot;: &quot;ASR 24.36–38.28 s&quot;,
+  &quot;propuesta_onia&quot;: {
+    &quot;aplicacion&quot;: &quot;Comparar un mensaje inicial con una revisión que preserve los datos del negocio ficticio.&quot;,
+    &quot;comprobacion_pendiente&quot;: &quot;Identificar la corrección y cotejar producto, precio y condiciones con la entrada.&quot;
+  },
+  &quot;nombre&quot;: &quot;Enrique Rocha / tododeia&quot;,
+  &quot;ficha&quot;: {
+    &quot;id&quot;: &quot;enrique-rocha&quot;,
+    &quot;ruta&quot;: &quot;03-referentes/cerebros-profundos/b/enrique-rocha.md&quot;,
+    &quot;sha256&quot;: &quot;71c591b4ef9f2c36919159107b638bf4edf38d0ea7de7f4739bad79ea6198a63&quot;
+  },
+  &quot;patron_en_ficha&quot;: {
+    &quot;fuente&quot;: &quot;enrique-rocha&quot;,
+    &quot;desde&quot;: 129,
+    &quot;hasta&quot;: 133,
+    &quot;sha256&quot;: &quot;e9fd9636b93d64e042fdf9fb2fb95c1641518adb1eedc252577658d65fee9ad0&quot;
+  },
+  &quot;fuente_publica&quot;: {
+    &quot;id&quot;: &quot;P1&quot;,
+    &quot;url&quot;: &quot;https://www.instagram.com/p/DfeYbLOCU-A/&quot;,
+    &quot;titulo&quot;: &quot;Claude como editor de video y Motion&quot;,
+    &quot;tipo&quot;: &quot;reel&quot;,
+    &quot;cobertura&quot;: &quot;MP4 50.895283 s; WAV 50.7834375 s; 16 segmentos ASR íntegros. 0–50,76 s; resultado, iteración, guía. 4 cuadros. Sin escucha ni visión continua, tiempos de WAV sin offset supuesto.&quot;,
+    &quot;fuente_tiempos&quot;: &quot;/tmp/onia-enrique-retoma-xhha7ogo/DfeYbLOCU-A.asr.json&quot;,
+    &quot;completa&quot;: true
+  },
+  &quot;aceptacion&quot;: {
+    &quot;fuente&quot;: &quot;cierre-aceptado&quot;,
+    &quot;commit_entrega&quot;: &quot;493bbb78e447e8a456262f5d4f39470124dcd9af&quot;,
+    &quot;documento&quot;: {
+      &quot;id&quot;: &quot;cierre-aceptado&quot;,
+      &quot;ruta&quot;: &quot;04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md&quot;,
+      &quot;sha256&quot;: &quot;ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb&quot;
+    }
+  },
+  &quot;cobertura_heredada_referente&quot;: {
+    &quot;fuente&quot;: &quot;cobertura-b&quot;,
+    &quot;piezas_completas&quot;: 4,
+    &quot;alcance&quot;: &quot;Completitud documental según cobertura aceptada, con límites de modalidad y muestra.&quot;,
+    &quot;limites&quot;: [],
+    &quot;dependencia_entre_piezas&quot;: &quot;Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia.&quot;
+  },
+  &quot;limites_adicionales_ficha&quot;: [
+    &quot;Cuatro clips seleccionados desde un embed de perfil. La selección deja frecuencia del método y eficacia comercial sin determinar.&quot;,
+    &quot;ASR íntegro reconocido y 16 imágenes entre las cuatro piezas. Prosodia, música y sincronía fina quedan sin escucha evaluada.&quot;,
+    &quot;Invitaciones a recurso en P1/P4. Entrega por privado, pago y clase completa quedaron sin observación.&quot;
+  ]
+}</pre></details></article><article class="card"><h3>Acción, motivo y ajuste</h3><p>Jeff Nippard · P2</p>
+            <p>El reel de la serie explica una secuencia, motivos de elección y ajustes concretos.</p><p>Inferencia<br>La relación entre acción y motivo puede transferirse como recurso comunicativo.</p>
+            <p>Aplicación propuesta<br>Explicar qué restricción se comprueba antes de aceptar cada paso de una agenda.</p>
+            <p>Comprobación pendiente<br>El participante señala una duración y una restricción que justifican su corrección.</p>
+            <details><summary>Fuente, pasaje y límites heredados</summary><pre>{
+  &quot;id&quot;: &quot;jeff-nippard-p2&quot;,
+  &quot;referente&quot;: &quot;jeff-nippard&quot;,
+  &quot;pieza&quot;: &quot;P2&quot;,
+  &quot;titulo&quot;: &quot;Acción, motivo y ajuste&quot;,
+  &quot;temas&quot;: [
+    &quot;ensenanza&quot;,
+    &quot;revision&quot;
+  ],
+  &quot;usos&quot;: [
+    &quot;ordenar&quot;,
+    &quot;ensenar&quot;,
+    &quot;workshop&quot;,
+    &quot;guiones&quot;,
+    &quot;ideas&quot;
+  ],
+  &quot;hecho_documentado&quot;: &quot;El reel de la serie explica una secuencia, motivos de elección y ajustes concretos.&quot;,
+  &quot;inferencia_acotada&quot;: &quot;La relación entre acción y motivo puede transferirse como recurso comunicativo.&quot;,
+  &quot;pasaje&quot;: {
+    &quot;fuente&quot;: &quot;jeff-nippard&quot;,
+    &quot;desde&quot;: 38,
+    &quot;hasta&quot;: 42,
+    &quot;sha256&quot;: &quot;eb0b6624a718bcafdc0a1d4de1647e0b22f8eeefd4a0b295f3ee6de36ddb277c&quot;
+  },
+  &quot;localizacion_temporal_heredada&quot;: &quot;ASR 02.88–39.72 s&quot;,
+  &quot;propuesta_onia&quot;: {
+    &quot;aplicacion&quot;: &quot;Explicar qué restricción se comprueba antes de aceptar cada paso de una agenda.&quot;,
+    &quot;comprobacion_pendiente&quot;: &quot;El participante señala una duración y una restricción que justifican su corrección.&quot;
+  },
+  &quot;nombre&quot;: &quot;Jeff Nippard&quot;,
+  &quot;ficha&quot;: {
+    &quot;id&quot;: &quot;jeff-nippard&quot;,
+    &quot;ruta&quot;: &quot;03-referentes/cerebros-profundos/c/jeff-nippard.md&quot;,
+    &quot;sha256&quot;: &quot;cf178824926a3244c13c32a91f0a9dd643a24d6551746171cc21d6d49c06f472&quot;
+  },
+  &quot;patron_en_ficha&quot;: {
+    &quot;fuente&quot;: &quot;jeff-nippard&quot;,
+    &quot;desde&quot;: 72,
+    &quot;hasta&quot;: 76,
+    &quot;sha256&quot;: &quot;d4234b54600b9b252f3834eb9d2022e1b5031907ae83a3f3191a8bfebdfcf75f&quot;
+  },
+  &quot;fuente_publica&quot;: {
+    &quot;id&quot;: &quot;P2&quot;,
+    &quot;url&quot;: &quot;https://www.instagram.com/reel/DC1ywxKJ0U8/&quot;,
+    &quot;titulo&quot;: &quot;Full pull workout explained! (Back, biceps and rear delts)&quot;,
+    &quot;tipo&quot;: &quot;reel&quot;,
+    &quot;cobertura&quot;: &quot;MP4 íntegro 57.629 s; 26 segmentos ASR y caption completos, 13 imágenes; serie pull/push/legs.&quot;,
+    &quot;fuente_tiempos&quot;: &quot;jeff-nippard.md P2 §3 (0–57.629 s); ASR completo/caption/PTS, cierre acotado, método/huellas.&quot;,
+    &quot;completa&quot;: true
+  },
+  &quot;aceptacion&quot;: {
+    &quot;fuente&quot;: &quot;cierre-aceptado&quot;,
+    &quot;commit_entrega&quot;: &quot;5332f2499864eb35993d189b075d0d812660f16c&quot;,
+    &quot;documento&quot;: {
+      &quot;id&quot;: &quot;cierre-aceptado&quot;,
+      &quot;ruta&quot;: &quot;04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md&quot;,
+      &quot;sha256&quot;: &quot;ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb&quot;
+    }
+  },
+  &quot;cobertura_heredada_referente&quot;: {
+    &quot;fuente&quot;: &quot;cobertura-c&quot;,
+    &quot;piezas_completas&quot;: 4,
+    &quot;alcance&quot;: &quot;Completitud documental según cobertura aceptada, con límites de modalidad y muestra.&quot;,
+    &quot;limites&quot;: [
+      &quot;Tres piezas de una misma serie limitan diversidad de la muestra.&quot;,
+      &quot;Sin escucha/visión continua, validación científica ni eficacia/ventas medidas.&quot;,
+      &quot;Precio final/compra/entrega no comprobados.&quot;,
+      &quot;VTT histórico de cinco niveles ausente y excluido del cómputo.&quot;
+    ],
+    &quot;dependencia_entre_piezas&quot;: &quot;P2–P4 comparten serie pull/push/legs. Limita diversidad y corroboración independiente.&quot;
+  },
+  &quot;limites_adicionales_ficha&quot;: []
+}</pre></details></article><article class="card"><h3>Prioridades ante una interrupción</h3><p>Nick Bare · P1</p>
+            <p>El relato plantea prioridades, atraviesa una llamada interrumpida por cuidados y hace balance posterior.</p><p>Inferencia<br>La incidencia permite discutir cómo revisar un plan cuando cambian sus restricciones.</p>
+            <p>Aplicación propuesta<br>Insertar una urgencia ficticia en una agenda y comparar el plan previo y el revisado.</p>
+            <p>Comprobación pendiente<br>El participante explica qué se desplazó y qué compromiso conserva horario.</p>
+            <details><summary>Fuente, pasaje y límites heredados</summary><pre>{
+  &quot;id&quot;: &quot;nick-bare-p1&quot;,
+  &quot;referente&quot;: &quot;nick-bare&quot;,
+  &quot;pieza&quot;: &quot;P1&quot;,
+  &quot;titulo&quot;: &quot;Prioridades ante una interrupción&quot;,
+  &quot;temas&quot;: [
+    &quot;agenda&quot;,
+    &quot;revision&quot;
+  ],
+  &quot;usos&quot;: [
+    &quot;ordenar&quot;,
+    &quot;ensenar&quot;,
+    &quot;workshop&quot;,
+    &quot;contenido&quot;,
+    &quot;ideas&quot;
+  ],
+  &quot;hecho_documentado&quot;: &quot;El relato plantea prioridades, atraviesa una llamada interrumpida por cuidados y hace balance posterior.&quot;,
+  &quot;inferencia_acotada&quot;: &quot;La incidencia permite discutir cómo revisar un plan cuando cambian sus restricciones.&quot;,
+  &quot;pasaje&quot;: {
+    &quot;fuente&quot;: &quot;nick-bare&quot;,
+    &quot;desde&quot;: 36,
+    &quot;hasta&quot;: 51,
+    &quot;sha256&quot;: &quot;75cce8009d15917755705210bf0a4de74469c7fd1fe6125c6bd185c9d8063687&quot;
+  },
+  &quot;localizacion_temporal_heredada&quot;: &quot;Captions aproximadamente 16:10–18:25 y 22:00–23:20&quot;,
+  &quot;propuesta_onia&quot;: {
+    &quot;aplicacion&quot;: &quot;Insertar una urgencia ficticia en una agenda y comparar el plan previo y el revisado.&quot;,
+    &quot;comprobacion_pendiente&quot;: &quot;El participante explica qué se desplazó y qué compromiso conserva horario.&quot;
+  },
+  &quot;nombre&quot;: &quot;Nick Bare&quot;,
+  &quot;ficha&quot;: {
+    &quot;id&quot;: &quot;nick-bare&quot;,
+    &quot;ruta&quot;: &quot;03-referentes/cerebros-profundos/c/nick-bare.md&quot;,
+    &quot;sha256&quot;: &quot;8b63fc20cfd0253bdd263086d695f8a0db6b0a9fc1c3e597a66b1c65ab1b3417&quot;
+  },
+  &quot;patron_en_ficha&quot;: {
+    &quot;fuente&quot;: &quot;nick-bare&quot;,
+    &quot;desde&quot;: 197,
+    &quot;hasta&quot;: 201,
+    &quot;sha256&quot;: &quot;aeeddd9ecbea0c046f9ffbc5bdecc8b8d17a9e016a8ad1addb6ccd1b5fd94f06&quot;
+  },
+  &quot;fuente_publica&quot;: {
+    &quot;id&quot;: &quot;P1&quot;,
+    &quot;url&quot;: &quot;https://www.youtube.com/watch?v=SVHKZkD1r_A&quot;,
+    &quot;titulo&quot;: &quot;DAY IN THE LIFE | CEO, Hybrid Athlete &amp; Dad&quot;,
+    &quot;tipo&quot;: &quot;video&quot;,
+    &quot;cobertura&quot;: &quot;Captions disponibles completos, 1011 cues; discurso principal 53.569–1661.360 s. Sin escucha.&quot;,
+    &quot;fuente_tiempos&quot;: &quot;../../../99-archivo/recuperacion-secundaria/SVHKZkD1r_A-subtitulos.json; nick-bare.md P1 §3; hueco final 20.487 s declarado.&quot;,
+    &quot;completa&quot;: true
+  },
+  &quot;aceptacion&quot;: {
+    &quot;fuente&quot;: &quot;cierre-aceptado&quot;,
+    &quot;commit_entrega&quot;: &quot;5332f2499864eb35993d189b075d0d812660f16c&quot;,
+    &quot;documento&quot;: {
+      &quot;id&quot;: &quot;cierre-aceptado&quot;,
+      &quot;ruta&quot;: &quot;04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md&quot;,
+      &quot;sha256&quot;: &quot;ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb&quot;
+    }
+  },
+  &quot;cobertura_heredada_referente&quot;: {
+    &quot;fuente&quot;: &quot;cobertura-c&quot;,
+    &quot;piezas_completas&quot;: 4,
+    &quot;alcance&quot;: &quot;Completitud documental según cobertura aceptada, con límites de modalidad y muestra.&quot;,
+    &quot;limites&quot;: [
+      &quot;P3/P4 complementarias y fuera del mínimo por poco desarrollo explicativo.&quot;,
+      &quot;Sin escucha/visión continua, literalidad dudosa en partes del ASR.&quot;,
+      &quot;Fechas exactas reposts P5/P6 pendientes; posible superposición visual breve sin resolver, guiones y estructuras diferenciados.&quot;,
+      &quot;Precio final/renovación/cancelación actuales no comprobados.&quot;
+    ],
+    &quot;dependencia_entre_piezas&quot;: &quot;Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia.&quot;
+  },
+  &quot;limites_adicionales_ficha&quot;: []
+}</pre></details></article><article class="card"><h3>Comparar sobre una misma entrada</h3><p>San Muñoz / Santiago Munoz / Horizontes IA · P1</p>
+            <p>Mantiene el material de partida, modifica instrucciones, presenta resultados y verbaliza una corrección.</p><p>Inferencia<br>La entrada común permite comparar cambios sin perder de vista los datos originales.</p>
+            <p>Aplicación propuesta<br>Pasar las mismas notas ficticias a una lista y a una agenda, y revisar su correspondencia.</p>
+            <p>Comprobación pendiente<br>Cada tarea y compromiso de la entrada aparece con sus datos conservados.</p>
+            <details><summary>Fuente, pasaje y límites heredados</summary><pre>{
+  &quot;id&quot;: &quot;san-munoz-p1&quot;,
+  &quot;referente&quot;: &quot;san-munoz&quot;,
+  &quot;pieza&quot;: &quot;P1&quot;,
+  &quot;titulo&quot;: &quot;Comparar sobre una misma entrada&quot;,
+  &quot;temas&quot;: [
+    &quot;comparacion&quot;,
+    &quot;revision&quot;
+  ],
+  &quot;usos&quot;: [
+    &quot;ordenar&quot;,
+    &quot;vender&quot;,
+    &quot;ensenar&quot;,
+    &quot;workshop&quot;,
+    &quot;contenido&quot;,
+    &quot;ideas&quot;
+  ],
+  &quot;hecho_documentado&quot;: &quot;Mantiene el material de partida, modifica instrucciones, presenta resultados y verbaliza una corrección.&quot;,
+  &quot;inferencia_acotada&quot;: &quot;La entrada común permite comparar cambios sin perder de vista los datos originales.&quot;,
+  &quot;pasaje&quot;: {
+    &quot;fuente&quot;: &quot;san-munoz&quot;,
+    &quot;desde&quot;: 60,
+    &quot;hasta&quot;: 66,
+    &quot;sha256&quot;: &quot;915b0e1f798a54b43b5167a646c818fcab618e15b008243192e1d5c001110ab0&quot;
+  },
+  &quot;localizacion_temporal_heredada&quot;: &quot;Captions 11:20–12:25 y 19:50–20:48&quot;,
+  &quot;propuesta_onia&quot;: {
+    &quot;aplicacion&quot;: &quot;Pasar las mismas notas ficticias a una lista y a una agenda, y revisar su correspondencia.&quot;,
+    &quot;comprobacion_pendiente&quot;: &quot;Cada tarea y compromiso de la entrada aparece con sus datos conservados.&quot;
+  },
+  &quot;nombre&quot;: &quot;San Muñoz / Santiago Munoz / Horizontes IA&quot;,
+  &quot;ficha&quot;: {
+    &quot;id&quot;: &quot;san-munoz&quot;,
+    &quot;ruta&quot;: &quot;03-referentes/cerebros-profundos/b/san-munoz.md&quot;,
+    &quot;sha256&quot;: &quot;893115bce9457ea762d7df7cbcfa7fcf155b2aa4989d870ecaeef91766087b0a&quot;
+  },
+  &quot;patron_en_ficha&quot;: {
+    &quot;fuente&quot;: &quot;san-munoz&quot;,
+    &quot;desde&quot;: 172,
+    &quot;hasta&quot;: 176,
+    &quot;sha256&quot;: &quot;a2cb8aedcbedfe4fb74c97468190643d14ab11cc56a24ac6cfb04c958a1cdf63&quot;
+  },
+  &quot;fuente_publica&quot;: {
+    &quot;id&quot;: &quot;P1&quot;,
+    &quot;url&quot;: &quot;https://www.youtube.com/watch?v=anrAaNvbp4M&quot;,
+    &quot;titulo&quot;: &quot;Convertí a Claude en mi editor de videos (nivel 1 vs nivel 3)&quot;,
+    &quot;tipo&quot;: &quot;video&quot;,
+    &quot;cobertura&quot;: &quot;Texto derivado completo y cues cotejados en rangos declarados;1115 cues. Captions con texto1,390–1268,305s;medio1266,433333s. Sobreextensión automática1,872s, no audio adicional.&quot;,
+    &quot;fuente_tiempos&quot;: &quot;../../../99-archivo/recuperacion-secundaria/anrAaNvbp4M-subtitulos.json&quot;,
+    &quot;completa&quot;: true
+  },
+  &quot;aceptacion&quot;: {
+    &quot;fuente&quot;: &quot;cierre-aceptado&quot;,
+    &quot;commit_entrega&quot;: &quot;493bbb78e447e8a456262f5d4f39470124dcd9af&quot;,
+    &quot;documento&quot;: {
+      &quot;id&quot;: &quot;cierre-aceptado&quot;,
+      &quot;ruta&quot;: &quot;04-operacion-agentes/evidencias/cerebros-profundos-20261108/CIERRE-RETOMAS.md&quot;,
+      &quot;sha256&quot;: &quot;ecb7724f132041df5ac349c0637fe48307e8692d3d870077c28e84bb52d2d8fb&quot;
+    }
+  },
+  &quot;cobertura_heredada_referente&quot;: {
+    &quot;fuente&quot;: &quot;cobertura-b&quot;,
+    &quot;piezas_completas&quot;: 4,
+    &quot;alcance&quot;: &quot;Completitud documental según cobertura aceptada, con límites de modalidad y muestra.&quot;,
+    &quot;limites&quot;: [],
+    &quot;dependencia_entre_piezas&quot;: &quot;Muestra seleccionada del referente, sin prueba de independencia causal ni de eficacia.&quot;
+  },
+  &quot;limites_adicionales_ficha&quot;: [
+    &quot;Tres piezas de edición y una de agendamiento. La selección temática limita generalización a otras tareas o clases.&quot;,
+    &quot;La lectura completa de texto derivado y cotejos temporales dejan escucha, reproducción continua y sincronía fina pendientes.&quot;,
+    &quot;Efectividad pedagógica, conversiones, fiabilidad técnica y cierre privado siguen sin medición. El salto de edición al workshop requiere adaptación y ensayo.&quot;
+  ]
+}</pre></details></article></div>
+    <p class="small">Catálogo documental del 9 de noviembre. Cada consulta valida fuentes y pasajes conservados.</p></section>
+<section id="guiones"><h2>Guiones reales · borradores</h2><div class="grid"><article class="card script">
+          <div class="eyebrow">T01 · guiones-tanda-20261111-v2 · Adaptación de G01: preparar una agenda comprobable antes de pedirla.</div>
+          <h3>Tu lista necesita tres datos</h3>
+          <span class="badge pending">Borrador · sin aprobación de publicación</span>
+          <span class="badge pending">Revisión técnica pendiente</span>
+          <p>Revisión editorial: Textos de Contenido aplicados; no implica aceptación de esta entrega.</p>
+          <p class="small">Bytes cotejados con la tanda local; no acredita aceptación ni publicación.</p>
+          <p class="mono">Origen: 05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v2/T01.md<br>SHA-256: baa35efa67091eb77a5f07a9838af4db19f1e0d4014251b6220e1eb7d8418611<br>Commit revisado: No verificado</p>
+          <details><summary>Leer guion y sus fuentes</summary><pre># T01 · Tu lista necesita tres datos
+
+Slot: venta. Audiencia: dueños de pequeños negocios de Santa Cruz que empiezan con IA.
+Estado: v2 con textos finales de Contenido aplicados; revisión independiente de esta entrega pendiente. Sin aprobación para grabar o publicar.
+
+## Idea
+
+Adaptación de G01: preparar una agenda comprobable antes de pedirla.
+
+## Apertura
+
+«Si tu lista de pendientes nunca termina, no le pidas la agenda a la IA todavía.»
+
+## Guion hablado
+
+Si tu lista de pendientes nunca termina, no le pidas la agenda a la IA todavía. Primero anotá tres datos: las tareas, cuánto te lleva cada una y los horarios que no se pueden mover. En este ejemplo de una tienda hay que revisar caja, confirmar pedidos, contar inventario y preparar entregas. Con esa ficha pedimos una tabla con inicio y fin. Antes de usarla, revisamos que estén las cuatro tareas y que respete los límites. Eso vamos a practicar en Claude de 0 a 100: tu negocio con IA. Son tres clases por Google Meet: jueves 12 y viernes 13 a las 21:00, y sábado 14 a las 14:00, hora de La Paz. El grupal sale 50 bolivianos. Comentá NEGOCIO y te paso la información.
+
+## Planos y apoyos
+
+No usar el logo de Claude/Anthropic como propio en ningún plano; el nombre solo en texto. 0–8 s: plano medio a cámara; 8–30 s: ficha escrita «Tareas / duración / límites», rotulada «Caso ficticio»; 30–43 s: dedo revisa los tres campos; cierre: cámara y placa de fechas/precio. Ninguna captura simulada de Claude.
+
+Duración orientativa: 65–85 s, a verificar con ensayo hablado; no cronometrada.
+
+## Copy
+
+Tres datos para preparar tu agenda: tareas, duración y límites. Ejemplo ficticio. Workshop Claude de 0 a 100: tu negocio con IA. Meet: jueves 12 y viernes 13 de noviembre de 2026, 21:00; sábado 14, 14:00 (America/La_Paz). Bs 50 grupal. Comentá NEGOCIO y te paso la información.
+
+## CTA único
+
+Comentá NEGOCIO y te paso la información.
+
+La repetición del mismo CTA en voz y copy es una sola acción. No añadir seguir, compartir, enlaces de pago ni mensajes automáticos.
+
+## Fuentes y separación de hechos
+
+Fuentes: G01, D10, KIT, CEREBRO; rutas y localizadores en [FUENTES.md](FUENTES.md). Los datos comerciales son decisiones documentadas; los ejemplos, el texto, los planos y las duraciones son propuestas OnIA. Ninguna cifra de ahorro, resultado de alumno, venta o conversión está acreditada por este guion. Las lecciones del cerebro orientan la presentación, sin imitar autores ni atribuirles este texto.
+
+## Criterio y próximo paso
+
+Bueno: apertura entregada en el cuerpo, ejemplo identificable, datos concordantes con la ficha, un CTA y lectura comprensible en la duración estimada. Falla si se confunde la ficción con una ejecución real, se añade una promesa o se cambia una condición comercial.
+
+Ensayar el ejercicio del kit y confirmar quién atiende NEGOCIO antes de habilitar la pieza. Después: revisión técnica distinta del commit, revisión editorial de Contenido hasta el 13 y visto bueno de Sergio antes de grabar. Sergio aprueba por separado antes de publicar.
+</pre></details>
+          <details><summary>Pendientes de esta versión</summary><pre>Ensayar el ejercicio del kit y confirmar quién atiende NEGOCIO antes de habilitar la pieza.</pre></details>
+          <details id="revision-6a4e3c7dcf3f0383741363d35f5e4c1ff124c4f37e291da686c39848140eb920"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details>
+        </article><article class="card script">
+          <div class="eyebrow">T02 · guiones-tanda-20261111-v2 · Mostrar criterio profesional mediante entrada, borrador y corrección, sin atribuir experiencia no documentada.</div>
+          <h3>Una prueba que se pueda revisar</h3>
+          <span class="badge pending">Borrador · sin aprobación de publicación</span>
+          <span class="badge pending">Revisión técnica pendiente</span>
+          <p>Revisión editorial: Textos de Contenido aplicados; no implica aceptación de esta entrega.</p>
+          <p class="small">Bytes cotejados con la tanda local; no acredita aceptación ni publicación.</p>
+          <p class="mono">Origen: 05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v2/T02.md<br>SHA-256: ca3aafc24f8d95e16ea6c55b3f34840e4dac33110c3a0243e742c9a027841fb1<br>Commit revisado: No verificado</p>
+          <details><summary>Leer guion y sus fuentes</summary><pre># T02 · Una prueba que se pueda revisar
+
+Slot: marca seria. Audiencia: dueños de pequeños negocios de Santa Cruz que empiezan con IA.
+Estado: v2 con textos finales de Contenido aplicados; revisión independiente de esta entrega pendiente. Sin aprobación para grabar o publicar.
+
+## Idea
+
+Mostrar criterio profesional mediante entrada, borrador y corrección, sin atribuir experiencia no documentada.
+
+## Apertura
+
+«¿Cómo revisás una respuesta de IA cuando parece bien escrita?»
+
+## Guion hablado
+
+¿Cómo revisás una respuesta de IA cuando parece bien escrita? Mirá este ejemplo. La ficha pide cuatro tareas: caja, pedidos, inventario y entregas. Este borrador sólo trae tres: falta inventario. Antes de usarlo, comparo la lista original con la respuesta, marco lo que falta y le pido que conserve las cuatro. Después vuelvo a revisar. Si ves la entrada, el borrador y la corrección, entendés qué cambió. Una respuesta prolija todavía hay que comprobarla. Guardá esta lista: comparar, marcar lo que falta, pedir el ajuste y volver a revisar.
+
+## Planos y apoyos
+
+No usar el logo de Claude/Anthropic como propio en ningún plano; el nombre solo en texto. 0–7 s: cámara; 7–20 s: dos tarjetas escritas, una con cuatro tareas y otra con tres; 20–35 s: marcar inventario ausente; cierre: las cuatro tareas juntas. Rótulo permanente «Ejemplo escrito ficticio; no salida real de IA».
+
+Duración orientativa: 40–55 s, a verificar con ensayo hablado; no cronometrada.
+
+## Copy
+
+Entrada, borrador y corrección: tres elementos para revisar lo que recibís. En este ejemplo escrito ficticio falta inventario. No representa una respuesta real de un modelo. Guardá esta lista: comparar, marcar lo que falta, pedir el ajuste y volver a revisar.
+
+## CTA único
+
+Guardá esta lista: comparar, marcar lo que falta, pedir el ajuste y volver a revisar.
+
+La repetición del mismo CTA en voz y copy es una sola acción. No añadir seguir, compartir, enlaces de pago ni mensajes automáticos.
+
+## Fuentes y separación de hechos
+
+Fuentes: CEREBRO, MATRIZ; rutas y localizadores en [FUENTES.md](FUENTES.md). Los datos comerciales son decisiones documentadas; los ejemplos, el texto, los planos y las duraciones son propuestas OnIA. Ninguna cifra de ahorro, resultado de alumno, venta o conversión está acreditada por este guion. Las lecciones del cerebro orientan la presentación, sin imitar autores ni atribuirles este texto.
+
+## Criterio y próximo paso
+
+Bueno: apertura entregada en el cuerpo, ejemplo identificable, datos concordantes con la ficha, un CTA y lectura comprensible en la duración estimada. Falla si se confunde la ficción con una ejecución real, se añade una promesa o se cambia una condición comercial.
+
+Contenido comprueba que la omisión se vea y que el tono sea de criterio profesional, sin convertirlo en un logro de OnIA. Después: revisión técnica distinta del commit, revisión editorial de Contenido hasta el 13 y visto bueno de Sergio antes de grabar. Sergio aprueba por separado antes de publicar.
+</pre></details>
+          <details><summary>Pendientes de esta versión</summary><pre>Contenido comprueba que la omisión se vea y que el tono sea de criterio profesional, sin convertirlo en un logro de OnIA.</pre></details>
+          <details id="revision-a50775ad13d3c052fc6e6c1f21f64ec22a28cb83ed6f8ef75319c3d8207528ab"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details>
+        </article><article class="card script">
+          <div class="eyebrow">T03 · guiones-tanda-20261111-v2 · Adaptación de G02: comprobar capacidad con una suma; evergreen seleccionado sin búsqueda de noticias nueva.</div>
+          <h3>Cuando la agenda no cabe</h3>
+          <span class="badge pending">Borrador · sin aprobación de publicación</span>
+          <span class="badge pending">Revisión técnica pendiente</span>
+          <p>Revisión editorial: Textos de Contenido aplicados; no implica aceptación de esta entrega.</p>
+          <p class="small">Bytes cotejados con la tanda local; no acredita aceptación ni publicación.</p>
+          <p class="mono">Origen: 05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v2/T03.md<br>SHA-256: a93347391115f1176cc370c44914180d44bc5746275bf438d8da073adaabc866<br>Commit revisado: No verificado</p>
+          <details><summary>Leer guion y sus fuentes</summary><pre># T03 · Cuando la agenda no cabe
+
+Slot: evergreen. Audiencia: dueños de pequeños negocios de Santa Cruz que empiezan con IA.
+Estado: v2 con textos finales de Contenido aplicados; revisión independiente de esta entrega pendiente. Sin aprobación para grabar o publicar.
+
+## Idea
+
+Adaptación de G02: comprobar capacidad con una suma; evergreen seleccionado sin búsqueda de noticias nueva.
+
+## Apertura
+
+«Una agenda puede verse perfecta y ser imposible.»
+
+## Guion hablado
+
+Una agenda puede verse perfecta y ser imposible. En este ejemplo hay dos horas: 120 minutos. Las tareas, el proveedor y la pausa ocupan 105. Quedan 15 libres. Pero inventario no eran 25 minutos: ahora son 50. Se suman 25 y el total pasa a 130. Te faltan 10 minutos. Antes de aceptar el plan, hay que decidir qué cambia. Podés escribirle: “Calculá el tiempo que falta y preguntame antes de mover o recortar tareas”. Después comprobá la suma y los horarios. Guardá este ejemplo para revisar tu próxima agenda.
+
+## Planos y apoyos
+
+No usar el logo de Claude/Anthropic como propio en ningún plano; el nombre solo en texto. 0–6 s: cámara y tarjeta «Caso ficticio»; 6–20 s: escribir 120 − 105 = 15; 20–34 s: inventario 25 → 50, total 130; 34–45 s: 130 − 120 = 10; cierre a cámara. Tarjetas propias, sin fingir error observado de Claude.
+
+Duración orientativa: 45–60 s, a verificar con ensayo hablado; no cronometrada.
+
+## Copy
+
+Evergreen, caso ficticio: 120 minutos disponibles y 130 necesarios. Faltan 10. El cambio de inventario añade 25 minutos a los 105 iniciales. Guardá este ejemplo para revisar tu próxima agenda.
+
+## CTA único
+
+Guardá este ejemplo para revisar tu próxima agenda.
+
+La repetición del mismo CTA en voz y copy es una sola acción. No añadir seguir, compartir, enlaces de pago ni mensajes automáticos.
+
+## Fuentes y separación de hechos
+
+Fuentes: G02, KIT, CEREBRO; rutas y localizadores en [FUENTES.md](FUENTES.md). Los datos comerciales son decisiones documentadas; los ejemplos, el texto, los planos y las duraciones son propuestas OnIA. Ninguna cifra de ahorro, resultado de alumno, venta o conversión está acreditada por este guion. Las lecciones del cerebro orientan la presentación, sin imitar autores ni atribuirles este texto.
+
+## Criterio y próximo paso
+
+Bueno: apertura entregada en el cuerpo, ejemplo identificable, datos concordantes con la ficha, un CTA y lectura comprensible en la duración estimada. Falla si se confunde la ficción con una ejecución real, se añade una promesa o se cambia una condición comercial.
+
+Contenido coteja la suma y Sergio ensaya la explicación con las tarjetas; no requiere una cuenta ni una respuesta real para mostrar el cálculo. Después: revisión técnica distinta del commit, revisión editorial de Contenido hasta el 13 y visto bueno de Sergio antes de grabar. Sergio aprueba por separado antes de publicar.
+</pre></details>
+          <details><summary>Pendientes de esta versión</summary><pre>Contenido coteja la suma y Sergio ensaya la explicación con las tarjetas; no requiere una cuenta ni una respuesta real para mostrar el cálculo.</pre></details>
+          <details id="revision-67b387984b9541479c41210b6b18a17f4647e3353df52d126cd7f196114fae20"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details>
+        </article><article class="card script">
+          <div class="eyebrow">T04 · guiones-tanda-20261111-v2 · Aclarar la oferta y el VIP sin urgencia inventada ni garantía de ventas.</div>
+          <h3>Qué incluye cada modalidad</h3>
+          <span class="badge pending">Borrador · sin aprobación de publicación</span>
+          <span class="badge pending">Revisión técnica pendiente</span>
+          <p>Revisión editorial: Textos de Contenido aplicados; no implica aceptación de esta entrega.</p>
+          <p class="small">Bytes cotejados con la tanda local; no acredita aceptación ni publicación.</p>
+          <p class="mono">Origen: 05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v2/T04.md<br>SHA-256: d5a291383ff63aa284f31c6bc2776290ffa4c764d1c470d04b94f4cf980c221a<br>Commit revisado: No verificado</p>
+          <details><summary>Leer guion y sus fuentes</summary><pre># T04 · Qué incluye cada modalidad
+
+Slot: segunda venta. Audiencia: dueños de pequeños negocios de Santa Cruz que empiezan con IA.
+Estado: v2 con textos finales de Contenido aplicados; revisión independiente de esta entrega pendiente. Sin aprobación para grabar o publicar.
+
+## Idea
+
+Aclarar la oferta y el VIP sin urgencia inventada ni garantía de ventas.
+
+## Apertura
+
+«El workshop tiene grupal y VIP, y no es lo mismo.»
+
+## Guion hablado
+
+El workshop tiene grupal y VIP, y no es lo mismo. Claude de 0 a 100: tu negocio con IA son tres clases por Google Meet, para ordenar y automatizar tu negocio con Claude. El grupal sale 50 bolivianos. El VIP sale 150 e incluye una llamada de 30 minutos; hay 5 cupos VIP. Las clases son el jueves 12 y el viernes 13 a las 21:00, y el sábado 14 a las 14:00, hora de La Paz. Vamos a practicar y revisar lo que hagas; no hay promesa de ingresos. Comentá NEGOCIO y te paso las condiciones de cada uno.
+
+## Planos y apoyos
+
+No usar el logo de Claude/Anthropic como propio en ningún plano; el nombre solo en texto. 0–6 s: pregunta a cámara; 6–25 s: placa «Grupal Bs 50 / VIP Bs 150 · llamada 30 min · 5 cupos»; 25–42 s: calendario con las tres fechas y zona; cierre cámara. No tachar cupos ni mostrar reservas ficticias.
+
+Duración orientativa: 50–65 s, a verificar con ensayo hablado; no cronometrada.
+
+## Copy
+
+Claude de 0 a 100: tu negocio con IA · Google Meet. Jueves 12 y viernes 13 de noviembre de 2026 a las 21:00; sábado 14 a las 14:00, America/La_Paz. Grupal Bs 50. VIP Bs 150: 5 cupos y llamada de 30 min. No se afirma disponibilidad restante. Comentá NEGOCIO y te paso las condiciones de cada uno.
+
+## CTA único
+
+Comentá NEGOCIO y te paso las condiciones de cada uno.
+
+La repetición del mismo CTA en voz y copy es una sola acción. No añadir seguir, compartir, enlaces de pago ni mensajes automáticos.
+
+## Fuentes y separación de hechos
+
+Fuentes: D10, OFERTA, CEREBRO; rutas y localizadores en [FUENTES.md](FUENTES.md). Los datos comerciales son decisiones documentadas; los ejemplos, el texto, los planos y las duraciones son propuestas OnIA. Ninguna cifra de ahorro, resultado de alumno, venta o conversión está acreditada por este guion. Las lecciones del cerebro orientan la presentación, sin imitar autores ni atribuirles este texto.
+
+## Criterio y próximo paso
+
+Bueno: apertura entregada en el cuerpo, ejemplo identificable, datos concordantes con la ficha, un CTA y lectura comprensible en la duración estimada. Falla si se confunde la ficción con una ejecución real, se añade una promesa o se cambia una condición comercial.
+
+Confirmar alcance exacto del VIP, agenda de las llamadas y cupos restantes antes de usar la oferta; no sumar ni inventar prestaciones. Después: revisión técnica distinta del commit, revisión editorial de Contenido hasta el 13 y visto bueno de Sergio antes de grabar. Sergio aprueba por separado antes de publicar.
+</pre></details>
+          <details><summary>Pendientes de esta versión</summary><pre>Confirmar alcance exacto del VIP, agenda de las llamadas y cupos restantes antes de usar la oferta; no sumar ni inventar prestaciones.</pre></details>
+          <details id="revision-2e04e90dc64bd4d761632c52749324b444f07f148cc27ce8938b54cf8136d28d"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details>
+        </article><article class="card script">
+          <div class="eyebrow">T05 · guiones-tanda-20261111-v2 · Probar comparación visual de dos ofertas ficticias; formato diferente y utilidad fuera de la agenda.</div>
+          <h3>¿Cuál mensaje permite decidir?</h3>
+          <span class="badge pending">Borrador · sin aprobación de publicación</span>
+          <span class="badge pending">Revisión técnica pendiente</span>
+          <p>Revisión editorial: Textos de Contenido aplicados; no implica aceptación de esta entrega.</p>
+          <p class="small">Bytes cotejados con la tanda local; no acredita aceptación ni publicación.</p>
+          <p class="mono">Origen: 05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v2/T05.md<br>SHA-256: 4f4ae3254bd9c24e3ae6a35a6abb19b0fa40d0b5fb0e9e0d8d0326056135c7c3<br>Commit revisado: No verificado</p>
+          <details><summary>Leer guion y sus fuentes</summary><pre># T05 · ¿Cuál mensaje permite decidir?
+
+Slot: reel de prueba. Audiencia: dueños de pequeños negocios de Santa Cruz que empiezan con IA.
+Estado: tanda v2, texto base conservado con cierre de Contenido aplicado; revisión técnica independiente y editorial de esta entrega pendientes. Sin aprobación para grabar o publicar.
+
+## Idea
+
+Probar comparación visual de dos ofertas ficticias; formato diferente y utilidad fuera de la agenda.
+
+## Apertura
+
+«¿Cuál de estos dos mensajes te deja menos dudas?»
+
+## Guion hablado
+
+¿Cuál de estos dos mensajes te deja menos dudas? A: “Tenemos cosas ricas, consultá”. B: “Pan integral por encargo. Retiro el sábado por la mañana. Consultá precio y disponibilidad”. Es una panadería. El segundo mensaje nombra el producto y cuándo se retira; todavía falta confirmar precio y cantidad. Antes de usar un texto de IA, comparalo con la información real del negocio. Comentá A o B según cuál te deja más claro qué se ofrece.
+
+## Planos y apoyos
+
+0–5 s: cámara señala dos tarjetas; 5–20 s: leer A y B con rótulo «Panadería ficticia»; 20–30 s: subrayar producto/retiro y marcar «Faltan precio y cantidad»; cierre: cámara. No inventar precios, stock ni pedido recibido.
+
+Duración orientativa: 30–45 s, a verificar con ensayo hablado; no cronometrada.
+
+## Copy
+
+Prueba de formato A/B con una panadería ficticia. Es una comparación de claridad, sin medición de conversión. El ejemplo B aún necesita precio y cantidad. Comentá A o B según cuál te deja más claro qué se ofrece.
+
+## CTA único
+
+Comentá A o B según cuál te deja más claro qué se ofrece.
+
+La repetición del mismo CTA en voz y copy es una sola acción. No añadir seguir, compartir, enlaces de pago ni mensajes automáticos.
+
+## Fuentes y separación de hechos
+
+Fuentes: CEREBRO, MATRIZ; rutas y localizadores en [FUENTES.md](FUENTES.md). Los datos comerciales son decisiones documentadas; los ejemplos, el texto, los planos y las duraciones son propuestas OnIA. Ninguna cifra de ahorro, resultado de alumno, venta o conversión está acreditada por este guion. Las lecciones del cerebro orientan la presentación, sin imitar autores ni atribuirles este texto.
+
+## Criterio y próximo paso
+
+Bueno: apertura entregada en el cuerpo, ejemplo identificable, datos concordantes con la ficha, un CTA y lectura comprensible en la duración estimada. Falla si se confunde la ficción con una ejecución real, se añade una promesa o se cambia una condición comercial.
+
+Contenido revisa legibilidad y claridad; sólo después de publicación autorizada medir respuestas únicas A/B en una ventana definida, sin llamarlas ventas. Después: revisión técnica distinta del commit, revisión editorial de Contenido hasta el 13 y visto bueno de Sergio antes de grabar. Sergio aprueba por separado antes de publicar.
+</pre></details>
+          <details><summary>Pendientes de esta versión</summary><pre>Contenido revisa legibilidad y claridad; sólo después de publicación autorizada medir respuestas únicas A/B en una ventana definida, sin llamarlas ventas.</pre></details>
+          <details id="revision-f63c6486ad1bfcc53b11c0d013270f63543715377f96bfd7b8a3a9fe530b6f0d"><summary>Revisar resultado · 0 observaciones</summary>
+    <p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p></details>
+        </article></div></section>
+<section id="fuentes"><h2>Fuentes públicas · 0 páginas leídas</h2><div class="grid"><p class="empty">Sin fuentes leídas en este recibo. Revisá los fallos; no se presume actualidad ni se inventa un reemplazo.</p></div>
+<details><summary>Consultas y fallos por fuente</summary><ul><li>Sin consultas registradas.</li></ul></details></section>
+<section id="ideas"><h2>Ideas que originaron los guiones</h2><div class="grid"><p class="empty">Sin ideas verificables en este recibo.</p></div></section>
+<section id="pendientes"><h2>Estado derivado y próximos pasos</h2><p>La autoridad sigue en los JSON canónicos del harness. “Aceptado” describe el alcance técnico de cada entrega; no concede permiso para publicar estos guiones.</p>
+<div class="grid tasks"><p class="empty">Sin tareas verificadas.</p></div></section>
+<footer><p>Tanda local cotejada. No se consultaron fuentes actuales ni se mutó el harness. Revisión técnica/editorial y autorización de publicación se cotejan por separado.</p><p class="mono">Commit de las entradas del repo: 7012ca493bfd059a833b8a6cdd77b080b38765d8</p>
+<p class="small">Las observaciones locales quedan pendientes para revisión de Sergio y la coordinadora. Los enlaces oficiales se abren por acción de quien consulta. Los recibos preservan metadatos y resúmenes propios.</p></footer></main></body></html>

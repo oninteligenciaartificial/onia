@@ -1,0 +1,47 @@
+{
+  "fecha": "2026-11-11T17:27:25.697421+00:00",
+  "actor": "coordinadora",
+  "base": "613a152",
+  "alcance": "Ajustes después de terminar la ejecutora; pruebas de árbol con cambios, ancladas por hashes de archivo.",
+  "pruebas": [
+    {
+      "comando": "python3 -B \"$P/pruebas.py\"",
+      "rc": 0,
+      "salida_resumida": "Ran 22 tests in 0.529s; OK"
+    },
+    {
+      "comando": "python3 -B -m unittest discover -s \"$P\" -p test_*.py -v",
+      "rc": 0,
+      "salida_resumida": "Ran 33 tests in 3.432s; OK"
+    },
+    {
+      "comando": "node \"$P/visual-diseno.cjs\" \"$P/evidencia/diseno-20261111/host-final-02\"",
+      "rc": 0,
+      "salida": {
+        "resultado": "OK",
+        "capturas": 3,
+        "pasos": 6
+      }
+    },
+    {
+      "comando": "node \"$P/visual-operacion.cjs\" \"$P/evidencia/diseno-20261111/host-operacion-final-01\"",
+      "rc": 0,
+      "salida": {
+        "resultado": "OK",
+        "casos": 3
+      }
+    }
+  ],
+  "sha256_archivos_probados": {
+    "panel.py": "a66d7e0c5e5dd83f1f0b5f927715ee83f004c98056d2ece69d8f028fb31fb281",
+    "diseno.py": "c1ddf8cde7d0f02237fde915fab32ac36c0f48c29987879fbc987b94f1e2afae",
+    "diseno.css": "5da61f84f3d9546ec9077687ff023ba8092a4f4c551e9c8d824439439b4a9423",
+    "servidor.py": "0367ad04a15802d24a0885d3a82f72bf943cca09c621f322775d3e9fc2d3f148",
+    "operacion.py": "11549031ed84222bc7c9368452d30471535b8ed6d19d3cab3273b5211b987de0",
+    "tanda.py": "e119cba47134fa84c4eb4f4c2280842c2d5b04f52239456abd7cf412217cdcd8",
+    "lector.py": "4fa98fe4e9b2b9eeb5014a7b5013513270234dfc55af0f2596eab89c4e4ec464",
+    "visual-diseno.cjs": "a954fdbb7c7c1c23adc1ce586f5aa72dd6a59f391a9081a991707eb79889cb8e",
+    "visual-operacion.cjs": "088c3522a36c2c9ff4d9716dccb21ca72e2f10ba76bfc4ab299a687fcf977bc8"
+  },
+  "limite": "Sin aceptación ni integración del producto; requiere revisión independiente y revisión de Sergio."
+}
