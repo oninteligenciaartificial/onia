@@ -39,6 +39,14 @@ def fixture(request):
     sources['items'] = [s for s in sources['items'] if s['tipo'] == 'local']
     for row in sources['items']:
         row['consultada'] = request['creado']
+        if row['id'] == 'D11':
+            # Conciliación explícita del11nov: sólo se añadieron entrega18h y
+            # número verificado. No cambia oferta ni guiones ficticios.
+            current = comun.lector.sha((motor.BASE / row['ruta']).read_bytes())
+            allowed = {row['sha256'], '22923dab6339e9ebbdc871ed713c8fdb412918688165a18cd68a5677bab3754c'}
+            assert current in allowed, 'Decisiones nuevas: conciliar fixture, no rehashear a ciegas'
+            row['sha256'] = current
+
     row = draft['guiones'][2]
     row.update(slot='evergreen', motivo_evergreen='ENSAYO SINTÉTICO: no validar hechos con una fixture.',
                fuentes=['D11', 'CEREBRO'], tipo_evidencia='ejemplo_ficticio', apertura='ENSAYO SINTÉTICO para revisar una agenda.',
@@ -419,6 +427,7 @@ class AdapterTests(unittest.TestCase):
         adapter = LocalHarness.__new__(LocalHarness)
         adapter.base, adapter.operation = Path('/tmp/coordinador-no-usado'), Path('/tmp/operacion-no-usada')
         adapter.sessions = types.SimpleNamespace(launch=Mock(), close=Mock(), collect_review=Mock())
+        adapter.preflight = Mock(return_value={'sintetico': True, 'permitido': True})
         request = motor.make_request(DAY, [], STAMP, True)
         _, actor, route = adapter.scope(request)
         before = {'exists': True, 'revision': 7, 'binding': 'SCOPE', 'goal': adapter.goal(request),
@@ -455,11 +464,11 @@ class AdapterTests(unittest.TestCase):
         self.assertFalse(adapter.harness.prepare.call_args.kwargs['shared'])
         adapter.trabajo.assign.assert_called_once_with(adapter.base, ident, 1, actor, [route])
 
-    def test_programacion_deshabilitada_y_hora_pendiente(self):
+    def test_programacion_deshabilitada_con_inicio17(self):
         import programacion
         config = comun.read_json(comun.HERE/'config.ejemplo.json')
         self.assertFalse(programacion.plan(config)['habilitada'])
-        self.assertIsNone(programacion.plan(config)['hora_tanda'])
+        self.assertEqual(programacion.plan(config)['hora_tanda'], '17:00')
         config['habilitada'] = True
         with self.assertRaises(ValueError):
             programacion.plan(config)

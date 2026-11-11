@@ -1,0 +1,115 @@
+{
+  "rotulo": "DATOS FICTICIOS; SOBRES CANDIDATOS SIN CAPTURA REAL DE META",
+  "reloj_epoch": 1794430800,
+  "recorridos": [
+    {
+      "canal": "instagram_comentario",
+      "payload": {
+        "object": "instagram",
+        "entry": [
+          {
+            "id": "10001",
+            "time": 1794430800,
+            "changes": [
+              {
+                "field": "comments",
+                "value": {
+                  "from": {
+                    "id": "20001"
+                  },
+                  "id": "30001",
+                  "text": "NEGOCIO",
+                  "media": {
+                    "id": "40001"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "canal": "instagram_dm",
+      "payload": {
+        "object": "instagram",
+        "entry": [
+          {
+            "id": "10001",
+            "time": 1794430800,
+            "messaging": [
+              {
+                "sender": {
+                  "id": "20001"
+                },
+                "recipient": {
+                  "id": "10001"
+                },
+                "timestamp": 1794430800000,
+                "message": {
+                  "mid": "m.FICTICIO_instagram",
+                  "text": "NEGOCIO"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "canal": "facebook_comentario",
+      "payload": {
+        "object": "page",
+        "entry": [
+          {
+            "id": "10002",
+            "time": 1794430800,
+            "changes": [
+              {
+                "field": "feed",
+                "value": {
+                  "from": {
+                    "id": "20002"
+                  },
+                  "comment_id": "40002_30002",
+                  "post_id": "10002_40002",
+                  "item": "comment",
+                  "verb": "add",
+                  "message": "NEGOCIO",
+                  "created_time": 1794430800
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "canal": "facebook_dm",
+      "payload": {
+        "object": "page",
+        "entry": [
+          {
+            "id": "10002",
+            "time": 1794430800,
+            "messaging": [
+              {
+                "sender": {
+                  "id": "20002"
+                },
+                "recipient": {
+                  "id": "10002"
+                },
+                "timestamp": 1794430800000,
+                "message": {
+                  "mid": "m.FICTICIO_facebook",
+                  "text": "NEGOCIO"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

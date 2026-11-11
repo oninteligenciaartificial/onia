@@ -38,10 +38,10 @@ El pedido también se persiste antes de escribir su archivo derivado. Un corte e
 
 ## Ensayo real por la coordinadora, sin recurrencia
 
-**No ejecutado en esta entrega.** La ejecutora no lanzó Codex ni hijos. El comando siguiente es para la coordinadora, después de cerrar esta sesión, obtener la revisión independiente de su commit y resolver reservas de rutas. No autoriza integrar master ni sustituye el sí aplicable a cada lanzamiento. Si las reservas o el STOP impiden el recorrido, conservar el pendiente; no eludirlos.
+**En esta retoma no se lanzó ninguna sesión de modelo ni hijos.** La continuidad recibida y COORDINACION-v4 documentan el piloto previo de la coordinadora y el dictamen del commit `9a4639f`; esa evidencia se conserva y no se atribuye a esta retoma. El comando siguiente es para la coordinadora, después de cerrar esta sesión, obtener la revisión independiente de su commit y resolver reservas de rutas. No autoriza integrar master ni sustituye el sí aplicable a cada lanzamiento. Si las reservas o el STOP impiden el recorrido, conservar el pendiente; no eludirlos.
 
 1. Conservar un checkout del commit revisado de esta rama para ejecutar el motor y leer sus contratos. El harness crea escritores desde origin/master: por eso el briefing pasa rutas absolutas de sólo lectura al prompt/validador/ejemplos conservados. No necesita integrar este código en master ni copiarlo al registro canónico. Mantener ese checkout hasta recoger la revisión de la tanda.
-2. Comprobar proveedor ChatGPT incluido realmente disponible, cuota actual, mismo `~/operacion`, reservas exclusivas y decisiones vigentes en el coordinador. No comprar ni llamar APIs pagadas. La muestra de cuota del encargo no demuestra disponibilidad futura. `--proveedor-disponible` declara esa comprobación, no la realiza ni autentica a Sergio.
+2. Comprobar proveedor ChatGPT incluido realmente disponible, cuota actual, mismo `~/operacion`, reservas exclusivas y decisiones vigentes en el coordinador. No comprar ni llamar APIs pagadas. La muestra de cuota del encargo no demuestra disponibilidad futura. `--proveedor-disponible` declara el permiso de uso incluido; no acredita disponibilidad ni autentica a Sergio. Cada `lanzar`/`revisar` realiza además el preflight vivo descrito abajo, aunque la bandera esté presente.
 3. Crear la entrada con el motor sin adaptador; inspeccionar en privado `pedidos/ID.json`, su SHA, fecha real y `panel.json`. Un fallo de fuente o contexto no se resuelve reutilizando la fixture. Elegir una noticia editorialmente pertinente o un evergreen explícito.
 4. Desde la sesión coordinadora, con el ID del día realmente creado (ejemplo concreto del 11-nov):
 
@@ -85,13 +85,17 @@ Una corrección usa `Engine.accept_result(..., corrections=...)` bajo el lock y 
 
 ## Programación y reversión
 
-La hora de tanda sigue **null**, pendiente de Sergio. Zona America/La_Paz. Consulta horaria sólo propuesta; no se restauran las 07:00. `programacion.py --tick` también admite una configuración habilitada con hora, constancia de autorización y vigencia explícita del modelo. La configuración entregada permanece deshabilitada y las unidades de ejemplo no están instaladas. Para probar UN disparo temporal determinista sin modelo:
+La continuidad vigente fija **inicio a las 17:00 y entrega objetivo a las 18:00 America/La_Paz, del 12 al 14 de noviembre 2026**. `config.ejemplo.json` sigue con `habilitada:false`, `redaccion_autorizada:false` y autorización null. No se restauran las 07:00. La hora las 18:00 es un objetivo, no una promesa de terminar si faltan cuota, revisión o entradas.
+
+`programacion.py --tick` puede iniciar modelos desde las17:00 de esas tres fechas; las18:00 son objetivo de entrega y una demora no cancela la tanda, con constancia de autorización, vigencia y preflight positivo. El corte máximo exclusivo es **2026-11-15T00:00:00-04:00**, fin del 14; puede adelantarse, nunca ampliarse mediante configuración. No renueva una suscripción ni presume la disponibilidad hasta esa fecha. Antes del inicio y después del corte de suscripción se impiden nuevos modelos, pero con la autorización existente aún se pueden cerrar/recoger trabajos ya iniciados; una falta de cuota no bloquea recuperar su resultado. Toda activación sigue a cargo de la coordinadora después de revisión.
+
+Para UN disparo temporal determinista sin modelo ni instalación:
 
 ```bash
 python3 -B "$F/programacion.py" --ensayo-disparo /tmp/onia-disparo-unico-local
 ```
 
-Termina al finalizar el tick, sin daemon ni recurrencia. Activación futura requiere hora confirmada, proveedor, acceso y revisión, ensayo completo y sí aplicable; las plantillas de scheduler ya están preparadas en `programacion/`, con un único directorio privado y el journal conservado. Esta entrega no instala ni activa esas unidades.
+Termina al finalizar el tick. No instala servicios ni crea un daemon. La consulta ligera horaria sigue siendo parte del plan, no una rutina activada por estos archivos.
 
 Reversión actual no destructiva: dejar de invocar el tick y detener el servidor local. Conservar SQLite, pedidos, v3 y revisiones; respaldar el directorio privado con el motor parado y restaurar **todo** el conjunto 0700/0600, nunca sólo un JSON o un índice nuevo. Antes de retomar, reconciliar tareas/SID/commits en el único harness. No borrar medios ni originales, ni relanzar un envío incierto. Para volver al panel anterior, iniciarlo sin `--flujo`; conserva las observaciones en sus datos privados. No hay servicio instalado que desactivar.
 
@@ -100,12 +104,30 @@ Reversión actual no destructiva: dejar de invocar el tick y detener el servidor
 
 ### Controlador por horario preparado por la coordinadora
 
-Las plantillas `programacion/onia-flujo-diario.service` y `.timer` ejecutan un tick por minuto. El tick consulta novedades como máximo una vez por hora y conserva las candidatas antes de la hora editorial. A partir de `hora_tanda` (La Paz), crea como máximo una tanda del día y avanza un paso permitido del harness por invocación. Después de la revisión técnica se detiene para revisión editorial. Un resultado incierto se conserva para conciliación; no se reintenta el lanzamiento con otro ID.
+Las plantillas `programacion/onia-flujo-diario.service` y `.timer` permanecen sin instalar. El timer propone ticks por minuto **del12 al15**. Del12 al14, desde17:00 puede avanzar redacción/revisión incluso si se atrasó; el15 sólo concilia resultados, sin modelos nuevos. La consulta de fuentes conserva su máximo de una vez por hora. Las invocaciones manuales anteriores a las 17:00 pueden recibir candidatas sin congelar la tanda. Cada tick avanza como máximo un efecto del harness para un ID, conservando tres cupos globales y cero hijos.
 
-La configuración activa debe estar fuera de Git, ser propiedad del usuario y tener modo 0600. Requiere hora y constancia de la autorización de Sergio. Para redactar requiere además `redaccion_autorizada: true` y `modelo_hasta` con zona horaria; esa fecha no acredita ni compra disponibilidad de Codex. Al vencer queda pendiente y no lanza un proveedor sustituto. Las sesiones iniciadas que crucen el día o la vigencia pueden requerir conciliación explícita; no se acredita funcionamiento ilimitado.
+La configuración activa debe estar fuera de Git, ser del usuario y tener modo 0600. La migración es explícita: copiar los campos del ejemplo nuevo a una configuración privada revisada, manteniendo el archivo anterior; configuraciones antiguas sin fecha/entrega se rechazan. La coordinadora añade la constancia del sí aplicable y revisa el commit antes de instalar. No se modifica automáticamente una configuración ni un servicio del host.
 
-Despliegue preparado, pendiente de autorización: conservar un checkout/export del commit revisado en `~/operacion/fabrica-diaria/codigo`; copiar la configuración a `~/operacion/fabrica-diaria/config.json` y los datos a su única raíz privada; comprobar permisos, acceso al harness y disponibilidad de ChatGPT; instalar las dos unidades como servicio del usuario y habilitar el timer. No se hizo ninguno de esos cambios en esta entrega. Una configuración `habilitada: false` no crea datos ni consulta la red al ejecutar `--tick`. La pausa no destructiva consiste en detener el timer y conservar código, journal, pedidos y resultados.
+Conservar un checkout del commit revisado en `~/operacion/fabrica-diaria/codigo` y el checkout canónico del harness. Antes de instalar o activar, la coordinadora ejecuta `preflight.py` en el host y coteja su salida saneada; después ajusta las rutas de las unidades y el archivo privado según lo revisado. Esta ejecutora no instala ni activa esas unidades. Al terminar el 14, el timer ya no tiene horarios nuevos; si queda una sesión por recoger, se usa un tick manual con el mismo directorio/configuración y coordinador, sin ampliar `modelo_hasta`. Pausar el timer conserva journal, pedidos, originales y resultados. Detener el disparador no cancela supervisoras del harness.
 
-No se presentan pasos simulados como un servicio instalado: para acreditar operación diaria faltan el sí sobre hora/activación, un disparo real del timer y la comprobación de retoma sin duplicar.
+No se acredita un disparo de systemd ni servicio activo por haber validado el calendario. La continuidad informa un piloto previo correcto; no se repitió aquí ni se usó su cuota como medición actual.
 
 La unidad es sólo el disparador; las sesiones quedan administradas por el registro del harness. Por eso declara `KillMode=process`: al terminar el disparador se conserva la supervisora que lanzó. Esta elección separa explícitamente ambos ciclos de vida; pausar el timer frena nuevas invocaciones, mientras que interrumpir una sesión exige el comando del harness. La [documentación primaria de systemd.kill](https://www.freedesktop.org/software/systemd/man/latest/systemd.kill.html) describe el comportamiento predeterminado de grupo y esta diferencia. La plantilla también declara el PATH comprobado del Codex instalado. La supervivencia real de una supervisora al finalizar el servicio debe verificarse en la activación autorizada; todavía no se acredita por validar la plantilla.
+
+
+### Preflight vivo del uso incluido
+
+`preflight.py` adapta el RPC local ya utilizado por la coordinadora, sin depender del archivo temporal ni copiar credenciales. Abre un proceso efímero `codex app-server --listen stdio://`, hace initialize y sólo dos lecturas: `account/read` sin refresh proactivo y `account/rateLimits/read`. No crea thread/turn, no envía prompts a un modelo, no inicia login, no consume resets, no compra créditos y no envía mensajes. Protocolo cotejado con [OpenAI Docs: App Server](https://learn.chatgpt.com/docs/app-server) y schemas del CLI recibido en `/tmp/onia-app-schema`. Esas rutas temporales son referencias de investigación, no dependencias de ejecución.
+
+Antes de **cada** escritora o revisora, `LocalHarness.invoke` consulta de nuevo: cuenta ChatGPT con plan incluido reconocido, `ordinaryUsageAllowed:true`, bucket global Codex y todas sus ventanas disponibles válidas y no agotadas. El permiso backend ausente/null se considera desconocido; no se infiere recuperación por porcentajes o resets. Un 100%, un bloqueo backend, un reset pasado, datos faltantes/tipos inválidos, fallo RPC o timeout impiden el lanzamiento. Porcentajes95/99 válidos se admiten: no vuelve la reserva del 90 %. Que el preflight sea positivo no garantiza capacidad futura del modelo ni entrega a las 18:00.
+
+El plazo total de lectura es de 20 s (no 20 s por llamada), más hasta 2 s de cierre; también limita bytes/notificaciones y líneas incompletas. Sólo usa comandos y métodos fijos, sin shell libre. Las variables de API se retiran para esta lectura, y el harness conserva auth ChatGPT con cero hijos. La salida/journal guardan sólo fuente, horas reales de la consulta, plan, porcentajes/ventanas y resultado, nunca email, IDs de cuenta, tokens, saldo, payload completo ni stderr. No hay caché de autorización: un recibo anterior jamás autoriza un lanzamiento nuevo. Un fallo previo al despacho deja la intención preparada para volver a **leer**; una caída durante un despacho real conserva la conciliación estricta anterior.
+
+`cerrar` y `recoger` no requieren preflight ni cuota, aunque haya vencido el plazo del modelo; siguen exigiendo el ID/alcance/revisión y la autorización aplicables. El plan activo permite escoger tareas pendientes del 12–14 después del corte, priorizando revisiones ya iniciadas. No crea otra tarea ni renueva permisos para modelos.
+
+```bash
+python3 -B "$F/preflight.py"
+python3 -B "$F/programacion.py"
+```
+
+Código0 del preflight: lectura positiva de esa invocación. Código2: pendiente, sin habilitar un modelo. En este sandbox el App Server no pudo arrancar por filesystem de sólo lectura (rc1, sin stdout); el lector original también falló aquí. Se conserva el intento saneado en `evidencia/cuota-programacion-v5/`. **Cuota y login en vivo quedan desconocidos en esta retoma**; la coordinadora debe repetirlo en el host autorizado. No se ampliaron permisos ni se maquilló una muestra histórica como vigente.

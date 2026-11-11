@@ -8,6 +8,7 @@ from zoneinfo import ZoneInfo
 
 import panel
 import diario
+import vistas_cerebro
 
 ROOT = Path(__file__).resolve().parent
 ICONS = ('home', 'building-factory-2', 'calendar', 'brain', 'movie', 'file-description',
@@ -44,7 +45,7 @@ def styles():
             css += f'body:has({condition}) .inspector-main{{display:none}}\n'
             css += f'body:has({condition}) .inspector-main[data-for="{key}"]{{display:block}}\n'
             css += f'body:has({condition}) #detalle-{key}{{display:block}}\n'
-    for section in ('hoy', 'calendario', 'cerebro', 'montaje', 'guiones', 'fuentes', 'ideas', 'pendientes'):
+    for section in ('hoy', 'calendario', 'cerebro', 'montaje', 'guiones', 'fuentes', 'ideas', 'pendientes', 'correcciones', 'estrategias', 'capacidades'):
         css += f'body:has(#{section}:target) .nav-fabricas{{background:transparent;font-weight:400}}\n'
         css += f'body:has(#{section}:target) .nav-{section}{{background:#f6e9cf;font-weight:700}}\n'
     return css
@@ -161,7 +162,8 @@ def script_cards(snapshot, operation, session):
 
 
 def brain_view(operation, session):
-    content = '<p class="small">Consultá los patrones del cerebro editorial por tema y uso.</p>'
+    content = vistas_cerebro.knowledge(operation)
+    content += '<h2 class="section-gap">Referentes y patrones</h2><p class="small">Consultá los patrones del cerebro editorial por tema y uso.</p>'
     if session:
         uses = ('ordenar', 'vender', 'ensenar', 'contenido', 'workshop', 'ideas', 'guiones', 'automatizar')
         options = '<option value="">Todos los usos</option>' + ''.join(f'<option>{use}</option>' for use in uses)
@@ -195,7 +197,9 @@ def render(snapshot, operation, session=None):
     months = ('ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic')
     date_label = f'{weekdays[generated.weekday()]} {generated.day} {months[generated.month - 1]} {generated.year}'
     nav = [('hoy', 'home', 'Hoy'), ('fabricas', 'building-factory-2', 'Fábricas'), ('calendario', 'calendar', 'Calendario'),
-           ('cerebro', 'brain', 'Cerebro'), ('montaje', 'movie', 'Sala de montaje')]
+           ('cerebro', 'brain', 'Cerebro'), ('montaje', 'movie', 'Sala de montaje'),
+           ('estrategias', 'brain', 'Estrategias'), ('capacidades', 'bolt', 'Anuncios y canales'),
+           ('correcciones', 'file-description', 'Correcciones')]
     navigation = ''.join(f'<a href="#{key}" class="nav-{key}">{icon(symbol)}<span>{label}</span></a>' for key, symbol, label in nav)
     errors = ''.join(f'<p class="notice" role="alert">{e(message)}</p>' for message in operation['errores'])
     saved = '<p class="status-message" role="status">Observación guardada · pendiente de revisión.</p>' if operation.get('guardado') else ''
@@ -217,7 +221,7 @@ def render(snapshot, operation, session=None):
     script_hash = session.get('daily_script_hash') if session else None
     script_policy = ("; script-src 'sha256-" + script_hash + "'; connect-src 'self'") if script_hash else ''
     daily_script = '<script>' + diario.script() + '</script>' if script_hash else ''
-    return f'''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    html = f'''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="same-origin"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; font-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action '{'self' if session else 'none'}'{script_policy}">
     <title>ONIA · Fábricas y revisión</title><style>{styles()}</style></head><body>
     <header class="topbar"><a class="brand" href="#fabricas"><strong>ONIA</strong><span class="slash">/</span><span>Fábricas</span></a>
@@ -239,6 +243,9 @@ def render(snapshot, operation, session=None):
     <article class="info-card"><h3>Fecha editorial de la tanda</h3><p>{e(operation['tanda']['fecha_tanda'] if operation.get('tanda') else 'Pendiente')}</p>
     {historical}<a class="secondary-link" href="#guiones">Revisar los cinco resultados</a></article></section>
     <section class="screen" id="cerebro"><h1>Cerebro editorial</h1><p class="subtitle">Patrones, pasajes y criterios recuperables</p>{brain_view(operation, session)}</section>
+    <section class="screen" id="estrategias"><h1>Estrategias</h1><p class="subtitle">Estrategia actual y propuestas futuras</p>{vistas_cerebro.strategies(operation, session)}</section>
+    <section class="screen" id="capacidades"><h1>Anuncios, VSL, IA y canales</h1>{vistas_cerebro.capabilities(operation)}</section>
+    <section class="screen" id="correcciones"><h1>Correcciones y versiones</h1>{vistas_cerebro.corrections(operation, session)}</section>
     <section class="screen" id="montaje"><h1>Sala de montaje</h1><p class="subtitle">Preparación y requisitos de edición</p>
     <article class="info-card"><h3>Recorrido audiovisual pendiente</h3><p>Falta conectar la grabación y los resultados del editor a esta vista.</p>
     <p>La revisión de audio, encuadre y variantes horizontal/vertical corresponde a los siguientes pasos.</p>
@@ -253,3 +260,4 @@ def render(snapshot, operation, session=None):
     <details class="delivery-summary"><summary>Procedencia de esta consulta</summary><p class="small">Generada {e(operation['generado'])} · America/La_Paz.</p>
     <p class="small">Resúmenes de productores. El harness conserva la autoridad de las tareas.</p><p class="mono">Commit de las entradas {e(snapshot.get('commit_entradas_repo', 'Sin anclar'))}</p>
     <p class="small">{e(snapshot.get('alcance', 'Consulta local'))}</p>{calendar_source}{licenses}</details></main></div>{daily_script}</body></html>'''
+    return vistas_cerebro.section_actions(html, operation, session)

@@ -1,0 +1,21 @@
+# Plantilla deshabilitada. Coordinadora adapta rutas y credenciales antes de instalar.
+[Unit]
+Description=Panel privado ONIA
+After=network.target
+
+[Service]
+Type=simple
+User=onia-codex-worker
+WorkingDirectory=/srv/onia
+ExecStart=/usr/bin/python3 -B _investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/servidor.py --datos /var/lib/onia-panel --acceso /etc/onia-panel/acceso.json --puerto 8765
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/var/lib/onia-panel
+
+[Install]
+WantedBy=multi-user.target
