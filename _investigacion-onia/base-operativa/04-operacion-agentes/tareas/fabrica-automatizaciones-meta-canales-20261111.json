@@ -1,0 +1,64 @@
+{
+  "schema": 2,
+  "id": "fabrica-automatizaciones-meta-canales-20261111",
+  "revision": 2,
+  "compartible": true,
+  "objetivo": "Preparar adaptadores verificables para comentarios/DM de Instagram y Facebook y conectarlos mediante contrato al panel existente.",
+  "estado": "preparado",
+  "proximo_paso": "Leer 04-operacion-agentes/encargos/fabrica-automatizaciones-meta-canales-20261111.md y ejecutar el encargo dentro de su alcance.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-11T20:40:43.342332+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-11T20:40:43.134498+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/fabrica-automatizaciones-meta-canales-20261111.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/fabrica-automatizaciones-meta-canales-20261111.md",
+    "sha256": "2b229703e2211d7a25ca5810c886f7e24221ccd56de0456410b1f6b0346793b4",
+    "bytes": 4663,
+    "contenido": "# Encargo fabrica-automatizaciones-meta-canales-20261111\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nPreparar adaptadores verificables para comentarios/DM de Instagram y Facebook y conectarlos mediante contrato al panel existente.\n\n## Entregable\n\nCódigo, fixtures, pruebas reproducibles, contrato exportable y guía exacta de activación pendiente.\n\n## Criterio de aceptación\n\nCada canal tiene recorrido local y fallos probados; diferencia estricta entre simulación y E2E real; ninguna activación/envío/gasto.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Lote técnico autorizado en CIERRE-VENTA-20261111.md (aeb1160), regla52fb1c8. Leer decisiones y bitácora; no retomar nombres/precios/horas históricas. Usar desarrollar-y-verificar. Un worktree, cero hijos, Sol high. No editar panel/harness/otros productos.\n- Revisar antes implementaciones n8n y diseños de canales ya presentes en repo. Reutilizar sin activar. Única ruta nueva 05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111. No copiar secretos, contactos, QR o direcciones privadas.\n- Investigar documentación primaria vigente de Meta para comentarios y mensajes privados IG/FB, distinguir capacidades/permisos/cuentas/versiones y fechas. Si fuente no accesible marcar desconocido; no inventar ventanas, tokens ni aprobaciones. Crear matriz canal/capacidad/entrada/salida/prueba/pendiente.\n- Implementar procesamiento puro con idempotencia y estado persistente de ensayo: detectar NEGOCIO, ofrecer información vigente, conservar contexto de origen y baja, enrutar a WhatsApp sólo mediante destino privado configurado; no presumir acceso API real. Firma de webhook/verificación y límites de payload; rechazo de identidad inválida, duplicados, orden tardío, inyección, timeout/resultado incierto. Sin shell libre.\n- Conector real deshabilitado por defecto, configuración privada sin tokens en logs, contrato para panel incluye estado, comprobaciones, entradas faltantes y aprobación pendiente. Simular respuestas éxito/fallo en fixtures rotulados, no registrar mensajes como realmente enviados. Preparar prueba autorizable por canal y no ejecutarla con personas. Node/Python existentes sin nuevas APIs pagas.\n- Entregar README/PRUEBAS/RECIBO, comandos/salidas, commit+push rama; revisión independiente por coordinadora. Publicar estado para_revision de producto no estado canónico. Nunca declarar canal listo sin prueba real autorizada.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/fabrica-automatizaciones-meta-canales-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "ejecucion": {
+    "perfil": "complejo",
+    "recomendado": {
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high"
+    },
+    "solicitado": null,
+    "observado": null,
+    "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+    "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+  },
+  "asignacion": {
+    "responsable": "codex-meta-canales-20261111",
+    "rutas": [
+      "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-11T20:40:43.342319+00:00"
+  }
+}
