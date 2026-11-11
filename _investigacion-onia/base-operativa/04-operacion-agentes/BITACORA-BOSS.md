@@ -2,6 +2,13 @@
 
 Qué hizo Boss, por qué, en qué estado quedó y qué sigue. La más reciente va primero. Los estados de tareas se consultan sólo en el harness; esto es contexto, no estado canónico.
 
+## 11 nov 2026 · primera tanda terminada y STOP (entrada de Codex)
+
+- Autorización directa de Sergio: lanzar panel, guiones y WhatsApp, y parar para revisarlos con la coordinadora.
+- Entregas: panel62bdcac,guiones26c39e3,WhatsApp46944fb. Estados canónicos al cierre: r12/r9/r26 para_revision. Cero sesiones vivas comprobadas desde el host; worktrees conservados. No aceptar ni integrar productos automáticamente ni lanzar otra tanda.
+- Coordinadora reprodujo guiones25 pruebas y WhatsApp44Node/16Python. Panel48 pruebas declaradas por ejecutora; navegador host sí arrancó con sandbox pero guardar observación devolvió Origen local inválido. Dictamen preliminar: corregir panel, revisión editorial y prueba real de ventas aún pendientes.
+- Evidencia, comandos, commits y límites: evidencias/tanda-fabricas-20261111/REVISION-COORDINADORA-v1.md. La tanda local y la preparación de WhatsApp no son operación comercial. No se modificó producto para ocultar el fallo visual.
+
 ## 11 nov 2026 · Q&A directo de Sergio en Codex (entrada de Codex)
 
 - Confirmado directamente: viernes 13 20:00, sábado 14 14:00 y lunes 16 20:00, America/La_Paz; QR y seguimiento con confirmación manual de cada pago por Sergio; VSL. Actualizada la fuente DECISIONES-SERGIO-20261110.md, conservando las entradas anteriores como historia.
