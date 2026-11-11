@@ -27,6 +27,9 @@ def badge(text, good=False):
 def render(s, operativo=None, session=None):
     if s.get("schema") != "onia-lector-panel-v1":
         raise ValueError("Schema de snapshot no admitido")
+    if operativo:
+        import diseno
+        return diseno.render(s, operativo, session)
     form_policy = "self" if session else "none"
     operation_html = render_operation(operativo, session) if operativo else ""
     public = s.get("fuentes", {})
@@ -93,7 +96,7 @@ def render(s, operativo=None, session=None):
     return f'''<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action '{form_policy}'">
-<meta name="referrer" content="no-referrer"><title>Fábrica OnIA · consulta manual</title>
+<meta name="referrer" content="same-origin"><title>Fábrica OnIA · consulta manual</title>
 <style>
 :root{{font-family:system-ui,sans-serif;color:#182b3a;background:#f2f5f4;line-height:1.6}}
 *{{box-sizing:border-box}}body{{margin:0;overflow-wrap:anywhere}}a{{color:#075b79;text-underline-offset:3px}}a:focus-visible,summary:focus-visible{{outline:3px solid #a55a00;outline-offset:4px}}
@@ -176,9 +179,9 @@ def export_view(data, operation, session):
                          {review_form(row['target'], operation, session)}</article>''' for row in data['entregables'])
     pending = ''.join(f'''<li>{e(row['motivo'])}<br>Responsable {e(row['responsable'])}<br>
                       Siguiente paso · {e(row['siguiente'])}</li>''' for row in data['pendientes'])
-    return f'''{synthetic}{badge(data['estado'])}<p class="mono">Resumen del productor generado {e(data['generado'])}<br>
+    return f'''{synthetic}{badge(data['estado'])}<details class="provenance"><summary>Fuente, fecha y versión del resumen</summary><p class="mono">Resumen del productor generado {e(data['generado'])}<br>
     Export {e(data['ruta_export'])}<br>SHA-256 {e(data['sha256'])}</p>
-    <p>Informe o recibo · {document_link(data['documento_fuente'])}</p>
+    <p>Informe o recibo · {document_link(data['documento_fuente'])}</p></details>
     <ol class="flow">{''.join(steps) or '<li>Pasos pendientes de declarar.</li>'}</ol>
     <h4>Entregas</h4>{deliveries or '<p>Entregas pendientes de declarar.</p>'}
     <h4>Bloqueos y pendientes</h4><ul>{pending or '<li>El resumen no declara pendientes adicionales.</li>'}</ul>'''

@@ -3,77 +3,75 @@
   "id": "cerebro-panel-usable-20261109",
   "fabrica": "panel",
   "estado": "para_revision",
-  "generado": "2026-11-11T13:39:45.260692+00:00",
-  "fuente": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION.md",
+  "generado": "2026-11-11T17:17:08.118779+00:00",
+  "fuente": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION-DISENO.md",
   "pasos": [
     {
-      "id": "procedencia",
-      "nombre": "Conservar lector22 y tanda3 con procedencia",
+      "id": "diseno",
+      "nombre": "Implementar Propuesta 1 en el render existente",
       "estado": "completado",
       "evidencias": [
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/pruebas.txt"
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION-DISENO.md"
       ]
     },
     {
-      "id": "recorrido",
-      "nombre": "Probar tarea, corrección, reinicio y original conservado en ensayo local",
+      "id": "regresiones",
+      "nombre": "Conservar lector, tanda y operación y probar política de origen",
       "estado": "completado",
       "evidencias": [
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/pruebas.txt",
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/recorrido-cli.json"
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/pruebas.txt"
       ]
     },
     {
-      "id": "seguridad",
-      "nombre": "Validar contratos, rutas, XSS y concurrencia local",
-      "estado": "completado",
+      "id": "guardado",
+      "nombre": "Verificar formulario nativo same-origin en navegador",
+      "estado": "bloqueado",
       "evidencias": [
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/pruebas.txt"
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/intento-01/resultado.json"
       ]
     },
     {
       "id": "visual",
-      "nombre": "Comprobar escritorio y móvil con Chromium existente",
+      "nombre": "Comparar referencia y capturas a 1487, 1440 y 390 px",
       "estado": "bloqueado",
       "evidencias": [
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/visual/resultado.json"
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/design-qa.md"
       ]
     },
     {
       "id": "revision",
-      "nombre": "Revisión de Sergio y coordinadora sobre la entrega publicada",
+      "nombre": "Revisión de Sergio y coordinadora sobre commit final",
       "estado": "pendiente",
       "evidencias": []
     }
   ],
   "entregables": [
     {
-      "nombre": "Panel ampliado · preview fechado",
-      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/preview-final/panel.html"
+      "nombre": "Preview Propuesta 1",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/preview-final/panel.html"
     },
     {
-      "nombre": "Guía y recorrido para Sergio",
-      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION.md"
+      "nombre": "Guía de revisión del diseño",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION-DISENO.md"
+    },
+    {
+      "nombre": "QA con bloqueo de navegador documentado",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/design-qa.md"
     }
   ],
   "pendientes": [
     {
-      "motivo": "Chromium falla al arrancar con sandbox habilitado en este entorno",
-      "responsable": "Coordinadora con host compatible",
-      "siguiente": "Ejecutar visual-operacion.cjs y revisar desktop y móvil"
+      "motivo": "Chromium falla al iniciar con sandbox en la ejecutora",
+      "responsable": "Coordinadora desde host compatible",
+      "siguiente": "Ejecutar visual-diseno.cjs, inspeccionar comparacion.png y comprobar Origin/guardado"
     },
     {
-      "motivo": "Exports nuevos de guiones y WhatsApp todavía ausentes en este checkout",
-      "responsable": "Productores y coordinadora",
-      "siguiente": "Añadir las rutas explícitas de estado-fabrica.json y el nuevo guiones-panel.json al invocar servidor.py"
+      "motivo": "Tanda v2 histórica y exports de productores paralelos pendientes de reunir",
+      "responsable": "Coordinadora y productores",
+      "siguiente": "Seleccionar los exports validados al revisar la entrega"
     },
     {
-      "motivo": "La tanda v2 conserva horarios históricos",
-      "responsable": "Contenido y Sergio",
-      "siguiente": "Revisar la tanda nueva con fechas confirmadas antes de usarla para la venta"
-    },
-    {
-      "motivo": "Revisión humana solicitada al entregar esta primera tanda",
+      "motivo": "Revisión humana solicitada de Propuesta 1",
       "responsable": "Sergio y coordinadora",
       "siguiente": "Revisar el commit publicado y decidir la continuación"
     }

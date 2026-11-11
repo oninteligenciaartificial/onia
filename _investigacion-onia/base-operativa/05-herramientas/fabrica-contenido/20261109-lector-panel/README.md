@@ -1,5 +1,9 @@
 # Lector manual y panel de consulta de la fábrica
 
+## Propuesta 1 elegida por Sergio
+
+La [guía de revisión del diseño](GUIA-REVISION-DISENO.md) describe la vista actual, la corrección de política del formulario y las comprobaciones pendientes del host. Abrir el [preview de Propuesta 1](evidencia/diseno-20261111/preview-final/panel.html). La [comparación visual](design-qa.md) sigue bloqueada por el arranque de Chromium en esta ejecutora.
+
 ## Ampliación del 11 de noviembre de 2026
 
 La [GUIA-REVISION](GUIA-REVISION.md) contiene el acceso al panel ampliado, el modo temporal de revisión persistente, comandos, pruebas y dependencias pendientes. El [preview vigente de esta entrega](evidencia/operacion-20261111/preview-final/panel.html) conserva la tanda histórica y los fixtures identificados. Los apartados siguientes documentan las entregas anteriores.

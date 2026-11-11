@@ -61,11 +61,13 @@ async function stop() {
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
     await page.screenshot({ path: path.join(output, 'desktop.png') });
     report.casos.push('desktop 1440x1000 · navegación seis fábricas');
-    const documentLink = page.locator('#fabrica-guiones ol a').first();
+    await page.goto(url + '/#detalle-guiones');
+    const documentLink = page.locator('#detalle-guiones ol a').first();
     await documentLink.click();
     assert((await page.innerText('body')).includes('Resultado original v1'));
     await page.getByRole('link', { name: 'Volver al panel' }).click();
-    const review = page.locator('#fabrica-guiones details[id^="revision-"]').nth(3);
+    await page.goto(url + '/#detalle-guiones');
+    const review = page.locator('#detalle-guiones details[id^="revision-"]').nth(3);
     await review.locator('summary').first().click();
     await review.locator('[name="motivo"]').fill('ENSAYO SINTÉTICO visual · aclarar criterio');
     await review.locator('[name="correccion"]').fill('ENSAYO SINTÉTICO · mostrar una acción evaluable <img src=x onerror=alert(1)>');
@@ -74,7 +76,8 @@ async function stop() {
     await stop();
     url = await start();
     await page.goto(url);
-    const persisted = page.locator('#fabrica-guiones details[id^="revision-"]').nth(3);
+    await page.goto(url + '/#detalle-guiones');
+    const persisted = page.locator('#detalle-guiones details[id^="revision-"]').nth(3);
     await persisted.locator('summary').first().click();
     assert((await persisted.innerText()).includes('aclarar criterio'));
     assert.equal(await page.locator('img,script').count(), 0);
@@ -83,6 +86,7 @@ async function stop() {
     await page.goto(url);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
     await page.screenshot({ path: path.join(output, 'mobile.png'), fullPage: true });
+    await page.goto(url + '/#cerebro');
     await page.locator('#cerebro input[name="tema"]').fill('revision');
     await page.getByRole('button', { name: 'Consultar cerebro' }).click();
     assert((await page.innerText('#cerebro')).includes('patrones.'));

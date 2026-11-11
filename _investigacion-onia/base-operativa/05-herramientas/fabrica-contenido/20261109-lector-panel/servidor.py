@@ -72,8 +72,8 @@ def handler_for(app):
             self.send_header('Content-Length', str(len(payload)))
             self.send_header('Cache-Control', 'no-store')
             self.send_header('X-Content-Type-Options', 'nosniff')
-            self.send_header('Referrer-Policy', 'no-referrer')
-            self.send_header('Content-Security-Policy', "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'")
+            self.send_header('Referrer-Policy', 'same-origin')
+            self.send_header('Content-Security-Policy', "default-src 'none'; img-src 'self' data:; font-src data:; style-src 'unsafe-inline'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'")
             if location:
                 self.send_header('Location', location)
             self.end_headers()
@@ -89,6 +89,8 @@ def handler_for(app):
                 route = urlsplit(self.path)
                 operacion.require(not route.scheme and not route.netloc, 'Ruta inválida')
                 query = parse_qs(route.query, keep_blank_values=True, max_num_fields=8, errors='strict')
+                if route.path == '/favicon.ico' and not query:
+                    return self.send(204, '')
                 if route.path == '/':
                     operacion.require(set(query) <= {'tema', 'uso', 'guardado'} and all(len(v) == 1 for v in query.values()), 'Consulta inválida')
                     return self.send(200, app.html(query))
