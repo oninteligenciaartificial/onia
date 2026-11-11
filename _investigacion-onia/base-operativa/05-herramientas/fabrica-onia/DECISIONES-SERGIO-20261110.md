@@ -1,11 +1,11 @@
 # Decisiones de Sergio para armar la fábrica
 
-10-nov-2026, 07:58–08:00 America/La_Paz, en el chat de Boss. Estas decisiones prevalecen sobre las anteriores del repo.
+Registro iniciado el 10-nov-2026, 07:58–08:00 America/La_Paz, en el chat de Boss. La tabla incorpora las confirmaciones directas posteriores de Sergio en Codex del 11-nov. Las entradas fechadas anteriores se conservan como historia; ante un conflicto rige la confirmación más reciente de Sergio.
 
 | Tema | Decisión |
 |---|---|
 | Canal del chatbot | WhatsApp Cloud API (Meta) con n8n. Queda inactivo hasta el sí de Sergio. |
-| Horarios del workshop (America/La_Paz) | Jueves 12 a las 21:00; viernes 13 a las 21:00; sábado 14 a las 14:00. |
+| Horarios del workshop (America/La_Paz) | Viernes 13 de noviembre a las 20:00; sábado 14 a las 14:00; lunes 16 a las 20:00. Confirmación directa en Codex el 11-nov; sustituye también la entrada de Boss de las 07:34. |
 | Plataforma de las clases | Google Meet. |
 | Cupos del grupo | Sin límite. |
 | Precio del grupo | Bs 50. |
@@ -54,6 +54,8 @@ Decisión directa de Sergio en Codex: «Quita el limite de 90% lo de las mas de 
 
 ## Horario definitivo del workshop · 11 nov 2026, 07:34 La Paz
 
+**Sustituido por la confirmación directa en Codex al final de este documento.** Se conserva para explicar el desajuste con los eventos de Calendar informados por Boss.
+
 Decisión directa de Sergio en chat con Boss: «Para que haya tiempo de vender movamos un día la clase, inicia el viernes, para agarrar más cupos». Antes había pedido bajar la hora a las 20:00.
 
 - Clase 1 Ordenar: viernes 13 nov, 20:00–21:30 (America/La_Paz).
@@ -69,3 +71,17 @@ Sergio: «Necesitamos que todos usen a Codex […] y tengo que tener el panel li
 - Todos los agentes (Contenido, Infraestructura/Operaciones, Calendario, Boss Life) mandan el trabajo pesado a Codex con `onia-llm` en la computadora compartida y solo coordinan y revisan. Boss conserva el puente al VPS para repo grande y tareas con revisor.
 - Todo el trabajo y el contexto deben quedar en este repo; nunca secretos, QR de pago, enlaces autenticados ni medios privados.
 - Prioridad: panel listo (lista abierta de tipos, calendario con fechas nuevas, sala de montaje) y corrección de fechas. Propuesto por Boss; lanzamiento pendiente de confirmación de Sergio.
+
+## Confirmaciones directas en Codex · 11 nov 2026
+
+Fuente: Q&A de Sergio en esta conversación. Pidió comprender las fábricas de los dos videos de Euge y explicar cómo se usarán el harness y sus sesiones, por secciones.
+
+- Fechas de las tres clases: viernes 13 a las 20:00; sábado 14 a las 14:00; lunes 16 a las 20:00, America/La_Paz. Respuesta literal sobre las horas: «Viernes 8pm / Sabado 2pm / Lunes 8pm». No se confirmó una hora de finalización nueva.
+- Esta confirmación sustituye jueves/viernes/sábado y la interpretación viernes/sábado/domingo de Boss. Su bitácora informa eventos Meet con el horario sustituido: deben conciliarse con esta decisión. Actualizar este archivo no modifica Calendar, mensajes del bot ni guiones existentes.
+- Cobrador: envío de QR y seguimiento; Sergio confirma cada pago. No detectar ni confirmar cobros automáticamente desde el banco; una captura no concede acceso.
+- «BCL» significaba VSL, video de venta del curso.
+- Meta inmediata: Bs 3.000. Prioridades pedidas: ampliar el panel existente con fábricas, cerebro, pasos y revisiones; automatizar ideas/noticias/guiones y calendario; cinco piezas diarias y salidas horizontal/vertical; sala de montaje con explicación de cambios; WhatsApp, Instagram/Facebook y n8n; curso, VIP y anuncios. Los formatos son lista abierta.
+- El vlog diario sigue entero y fuera del editor de la fábrica. No interpretar horizontal/vertical como diez ideas ni como permiso para cortar el vlog.
+- El límite de tres sesiones se conserva y medir más de tres sigue pendiente. No se restablecen las seis altas diarias ni la reserva interna del 90%.
+- La suscripción se sigue planificando con corte el 14: la clase del lunes 16 necesita materiales y operación que no dependan de una sesión de Codex. No hay autorización de renovación, API de pago ni proveedor sustituto.
+- El reparto detallado de sesiones está propuesto en CIERRE-VENTA-20261111.md. Este registro no acredita lanzamientos, cambios en rutinas de Grok ni configuración de ejecución automática.

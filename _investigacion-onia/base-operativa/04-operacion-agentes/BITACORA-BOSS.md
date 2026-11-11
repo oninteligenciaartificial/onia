@@ -2,6 +2,15 @@
 
 Qué hizo Boss, por qué, en qué estado quedó y qué sigue. La más reciente va primero. Los estados de tareas se consultan sólo en el harness; esto es contexto, no estado canónico.
 
+## 11 nov 2026 · Q&A directo de Sergio en Codex (entrada de Codex)
+
+- Confirmado directamente: viernes 13 20:00, sábado 14 14:00 y lunes 16 20:00, America/La_Paz; QR y seguimiento con confirmación manual de cada pago por Sergio; VSL. Actualizada la fuente DECISIONES-SERGIO-20261110.md, conservando las entradas anteriores como historia.
+- Conflicto localizado: el commit de Boss 4eeae23 registra sábado 20:00/domingo 14:00 e informa eventos Meet movidos a esas horas. La confirmación directa de Sergio en Codex sustituye esa interpretación. No se han corregido Calendar, guiones ni bot por actualizar la documentación; sus versiones vigentes requieren conciliación antes de usarlas.
+- Relectura: contenido hablado completo disponible de ambos videos de Euge; sin nueva transcripción ni extracción de fotogramas, sin afirmar nuevo visionado/escucha continua. Aplicación y plan propuesto por secciones en 05-herramientas/fabrica-onia/CIERRE-VENTA-20261111.md.
+- Estado observado: registro canónico sin sesiones vivas a 12:12:15Z. Nueva muestra de cuota 1% usado a 12:11:58Z, frente a la anterior de 98%; no se atribuye causa ni renovación. No se han lanzado las sesiones propuestas ni modificado rutinas de Grok.
+- Próximo paso: presentar a Sergio reparto panel / guiones-calendario / venta, con rotación de revisión y siguientes entregas de montaje, VSL/curso, canales y homelab. El lunes 16 queda después del corte de Codex informado por Sergio: preparar continuidad con programas fijos y operador.
+- Revisión documental independiente por revisar_plan_11nov: bueno después de precisar la aceptación de cinco piezas en dos formatos, la prioridad de VSL/materiales/conciliación de horarios y los encabezados históricos. git diff --check limpio. No se ejecutaron pruebas del producto por estos cambios de documentación.
+
 ## 10 nov 2026, 18:20 La Paz · acuse de REGLAS-BOSS.md
 
 - Observado: Boss leyó `04-operacion-agentes/REGLAS-BOSS.md` en master, commit 6f46f64 (18:09).
