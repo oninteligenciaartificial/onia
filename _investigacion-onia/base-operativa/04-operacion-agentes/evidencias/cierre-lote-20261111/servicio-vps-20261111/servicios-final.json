@@ -1,0 +1,30 @@
+{
+  "fecha": "2026-11-11T22:26:27.088945+00:00",
+  "release": "816be49422b24ce1c8df52fafa38ae04c11ed514",
+  "unidades": {
+    "onia-panel.service": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "running",
+      "UnitFileState": "enabled",
+      "sha256_unidad": "7c4d7cd77452eed9c7d657a6f7f887b2784d676c135a88a7e0e413301c65e414"
+    },
+    "onia-flujo-diario.service": {
+      "ExecMainStatus": "0",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "UnitFileState": "static",
+      "sha256_unidad": "57e0b777ad4b47a7ec3fd8e0032bbf312b0e657dd0f934ec6c709fa9993a4bb6"
+    },
+    "onia-flujo-diario.timer": {
+      "NextElapseUSecRealtime": "Thu 2026-11-12 04:00:00 UTC",
+      "ActiveState": "active",
+      "SubState": "waiting",
+      "UnitFileState": "enabled",
+      "sha256_unidad": "3691bfccccacdbf706090bc2ff6ca4d4279f9dcff45b87092617cc92535477ad"
+    }
+  },
+  "telefono_fisico_probado": false,
+  "acceso": "solo_loopback",
+  "linger": "Linger=yes"
+}
