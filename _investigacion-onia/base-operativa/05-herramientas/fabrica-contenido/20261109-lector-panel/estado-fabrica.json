@@ -3,74 +3,87 @@
   "id": "cerebro-panel-usable-20261109",
   "fabrica": "panel",
   "estado": "para_revision",
-  "generado": "2026-11-11T17:27:25.697153+00:00",
-  "fuente": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION-DISENO.md",
+  "generado": "2026-11-11T21:12:53.811005+00:00",
+  "fuente": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-CEREBRO.md",
   "pasos": [
     {
-      "id": "diseno",
-      "nombre": "Implementar Propuesta 1 en el render existente",
+      "id": "cerebro",
+      "nombre": "Recuperar fuentes, decisiones y reglas aprobadas documentadas",
       "estado": "completado",
       "evidencias": [
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION-DISENO.md"
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-CEREBRO.md"
       ]
     },
     {
-      "id": "regresiones",
-      "nombre": "Conservar lector, tanda y operación y probar política de origen",
+      "id": "correcciones",
+      "nombre": "Probar sugerencia, versión local, reintento y export a coordinación",
       "estado": "completado",
       "evidencias": [
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/pruebas.txt"
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/cerebro-20261111/pruebas.txt",
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/cerebro-20261111/recorrido-cli.json"
       ]
     },
     {
-      "id": "guardado",
-      "nombre": "Verificar formulario nativo same-origin en navegador",
+      "id": "contrato",
+      "nombre": "Consumir contrato publicado de estrategias con pruebas de validez y rechazo",
       "estado": "completado",
       "evidencias": [
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/design-qa.md",
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/host-final-02/resultado.json"
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/CONTRATO-COORDINACION.md",
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/cerebro-20261111/pruebas.txt"
       ]
     },
     {
-      "id": "visual",
-      "nombre": "Comparar referencia y capturas a 1487, 1440 y 390 px",
+      "id": "privado",
+      "nombre": "Preparar origen externo explícito, autenticación y servicio deshabilitado",
       "estado": "completado",
       "evidencias": [
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/design-qa.md",
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/host-final-02/resultado.json"
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-CEREBRO.md"
+      ]
+    },
+    {
+      "id": "browser",
+      "nombre": "Probar nuevas pantallas y aplicación con navegador desktop y móvil",
+      "estado": "bloqueado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/cerebro-20261111/intento-01/resultado.json"
       ]
     },
     {
       "id": "revision",
-      "nombre": "Revisión de Sergio y coordinadora sobre commit final",
+      "nombre": "Revisión independiente e integración por coordinación",
       "estado": "pendiente",
       "evidencias": []
     }
   ],
   "entregables": [
     {
-      "nombre": "Preview Propuesta 1",
-      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/preview-coordinadora/panel.html"
+      "nombre": "Preview cerebro y correcciones",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/cerebro-20261111/preview-final/panel.html"
     },
     {
-      "nombre": "Guía de revisión del diseño",
-      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION-DISENO.md"
+      "nombre": "Guía de uso, reinicio y acceso privado",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-CEREBRO.md"
     },
     {
-      "nombre": "QA visual y funcional completado en host",
-      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/design-qa.md"
+      "nombre": "Contrato y dependencias de coordinación",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/CONTRATO-COORDINACION.md"
     }
   ],
   "pendientes": [
     {
-      "motivo": "Tanda v2 histórica y exports de productores paralelos pendientes de reunir",
-      "responsable": "Coordinadora y productores",
-      "siguiente": "Seleccionar los exports validados al revisar la entrega"
+      "motivo": "Productor de estrategias publicado en rama, aún ausente de este checkout",
+      "responsable": "Coordinadora y productor",
+      "siguiente": "Reunir export y fuentes vigentes en el checkout y actualizar el control histórico del productor"
     },
     {
-      "motivo": "Revisión humana solicitada de Propuesta 1",
-      "responsable": "Sergio y coordinadora",
-      "siguiente": "Revisar el commit publicado y decidir la continuación"
+      "motivo": "Sandbox de Chromium no utilizable en la ejecutora",
+      "responsable": "Coordinadora desde host compatible",
+      "siguiente": "Ejecutar visual-cerebro.cjs y abrir las capturas nuevas"
+    },
+    {
+      "motivo": "TLS/proxy, configuración de credenciales, servicio y teléfono real pendientes de instalación y prueba",
+      "responsable": "Coordinadora y Sergio",
+      "siguiente": "Adaptar plantilla deshabilitada al despliegue privado autorizado y comprobar acceso/reinicio"
     }
   ]
 }

@@ -1,5 +1,9 @@
 # Lector manual y panel de consulta de la fábrica
 
+## Cerebro, correcciones y estrategias
+
+La [GUIA-CEREBRO](GUIA-CEREBRO.md) contiene el recorrido actual, aplicación a versiones locales pendientes, contrato de estrategias y preparación del acceso privado. Abrir el [preview de esta retoma](evidencia/cerebro-20261111/preview-final/panel.html). Las secciones siguientes conservan las entregas anteriores.
+
 ## Propuesta 1 elegida por Sergio
 
 La [guía de revisión del diseño](GUIA-REVISION-DISENO.md) describe la vista actual, la corrección de política del formulario y las comprobaciones completadas en el host. Abrir el [preview de Propuesta 1](evidencia/diseno-20261111/preview-coordinadora/panel.html). La [comparación visual](design-qa.md) pasó después de corregir los hallazgos del navegador. Entrega pendiente de revisión independiente y de Sergio.

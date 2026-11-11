@@ -1,0 +1,111 @@
+Verificación final 2026-11-11T21:19:58.775486+00:00
+
+$ python3 -B _investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/pruebas.py
+test_articulo_concreto_permitido_y_deduplicado (__main__.Tests.test_articulo_concreto_permitido_y_deduplicado) ... ok
+test_articulo_fallido_conserva_referencia_sin_fingir_lectura (__main__.Tests.test_articulo_fallido_conserva_referencia_sin_fingir_lectura) ... ok
+test_challenge_200_no_es_fuente (__main__.Tests.test_challenge_200_no_es_fuente) ... ok
+test_deadline_total_interrumpe_goteo (__main__.Tests.test_deadline_total_interrumpe_goteo) ... ok
+test_duplicado_utm_no_vuelve_a_leer (__main__.Tests.test_duplicado_utm_no_vuelve_a_leer) ... ok
+test_fallo_por_fuente_continua_independiente (__main__.Tests.test_fallo_por_fuente_continua_independiente) ... ok
+test_fecha_ausente_no_inventa_publicacion (__main__.Tests.test_fecha_ausente_no_inventa_publicacion) ... ok
+test_fecha_visible_no_se_convierte_en_publicacion (__main__.Tests.test_fecha_visible_no_se_convierte_en_publicacion) ... ok
+test_guion_alterado_no_falsa_revision (__main__.Tests.test_guion_alterado_no_falsa_revision) ... ok
+test_harness_evidencia_corrupta_no_falso_estado (__main__.Tests.test_harness_evidencia_corrupta_no_falso_estado) ... ok
+test_html_escapa_respuesta_y_rechaza_links (__main__.Tests.test_html_escapa_respuesta_y_rechaza_links) ... ok
+test_limites_no_hacen_red (__main__.Tests.test_limites_no_hacen_red) ... ok
+test_noticia_fecha_insegura_o_discrepante_rechazada (__main__.Tests.test_noticia_fecha_insegura_o_discrepante_rechazada) ... ok
+test_noticia_fecha_primaria_cotejada_no_consulta (__main__.Tests.test_noticia_fecha_primaria_cotejada_no_consulta) ... ok
+test_noticia_sin_fecha_no_toma_consulta_ni_referencia_previa (__main__.Tests.test_noticia_sin_fecha_no_toma_consulta_ni_referencia_previa) ... ok
+test_panel_vacio_y_fallo_legibles (__main__.Tests.test_panel_vacio_y_fallo_legibles) ... ok
+test_redireccion_nunca_se_sigue (__main__.Tests.test_redireccion_nunca_se_sigue) ... ok
+test_respuesta_insegura_tamano_tipo_compresion_destino (__main__.Tests.test_respuesta_insegura_tamano_tipo_compresion_destino) ... ok
+test_salida_no_escribe_fuera_ni_pisa_recibo (__main__.Tests.test_salida_no_escribe_fuera_ni_pisa_recibo) ... ok
+test_snapshot_real_y_guiones_anclados (__main__.Tests.test_snapshot_real_y_guiones_anclados) ... ok
+test_timeout_visible_sin_detalle_sensible (__main__.Tests.test_timeout_visible_sin_detalle_sensible) ... ok
+test_url_externa_privada_o_autenticada_rechazada (__main__.Tests.test_url_externa_privada_o_autenticada_rechazada) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.514s
+
+OK
+rc=0
+
+$ python3 -B -m unittest discover -s _investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel -p test_*.py -v
+test_apply_creates_private_version_once_restart_and_recorrect (test_cerebro.CorrectionTests.test_apply_creates_private_version_once_restart_and_recorrect) ... ok
+test_canonical_and_llm_export_request_never_marked_applied (test_cerebro.CorrectionTests.test_canonical_and_llm_export_request_never_marked_applied) ... ok
+test_double_submission_idempotent_conflicting_payload_rejected (test_cerebro.CorrectionTests.test_double_submission_idempotent_conflicting_payload_rejected) ... ok
+test_legacy_database_migrates_without_losing_rows (test_cerebro.CorrectionTests.test_legacy_database_migrates_without_losing_rows) ... ok
+test_malicious_text_stays_escaped_after_application (test_cerebro.CorrectionTests.test_malicious_text_stays_escaped_after_application) ... ok
+test_new_mutations_keep_csrf_and_origin_guards (test_cerebro.CorrectionTests.test_new_mutations_keep_csrf_and_origin_guards) ... ok
+test_obsolete_observation_and_tampered_source_cannot_apply (test_cerebro.CorrectionTests.test_obsolete_observation_and_tampered_source_cannot_apply) ... ok
+test_source_documents_and_correction_from_all_sections (test_cerebro.CorrectionTests.test_source_documents_and_correction_from_all_sections) ... ok
+test_credential_permissions_symlinks_and_http_origin_rejected (test_cerebro.PrivateAccessTests.test_credential_permissions_symlinks_and_http_origin_rejected) ... ok
+test_explicit_external_host_auth_and_no_forwarded_trust (test_cerebro.PrivateAccessTests.test_explicit_external_host_auth_and_no_forwarded_trust) ... ok
+test_external_post_requires_configured_origin_and_auth (test_cerebro.PrivateAccessTests.test_external_post_requires_configured_origin_and_auth) ... ok
+test_absent_invalid_and_schema_reference_rejected (test_cerebro.StrategyTests.test_absent_invalid_and_schema_reference_rejected) ... ok
+test_changed_business_source_path_escape_and_fake_approval_rejected (test_cerebro.StrategyTests.test_changed_business_source_path_escape_and_fake_approval_rejected) ... ok
+test_published_export_valid_future_proposals_and_source_hashes (test_cerebro.StrategyTests.test_published_export_valid_future_proposals_and_source_hashes) ... ok
+test_strategy_piece_malicious_text_is_inert_in_view (test_cerebro.StrategyTests.test_strategy_piece_malicious_text_is_inert_in_view) ... ok
+test_etiqueta_tecnica_exige_dictamen_del_mismo_commit_sin_aprobar_editorial (test_diario.DailyPanelTests.test_etiqueta_tecnica_exige_dictamen_del_mismo_commit_sin_aprobar_editorial) ... ok
+test_feed_fallido_conserva_ultimo_exito_y_no_renueva_fecha (test_diario.DailyPanelTests.test_feed_fallido_conserva_ultimo_exito_y_no_renueva_fecha) ... ok
+test_feed_y_guiones_revision_persistida_original_conservado (test_diario.DailyPanelTests.test_feed_y_guiones_revision_persistida_original_conservado) ... ok
+test_host_origin_csrf_huella_inyeccion_y_rutas_privadas (test_diario.DailyPanelTests.test_host_origin_csrf_huella_inyeccion_y_rutas_privadas) ... ok
+test_paquete_alterado_no_desplaza_el_ultimo_bueno (test_diario.DailyPanelTests.test_paquete_alterado_no_desplaza_el_ultimo_bueno) ... ok
+test_proyeccion_incompleta_no_reemplaza_cache_ni_rompe_pagina (test_diario.DailyPanelTests.test_proyeccion_incompleta_no_reemplaza_cache_ni_rompe_pagina) ... ok
+test_embedded_library_assets_match_sources_and_licenses (test_diseno.DesignTests.test_embedded_library_assets_match_sources_and_licenses) ... ok
+test_fixture_steps_are_labelled_and_completion_comes_from_contract (test_diseno.DesignTests.test_fixture_steps_are_labelled_and_completion_comes_from_contract) ... ok
+test_header_date_uses_snapshot_and_la_paz_zone (test_diseno.DesignTests.test_header_date_uses_snapshot_and_la_paz_zone) ... ok
+test_missing_exports_never_create_completed_circles (test_diseno.DesignTests.test_missing_exports_never_create_completed_circles) ... ok
+test_preview_native_navigation_resolves_and_selectors_have_targets (test_diseno.DesignTests.test_preview_native_navigation_resolves_and_selectors_have_targets) ... ok
+test_header_and_html_referrer_policies_allow_real_same_origin_post (test_diseno.OriginTests.test_header_and_html_referrer_policies_allow_real_same_origin_post) ... ok
+test_null_missing_wildcard_and_foreign_origin_stay_forbidden (test_diseno.OriginTests.test_null_missing_wildcard_and_foreign_origin_stay_forbidden) ... ok
+test_bad_export_does_not_authorize_partial_targets (test_operacion.ContractTests.test_bad_export_does_not_authorize_partial_targets) ... ok
+test_brain_reuses_existing_validation_and_filters (test_operacion.ContractTests.test_brain_reuses_existing_validation_and_filters) ... ok
+test_duplicate_path_and_missing_export_visible (test_operacion.ContractTests.test_duplicate_path_and_missing_export_visible) ... ok
+test_export_invalid_types_states_dates_and_paths (test_operacion.ContractTests.test_export_invalid_types_states_dates_and_paths) ... ok
+test_future_producer_export_with_exact_contract (test_operacion.ContractTests.test_future_producer_export_with_exact_contract) ... ok
+test_missing_tanda_visible_and_existing_reader_usable (test_operacion.ContractTests.test_missing_tanda_visible_and_existing_reader_usable) ... ok
+test_own_delivery_export_and_fixture_together (test_operacion.ContractTests.test_own_delivery_export_and_fixture_together) ... ok
+test_routes_reject_traversal_absolute_private_url_and_symlinks (test_operacion.ContractTests.test_routes_reject_traversal_absolute_private_url_and_symlinks) ... ok
+test_six_factories_pending_and_fixture_explicit (test_operacion.ContractTests.test_six_factories_pending_and_fixture_explicit) ... ok
+test_xss_escaped_in_export_and_static_html (test_operacion.ContractTests.test_xss_escaped_in_export_and_static_html) ... ok
+test_brain_over_http_and_invalid_query (test_operacion.LocalFlowTests.test_brain_over_http_and_invalid_query) ... ok
+test_changed_result_bytes_require_refresh_and_keep_original (test_operacion.LocalFlowTests.test_changed_result_bytes_require_refresh_and_keep_original) ... ok
+test_concurrent_revision_only_one_wins (test_operacion.LocalFlowTests.test_concurrent_revision_only_one_wins) ... ok
+test_data_directory_rejects_git_and_symlink (test_operacion.LocalFlowTests.test_data_directory_rejects_git_and_symlink) ... ok
+test_documents_allowlist_and_escaped_html (test_operacion.LocalFlowTests.test_documents_allowlist_and_escaped_html) ... ok
+test_invalid_post_origin_csrf_target_version_empty_and_size (test_operacion.LocalFlowTests.test_invalid_post_origin_csrf_target_version_empty_and_size) ... ok
+test_original_accessible_when_export_leaves_selection (test_operacion.LocalFlowTests.test_original_accessible_when_export_leaves_selection) ... ok
+test_real_tanda_review_preserves_editorial_bytes (test_operacion.LocalFlowTests.test_real_tanda_review_preserves_editorial_bytes) ... ok
+test_saved_xss_and_sql_text_remain_inert (test_operacion.LocalFlowTests.test_saved_xss_and_sql_text_remain_inert) ... ok
+test_stale_version_and_stale_source_preserve_input (test_operacion.LocalFlowTests.test_stale_version_and_stale_source_preserve_input) ... ok
+test_static_preview_omits_private_reviews_and_preserves_existing_output (test_operacion.LocalFlowTests.test_static_preview_omits_private_reviews_and_preserves_existing_output) ... ok
+test_task_correction_restart_second_version_and_original (test_operacion.LocalFlowTests.test_task_correction_restart_second_version_and_original) ... ok
+test_unicode_maximum_length_round_trip (test_operacion.LocalFlowTests.test_unicode_maximum_length_round_trip) ... ok
+test_changed_bytes_rejected_without_modifying_source (test_tanda.TandaTests.test_changed_bytes_rejected_without_modifying_source) ... ok
+test_five_drafts_visible_without_claiming_approval (test_tanda.TandaTests.test_five_drafts_visible_without_claiming_approval) ... ok
+test_untracked_inputs_not_attributed_to_head (test_tanda.TandaTests.test_untracked_inputs_not_attributed_to_head) ... ok
+
+----------------------------------------------------------------------
+Ran 54 tests in 21.324s
+
+OK
+rc=0
+
+$ node --check _investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/visual-cerebro.cjs
+rc=0
+
+$ node --check _investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/visual-diseno.cjs
+rc=0
+
+$ node --check _investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/visual-operacion.cjs
+rc=0
+
+$ git diff --check
+rc=0
+
+AST Python comprobado. Navegador y teléfono declarados por separado.
+
+$ git diff --cached --check
+rc=0
+Comprobación final: 25 archivos exclusivamente de producto; siete evidencias previas intactas y excluidas; hashes del recibo coinciden.

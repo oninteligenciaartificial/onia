@@ -23,14 +23,21 @@ class Forms(HTMLParser):
     def __init__(self, html):
         super().__init__()
         self.forms = []
+        self.capture_review = False
         self.feed(html)
 
     def handle_starttag(self, tag, attributes):
         attrs = dict(attributes)
-        if tag == 'form' and attrs.get('method') == 'post':
-            self.forms.append({})
-        if tag == 'input' and attrs.get('type') == 'hidden':
+        if tag == 'form':
+            self.capture_review = attrs.get('method') == 'post' and attrs.get('action') == '/revision'
+            if self.capture_review:
+                self.forms.append({})
+        if tag == 'input' and attrs.get('type') == 'hidden' and self.capture_review:
             self.forms[-1][attrs['name']] = attrs.get('value', '')
+
+    def handle_endtag(self, tag):
+        if tag == 'form':
+            self.capture_review = False
 
 
 class ContractTests(unittest.TestCase):
@@ -198,6 +205,8 @@ class LocalFlowTests(unittest.TestCase):
     def test_stale_version_and_stale_source_preserve_input(self):
         fields = self.form()
         self.assertEqual(self.request('POST', '/revision', fields)[0], 303)
+        self.assertEqual(self.request('POST', '/revision', fields)[0], 303)  # Doble envío idéntico, idempotente.
+        fields['solicitud_id'] = 'f' * 64  # Otra propuesta sobre una versión obsoleta.
         status, _, html = self.request('POST', '/revision', fields)
         self.assertEqual(status, 409)
         self.assertIn(fields['correccion'], html)

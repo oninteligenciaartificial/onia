@@ -146,19 +146,42 @@ def review_form(target_id, operation, session):
     for row in history:
         changed = ' · la fuente actual tiene otros bytes' if (
             row['sha256_fuente'] != item['sha256_fuente'] or json.loads(row['original']) != item['original']) else ''
-        records.append(f'''<article class="history"><h4>Revisión local v{e(row['version'])} · pendiente{changed}</h4>
+        applied = operation.get('aplicaciones', {}).get((target_id, row['version']))
+        state = 'Aplicada a versión local · revisión pendiente' if applied else 'Sugerencia pendiente'
+        actions = ''
+        if session and session.get('correcciones_v2'):
+            hidden = f'''<input type="hidden" name="csrf" value="{e(session['csrf'])}">
+            <input type="hidden" name="target" value="{e(target_id)}">
+            <input type="hidden" name="source_hash" value="{e(item['huella_revision'])}">
+            <input type="hidden" name="version" value="{e(row['version'])}">'''
+            if applied:
+                actions += f'<p><a href="/version?id={e(applied["id"])}">Previsualizar versión local pendiente</a></p>'
+            elif item.get('editable_local') and row.get('alcance', 'pieza') == 'pieza' and row['version'] == history[-1]['version']:
+                actions += f'<form action="/aplicar" method="post">{hidden}<button>Crear versión local pendiente</button><p class="small">La propuesta se usa como texto completo de la nueva pieza.</p></form>'
+            actions += f'<form action="/solicitar" method="post">{hidden}<button>Exportar solicitud a coordinadora</button></form>'
+        records.append(f'''<article class="history"><h4>Revisión local v{e(row['version'])} · {e(state)}{changed}</h4>
         <p>{e(row['fecha'])}</p><p>Motivo<br>{e(row['motivo'])}</p>
-        <pre>{e(row['correccion'])}</pre><details><summary>Original conservado de esta revisión</summary>
+        <p>Alcance · {e(row.get('alcance', 'pieza'))}</p><pre>{e(row['correccion'])}</pre>{actions}<details><summary>Original conservado de esta revisión</summary>
         <p class="mono">{e(row['fuente'])}<br>SHA-256 de la fuente {e(row['sha256_fuente'])}</p>
         <pre>{e(row['original'])}</pre></details></article>''')
     form = '<p class="small">Para guardar una observación, abrir el modo local indicado en GUIA-REVISION.md.</p>'
     if session:
         version = history[-1]['version'] if history else 0
+        extra = ''
+        if session.get('correcciones_v2'):
+            from lector import sha
+            request_id = sha((session['csrf'] + target_id + str(version) + item['huella_revision']).encode())
+            scopes = [('seccion','Esta sección'),('canonico','Decisión canónica · requiere decisión explícita'),('llm','Trabajo con LLM · requiere coordinación')]
+            if item.get('editable_local'):
+                scopes.insert(0, ('pieza','Esta pieza · nueva versión local'))
+            options = ''.join(f'<option value="{key}">{e(label)}</option>' for key,label in scopes)
+            extra = f'<input type="hidden" name="solicitud_id" value="{request_id}"><label>Alcance<select name="alcance">{options}</select></label>'
         form = f'''<form action="/revision" method="post">
         <input type="hidden" name="csrf" value="{e(session['csrf'])}">
         <input type="hidden" name="target" value="{e(target_id)}">
         <input type="hidden" name="source_hash" value="{e(item['huella_revision'])}">
         <input type="hidden" name="version" value="{e(version)}">
+        <p class="small">Objetivo · {e(item['nombre'])}</p><details class="provenance"><summary>Versión y huella del objetivo</summary><p class="mono">{e(item['fuente'])}<br>Observaciones v{version}<br>{e(item['huella_revision'])}</p></details>{extra}
         <label>Motivo de la observación<input name="motivo" required maxlength="2000"></label>
         <label>Observación o corrección propuesta<textarea name="correccion" required maxlength="12000"></textarea></label>
         <button type="submit">Guardar revisión pendiente v{version + 1}</button>

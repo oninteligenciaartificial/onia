@@ -28,6 +28,7 @@ FACTORIES = (
 )
 PRODUCERS = {key: root for key, _, root in FACTORIES if key in ('guiones', 'whatsapp')}
 PRODUCERS['panel'] = PANEL_ROOT
+PRODUCERS['estrategias'] = '01-negocio/estrategias-operativas-20261111'
 STATES = {'pendiente', 'en_curso', 'bloqueado', 'completado', 'para_revision'}
 HISTORIC_TANDA = FACTORY_ROOT + '1-guiones-calendario/salida/guiones-tanda-20261111-v2/guiones-panel.json'
 MAX_FILE = 512 * 1024
@@ -164,6 +165,7 @@ def build(exports=(), tanda_path=HISTORIC_TANDA):
                                   'documento': document(root + '/README.md', [root], documents)})
     if 'panel' in loaded:
         result['exports_panel'].extend(loaded['panel'])
+    result['exports_estrategias'] = loaded.get('estrategias', [])
     result['decisiones'] = document(DECISIONS, [DECISIONS], documents)
     result['alcance'] = document(SCOPE, [SCOPE], documents)
     result['cerebro_doc'] = document(BRAIN_ROOT + '/README.md', [BRAIN_ROOT], documents)
@@ -220,11 +222,18 @@ class Reviews:
         if fd is not None:
             os.close(fd)
         with self.connect() as db:
+            db.execute('BEGIN IMMEDIATE')
             db.execute('''CREATE TABLE IF NOT EXISTS revisiones (
                 target TEXT NOT NULL, version INTEGER NOT NULL, fecha TEXT NOT NULL,
                 motivo TEXT NOT NULL, correccion TEXT NOT NULL, estado TEXT NOT NULL CHECK(estado='pendiente'),
                 fuente TEXT NOT NULL, sha256_fuente TEXT NOT NULL, original TEXT NOT NULL,
                 PRIMARY KEY(target, version))''')
+            columns = {row['name'] for row in db.execute('PRAGMA table_info(revisiones)')}
+            for name, definition in (('solicitud_id', 'TEXT'), ('payload_sha', 'TEXT'),
+                                     ('alcance', "TEXT NOT NULL DEFAULT 'pieza'")):
+                if name not in columns:
+                    db.execute(f'ALTER TABLE revisiones ADD COLUMN {name} {definition}')
+            db.execute('CREATE UNIQUE INDEX IF NOT EXISTS revision_solicitud ON revisiones(solicitud_id)')
 
     @contextmanager
     def connect(self):
@@ -245,15 +254,30 @@ class Reviews:
                 rows = db.execute('SELECT * FROM revisiones WHERE target=? ORDER BY version', (target_id,)).fetchall()
         return [dict(row) for row in rows]
 
-    def append(self, item, expected, motive, correction):
+    def retry(self, request_id, payload_sha):
+        with self.connect() as db:
+            row = db.execute('SELECT * FROM revisiones WHERE solicitud_id=?', (request_id,)).fetchone()
+        if row:
+            require(row['payload_sha'] == payload_sha, 'El identificador ya se usó con otra propuesta')
+            return dict(row)
+
+    def append(self, item, expected, motive, correction, request_id=None, payload_sha=None, scope='pieza'):
         text(motive, 2000)
         text(correction, 12000)
         require(type(expected) is int and expected >= 0, 'Versión inválida')
         with self.connect() as db:
             db.execute('BEGIN IMMEDIATE')
+            if request_id:
+                saved = db.execute('SELECT * FROM revisiones WHERE solicitud_id=?', (request_id,)).fetchone()
+                if saved:
+                    require(saved['payload_sha'] == payload_sha, 'Identificador reutilizado con otros datos')
+                    return saved['version']
             current = db.execute('SELECT COALESCE(MAX(version),0) FROM revisiones WHERE target=?', (item['id'],)).fetchone()[0]
             require(current == expected, 'La revisión cambió. Recargar antes de guardar.')
-            db.execute('INSERT INTO revisiones VALUES (?,?,?,?,?,?,?,?,?)',
+            db.execute('''INSERT INTO revisiones
+                       (target,version,fecha,motivo,correccion,estado,fuente,sha256_fuente,original,
+                        solicitud_id,payload_sha,alcance) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)''',
                        (item['id'], current + 1, lector.now(), motive, correction, 'pendiente',
-                        item['fuente'], item['sha256_fuente'], json.dumps(item['original'], ensure_ascii=False)))
+                        item['fuente'], item['sha256_fuente'], json.dumps(item['original'], ensure_ascii=False),
+                        request_id, payload_sha, scope))
         return current + 1
