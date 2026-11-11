@@ -1,8 +1,8 @@
 # HOMELAB: worker Windows + WSL para OnIA
 
-> Siguiente paso del corte PE: [diagnóstico y retoma v3](RETOMA-PE-20261111.md). Primero diagnóstico; no repetir v2 ni dar la PC por conectada.
+> **Retoma vigente preparada:** [guía v4 para el corte de montaje](RETOMA-MONTAJE-v4-20261111.md). Código y pruebas en VPS; pendiente revisión independiente y ejecución local de Sergio. No se actuó sobre la PC en esta entrega.
 
-> **Último intento:** la retoma revisada también se detuvo; ver [ALTA-DETENIDA-v2-20261110.md](ALTA-DETENIDA-v2-20261110.md). Quedaron archivos nuevos y la cuenta cerrada. No repetir el alta inicial ni la retoma v2 sobre ese estado: falta diagnóstico y una retoma segura. Los documentos anteriores se conservan como historia. La prioridad vigente de Sergio es ingresos hasta14nov; no usar el homelab como capacidad disponible antes de verificarlo.
+> **Último intento en la PC:** [v3 detenida](ALTA-DETENIDA-v3-20261111.md), con rechazo del montaje overlay de módulos de WSL. No repetir alta inicial, v2 ni v3 sobre ese árbol. Puerto2222 ajeno y excluido. Los cortes siguientes son antecedentes; no usar HOMELAB como capacidad disponible antes de verificar SSH, aislamiento y persistencia.
 
 ## Avance de alta · 9 noviembre 2026 · America/La_Paz
 

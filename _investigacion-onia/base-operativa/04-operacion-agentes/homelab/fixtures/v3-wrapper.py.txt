@@ -1,0 +1,119 @@
+#!/usr/bin/python3 -I
+import ctypes
+import os
+from pathlib import Path
+import pwd
+import re
+import sys
+
+def mounts_safe(sources, mountinfo=None):
+    text = Path('/proc/self/mountinfo').read_text() if mountinfo is None else mountinfo
+    mounts = []
+    for line in text.splitlines():
+        left, right = line.split(' - ', 1)
+        target = re.sub(r'\\([0-7]{3})', lambda m: chr(int(m[1],8)), left.split()[4])
+        mounts.append((Path(target), right.split()[0]))
+    for source in sources:
+        path = Path(source).resolve()
+        if path != Path(source):
+            raise RuntimeError('DENEGADO: fuente enlazada')
+        parent_mount, parent_fs = max(((p,fs) for p,fs in mounts if path == p or p in path.parents), key=lambda item:len(str(item[0])))
+        if parent_mount != Path('/'):
+            raise RuntimeError('DENEGADO: fuente sobre montaje separado no aprobado')
+        if parent_fs not in {'ext4','xfs','btrfs','overlay','tmpfs'}:
+            raise RuntimeError('DENEGADO: filesystem no aprobado')
+        for mount, fs in mounts:
+            if (path == mount or path in mount.parents) and not (mount == Path('/usr/lib/wsl') or Path('/usr/lib/wsl') in mount.parents):
+                raise RuntimeError('DENEGADO: submontaje no aprobado')
+
+def filter_fd():
+    lib = ctypes.CDLL('libseccomp.so.2')
+    class Cmp(ctypes.Structure):
+        _fields_=[('arg',ctypes.c_uint),('op',ctypes.c_int),('a',ctypes.c_uint64),('b',ctypes.c_uint64)]
+    lib.seccomp_init.argtypes=[ctypes.c_uint32];lib.seccomp_init.restype=ctypes.c_void_p
+    lib.seccomp_release.argtypes=[ctypes.c_void_p]
+    lib.seccomp_syscall_resolve_name.argtypes=[ctypes.c_char_p];lib.seccomp_syscall_resolve_name.restype=ctypes.c_int
+    lib.seccomp_rule_add_array.argtypes=[ctypes.c_void_p,ctypes.c_uint32,ctypes.c_int,ctypes.c_uint,ctypes.POINTER(Cmp)]
+    lib.seccomp_export_bpf.argtypes=[ctypes.c_void_p,ctypes.c_int]
+    ctx=lib.seccomp_init(0x7fff0000)  # ALLOW; unknown ABI remains killed by libseccomp.
+    if not ctx: raise RuntimeError('seccomp no disponible')
+    fd=os.memfd_create('onia-worker-seccomp',0)
+    try:
+        for name in (b'socket',b'socketpair',b'io_uring_setup'):
+            syscall=lib.seccomp_syscall_resolve_name(name)
+            if syscall < 0: raise RuntimeError('syscall desconocido')
+            # Only local UNIX sockets. VSOCK, Hyper-V, INET and other families denied.
+            cmp=Cmp(0,1,1,0)  # arg0 != AF_UNIX
+            count=0 if name==b'io_uring_setup' else 1
+            if lib.seccomp_rule_add_array(ctx,0x00050001,syscall,count,ctypes.byref(cmp) if count else None)<0:
+                raise RuntimeError('No se pudo construir seccomp')
+        if lib.seccomp_export_bpf(ctx,fd)<0: raise RuntimeError('No se pudo exportar seccomp')
+        os.lseek(fd,0,os.SEEK_SET);os.set_inheritable(fd,True)
+        return fd
+    except Exception:
+        os.close(fd);raise
+    finally: lib.seccomp_release(ctx)
+
+def command(work, config, text, canary=None):
+    sources=[str(work),str(config)]+['/usr/'+n for n in ('bin','sbin','lib','lib64','share') if Path('/usr/'+n).exists()]
+    mounts_safe(sources)
+    fd=filter_fd()
+    args = ['/usr/bin/bwrap', '--unshare-user', '--unshare-pid',
+            '--unshare-net', '--unshare-ipc', '--unshare-uts',
+            '--die-with-parent', '--new-session', '--cap-drop', 'ALL',
+            '--seccomp', str(fd),
+            '--hostname', 'onia-worker', '--clearenv',
+            '--setenv', 'PATH', '/usr/bin:/bin',
+            '--setenv', 'HOME', '/home/onia-worker',
+            '--setenv', 'USER', 'onia-worker', '--setenv', 'LOGNAME', 'onia-worker',
+            '--setenv', 'LANG', 'C.UTF-8', '--setenv', 'LC_ALL', 'C.UTF-8',
+            '--setenv', 'SHELL', '/bin/bash']
+    # Deliberate allowlist: never bind the host /, /home, /run, /mnt or /usr/local.
+    for name in ('bin', 'sbin', 'lib', 'lib64', 'share'):
+        source = '/usr/' + name
+        if Path(source).exists():
+            args += ['--ro-bind', source, source]
+    for name in ('bin', 'sbin', 'lib', 'lib64'):
+        if Path('/usr/' + name).exists():
+            args += ['--symlink', 'usr/' + name, '/' + name]
+    if Path('/usr/lib/wsl').exists():
+        args += ['--tmpfs', '/usr/lib/wsl']
+    if canary is not None:
+        args += ['--ro-bind', str(canary), '/opt/onia/interop-canary.exe']
+    args += ['--ro-bind', str(config), '/etc', '--proc', '/proc', '--dev', '/dev',
+             '--tmpfs', '/tmp', '--tmpfs', '/run',
+             '--bind', str(work), '/home/onia-worker',
+             '--chdir', '/home/onia-worker',
+             '/bin/bash', '--noprofile', '--norc', '-c', text]
+    return args
+
+def main():
+    account = pwd.getpwnam('onia-worker')
+    if os.geteuid() != account.pw_uid or os.geteuid() == 0:
+        raise SystemExit('DENEGADO: identidad worker requerida')
+    work = Path('/var/lib/onia-worker/work')
+    config = Path('/var/lib/onia-worker/etc')
+    for path in (Path('/var/lib/onia-worker'), config):
+        st = path.lstat()
+        if path.is_symlink() or st.st_uid != 0 or st.st_mode & 0o022:
+            raise SystemExit('DENEGADO: control de rutas modificado')
+    if work.is_symlink() or work.stat().st_uid != account.pw_uid:
+        raise SystemExit('DENEGADO: workspace no válido')
+    text = os.environ.get('SSH_ORIGINAL_COMMAND')
+    if text is None and len(sys.argv) == 3 and sys.argv[1] == '-c':
+        text = sys.argv[2]
+    if not text or text == '/usr/local/libexec/onia-worker-shell':
+        raise SystemExit('DENEGADO: usar un comando explícito, sin sesión interactiva')
+    os.chdir('/')
+    # Drop inherited descriptors before creating the mount/pid namespaces.
+    for name in os.listdir('/proc/self/fd'):
+        fd = int(name)
+        if fd > 2:
+            try: os.close(fd)
+            except OSError: pass
+    os.umask(0o077)
+    os.execve('/usr/bin/bwrap', command(work, config, text, Path('/var/lib/onia-worker/interop-canary.exe')),
+              {'PATH': '/usr/bin:/bin', 'LANG': 'C.UTF-8'})
+
+if __name__ == '__main__':
+    main()
