@@ -10,3 +10,15 @@ Ejecutada en VPS, sin originales de Sergio ni efectos externos.
 Error de ejecución del coordinador: intentó editar el archivo de prueba con ruta relativa a raíz estando en la carpeta del editor. No editó archivos; el test nuevo todavía no existía. Se corrigió la ruta y se ejecutó el caso con éxito. No es fallo de aplicación ni prueba pasada en ese intento fallido.
 
 Sin grabación real en la cola consultada: la carpeta privada de entrada no existía en esta lectura. Eso no demuestra que Drive esté vacío. No se escuchó ni aprobó material de Sergio; tampoco se probó traslado por Boss ni publicación. Los guiones conservan ensayo/aceptación editorial pendientes.
+
+## Correcciones de la revisión independiente
+
+El revisor reprodujo B-roll cambiante entre formatos y ausencia de recibo para manifiestos inválidos. Corregidos: hashes de todos los apoyos fijados antes de ASR y cotejados entre renders; salida/recibo reservados antes de validar entrada. Se llama directamente al editor, cuyos subprocesos conservan timeout, sin otro timeout que pueda matar sólo el padre Python.
+
+Desde la carpeta del editor:
+
+```sh
+python3 -B -m unittest -v pruebas.EditorTests.test_batch_invalid_input_keeps_report pruebas.EditorTests.test_batch_detects_broll_changed_between_formats pruebas.EditorTests.test_batch_transcribes_once_for_multiple_pieces pruebas.EditorTests.test_horizontal_and_batch_share_transcript_and_preserve_source
+```
+
+Salida: `Ran 4 tests in 4.862s — OK`. Un intento anterior desde la raíz no encontró el módulo pruebas (ImportError), sin ejecutar casos ni modificar salidas; se corrigió el directorio y se obtuvo esta salida. Los fixtures permanecen en /tmp. Material real pendiente.

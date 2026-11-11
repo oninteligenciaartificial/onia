@@ -165,6 +165,48 @@ class EditorTests(unittest.TestCase):
         EVIDENCE['lote-asr-unico'] = {'asr_simulado': True, 'render_real': True,
                                     'invocaciones_asr': 1, 'piezas': 2, 'salidas': 4}
 
+    def test_batch_invalid_input_keeps_report(self):
+        invalid = self.root/'lote-invalido.json'
+        invalid.write_text('{')
+        for index, manifest in enumerate((invalid, self.root/'lote-ausente.json')):
+            dest = self.root/f'lote-error-{index}'
+            with self.assertRaises((ValueError, OSError)):
+                lote.process(SimpleNamespace(plan=manifest, salida=dest, preview=True,
+                    timeout=60, asr_python=Path('/fixture/python'), modelos=Path('/fixture/model')))
+            report = editor.read_json(dest/'lote-reporte.json')
+            self.assertEqual(report['resultado'], 'fallido')
+            self.assertEqual(report['piezas'], [])
+            self.assertIn('error', report)
+        EVIDENCE['lote-preflight'] = {'casos': 2, 'recibos_fallidos': 2}
+
+    def test_batch_detects_broll_changed_between_formats(self):
+        support = self.root/'apoyo-cambiante.mp4'
+        support.write_bytes((self.root/'apoyo.mp4').read_bytes())
+        manifest = self.root/'lote-cambio.json'
+        piece = {**self.plan, 'id': 'T01', 'broll': [{**self.plan['broll'][0], 'archivo': str(support)}]}
+        for field in ('version', 'entrada', 'transcripcion'):
+            piece.pop(field)
+        manifest.write_text(json.dumps({'version': 1, 'entrada': str(self.root/'fuente.mp4'),
+            'transcripcion': str(self.root/'texto.json'), 'piezas': [piece]}))
+        dest = self.root/'lote-cambio'
+        original = editor.process
+        before = editor.digest(support)
+        def changing(args):
+            result = original(args)
+            with support.open('ab') as stream:
+                stream.write(b'fixture-cambiado')
+            return result
+        with patch.object(editor, 'process', side_effect=changing) as render:
+            with self.assertRaises(ValueError):
+                lote.process(SimpleNamespace(plan=manifest, salida=dest, preview=True,
+                    timeout=60, asr_python=Path('/fixture/python'), modelos=Path('/fixture/model')))
+            self.assertEqual(render.call_count, 1)
+        report = editor.read_json(dest/'lote-reporte.json')
+        self.assertEqual(report['resultado'], 'fallido')
+        self.assertEqual(report['broll'][0]['sha256'], before)
+        self.assertFalse((dest/'T01-horizontal').exists())
+        EVIDENCE['lote-broll-cambiado'] = {'rechazado': True, 'horizontal_no_iniciado': True}
+
     def test_bad_plan_inputs(self):
         variants = [
             ("vlog", {"tipo": "vlog"}),

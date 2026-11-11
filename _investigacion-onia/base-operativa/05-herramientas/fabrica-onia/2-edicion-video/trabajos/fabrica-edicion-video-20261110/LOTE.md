@@ -17,10 +17,12 @@ D=_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/2-edicion-vide
 python3 -B "$D/lote.py" --plan "$HOME/operacion/fabrica/entrada/tanda-plan.json" --salida "$HOME/operacion/fabrica/entrada/tanda-salida-nueva"
 ```
 
-El padre de salida debe existir; el destino debe ser nuevo. `--preview` genera 360×640 y640×360; por defecto720×1280 y1280×720. El programa procesa en serie con los hilos CPU acotados del editor. No se añade scheduler ni se sube el límite de sesiones. No descarga modelos, sube Drive ni publica.
+El padre de salida debe existir; el destino debe ser nuevo. `--preview` genera 360×640  y 640×360; por defecto 720×1280  y 1280×720. El programa procesa en serie con los hilos CPU acotados del editor. No se añade scheduler ni se sube el límite de sesiones. No descarga modelos, sube Drive ni publica.
 
 Una interrupción conserva el lote parcial. Consultar `lote-reporte.json` y los reportes por pieza; no usar piezas de un lote fallido sin revisión. Nunca repetir sobre el mismo destino ni borrar la transcripción para forzar otro ASR. Si se necesita una nueva corrida, aportar como transcripcion el JSON anterior cotejado y elegir salida nueva.
 
 Boss traslada los resultados a Sala de montaje con el acceso que tenga autorizado. Tener este comando no prueba su ejecución desde la llave restringida del puente; la operación autónoma sin Codex sigue pendiente de comprobar. Contenido/Sergio revisan voz, palabras, sincronía, encuadre y sonido; el estado de salida siempre conserva revisión humana pendiente.
 
 Pruebas: suite existente ampliada12/12 pasó, con ASR real offline de voz sintética, cortes/B-roll/audio/geometría, salida vertical/horizontal y rechazo de salida ocupada. Además una prueba del lote con dos piezas y cuatro renders pasó: ASR simulado invocado sólo una vez, para verificar reutilización. Total13 casos ejecutados. Material real y calidad editorial aún pendientes.
+
+Corrección de revisión: el lote fija los hashes de todos los B-roll antes del ASR, los coteja antes y después de cada render y guarda el inventario en su recibo. Un manifiesto ausente o inválido deja recibo fallido en la salida nueva. No crea otra salida si ésta ya existía. Cada proceso del editor tiene su timeout; no hay un segundo timeout que mate sólo su Python padre. Un corte externo forzoso de energía/proceso puede impedir el recibo final; los parciales se conservan.
