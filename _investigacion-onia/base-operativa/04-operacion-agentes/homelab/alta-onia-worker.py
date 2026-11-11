@@ -41,7 +41,11 @@ import os
 from pathlib import Path
 import pwd
 import re
+import stat
 import sys
+
+# Sólo el montaje observado en DESKTOP-0GGGNMF; otro kernel requiere diagnóstico.
+MODULE_MOUNT = Path('/usr/lib/modules/6.18.33.2-microsoft-standard-WSL2')
 
 def mounts_safe(sources, mountinfo=None):
     text = Path('/proc/self/mountinfo').read_text() if mountinfo is None else mountinfo
@@ -49,7 +53,21 @@ def mounts_safe(sources, mountinfo=None):
     for line in text.splitlines():
         left, right = line.split(' - ', 1)
         target = re.sub(r'\\([0-7]{3})', lambda m: chr(int(m[1],8)), left.split()[4])
+        if not target.startswith('/') or str(Path(target)) != target or '..' in Path(target).parts:
+            raise RuntimeError('DENEGADO: destino de montaje no canónico')
         mounts.append((Path(target), right.split()[0]))
+    module_mounts = [(p, fs) for p, fs in mounts
+                     if p == Path('/usr/lib/modules') or Path('/usr/lib/modules') in p.parents]
+    if module_mounts and module_mounts != [(MODULE_MOUNT, 'overlay')]:
+        raise RuntimeError('DENEGADO: montaje de módulos distinto del observado')
+    for path in (Path('/usr/lib/modules'), MODULE_MOUNT):
+        if path.exists() or path.is_symlink():
+            info = path.lstat()
+            if (path.resolve() != path or not stat.S_ISDIR(info.st_mode)
+                    or (module_mounts and (info.st_uid != 0 or info.st_gid != 0 or info.st_mode & 0o022))):
+                raise RuntimeError('DENEGADO: ruta de módulos no segura')
+        elif module_mounts:
+            raise RuntimeError('DENEGADO: montaje de módulos sin directorio')
     for source in sources:
         path = Path(source).resolve()
         if path != Path(source):
@@ -60,7 +78,7 @@ def mounts_safe(sources, mountinfo=None):
         if parent_fs not in {'ext4','xfs','btrfs','overlay','tmpfs'}:
             raise RuntimeError('DENEGADO: filesystem no aprobado')
         for mount, fs in mounts:
-            if (path == mount or path in mount.parents) and not (mount == Path('/usr/lib/wsl') or Path('/usr/lib/wsl') in mount.parents):
+            if (path == mount or path in mount.parents) and not (mount == Path('/usr/lib/wsl') or Path('/usr/lib/wsl') in mount.parents or (mount, fs) == (MODULE_MOUNT, 'overlay')):
                 raise RuntimeError('DENEGADO: submontaje no aprobado')
 
 def filter_fd():
@@ -115,6 +133,8 @@ def command(work, config, text, canary=None):
             args += ['--symlink', 'usr/' + name, '/' + name]
     if Path('/usr/lib/wsl').exists():
         args += ['--tmpfs', '/usr/lib/wsl']
+    # Después del bind de /usr/lib: nunca exponer el árbol de módulos del host.
+    args += ['--tmpfs', '/usr/lib/modules', '--remount-ro', '/usr/lib/modules']
     if canary is not None:
         args += ['--ro-bind', str(canary), '/opt/onia/interop-canary.exe']
     args += ['--ro-bind', str(config), '/etc', '--proc', '/proc', '--dev', '/dev',
@@ -182,13 +202,13 @@ for name in ('/mnt/c', '/mnt/wsl', '/init', '/run/WSL', '/root',
     assert not pathlib.Path(name).exists(), 'ruta expuesta: ' + name
 if pathlib.Path('/usr/lib/wsl').exists():
     assert not any(pathlib.Path('/usr/lib/wsl').iterdir())
+assert pathlib.Path('/usr/lib/modules').is_dir(), 'máscara de módulos ausente'
+assert not any(pathlib.Path('/usr/lib/modules').iterdir()), 'módulos del host expuestos'
+try:
+    with open('/usr/lib/modules/escritura-prohibida', 'x') as stream: stream.write('test')
+except OSError: pass
+else: raise AssertionError('máscara de módulos escribible')
 assert set(p.name for p in pathlib.Path('/home').iterdir()) == {'onia-worker'}
-tag = 'prueba-' + uuid.uuid4().hex
-work = pathlib.Path.home() / tag
-work.mkdir(mode=0o700)
-(work / 'persistencia.txt').write_text('aislamiento sintético\n')
-(work / 'enlace-windows').symlink_to('/mnt/c')
-assert not (work / 'enlace-windows' / 'Windows').exists()
 denied = False
 try:
     with open('/etc/onia-escritura-prohibida', 'x') as stream: stream.write('test')
@@ -201,10 +221,19 @@ for path in pathlib.Path('/proc/self/fd').iterdir():
     try: target = os.readlink(path)
     except FileNotFoundError: continue
     assert not target.startswith(('/mnt/', '/var/lib/onia-worker/', '/root/'))
+tag = None
+if '--preflight' not in sys.argv[4:]:
+    tag = 'prueba-' + uuid.uuid4().hex
+    work = pathlib.Path.home() / tag
+    work.mkdir(mode=0o700)
+    (work / 'persistencia.txt').write_text('aislamiento sintético\n')
+    (work / 'enlace-windows').symlink_to('/mnt/c')
+    assert not (work / 'enlace-windows' / 'Windows').exists()
 print(json.dumps({'ok': True, 'uid_no_root': True, 'sin_capacidades': True,
                   'no_new_privs': True, 'pid_y_red_aislados': True,
                   'windows_y_host_no_expuestos': True, 'etc_solo_lectura': True,
                   'sudo_rechazado': True, 'persistencia': tag,
+                  'modulos_ocultos_solo_lectura': True,
                   'limite': 'Prueba local del aislamiento; no acredita SSH remoto, ASR ni WSL persistente.'}))
 '''
 
@@ -352,6 +381,9 @@ def pe_canary():
     return bytes(data)
 
 HOST_CANARY = 'Canario sintético fuera del sandbox, sin datos privados.\n'
+# Bytes exactos del instalador v3 SHA256 3e640659…656be; no se adopta otro wrapper.
+V3_WRAPPER_SHA256 = '15bb695532d1d433ee6a8bf5e94e296b7f813328214039a24045d3279f8a41bd'
+V3_CHECK_SHA256 = 'a5b29f52275be780ac5bbbfedf5633325a9a6fb56c3a81cfdff54b10c54e5ed2'
 
 
 def checked_metadata(path, mode, uid=0, gid=0, directory=False):
@@ -396,6 +428,156 @@ def validate_pe_partial(account):
     if (ROOT/'host-only').read_bytes() != HOST_CANARY.encode():
         raise RuntimeError('Canario host distinto; no retomar')
     checked_pe()
+
+
+def config_contents(account):
+    contents = {
+        'passwd': f'onia-worker:x:{account.pw_uid}:{account.pw_gid}:worker:/home/onia-worker:/bin/bash\n'.encode(),
+        'group': f'onia-worker:x:{account.pw_gid}:\n'.encode(),
+        'nsswitch.conf': b'passwd: files\ngroup: files\nhosts: files\n',
+    }
+    # v3 copió estos archivos desde el host. Un cambio del host obliga a parar;
+    # ni se inventa su contenido ni se acepta cualquier archivo con ese nombre.
+    for name in ('ld.so.cache', 'localtime'):
+        source = Path('/etc')/name
+        if not source.exists():
+            if source.is_symlink(): raise RuntimeError('Fuente de configuración colgante')
+            continue
+        resolved = source.resolve(strict=True)
+        if resolved != source and not (name == 'localtime' and resolved.is_relative_to('/usr/share/zoneinfo')):
+            raise RuntimeError('Fuente de configuración enlazada no aprobada')
+        checked_metadata(resolved, 0o644)
+        if resolved.stat().st_size > 8 * 1024 * 1024:
+            raise RuntimeError('Fuente de configuración supera el límite')
+        contents[name] = resolved.read_bytes()
+    return contents
+
+
+def check_absent_publication():
+    for path in (UNIT, Path('/run/systemd/system/onia-worker-sshd.service'),
+                 Path('/usr/lib/systemd/system/onia-worker-sshd.service'),
+                 Path('/etc/systemd/system/multi-user.target.wants/onia-worker-sshd.service'),
+                 Path('/run/onia-worker-sshd')):
+        if os.path.lexists(path):
+            raise RuntimeError('Unidad o runtime ya publicado; no retomar v3')
+
+
+def validate_mount_partial(account):
+    """Corte v3 ANTES de CHECK: lectura estricta, sin adoptar pruebas ni datos nuevos."""
+    checked_metadata(ROOT, 0o755, directory=True)
+    scope = {'__name__': 'validate_mounts'}
+    exec(compile(WRAPPER, 'worker-mount-validation', 'exec'), scope)
+    scope['mounts_safe']([str(ROOT), str(SHELL), str(RUNTIME), str(KEY_DIR)])
+    expected = {'login', 'work', 'etc', 'host-only', 'interop-canary.exe', 'check-isolation.py'}
+    if set(p.name for p in ROOT.iterdir()) != expected:
+        raise RuntimeError('Árbol distinto del corte de montaje v3; conservar y diagnosticar')
+    for name in ('login', 'work', 'etc'):
+        worker = name == 'work'
+        checked_metadata(ROOT/name, 0o700 if worker else 0o755,
+                         account.pw_uid if worker else 0,
+                         account.pw_gid if worker else 0, directory=True)
+        if name != 'etc' and any((ROOT/name).iterdir()):
+            raise RuntimeError('Datos o pruebas previas en el corte v3; no retomar')
+    contents = config_contents(account)
+    if set(p.name for p in (ROOT/'etc').iterdir()) != set(contents):
+        raise RuntimeError('Configuración parcial v3 distinta; no retomar')
+    for name, content in contents.items():
+        path = ROOT/'etc'/name
+        checked_metadata(path, 0o644)
+        if path.read_bytes() != content:
+            raise RuntimeError('Bytes de configuración distintos del host revisado: ' + name)
+    checked_metadata(KEY_DIR, 0o755, directory=True)
+    if set(p.name for p in KEY_DIR.iterdir()) != {'sshd_config'}:
+        raise RuntimeError('Llave u otro archivo SSH ya presente; no retomar')
+    files = ((SHELL, 0o755, V3_WRAPPER_SHA256),
+             (ROOT/'check-isolation.py', 0o644, V3_CHECK_SHA256),
+             (RUNTIME, 0o755, hashlib.sha256(RUNTIME_SCRIPT.encode()).hexdigest()),
+             (SSH_RULE, 0o600, hashlib.sha256(SSH_CONFIG.encode()).hexdigest()),
+             (ROOT/'host-only', 0o644, hashlib.sha256(HOST_CANARY.encode()).hexdigest()))
+    for path, mode, digest in files:
+        checked_metadata(path, mode)
+        if path.stat().st_size > 128 * 1024 or hashlib.sha256(path.read_bytes()).hexdigest() != digest:
+            raise RuntimeError('Archivo distinto de los bytes v3 revisados: ' + path.name)
+    checked_pe()
+    check_absent_publication()
+
+
+def isolation_probe(account, candidate=False, preflight=False):
+    """CHECK con timeout y diagnóstico acotado; nunca vuelca stdout/stderr del hijo."""
+    text = 'python3 - ' + shlex.join([str(account.pw_uid), os.readlink('/proc/self/ns/net'),
+                                    os.readlink('/proc/self/ns/pid')] + (['--preflight'] if preflight else []))
+    entry = ['/usr/bin/python3', '-I', '-c', WRAPPER] if candidate else [str(SHELL)]
+    command = ['/usr/bin/setpriv', '--reuid', str(account.pw_uid), '--regid', str(account.pw_gid),
+               '--init-groups', '/usr/bin/env', '-i'] + entry + ['-c', text]
+    try:
+        result = subprocess.run(command, input=CHECK.encode(), capture_output=True, timeout=20, cwd='/')
+    except subprocess.TimeoutExpired:
+        raise RuntimeError('CHECK detenido: TimeoutExpired (20s); conservar cuenta cerrada') from None
+    report = {'returncode': result.returncode, 'stdout_bytes': len(result.stdout),
+              'stderr_bytes': len(result.stderr), 'stderr_sha256': hashlib.sha256(result.stderr).hexdigest(),
+              'indicios': [label for token, label in (
+                  (b'submontaje', 'submontaje'), (b'montaje de m', 'modulos_montaje'),
+                  (b'bwrap:', 'bwrap'), (b'AssertionError', 'CHECK_assert'),
+                  (b'Permission denied', 'permisos'), (b'namespace', 'namespace')) if token in result.stderr]}
+    if result.returncode != 0 or len(result.stdout) > 8192:
+        raise RuntimeError('CHECK no aprobado: ' + json.dumps(report))
+    try: data = json.loads(result.stdout)
+    except (ValueError, UnicodeError):
+        raise RuntimeError('CHECK sin JSON válido: ' + json.dumps(report)) from None
+    flags = {'ok', 'uid_no_root', 'sin_capacidades', 'no_new_privs', 'pid_y_red_aislados',
+             'windows_y_host_no_expuestos', 'etc_solo_lectura', 'sudo_rechazado',
+             'modulos_ocultos_solo_lectura'}
+    if (not isinstance(data, dict) or set(data) != flags | {'persistencia', 'limite'}
+            or any(data.get(key) is not True for key in flags)):
+        raise RuntimeError('CHECK sin aprobación de aislamiento y módulos')
+    tag = data['persistencia']
+    import re
+    if (preflight and tag is not None) or (not preflight and
+            (not isinstance(tag, str) or not re.fullmatch(r'prueba-[0-9a-f]{32}', tag))):
+        raise RuntimeError('CHECK sin resultado de persistencia válido')
+    if data['limite'] != 'Prueba local del aislamiento; no acredita SSH remoto, ASR ni WSL persistente.':
+        raise RuntimeError('CHECK con campos no reconocidos; conservar salida privada')
+    return data
+
+
+def resume_mount_partial(account, backup):
+    # La candidata se ejecuta en Python aislado como worker, sin instalarla.
+    # Preflight no escribe pruebas en work: cualquier rechazo deja v3 intacta.
+    validate_mount_partial(account)
+    isolation_probe(account, candidate=True, preflight=True)
+    validate_mount_partial(account)
+    saved = backup/'estado-v3'
+    saved.mkdir(mode=0o700)
+    paths = [SHELL, RUNTIME, SSH_RULE, ROOT/'check-isolation.py', ROOT/'host-only',
+             ROOT/'interop-canary.exe'] + sorted((ROOT/'etc').iterdir())
+    manifest = []
+    for index, path in enumerate(paths):
+        data = path.read_bytes()
+        original = saved/str(index)
+        shutil.copy2(path, original, follow_symlinks=False)
+        if original.read_bytes() != data:
+            raise RuntimeError('Respaldo v3 incompleto; no sustituir wrapper')
+        with original.open('rb') as stream: os.fsync(stream.fileno())
+        st = path.lstat()
+        manifest.append({'ruta': str(path), 'copia': str(index), 'sha256': hashlib.sha256(data).hexdigest(),
+                         'modo': oct(stat.S_IMODE(st.st_mode)), 'uid': st.st_uid, 'gid': st.st_gid})
+    write_new(saved/'manifest.json', json.dumps(manifest, indent=2)+'\n', 0o600)
+    directory_fd = os.open(saved, os.O_RDONLY | os.O_DIRECTORY)
+    try: os.fsync(directory_fd)
+    finally: os.close(directory_fd)
+    validate_mount_partial(account)
+    # Estado de intento inmutable: incluso un corte posterior exige diagnóstico,
+    # no una segunda ejecución que sobrescriba archivos parcialmente actualizados.
+    candidate = SHELL.with_name('onia-worker-shell.v4-pending')
+    if os.path.lexists(candidate): raise RuntimeError('Candidata v4 existente; conservar y diagnosticar')
+    write_new(ROOT/'retoma-v4.json', json.dumps({'respaldo_v3': str(saved), 'preflight': 'OK'})+'\n', 0o600)
+    write_new(ROOT/'check-isolation-v4.py', CHECK)
+    write_new(candidate, WRAPPER, 0o755)
+    # Sólo reemplaza el wrapper autenticado; runtime, etc y CHECK v3 se conservan.
+    checked_metadata(SHELL, 0o755)
+    if hashlib.sha256(SHELL.read_bytes()).hexdigest() != V3_WRAPPER_SHA256:
+        raise RuntimeError('Wrapper cambió durante la retoma; no sustituir')
+    os.replace(candidate, SHELL)
 
 
 def pe_probe():
@@ -559,12 +741,14 @@ def main():
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument('--apply', action='store_true', help='Sergio ejecuta localmente como root en la PC autorizada')
     mode.add_argument('--diagnose-pe', action='store_true', help='Sólo lectura y canario PE existente verificado; no instala')
-    parser.add_argument('--resume-pe-control', action='store_true', help='Sólo el árbol parcial exacto de ALTA-DETENIDA-v2')
+    resume = parser.add_mutually_exclusive_group()
+    resume.add_argument('--resume-pe-control', action='store_true', help='Sólo el árbol parcial exacto de ALTA-DETENIDA-v2')
+    resume.add_argument('--resume-mount-control', action='store_true', help='Sólo el corte exacto de montaje v3; preflight y respaldo antes de sustituir')
     parser.add_argument('--resume-backup', type=Path,
                         help='Retoma sólo la cuenta cerrada uid/gid1001; respaldo original privado en /root')
     args = parser.parse_args()
-    if args.resume_pe_control and (not args.apply or args.resume_backup is None):
-        parser.error('--resume-pe-control requiere --apply y --resume-backup ORIGINAL')
+    if (args.resume_pe_control or args.resume_mount_control) and (not args.apply or args.resume_backup is None):
+        parser.error('La retoma del árbol requiere --apply y --resume-backup ORIGINAL')
     if args.diagnose_pe and args.resume_backup is not None:
         parser.error('El diagnóstico no retoma ni necesita respaldo')
     if not args.apply and not args.diagnose_pe:
@@ -592,10 +776,14 @@ def main():
         raise RuntimeError('Retoma solicitada sin cuenta previa; detener')
     if args.resume_pe_control:
         validate_pe_partial(existing)
+    if args.resume_mount_control:
+        validate_mount_partial(existing)
     os.umask(0o022)
     for path in (ROOT, SHELL, KEY_DIR, UNIT, RUNTIME):
         if path == ROOT and args.resume_pe_control:
             continue  # Exact tree/metadata verified above, not an overwrite allowance.
+        if args.resume_mount_control and path in (ROOT, SHELL, KEY_DIR, RUNTIME):
+            continue  # Exact v3 bytes, parents and metadata verified above.
         if os.path.lexists(path): raise RuntimeError('Ruta existente; no sobrescribir: ' + str(path))
         for parent in path.parents:
             if parent.is_symlink(): raise RuntimeError('Padre enlazado: ' + str(parent))
@@ -608,7 +796,7 @@ def main():
     listener=socket.socket()
     try:listener.bind(('127.0.0.1',2224))
     finally:listener.close()
-    stamp = datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+    stamp = datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
     backup = Path('/root') / ('onia-worker-originales-' + stamp)
     backup.mkdir(mode=0o700)
     for original in ('/etc/passwd','/etc/group','/etc/shadow','/etc/gshadow','/etc/ssh/sshd_config'):
@@ -626,29 +814,26 @@ def main():
                               env={'PATH':'/usr/sbin:/usr/bin:/sbin:/bin','LC_ALL':'C'})
         if not sudo_policy_denied(policy, socket.gethostname()):
             raise RuntimeError('Política sudo del worker requiere revisión; no habilitar')
-    prepare_pe_partial(account, args.resume_pe_control)
+    if not args.resume_mount_control:
+        prepare_pe_partial(account, args.resume_pe_control)
     # Positive control remains mandatory; a diagnostic is not a bypass.
     control = pe_probe()
     if not control['ok']:
         raise RuntimeError('Control PE fuera del sandbox falló; cuenta cerrada: ' + json.dumps(control))
-    write_new(ROOT/'etc/passwd',f'onia-worker:x:{account.pw_uid}:{account.pw_gid}:worker:/home/onia-worker:/bin/bash\n')
-    write_new(ROOT/'etc/group',f'onia-worker:x:{account.pw_gid}:\n')
-    write_new(ROOT/'etc/nsswitch.conf','passwd: files\ngroup: files\nhosts: files\n')
-    for filename in ('ld.so.cache','localtime'):
-        source=Path('/etc')/filename
-        if source.exists(): shutil.copyfile(source,ROOT/'etc'/filename)
-    SHELL.parent.mkdir(parents=True,exist_ok=True)
-    write_new(SHELL,WRAPPER,0o755)
-    write_new(RUNTIME,RUNTIME_SCRIPT,0o755)
-    write_new(ROOT/'check-isolation.py',CHECK)
-    KEY_DIR.mkdir(mode=0o755)
-    write_new(SSH_RULE,SSH_CONFIG,0o600)
+    if args.resume_mount_control:
+        check_effective()  # Rechazar configuración/host key antes de sustituir v3.
+        resume_mount_partial(account, backup)
+    else:
+        for filename, content in config_contents(account).items():
+            write_new(ROOT/'etc'/filename, content)
+        SHELL.parent.mkdir(parents=True,exist_ok=True)
+        write_new(SHELL,WRAPPER,0o755)
+        write_new(RUNTIME,RUNTIME_SCRIPT,0o755)
+        write_new(ROOT/'check-isolation.py',CHECK)
+        KEY_DIR.mkdir(mode=0o755)
+        write_new(SSH_RULE,SSH_CONFIG,0o600)
     check_effective()
-    text='python3 - '+shlex.join([str(account.pw_uid),os.readlink('/proc/self/ns/net'),os.readlink('/proc/self/ns/pid')])
-    probe=run(['/usr/bin/setpriv','--reuid',str(account.pw_uid),'--regid',str(account.pw_gid),
-               '--init-groups','/usr/bin/env','-i',str(SHELL),'-c',text],input=CHECK,capture_output=True)
-    local_result=json.loads(probe.stdout)
-    if local_result.get('ok') is not True: raise RuntimeError('Prueba local no aprobada')
+    local_result = isolation_probe(account)
     write_new(ROOT/'alta-local-v1.json',json.dumps({'fecha':stamp,'host_fingerprint':fingerprint,
               'grupos_solo_worker':True,'prueba_local':local_result,'ssh_remoto':'pendiente',
               'red_del_worker':'aislada; transferencia por stdin/stdout SSH, sin red API/browser',

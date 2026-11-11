@@ -1,0 +1,84 @@
+{
+  "encargo": "homelab-conexion-20261109",
+  "version": "v4-montaje",
+  "fecha_utc": "2026-11-11T23:04:48.905772+00:00",
+  "base": "f4479eb301c0b5364021fbbed0183d99c4685d13",
+  "instalador_sha256": "0f6ca971dd570d8e783061ee1f4f58c7517f165dbf2fdb3452a9dc4140282cc1",
+  "suite": {
+    "comando": "python3 -I -B -m unittest discover -s _investigacion-onia/base-operativa/04-operacion-agentes/homelab -p test_alta_onia_worker.py -v",
+    "total": 33,
+    "correctas": 32,
+    "fallos": 0,
+    "errores": 0,
+    "omitidas": [
+      {
+        "prueba": "test_real_bubblewrap_isolation_and_persistence (test_alta_onia_worker.BootstrapSafety.test_real_bubblewrap_isolation_and_persistence)",
+        "motivo": "Integration requires explicit host execution ONIA_TEST_BWRAP=1"
+      }
+    ]
+  },
+  "integracion_explicita": {
+    "comando": "ONIA_TEST_BWRAP=1 python3 -I -B -m unittest discover -s _investigacion-onia/base-operativa/04-operacion-agentes/homelab -p test_alta_onia_worker.py -k test_real_bubblewrap_isolation_and_persistence -v",
+    "returncode": 1,
+    "guarda_montaje_separado": true,
+    "resultado": "No probó aislamiento real: sandbox con fuente sobre montaje separado"
+  },
+  "bwrap_minimo": {
+    "comando": [
+      "bwrap",
+      "--unshare-user",
+      "--unshare-pid",
+      "--unshare-net",
+      "--die-with-parent",
+      "--ro-bind",
+      "/usr",
+      "/usr",
+      "--symlink",
+      "usr/bin",
+      "/bin",
+      "--symlink",
+      "usr/lib",
+      "/lib",
+      "--symlink",
+      "usr/lib64",
+      "/lib64",
+      "--proc",
+      "/proc",
+      "--dev",
+      "/dev",
+      "/usr/bin/true"
+    ],
+    "returncode": 1,
+    "namespace_denegado": true
+  },
+  "powershell": {
+    "runtime_disponible": false,
+    "ejecutado": false,
+    "validacion": "Revisión estática de sintaxis PowerShell5.1 y argv WSL; ejecución Windows pendiente"
+  },
+  "fixtures": {
+    "v3_wrapper_sha256": "15bb695532d1d433ee6a8bf5e94e296b7f813328214039a24045d3279f8a41bd",
+    "v3_check_sha256": "a5b29f52275be780ac5bbbfedf5633325a9a6fb56c3a81cfdff54b10c54e5ed2",
+    "propietarios_y_mountinfo": "Simulados en pruebas WSL; no acredita máquina real"
+  },
+  "sin_aplicacion": {
+    "pc": true,
+    "vps_worker": true,
+    "servicios": true,
+    "produccion": true,
+    "puerto_2222_excluido": true
+  },
+  "revision_independiente": "Pendiente de la coordinadora sobre el commit de entrega",
+  "pendientes": [
+    "Alta local por Sergio",
+    "SSH remoto y host key",
+    "Persistencia WSL",
+    "Orquestación fuera de esta entrega"
+  ],
+  "modelo_efectivo": null,
+  "esfuerzo_efectivo": null,
+  "cuota_inicial": null,
+  "cuota_final": null,
+  "motivo_telemetria": "No expuestos a esta ejecutora",
+  "hijos_abiertos": 0
+}

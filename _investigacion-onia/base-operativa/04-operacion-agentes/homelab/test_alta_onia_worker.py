@@ -2,6 +2,7 @@ import importlib.util
 import json
 import hashlib
 import errno
+from contextlib import contextmanager, ExitStack
 import os
 from pathlib import Path
 import shlex
@@ -294,6 +295,254 @@ class PERecovery(unittest.TestCase):
     def test_pe_bytes_unchanged_from_v2(self):
         self.assertEqual(hashlib.sha256(alta.pe_canary()).hexdigest(),
                          '98ee1b89c5961a32ea860444715c306f8302cb380797ebab44f4f879e13e6055')
+
+
+class MountRecovery(unittest.TestCase):
+    root_mount = '1 0 8:1 / / rw - ext4 fake rw\n'
+    modules = '/usr/lib/modules/6.18.33.2-microsoft-standard-WSL2'
+    fixtures = SOURCE.parent/'fixtures'
+
+    def wrapper_scope(self, old=False):
+        ns = {'__name__': 'fixture'}
+        exec((self.fixtures/'v3-wrapper.py.txt').read_text() if old else alta.WRAPPER, ns)
+        return ns
+
+    @contextmanager
+    def module_paths(self, symlink=False, writable=False, uid=0):
+        original = Path.lstat
+        resolve = Path.resolve
+        def info(path, *args, **kwargs):
+            if str(path) in ('/usr/lib/modules', self.modules):
+                return SimpleNamespace(st_mode=(stat.S_IFLNK if symlink else stat.S_IFDIR) |
+                                       (0o777 if writable else 0o755), st_uid=uid, st_gid=0)
+            return original(path, *args, **kwargs)
+        def canonical(path, *args, **kwargs):
+            if str(path) in ('/usr/lib/modules', self.modules):
+                return Path('/other') if symlink else path
+            return resolve(path, *args, **kwargs)
+        exists = Path.exists
+        def present(path):
+            return True if str(path) in ('/usr/lib/modules', self.modules) else exists(path)
+        with patch.object(Path, 'lstat', info), patch.object(Path, 'resolve', canonical), patch.object(Path, 'exists', present):
+            yield
+
+    def test_observed_mount_reproduces_v3_and_v4_masks_it_after_bind(self):
+        mounts = self.root_mount + f'2 1 0:2 / {self.modules} ro - overlay overlay ro\n'
+        with self.module_paths():
+            with self.assertRaisesRegex(RuntimeError, 'submontaje'):
+                self.wrapper_scope(old=True)['mounts_safe'](['/usr/lib'], mounts)
+            ns = self.wrapper_scope()
+            ns['mounts_safe'](['/usr/lib'], mounts)
+            ns['filter_fd'] = lambda: 42
+            with patch.object(Path, 'read_text', return_value=mounts):
+                cmd = ns['command'](Path('/var/lib/onia-worker/work'), Path('/var/lib/onia-worker/etc'), 'id -u')
+            mask = cmd.index('/usr/lib/modules')
+            self.assertEqual(cmd[mask-1:mask+3], ['--tmpfs', '/usr/lib/modules', '--remount-ro', '/usr/lib/modules'])
+            self.assertGreater(mask, cmd.index('--ro-bind'))
+
+    def test_modules_reject_other_type_version_descendant_duplicate_or_noncanonical(self):
+        valid = f'2 1 0:2 / {self.modules} ro - overlay overlay ro\n'
+        invalid = [valid.replace('overlay overlay', 'ext4 fake'),
+                   valid.replace('6.18.33.2', '6.18.33.3'),
+                   valid.replace(self.modules, '/usr/lib/modules'),
+                   valid.replace(self.modules, self.modules+'/child'), valid+valid,
+                   valid+f'3 2 0:3 / {self.modules}/child ro - tmpfs tmpfs ro\n',
+                   valid.replace('/usr/lib/modules/', '/usr/lib/../lib/modules/'),
+                   valid.replace('/usr/lib/modules/', '/usr//lib/modules/'),
+                   valid+'3 1 8:2 / /usr/share/private rw - ext4 fake rw\n']
+        with self.module_paths():
+            for mounts in invalid:
+                with self.subTest(mounts=mounts), self.assertRaises(RuntimeError):
+                    self.wrapper_scope()['mounts_safe'](['/usr/lib', '/usr/share'], self.root_mount+mounts)
+
+    def test_modules_reject_symlink_unsafe_owner_or_permissions(self):
+        mounts = self.root_mount + f'2 1 0:2 / {self.modules} ro - overlay overlay ro\n'
+        for change in ({'symlink': True}, {'writable': True}, {'uid': 1001}):
+            with self.subTest(change=change), self.module_paths(**change), self.assertRaises(RuntimeError):
+                self.wrapper_scope()['mounts_safe'](['/usr/lib'], mounts)
+
+    @contextmanager
+    def partial(self):
+        folder = Path(tempfile.mkdtemp(prefix='onia-mount-v4-'))
+        root = folder/'worker'; root.mkdir(mode=0o755)
+        for name in ('login', 'work', 'etc'): (root/name).mkdir(mode=0o700 if name == 'work' else 0o755)
+        keydir = folder/'ssh'; keydir.mkdir(mode=0o755)
+        shell = folder/'libexec'/'onia-worker-shell'; shell.parent.mkdir(mode=0o755)
+        runtime = shell.with_name('onia-worker-runtime')
+        contents = {'passwd': b'fixture-passwd\n', 'group': b'fixture-group\n',
+                    'nsswitch.conf': b'passwd: files\n', 'ld.so.cache': b'host-cache', 'localtime': b'host-timezone'}
+        for name, content in contents.items(): alta.write_new(root/'etc'/name, content)
+        alta.write_new(shell, (self.fixtures/'v3-wrapper.py.txt').read_bytes(), 0o755)
+        alta.write_new(runtime, alta.RUNTIME_SCRIPT, 0o755)
+        alta.write_new(keydir/'sshd_config', alta.SSH_CONFIG, 0o600)
+        alta.write_new(root/'check-isolation.py', (self.fixtures/'v3-check.py.txt').read_bytes())
+        alta.write_new(root/'host-only', alta.HOST_CANARY)
+        alta.write_new(root/'interop-canary.exe', alta.pe_canary(), 0o755)
+        backup = folder/'backup'; backup.mkdir(mode=0o700)
+        account = SimpleNamespace(pw_uid=1001, pw_gid=1001)
+        original = Path.lstat
+        read = Path.read_text
+        def info(path, *args, **kwargs):
+            st = original(path, *args, **kwargs)
+            if path == folder or folder in path.parents or path in folder.parents:
+                uid = 1001 if path == root/'work' else 0
+                mode = (stat.S_IFDIR | 0o755) if path in folder.parents else st.st_mode
+                return SimpleNamespace(st_mode=mode, st_uid=uid, st_gid=uid, st_nlink=st.st_nlink)
+            return st
+        def text(path, *args, **kwargs):
+            return self.root_mount if str(path) == '/proc/self/mountinfo' else read(path, *args, **kwargs)
+        with ExitStack() as stack:
+            for name, value in {'ROOT': root, 'SHELL': shell, 'RUNTIME': runtime,
+                                'KEY_DIR': keydir, 'SSH_RULE': keydir/'sshd_config', 'UNIT': folder/'unit'}.items():
+                stack.enter_context(patch.object(alta, name, value))
+            stack.enter_context(patch.object(Path, 'lstat', info))
+            stack.enter_context(patch.object(Path, 'read_text', text))
+            stack.enter_context(patch.object(alta, 'config_contents', return_value=contents))
+            yield account, folder, backup
+
+    def snapshot(self, folder):
+        return {str(p.relative_to(folder)): (p.read_bytes(), p.stat().st_mode, p.stat().st_mtime_ns)
+                for p in folder.rglob('*') if p.is_file() and not p.is_symlink()}
+
+    def test_v3_exact_bytes_fixture_and_safe_resume_back_up_every_original(self):
+        for filename, digest in [('v3-wrapper.py.txt', alta.V3_WRAPPER_SHA256), ('v3-check.py.txt', alta.V3_CHECK_SHA256)]:
+            self.assertEqual(hashlib.sha256((self.fixtures/filename).read_bytes()).hexdigest(), digest)
+        with self.partial() as (account, folder, backup):
+            before = self.snapshot(folder)
+            with patch.object(alta, 'isolation_probe', return_value={'ok': True}) as probe:
+                alta.resume_mount_partial(account, backup)
+            probe.assert_called_once_with(account, candidate=True, preflight=True)
+            self.assertEqual(alta.SHELL.read_text(), alta.WRAPPER)
+            self.assertEqual((alta.ROOT/'check-isolation-v4.py').read_text(), alta.CHECK)
+            manifest = json.loads((backup/'estado-v3/manifest.json').read_text())
+            self.assertEqual(len(manifest), 11)
+            for entry in manifest:
+                saved = backup/'estado-v3'/entry['copia']
+                original = before[str(Path(entry['ruta']).relative_to(folder))]
+                self.assertEqual(saved.read_bytes(), original[0])
+                self.assertEqual(saved.stat().st_mtime_ns, original[2])
+            # Todos los originales salvo wrapper permanecen en su sitio, con metadatos.
+            after = self.snapshot(folder)
+            for path, value in before.items():
+                if path != str(alta.SHELL.relative_to(folder)): self.assertEqual(after[path], value)
+            self.assertFalse(alta.UNIT.exists())
+            self.assertFalse((alta.KEY_DIR/'authorized_keys').exists())
+            with self.assertRaises(RuntimeError): alta.resume_mount_partial(account, backup)
+
+    def test_failed_candidate_or_backup_does_not_replace_or_publish(self):
+        for failure in ('probe', 'copy'):
+            with self.subTest(failure=failure), self.partial() as (account, folder, backup):
+                before = self.snapshot(folder)
+                with patch.object(alta, 'isolation_probe', side_effect=RuntimeError('fixture failure') if failure == 'probe' else None), \
+                     patch.object(alta.shutil, 'copy2', side_effect=OSError('copy failure') if failure == 'copy' else None):
+                    with self.assertRaises((RuntimeError, OSError)): alta.resume_mount_partial(account, backup)
+                after = self.snapshot(folder)
+                for path, value in before.items(): self.assertEqual(after[path], value)
+                self.assertFalse((alta.ROOT/'retoma-v4.json').exists())
+                self.assertFalse(alta.UNIT.exists())
+                self.assertFalse((alta.KEY_DIR/'authorized_keys').exists())
+
+    def test_reject_modified_partial_content_permissions_links_publication_and_data(self):
+        mutations = ('shell', 'runtime', 'check', 'ssh', 'cache', 'timezone', 'extra', 'work', 'login',
+                     'symlink', 'hardlink', 'mode', 'key', 'unit', 'receipt')
+        for mutation in mutations:
+            with self.subTest(mutation=mutation), self.partial() as (account, folder, backup):
+                if mutation == 'shell': alta.SHELL.write_text('# altered\n')
+                elif mutation == 'runtime': alta.RUNTIME.write_text('# altered\n')
+                elif mutation == 'check': (alta.ROOT/'check-isolation.py').write_text('altered')
+                elif mutation == 'ssh': alta.SSH_RULE.write_text('altered')
+                elif mutation == 'cache': (alta.ROOT/'etc/ld.so.cache').write_bytes(b'different')
+                elif mutation == 'timezone': (alta.ROOT/'etc/localtime').write_bytes(b'different')
+                elif mutation == 'extra': (alta.ROOT/'extra').write_text('preserve')
+                elif mutation in ('work', 'login'): (alta.ROOT/mutation/'data').write_text('preserve')
+                elif mutation == 'symlink':
+                    os.rename(alta.SHELL, folder/'original-shell')
+                    alta.SHELL.symlink_to(folder/'original-shell')
+                elif mutation == 'hardlink': os.link(alta.SHELL, folder/'shell-alias')
+                elif mutation == 'mode': alta.RUNTIME.chmod(0o777)
+                elif mutation == 'key': (alta.KEY_DIR/'authorized_keys.pending').write_text('preserve')
+                elif mutation == 'unit': alta.UNIT.symlink_to(folder/'missing-unit')
+                elif mutation == 'receipt': (alta.ROOT/'alta-local-v1.json').write_text('{}')
+                before = self.snapshot(folder)
+                with patch.object(alta, 'isolation_probe') as probe:
+                    with self.assertRaises(RuntimeError): alta.resume_mount_partial(account, backup)
+                    probe.assert_not_called()
+                self.assertEqual(self.snapshot(folder), before)
+
+    def test_v4_flag_requires_apply_backup_and_excludes_other_resume(self):
+        for args in (['--resume-mount-control'], ['--apply', '--resume-mount-control'],
+                     ['--diagnose-pe', '--resume-mount-control'],
+                     ['--apply', '--resume-pe-control', '--resume-mount-control', '--resume-backup', '/root/x']):
+            with self.subTest(args=args), patch('sys.argv', [str(SOURCE)]+args), patch('sys.stderr'):
+                with self.assertRaises(SystemExit): alta.main()
+
+    def test_check_failure_diagnostic_never_prints_arbitrary_child_output(self):
+        account = SimpleNamespace(pw_uid=1001, pw_gid=1001)
+        for outcome in (subprocess.CompletedProcess([], 1, b'secret-stdout', b'\xffsecret-stderr bwrap: namespace'),
+                        subprocess.CompletedProcess([], 0, b'secret-stdout', b'private'),
+                        subprocess.TimeoutExpired('private command', 20)):
+            with self.subTest(outcome=type(outcome).__name__), patch.object(alta.subprocess, 'run') as run:
+                if isinstance(outcome, BaseException): run.side_effect = outcome
+                else: run.return_value = outcome
+                with self.assertRaises(RuntimeError) as caught: alta.isolation_probe(account, candidate=True, preflight=True)
+                self.assertNotIn('secret', str(caught.exception))
+                self.assertNotIn('private', str(caught.exception))
+                self.assertEqual(run.call_args.kwargs['timeout'], 20)
+
+    def test_check_success_requires_all_flags_and_only_known_output(self):
+        account = SimpleNamespace(pw_uid=1001, pw_gid=1001)
+        data = dict.fromkeys(('ok', 'uid_no_root', 'sin_capacidades', 'no_new_privs',
+                             'pid_y_red_aislados', 'windows_y_host_no_expuestos', 'etc_solo_lectura',
+                             'sudo_rechazado', 'modulos_ocultos_solo_lectura'), True)
+        data.update(persistencia=None, limite='Prueba local del aislamiento; no acredita SSH remoto, ASR ni WSL persistente.')
+        with patch.object(alta.subprocess, 'run', return_value=subprocess.CompletedProcess([], 0, json.dumps(data).encode(), b'')) as run:
+            self.assertEqual(alta.isolation_probe(account, candidate=True, preflight=True), data)
+            self.assertIn(alta.WRAPPER, run.call_args.args[0])
+            self.assertIn('--preflight', run.call_args.args[0][-1])
+        for changed in (data | {'sudo_rechazado': False}, data | {'secret': 'never-print'},
+                        data | {'persistencia': 'never-print'}, data | {'limite': 'never-print'}):
+            with self.subTest(keys=set(changed)), patch.object(alta.subprocess, 'run',
+                    return_value=subprocess.CompletedProcess([], 0, json.dumps(changed).encode(), b'')):
+                with self.assertRaises(RuntimeError) as caught: alta.isolation_probe(account, preflight=True)
+                self.assertNotIn('never-print', str(caught.exception))
+
+    def test_v4_nested_mount_or_changed_parent_is_refused_before_probe(self):
+        for mutation in ('mount', 'parent'):
+            with self.subTest(mutation=mutation), self.partial() as (account, folder, backup):
+                before = self.snapshot(folder)
+                with ExitStack() as stack:
+                    if mutation == 'parent': alta.SHELL.parent.chmod(0o777)
+                    else:
+                        read = Path.read_text
+                        def text(path, *args, **kwargs):
+                            return (self.root_mount + f'2 1 8:2 / {alta.ROOT}/work rw - ext4 fake rw\n') if str(path) == '/proc/self/mountinfo' else read(path, *args, **kwargs)
+                        stack.enter_context(patch.object(Path, 'read_text', text))
+                    probe = stack.enter_context(patch.object(alta, 'isolation_probe'))
+                    with self.assertRaises(RuntimeError): alta.resume_mount_partial(account, backup)
+                    probe.assert_not_called()
+                self.assertEqual(self.snapshot(folder), before)
+
+    def test_host_copied_config_validates_sources_and_preserves_their_bytes(self):
+        source_data = {'/etc/ld.so.cache': b'cache-from-host', '/usr/share/zoneinfo/Etc/UTC': b'time-from-host'}
+        exists = Path.exists; resolve = Path.resolve; read = Path.read_bytes
+        def present(path): return True if str(path) in ('/etc/ld.so.cache', '/etc/localtime') else exists(path)
+        def canonical(path, *args, **kwargs):
+            if str(path) == '/etc/localtime': return Path('/usr/share/zoneinfo/Etc/UTC')
+            if str(path) == '/etc/ld.so.cache': return path
+            return resolve(path, *args, **kwargs)
+        def contents(path): return source_data[str(path)] if str(path) in source_data else read(path)
+        account = SimpleNamespace(pw_uid=1001, pw_gid=1001)
+        with patch.object(Path, 'exists', present), patch.object(Path, 'resolve', canonical), \
+             patch.object(Path, 'read_bytes', contents), patch.object(alta, 'checked_metadata') as metadata:
+            result = alta.config_contents(account)
+            self.assertEqual(result['ld.so.cache'], b'cache-from-host')
+            self.assertEqual(result['localtime'], b'time-from-host')
+            self.assertEqual(result['passwd'], b'onia-worker:x:1001:1001:worker:/home/onia-worker:/bin/bash\n')
+            metadata.assert_any_call(Path('/usr/share/zoneinfo/Etc/UTC'), 0o644)
+            with patch.object(Path, 'resolve', return_value=Path('/private/unapproved')), self.assertRaises(RuntimeError):
+                alta.config_contents(account)
+            with patch.object(alta, 'checked_metadata', side_effect=RuntimeError('bad metadata')), self.assertRaises(RuntimeError):
+                alta.config_contents(account)
 
 
 if __name__ == '__main__':

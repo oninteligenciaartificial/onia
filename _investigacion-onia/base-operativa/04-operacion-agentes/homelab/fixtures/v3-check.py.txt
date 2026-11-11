@@ -1,0 +1,50 @@
+import json, os, pathlib, socket, subprocess, sys, uuid
+uid, host_net, host_pid = int(sys.argv[1]), sys.argv[2], sys.argv[3]
+assert os.getuid() == uid and os.geteuid() == uid and uid != 0
+status = dict(x.split(':', 1) for x in pathlib.Path('/proc/self/status').read_text().splitlines() if ':' in x)
+assert status['NoNewPrivs'].strip() == '1'
+assert status['Seccomp'].strip() == '2'
+assert int(status['CapEff'].strip(), 16) == 0
+assert os.readlink('/proc/self/ns/net') != host_net
+assert os.readlink('/proc/self/ns/pid') != host_pid
+assert not os.environ.get('WSL_INTEROP') and not os.environ.get('WSLENV')
+for family in (2,10,40,43):
+    try: sock=socket.socket(family,socket.SOCK_STREAM)
+    except PermissionError: pass
+    else:
+        sock.close();raise AssertionError('familia socket no bloqueada: '+str(family))
+if pathlib.Path('/opt/onia/interop-canary.exe').exists():
+    try:
+        pe=subprocess.run(['/opt/onia/interop-canary.exe'],capture_output=True,timeout=5)
+    except OSError: pass
+    else: assert pe.returncode != 0, 'PE Windows pudo ejecutarse'
+for name in ('/mnt/c', '/mnt/wsl', '/init', '/run/WSL', '/root',
+             '/var/lib/onia-worker/host-only', '/etc/shadow', '/etc/ssh',
+             '/proc/1/root/mnt/c', '/proc/1/root/var/lib/onia-worker/host-only'):
+    assert not pathlib.Path(name).exists(), 'ruta expuesta: ' + name
+if pathlib.Path('/usr/lib/wsl').exists():
+    assert not any(pathlib.Path('/usr/lib/wsl').iterdir())
+assert set(p.name for p in pathlib.Path('/home').iterdir()) == {'onia-worker'}
+tag = 'prueba-' + uuid.uuid4().hex
+work = pathlib.Path.home() / tag
+work.mkdir(mode=0o700)
+(work / 'persistencia.txt').write_text('aislamiento sintético\n')
+(work / 'enlace-windows').symlink_to('/mnt/c')
+assert not (work / 'enlace-windows' / 'Windows').exists()
+denied = False
+try:
+    with open('/etc/onia-escritura-prohibida', 'x') as stream: stream.write('test')
+except OSError: denied = True
+assert denied, '/etc debe ser sólo lectura'
+result = subprocess.run(['/usr/bin/sudo', '-n', 'true'], capture_output=True) if pathlib.Path('/usr/bin/sudo').exists() else None
+assert result is None or result.returncode != 0
+# /proc is the private pid namespace; no outside process descriptors are reachable.
+for path in pathlib.Path('/proc/self/fd').iterdir():
+    try: target = os.readlink(path)
+    except FileNotFoundError: continue
+    assert not target.startswith(('/mnt/', '/var/lib/onia-worker/', '/root/'))
+print(json.dumps({'ok': True, 'uid_no_root': True, 'sin_capacidades': True,
+                  'no_new_privs': True, 'pid_y_red_aislados': True,
+                  'windows_y_host_no_expuestos': True, 'etc_solo_lectura': True,
+                  'sudo_rechazado': True, 'persistencia': tag,
+                  'limite': 'Prueba local del aislamiento; no acredita SSH remoto, ASR ni WSL persistente.'}))
