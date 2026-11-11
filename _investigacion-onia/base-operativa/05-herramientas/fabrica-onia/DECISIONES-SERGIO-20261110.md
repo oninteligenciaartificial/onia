@@ -51,3 +51,21 @@ Decisión directa de Sergio en Codex: «Quita el limite de 90% lo de las mas de 
 - Mantener máximo3 sesiones simultáneas. La medición para superar3 queda pendiente; no ejecutar ni programar el ensayo91→93.
 - Prioridad hasta el14 de noviembre: ingresos. Retomar las entregas existentes útiles para vender y completar sus requisitos; no condicionar el trabajo independiente del VPS a terminar benchmarks o al homelab.
 - Sustituye la secuencia anterior de cerrar toda la infraestructura antes de avanzar en ingresos. Homelab conserva su pendiente y no se presenta como listo. No cambia permisos de publicación, mensajes comerciales, cobro, gasto, n8n ni producción; ninguna entrega se acepta sin su evidencia y autoridad correspondientes.
+
+## Horario definitivo del workshop · 11 nov 2026, 07:34 La Paz
+
+Decisión directa de Sergio en chat con Boss: «Para que haya tiempo de vender movamos un día la clase, inicia el viernes, para agarrar más cupos». Antes había pedido bajar la hora a las 20:00.
+
+- Clase 1 Ordenar: viernes 13 nov, 20:00–21:30 (America/La_Paz).
+- Clase 2 Vender: sábado 14 nov, 20:00–21:30.
+- Clase 3 Automatizar: domingo 15 nov, 14:00–15:30.
+- Sustituye las fechas anteriores (jue 12 / vie 13 21:00, sáb 14 14:00) en oferta, guiones, textos del bot, calendario de contenido y n8n.
+- Pendiente de Sergio: la clase 1 se pisa con su bloque «Novia» (vie 18:00–21:00).
+
+## Reparto de trabajo con Codex · 11 nov 2026, 07:40 La Paz
+
+Sergio: «Necesitamos que todos usen a Codex […] y tengo que tener el panel listo».
+
+- Todos los agentes (Contenido, Infraestructura/Operaciones, Calendario, Boss Life) mandan el trabajo pesado a Codex con `onia-llm` en la computadora compartida y solo coordinan y revisan. Boss conserva el puente al VPS para repo grande y tareas con revisor.
+- Todo el trabajo y el contexto deben quedar en este repo; nunca secretos, QR de pago, enlaces autenticados ni medios privados.
+- Prioridad: panel listo (lista abierta de tipos, calendario con fechas nuevas, sala de montaje) y corrección de fechas. Propuesto por Boss; lanzamiento pendiente de confirmación de Sergio.

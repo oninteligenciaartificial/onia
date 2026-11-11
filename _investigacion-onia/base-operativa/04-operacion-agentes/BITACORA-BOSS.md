@@ -69,3 +69,14 @@ Error de Boss: durante cerca de una hora trató sesiones con viva=false y sesion
 - Inferido: no corresponde cerrar/revisar/recoger ni relanzar construcción sobre esas rutas.
 - Entradas localizadas: ninguna todavía (número Meta verificado, acceso, QR, 3 enlaces Meet y credenciales siguen sin localizar; el acuse 388043f no las acredita).
 - Siguiente responsable: Boss en chat principal + Sergio (decir qué de eso está listo, en privado) y Operaciones; Contenido revisa mensajes, excepciones y tanda. Luego prueba limitada en el número de Sergio bajo su autorización. Sin activar n8n, sin envíos a clientes, sin publicación ni cobro.
+
+## 11 nov 2026, 07:30–07:57 La Paz · preparación de venta (chat principal)
+
+- Observado: número de ventas WhatsApp +591 75414930 en WhatsApp Manager, WABA «Onia», portfolio OniaAgency, Conectado, calidad Alta (lectura sin cambios). El segundo número (+591 75470140) no entra en esta venta. Posible aviso de empresa no verificada, sin confirmar.
+- Observado: QR de pago localizado en Drive privado de Sergio. No se copia a Git ni al chat; Codex lo recibirá solo en privado para la prueba autorizada.
+- Ejecutado: 3 eventos Meet en Google Calendar de OnIA (sin invitados, sin avisos), movidos al horario de DECISIONES (vie 13 20:00, sáb 14 20:00, dom 15 14:00). Enlaces fuera de Git.
+- Ejecutado: panel regenerado desde master con `tanda.py` sobre guiones-tanda-20261111-v2 en worktree limpio y entregado a Sergio como archivo. Es solo lectura y no está aceptado.
+- Observado: el `--diagnose-pe` del homelab (RETOMA-PE df8beea) sigue sin correr; Sergio lo marcó como pendiente, pero DESKTOP-0GGGNMF aparecía desconectada a las 07:35.
+- Observado: Codex disponible en la computadora compartida de agentes vía `onia-llm` (prueba de humo OK 07:41).
+- Pendiente de Sergio: quién atiende «comentá NEGOCIO»; choque vie 13 con «Novia»; prueba del bot solo con su número; sí para lanzar la tarea del panel y la regla Codex para agentes; sí para abrir la venta.
+- Archivos con fechas viejas: listados en el informe de esta mañana (16 vigentes; evidencia histórica no se reescribe).
