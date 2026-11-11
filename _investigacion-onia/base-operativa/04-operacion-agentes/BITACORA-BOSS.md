@@ -38,3 +38,9 @@ Error de Boss: durante cerca de una hora trató sesiones con viva=false y sesion
 - Decisión: nombre del workshop «Claude de 0 a 100: tu negocio con IA» (DECISIONES-SERGIO-20261110.md).
 - Propuesto a Sergio, pendiente de que se lo pida a Codex: operación `preguntar` en el puente y regla en AGENTS.md para que toda sesión lea esta bitácora.
 - Nota: el ID de la fábrica guiones debe empezar con `guiones-tanda-` (FACTORIES en harness_delegacion.py).
+
+## 10 nov 2026, 20:30 La Paz · aviso `pedido_coordinacion` prioridad-ingresos-20261110-1
+- Observado: webhook tipo pedido_coordinacion (no fin de sesión) para `conexion-boss-codex-20261110` r11 «aceptado», commit 53929e5. Leí 53929e5 y 48842c3: DECISIONES-SERGIO entrada «Prioridad de ingresos y cuota» (cita de Sergio en Codex: quitar reserva 90 %, >3 sesiones pendiente, ingresos hasta el 14/11), REGLAS-BOSS §orden actualizado, cola-boss «HECHO + decisión vigente».
+- Comprobado: el commit existe en origin/master y coincide con el aviso. No pude correr `consultar` desde esta rutina (destino del puente no disponible en el entorno de la rutina); estado del harness no verificado aquí.
+- Inferido: no hay entrega nueva ni veredicto que recoger; ningún efecto de cerrar/revisar/recoger corresponde a este aviso.
+- Pendiente para el chat principal de Boss: confirmar con Sergio la decisión (autor del commit es Codex), y elegir siguiente tarea de ingresos ya autorizada desde entregas existentes. Homelab: no repetir retoma v2. Sin cambios en publicación, cobro, gasto, n8n ni producción.
