@@ -128,12 +128,14 @@ p+p {
 .sidebar a {
   display:flex;
   align-items:center;
-  gap:15px;
+  gap:10px;
   min-height:52px;
-  padding:12px 15px;
+  padding:12px 10px;
   border-radius:11px;
-  font-size:17px;
-  line-height:1.3
+  font-size:15px;
+  line-height:1.3;
+  overflow-wrap:normal;
+  word-break:normal
 }
 .sidebar a:hover {
   background:#f1ece5
