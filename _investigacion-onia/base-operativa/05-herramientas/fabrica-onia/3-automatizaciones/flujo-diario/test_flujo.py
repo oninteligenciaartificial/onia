@@ -419,6 +419,7 @@ class AdapterTests(unittest.TestCase):
         adapter = LocalHarness.__new__(LocalHarness)
         adapter.base, adapter.operation = Path('/tmp/coordinador-no-usado'), Path('/tmp/operacion-no-usada')
         adapter.sessions = types.SimpleNamespace(launch=Mock(), close=Mock(), collect_review=Mock())
+        adapter.preflight = Mock(return_value={'sintetico': True, 'permitido': True})
         request = motor.make_request(DAY, [], STAMP, True)
         _, actor, route = adapter.scope(request)
         before = {'exists': True, 'revision': 7, 'binding': 'SCOPE', 'goal': adapter.goal(request),
@@ -455,11 +456,11 @@ class AdapterTests(unittest.TestCase):
         self.assertFalse(adapter.harness.prepare.call_args.kwargs['shared'])
         adapter.trabajo.assign.assert_called_once_with(adapter.base, ident, 1, actor, [route])
 
-    def test_programacion_deshabilitada_y_hora_pendiente(self):
+    def test_programacion_deshabilitada_con_inicio17(self):
         import programacion
         config = comun.read_json(comun.HERE/'config.ejemplo.json')
         self.assertFalse(programacion.plan(config)['habilitada'])
-        self.assertIsNone(programacion.plan(config)['hora_tanda'])
+        self.assertEqual(programacion.plan(config)['hora_tanda'], '17:00')
         config['habilitada'] = True
         with self.assertRaises(ValueError):
             programacion.plan(config)

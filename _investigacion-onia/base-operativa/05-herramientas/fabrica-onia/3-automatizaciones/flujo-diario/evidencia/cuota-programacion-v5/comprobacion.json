@@ -1,0 +1,52 @@
+{
+  "schema": "onia-cuota-programacion-evidencia-v1",
+  "fecha": "2026-11-11T21:50:36.609664+00:00",
+  "base_head": "9a4639f245d4cf3d0f3ab3e22403fabe80e0d43b",
+  "pruebas": {
+    "total": 55,
+    "preflight": 16,
+    "programacion": 8,
+    "flujo_restante": 31,
+    "returncode": 0,
+    "log": "pruebas-flujo.txt"
+  },
+  "rpc_vivo": "intento-rpc-vivo.json",
+  "rpc_positivo": false,
+  "cuota_inicial": null,
+  "cuota_final": null,
+  "programacion_instalada": false,
+  "programacion_activada": false,
+  "panel_modificado": false,
+  "harness_instalado_modificado": false,
+  "sesiones_modelo_lanzadas": 0,
+  "hijos": 0,
+  "revision_independiente": null,
+  "referencias": {
+    "rpc_primario": "https://learn.chatgpt.com/docs/app-server",
+    "helper_leido": "/tmp/onia-read-quota-rpc.py",
+    "schemas_leidos": "/tmp/onia-app-schema/v2"
+  },
+  "sha256": {
+    "COORDINACION-v1.md": "0fe0f52d8d2f446270c05a1e8d607c75d61c2fb2049efc64cddd64cfdf356861",
+    "COORDINACION-v2.md": "09201cc1aba5f9a8a0d8eec956a053ab40205a669f9b8d15913946a336acc003",
+    "COORDINACION-v3.md": "7e96799cecdb2fe27afb9f01942aea911e4a70bccead11511632d8e989059b3c",
+    "COORDINACION-v4.md": "8b607e7875f3479ce07378441cab6c34456da5209774063b364a16b2674c6081",
+    "PROMPT-DIARIO.md": "aba4a0e655b53dd8ae895ba6d279390c790e341b8cb998afe1cb126942cb629e",
+    "PRUEBAS.md": "883e8ae7ca5448cff94631ac88fc7d92a202889e799bf28a887cd31a447df9e1",
+    "README.md": "93dea833b672f9d415c48c4c040d08d59a4afbcf669c42fa8709926151f50046",
+    "RECIBO.md": "b59566ff0d614d3354172757690f88a2587a11905010b31dbc7771fe59cc68e1",
+    "adaptador_harness.py": "1096b8f02826792291481fe70325fcb0b73fe51374efbb8f2f70ebe9f59ff0f6",
+    "comun.py": "184a8d5525554e17669cf5a1af713ff8b1a8414f605fe8856596656d6be8f593",
+    "config.ejemplo.json": "524c1b9b59e92e0cdbac847240a50056e4ec0d3989fb48920e3382b83198d0d8",
+    "ensayo.py": "7da4f89a54d53cc8904a43ab87ea502f90814b9a50937e55e37431cd287e0a1e",
+    "fuentes.py": "1e4e1b4d80dc20448c13ff8069918137864af75731b09a8c1dcfee0bd74ede49",
+    "motor.py": "2ea95447b92bc1b64b3e85cf4d116be8effbc7e289f5c584f9ceb39c8a048af0",
+    "preflight.py": "371f919e1f9339b87b63ed30f3f7e1610b374890bd5df3557f1233a3d7730e21",
+    "programacion/onia-flujo-diario.service": "c4941e37433a65fc2b2cd033123ff53a7f3bee58aedc3f675d1feac89e4af308",
+    "programacion/onia-flujo-diario.timer": "5ea0b9ebb7b7e8d7ee329c5ec2da6811dd0920d010fcf58671e0fe7403d08da3",
+    "programacion.py": "f0814ad29121df5cc6831dbd646ec2a64e486bc336269c4d35edd29d7064032c",
+    "test_flujo.py": "4ffd321b024605a574e8a2fae802cb32172b81298367dcbde22dbdaa97dd7289",
+    "test_preflight.py": "b981e449e41dd5ed3e188bb5f47fa56684599efeacc1232ff65adf93daaf7092",
+    "test_programacion.py": "c14d80323a2514d607abfb80d5b749accfa71b6dc08d7c659cb8844d9ac53741"
+  }
+}
