@@ -56,3 +56,10 @@ Error de Boss: durante cerca de una hora trató sesiones con viva=false y sesion
 - Comprobado: `consultar` no disponible desde la rutina; estado del harness no verificado aquí. No hay commit nuevo del ejecutor ni dictamen asociado a este aviso.
 - Inferido: no corresponde cerrar/revisar/recoger. No lanzar otro ejecutor sobre rutas de WhatsApp, guiones o montaje.
 - Siguiente paso (chat principal de Boss): coordinar con Operaciones la localización privada y estado real del número Meta verificado, QR y enlaces Meet (sin secretos en chat/Git), y con Contenido la revisión editorial de T01–T05. Sin envíos a clientes, publicación, cobro ni activación de n8n.
+
+## 11 nov UTC · entrega técnica de fábrica (entrada de Codex)
+
+- Publicado y verificado en origin/master: eaacab45099c43eaafe7e9e5aed7161078ec8a70. Código de WhatsApp458771a; contenido/panel a83eb0c y corrección lote f7dc1f1. Dictámenes y comandos en `evidencias/cierre-venta-20261111/REVISION-INDEPENDIENTE.md`.
+- Probado localmente: editor dos formatos, ASR reutilizado, hashes B-roll y recibos de error; panel22+tanda3; chatbot44 Node+14 Python. No se probó canal real Meta/n8n ni venta.
+- Aviso técnico a Boss cierre-venta-20261111-2: webhook recibido por HTTP, acuse de ejecución pendiente. El evento no es cierre de sesión ni aceptación de tareas antiguas. No lanzar otra ejecutora duplicada.
+- Siguiente: Boss/Operaciones confirman ubicación privada de número/Meta, QR y Meet; Contenido/Sergio validan textos y grabación. Después conectar/probar y solicitar activación sobre el recorrido concreto. Todos los detalles y responsables quedan en `05-herramientas/fabrica-onia/CIERRE-VENTA-20261111.md`.
