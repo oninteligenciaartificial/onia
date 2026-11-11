@@ -1,0 +1,40 @@
+{
+  "consultada": "2026-11-11T18:29:32.354519+00:00",
+  "errores": [],
+  "fuente_real": true,
+  "limites": [
+    "Lectura primaria del artículo y metadatos; no redacción ni prueba de producto",
+    "Candidata, sin selección editorial",
+    "Persistencia privada fuera de Git; sin recurrencia"
+  ],
+  "modelo_real": false,
+  "noticias": [
+    {
+      "consultada": "2026-11-11T18:29:32.094062+00:00",
+      "fecha_hecho": "2026-11-10",
+      "limites": "Anuncio primario; fecha del anuncio, no despliegue individual. Revisión editorial pendiente.",
+      "precision": "dia",
+      "publicada": "2026-11-10",
+      "resumen": "Today Anthropic, PBC launched the roadshow for its proposed initial public offering of its Class A common stock.",
+      "sha256_respuesta": "48ace4292b94761581711d2ac8696ed4de7d17943a4a23bfb220395988b9596d",
+      "titulo": "Anthropic launches roadshow for proposed initial public offering",
+      "url": "https://www.anthropic.com/news/roadshow-launch"
+    }
+  ],
+  "primera_proyeccion": {
+    "candidatas": 1,
+    "ciclos": 1,
+    "errores": [
+      {
+        "codigo": "MODELO_NO_DISPONIBLE",
+        "siguiente": "Coordinadora: comprobar proveedor incluido; no sustituir por API pagada."
+      }
+    ]
+  },
+  "schema": "onia-ensayo-fuente-real-v1",
+  "segunda_consulta": {
+    "candidatas": 1,
+    "ciclos": 1,
+    "lanzamientos": 0
+  }
+}

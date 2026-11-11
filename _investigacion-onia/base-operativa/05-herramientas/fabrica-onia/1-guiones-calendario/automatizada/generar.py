@@ -15,6 +15,7 @@ import sys
 import tempfile
 import unicodedata
 from urllib.parse import urlsplit
+from zoneinfo import ZoneInfo
 
 HERE = Path(__file__).resolve().parent
 BASE = HERE.parents[3]
@@ -124,7 +125,7 @@ def validate(brief, sources, draft):
     day = date.fromisoformat(brief['fecha_tanda'])
     require(brief.get('oferta') == OFFER, 'Oferta/horarios no coinciden con decisiones vigentes')
     generated = stamp(brief['generado'])
-    require(generated.date() == day, 'Fecha de generación diferente de tanda')
+    require(generated.astimezone(ZoneInfo('America/La_Paz')).date() == day, 'Fecha de generación diferente de tanda')
     require(brief.get('revision_editorial') == 'pendiente', 'No se admite aprobación editorial')
     require(brief.get('canal', {}).get('estado') == 'no_probado', 'Canal real fuera del ensayo')
     for key in ('nombre', 'responsable', 'prueba_requerida'):
@@ -205,9 +206,29 @@ def validate(brief, sources, draft):
     return catalog
 
 
-def target_path(output):
+def output_reference(output):
+    # Los exports privados usan referencias relativas al paquete, nunca rutas del host.
+    try:
+        return Path(output).relative_to(BASE).as_posix()
+    except ValueError:
+        return Path(output).name
+
+
+def target_path(output, output_root=None):
     output = Path(output).absolute()
-    require(output.resolve().is_relative_to(OUTPUT_ROOT.resolve()), 'Salida fuera de v3 asignada')
+    root = Path(output_root).absolute() if output_root is not None else OUTPUT_ROOT
+    require(output.resolve().is_relative_to(root.resolve()) and (output_root is None or output != root),
+            'Salida fuera de v3 asignada o raíz explícita')
+    if output_root is not None:
+        require(root.name == 'v3', 'La raíz explícita debe identificar v3')
+        require(not root.resolve().is_relative_to(BASE.resolve()), 'Raíz explícita debe ser privada, fuera del repo')
+        for parent in (root, *root.parents):
+            require(not parent.is_symlink(), 'Raíz con enlace')
+            require(not ((parent / '.git').is_file() or (parent / '.git/HEAD').is_file()), 'Raíz privada dentro de Git')
+            require(not ((parent / 'HEAD').is_file() and (parent / 'objects').is_dir()), 'Raíz privada dentro de Git bare')
+    if output_root is not None and root.exists():
+        require(root.is_dir() and root.stat().st_uid == os.getuid() and not root.stat().st_mode & 0o077,
+                'Raíz explícita sin permisos privados')
     for part in [output, *output.parents]:
         require(not part.is_symlink(), 'Salida con enlace simbólico')
         if part == BASE:
@@ -240,8 +261,8 @@ def markdown(row, version, brief):
     return '\n'.join(lines) + '\n'
 
 
-def build(brief, sources, draft, corrections, output):
-    output = target_path(output)
+def build(brief, sources, draft, corrections, output, *, output_root=None):
+    output = target_path(output, output_root)
     corrected, changes = apply_corrections(draft, corrections)
     catalog = validate(brief, sources, corrected)
     # El original también debe ser completo: una corrección no repara entradas incompletas.
@@ -252,7 +273,7 @@ def build(brief, sources, draft, corrections, output):
         row = copy.deepcopy(item)
         words = len(row['guion_hablado'].split())
         row['duracion_orientativa'] = f'{math.floor(words/150*60)}–{math.ceil(words/115*60)} s'
-        row.update({'origen': (output / (row['id']+'.md')).relative_to(BASE).as_posix(),
+        row.update({'origen': output_reference(output / (row['id']+'.md')),
                     'integridad': 'pendiente_revision', 'revision_tecnica': None,
                     'revision_editorial': 'pendiente', 'publicacion': 'Sin aprobación; borrador',
                     'error': 'Integridad de bytes no equivale a aprobación editorial.',
@@ -303,13 +324,13 @@ def build(brief, sources, draft, corrections, output):
         '. Revisión técnica distinta/editorial y ensayo humano pendientes.\n\n' +
         '\n'.join(f'- [{r["id"]}]({r["id"]}.md): {r["titulo"]} · {r["slot"]} · {r["duracion_orientativa"]} estimados.' for r in rows) +
         '\n\nVoz y selección propuestas por el LLM de esta sesión. Programa fijo: validación, correcciones literales, cálculo orientativo, calendarios y export. '
-        'No investiga, no escribe creatividad ni despacha automáticamente.\n\n'
+        + 'No investiga, no escribe creatividad ni despacha automáticamente.\n\n'
         'Ver FUENTES.md, seleccion.json, correcciones-aplicadas.json y calendario.json. '
         'Canal NEGOCIO no probado; pagos manuales por Sergio. Sin publicación ni venta acreditada.\n\n'
         'Entrada concreta para un relato real futuro: ' + brief['entrada_relato_real'] + '\n').encode()
-    rel = lambda name: (output / name).relative_to(BASE).as_posix()
-    files['estado-fabrica.json'] = encoded({'schema': 'onia-fabrica-estado-v1',
-        'id': 'guiones-tanda-automatizada-20261111', 'fabrica': 'guiones', 'estado': 'para_revision',
+    rel = lambda name: output_reference(output / name)
+    files['estado-fabrica.json'] = encoded({'schema': 'onia-fabrica-estado-privado-v1' if output_root is not None else 'onia-fabrica-estado-v1',
+        'id': ('guiones-tanda-' + brief['fecha_tanda'].replace('-', '')) if output_root is not None else 'guiones-tanda-automatizada-20261111', 'fabrica': 'guiones', 'estado': 'para_revision',
         'generado': brief['generado'], 'fuente': rel('recibo.json'),
         'pasos': [{'id': 'seleccion', 'nombre': 'Seleccionar ideas con cerebro', 'estado': 'completado', 'evidencias': [rel('seleccion.json')]},
                   {'id': 'correccion', 'nombre': 'Aplicar corrección versionada', 'estado': 'completado' if changes else 'pendiente', 'evidencias': [rel('correcciones-aplicadas.json')]},
@@ -319,6 +340,8 @@ def build(brief, sources, draft, corrections, output):
             {'motivo': 'Canal NEGOCIO no probado', 'responsable': 'Operaciones/Sergio', 'siguiente': brief['canal']['prueba_requerida']},
             {'motivo': 'Relato real no aportado', 'responsable': 'Sergio', 'siguiente': brief['entrada_relato_real']}]})
     reference = {p.name: digest(p.read_bytes()) for p in sorted(V2.iterdir()) if p.is_file()}
+    if output_root is not None:
+        files['redaccion-original.json'] = encoded(draft)
     files['recibo.json'] = encoded({'schema': 'onia-recibo-tanda-v1', 'generado': brief['generado'],
         'ensayo_local': True, 'revision_independiente': None, 'aprobacion_editorial': None,
         'entradas': {'brief': fingerprint(brief), 'fuentes': fingerprint(sources), 'redaccion': fingerprint(draft),
@@ -326,8 +349,11 @@ def build(brief, sources, draft, corrections, output):
         'v2_solo_lectura': reference, 'archivos': {name: {'sha256': digest(raw), 'bytes': len(raw)} for name, raw in files.items()},
         'limite': 'Recibo no se hashea a sí mismo. Hashes verifican bytes; no verdad ni aceptación.'})
     # Toda validación y render se completa antes de crear el destino. No reemplaza una salida previa.
-    output.parent.mkdir(parents=True, exist_ok=True)
-    staging = Path(tempfile.mkdtemp(prefix='.tanda-', dir=HERE))
+    if output_root is not None:
+        Path(output_root).mkdir(mode=0o700, parents=True, exist_ok=True)
+        require(not Path(output_root).stat().st_mode & 0o077, 'Raíz explícita sin permisos privados')
+    output.parent.mkdir(mode=0o700 if output_root is not None else 0o777, parents=True, exist_ok=True)
+    staging = Path(tempfile.mkdtemp(prefix='.tanda-', dir=output.parent))
     try:
         for name, raw in files.items():
             (staging / name).write_bytes(raw)
@@ -340,7 +366,7 @@ def build(brief, sources, draft, corrections, output):
             raise
     finally:
         shutil.rmtree(staging)
-    return {'salida': output.relative_to(BASE).as_posix(), 'version': corrected['version'],
+    return {'salida': output_reference(output), 'version': corrected['version'],
             'piezas': len(rows), 'cambios': len(changes), 'estado': 'para_revision'}
 
 
@@ -349,10 +375,11 @@ def main(argv=None):
     for field in ('brief', 'fuentes', 'redaccion', 'salida'):
         parser.add_argument('--' + field, required=True, type=Path)
     parser.add_argument('--correcciones', type=Path)
+    parser.add_argument('--raiz-salida-v3', type=Path, help='Raíz privada explícita fuera de Git, terminada en v3')
     args = parser.parse_args(argv)
     try:
         result = build(load(args.brief), load(args.fuentes), load(args.redaccion),
-                       load(args.correcciones) if args.correcciones else None, args.salida)
+                       load(args.correcciones) if args.correcciones else None, args.salida, output_root=args.raiz_salida_v3)
         print(json.dumps(result, ensure_ascii=False))
         return 0
     except (OSError, ValueError, KeyError, TypeError, AttributeError, StopIteration) as error:

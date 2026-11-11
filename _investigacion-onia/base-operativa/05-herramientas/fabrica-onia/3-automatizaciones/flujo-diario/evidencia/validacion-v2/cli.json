@@ -1,0 +1,67 @@
+[
+  {
+    "caso": "sintetico",
+    "returncode": 0,
+    "salidas_json": [
+      {
+        "naturaleza": "SINTETICO: textos fijos y doble del harness; sin modelo real",
+        "operaciones_doble": [
+          "registrar",
+          "lanzar",
+          "cerrar",
+          "revisar",
+          "recoger"
+        ],
+        "piezas": 5,
+        "panel": "panel.json",
+        "fuente_real": false,
+        "modelo_real": false,
+        "programacion_habilitada": false
+      }
+    ],
+    "stderr_vacio": true,
+    "modelo_real": false
+  },
+  {
+    "caso": "plan",
+    "returncode": 0,
+    "salidas_json": [
+      {
+        "schema": "onia-plan-disparo-v1",
+        "habilitada": false,
+        "zona": "America/La_Paz",
+        "hora_tanda": null,
+        "consulta_horaria": "propuesta_sin_activar",
+        "efectos_instalados": [],
+        "ensayo": "Un tick manual; no queda proceso residente"
+      }
+    ],
+    "stderr_vacio": true,
+    "modelo_real": false
+  },
+  {
+    "caso": "disparo-unico-real-sin-modelo",
+    "returncode": 2,
+    "salidas_json": [
+      {
+        "schema": "onia-plan-disparo-v1",
+        "habilitada": false,
+        "zona": "America/La_Paz",
+        "hora_tanda": null,
+        "consulta_horaria": "propuesta_sin_activar",
+        "efectos_instalados": [],
+        "ensayo": "Un tick manual; no queda proceso residente"
+      },
+      {
+        "ciclos": 1,
+        "candidatas": 3,
+        "errores": [
+          "MODELO_NO_DISPONIBLE"
+        ],
+        "programacion_habilitada": false
+      }
+    ],
+    "stderr_vacio": true,
+    "modelo_real": false
+  }
+]
