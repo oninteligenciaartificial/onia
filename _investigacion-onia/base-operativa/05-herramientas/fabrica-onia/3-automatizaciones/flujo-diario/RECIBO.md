@@ -1,6 +1,6 @@
 # Recibo de ejecutora · fabrica-automatizaciones-flujo-diario-20261111
 
-Entrega en `codex/ws-fabrica-automatizaciones-flujo-diario-20261111`, lista para cierre y revisión por la coordinadora. Hash final: el commit publicado comunicado al entregar y verificable en esa rama remota. Sin integración ni push a master. La aprobación pendiente después del STOP del panel sigue siendo necesaria para esa acción; esta rama no lo elude.
+Entrega en `codex/ws-fabrica-automatizaciones-flujo-diario-20261111`, lista para cierre y revisión por la coordinadora. Hash final: el commit publicado comunicado al entregar y verificable en esa rama remota. Sin integración ni push a master. La integración del panel 94cca9b fue autorizada por Sergio y ya se comprobó en master; esta entrega nueva mantiene su revisión propia.
 
 Inicio comprobado: checkout asignado, rama asignada y HEAD `a2e9d76aef2eedca05c0e6c355616a6f684c0b7b`, sin cambios previos. Leídos AGENTS, bitácora, decisiones vigentes, reglas comunes, boss-memoria, ESTADO, ORQUESTACION, instrucciones de inicio Cloud y arquitectura pertinentes. Directora `desarrollar-y-verificar` anunciada en el catálogo y cuerpo canónico leído explícitamente. No se deduce carga automática. No fue necesario consultar contexto personal ni ONIA-CENTRAL. Briefing recibido por conversación/stdin; no se reconstruyó ni editó su proyección.
 

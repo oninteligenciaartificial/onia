@@ -49,13 +49,19 @@ def attach(model, data):
 
 def fragment(data, stale=False):
     from panel import e
-    out = ['<p>Programación deshabilitada · America/La_Paz · hora de tanda pendiente de Sergio.</p>']
+    schedule = data.get('programacion') or {}
+    if schedule.get('habilitada'):
+        label = 'Programación habilitada · ' + e(schedule.get('hora_tanda') or 'hora pendiente') + ' · America/La_Paz.'
+    else:
+        label = 'Programación deshabilitada · hora de tanda pendiente.'
+    out = ['<p>' + label + '</p>']
     if stale:
         out.append('<p role="alert">Actualización fallida. Se conserva la última proyección válida; revisar archivo del productor.</p>')
     out.append('<p>Última consulta: ' + e(data.get('fuente_ultimo_intento') or 'sin consulta') +
                '<br>Último éxito de fuente: ' + e(data.get('fuente_ultimo_exito') or 'sin éxito') + '</p>')
     for error in data.get('errores', []):
         out.append('<p role="alert">' + e(error['codigo']) + ' · ' + e(error['siguiente']) + '</p>')
+    out.append('<details><summary>Ver novedades y progreso</summary>')
     out.append('<details><summary>Novedades / candidatas (' + str(len(data.get('candidatas', []))) + ')</summary>')
     for row in data.get('candidatas', []):
         # Sólo texto, sin convertir una URL externa en navegación ejecutable.
@@ -76,6 +82,7 @@ def fragment(data, stale=False):
                 out.append('<details><summary>' + e(row['id']) + ' · ' + e(row['titulo']) + '</summary><pre>' + e(row['texto']) + '</pre></details>')
             out.append('<a href="/?guardado=0#guiones">Abrir esta versión para revisar (recarga)</a>')
         out.append('</article>')
+    out.append('</details>')
     return ''.join(out)
 
 

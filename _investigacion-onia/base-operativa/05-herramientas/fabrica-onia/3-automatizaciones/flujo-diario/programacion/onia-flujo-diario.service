@@ -1,0 +1,10 @@
+# Plantilla revisable. No instalada ni activada por esta entrega.
+[Unit]
+Description=ONIA: un paso del flujo diario autorizado
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/operacion/fabrica-diaria/codigo
+ExecStart=/usr/bin/python3 -B %h/operacion/fabrica-diaria/codigo/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/programacion.py --tick --config %h/operacion/fabrica-diaria/config.json --datos %h/operacion/fabrica-diaria/datos --coordinador-base %h/repos/onia-coordinador/_investigacion-onia/base-operativa
+TimeoutStartSec=5min
+UMask=0077

@@ -82,7 +82,8 @@ def factory_rows(operation):
             if exports[0]['sintetico']:
                 status = 'ENSAYO SINTÉTICO · ' + status
         elif key == 'guiones' and operation.get('tanda'):
-            status = '5 borradores históricos · por revisar'
+            status = ('5 borradores históricos · por revisar' if operation.get('tanda_historica')
+                      else '5 borradores · ' + operation['tanda'].get('fecha_tanda', '') + ' · por revisar')
         rows.append(f'''<article class="factory-row" id="fabrica-{e(key)}" style="--factory-color:{color}">
           <span class="factory-symbol">{icon(symbol)}</span><div><h3>{e(factory['nombre'])}</h3>
           <p class="factory-status">{e(status)}</p></div>{step_strip(factory)}

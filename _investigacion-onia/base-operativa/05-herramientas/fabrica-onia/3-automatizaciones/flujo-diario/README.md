@@ -2,7 +2,7 @@
 
 El programa recibe noticias, crea una solicitud por día de La Paz, usa un adaptador del harness existente y proyecta resultados en el panel Propuesta 1. Cada invocación termina: no instala ni activa servicios, cron, n8n o un bucle de agentes. Redacción real y revisión editorial permanecen pendientes de su ensayo y autorización aplicables.
 
-Dependencias incorporadas por fetch y merge **en esta rama**, sin push a master: panel `94cca9bfaeba72ad6eee8bcf87db30d8c4d28083`, generador `26c39e3df390a9a0485c2fcdcb0a2bc0258174e1`. Los archivos de salida históricos importados son dependencias conservadas. La implementación nueva se limita a las tres rutas del encargo. No se tocó el harness instalado, su registro canónico, el briefing ni los permisos. El STOP de integración del panel sigue vigente.
+Dependencias incorporadas por fetch y merge **en esta rama**, sin push a master: panel `94cca9bfaeba72ad6eee8bcf87db30d8c4d28083`, generador `26c39e3df390a9a0485c2fcdcb0a2bc0258174e1`. Los archivos de salida históricos importados son dependencias conservadas. La implementación nueva se limita a las tres rutas del encargo. No se tocó el harness instalado, su registro canónico, el briefing ni los permisos. El panel 94cca9b ya fue autorizado e integrado por la coordinadora; este flujo tiene su propia revisión pendiente.
 
 ## Uso determinista, sin modelo
 
@@ -85,14 +85,25 @@ Una corrección usa `Engine.accept_result(..., corrections=...)` bajo el lock y 
 
 ## Programación y reversión
 
-La hora de tanda sigue **null**, pendiente de Sergio. Zona America/La_Paz. Consulta horaria sólo propuesta; no se restauran las 07:00. `programacion.py` rechaza un plan habilitado; no incluye comandos de instalación. Para probar UN disparo temporal determinista sin modelo:
+La hora de tanda sigue **null**, pendiente de Sergio. Zona America/La_Paz. Consulta horaria sólo propuesta; no se restauran las 07:00. `programacion.py --tick` también admite una configuración habilitada con hora, constancia de autorización y vigencia explícita del modelo. La configuración entregada permanece deshabilitada y las unidades de ejemplo no están instaladas. Para probar UN disparo temporal determinista sin modelo:
 
 ```bash
 python3 -B "$F/programacion.py" --ensayo-disparo /tmp/onia-disparo-unico-local
 ```
 
-Termina al finalizar el tick, sin daemon ni recurrencia. Activación futura requiere hora confirmada, proveedor, acceso y revisión, ensayo completo y sí aplicable; después preparar el scheduler concreto con esta misma invocación, un único directorio privado y el journal conservado. Esta entrega no hace ese paso.
+Termina al finalizar el tick, sin daemon ni recurrencia. Activación futura requiere hora confirmada, proveedor, acceso y revisión, ensayo completo y sí aplicable; las plantillas de scheduler ya están preparadas en `programacion/`, con un único directorio privado y el journal conservado. Esta entrega no instala ni activa esas unidades.
 
 Reversión actual no destructiva: dejar de invocar el tick y detener el servidor local. Conservar SQLite, pedidos, v3 y revisiones; respaldar el directorio privado con el motor parado y restaurar **todo** el conjunto 0700/0600, nunca sólo un JSON o un índice nuevo. Antes de retomar, reconciliar tareas/SID/commits en el único harness. No borrar medios ni originales, ni relanzar un envío incierto. Para volver al panel anterior, iniciarlo sin `--flujo`; conserva las observaciones en sus datos privados. No hay servicio instalado que desactivar.
 
 [Pruebas y comandos](PRUEBAS.md) · [Recibo y límites](RECIBO.md)
+
+
+### Controlador por horario preparado por la coordinadora
+
+Las plantillas `programacion/onia-flujo-diario.service` y `.timer` ejecutan un tick por minuto. El tick consulta novedades como máximo una vez por hora y conserva las candidatas antes de la hora editorial. A partir de `hora_tanda` (La Paz), crea como máximo una tanda del día y avanza un paso permitido del harness por invocación. Después de la revisión técnica se detiene para revisión editorial. Un resultado incierto se conserva para conciliación; no se reintenta el lanzamiento con otro ID.
+
+La configuración activa debe estar fuera de Git, ser propiedad del usuario y tener modo 0600. Requiere hora y constancia de la autorización de Sergio. Para redactar requiere además `redaccion_autorizada: true` y `modelo_hasta` con zona horaria; esa fecha no acredita ni compra disponibilidad de Codex. Al vencer queda pendiente y no lanza un proveedor sustituto. Las sesiones iniciadas que crucen el día o la vigencia pueden requerir conciliación explícita; no se acredita funcionamiento ilimitado.
+
+Despliegue preparado, pendiente de autorización: conservar un checkout/export del commit revisado en `~/operacion/fabrica-diaria/codigo`; copiar la configuración a `~/operacion/fabrica-diaria/config.json` y los datos a su única raíz privada; comprobar permisos, acceso al harness y disponibilidad de ChatGPT; instalar las dos unidades como servicio del usuario y habilitar el timer. No se hizo ninguno de esos cambios en esta entrega. Una configuración `habilitada: false` no crea datos ni consulta la red al ejecutar `--tick`. La pausa no destructiva consiste en detener el timer y conservar código, journal, pedidos y resultados.
+
+No se presentan pasos simulados como un servicio instalado: para acreditar operación diaria faltan el sí sobre hora/activación, un disparo real del timer y la comprobación de retoma sin duplicar.
