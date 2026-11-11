@@ -13,7 +13,9 @@ node ensayo.cjs
 python3 -B -m unittest -v pruebas_adaptador
 ```
 
-Las pruebas llaman a la aplicación WSGI en memoria, conservan las bases SQLite ficticias en una carpeta privada nueva en `/tmp` y sustituyen el transporte por un falso o un mock HTTPS. Cubren 44 casos en Node (incluida la regresión BAJA → vencimiento en el módulo y en el JSON, y la estructura del workflow de despacho) y 14 en Python. El caso de venta comprueba el cuerpo de los mensajes y que una captura deja la inscripción pendiente. Las pruebas externas con Meta, n8n y Meet siguen en [FALTANTES.md](FALTANTES.md).
+Las pruebas llaman a la aplicación WSGI en memoria, conservan las bases SQLite ficticias en una carpeta privada nueva en `/tmp` y sustituyen el transporte por un falso o un mock HTTPS. Cubren 44 casos en Node (incluida la regresión BAJA → vencimiento en el módulo y en el JSON, y la estructura del workflow de despacho) y 16 en Python: los 14 existentes y dos nuevos para configuración/faltantes y el lunes 16. No se cuentan los subcasos como pruebas independientes. El caso de venta comprueba el cuerpo de los mensajes y que una captura deja la inscripción pendiente. Las pruebas externas con Meta, n8n y Meet siguen en [FALTANTES.md](FALTANTES.md).
+
+Fechas vigentes: viernes 13 20:00, sábado 14 14:00 y lunes 16 20:00, La Paz. No se confirmó hora final. Los comandos repetibles, resultados de esta tanda y el recorrido autorizado pendiente para Sergio están en [GUIA-REVISION.md](GUIA-REVISION.md).
 
 ## Configuración privada
 
@@ -24,14 +26,16 @@ Para un ensayo HTTP en loopback, colocá un JSON de prueba en una carpeta propia
 | `phone_number_id` | Cadena de dígitos, ID del número en Meta. |
 | `app_secret`, `verify_token`, `operator_token` | Tres valores distintos de 24 a 256 caracteres ASCII alfanuméricos o `_.~-`. La credencial del operador se entrega sólo a Sergio u operador autorizado. |
 | `pago_ttl_segundos` | Entero entre 1 y 86400. Sergio fija el plazo de pago, independiente de la ventana de atención de Meta. |
-| `cierre_inscripcion_epoch` | Entero Unix en segundos, a más tardar el inicio de la última clase. Sergio fija el cierre comercial. Una inscripción vence al primero de sus dos límites, plazo de pago o cierre. |
-| `envios_habilitados` | Booleano. La omisión equivale a deshabilitado. |
+| `cierre_inscripcion_epoch` | Entero Unix en segundos, a más tardar `2026-11-16T20:00:00-04:00`, inicio de la última clase. Sergio fija el cierre comercial, que puede ser anterior. Una inscripción vence al primero de sus dos límites, plazo de pago o cierre. No se deriva de una hora final supuesta. |
+| `envios_habilitados` | Booleano estricto. La omisión equivale a deshabilitado; cadenas como `"false"` se rechazan como configuración inválida. |
 | `dispatcher_token` | Credencial exclusiva de despacho para n8n. Mismo formato de 24 a 256 caracteres, distinta de las otras tres. |
 | `graph_version`, `graph_token` | Para un envío autorizado, versión Graph elegida en la cuenta (`v<mayor>.<menor>`) y token de envío. |
 | `qr_media_id` | ID de imagen privada ya cargada a Meta para ese número. Sergio mantiene el original fuera de Git. La carga y la prueba de vigencia del medio siguen pendientes. |
 | `meet_urls` | Tres enlaces HTTPS a `meet.google.com`, uno por clase en orden. Sólo se incluyen en el payload de acceso confirmado. |
 
 El servidor de desarrollo sólo enlaza loopback. Para una prueba local adicional con configuración ficticia, ejecutá `python3 -B adaptador.py --config /ruta/privada/config.json`. Detenelo con Ctrl+C. El despachador permanece deshabilitado con ese comando. Para un encargo posterior de conexión, el envío exige además el argumento `--permitir-envios` y la bandera privada `envios_habilitados: true`. El servidor incluido es para desarrollo. La exposición a Meta requiere un servidor WSGI adecuado, HTTPS y un proxy que enrute sólo `/meta`.
+
+En esta tanda no se inicia ese servidor ni se proporciona configuración real. Sin permiso de envío, la app puede conservar una intención QR sin medio configurado, pero no despacharla. Si se habilita el transporte y falta `qr_media_id`, `meet_urls`, token de Graph o credencial de despacho, la aplicación rechaza el arranque con el nombre del campo faltante, sin imprimir valores. En la exportación pública esos datos constan como no verificados; no se toma un fixture por un activo listo.
 
 ## Contrato HTTP
 
@@ -44,6 +48,8 @@ El servidor de desarrollo sólo enlaza loopback. Para una prueba local adicional
 | `POST /operador/despachar` | `Authorization: Bearer <dispatcher_token>`, cuerpo vacío. Una salida por petición. | 200 JSON con `resultado` igual a `aceptado`, `incierto` o `vacio` y el ID local si se intentó. Deshabilitado devuelve 409. |
 
 La autenticación fallida del operador devuelve 401. La validación de estructura o cuerpo puede devolver 400, 411 o 413. Un fallo de SQLite devuelve 503. El ID de Meta deduplica el evento de entrada, y la escritura de estado y de cola ocurre en la misma transacción. La verificación del número, HMAC y forma del lote sucede antes de esa escritura. Una imagen abre revisión sin descargar el medio. Los comandos de texto son `NEGOCIO`, `GRUPAL`, `VIP`, `AYUDA` y `BAJA`.
+
+El seguimiento preparado consiste en la bandeja privada `/operador/revisar` y la cola de salida con despacho manual. No hay recordatorios periódicos instalados. BAJA cancela las intenciones pendientes y evita que el vencimiento genere contacto nuevo. Ningún programa requiere un LLM para ejecutar ese circuito; el permiso, acceso y ensayo del operador para el lunes 16 siguen pendientes antes del corte de Codex informado para el 14.
 
 El límite VIP se comprueba al pedir QR y al confirmar. Una solicitud pendiente no reserva cupo. Con más de cinco solicitudes simultáneas puede llegar un pago cuando ya se llenó el cupo. Sergio debe decidir el tratamiento comercial antes de abrir VIP. El importe, el estado y el cupo son validaciones del registro. El acceso a la banca y la comprobación del destino siguen a cargo del operador.
 

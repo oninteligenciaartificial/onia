@@ -57,6 +57,12 @@ El revisor debe ser una sesión distinta del ejecutor y trabaja en sólo lectura
 
 Los worktrees no aíslan servicios, cuentas ni conectores externos. No ampliar permisos de producción, n8n, publicaciones, mensajes, cobros o gastos por lanzar una sesión.
 
+## Cierre completo del trabajo autorizado — Sergio, 11 noviembre 2026
+
+La regla NO DEJAR HUECOS de boss-memoria.md también rige a Codex: cotejar cada requisito con evidencia, completar revisión, corrección, aceptación e integración autorizadas y comprobar el resultado remoto. Lanzar sesiones no cierra un lote. No devolverle al usuario pasos técnicos ya autorizados como si requirieran otro prompt. Una aprobación del lote se reutiliza dentro de su alcance.
+
+Mantener en el plan existente la lista de brechas con estado comprobado, responsable, próxima acción y criterio de cierre. Continuar los frentes independientes. Si falta acceso, material, permiso externo o capacidad de ejecución persistente, declararlo y conservar el trabajo; no ocultarlo, inventar éxito ni ampliar permisos. Mientras no exista un despachador probado, no prometer que una siguiente tarea arrancará sola al terminar el turno. Una revisión favorable ya recogida no debe mostrar como próximo paso lanzar esa misma revisión otra vez.
+
 ## Continuidad y cierre
 
 Para Boss/Grokbot rige además [REGLAS-BOSS.md](REGLAS-BOSS.md), procedimiento autorizado por Sergio el 10/11/2026 para recuperar contexto, distinguir estados/evidencia y cerrar el recorrido de avisos y revisión. Reemplaza las formulaciones históricas incompatibles sobre ese procedimiento; no modifica permisos, límites ni el registro canónico del harness. No cambia las instrucciones de Codex ni acredita que la app o una rutina de Boss lo hayan cargado.

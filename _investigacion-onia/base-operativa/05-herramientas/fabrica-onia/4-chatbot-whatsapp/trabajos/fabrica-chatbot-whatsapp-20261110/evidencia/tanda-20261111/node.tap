@@ -1,0 +1,230 @@
+TAP version 13
+# Subtest: modulo: interés sin instrucciones de pago
+ok 1 - modulo: interés sin instrucciones de pago
+  ---
+  duration_ms: 1.715516
+  ...
+# Subtest: modulo: pendiente con QR ficticio y aviso, sin acceso
+ok 2 - modulo: pendiente con QR ficticio y aviso, sin acceso
+  ---
+  duration_ms: 0.416448
+  ...
+# Subtest: modulo: captura con o sin referencia nunca confirma
+ok 3 - modulo: captura con o sin referencia nunca confirma
+  ---
+  duration_ms: 0.674318
+  ...
+# Subtest: modulo: sólo señal explícita completa confirma y prepara acceso
+ok 4 - modulo: sólo señal explícita completa confirma y prepara acceso
+  ---
+  duration_ms: 1.449927
+  ...
+# Subtest: modulo: cliente no puede inyectar confirmación
+ok 5 - modulo: cliente no puede inyectar confirmación
+  ---
+  duration_ms: 0.944273
+  ...
+# Subtest: modulo: señal no explícita o actor inválido rechazada sin mutar
+ok 6 - modulo: señal no explícita o actor inválido rechazada sin mutar
+  ---
+  duration_ms: 0.593726
+  ...
+# Subtest: modulo: importe, moneda, movimiento y destino exigen conciliación
+ok 7 - modulo: importe, moneda, movimiento y destino exigen conciliación
+  ---
+  duration_ms: 0.797211
+  ...
+# Subtest: modulo: replay y otra inscripción no duplican QR ni acceso
+ok 8 - modulo: replay y otra inscripción no duplican QR ni acceso
+  ---
+  duration_ms: 0.570991
+  ...
+# Subtest: modulo: mismo ID con contenido distinto se rechaza
+ok 9 - modulo: mismo ID con contenido distinto se rechaza
+  ---
+  duration_ms: 0.338681
+  ...
+# Subtest: modulo: estado serializado mantiene deduplicación al retomar
+ok 10 - modulo: estado serializado mantiene deduplicación al retomar
+  ---
+  duration_ms: 0.333764
+  ...
+# Subtest: modulo: timeout en el límite y reintento no dan acceso
+ok 11 - modulo: timeout en el límite y reintento no dan acceso
+  ---
+  duration_ms: 0.518162
+  ...
+# Subtest: modulo: referencia reclamada por otro pendiente o confirmado va a excepción
+ok 12 - modulo: referencia reclamada por otro pendiente o confirmado va a excepción
+  ---
+  duration_ms: 1.188773
+  ...
+# Subtest: modulo: referencia repetida en operador o captura no produce segundo acceso
+ok 13 - modulo: referencia repetida en operador o captura no produce segundo acceso
+  ---
+  duration_ms: 0.407604
+  ...
+# Subtest: modulo: una referencia distinta de la captura requiere revisión
+ok 14 - modulo: una referencia distinta de la captura requiere revisión
+  ---
+  duration_ms: 0.301495
+  ...
+# Subtest: modulo: sexto VIP no se confirma, grupal no tiene límite fijado
+ok 15 - modulo: sexto VIP no se confirma, grupal no tiene límite fijado
+  ---
+  duration_ms: 1.023504
+  ...
+# Subtest: modulo: baja detiene mensajes posteriores y acceso
+ok 16 - modulo: baja detiene mensajes posteriores y acceso
+  ---
+  duration_ms: 0.352661
+  ...
+# Subtest: modulo: vencimiento posterior a BAJA no emite mensajes
+ok 17 - modulo: vencimiento posterior a BAJA no emite mensajes
+  ---
+  duration_ms: 0.293613
+  ...
+# Subtest: modulo: reloj viejo, identidad y datos reales rechazados
+ok 18 - modulo: reloj viejo, identidad y datos reales rechazados
+  ---
+  duration_ms: 0.374534
+  ...
+# Subtest: modulo: QR, acceso y referencia ajenos al contrato no se conservan
+ok 19 - modulo: QR, acceso y referencia ajenos al contrato no se conservan
+  ---
+  duration_ms: 0.448337
+  ...
+# Subtest: workflow: interés sin instrucciones de pago
+ok 20 - workflow: interés sin instrucciones de pago
+  ---
+  duration_ms: 0.759065
+  ...
+# Subtest: workflow: pendiente con QR ficticio y aviso, sin acceso
+ok 21 - workflow: pendiente con QR ficticio y aviso, sin acceso
+  ---
+  duration_ms: 0.290117
+  ...
+# Subtest: workflow: captura con o sin referencia nunca confirma
+ok 22 - workflow: captura con o sin referencia nunca confirma
+  ---
+  duration_ms: 0.496159
+  ...
+# Subtest: workflow: sólo señal explícita completa confirma y prepara acceso
+ok 23 - workflow: sólo señal explícita completa confirma y prepara acceso
+  ---
+  duration_ms: 0.290859
+  ...
+# Subtest: workflow: cliente no puede inyectar confirmación
+ok 24 - workflow: cliente no puede inyectar confirmación
+  ---
+  duration_ms: 0.317178
+  ...
+# Subtest: workflow: señal no explícita o actor inválido rechazada sin mutar
+ok 25 - workflow: señal no explícita o actor inválido rechazada sin mutar
+  ---
+  duration_ms: 0.332002
+  ...
+# Subtest: workflow: importe, moneda, movimiento y destino exigen conciliación
+ok 26 - workflow: importe, moneda, movimiento y destino exigen conciliación
+  ---
+  duration_ms: 0.797172
+  ...
+# Subtest: workflow: replay y otra inscripción no duplican QR ni acceso
+ok 27 - workflow: replay y otra inscripción no duplican QR ni acceso
+  ---
+  duration_ms: 0.504191
+  ...
+# Subtest: workflow: mismo ID con contenido distinto se rechaza
+ok 28 - workflow: mismo ID con contenido distinto se rechaza
+  ---
+  duration_ms: 0.214733
+  ...
+# Subtest: workflow: estado serializado mantiene deduplicación al retomar
+ok 29 - workflow: estado serializado mantiene deduplicación al retomar
+  ---
+  duration_ms: 0.324238
+  ...
+# Subtest: workflow: timeout en el límite y reintento no dan acceso
+ok 30 - workflow: timeout en el límite y reintento no dan acceso
+  ---
+  duration_ms: 0.881789
+  ...
+# Subtest: workflow: referencia reclamada por otro pendiente o confirmado va a excepción
+ok 31 - workflow: referencia reclamada por otro pendiente o confirmado va a excepción
+  ---
+  duration_ms: 0.442267
+  ...
+# Subtest: workflow: referencia repetida en operador o captura no produce segundo acceso
+ok 32 - workflow: referencia repetida en operador o captura no produce segundo acceso
+  ---
+  duration_ms: 0.41778
+  ...
+# Subtest: workflow: una referencia distinta de la captura requiere revisión
+ok 33 - workflow: una referencia distinta de la captura requiere revisión
+  ---
+  duration_ms: 0.308886
+  ...
+# Subtest: workflow: sexto VIP no se confirma, grupal no tiene límite fijado
+ok 34 - workflow: sexto VIP no se confirma, grupal no tiene límite fijado
+  ---
+  duration_ms: 1.126579
+  ...
+# Subtest: workflow: baja detiene mensajes posteriores y acceso
+ok 35 - workflow: baja detiene mensajes posteriores y acceso
+  ---
+  duration_ms: 0.22532
+  ...
+# Subtest: workflow: vencimiento posterior a BAJA no emite mensajes
+ok 36 - workflow: vencimiento posterior a BAJA no emite mensajes
+  ---
+  duration_ms: 0.216177
+  ...
+# Subtest: workflow: reloj viejo, identidad y datos reales rechazados
+ok 37 - workflow: reloj viejo, identidad y datos reales rechazados
+  ---
+  duration_ms: 0.197657
+  ...
+# Subtest: workflow: QR, acceso y referencia ajenos al contrato no se conservan
+ok 38 - workflow: QR, acceso y referencia ajenos al contrato no se conservan
+  ---
+  duration_ms: 0.246473
+  ...
+# Subtest: Meta: batch completo; texto de pago y estados de entrega no confirman
+ok 39 - Meta: batch completo; texto de pago y estados de entrega no confirman
+  ---
+  duration_ms: 0.356699
+  ...
+# Subtest: workflow: fuente regenerable exacta, inactiva y sólo nodos permitidos
+ok 40 - workflow: fuente regenerable exacta, inactiva y sólo nodos permitidos
+  ---
+  duration_ms: 0.785524
+  ...
+# Subtest: workflow: Code exacto y módulo dan el mismo recorrido y un solo acceso
+ok 41 - workflow: Code exacto y módulo dan el mismo recorrido y un solo acceso
+  ---
+  duration_ms: 3.683756
+  ...
+# Subtest: decisiones actuales en mensajes, QR y acceso exclusivos de prueba
+ok 42 - decisiones actuales en mensajes, QR y acceso exclusivos de prueba
+  ---
+  duration_ms: 0.653867
+  ...
+# Subtest: despacho n8n: sólo trigger manual y petición privada sin guardar ejecuciones
+ok 43 - despacho n8n: sólo trigger manual y petición privada sin guardar ejecuciones
+  ---
+  duration_ms: 0.769099
+  ...
+# Subtest: despacho n8n: URL de entorno obligatoria, ruta fija y sin destino en la exportación
+ok 44 - despacho n8n: URL de entorno obligatoria, ruta fija y sin destino en la exportación
+  ---
+  duration_ms: 3.586719
+  ...
+1..44
+# tests 44
+# suites 0
+# pass 44
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 120.643919

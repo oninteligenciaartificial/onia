@@ -2,6 +2,8 @@
 
 **Uso real bloqueado.** Se conservó el avance local; las siguientes entradas no impiden revisar los archivos, pero sí integrar servicios o atender clientes. No se inspeccionaron cuentas ni instancias reales: presencia, permisos y vigencia permanecen desconocidos, no se declaran inexistentes.
 
+La bitácora informa activos localizados por Boss; esta sesión no los consulta ni acredita su vigencia. No se repiten teléfonos o destinos en la entrega. La prueba real pendiente está detallada en [GUIA-REVISION.md](GUIA-REVISION.md). Las fechas a conciliar privadamente con Meet son 13-nov 20:00, 14-nov 14:00 y 16-nov 20:00, La Paz. No se presume hora final ni se modifica Calendar.
+
 | Falta / incertidumbre | Responsable | Siguiente acción y condición de retoma |
 |---|---|---|
 | Número WhatsApp de prueba y después número operativo, `phone_number_id`, WABA, app Meta y verificación del negocio si Meta la exige | Sergio, con apoyo técnico autorizado | Elegir y verificar en Meta; no copiar teléfono, IDs privados ni capturas de cuenta a esta entrega |
@@ -17,6 +19,7 @@
 | Redacción definitiva y coherencia con el kit existente | Contenido + Operaciones | Revisar `mensajes.json`; borrador actual sin aprobación. No afirmar aprendizaje, ventas ni conversiones probadas |
 | Revisión técnica independiente del commit exacto | Coordinador / revisor distinto | Cerrar y revisar por el harness; recoger veredicto vigente y sólo aceptar si es bueno. Esta ejecutora no lanza sesiones ni se autoacepta |
 | Sí explícito de Sergio para siguiente prueba y activación, webhook, envíos y uso real | Sergio | Autorizar alcance concreto después de revisión técnica y validación comercial de Operaciones. Este encargo no incluye importaciones ni pruebas con número real |
+| Operación del lunes 16 después del corte de Codex informado para el 14 | Sergio + Operaciones | Ensayar los scripts fijos, acceso restringido y recuperación del estado antes del corte. No presumir renovación, nueva sesión de Codex ni scheduler |
 
 Antes de conectar, comprobar permisos, consentimiento, plantillas requeridas fuera de la ventana de atención y política de retención. El adaptador cancela pendientes fuera de la ventana de 24 h y conserva en revisión los envíos inciertos.
 

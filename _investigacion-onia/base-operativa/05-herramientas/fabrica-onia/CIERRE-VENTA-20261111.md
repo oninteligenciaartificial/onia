@@ -307,3 +307,28 @@ Referencias: lecturas existentes de los dos videos de Euge (`EUGE-VIDEO-BOSS-202
 Sergio aprobó: «Ok, vamos con el plan ve desarrollando te dejo», y agregó un apartado que arme estrategias documentadas para la venta actual y futuros proyectos/ventas. Queda autorizado el lote técnico presentado, incluida integración revisada y despliegue privado; se mantienen aprobaciones comerciales y gasto. El bloque anterior deja de ser sólo propuesta para ese alcance. Hora diaria y verificación Meta siguen pendientes.
 
 Estrategias: biblioteca versionada por proyecto con diagnóstico, evidencia/supuestos, audiencia, oferta, canal, recorrido de venta, acciones priorizadas, piezas, responsable, dependencias, métricas reales y revisión. Primera estrategia: workshop y objetivo de Bs 3000. Futuros proyectos quedan como propuestas evaluables, sin iniciar gastos ni desarrollar cada idea. Integrar su consulta/corrección al panel mediante contrato, con un solo escritor de UI.
+
+## Auditoría de huecos del lote — 11 noviembre, ejecución autorizada
+
+| Brecha observada | Responsable y siguiente paso | Evidencia de cierre requerida |
+|---|---|---|
+| Regla de cierre estaba en memoria de Boss pero no explícita para Codex | Coordinadora: incorporada en reglas-comunes | Regla publicada y aplicada a este lote |
+| Flujo/generador revisados seguían sin integración | Cerrado técnico: merge a728a89, seis HTTP correctas; aceptaciones canónicas flujo r43/generador r17 | Publicado, estados saneados en master624529c |
+| Loop general no existe probado | Sesión fabrica-codigo-continuidad-lote-20261111 ejecutándose | Dictamen y ensayo de avance/reinicio real |
+| Estrategias aún sin entrega | Sesión guiones-tanda-estrategias-20261111 ejecutándose | Estrategia workshop, biblioteca y revisión |
+| Cerebro/correcciones/panel y acceso teléfono incompletos | Retoma cerebro-panel-usable-20261109 preparada r31, rama actualizada y ruta exclusiva | Corrección aplicada, persistencia, acceso privado real |
+| WhatsApp preparado sin ensayo comercial | Integrado7a9892a, aceptado r34;44Node+16Python correctas. Sergio completa acceso Meta/QR/Meet | Recorrido real autorizado, pago manual y acceso |
+| IG/FB, anuncios/IA y montaje incompletos | Sesiones sucesivas del lote aprobado, rutas separadas | Pruebas por canal y material real; generación por pieza autorizada |
+| Hora diaria no confirmada | Sergio: pregunta pendiente; no restaurar 07:00 | Hora de entrega e inicio medido, disparador probado |
+| Homelab online sin worker aceptado | Diagnóstico PE local y validación SSH/aislamiento | Una ejecución segura en worker; no basta presencia Tailscale |
+| Modelo después del14 sin continuidad garantizada | Preparar scripts/materiales y operación con Contenido | Proveedor disponible o procedimiento manual comprobado |
+
+Esta tabla registra pendientes reales; anotarlos no equivale a resolverlos. El lote sigue abierto hasta sus comprobaciones, sin exigir otro prompt para trabajo técnico ya autorizado.
+
+### Conciliación comprobada del cierre
+
+Master remoto52fb1c8 comprobado; después integración WhatsApp7a9892a y publicación de estados624529c. Flujo/generador/WhatsApp aceptados técnicamente con sus revisores originales buenos y commits exactos. Rutas liberadas. Esto no activa programación ni canales ni aprueba piezas editoriales.
+
+La primera liberación de ruta del flujo falló porque se usó actor coordinadora donde el harness exige el responsable asignado. La aceptación anterior sí había quedado guardada: se consultó el estado y se liberó con el responsable canónico, sin aceptar de nuevo ni eludir la comprobación. Lección: cada efecto se concilia antes de reintentar el paso siguiente.
+
+Las brechas de producto son trabajo del lote en curso, no condiciones para volver a pedir aprobación del plan. Los bloqueos externos son concretos: hora diaria, acceso y prueba autorizada Meta, QR/Meet privados, grabación/B-roll y diagnóstico local del homelab. No se inventa que alguno llegó. La ampliación de más de tres sesiones permanece pospuesta por Sergio.

@@ -1,0 +1,72 @@
+{
+  "modo": "WSGI_en_memoria_transporte_falso",
+  "red_bloqueada_en_ensayo": true,
+  "meta_invocado": false,
+  "n8n_invocado": false,
+  "servidor_iniciado": false,
+  "mensajes_reales": 0,
+  "pagos_reales": 0,
+  "pasos": [
+    {
+      "id": "informacion",
+      "esperado": true,
+      "observado": true
+    },
+    {
+      "id": "modalidad",
+      "esperado": "pendiente",
+      "observado": "pendiente"
+    },
+    {
+      "id": "qr_configurado_ficticio",
+      "esperado": "image",
+      "observado": "image"
+    },
+    {
+      "id": "qr_ausente_explicito",
+      "esperado": "Config inválida: qr_media_id",
+      "observado": "Config inválida: qr_media_id"
+    },
+    {
+      "id": "comprobante_pendiente",
+      "esperado": "pendiente",
+      "observado": "pendiente"
+    },
+    {
+      "id": "sin_acceso_tras_captura",
+      "esperado": 0,
+      "observado": 0
+    },
+    {
+      "id": "credencial_equivocada",
+      "esperado": 401,
+      "observado": 401
+    },
+    {
+      "id": "confirmacion_manual_autenticada",
+      "esperado": "confirmado",
+      "observado": "confirmado"
+    },
+    {
+      "id": "acceso_ficticio_preparado",
+      "esperado": 1,
+      "observado": 1
+    },
+    {
+      "id": "duplicado_comprobante",
+      "esperado": 0,
+      "observado": 0
+    },
+    {
+      "id": "duplicado_confirmacion",
+      "esperado": "ya_confirmado",
+      "observado": "ya_confirmado"
+    },
+    {
+      "id": "cola_sin_reenvio",
+      "esperado": "vacio",
+      "observado": "vacio"
+    }
+  ],
+  "limite": "Autenticación con credenciales ficticias; no acredita identidad ni entrega real. Sin datos privados en este resumen."
+}

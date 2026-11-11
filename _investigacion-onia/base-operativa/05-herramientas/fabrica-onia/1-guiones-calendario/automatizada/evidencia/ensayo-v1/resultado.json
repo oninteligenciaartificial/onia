@@ -1,0 +1,214 @@
+{
+  "id_encargo": "guiones-tanda-automatizada-20261111",
+  "ensayo_local": true,
+  "generado": "2026-11-11T13:37:17.102886+00:00",
+  "base_head": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+  "pruebas": {
+    "returncode": 0,
+    "log": "unittest.txt"
+  },
+  "demostracion": {
+    "versiones": [
+      "r1",
+      "r2"
+    ],
+    "temporales_retirados_al_terminar": true,
+    "original_intacto": true,
+    "cinco_markdown_reproducidos": true,
+    "r1_hashes": {
+      "CALENDARIO.md": "7bd8df3feb49d78fdacd9065fcf112c6699b1276dfd01188c6101eaa17877c01",
+      "FUENTES.md": "b7cf194174510643207a23822c560e87250223fca3a8eb624876d548811e2e04",
+      "README.md": "5a8517772e5cbb9c88a8fd80bf4e493f8c206baa5cabd615d96ce1460c6f8e14",
+      "T01.md": "d7d7c7acb70e85f2abca57342b56788d4d5cd0617cf3c81b1fc9936b8f81395c",
+      "T02.md": "1fc0bd34edda908422d4c0730efaca70ff61190a6782e96ef51f95ebb54eaf98",
+      "T03.md": "2fa1505a055c63a5d03c8628c82880164f881f5712c930b1f075c51b8cfe8d2b",
+      "T04.md": "414819964e5847e3132fefca04623129245da2a4173dde68d0f24ef6c49c24e6",
+      "T05.md": "4364789fee04ca6a16492a29c3924f763d5aa1bf3194926348dbad79303f8f70",
+      "brief-editorial.json": "80a3f0fca4e57993e9760f456774adb67c9430813d76867c193725210dcbfee8",
+      "calendario.json": "10870ce361425f15f941e3e47108b455212a1fddd1c478a249de79c04ede8e58",
+      "correcciones-aplicadas.json": "0a374be85d844c99d61a751ccc7620a33cf7b8f16f9f84f481c144a284f2dae3",
+      "estado-fabrica.json": "fac3dbfa44a817d7337c57f8a595597b590259627d5b11ebf7aca3d4f1e26b96",
+      "fuentes.json": "c5b99ee4945b089dcbecbfcc58778bb57b402d33544dae758bc01e66511fc1fd",
+      "guiones-panel.json": "f86541816495c524508d4634a3221e2b2e96ff8928c99aa1f384883eeee36d2c",
+      "recibo.json": "2609b179c162d515fe01a0ba6e1fa435b2ba8e9a1318956ca697c0e24d9a155c",
+      "redaccion-aplicada.json": "6261762d479befc5ccb5e33a5e61dd18b92b13bf10e21521c1f5e5d2a9a12f87",
+      "seleccion.json": "c1da60a03f3bd8917b04e9de3cd4770544b54e8b145ecfd83e4561a0e8bb27ba"
+    },
+    "r2_hashes": {
+      "CALENDARIO.md": "7bd8df3feb49d78fdacd9065fcf112c6699b1276dfd01188c6101eaa17877c01",
+      "FUENTES.md": "b7cf194174510643207a23822c560e87250223fca3a8eb624876d548811e2e04",
+      "README.md": "eea30ba1136a359418238c5dc20cedab07fa06f21e3c3d61713e3d1e482fa8e0",
+      "T01.md": "774e51832bf91b1463b095c71d4b7aad26dd10ec246dc548d7197cce5f3d725d",
+      "T02.md": "6fd31c2575c6413fd4eab08c35e4ff65fb7edb18d586a671defb078caa654cf8",
+      "T03.md": "96015e191eeae17c954a4fb1dc63fe3f610ea1778ff9608ac5bf5e466245901f",
+      "T04.md": "97de100f084d403a7332105a06f2a29ecb1b88dcf2e668dabd734506e6e71094",
+      "T05.md": "b2d9205c4852922cb3633aa08d31ae27442634558e2f41fb68ffb3bc664bd166",
+      "brief-editorial.json": "80a3f0fca4e57993e9760f456774adb67c9430813d76867c193725210dcbfee8",
+      "calendario.json": "10870ce361425f15f941e3e47108b455212a1fddd1c478a249de79c04ede8e58",
+      "correcciones-aplicadas.json": "52a4c3bb28cad9b116b137f6b30586b5b3679336ec7aa8208d5b8495e02618d0",
+      "estado-fabrica.json": "3665bfd16263f15f2a18ffa8c5354795bb61a876bdf967cf7333a4afcb753c3a",
+      "fuentes.json": "c5b99ee4945b089dcbecbfcc58778bb57b402d33544dae758bc01e66511fc1fd",
+      "guiones-panel.json": "e715fedfc9d5123ea593eb0e04d2353aac029801cf7f1828fc45ea1075d74f40",
+      "recibo.json": "0b22c2b7292fc9e1e2ad78651beb99dbbcfa534150022ba6521b3dd317d148e7",
+      "redaccion-aplicada.json": "d29716b193791456bef27f9ec3d008ba486160b1951a22416c24fe94eb94f641",
+      "seleccion.json": "c1da60a03f3bd8917b04e9de3cd4770544b54e8b145ecfd83e4561a0e8bb27ba"
+    },
+    "correccion": {
+      "entrada_sha256": "148a3bd01c2ff42c4b7db1ac04fe4fe77be722eb5cd2430dc2bb82cd861fa230",
+      "salida_sha256": "85d91467c144ef5e4dce7b44477694b512ef7a689d7061acabde7281a5e72ea4",
+      "version_base": "r1",
+      "version_nueva": "r2",
+      "cambios": [
+        {
+          "regla": "C01-canal-no-probado",
+          "pieza": "T01",
+          "campo": "guion_hablado",
+          "motivo": "El canal no tiene prueba de punta a punta. Eliminar promesa personal de respuesta heredada de v2 y mantener una invitación coherente; sigue bloqueada publicación hasta prueba real. Se aplica en una segunda salida local a las dos ventas.",
+          "antes_sha256": "ef762a67437de9caad4ce2ed7a0e0cc44b3af68bbc937172cd03caacbe26e9d4",
+          "despues_sha256": "4bb13e714439bf24f0fa1679a1ce707b2f901f3ce854cf8d5b640cdaef14fba4"
+        },
+        {
+          "regla": "C01-canal-no-probado",
+          "pieza": "T01",
+          "campo": "copy",
+          "motivo": "El canal no tiene prueba de punta a punta. Eliminar promesa personal de respuesta heredada de v2 y mantener una invitación coherente; sigue bloqueada publicación hasta prueba real. Se aplica en una segunda salida local a las dos ventas.",
+          "antes_sha256": "203fdaac26b1c90739f1443084ccdf6e5824afd8034243cbb24941caed92324f",
+          "despues_sha256": "535e358383f7a3d492e5d541f0a6413839b2e194489f299b00403b99df4c9ea7"
+        },
+        {
+          "regla": "C01-canal-no-probado",
+          "pieza": "T01",
+          "campo": "cta",
+          "motivo": "El canal no tiene prueba de punta a punta. Eliminar promesa personal de respuesta heredada de v2 y mantener una invitación coherente; sigue bloqueada publicación hasta prueba real. Se aplica en una segunda salida local a las dos ventas.",
+          "antes_sha256": "740026310433e09a1090ae7a5bc63f1a86dfa9166c5d38ee90dcc0d7c46bfe7c",
+          "despues_sha256": "f030f7af77ca9e55dc110c43cf4456441ace547e4dd4e260c60ff3d41cfa3671"
+        },
+        {
+          "regla": "C01-canal-no-probado",
+          "pieza": "T04",
+          "campo": "guion_hablado",
+          "motivo": "El canal no tiene prueba de punta a punta. Eliminar promesa personal de respuesta heredada de v2 y mantener una invitación coherente; sigue bloqueada publicación hasta prueba real. Se aplica en una segunda salida local a las dos ventas.",
+          "antes_sha256": "5055e739318024cca01c5f2ed32199ec76ead5308c0289c15a64fe53b335f4a0",
+          "despues_sha256": "2830ec0c4f5ac39fcd5b82e15ad97754a0b1ad75862e0a7fe8c7325bb655f581"
+        },
+        {
+          "regla": "C01-canal-no-probado",
+          "pieza": "T04",
+          "campo": "copy",
+          "motivo": "El canal no tiene prueba de punta a punta. Eliminar promesa personal de respuesta heredada de v2 y mantener una invitación coherente; sigue bloqueada publicación hasta prueba real. Se aplica en una segunda salida local a las dos ventas.",
+          "antes_sha256": "9118ba3d1d9e88f0afde34edff6e77f4437c2da112e64e58a3f2094bb15b99ec",
+          "despues_sha256": "3b3f3a1e19f148ec9cfacb4578a27d9a090d1d6f1055a6e80d4da8a249af908a"
+        },
+        {
+          "regla": "C01-canal-no-probado",
+          "pieza": "T04",
+          "campo": "cta",
+          "motivo": "El canal no tiene prueba de punta a punta. Eliminar promesa personal de respuesta heredada de v2 y mantener una invitación coherente; sigue bloqueada publicación hasta prueba real. Se aplica en una segunda salida local a las dos ventas.",
+          "antes_sha256": "740026310433e09a1090ae7a5bc63f1a86dfa9166c5d38ee90dcc0d7c46bfe7c",
+          "despues_sha256": "f030f7af77ca9e55dc110c43cf4456441ace547e4dd4e260c60ff3d41cfa3671"
+        }
+      ],
+      "naturaleza": "Corrección local declarada por productor; no revisión independiente ni aprobación"
+    },
+    "rechazos_cli": [
+      {
+        "caso": "incompleta",
+        "returncode": 2,
+        "error": {
+          "error": "Tanda rechazada",
+          "detalle": "Falta texto: proposito"
+        },
+        "original_intacto": true
+      },
+      {
+        "caso": "duplicada",
+        "returncode": 2,
+        "error": {
+          "error": "Tanda rechazada",
+          "detalle": "Pieza duplicada por idea"
+        },
+        "original_intacto": true
+      },
+      {
+        "caso": "destino_ocupado",
+        "returncode": 2,
+        "error": {
+          "error": "Tanda rechazada",
+          "detalle": "Salida duplicada; no se pisa ninguna versión"
+        },
+        "original_intacto": true
+      }
+    ]
+  },
+  "consumidor": {
+    "metodo": "tanda.snapshot(path) → panel.render(snapshot), módulos reales sin cambios",
+    "piezas": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05"
+    ],
+    "titulo_en_html": {
+      "T01": true,
+      "T02": true,
+      "T03": true,
+      "T04": true,
+      "T05": true
+    },
+    "html_bytes": 27155,
+    "html_sha256": "52110c5193fadf9eaf5dfd708f0b4cea8323cf5e9627c9e25f13046b4b23edaf",
+    "revision_tecnica": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "rotulo_heredado": "tanda v2",
+    "version_editorial_datos": "r2",
+    "archivos": [
+      {
+        "ruta": "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/tanda.py",
+        "sha256": "20b302ce40b39c6c84b92f30ae2189a4d86a3b7e0832bf4c337c422d0945c588",
+        "igual_a_HEAD": true
+      },
+      {
+        "ruta": "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/panel.py",
+        "sha256": "4f7c1774f4cdd267082bdf1b4ee7c727b8984f4ff39fd221dd41bc75289095a1",
+        "igual_a_HEAD": true
+      },
+      {
+        "ruta": "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/lector.py",
+        "sha256": "4fa98fe4e9b2b9eeb5014a7b5013513270234dfc55af0f2596eab89c4e4ec464",
+        "igual_a_HEAD": true
+      }
+    ]
+  },
+  "entrada_y_codigo": {
+    "generar.py": "d8b5b1eb4fd3f6673668ce975751f4f71216cc202dbb7daf0eb092cc1ae8d7a7",
+    "test_generar.py": "3286fbcab3e7b08d2522f5f0c02a76cc82311640da38a13aea156914ddb56445",
+    "comprobar.py": "503cf658640973ac2b9f744ac93c7d3811e5a3b3208dfbc43ecf6040e03de360",
+    "entradas/brief.json": "80a3f0fca4e57993e9760f456774adb67c9430813d76867c193725210dcbfee8",
+    "entradas/correcciones-r2.json": "573d31f41c33d46df4cfec779c2cd810f10e08fbe4d5a91071813dcda852a818",
+    "entradas/fuentes.json": "c5b99ee4945b089dcbecbfcc58778bb57b402d33544dae758bc01e66511fc1fd",
+    "entradas/redaccion-r1.json": "6261762d479befc5ccb5e33a5e61dd18b92b13bf10e21521c1f5e5d2a9a12f87"
+  },
+  "v2_intacta": true,
+  "v3_intacta": true,
+  "llm": {
+    "solicitado": "gpt-6.1-sol high",
+    "modelo_observado": null,
+    "esfuerzo_observado": null,
+    "cuota_inicio": null,
+    "cuota_fin": null,
+    "intentos_observados": "Una sesión de ejecutor; intentos canónicos no consultados"
+  },
+  "limites": [
+    "Sin prueba visual de navegador ni canal comercial",
+    "No aprobación editorial ni revisión independiente",
+    "Duraciones sin ensayo humano",
+    "Rótulo v2 fijo del consumidor: consultar version_editorial y Markdown r2",
+    "Veracidad, voz y duplicados semánticos requieren revisión editorial; controles deterministas no los certifican"
+  ]
+}

@@ -7,6 +7,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import panel
+import diario
 
 ROOT = Path(__file__).resolve().parent
 ICONS = ('home', 'building-factory-2', 'calendar', 'brain', 'movie', 'file-description',
@@ -81,7 +82,8 @@ def factory_rows(operation):
             if exports[0]['sintetico']:
                 status = 'ENSAYO SINTÉTICO · ' + status
         elif key == 'guiones' and operation.get('tanda'):
-            status = '5 borradores históricos · por revisar'
+            status = ('5 borradores históricos · por revisar' if operation.get('tanda_historica')
+                      else '5 borradores · ' + operation['tanda'].get('fecha_tanda', '') + ' · por revisar')
         rows.append(f'''<article class="factory-row" id="fabrica-{e(key)}" style="--factory-color:{color}">
           <span class="factory-symbol">{icon(symbol)}</span><div><h3>{e(factory['nombre'])}</h3>
           <p class="factory-status">{e(status)}</p></div>{step_strip(factory)}
@@ -207,14 +209,22 @@ def render(snapshot, operation, session=None):
     title = '<h1>Tu fábrica, paso a paso</h1><p class="subtitle">Entradas claras. Resultados revisables.</p>'
     licenses = provenance('<pre>' + e((ROOT / 'recursos/tabler/LICENSE').read_text()) + '</pre><pre>'
                           + e((ROOT / 'recursos/inter/OFL.txt').read_text()) + '</pre>', 'Licencias de iconos y tipografía')
+    daily = operation.get('diario')
+    daily_html = ('<section class="info-card" id="flujo-diario"><h2>Flujo diario</h2><p id="flujo-aviso" role="status"></p><div id="flujo-bandeja">'
+                  + diario.fragment(daily, operation.get('daily_stale', False)) + '</div></section>') if daily else ''
+    if session and session.get('daily_script_hash') and not daily:
+        daily_html = '<section class="info-card"><h2>Flujo diario</h2><p id="flujo-aviso" role="status">Productor pendiente de proyección válida.</p><div id="flujo-bandeja"></div></section>'
+    script_hash = session.get('daily_script_hash') if session else None
+    script_policy = ("; script-src 'sha256-" + script_hash + "'; connect-src 'self'") if script_hash else ''
+    daily_script = '<script>' + diario.script() + '</script>' if script_hash else ''
     return f'''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="referrer" content="same-origin"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; font-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action '{'self' if session else 'none'}'">
+    <meta name="referrer" content="same-origin"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; font-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action '{'self' if session else 'none'}'{script_policy}">
     <title>ONIA · Fábricas y revisión</title><style>{styles()}</style></head><body>
     <header class="topbar"><a class="brand" href="#fabricas"><strong>ONIA</strong><span class="slash">/</span><span>Fábricas</span></a>
     <time class="snapshot-date" datetime="{e(operation['generado'])}">{e(date_label)}</time><span class="context-label">Consulta local · fuentes fechadas</span></header>
     <div class="app-layout"><aside class="sidebar"><nav aria-label="Secciones">{navigation}</nav></aside>
     <main class="workspace">{saved}{errors}<div class="work-grid"><div class="main-content">
-    <section class="screen" id="fabricas">{title}{factory_rows(operation)}{factory_details(operation, session)}</section>
+    <section class="screen" id="fabricas">{title}{daily_html}{factory_rows(operation)}{factory_details(operation, session)}</section>
     <section class="screen" id="hoy"><h1>Hoy</h1><p class="subtitle">Preparar la revisión del workshop</p>
     <article class="info-card"><h3>Tanda en consulta</h3><p>{len(snapshot.get('guiones', []))} borradores para revisar</p>{historical}
     <a class="button" href="#guiones">Abrir guiones {icon('chevron-right')}</a></article>
@@ -242,4 +252,4 @@ def render(snapshot, operation, session=None):
     <p class="vlog-note">{icon('brand-youtube')}Vlog diario · se publica entero, fuera del montaje.</p>
     <details class="delivery-summary"><summary>Procedencia de esta consulta</summary><p class="small">Generada {e(operation['generado'])} · America/La_Paz.</p>
     <p class="small">Resúmenes de productores. El harness conserva la autoridad de las tareas.</p><p class="mono">Commit de las entradas {e(snapshot.get('commit_entradas_repo', 'Sin anclar'))}</p>
-    <p class="small">{e(snapshot.get('alcance', 'Consulta local'))}</p>{calendar_source}{licenses}</details></main></div></body></html>'''
+    <p class="small">{e(snapshot.get('alcance', 'Consulta local'))}</p>{calendar_source}{licenses}</details></main></div>{daily_script}</body></html>'''

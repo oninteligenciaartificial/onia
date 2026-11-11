@@ -1,0 +1,88 @@
+{
+  "schema": "onia-comprobacion-flujo-v1",
+  "fecha": "2026-11-11T18:42:36.064521+00:00",
+  "suites": [
+    {
+      "suite": "ciclo",
+      "returncode": 0,
+      "comando": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "log": "ciclo.txt"
+    },
+    {
+      "suite": "panel-nuevo",
+      "returncode": 0,
+      "comando": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel",
+        "-p",
+        "test_diario.py",
+        "-v"
+      ],
+      "log": "panel-nuevo.txt"
+    },
+    {
+      "suite": "generador",
+      "returncode": 0,
+      "comando": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "log": "generador.txt"
+    }
+  ],
+  "conteo": {
+    "ciclo": 28,
+    "panel_nuevo": 4,
+    "generador": 25,
+    "total": 57
+  },
+  "codigo_sha256": {
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/diario.js": "b104f270601214d357671625a27756046b2d10ec786e6d5b1ff454b7a4302e05",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/diario.py": "09b1d5fc65fc4da1434e0411de3e3746bc6eed08adc476e9d2a7c5fbfca6208f",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/diseno.py": "da10dc082fee10b66e0ec0e8bff0af47c379f91b91bbb4ab44dc09b2bbf80ac4",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/servidor.py": "4da114e4321fa6ef3246337dc1093db78b0c2338aec84e479169a1e65463e0d1",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/test_diario.py": "dd5c62522d4d1ed6ba150403e3238a8317c202c9a31e94bf027a1b00370f0f75",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/1-guiones-calendario/automatizada/generar.py": "8a62b37f431db6b8e86c813b85725283638de38359a7905b834c02861f928b45",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/PROMPT-DIARIO.md": "aba4a0e655b53dd8ae895ba6d279390c790e341b8cb998afe1cb126942cb629e",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/PRUEBAS.md": "94fa7a34c2f5f91be9184cf5d22f938c30c2d8551e5b9b8897ebd5ad152dd8e7",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/README.md": "370c088b9393f6ced060507784708af4d333b8196b8e452cdaef2a633b2a77f4",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/RECIBO.md": "a2abc23f9e6a1584e751e0621c69c875867980288a27e330930a2f36660d75fc",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/adaptador_harness.py": "4c9325ebdb66b6c44d3a2374e0fa0923893bb7c88ce32257bafed5239b258d73",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/comun.py": "184a8d5525554e17669cf5a1af713ff8b1a8414f605fe8856596656d6be8f593",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/config.ejemplo.json": "04d991b412b9528b6767aeef1a2035b77d83b2105a75b088b87eaf1ad7cfee9a",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/ensayo.py": "7da4f89a54d53cc8904a43ab87ea502f90814b9a50937e55e37431cd287e0a1e",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/fuentes.py": "1e4e1b4d80dc20448c13ff8069918137864af75731b09a8c1dcfee0bd74ede49",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/motor.py": "641fe56a3e478d9ee662e7850aa24439e219563819aa4bd683af6817e24deddd",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/programacion.py": "67bd396f66f5719010439a9819e64f6bb09835c2dbe35859d9d226370e8afc1c",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/test_flujo.py": "5c8957562ca2f92625e1d09890c1e3c8b288aa306c2c035a0fc054ac29acfe96",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/visual-flujo.cjs": "7fc5c879a7cd3d10a197d35fbad8bf468ef561cb98f9b832443538e84c6e484f"
+  },
+  "base_head": "e2d15c00b8ea6fe518994b118b5ef108ac1283e0",
+  "sintetico": "dobles y textos fijos; no redacción nueva",
+  "fuente_real": "../fuente-real-01.json",
+  "modelo_real": false,
+  "navegador": "../../evidencia-visual-01/resultado.json: sandbox fallido",
+  "programacion_habilitada": false,
+  "revision_independiente": null
+}

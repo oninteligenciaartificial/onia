@@ -1,0 +1,59 @@
+{
+  "schema": "onia-fabrica-estado-v1",
+  "id": "guiones-tanda-automatizada-20261111",
+  "fabrica": "guiones",
+  "estado": "para_revision",
+  "generado": "2026-11-11T13:34:35.430377+00:00",
+  "fuente": "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3/recibo.json",
+  "pasos": [
+    {
+      "id": "seleccion",
+      "nombre": "Seleccionar ideas con cerebro",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3/seleccion.json"
+      ]
+    },
+    {
+      "id": "correccion",
+      "nombre": "Aplicar corrección versionada",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3/correcciones-aplicadas.json"
+      ]
+    },
+    {
+      "id": "revision",
+      "nombre": "Revisión editorial y ensayo humano",
+      "estado": "pendiente",
+      "evidencias": []
+    }
+  ],
+  "entregables": [
+    {
+      "nombre": "Tanda",
+      "ruta": "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3/guiones-panel.json"
+    },
+    {
+      "nombre": "Calendario propuesto",
+      "ruta": "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3/calendario.json"
+    }
+  ],
+  "pendientes": [
+    {
+      "motivo": "Ensayo hablado y autorización editorial",
+      "responsable": "Contenido/Sergio",
+      "siguiente": "Leer las cinco piezas y ensayar ambas adaptaciones"
+    },
+    {
+      "motivo": "Canal NEGOCIO no probado",
+      "responsable": "Operaciones/Sergio",
+      "siguiente": "Probar comentario NEGOCIO → respuesta → derivación WhatsApp → QR privado → pago confirmado por Sergio → acceso Meet y soporte, con autorización concreta antes de usar el CTA comercial."
+    },
+    {
+      "motivo": "Relato real no aportado",
+      "responsable": "Sergio",
+      "siguiente": "Sergio: aportar una tarea real de hoy, entrada saneada sin clientes, borrador recibido, error concreto, corrección y permiso para contarlo. T02 ofrece criterio de marca mediante un ejemplo ficticio mientras falta ese material."
+    }
+  ]
+}

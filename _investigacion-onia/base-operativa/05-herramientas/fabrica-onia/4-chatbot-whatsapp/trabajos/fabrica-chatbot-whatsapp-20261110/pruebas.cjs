@@ -196,7 +196,11 @@ test('decisiones actuales en mensajes, QR y acceso exclusivos de prueba', () => 
   const oferta = catalogo.oferta;
   assert.equal(oferta.nombre, 'Claude de 0 a 100: tu negocio con IA');
   assert.ok(catalogo.textos.informacion.includes(oferta.nombre));
-  assert.deepEqual(oferta.clases, ['2026-11-12T21:00:00-04:00', '2026-11-13T21:00:00-04:00', '2026-11-14T14:00:00-04:00']);
+  assert.deepEqual(oferta.clases, ['2026-11-13T20:00:00-04:00', '2026-11-14T14:00:00-04:00', '2026-11-16T20:00:00-04:00']);
+  for (const inicio of ['viernes 13 de noviembre de 2026 a las 20:00', 'sábado 14 a las 14:00', 'lunes 16 a las 20:00'])
+    assert.ok(catalogo.textos.informacion.includes(inicio));
+  assert.doesNotMatch(catalogo.textos.informacion, /jueves|21:00|21:30|15:30/);
+  assert.ok(catalogo.textos.informacion.includes('No hay hora de finalización confirmada'));
   assert.equal(oferta.zona, 'America/La_Paz'); assert.equal(oferta.plataforma, 'Google Meet');
   assert.equal(oferta.grupal.cupos, null); assert.equal(oferta.vip.llamada_minutos, 30);
   assert.equal(catalogo.aprobacion_editorial, false);
