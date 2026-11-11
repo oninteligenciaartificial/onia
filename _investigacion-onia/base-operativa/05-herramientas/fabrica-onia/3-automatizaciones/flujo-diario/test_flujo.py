@@ -39,6 +39,14 @@ def fixture(request):
     sources['items'] = [s for s in sources['items'] if s['tipo'] == 'local']
     for row in sources['items']:
         row['consultada'] = request['creado']
+        if row['id'] == 'D11':
+            # Conciliación explícita del11nov: sólo se añadieron entrega18h y
+            # número verificado. No cambia oferta ni guiones ficticios.
+            current = comun.lector.sha((motor.BASE / row['ruta']).read_bytes())
+            allowed = {row['sha256'], '22923dab6339e9ebbdc871ed713c8fdb412918688165a18cd68a5677bab3754c'}
+            assert current in allowed, 'Decisiones nuevas: conciliar fixture, no rehashear a ciegas'
+            row['sha256'] = current
+
     row = draft['guiones'][2]
     row.update(slot='evergreen', motivo_evergreen='ENSAYO SINTÉTICO: no validar hechos con una fixture.',
                fuentes=['D11', 'CEREBRO'], tipo_evidencia='ejemplo_ficticio', apertura='ENSAYO SINTÉTICO para revisar una agenda.',

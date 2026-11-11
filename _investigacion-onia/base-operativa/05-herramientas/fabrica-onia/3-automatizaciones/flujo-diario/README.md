@@ -87,7 +87,7 @@ Una corrección usa `Engine.accept_result(..., corrections=...)` bajo el lock y 
 
 La continuidad vigente fija **inicio a las 17:00 y entrega objetivo a las 18:00 America/La_Paz, del 12 al 14 de noviembre 2026**. `config.ejemplo.json` sigue con `habilitada:false`, `redaccion_autorizada:false` y autorización null. No se restauran las 07:00. La hora las 18:00 es un objetivo, no una promesa de terminar si faltan cuota, revisión o entradas.
 
-`programacion.py --tick` sólo puede iniciar modelos en `[17:00,18:00)` de esas tres fechas, con constancia de autorización, vigencia y preflight positivo. El corte máximo exclusivo es **2026-11-15T00:00:00-04:00**, fin del 14; puede adelantarse, nunca ampliarse mediante configuración. No renueva una suscripción ni presume la disponibilidad hasta esa fecha. Fuera de la ventana se impiden nuevos modelos, pero con la autorización existente aún se pueden cerrar/recoger trabajos ya iniciados; una falta de cuota no bloquea recuperar su resultado. Toda activación sigue a cargo de la coordinadora después de revisión.
+`programacion.py --tick` puede iniciar modelos desde las17:00 de esas tres fechas; las18:00 son objetivo de entrega y una demora no cancela la tanda, con constancia de autorización, vigencia y preflight positivo. El corte máximo exclusivo es **2026-11-15T00:00:00-04:00**, fin del 14; puede adelantarse, nunca ampliarse mediante configuración. No renueva una suscripción ni presume la disponibilidad hasta esa fecha. Antes del inicio y después del corte de suscripción se impiden nuevos modelos, pero con la autorización existente aún se pueden cerrar/recoger trabajos ya iniciados; una falta de cuota no bloquea recuperar su resultado. Toda activación sigue a cargo de la coordinadora después de revisión.
 
 Para UN disparo temporal determinista sin modelo ni instalación:
 
@@ -104,7 +104,7 @@ Reversión actual no destructiva: dejar de invocar el tick y detener el servidor
 
 ### Controlador por horario preparado por la coordinadora
 
-Las plantillas `programacion/onia-flujo-diario.service` y `.timer` permanecen sin instalar. El timer propone ticks por minuto **de 17:00 a 18:59 del 12 al 14**: de 17:00 a 17:59 puede avanzar redacción/revisión, desde las 18:00 sólo cerrar/recoger y observar. La consulta de fuentes conserva su máximo de una vez por hora. Las invocaciones manuales anteriores a las 17:00 pueden recibir candidatas sin congelar la tanda. Cada tick avanza como máximo un efecto del harness para un ID, conservando tres cupos globales y cero hijos.
+Las plantillas `programacion/onia-flujo-diario.service` y `.timer` permanecen sin instalar. El timer propone ticks por minuto **del12 al15**. Del12 al14, desde17:00 puede avanzar redacción/revisión incluso si se atrasó; el15 sólo concilia resultados, sin modelos nuevos. La consulta de fuentes conserva su máximo de una vez por hora. Las invocaciones manuales anteriores a las 17:00 pueden recibir candidatas sin congelar la tanda. Cada tick avanza como máximo un efecto del harness para un ID, conservando tres cupos globales y cero hijos.
 
 La configuración activa debe estar fuera de Git, ser del usuario y tener modo 0600. La migración es explícita: copiar los campos del ejemplo nuevo a una configuración privada revisada, manteniendo el archivo anterior; configuraciones antiguas sin fecha/entrega se rechazan. La coordinadora añade la constancia del sí aplicable y revisa el commit antes de instalar. No se modifica automáticamente una configuración ni un servicio del host.
 

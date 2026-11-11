@@ -59,7 +59,8 @@ def tick(config, root, coordinator=None, clock=now, adapter_factory=LocalHarness
     current = instant(stamp)
     local = current.astimezone(ZONE)
     in_dates = FIRST_DAY <= local.date() <= LAST_DAY
-    due = in_dates and config['hora_tanda'] <= local.strftime('%H:%M') < config['hora_entrega']
+    # Las18:00 son objetivo editorial; una demora no cancela la tanda.
+    due = in_dates and config['hora_tanda'] <= local.strftime('%H:%M')
     provider = bool(due and config['redaccion_autorizada'] and current < instant(config['modelo_hasta']))
     require(not provider or coordinator is not None, 'FALTA_COORDINADOR_CANONICO')
     with locked(root):

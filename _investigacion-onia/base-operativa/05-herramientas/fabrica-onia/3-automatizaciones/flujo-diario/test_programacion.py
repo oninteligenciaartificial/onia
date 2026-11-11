@@ -66,12 +66,19 @@ class ScheduledTests(unittest.TestCase):
         self.tick('2026-11-12T21:00:00+00:00')
         self.assertEqual(self.fake.calls, ['registrar'])
         self.tick('2026-11-12T22:00:00+00:00')
-        self.assertEqual(self.fake.calls, ['registrar'])  # entrega18:00: no nuevo lanzamiento
+        self.assertEqual(self.fake.calls, ['registrar', 'lanzar'])  # Sigue la tanda atrasada, no la abandona.
         projection = json.loads((self.root/'panel.json').read_text())
         self.assertEqual(projection['programacion']['hora_entrega'], '18:00')
-        self.assertFalse(projection['programacion']['redaccion_autorizada'])
+        self.assertTrue(projection['programacion']['redaccion_autorizada'])
+        self.fake.finish()
+        self.tick('2026-11-12T22:01:00+00:00')
+        self.tick('2026-11-12T22:02:00+00:00')
+        self.fake.finish()
+        self.tick('2026-11-12T22:03:00+00:00')
+        self.tick('2026-11-12T22:04:00+00:00')
+        self.assertEqual(self.fake.calls, ['registrar','lanzar','cerrar','revisar','recoger'])
         self.assertEqual(self.tick('2026-11-15T21:00:00+00:00')['ciclos'], 1)
-        self.assertEqual(self.fake.calls, ['registrar'])
+        self.assertEqual(self.fake.calls, ['registrar','lanzar','cerrar','revisar','recoger'])
 
     def test_recoge_dictamen_del14_despues_del_corte_sin_renovar(self):
         self.tick('2026-11-14T21:00:00+00:00')
