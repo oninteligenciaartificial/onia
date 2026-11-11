@@ -1,16 +1,22 @@
 {
   "schema": 2,
   "id": "fabrica-automatizaciones-flujo-diario-20261111",
-  "revision": 6,
+  "revision": 13,
   "compartible": true,
   "objetivo": "Conectar noticias, redacción mediante harness, revisión y panel en un flujo diario verificable.",
-  "estado": "en_curso",
-  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
-  "resultado": "",
-  "comprobacion": "",
-  "verificacion": "pendiente",
-  "evidencias": [],
-  "actualizado": "2026-11-11T18:15:05.086059+00:00",
+  "estado": "para_revision",
+  "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+  "resultado": "Motor diario con contratos conservados, controlador programable apagado y panel; ejecutora ebb5959 y correcciones de coordinadora fb86bb2. Revisar commit final completo.",
+  "comprobacion": "62 tests correctos y recorrido de navegador con sandbox, formulario/CSRF/huella preservados, reinicio y vista móvil. COORDINACION-v1.md y evidencia/coordinadora. Redacción real y activación aún no probadas.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-flujo-diario-20261111/cierre-r8-fd426530.json",
+      "sha256": "2e022a04d7ed6dea1b12bb8ef9b2c0d9826874b45dbe5223db47177cbbedb154",
+      "bytes": 328
+    }
+  ],
+  "actualizado": "2026-11-11T18:48:14.587120+00:00",
   "historial": [
     {
       "revision": 1,
@@ -281,6 +287,708 @@
       ],
       "cierre": null,
       "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-11T18:15:05.086059+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-flujo-diario-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+          "05-herramientas/fabrica-contenido/20261109-lector-panel",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T18:14:41.116615+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-flujo-diario-20261111",
+          "pid": 2532192,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011883",
+          "supervisor_pid": 2532098,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011836",
+          "rama": "codex/ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "session_id": "01a1cbd2-134f-7051-b38d-17fdc6405e9d",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+            "05-herramientas/fabrica-contenido/20261109-lector-panel",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada"
+          ],
+          "dry_run": false,
+          "commit_base": "a2e9d76aef2eedca05c0e6c355616a6f684c0b7b",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T18:15:01.974675+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-11T18:44:26.011948+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-flujo-diario-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+          "05-herramientas/fabrica-contenido/20261109-lector-panel",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T18:14:41.116615+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-flujo-diario-20261111",
+          "pid": 2532192,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011883",
+          "supervisor_pid": 2532098,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011836",
+          "rama": "codex/ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "session_id": "01a1cbd2-134f-7051-b38d-17fdc6405e9d",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+            "05-herramientas/fabrica-contenido/20261109-lector-panel",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada"
+          ],
+          "dry_run": false,
+          "commit_base": "a2e9d76aef2eedca05c0e6c355616a6f684c0b7b",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T18:15:01.974675+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T18:44:26.000633+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-11T18:46:07.728305+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-flujo-diario-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+          "05-herramientas/fabrica-contenido/20261109-lector-panel",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada/generar.py"
+        ],
+        "revision_base": 7,
+        "fecha": "2026-11-11T18:46:07.728289+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-flujo-diario-20261111",
+          "pid": 2532192,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011883",
+          "supervisor_pid": 2532098,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011836",
+          "rama": "codex/ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "session_id": "01a1cbd2-134f-7051-b38d-17fdc6405e9d",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+            "05-herramientas/fabrica-contenido/20261109-lector-panel",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada"
+          ],
+          "dry_run": false,
+          "commit_base": "a2e9d76aef2eedca05c0e6c355616a6f684c0b7b",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T18:15:01.974675+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T18:44:26.000633+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-11T18:48:10.312570+00:00",
+      "estado": "para_revision",
+      "resultado": "Motor diario con contratos conservados, controlador programable apagado y panel; ejecutora ebb5959 y correcciones de coordinadora fb86bb2. Revisar commit final completo.",
+      "comprobacion": "62 tests correctos y recorrido de navegador con sandbox, formulario/CSRF/huella preservados, reinicio y vista móvil. COORDINACION-v1.md y evidencia/coordinadora. Redacción real y activación aún no probadas.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-flujo-diario-20261111/cierre-r8-fd426530.json",
+          "sha256": "2e022a04d7ed6dea1b12bb8ef9b2c0d9826874b45dbe5223db47177cbbedb154",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-flujo-diario-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+          "05-herramientas/fabrica-contenido/20261109-lector-panel",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada/generar.py"
+        ],
+        "revision_base": 7,
+        "fecha": "2026-11-11T18:46:07.728289+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-flujo-diario-20261111",
+          "pid": 2532192,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011883",
+          "supervisor_pid": 2532098,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011836",
+          "rama": "codex/ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "session_id": "01a1cbd2-134f-7051-b38d-17fdc6405e9d",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+            "05-herramientas/fabrica-contenido/20261109-lector-panel",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada"
+          ],
+          "dry_run": false,
+          "commit_base": "a2e9d76aef2eedca05c0e6c355616a6f684c0b7b",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T18:15:01.974675+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T18:44:26.000633+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "fb86bb2701b9e13c3fb645a56f7de4e080698f31",
+        "commit_base": "a2e9d76aef2eedca05c0e6c355616a6f684c0b7b",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-flujo-diario-20261111"
+        ],
+        "fecha": "2026-11-11T18:48:10.301606+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-flujo-diario-20261111/cierre-r8-fd426530.json",
+          "sha256": "2e022a04d7ed6dea1b12bb8ef9b2c0d9826874b45dbe5223db47177cbbedb154",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-11T18:48:13.295292+00:00",
+      "estado": "para_revision",
+      "resultado": "Motor diario con contratos conservados, controlador programable apagado y panel; ejecutora ebb5959 y correcciones de coordinadora fb86bb2. Revisar commit final completo.",
+      "comprobacion": "62 tests correctos y recorrido de navegador con sandbox, formulario/CSRF/huella preservados, reinicio y vista móvil. COORDINACION-v1.md y evidencia/coordinadora. Redacción real y activación aún no probadas.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-flujo-diario-20261111/cierre-r8-fd426530.json",
+          "sha256": "2e022a04d7ed6dea1b12bb8ef9b2c0d9826874b45dbe5223db47177cbbedb154",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-flujo-diario-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+          "05-herramientas/fabrica-contenido/20261109-lector-panel",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada/generar.py"
+        ],
+        "revision_base": 7,
+        "fecha": "2026-11-11T18:46:07.728289+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-flujo-diario-20261111",
+          "pid": 2532192,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011883",
+          "supervisor_pid": 2532098,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011836",
+          "rama": "codex/ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "session_id": "01a1cbd2-134f-7051-b38d-17fdc6405e9d",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+            "05-herramientas/fabrica-contenido/20261109-lector-panel",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada"
+          ],
+          "dry_run": false,
+          "commit_base": "a2e9d76aef2eedca05c0e6c355616a6f684c0b7b",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T18:15:01.974675+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T18:44:26.000633+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-flujo-diario-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-flujo-diario-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+            "05-herramientas/fabrica-contenido/20261109-lector-panel",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada/generar.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fb86bb2701b9e13c3fb645a56f7de4e080698f31",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T18:48:13.270883+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "dbaafdfeace0c8be3129e8c8a157c8b8397d06cf63436bf43ea2248f9760b3ba",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "fb86bb2701b9e13c3fb645a56f7de4e080698f31",
+        "commit_base": "a2e9d76aef2eedca05c0e6c355616a6f684c0b7b",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-flujo-diario-20261111"
+        ],
+        "fecha": "2026-11-11T18:48:10.301606+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-flujo-diario-20261111/cierre-r8-fd426530.json",
+          "sha256": "2e022a04d7ed6dea1b12bb8ef9b2c0d9826874b45dbe5223db47177cbbedb154",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-11T18:48:13.465313+00:00",
+      "estado": "para_revision",
+      "resultado": "Motor diario con contratos conservados, controlador programable apagado y panel; ejecutora ebb5959 y correcciones de coordinadora fb86bb2. Revisar commit final completo.",
+      "comprobacion": "62 tests correctos y recorrido de navegador con sandbox, formulario/CSRF/huella preservados, reinicio y vista móvil. COORDINACION-v1.md y evidencia/coordinadora. Redacción real y activación aún no probadas.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-flujo-diario-20261111/cierre-r8-fd426530.json",
+          "sha256": "2e022a04d7ed6dea1b12bb8ef9b2c0d9826874b45dbe5223db47177cbbedb154",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-flujo-diario-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+          "05-herramientas/fabrica-contenido/20261109-lector-panel",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada/generar.py"
+        ],
+        "revision_base": 7,
+        "fecha": "2026-11-11T18:46:07.728289+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-flujo-diario-20261111",
+          "pid": 2532192,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011883",
+          "supervisor_pid": 2532098,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011836",
+          "rama": "codex/ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "session_id": "01a1cbd2-134f-7051-b38d-17fdc6405e9d",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+            "05-herramientas/fabrica-contenido/20261109-lector-panel",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada"
+          ],
+          "dry_run": false,
+          "commit_base": "a2e9d76aef2eedca05c0e6c355616a6f684c0b7b",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T18:15:01.974675+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T18:44:26.000633+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-flujo-diario-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 2616601,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216210878",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-flujo-diario-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+            "05-herramientas/fabrica-contenido/20261109-lector-panel",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada/generar.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fb86bb2701b9e13c3fb645a56f7de4e080698f31",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T18:48:13.270883+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "dbaafdfeace0c8be3129e8c8a157c8b8397d06cf63436bf43ea2248f9760b3ba",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "fb86bb2701b9e13c3fb645a56f7de4e080698f31",
+        "commit_base": "a2e9d76aef2eedca05c0e6c355616a6f684c0b7b",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-flujo-diario-20261111"
+        ],
+        "fecha": "2026-11-11T18:48:10.301606+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-flujo-diario-20261111/cierre-r8-fd426530.json",
+          "sha256": "2e022a04d7ed6dea1b12bb8ef9b2c0d9826874b45dbe5223db47177cbbedb154",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-11T18:48:13.668369+00:00",
+      "estado": "para_revision",
+      "resultado": "Motor diario con contratos conservados, controlador programable apagado y panel; ejecutora ebb5959 y correcciones de coordinadora fb86bb2. Revisar commit final completo.",
+      "comprobacion": "62 tests correctos y recorrido de navegador con sandbox, formulario/CSRF/huella preservados, reinicio y vista móvil. COORDINACION-v1.md y evidencia/coordinadora. Redacción real y activación aún no probadas.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-flujo-diario-20261111/cierre-r8-fd426530.json",
+          "sha256": "2e022a04d7ed6dea1b12bb8ef9b2c0d9826874b45dbe5223db47177cbbedb154",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-flujo-diario-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+          "05-herramientas/fabrica-contenido/20261109-lector-panel",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada/generar.py"
+        ],
+        "revision_base": 7,
+        "fecha": "2026-11-11T18:46:07.728289+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-flujo-diario-20261111",
+          "pid": 2532192,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011883",
+          "supervisor_pid": 2532098,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011836",
+          "rama": "codex/ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "session_id": "01a1cbd2-134f-7051-b38d-17fdc6405e9d",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+            "05-herramientas/fabrica-contenido/20261109-lector-panel",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada"
+          ],
+          "dry_run": false,
+          "commit_base": "a2e9d76aef2eedca05c0e6c355616a6f684c0b7b",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T18:15:01.974675+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T18:44:26.000633+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-flujo-diario-20261111",
+          "pid": 2616603,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216210896",
+          "supervisor_pid": 2616601,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216210878",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-flujo-diario-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+            "05-herramientas/fabrica-contenido/20261109-lector-panel",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada/generar.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fb86bb2701b9e13c3fb645a56f7de4e080698f31",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T18:48:13.270883+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "dbaafdfeace0c8be3129e8c8a157c8b8397d06cf63436bf43ea2248f9760b3ba",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "fb86bb2701b9e13c3fb645a56f7de4e080698f31",
+        "commit_base": "a2e9d76aef2eedca05c0e6c355616a6f684c0b7b",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-flujo-diario-20261111"
+        ],
+        "fecha": "2026-11-11T18:48:10.301606+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-flujo-diario-20261111/cierre-r8-fd426530.json",
+          "sha256": "2e022a04d7ed6dea1b12bb8ef9b2c0d9826874b45dbe5223db47177cbbedb154",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -306,10 +1014,10 @@
     "rutas": [
       "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
       "05-herramientas/fabrica-contenido/20261109-lector-panel",
-      "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada"
+      "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada/generar.py"
     ],
-    "revision_base": 1,
-    "fecha": "2026-11-11T18:14:41.116615+00:00"
+    "revision_base": 7,
+    "fecha": "2026-11-11T18:46:07.728289+00:00"
   },
   "sesiones": [
     {
@@ -322,7 +1030,7 @@
       "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216011836",
       "rama": "codex/ws-fabrica-automatizaciones-flujo-diario-20261111",
       "session_id": "01a1cbd2-134f-7051-b38d-17fdc6405e9d",
-      "estado": "ejecutando",
+      "estado": "cerrada",
       "operacion": "/home/onia-codex-worker/operacion",
       "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
       "log_rel": "logs/fabrica-automatizaciones-flujo-diario-20261111.jsonl",
@@ -338,17 +1046,69 @@
       "reanuda": null,
       "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.1.briefing.txt",
       "inicio": "2026-11-11T18:15:01.974675+00:00",
-      "rc": null,
-      "ultimo_evento": "thread.started",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
       "modelo": "gpt-6.1-sol",
       "esfuerzo": "high",
       "auth_chatgpt": true,
       "subagentes_maximos": 0,
       "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git",
       "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-flujo-diario-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-flujo-diario-20261111",
-      "perfil_permisos": "harness-git"
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-11T18:44:26.000633+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "revisor",
+      "responsable": "revisor-flujo-diario-20261111",
+      "pid": 2616603,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216210896",
+      "supervisor_pid": 2616601,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216210878",
+      "rama": "(detached)",
+      "session_id": "01a1cbf0-6e7e-7a63-a6fe-5ac4366e207c",
+      "estado": "ejecutando",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.revision-2.jsonl",
+      "log_rel": "logs/fabrica-automatizaciones-flujo-diario-20261111.revision-2.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111-revision-2",
+      "rutas": [
+        "05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario",
+        "05-herramientas/fabrica-contenido/20261109-lector-panel",
+        "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada/generar.py"
+      ],
+      "dry_run": false,
+      "commit_base": "fb86bb2701b9e13c3fb645a56f7de4e080698f31",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.2.briefing.txt",
+      "inicio": "2026-11-11T18:48:13.270883+00:00",
+      "rc": null,
+      "ultimo_evento": "thread.started",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "dbaafdfeace0c8be3129e8c8a157c8b8397d06cf63436bf43ea2248f9760b3ba",
+      "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.2.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-flujo-diario-20261111.2.veredicto.json"
     }
   ],
   "revision_independiente": null,
-  "cierre": null
+  "cierre": {
+    "commit": "fb86bb2701b9e13c3fb645a56f7de4e080698f31",
+    "commit_base": "a2e9d76aef2eedca05c0e6c355616a6f684c0b7b",
+    "ramas_origin": [
+      "origin/codex/ws-fabrica-automatizaciones-flujo-diario-20261111"
+    ],
+    "fecha": "2026-11-11T18:48:10.301606+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "worktree_conservado": true,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-flujo-diario-20261111/cierre-r8-fd426530.json",
+      "sha256": "2e022a04d7ed6dea1b12bb8ef9b2c0d9826874b45dbe5223db47177cbbedb154",
+      "bytes": 328
+    }
+  }
 }
