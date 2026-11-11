@@ -79,7 +79,7 @@ async function submit(page, review, policy) {
     let expectLegacyFailure = false;
     page.on('pageerror', error => errors.push(error.message));
     page.on('console', message => {
-      if (message.type() === 'error' && !expectLegacyFailure) errors.push(message.text());
+      if (message.type() === 'error' && !(expectLegacyFailure && message.text().includes('403 (Forbidden)'))) errors.push(message.text());
     });
     for (const [name, width, height] of [['objetivo',1487,1058], ['desktop',1440,1000], ['mobile',390,844]]) {
       await page.setViewportSize({ width, height });
@@ -122,20 +122,22 @@ comparison.save(sys.argv[3])
     assert(await page.locator('.tab-cambios').isVisible());
     await page.locator('label[for="tab-resultado"]').click();
     await page.locator('.result-list a').first().click();
-    assert(await page.locator('#guion-T01').isVisible());
+    await page.locator('#guion-T01').waitFor({state:'visible'});
     await page.locator('#guion-T01 > details').first().locator('summary').click();
     assert((await page.innerText('#guion-T01')).includes('Guion hablado'));
+    await page.screenshot({path:path.join(output,'guion-abierto.png')});
     report.pasos.push('Inspector Resultado/Fuentes/Cambios, selección T01 y texto completo');
 
     // Reproducir la política anterior sólo en una respuesta de ensayo del mismo servidor.
+    const legacyBody = await page.content();
     const legacyPolicy = async route => {
-      const response = await route.fetch();
-      const headers = { ...response.headers(), 'referrer-policy': 'no-referrer' };
-      delete headers['content-length'];
-      const body = (await response.text()).replace('<meta name="referrer" content="same-origin">', '<meta name="referrer" content="no-referrer">');
-      await route.fulfill({ response, headers, body });
+      // HTML y cookie de la sesión actual; no se fabrica Origin ni el POST.
+      // Evita una segunda conexión de route.fetch contra el HTTPServer secuencial.
+      const body = legacyBody.replace('<meta name="referrer" content="same-origin">', '<meta name="referrer" content="no-referrer">');
+      await route.fulfill({status:200,contentType:'text/html; charset=utf-8',headers:{'referrer-policy':'no-referrer'},body});
     };
     await page.route(url + '/', legacyPolicy);
+    await page.goto('about:blank'); // Obliga a cargar la política; cambiar sólo el hash no recarga.
     let review = await prepareForm(page, url);
     expectLegacyFailure = true;
     const legacy = await submit(page, review, 'no-referrer (ensayo controlado)');
@@ -150,6 +152,8 @@ comparison.save(sys.argv[3])
     assert.equal(saved.origin, url);
     assert.equal(saved.status, 303);
     assert((await page.innerText('body')).includes('Observación guardada'));
+    const savedBox=await page.locator('[role=status]').boundingBox();
+    assert(savedBox && savedBox.y>=0 && savedBox.y+savedBox.height<=1058, 'Confirmación visible tras guardar');
     await page.screenshot({ path: path.join(output, 'guardado.png'), fullPage: false });
     report.pasos.push('Formulario nativo same-origin guardado por POST 303 con origen exacto');
     await stop();
@@ -181,7 +185,7 @@ comparison.save(sys.argv[3])
     report.servidor_cerrado = true;
     report.navegador_cerrado = true;
     report.datos = 'SQLite sintética conservada fuera de Git en /tmp';
-    fs.writeFileSync(path.join(output,'resultado.json'),JSON.stringify(report,null,2)+'\n',{flag:'wx'});
+    fs.writeFileSync(path.join(output,'resultado.json'),JSON.stringify(report,null,2).replaceAll(os.homedir(),'~').replace(/(?:http:\/\/)?127\.0\.0\.1(?::\d+)?/g,'loopback')+'\n',{flag:'wx'});
     console.log(JSON.stringify({resultado:report.resultado,capturas:report.viewports.length,pasos:report.pasos.length}));
   }
 })();

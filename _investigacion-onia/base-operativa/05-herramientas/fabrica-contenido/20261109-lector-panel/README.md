@@ -2,7 +2,7 @@
 
 ## Propuesta 1 elegida por Sergio
 
-La [guía de revisión del diseño](GUIA-REVISION-DISENO.md) describe la vista actual, la corrección de política del formulario y las comprobaciones pendientes del host. Abrir el [preview de Propuesta 1](evidencia/diseno-20261111/preview-final/panel.html). La [comparación visual](design-qa.md) sigue bloqueada por el arranque de Chromium en esta ejecutora.
+La [guía de revisión del diseño](GUIA-REVISION-DISENO.md) describe la vista actual, la corrección de política del formulario y las comprobaciones completadas en el host. Abrir el [preview de Propuesta 1](evidencia/diseno-20261111/preview-coordinadora/panel.html). La [comparación visual](design-qa.md) pasó después de corregir los hallazgos del navegador. Entrega pendiente de revisión independiente y de Sergio.
 
 ## Ampliación del 11 de noviembre de 2026
 

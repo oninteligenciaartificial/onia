@@ -1,0 +1,63 @@
+{
+  "fecha": "2026-11-11T17:25:12.958Z",
+  "ensayo": "SINTETICO de revisión sobre la tanda v2 histórica",
+  "chromiumSandbox": true,
+  "viewports": [
+    {
+      "name": "objetivo",
+      "width": 1487,
+      "height": 1058,
+      "deviceScaleFactor": 1,
+      "captura": "objetivo.png",
+      "overflow": false
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "deviceScaleFactor": 1,
+      "captura": "desktop.png",
+      "overflow": false
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1,
+      "captura": "mobile.png",
+      "overflow": false
+    }
+  ],
+  "pasos": [
+    "Navegación nativa por cinco secciones y selección de seis fábricas",
+    "Inspector Resultado/Fuentes/Cambios, selección T01 y texto completo",
+    "Política anterior reproducida con Origin:null y rechazo 403",
+    "Formulario nativo same-origin guardado por POST 303 con origen exacto",
+    "Proceso reiniciado y revisión pendiente v1 recuperada con original",
+    "Consulta del cerebro existente por formulario GET"
+  ],
+  "cabeceras_formulario": [
+    {
+      "politica": "no-referrer (ensayo controlado)",
+      "origin": "null",
+      "referer": "(ausente)",
+      "host": "(gestionado por navegador)",
+      "status": 403
+    },
+    {
+      "politica": "same-origin",
+      "origin": "loopback",
+      "referer": "loopback/",
+      "host": "(gestionado por navegador)",
+      "status": 303
+    }
+  ],
+  "comparacion_visual": "Pendiente de abrir capturas junto a la referencia exacta",
+  "comparacion": "comparacion.png · referencia izquierda e implementación derecha, 1:1",
+  "peticiones_externas": [],
+  "errores": [],
+  "resultado": "OK",
+  "servidor_cerrado": true,
+  "navegador_cerrado": true,
+  "datos": "SQLite sintética conservada fuera de Git en /tmp"
+}

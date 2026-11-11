@@ -1,48 +1,53 @@
-# Comprobación de Propuesta 1
+# QA visual y funcional de Propuesta 1
 
-final result: blocked
+final result: passed
 
-La referencia exacta fue abierta con view_image. Chromium falló al iniciar con sandbox y produjo cero capturas de esta implementación. La comparación de fidelidad y el guardado nativo en navegador requieren el ensayo del host de la coordinadora.
+Revisión de la coordinadora sobre el render existente, con Chromium y sandbox habilitado en el host. La entrega de la ejecutora 613a152 dejó este QA bloqueado por su entorno; su informe se conserva en `evidencia/diseno-20261111/qa-ejecutora-613a152.md`. La coordinadora reprodujo los fallos, corrigió el producto después de terminar la ejecutora y completó los ensayos.
 
-## Evidencia disponible
+## Referencia, estado y comparación
 
-- Referencia visual elegida y abierta en esta retoma en `diseno/propuesta-1.png`, 1487×1058 px.
-- Implementación en el mismo `panel.render`, mediante `diseno.py` y `diseno.css`.
-- Captura de implementación pendiente. Intento en `evidencia/diseno-20261111/intento-01/resultado.json`, resultado BLOCKED, `No usable sandbox!`.
-- Estado inicial previsto para comparar · Fábricas, inspector Resultado, tanda v2 histórica y seis fábricas con datos de los contratos recibidos.
-- Viewport objetivo 1487×1058 CSS px, deviceScaleFactor 1. Otras comprobaciones previstas a 1440×1000 y 390×844.
-- El script `visual-diseno.cjs` genera `objetivo.png` y `comparacion.png` con referencia a la izquierda e implementación a la derecha, ambas a 1:1, cuando Chromium puede arrancar. Su generación en esta sesión quedó bloqueada.
-- Comparación conjunta de vista completa pendiente. Comparaciones enfocadas de cabecera, filas, inspector y formulario pendientes. Esas regiones son necesarias por su densidad y controles.
+- Fuente visual: `diseno/propuesta-1.png`, 1487×1058 píxeles.
+- Implementación: `evidencia/diseno-20261111/host-final-02/objetivo.png`, 1487×1058 píxeles; viewport CSS 1487×1058, deviceScaleFactor 1. Sin reescalado en los archivos de comparación.
+- Estado: Fábricas, Resultado. La referencia tiene v3/checks de ejemplo; la implementación muestra la v2 histórica disponible y pendientes sin inventar progreso. Diferencia de contenido intencional.
+- Vista conjunta abierta: `host-final-02/comparacion.png` (2974×1058, referencia izquierda, implementación derecha).
+- Comparaciones enfocadas abiertas: `comparacion-cabecera.png`, `comparacion-filas.png`, `comparacion-inspector.png` en ese directorio. Mismos recortes y escala en cada par. Las regiones densas se leyeron por separado.
+- Abiertos además: `mobile.png`, captura móvil completa anterior de igual estructura y `guardado.png`. El ensayo final confirma ausencia de desbordamiento a 1487, 1440 y 390 px.
 
-## Superficies de fidelidad
+## Hallazgos corregidos e historial
 
-| Superficie | Implementación preparada | Validación visual |
-|---|---|---|
-| Tipografía | Inter variable local, cuerpo compacto, h1 de 38 px, filas de 20 px, inspector de 24 px | Pendiente de comparar pesos, saltos y espaciado con la referencia |
-| Espaciado y estructura | Cabecera de 70 px, sidebar de 186 px, filas de 106 px, inspector de 360 px, tarjeta de clases y nota del vlog | Pendiente a 1487×1058 y con datos largos |
-| Colores | Cabecera #1b303e, fondo #faf8f5, crema #fff3df y acentos semánticos de las fábricas | Inferidos de la referencia abierta, pendientes de cotejo renderizado |
-| Imágenes e iconos | Referencia conservada, 18 SVG originales de Tabler MIT y fuente Inter OFL incrustados desde recursos locales | Integridad/licencias comprobables por tests. Tamaño, alineación y peso visual pendientes |
-| Texto y estado | Títulos de Propuesta 1, v2 histórica con alerta, fechas de fuente, ausencia de export indicada como pendiente | Diferencia intencional respecto de los ejemplos v3/checks de la maqueta. Falta inspeccionar la presentación |
-| Móvil y accesibilidad | Reorganización a una columna, navegación envuelta, inspector después de filas, enlaces/radios/details nativos y foco visible | Pendientes de inspección de 390 px, navegación de teclado y control de overflow en navegador |
+1. **P1 · guion seleccionado oculto.** `coordinadora-antes/resultado.json` conserva el fallo: el hash llega a T01 y su sección aparece, pero el artículo queda oculto. La regla de ocultar otras tarjetas tenía mayor especificidad. Se igualó la especificidad en `.scripts:has(.script:target) .script:target`. Prueba posterior: `host-final-02/guion-abierto.png` y recorrido OK.
+2. **P2 · confirmación fuera del viewport.** La captura `coordinadora-antes/guardado.png` no muestra el aviso tras la navegación al resultado. Se hizo persistente el aviso durante el desplazamiento y se añadió margen al destino. `host-final-02/guardado.png` muestra la confirmación y la prueba verifica su caja dentro del viewport.
+3. **P2 · tipografía de título y pasos demasiado pequeña.** Se ajustó h1 de 38 a 42 px y pasos de 12 a 14 px en escritorio. `host-final-01` confirmó el cambio y detectó corte dentro de “Confirmación”. `overflow-wrap:normal` en la etiqueta evita ese corte; `host-final-02/comparacion-filas.png` lo confirma. Móvil mantiene su tamaño adaptado.
+4. **Prueba corregida, sin alterar servidor.** Cambiar sólo el fragmento no recargaba la política anterior. Se fuerza una navegación nueva y se sirve una copia del HTML de la sesión con ambas políticas anteriores. El navegador genera Origin:null y el servidor devuelve 403; la versión real same-origin devuelve 303. No se fabrica Origin ni el POST. Se evita route.fetch, que abría otra conexión contra el servidor secuencial.
 
-## Guardado e interacciones
+Tras estas correcciones no quedan P0/P1/P2 accionables en este alcance visual/local. Los ensayos fallidos se conservan; no se contabilizan como éxitos.
 
-Se cambió Referrer-Policy y meta referrer a same-origin. Host y Origin exactos, token CSRF, huella y versión esperada se conservan en el servidor. La norma Fetch explica el Origin nulo producido por no-referrer. La comprobación comparativa del navegador está preparada para forzar únicamente la política anterior en una respuesta de ensayo, observar 403 con Origin:null y después exigir 303 con el origen exacto en same-origin. [Norma Fetch](https://fetch.spec.whatwg.org/#origin-header)
+## Cinco superficies de fidelidad
 
-Las pruebas HTTP y HTML comprueban el rechazo de origen ausente, null, wildcard, ajeno, token malo, huella y versión, además de las regresiones anteriores. El script del host comprobará navegación por secciones, selección de fábrica, pestañas del inspector, lectura de T01, formulario, reinicio y consulta del cerebro. Errores de consola y solicitudes externas quedan bajo comprobación en ese ensayo. Sólo se registran Origin, Referer y Host del formulario sintético, junto con su estado HTTP.
+| Superficie | Veredicto |
+|---|---|
+| Fuentes y tipografía | Inter local, título fuerte, jerarquía y lectura comprobadas. Inspector deliberadamente compacto para la alerta de versión histórica. Diferencias menores de peso respecto de la imagen son P3. |
+| Espaciado y ritmo | Cabecera 70 px, sidebar 186 px, seis filas, inspector 360 px, clases y vlog conservan composición y densidad. En móvil navegación y columnas se reorganizan sin controles recortados. |
+| Colores | Navy, fondo cálido, crema y acentos de fábrica coherentes con la referencia. Los círculos pendientes reemplazan los checks ficticios intencionalmente. |
+| Imágenes e iconos | Tabler original e Inter local con licencias; sin solicitudes de recursos externos ni iconos dibujados a mano. Peso plano de la biblioteca frente a la iluminación de la maqueta aceptado como P3. |
+| Texto y contenido | Fechas y horarios confirmados, pago manual y vlog intacto. Títulos de guiones y estado histórico provienen del paquete recibido; no se copian textos ficticios de la maqueta. |
 
-## Hallazgos y siguiente comprobación
+## Pruebas reales
 
-La ausencia de una captura actual bloquea el juicio de fidelidad. No se asignan defectos visuales a una interfaz que no pudo observarse. Las capturas host anteriores corresponden a la entrega previa y conservan sus archivos y carácter histórico.
+`node "$P/visual-diseno.cjs" "$P/evidencia/diseno-20261111/host-final-02"` → `{"resultado":"OK","capturas":3,"pasos":6}`. Cinco secciones, seis fábricas, tres pestañas, T01, reproducción del rechazo 403, guardado 303, confirmación visible, reinicio y persistencia, consulta del cerebro. Cero errores inesperados de consola y cero peticiones externas. Sólo el 403 provocado y esperado se excluye del conteo; queda registrado. Los orígenes locales se redactan como loopback en el recibo.
 
-1. Ejecutar `visual-diseno.cjs` en el host compatible, con sandbox habilitado y un directorio nuevo.
-2. Abrir `diseno/propuesta-1.png`, `objetivo.png` y `comparacion.png` conjuntamente. Revisar además desktop, mobile, mobile-completo y guardado.
-3. Comparar cabecera, filas e inspector en recortes legibles de ambas imágenes y registrar cada diferencia P0/P1/P2 con su evidencia.
-4. Corregir las diferencias que requieran cambios y repetir capturas a igual viewport y estado. La coordinadora debe pedir la retoma sobre esta misma tarea si corresponde.
-5. Registrar la inspección y el resultado del formulario antes de cambiar el resultado de QA.
+`node "$P/visual-operacion.cjs" "$P/evidencia/diseno-20261111/host-operacion-final-01"` → `{"resultado":"OK","casos":3}`. Conserva navegación, evidencia original, revisión de fixture, reinicio y consulta desde móvil 390×844.
 
-## Historial de comparación
+`python3 -B "$P/pruebas.py"` → 22 tests OK. `python3 -B -m unittest discover -s "$P" -p 'test_*.py' -v` → 33 tests OK. Total 55. Host/Origin exactos, CSRF, huella, versión, XSS, rutas y concurrencia siguen cubiertos. Los comandos y salidas resumidas están en `evidencia/diseno-20261111/coordinadora.json`.
 
-Intento 01 de esta retoma · bloqueo de arranque de Chromium. Cero comparaciones visuales ejecutadas. Las pruebas de código y los cambios de CSS posteriores al intento conservan este bloqueo ambiental. El script queda preparado para comprobar el commit final desde el host.
+No equivale a una auditoría completa de lectores de pantalla ni prueba de canales reales. Se mantiene el STOP para Sergio; este QA no acepta ni integra la entrega. Sin n8n, publicación comercial, pagos, PC o instalación de software.
 
-final result: blocked
+## Checklist final
+
+- [x] Referencia y render abiertos juntos, regiones legibles y móvil inspeccionados.
+- [x] Fallos encontrados corregidos y recapturados.
+- [x] Formularios y persistencia verificados en navegador, protecciones conservadas.
+- [x] Estados de ejemplo separados de evidencia real.
+- [ ] Revisión independiente y decisión de Sergio, gestionadas por el harness.
+
+final result: passed

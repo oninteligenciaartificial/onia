@@ -4,7 +4,7 @@ Retoma autorizada de `cerebro-panel-usable-20261109`, desde HEAD `dd41bcc8d8e26a
 
 ## Abrir la entrega
 
-El [preview de Propuesta 1](evidencia/diseno-20261111/preview-final/panel.html) usa el render Python/HTML existente. Cabecera compacta, sidebar, seis filas, inspector, clases y nota del vlog reproducen la estructura elegida. [Referencia exacta conservada](diseno/propuesta-1.png).
+El [preview de Propuesta 1](evidencia/diseno-20261111/preview-coordinadora/panel.html) usa el render Python/HTML existente. Cabecera compacta, sidebar, seis filas, inspector, clases y nota del vlog reproducen la estructura elegida. [Referencia exacta conservada](diseno/propuesta-1.png).
 
 La navegación del preview funciona mediante enlaces locales, selectores CSS, radios y details nativos. Permite seleccionar secciones y fábricas, abrir pasos, escoger Resultado/Fuentes/Cambios y leer los guiones. La consulta del cerebro mostrada es una recuperación documental local. Para consultar otras etiquetas o guardar revisiones, abrir el modo temporal.
 
@@ -41,8 +41,7 @@ Ese fixture permanece rotulado ENSAYO SINTÉTICO. La corrección sobre T01 exist
 
 `Referrer-Policy: no-referrer` y el meta anterior podían provocar `Origin: null` en el formulario nativo. Se aplicó `same-origin` a la cabecera y al meta. El servidor exige Host y Origin exactos de su puerto loopback, token CSRF, huella del resultado y versión vigente. Mantiene rechazo de Origin ausente, null, wildcard y ajeno. La ruta de favicon devuelve 204 para evitar un error de recurso durante el ensayo. La CSP admite únicamente estilos inline, máscaras/font incrustados y la acción de formulario local. [Norma primaria Fetch](https://fetch.spec.whatwg.org/#origin-header)
 
-Las pruebas HTTP pasan con las políticas corregidas. La confirmación del guardado nativo en Chromium está pendiente del host. El [intento de esta retoma](evidencia/diseno-20261111/intento-01/resultado.json) terminó BLOCKED antes de abrir una página por `No usable sandbox!`. [design-qa.md](design-qa.md) conserva `final result: blocked`.
-
+Las pruebas HTTP y el navegador del host pasaron. La coordinadora corrigió la visibilidad de T01 y el aviso después de guardar, verificó Origin:null → 403 y same-origin → 303 y recuperó la revisión tras reiniciar. Evidencia: `evidencia/diseno-20261111/host-final-02/resultado.json`, capturas y `design-qa.md` con `final result: passed`. El intento bloqueado de la ejecutora se conserva como histórico.
 ## Comprobaciones y host
 
 ```bash
@@ -61,7 +60,7 @@ En el host con Playwright/Chromium ya existente, usar un directorio nuevo
 node "$P/visual-diseno.cjs" "$P/evidencia/diseno-20261111/host-01"
 ```
 
-El script ejecuta el servidor temporal con una SQLite sintética privada en `/tmp`, comprueba los tres viewports 1487×1058, 1440×1000 y 390×844, navegación, selección de seis fábricas, inspector, T01, guardado y reinicio. Compara la política anterior en una respuesta controlada de ensayo y después exige el guardado con same-origin. Registra únicamente Origin, Referer, Host y estado HTTP de esos formularios. Cierra servidor y navegador al finalizar. La generación del comparativo usa Pillow existente, sin instalaciones.
+El script ejecuta el servidor temporal con una SQLite sintética privada en `/tmp`, comprueba los tres viewports 1487×1058, 1440×1000 y 390×844, navegación, selección de seis fábricas, inspector, T01, guardado y reinicio. Compara la política anterior en una respuesta controlada de ensayo y después exige el guardado con same-origin. Registra únicamente Origin, Referer, Host y estado HTTP de esos formularios, redactando la dirección local como loopback. Cierra servidor y navegador al finalizar. La generación del comparativo usa Pillow existente, sin instalaciones.
 
 Debe producir `objetivo.png`, `desktop.png`, `mobile.png`, `mobile-completo.png`, `guardado.png`, `comparacion.png` y `resultado.json`. El comparativo contiene referencia a la izquierda e implementación a la derecha a igual tamaño. Abrir ambas y sus regiones legibles antes de modificar design-qa.md. Los datos reales y las advertencias históricas explican diferencias de contenido respecto de la maqueta.
 
@@ -86,4 +85,4 @@ Las observaciones privadas permanecen en SQLite. El preview se genera con contra
 
 Iconos originales de [Tabler Icons](https://tabler.io/icons), licencia MIT, y fuente [Inter](https://github.com/google/fonts/tree/main/ofl/inter), licencia OFL. Fuentes, commit de la biblioteca y hashes están en `recursos/FUENTES.json`, con los originales y licencias en `recursos/`. Se incrustan desde esos archivos para abrir el panel sin solicitar recursos de red. Las licencias también se conservan dentro del HTML generado.
 
-La estructura está implementada y las pruebas de código pasan. Fidelidad visual, comportamiento renderizado a los tres tamaños y comparación de Origin en navegador quedan bloqueados hasta el ensayo del host. Calendar/Meet, ventas y pagos manuales, canales reales, sala audiovisual completa y permisos conservan las dependencias de su alcance previo. La entrega espera revisión de Sergio y la coordinadora en el punto STOP autorizado.
+La estructura y los recorridos locales fueron comprobados en el host. Las 55 pruebas Python, el recorrido nuevo de seis pasos y el recorrido previo de tres casos pasaron. La comparación visual está documentada en design-qa.md. Calendar/Meet, ventas y pagos manuales, canales reales, sala audiovisual completa y permisos conservan las dependencias de su alcance previo. La entrega espera revisión de Sergio y la coordinadora en el punto STOP autorizado.

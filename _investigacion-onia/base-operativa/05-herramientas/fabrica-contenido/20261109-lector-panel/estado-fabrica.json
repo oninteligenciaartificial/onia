@@ -3,7 +3,7 @@
   "id": "cerebro-panel-usable-20261109",
   "fabrica": "panel",
   "estado": "para_revision",
-  "generado": "2026-11-11T17:17:08.118779+00:00",
+  "generado": "2026-11-11T17:27:25.697153+00:00",
   "fuente": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION-DISENO.md",
   "pasos": [
     {
@@ -25,17 +25,19 @@
     {
       "id": "guardado",
       "nombre": "Verificar formulario nativo same-origin en navegador",
-      "estado": "bloqueado",
+      "estado": "completado",
       "evidencias": [
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/intento-01/resultado.json"
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/design-qa.md",
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/host-final-02/resultado.json"
       ]
     },
     {
       "id": "visual",
       "nombre": "Comparar referencia y capturas a 1487, 1440 y 390 px",
-      "estado": "bloqueado",
+      "estado": "completado",
       "evidencias": [
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/design-qa.md"
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/design-qa.md",
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/host-final-02/resultado.json"
       ]
     },
     {
@@ -48,23 +50,18 @@
   "entregables": [
     {
       "nombre": "Preview Propuesta 1",
-      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/preview-final/panel.html"
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/diseno-20261111/preview-coordinadora/panel.html"
     },
     {
       "nombre": "Guía de revisión del diseño",
       "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION-DISENO.md"
     },
     {
-      "nombre": "QA con bloqueo de navegador documentado",
+      "nombre": "QA visual y funcional completado en host",
       "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/design-qa.md"
     }
   ],
   "pendientes": [
-    {
-      "motivo": "Chromium falla al iniciar con sandbox en la ejecutora",
-      "responsable": "Coordinadora desde host compatible",
-      "siguiente": "Ejecutar visual-diseno.cjs, inspeccionar comparacion.png y comprobar Origin/guardado"
-    },
     {
       "motivo": "Tanda v2 histórica y exports de productores paralelos pendientes de reunir",
       "responsable": "Coordinadora y productores",
