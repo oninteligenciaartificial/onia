@@ -1,6 +1,8 @@
 # Política privada de admisión por cuota
 
-Cambio preparado el10/11/2026 a pedido de Sergio de resolver el bloqueo operativo. La configuración real conserva90 hasta una decisión explícita de Sergio. El código por sí solo no levanta esa reserva.
+**Vigente desde2026-11-11T00:17:25UTC (10/11,20:17 LaPaz): Sergio autorizó quitar la reserva del90%. Configuración aplicada: max_usado100. La comprobación con cuota94% permite admisión por cuota; no se lanzó una sesión para probarlo.** [Recibo de aplicación](APLICACION-CUOTA-INGRESOS.json). Mantener3 simultáneas, sin ensayo ni gasto adicional autorizado. Los párrafos de preparación que siguen conservan su fecha; la aprobación ya no está pendiente.
+
+Antecedente de preparación, no estado actual: cambio preparado el10/11/2026 a pedido de Sergio de resolver el bloqueo operativo. La configuración real conserva90 hasta una decisión explícita de Sergio. El código por sí solo no levanta esa reserva.
 
 `config.json` privado admite `politica_cuota` con exactamente `max_usado` (número mayor que0 y hasta100) y `autorizacion_sergio` (referencia textual a una decisión comprobada por el operador). Si falta la política, se conserva90. Valores inválidos, campos extra o ausencia de autorización rechazan el lanzamiento. Boss no puede escribir esta configuración por el protocolo SSH ni cambiarla con un pedido.
 

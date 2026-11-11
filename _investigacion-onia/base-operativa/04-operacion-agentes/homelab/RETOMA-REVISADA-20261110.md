@@ -1,5 +1,7 @@
 # Retoma revisada de onia-worker — 10 noviembre 2026
 
+> **Este intento ya se ejecutó y volvió a detenerse.** Consultar [ALTA-DETENIDA-v2-20261110.md](ALTA-DETENIDA-v2-20261110.md). No repetir este comando sobre los archivos creados por ese intento; requiere diagnóstico y otra retoma revisada.
+
 Corrección del corte documentado en [ALTA-DETENIDA](ALTA-DETENIDA-20261110.md). Sólo DESKTOP-0GGGNMF/Ubuntu WSL2. No aplicada por Codex al escribir este informe.
 
 Instalador nuevo SHA256: `0521e2f4286f50734e0c2c01be09d05abb0393edd74bf6a5196ec3ecd98fe871`. Conserva el original y descargá esta versión con otro nombre, `alta-onia-worker-v2.py`. No usar el hash anterior.

@@ -590,3 +590,7 @@ Al contrastar la propuesta de Boss se volcó una respuesta de listado completa d
 ## 10/11/2026 · publicación tras recoger dictámenes
 
 El puente publicó dos revisiones en master mientras el checkout documental mantenía una referencia remota anterior. El push atómico fue rechazado sin publicar ninguna de sus ramas. Se recuperaron e integraron los commits remotos preservando todo el historial. Comprobación preventiva: después de una operación del puente que publica, actualizar origin/master antes del siguiente push del coordinador.
+
+## 10/11/2026 · publicación del nuevo corte de homelab
+
+Al conciliar el informe de Boss6fdcd74, el registro privado pasó de r9 a r10 en_espera. Publicar fue rechazado por contenido_no_compartible: el briefing y dos preflights heredados contienen direcciones loopback. No se imprimieron sus valores, no se relajó el filtro y no se forzó la publicación. La nueva evidencia y el registro se conservan en el VPS; master conserva r9. La conciliación y el informe de Boss quedan enlazados en el buzón. Resolver el saneamiento con evidencia original conservada cuando se retome homelab; no bloquear por ello la aplicación de cuota ni ingresos independientes.

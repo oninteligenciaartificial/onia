@@ -15,7 +15,7 @@ El contrato histórico [delegacion-boss-20261110/USO-Y-LIMITES.md](../delegacion
 - Reserva por ID, rechazo de altas parciales sin conciliar, repetición idempotente de la misma solicitud y rechazo de una solicitud alterada.
 - Registro y publicación de la tarea antes de habilitar su uso. Registrar **no lanza** una sesión ni hace que arranque al liberarse un cupo.
 - Máximo actual de tres sesiones simultáneas, incluidos revisores y consultas `preguntar` mientras responden. No es un máximo de hardware demostrado.
-- Lanzamiento delegado con cuota semanal comprobada de antigüedad menor de dos horas y usada menor del 90%. El 90% es una reserva operativa del puente, no agotamiento del proveedor. No se modifica en este encargo.
+- Lanzamiento delegado con cuota semanal comprobada de antigüedad menor de dos horas y usada por debajo del límite privado vigente. Sergio retiró posteriormente la reserva del90%: está aplicada la política100, conservando la comprobación de cuota y los límites del proveedor. Ver POLITICA-CUOTA.md y su recibo; no autoriza saldo extra ni reabre el ensayo.
 - Caducidad e intentos por tarea, cierre remoto, revisor distinto, recogida del veredicto y aceptación separados.
 
 No amplía producción, n8n, envíos, gasto, acceso a PC ni secretos. `preguntar` conserva sus límites propios, distintos del registro de tareas.
@@ -43,3 +43,5 @@ La lectura inicial fue 90% usado a `2026-11-10T23:08:11.742Z` (19:08 La Paz). Po
 La release quedó instalada y comprobada. Sergio autorizó después un ensayo acotado de 91% a 93%, exclusivamente para medir; no se ejecutó porque la revisión detectó un control insuficiente del presupuesto. Los límites ordinarios no cambian. Evidencia y dictámenes separados en [INSTALACION.md](INSTALACION.md).
 
 La implementación posterior permite una [política privada explícita de cuota](POLITICA-CUOTA.md), conservando90 por defecto. La instalación no equivale a autorizar ni aplicar otro límite; consultar el recibo y la configuración real.
+
+Decisión posterior de Sergio: prioridad ingresos hasta14nov y medición de más de3pendiente; la política100 ya está aplicada. [Fuente de decisión](../../../05-herramientas/fabrica-onia/DECISIONES-SERGIO-20261110.md).

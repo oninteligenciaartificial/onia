@@ -1,6 +1,6 @@
 # Alta esencial de onia-worker
 
-> **Procedimiento vigente para el alta parcial del10/11:** comenzar por [RETOMA-REVISADA-20261110.md](RETOMA-REVISADA-20261110.md), que valida el estado dejado por el instalador anterior y su nuevo hash. No repetir el bloque de alta inicial ni usar su hash histórico sobre esa cuenta. Las pruebas de SSH/aislamiento y el estado de la tarea siguen pendientes hasta comprobarse; este índice no acredita la disponibilidad actual de la PC. Las decisiones actuales de Sergio prevalecen sobre prioridades y propuestas fechadas que siguen abajo.
+> **Último intento:** la retoma revisada también se detuvo; ver [ALTA-DETENIDA-v2-20261110.md](ALTA-DETENIDA-v2-20261110.md). Quedaron archivos nuevos y la cuenta cerrada. No repetir el alta inicial ni la retoma v2 sobre ese estado: falta diagnóstico y una retoma segura. Los documentos anteriores se conservan como historia. La prioridad vigente de Sergio es ingresos hasta14nov; no usar el homelab como capacidad disponible antes de verificarlo.
 
 9 noviembre 2026 · America/La_Paz. Preparación revisada para que Sergio la aplique **sólo en DESKTOP-0GGGNMF / Ubuntu WSL2**. No aplicada todavía. Estado canónico: [homelab-conexion-20261109](../tareas/homelab-conexion-20261109.json). Laptop DESKTOP-ENV6SDA excluida.
 

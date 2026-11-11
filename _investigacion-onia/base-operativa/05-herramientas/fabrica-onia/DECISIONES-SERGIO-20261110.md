@@ -42,3 +42,12 @@ Reemplaza la entrada de las 16:20. Nombre final: «Claude de 0 a 100: tu negocio
 
 - Los tipos de anuncio y de guion nombrados (artes, UGC, ugly ads, talking head; noticia IA, B-roll, personal, venta) son ejemplos, no una lista cerrada. El panel y cada encargo deben contemplar todos los tipos relevantes (p. ej. carrusel, testimonio, demo de pantalla, antes/después, oferta directa, retargeting, historias, lead ads, mensajes a WhatsApp) e incorporar los que Sergio vaya mencionando.
 - Cada canal (Instagram, Facebook, TikTok, YouTube, X, WhatsApp, comunidad, Meta Ads) debe quedar documentado y probado de punta a punta (entrada, respuesta, derivación, pago, acceso, soporte y medición) antes de considerarse listo. Documentado o conectado no equivale a probado.
+
+## Prioridad de ingresos y cuota · 10 nov 2026, noche de La Paz
+
+Decisión directa de Sergio en Codex: «Quita el limite de 90% lo de las mas de 3 sesiones queda pendiente tenemos hasta el 14 de noviembre para los ingresos».
+
+- Retirar la reserva interna del90% para trabajo ya autorizado; usar el saldo incluido disponible sin autorizar compras ni saldo extra. Aplicado en el VPS mediante política privada100; no es una ampliación de cuota del proveedor.
+- Mantener máximo3 sesiones simultáneas. La medición para superar3 queda pendiente; no ejecutar ni programar el ensayo91→93.
+- Prioridad hasta el14 de noviembre: ingresos. Retomar las entregas existentes útiles para vender y completar sus requisitos; no condicionar el trabajo independiente del VPS a terminar benchmarks o al homelab.
+- Sustituye la secuencia anterior de cerrar toda la infraestructura antes de avanzar en ingresos. Homelab conserva su pendiente y no se presenta como listo. No cambia permisos de publicación, mensajes comerciales, cobro, gasto, n8n ni producción; ninguna entrega se acepta sin su evidencia y autoridad correspondientes.

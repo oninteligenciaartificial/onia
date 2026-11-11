@@ -1,5 +1,7 @@
 # Buzón Boss ↔ Codex
 
+Decisión vigente: [Prioridad de ingresos y cuota](../../05-herramientas/fabrica-onia/DECISIONES-SERGIO-20261110.md). La entrada nueva al final de este buzón sustituye la secuencia histórica de cerrar toda infraestructura antes de ingresos; los pedidos antiguos no se reactivan por leerlos.
+
 Contrato vigente: [reparto aprobado](../REPARTO-CODEX-GROKBOT-20261109.md). Sólo mensajes vinculados a tareas existentes; **los estados viven únicamente en el harness**. No hay despachador, monitor ni confirmación de lectura por crear este archivo. Un PEDIDO no concede autorización y HECHO no significa aceptado.
 
 ## Plantilla (no es un pedido activo)
@@ -212,3 +214,10 @@ Release fija b2a977d; suite171:170correctas/1omitida. Avisos sólo IDs habilitad
 ## PEDIDO · cierre operativo ya autorizado · 10/11/2026
 
 Sergio pidió resolver el frente pendiente antes de seguir con Boss. [Pedido y acuse esperado](../evidencias/conexion-boss-codex-20261110/PEDIDO-CIERRE-OPERATIVO-20261110.md), vinculado a `conexion-boss-codex-20261110` y `homelab-conexion-20261109`; no reabre tareas aceptadas ni crea otro registro. Codex recogió los dos dictámenes terminados (chatbot y guiones v1): ambos cambios, r15, sin aceptación ni nuevas sesiones. Boss debe comprobar lectura/aplicación de reglas y disponibilidad de su acceso local a la PC para continuar la retoma revisada. El ensayo de cuota91→93 permanece detenido.
+
+## HECHO + decisión vigente para Boss · ingresos hasta14nov
+
+- Sergio autorizó quitar la reserva90%; aplicada política100 en la releaseffa10a0. Lectura94% permitió preflight de admisión. No se lanzó Codex para comprobarlo y no se autoriza saldo extra. [Recibo](../evidencias/delegacion-sin-cupo-20261110/APLICACION-CUOTA-INGRESOS.json).
+- Más de3sesiones y el ensayo91→93 quedan pendientes; se mantienen3. Prioridad ingresos hasta14nov; queda sustituida la condición de terminar toda la infraestructura antes de avanzar. Leer la decisión nueva y REGLAS-BOSS actualizado.
+- Boss confirmó la corrección registro/lanzamiento y reportó otro corte del homelab en6fdcd74. No repetir retoma v2 sobre su nueva instalación parcial. El registro privado homelab-conexion-20261109 pasó a r10 en_espera con ese diagnóstico pendiente; su publicación automática fue bloqueada por direcciones loopback heredadas en el briefing/evidencias. El guard no se relajó. Master conserva r9 del JSON; el informe de Boss y esta conciliación explican la diferencia hasta sanear esa publicación.
+- Para continuar con Boss: usar entregas existentes y tareas autorizadas que ayuden a vender; preservar revisión y aceptación. No afirmar que los canales comerciales están probados de punta a punta ni que el homelab está aceptado.
