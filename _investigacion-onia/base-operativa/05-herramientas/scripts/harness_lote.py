@@ -544,7 +544,7 @@ class Dispatcher:
                                      antes=fingerprint(row), revision=row['revision'],
                                      perfil=task['perfiles'][role], responsable=task['revisor'] if role == 'revisor' else task['actor'],
                                      entrega=trabajo.delivery_digest(row),
-                                     sid=history[-1].get('session_id') if history else None,
+                                     sid=(task['reanudar_sid'] if op == 'reanudar' else history[-1].get('session_id') if history else None),
                                      commit=(observation.get('cierres', {}).get(ident, {}).get('commit') if op == 'cerrar'
                                              else (row.get('cierre') or {}).get('commit')),
                                      cuota={k: observation.get(k) for k in ('fecha', 'proveedor', 'restante_porcentaje')},

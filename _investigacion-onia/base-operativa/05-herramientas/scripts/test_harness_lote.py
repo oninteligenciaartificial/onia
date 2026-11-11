@@ -399,6 +399,36 @@ class BatchTests(unittest.TestCase):
         self.assertEqual(self.adapter.calls[-1], ('reanudar', 'uno'))
         self.assertEqual(self.adapter.rows['uno']['sesiones'][-1]['session_id'], sid)
 
+    def test_changes_review_reopen_resume_reconciles_executor_sid(self):
+        self.review_ready()
+        self.tick()
+        self.finish()
+        self.tick()
+        row = self.adapter.rows['uno']
+        row['revision_independiente']['veredicto'] = 'cambios'
+        writer = next(s for s in row['sesiones'] if s['rol'] == 'ejecutor')
+        writer['estado'] = 'cerrada'
+        sid = writer['session_id']
+        reviewer_sid = row['sesiones'][-1]['session_id']
+        self.assertNotEqual(sid, reviewer_sid)
+        row.update(estado='en_espera', cierre=None, revision_independiente=None)
+        task = self.manifest['tareas'][0]
+        task.update(reanudar_sid=sid, prioridad=10)
+        self.save(retomas={'uno': dict(sid=sid, revision=row['revision'], auxiliares_terminados=True)})
+        def crash_after_effect():
+            raise Crash()
+        self.adapter.after = crash_after_effect
+        with self.assertRaises(Crash):
+            self.tick()
+        self.adapter.after = None
+        restored = self.dispatcher()
+        unresolved = restored.recover({i: self.adapter.row(i) for i in self.adapter.rows})
+        self.assertEqual(unresolved, {})
+        resumed = [e for e in restored.events() if e.get('op') == 'reanudar']
+        self.assertEqual(resumed[0]['sid'], sid)
+        self.assertTrue(any(e['tipo'] == 'efecto' and e.get('recuperado') for e in resumed))
+        self.assertEqual(self.adapter.calls.count(('reanudar', 'uno')), 1)
+
     def test_attempt_budget_and_global_three_slots(self):
         self.review_ready()
         self.manifest['tareas'][0]['intentos_maximos']['revisor'] = 1
