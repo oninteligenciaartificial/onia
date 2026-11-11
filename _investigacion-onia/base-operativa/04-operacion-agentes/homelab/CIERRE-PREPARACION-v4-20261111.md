@@ -16,3 +16,7 @@ Se integra únicamente la preparación revisada. [Guía y comando PowerShell](RE
 4. Ensayo de orquestación: primero una tarea real acotada en el worker y coordinación en VPS; después medir concurrencia y recuperación con las rutas exclusivas del harness. El tope ordinario sigue en tres. No activar cinco por sumar CPU de dos equipos. La ampliación y el despacho distribuido de SCHEDULER.md siguen pendientes de implementación/medición; F1-PLAN.json histórico no es ejecutable ni acredita una prueba.
 
 El registro canónico queda en espera del resultado local; no lanzar ni aceptar tareas adicionales con este cierre. Lo único listo aquí es el instalador revisado para retomar el alta.
+
+## Estado canónico y publicación saneada
+
+El harness quedó en `en_espera`, revisión 34, sin rutas asignadas ni sesiones nuevas. Se conservan los dictámenes en su historial. La publicación automática del registro completo se detuvo por `contenido_no_compartible` en el briefing y dos preflights históricos; no se relajó el filtro ni se republicó ese contenido. Este cierre publica sólo el estado saneado y los dictámenes revisados. La limpieza del historial publicable del registro queda como mantenimiento pendiente antes de volver a usar su publicación automática; no bloquea descargar el instalador ya publicado.
