@@ -1,0 +1,21 @@
+{
+  "rotulo": "TRANSPORTE FICTICIO. No son respuestas observadas de Graph API.",
+  "casos": [
+    {
+      "resultado": "exito",
+      "esperado": "exito_simulado"
+    },
+    {
+      "resultado": "rechazo",
+      "esperado": "fallo_simulado"
+    },
+    {
+      "resultado": "timeout",
+      "esperado": "incierto_simulado"
+    },
+    {
+      "resultado": "incierto",
+      "esperado": "incierto_simulado"
+    }
+  ]
+}

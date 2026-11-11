@@ -1,0 +1,117 @@
+{
+  "schema": "onia-fabrica-estado-v1",
+  "id": "fabrica-automatizaciones-meta-canales-20261111",
+  "fabrica": "automatizaciones",
+  "estado": "para_revision",
+  "generado": "2026-11-11T21:09:05.449494+00:00",
+  "fuente": "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/README.md",
+  "pasos": [
+    {
+      "id": "fuentes",
+      "nombre": "Inspeccionar fuentes primarias y conservar desconocidos",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/MATRIZ-META.md",
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/fuentes-meta.json"
+      ]
+    },
+    {
+      "id": "motor",
+      "nombre": "Preparar cuatro adaptadores de ensayo y persistencia privada",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/README.md",
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/fixtures/recorridos.json"
+      ]
+    },
+    {
+      "id": "pruebas",
+      "nombre": "Comprobar recorridos locales, reinicio y fallos",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/PRUEBAS.md",
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/evidencia/pruebas.txt",
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/evidencia/recorridos.json"
+      ]
+    },
+    {
+      "id": "contrato",
+      "nombre": "Leer contrato con consumidor del panel mediante puente local",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/CONTRATO-PANEL.md",
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/evidencia/panel.json"
+      ]
+    },
+    {
+      "id": "revision",
+      "nombre": "Revisión independiente del commit publicado",
+      "estado": "pendiente",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/RECIBO.md"
+      ]
+    },
+    {
+      "id": "e2e-real",
+      "nombre": "Pruebas reales por canal y aprobación de activación",
+      "estado": "bloqueado",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/ACTIVACION-PENDIENTE.md"
+      ]
+    }
+  ],
+  "entregables": [
+    {
+      "nombre": "Contrato por canal",
+      "ruta": "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/contrato-canales.json"
+    },
+    {
+      "nombre": "Matriz primaria y desconocidos",
+      "ruta": "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/MATRIZ-META.md"
+    },
+    {
+      "nombre": "Guía exacta de activación pendiente",
+      "ruta": "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/ACTIVACION-PENDIENTE.md"
+    },
+    {
+      "nombre": "Pruebas locales reproducibles",
+      "ruta": "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/PRUEBAS.md"
+    },
+    {
+      "nombre": "Recibo de entrega",
+      "ruta": "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/RECIBO.md"
+    }
+  ],
+  "pendientes": [
+    {
+      "motivo": "Permisos, cuentas, login, versión, ventanas y límites de Meta no comprobados; fuentes HTTP 429",
+      "responsable": "Sergio y Operaciones",
+      "siguiente": "Recuperar documentación primaria y comprobar configuración privada por canal según ACTIVACION-PENDIENTE.md"
+    },
+    {
+      "motivo": "Transporte real y receptor HTTPS no implementados ni autorizados; envío bloqueado",
+      "responsable": "Desarrollador y revisor independiente",
+      "siguiente": "Resolver fuentes, implementar transporte con gate de aprobación y revisar commit exacto antes de prueba real"
+    },
+    {
+      "motivo": "Destino WhatsApp privado ausente por defecto; contexto no vinculado con contacto real",
+      "responsable": "Operaciones y Sergio",
+      "siguiente": "Configurar privadamente el destino propio y autorizar ensayo con cuenta controlada"
+    },
+    {
+      "motivo": "Aprobación editorial y prueba real por cada uno de los cuatro canales pendientes",
+      "responsable": "Contenido, Sergio y Operaciones",
+      "siguiente": "Aprobar texto y ejecutar plan limitado; conservar evidencia privada saneada, sin activar tráfico comercial"
+    },
+    {
+      "motivo": "UI existente no incluye productor automatizaciones en lista de exports permitidos",
+      "responsable": "Único escritor del panel y coordinadora",
+      "siguiente": "Adoptar contrato según CONTRATO-PANEL.md y probar vistas sin tocar permisos de envío"
+    },
+    {
+      "motivo": "Revisión independiente del commit entregado pendiente",
+      "responsable": "Coordinadora",
+      "siguiente": "Cerrar y revisar rama; no aceptar desde esta sesión"
+    }
+  ]
+}
