@@ -67,3 +67,7 @@ La integración se intentó explícitamente y falló en la guarda de fuente sobr
 Modelo/esfuerzo efectivos y cuota inicial/final no expuestos a esta ejecutora: desconocidos. Se documenta esta intervención desde el commit base; no se inventa número total de intentos del harness ni consumo monetario. No se abrieron hijos ni otras sesiones.
 
 Fuentes primarias contrastadas: [Bubblewrap, operaciones de montaje](https://github.com/containers/bubblewrap/blob/main/bwrap.xml) documenta que `--tmpfs` crea un filesystem nuevo y `--remount-ro` lo hace de sólo lectura; [Microsoft WSL](https://learn.microsoft.com/en-us/windows/wsl/basic-commands#run-a-specific-linux-distribution-from-powershell-or-cmd) documenta la selección explícita de distribución y usuario. Esas opciones no sustituyen el CHECK real pendiente.
+
+## Comprobación adicional de la coordinadora en el host VPS
+
+Sobre los mismos hashes de instalador y tests, `ONIA_TEST_BWRAP=1 python3 -I -B -m unittest discover -s _investigacion-onia/base-operativa/04-operacion-agentes/homelab -p test_alta_onia_worker.py -v` pasó las **33 pruebas sin omisiones**, incluida integración real de Bubblewrap y persistencia con fixtures. [Recibo de hashes](evidencia-v4-host/RECIBO.json), [salida completa](evidencia-v4-host/pruebas.txt). El bloqueo del sandbox de la ejecutora se conserva como antecedente, no se presenta como prueba aprobada. No se instaló el worker en el VPS; la retoma en WSL/SSH remoto siguen pendientes. Revisión independiente del commit de entrega aún requerida.

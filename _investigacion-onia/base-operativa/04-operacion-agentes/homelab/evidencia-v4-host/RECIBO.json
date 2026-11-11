@@ -1,0 +1,11 @@
+{
+  "fecha": "2026-11-11T23:03:48.331344+00:00",
+  "actor": "coordinadora-host",
+  "comando": "ONIA_TEST_BWRAP=1 python3 -I -B -m unittest discover -s _investigacion-onia/base-operativa/04-operacion-agentes/homelab -p test_alta_onia_worker.py -v",
+  "resultado": "33 tests OK; integraci\u00f3n bwrap incluida; cero omitidas",
+  "hashes": {
+    "alta-onia-worker.py": "0f6ca971dd570d8e783061ee1f4f58c7517f165dbf2fdb3452a9dc4140282cc1",
+    "test_alta_onia_worker.py": "fd483d199778cde3b8d2f129045b49c2a83ae047d658e149f0a8ef7a9be5265f"
+  },
+  "limite": "Host VPS con fixtures; no instala usuario, SSH ni worker. No equivale a retoma en WSL ni acceso remoto."
+}
