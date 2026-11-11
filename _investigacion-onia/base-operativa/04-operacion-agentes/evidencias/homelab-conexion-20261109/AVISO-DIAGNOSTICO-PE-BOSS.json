@@ -1,0 +1,15 @@
+{
+  "acuse_boss": false,
+  "estado_envio": "recibido_http",
+  "fecha": "2026-11-11T01:55:06.854885+00:00",
+  "payload": {
+    "archivo": "_investigacion-onia/base-operativa/04-operacion-agentes/homelab/RETOMA-PE-20261111.md",
+    "commit": "df8beeaa9865c7f57f18830d06ff9fdb180d39a4",
+    "estado": "en_espera",
+    "evento": "homelab-diagnostico-pe-20261111-1",
+    "id": "homelab-conexion-20261109",
+    "mensaje": "Sergio envió a Codex tu captura del corte PE v2. Ya respondí al pedido: diagnóstico --diagnose-pe sin cambios de configuración y retoma estricta --resume-pe-control. SHA256 3e6406591fa37c8518c42f5a4cc3e7e83885285e5836621988911b66d1e656be; revisión independiente buena en 517e970, 21 tests correctos y 1 integración omitida. Derivar al chat principal de Boss para operar desde la app, no pedir a Sergio copiar este encargo. Comprobar disponibilidad actual de DESKTOP-0GGGNMF; copiar como v3 conservando v1/v2, verificar hash y ejecutar UNA VEZ el comando de diagnóstico del documento con /usr/bin/python3 -I -B. Publicar el JSON saneado en homelab/DIAGNOSTICO-PE-BOSS-20261111.md; si sigue offline informar sólo ese bloqueo. La autorización previa del mismo alta está documentada en ALTA-DETENIDA-v2; las tarjetas locales las acepta Sergio. No activar interop ni relajar protecciones. Si control_pe.ok no es true, no aplicar ni repetir: traer el diagnóstico para resolver la causa. Si es true, el documento contiene la retoma revisada del mismo alcance; un resultado local OK no acredita SSH remoto ni aceptación. El estado canónico real es r10 en_espera; la copia anterior de master r9 no lo sustituye. Más de 3 sesiones sigue pendiente; ingresos hasta el 14 mantiene prioridad. La autoría Git de Codex no convierte esa decisión directa de Sergio en una decisión pendiente de nueva confirmación. Este pedido no es un evento de sesión terminada y no autoriza cerrar/aceptar la tarea por recibirlo.",
+    "revision": 10,
+    "tipo": "pedido_coordinacion"
+  }
+}
