@@ -1,0 +1,127 @@
+test_corte_no_autoriza_revisora_nueva_ni_recrea_tanda (test_recuperacion_medianoche.MidnightRecoveryTests.test_corte_no_autoriza_revisora_nueva_ni_recrea_tanda) ... ok
+test_cupos_llenos_no_revisan_anterior_y_luego_recupera_mismo_id (test_recuperacion_medianoche.MidnightRecoveryTests.test_cupos_llenos_no_revisan_anterior_y_luego_recupera_mismo_id) ... FAIL
+test_pedido_anterior_sin_escritora_no_se_redacta_con_fecha_inventada (test_recuperacion_medianoche.MidnightRecoveryTests.test_pedido_anterior_sin_escritora_no_se_redacta_con_fecha_inventada) ... ok
+test_revocacion_no_autoriza_tanda_anterior (test_recuperacion_medianoche.MidnightRecoveryTests.test_revocacion_no_autoriza_tanda_anterior) ... ok
+test_secuencia12_13_14_y_recogida_el15_sin_renovar (test_recuperacion_medianoche.MidnightRecoveryTests.test_secuencia12_13_14_y_recogida_el15_sin_renovar) ... FAIL
+test_tanda12_se_revisa_el13_antes17 (test_recuperacion_medianoche.MidnightRecoveryTests.test_tanda12_se_revisa_el13_antes17) ... FAIL
+test_tanda12_se_revisa_el13_despues17_sin_que_la_nueva_la_tape (test_recuperacion_medianoche.MidnightRecoveryTests.test_tanda12_se_revisa_el13_despues17_sin_que_la_nueva_la_tape) ... FAIL
+test_tanda12_se_revisa_el14_antes17 (test_recuperacion_medianoche.MidnightRecoveryTests.test_tanda12_se_revisa_el14_antes17) ... FAIL
+test_tanda12_se_revisa_el14_despues18_objetivo (test_recuperacion_medianoche.MidnightRecoveryTests.test_tanda12_se_revisa_el14_despues18_objetivo) ... FAIL
+
+======================================================================
+FAIL: test_cupos_llenos_no_revisan_anterior_y_luego_recupera_mismo_id (test_recuperacion_medianoche.MidnightRecoveryTests.test_cupos_llenos_no_revisan_anterior_y_luego_recupera_mismo_id)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/test_recuperacion_medianoche.py", line 165, in test_cupos_llenos_no_revisan_anterior_y_luego_recupera_mismo_id
+    self.assertIn('TRES_CUPOS_OCUPADOS', value['errores'])
+AssertionError: 'TRES_CUPOS_OCUPADOS' not found in ['MODELO_NO_DISPONIBLE']
+
+======================================================================
+FAIL: test_secuencia12_13_14_y_recogida_el15_sin_renovar (test_recuperacion_medianoche.MidnightRecoveryTests.test_secuencia12_13_14_y_recogida_el15_sin_renovar)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/test_recuperacion_medianoche.py", line 131, in test_secuencia12_13_14_y_recogida_el15_sin_renovar
+    self.recover('2026-11-12', '2026-11-13T04:01:00+00:00')
+  File "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/test_recuperacion_medianoche.py", line 94, in recover
+    self.assertEqual(self.fake.calls[-1], (previous, 'revisar'), cycle.get('error'))
+AssertionError: Tuples differ: ('2026-11-12', 'cerrar') != ('2026-11-12', 'revisar')
+
+First differing element 1:
+'cerrar'
+'revisar'
+
+- ('2026-11-12', 'cerrar')
+?                 ^ ^^
+
++ ('2026-11-12', 'revisar')
+?                 ^ ^^^
+ : MODELO_NO_DISPONIBLE
+
+======================================================================
+FAIL: test_tanda12_se_revisa_el13_antes17 (test_recuperacion_medianoche.MidnightRecoveryTests.test_tanda12_se_revisa_el13_antes17)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/test_recuperacion_medianoche.py", line 109, in test_tanda12_se_revisa_el13_antes17
+    self.recover('2026-11-12', '2026-11-13T04:01:00+00:00')
+  File "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/test_recuperacion_medianoche.py", line 94, in recover
+    self.assertEqual(self.fake.calls[-1], (previous, 'revisar'), cycle.get('error'))
+AssertionError: Tuples differ: ('2026-11-12', 'cerrar') != ('2026-11-12', 'revisar')
+
+First differing element 1:
+'cerrar'
+'revisar'
+
+- ('2026-11-12', 'cerrar')
+?                 ^ ^^
+
++ ('2026-11-12', 'revisar')
+?                 ^ ^^^
+ : MODELO_NO_DISPONIBLE
+
+======================================================================
+FAIL: test_tanda12_se_revisa_el13_despues17_sin_que_la_nueva_la_tape (test_recuperacion_medianoche.MidnightRecoveryTests.test_tanda12_se_revisa_el13_despues17_sin_que_la_nueva_la_tape)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/test_recuperacion_medianoche.py", line 115, in test_tanda12_se_revisa_el13_despues17_sin_que_la_nueva_la_tape
+    self.recover('2026-11-12', '2026-11-13T21:01:00+00:00')
+  File "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/test_recuperacion_medianoche.py", line 94, in recover
+    self.assertEqual(self.fake.calls[-1], (previous, 'revisar'), cycle.get('error'))
+AssertionError: Tuples differ: ('2026-11-13', 'registrar') != ('2026-11-12', 'revisar')
+
+First differing element 0:
+'2026-11-13'
+'2026-11-12'
+
+- ('2026-11-13', 'registrar')
+?            ^      ^  --
+
++ ('2026-11-12', 'revisar')
+?            ^      ^
+ : AUTORIZACION_PENDIENTE
+
+======================================================================
+FAIL: test_tanda12_se_revisa_el14_antes17 (test_recuperacion_medianoche.MidnightRecoveryTests.test_tanda12_se_revisa_el14_antes17)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/test_recuperacion_medianoche.py", line 122, in test_tanda12_se_revisa_el14_antes17
+    self.recover('2026-11-12', '2026-11-14T20:59:00+00:00')
+  File "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/test_recuperacion_medianoche.py", line 94, in recover
+    self.assertEqual(self.fake.calls[-1], (previous, 'revisar'), cycle.get('error'))
+AssertionError: Tuples differ: ('2026-11-12', 'cerrar') != ('2026-11-12', 'revisar')
+
+First differing element 1:
+'cerrar'
+'revisar'
+
+- ('2026-11-12', 'cerrar')
+?                 ^ ^^
+
++ ('2026-11-12', 'revisar')
+?                 ^ ^^^
+ : MODELO_NO_DISPONIBLE
+
+======================================================================
+FAIL: test_tanda12_se_revisa_el14_despues18_objetivo (test_recuperacion_medianoche.MidnightRecoveryTests.test_tanda12_se_revisa_el14_despues18_objetivo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/test_recuperacion_medianoche.py", line 127, in test_tanda12_se_revisa_el14_despues18_objetivo
+    self.recover('2026-11-12', '2026-11-14T22:01:00+00:00')
+  File "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-flujo-diario-20261111/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/flujo-diario/test_recuperacion_medianoche.py", line 94, in recover
+    self.assertEqual(self.fake.calls[-1], (previous, 'revisar'), cycle.get('error'))
+AssertionError: Tuples differ: ('2026-11-14', 'registrar') != ('2026-11-12', 'revisar')
+
+First differing element 0:
+'2026-11-14'
+'2026-11-12'
+
+- ('2026-11-14', 'registrar')
+?            ^      ^  --
+
++ ('2026-11-12', 'revisar')
+?            ^      ^
+ : AUTORIZACION_PENDIENTE
+
+----------------------------------------------------------------------
+Ran 9 tests in 4.824s
+
+FAILED (failures=6)

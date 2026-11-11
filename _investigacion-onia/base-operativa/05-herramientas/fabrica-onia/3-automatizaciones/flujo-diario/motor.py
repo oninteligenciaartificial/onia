@@ -13,6 +13,7 @@ from comun import (BASE, GENERATOR, HERE, atomic, digest, encoded, immutable, le
                    locked, module, no_links, now, private_root, read_json, require)
 import fuentes
 from adaptador_harness import LocalHarness, observed, task_id
+from preflight import PreflightError
 
 g = module('generador_flujo', GENERATOR / 'generar.py')
 ZONE = ZoneInfo('America/La_Paz')
@@ -23,6 +24,16 @@ ACTIONS = {'FUENTE': 'Revisar disponibilidad y metadatos primarios; conservar ú
            'CONCILIACION_NECESARIA': 'Coordinadora: cotejar ID, revisión, SID y journal; no repetir un despacho incierto.',
            'RESULTADO_INVALIDO': 'Contenido/coordinadora: corregir en versión nueva conservando el original.',
            'REVISION_CON_CAMBIOS': 'Coordinadora: revisar dictamen exacto y autorizar corrección acotada; sin relanzar automáticamente.',
+           'CUOTA_AGOTADA': 'Esperar cuota incluida y consultar de nuevo en vivo; no comprar ni renovar.',
+           'LOGIN_CHATGPT_REQUERIDO': 'Coordinadora: comprobar login ChatGPT incluido en el host; no usar API pagada.',
+           'PLAN_INCLUIDO_NO_COMPROBADO': 'Coordinadora: comprobar plan incluido; no sustituir por créditos/API.',
+           'CUOTA_PERMISO_DESCONOCIDO': 'Repetir lectura vigente en el host; un permiso desconocido bloquea el lanzamiento.',
+           'CUOTA_CODEX_DESCONOCIDA': 'Revisar respuesta vigente de cuota Codex; no usar muestras históricas.',
+           'CUOTA_VENTANA_VENCIDA': 'Consultar cuota de nuevo; no suponer renovación porque pasó una fecha de reset.',
+           'PREFLIGHT_RPC_FALLIDO': 'Coordinadora: revisar el RPC local y reintentar la lectura; no se lanzó un modelo.',
+           'PREFLIGHT_TIMEOUT': 'Lectura de cuota/login agotó el plazo; revisar RPC antes de un nuevo intento.',
+           'PREFLIGHT_DATOS_INVALIDOS': 'Respuesta de login/cuota inválida; corregir o actualizar el lector antes de lanzar.',
+           'PREFLIGHT_RESPUESTA_EXCESIVA': 'RPC excedió límites de respuesta; revisar protocolo sin exponer sus payloads.',
            'PUBLICACION_PANEL_FALLIDA': 'Reintentar sólo la proyección; conservar última actualización real.'}
 
 
@@ -239,7 +250,7 @@ class Engine:
             if authorized_id != cycle['id']:
                 cycle['error'] = 'AUTORIZACION_PENDIENTE'
                 return
-            if not provider:
+            if not provider and op not in {'cerrar', 'recoger'}:
                 cycle['error'] = 'MODELO_NO_DISPONIBLE'
                 return
             if op == 'lanzar':
@@ -258,7 +269,9 @@ class Engine:
             self.hook('antes_despacho', op)
             action['fase'] = 'enviando'
             self.store.put('efecto', key, action)  # fsync transacción ANTES del efecto externo
-            self.adapter.invoke(op, request, row, self.root / 'pedidos' / cycle['pedido'])
+            receipt = self.adapter.invoke(op, request, row, self.root / 'pedidos' / cycle['pedido'])
+            if isinstance(receipt, dict) and 'preflight' in receipt:
+                cycle['preflight_ultimo'] = receipt['preflight']
             self.hook('despues_despacho', op)
             after = self.adapter.query(cycle['id'])
             require(observed(op, row, after), 'EFECTO_SIN_CONFIRMACION')
@@ -266,6 +279,14 @@ class Engine:
             self.store.put('efecto', key, action)
             cycle['harness'] = {k: after.get(k) for k in ('revision', 'state', 'commit', 'review')}
             cycle['fase'], cycle['error'] = 'harness_' + op, None
+        except PreflightError as error:
+            # La excepción sólo procede de la lectura anterior a sessions.launch.
+            # No hubo despacho: su intención puede intentarse de nuevo con lectura nueva.
+            action['fase'] = 'preparado'
+            action['preflight_error'] = error.code
+            self.store.put('efecto', key, action)
+            cycle['error'] = error.code
+            cycle['preflight_ultimo'] = {'permitido': False, 'codigo': error.code, 'intento_finalizado': self.clock()}
         except (OSError, ValueError, KeyError, TypeError, AttributeError, StopIteration, UnicodeError):
             # Mensajes de proveedores/harness son privados. No copiar excepciones al panel.
             if cycle.get('error') != 'RESULTADO_INVALIDO':
@@ -342,7 +363,7 @@ def main(argv=None):
     parser.add_argument('--url', action='append', help='Máximo tres artículos primarios Anthropic; sin URL consulta índice')
     parser.add_argument('--coordinador-base', type=Path)
     parser.add_argument('--ensayo-real', help='ID exacto del único ciclo autorizado en esta invocación; no inicia recurrencia')
-    parser.add_argument('--proveedor-disponible', action='store_true', help='Declaración de coordinadora tras comprobar proveedor y cuota; no compra ni llama API')
+    parser.add_argument('--proveedor-disponible', action='store_true', help='Permiso de uso incluido; cada lanzamiento comprueba login/cuota en vivo por RPC')
     args = parser.parse_args(argv)
     try:
         require(not args.ensayo_real or args.coordinador_base, 'ENSAYO_REQUIERE_COORDINADORA')

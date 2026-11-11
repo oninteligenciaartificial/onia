@@ -1,0 +1,47 @@
+{
+  "schema": "onia-recuperacion-medianoche-v1",
+  "fecha": "2026-11-11T22:13:39.683442+00:00",
+  "base_head": "b931d3cc87893a27fc7d885c945e0c1ef7280309",
+  "dictamen_recibido": {
+    "revision": 7,
+    "veredicto": "cambios",
+    "commit": "b931d3cc87893a27fc7d885c945e0c1ef7280309"
+  },
+  "reproduccion_previa": {
+    "pruebas": 9,
+    "fallos": 6,
+    "archivo": "reproduccion-antes.txt"
+  },
+  "validacion_posterior": {
+    "pruebas": 64,
+    "regresiones_nuevas": 9,
+    "returncode": 0,
+    "archivo": "pruebas-despues.txt"
+  },
+  "programacion_habilitada": false,
+  "modelos_reales_lanzados": 0,
+  "hijos": 0,
+  "cuota_inicio": null,
+  "cuota_fin": null,
+  "revision_independiente_nueva": null,
+  "sha256": {
+    "programacion.py": "dd91a3d32dca6fe9a95d90291a4c6f52dae4da497b9f358893cc90c3efa74139",
+    "test_recuperacion_medianoche.py": "c1cf90a8dd439c6b7c722615b29a83cd8a4ad2cdf18cb31490448f9a133b4fcb",
+    "README.md": "52c1106153a589740314e5fd8db5646586f05bb612d023956da1894a3b1314a5",
+    "PRUEBAS.md": "d724dd130853b6aa3010e528d7890f48c9d0b889ff7314f18e496c5c1de46e94",
+    "RECIBO.md": "df7e1320a8895ec9f8c3790070baf8e5155f826709c1390f7fa433e3fc6c2be5"
+  },
+  "controles_sin_cambios_sha256": {
+    "preflight.py": "371f919e1f9339b87b63ed30f3f7e1610b374890bd5df3557f1233a3d7730e21",
+    "adaptador_harness.py": "1096b8f02826792291481fe70325fcb0b73fe51374efbb8f2f70ebe9f59ff0f6",
+    "motor.py": "2ea95447b92bc1b64b3e85cf4d116be8effbc7e289f5c584f9ceb39c8a048af0",
+    "config.ejemplo.json": "524c1b9b59e92e0cdbac847240a50056e4ec0d3989fb48920e3382b83198d0d8",
+    "programacion/onia-flujo-diario.timer": "3691bfccccacdbf706090bc2ff6ca4d4279f9dcff45b87092617cc92535477ad",
+    "programacion/onia-flujo-diario.service": "c4941e37433a65fc2b2cd033123ff53a7f3bee58aedc3f675d1feac89e4af308"
+  },
+  "limites": [
+    "Sólo dobles, sin sesiones reales ni RPC/red",
+    "No instalación/activación/integración",
+    "La coordinadora debe revisar el commit nuevo"
+  ]
+}

@@ -1,9 +1,10 @@
 # Plantilla revisable. No instalada ni activada por esta entrega.
 [Unit]
-Description=ONIA: reconciliar el ciclo cada minuto
+Description=ONIA: ticks del12 al15nov; tanda17:00 y entrega18:00 LaPaz
 
+# Inicio17:00 del12 al14;18:00 es objetivo, no corte. El15 sólo concilia.
 [Timer]
-OnCalendar=*-*-* *:*:00 America/La_Paz
+OnCalendar=2026-11-12..15 *:*:00 America/La_Paz
 Persistent=true
 Unit=onia-flujo-diario.service
 

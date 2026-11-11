@@ -1,6 +1,6 @@
 """Adaptador local de la API del harness existente. Sólo invocable por coordinadora.
 
-No ejecuta shell/CLI/HTTP ni acepta comandos. Cada paso mutante necesita revisión
+No acepta shell libre ni comandos. El preflight sólo lee RPC de cuenta/cuota. Cada paso mutante necesita revisión
 esperada. Harness conserva tareas, cupos, scopes, sesiones, permisos y veredictos.
 """
 from pathlib import Path
@@ -8,6 +8,7 @@ import re
 import sys
 
 from comun import digest, lector, no_links, require
+from preflight import read_live
 
 ROUTE = '05-herramientas/fabrica-onia/1-guiones-calendario/automatizada/diarias/'
 OPS = {'registrar', 'lanzar', 'cerrar', 'revisar', 'recoger'}
@@ -18,7 +19,8 @@ def task_id(day):
 
 
 class LocalHarness:
-    def __init__(self, coordinator_base, operation):
+    def __init__(self, coordinator_base, operation, *, preflight=read_live):
+        self.preflight = preflight
         self.base = no_links(coordinator_base)
         self.operation = no_links(operation)
         require(self.base.is_dir() and self.operation == Path.home() / 'operacion', 'COORDINADOR_U_OPERACION_INVALIDOS')
@@ -100,9 +102,12 @@ class LocalHarness:
         if op in {'lanzar', 'revisar'}:
             require(current['occupied'] < 3, 'TRES_CUPOS_OCUPADOS')
             require(len(current['sessions']) < 2, 'LIMITE_DOS_SESIONES_DEL_CICLO')
+            # Lectura nueva por lanzamiento; nunca se admite una muestra del journal.
+            snapshot = self.preflight()
             self.sessions.launch(self.base, ident, self.operation, revision, actor, approved=True,
                 reviewer=('revision-' + request['dia'].replace('-', '')) if op == 'revisar' else None,
                 model='gpt-6.1-sol', effort='high', auth_chatgpt=True, subagents=0)
+            return {'preflight': snapshot}
         elif op == 'cerrar':
             self.sessions.close(self.base, ident, self.operation, revision, actor,
                 'Redacción entregada; falta revisión editorial', 'Coordinadora debe validar artefactos y commit exacto', retain_worktree=True)

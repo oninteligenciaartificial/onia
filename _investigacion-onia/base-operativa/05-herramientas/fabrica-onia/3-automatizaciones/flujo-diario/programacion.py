@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Valida la configuración o ejecuta un tick acotado; no instala un servicio."""
 import argparse
-from datetime import datetime
+from datetime import date, datetime
 import json
 import os
 from pathlib import Path
@@ -14,6 +14,9 @@ import motor
 from adaptador_harness import LocalHarness, task_id
 
 ZONE = ZoneInfo('America/La_Paz')
+FIRST_DAY = date(2026, 11, 12)
+LAST_DAY = date(2026, 11, 14)
+MODEL_CUTOFF = datetime(2026, 11, 15, tzinfo=ZONE)
 
 
 def instant(value):
@@ -32,14 +35,18 @@ def plan(config):
     hour = config['hora_tanda']
     require(hour is None or isinstance(hour, str) and re.fullmatch(r'(?:[01]\d|2[0-3]):[0-5]\d', hour), 'HORA_INVALIDA')
     require(config['autorizacion'] is None or isinstance(config['autorizacion'], str) and 0 < len(config['autorizacion'].strip()) <= 300, 'AUTORIZACION_INVALIDA')
+    require(config['hora_tanda'] == '17:00' and config['hora_entrega'] == '18:00', 'HORARIO_NO_AUTORIZADO')
+    require(date.fromisoformat(config['fecha_desde']) == FIRST_DAY and date.fromisoformat(config['fecha_hasta']) == LAST_DAY, 'FECHAS_NO_AUTORIZADAS')
     if config['modelo_hasta'] is not None:
-        instant(config['modelo_hasta'])
+        require(instant(config['modelo_hasta']) <= MODEL_CUTOFF, 'CORTE_MODELO_NO_AMPLIABLE')
     if config['habilitada']:
         require(hour is not None and config['autorizacion'], 'FALTA_HORA_O_AUTORIZACION')
     if config['redaccion_autorizada']:
         require(config['habilitada'] and config['modelo_hasta'], 'FALTA_VIGENCIA_MODELO')
     return {'schema': 'onia-plan-disparo-v1', 'habilitada': config['habilitada'], 'zona': config['zona'],
-            'hora_tanda': hour, 'redaccion_autorizada': config['redaccion_autorizada'],
+            'hora_tanda': hour, 'hora_entrega': config['hora_entrega'],
+            'fecha_desde': config['fecha_desde'], 'fecha_hasta': config['fecha_hasta'],
+            'redaccion_autorizada': config['redaccion_autorizada'],
             'modelo_hasta': config['modelo_hasta'], 'efectos_instalados': [],
             'ensayo': 'Cada tick termina; el horario depende de un scheduler instalado con autorización'}
 
@@ -51,9 +58,10 @@ def tick(config, root, coordinator=None, clock=now, adapter_factory=LocalHarness
     stamp = clock()
     current = instant(stamp)
     local = current.astimezone(ZONE)
-    due = local.strftime('%H:%M') >= config['hora_tanda']
-    provider = bool(config['redaccion_autorizada'] and current < instant(config['modelo_hasta']))
-    require(not provider or coordinator is not None, 'FALTA_COORDINADOR_CANONICO')
+    in_dates = FIRST_DAY <= local.date() <= LAST_DAY
+    # Las18:00 son objetivo editorial; una demora no cancela la tanda.
+    due = in_dates and config['hora_tanda'] <= local.strftime('%H:%M')
+    model_valid = bool(in_dates and config['redaccion_autorizada'] and current < instant(config['modelo_hasta']))
     with locked(root):
         adapter = adapter_factory(coordinator, Path.home() / 'operacion') if coordinator is not None else None
         engine = motor.Engine(root, adapter, clock=clock)
@@ -63,15 +71,41 @@ def tick(config, root, coordinator=None, clock=now, adapter_factory=LocalHarness
             # Se consultan novedades antes de la hora editorial, sin congelar la tanda demasiado pronto.
             if last is None or (current - instant(last)).total_seconds() >= 3600:
                 engine.ingest(collect(cursor=meta.get('cursor', 0), clock=clock), queue_input=False)
-            ident = task_id(local.date().isoformat()) if due and config['redaccion_autorizada'] else None
+            ident = None
+            if config['redaccion_autorizada']:
+                # Recuperar antes de iniciar otra tanda, incluso antes de17:00 del día nuevo.
+                # Los estados del journal sólo proponen el ID: Engine vuelve a cotejar el harness.
+                pending = []
+                for cycle in engine.store.rows('ciclo')[-14:]:
+                    if not (FIRST_DAY.isoformat() <= cycle['dia'] <= LAST_DAY.isoformat()
+                            and cycle['dia'] < local.date().isoformat()):
+                        continue
+                    if cycle['fase'] in {'para_revision_editorial', 'correccion_pendiente_revision',
+                                         'correccion_pendiente', 'resultado_invalido'}:
+                        continue
+                    dispatched = engine.store.get('efecto', cycle['id'] + ':lanzar', {})
+                    if ((cycle.get('harness') or {}).get('commit')
+                            or dispatched.get('fase') in {'enviando', 'confirmado'}):
+                        pending.append(cycle)
+                if pending:
+                    priority = {'harness_revisar': 0, 'revision_tecnica_en_curso': 0,
+                                'harness_lanzar': 1, 'redaccion_en_curso': 1,
+                                'harness_recoger': 2, 'harness_cerrar': 3}
+                    ident = min(pending, key=lambda c: (priority.get(c['fase'], 4), c['dia']))['id']
+                elif due:
+                    ident = task_id(local.date().isoformat())
+            provider = bool(model_valid and ident is not None)
+            require(not provider or coordinator is not None, 'FALTA_COORDINADOR_CANONICO')
             projection = engine.step('horario' if due else 'reconciliar', authorized_id=ident, provider=provider)
             projection['programacion'] = {'habilitada': True, 'zona': config['zona'], 'hora_tanda': config['hora_tanda'],
-                'redaccion_autorizada': provider, 'modelo_hasta': config['modelo_hasta']}
+                'redaccion_autorizada': provider, 'modelo_hasta': config['modelo_hasta'],
+                'hora_entrega': config['hora_entrega'], 'fecha_desde': config['fecha_desde'], 'fecha_hasta': config['fecha_hasta']}
             from comun import atomic
             atomic(engine.root / 'panel.json', projection)
             return {'resultado': 'tick_completado', 'hora_tanda': config['hora_tanda'],
                     'candidatas': len(projection['candidatas']), 'ciclos': len(projection['ciclos']),
-                    'modelo_en_vigencia': provider, 'errores': [e['codigo'] for e in projection['errores']]}
+                    'modelo_en_vigencia': provider, 'hora_entrega': config['hora_entrega'],
+                    'corte_modelo': config['modelo_hasta'], 'errores': [e['codigo'] for e in projection['errores']]}
         finally:
             engine.store.close()
 
@@ -95,7 +129,7 @@ def main(argv=None):
                 require(not path.resolve().is_relative_to(motor.BASE.parents[1]), 'CONFIG_ACTIVA_DENTRO_GIT')
                 info = path.stat()
                 require(info.st_uid == os.getuid() and info.st_nlink == 1 and not info.st_mode & 0o077, 'CONFIG_ACTIVA_NO_PRIVADA')
-                require(not any((part / '.git').exists() for part in (path.parent, *path.parents)), 'CONFIG_ACTIVA_DENTRO_GIT')
+                require(not any((part / '.git').is_file() or (part / '.git/HEAD').is_file() for part in (path.parent, *path.parents)), 'CONFIG_ACTIVA_DENTRO_GIT')
             value = tick(config, args.datos, args.coordinador_base)
         print(json.dumps(value, ensure_ascii=False))
         if args.ensayo_disparo:

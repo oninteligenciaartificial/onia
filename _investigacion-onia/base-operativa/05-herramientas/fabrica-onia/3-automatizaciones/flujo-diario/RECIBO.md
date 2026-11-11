@@ -1,3 +1,33 @@
+# Corrección del dictamen7 · recuperación tras medianoche
+
+Inicio cotejado en `b931d3cc87893a27fc7d885c945e0c1ef7280309`, rama asignada limpia. El dictamen recibido pide cambios sobre ese mismo commit; su archivo canónico no se copia ni modifica. Alcance exclusivo: `flujo-diario/`.
+
+Reproducidos6 fallos de9 regresiones antes de corregir. Ahora el plan prioriza entregas anteriores ya iniciadas y permite su revisión antes/después de17:00 mientras sigan autorizadas y vigentes. La tanda nueva sigue comenzando desde17:00;18:00 sigue siendo un objetivo. Corte máximo15nov00:00 LaPaz sin renovación, cuota/login en vivo, tres cupos, cero hijos y revisión editorial preservados. No se modifica el harness instalado ni el panel ni se concede aprobación de contenido.
+
+Comprobación actual:64 pruebas de flujo, incluidas9 de recuperación12→13→14 con dobles controlados. Evidencia nueva: `evidencia/recuperacion-medianoche-v7/`, con reproducción previa y validación posterior separadas. Pedido, ID, commit, originales, recibos previos y máximo de un efecto por tick conservados. Sin modelos, RPC vivo ni fuente real nuevos; las pruebas no se presentan como ejecución autónoma real. Programación sigue deshabilitada, sin instalación/activación ni integración.
+
+Modelo/esfuerzo solicitados: gpt-6.1-sol high; efectivos/SID y cuota inicial/final de esta ejecutora: desconocidos. Cero hijos o sesiones de modelo adicionales; sin consumo atribuible ni USD calculados. El commit publicado de esta corrección necesita revisión independiente por la coordinadora. El veredicto con cambios de revisión7 no se transforma en una aceptación ni se rehashea evidencia para continuar.
+
+Los recibos siguientes son históricos de intentos anteriores.
+
+---
+
+# Retoma de cuota y programación · v5
+
+Base cotejada: `9a4639f245d4cf3d0f3ab3e22403fabe80e0d43b`, rama asignada limpia al comenzar. La continuidad recibida informa su integración y piloto previo correcto; no se repitieron ni se confunden con una ejecución nueva. Esta entrega sólo cambia `flujo-diario/`; panel, generador, harness instalado, JSON canónico y briefing permanecen fuera de escritura. Commit/push final: rama asignada, sin master ni instalación/activación.
+
+Preparado: preflight efímero de login ChatGPT y cuota incluida antes de escritora/revisora, bloqueo conservador ante agotamiento/fallo/tipos inválidos/timeout, sin reserva del 90 % ni API pagada, sin caché. Cerrar/recoger siguen disponibles con su autorización aunque no haya cuota. Programación deshabilitada con inicio a las 17:00, entrega objetivo a las 18:00 del 12 al 14, corte máximo exclusivo15nov00:00 LaPaz sin renovación; plantillas sin instalar.
+
+Evidencia actual: `evidencia/cuota-programacion-v5/`. 55 pruebas de flujo en total (incluyen 16 de preflight y 8 de programación), controles con dobles y calendario validado; no se volvieron a ejecutar panel/generador. Se conservan todas las evidencias anteriores. Una lectura real del RPC y un diagnóstico saneado confirman fallo de arranque por filesystem de sólo lectura: cuota/login actuales desconocidos; no se sustituyeron por porcentajes históricos ni se modificaron permisos. La consulta positiva y un modelo real con este gate quedan para el host de la coordinadora después de revisión.
+
+Modelo/esfuerzo solicitados: gpt-6.1-sol high; efectivos observados de esta ejecutora, SID y cuota usada inicial/final: desconocidos. No hay consumo atribuible medido ni USD calculados. Cero hijos y cero sesiones de modelo lanzadas por este intento. Los procesos de App Server sólo se usaron para lecturas sin thread/turn y terminaron; los modelos de pruebas son dobles Python, sin API.
+
+Retrabajo: se separó la falta de cuota de un despacho incierto, se habilitó la recogida tras el corte y se acotaron fechas/horas de inicio, conservando tres cupos y los originales. Revisión independiente del nuevo commit pendiente del coordinador; el dictamen bueno anterior sólo vale para `9a4639f`. Después de revisar, la coordinadora comprueba el preflight en el host y decide instalación/activación. Esta sesión entrega commit/push y se detiene.
+
+El recibo siguiente es **histórico del primer intento**; sus cifras, pendientes y cuota del 10 % no describen una medición vigente de esta retoma.
+
+---
+
 # Recibo de ejecutora · fabrica-automatizaciones-flujo-diario-20261111
 
 Entrega en `codex/ws-fabrica-automatizaciones-flujo-diario-20261111`, lista para cierre y revisión por la coordinadora. Hash final: el commit publicado comunicado al entregar y verificable en esa rama remota. Sin integración ni push a master. La integración del panel 94cca9b fue autorizada por Sergio y ya se comprobó en master; esta entrega nueva mantiene su revisión propia.

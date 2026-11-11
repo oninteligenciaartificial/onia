@@ -11,7 +11,7 @@ python3 -B -m unittest discover -s "$B/fabrica-onia/1-guiones-calendario/automat
 python3 -B "$F/programacion.py"
 ```
 
-Última validación: `evidencia/validacion-v2/`. Las evidencias anteriores se conservan con sus hashes/fecha propios y no se presentan como validación del código posterior. No se repitieron las 55 pruebas históricas del panel.
+La validación de la retoma de cuota/programación está en `evidencia/cuota-programacion-v5/`: 55 pruebas de flujo, 16 de ellas específicas de preflight y 8 de programación. No se editaron ni repitieron panel/generador. La tabla histórica siguiente describe la primera entrega (`validacion-v2`), no el delta actual. Las evidencias anteriores se conservan con sus hashes/fecha propios y no se presentan como validación del código posterior. No se repitieron las 55 pruebas históricas del panel.
 
 | Componente | Resultado | Evidencia |
 |---|---|---|
@@ -51,6 +51,38 @@ node "$F/visual-flujo.cjs" "$F/evidencia-visual-host-01"
 
 Tercer argumento opcional: directorio del runtime Playwright con `node_modules/playwright` y `browsers/chromium-1252/chrome-linux64/chrome`. No instalar ni configurar servicios para esta prueba. El script mantiene `chromiumSandbox: true`, limita el navegador a loopback, prepara datos sintéticos fuera de Git, prueba un refresco real con formulario abierto, texto/CSRF/versión/huella conservados, fallo del export, guardado, reinicio y vista móvil/escritorio, y detiene el servidor en `finally`. Conserva los datos privados; escribe capturas sólo si el navegador funciona.
 
-## Lo que sigue sin probar
+## Lo que sigue sin probar en esta retoma
 
-Un recorrido de modelo real a través del harness, disponibilidad/cuota futura, revisión independiente de este commit, redacción y revisión editorial reales, utilidad/voz humana, acceso desde teléfono de Sergio, activación horaria, n8n, canales comerciales, publicación, cobro y operación persistente. La fuente real no prueba capacidades del producto anunciado. El ensayo autorizado para la coordinadora está en README; no ejecutar el adaptador real desde esta sesión ejecutora.
+La continuidad ya informa un piloto de modelo real y la revisión buena de `9a4639f`; COORDINACION-v4 conserva esa evidencia. No se repitieron aquí. En esta retoma quedan sin acreditar login/cuota positivos en el host (RPC bloqueado por filesystem), un lanzamiento real usando el nuevo preflight, revisión independiente del nuevo commit, activación horaria y entrega real a las 18:00. Editorial, canales comerciales, cobro y operación persistente conservan sus requisitos humanos. No ejecutar modelos desde esta sesión ejecutora.
+
+
+## Retoma de cuota/programación v5
+
+```bash
+python3 -B -m unittest discover -s "$F" -p 'test_*.py' -v
+python3 -B "$F/preflight.py"
+python3 -B "$F/programacion.py"
+systemd-analyze calendar --base-time='2026-11-11 21:00:00 UTC' --iterations=3 '2026-11-12..14 17..18:*:00 America/La_Paz'
+```
+
+`test_preflight.py` usa procesos Python sintéticos para el JSONL: login/plan incluidos, respuesta saneada,95/99 sin reserva,100 en cualquiera de las ventanas, permiso backend falso/ausente/null, tipos/rangos/NaN, reset pasado, bucket incorrecto, fallo de arranque/RPC, IDs erróneos, mensajes excesivos y timeout sobre una línea parcial. Comprueba que cada proceso termina, que sólo se envían los métodos de lectura, que no se heredan variables API ni se filtran email/cuenta/créditos/stderr, y que una consulta no reutiliza la anterior.
+
+Las pruebas del adaptador usan las llamadas reales con mocks: no se llama `sessions.launch` ante cuota agotada, login incorrecto, fallo RPC, tipo inválido o timeout, tanto para escribir como para revisar. El motor deja el efecto preparado, reintenta una lectura y conserva un único despacho. `cerrar`/`recoger` pasan sin consultar cuota incluso si el proveedor está marcado no disponible.
+
+`test_programacion.py` cubre apagado sin datos/red, hora LaPaz, consulta horaria, ningún modelo antes del 12/después del 14/desde las 18:00, creación a17:00, fecha de corte no ampliable y recogida del dictamen del 14 después de medianoche sin renovación ni otro ciclo. Se valida la sintaxis de la plantilla del calendario; no se instala.
+
+La prueba viva sólo obtuvo un fallo de arranque RPC (filesystem de sólo lectura, sin stdout). El recibo conserva esa limitación y la cuota desconocida. No se produjo una lectura positiva ni un modelo real y no se presentan los mocks como tales.
+
+
+## Corrección del dictamen7: recuperación12→13→14
+
+Base revisada: `b931d3cc87893a27fc7d885c945e0c1ef7280309`. La reproducción previa de `test_recuperacion_medianoche.py` falló6 de9 casos: antes de17:00 aparecía `MODELO_NO_DISPONIBLE` y después `AUTORIZACION_PENDIENTE`. La salida se conserva en `evidencia/recuperacion-medianoche-v7/reproduccion-antes.txt`; no se cambian los recibos anteriores.
+
+```bash
+python3 -B -m unittest discover -s "$F" -p test_recuperacion_medianoche.py -v
+python3 -B -m unittest discover -s "$F" -p 'test_*.py' -v
+```
+
+Las9 regresiones utilizan un doble con tareas separadas por ID y cupos compartidos. Cubren una entrega del12 pendiente de revisión el13/el14, antes y después de17:00; prioridad frente a la tanda actual; recorrido secuencial12→13→14 y recogida el15; prohibición de nueva revisora tras el corte; revocación; tres cupos ocupados; y una tarea anterior sin escritora que no se redacta retroactivamente. Se comprueban pedido original intacto, commit coincidente, una escritora/una revisora por ID, máximo un efecto por tick y devolución a revisión editorial.
+
+La suite completa de `flujo-diario` tiene64 pruebas (55 existentes y9 nuevas). La evidencia actual incluye logs, hashes y configuración deshabilitada. No se ejecutan modelos, RPC vivo, red, tareas reales, instalación, revisión independiente ni integración en estas regresiones. Panel, generador, preflight y harness conservan sus comprobaciones anteriores; sus suites externas no se repiten para este cambio.
