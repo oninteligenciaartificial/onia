@@ -594,3 +594,8 @@ El puente publicó dos revisiones en master mientras el checkout documental mant
 ## 10/11/2026 · publicación del nuevo corte de homelab
 
 Al conciliar el informe de Boss6fdcd74, el registro privado pasó de r9 a r10 en_espera. Publicar fue rechazado por contenido_no_compartible: el briefing y dos preflights heredados contienen direcciones loopback. No se imprimieron sus valores, no se relajó el filtro y no se forzó la publicación. La nueva evidencia y el registro se conservan en el VPS; master conserva r9. La conciliación y el informe de Boss quedan enlazados en el buzón. Resolver el saneamiento con evidencia original conservada cuando se retome homelab; no bloquear por ello la aplicación de cuota ni ingresos independientes.
+
+
+## Corte PE del homelab · 11 noviembre 2026 UTC
+
+Boss reportó el segundo corte del alta: cuenta cerrada y árbol parcial creado. El código ocultaba la excepción bajo un mensaje único y la retoma anterior rechazaba toda ruta existente. Se prepara diagnóstico saneado sin configuración y retoma del inventario exacto, conservando control PE obligatorio. No inferir que interop está desactivada ni que un cambio local ya funcionó. Ver homelab/RETOMA-PE-20261111.md. Durante los tests, el nuevo control de montajes rechazó correctamente el /tmp separado del sandbox: se corrigió el fixture para simular mountinfo explícito, sin relajar el control real.

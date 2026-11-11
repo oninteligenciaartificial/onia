@@ -1,5 +1,7 @@
 import importlib.util
 import json
+import hashlib
+import errno
 import os
 from pathlib import Path
 import shlex
@@ -150,6 +152,148 @@ class BootstrapSafety(unittest.TestCase):
         finally: os.close(fd)
         self.assertEqual(again.returncode,0,again.stderr)
         self.assertEqual(again.stdout,'aislamiento sintético\n')
+
+
+class PERecovery(unittest.TestCase):
+    def test_control_preserves_failure_kind_and_never_exposes_raw_output(self):
+        cases = [
+            (OSError(errno.ENOEXEC, 'private filename'), {'exception': 'OSError', 'errno': errno.ENOEXEC}),
+            (PermissionError(errno.EACCES, 'private path'), {'exception': 'PermissionError', 'errno': errno.EACCES}),
+            (subprocess.TimeoutExpired('private command', 5, stderr=b'secret'), {'exception': 'TimeoutExpired', 'timeout_s': 5}),
+            (subprocess.CompletedProcess([], 193, b'private', b'\xffsecret CreateProcess'), {'returncode': 193}),
+            (subprocess.CompletedProcess([], 0, b'', b''), {'returncode': 0}),
+        ]
+        with patch.object(alta, 'checked_pe', return_value=Path('/verified/canary')):
+            for outcome, expected in cases:
+                with self.subTest(expected=expected), patch.object(alta.subprocess, 'run') as run:
+                    if isinstance(outcome, BaseException): run.side_effect = outcome
+                    else: run.return_value = outcome
+                    data = alta.pe_probe()
+                    for key, value in expected.items(): self.assertEqual(data[key], value)
+                    self.assertEqual(data['ok'], expected.get('returncode') == 0)
+                    self.assertNotIn('secret', json.dumps(data))
+                    self.assertNotIn('private', json.dumps(data))
+                    self.assertEqual(run.call_args.kwargs['timeout'], 5)
+                    self.assertEqual(run.call_args.kwargs['stdin'], subprocess.DEVNULL)
+
+    def test_unverified_pe_never_executes(self):
+        with patch.object(alta, 'checked_pe', side_effect=RuntimeError('bad hash')), \
+             patch.object(alta.subprocess, 'run') as run:
+            with self.assertRaises(RuntimeError): alta.pe_probe()
+            run.assert_not_called()
+
+    def test_diagnostic_is_separate_from_apply(self):
+        with patch('sys.argv', [str(SOURCE), '--diagnose-pe']), \
+             patch.object(alta.os, 'geteuid', return_value=0), \
+             patch.object(alta.socket, 'gethostname', return_value=alta.MACHINE), \
+             patch.object(Path, 'read_text', return_value='microsoft-wsl'), \
+             patch.object(alta, 'diagnose_pe', return_value={'ok': True}) as diagnose, \
+             patch.object(alta, 'run') as run, patch.object(alta, 'write_new') as write, \
+             patch('builtins.print'):
+            alta.main()
+            diagnose.assert_called_once_with()
+            run.assert_not_called()
+            write.assert_not_called()
+
+    def test_resume_flag_requires_explicit_apply_and_original_backup(self):
+        for args in (['--resume-pe-control'], ['--apply', '--resume-pe-control'],
+                     ['--diagnose-pe', '--apply'], ['--diagnose-pe', '--resume-backup', '/root/x']):
+            with self.subTest(args=args), patch('sys.argv', [str(SOURCE)] + args), \
+                 patch.object(alta, 'run') as run, patch('sys.stderr'):
+                with self.assertRaises(SystemExit): alta.main()
+                run.assert_not_called()
+
+    def test_diagnostic_filters_configs_environment_and_exception_text(self):
+        original = Path.read_text
+        def read(path, *args, **kwargs):
+            if path.name == 'status': return 'enabled\n'
+            if path.name == 'WSLInterop': return 'enabled\ninterpreter /init\nprivate-data\n'
+            return original(path, *args, **kwargs)
+        import io
+        with patch.object(Path, 'read_text', read), \
+             patch('builtins.open', return_value=io.StringIO('[interop]\nenabled=true\nsecret=do-not-output\n')), \
+             patch.dict(os.environ, {'WSL_INTEROP': '/private/do-not-output'}), \
+             patch.object(alta, 'pe_probe', side_effect=RuntimeError('do-not-output')):
+            data = alta.diagnose_pe()
+        text = json.dumps(data)
+        self.assertNotIn('do-not-output', text)
+        self.assertNotIn('private-data', text)
+        self.assertTrue(data['WSLInterop']['interpreter_init'])
+        self.assertEqual(data['wsl_conf']['interop.enabled'], 'true')
+        self.assertTrue(data['control_pe']['no_ejecutado'])
+
+    def test_partial_resume_preserves_exact_tree_and_rejects_changes(self):
+        root = Path(tempfile.mkdtemp(prefix='onia-pe-retoma-'))/'worker'
+        root.mkdir(mode=0o755)
+        for name in ('login', 'etc', 'work'): (root/name).mkdir(mode=0o700 if name == 'work' else 0o755)
+        alta.write_new(root/'host-only', alta.HOST_CANARY)
+        alta.write_new(root/'interop-canary.exe', alta.pe_canary(), 0o755)
+        account = SimpleNamespace(pw_uid=1001, pw_gid=1001)
+        original_lstat = Path.lstat
+        ownership = {}
+        def metadata(path, *args, **kwargs):
+            st = original_lstat(path, *args, **kwargs)
+            uid, gid = ownership.get(str(path), (1001, 1001) if path == root/'work' else (0, 0))
+            mode = (stat.S_IFDIR | 0o755) if path in root.parents else st.st_mode
+            return SimpleNamespace(st_mode=mode, st_uid=uid, st_gid=gid, st_nlink=st.st_nlink)
+        with patch.object(alta, 'ROOT', root), patch.object(Path, 'lstat', metadata), \
+             patch.object(Path, 'read_text', return_value='1 0 8:1 / / rw - ext4 /dev/fake rw\n'):
+            before = {p.relative_to(root): (p.read_bytes(), p.stat().st_mtime_ns) for p in root.rglob('*') if p.is_file()}
+            alta.prepare_pe_partial(account, True)
+            self.assertEqual(before, {p.relative_to(root): (p.read_bytes(), p.stat().st_mtime_ns) for p in root.rglob('*') if p.is_file()})
+            ownership[str(root)] = (1001, 0)
+            with self.assertRaises(RuntimeError): alta.validate_pe_partial(account)
+            ownership.clear()
+            (root/'work').chmod(0o755)
+            with self.assertRaises(RuntimeError): alta.validate_pe_partial(account)
+            (root/'work').chmod(0o700)
+            pe = root/'interop-canary.exe'
+            pe.write_bytes(b'changed')
+            with self.assertRaises(RuntimeError): alta.validate_pe_partial(account)
+            pe.write_bytes(alta.pe_canary())
+            os.link(pe, root.parent/'hardlink')
+            with self.assertRaises(RuntimeError): alta.validate_pe_partial(account)
+            # Leave all failed fixtures intact; no cleanup of real or synthetic evidence.
+
+    def test_partial_resume_rejects_symlink_nonempty_and_extra_paths(self):
+        for mutation in ('symlink', 'nonempty', 'extra'):
+            root = Path(tempfile.mkdtemp(prefix='onia-pe-negative-'))/'worker'
+            root.mkdir()
+            for name in ('login', 'etc', 'work'):
+                if name == 'work' and mutation == 'symlink': (root/name).symlink_to('/tmp')
+                else: (root/name).mkdir()
+            alta.write_new(root/'host-only', alta.HOST_CANARY)
+            alta.write_new(root/'interop-canary.exe', alta.pe_canary(), 0o755)
+            if mutation == 'nonempty': (root/'etc'/'unexpected').write_text('conservar')
+            if mutation == 'extra': (root/'extra').write_text('conservar')
+            # Metadata mocked only here: directory enumeration still rejects all extras,
+            # and a real symlink rejection is separately checked below.
+            def check(path, *args, **kwargs):
+                if path.is_symlink(): raise RuntimeError('symlink')
+            with self.subTest(mutation=mutation), patch.object(alta, 'ROOT', root), \
+                 patch.object(alta, 'checked_metadata', side_effect=check), \
+                 patch.object(Path, 'read_text', return_value='1 0 8:1 / / rw - ext4 /dev/fake rw\n'):
+                with self.assertRaises(RuntimeError):
+                    alta.validate_pe_partial(SimpleNamespace(pw_uid=1001, pw_gid=1001))
+
+    def test_metadata_rejects_real_symlink_before_following_it(self):
+        root = Path(tempfile.mkdtemp(prefix='onia-pe-link-'))
+        (root/'link').symlink_to('/usr/bin/python3')
+        with self.assertRaises(RuntimeError): alta.checked_metadata(root/'link', 0o755)
+
+    def test_partial_resume_rejects_nested_mount(self):
+        root = Path(tempfile.mkdtemp(prefix='onia-pe-mount-'))/'worker'
+        root.mkdir()
+        mountinfo = '1 0 8:1 / / rw - ext4 /dev/fake rw\n'
+        mountinfo += f'2 1 8:2 / {root}/work rw - ext4 /dev/other rw\n'
+        with patch.object(alta, 'ROOT', root), patch.object(alta, 'checked_metadata'), \
+             patch.object(Path, 'read_text', return_value=mountinfo):
+            with self.assertRaisesRegex(RuntimeError, 'submontaje'):
+                alta.validate_pe_partial(SimpleNamespace(pw_uid=1001, pw_gid=1001))
+
+    def test_pe_bytes_unchanged_from_v2(self):
+        self.assertEqual(hashlib.sha256(alta.pe_canary()).hexdigest(),
+                         '98ee1b89c5961a32ea860444715c306f8302cb380797ebab44f4f879e13e6055')
 
 
 if __name__ == '__main__':

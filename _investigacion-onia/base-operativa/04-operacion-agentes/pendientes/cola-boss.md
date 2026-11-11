@@ -221,3 +221,8 @@ Sergio pidió resolver el frente pendiente antes de seguir con Boss. [Pedido y a
 - Más de3sesiones y el ensayo91→93 quedan pendientes; se mantienen3. Prioridad ingresos hasta14nov; queda sustituida la condición de terminar toda la infraestructura antes de avanzar. Leer la decisión nueva y REGLAS-BOSS actualizado.
 - Boss confirmó la corrección registro/lanzamiento y reportó otro corte del homelab en6fdcd74. No repetir retoma v2 sobre su nueva instalación parcial. El registro privado homelab-conexion-20261109 pasó a r10 en_espera con ese diagnóstico pendiente; su publicación automática fue bloqueada por direcciones loopback heredadas en el briefing/evidencias. El guard no se relajó. Master conserva r9 del JSON; el informe de Boss y esta conciliación explican la diferencia hasta sanear esa publicación.
 - Para continuar con Boss: usar entregas existentes y tareas autorizadas que ayuden a vender; preservar revisión y aceptación. No afirmar que los canales comerciales están probados de punta a punta ni que el homelab está aceptado.
+
+
+## HECHO preparación · diagnóstico PE homelab · 11 nov 2026 UTC
+
+En respuesta a ALTA-DETENIDA-v2 y a la captura enviada por Sergio, se prepara `homelab/RETOMA-PE-20261111.md`: diagnóstico con excepción saneada y retoma estricta del árbol parcial, sin aplicar en PC. Boss recibe la ruta por webhook tras revisión. Próximo paso: comprobar disponibilidad de DESKTOP-0GGGNMF desde la app y ejecutar el diagnóstico una sola vez, con el hash revisado. Si sigue desconectada, registrar ese bloqueo concreto y continuar ingresos; no requiere que Sergio copie otro prompt. No cambia el pendiente de >3 sesiones ni acepta el homelab. El registro privado sigue en espera, no se alteró en esta preparación.
