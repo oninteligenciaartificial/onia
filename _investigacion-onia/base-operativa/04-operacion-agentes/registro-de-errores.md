@@ -599,3 +599,5 @@ Al conciliar el informe de Boss6fdcd74, el registro privado pasó de r9 a r10 en
 ## Corte PE del homelab · 11 noviembre 2026 UTC
 
 Boss reportó el segundo corte del alta: cuenta cerrada y árbol parcial creado. El código ocultaba la excepción bajo un mensaje único y la retoma anterior rechazaba toda ruta existente. Se prepara diagnóstico saneado sin configuración y retoma del inventario exacto, conservando control PE obligatorio. No inferir que interop está desactivada ni que un cambio local ya funcionó. Ver homelab/RETOMA-PE-20261111.md. Durante los tests, el nuevo control de montajes rechazó correctamente el /tmp separado del sandbox: se corrigió el fixture para simular mountinfo explícito, sin relajar el control real.
+
+Corrección de revisión independiente: el comando nuevo se escribió inicialmente con `python3 -B`; eso no aísla importaciones del directorio Descargas. Antes de publicarlo en master o ejecutarlo, se corrigió a `/usr/bin/python3 -I -B` en diagnóstico y retoma. El SHA del script no cambia.
