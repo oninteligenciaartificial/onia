@@ -1,0 +1,111 @@
+{
+  "schema": "onia-fabrica-estado-v1",
+  "id": "fabrica-chatbot-whatsapp-20261110",
+  "fabrica": "whatsapp",
+  "estado": "para_revision",
+  "generado": "2026-11-11T13:35:47.470710+00:00",
+  "fuente": "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/GUIA-REVISION.md",
+  "pasos": [
+    {
+      "id": "reutilizar",
+      "nombre": "Reutilizar adaptador integrado y correccion BAJA",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/motor.cjs",
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/adaptador.py",
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/evidencia/tanda-20261111-baseline/node.tap",
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/evidencia/tanda-20261111-baseline/python.txt"
+      ]
+    },
+    {
+      "id": "oferta",
+      "nombre": "Alinear nombre, fechas, precio y VIP",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/mensajes.json"
+      ]
+    },
+    {
+      "id": "recorrido-local",
+      "nombre": "Evaluar informacion, modalidad, QR, comprobante y confirmacion",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/evidencia/tanda-20261111/recorrido-adaptador.json",
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/evidencia/tanda-20261111/recorrido-motor.json"
+      ]
+    },
+    {
+      "id": "fallos",
+      "nombre": "Comprobar duplicados, referencias, cupo, cese, timeout y configuracion",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/evidencia/tanda-20261111/node.tap",
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/evidencia/tanda-20261111/python.txt"
+      ]
+    },
+    {
+      "id": "revision",
+      "nombre": "Revision de la coordinadora y Sergio",
+      "estado": "pendiente",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/GUIA-REVISION.md"
+      ]
+    },
+    {
+      "id": "prueba-real",
+      "nombre": "Prueba autorizada con activos privados y operador",
+      "estado": "bloqueado",
+      "evidencias": [
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/FALTANTES.md"
+      ]
+    }
+  ],
+  "entregables": [
+    {
+      "nombre": "Guia de revision y prueba real pendiente",
+      "ruta": "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/GUIA-REVISION.md"
+    },
+    {
+      "nombre": "Adaptador deshabilitado por defecto",
+      "ruta": "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/adaptador.py"
+    },
+    {
+      "nombre": "Mensajes en borrador",
+      "ruta": "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/mensajes.json"
+    },
+    {
+      "nombre": "Workflow sintetico inactivo",
+      "ruta": "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/workflow-n8n.json"
+    },
+    {
+      "nombre": "Plantilla de despacho inactiva",
+      "ruta": "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/workflow-despacho-n8n.json"
+    },
+    {
+      "nombre": "Recibo y evidencia de esta tanda",
+      "ruta": "05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/evidencia/tanda-20261111/recibo.json"
+    }
+  ],
+  "pendientes": [
+    {
+      "motivo": "Activos privados no verificados por esta sesion: numero, credenciales, QR/media ID y Meet",
+      "responsable": "Sergio y Operaciones",
+      "siguiente": "Comprobarlos en privado; si falta QR no continuar el paso de pago"
+    },
+    {
+      "motivo": "Revision tecnica del commit nuevo y validacion comercial/editorial pendientes",
+      "responsable": "Coordinadora, revisor distinto, Operaciones, Contenido y Sergio",
+      "siguiente": "Revisar entrega y conservar STOP; sin aceptar ni integrar automaticamente"
+    },
+    {
+      "motivo": "E2E Meta/n8n y autorizacion de activacion no realizados",
+      "responsable": "Sergio y Operaciones",
+      "siguiente": "Autorizar prueba limitada y ejecutar la guia con recibo privado; luego decidir activacion"
+    },
+    {
+      "motivo": "Operacion del lunes 16 posterior al corte de Codex no ensayada",
+      "responsable": "Operaciones y Sergio",
+      "siguiente": "Comprobar scripts fijos, permisos y recuperacion antes del corte sin depender de nuevas sesiones"
+    }
+  ]
+}
