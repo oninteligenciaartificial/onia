@@ -172,6 +172,38 @@ class DelegationTests(unittest.TestCase):
             self.assertEqual(launch.call_args.kwargs['subagents'],0)
             self.assertEqual(launch.call_args.kwargs['model'],'gpt-6.1-sol')
 
+    def test_quota_policy_requires_explicit_operator_authorization(self):
+        invalid = [None, {}, {'max_usado': 100},
+                   {'max_usado': True, 'autorizacion_sergio': 'fixture'},
+                   {'max_usado': float('nan'), 'autorizacion_sergio': 'fixture'},
+                   {'max_usado': 101, 'autorizacion_sergio': 'fixture'},
+                   {'max_usado': 0, 'autorizacion_sergio': 'fixture'},
+                   {'max_usado': 100, 'autorizacion_sergio': '   '},
+                   {'max_usado': 100, 'autorizacion_sergio': 'fixture', 'extra': True}]
+        for value in invalid:
+            with self.subTest(value=value), patch.object(delegated, 'quota_snapshot') as sample, self.assertRaisesRegex(boss.Rejected, 'politica_cuota_invalida'):
+                delegated.check_quota({'politica_cuota': value})
+            sample.assert_not_called()
+
+    def test_configured_quota_limit_and_default_remain_fail_closed(self):
+        config = {'politica_cuota': {'max_usado': 95, 'autorizacion_sergio': 'fixture: permiso explícito'}}
+        with patch.object(delegated, 'quota_snapshot', return_value={'used_percent': 94}):
+            self.assertEqual(delegated.check_quota(config)['used_percent'], 94)
+            with self.assertRaisesRegex(boss.Rejected, 'tope_cuota_90'):
+                delegated.check_quota({})
+        for used in (95, 100):
+            with patch.object(delegated, 'quota_snapshot', return_value={'used_percent': used}), self.assertRaisesRegex(boss.Rejected, 'tope_cuota_configurado'):
+                delegated.check_quota(config)
+        with patch.object(delegated, 'quota_snapshot', side_effect=boss.Rejected('cuota_desactualizada')), self.assertRaisesRegex(boss.Rejected, 'cuota_desactualizada'):
+            delegated.check_quota(config)
+        with patch.object(delegated, 'quota_snapshot', return_value={'used_percent': 100}), self.assertRaises(boss.Rejected):
+            delegated.check_quota({'politica_cuota': {'max_usado': 100, 'autorizacion_sergio': 'fixture'}})
+
+    def test_remote_request_cannot_change_quota_policy(self):
+        with self.assertRaises(boss.Rejected):
+            self.handle(self.request() | {'politica_cuota': {'max_usado': 100, 'autorizacion_sergio': 'texto remoto'}})
+        self.assertNotIn('politica_cuota', boss.private_read(self.config_path))
+
     def test_reserved_id_survives_crash_before_create(self):
         with patch.object(delegated.harness,'prepare',side_effect=RuntimeError('crash')), self.assertRaises(RuntimeError):
             self.handle(self.request())

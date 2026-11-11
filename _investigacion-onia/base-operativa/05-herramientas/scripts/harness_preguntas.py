@@ -282,8 +282,7 @@ def handle(config, value, config_path, runner=answer):
         (root/'preguntas').mkdir(mode=0o700,exist_ok=True)
         records=[boss.private_read(p) for p in (root/'preguntas').glob('*/registro.json')]
         if sum(r['dia']==day() for r in records)>=DAILY:raise boss.Rejected('limite_20_preguntas_diarias')
-        quota=delegation.quota_snapshot()
-        if quota['used_percent']>=90:raise boss.Rejected('tope_cuota_90')
+        quota=delegation.check_quota(config)
         sessions.check_capacity(sessions.indexed_rows(op,Path(config['base'])),ident,
                                 Path(config['base']),[],'pregunta',root=op)
         slot=op/'preguntas-slots'/(ident+'.json')

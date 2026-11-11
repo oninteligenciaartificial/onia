@@ -80,6 +80,16 @@ class QuestionTests(unittest.TestCase):
             with self.assertRaisesRegex(boss.Rejected,'tope_cuota'):self.handle()
         self.assertFalse((self.root/'preguntas/pregunta-1/registro.json').exists())
 
+    def test_question_uses_private_quota_policy_and_blocks_at_limit(self):
+        boss.private_write(self.config_path,self.config|{'politica_cuota':{
+            'max_usado':95,'autorizacion_sergio':'fixture explícito, no permiso real'}})
+        with patch.object(q.delegation,'quota_snapshot',return_value={'used_percent':94}):
+            self.assertTrue(self.handle()['ok'])
+        with patch.object(q.delegation,'quota_snapshot',return_value={'used_percent':95}):
+            with self.assertRaisesRegex(boss.Rejected,'tope_cuota_configurado'):
+                self.handle(self.request(ident='pregunta-bloqueada'))
+        self.assertFalse((self.root/'preguntas/pregunta-bloqueada/registro.json').exists())
+
     def test_shared_capacity_and_stale_pid(self):
         op=Path(self.config['operacion'])
         for i in range(3):boss.private_write(op/f'preguntas-slots/q-{i}.json',{'estado':'respondiendo','vence':time.time()+30})
