@@ -1,0 +1,23 @@
+{
+  "schema": "onia-correcciones-v1",
+  "entrada_sha256": "148a3bd01c2ff42c4b7db1ac04fe4fe77be722eb5cd2430dc2bb82cd861fa230",
+  "version_base": "r1",
+  "version_nueva": "r2",
+  "reglas": [
+    {
+      "id": "C01-canal-no-probado",
+      "piezas": [
+        "T01",
+        "T04"
+      ],
+      "campos": [
+        "guion_hablado",
+        "copy",
+        "cta"
+      ],
+      "antes": "Comentá NEGOCIO y te paso la información.",
+      "despues": "Si te interesa el workshop, comentá NEGOCIO.",
+      "motivo": "El canal no tiene prueba de punta a punta. Eliminar promesa personal de respuesta heredada de v2 y mantener una invitación coherente; sigue bloqueada publicación hasta prueba real. Se aplica en una segunda salida local a las dos ventas."
+    }
+  ]
+}

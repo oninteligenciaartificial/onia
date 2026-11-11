@@ -1,0 +1,93 @@
+{
+  "schema": "onia-brief-guiones-v1",
+  "fecha_tanda": "2026-11-11",
+  "generado": "2026-11-11T13:34:35.430377+00:00",
+  "oferta": {
+    "nombre": "Claude de 0 a 100: tu negocio con IA",
+    "grupo_bs": 50,
+    "vip_bs": 150,
+    "vip_cupos": 5,
+    "vip_minutos": 30,
+    "zona": "America/La_Paz",
+    "plataforma": "Google Meet",
+    "clases": [
+      "2026-11-13T20:00:00-04:00",
+      "2026-11-14T14:00:00-04:00",
+      "2026-11-16T20:00:00-04:00"
+    ],
+    "pago": "QR y seguimiento; Sergio confirma cada pago manualmente"
+  },
+  "revision_editorial": "pendiente",
+  "audiencia_propuesta": "Dueños de pequeños negocios de Santa Cruz que comienzan con IA; hipótesis editorial, sin entrevistas nuevas.",
+  "canal": {
+    "nombre": "Comentarios Instagram/Facebook, palabra NEGOCIO",
+    "estado": "no_probado",
+    "responsable": "Operaciones/Sergio",
+    "prueba_requerida": "Probar comentario NEGOCIO → respuesta → derivación WhatsApp → QR privado → pago confirmado por Sergio → acceso Meet y soporte, con autorización concreta antes de usar el CTA comercial."
+  },
+  "entrada_relato_real": "Sergio: aportar una tarea real de hoy, entrada saneada sin clientes, borrador recibido, error concreto, corrección y permiso para contarlo. T02 ofrece criterio de marca mediante un ejemplo ficticio mientras falta ese material.",
+  "hipotesis_editoriales": [
+    {
+      "persona": "Dueño con agenda sobrecargada",
+      "hipotesis": "Necesita ver tareas y límites antes de comprar",
+      "validacion_pendiente": "Entrevista o respuesta real con consentimiento"
+    },
+    {
+      "persona": "Principiante que duda del VIP",
+      "hipotesis": "Puede confundir grupo con atención privada",
+      "validacion_pendiente": "Preguntas reales de interesados"
+    },
+    {
+      "critico": "Revisor simulado por el mismo LLM",
+      "hipotesis": "La promesa de respuesta NEGOCIO puede confundir canal planeado con probado",
+      "validacion_pendiente": "Contenido y prueba real por Operaciones"
+    }
+  ],
+  "candidatas": [
+    {
+      "id": "I01",
+      "pieza": "T01",
+      "decision": "seleccionada",
+      "motivo": "Venta mediante una preparación concreta de agenda, hereda v2/G01 y especificidad de Pedro."
+    },
+    {
+      "id": "I02",
+      "pieza": "T02",
+      "decision": "seleccionada",
+      "motivo": "Marca por criterio visible: entrada, omisión y corrección. Sin autobiografía inventada."
+    },
+    {
+      "id": "I03",
+      "pieza": "T03",
+      "decision": "seleccionada",
+      "motivo": "Noticia primaria del 10-nov: condiciones y límite de prueba; útil para distinguir anuncio de demo."
+    },
+    {
+      "id": "I04",
+      "pieza": "T04",
+      "decision": "seleccionada",
+      "motivo": "Segunda venta: decisión grupal/VIP con condiciones verificables."
+    },
+    {
+      "id": "I05",
+      "pieza": "T05",
+      "decision": "seleccionada",
+      "motivo": "Prueba A/B de claridad de mensajes; sin inferir conversión."
+    },
+    {
+      "id": "I06",
+      "decision": "descartada",
+      "motivo": "Relato sobre el día de Sergio: faltan hechos reales y permiso; usar T02 de marca."
+    },
+    {
+      "id": "I07",
+      "decision": "descartada",
+      "motivo": "Búsqueda web en Claude anunciada en marzo de 2025: no es novedad del día. Primaria consultada, no usada como noticia de esta tanda."
+    },
+    {
+      "id": "I08",
+      "decision": "reserva_evergreen",
+      "motivo": "Agenda imposible de v2 T03, rotular evergreen si no hay noticia primaria fechada; no quinto tema adicional."
+    }
+  ]
+}

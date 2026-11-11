@@ -1,0 +1,210 @@
+{
+  "schema": "onia-redaccion-guiones-v1",
+  "version": "r2",
+  "autor": {
+    "modo": "LLM_en_sesion",
+    "solicitado": "gpt-6.1-sol high",
+    "modelo_observado": null,
+    "esfuerzo_observado": null,
+    "nota": "Redacción y selección por Codex en esta sesión; sin llamada a API desde el programa. Metadatos efectivos no expuestos al ejecutor."
+  },
+  "guiones": [
+    {
+      "id": "T01",
+      "slot": "venta",
+      "titulo": "Antes de pedirle una agenda a la IA",
+      "idea": "Preparar tres datos y cotejar cuatro tareas antes de usar una agenda.",
+      "proposito": "Dar una muestra del ejercicio de ordenar e invitar a conocer la oferta.",
+      "apertura": "Si tu lista de pendientes nunca termina, prepará estos tres datos antes de pedirle una agenda a la IA.",
+      "guion_hablado": "Si tu lista de pendientes nunca termina, prepará estos tres datos antes de pedirle una agenda a la IA. Las tareas, cuánto lleva cada una y los horarios que no podés mover. Mirá esta tienda de ejemplo: caja, pedidos, inventario y entregas. Con esa ficha podés pedir una tabla con inicio y fin. Después comprobá que estén las cuatro tareas y que no se pisen los horarios. Eso vamos a practicar en Claude de 0 a 100: tu negocio con IA. Son tres clases por Google Meet: viernes 13 a las 20:00, sábado 14 a las 14:00 y lunes 16 a las 20:00, hora de La Paz. El grupal cuesta 50 bolivianos. Si te interesa el workshop, comentá NEGOCIO.",
+      "copy": "Tareas, duración y límites: prepará una entrada que puedas revisar. Ejemplo ficticio. Claude de 0 a 100: tu negocio con IA. Google Meet: 13-nov 20:00, 14-nov 14:00, 16-nov 20:00 (America/La_Paz). Grupal Bs 50. Si te interesa el workshop, comentá NEGOCIO.",
+      "cta": "Si te interesa el workshop, comentá NEGOCIO.",
+      "planos": "Cámara y tarjeta propia con caja/pedidos/inventario/entregas; rótulo «Caso ficticio» durante el ejemplo. Placa final con fechas y Bs 50. No mostrar resultado simulado como captura de Claude.",
+      "patrones": [
+        "pedro-buerbaum-p1",
+        "erik-taveras-p1",
+        "alex-hormozi-p2"
+      ],
+      "fuentes": [
+        "D11",
+        "CEREBRO",
+        "CATALOGO",
+        "V2"
+      ],
+      "seleccion_motivo": "I01 elegida: mantiene la entrada concreta de v2 T01, actualiza fechas con D11 y entrega lo que promete la apertura. Pedro orienta especificidad; Erik, orientación; Hormozi, promesa/entrega.",
+      "tipo_evidencia": "caso_ficticio_no_salida_IA",
+      "criterio": "Se ven los tres datos y las cuatro tareas; fechas y CTA coinciden en voz/copy. No promete ahorro ni respuesta inmediata.",
+      "pendientes": "Contenido revisa tono y claridad; Sergio ensaya la práctica real; Operaciones prueba NEGOCIO antes de publicación.",
+      "variantes": {
+        "vertical": {
+          "relacion": "9:16",
+          "encuadre": "Plano medio centrado; tarjeta vertical debajo del rostro, sin cortar las cuatro tareas.",
+          "texto_pantalla": "Tareas / duración / límites. Caso ficticio. Fechas en placa separada.",
+          "montaje": "Una tarjeta por dato; mantener rótulo del ejemplo y cierre con el mismo CTA de voz."
+        },
+        "horizontal": {
+          "relacion": "16:9",
+          "encuadre": "Rostro a la izquierda y ficha completa a la derecha; placa de fechas al ancho.",
+          "texto_pantalla": "Las cuatro tareas visibles juntas; tres datos arriba. Caso ficticio.",
+          "montaje": "Conservar la misma locución; no inventar otro gancho ni agregar CTA al adaptar."
+        }
+      }
+    },
+    {
+      "id": "T02",
+      "slot": "marca",
+      "titulo": "Una respuesta prolija también se revisa",
+      "idea": "Mostrar una tarea omitida y el ciclo de corrección en tarjetas escritas.",
+      "proposito": "Construir marca por criterio profesional sin contar un día de Sergio no documentado.",
+      "apertura": "¿Cómo revisás una respuesta de IA cuando parece bien escrita?",
+      "guion_hablado": "¿Cómo revisás una respuesta de IA cuando parece bien escrita? Mirá este ejemplo. La ficha pide caja, pedidos, inventario y entregas. El borrador trae caja, pedidos y entregas. Falta inventario. La corrección tiene que decir qué falta y pedir que se conserven las cuatro tareas. Después comparás de nuevo con la ficha. Acá usamos tarjetas escritas para que la omisión se vea. Cuando lo hagas con una herramienta, guardá la entrada y las dos versiones: así podés explicar qué cambió. Guardá esta lista: comparar, marcar lo que falta, pedir el ajuste y volver a revisar.",
+      "copy": "Entrada, borrador y corrección. Ejemplo escrito ficticio: falta inventario; no es una salida real de IA ni un relato del día de Sergio. Guardá esta lista: comparar, marcar lo que falta, pedir el ajuste y volver a revisar.",
+      "cta": "Guardá esta lista: comparar, marcar lo que falta, pedir el ajuste y volver a revisar.",
+      "planos": "Tres tarjetas propias: entrada con cuatro tareas, borrador con tres y corrección con cuatro. Resaltar inventario. Rótulo «Ejemplo escrito ficticio; no salida real de IA».",
+      "patrones": [
+        "jeff-nippard-p2",
+        "san-munoz-p1"
+      ],
+      "fuentes": [
+        "CEREBRO",
+        "CATALOGO",
+        "V2"
+      ],
+      "seleccion_motivo": "I02 elegida: reusa v2 T02. Jeff aporta acción/motivo/ajuste y San comparación de una misma entrada. La transferencia es comunicativa; no demuestra aprendizaje real.",
+      "tipo_evidencia": "caso_ficticio_no_salida_IA",
+      "criterio": "La omisión y su corrección son legibles en ambos formatos. No atribuye al autor experiencia o resultado real.",
+      "pendientes": "Falta relato real de Sergio: tarea de hoy, entrada saneada, borrador, error, corrección y permiso. Hasta recibirlo, mantener esta pieza de marca sin autobiografía.",
+      "variantes": {
+        "vertical": {
+          "relacion": "9:16",
+          "encuadre": "Cámara arriba y tarjetas sucesivas abajo, con inventario resaltado sin cubrirlo con subtítulos.",
+          "texto_pantalla": "Entrada: 4 / borrador: 3 / corrección: 4. Ejemplo escrito ficticio.",
+          "montaje": "Detenerse en la omisión antes de revelar la tercera tarjeta; dejar tiempo de lectura a ensayar."
+        },
+        "horizontal": {
+          "relacion": "16:9",
+          "encuadre": "Tres tarjetas en fila; el rostro pequeño al costado, sin tapar listas.",
+          "texto_pantalla": "Comparar → marcar → ajustar → revisar. Ejemplo escrito ficticio.",
+          "montaje": "Iluminar una tarjeta por etapa con la misma voz y el mismo CTA."
+        }
+      }
+    },
+    {
+      "id": "T03",
+      "slot": "noticia_ia",
+      "titulo": "Sheets en Claude: anuncio y prueba son pasos distintos",
+      "idea": "Explicar una novedad fechada con su condición de acceso y una comprobación pendiente.",
+      "proposito": "Aportar actualidad útil y enseñar a distinguir el anuncio del uso probado.",
+      "apertura": "Claude sumó hojas de cálculo, pero revisá las condiciones antes de contarlo como una herramienta lista para tu negocio.",
+      "guion_hablado": "Claude sumó hojas de cálculo, pero revisá las condiciones antes de contarlo como una herramienta lista para tu negocio. El 10 de noviembre de 2026, Anthropic anunció Claude Sheets y Whiteboards en beta para planes pagos. En Sheets, la empresa describe pestañas y fórmulas. Acá no lo probamos en una cuenta. Para evaluar si te sirve, prepará una tabla ficticia, definí qué debería calcular y revisá el resultado cuando tengas acceso. Es una comprobación propuesta; no una demo ni una prestación prometida del workshop. Guardá esta pregunta: ¿estoy viendo un anuncio o una herramienta que ya probé?",
+      "copy": "Anuncio primario publicado 2026-11-10: https://claude.com/resources/articles/sheets-whiteboards-data. Beta y planes pagos; no probado en cuenta propia ni incluido como promesa del workshop. Guardá esta pregunta: ¿estoy viendo un anuncio o una herramienta que ya probé?",
+      "cta": "Guardá esta pregunta: ¿estoy viendo un anuncio o una herramienta que ya probé?",
+      "planos": "Cámara y placa editorial de texto con título, fecha y dominio de la fuente. Si se abre la página, usar captura auténtica después de revisión. No recrear interfaz ni resultados de Claude. Rótulo «Anuncio del proveedor · no demo propia».",
+      "patrones": [
+        "iman-gadzhi-p1",
+        "alex-hormozi-p2"
+      ],
+      "fuentes": [
+        "N10",
+        "CATALOGO"
+      ],
+      "seleccion_motivo": "I03 elegida por hecho primario del 10-nov y utilidad para evaluar herramientas. Iman orienta tesis/consecuencia/ejemplo y Hormozi limita la promesa del gancho. No se usó el anuncio antiguo N25 como novedad.",
+      "tipo_evidencia": "anuncio_primario_no_demo",
+      "criterio": "Fecha visible; condición beta/pago; anuncio atribuido; prueba propia explicitada como pendiente. Si caduca la fuente, sustituir por evergreen rotulado.",
+      "pendientes": "Contenido coteja el anuncio antes de usar; disponibilidad y cálculo real pendientes. No se probó la interfaz ni se habilita gasto.",
+      "variantes": {
+        "vertical": {
+          "relacion": "9:16",
+          "encuadre": "Rostro centrado con placa de fecha debajo y fuente en zona legible.",
+          "texto_pantalla": "10-nov-2026 · Beta / planes pagos · Anuncio del proveedor, no demo.",
+          "montaje": "Tres placas secuenciales: fecha, condición y comprobación; conservar URL en copy."
+        },
+        "horizontal": {
+          "relacion": "16:9",
+          "encuadre": "Rostro a la izquierda y placa editorial a la derecha; no simular una hoja de Claude.",
+          "texto_pantalla": "Fuente: claude.com · 10-nov-2026 · No probado en cuenta propia.",
+          "montaje": "Mostrar el mismo anuncio y la misma condición con la misma voz; no añadir prestaciones."
+        }
+      }
+    },
+    {
+      "id": "T04",
+      "slot": "venta",
+      "titulo": "Grupal o VIP: elegí según lo que necesitás",
+      "idea": "Diferenciar la práctica grupal de una llamada privada sobre el caso de la persona.",
+      "proposito": "Facilitar la elección comercial sin inventar escasez restante ni garantías.",
+      "apertura": "¿Querés practicar en grupo o revisar tu caso en una llamada privada?",
+      "guion_hablado": "¿Querés practicar en grupo o revisar tu caso en una llamada privada? En Claude de 0 a 100: tu negocio con IA, el grupal cuesta 50 bolivianos. El VIP cuesta 150 e incluye una llamada privada de 30 minutos para ver tu caso de negocio o personal. El VIP tiene cinco cupos; eso no dice cuántos quedan disponibles. Las clases son por Google Meet: viernes 13 a las 20:00, sábado 14 a las 14:00 y lunes 16 a las 20:00, hora de La Paz. Para inscribirte, se envía QR y seguimiento. Sergio confirma cada pago: una captura sola no confirma tu inscripción. Si te interesa el workshop, comentá NEGOCIO.",
+      "copy": "Claude de 0 a 100: tu negocio con IA. Grupal Bs 50; VIP Bs 150, 5 cupos totales y llamada privada de 30 min. Disponibilidad restante por confirmar. Google Meet: 13-nov 20:00, 14-nov 14:00 y 16-nov 20:00, America/La_Paz. QR y seguimiento; Sergio confirma cada pago. Si te interesa el workshop, comentá NEGOCIO.",
+      "cta": "Si te interesa el workshop, comentá NEGOCIO.",
+      "planos": "Cámara con dos placas: grupal/VIP; placa de fechas; cierre sobre confirmación manual. Sin QR, datos de personas, enlaces privados o contador de cupos restantes.",
+      "patrones": [
+        "pedro-buerbaum-p1",
+        "justin-welsh-p4"
+      ],
+      "fuentes": [
+        "D11",
+        "CATALOGO",
+        "V2"
+      ],
+      "seleccion_motivo": "I04 elegida: v2 T04 aporta comparación de opciones; Pedro ayuda a concretar la entrega y Justin a mantener una sola acción. Condiciones actualizadas por D11.",
+      "tipo_evidencia": "oferta_documentada_no_venta",
+      "criterio": "Precios, cinco cupos totales, llamada y fechas concordantes. No inferir plazas libres, pagos ni resultados.",
+      "pendientes": "Operaciones confirma disponibilidad y prueba recorrido. Contenido revisa condiciones; Sergio revisa y ensaya antes de publicar.",
+      "variantes": {
+        "vertical": {
+          "relacion": "9:16",
+          "encuadre": "Plano medio; alternar placa grupal/VIP a pantalla completa para leer precios.",
+          "texto_pantalla": "Grupal Bs 50 / VIP Bs 150 · 5 cupos totales · 30 min · Pago confirma Sergio.",
+          "montaje": "Una comparación y una placa de fechas; repetir CTA de voz sin QR ni enlace adicional."
+        },
+        "horizontal": {
+          "relacion": "16:9",
+          "encuadre": "Rostro al centro con tarjetas grupal/VIP a los lados, fechas en placa posterior.",
+          "texto_pantalla": "VIP: llamada privada sobre tu caso; disponibilidad por confirmar.",
+          "montaje": "Conservar toda la comparación y el cierre; no sustituirlo por testimonio o escasez."
+        }
+      }
+    },
+    {
+      "id": "T05",
+      "slot": "prueba",
+      "titulo": "¿Qué mensaje te deja decidir?",
+      "idea": "Comparar dos mensajes ficticios de una panadería para observar claridad percibida.",
+      "proposito": "Recoger una señal futura de comprensión sin afirmar conversión ni ventas.",
+      "apertura": "¿Cuál de estos mensajes te deja saber qué podés pedir?",
+      "guion_hablado": "¿Cuál de estos mensajes te deja saber qué podés pedir? A: tenemos cosas ricas, consultanos. B: recibimos pedidos de pan integral para retirar el sábado; consultá disponibilidad. Son mensajes inventados para esta prueba. B da un producto y una forma de entrega, pero todavía habría que confirmar precio y cantidad antes de comprar. No tenemos resultados: queremos saber cuál entendés mejor. Si después se publica esta pieza con permiso, las respuestas mostrarían claridad percibida; no probarían qué mensaje vende más. Comentá A o B según cuál mensaje entendés mejor.",
+      "copy": "Ejemplo escrito ficticio. A: «Tenemos cosas ricas, consultanos». B: «Recibimos pedidos de pan integral para retirar el sábado; consultá disponibilidad». Falta precio/cantidad, no es una oferta real. Comentá A o B según cuál mensaje entendés mejor.",
+      "cta": "Comentá A o B según cuál mensaje entendés mejor.",
+      "planos": "Tarjetas propias A y B, mismo tamaño y tiempo de lectura a ensayar. Rótulo «Mensajes ficticios · prueba de claridad, sin resultados». No mostrar clientes ni métricas inventadas.",
+      "patrones": [
+        "pedro-buerbaum-p1",
+        "justin-welsh-p4",
+        "san-munoz-p1"
+      ],
+      "fuentes": [
+        "CEREBRO",
+        "CATALOGO",
+        "V2"
+      ],
+      "seleccion_motivo": "I05 elegida: conserva el contraste A/B de v2 T05, concreta entrega con Pedro y una acción con Justin. San orienta mantener entrada y condiciones de comparación; no convierte comentarios en experimento controlado.",
+      "tipo_evidencia": "hipotesis_prueba_sin_resultados",
+      "criterio": "Dos mensajes legibles y un CTA. Definir ventana antes de publicar y registrar A/B/otras respuestas únicas; no llamar ganador comercial.",
+      "pendientes": "Contenido propone ventana de 48 h desde publicación autorizada. No ejecutada. Operaciones define conteo deduplicado y Sergio decide publicación; no hay audiencia medida.",
+      "variantes": {
+        "vertical": {
+          "relacion": "9:16",
+          "encuadre": "Tarjetas A y B sucesivas en el mismo lugar y tamaño, rostro fuera del texto.",
+          "texto_pantalla": "A / B · Ejemplo ficticio · Sin resultados.",
+          "montaje": "Dar el mismo tiempo de lectura a ambas; cierre A o B sin otra invitación."
+        },
+        "horizontal": {
+          "relacion": "16:9",
+          "encuadre": "Tarjetas A y B lado a lado con tamaño y jerarquía iguales.",
+          "texto_pantalla": "¿Cuál entendés mejor? No es medición de ventas.",
+          "montaje": "Misma locución y duración de exposición por tarjeta; adaptar posiciones sin crear otra idea."
+        }
+      }
+    }
+  ]
+}

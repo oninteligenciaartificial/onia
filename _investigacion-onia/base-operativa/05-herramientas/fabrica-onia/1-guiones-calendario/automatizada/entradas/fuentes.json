@@ -1,0 +1,77 @@
+{
+  "schema": "onia-fuentes-guiones-v1",
+  "items": [
+    {
+      "id": "D11",
+      "tipo": "local",
+      "titulo": "DECISIONES-SERGIO-20261110.md",
+      "ruta": "05-herramientas/fabrica-onia/DECISIONES-SERGIO-20261110.md",
+      "sha256": "db0adcee868c465496c8b93a61b6eb2edeb4cc5d83c09ef5535fa83af4379ba4",
+      "consultada": "2026-11-11T13:34:35.430377+00:00",
+      "localizador": "Confirmaciones directas en Codex y primera tanda autorizada",
+      "limites": "Los horarios históricos del mismo archivo están sustituidos."
+    },
+    {
+      "id": "CEREBRO",
+      "tipo": "local",
+      "titulo": "GUIA-APLICADA.md",
+      "ruta": "03-referentes/cerebro-operativo/20261109/GUIA-APLICADA.md",
+      "sha256": "8ce27a58c756107dea98d2e224a1e2cbc03b8eb44c70288a0e2161b13643241a",
+      "consultada": "2026-11-11T13:34:35.430377+00:00",
+      "localizador": "Ordenar una mañana; Enseñar mediante una corrección; Recuperar una idea",
+      "limites": "Propuestas OnIA y límites heredados, no resultados de alumnos."
+    },
+    {
+      "id": "CATALOGO",
+      "tipo": "local",
+      "titulo": "catalogo.json",
+      "ruta": "03-referentes/cerebro-operativo/20261109/catalogo.json",
+      "sha256": "c8f3237fcca33bd2b6a1be430e05175f50bd192f1fe429867fb414b8b8577007",
+      "consultada": "2026-11-11T13:34:35.430377+00:00",
+      "localizador": "Patrones por ID, fuentes/pasajes validados por consultar.py",
+      "limites": "Integridad documental no valida transferencia a esta audiencia."
+    },
+    {
+      "id": "V2",
+      "tipo": "local",
+      "titulo": "guiones-panel.json",
+      "ruta": "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v2/guiones-panel.json",
+      "sha256": "e0b2733d7dd759e4cc22220d2ceb1d2c5ea7959a4fac0314505cbe574263888e",
+      "consultada": "2026-11-11T13:34:35.430377+00:00",
+      "localizador": "T01, T02, T04, T05; T03 reserva evergreen",
+      "limites": "Lectura histórica; fechas sustituidas, sin heredar aprobación editorial."
+    },
+    {
+      "id": "N10",
+      "tipo": "web_primaria",
+      "primaria": true,
+      "titulo": "Introducing Claude Whiteboards, Claude Sheets, and Claude Data",
+      "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+      "publicada": "2026-11-10",
+      "fecha_hecho": "2026-11-10",
+      "consultada": "2026-11-11T13:34:35.430377+00:00",
+      "localizador": "Fecha; introducción y sección Claude Sheets, líneas 21–51 de lectura web; no se reprodujo demo.",
+      "hechos": [
+        "La empresa anuncia Sheets y Whiteboards en beta para planes pagos",
+        "La sección Sheets describe pestañas y fórmulas"
+      ],
+      "limites": "Anuncio del proveedor; disponibilidad en cuenta propia, calidad y uso en el workshop no probados. No es noticia del 11 ni promesa de herramienta gratis."
+    },
+    {
+      "id": "N25",
+      "tipo": "web_primaria",
+      "primaria": true,
+      "titulo": "Claude can now search the web",
+      "url": "https://claude.com/resources/articles/web-search",
+      "publicada": "2025-03-20",
+      "fecha_hecho": "2025-03-20",
+      "consultada": "2026-11-11T13:34:35.430377+00:00",
+      "localizador": "Encabezado y fecha, líneas 21–35; candidata rechazada por antigüedad.",
+      "hechos": [
+        "Fecha de anuncio 20 de marzo de 2025"
+      ],
+      "limites": "Descartada para noticia reciente; no se derivan prestaciones actuales ni se usa en voz."
+    }
+  ],
+  "metodo": "Herramienta web: búsqueda acotada, apertura primaria y enlace a anuncio del 10-nov; sin investigación general ni prueba de producto. Selección editorial manual del LLM."
+}
