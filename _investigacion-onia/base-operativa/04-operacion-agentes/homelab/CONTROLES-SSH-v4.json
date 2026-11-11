@@ -1,0 +1,17 @@
+{
+  "tty_denegado": true,
+  "forward_remoto_denegado": true,
+  "sin_llave_denegado": true,
+  "aislamiento_adicional": {
+    "/mnt/c/Windows": true,
+    "/proc/1/root/mnt/c/Windows": true,
+    "/proc/self/root/mnt/c/Windows": true,
+    "/run/WSL": true,
+    "/home/onia-codex-worker": true,
+    "enlace_windows_denegado": true,
+    "sudo_ausente": true,
+    "pe_denegado": true,
+    "sin_fds_mayores_2": true
+  },
+  "forward_directo_denegado": true
+}
