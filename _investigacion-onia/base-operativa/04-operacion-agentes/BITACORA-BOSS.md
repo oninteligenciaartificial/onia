@@ -2,6 +2,14 @@
 
 Qué hizo Boss, por qué, en qué estado quedó y qué sigue. La más reciente va primero. Los estados de tareas se consultan sólo en el harness; esto es contexto, no estado canónico.
 
+## 11 nov 2026 · flujo diario probado hasta revisión editorial (Codex)
+
+- Panel Propuesta 1 autorizado e integrado. Flujo final `9a4639f245d4cf3d0f3ab3e22403fabe80e0d43b`, tarea `fabrica-automatizaciones-flujo-diario-20261111`, revisión independiente buena recogida en r41. Dictamen en master `5ccc637`; código del flujo y dependencia del generador todavía en rama, con autorización de integración consultada a Sergio y pendiente. No confundir publicar el dictamen con integrar el producto.
+- Ensayo real `guiones-tanda-diaria-20261111`: una escritora y una revisora, producto `3d50b8211f4cc5d86c3dc30994753f18a20cac21`, revisión buena recogida en r16. Cinco guiones y veinte ideas; T03 evergreen motivado. Cadena llegó a revisión editorial pendiente. Repetir el tick conservó exactamente la tarea y ambas sesiones, sin nueva tanda.
+- Comprobados contratos, rechazos ante fecha/cantidad/hash alterados y panel real en escritorio/móvil. Evidencia, imágenes y límites: [REVISION-COORDINADORA](evidencias/flujo-diario-real-20261111/REVISION-COORDINADORA.md). La operación por horario NO está activada ni probada como servicio permanente.
+- Se conciliaron decisiones canónicas antiguas antes de lanzar, conservando copia y evidencia, y respuestas iniciales sin SID cotejando la sesión existente. No reintentar con otro ID. Se corrigió una etiqueta técnica que seguía pendiente aun con dictamen bueno.
+- Quedan para Sergio: aprobación de integración del flujo y hora de tanda; activar exige un disparo real del servicio y comprobar supervivencia de la supervisora. No reactivar las 07:00 históricas ni suponer modelo disponible después del 14. Revisión editorial, locución, CTA NEGOCIO y canales de venta siguen pendientes; no presentar el ensayo como venta real. Ninguna tarea de esta cadena quedó ejecutándose al recoger sus revisiones.
+
 ## 11 nov 2026 · panel Propuesta 1 integrado con autorización (Codex)
 
 - Sergio autorizó expresamente «Sí, integrar ese panel», correspondiente a `94cca9bfaeba72ad6eee8bcf87db30d8c4d28083`. El panel, con revisión independiente favorable, quedó en `origin/master` mediante `05b5d1e2ecf68dc9dda34742f107ad8dcd722084`; hash remoto comprobado. El guardado inicial ya fue corregido y probado en navegador, incluida persistencia tras reinicio.
