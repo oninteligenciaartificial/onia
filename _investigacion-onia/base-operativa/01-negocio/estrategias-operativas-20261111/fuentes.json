@@ -56,8 +56,8 @@
       "id": "S08",
       "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/operacion.py",
       "localizador": "PRODUCERS; relative_path; load_export",
-      "sha256": "11549031ed84222bc7c9368452d30471535b8ed6d19d3cab3273b5211b987de0",
-      "bytes": 13315
+      "sha256": "3e3052efecd5f14875ffeee82398ed4394d735b1f1388babfe0a5b8f8032db42",
+      "bytes": 14922
     },
     {
       "id": "S09",
@@ -120,5 +120,17 @@
         "despues": "f7acb59c681db5b357d16e648e26e6b18a2f9fcba77440aa639bec614da0c402"
       }
     ]
+  },
+  "conciliacion_panel": {
+    "fecha": "2026-11-11T22:02:00.044544+00:00",
+    "panel": "74563b8f9f577846c8689931c91889fe04027de1",
+    "cambios": [
+      {
+        "id": "S08",
+        "antes": "11549031ed84222bc7c9368452d30471535b8ed6d19d3cab3273b5211b987de0",
+        "despues": "3e3052efecd5f14875ffeee82398ed4394d735b1f1388babfe0a5b8f8032db42"
+      }
+    ],
+    "criterio": "Diff leído: productor estrategias y correcciones idempotentes; sin modificar oferta ni piezas."
   }
 }

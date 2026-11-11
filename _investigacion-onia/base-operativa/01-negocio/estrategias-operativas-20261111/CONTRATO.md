@@ -8,9 +8,9 @@ Productor documental: `estrategias`. Raíz única: `01-negocio/estrategias-opera
 
 `estado-fabrica.json` conserva la forma `onia-fabrica-estado-v1` con id, fábrica, estado descriptivo, fecha, fuente, pasos, entregables y pendientes. Su estado `para_revision` describe el paquete; no escribe ni refleja automáticamente estado canónico del harness. El consumidor debe distinguir validación de estructura, revisión independiente técnica, editorial, autorización comercial, publicación y cobro. En esta entrega revisiones y permisos comerciales son null/pendientes.
 
-## Incorporación al panel existente, pendiente
+## Incorporación original al panel — antecedente previo a74563b8
 
-El parser de [operacion.py](../../05-herramientas/fabrica-contenido/20261109-lector-panel/operacion.py) en el commit base sólo permite productores guiones/whatsapp/panel y sus raíces. **El export de esta ruta es rechazado hoy**. No presentarlo como importado o visible en el teléfono. No etiquetarlo como `panel` o `guiones` para saltar el control ni copiarlo bajo otra raíz.
+El parser de [operacion.py](../../05-herramientas/fabrica-contenido/20261109-lector-panel/operacion.py) en el commit base sólo permite productores guiones/whatsapp/panel y sus raíces. **El export era rechazado en la entrega original**. No presentarlo como importado o visible en el teléfono. No etiquetarlo como `panel` o `guiones` para saltar el control ni copiarlo bajo otra raíz.
 
 Cambio mínimo propuesto a la escritora única del panel, en su alcance: admitir explícitamente el productor `estrategias` y su raíz, mantener validación de rutas/tamaños/symlinks, seleccionar el export mediante lista explícita y mostrarlo en el apartado de estrategias del panel existente. Añadir una clave al mapa de productores sólo permite leerlo: su vista también debe usarlo; no confundir parser con interfaz integrada. No requiere otra fábrica ni otro panel. Coordinación decide cómo incorporar el contrato a esa tarea; esta ejecutora no crea hijos o tareas.
 
@@ -32,3 +32,5 @@ El comprobador ejecuta sin servicios dos controles: parser actual rechaza el exp
 Las dos versiones mantienen revisión editorial null. Una aprobación hipotética de v1 no valida v2. Piezas dependientes requieren revisión nueva sobre versión/hash; si ya estuvieran publicadas, el operador concilia su estado antes de reemplazar. La prueba negativa cambia v2 en memoria a `aprobado` y exige rechazo. No se añade esa hora histórica a ninguna pieza vigente; sólo vive en el objeto explícito del ejemplo.
 
 La corrección registra un cambio verificable, no aprendizaje ya probado en producción. Enseña conservación del original y necesidad de revisión, sin autoaprobar ni modificar memoria general o skills ajenas a la ruta asignada.
+
+Estado posterior: [integración local y conciliaciónS08](INTEGRACION-PANEL-20261111.md). El consumidor ya reconoce la raíz; no concede aprobación editorial ni comercial.

@@ -202,25 +202,19 @@ def run():
     sys.path.insert(0, str(panel_path))
     panel = importlib.import_module('operacion')
     export_path = REL + '/estado-fabrica.json'
-    # Caso observado del parser vigente; es un límite esperado, no un error oculto.
-    negative('panel_actual_rechaza_productor_nuevo', lambda: panel.load_export(export_path, {}, {}))
-    original_producers = panel.PRODUCERS
-    try:
-        panel.PRODUCERS = {**original_producers, 'estrategias': REL}
-        docs, targets = {}, {}
-        loaded = panel.load_export(export_path, docs, targets)
-        require(loaded['fabrica'] == 'estrategias' and all(d['documento']['disponible'] for d in loaded['entregables']),
-                'Export incompleto bajo ampliación en memoria')
-        require(len(targets) == len(loaded['pasos']) + len(loaded['entregables']), 'Targets incompletos')
-        for row in read('estado-fabrica.json')['pasos']:
-            for evidence in row['evidencias']:
-                local(evidence, own=True)
-        CHECKS.append({'control': 'panel_forma_compatible_con_mapa_solo_en_memoria', 'resultado': 'correcto',
-                       'documentos': len(docs), 'targets': len(targets), 'integracion_real': False})
-        negative('panel_rechaza_documento_fuera_raiz', lambda: panel.relative_path(
-            '04-operacion-agentes/reglas-comunes.md', [REL]))
-    finally:
-        panel.PRODUCERS = original_producers
+    require(panel.PRODUCERS.get('estrategias') == REL, 'Falta consumidor real de estrategias')
+    docs, targets = {}, {}
+    loaded = panel.load_export(export_path, docs, targets)
+    require(loaded['fabrica'] == 'estrategias' and all(d['documento']['disponible'] for d in loaded['entregables']),
+            'Export incompleto en consumidor real')
+    require(len(targets) == len(loaded['pasos']) + len(loaded['entregables']), 'Targets incompletos')
+    for row in read('estado-fabrica.json')['pasos']:
+        for evidence in row['evidencias']:
+            local(evidence, own=True)
+    CHECKS.append({'control': 'panel_consumidor_real', 'resultado': 'correcto',
+                   'documentos': len(docs), 'targets': len(targets), 'integracion_real': True})
+    negative('panel_rechaza_documento_fuera_raiz', lambda: panel.relative_path(
+        '04-operacion-agentes/reglas-comunes.md', [REL]))
 
     # Control del alcance real del checkout; no consulta otro almacén Git.
     status = subprocess.run(['git', 'status', '--porcelain', '-z', '--untracked-files=all'],
@@ -240,7 +234,7 @@ def run():
             'commit_fuentes': data['commit_base'], 'controles': CHECKS,
             'limites': ['Sin revisión independiente/editorial ni ensayo de voz',
                         'Sin cuentas/CTA/pago/acceso real probados ni autorización comercial',
-                        'Panel actual rechaza nueva raíz; ampliación únicamente en memoria',
+                        'Consumidor local real probado; servicio y teléfono no acreditados por este comprobador',
                         'Revisión auxiliar de secretos no sustituye inspección humana']}
 
 

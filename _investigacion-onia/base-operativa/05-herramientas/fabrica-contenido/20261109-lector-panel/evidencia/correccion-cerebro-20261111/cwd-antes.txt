@@ -1,0 +1,87 @@
+test_absent_invalid_and_schema_reference_rejected (test_cerebro.StrategyTests.test_absent_invalid_and_schema_reference_rejected) ... ERROR
+test_changed_business_source_path_escape_and_fake_approval_rejected (test_cerebro.StrategyTests.test_changed_business_source_path_escape_and_fake_approval_rejected) ... ERROR
+test_published_export_valid_future_proposals_and_source_hashes (test_cerebro.StrategyTests.test_published_export_valid_future_proposals_and_source_hashes) ... ERROR
+test_s01_required_even_when_all_references_removed (test_cerebro.StrategyTests.test_s01_required_even_when_all_references_removed) ... ERROR
+test_strategy_piece_malicious_text_is_inert_in_view (test_cerebro.StrategyTests.test_strategy_piece_malicious_text_is_inert_in_view) ... ERROR
+
+======================================================================
+ERROR: test_absent_invalid_and_schema_reference_rejected (test_cerebro.StrategyTests.test_absent_invalid_and_schema_reference_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onia-codex-worker/repos/onia-ws-cerebro-panel-usable-20261109/_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/test_cerebro.py", line 302, in setUp
+    sources=json.loads((self.base/cerebro.STRATEGY_ROOT/'fuentes.json').read_text())
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/onia-estrategias-contrato-kpemqo6p/01-negocio/estrategias-operativas-20261111/fuentes.json'
+
+======================================================================
+ERROR: test_changed_business_source_path_escape_and_fake_approval_rejected (test_cerebro.StrategyTests.test_changed_business_source_path_escape_and_fake_approval_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onia-codex-worker/repos/onia-ws-cerebro-panel-usable-20261109/_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/test_cerebro.py", line 302, in setUp
+    sources=json.loads((self.base/cerebro.STRATEGY_ROOT/'fuentes.json').read_text())
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/onia-estrategias-contrato-v49dvt5t/01-negocio/estrategias-operativas-20261111/fuentes.json'
+
+======================================================================
+ERROR: test_published_export_valid_future_proposals_and_source_hashes (test_cerebro.StrategyTests.test_published_export_valid_future_proposals_and_source_hashes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onia-codex-worker/repos/onia-ws-cerebro-panel-usable-20261109/_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/test_cerebro.py", line 302, in setUp
+    sources=json.loads((self.base/cerebro.STRATEGY_ROOT/'fuentes.json').read_text())
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/onia-estrategias-contrato-n20hbcfs/01-negocio/estrategias-operativas-20261111/fuentes.json'
+
+======================================================================
+ERROR: test_s01_required_even_when_all_references_removed (test_cerebro.StrategyTests.test_s01_required_even_when_all_references_removed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onia-codex-worker/repos/onia-ws-cerebro-panel-usable-20261109/_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/test_cerebro.py", line 302, in setUp
+    sources=json.loads((self.base/cerebro.STRATEGY_ROOT/'fuentes.json').read_text())
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/onia-estrategias-contrato-hq82n2w2/01-negocio/estrategias-operativas-20261111/fuentes.json'
+
+======================================================================
+ERROR: test_strategy_piece_malicious_text_is_inert_in_view (test_cerebro.StrategyTests.test_strategy_piece_malicious_text_is_inert_in_view)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onia-codex-worker/repos/onia-ws-cerebro-panel-usable-20261109/_investigacion-onia/base-operativa/05-herramientas/fabrica-contenido/20261109-lector-panel/test_cerebro.py", line 302, in setUp
+    sources=json.loads((self.base/cerebro.STRATEGY_ROOT/'fuentes.json').read_text())
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/onia-estrategias-contrato-ll6z2ezv/01-negocio/estrategias-operativas-20261111/fuentes.json'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.057s
+
+FAILED (errors=5)
+
+rc=1

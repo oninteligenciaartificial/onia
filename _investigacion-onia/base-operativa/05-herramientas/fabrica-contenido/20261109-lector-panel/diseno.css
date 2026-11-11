@@ -128,12 +128,14 @@ p+p {
 .sidebar a {
   display:flex;
   align-items:center;
-  gap:15px;
+  gap:10px;
   min-height:52px;
-  padding:12px 15px;
+  padding:12px 10px;
   border-radius:11px;
-  font-size:17px;
-  line-height:1.3
+  font-size:15px;
+  line-height:1.3;
+  overflow-wrap:normal;
+  word-break:normal
 }
 .sidebar a:hover {
   background:#f1ece5
@@ -964,3 +966,48 @@ input:focus,textarea:focus,select:focus {
 }
 
 details[id^="revision-"]:target { scroll-margin-top:80px; }
+.section-correct {
+  float: right;
+  font-size: 12px;
+  padding: 7px 9px;
+  margin: 0 0 12px 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  color: #6e501d;
+}
+.section-gap {
+  margin-top: 26px;
+}
+.table-wrap {
+  overflow-wrap: anywhere;
+}
+.knowledge-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.knowledge-table th, .knowledge-table td {
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  padding: 10px 6px;
+}
+.knowledge-table th {
+  width: 34%;
+}
+.correction-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+@media (max-width: 860px) {
+  .section-correct {
+    float: none;
+    display: inline-block;
+    margin-left: 0;
+  }
+  .knowledge-table th, .knowledge-table td {
+    display: block;
+    width: 100%;
+  }
+}
