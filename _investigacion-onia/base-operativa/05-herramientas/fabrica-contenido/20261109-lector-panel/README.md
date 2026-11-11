@@ -1,5 +1,9 @@
 # Lector manual y panel de consulta de la fábrica
 
+## Ampliación del 11 de noviembre de 2026
+
+La [GUIA-REVISION](GUIA-REVISION.md) contiene el acceso al panel ampliado, el modo temporal de revisión persistente, comandos, pruebas y dependencias pendientes. El [preview vigente de esta entrega](evidencia/operacion-20261111/preview-final/panel.html) conserva la tanda histórica y los fixtures identificados. Los apartados siguientes documentan las entregas anteriores.
+
 9/11/2026 UTC · encargo `fabrica-lector-panel-20261109`. Implementación local con Python stdlib y Playwright ya instalado en el VPS. Directora `desarrollar-y-verificar`, anunciada en el catálogo y leída desde su fuente canónica. Sin hijos ni instalaciones.
 
 Funciona: consulta pública real de tres páginas oficiales —dos guías y una noticia—, snapshot saneado, proyección de tres registros únicos y dos guiones reales, HTML autónomo y 22 pruebas sin red. **Corrección visual comprobada, lista para revisión independiente.** Se añadió únicamente `overflow-wrap:anywhere` a `body`. El host autorizado del coordinador ejecutó los cinco casos con Chromium1252 y sandbox; esta ejecutora abrió e inspeccionó las cinco capturas. [Comprobación final](evidencia/COMPROBACION-03.json), [capturas y alcance](evidencia/host-02/INSPECCION.md).

@@ -29,7 +29,7 @@ def snapshot(path):
         if (hashlib.sha256(raw).hexdigest() != row.get('sha256') or
                 len(raw) != row.get('bytes') or raw.decode() != row.get('texto')):
             raise ValueError('El guion difiere de su paquete; reconciliar antes de mostrar')
-        output.append({**row, 'version': 'tanda v2', 'revision_tecnica': None,
+        output.append({**row, 'version': row.get('version', path.parent.name), 'revision_tecnica': None,
                        'integridad': 'pendiente_revision',
                        'error': 'Bytes cotejados con la tanda local; no acredita aceptación ni publicación.',
                        'origen': str(source.relative_to(lector.BASE))})

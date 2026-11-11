@@ -1,0 +1,81 @@
+{
+  "schema": "onia-fabrica-estado-v1",
+  "id": "cerebro-panel-usable-20261109",
+  "fabrica": "panel",
+  "estado": "para_revision",
+  "generado": "2026-11-11T13:39:45.260692+00:00",
+  "fuente": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION.md",
+  "pasos": [
+    {
+      "id": "procedencia",
+      "nombre": "Conservar lector22 y tanda3 con procedencia",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/pruebas.txt"
+      ]
+    },
+    {
+      "id": "recorrido",
+      "nombre": "Probar tarea, corrección, reinicio y original conservado en ensayo local",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/pruebas.txt",
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/recorrido-cli.json"
+      ]
+    },
+    {
+      "id": "seguridad",
+      "nombre": "Validar contratos, rutas, XSS y concurrencia local",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/pruebas.txt"
+      ]
+    },
+    {
+      "id": "visual",
+      "nombre": "Comprobar escritorio y móvil con Chromium existente",
+      "estado": "bloqueado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/visual/resultado.json"
+      ]
+    },
+    {
+      "id": "revision",
+      "nombre": "Revisión de Sergio y coordinadora sobre la entrega publicada",
+      "estado": "pendiente",
+      "evidencias": []
+    }
+  ],
+  "entregables": [
+    {
+      "nombre": "Panel ampliado · preview fechado",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/operacion-20261111/preview-final/panel.html"
+    },
+    {
+      "nombre": "Guía y recorrido para Sergio",
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION.md"
+    }
+  ],
+  "pendientes": [
+    {
+      "motivo": "Chromium falla al arrancar con sandbox habilitado en este entorno",
+      "responsable": "Coordinadora con host compatible",
+      "siguiente": "Ejecutar visual-operacion.cjs y revisar desktop y móvil"
+    },
+    {
+      "motivo": "Exports nuevos de guiones y WhatsApp todavía ausentes en este checkout",
+      "responsable": "Productores y coordinadora",
+      "siguiente": "Añadir las rutas explícitas de estado-fabrica.json y el nuevo guiones-panel.json al invocar servidor.py"
+    },
+    {
+      "motivo": "La tanda v2 conserva horarios históricos",
+      "responsable": "Contenido y Sergio",
+      "siguiente": "Revisar la tanda nueva con fechas confirmadas antes de usarla para la venta"
+    },
+    {
+      "motivo": "Revisión humana solicitada al entregar esta primera tanda",
+      "responsable": "Sergio y coordinadora",
+      "siguiente": "Revisar el commit publicado y decidir la continuación"
+    }
+  ]
+}
