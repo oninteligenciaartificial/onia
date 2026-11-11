@@ -1,3 +1,5 @@
+> Actualización de la coordinadora: preparación revisada e integrada; ver [cierre y dictámenes](CIERRE-PREPARACION-v4-20261111.md). Las menciones de revisión pendiente más abajo describen el estado original de la entrega. Homelab real continúa pendiente.
+
 # Retoma v4 del corte de montaje WSL
 
 Preparada para el encargo `homelab-conexion-20261109`, desde `f4479eb301c0b5364021fbbed0183d99c4685d13`. **Pendiente revisión independiente del commit de entrega y publicación de la coordinadora en master. No aplicada en la PC. HOMELAB sigue sin aceptación.** La autorización existente permite continuar esta misma alta; no se necesita otro permiso general. La ejecución administrativa local corresponde a Sergio.
