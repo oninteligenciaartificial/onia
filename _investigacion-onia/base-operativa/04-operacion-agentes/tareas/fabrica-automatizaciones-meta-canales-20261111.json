@@ -1,22 +1,27 @@
 {
   "schema": 2,
   "id": "fabrica-automatizaciones-meta-canales-20261111",
-  "revision": 15,
+  "revision": 33,
   "compartible": true,
   "objetivo": "Preparar adaptadores verificables para comentarios/DM de Instagram y Facebook y conectarlos mediante contrato al panel existente.",
-  "estado": "para_revision",
-  "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
-  "resultado": "612a99b: adaptadores de ensayo y contratos para4canales; no servidor ni transporte real activable.",
-  "comprobacion": "Coordinadora repite39pruebas locales. ACTIVACION-PENDIENTE reconoce transporte ausente y documentación/accesos sin validar. No declarar canales listos; continuación técnica pertenece al mismo lote autorizado.",
+  "estado": "aceptado",
+  "proximo_paso": "Comprobar app/permisos Meta, implementar transporte real y realizar ensayo autorizado. Integración visual pendiente.",
+  "resultado": "Oferta pendiente revalidada al consumir; 6146271",
+  "comprobacion": "44 pruebas del ejecutor; sin transporte real ni activación.",
   "verificacion": "correcta",
   "evidencias": [
     {
       "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
       "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
       "bytes": 328
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+      "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+      "bytes": 328
     }
   ],
-  "actualizado": "2026-11-11T21:20:23.144964+00:00",
+  "actualizado": "2026-11-11T21:34:17.969740+00:00",
   "historial": [
     {
       "revision": 1,
@@ -1189,6 +1194,3190 @@
         }
       },
       "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-11T21:20:23.144964+00:00",
+      "estado": "para_revision",
+      "resultado": "612a99b: adaptadores de ensayo y contratos para4canales; no servidor ni transporte real activable.",
+      "comprobacion": "Coordinadora repite39pruebas locales. ACTIVACION-PENDIENTE reconoce transporte ausente y documentación/accesos sin validar. No declarar canales listos; continuación técnica pertenece al mismo lote autorizado.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+        "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-meta-canales-20261111"
+        ],
+        "fecha": "2026-11-11T21:12:04.402846+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "cambios",
+        "commit": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+        "criterio": "P2 — adaptador.py:280-291: simulate_one comprueba la antigüedad del evento, pero no revalida la oferta antes de despachar una salida pendiente. Reproduje con SQLite en memoria: información preparada un segundo antes de caducar la oferta termina como exito_simulado después de caducar, aunque load_offer devuelve False. Corregir el bloqueo de pendientes por caducidad o cambio de fuentes y añadir regresiones. Los hashes de evidencia coinciden; hay cuatro recorridos y 16 resultados ficticios correctamente rotulados, sin envíos reales. El puente del panel funciona, pero la integración efectiva y el transporte real siguen pendientes. No pude repetir las 39 pruebas: el sandbox de sólo lectura impide crear sus bases temporales; esto es un límite de verificación, no un fallo del producto.",
+        "worktree_conservado": true,
+        "revisor": "revisor-meta-canales-20261111",
+        "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+        "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 16,
+      "actualizado": "2026-11-11T21:20:42.189218+00:00",
+      "estado": "en_curso",
+      "resultado": "Corrección requerida por revisión independiente: P2 — adaptador.py:280-291: simulate_one comprueba la antigüedad del evento, pero no revalida la oferta antes de despachar una salida pendiente. Reproduje con SQLite en memoria: información preparada un segundo antes de caducar la oferta termina como exito_simulado después de caducar, aunque load_offer devuelve False. Corregir el bloqueo de pendientes por caducidad o cambio de fuentes y añadir regresiones. Los hashes de evidencia coinciden; hay cuatro recorridos y 16 resultados ficticios correctamente rotulados, sin envíos reales. El puente del panel funciona, pero la integración efectiva y el transporte real siguen pendientes. No pude repetir las 39 pruebas: el sandbox de sólo lectura impide crear sus bases temporales; esto es un límite de verificación, no un fallo del producto.",
+      "comprobacion": "Dictamen recogido y publicado en fd541b7.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Corregir revalidación de oferta y fuentes al procesar pendientes; añadir regresiones de vencimiento y cambio de fuente, ejecutar suite, documentar límites reales y publicar commit. Mantener simulación sin envíos externos.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 17,
+      "actualizado": "2026-11-11T21:20:42.768633+00:00",
+      "estado": "en_curso",
+      "resultado": "Corrección requerida por revisión independiente: P2 — adaptador.py:280-291: simulate_one comprueba la antigüedad del evento, pero no revalida la oferta antes de despachar una salida pendiente. Reproduje con SQLite en memoria: información preparada un segundo antes de caducar la oferta termina como exito_simulado después de caducar, aunque load_offer devuelve False. Corregir el bloqueo de pendientes por caducidad o cambio de fuentes y añadir regresiones. Los hashes de evidencia coinciden; hay cuatro recorridos y 16 resultados ficticios correctamente rotulados, sin envíos reales. El puente del panel funciona, pero la integración efectiva y el transporte real siguen pendientes. No pude repetir las 39 pruebas: el sandbox de sólo lectura impide crear sus bases temporales; esto es un límite de verificación, no un fallo del producto.",
+      "comprobacion": "Dictamen recogido y publicado en fd541b7.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 18,
+      "actualizado": "2026-11-11T21:20:43.019863+00:00",
+      "estado": "en_curso",
+      "resultado": "Corrección requerida por revisión independiente: P2 — adaptador.py:280-291: simulate_one comprueba la antigüedad del evento, pero no revalida la oferta antes de despachar una salida pendiente. Reproduje con SQLite en memoria: información preparada un segundo antes de caducar la oferta termina como exito_simulado después de caducar, aunque load_offer devuelve False. Corregir el bloqueo de pendientes por caducidad o cambio de fuentes y añadir regresiones. Los hashes de evidencia coinciden; hay cuatro recorridos y 16 resultados ficticios correctamente rotulados, sin envíos reales. El puente del panel funciona, pero la integración efectiva y el transporte real siguen pendientes. No pude repetir las 39 pruebas: el sandbox de sólo lectura impide crear sus bases temporales; esto es un límite de verificación, no un fallo del producto.",
+      "comprobacion": "Dictamen recogido y publicado en fd541b7.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 19,
+      "actualizado": "2026-11-11T21:20:43.356261+00:00",
+      "estado": "en_curso",
+      "resultado": "Corrección requerida por revisión independiente: P2 — adaptador.py:280-291: simulate_one comprueba la antigüedad del evento, pero no revalida la oferta antes de despachar una salida pendiente. Reproduje con SQLite en memoria: información preparada un segundo antes de caducar la oferta termina como exito_simulado después de caducar, aunque load_offer devuelve False. Corregir el bloqueo de pendientes por caducidad o cambio de fuentes y añadir regresiones. Los hashes de evidencia coinciden; hay cuatro recorridos y 16 resultados ficticios correctamente rotulados, sin envíos reales. El puente del panel funciona, pero la integración efectiva y el transporte real siguen pendientes. No pude repetir las 39 pruebas: el sandbox de sólo lectura impide crear sus bases temporales; esto es un límite de verificación, no un fallo del producto.",
+      "comprobacion": "Dictamen recogido y publicado en fd541b7.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 20,
+      "actualizado": "2026-11-11T21:20:44.352365+00:00",
+      "estado": "en_curso",
+      "resultado": "Corrección requerida por revisión independiente: P2 — adaptador.py:280-291: simulate_one comprueba la antigüedad del evento, pero no revalida la oferta antes de despachar una salida pendiente. Reproduje con SQLite en memoria: información preparada un segundo antes de caducar la oferta termina como exito_simulado después de caducar, aunque load_offer devuelve False. Corregir el bloqueo de pendientes por caducidad o cambio de fuentes y añadir regresiones. Los hashes de evidencia coinciden; hay cuatro recorridos y 16 resultados ficticios correctamente rotulados, sin envíos reales. El puente del panel funciona, pero la integración efectiva y el transporte real siguen pendientes. No pude repetir las 39 pruebas: el sandbox de sólo lectura impide crear sus bases temporales; esto es un límite de verificación, no un fallo del producto.",
+      "comprobacion": "Dictamen recogido y publicado en fd541b7.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 21,
+      "actualizado": "2026-11-11T21:21:35.507499+00:00",
+      "estado": "en_curso",
+      "resultado": "Corrección requerida por revisión independiente: P2 — adaptador.py:280-291: simulate_one comprueba la antigüedad del evento, pero no revalida la oferta antes de despachar una salida pendiente. Reproduje con SQLite en memoria: información preparada un segundo antes de caducar la oferta termina como exito_simulado después de caducar, aunque load_offer devuelve False. Corregir el bloqueo de pendientes por caducidad o cambio de fuentes y añadir regresiones. Los hashes de evidencia coinciden; hay cuatro recorridos y 16 resultados ficticios correctamente rotulados, sin envíos reales. El puente del panel funciona, pero la integración efectiva y el transporte real siguen pendientes. No pude repetir las 39 pruebas: el sandbox de sólo lectura impide crear sus bases temporales; esto es un límite de verificación, no un fallo del producto.",
+      "comprobacion": "Dictamen recogido y publicado en fd541b7.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 22,
+      "actualizado": "2026-11-11T21:26:58.950886+00:00",
+      "estado": "en_curso",
+      "resultado": "Corrección requerida por revisión independiente: P2 — adaptador.py:280-291: simulate_one comprueba la antigüedad del evento, pero no revalida la oferta antes de despachar una salida pendiente. Reproduje con SQLite en memoria: información preparada un segundo antes de caducar la oferta termina como exito_simulado después de caducar, aunque load_offer devuelve False. Corregir el bloqueo de pendientes por caducidad o cambio de fuentes y añadir regresiones. Los hashes de evidencia coinciden; hay cuatro recorridos y 16 resultados ficticios correctamente rotulados, sin envíos reales. El puente del panel funciona, pero la integración efectiva y el transporte real siguen pendientes. No pude repetir las 39 pruebas: el sandbox de sólo lectura impide crear sus bases temporales; esto es un límite de verificación, no un fallo del producto.",
+      "comprobacion": "Dictamen recogido y publicado en fd541b7.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:26:58.934521+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 23,
+      "actualizado": "2026-11-11T21:29:07.176499+00:00",
+      "estado": "en_curso",
+      "resultado": "Corrección requerida por revisión independiente: P2 — adaptador.py:280-291: simulate_one comprueba la antigüedad del evento, pero no revalida la oferta antes de despachar una salida pendiente. Reproduje con SQLite en memoria: información preparada un segundo antes de caducar la oferta termina como exito_simulado después de caducar, aunque load_offer devuelve False. Corregir el bloqueo de pendientes por caducidad o cambio de fuentes y añadir regresiones. Los hashes de evidencia coinciden; hay cuatro recorridos y 16 resultados ficticios correctamente rotulados, sin envíos reales. El puente del panel funciona, pero la integración efectiva y el transporte real siguen pendientes. No pude repetir las 39 pruebas: el sandbox de sólo lectura impide crear sus bases temporales; esto es un límite de verificación, no un fallo del producto.",
+      "comprobacion": "Dictamen recogido y publicado en fd541b7.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:26:58.934521+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 24,
+      "actualizado": "2026-11-11T21:29:37.004269+00:00",
+      "estado": "para_revision",
+      "resultado": "Oferta pendiente revalidada al consumir; 6146271",
+      "comprobacion": "44 pruebas del ejecutor; sin transporte real ni activación.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:26:58.934521+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "6146271406bf9a4b7c74def461821a3e07c75f60",
+        "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-meta-canales-20261111"
+        ],
+        "fecha": "2026-11-11T21:29:36.981074+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 25,
+      "actualizado": "2026-11-11T21:29:39.997401+00:00",
+      "estado": "para_revision",
+      "resultado": "Oferta pendiente revalidada al consumir; 6146271",
+      "comprobacion": "44 pruebas del ejecutor; sin transporte real ni activación.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:26:58.934521+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-v2-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-4",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "6146271406bf9a4b7c74def461821a3e07c75f60",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T21:29:39.968356+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "0e561d154fe3e9fde3f45267f8bf24b0a6997a83884ad9934ca5041f0cbb5f42",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "6146271406bf9a4b7c74def461821a3e07c75f60",
+        "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-meta-canales-20261111"
+        ],
+        "fecha": "2026-11-11T21:29:36.981074+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 26,
+      "actualizado": "2026-11-11T21:29:40.232431+00:00",
+      "estado": "para_revision",
+      "resultado": "Oferta pendiente revalidada al consumir; 6146271",
+      "comprobacion": "44 pruebas del ejecutor; sin transporte real ni activación.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:26:58.934521+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-v2-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 3089157,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179554",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-4",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "6146271406bf9a4b7c74def461821a3e07c75f60",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T21:29:39.968356+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "0e561d154fe3e9fde3f45267f8bf24b0a6997a83884ad9934ca5041f0cbb5f42",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "6146271406bf9a4b7c74def461821a3e07c75f60",
+        "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-meta-canales-20261111"
+        ],
+        "fecha": "2026-11-11T21:29:36.981074+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 27,
+      "actualizado": "2026-11-11T21:29:40.473822+00:00",
+      "estado": "para_revision",
+      "resultado": "Oferta pendiente revalidada al consumir; 6146271",
+      "comprobacion": "44 pruebas del ejecutor; sin transporte real ni activación.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:26:58.934521+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-v2-20261111",
+          "pid": 3089159,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179577",
+          "supervisor_pid": 3089157,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179554",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-4",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "6146271406bf9a4b7c74def461821a3e07c75f60",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T21:29:39.968356+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "0e561d154fe3e9fde3f45267f8bf24b0a6997a83884ad9934ca5041f0cbb5f42",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "6146271406bf9a4b7c74def461821a3e07c75f60",
+        "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-meta-canales-20261111"
+        ],
+        "fecha": "2026-11-11T21:29:36.981074+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 28,
+      "actualizado": "2026-11-11T21:29:41.171264+00:00",
+      "estado": "para_revision",
+      "resultado": "Oferta pendiente revalidada al consumir; 6146271",
+      "comprobacion": "44 pruebas del ejecutor; sin transporte real ni activación.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:26:58.934521+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-v2-20261111",
+          "pid": 3089159,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179577",
+          "supervisor_pid": 3089157,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179554",
+          "rama": "(detached)",
+          "session_id": "01a1cc84-3d2f-73e0-bc74-0ae8eb9606e1",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-4",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "6146271406bf9a4b7c74def461821a3e07c75f60",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T21:29:39.968356+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "0e561d154fe3e9fde3f45267f8bf24b0a6997a83884ad9934ca5041f0cbb5f42",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "6146271406bf9a4b7c74def461821a3e07c75f60",
+        "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-meta-canales-20261111"
+        ],
+        "fecha": "2026-11-11T21:29:36.981074+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 29,
+      "actualizado": "2026-11-11T21:31:39.914751+00:00",
+      "estado": "para_revision",
+      "resultado": "Oferta pendiente revalidada al consumir; 6146271",
+      "comprobacion": "44 pruebas del ejecutor; sin transporte real ni activación.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:26:58.934521+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-v2-20261111",
+          "pid": 3089159,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179577",
+          "supervisor_pid": 3089157,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179554",
+          "rama": "(detached)",
+          "session_id": "01a1cc84-3d2f-73e0-bc74-0ae8eb9606e1",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-4",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "6146271406bf9a4b7c74def461821a3e07c75f60",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T21:29:39.968356+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "0e561d154fe3e9fde3f45267f8bf24b0a6997a83884ad9934ca5041f0cbb5f42",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "6146271406bf9a4b7c74def461821a3e07c75f60",
+        "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-meta-canales-20261111"
+        ],
+        "fecha": "2026-11-11T21:29:36.981074+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 30,
+      "actualizado": "2026-11-11T21:32:35.300174+00:00",
+      "estado": "para_revision",
+      "resultado": "Oferta pendiente revalidada al consumir; 6146271",
+      "comprobacion": "44 pruebas del ejecutor; sin transporte real ni activación.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:26:58.934521+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-v2-20261111",
+          "pid": 3089159,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179577",
+          "supervisor_pid": 3089157,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179554",
+          "rama": "(detached)",
+          "session_id": "01a1cc84-3d2f-73e0-bc74-0ae8eb9606e1",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-4",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "6146271406bf9a4b7c74def461821a3e07c75f60",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T21:29:39.968356+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "0e561d154fe3e9fde3f45267f8bf24b0a6997a83884ad9934ca5041f0cbb5f42",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.veredicto.json",
+          "fin": "2026-11-11T21:32:35.272446+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "6146271406bf9a4b7c74def461821a3e07c75f60",
+        "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-meta-canales-20261111"
+        ],
+        "fecha": "2026-11-11T21:29:36.981074+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        }
+      ]
+    },
+    {
+      "revision": 31,
+      "actualizado": "2026-11-11T21:33:40.190559+00:00",
+      "estado": "para_revision",
+      "resultado": "Oferta pendiente revalidada al consumir; 6146271",
+      "comprobacion": "44 pruebas del ejecutor; sin transporte real ni activación.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:26:58.934521+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-v2-20261111",
+          "pid": 3089159,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179577",
+          "supervisor_pid": 3089157,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179554",
+          "rama": "(detached)",
+          "session_id": "01a1cc84-3d2f-73e0-bc74-0ae8eb9606e1",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-4",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "6146271406bf9a4b7c74def461821a3e07c75f60",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T21:29:39.968356+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "0e561d154fe3e9fde3f45267f8bf24b0a6997a83884ad9934ca5041f0cbb5f42",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.veredicto.json",
+          "fin": "2026-11-11T21:32:35.272446+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "6146271406bf9a4b7c74def461821a3e07c75f60",
+        "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-meta-canales-20261111"
+        ],
+        "fecha": "2026-11-11T21:29:36.981074+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "6146271406bf9a4b7c74def461821a3e07c75f60",
+        "criterio": "Cumple el alcance de preparación local: cuatro canales con recorridos y fallos simulados, contrato consumido por el panel mediante puente y guía de activación pendiente. Corrección P2 comprobada: oferta inválida cancela pendientes sin transporte ni reintento. Verificados 19 hashes y seis evidencias históricas intactas; evidencia de 44 pruebas del ejecutor. Pasaron 175 aserciones independientes, usando SQLite en memoria donde correspondía. La suite completa no pudo repetirse por el sandbox de sólo lectura; persistencia y reinicio en disco se respaldan en la evidencia del ejecutor. Cambios limitados a la ruta asignada. Conector real bloqueado, sin activación/envíos/gasto; permisos, integración visual y E2E real siguen pendientes. Ningún canal se declara listo.",
+        "worktree_conservado": true,
+        "revisor": "revisor-meta-canales-v2-20261111",
+        "session_id": "01a1cc84-3d2f-73e0-bc74-0ae8eb9606e1",
+        "entrega_sha256": "0e561d154fe3e9fde3f45267f8bf24b0a6997a83884ad9934ca5041f0cbb5f42",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-4-735d0ed1.json",
+          "sha256": "22cf194e79043c64696f210fc34ace3506757527919ea61014d004d77b9a1709",
+          "bytes": 912
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-4-735d0ed1.json",
+          "sha256": "22cf194e79043c64696f210fc34ace3506757527919ea61014d004d77b9a1709",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "revision": 32,
+      "actualizado": "2026-11-11T21:34:17.911751+00:00",
+      "estado": "aceptado",
+      "resultado": "Oferta pendiente revalidada al consumir; 6146271",
+      "comprobacion": "44 pruebas del ejecutor; sin transporte real ni activación.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
+          "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+          "bytes": 328
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      ],
+      "proximo_paso": "Comprobar app/permisos Meta, implementar transporte real y realizar ensayo autorizado. Integración visual pendiente.",
+      "aceptacion": {
+        "revisor": "revisor-meta-canales-v2-20261111",
+        "criterio": "Preparación local6146271 aceptada,44tests repetidos y revisión independiente buena; integrado0872e57. No hay transporte real ni canales operativos.",
+        "fecha": "2026-11-11T21:34:17.911728+00:00"
+      },
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "codex-meta-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T20:40:43.342319+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 2983756,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962747",
+          "supervisor_pid": 2983744,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216962725",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:53:31.687056+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:10:31.227660+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-20261111",
+          "pid": 3036891,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074321",
+          "supervisor_pid": 3036889,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217074300",
+          "rama": "(detached)",
+          "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T21:12:07.471204+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-11T21:14:31.729934+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "ejecutor",
+          "responsable": "codex-meta-canales-20261111",
+          "pid": 3062035,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+          "supervisor_pid": 3062016,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+          "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+          "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+          "log_offset": 680973,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+          "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T21:20:42.687859+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T21:26:58.934521+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-meta-canales-v2-20261111",
+          "pid": 3089159,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179577",
+          "supervisor_pid": 3089157,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179554",
+          "rama": "(detached)",
+          "session_id": "01a1cc84-3d2f-73e0-bc74-0ae8eb9606e1",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-4",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "6146271406bf9a4b7c74def461821a3e07c75f60",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T21:29:39.968356+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "0e561d154fe3e9fde3f45267f8bf24b0a6997a83884ad9934ca5041f0cbb5f42",
+          "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.veredicto.json",
+          "fin": "2026-11-11T21:32:35.272446+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "6146271406bf9a4b7c74def461821a3e07c75f60",
+        "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+        "ramas_origin": [
+          "origin/codex/ws-fabrica-automatizaciones-meta-canales-20261111"
+        ],
+        "fecha": "2026-11-11T21:29:36.981074+00:00",
+        "dry_run": false,
+        "intento": 3,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+          "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
+          "bytes": 328
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "6146271406bf9a4b7c74def461821a3e07c75f60",
+        "criterio": "Cumple el alcance de preparación local: cuatro canales con recorridos y fallos simulados, contrato consumido por el panel mediante puente y guía de activación pendiente. Corrección P2 comprobada: oferta inválida cancela pendientes sin transporte ni reintento. Verificados 19 hashes y seis evidencias históricas intactas; evidencia de 44 pruebas del ejecutor. Pasaron 175 aserciones independientes, usando SQLite en memoria donde correspondía. La suite completa no pudo repetirse por el sandbox de sólo lectura; persistencia y reinicio en disco se respaldan en la evidencia del ejecutor. Cambios limitados a la ruta asignada. Conector real bloqueado, sin activación/envíos/gasto; permisos, integración visual y E2E real siguen pendientes. Ningún canal se declara listo.",
+        "worktree_conservado": true,
+        "revisor": "revisor-meta-canales-v2-20261111",
+        "session_id": "01a1cc84-3d2f-73e0-bc74-0ae8eb9606e1",
+        "entrega_sha256": "0e561d154fe3e9fde3f45267f8bf24b0a6997a83884ad9934ca5041f0cbb5f42",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-4-735d0ed1.json",
+          "sha256": "22cf194e79043c64696f210fc34ace3506757527919ea61014d004d77b9a1709",
+          "bytes": 912
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
+          "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
+          "bytes": 934
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-4-735d0ed1.json",
+          "sha256": "22cf194e79043c64696f210fc34ace3506757527919ea61014d004d77b9a1709",
+          "bytes": 912
+        }
+      ]
     }
   ],
   "briefing": {
@@ -1197,7 +4386,11 @@
     "bytes": 4663,
     "contenido": "# Encargo fabrica-automatizaciones-meta-canales-20261111\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nPreparar adaptadores verificables para comentarios/DM de Instagram y Facebook y conectarlos mediante contrato al panel existente.\n\n## Entregable\n\nCódigo, fixtures, pruebas reproducibles, contrato exportable y guía exacta de activación pendiente.\n\n## Criterio de aceptación\n\nCada canal tiene recorrido local y fallos probados; diferencia estricta entre simulación y E2E real; ninguna activación/envío/gasto.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Lote técnico autorizado en CIERRE-VENTA-20261111.md (aeb1160), regla52fb1c8. Leer decisiones y bitácora; no retomar nombres/precios/horas históricas. Usar desarrollar-y-verificar. Un worktree, cero hijos, Sol high. No editar panel/harness/otros productos.\n- Revisar antes implementaciones n8n y diseños de canales ya presentes en repo. Reutilizar sin activar. Única ruta nueva 05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111. No copiar secretos, contactos, QR o direcciones privadas.\n- Investigar documentación primaria vigente de Meta para comentarios y mensajes privados IG/FB, distinguir capacidades/permisos/cuentas/versiones y fechas. Si fuente no accesible marcar desconocido; no inventar ventanas, tokens ni aprobaciones. Crear matriz canal/capacidad/entrada/salida/prueba/pendiente.\n- Implementar procesamiento puro con idempotencia y estado persistente de ensayo: detectar NEGOCIO, ofrecer información vigente, conservar contexto de origen y baja, enrutar a WhatsApp sólo mediante destino privado configurado; no presumir acceso API real. Firma de webhook/verificación y límites de payload; rechazo de identidad inválida, duplicados, orden tardío, inyección, timeout/resultado incierto. Sin shell libre.\n- Conector real deshabilitado por defecto, configuración privada sin tokens en logs, contrato para panel incluye estado, comprobaciones, entradas faltantes y aprobación pendiente. Simular respuestas éxito/fallo en fixtures rotulados, no registrar mensajes como realmente enviados. Preparar prueba autorizable por canal y no ejecutarla con personas. Node/Python existentes sin nuevas APIs pagas.\n- Entregar README/PRUEBAS/RECIBO, comandos/salidas, commit+push rama; revisión independiente por coordinadora. Publicar estado para_revision de producto no estado canónico. Nunca declarar canal listo sin prueba real autorizada.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/fabrica-automatizaciones-meta-canales-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
   },
-  "aceptacion": null,
+  "aceptacion": {
+    "revisor": "revisor-meta-canales-v2-20261111",
+    "criterio": "Preparación local6146271 aceptada,44tests repetidos y revisión independiente buena; integrado0872e57. No hay transporte real ni canales operativos.",
+    "fecha": "2026-11-11T21:34:17.911728+00:00"
+  },
   "ejecucion": {
     "perfil": "complejo",
     "recomendado": {
@@ -1209,14 +4402,7 @@
     "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
     "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
   },
-  "asignacion": {
-    "responsable": "codex-meta-canales-20261111",
-    "rutas": [
-      "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
-    ],
-    "revision_base": 1,
-    "fecha": "2026-11-11T20:40:43.342319+00:00"
-  },
+  "asignacion": null,
   "sesiones": [
     {
       "intento": 1,
@@ -1287,35 +4473,105 @@
       "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.schema.json",
       "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.2.veredicto.json",
       "fin": "2026-11-11T21:14:31.729934+00:00"
+    },
+    {
+      "intento": 3,
+      "rol": "ejecutor",
+      "responsable": "codex-meta-canales-20261111",
+      "pid": 3062035,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125866",
+      "supervisor_pid": 3062016,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217125828",
+      "rama": "codex/ws-fabrica-automatizaciones-meta-canales-20261111",
+      "session_id": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+      "estado": "cerrada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+      "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.jsonl",
+      "log_offset": 680973,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+      "rutas": [
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+      ],
+      "dry_run": false,
+      "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
+      "reanuda": "01a1cc63-26f0-7622-ad4b-7554b2da5d88",
+      "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.3.briefing.txt",
+      "inicio": "2026-11-11T21:20:42.687859+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/fabrica-automatizaciones-meta-canales-20261111.git/worktrees/onia-ws-fabrica-automatizaciones-meta-canales-20261111",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-11T21:26:58.934521+00:00"
+    },
+    {
+      "intento": 4,
+      "rol": "revisor",
+      "responsable": "revisor-meta-canales-v2-20261111",
+      "pid": 3089159,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179577",
+      "supervisor_pid": 3089157,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217179554",
+      "rama": "(detached)",
+      "session_id": "01a1cc84-3d2f-73e0-bc74-0ae8eb9606e1",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+      "log_rel": "logs/fabrica-automatizaciones-meta-canales-20261111.revision-4.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-fabrica-automatizaciones-meta-canales-20261111-revision-4",
+      "rutas": [
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111"
+      ],
+      "dry_run": false,
+      "commit_base": "6146271406bf9a4b7c74def461821a3e07c75f60",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.briefing.txt",
+      "inicio": "2026-11-11T21:29:39.968356+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "0e561d154fe3e9fde3f45267f8bf24b0a6997a83884ad9934ca5041f0cbb5f42",
+      "schema": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/fabrica-automatizaciones-meta-canales-20261111.4.veredicto.json",
+      "fin": "2026-11-11T21:32:35.272446+00:00"
     }
   ],
   "revision_independiente": {
-    "veredicto": "cambios",
-    "commit": "612a99bac419dde4c34eca0646d2a70ad14751e5",
-    "criterio": "P2 — adaptador.py:280-291: simulate_one comprueba la antigüedad del evento, pero no revalida la oferta antes de despachar una salida pendiente. Reproduje con SQLite en memoria: información preparada un segundo antes de caducar la oferta termina como exito_simulado después de caducar, aunque load_offer devuelve False. Corregir el bloqueo de pendientes por caducidad o cambio de fuentes y añadir regresiones. Los hashes de evidencia coinciden; hay cuatro recorridos y 16 resultados ficticios correctamente rotulados, sin envíos reales. El puente del panel funciona, pero la integración efectiva y el transporte real siguen pendientes. No pude repetir las 39 pruebas: el sandbox de sólo lectura impide crear sus bases temporales; esto es un límite de verificación, no un fallo del producto.",
+    "veredicto": "bueno",
+    "commit": "6146271406bf9a4b7c74def461821a3e07c75f60",
+    "criterio": "Cumple el alcance de preparación local: cuatro canales con recorridos y fallos simulados, contrato consumido por el panel mediante puente y guía de activación pendiente. Corrección P2 comprobada: oferta inválida cancela pendientes sin transporte ni reintento. Verificados 19 hashes y seis evidencias históricas intactas; evidencia de 44 pruebas del ejecutor. Pasaron 175 aserciones independientes, usando SQLite en memoria donde correspondía. La suite completa no pudo repetirse por el sandbox de sólo lectura; persistencia y reinicio en disco se respaldan en la evidencia del ejecutor. Cambios limitados a la ruta asignada. Conector real bloqueado, sin activación/envíos/gasto; permisos, integración visual y E2E real siguen pendientes. Ningún canal se declara listo.",
     "worktree_conservado": true,
-    "revisor": "revisor-meta-canales-20261111",
-    "session_id": "01a1cc74-2deb-7790-9bb5-a097cdafd52e",
-    "entrega_sha256": "b8bff0271e78e57acbfadfd16c5d7129f19ff982cad0dbde97c9b55d68ba3e2b",
+    "revisor": "revisor-meta-canales-v2-20261111",
+    "session_id": "01a1cc84-3d2f-73e0-bc74-0ae8eb9606e1",
+    "entrega_sha256": "0e561d154fe3e9fde3f45267f8bf24b0a6997a83884ad9934ca5041f0cbb5f42",
     "evidencia": {
-      "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
-      "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
-      "bytes": 934
+      "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-4-735d0ed1.json",
+      "sha256": "22cf194e79043c64696f210fc34ace3506757527919ea61014d004d77b9a1709",
+      "bytes": 912
     }
   },
   "cierre": {
-    "commit": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+    "commit": "6146271406bf9a4b7c74def461821a3e07c75f60",
     "commit_base": "de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c",
     "ramas_origin": [
       "origin/codex/ws-fabrica-automatizaciones-meta-canales-20261111"
     ],
-    "fecha": "2026-11-11T21:12:04.402846+00:00",
+    "fecha": "2026-11-11T21:29:36.981074+00:00",
     "dry_run": false,
-    "intento": 1,
+    "intento": 3,
     "worktree_conservado": true,
     "evidencia": {
-      "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r8-7c0893ab.json",
-      "sha256": "87946f0d7555f7fab321f5fc5b7911b8e8ce04738916db95f0b47f4601b21b87",
+      "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/cierre-r23-555b05de.json",
+      "sha256": "7baec85bce62cfd0ac206ccd4e325796dbc594e07000692e76c18042fe3cf864",
       "bytes": 328
     }
   },
@@ -1324,6 +4580,11 @@
       "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-2-53c54284.json",
       "sha256": "37490aec3b81751af3d873bc206906edab4946a0575a1e1e6dab8c050c3813a5",
       "bytes": 934
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/fabrica-automatizaciones-meta-canales-20261111/revision-4-735d0ed1.json",
+      "sha256": "22cf194e79043c64696f210fc34ace3506757527919ea61014d004d77b9a1709",
+      "bytes": 912
     }
   ]
 }
