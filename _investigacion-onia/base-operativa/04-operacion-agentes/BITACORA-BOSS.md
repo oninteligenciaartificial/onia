@@ -50,3 +50,9 @@ Error de Boss: durante cerca de una hora trató sesiones con viva=false y sesion
 - Comprobado: la PC de Sergio figura offline en este momento. No ejecuté nada en la PC (la rutina no toca la PC). `consultar` no disponible desde la rutina; estado del harness no verificado aquí.
 - Inferido: no hay entrega ni veredicto; no corresponde cerrar/revisar/recoger.
 - Siguiente paso: derivado al chat principal de Boss; con la PC encendida, correr el diagnóstico una vez. Si control_pe.ok no es true, no aplicar ni repetir.
+
+## 10 nov 2026, 22:05 La Paz · aviso `pedido_coordinacion` cierre-venta-20261111-1
+- Observado: webhook tipo pedido_coordinacion (no fin de sesión) para `fabrica-chatbot-whatsapp-20261110` r15 para_revision, commit 98301af. El commit existe en origin/master y publica `05-herramientas/fabrica-onia/CIERRE-VENTA-20261111.md` (cadena de venta hasta el 14, tabla de requisitos/responsables, Codex directo corrige WhatsApp e integra guiones/montaje con escritura exclusiva del paquete WhatsApp; fbc8747 es sólo ensayo; máximo 3 sesiones; muestra de cuota 96 % usado 2026-11-11T01:55:50Z).
+- Comprobado: `consultar` no disponible desde la rutina; estado del harness no verificado aquí. No hay commit nuevo del ejecutor ni dictamen asociado a este aviso.
+- Inferido: no corresponde cerrar/revisar/recoger. No lanzar otro ejecutor sobre rutas de WhatsApp, guiones o montaje.
+- Siguiente paso (chat principal de Boss): coordinar con Operaciones la localización privada y estado real del número Meta verificado, QR y enlaces Meet (sin secretos en chat/Git), y con Contenido la revisión editorial de T01–T05. Sin envíos a clientes, publicación, cobro ni activación de n8n.
