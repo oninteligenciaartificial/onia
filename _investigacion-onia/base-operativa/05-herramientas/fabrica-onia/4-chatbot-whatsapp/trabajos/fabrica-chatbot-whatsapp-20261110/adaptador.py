@@ -135,6 +135,10 @@ def leer_config(path):
 
 
 def validar_config(cfg, permitir_envios):
+    if not isinstance(cfg, dict):
+        raise ValueError("Config inválida: objeto requerido")
+    if type(cfg.get("envios_habilitados", False)) is not bool:
+        raise ValueError("Config inválida: envios_habilitados")
     for k in ("app_secret", "verify_token", "operator_token"):
         if not coincide(r"[A-Za-z0-9_.~-]{24,256}", cfg.get(k)):
             raise ValueError(f"Config inválida: {k}")
@@ -144,6 +148,7 @@ def validar_config(cfg, permitir_envios):
         raise ValueError("Config inválida: phone_number_id")
     ttl = cfg.get("pago_ttl_segundos")
     cierre = cfg.get("cierre_inscripcion_epoch")
+    # Límite por INICIO de la última clase. Su hora final no está confirmada.
     ultima_clase = int(datetime.fromisoformat(OFERTA["clases"][-1]).timestamp())
     if type(ttl) is not int or not 0 < ttl <= VENTANA:
         raise ValueError("Config inválida: pago_ttl_segundos")
