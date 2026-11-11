@@ -1,12 +1,12 @@
 {
   "schema": 2,
   "id": "cerebro-panel-usable-20261109",
-  "revision": 3,
+  "revision": 5,
   "compartible": true,
-  "objetivo": "Entregar cerebro operativo consultable y panel de contenido usable por Sergio para el workshop.",
-  "estado": "en_espera",
-  "proximo_paso": "Aparcado por reparto final: Boss/Contenido reutilizan cerebro/kit existentes; Codex interviene sólo con PEDIDO técnico concreto y autorización aplicable. Este acuerdo no aprueba implementar el nuevo panel.",
-  "resultado": "Plan corto preparado; implementación no iniciada.",
+  "objetivo": "Ampliar el panel existente con fábricas y revisión persistente de resultados para preparar la venta del workshop.",
+  "estado": "preparado",
+  "proximo_paso": "Ejecutar el encargo acotado; entregar rama y evidencia; STOP para revisión.",
+  "resultado": "Primera tanda autorizada; alcance actualizado sin borrar historia.",
   "comprobacion": "Cotejados README, PANEL-DIARIO y cierre aceptado; no se han repetido pruebas históricas ni lanzado ejecutoras del panel.",
   "verificacion": "pendiente",
   "evidencias": [
@@ -14,9 +14,19 @@
       "archivo": "04-operacion-agentes/evidencias/cerebro-panel-usable-20261109/PLAN.md",
       "sha256": "44997c4c36f48319f99bdadd3bd4ccdb0cd771e6fc021fc4080d610c453daaf6",
       "bytes": 8180
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/tanda-fabricas-20261111/cerebro-panel-usable-20261109-antes-r3.json",
+      "sha256": "5efa857f0da1bfd6427721451f2c1a495457a469564952659fbd7c0a20e01b55",
+      "bytes": 5455
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md",
+      "sha256": "8f74488009a4be7ebfa8b4cdeb5381d3ee00300417b20fd1561216fbe22f51b8",
+      "bytes": 3843
     }
   ],
-  "actualizado": "2026-11-09T22:49:26.959067+00:00",
+  "actualizado": "2026-11-11T13:26:08.711156+00:00",
   "historial": [
     {
       "revision": 1,
@@ -45,13 +55,65 @@
       ],
       "proximo_paso": "Esperar sí de Sergio a este plan; tomar cuota nueva U0 antes del lanzamiento.",
       "aceptacion": null
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-09T22:49:26.959067+00:00",
+      "estado": "en_espera",
+      "resultado": "Plan corto preparado; implementación no iniciada.",
+      "comprobacion": "Cotejados README, PANEL-DIARIO y cierre aceptado; no se han repetido pruebas históricas ni lanzado ejecutoras del panel.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-panel-usable-20261109/PLAN.md",
+          "sha256": "44997c4c36f48319f99bdadd3bd4ccdb0cd771e6fc021fc4080d610c453daaf6",
+          "bytes": 8180
+        }
+      ],
+      "proximo_paso": "Aparcado por reparto final: Boss/Contenido reutilizan cerebro/kit existentes; Codex interviene sólo con PEDIDO técnico concreto y autorización aplicable. Este acuerdo no aprueba implementar el nuevo panel.",
+      "aceptacion": null
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-11T13:26:08.520568+00:00",
+      "estado": "preparado",
+      "resultado": "Primera tanda autorizada; alcance actualizado sin borrar historia.",
+      "comprobacion": "Cotejados README, PANEL-DIARIO y cierre aceptado; no se han repetido pruebas históricas ni lanzado ejecutoras del panel.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/cerebro-panel-usable-20261109/PLAN.md",
+          "sha256": "44997c4c36f48319f99bdadd3bd4ccdb0cd771e6fc021fc4080d610c453daaf6",
+          "bytes": 8180
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/tanda-fabricas-20261111/cerebro-panel-usable-20261109-antes-r3.json",
+          "sha256": "5efa857f0da1bfd6427721451f2c1a495457a469564952659fbd7c0a20e01b55",
+          "bytes": 5455
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md",
+          "sha256": "8f74488009a4be7ebfa8b4cdeb5381d3ee00300417b20fd1561216fbe22f51b8",
+          "bytes": 3843
+        }
+      ],
+      "proximo_paso": "Ejecutar el encargo acotado; entregar rama y evidencia; STOP para revisión.",
+      "aceptacion": null
     }
   ],
   "briefing": {
     "archivo": "04-operacion-agentes/encargos/cerebro-panel-usable-20261109.md",
-    "sha256": "dbc81b80393ab04a1bc71e110cef4feb0ef62aac2d22c35820c578720ab578bd",
-    "bytes": 2987,
-    "contenido": "# Encargo cerebro-panel-usable-20261109\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nEntregar cerebro operativo consultable y panel de contenido usable por Sergio para el workshop.\n\n## Entregable\n\nEntrada privada en navegador con cerebro, ideas, guiones, fuentes, estado, próximo paso y faltantes; guía de tres pasos.\n\n## Criterio de aceptación\n\nCumplir PLAN.md, tope2puntos y recibos obligatorios; revisor distinto ultra; esperar sí antes de implementar.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Plan vigente: 04-operacion-agentes/evidencias/cerebro-panel-usable-20261109/PLAN.md\n- No ejecutar ni lanzar antes del sí de Sergio. Sólo planificación autorizada ahora.\n- Reusar entregas aceptadas; sin producción/n8n/envíos/compras/borrados/publicación de contenido.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/cerebro-panel-usable-20261109.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+    "sha256": "229cce585b1a8c2e08363c7571c32631c36293fe4d07b804a4eb28e95de5b1d9",
+    "bytes": 3378,
+    "contenido": "# Encargo actualizado cerebro-panel-usable-20261109\n\n## Objetivo\nAmpliar el panel existente con fábricas y revisión persistente de resultados para preparar la venta del workshop.\n\n## Entregable\nPanel utilizable con pasos, cerebro, calendario, entregas, bloqueos y corrección persistida; GUIA-REVISION, pruebas y preview.\n\n## Aceptación actual\nAmpliar el panel Python/HTML existente, conservar lector/tanda y sus garantías de procedencia. No crear otro panel ni rehacer el cerebro. Navegación por las seis fábricas (estado real o pendiente claro), pasos y evidencias de cada resultado, calendario con fechas vigentes, vista de una tanda y acceso al cerebro. Consumir contratos existentes y onia-fabrica-estado-v1 mediante rutas explícitas validadas. Permitir registrar una observación/corrección local con versión, motivo y estado pendiente; persistir sin perder original, sin tocar el harness ni fingir aprobación. Un servidor temporal local para pruebas es válido; no instalar servicio permanente. Guardar datos de operación fuera de Git; fixtures sintéticos claramente marcados. Probar recorrido completo de una tarea y corrección, reinicio/persistencia, entradas inválidas/escape de rutas/XSS, desktop+móvil si herramientas existentes permiten. Conservar panel22/tanda3 o justificar cualquier cambio. Dar preview abrible y explicar dependencias no conectadas.\n\n## Contexto y restricciones\nSergio autorizó esta primera tanda y pidió STOP al entregar para revisarla con la coordinadora. Leer primero BITACORA-BOSS, DECISIONES-SERGIO y 04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md de master. Ese alcance sustituye el briefing histórico del9/10nov y sus presupuestos/ultra. Método Euge: entrada concreta -> paso evaluable -> resultado -> revisión/corrección; reutilizar lo existente y el cerebro, no repetir ASR ni capturas de videos. Fechas: viernes13 20h, sábado14 14h, lunes16 20h La Paz. Nombre: Claude de 0 a 100: tu negocio con IA; grupo50Bs, VIP150Bs,5cupos,1:1 de30min. QR+seguimiento y Sergio confirma cada pago. No tocar calendario real ni secretos/QR ni clientes, no activar n8n, no publicar contenido, no gastar, no cambiar PC. Vlog excluido. No modificar harness, AGENTS, decisiones ni registros canónicos. Sol6.1 high, sin hijos. No abrir otros frentes. Usar desarrollar-y-verificar. Consultar documentación primaria si surge una duda concreta; no investigación general.\n\nPreparar GUIA-REVISION.md dentro de tu ruta, con comandos, resultados reales, límites y recorrido para Sergio. Si hay bloqueo conservar trabajo y explicarlo. Probar lo pertinente, commit+push sólo de tu rama, informar hash y STOP. Nada de aceptar, integrar en master o iniciar siguiente tanda. No confundir ensayo local con operación real. Contrato estado-fabrica.json y guiones-panel.json en ALCANCE-v1.md.\n\nReutilizar 03-referentes/cerebro-operativo/20261109, lector.py, panel.py y tanda.py. Salida editorial v2 es ejemplo histórico; no modificarla. Los otros productores trabajan en paralelo; probar contratos con fixtures etiquetados y admitir sus exports cuando existan. Mostrar fuente/fecha, no inferir un estado vivo. La sala audiovisual completa y los canales reales quedan para pasos posteriores; sólo estructura y recorrido real local de esta tanda.\n\nRutas exclusivas: 05-herramientas/fabrica-contenido/20261109-lector-panel\n"
   },
-  "aceptacion": null
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "codex-panel-20261111",
+    "rutas": [
+      "05-herramientas/fabrica-contenido/20261109-lector-panel"
+    ],
+    "revision_base": 4,
+    "fecha": "2026-11-11T13:26:08.711137+00:00"
+  }
 }

@@ -1,0 +1,43 @@
+{
+  "schema": 2,
+  "id": "guiones-tanda-automatizada-20261111",
+  "revision": 2,
+  "compartible": true,
+  "objetivo": "Producir una tanda diaria verificable de cinco guiones mediante un procedimiento reproducible que use cerebro, fuentes fechadas y correcciones.",
+  "estado": "preparado",
+  "proximo_paso": "Leer 04-operacion-agentes/encargos/guiones-tanda-automatizada-20261111.md y ejecutar el encargo dentro de su alcance.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-11T13:26:08.944885+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-11T13:26:08.746290+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/guiones-tanda-automatizada-20261111.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/guiones-tanda-automatizada-20261111.md",
+    "sha256": "828755dbb0c291c9753dfdbf66c1dcf36a3ccbdf04b86639ac2a30496d0ccc3a",
+    "bytes": 5915,
+    "contenido": "# Encargo guiones-tanda-automatizada-20261111\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nProducir una tanda diaria verificable de cinco guiones mediante un procedimiento reproducible que use cerebro, fuentes fechadas y correcciones.\n\n## Entregable\n\nPipeline/procedimiento local en automatizada, tanda v3 nueva, calendario, fuentes, export compatible y GUIA-REVISION.\n\n## Criterio de aceptación\n\nReusar cerebro y tanda v2 en lectura. No editar las tandas históricas reservadas. Implementar procedimiento invocable que reciba fuentes/brief/correcciones, valide cinco piezas con propósito y construya paquete editorial compatible: T01–T05 Markdown, hashes/bytes, guiones-panel.json, calendario y estado-fabrica.json. Seleccionar ideas según referentes pertinentes con trazabilidad; personas simuladas/crítico son hipótesis, no investigación de audiencia real. La tanda mezcla venta, marca, noticia IA verificable o evergreen rotulado, segunda venta/marca y prueba. Investigar una noticia sólo con fuente primaria y fecha si hay herramientas; si no, fallback evergreen explícito. Adaptaciones horizontal/vertical por pieza, no diez ideas. Voz natural voseo, CTA coherente y marcar si canal no probado. No inventar cifras, pantallas de Claude ni hechos del día de Sergio; si falta relato real dejar entrada requerida concreta y un guion de marca sin autobiografía falsa. Demostrar una corrección aplicada a nueva versión y rechazo de datos incompletos/duplicado sin pisar salida; declarar qué parte genera el LLM y cuál es script fijo. No prometer escritura creativa/news/autoscheduler después14 sin modelo disponible. Probar compatibilidad del paquete con tanda.py del panel sin modificarlo. Duraciones estimadas hasta ensayo humano; sin aprobación editorial falsa.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sergio autorizó esta primera tanda y pidió STOP al entregar para revisarla con la coordinadora. Leer primero BITACORA-BOSS, DECISIONES-SERGIO y 04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md de master. Ese alcance sustituye el briefing histórico del9/10nov y sus presupuestos/ultra. Método Euge: entrada concreta -> paso evaluable -> resultado -> revisión/corrección; reutilizar lo existente y el cerebro, no repetir ASR ni capturas de videos. Fechas: viernes13 20h, sábado14 14h, lunes16 20h La Paz. Nombre: Claude de 0 a 100: tu negocio con IA; grupo50Bs, VIP150Bs,5cupos,1:1 de30min. QR+seguimiento y Sergio confirma cada pago. No tocar calendario real ni secretos/QR ni clientes, no activar n8n, no publicar contenido, no gastar, no cambiar PC. Vlog excluido. No modificar harness, AGENTS, decisiones ni registros canónicos. Sol6.1 high, sin hijos. No abrir otros frentes. Usar desarrollar-y-verificar. Consultar documentación primaria si surge una duda concreta; no investigación general.\n\nPreparar GUIA-REVISION.md dentro de tu ruta, con comandos, resultados reales, límites y recorrido para Sergio. Si hay bloqueo conservar trabajo y explicarlo. Probar lo pertinente, commit+push sólo de tu rama, informar hash y STOP. Nada de aceptar, integrar en master o iniciar siguiente tanda. No confundir ensayo local con operación real. Contrato estado-fabrica.json y guiones-panel.json en ALCANCE-v1.md.\n\n- Guardar generador/README/tests/GUIA-REVISION en automatizada; salida exclusivamente en salida/guiones-tanda-20261111-v3. Recursos del cerebro son lectura, cambios editoriales quedan versionados en tu ruta. No cron, no API de pago, no nuevos modelos descargados. Las reglas se aplican a una segunda salida de prueba local, no entrenamiento de pesos.\n- Alcance: 04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/guiones-tanda-automatizada-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "codex-guiones-20261111",
+    "rutas": [
+      "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+      "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-11T13:26:08.944869+00:00"
+  }
+}

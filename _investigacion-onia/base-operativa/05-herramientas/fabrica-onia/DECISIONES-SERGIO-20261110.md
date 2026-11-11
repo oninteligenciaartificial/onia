@@ -85,3 +85,7 @@ Fuente: Q&A de Sergio en esta conversación. Pidió comprender las fábricas de 
 - El límite de tres sesiones se conserva y medir más de tres sigue pendiente. No se restablecen las seis altas diarias ni la reserva interna del 90%.
 - La suscripción se sigue planificando con corte el 14: la clase del lunes 16 necesita materiales y operación que no dependan de una sesión de Codex. No hay autorización de renovación, API de pago ni proveedor sustituto.
 - El reparto detallado de sesiones está propuesto en CIERRE-VENTA-20261111.md. Este registro no acredita lanzamientos, cambios en rutinas de Grok ni configuración de ejecución automática.
+
+## Primera tanda autorizada y punto de parada · 11 nov 2026
+
+Sergio aprobó lanzar panel, guiones/calendario y WhatsApp del plan 2cb5050. Alcance y contrato compartido: 04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md. Al entregar, parar para revisión con la coordinadora/Sergio; no pasar a la siguiente tanda ni integrar/aceptar automáticamente estos productos. Esta autorización sustituye el estado aparcado y los topes históricos del encargo del panel. Conserva tres sesiones, sin hijos, y los permisos sensibles vigentes.
