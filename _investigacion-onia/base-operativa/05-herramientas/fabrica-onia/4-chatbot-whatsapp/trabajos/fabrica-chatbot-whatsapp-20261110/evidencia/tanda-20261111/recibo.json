@@ -1,0 +1,197 @@
+{
+  "id": "fabrica-chatbot-whatsapp-20261110",
+  "tanda": "primera-20261111",
+  "fecha_utc": "2026-11-11T13:38:12.481726+00:00",
+  "resultado": "preparacion_local_para_revision_STOP",
+  "git": {
+    "rama": "codex/ws-fabrica-chatbot-whatsapp-20261110",
+    "base_conciliada": "c9ccd5dce93955de8ee9ae19203bf735cd931ac8",
+    "adaptador_integrado_reutilizado": "458771a",
+    "commit_codigo_y_evidencia": "13feeda4a994e23f45bcefa480537851cb7f5df0",
+    "commit_recibo": "Se agrega en el siguiente commit; el hash final se informa tras verificar el remoto."
+  },
+  "runtime": {
+    "node": "v20.20.2",
+    "python": "3.12.3",
+    "modelo_solicitado": "gpt-6.1-sol",
+    "esfuerzo_solicitado": "high",
+    "modelo_observado": null,
+    "esfuerzo_observado": null,
+    "limite": "Identificador exacto y esfuerzo efectivos no expuestos por este runtime; no se atribuyen por el briefing."
+  },
+  "cuota": {
+    "inicial": {
+      "fecha_utc": "2026-11-11T13:30:23+00:00",
+      "valor": null,
+      "estado": "desconocida"
+    },
+    "final": {
+      "fecha_utc": "2026-11-11T13:38:12.481726+00:00",
+      "valor": null,
+      "estado": "desconocida"
+    },
+    "contexto": "La bitacora conserva una muestra anterior; no se usa como medicion propia de esta retoma. No se lanzaron otras sesiones."
+  },
+  "intentos": {
+    "ejecucion_de_esta_retoma": 1,
+    "relanzamientos": 0,
+    "hijos": 0,
+    "sesiones_adicionales_lanzadas": 0
+  },
+  "retrabajo": {
+    "fallos_de_pruebas_en_esta_retoma": 0,
+    "revision_nueva_recibida": false,
+    "correccion_historica": "BAJA-vencimiento ya corregido en la base conciliada; regresiones modulo/JSON y adaptador repetidas correctamente."
+  },
+  "baseline": {
+    "base": "c9ccd5d",
+    "node": {
+      "tests": 44,
+      "pass": 44,
+      "fail": 0,
+      "skipped": 0
+    },
+    "python": {
+      "tests": 14,
+      "pass": 14,
+      "fail": 0,
+      "skipped": 0,
+      "casos": [
+        "test_baja_cancela_pendientes_y_vencimiento_no_recontacta",
+        "test_batch_dedup_y_reapertura_con_base_privada",
+        "test_challenge_y_token_incorrecto",
+        "test_credencial_de_n8n_no_confirma_pagos",
+        "test_envios_deshabilitados_con_cualquiera_de_las_dos_guardas",
+        "test_firma_de_bytes_crudos_antes_de_parsear",
+        "test_flujo_salida_de_ficha_qr_captura_acceso",
+        "test_numero_ajeno_en_batch_no_persiste_eventos_validos",
+        "test_referencia_canonica_no_se_reutiliza",
+        "test_seis_confirmaciones_vip_concurrentes",
+        "test_senales_del_cliente_y_firma_meta_no_autentican_pago",
+        "test_timeout_persistido_no_reenvia_tras_reinicio",
+        "test_transporte_graph_coteja_ruta_cuerpo_y_respuesta",
+        "test_vencimiento_y_ventana_de_atencion_son_distintos"
+      ]
+    }
+  },
+  "comprobaciones": {
+    "node": {
+      "comando": "node --test pruebas.cjs",
+      "codigo_salida": 0,
+      "tests": 44,
+      "pass": 44,
+      "fail": 0,
+      "skipped": 0
+    },
+    "python": {
+      "comando": "python3 -B -m unittest -v pruebas_adaptador",
+      "codigo_salida": 0,
+      "tests": 16,
+      "pass": 16,
+      "fail": 0,
+      "skipped": 0,
+      "casos": [
+        "test_baja_cancela_pendientes_y_vencimiento_no_recontacta",
+        "test_batch_dedup_y_reapertura_con_base_privada",
+        "test_challenge_y_token_incorrecto",
+        "test_configuracion_invalida_y_qr_faltante_fallan_sin_transporte",
+        "test_credencial_de_n8n_no_confirma_pagos",
+        "test_envios_deshabilitados_con_cualquiera_de_las_dos_guardas",
+        "test_firma_de_bytes_crudos_antes_de_parsear",
+        "test_flujo_salida_de_ficha_qr_captura_acceso",
+        "test_lunes_16_cierre_en_inicio_sin_inventar_hora_final",
+        "test_numero_ajeno_en_batch_no_persiste_eventos_validos",
+        "test_referencia_canonica_no_se_reutiliza",
+        "test_seis_confirmaciones_vip_concurrentes",
+        "test_senales_del_cliente_y_firma_meta_no_autentican_pago",
+        "test_timeout_persistido_no_reenvia_tras_reinicio",
+        "test_transporte_graph_coteja_ruta_cuerpo_y_respuesta",
+        "test_vencimiento_y_ventana_de_atencion_son_distintos"
+      ]
+    },
+    "casos_nuevos": {
+      "node": 0,
+      "python": 2,
+      "limite": "Las variantes y subcasos ya estan incluidos, no se cuentan como pruebas adicionales."
+    },
+    "recorrido_motor": {
+      "comando": "node ensayo.cjs",
+      "codigo_salida": 0,
+      "evidencia": "recorrido-motor.json"
+    },
+    "recorrido_adaptador": {
+      "comando": "python3 -B ensayo_adaptador.py",
+      "codigo_salida": 0,
+      "evidencia": "recorrido-adaptador.json",
+      "red_bloqueada_en_ensayo": true
+    },
+    "contrato_estado_fabrica": "schema, fabrica, estado, fecha ISO y rutas locales verificados",
+    "enlaces_locales": "correctos",
+    "git_diff_check": "correcto",
+    "evidencia_historica": "sin modificar"
+  },
+  "oferta": {
+    "nombre": "Claude de 0 a 100: tu negocio con IA",
+    "zona": "America/La_Paz",
+    "clases": [
+      "2026-11-13T20:00:00-04:00",
+      "2026-11-14T14:00:00-04:00",
+      "2026-11-16T20:00:00-04:00"
+    ],
+    "hora_final_confirmada": false,
+    "grupo_Bs": 50,
+    "VIP_Bs": 150,
+    "VIP_cupos": 5,
+    "VIP_1a1_minutos": 30,
+    "pago": "confirmacion explicita del operador autenticado; sin deteccion bancaria"
+  },
+  "efectos": {
+    "meta_invocado": false,
+    "n8n_invocado": false,
+    "workflow_importado": false,
+    "workflows_activos": false,
+    "servidor_iniciado": false,
+    "envios_reales": 0,
+    "pagos_reales": 0,
+    "clientes_reales": 0,
+    "gastos": 0,
+    "activos_privados_de_cuenta_consultados": false
+  },
+  "faltantes": [
+    "Prueba E2E real Meta-n8n no realizada",
+    "Numero, credenciales, QR/media ID y Meet privados sin validar en esta sesion",
+    "Revision tecnica distinta del commit nuevo y validacion de Operaciones/Contenido/Sergio",
+    "Autorizacion especifica para prueba externa, y despues para activar o enviar",
+    "Ensayo de operacion del lunes 16 sin depender de Codex despues del corte"
+  ],
+  "siguiente": "STOP para revision con Sergio/coordinadora. No aceptar, integrar en master ni iniciar otra tanda.",
+  "archivos_sha256": {
+    "motor.cjs": "a4436cc3fde80be3911a30a881c4aa79afe62c703db6b168895383a200a44304",
+    "adaptador.py": "92ddea050c87d281ad74a9a6bf86a79d1039989c4d2f9887846fded3d4a0cbfc",
+    "mensajes.json": "47586b58a0136cedc83126b0eee955468496ca64a1e24e01839c1462f9a619f7",
+    "fixtures.json": "36cd7d1434ec28e0c30aaea057b38a7242ee1125aba54883e8e68ae02b06a8f9",
+    "pruebas.cjs": "49f705fd6f3b2d1fe60bf8ae304b5ac82efd16476ce8cba17db0f53aa47c563a",
+    "pruebas_adaptador.py": "b8802f4a097a06caf5e280ec1d9701befb09208184b3c12567cecc0f2b0ca726",
+    "preparar.cjs": "564ac31393ead178a72f3d9ff9ad98a114907a1a8ed4deefa519151fb055bc4f",
+    "ensayo.cjs": "ee7e56d75be51371a9b895c4d4739889a9c430dcd0bd4288f020355abfb11fde",
+    "ensayo_adaptador.py": "df0f7d2dacfe0c1573997db0e69f7d50ed02e77bda9918d02d9793e72c8e379b",
+    "workflow-n8n.json": "ca38ce728aba71c10e992929870e892258da57b4d2b7348a3d66b092c5a81050",
+    "workflow-despacho-n8n.json": "62567c0267b82c2725091ecfa6c7ddc9e6c86f65ef2b82964d928dcf36e39b49",
+    "README.md": "d92e22bc5a8203130d7749ff1b54d52245c7cf1a932adb1a018bf32359907724",
+    "ADAPTADOR.md": "b8c478398dae9df3656f09d9a8ba739c6008a0aa3622d3f874630e29e02fe347",
+    "ESTADOS.md": "90e072b761307ee058784bcbfa0c70ce06495bdd354bb9997121eb96f7144260",
+    "FALTANTES.md": "df0a60933e0946f1b9d45a6fff3bec5d79c3ceadfc4360d586ae9623d822afc0",
+    "GUIA-REVISION.md": "56c4bbc0935c9de33a049d921321c5e87cd16ff556a4a18976c00ee1568566db",
+    "estado-fabrica.json": "c8112632894895e1189c99659361105fce3d48bd953fe36ba15032b5a3d218c3"
+  },
+  "evidencia_sha256": {
+    "node.tap": "03d4162ae29a820e46f9f434ba41f7eb479926226cc71fec5dd8a4afd1fd1b39",
+    "python.txt": "d46bffe2e2aebf5ce8ec2b7420bfa551b6799d9eb74655b2bddab1e913709e62",
+    "recorrido-motor.json": "7e2b949cbfde7fa5976a1f74a6992393ff74d8c301e20efcc4505bfd61f70315",
+    "recorrido-adaptador.json": "fe5c63440d78738e67637141b132f815d4ceb52d240cb0aa6cf423cc8daaf099"
+  },
+  "fuentes_relativas_base_sha256": {
+    "05-herramientas/fabrica-onia/DECISIONES-SERGIO-20261110.md": "db0adcee868c465496c8b93a61b6eb2edeb4cc5d83c09ef5535fa83af4379ba4",
+    "04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md": "8f74488009a4be7ebfa8b4cdeb5381d3ee00300417b20fd1561216fbe22f51b8"
+  }
+}

@@ -1,0 +1,916 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "onia-estrategias-v1"
+    },
+    "version_export": {
+      "const": 1
+    },
+    "commit_base": {
+      "const": "aeb116090aed97763fa3be050f514bdea8aadde1"
+    },
+    "raiz": {
+      "const": "01-negocio/estrategias-operativas-20261111"
+    },
+    "fuentes_documento": {
+      "const": "01-negocio/estrategias-operativas-20261111/fuentes.json"
+    },
+    "integracion_panel": {
+      "const": {
+        "estado": "pendiente",
+        "parser_actual_admite": false,
+        "compatibilidad": "forma compatible condicionada a nuevo productor/raíz; vista pendiente",
+        "documento": "01-negocio/estrategias-operativas-20261111/CONTRATO.md"
+      }
+    },
+    "tipos_pieza_lista_abierta": {
+      "const": true
+    },
+    "tipos_ejemplo": {
+      "const": [
+        "venta directa",
+        "marca",
+        "evergreen",
+        "noticia con primaria",
+        "trial",
+        "arte",
+        "UGC",
+        "ugly ad",
+        "talking head",
+        "carrusel",
+        "pantalla",
+        "B-roll",
+        "testimonio con evidencia",
+        "retargeting",
+        "lead ad",
+        "mensajes"
+      ]
+    },
+    "permisos": {
+      "const": {
+        "publicar": false,
+        "enviar": false,
+        "gastar": false,
+        "activar_n8n": false,
+        "usar_Higgsfield": false,
+        "editar_UI": false,
+        "lanzar_desarrollo_futuros": false
+      }
+    },
+    "generado": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "fuentes_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S05",
+          "S06",
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S11",
+          "S12"
+        ]
+      },
+      "minItems": 1
+    },
+    "workshop": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "const": "workshop-claude-20261113"
+        },
+        "version": {
+          "const": 1
+        },
+        "padre": {
+          "const": null
+        },
+        "estado": {
+          "const": "borrador_preparado"
+        },
+        "documento": {
+          "type": "string",
+          "pattern": "^01-negocio/estrategias-operativas-20261111/[A-Za-z0-9/_.-]+$"
+        },
+        "fuentes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "S01",
+              "S02",
+              "S03",
+              "S04",
+              "S05",
+              "S06",
+              "S07",
+              "S08",
+              "S09",
+              "S10",
+              "S11",
+              "S12"
+            ]
+          },
+          "minItems": 1
+        },
+        "nombre": {
+          "const": "Claude de 0 a 100: tu negocio con IA"
+        },
+        "zona": {
+          "const": "America/La_Paz"
+        },
+        "moneda": {
+          "const": "BOB"
+        },
+        "precio_grupo_Bs": {
+          "const": 50
+        },
+        "precio_vip_Bs": {
+          "const": 150
+        },
+        "vip_precio_total": {
+          "const": true
+        },
+        "capacidad_grupo": {
+          "const": null
+        },
+        "grupo_sin_limite_comercial": {
+          "const": true
+        },
+        "capacidad_vip": {
+          "const": 5
+        },
+        "vip_minutos": {
+          "const": 30
+        },
+        "vip_restantes": {
+          "const": null
+        },
+        "plataforma": {
+          "const": "Google Meet"
+        },
+        "clases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "tema": {
+                "type": "string",
+                "minLength": 1
+              },
+              "inicio": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "termina": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "id",
+              "tema",
+              "inicio",
+              "termina"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "pago": {
+          "type": "object",
+          "properties": {
+            "medio": {
+              "const": "QR privado"
+            },
+            "confirmador": {
+              "const": "Sergio"
+            },
+            "confirmacion": {
+              "const": "manual"
+            },
+            "captura_concede_acceso": {
+              "const": false
+            }
+          },
+          "required": [
+            "medio",
+            "confirmador",
+            "confirmacion",
+            "captura_concede_acceso"
+          ],
+          "additionalProperties": false
+        },
+        "condiciones": {
+          "type": "object",
+          "properties": {
+            "devoluciones": {
+              "const": "cero devoluciones"
+            },
+            "soporte": {
+              "const": "grupos de WhatsApp y comunidad pública; instrucciones/atención por comprobar"
+            },
+            "acceso": {
+              "const": "cuenta propia legítima de Claude, dispositivo y conexión; sin suscripción incluida"
+            }
+          },
+          "required": [
+            "devoluciones",
+            "soporte",
+            "acceso"
+          ],
+          "additionalProperties": false
+        },
+        "objetivo_Bs": {
+          "const": 3000
+        },
+        "objetivo_hasta": {
+          "const": "2026-11-14"
+        },
+        "supuestos": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "metricas_reales": {
+          "type": "object",
+          "properties": {
+            "corte": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "origen": {
+              "type": "string",
+              "minLength": 1
+            },
+            "piezas_aprobadas": {
+              "type": "null"
+            },
+            "piezas_publicadas": {
+              "type": "null"
+            },
+            "consultas_calificadas_unicas": {
+              "type": "null"
+            },
+            "inscripciones_pendientes": {
+              "type": "null"
+            },
+            "pagos_confirmados": {
+              "type": "null"
+            },
+            "ingresos_cobrados_Bs": {
+              "type": "null"
+            },
+            "gastos_Bs": {
+              "type": "null"
+            },
+            "ajustes_Bs": {
+              "type": "null"
+            },
+            "beneficio_Bs": {
+              "type": "null"
+            },
+            "vip_restantes": {
+              "type": "null"
+            },
+            "accesos_recibidos": {
+              "type": "null"
+            },
+            "asistencias": {
+              "type": "null"
+            },
+            "bajas": {
+              "type": "null"
+            },
+            "conversion": {
+              "type": "null"
+            },
+            "CPA_Bs": {
+              "type": "null"
+            },
+            "ROAS": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "corte",
+            "origen",
+            "piezas_aprobadas",
+            "piezas_publicadas",
+            "consultas_calificadas_unicas",
+            "inscripciones_pendientes",
+            "pagos_confirmados",
+            "ingresos_cobrados_Bs",
+            "gastos_Bs",
+            "ajustes_Bs",
+            "beneficio_Bs",
+            "vip_restantes",
+            "accesos_recibidos",
+            "asistencias",
+            "bajas",
+            "conversion",
+            "CPA_Bs",
+            "ROAS"
+          ],
+          "additionalProperties": false
+        },
+        "escenarios": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "tipo": {
+                "const": "escenario_no_prevision"
+              },
+              "grupo": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "vip": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 5
+              },
+              "personas": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "ingreso_bruto_Bs": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "diferencia_meta_Bs": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "id",
+              "tipo",
+              "grupo",
+              "vip",
+              "personas",
+              "ingreso_bruto_Bs",
+              "diferencia_meta_Bs"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "frontera_meta": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "vip": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 5
+              },
+              "grupo": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "vip",
+              "grupo"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 6,
+          "maxItems": 6
+        },
+        "anuncios": {
+          "type": "object",
+          "properties": {
+            "estado": {
+              "const": "borrador_local"
+            },
+            "cuenta": {
+              "const": null
+            },
+            "pagina": {
+              "const": null
+            },
+            "instagram": {
+              "const": null
+            },
+            "destino_url": {
+              "const": null
+            },
+            "presupuesto_total_Bs": {
+              "const": null
+            },
+            "presupuesto_diario_Bs": {
+              "const": null
+            },
+            "autorizacion_gasto": {
+              "const": null
+            },
+            "lectura_activos": {
+              "const": "No realizada; sin herramienta Meta dedicada disponible"
+            },
+            "hipotesis": {
+              "const": "Dos ángulos para consultas calificadas de pequeños negocios de Santa Cruz; opciones de cuenta a validar"
+            }
+          },
+          "required": [
+            "estado",
+            "cuenta",
+            "pagina",
+            "instagram",
+            "destino_url",
+            "presupuesto_total_Bs",
+            "presupuesto_diario_Bs",
+            "autorizacion_gasto",
+            "lectura_activos",
+            "hipotesis"
+          ],
+          "additionalProperties": false
+        },
+        "acciones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "fecha": {
+                "type": "string",
+                "format": "date"
+              },
+              "prioridad": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3
+              },
+              "accion": {
+                "type": "string",
+                "minLength": 1
+              },
+              "responsable": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dependencias": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              },
+              "salida": {
+                "type": "string",
+                "minLength": 1
+              },
+              "estado": {
+                "const": "propuesto"
+              }
+            },
+            "required": [
+              "id",
+              "fecha",
+              "prioridad",
+              "accion",
+              "responsable",
+              "dependencias",
+              "salida",
+              "estado"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "piezas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "version": {
+                "const": 1
+              },
+              "tipo": {
+                "type": "string",
+                "minLength": 1
+              },
+              "titulo": {
+                "type": "string",
+                "minLength": 1
+              },
+              "documento": {
+                "type": "string",
+                "pattern": "^01-negocio/estrategias-operativas-20261111/[A-Za-z0-9/_.-]+$"
+              },
+              "contenido": {
+                "type": "string",
+                "minLength": 1
+              },
+              "cta": {
+                "type": "string",
+                "minLength": 1
+              },
+              "destino": {
+                "type": "string",
+                "minLength": 1
+              },
+              "fuentes": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "S01",
+                    "S02",
+                    "S03",
+                    "S04",
+                    "S05",
+                    "S06",
+                    "S07",
+                    "S08",
+                    "S09",
+                    "S10",
+                    "S11",
+                    "S12"
+                  ]
+                },
+                "minItems": 1
+              },
+              "dependencias": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              },
+              "revision_editorial": {
+                "type": "null"
+              },
+              "autorizacion_comercial": {
+                "type": "null"
+              },
+              "estado": {
+                "const": "borrador_preparado"
+              }
+            },
+            "required": [
+              "id",
+              "version",
+              "tipo",
+              "titulo",
+              "documento",
+              "contenido",
+              "cta",
+              "destino",
+              "fuentes",
+              "dependencias",
+              "revision_editorial",
+              "autorizacion_comercial",
+              "estado"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "pendientes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "revision_tecnica": {
+          "const": null
+        },
+        "revision_editorial": {
+          "const": null
+        },
+        "autorizacion_comercial": {
+          "const": null
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "padre",
+        "estado",
+        "documento",
+        "fuentes",
+        "nombre",
+        "zona",
+        "moneda",
+        "precio_grupo_Bs",
+        "precio_vip_Bs",
+        "vip_precio_total",
+        "capacidad_grupo",
+        "grupo_sin_limite_comercial",
+        "capacidad_vip",
+        "vip_minutos",
+        "vip_restantes",
+        "plataforma",
+        "clases",
+        "pago",
+        "condiciones",
+        "objetivo_Bs",
+        "objetivo_hasta",
+        "supuestos",
+        "metricas_reales",
+        "escenarios",
+        "frontera_meta",
+        "anuncios",
+        "acciones",
+        "piezas",
+        "pendientes",
+        "revision_tecnica",
+        "revision_editorial",
+        "autorizacion_comercial"
+      ],
+      "additionalProperties": false
+    },
+    "biblioteca": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "padre": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "proyecto": {
+            "type": "string",
+            "minLength": 1
+          },
+          "estado": {
+            "const": "propuesto"
+          },
+          "documento": {
+            "type": "string",
+            "pattern": "^01-negocio/estrategias-operativas-20261111/[A-Za-z0-9/_.-]+$"
+          },
+          "problema": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidencia": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "fuentes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "S01",
+                "S02",
+                "S03",
+                "S04",
+                "S05",
+                "S06",
+                "S07",
+                "S08",
+                "S09",
+                "S10",
+                "S11",
+                "S12"
+              ]
+            },
+            "minItems": 1
+          },
+          "brecha": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entrega": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publico": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recursos": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "horas_prueba_estimadas": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "coste_por_aprobar_Bs": {
+            "type": "null"
+          },
+          "precio_propuesto_Bs": {
+            "type": "null"
+          },
+          "prueba_pequena": {
+            "type": "string",
+            "minLength": 1
+          },
+          "avanzar_si": {
+            "type": "string",
+            "minLength": 1
+          },
+          "descartar_si": {
+            "type": "string",
+            "minLength": 1
+          },
+          "responsable": {
+            "type": "string",
+            "minLength": 1
+          },
+          "metricas_reales": {
+            "type": "null"
+          },
+          "revision_editorial": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "id",
+          "version",
+          "padre",
+          "proyecto",
+          "estado",
+          "documento",
+          "problema",
+          "evidencia",
+          "fuentes",
+          "brecha",
+          "entrega",
+          "publico",
+          "recursos",
+          "horas_prueba_estimadas",
+          "coste_por_aprobar_Bs",
+          "precio_propuesto_Bs",
+          "prueba_pequena",
+          "avanzar_si",
+          "descartar_si",
+          "responsable",
+          "metricas_reales",
+          "revision_editorial"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 3
+    },
+    "correcciones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "const": "CORR-01"
+          },
+          "tipo": {
+            "const": "ejemplo_no_aprobacion"
+          },
+          "motivo": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidencia_fuente": {
+            "const": "S01"
+          },
+          "localizador": {
+            "type": "string",
+            "minLength": 1
+          },
+          "documento": {
+            "type": "string",
+            "pattern": "^01-negocio/estrategias-operativas-20261111/[A-Za-z0-9/_.-]+$"
+          },
+          "versiones": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "const": "EJ-ANUNCIO"
+                },
+                "version": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 2
+                },
+                "padre": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "estado": {
+                  "enum": [
+                    "historico_excluido",
+                    "revision_pendiente"
+                  ]
+                },
+                "texto": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "revision_editorial": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "id",
+                "version",
+                "padre",
+                "estado",
+                "texto",
+                "revision_editorial"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 2
+          },
+          "dependientes_requieren_revision": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "tipo",
+          "motivo",
+          "evidencia_fuente",
+          "localizador",
+          "documento",
+          "versiones",
+          "dependientes_requieren_revision"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "version_export",
+    "commit_base",
+    "raiz",
+    "fuentes_documento",
+    "integracion_panel",
+    "tipos_pieza_lista_abierta",
+    "tipos_ejemplo",
+    "permisos",
+    "generado",
+    "fuentes_ids",
+    "workshop",
+    "biblioteca",
+    "correcciones"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Export ONIA estrategias v1 — instantánea de borradores sin aprobación"
+}

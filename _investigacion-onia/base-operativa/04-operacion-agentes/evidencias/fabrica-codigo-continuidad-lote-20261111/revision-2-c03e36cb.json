@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "4d3ed5cf237b4d26728ae4a0478ca7c5de099a28",
+  "criterio": "Dos fallos reproducidos en memoria: (1) harness_lote.py:351 valida la antigüedad de cuota antes de consultar proveedor y reservas, sin revalidarla al despachar. Una observación de 115 segundos fue admitida tras alcanzar 125, superando el límite de 120. Revalidar inmediatamente antes del efecto y añadir prueba. (2) harness_lote.py:336 sólo propone cerrar ejecutores finalizados con rc=0. Si el ejecutor publica una entrega válida y después falla, selecciona reanudar aunque exista comprobación del commit; falta recuperar esa entrega mediante cierre antes de consumir otro intento. Añadir ese caso. Alcance de archivos, sintaxis, hashes y diff comprobados. Las 31 pruebas focales no pudieron repetirse porque el sandbox impide crear temporales; las salidas históricas fueron leídas. El piloto real permanece pendiente y correctamente declarado.",
+  "worktree_conservado": true
+}

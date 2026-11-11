@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "id": "guiones-tanda-automatizada-20261111",
-  "revision": 9,
+  "revision": 17,
   "compartible": true,
   "objetivo": "Producir una tanda diaria verificable de cinco guiones mediante un procedimiento reproducible que use cerebro, fuentes fechadas y correcciones.",
-  "estado": "para_revision",
-  "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+  "estado": "aceptado",
+  "proximo_paso": "Integrado en master; continuar despliegue privado del lote aprobado. Aprobación editorial y canales reales pendientes según CIERRE-VENTA.",
   "resultado": "Entrega26c39e3: cinco guionesv3, calendario, generador y corrección reproducible. STOP para revisión.",
   "comprobacion": "Coordinadora repitió comprobar.py:correcto,5piezas,6cambios,v2/v3intactas,25pruebas sin fallos. Fuente noticiosa contrastada con publicación primaria10nov. No aprobación editorial, ensayo hablado ni canal comercial real.",
   "verificacion": "correcta",
@@ -16,7 +16,7 @@
       "bytes": 317
     }
   ],
-  "actualizado": "2026-11-11T13:43:23.290634+00:00",
+  "actualizado": "2026-11-11T20:36:37.026019+00:00",
   "historial": [
     {
       "revision": 1,
@@ -403,6 +403,934 @@
       ],
       "cierre": null,
       "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-11T13:43:23.290634+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega26c39e3: cinco guionesv3, calendario, generador y corrección reproducible. STOP para revisión.",
+      "comprobacion": "Coordinadora repitió comprobar.py:correcto,5piezas,6cambios,v2/v3intactas,25pruebas sin fallos. Fuente noticiosa contrastada con publicación primaria10nov. No aprobación editorial, ensayo hablado ni canal comercial real.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "codex-guiones-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T13:26:08.944869+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-guiones-20261111",
+          "pid": 1822131,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289950",
+          "supervisor_pid": 1822034,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289885",
+          "rama": "codex/ws-guiones-tanda-automatizada-20261111",
+          "session_id": "01a1cacb-5351-7241-aaaf-3b12096739c0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T13:28:03.343454+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git/worktrees/onia-ws-guiones-tanda-automatizada-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T13:40:58.512187+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+        "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-automatizada-20261111"
+        ],
+        "fecha": "2026-11-11T13:43:23.281457+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-11T18:10:34.891347+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega26c39e3: cinco guionesv3, calendario, generador y corrección reproducible. STOP para revisión.",
+      "comprobacion": "Coordinadora repitió comprobar.py:correcto,5piezas,6cambios,v2/v3intactas,25pruebas sin fallos. Fuente noticiosa contrastada con publicación primaria10nov. No aprobación editorial, ensayo hablado ni canal comercial real.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "codex-guiones-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T13:26:08.944869+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-guiones-20261111",
+          "pid": 1822131,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289950",
+          "supervisor_pid": 1822034,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289885",
+          "rama": "codex/ws-guiones-tanda-automatizada-20261111",
+          "session_id": "01a1cacb-5351-7241-aaaf-3b12096739c0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T13:28:03.343454+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git/worktrees/onia-ws-guiones-tanda-automatizada-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T13:40:58.512187+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-flujo-guiones-tanda-automatizada-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T18:10:34.864561+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c51db6574ed157475881ef68594d3896ad9fb3ca561ae7d6a3a2430a08ce175c",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+        "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-automatizada-20261111"
+        ],
+        "fecha": "2026-11-11T13:43:23.281457+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-11T18:10:35.062836+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega26c39e3: cinco guionesv3, calendario, generador y corrección reproducible. STOP para revisión.",
+      "comprobacion": "Coordinadora repitió comprobar.py:correcto,5piezas,6cambios,v2/v3intactas,25pruebas sin fallos. Fuente noticiosa contrastada con publicación primaria10nov. No aprobación editorial, ensayo hablado ni canal comercial real.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "codex-guiones-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T13:26:08.944869+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-guiones-20261111",
+          "pid": 1822131,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289950",
+          "supervisor_pid": 1822034,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289885",
+          "rama": "codex/ws-guiones-tanda-automatizada-20261111",
+          "session_id": "01a1cacb-5351-7241-aaaf-3b12096739c0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T13:28:03.343454+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git/worktrees/onia-ws-guiones-tanda-automatizada-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T13:40:58.512187+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-flujo-guiones-tanda-automatizada-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 2520401,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:215985038",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T18:10:34.864561+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c51db6574ed157475881ef68594d3896ad9fb3ca561ae7d6a3a2430a08ce175c",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+        "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-automatizada-20261111"
+        ],
+        "fecha": "2026-11-11T13:43:23.281457+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-11T18:10:35.194199+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega26c39e3: cinco guionesv3, calendario, generador y corrección reproducible. STOP para revisión.",
+      "comprobacion": "Coordinadora repitió comprobar.py:correcto,5piezas,6cambios,v2/v3intactas,25pruebas sin fallos. Fuente noticiosa contrastada con publicación primaria10nov. No aprobación editorial, ensayo hablado ni canal comercial real.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "codex-guiones-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T13:26:08.944869+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-guiones-20261111",
+          "pid": 1822131,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289950",
+          "supervisor_pid": 1822034,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289885",
+          "rama": "codex/ws-guiones-tanda-automatizada-20261111",
+          "session_id": "01a1cacb-5351-7241-aaaf-3b12096739c0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T13:28:03.343454+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git/worktrees/onia-ws-guiones-tanda-automatizada-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T13:40:58.512187+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-flujo-guiones-tanda-automatizada-20261111",
+          "pid": 2520404,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:215985051",
+          "supervisor_pid": 2520401,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:215985038",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T18:10:34.864561+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c51db6574ed157475881ef68594d3896ad9fb3ca561ae7d6a3a2430a08ce175c",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+        "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-automatizada-20261111"
+        ],
+        "fecha": "2026-11-11T13:43:23.281457+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-11T18:10:39.765955+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega26c39e3: cinco guionesv3, calendario, generador y corrección reproducible. STOP para revisión.",
+      "comprobacion": "Coordinadora repitió comprobar.py:correcto,5piezas,6cambios,v2/v3intactas,25pruebas sin fallos. Fuente noticiosa contrastada con publicación primaria10nov. No aprobación editorial, ensayo hablado ni canal comercial real.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "codex-guiones-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T13:26:08.944869+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-guiones-20261111",
+          "pid": 1822131,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289950",
+          "supervisor_pid": 1822034,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289885",
+          "rama": "codex/ws-guiones-tanda-automatizada-20261111",
+          "session_id": "01a1cacb-5351-7241-aaaf-3b12096739c0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T13:28:03.343454+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git/worktrees/onia-ws-guiones-tanda-automatizada-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T13:40:58.512187+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-flujo-guiones-tanda-automatizada-20261111",
+          "pid": 2520404,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:215985051",
+          "supervisor_pid": 2520401,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:215985038",
+          "rama": "(detached)",
+          "session_id": "01a1cbcd-f8ac-7141-a792-16772891a2c2",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T18:10:34.864561+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c51db6574ed157475881ef68594d3896ad9fb3ca561ae7d6a3a2430a08ce175c",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+        "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-automatizada-20261111"
+        ],
+        "fecha": "2026-11-11T13:43:23.281457+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-11T18:13:31.136080+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega26c39e3: cinco guionesv3, calendario, generador y corrección reproducible. STOP para revisión.",
+      "comprobacion": "Coordinadora repitió comprobar.py:correcto,5piezas,6cambios,v2/v3intactas,25pruebas sin fallos. Fuente noticiosa contrastada con publicación primaria10nov. No aprobación editorial, ensayo hablado ni canal comercial real.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "codex-guiones-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T13:26:08.944869+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-guiones-20261111",
+          "pid": 1822131,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289950",
+          "supervisor_pid": 1822034,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289885",
+          "rama": "codex/ws-guiones-tanda-automatizada-20261111",
+          "session_id": "01a1cacb-5351-7241-aaaf-3b12096739c0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T13:28:03.343454+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git/worktrees/onia-ws-guiones-tanda-automatizada-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T13:40:58.512187+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-flujo-guiones-tanda-automatizada-20261111",
+          "pid": 2520404,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:215985051",
+          "supervisor_pid": 2520401,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:215985038",
+          "rama": "(detached)",
+          "session_id": "01a1cbcd-f8ac-7141-a792-16772891a2c2",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T18:10:34.864561+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c51db6574ed157475881ef68594d3896ad9fb3ca561ae7d6a3a2430a08ce175c",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.veredicto.json",
+          "fin": "2026-11-11T18:13:31.125512+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+        "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-automatizada-20261111"
+        ],
+        "fecha": "2026-11-11T13:43:23.281457+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-11T18:14:40.001368+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega26c39e3: cinco guionesv3, calendario, generador y corrección reproducible. STOP para revisión.",
+      "comprobacion": "Coordinadora repitió comprobar.py:correcto,5piezas,6cambios,v2/v3intactas,25pruebas sin fallos. Fuente noticiosa contrastada con publicación primaria10nov. No aprobación editorial, ensayo hablado ni canal comercial real.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "codex-guiones-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+          "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-11T13:26:08.944869+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-guiones-20261111",
+          "pid": 1822131,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289950",
+          "supervisor_pid": 1822034,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289885",
+          "rama": "codex/ws-guiones-tanda-automatizada-20261111",
+          "session_id": "01a1cacb-5351-7241-aaaf-3b12096739c0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T13:28:03.343454+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git/worktrees/onia-ws-guiones-tanda-automatizada-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T13:40:58.512187+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-flujo-guiones-tanda-automatizada-20261111",
+          "pid": 2520404,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:215985051",
+          "supervisor_pid": 2520401,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:215985038",
+          "rama": "(detached)",
+          "session_id": "01a1cbcd-f8ac-7141-a792-16772891a2c2",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T18:10:34.864561+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c51db6574ed157475881ef68594d3896ad9fb3ca561ae7d6a3a2430a08ce175c",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.veredicto.json",
+          "fin": "2026-11-11T18:13:31.125512+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+        "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-automatizada-20261111"
+        ],
+        "fecha": "2026-11-11T13:43:23.281457+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+        "criterio": "Cotejado contra 7012ca493bfd059a833b8a6cdd77b080b38765d8. Cambios limitados a las rutas asignadas; cerebro, v2 y consumidores conservados. Cumple cinco piezas con propósito, mezcla editorial, voseo, CTA coherente y adaptaciones horizontal/vertical. Selección trazable, hipótesis rotuladas y relato real solicitado sin autobiografía inventada. Noticia contrastada con la [fuente primaria del 10-nov](https://claude.com/resources/articles/sheets-whiteboards-data); fallback evergreen documentado. Verificados hashes/bytes de 16 archivos, reproducción en memoria de cinco Markdown, seis correcciones r1→r2, calendario y estado-fabrica.json. Compatibilidad comprobada con tanda.snapshot y panel.render originales. Pasaron 18 pruebas ejecutables sin escritura; evidencia 25/25 cotejada con el código exacto, sin repetir la suite completa que crea temporales. GUIA-REVISION distingue redacción LLM y programa fijo, rechazos sin sobrescritura y límites posteriores al 14. Permanecen pendientes ensayo humano, aprobación editorial y canal comercial; el rótulo heredado «tanda v2» está documentado. Revisión de sólo lectura; STOP, sin aceptar ni integrar.",
+        "worktree_conservado": true,
+        "revisor": "revisor-flujo-guiones-tanda-automatizada-20261111",
+        "session_id": "01a1cbcd-f8ac-7141-a792-16772891a2c2",
+        "entrega_sha256": "c51db6574ed157475881ef68594d3896ad9fb3ca561ae7d6a3a2430a08ce175c",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/revision-2-7c3e0801.json",
+          "sha256": "e75e71f53b5b3eec32ea52b218bd1da74a06d94d70cc7ee91529f5aa18985bc6",
+          "bytes": 1295
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/revision-2-7c3e0801.json",
+          "sha256": "e75e71f53b5b3eec32ea52b218bd1da74a06d94d70cc7ee91529f5aa18985bc6",
+          "bytes": 1295
+        }
+      ]
+    },
+    {
+      "revision": 16,
+      "actualizado": "2026-11-11T18:14:40.887551+00:00",
+      "estado": "para_revision",
+      "resultado": "Entrega26c39e3: cinco guionesv3, calendario, generador y corrección reproducible. STOP para revisión.",
+      "comprobacion": "Coordinadora repitió comprobar.py:correcto,5piezas,6cambios,v2/v3intactas,25pruebas sin fallos. Fuente noticiosa contrastada con publicación primaria10nov. No aprobación editorial, ensayo hablado ni canal comercial real.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": null,
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "codex-guiones-20261111",
+          "pid": 1822131,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289950",
+          "supervisor_pid": 1822034,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:214289885",
+          "rama": "codex/ws-guiones-tanda-automatizada-20261111",
+          "session_id": "01a1cacb-5351-7241-aaaf-3b12096739c0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T13:28:03.343454+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git/worktrees/onia-ws-guiones-tanda-automatizada-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T13:40:58.512187+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-flujo-guiones-tanda-automatizada-20261111",
+          "pid": 2520404,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:215985051",
+          "supervisor_pid": 2520401,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:215985038",
+          "rama": "(detached)",
+          "session_id": "01a1cbcd-f8ac-7141-a792-16772891a2c2",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+            "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+          ],
+          "dry_run": false,
+          "commit_base": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T18:10:34.864561+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c51db6574ed157475881ef68594d3896ad9fb3ca561ae7d6a3a2430a08ce175c",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.veredicto.json",
+          "fin": "2026-11-11T18:13:31.125512+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+        "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-automatizada-20261111"
+        ],
+        "fecha": "2026-11-11T13:43:23.281457+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/cierre-r8-027f293a.json",
+          "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+        "criterio": "Cotejado contra 7012ca493bfd059a833b8a6cdd77b080b38765d8. Cambios limitados a las rutas asignadas; cerebro, v2 y consumidores conservados. Cumple cinco piezas con propósito, mezcla editorial, voseo, CTA coherente y adaptaciones horizontal/vertical. Selección trazable, hipótesis rotuladas y relato real solicitado sin autobiografía inventada. Noticia contrastada con la [fuente primaria del 10-nov](https://claude.com/resources/articles/sheets-whiteboards-data); fallback evergreen documentado. Verificados hashes/bytes de 16 archivos, reproducción en memoria de cinco Markdown, seis correcciones r1→r2, calendario y estado-fabrica.json. Compatibilidad comprobada con tanda.snapshot y panel.render originales. Pasaron 18 pruebas ejecutables sin escritura; evidencia 25/25 cotejada con el código exacto, sin repetir la suite completa que crea temporales. GUIA-REVISION distingue redacción LLM y programa fijo, rechazos sin sobrescritura y límites posteriores al 14. Permanecen pendientes ensayo humano, aprobación editorial y canal comercial; el rótulo heredado «tanda v2» está documentado. Revisión de sólo lectura; STOP, sin aceptar ni integrar.",
+        "worktree_conservado": true,
+        "revisor": "revisor-flujo-guiones-tanda-automatizada-20261111",
+        "session_id": "01a1cbcd-f8ac-7141-a792-16772891a2c2",
+        "entrega_sha256": "c51db6574ed157475881ef68594d3896ad9fb3ca561ae7d6a3a2430a08ce175c",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/revision-2-7c3e0801.json",
+          "sha256": "e75e71f53b5b3eec32ea52b218bd1da74a06d94d70cc7ee91529f5aa18985bc6",
+          "bytes": 1295
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/revision-2-7c3e0801.json",
+          "sha256": "e75e71f53b5b3eec32ea52b218bd1da74a06d94d70cc7ee91529f5aa18985bc6",
+          "bytes": 1295
+        }
+      ]
     }
   ],
   "briefing": {
@@ -411,16 +1339,12 @@
     "bytes": 5915,
     "contenido": "# Encargo guiones-tanda-automatizada-20261111\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nProducir una tanda diaria verificable de cinco guiones mediante un procedimiento reproducible que use cerebro, fuentes fechadas y correcciones.\n\n## Entregable\n\nPipeline/procedimiento local en automatizada, tanda v3 nueva, calendario, fuentes, export compatible y GUIA-REVISION.\n\n## Criterio de aceptación\n\nReusar cerebro y tanda v2 en lectura. No editar las tandas históricas reservadas. Implementar procedimiento invocable que reciba fuentes/brief/correcciones, valide cinco piezas con propósito y construya paquete editorial compatible: T01–T05 Markdown, hashes/bytes, guiones-panel.json, calendario y estado-fabrica.json. Seleccionar ideas según referentes pertinentes con trazabilidad; personas simuladas/crítico son hipótesis, no investigación de audiencia real. La tanda mezcla venta, marca, noticia IA verificable o evergreen rotulado, segunda venta/marca y prueba. Investigar una noticia sólo con fuente primaria y fecha si hay herramientas; si no, fallback evergreen explícito. Adaptaciones horizontal/vertical por pieza, no diez ideas. Voz natural voseo, CTA coherente y marcar si canal no probado. No inventar cifras, pantallas de Claude ni hechos del día de Sergio; si falta relato real dejar entrada requerida concreta y un guion de marca sin autobiografía falsa. Demostrar una corrección aplicada a nueva versión y rechazo de datos incompletos/duplicado sin pisar salida; declarar qué parte genera el LLM y cuál es script fijo. No prometer escritura creativa/news/autoscheduler después14 sin modelo disponible. Probar compatibilidad del paquete con tanda.py del panel sin modificarlo. Duraciones estimadas hasta ensayo humano; sin aprobación editorial falsa.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sergio autorizó esta primera tanda y pidió STOP al entregar para revisarla con la coordinadora. Leer primero BITACORA-BOSS, DECISIONES-SERGIO y 04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md de master. Ese alcance sustituye el briefing histórico del9/10nov y sus presupuestos/ultra. Método Euge: entrada concreta -> paso evaluable -> resultado -> revisión/corrección; reutilizar lo existente y el cerebro, no repetir ASR ni capturas de videos. Fechas: viernes13 20h, sábado14 14h, lunes16 20h La Paz. Nombre: Claude de 0 a 100: tu negocio con IA; grupo50Bs, VIP150Bs,5cupos,1:1 de30min. QR+seguimiento y Sergio confirma cada pago. No tocar calendario real ni secretos/QR ni clientes, no activar n8n, no publicar contenido, no gastar, no cambiar PC. Vlog excluido. No modificar harness, AGENTS, decisiones ni registros canónicos. Sol6.1 high, sin hijos. No abrir otros frentes. Usar desarrollar-y-verificar. Consultar documentación primaria si surge una duda concreta; no investigación general.\n\nPreparar GUIA-REVISION.md dentro de tu ruta, con comandos, resultados reales, límites y recorrido para Sergio. Si hay bloqueo conservar trabajo y explicarlo. Probar lo pertinente, commit+push sólo de tu rama, informar hash y STOP. Nada de aceptar, integrar en master o iniciar siguiente tanda. No confundir ensayo local con operación real. Contrato estado-fabrica.json y guiones-panel.json en ALCANCE-v1.md.\n\n- Guardar generador/README/tests/GUIA-REVISION en automatizada; salida exclusivamente en salida/guiones-tanda-20261111-v3. Recursos del cerebro son lectura, cambios editoriales quedan versionados en tu ruta. No cron, no API de pago, no nuevos modelos descargados. Las reglas se aplican a una segunda salida de prueba local, no entrenamiento de pesos.\n- Alcance: 04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/guiones-tanda-automatizada-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
   },
-  "aceptacion": null,
-  "asignacion": {
-    "responsable": "codex-guiones-20261111",
-    "rutas": [
-      "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
-      "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
-    ],
-    "revision_base": 1,
-    "fecha": "2026-11-11T13:26:08.944869+00:00"
+  "aceptacion": {
+    "revisor": "revisor-flujo-guiones-tanda-automatizada-20261111",
+    "criterio": "Aceptación técnica del lote autorizado aeb1160; dictamen independiente vigente, integrado en master, pruebas verificadas; no acredita activación comercial ni aprobación editorial.",
+    "fecha": "2026-11-11T20:36:37.025998+00:00"
   },
+  "asignacion": null,
   "sesiones": [
     {
       "intento": 1,
@@ -457,9 +1381,58 @@
       "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-automatizada-20261111.git/worktrees/onia-ws-guiones-tanda-automatizada-20261111",
       "perfil_permisos": "harness-git",
       "fin": "2026-11-11T13:40:58.512187+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "revisor",
+      "responsable": "revisor-flujo-guiones-tanda-automatizada-20261111",
+      "pid": 2520404,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:215985051",
+      "supervisor_pid": 2520401,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:215985038",
+      "rama": "(detached)",
+      "session_id": "01a1cbcd-f8ac-7141-a792-16772891a2c2",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+      "log_rel": "logs/guiones-tanda-automatizada-20261111.revision-2.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-automatizada-20261111-revision-2",
+      "rutas": [
+        "05-herramientas/fabrica-onia/1-guiones-calendario/automatizada",
+        "05-herramientas/fabrica-onia/1-guiones-calendario/salida/guiones-tanda-20261111-v3"
+      ],
+      "dry_run": false,
+      "commit_base": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.briefing.txt",
+      "inicio": "2026-11-11T18:10:34.864561+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "c51db6574ed157475881ef68594d3896ad9fb3ca561ae7d6a3a2430a08ce175c",
+      "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-automatizada-20261111.2.veredicto.json",
+      "fin": "2026-11-11T18:13:31.125512+00:00"
     }
   ],
-  "revision_independiente": null,
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
+    "criterio": "Cotejado contra 7012ca493bfd059a833b8a6cdd77b080b38765d8. Cambios limitados a las rutas asignadas; cerebro, v2 y consumidores conservados. Cumple cinco piezas con propósito, mezcla editorial, voseo, CTA coherente y adaptaciones horizontal/vertical. Selección trazable, hipótesis rotuladas y relato real solicitado sin autobiografía inventada. Noticia contrastada con la [fuente primaria del 10-nov](https://claude.com/resources/articles/sheets-whiteboards-data); fallback evergreen documentado. Verificados hashes/bytes de 16 archivos, reproducción en memoria de cinco Markdown, seis correcciones r1→r2, calendario y estado-fabrica.json. Compatibilidad comprobada con tanda.snapshot y panel.render originales. Pasaron 18 pruebas ejecutables sin escritura; evidencia 25/25 cotejada con el código exacto, sin repetir la suite completa que crea temporales. GUIA-REVISION distingue redacción LLM y programa fijo, rechazos sin sobrescritura y límites posteriores al 14. Permanecen pendientes ensayo humano, aprobación editorial y canal comercial; el rótulo heredado «tanda v2» está documentado. Revisión de sólo lectura; STOP, sin aceptar ni integrar.",
+    "worktree_conservado": true,
+    "revisor": "revisor-flujo-guiones-tanda-automatizada-20261111",
+    "session_id": "01a1cbcd-f8ac-7141-a792-16772891a2c2",
+    "entrega_sha256": "c51db6574ed157475881ef68594d3896ad9fb3ca561ae7d6a3a2430a08ce175c",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/revision-2-7c3e0801.json",
+      "sha256": "e75e71f53b5b3eec32ea52b218bd1da74a06d94d70cc7ee91529f5aa18985bc6",
+      "bytes": 1295
+    }
+  },
   "cierre": {
     "commit": "26c39e3df390a9a0485c2fcdcb0a2bc0258174e1",
     "commit_base": "7012ca493bfd059a833b8a6cdd77b080b38765d8",
@@ -475,5 +1448,12 @@
       "sha256": "1408d88c2bd6e4170351d12988c90c6e146b4452cdbc94ed634a0f2b9dc5e5d1",
       "bytes": 317
     }
-  }
+  },
+  "evidencias_revision": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/guiones-tanda-automatizada-20261111/revision-2-7c3e0801.json",
+      "sha256": "e75e71f53b5b3eec32ea52b218bd1da74a06d94d70cc7ee91529f5aa18985bc6",
+      "bytes": 1295
+    }
+  ]
 }

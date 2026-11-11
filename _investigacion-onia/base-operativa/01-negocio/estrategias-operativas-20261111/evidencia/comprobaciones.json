@@ -1,0 +1,101 @@
+{
+  "resultado": "correcto",
+  "ejecutado": "2026-11-11T20:41:07+00:00",
+  "commit_fuentes": "aeb116090aed97763fa3be050f514bdea8aadde1",
+  "controles": [
+    {
+      "control": "schema_y_semantica_export",
+      "resultado": "correcto"
+    },
+    {
+      "control": "fuentes_locales_y_decisiones",
+      "resultado": "correcto",
+      "fuentes": 12
+    },
+    {
+      "control": "piezas_export_vs_markdown_y_referencias_JSON",
+      "resultado": "correcto",
+      "piezas": 10
+    },
+    {
+      "control": "enlaces_locales_y_anclas_markdown",
+      "resultado": "correcto",
+      "enlaces": 46
+    },
+    {
+      "control": "frontera_ventas_grupo_VIP",
+      "resultado": "correcto",
+      "combinaciones": 366
+    },
+    {
+      "control": "sexto_VIP",
+      "resultado": "rechazado_como_se_esperaba"
+    },
+    {
+      "control": "precio_alterado",
+      "resultado": "rechazado_como_se_esperaba"
+    },
+    {
+      "control": "fecha_historica",
+      "resultado": "rechazado_como_se_esperaba"
+    },
+    {
+      "control": "ingreso_mal_sumado",
+      "resultado": "rechazado_como_se_esperaba"
+    },
+    {
+      "control": "escenario_como_cobro",
+      "resultado": "rechazado_como_se_esperaba"
+    },
+    {
+      "control": "captura_concede_acceso",
+      "resultado": "rechazado_como_se_esperaba"
+    },
+    {
+      "control": "correccion_autoaprobada",
+      "resultado": "rechazado_como_se_esperaba"
+    },
+    {
+      "control": "futuro_iniciado",
+      "resultado": "rechazado_como_se_esperaba"
+    },
+    {
+      "control": "raiz_escape",
+      "resultado": "rechazado_como_se_esperaba"
+    },
+    {
+      "control": "tipos_de_pieza_ampliables",
+      "resultado": "correcto"
+    },
+    {
+      "control": "panel_actual_rechaza_productor_nuevo",
+      "resultado": "rechazado_como_se_esperaba"
+    },
+    {
+      "control": "panel_forma_compatible_con_mapa_solo_en_memoria",
+      "resultado": "correcto",
+      "documentos": 8,
+      "targets": 11,
+      "integracion_real": false
+    },
+    {
+      "control": "panel_rechaza_documento_fuera_raiz",
+      "resultado": "rechazado_como_se_esperaba"
+    },
+    {
+      "control": "alcance_git",
+      "resultado": "correcto",
+      "archivos_en_cambio": 15
+    },
+    {
+      "control": "revision_auxiliar_datos_compartibles",
+      "resultado": "correcto"
+    }
+  ],
+  "limites": [
+    "Sin revisión independiente/editorial ni ensayo de voz",
+    "Sin cuentas/CTA/pago/acceso real probados ni autorización comercial",
+    "Panel actual rechaza nueva raíz; ampliación únicamente en memoria",
+    "Revisión auxiliar de secretos no sustituye inspección humana"
+  ]
+}

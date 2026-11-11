@@ -1,0 +1,105 @@
+{
+  "fecha": "2026-11-11T19:32:06.903118+00:00",
+  "tipo": "Ensayo acotado real por coordinadora; no ejecución recurrente",
+  "id": "guiones-tanda-diaria-20261111",
+  "revision_harness": 16,
+  "estado_harness": "para_revision",
+  "commit_entrega": "3d50b8211f4cc5d86c3dc30994753f18a20cac21",
+  "commit_flujo": "9a4639f245d4cf3d0f3ab3e22403fabe80e0d43b",
+  "sesiones": [
+    {
+      "rol": "ejecutor",
+      "sid": "01a1cc0a-ee5c-7241-8f28-79f0da0f3d84",
+      "estado": "cerrada",
+      "rc": 0
+    },
+    {
+      "rol": "revisor",
+      "sid": "01a1cc11-f3a9-7bc3-a8f2-91eaf5ca1a2c",
+      "estado": "finalizada",
+      "rc": 0
+    }
+  ],
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "3d50b8211f4cc5d86c3dc30994753f18a20cac21",
+    "criterio": "Pasan generar.validate y motor.validate_result. Verificadas 20 candidatas, cinco piezas originales, ambos formatos, hipótesis y autocrítica. Oferta, horarios, ocho hashes locales y evidencia de cierre coinciden. Paquete v3 íntegro, original conservado y v2 intacta. Cambios limitados a los tres JSON asignados. Siguen pendientes aprobación editorial, ensayo hablado y prueba del canal NEGOCIO. Modelo efectivo y cuota constan como desconocidos.",
+    "revisor": "revision-20261111",
+    "session_id": "01a1cc11-f3a9-7bc3-a8f2-91eaf5ca1a2c"
+  },
+  "efectos": [
+    {
+      "operacion": "cerrar",
+      "fase": "confirmado"
+    },
+    {
+      "operacion": "lanzar",
+      "fase": "confirmado"
+    },
+    {
+      "operacion": "recoger",
+      "fase": "confirmado"
+    },
+    {
+      "operacion": "registrar",
+      "fase": "confirmado"
+    },
+    {
+      "operacion": "revisar",
+      "fase": "confirmado"
+    }
+  ],
+  "conciliaciones_manuales_registradas": 1,
+  "causa_conciliacion": "Primer preflight rechazado antes de crear sesión por decisiones canónicas antiguas. Se verificó ausencia de sesión/worktree/log, se respaldó el archivo intacto anterior y se sincronizó sólo DECISIONES desde master 44ad303. Mismo ID/pedido; sin borrar evidencia. Los avisos sin SID inicial se conciliaron con los SID positivos, sin otro lanzamiento.",
+  "proyeccion": {
+    "fase": "para_revision_editorial",
+    "editorial": "pendiente",
+    "sintetico": false,
+    "huella_resultado": "a95b0675ac8697a2d09f1f887b60fbae4e6c0dc909ff87906c1dc7fc250dc663",
+    "piezas": 5,
+    "candidatas_de_ideas": 20,
+    "noticias_en_pedido": 1
+  },
+  "archivos_sha256": {
+    "brief.json": "0784413fc60ace751b595c8454eac8c35133cdd5a9e779d1bf9f30b3f3e0eb8c",
+    "fuentes.json": "ef4f3a11cf3b50fbdc437d9fc2826c779ed47f69d11da924767ae1b40c2ec995",
+    "redaccion.json": "894aa05e0e4d41c2c221ef75fa963f214e44e789983cc344fb146fe746d773f4"
+  },
+  "comprobaciones_coordinadora": [
+    {
+      "prueba": "Validadores de contrato con los tres JSON del commit real",
+      "resultado": "pasa"
+    },
+    {
+      "prueba": "Tanda de otro día",
+      "resultado": "pasa; rechazo esperado",
+      "codigo": "TANDA_DE_OTRO_DIA"
+    },
+    {
+      "prueba": "Falta una candidata",
+      "resultado": "pasa; rechazo esperado",
+      "codigo": "VEINTE_CANDIDATAS_REQUERIDAS"
+    },
+    {
+      "prueba": "Hash primario distinto al pedido",
+      "resultado": "pasa; rechazo esperado",
+      "codigo": "FUENTE_NO_CORRESPONDE_AL_PEDIDO"
+    },
+    {
+      "prueba": "Repetir tick después de recoger revisión",
+      "resultado": "pasa; tarea idéntica, un ciclo y dos sesiones terminadas",
+      "salida": "{\"ciclos\": 1, \"candidatas\": 3, \"errores\": [], \"programacion_habilitada\": false}"
+    }
+  ],
+  "programacion_habilitada": false,
+  "aprobacion_editorial": false,
+  "publicacion_autorizada": false,
+  "modelo_solicitado": "gpt-6.1-sol high; autenticación ChatGPT",
+  "modelo_efectivo": "unknown",
+  "pendientes": [
+    "Autorización de integración del flujo y dependencia del generador",
+    "Hora diaria de La Paz y activación del disparador con prueba real de servicio",
+    "Revisión editorial, duración hablada y prueba de CTA NEGOCIO",
+    "Canales comerciales y pago real fuera de este ensayo"
+  ]
+}

@@ -2,6 +2,21 @@
 
 Qué hizo Boss, por qué, en qué estado quedó y qué sigue. La más reciente va primero. Los estados de tareas se consultan sólo en el harness; esto es contexto, no estado canónico.
 
+## 11 nov 2026 · flujo diario probado hasta revisión editorial (Codex)
+
+- Panel Propuesta 1 autorizado e integrado. Flujo final `9a4639f245d4cf3d0f3ab3e22403fabe80e0d43b`, tarea `fabrica-automatizaciones-flujo-diario-20261111`, revisión independiente buena recogida en r41. Dictamen en master `5ccc637`; código del flujo y dependencia del generador todavía en rama, con autorización de integración consultada a Sergio y pendiente. No confundir publicar el dictamen con integrar el producto.
+- Ensayo real `guiones-tanda-diaria-20261111`: una escritora y una revisora, producto `3d50b8211f4cc5d86c3dc30994753f18a20cac21`, revisión buena recogida en r16. Cinco guiones y veinte ideas; T03 evergreen motivado. Cadena llegó a revisión editorial pendiente. Repetir el tick conservó exactamente la tarea y ambas sesiones, sin nueva tanda.
+- Comprobados contratos, rechazos ante fecha/cantidad/hash alterados y panel real en escritorio/móvil. Evidencia, imágenes y límites: [REVISION-COORDINADORA](evidencias/flujo-diario-real-20261111/REVISION-COORDINADORA.md). La operación por horario NO está activada ni probada como servicio permanente.
+- Se conciliaron decisiones canónicas antiguas antes de lanzar, conservando copia y evidencia, y respuestas iniciales sin SID cotejando la sesión existente. No reintentar con otro ID. Se corrigió una etiqueta técnica que seguía pendiente aun con dictamen bueno.
+- Quedan para Sergio: aprobación de integración del flujo y hora de tanda; activar exige un disparo real del servicio y comprobar supervivencia de la supervisora. No reactivar las 07:00 históricas ni suponer modelo disponible después del 14. Revisión editorial, locución, CTA NEGOCIO y canales de venta siguen pendientes; no presentar el ensayo como venta real. Ninguna tarea de esta cadena quedó ejecutándose al recoger sus revisiones.
+
+## 11 nov 2026 · panel Propuesta 1 integrado con autorización (Codex)
+
+- Sergio autorizó expresamente «Sí, integrar ese panel», correspondiente a `94cca9bfaeba72ad6eee8bcf87db30d8c4d28083`. El panel, con revisión independiente favorable, quedó en `origin/master` mediante `05b5d1e2ecf68dc9dda34742f107ad8dcd722084`; hash remoto comprobado. El guardado inicial ya fue corregido y probado en navegador, incluida persistencia tras reinicio.
+- El pedido posterior de flujo automatizado se trabaja con el harness en `fabrica-automatizaciones-flujo-diario-20261111`, rama propia y una sola escritora. Reutiliza panel y generador; no lanzar otra tarea sobre esas rutas. Consultar el registro canónico para su estado, no inferirlo de esta nota.
+- Las revisiones técnicas del generador `26c39e3` y WhatsApp `46944fb` fueron recogidas con veredicto bueno. Eso no acredita aprobación editorial, integración de esos productos ni prueba real de Meta.
+- La autorización de integración del panel no activa horario, n8n, chatbot ni envíos. Hora diaria pendiente de Sergio; no reactivar la rutina histórica de las 07:00. El siguiente cierre exige evidencia del ciclo y revisión independiente del commit nuevo.
+
 ## 11 nov 2026 · funcionamiento diario y siguiente tramo propuesto (Codex)
 
 - Sergio pidió mostrar cómo se actualizan fábrica/calendario, cómo funcionan sesiones y automatizaciones y dónde se aloja el chatbot, siguiendo a Euge. Ampliado el plan existente CIERRE-VENTA-20261111.md, sección Funcionamiento diario y siguiente tramo; no se crea otro panel ni un registro de tareas.

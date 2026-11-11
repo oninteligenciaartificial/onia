@@ -89,3 +89,8 @@ Fuente: Q&A de Sergio en esta conversación. Pidió comprender las fábricas de 
 ## Primera tanda autorizada y punto de parada · 11 nov 2026
 
 Sergio aprobó lanzar panel, guiones/calendario y WhatsApp del plan 2cb5050. Alcance y contrato compartido: 04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md. Al entregar, parar para revisión con la coordinadora/Sergio; no pasar a la siguiente tanda ni integrar/aceptar automáticamente estos productos. Esta autorización sustituye el estado aparcado y los topes históricos del encargo del panel. Conserva tres sesiones, sin hijos, y los permisos sensibles vigentes.
+
+## Confirmaciones de operación — 11 noviembre 2026
+
+- Sergio confirmó directamente en Codex que la tanda de cinco guiones debe estar lista a las **18:00 America/La_Paz**, desde el12nov. Es hora de entrega; el inicio necesita margen medido y no restaura la rutina histórica pausada de07:00.
+- Sergio confirmó que el número del workshop **ya está verificado en Meta**. Es confirmación del titular; todavía no acredita acceso API, recepción de webhook, envío real ni recorrido de pago/acceso. Esas pruebas conservan sus permisos y evidencia propios.

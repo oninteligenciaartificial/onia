@@ -1,0 +1,85 @@
+{
+  "id": "fabrica-automatizaciones-meta-canales-20261111",
+  "fecha_utc": "2026-11-11T21:26:24.261707+00:00",
+  "correccion": "P2_revalidacion_de_oferta_y_fuentes_al_consumir_pendientes",
+  "commit_revisado": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+  "dictamen_recibido_por_stdin": {
+    "veredicto": "cambios",
+    "publicacion_indicada": "fd541b7",
+    "json_local_disponible": false
+  },
+  "python": "3.12.3",
+  "modelo_observado": null,
+  "esfuerzo_observado": null,
+  "cuota_inicial": null,
+  "cuota_final": null,
+  "reproduccion_previa": {
+    "canales": 4,
+    "oferta_vigente": false,
+    "resultado_incorrecto": "exito_simulado",
+    "edad_evento_segundos": 1
+  },
+  "regresiones_antes": {
+    "metodos": 5,
+    "fallos_de_subcasos": 20,
+    "rc": 1
+  },
+  "pruebas": {
+    "comando": "python3 -B -m unittest discover -s _investigacion-onia/base-operativa/05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111 -p test_*.py -v",
+    "metodos": 44,
+    "resultado": "OK",
+    "omisiones": 0,
+    "rc": 0
+  },
+  "recorridos": 4,
+  "casos_transporte_ficticio": 16,
+  "panel": {
+    "modo": "contrato_local",
+    "ui_publicada": false,
+    "lector_sin_puente": "rechazado_por_lista_de_productores",
+    "id": "fabrica-automatizaciones-meta-canales-20261111",
+    "estado": "para_revision",
+    "exports_consumidos": 1,
+    "documentos": 12,
+    "targets_revision": 11,
+    "documentos_disponibles": true,
+    "entradas_faltantes": 6,
+    "errores_modelo": []
+  },
+  "modo": "simulacion_local_no_e2e",
+  "envios_reales": 0,
+  "evidencia_anterior_preservada": {
+    "commit": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+    "archivos": 6,
+    "bytes_iguales": true
+  },
+  "hashes_sha256": {
+    "motor.py": "357052f653e742a99cb1219bc2d6c37232cfab672183a5c98d5439fbc2fcb88b",
+    "adaptador.py": "686a7449dfdca874bda6c33d50bd32bdf24d8e7d2899003ac5953d4a2877e50e",
+    "test_canales.py": "cb856838eab93dd0cf9501da240615d2e9702022afa8466999ce3af72ce58c7a",
+    "ensayo.py": "b90a3014ecfd7b22cc59af70da6a47125054b2cd1377a9603cee766895014da0",
+    "puente_panel.py": "cd4658de705b01157fbb6a309deeaa7034704cdb08c57851c81418b58b7c46c7",
+    "contrato-canales.json": "0d43ef6384388a5234fe0892acd60b8fd7a8afd40607c5db6df74a29e2dee72a",
+    "estado-fabrica.json": "fa5be1decf7a7577621b0a750cbec4bb9e1e1921eb653dfb19940cb5e7eed9f1",
+    "README.md": "419f3caacd3d92c045be3980291ccada37a57dc843b1403665da59d8a04b45e9",
+    "PRUEBAS.md": "516f39874b5a85dcec661c287b03674ced111a1276157806b0d4871de42f2c78",
+    "RECIBO.md": "c73aaab8083e3d67fb91285635d461038fd443525b97dbf78cf16415f7f8134f",
+    "oferta-referencia.json": "b38579b47a164faf8fbb28499fa4985be44b34f1d83b908733ee3b20fb2ab377",
+    "fixtures/recorridos.json": "e1ca3c49d91276c53bcc05dc16159d1e461c8c3efa88decb968f2526b00cc0f8",
+    "fixtures/resultados.json": "b697d3610f10696d43d585dee9f5af1e52ab550cf2a63492ea9768373280463c",
+    "evidencia/correccion-p2/panel.json": "694d8af7bdd6a458c0648049e4eca3b0556bdb46ebf1fb2733b27874f017ff6c",
+    "evidencia/correccion-p2/pruebas-final.txt": "d2829db2989cc1142b3418848b89c2db1c30b86cda88a19add7ae63d2d028ff7",
+    "evidencia/correccion-p2/pruebas.txt": "f917bccf57771428703ddf4e3848ff75d8ce1b14695314cbdc9b18e3cddc1363",
+    "evidencia/correccion-p2/recorridos.json": "e2ab6fde18dc862cce569c161927932481a8d175045022c19ec29aca0073c277",
+    "evidencia/correccion-p2/regresiones-antes.json": "f862f39c2fa5bf75a8981fa6833a0cf97d0dcf798e99426599f1af58c4afc04e",
+    "evidencia/correccion-p2/reproduccion-612a99b.json": "73fddc75ab11c186381500cba1fe33c491d4700530cb5f21352ad77d8bab1444"
+  },
+  "limites": [
+    "fuentes_meta_no_verificables",
+    "sin_transporte_real",
+    "sin_ui_integrada",
+    "sin_aprobacion_editorial",
+    "sin_e2e_real",
+    "revision_independiente_del_nuevo_commit_pendiente"
+  ]
+}

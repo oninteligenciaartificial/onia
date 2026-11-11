@@ -1,5 +1,7 @@
 # Contrato local de estados y eventos
 
+Este contrato describe el motor sintético `motor.cjs`. El adaptador con HMAC, autenticación de operador y SQLite incorporado en `458771a` se describe en [ADAPTADOR.md](ADAPTADOR.md); su recorrido y fallos se prueban en memoria. La autenticación real, entrega y despliegue siguen pendientes. Las fechas vigentes de ambos son 13-nov 20:00, 14-nov 14:00 y 16-nov 20:00, La Paz; sin hora final confirmada.
+
 Este documento describe el motor de fixtures. El contrato de la retoma HTTP/SQLite está en [ADAPTADOR.md](ADAPTADOR.md).
 
 Los estados pertenecen a clientes sintéticos, no al harness. `snapshot.version=1` conserva `clientes`, `referencias`, `vistos`, `salida`, `auditoria` y `reloj`. El llamador puede serializar y restaurar ese objeto para un ensayo; el workflow manual empieza vacío en cada ejecución. No hay persistencia entre ejecuciones de n8n implementada.
@@ -36,4 +38,4 @@ La clave de transporte local es `canal:evento.id`. Un duplicado con idéntico ob
 
 Cada salida tiene un ID estable derivado del evento y su posición. Es una **intención local**, no un recibo de entrega. Las pruebas restauran el snapshot y vuelven a enviar la confirmación para verificar que no nace otro acceso. El límite VIP cuenta confirmaciones dentro del snapshot; no reserva cupo con una solicitud y no garantiza cupos bajo ejecuciones concurrentes.
 
-Para uso real faltan una transacción durable que guarde deduplicación, unicidad de referencia, cupos y outbox atómicamente, y un adaptador de entrega con recibos privados. No usar el estado global del workflow como garantía de exclusión. Si falla una escritura, no enviar; si una entrega vence o su resultado es incierto, conservarla como indeterminada, conciliar su estado antes de reintentar y pedir revisión cuando no pueda resolverse. El ensayo no hace escrituras externas, no simula una entrega exitosa y no prueba concurrencia ni recuperación ante caída de un servicio.
+El motor sintético no implementa persistencia transaccional. El adaptador separado sí usa SQLite para guardar deduplicación, referencias únicas, cupos y cola atómicamente; tiene pruebas locales de concurrencia y recuperación de incertidumbre, sin acreditar operación real. No usar el estado global del workflow como garantía de exclusión. Si falla una escritura, no enviar; si una entrega vence o su resultado es incierto, conservarla como indeterminada, conciliar su estado antes de reintentar y pedir revisión cuando no pueda resolverse. Las pruebas sustituyen aceptación de Graph por un resultado falso y no prueban entrega externa.
