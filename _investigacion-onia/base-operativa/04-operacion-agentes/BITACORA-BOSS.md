@@ -2,6 +2,13 @@
 
 Qué hizo Boss, por qué, en qué estado quedó y qué sigue. La más reciente va primero. Los estados de tareas se consultan sólo en el harness; esto es contexto, no estado canónico.
 
+## 11 nov 2026 · funcionamiento diario y siguiente tramo propuesto (Codex)
+
+- Sergio pidió mostrar cómo se actualizan fábrica/calendario, cómo funcionan sesiones y automatizaciones y dónde se aloja el chatbot, siguiendo a Euge. Ampliado el plan existente CIERRE-VENTA-20261111.md, sección Funcionamiento diario y siguiente tramo; no se crea otro panel ni un registro de tareas.
+- Diferencia explícita: fábrica = proceso persistente; sesión = trabajo acotado; n8n/programas fijos = ejecución programada propuesta; panel = consulta/revisión. El ensamblador de guiones no obtiene noticias ni redacta con un modelo autónomamente. La ronda diaria, el refresco, la bandeja visual del operador y el alojamiento real del bot siguen pendientes.
+- Próximo tramo propuesto: corregir guardado e integrar panel tras revisión; fuentes/tanda recurrente; venta y acceso; VSL/materiales en el primer lugar compatible y montaje con grabación. Mantener tres lugares contando revisores. Hora objetivo de la tanda consultada a Sergio, pendiente; no reactivar las 07:00 históricas por inferencia.
+- Se cotejaron el dictamen de la primera tanda, las guías de panel/bot y master 61e404c. Cambio documental: no se corrigió producto, no se lanzaron sesiones, no se activó recurrencia/n8n/producción ni se enviaron mensajes. El STOP de revisión no se convierte en autorización de una segunda tanda por esta nota.
+
 ## 11 nov 2026 · primera tanda terminada y STOP (entrada de Codex)
 
 - Autorización directa de Sergio: lanzar panel, guiones y WhatsApp, y parar para revisarlos con la coordinadora.

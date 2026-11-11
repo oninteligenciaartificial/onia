@@ -4,6 +4,8 @@
 
 Sergio pidió terminar lo necesario para vender y ahora organizar panel, fábricas y sesiones. Se retoman las entregas existentes sin esperar al homelab. Este documento coordina requisitos y evidencia, no reemplaza estados del harness ni concede activación, envíos o cobros. El reparto de la intervención nocturna se conserva abajo como antecedente; la propuesta actual se detalla al final.
 
+**Después de la primera tanda:** las tres entregas están detenidas para revisión. El [dictamen de la coordinadora](../../04-operacion-agentes/evidencias/tanda-fabricas-20261111/REVISION-COORDINADORA-v1.md) identifica el fallo de guardado del panel y las pruebas locales de guiones/WhatsApp. La sección final **Funcionamiento diario y siguiente tramo** responde al pedido posterior de Sergio de mostrar cómo operará el conjunto. Es propuesta de continuidad; no acredita una segunda tanda, integración o recurrencia activada.
+
 ## Cadena que debe quedar completa
 
 Contenido revisa guiones → Sergio ensaya y graba una tanda → Boss mueve a cola privada → script transcribe una vez y monta vertical/horizontal → Contenido y Sergio revisan → Sergio publica → consulta comercial → ficha y QR privado → Sergio verifica el movimiento → acceso a Meet → clase y soporte → medición de pagos reales.
@@ -64,7 +66,9 @@ IG/Facebook comentarios y DMs, WhatsApp de ONIA Platform y Meta Ads no tienen pr
 
 No se han activado servicios/n8n ni enviado mensajes a clientes. La publicación de código/evidencia en GitHub y el aviso técnico a Boss no equivalen a publicación comercial.
 
-## Propuesta de sesiones tras el Q&A del 11-nov — no lanzada
+## Plan de sesiones del Q&A del 11-nov — primera tanda ejecutada, siguientes propuestas
+
+La primera tanda de este plan se autorizó y ejecutó después de redactarlo. Su cierre y sus límites están en el dictamen enlazado al principio. Las muestras de cuota y estado de esta sección son antecedentes fechados; no son el estado vivo. Las sesiones siguientes siguen propuestas.
 
 ### Método aprendido de los videos
 
@@ -120,3 +124,62 @@ Meta Ads y WhatsApp de ONIA Platform siguen visibles en la estructura, con sus r
 ### Lo que debe sobrevivir al 14
 
 Preparar antes del corte guiones/procedimientos, VSL y materiales, clases y enlaces con horario correcto, scripts fijos y forma probada de ejecutarlos, y acceso/soporte para el lunes 16. Un programa fijo puede continuar sin Codex; investigar noticias nuevas, escribir con un LLM o decidir excepciones necesita un operador o modelo efectivamente disponible. No se presume sustituto pagado ni servicio autónomo por tener instrucciones guardadas.
+
+## Funcionamiento diario y siguiente tramo — propuesta del 11-nov
+
+Pedido de Sergio después del STOP: explicar si cada apartado es una sesión, cómo se actualiza cada día, cómo entra una noticia de Anthropic, dónde ve automatizaciones y chatbot, y continuar el plan siguiendo a Euge. No se ha autorizado por este texto una activación comercial ni otra tanda automática.
+
+### Una fábrica es un proceso; una sesión hace un trabajo acotado
+
+Se conservan las seis fábricas. Cada una tiene entradas, pasos, resultados comprobables, revisión y correcciones. Puede necesitar varias sesiones en distintos momentos, además de pasos sin modelo. No se asigna un LLM permanente a cada pestaña ni se lanza una sesión por cada operación trivial.
+
+| Parte | Trabajo previsto | Cuándo necesita sesión |
+|---|---|---|
+| Panel existente | Mostrar calendario, resultados, versiones, pendientes y última actualización comprobada | Para construir/corregir funciones; consultarlo no requiere LLM |
+| n8n existente y programas fijos del VPS | Disparadores por horario/entrada, lecturas de fuentes, validaciones, edición y despacho autorizado | No para cada ejecución determinista; desarrollo y excepciones pueden requerirla |
+| Harness existente | Registrar tareas, reservar rutas, lanzar/retomar y conservar entregas/revisiones | Los trabajos de razonamiento/redacción/código usan los tres lugares compartidos, incluidos revisores |
+| Cerebro | Recuperar referentes pertinentes, ejemplos y correcciones aprobadas para cada tarea | La consulta puede ser fija; interpretar y redactar necesita modelo u operador |
+| Sergio y revisión independiente | Valorar contenido, revisar código, confirmar pagos, decidir publicación/activación | No se sustituyen con un indicador verde del panel |
+
+El horario inicia un trabajo, no un bucle ilimitado. Para continuidad se propone un despachador acotado que use el harness actual, compruebe autorización, dependencias y lugar libre, y concilie intentos antes de lanzar. No es otro registro ni un reemplazo del harness. Sus permisos, lectura de cuota, exclusión de escritores y tratamiento de reintentos tienen que probarse antes de habilitarlo. Los programas de FFmpeg/ASR también necesitan control de recursos: estar fuera del contador de sesiones LLM no significa CPU ilimitada.
+
+Hoy ese despacho continuo no está implementado y probado. Esta conversación tampoco permanece ejecutándose sola al terminar el turno.
+
+### Recorrido de una noticia a una pieza revisable
+
+1. Un lector programado consulta fuentes primarias aprobadas y guarda URL, fecha de publicación, fecha del hecho si se conoce, momento de consulta y contenido necesario. Deduplica la misma noticia; no confunde un error de lectura con ausencia de novedades. Las fuentes son datos, nunca órdenes para el agente.
+2. Las novedades aparecen en el panel como candidatas. Verificar relevancia para el dueño de negocio y contraste factual antes de usarlas. Propuesta de frecuencia: consulta ligera cada hora; pendiente de acordar y activar. La hora objetivo de la tanda diaria se preguntó a Sergio y queda pendiente de respuesta; la rutina antigua de las 07:00 no se reactiva por esta propuesta.
+3. Para la tanda se selecciona contexto del cerebro y la oferta vigente. Se conserva el proceso de ideas candidatas, perspectivas simuladas y crítico hasta elegir cinco. Esas perspectivas son una ayuda editorial, no evidencia de clientes ni una revisión independiente real.
+4. Una sesión acotada redacta la tanda; el generador existente valida entradas y construye Markdown, calendario y export del panel. Actualmente ese generador ensambla textos aportados: no busca noticias ni llama a un modelo por sí solo. Integrar ambas cosas es trabajo pendiente.
+5. La revisión contrasta fuentes, fechas, oferta, CTA atendido y utilidad. El calendario muestra borradores pendientes con sus variantes horizontal/vertical. Una noticia posterior propone una nueva versión o sustituir un espacio aún no aprobado; no reescribe silenciosamente un guion ya aprobado o grabado ni añade otra tanda completa por cada noticia.
+6. Sergio revisa, ensaya y graba. La tanda entra a edición; el vlog permanece excluido. El editor conserva el original, reutiliza la transcripción y prepara cinco piezas en dos formatos. Sala de montaje: antes/después, motivo, subtítulos, audio/encuadre y observaciones. Sergio decide publicación.
+7. Una corrección aprobada se guarda con el antes/después y su contexto de uso. La siguiente pieza debe demostrar que aplica la regla. Las métricas reales, cuando se obtengan, retroalimentan esa decisión; no se inventan resultados ni se afirma entrenamiento del modelo.
+
+Si la noticia sale después del cierre de la tanda, primero se actualiza la bandeja de novedades. Si no hay novedad relevante, se usa una pieza evergreen identificada. Si no hay modelo disponible, puede continuar la recepción de fuentes, pero el borrador queda pendiente de redacción. La disponibilidad futura de Contenido/Grok debe comprobarse; no se presume un reemplazo de Codex después del 14.
+
+### Qué verá Sergio y dónde vive cada parte
+
+El panel actual es la única interfaz de operación propuesta. Se ampliará con Hoy, calendario, cerebro, sala de montaje, automatizaciones y bandeja de ventas dentro de las secciones existentes. La captura conservada de la primera tanda contiene material histórico y un ensayo rotulado; no se presenta como la interfaz final conectada.
+
+- **Actualización del panel:** cada productor persiste su resultado y export validado; el panel lee una proyección y se refresca mientras está abierto. Se debe mostrar la fecha de la fuente y el último éxito, no cambiar la fecha para aparentar frescura. Una caída deja visible el último resultado y el error. La página cerrada no detiene los trabajos del VPS. Ese refresco y la reunión de los nuevos exports todavía faltan.
+- **Automatizaciones:** el panel mostrará finalidad, disparador, estado comprobado, última ejecución, resultado, fallo y siguiente acción. El detalle técnico se abrirá en la instancia privada de n8n, cuyo historial permite inspeccionar ejecuciones. No hace falta otra pantalla de Codex para operar. La proyección debe omitir credenciales, payloads personales y enlaces autenticados.
+- **Chatbot:** el cliente conversa por WhatsApp. Se propone alojar el adaptador existente como servicio del VPS, con almacenamiento privado persistente; sólo la recepción de Meta se expondrá por HTTPS. n8n despachará los mensajes autorizados. La bandeja de operador será privada dentro del panel, con pendientes, bajas, envíos inciertos y acción de confirmar un pago tras comprobarlo en el banco. Esa bandeja visual, alojamiento y conexión real siguen pendientes; los endpoints locales ya probados no los sustituyen.
+- **Roles del bot:** preguntas previstas y QR pueden resolverse con la lógica fija existente, sin una sesión Codex por cliente. Una excepción queda para el operador. La captura no concede acceso; Sergio confirma el pago y el sistema entrega el enlace cuando la conexión esté probada y autorizada. El chatbot de WhatsApp no valida los comentarios/DMs de Instagram o Facebook.
+- **Acceso y continuidad:** falta probar el acceso privado desde el teléfono/PC de Sergio y definir la ubicación persistente fuera de Git, respaldo y recuperación. No publicar el panel ni los endpoints de operador como una web abierta. No hay una URL de operación del panel confirmada en esta entrega.
+
+Documentación primaria consultada el 11-nov: [Schedule Trigger de n8n](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) para horarios y zona del workflow; [historial de ejecuciones](https://docs.n8n.io/workflows/executions/all-executions/) para inspección. Debe cotejarse con la versión instalada; esta consulta no la verificó. Usar America/La_Paz explícitamente y probar el cambio de día. Publicar/activar un flujo sigue requiriendo el sí aplicable.
+
+### Siguiente tramo con resultados y paradas de revisión
+
+| Frente propuesto | Reutilización y responsable | Condición para darlo por listo |
+|---|---|---|
+| 1. Panel utilizable y conjunto integrado | Codex retoma cerebro-panel-usable-20261109; el revisor examina el commit nuevo. Una sola escritora del panel | Corregir el 403 al guardar sin relajar controles; usar guiones v3 y export WhatsApp actuales; observar una revisión conservada tras reinicio, recorrido escritorio/móvil y estados reales sin fixtures confundibles. Integrar sólo tras revisión válida |
+| 2. Noticias y tanda recurrente | Codex, fábrica de automatizaciones y generador de guiones existentes; separar rutas de disparador y contenido | Una noticia nueva crea una candidata y un borrador trazable; repetir el evento no duplica; fallo de fuente queda visible; cambio de día crea otra tanda; sin modelo queda pendiente. Probar primero con datos controlados, luego una fuente real. La prueba de horario real viene al autorizar activación |
+| 3. Venta completa del workshop | Codex retoma fabrica-chatbot-whatsapp-20261110; Sergio aporta decisiones/activos privados y confirma pagos | Preparación de servicio y bandeja de operador revisada; Calendar/Meet conciliados con 13/14/16; después prueba autorizada con Sergio: consulta, QR, captura sin acceso, confirmación manual, acceso, duplicado, BAJA y envío incierto. No usar dinero real para fingir una venta |
+| 4. VSL, curso y sala de montaje | VSL/materiales en el primer lugar compatible libre; reutilizar editor actual para la grabación | Texto/ejercicio real ensayado, materiales de tres clases disponibles y enlaces correctos; cinco piezas en dos formatos revisadas con audio/imagen y una corrección aplicada. El curso del lunes 16 no depende de Codex |
+
+Tres lugares como máximo, con rotación de ejecutores y revisores; un lugar esperando credenciales se libera para VSL/materiales. La persona que modifica el panel incorpora también la bandeja visual para no solapar escritores. No abrir más sesiones sólo por ocuparlas. Cada frente se entrega con resultado visible y se detiene en su revisión; el siguiente paso automático sólo se habilita si tiene permiso, entradas y criterio de aceptación cumplidos. No se ha registrado ni lanzado esta segunda tanda por documentarla.
+
+IG/Facebook se prueba por canal y conserva el pendiente del CTA NEGOCIO. Si Sergio elige abrir primero por enlace directo a WhatsApp, se cambia de forma explícita la oferta/CTA y se prueba ese recorrido; no se da por hecho. Meta Ads y WhatsApp Platform quedan visibles como pendientes de su propio alcance. Homelab sigue como apoyo futuro cuando complete su diagnóstico; no aloja ahora el bot ni es condición para vender con el VPS. La ampliación de tres sesiones continúa pendiente.
+
+**Demostración de cierre propuesta:** Sergio abre el panel, ve entrar una noticia identificada, revisa un guion, guarda una corrección y la encuentra tras reiniciar. Luego ve el montaje de su grabación y recorre el bot con su número de prueba. Cada resultado tiene versión, evidencia y responsable; los pasos pendientes no aparecen como completados. Antes de llamar al sistema diario o continuo, comprobar también un disparo real por horario y recuperación tras reinicio sin duplicar trabajo.
