@@ -3,7 +3,8 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
-const { spawn } = require('node:child_process');
+const { spawn, spawnSync } = require('node:child_process');
+const { createHash } = require('node:crypto');
 const runtime = path.join(os.homedir(),'operacion/browser-piloto-20261108');
 const { chromium } = require(path.join(runtime,'node_modules/playwright'));
 const root = __dirname;
@@ -19,6 +20,9 @@ const data = fs.mkdtempSync('/tmp/onia-cerebro-browser-sintetico-');
 let server;
 let browser;
 const report = { fecha:new Date().toISOString(), ensayo:'SINTETICO sobre T01 histórico', chromiumSandbox:true, casos:[] };
+report.commit_checkout = spawnSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).stdout.trim();
+report.codigo_sha256 = Object.fromEntries(['cerebro.py','servidor.py','operacion.py','diseno.py','panel.py','correcciones.py','vistas_cerebro.py','diseno.css','visual-cerebro.cjs'].map(name =>
+  [name,createHash('sha256').update(fs.readFileSync(path.join(root,name))).digest('hex')]));
 async function start() {
   server = spawn('python3',['-B',path.join(root,'servidor.py'),'--datos',data,'--puerto','0'],{stdio:['ignore','pipe','pipe']});
   return await new Promise((resolve,reject) => {
@@ -68,6 +72,9 @@ async function post(page,review,name,pathname) {
       await page.evaluate(()=>document.fonts.ready);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
       assert((await page.innerText('#cerebro')).includes('Decisiones de negocio vigentes'));
+      const author = page.locator('.knowledge-table tr').filter({hasText:'Autor de los 5 guiones diarios'});
+      assert((await author.innerText()).includes('Codex escribe'));
+      assert((await author.innerText()).includes('Hasta el viernes 13'));
       await page.screenshot({path:path.join(output,name+'-cerebro.png'),fullPage:true});
       await page.locator('.sidebar a[href="#estrategias"]').click();
       const strategyText = await page.innerText('#estrategias');

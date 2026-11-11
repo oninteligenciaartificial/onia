@@ -3,12 +3,12 @@
   "id": "cerebro-panel-usable-20261109",
   "fabrica": "panel",
   "estado": "para_revision",
-  "generado": "2026-11-11T21:12:53.811005+00:00",
+  "generado": "2026-11-11T21:35:25.614989+00:00",
   "fuente": "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-CEREBRO.md",
   "pasos": [
     {
       "id": "cerebro",
-      "nombre": "Recuperar fuentes, decisiones y reglas aprobadas documentadas",
+      "nombre": "Consultar autoría conciliada, fuentes y reglas aprobadas",
       "estado": "completado",
       "evidencias": [
         "05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-CEREBRO.md"
@@ -19,17 +19,17 @@
       "nombre": "Probar sugerencia, versión local, reintento y export a coordinación",
       "estado": "completado",
       "evidencias": [
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/cerebro-20261111/pruebas.txt",
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/cerebro-20261111/recorrido-cli.json"
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/correccion-cerebro-20261111/pruebas.txt",
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/correccion-cerebro-20261111/recorrido-cli.json"
       ]
     },
     {
       "id": "contrato",
-      "nombre": "Consumir contrato publicado de estrategias con pruebas de validez y rechazo",
+      "nombre": "Exigir S01 íntegra y rechazar versiones de sección obsoletas",
       "estado": "completado",
       "evidencias": [
         "05-herramientas/fabrica-contenido/20261109-lector-panel/CONTRATO-COORDINACION.md",
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/cerebro-20261111/pruebas.txt"
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/correccion-cerebro-20261111/pruebas.txt"
       ]
     },
     {
@@ -42,10 +42,18 @@
     },
     {
       "id": "browser",
-      "nombre": "Probar nuevas pantallas y aplicación con navegador desktop y móvil",
+      "nombre": "Probar código corregido en navegador escritorio y móvil",
       "estado": "bloqueado",
       "evidencias": [
-        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/cerebro-20261111/intento-01/resultado.json"
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/correccion-cerebro-20261111/intento-browser-01/resultado.json"
+      ]
+    },
+    {
+      "id": "host-base",
+      "nombre": "Incorporar y abrir evidencia host de b8019ec, cinco casos con persistencia",
+      "estado": "completado",
+      "evidencias": [
+        "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/cerebro-20261111/host-coordinadora-01/PROCEDENCIA.json"
       ]
     },
     {
@@ -58,7 +66,7 @@
   "entregables": [
     {
       "nombre": "Preview cerebro y correcciones",
-      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/cerebro-20261111/preview-final/panel.html"
+      "ruta": "05-herramientas/fabrica-contenido/20261109-lector-panel/evidencia/correccion-cerebro-20261111/preview/panel.html"
     },
     {
       "nombre": "Guía de uso, reinicio y acceso privado",

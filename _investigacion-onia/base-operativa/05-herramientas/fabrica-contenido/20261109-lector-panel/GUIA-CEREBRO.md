@@ -1,10 +1,18 @@
 # Cerebro, correcciones y estrategias
 
-Retoma de `cerebro-panel-usable-20261109` sobre `624529cc33128c3c2aac60a052bc437be455215f`. Se conserva Propuesta 1, el consumidor del flujo diario 9a4639f y la entrega aceptada 94cca9b. Directora desarrollar-y-verificar leída. Modelo solicitado Sol high, cero hijos. Runtime y cuota atribuibles a esta retoma desconocidos. La coordinadora mantiene tareas, decisiones e integración.
+Corrección de revisión de `cerebro-panel-usable-20261109` sobre `b8019ec4480caf5ba83b1d7b654422d058ac5792`. La implementación anterior partió de `624529cc33128c3c2aac60a052bc437be455215f`. Se conserva Propuesta 1, el consumidor del flujo diario 9a4639f y la entrega aceptada 94cca9b. Directora desarrollar-y-verificar leída. Modelo solicitado Sol high, cero hijos. Runtime y cuota atribuibles a esta retoma desconocidos. La coordinadora mantiene tareas, decisiones e integración.
+
+## Correcciones de la revisión independiente
+
+Las tres regresiones reprodujeron el fallo sobre b8019ec antes de aplicar el cambio. El consumidor exige S01 en fuentes.json y en el índice de fuentes, además de cotejar su ruta, bytes y SHA-256 con la decisión comercial vigente. Omitir esa fuente completa rechaza el export.
+
+La huella de cada sección incorpora una copia de los datos mostrados de fábricas, pasos, entregables, pendientes, errores, tanda, flujo diario y estrategias. Un cambio de esos datos exige recargar el formulario. Se excluye la hora generada por la consulta de tanda.snapshot para permitir guardar mientras el contenido permanece igual. La invalidación es común a las secciones y permite detectar cambios de contexto entre vistas.
+
+La fila de autoría concilia la tabla inicial con el apartado posterior Agregado 08:22 de la misma fuente. Muestra Codex hasta el viernes 13, Contenido como editor y la redacción de Contenido desde el sábado 14. Ambos períodos se leen del documento y conservan su procedencia. StrategyTests ejecuta Git desde la raíz resuelta por lector.REPO y funciona desde la subcarpeta del producto.
 
 ## Qué abrir
 
-[Preview del cerebro](evidencia/cerebro-20261111/preview-final/panel.html). Contiene consulta documental de referentes, decisiones vigentes, reglas aprobadas documentadas, fuentes/fecha/hash, estrategias pendientes de integrar y las vistas de capacidades. Los datos de las revisiones privadas se consultan en el servidor temporal. La [validación estructural del preview](evidencia/cerebro-20261111/preview-validacion.json) comprobó 96 enlaces y 46 anclas únicas, sin formularios privados ni scripts.
+[Preview del cerebro](evidencia/correccion-cerebro-20261111/preview/panel.html). Contiene consulta documental de referentes, decisiones vigentes, reglas aprobadas documentadas, fuentes/fecha/hash, estrategias pendientes de integrar y las vistas de capacidades. Los datos de las revisiones privadas se consultan en el servidor temporal. La [validación estructural del preview](evidencia/correccion-cerebro-20261111/preview-validacion.json) comprobó 97 enlaces y 47 anclas únicas, sin formularios privados ni scripts.
 
 Desde la raíz del checkout
 
@@ -39,7 +47,7 @@ Se leyó la entrega publicada `19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed` de `cod
 
 El adaptador consume `01-negocio/estrategias-operativas-20261111/export-estrategias-v1.json`, schema `onia-estrategias-v1`, junto con `estrategias.schema.json` y `fuentes.json`. Se amplió el mapa exclusivamente al productor `estrategias` bajo esa raíz. La estrategia del workshop conserva borrador preparado; las futuras propuestas conservan propuesto, sus acciones, piezas, evidencia y fuentes. Los valores desconocidos de métricas permanecen desconocidos.
 
-Se valida el esquema local con jsonschema ya disponible. Las referencias de esquema que pudieran requerir resolución externa se rechazan. S01 debe coincidir con la decisión vigente. Las fuentes técnicas modificadas se muestran pendientes de conciliación, sin rehacer las huellas del productor. Las piezas se cotejan con el Markdown declarado. Una ruta fuera de raíz, aprobación inventada, precio o fecha divergentes bloquea la adopción del export.
+Se valida el esquema local con jsonschema ya disponible. Las referencias de esquema que pudieran requerir resolución externa se rechazan. S01 es obligatoria y debe coincidir con la decisión vigente. Las fuentes técnicas modificadas se muestran pendientes de conciliación, sin rehacer las huellas del productor. Las piezas se cotejan con el Markdown declarado. Una ruta fuera de raíz, aprobación inventada, precio o fecha divergentes bloquea la adopción del export.
 
 [Contrato de coordinación](CONTRATO-COORDINACION.md). El comprobador histórico del productor presupone que el mapa del panel rechaza esta raíz; su expectativa necesita actualización por su escritora cuando se integren los productos. Su evidencia anterior conserva su alcance.
 
@@ -84,21 +92,29 @@ El operador comprueba después autenticación, una versión local previa y la ú
 ```bash
 python3 -B "$P/pruebas.py"
 python3 -B -m unittest discover -s "$P" -p 'test_*.py' -v
+(cd "$P" && python3 -B -m unittest test_cerebro.StrategyTests -v)
+python3 -B "$P/evidencia/correccion-cerebro-20261111/recorrido-cli.py"
 node --check "$P/visual-cerebro.cjs"
 node --check "$P/visual-diseno.cjs"
 node --check "$P/visual-operacion.cjs"
 git diff --check
 ```
 
-Resultados y comandos en [pruebas.txt](evidencia/cerebro-20261111/pruebas.txt), con [recorrido CLI](evidencia/cerebro-20261111/recorrido-cli.json) y [recibo](evidencia/cerebro-20261111/RECIBO.json). Se conservan lector 22, tanda 3, operación 23, diseño/origen 7 y diario 6. La ampliación añade 15 regresiones de fuentes reales, contrato real de estrategias reificado en /tmp, export válido/inválido/ausente, rutas/esquema malicioso, XSS, migración, aplicación/reintento, conflictos, reinicio, solicitudes y autenticación. Total ejecutado en esta sesión, 76 comprobaciones Python aprobadas, sin omisiones. La prueba del contrato publicado requiere ese commit del productor en los objetos Git; si falta, la suite declara la omisión de esa dependencia.
+La entrega anterior conserva sus 76 comprobaciones y su recibo. La corrección añade tres regresiones y ejecutó 79 comprobaciones Python, incluyendo lector 22, tanda 3, operación 23, diseño/origen 7, diario 6 y cerebro 18, sin omisiones. StrategyTests pasó sus cinco casos también desde la subcarpeta del producto. El ensayo CLI guardó y aplicó con reintento, reinició en un proceso nuevo, recuperó la versión privada y exportó una solicitud canónica pendiente. Los comandos, salidas y hashes están en el recibo de esta corrección. [Pruebas](evidencia/correccion-cerebro-20261111/pruebas.txt), [recorrido CLI](evidencia/correccion-cerebro-20261111/recorrido-cli.json), [recibo](evidencia/correccion-cerebro-20261111/RECIBO.json).
+
+La prueba del contrato publicado requiere el commit del productor en los objetos Git. Si falta, la suite declara la omisión de esa dependencia.
 
 El ensayo de navegador preparado usa Playwright/Chromium existente con sandbox real
 
 ```bash
-node "$P/visual-cerebro.cjs" "$P/evidencia/cerebro-20261111/host-01"
+node "$P/visual-cerebro.cjs" "$P/evidencia/correccion-cerebro-20261111/host-02"
 ```
 
-Ejecuta vistas de cerebro/estrategias en 1440×1000 y 390×844, guardado, aplicación local, reinicio y solicitud canónica. Cierra servidor y navegador y conserva SQLite sintética fuera de Git. En esta ejecutora Chromium falló antes de renderizar por `No usable sandbox!`, con cero capturas nuevas. [Intento conservado](evidencia/cerebro-20261111/intento-01/resultado.json). La revisión de las capturas nuevas queda pendiente del host. El veredicto bueno sobre 94cca9b corresponde a aquella entrega.
+Ejecuta vistas de cerebro/estrategias en 1440×1000 y 390×844, comprueba la autoría conciliada, guardado, aplicación local, reinicio y solicitud canónica. Registra el commit del checkout y los hashes del código. Cierra servidor y navegador y conserva SQLite sintética fuera de Git.
+
+La coordinadora ejecutó el navegador sobre b8019ec con sandbox real y cinco casos aprobados, incluyendo persistencia tras reinicio. Se incorporan su JSON y cinco capturas, abiertas durante esta retoma. La imagen de cerebro de esa versión muestra la fila de autoría que corrige esta entrega. Las capturas tienen procedencia y hashes propios. [Evidencia host de b8019ec](evidencia/cerebro-20261111/host-coordinadora-01/PROCEDENCIA.json).
+
+El intento de navegador del código corregido volvió a fallar antes de renderizar por No usable sandbox!, con cero capturas nuevas. La coordinadora debe ejecutar el comando anterior sobre la entrega corregida y abrir sus capturas. El recibo del intento conserva los hashes del código exacto. [Intento de la corrección](evidencia/correccion-cerebro-20261111/intento-browser-01/resultado.json).
 
 Para regenerar un preview en un directorio nuevo
 

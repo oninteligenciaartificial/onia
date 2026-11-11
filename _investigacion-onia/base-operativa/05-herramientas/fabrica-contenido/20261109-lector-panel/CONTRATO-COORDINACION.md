@@ -4,7 +4,7 @@ El panel consume la entrega del productor `19e2d7dc71db6c00c4e5c1e60239b9419b4f7
 
 ## Estrategias
 
-La ruta precisa es `01-negocio/estrategias-operativas-20261111/export-estrategias-v1.json`, schema `onia-estrategias-v1`, versión_export 1. El consumidor lee `estrategias.schema.json` y `fuentes.json` en esa misma raíz, valida el esquema autocontenido con jsonschema existente, confirma la oferta y horarios y contrasta S01 con los bytes de la decisión vigente. No resuelve referencias de esquema de red.
+La ruta precisa es `01-negocio/estrategias-operativas-20261111/export-estrategias-v1.json`, schema `onia-estrategias-v1`, versión_export 1. El consumidor lee `estrategias.schema.json` y `fuentes.json` en esa misma raíz, valida el esquema autocontenido con jsonschema existente, confirma la oferta y horarios y exige S01 presente con ruta, bytes y SHA-256 de la decisión vigente. No resuelve referencias de esquema de red.
 
 Se admitió el productor `estrategias` en el mapa del lector para `estado-fabrica.json`, exclusivamente bajo esa raíz. El resumen descriptivo y la estrategia documentada conservan sus alcances. La vista muestra workshop como borrador preparado y biblioteca futura como propuesta. Las piezas son borradores con revisión pendiente, sus textos se cotejan con sus Markdown y pueden recibir una nueva versión local de revisión.
 
@@ -25,3 +25,5 @@ El alcance `pieza` habilita una acción fija para convertir el texto completo de
 Las correcciones de sección, canónicas o que requieren LLM se exportan a coordinación. Los precios, horarios y roles vigentes siguen procediendo de la decisión explícita documentada. Las versiones locales son entradas de revisión, con propagación a productores y ventas sujeta al recorrido autorizado de coordinación.
 
 El comprobador del productor conserva el control histórico `panel_actual_rechaza_productor_nuevo`. Después de integrar esta ampliación, esa expectativa necesita una actualización en la ruta del productor, a cargo de su escritora/coordinadora. Los recibos anteriores mantienen su fecha y alcance. Esta entrega prueba el export real del productor en copias temporales, con su esquema y fuentes, y comprueba la aceptación y los rechazos del lector nuevo.
+
+Los objetivos de sección incluyen los contratos mostrados de fábricas, pasos, entregables, pendientes, errores, tanda, flujo diario y estrategias en su huella de revisión. Una actualización de contexto invalida el formulario anterior. La hora de consulta de tanda.snapshot queda excluida. Las observaciones ya persistidas conservan su original y su reintento idempotente.

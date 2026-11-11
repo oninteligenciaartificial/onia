@@ -20,7 +20,7 @@ import lector
 import operacion as op
 import servidor
 import vistas_cerebro
-from test_operacion import Forms
+from test_operacion import FIXTURE, Forms
 
 
 class CorrectionTests(unittest.TestCase):
@@ -71,6 +71,46 @@ class CorrectionTests(unittest.TestCase):
         self.assertEqual(self.request(path='/?objetivo=../../privado')[0],400)
         private_id=lector.sha('privado/contexto.md'.encode())[:24]
         self.assertEqual(self.request(path='/documento?id='+private_id)[0],400)
+
+    def test_current_author_uses_documented_temporary_exception(self):
+        decisions = dict(self.app.model()['conocimiento']['decisiones'])
+        author = decisions['Autor de los 5 guiones diarios']
+        self.assertIn('Hasta el viernes 13', author)
+        self.assertIn('Codex escribe', author)
+        self.assertIn('Contenido los revisa', author)
+        self.assertIn('Desde el sábado 14', author)
+        self.assertIn('Contenido escribe', author)
+        self.assertIn(author, self.request()[2])
+
+    def test_section_form_rejects_changed_factory_and_keeps_retry(self):
+        self.app.exports = (FIXTURE,)
+        original_read = op.read_relative
+        export = json.loads(original_read(FIXTURE, [op.PANEL_ROOT]))
+
+        def read_export(path, roots):
+            if path == FIXTURE:
+                return json.dumps(export).encode()
+            return original_read(path, roots)
+
+        with patch.object(op, 'read_relative', side_effect=read_export):
+            model = self.app.model()
+            key = model['context_targets']['fabricas']
+            fingerprint = model['targets'][key]['huella_revision']
+            fields = Forms(self.request(path='/?objetivo=' + key)[2]).forms[-1]
+            fields.update(motivo='ENSAYO de estado de fábrica',
+                          correccion='Revisar el bloqueo de esta fábrica.', alcance='seccion')
+            self.assertEqual(fingerprint, self.app.model()['targets'][key]['huella_revision'])
+            export['estado'] = 'bloqueado'
+            changed = self.app.model()['targets'][key]
+            self.assertNotEqual(fingerprint, changed['huella_revision'])
+            self.assertIn('bloqueado', json.dumps(changed['original']))
+            self.assertEqual(self.request('POST', '/revision', fields)[0], 409)
+            self.assertEqual(self.app.reviews.history(key), [])
+            refreshed = Forms(self.request(path='/?objetivo=' + key)[2]).forms[-1]
+            fields.update(source_hash=refreshed['source_hash'], solicitud_id=refreshed['solicitud_id'])
+            self.assertEqual(self.request('POST', '/revision', fields)[0], 303)
+            self.assertEqual(self.request('POST', '/revision', fields)[0], 303)
+            self.assertEqual(len(self.app.reviews.history(key)), 1)
 
     def test_double_submission_idempotent_conflicting_payload_rejected(self):
         fields=self.fields()
@@ -246,7 +286,7 @@ class StrategyTests(unittest.TestCase):
     def setUpClass(cls):
         cls.commit='19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed'
         cls.prefix='_investigacion-onia/base-operativa/'
-        result=subprocess.run(['git','cat-file','-e',cls.commit],capture_output=True)
+        result=subprocess.run(['git','cat-file','-e',cls.commit],cwd=lector.REPO,capture_output=True)
         if result.returncode:
             raise unittest.SkipTest('Entrega publicada del productor todavía no disponible en los objetos de este checkout')
 
@@ -255,7 +295,8 @@ class StrategyTests(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.base=Path(self.tmp.name)
         folder=self.prefix+cerebro.STRATEGY_ROOT
-        files=subprocess.check_output(['git','ls-tree','-r','--name-only',self.commit,'--',folder],text=True).splitlines()
+        files=subprocess.check_output(['git','ls-tree','-r','--name-only',self.commit,'--',folder],cwd=lector.REPO,text=True).splitlines()
+        self.assertTrue(files, 'El contrato publicado debe incluir archivos en su raíz exacta')
         for name in files:self.copy_source(name)
         sources=json.loads((self.base/cerebro.STRATEGY_ROOT/'fuentes.json').read_text())
         for row in sources['fuentes']:self.copy_source(self.prefix+row['ruta'])
@@ -268,7 +309,7 @@ class StrategyTests(unittest.TestCase):
     def copy_source(self,name):
         path=self.base/name.removeprefix(self.prefix)
         path.parent.mkdir(parents=True,exist_ok=True)
-        path.write_bytes(subprocess.check_output(['git','show',self.commit+':'+name]))
+        path.write_bytes(subprocess.check_output(['git','show',self.commit+':'+name],cwd=lector.REPO))
 
     def test_published_export_valid_future_proposals_and_source_hashes(self):
         result=cerebro.strategies(self.model)
@@ -288,6 +329,31 @@ class StrategyTests(unittest.TestCase):
         path.write_text(json.dumps(self.original))
         (self.base/cerebro.STRATEGY_ROOT/'estrategias.schema.json').write_text('{"$ref":"https://evil.invalid/schema"}')
         with self.assertRaises(ValueError):cerebro.strategies(self.model)
+
+    def test_s01_required_even_when_all_references_removed(self):
+        path = self.base / cerebro.STRATEGY_INDEX
+        data = copy.deepcopy(self.original)
+        data['fuentes_ids'].remove('S01')
+
+        def remove_reference(value):
+            if isinstance(value, dict):
+                for key, child in value.items():
+                    if key == 'fuentes' and isinstance(child, list):
+                        value[key] = [item for item in child if item != 'S01'] or ['S02']
+                    else:
+                        remove_reference(child)
+            elif isinstance(value, list):
+                for child in value:
+                    remove_reference(child)
+
+        remove_reference(data)
+        path.write_text(json.dumps(data))
+        sources_path = self.base / cerebro.STRATEGY_ROOT / 'fuentes.json'
+        sources = json.loads(sources_path.read_text())
+        sources['fuentes'] = [row for row in sources['fuentes'] if row['id'] != 'S01']
+        sources_path.write_text(json.dumps(sources))
+        with self.assertRaisesRegex(ValueError, 'S01'):
+            cerebro.strategies(self.model)
 
     def test_changed_business_source_path_escape_and_fake_approval_rejected(self):
         path=self.base/cerebro.STRATEGY_INDEX

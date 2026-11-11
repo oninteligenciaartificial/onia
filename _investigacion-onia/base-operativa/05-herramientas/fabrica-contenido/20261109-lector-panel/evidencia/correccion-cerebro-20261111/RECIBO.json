@@ -1,0 +1,81 @@
+{
+  "schema": "onia-panel-recibo-v1",
+  "tarea": "cerebro-panel-usable-20261109",
+  "generado": "2026-11-11T21:37:21.685772+00:00",
+  "base": "b8019ec4480caf5ba83b1d7b654422d058ac5792",
+  "rama": "codex/ws-cerebro-panel-usable-20261109",
+  "modelo_solicitado": "Sol high",
+  "modelo_observado": null,
+  "esfuerzo_observado": null,
+  "cuota_inicial": null,
+  "cuota_final": null,
+  "hijos": 0,
+  "correcciones": [
+    "S01 obligatoria e íntegra incluso si se retiran sus referencias",
+    "Huella de sección incluye datos mostrados y detecta estado de fábrica obsoleto",
+    "Autoría concilia tabla inicial y excepción documental hasta el 13",
+    "StrategyTests resuelve Git desde la raíz del repositorio"
+  ],
+  "reproduccion": "Tres regresiones fallaron sobre b8019ec. StrategyTests falló desde la subcarpeta. antes.txt y cwd-antes.txt conservan salidas.",
+  "ajuste_intermedio": "El primer ajuste de huella incluía la hora de render de tanda.snapshot y produjo dos fallos de guardado/estabilidad. Se excluyó esa hora de consulta y pasó la regresión de estabilidad y guardado.",
+  "pruebas_python": {
+    "lector": 22,
+    "tanda": 3,
+    "operacion": 23,
+    "diseno": 7,
+    "diario": 6,
+    "cerebro": 18,
+    "total": 79,
+    "omitidas": 0,
+    "resultado": "OK"
+  },
+  "repeticion_subcarpeta": {
+    "suite": "StrategyTests",
+    "casos": 5,
+    "resultado": "OK"
+  },
+  "comandos_y_salidas": "pruebas.txt",
+  "recorrido_procesos": "recorrido-cli.json",
+  "browser_base": {
+    "commit": "b8019ec4480caf5ba83b1d7b654422d058ac5792",
+    "casos": 5,
+    "resultado_host": "OK",
+    "capturas_abiertas": 5,
+    "procedencia": "../cerebro-20261111/host-coordinadora-01/PROCEDENCIA.json"
+  },
+  "browser_corregido": {
+    "resultado": "BLOCKED",
+    "recibo": "intento-browser-01/resultado.json",
+    "capturas": 0,
+    "motivo": "No usable sandbox!"
+  },
+  "preview": {
+    "preview": "preview/panel.html",
+    "enlaces_validados": 97,
+    "anclas_unicas": 47,
+    "formularios_privados": 0,
+    "scripts": 0,
+    "autoria_conciliada": true,
+    "resultado": "OK"
+  },
+  "hashes_codigo": {
+    "cerebro.py": "c71dca860c238331c69668c959e18e65df7139780b7fe080c0eba2c5b552f2a5",
+    "test_cerebro.py": "4141d8b982bac7a888de4e2ce9b7665a50475d54e00c15619469337e68908228",
+    "visual-cerebro.cjs": "6190aea6ff4043d2c12e26c9ce836595be21ad5374bda7232c313adaa13570a5",
+    "servidor.py": "7c448c8647331a90dc80b651ee29b61923dc1a25b6b8bbb9d2f22f4092dffd12",
+    "operacion.py": "3e3052efecd5f14875ffeee82398ed4394d735b1f1388babfe0a5b8f8032db42",
+    "diseno.py": "b9b357867dccc58c3c63033368571d141aa023fa8cb43e33a6269d25e95babb0",
+    "panel.py": "0077e5ea92ea16e4e3b02ebefd49cbc42190cb1532d9cdb2bfdb10f5446ab250",
+    "correcciones.py": "2b6050eba260a7ccb92076aa7438d0d1f86ae2df895bf4965d1fcffeba1c1a38",
+    "vistas_cerebro.py": "72eab652c1dd1716023f748af85e916adc06024f73b34ea9392f5ab844ee8402",
+    "diseno.css": "dc400425e3b7b2c8972fb3b4b2b415ef9db374265fb0d41389db52347c5f9eb0",
+    "diario.py": "308b82cbeb65c22c03272172c4ca206b923bc1a077fa397b049149c6c87eeee8",
+    "diario.js": "b104f270601214d357671625a27756046b2d10ec786e6d5b1ff454b7a4302e05"
+  },
+  "limites": [
+    "Navegador del código corregido pendiente de host con sandbox compatible",
+    "Productor de estrategias publicado en rama y aún ausente en este checkout",
+    "Integración/revisión independiente, despliegue privado y teléfono real a cargo de coordinación/Sergio"
+  ],
+  "siete_evidencias_previas": "Conservadas byte a byte fuera del commit. host-coordinadora-01 incorporado por el encargo con commit y hashes."
+}

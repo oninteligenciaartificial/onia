@@ -64,6 +64,7 @@ def strategies(model, index_path=STRATEGY_INDEX):
             op.require(row['ruta'] == op.DECISIONS and matches, 'Decisión comercial cambió; conciliar con productor')
         elif not matches:
             divergences.append(row['id'])
+    op.require('S01' in source_ids, 'S01 es obligatoria para cotejar la decisión comercial vigente')
     op.require(set(data['fuentes_ids']) == source_ids, 'Índice de fuentes inconsistente')
     documents, targets = {}, {}
     def reference(value):
@@ -119,6 +120,27 @@ def strategies(model, index_path=STRATEGY_INDEX):
             'documento':op.document(index_path, [STRATEGY_ROOT], model['documents'])}
 
 
+def current_decisions(document):
+    rows = []
+    for line in document.split('\n## ', 1)[0].splitlines():
+        if line.startswith('|'):
+            cells = [cell.strip() for cell in line.strip('|').split('|')]
+            if len(cells) == 2 and cells[0] not in ('Tema', '---'):
+                rows.append(cells)
+    # El contrato documental conserva la tabla inicial y esta excepción posterior.
+    # Mostrar ambos períodos evita atribuir a Contenido la redacción hasta el 13.
+    for section in document.split('\n## ')[1:]:
+        heading, _, body = section.partition('\n')
+        if heading.strip() == 'Agregado 08:22: guiones y plan B':
+            author = ' '.join(line.removeprefix('- ').replace('**', '') for line in body.splitlines()
+                              if line.startswith(('- **Hasta el ', '- **Desde el ')))
+            op.require(author, 'Reparto de autoría sin conciliar en la fuente de decisiones')
+            for row in rows:
+                if row[0] == 'Autor de los 5 guiones diarios':
+                    row[1] = author
+    return rows
+
+
 def attach(model):
     model['conocimiento'] = {'fuentes': [], 'decisiones': [], 'reglas': []}
     for path in SOURCES:
@@ -126,11 +148,7 @@ def attach(model):
             item = source(path, model)
             model['conocimiento']['fuentes'].append(item)
             if path == op.DECISIONS:
-                for line in item['texto'].split('\n## ', 1)[0].splitlines():
-                    if line.startswith('|'):
-                        cells = [cell.strip() for cell in line.strip('|').split('|')]
-                        if len(cells) == 2 and cells[0] not in ('Tema','---'):
-                            model['conocimiento']['decisiones'].append(cells)
+                model['conocimiento']['decisiones'] = current_decisions(item['texto'])
             if path == RULES:
                 heading = '## Cierre completo del trabajo autorizado'
                 excerpt = item['texto'].split(heading, 1)[-1].split('\n## ', 1)[0]
@@ -145,11 +163,21 @@ def attach(model):
                                 'motivo': 'Índice o estrategia ausente o inválida. El productor y la coordinadora deben aportar el contrato versionado.'}
     model['context_targets'] = {}
     source_hash = lector.sha(''.join(row['sha256'] for row in model['conocimiento']['fuentes']).encode())
+    # Capturar los contratos mostrados, incluida su procedencia y disponibilidad.
+    # La hora de render y los avisos de sesión no cambian la versión del contenido.
+    displayed = {key: model.get(key) for key in (
+        'fabricas', 'exports_panel', 'exports_estrategias', 'errores', 'tanda',
+        'tanda_historica', 'diario', 'daily_stale', 'estrategias')}
+    displayed = json.loads(json.dumps(displayed, ensure_ascii=False))
+    if displayed['tanda'] and not model.get('diario'):
+        # tanda.snapshot fecha la consulta; el contenido y sus hashes ya van incluidos.
+        displayed['tanda'].pop('generado', None)
     for section, title in SECTIONS.items():
         original = {'seccion': section, 'objetivo': title,
                     'fuentes': [row['documento']['ruta'] for row in model['conocimiento']['fuentes']],
                     'decisiones': model['conocimiento']['decisiones'], 'clases': [list(row) for row in model['clases']],
                     'reglas_aprobadas': [row['texto'] for row in model['conocimiento']['reglas']],
+                    'datos_mostrados': displayed,
                     'tanda': model.get('tanda_ruta'),
                     'piezas': [{'id':row['id'], 'sha256':row.get('sha256'), 'version':row.get('version')}
                                for row in (model.get('tanda') or {}).get('guiones', [])],
