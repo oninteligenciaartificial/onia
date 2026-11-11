@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "id": "guiones-tanda-estrategias-20261111",
-  "revision": 27,
+  "revision": 38,
   "compartible": true,
   "objetivo": "Crear biblioteca de estrategias y paquete accionable para vender el workshop y evaluar futuros proyectos.",
   "estado": "aceptado",
-  "proximo_paso": "Paquete técnico integrado. Panel lo conecta en su retoma activa; Contenido/Sergio revisan voz y piezas antes de publicar. Canales reales pendientes de ensayo autorizado.",
-  "resultado": "Estrategia conciliada19e2d7d; conserva piezas y oferta; decisiones18h/Meta registradas por coordinadora.",
-  "comprobacion": "20controles correctos. Ver CONCILIACION-FUENTES; cambios fuera de ruta proceden de master y decisiones directas, no nueva producción editorial. Requiere dictamen exacto nuevo.",
+  "proximo_paso": "Verificar instalación privada del lote; teléfono y canales reales pendientes según auditoría. Sin publicación comercial automática.",
+  "resultado": "50c8b8d: conciliación S08 y consumidor real",
+  "comprobacion": "19 controles correctos, evidencia conservada",
   "verificacion": "correcta",
   "evidencias": [
     {
@@ -19,9 +19,14 @@
       "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
       "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
       "bytes": 316
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+      "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+      "bytes": 316
     }
   ],
-  "actualizado": "2026-11-11T20:49:53.091195+00:00",
+  "actualizado": "2026-11-11T22:20:23.501630+00:00",
   "historial": [
     {
       "revision": 1,
@@ -3128,6 +3133,2247 @@
           "bytes": 604
         }
       ]
+    },
+    {
+      "revision": 27,
+      "actualizado": "2026-11-11T20:49:53.091195+00:00",
+      "estado": "aceptado",
+      "resultado": "Estrategia conciliada19e2d7d; conserva piezas y oferta; decisiones18h/Meta registradas por coordinadora.",
+      "comprobacion": "20controles correctos. Ver CONCILIACION-FUENTES; cambios fuera de ruta proceden de master y decisiones directas, no nueva producción editorial. Requiere dictamen exacto nuevo.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r8-700f3b56.json",
+          "sha256": "7aaaa6c6a82daa6df41703ffd8cad2548f194247930a1abc2915f7dd3e40bca5",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
+          "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
+          "bytes": 316
+        }
+      ],
+      "proximo_paso": "Paquete técnico integrado. Panel lo conecta en su retoma activa; Contenido/Sergio revisan voz y piezas antes de publicar. Canales reales pendientes de ensayo autorizado.",
+      "aceptacion": {
+        "revisor": "revisor-estrategias-conciliacion-20261111",
+        "criterio": "Paquete y conciliación con revisión buena exacta;20controles reproducidos e integrado en master19e2d7d. Aceptación técnica, no editorial ni comercial.",
+        "fecha": "2026-11-11T20:49:53.054180+00:00"
+      },
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": null,
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+          "pid": 2861927,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807946",
+          "supervisor_pid": 2861887,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807905",
+          "rama": "codex/ws-guiones-tanda-estrategias-20261111",
+          "session_id": "01a1cc4b-88c0-7471-b8ac-81bee795b646",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:27:43.478723+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git/worktrees/onia-ws-guiones-tanda-estrategias-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T20:41:31.887773+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-20261111",
+          "pid": 2911902,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896956",
+          "supervisor_pid": 2911900,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896940",
+          "rama": "(detached)",
+          "session_id": "01a1cc59-1cf3-7922-92aa-484334cd3d14",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-2",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "67e8336c0f992594e9cbac4b2fdadaa976bc6aa0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T20:42:33.928569+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "f3c7ea01c07b5de328722bed1d0f81c5aa17692f9eaf72bc856c5047b75a1253",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.veredicto.json",
+          "fin": "2026-11-11T20:44:10.705390+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-conciliacion-20261111",
+          "pid": 2948549,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928989",
+          "supervisor_pid": 2948520,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928971",
+          "rama": "(detached)",
+          "session_id": "01a1cc5e-005f-7281-8c32-b776e22d1ec6",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-3",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T20:47:54.211792+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d998e93602b6d2d7f1690eee24506d869b395671d43da2a89be46b866c86873",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.veredicto.json",
+          "fin": "2026-11-11T20:48:43.284432+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+        "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-estrategias-20261111"
+        ],
+        "fecha": "2026-11-11T20:47:51.371031+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
+          "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
+          "bytes": 316
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+        "criterio": "Entrega cotejada con el briefing y las decisiones vigentes. Reproducidos 20 controles correctos: 11 rechazos esperados, 46 enlaces y 366 combinaciones grupo/VIP. Oferta, piezas, biblioteca, contrato y conciliación respaldados; cambios externos proceden de integraciones previas. Permanecen explícitamente pendientes integración visual, revisión editorial, ensayo de voz, CTA NEGOCIO, activos privados y autorización comercial. Sin edición ni aceptación de la tarea.",
+        "worktree_conservado": true,
+        "revisor": "revisor-estrategias-conciliacion-20261111",
+        "session_id": "01a1cc5e-005f-7281-8c32-b776e22d1ec6",
+        "entrega_sha256": "5d998e93602b6d2d7f1690eee24506d869b395671d43da2a89be46b866c86873",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
+          "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
+          "bytes": 604
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-2-ab971520.json",
+          "sha256": "20d3e155fd13c236df0db4875060bdf41c0481a999b7ab63a3f990989f506881",
+          "bytes": 643
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
+          "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
+          "bytes": 604
+        }
+      ]
+    },
+    {
+      "revision": 28,
+      "actualizado": "2026-11-11T22:00:25.221645+00:00",
+      "estado": "en_curso",
+      "resultado": "Conciliar fuente técnica S08 con panel ampliado; oferta y piezas permanecen iguales.",
+      "comprobacion": "Diff de operacion.py leído: contrato estrategias y revisiones idempotentes, sin cambio comercial. Todas las demás fuentes coinciden.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r8-700f3b56.json",
+          "sha256": "7aaaa6c6a82daa6df41703ffd8cad2548f194247930a1abc2915f7dd3e40bca5",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
+          "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
+          "bytes": 316
+        }
+      ],
+      "proximo_paso": "Conservar fuentes previas, cotejar S08, actualizar sólo esa huella y comprobar20controles; revisar integración junto a panel/flujo antes de master.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": null,
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+          "pid": 2861927,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807946",
+          "supervisor_pid": 2861887,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807905",
+          "rama": "codex/ws-guiones-tanda-estrategias-20261111",
+          "session_id": "01a1cc4b-88c0-7471-b8ac-81bee795b646",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:27:43.478723+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git/worktrees/onia-ws-guiones-tanda-estrategias-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T20:41:31.887773+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-20261111",
+          "pid": 2911902,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896956",
+          "supervisor_pid": 2911900,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896940",
+          "rama": "(detached)",
+          "session_id": "01a1cc59-1cf3-7922-92aa-484334cd3d14",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-2",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "67e8336c0f992594e9cbac4b2fdadaa976bc6aa0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T20:42:33.928569+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "f3c7ea01c07b5de328722bed1d0f81c5aa17692f9eaf72bc856c5047b75a1253",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.veredicto.json",
+          "fin": "2026-11-11T20:44:10.705390+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-conciliacion-20261111",
+          "pid": 2948549,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928989",
+          "supervisor_pid": 2948520,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928971",
+          "rama": "(detached)",
+          "session_id": "01a1cc5e-005f-7281-8c32-b776e22d1ec6",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-3",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T20:47:54.211792+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d998e93602b6d2d7f1690eee24506d869b395671d43da2a89be46b866c86873",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.veredicto.json",
+          "fin": "2026-11-11T20:48:43.284432+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-2-ab971520.json",
+          "sha256": "20d3e155fd13c236df0db4875060bdf41c0481a999b7ab63a3f990989f506881",
+          "bytes": 643
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
+          "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
+          "bytes": 604
+        }
+      ]
+    },
+    {
+      "revision": 29,
+      "actualizado": "2026-11-11T22:00:25.836936+00:00",
+      "estado": "en_curso",
+      "resultado": "Conciliar fuente técnica S08 con panel ampliado; oferta y piezas permanecen iguales.",
+      "comprobacion": "Diff de operacion.py leído: contrato estrategias y revisiones idempotentes, sin cambio comercial. Todas las demás fuentes coinciden.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r8-700f3b56.json",
+          "sha256": "7aaaa6c6a82daa6df41703ffd8cad2548f194247930a1abc2915f7dd3e40bca5",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
+          "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
+          "bytes": 316
+        }
+      ],
+      "proximo_paso": "Conservar fuentes previas, cotejar S08, actualizar sólo esa huella y comprobar20controles; revisar integración junto a panel/flujo antes de master.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+        "rutas": [
+          "01-negocio/estrategias-operativas-20261111"
+        ],
+        "revision_base": 28,
+        "fecha": "2026-11-11T22:00:25.836900+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+          "pid": 2861927,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807946",
+          "supervisor_pid": 2861887,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807905",
+          "rama": "codex/ws-guiones-tanda-estrategias-20261111",
+          "session_id": "01a1cc4b-88c0-7471-b8ac-81bee795b646",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:27:43.478723+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git/worktrees/onia-ws-guiones-tanda-estrategias-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T20:41:31.887773+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-20261111",
+          "pid": 2911902,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896956",
+          "supervisor_pid": 2911900,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896940",
+          "rama": "(detached)",
+          "session_id": "01a1cc59-1cf3-7922-92aa-484334cd3d14",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-2",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "67e8336c0f992594e9cbac4b2fdadaa976bc6aa0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T20:42:33.928569+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "f3c7ea01c07b5de328722bed1d0f81c5aa17692f9eaf72bc856c5047b75a1253",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.veredicto.json",
+          "fin": "2026-11-11T20:44:10.705390+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-conciliacion-20261111",
+          "pid": 2948549,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928989",
+          "supervisor_pid": 2948520,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928971",
+          "rama": "(detached)",
+          "session_id": "01a1cc5e-005f-7281-8c32-b776e22d1ec6",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-3",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T20:47:54.211792+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d998e93602b6d2d7f1690eee24506d869b395671d43da2a89be46b866c86873",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.veredicto.json",
+          "fin": "2026-11-11T20:48:43.284432+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-2-ab971520.json",
+          "sha256": "20d3e155fd13c236df0db4875060bdf41c0481a999b7ab63a3f990989f506881",
+          "bytes": 643
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
+          "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
+          "bytes": 604
+        }
+      ]
+    },
+    {
+      "revision": 30,
+      "actualizado": "2026-11-11T22:06:31.912131+00:00",
+      "estado": "para_revision",
+      "resultado": "50c8b8d: conciliación S08 y consumidor real",
+      "comprobacion": "19 controles correctos, evidencia conservada",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r8-700f3b56.json",
+          "sha256": "7aaaa6c6a82daa6df41703ffd8cad2548f194247930a1abc2915f7dd3e40bca5",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
+          "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+        "rutas": [
+          "01-negocio/estrategias-operativas-20261111"
+        ],
+        "revision_base": 28,
+        "fecha": "2026-11-11T22:00:25.836900+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+          "pid": 2861927,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807946",
+          "supervisor_pid": 2861887,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807905",
+          "rama": "codex/ws-guiones-tanda-estrategias-20261111",
+          "session_id": "01a1cc4b-88c0-7471-b8ac-81bee795b646",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:27:43.478723+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git/worktrees/onia-ws-guiones-tanda-estrategias-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T20:41:31.887773+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-20261111",
+          "pid": 2911902,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896956",
+          "supervisor_pid": 2911900,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896940",
+          "rama": "(detached)",
+          "session_id": "01a1cc59-1cf3-7922-92aa-484334cd3d14",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-2",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "67e8336c0f992594e9cbac4b2fdadaa976bc6aa0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T20:42:33.928569+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "f3c7ea01c07b5de328722bed1d0f81c5aa17692f9eaf72bc856c5047b75a1253",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.veredicto.json",
+          "fin": "2026-11-11T20:44:10.705390+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-conciliacion-20261111",
+          "pid": 2948549,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928989",
+          "supervisor_pid": 2948520,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928971",
+          "rama": "(detached)",
+          "session_id": "01a1cc5e-005f-7281-8c32-b776e22d1ec6",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-3",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T20:47:54.211792+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d998e93602b6d2d7f1690eee24506d869b395671d43da2a89be46b866c86873",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.veredicto.json",
+          "fin": "2026-11-11T20:48:43.284432+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+        "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-estrategias-20261111"
+        ],
+        "fecha": "2026-11-11T22:06:31.885051+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-2-ab971520.json",
+          "sha256": "20d3e155fd13c236df0db4875060bdf41c0481a999b7ab63a3f990989f506881",
+          "bytes": 643
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
+          "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
+          "bytes": 604
+        }
+      ]
+    },
+    {
+      "revision": 31,
+      "actualizado": "2026-11-11T22:06:35.363058+00:00",
+      "estado": "para_revision",
+      "resultado": "50c8b8d: conciliación S08 y consumidor real",
+      "comprobacion": "19 controles correctos, evidencia conservada",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r8-700f3b56.json",
+          "sha256": "7aaaa6c6a82daa6df41703ffd8cad2548f194247930a1abc2915f7dd3e40bca5",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
+          "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+        "rutas": [
+          "01-negocio/estrategias-operativas-20261111"
+        ],
+        "revision_base": 28,
+        "fecha": "2026-11-11T22:00:25.836900+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+          "pid": 2861927,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807946",
+          "supervisor_pid": 2861887,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807905",
+          "rama": "codex/ws-guiones-tanda-estrategias-20261111",
+          "session_id": "01a1cc4b-88c0-7471-b8ac-81bee795b646",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:27:43.478723+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git/worktrees/onia-ws-guiones-tanda-estrategias-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T20:41:31.887773+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-20261111",
+          "pid": 2911902,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896956",
+          "supervisor_pid": 2911900,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896940",
+          "rama": "(detached)",
+          "session_id": "01a1cc59-1cf3-7922-92aa-484334cd3d14",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-2",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "67e8336c0f992594e9cbac4b2fdadaa976bc6aa0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T20:42:33.928569+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "f3c7ea01c07b5de328722bed1d0f81c5aa17692f9eaf72bc856c5047b75a1253",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.veredicto.json",
+          "fin": "2026-11-11T20:44:10.705390+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-conciliacion-20261111",
+          "pid": 2948549,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928989",
+          "supervisor_pid": 2948520,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928971",
+          "rama": "(detached)",
+          "session_id": "01a1cc5e-005f-7281-8c32-b776e22d1ec6",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-3",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T20:47:54.211792+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d998e93602b6d2d7f1690eee24506d869b395671d43da2a89be46b866c86873",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.veredicto.json",
+          "fin": "2026-11-11T20:48:43.284432+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-panel-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-4",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T22:06:35.337590+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d8f43d5161ea4984d6ced177aab4575278e594e50e1ea7a2116a626589d06b9",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+        "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-estrategias-20261111"
+        ],
+        "fecha": "2026-11-11T22:06:31.885051+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-2-ab971520.json",
+          "sha256": "20d3e155fd13c236df0db4875060bdf41c0481a999b7ab63a3f990989f506881",
+          "bytes": 643
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
+          "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
+          "bytes": 604
+        }
+      ]
+    },
+    {
+      "revision": 32,
+      "actualizado": "2026-11-11T22:06:35.580646+00:00",
+      "estado": "para_revision",
+      "resultado": "50c8b8d: conciliación S08 y consumidor real",
+      "comprobacion": "19 controles correctos, evidencia conservada",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r8-700f3b56.json",
+          "sha256": "7aaaa6c6a82daa6df41703ffd8cad2548f194247930a1abc2915f7dd3e40bca5",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
+          "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+        "rutas": [
+          "01-negocio/estrategias-operativas-20261111"
+        ],
+        "revision_base": 28,
+        "fecha": "2026-11-11T22:00:25.836900+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+          "pid": 2861927,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807946",
+          "supervisor_pid": 2861887,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807905",
+          "rama": "codex/ws-guiones-tanda-estrategias-20261111",
+          "session_id": "01a1cc4b-88c0-7471-b8ac-81bee795b646",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:27:43.478723+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git/worktrees/onia-ws-guiones-tanda-estrategias-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T20:41:31.887773+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-20261111",
+          "pid": 2911902,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896956",
+          "supervisor_pid": 2911900,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896940",
+          "rama": "(detached)",
+          "session_id": "01a1cc59-1cf3-7922-92aa-484334cd3d14",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-2",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "67e8336c0f992594e9cbac4b2fdadaa976bc6aa0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T20:42:33.928569+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "f3c7ea01c07b5de328722bed1d0f81c5aa17692f9eaf72bc856c5047b75a1253",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.veredicto.json",
+          "fin": "2026-11-11T20:44:10.705390+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-conciliacion-20261111",
+          "pid": 2948549,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928989",
+          "supervisor_pid": 2948520,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928971",
+          "rama": "(detached)",
+          "session_id": "01a1cc5e-005f-7281-8c32-b776e22d1ec6",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-3",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T20:47:54.211792+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d998e93602b6d2d7f1690eee24506d869b395671d43da2a89be46b866c86873",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.veredicto.json",
+          "fin": "2026-11-11T20:48:43.284432+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-panel-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 3192911,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217401088",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-4",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T22:06:35.337590+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d8f43d5161ea4984d6ced177aab4575278e594e50e1ea7a2116a626589d06b9",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+        "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-estrategias-20261111"
+        ],
+        "fecha": "2026-11-11T22:06:31.885051+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-2-ab971520.json",
+          "sha256": "20d3e155fd13c236df0db4875060bdf41c0481a999b7ab63a3f990989f506881",
+          "bytes": 643
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
+          "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
+          "bytes": 604
+        }
+      ]
+    },
+    {
+      "revision": 33,
+      "actualizado": "2026-11-11T22:06:35.820755+00:00",
+      "estado": "para_revision",
+      "resultado": "50c8b8d: conciliación S08 y consumidor real",
+      "comprobacion": "19 controles correctos, evidencia conservada",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r8-700f3b56.json",
+          "sha256": "7aaaa6c6a82daa6df41703ffd8cad2548f194247930a1abc2915f7dd3e40bca5",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
+          "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+        "rutas": [
+          "01-negocio/estrategias-operativas-20261111"
+        ],
+        "revision_base": 28,
+        "fecha": "2026-11-11T22:00:25.836900+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+          "pid": 2861927,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807946",
+          "supervisor_pid": 2861887,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807905",
+          "rama": "codex/ws-guiones-tanda-estrategias-20261111",
+          "session_id": "01a1cc4b-88c0-7471-b8ac-81bee795b646",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:27:43.478723+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git/worktrees/onia-ws-guiones-tanda-estrategias-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T20:41:31.887773+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-20261111",
+          "pid": 2911902,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896956",
+          "supervisor_pid": 2911900,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896940",
+          "rama": "(detached)",
+          "session_id": "01a1cc59-1cf3-7922-92aa-484334cd3d14",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-2",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "67e8336c0f992594e9cbac4b2fdadaa976bc6aa0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T20:42:33.928569+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "f3c7ea01c07b5de328722bed1d0f81c5aa17692f9eaf72bc856c5047b75a1253",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.veredicto.json",
+          "fin": "2026-11-11T20:44:10.705390+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-conciliacion-20261111",
+          "pid": 2948549,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928989",
+          "supervisor_pid": 2948520,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928971",
+          "rama": "(detached)",
+          "session_id": "01a1cc5e-005f-7281-8c32-b776e22d1ec6",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-3",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T20:47:54.211792+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d998e93602b6d2d7f1690eee24506d869b395671d43da2a89be46b866c86873",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.veredicto.json",
+          "fin": "2026-11-11T20:48:43.284432+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-panel-20261111",
+          "pid": 3192932,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217401111",
+          "supervisor_pid": 3192911,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217401088",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-4",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T22:06:35.337590+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d8f43d5161ea4984d6ced177aab4575278e594e50e1ea7a2116a626589d06b9",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+        "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-estrategias-20261111"
+        ],
+        "fecha": "2026-11-11T22:06:31.885051+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-2-ab971520.json",
+          "sha256": "20d3e155fd13c236df0db4875060bdf41c0481a999b7ab63a3f990989f506881",
+          "bytes": 643
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
+          "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
+          "bytes": 604
+        }
+      ]
+    },
+    {
+      "revision": 34,
+      "actualizado": "2026-11-11T22:06:36.808228+00:00",
+      "estado": "para_revision",
+      "resultado": "50c8b8d: conciliación S08 y consumidor real",
+      "comprobacion": "19 controles correctos, evidencia conservada",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r8-700f3b56.json",
+          "sha256": "7aaaa6c6a82daa6df41703ffd8cad2548f194247930a1abc2915f7dd3e40bca5",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
+          "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+        "rutas": [
+          "01-negocio/estrategias-operativas-20261111"
+        ],
+        "revision_base": 28,
+        "fecha": "2026-11-11T22:00:25.836900+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+          "pid": 2861927,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807946",
+          "supervisor_pid": 2861887,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807905",
+          "rama": "codex/ws-guiones-tanda-estrategias-20261111",
+          "session_id": "01a1cc4b-88c0-7471-b8ac-81bee795b646",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:27:43.478723+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git/worktrees/onia-ws-guiones-tanda-estrategias-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T20:41:31.887773+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-20261111",
+          "pid": 2911902,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896956",
+          "supervisor_pid": 2911900,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896940",
+          "rama": "(detached)",
+          "session_id": "01a1cc59-1cf3-7922-92aa-484334cd3d14",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-2",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "67e8336c0f992594e9cbac4b2fdadaa976bc6aa0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T20:42:33.928569+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "f3c7ea01c07b5de328722bed1d0f81c5aa17692f9eaf72bc856c5047b75a1253",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.veredicto.json",
+          "fin": "2026-11-11T20:44:10.705390+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-conciliacion-20261111",
+          "pid": 2948549,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928989",
+          "supervisor_pid": 2948520,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928971",
+          "rama": "(detached)",
+          "session_id": "01a1cc5e-005f-7281-8c32-b776e22d1ec6",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-3",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T20:47:54.211792+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d998e93602b6d2d7f1690eee24506d869b395671d43da2a89be46b866c86873",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.veredicto.json",
+          "fin": "2026-11-11T20:48:43.284432+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-panel-20261111",
+          "pid": 3192932,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217401111",
+          "supervisor_pid": 3192911,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217401088",
+          "rama": "(detached)",
+          "session_id": "01a1cca6-0ba0-74c0-97df-c517b40d786a",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-4",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T22:06:35.337590+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d8f43d5161ea4984d6ced177aab4575278e594e50e1ea7a2116a626589d06b9",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+        "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-estrategias-20261111"
+        ],
+        "fecha": "2026-11-11T22:06:31.885051+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-2-ab971520.json",
+          "sha256": "20d3e155fd13c236df0db4875060bdf41c0481a999b7ab63a3f990989f506881",
+          "bytes": 643
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
+          "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
+          "bytes": 604
+        }
+      ]
+    },
+    {
+      "revision": 35,
+      "actualizado": "2026-11-11T22:07:40.356840+00:00",
+      "estado": "para_revision",
+      "resultado": "50c8b8d: conciliación S08 y consumidor real",
+      "comprobacion": "19 controles correctos, evidencia conservada",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r8-700f3b56.json",
+          "sha256": "7aaaa6c6a82daa6df41703ffd8cad2548f194247930a1abc2915f7dd3e40bca5",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
+          "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+        "rutas": [
+          "01-negocio/estrategias-operativas-20261111"
+        ],
+        "revision_base": 28,
+        "fecha": "2026-11-11T22:00:25.836900+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+          "pid": 2861927,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807946",
+          "supervisor_pid": 2861887,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807905",
+          "rama": "codex/ws-guiones-tanda-estrategias-20261111",
+          "session_id": "01a1cc4b-88c0-7471-b8ac-81bee795b646",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:27:43.478723+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git/worktrees/onia-ws-guiones-tanda-estrategias-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T20:41:31.887773+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-20261111",
+          "pid": 2911902,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896956",
+          "supervisor_pid": 2911900,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896940",
+          "rama": "(detached)",
+          "session_id": "01a1cc59-1cf3-7922-92aa-484334cd3d14",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-2",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "67e8336c0f992594e9cbac4b2fdadaa976bc6aa0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T20:42:33.928569+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "f3c7ea01c07b5de328722bed1d0f81c5aa17692f9eaf72bc856c5047b75a1253",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.veredicto.json",
+          "fin": "2026-11-11T20:44:10.705390+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-conciliacion-20261111",
+          "pid": 2948549,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928989",
+          "supervisor_pid": 2948520,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928971",
+          "rama": "(detached)",
+          "session_id": "01a1cc5e-005f-7281-8c32-b776e22d1ec6",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-3",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T20:47:54.211792+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d998e93602b6d2d7f1690eee24506d869b395671d43da2a89be46b866c86873",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.veredicto.json",
+          "fin": "2026-11-11T20:48:43.284432+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-panel-20261111",
+          "pid": 3192932,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217401111",
+          "supervisor_pid": 3192911,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217401088",
+          "rama": "(detached)",
+          "session_id": "01a1cca6-0ba0-74c0-97df-c517b40d786a",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-4",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T22:06:35.337590+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d8f43d5161ea4984d6ced177aab4575278e594e50e1ea7a2116a626589d06b9",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.veredicto.json",
+          "fin": "2026-11-11T22:07:40.324128+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+        "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-estrategias-20261111"
+        ],
+        "fecha": "2026-11-11T22:06:31.885051+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-2-ab971520.json",
+          "sha256": "20d3e155fd13c236df0db4875060bdf41c0481a999b7ab63a3f990989f506881",
+          "bytes": 643
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
+          "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
+          "bytes": 604
+        }
+      ]
+    },
+    {
+      "revision": 36,
+      "actualizado": "2026-11-11T22:08:14.584613+00:00",
+      "estado": "para_revision",
+      "resultado": "50c8b8d: conciliación S08 y consumidor real",
+      "comprobacion": "19 controles correctos, evidencia conservada",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r8-700f3b56.json",
+          "sha256": "7aaaa6c6a82daa6df41703ffd8cad2548f194247930a1abc2915f7dd3e40bca5",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
+          "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+        "rutas": [
+          "01-negocio/estrategias-operativas-20261111"
+        ],
+        "revision_base": 28,
+        "fecha": "2026-11-11T22:00:25.836900+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+          "pid": 2861927,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807946",
+          "supervisor_pid": 2861887,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807905",
+          "rama": "codex/ws-guiones-tanda-estrategias-20261111",
+          "session_id": "01a1cc4b-88c0-7471-b8ac-81bee795b646",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:27:43.478723+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git/worktrees/onia-ws-guiones-tanda-estrategias-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T20:41:31.887773+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-20261111",
+          "pid": 2911902,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896956",
+          "supervisor_pid": 2911900,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896940",
+          "rama": "(detached)",
+          "session_id": "01a1cc59-1cf3-7922-92aa-484334cd3d14",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-2",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "67e8336c0f992594e9cbac4b2fdadaa976bc6aa0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T20:42:33.928569+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "f3c7ea01c07b5de328722bed1d0f81c5aa17692f9eaf72bc856c5047b75a1253",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.veredicto.json",
+          "fin": "2026-11-11T20:44:10.705390+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-conciliacion-20261111",
+          "pid": 2948549,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928989",
+          "supervisor_pid": 2948520,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928971",
+          "rama": "(detached)",
+          "session_id": "01a1cc5e-005f-7281-8c32-b776e22d1ec6",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-3",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T20:47:54.211792+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d998e93602b6d2d7f1690eee24506d869b395671d43da2a89be46b866c86873",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.veredicto.json",
+          "fin": "2026-11-11T20:48:43.284432+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-panel-20261111",
+          "pid": 3192932,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217401111",
+          "supervisor_pid": 3192911,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217401088",
+          "rama": "(detached)",
+          "session_id": "01a1cca6-0ba0-74c0-97df-c517b40d786a",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-4",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T22:06:35.337590+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d8f43d5161ea4984d6ced177aab4575278e594e50e1ea7a2116a626589d06b9",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.veredicto.json",
+          "fin": "2026-11-11T22:07:40.324128+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+        "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-estrategias-20261111"
+        ],
+        "fecha": "2026-11-11T22:06:31.885051+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+        "criterio": "Entrega cotejada con el encargo y las decisiones vigentes. Reproducidos 19 controles, 48 enlaces y 366 combinaciones grupo/VIP. Consumidor real disponible con cuatro estrategias, diez piezas y ninguna fuente divergente. Oferta, biblioteca, versiones y evidencia coherentes. El resumen estado-fabrica conserva pendientes históricos de integración, aclarados en INTEGRACION-PANEL-20261111.md. Continúan pendientes revisión editorial, ensayo de voz, CTA NEGOCIO, activos privados y autorización comercial.",
+        "worktree_conservado": true,
+        "revisor": "revisor-estrategias-panel-20261111",
+        "session_id": "01a1cca6-0ba0-74c0-97df-c517b40d786a",
+        "entrega_sha256": "5d8f43d5161ea4984d6ced177aab4575278e594e50e1ea7a2116a626589d06b9",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-4-f62a08f1.json",
+          "sha256": "3e14606bc16d7463b5a038ac17657f06466fc7b9ef26c4edec18a113ece0dcfd",
+          "bytes": 639
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-2-ab971520.json",
+          "sha256": "20d3e155fd13c236df0db4875060bdf41c0481a999b7ab63a3f990989f506881",
+          "bytes": 643
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
+          "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
+          "bytes": 604
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-4-f62a08f1.json",
+          "sha256": "3e14606bc16d7463b5a038ac17657f06466fc7b9ef26c4edec18a113ece0dcfd",
+          "bytes": 639
+        }
+      ]
+    },
+    {
+      "revision": 37,
+      "actualizado": "2026-11-11T22:20:23.435692+00:00",
+      "estado": "aceptado",
+      "resultado": "50c8b8d: conciliación S08 y consumidor real",
+      "comprobacion": "19 controles correctos, evidencia conservada",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r8-700f3b56.json",
+          "sha256": "7aaaa6c6a82daa6df41703ffd8cad2548f194247930a1abc2915f7dd3e40bca5",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
+          "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
+          "bytes": 316
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      ],
+      "proximo_paso": "Verificar instalación privada del lote; teléfono y canales reales pendientes según auditoría. Sin publicación comercial automática.",
+      "aceptacion": {
+        "revisor": "revisor-estrategias-panel-20261111",
+        "criterio": "Dictamen exacto bueno, integración master dd823a4 y comprobación conjunta correcta; aprobación técnica, no comercial.",
+        "fecha": "2026-11-11T22:20:23.435675+00:00"
+      },
+      "ejecucion": {
+        "perfil": "complejo",
+        "recomendado": {
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high"
+        },
+        "solicitado": null,
+        "observado": null,
+        "criterio": "Dependencias o decisiones con criterios contrapuestos; no usar sólo la etiqueta del área.",
+        "escalamiento": "High ante diseño o fallo de razonamiento difícil identificado; ultra sólo si Sergio lo pide. No escalar por permisos/herramientas ausentes ni cambiar de modelo automáticamente."
+      },
+      "asignacion": {
+        "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+        "rutas": [
+          "01-negocio/estrategias-operativas-20261111"
+        ],
+        "revision_base": 28,
+        "fecha": "2026-11-11T22:00:25.836900+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-guiones-tanda-estrategias-20261111",
+          "pid": 2861927,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807946",
+          "supervisor_pid": 2861887,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216807905",
+          "rama": "codex/ws-guiones-tanda-estrategias-20261111",
+          "session_id": "01a1cc4b-88c0-7471-b8ac-81bee795b646",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.1.briefing.txt",
+          "inicio": "2026-11-11T20:27:43.478723+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/guiones-tanda-estrategias-20261111.git/worktrees/onia-ws-guiones-tanda-estrategias-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-11T20:41:31.887773+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-20261111",
+          "pid": 2911902,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896956",
+          "supervisor_pid": 2911900,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216896940",
+          "rama": "(detached)",
+          "session_id": "01a1cc59-1cf3-7922-92aa-484334cd3d14",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-2",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "67e8336c0f992594e9cbac4b2fdadaa976bc6aa0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.briefing.txt",
+          "inicio": "2026-11-11T20:42:33.928569+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "f3c7ea01c07b5de328722bed1d0f81c5aa17692f9eaf72bc856c5047b75a1253",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.2.veredicto.json",
+          "fin": "2026-11-11T20:44:10.705390+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-conciliacion-20261111",
+          "pid": 2948549,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928989",
+          "supervisor_pid": 2948520,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:216928971",
+          "rama": "(detached)",
+          "session_id": "01a1cc5e-005f-7281-8c32-b776e22d1ec6",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-3",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.briefing.txt",
+          "inicio": "2026-11-11T20:47:54.211792+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d998e93602b6d2d7f1690eee24506d869b395671d43da2a89be46b866c86873",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.veredicto.json",
+          "fin": "2026-11-11T20:48:43.284432+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-estrategias-panel-20261111",
+          "pid": 3192932,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217401111",
+          "supervisor_pid": 3192911,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217401088",
+          "rama": "(detached)",
+          "session_id": "01a1cca6-0ba0-74c0-97df-c517b40d786a",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-4",
+          "rutas": [
+            "01-negocio/estrategias-operativas-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.briefing.txt",
+          "inicio": "2026-11-11T22:06:35.337590+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "5d8f43d5161ea4984d6ced177aab4575278e594e50e1ea7a2116a626589d06b9",
+          "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.veredicto.json",
+          "fin": "2026-11-11T22:07:40.324128+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+        "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
+        "ramas_origin": [
+          "origin/codex/ws-guiones-tanda-estrategias-20261111"
+        ],
+        "fecha": "2026-11-11T22:06:31.885051+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+          "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
+          "bytes": 316
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+        "criterio": "Entrega cotejada con el encargo y las decisiones vigentes. Reproducidos 19 controles, 48 enlaces y 366 combinaciones grupo/VIP. Consumidor real disponible con cuatro estrategias, diez piezas y ninguna fuente divergente. Oferta, biblioteca, versiones y evidencia coherentes. El resumen estado-fabrica conserva pendientes históricos de integración, aclarados en INTEGRACION-PANEL-20261111.md. Continúan pendientes revisión editorial, ensayo de voz, CTA NEGOCIO, activos privados y autorización comercial.",
+        "worktree_conservado": true,
+        "revisor": "revisor-estrategias-panel-20261111",
+        "session_id": "01a1cca6-0ba0-74c0-97df-c517b40d786a",
+        "entrega_sha256": "5d8f43d5161ea4984d6ced177aab4575278e594e50e1ea7a2116a626589d06b9",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-4-f62a08f1.json",
+          "sha256": "3e14606bc16d7463b5a038ac17657f06466fc7b9ef26c4edec18a113ece0dcfd",
+          "bytes": 639
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-2-ab971520.json",
+          "sha256": "20d3e155fd13c236df0db4875060bdf41c0481a999b7ab63a3f990989f506881",
+          "bytes": 643
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
+          "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
+          "bytes": 604
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-4-f62a08f1.json",
+          "sha256": "3e14606bc16d7463b5a038ac17657f06466fc7b9ef26c4edec18a113ece0dcfd",
+          "bytes": 639
+        }
+      ]
     }
   ],
   "briefing": {
@@ -3137,9 +5383,9 @@
     "contenido": "# Encargo guiones-tanda-estrategias-20261111\n\nÁrea: marketing\nModo: encargo\nSkill directora: preparar-oferta-y-embudo\n\n## Objetivo\n\nCrear biblioteca de estrategias y paquete accionable para vender el workshop y evaluar futuros proyectos.\n\n## Entregable\n\nImplementación o paquete concreto, contrato, pruebas y recibo en rutas asignadas.\n\n## Criterio de aceptación\n\nCumple el plan aprobado, evidencia reproducible, límites honestos; revisión independiente requerida.\n\n## Entrada y alcance\n\nPreparar una oferta, embudo, webinar o brief de contenido.\n\n- Autorización directa actual de Sergio: Ok, vamos con el plan ve desarrollando te dejo. Plan aprobado en master aeb1160, 05-herramientas/fabrica-onia/CIERRE-VENTA-20261111.md sección Plan completo y autorización final. Leerlo y las decisiones vigentes; instrucciones actuales prevalecen sobre STOP histórico dentro del lote técnico.\n- Una tarea, rutas asignadas, cero hijos. No modificar registro canónico ni instalación activa. Sin servicios, gastos, publicaciones comerciales, mensajes, n8n ni cambios de PC desde esta ejecutora. Commit y push de tu rama al terminar; coordinadora revisa e integra. No declarar terminado por un archivo escrito; comandos/salidas y límites en recibo. No secretos/IPs/QR/medios privados en Git. Modelo solicitado Sol high; observado desconocido si no hay evidencia.\n- Crear documento índice y contrato JSON exportable al panel existente, sin editar UI. Primera estrategia completa: workshop Claude de0a100:tunegocioconIA, Bs50 grupo, Bs150VIP5cupos30min, clases13nov20:00/14nov14:00/16nov20:00LaPaz, objetivoBs3000; comprobar texto exacto de decisiones. Pago QR confirmado manualmente por Sergio. Fuentes/cerebro existentes, sin inventar leads, ventas, testimonios o plazos Meta.\n- Entregar estrategia: situación comprobada y supuestos, público/problema/promesa, oferta, mensaje, orgánico y anuncios preparados, VSL, recorrido consulta->pago->acceso, calendario de acciones desde12nov, piezas necesarias, dependencias, responsables y criterio de prueba. Calcular escenarios de ventas grupo/VIP con capacidadVIP5, separados de resultados reales y sin prometer alcanzar meta.\n- Biblioteca de futuras estrategias con plantilla/versiones/estado propuesto y criterios de priorización (evidencia, problema, entrega, tiempo, recursos, coste por aprobar, prueba pequeña y condición de descartar). Incluir OnIA Platform como futuro, sin lanzar su desarrollo. Casos concretos útiles, no catálogo de ideas genéricas. Tipos de guion/anuncio lista abierta. Incorporar enlaces a fuentes y reglas relevantes del cerebro, voz con voseo. Ejemplo de corrección que crea versión nueva y enlaza motivo/evidencia; no autoaprobar editorialmente.\n- Leer skill preparar-oferta-y-embudo y preparar-campana-meta pertinentes. Preparar plantillas y primeras piezas comerciales revisables, no publicar ni usar Higgsfield. Entregar README, estrategia, export JSON, comprobaciones de coherencia/escenarios/enlaces locales y recibo. Mantener claramente pendiente ensayo de voz, prueba de CTA NEGOCIO, activos privados y autorización comercial.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md](../ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md)\n- [01-negocio/preparar-oferta-y-embudo/SKILL.md](../../01-negocio/preparar-oferta-y-embudo/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [preparar-campana-meta](../../05-herramientas/compartibles/skills/preparar-campana-meta/SKILL.md)\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-marketing-humanizer](../../05-herramientas/compartibles/terceros/marketing/humanizer/SKILL.md)\n\n## Salidas de referencia del área\n\n- Oferta y recorrido de venta\n- Borradores de las piezas del encargo\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/guiones-tanda-estrategias-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
   },
   "aceptacion": {
-    "revisor": "revisor-estrategias-conciliacion-20261111",
-    "criterio": "Paquete y conciliación con revisión buena exacta;20controles reproducidos e integrado en master19e2d7d. Aceptación técnica, no editorial ni comercial.",
-    "fecha": "2026-11-11T20:49:53.054180+00:00"
+    "revisor": "revisor-estrategias-panel-20261111",
+    "criterio": "Dictamen exacto bueno, integración master dd823a4 y comprobación conjunta correcta; aprobación técnica, no comercial.",
+    "fecha": "2026-11-11T22:20:23.435675+00:00"
   },
   "ejecucion": {
     "perfil": "complejo",
@@ -3258,35 +5504,70 @@
       "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.schema.json",
       "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.3.veredicto.json",
       "fin": "2026-11-11T20:48:43.284432+00:00"
+    },
+    {
+      "intento": 4,
+      "rol": "revisor",
+      "responsable": "revisor-estrategias-panel-20261111",
+      "pid": 3192932,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217401111",
+      "supervisor_pid": 3192911,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:217401088",
+      "rama": "(detached)",
+      "session_id": "01a1cca6-0ba0-74c0-97df-c517b40d786a",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+      "log_rel": "logs/guiones-tanda-estrategias-20261111.revision-4.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-guiones-tanda-estrategias-20261111-revision-4",
+      "rutas": [
+        "01-negocio/estrategias-operativas-20261111"
+      ],
+      "dry_run": false,
+      "commit_base": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.briefing.txt",
+      "inicio": "2026-11-11T22:06:35.337590+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "5d8f43d5161ea4984d6ced177aab4575278e594e50e1ea7a2116a626589d06b9",
+      "schema": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/guiones-tanda-estrategias-20261111.4.veredicto.json",
+      "fin": "2026-11-11T22:07:40.324128+00:00"
     }
   ],
   "revision_independiente": {
     "veredicto": "bueno",
-    "commit": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
-    "criterio": "Entrega cotejada con el briefing y las decisiones vigentes. Reproducidos 20 controles correctos: 11 rechazos esperados, 46 enlaces y 366 combinaciones grupo/VIP. Oferta, piezas, biblioteca, contrato y conciliación respaldados; cambios externos proceden de integraciones previas. Permanecen explícitamente pendientes integración visual, revisión editorial, ensayo de voz, CTA NEGOCIO, activos privados y autorización comercial. Sin edición ni aceptación de la tarea.",
+    "commit": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
+    "criterio": "Entrega cotejada con el encargo y las decisiones vigentes. Reproducidos 19 controles, 48 enlaces y 366 combinaciones grupo/VIP. Consumidor real disponible con cuatro estrategias, diez piezas y ninguna fuente divergente. Oferta, biblioteca, versiones y evidencia coherentes. El resumen estado-fabrica conserva pendientes históricos de integración, aclarados en INTEGRACION-PANEL-20261111.md. Continúan pendientes revisión editorial, ensayo de voz, CTA NEGOCIO, activos privados y autorización comercial.",
     "worktree_conservado": true,
-    "revisor": "revisor-estrategias-conciliacion-20261111",
-    "session_id": "01a1cc5e-005f-7281-8c32-b776e22d1ec6",
-    "entrega_sha256": "5d998e93602b6d2d7f1690eee24506d869b395671d43da2a89be46b866c86873",
+    "revisor": "revisor-estrategias-panel-20261111",
+    "session_id": "01a1cca6-0ba0-74c0-97df-c517b40d786a",
+    "entrega_sha256": "5d8f43d5161ea4984d6ced177aab4575278e594e50e1ea7a2116a626589d06b9",
     "evidencia": {
-      "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
-      "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
-      "bytes": 604
+      "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-4-f62a08f1.json",
+      "sha256": "3e14606bc16d7463b5a038ac17657f06466fc7b9ef26c4edec18a113ece0dcfd",
+      "bytes": 639
     }
   },
   "cierre": {
-    "commit": "19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed",
+    "commit": "50c8b8db0d873b623e456898cac2fe0bf3c224b0",
     "commit_base": "aeb116090aed97763fa3be050f514bdea8aadde1",
     "ramas_origin": [
       "origin/codex/ws-guiones-tanda-estrategias-20261111"
     ],
-    "fecha": "2026-11-11T20:47:51.371031+00:00",
+    "fecha": "2026-11-11T22:06:31.885051+00:00",
     "dry_run": false,
     "intento": 1,
     "worktree_conservado": true,
     "evidencia": {
-      "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r17-d742d2f2.json",
-      "sha256": "01fd60411b5d8c8d4fd9aeabeefb7b705e96d98e6308599ccdfad70534e3c61d",
+      "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/cierre-r29-960b3f00.json",
+      "sha256": "72822fc51f824fa07ef34a60477f1d36d76001ccfe5a8160336f4251d4fab644",
       "bytes": 316
     }
   },
@@ -3300,6 +5581,11 @@
       "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-3-d45e6d9c.json",
       "sha256": "b1182c28ce178567808268ca991ce014c7312e7141355407dbd52e286c8800e4",
       "bytes": 604
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/guiones-tanda-estrategias-20261111/revision-4-f62a08f1.json",
+      "sha256": "3e14606bc16d7463b5a038ac17657f06466fc7b9ef26c4edec18a113ece0dcfd",
+      "bytes": 639
     }
   ]
 }
