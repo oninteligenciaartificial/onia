@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "612a99bac419dde4c34eca0646d2a70ad14751e5",
+  "criterio": "P2 — adaptador.py:280-291: simulate_one comprueba la antigüedad del evento, pero no revalida la oferta antes de despachar una salida pendiente. Reproduje con SQLite en memoria: información preparada un segundo antes de caducar la oferta termina como exito_simulado después de caducar, aunque load_offer devuelve False. Corregir el bloqueo de pendientes por caducidad o cambio de fuentes y añadir regresiones. Los hashes de evidencia coinciden; hay cuatro recorridos y 16 resultados ficticios correctamente rotulados, sin envíos reales. El puente del panel funciona, pero la integración efectiva y el transporte real siguen pendientes. No pude repetir las 39 pruebas: el sandbox de sólo lectura impide crear sus bases temporales; esto es un límite de verificación, no un fallo del producto.",
+  "worktree_conservado": true
+}

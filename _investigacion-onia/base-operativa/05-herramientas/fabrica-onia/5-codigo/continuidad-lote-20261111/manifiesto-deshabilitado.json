@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "id": "ejemplo-lote-aprobado",
+  "habilitado": false,
+  "autorizacion": "Completar referencia al sí de Sergio y alcance cotejado por coordinadora",
+  "desde": "2026-11-11T00:00:00Z",
+  "hasta": "2026-11-12T00:00:00Z",
+  "base": "/ruta/al/checkout/_investigacion-onia/base-operativa",
+  "repositorio": "/ruta/al/checkout",
+  "operacion": "/home/usuario/operacion",
+  "proveedor": "openai-chatgpt-incluido",
+  "cuota_minima_porcentaje": 1,
+  "tareas": [
+    {
+      "id": "id-existente-a-completar",
+      "actor": "responsable-canonico",
+      "revisor": "revisor-independiente",
+      "criterio": "Completar criterios aprobados y comprobaciones reproducibles",
+      "briefing_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "rutas": ["05-herramientas/entrega-asignada"],
+      "operaciones": ["lanzar", "reanudar", "cerrar", "revisar", "recoger"],
+      "perfiles": {
+        "ejecutor": {"modelo": "gpt-6.1-sol", "esfuerzo": "high"},
+        "revisor": {"modelo": "gpt-6.1-sol", "esfuerzo": "high"}
+      },
+      "intentos_maximos": {"ejecutor": 2, "revisor": 2},
+      "prioridad": 0,
+      "depende_de": []
+    }
+  ]
+}

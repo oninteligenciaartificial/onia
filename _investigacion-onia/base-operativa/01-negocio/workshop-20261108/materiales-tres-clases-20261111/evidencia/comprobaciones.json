@@ -1,0 +1,421 @@
+{
+  "id": "guiones-kit-clases-20261111",
+  "fecha_utc": "2026-11-11T21:23:02.672096+00:00",
+  "resultado": "correcto",
+  "controles": [
+    {
+      "control": "Enlaces locales y anclas",
+      "resultado": "OK",
+      "evidencia": {
+        "enlaces": 101,
+        "fallos": []
+      }
+    },
+    {
+      "control": "HTML autocontenido para lectura",
+      "resultado": "OK",
+      "evidencia": {
+        "recursos_externos": [],
+        "script": 0
+      }
+    },
+    {
+      "control": "IDs HTML únicos",
+      "resultado": "OK",
+      "evidencia": {
+        "ids": 11
+      }
+    },
+    {
+      "control": "Texto de diez Markdown íntegro en HTML",
+      "resultado": "OK",
+      "evidencia": {
+        "documentos": 10,
+        "ausentes": []
+      }
+    },
+    {
+      "control": "Pedidos A y B idénticos al piloto",
+      "resultado": "OK",
+      "evidencia": {
+        "A_sha256": "238533a135dc3168963a3a93c95538f290ba9167aad822baeb843dffd4381cd1",
+        "B_sha256": "37277cb625f2341f0f9f931811c2c48b86897a4fc074d5c04737bf28edc58b3f"
+      }
+    },
+    {
+      "control": "Agenda A respeta duración, bloques, orden y límites",
+      "resultado": "OK",
+      "evidencia": {
+        "filas": 7,
+        "ocupado": 105,
+        "libre": 15
+      }
+    },
+    {
+      "control": "Rechazo de agenda con pausa omitida",
+      "resultado": "OK",
+      "evidencia": "Misma validación sobre solución alterada en memoria"
+    },
+    {
+      "control": "Rechazo de inventario acortado",
+      "resultado": "OK",
+      "evidencia": "Misma validación sobre solución alterada en memoria"
+    },
+    {
+      "control": "B detecta exceso de diez minutos",
+      "resultado": "OK",
+      "evidencia": {
+        "requerido": 130,
+        "disponible": 120,
+        "faltan": 10
+      }
+    },
+    {
+      "control": "Extensión semanal sin superposición y con precedencia/pausas",
+      "resultado": "OK",
+      "evidencia": {
+        "filas": 9,
+        "tareas": 140,
+        "pausas": 30,
+        "libre": 70
+      }
+    },
+    {
+      "control": "Tres bases de 60 y tres extensiones de 30 sin huecos",
+      "resultado": "OK",
+      "evidencia": {
+        "intervalos": [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              6,
+              8
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              10,
+              15
+            ],
+            [
+              15,
+              25
+            ],
+            [
+              25,
+              35
+            ],
+            [
+              35,
+              45
+            ],
+            [
+              45,
+              52
+            ],
+            [
+              52,
+              57
+            ],
+            [
+              57,
+              60
+            ]
+          ],
+          [
+            [
+              60,
+              70
+            ],
+            [
+              70,
+              80
+            ],
+            [
+              80,
+              90
+            ]
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            [
+              5,
+              10
+            ],
+            [
+              10,
+              18
+            ],
+            [
+              18,
+              30
+            ],
+            [
+              30,
+              38
+            ],
+            [
+              38,
+              46
+            ],
+            [
+              46,
+              53
+            ],
+            [
+              53,
+              57
+            ],
+            [
+              57,
+              60
+            ]
+          ],
+          [
+            [
+              60,
+              70
+            ],
+            [
+              70,
+              80
+            ],
+            [
+              80,
+              90
+            ]
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            [
+              5,
+              12
+            ],
+            [
+              12,
+              20
+            ],
+            [
+              20,
+              30
+            ],
+            [
+              30,
+              42
+            ],
+            [
+              42,
+              50
+            ],
+            [
+              50,
+              55
+            ],
+            [
+              55,
+              60
+            ]
+          ],
+          [
+            [
+              60,
+              70
+            ],
+            [
+              70,
+              80
+            ],
+            [
+              80,
+              90
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "control": "Guion VIP de treinta minutos",
+      "resultado": "OK",
+      "evidencia": {
+        "intervalos": [
+          [
+            0,
+            5
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            25
+          ],
+          [
+            25,
+            30
+          ]
+        ]
+      }
+    },
+    {
+      "control": "Mensaje resuelto cumple límite de ochenta palabras",
+      "resultado": "OK",
+      "evidencia": {
+        "palabras": 48,
+        "limite": 80
+      }
+    },
+    {
+      "control": "Fechas y días de semana correctos",
+      "resultado": "OK",
+      "evidencia": {
+        "fechas": [
+          "2026-11-13 viernes",
+          "2026-11-14 sábado",
+          "2026-11-16 lunes"
+        ],
+        "inicios": [
+          "20:00",
+          "14:00",
+          "20:00"
+        ],
+        "zona": "America/La_Paz"
+      }
+    },
+    {
+      "control": "Ficha comercial cotejada con decisiones y estrategia",
+      "resultado": "OK",
+      "evidencia": {
+        "campos_verificados": [
+          "nombre",
+          "grupo",
+          "VIP total",
+          "cinco cupos",
+          "treinta minutos",
+          "clases 13/14/16 e inicios",
+          "zona",
+          "pago manual Sergio",
+          "condición registrada"
+        ],
+        "fuentes": {
+          "05-herramientas/fabrica-onia/DECISIONES-SERGIO-20261110.md": "22923dab6339e9ebbdc871ed713c8fdb412918688165a18cd68a5677bab3754c",
+          "01-negocio/estrategias-operativas-20261111/ESTRATEGIA-WORKSHOP-v1.md": "9623e64cd8feb153f47afd56cbcc469c11489afd1325510aff5759b0b1ae85f8"
+        }
+      }
+    },
+    {
+      "control": "Cotejo editorial de clase 3",
+      "resultado": "OK",
+      "evidencia": {
+        "metodo": "Lectura de tabla y procedimiento por ejecutora",
+        "consulta_unica": "CON-F01",
+        "evento_repetido": "EVT-F01",
+        "captura": "E03 pendiente",
+        "confirmacion": "E04 por dueño PAG-F01",
+        "salida": "E05 incierta SAL-F01",
+        "limite": "Revisión documental de caso ficticio"
+      }
+    }
+  ],
+  "archivos": {
+    "ALUMNO-CLASE1.md": {
+      "bytes": 7773,
+      "sha256": "fbae00f62d19987aae8db3f6c1817b975d14755a1f62e4e724f4325733f4b25e"
+    },
+    "ALUMNO-CLASE2.md": {
+      "bytes": 6184,
+      "sha256": "bafa9edb8bb91dc4dddf1c0e0fcea972f1921cfe3ebb346a70c5f247ba6bfda7"
+    },
+    "ALUMNO-CLASE3.md": {
+      "bytes": 9357,
+      "sha256": "a1197c24f384cb16cc4470cf0749877a49e0889b728765c09741d41add98cae2"
+    },
+    "CONTINUIDAD-SIN-CODEX.md": {
+      "bytes": 5389,
+      "sha256": "d2ae3db73bfbb7e9c150d33a0734853b5f6a50d99da54720320af624a7709645"
+    },
+    "ENSAYO-Y-PENDIENTES.md": {
+      "bytes": 5949,
+      "sha256": "15721abf5ae1025120e113a6cc5debe522cdf4d925b12421dfdf4d16396e1e54"
+    },
+    "FUENTES-Y-REUSO.md": {
+      "bytes": 5868,
+      "sha256": "e015719f7b165dc0623028f3a2209901b0e57ba952fe1737b36b46bb0955d2e9"
+    },
+    "GUIA-DOCENTE.md": {
+      "bytes": 13457,
+      "sha256": "ab787733a4726a8b642cc503e8489492ebfb676aef32024f652f47574e8d1f1e"
+    },
+    "OFERTA-VIGENTE.md": {
+      "bytes": 4342,
+      "sha256": "e17daced1ab24ed7731c98d4003e8f883d52def94e8331c3f070b2f8c51ad1b6"
+    },
+    "README.md": {
+      "bytes": 4174,
+      "sha256": "771f360abf2697486db01f7cce01606c9f0ca73a459460ee774758b1d23e0b3c"
+    },
+    "RECIBO.md": {
+      "bytes": 4480,
+      "sha256": "f4d6de62c9975d81f6c919e1895ba1bc64dc7230d7d6ab3c2aede302b54218ff"
+    },
+    "VIP-Y-SOPORTE.md": {
+      "bytes": 3284,
+      "sha256": "3228531b2a0f8549ba9217f1e664e25dedc3de5c3af2ff33df9d38af70f5480e"
+    },
+    "index.html": {
+      "bytes": 86559,
+      "sha256": "c9e19f75667f8412eaf243cd82da4aa52869dc711a84195759efdd7afc458698"
+    }
+  },
+  "apertura": {
+    "parser_local": "realizada",
+    "navegador": "fallo antes de cargar página",
+    "error": "Chromium sandboxing failed",
+    "sandbox": true,
+    "prueba_visual": "pendiente",
+    "movil_pdf": "pendiente",
+    "dispositivo_sergio": "pendiente"
+  },
+  "limites": [
+    "Ensayo humano pendiente",
+    "Demo real de Claude pendiente",
+    "Demo real elegida de OnIA pendiente",
+    "Revisión editorial y comercial de Contenido/Sergio pendiente",
+    "Revisión independiente e integración por coordinadora pendientes"
+  ]
+}

@@ -1,0 +1,24 @@
+# Fuentes, vigencia y aplicación
+
+Lectura documental selectiva del checkout base `aeb116090aed97763fa3be050f514bdea8aadde1`, 11-nov-2026. No se hicieron entrevistas, lectura de cuentas ni nuevo visionado de videos. Las fuentes locales se enlazan desde esta carpeta; `fuentes.json` conserva ruta relativa a base-operativa, localizador, SHA-256 y tamaño. Los hashes no autentican permisos ni calidad editorial.
+
+| ID | Fuente y pasaje usado | Aplicación / límite |
+|---|---|---|
+| S01 | [Decisiones de Sergio](../../05-herramientas/fabrica-onia/DECISIONES-SERGIO-20261110.md): tabla inicial; Decisiones comerciales; Nombre final; Alcance de anuncios; Confirmaciones directas en Codex | Nombre, precios, capacidad VIP, llamada, pagos, soporte, meta y 13/14/16. Las entradas previas se conservan como historia; no copiar sus horas ni asumir finales de clase |
+| S02 | [Cierre y plan aprobado](../../05-herramientas/fabrica-onia/CIERRE-VENTA-20261111.md): Plan completo; Autorización del lote y estrategias | Preparación autorizada; biblioteca, contrato y panel existente. No concede autorización comercial ni presupuesto |
+| S03 | [Reglas comunes](../../04-operacion-agentes/reglas-comunes.md): Autonomía y permisos; Evidencia; Lanzamiento y cierre | Estados, único escritor, secretos fuera, revisión distinta y permisos |
+| S04 | [Cerebro aplicado](../../03-referentes/cerebro-operativo/20261109/GUIA-APLICADA.md): Vender una entrega específica; Enseñar mediante una corrección; Recuperar una idea | Oferta concreta (Pedro P1), acción/motivo/ajuste (Jeff P2), gancho/entrega (Hormozi P2), CTA con destino (Justin P4). Son transferencias propuestas; no se atribuyen resultados de ventas ni voz de Sergio a referentes |
+| S05 | [Piloto clase 1](../workshop-20261108/noche-20261109/CLASE1-PRIMEROS10MIN.md): acceso; caso A/B; criterios | Material escrito reutilizable, cálculo 120/105/130 y revisión; sin ejecución de Claude/alumno ni cronometraje nuevo |
+| S06 | [Formatos ONIA](../../02-contenido/formatos-onia.md): Clasificación; catálogo | Separar formato/canal/distribución y ampliar tipos; menciones antiguas del vlog no sustituyen corrección de Sergio |
+| S07 | [Modelo de fábrica](../../04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md): corrección v2 20:30 y qué reutilizar | Cinco guiones, grabación de tanda; vlog entero fuera de editor. Sus horarios, roles y STOP históricos se cotejan con instrucciones actuales |
+| S08 | [Lector de contratos actual](../../05-herramientas/fabrica-contenido/20261109-lector-panel/operacion.py): PRODUCERS, relative_path, load_export | Evidencia del rechazo de una nueva raíz/productor. Se leyó código; no se modificó ni se inició servicio |
+| S09 | [Guía del panel](../../05-herramientas/fabrica-contenido/20261109-lector-panel/GUIA-REVISION.md): Persistencia y contratos | Forma `onia-fabrica-estado-v1` y revisiones; historial no acredita importación de estrategias |
+| S10 | [Directora oferta/embudo](../preparar-oferta-y-embudo/SKILL.md) | Ficha, recorrido y separación de escenarios/cobros |
+| S11 | [Apoyo campaña Meta](../../05-herramientas/compartibles/skills/preparar-campana-meta/SKILL.md) | Borradores y activos pendientes, sin objetos remotos ni gasto |
+| S12 | [Bitácora Boss](../../04-operacion-agentes/BITACORA-BOSS.md): Q&A directo; preparación 07:30–07:57 | Antecedente informado de QR y Meet; no confirma acceso ni conciliación actual |
+
+Fuentes de arranque adicionales leídas: AGENTS.md de raíz, [ESTADO](../../00-MAPA/ESTADO.md), [boss-memoria](../../04-operacion-agentes/boss-memoria.md), [ORQUESTACION](../../04-operacion-agentes/ORQUESTACION.md), [manifiesto](../../04-operacion-agentes/orquestacion.json) y [entrada Cloud](../../05-herramientas/cloud/INICIO-SESION.md). Esta es una ejecutora con briefing por stdin, no el coordinador Cloud `/workspace/onia`; no se ejecutó retomar desde otro checkout ni se modificó registro canónico.
+
+Algunos volcados iniciales agrupados excedieron la salida visible; se recuperaron por separado decisiones, reglas, memoria y skills, y por rangos los pasajes del panel/cerebro utilizados. No se declara lectura íntegra de todos los archivos largos ni de documentos meramente enlazados. El catálogo nativo anunció las skills propias; sus cuerpos pertinentes se leyeron desde las fuentes canónicas. Enlaces `.agents/skills` pertinentes existentes comprobados; no se ejecutó instalador. No se consultó ONIA-CENTRAL ni contexto privado.
+
+Los textos publicitarios son redacción propia derivada de estas decisiones. No se incorporaron especificaciones nuevas de Claude o Meta; funcionamiento de cuenta, opciones actuales, accesos y límites requieren cotejo al ejecutar el recorrido. No se afirma consulta web nueva de los enlaces públicos heredados ni que una referencia histórica esté disponible hoy.

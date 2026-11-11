@@ -1,0 +1,648 @@
+{
+  "tipo_evidencia": "SIMULACION_LOCAL_NO_E2E",
+  "envios_reales": 0,
+  "canales": [
+    {
+      "canal": "instagram_comentario",
+      "entrada": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_comentario",
+            "resultado": "informacion_preparada"
+          }
+        ]
+      },
+      "transporte_ficticio": {
+        "modo": "simulacion",
+        "canal": "instagram_comentario",
+        "resultado": "exito_simulado",
+        "envios_reales": 0
+      },
+      "repeticion": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_comentario",
+            "resultado": "duplicado"
+          }
+        ]
+      },
+      "tras_reinicio": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_comentario",
+            "resultado": "duplicado"
+          }
+        ]
+      },
+      "destino_ausente": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_dm",
+            "resultado": "destino_privado_faltante"
+          }
+        ]
+      },
+      "derivacion_con_destino_ficticio": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_dm",
+            "resultado": "derivacion_preparada"
+          }
+        ]
+      },
+      "transporte_derivacion_ficticio": {
+        "modo": "simulacion",
+        "canal": "instagram_dm",
+        "resultado": "exito_simulado",
+        "envios_reales": 0
+      },
+      "baja": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_dm",
+            "resultado": "baja"
+          }
+        ]
+      },
+      "tras_baja": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_dm",
+            "resultado": "cese_vigente"
+          }
+        ]
+      },
+      "resumen": {
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "eventos": 5,
+        "salidas": {
+          "exito_simulado": 2
+        }
+      }
+    },
+    {
+      "canal": "instagram_dm",
+      "entrada": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_dm",
+            "resultado": "informacion_preparada"
+          }
+        ]
+      },
+      "transporte_ficticio": {
+        "modo": "simulacion",
+        "canal": "instagram_dm",
+        "resultado": "exito_simulado",
+        "envios_reales": 0
+      },
+      "repeticion": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_dm",
+            "resultado": "duplicado"
+          }
+        ]
+      },
+      "tras_reinicio": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_dm",
+            "resultado": "duplicado"
+          }
+        ]
+      },
+      "destino_ausente": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_dm",
+            "resultado": "destino_privado_faltante"
+          }
+        ]
+      },
+      "derivacion_con_destino_ficticio": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_dm",
+            "resultado": "derivacion_preparada"
+          }
+        ]
+      },
+      "transporte_derivacion_ficticio": {
+        "modo": "simulacion",
+        "canal": "instagram_dm",
+        "resultado": "exito_simulado",
+        "envios_reales": 0
+      },
+      "baja": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_dm",
+            "resultado": "baja"
+          }
+        ]
+      },
+      "tras_baja": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "instagram_dm",
+            "resultado": "cese_vigente"
+          }
+        ]
+      },
+      "resumen": {
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "eventos": 5,
+        "salidas": {
+          "exito_simulado": 2
+        }
+      }
+    },
+    {
+      "canal": "facebook_comentario",
+      "entrada": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_comentario",
+            "resultado": "informacion_preparada"
+          }
+        ]
+      },
+      "transporte_ficticio": {
+        "modo": "simulacion",
+        "canal": "facebook_comentario",
+        "resultado": "exito_simulado",
+        "envios_reales": 0
+      },
+      "repeticion": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_comentario",
+            "resultado": "duplicado"
+          }
+        ]
+      },
+      "tras_reinicio": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_comentario",
+            "resultado": "duplicado"
+          }
+        ]
+      },
+      "destino_ausente": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_dm",
+            "resultado": "destino_privado_faltante"
+          }
+        ]
+      },
+      "derivacion_con_destino_ficticio": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_dm",
+            "resultado": "derivacion_preparada"
+          }
+        ]
+      },
+      "transporte_derivacion_ficticio": {
+        "modo": "simulacion",
+        "canal": "facebook_dm",
+        "resultado": "exito_simulado",
+        "envios_reales": 0
+      },
+      "baja": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_dm",
+            "resultado": "baja"
+          }
+        ]
+      },
+      "tras_baja": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_dm",
+            "resultado": "cese_vigente"
+          }
+        ]
+      },
+      "resumen": {
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "eventos": 5,
+        "salidas": {
+          "exito_simulado": 2
+        }
+      }
+    },
+    {
+      "canal": "facebook_dm",
+      "entrada": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_dm",
+            "resultado": "informacion_preparada"
+          }
+        ]
+      },
+      "transporte_ficticio": {
+        "modo": "simulacion",
+        "canal": "facebook_dm",
+        "resultado": "exito_simulado",
+        "envios_reales": 0
+      },
+      "repeticion": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_dm",
+            "resultado": "duplicado"
+          }
+        ]
+      },
+      "tras_reinicio": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_dm",
+            "resultado": "duplicado"
+          }
+        ]
+      },
+      "destino_ausente": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_dm",
+            "resultado": "destino_privado_faltante"
+          }
+        ]
+      },
+      "derivacion_con_destino_ficticio": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_dm",
+            "resultado": "derivacion_preparada"
+          }
+        ]
+      },
+      "transporte_derivacion_ficticio": {
+        "modo": "simulacion",
+        "canal": "facebook_dm",
+        "resultado": "exito_simulado",
+        "envios_reales": 0
+      },
+      "baja": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_dm",
+            "resultado": "baja"
+          }
+        ]
+      },
+      "tras_baja": {
+        "status": 200,
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "resultados": [
+          {
+            "canal": "facebook_dm",
+            "resultado": "cese_vigente"
+          }
+        ]
+      },
+      "resumen": {
+        "modo": "simulacion",
+        "envios_reales": 0,
+        "eventos": 5,
+        "salidas": {
+          "exito_simulado": 2
+        }
+      }
+    }
+  ],
+  "resultados_transporte_por_canal": [
+    {
+      "canal": "instagram_comentario",
+      "fixture": "exito",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "instagram_comentario",
+        "resultado": "exito_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "instagram_comentario",
+      "fixture": "rechazo",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "instagram_comentario",
+        "resultado": "fallo_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "instagram_comentario",
+      "fixture": "timeout",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "instagram_comentario",
+        "resultado": "incierto_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "instagram_comentario",
+      "fixture": "incierto",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "instagram_comentario",
+        "resultado": "incierto_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "instagram_dm",
+      "fixture": "exito",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "instagram_dm",
+        "resultado": "exito_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "instagram_dm",
+      "fixture": "rechazo",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "instagram_dm",
+        "resultado": "fallo_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "instagram_dm",
+      "fixture": "timeout",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "instagram_dm",
+        "resultado": "incierto_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "instagram_dm",
+      "fixture": "incierto",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "instagram_dm",
+        "resultado": "incierto_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "facebook_comentario",
+      "fixture": "exito",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "facebook_comentario",
+        "resultado": "exito_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "facebook_comentario",
+      "fixture": "rechazo",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "facebook_comentario",
+        "resultado": "fallo_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "facebook_comentario",
+      "fixture": "timeout",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "facebook_comentario",
+        "resultado": "incierto_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "facebook_comentario",
+      "fixture": "incierto",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "facebook_comentario",
+        "resultado": "incierto_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "facebook_dm",
+      "fixture": "exito",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "facebook_dm",
+        "resultado": "exito_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "facebook_dm",
+      "fixture": "rechazo",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "facebook_dm",
+        "resultado": "fallo_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "facebook_dm",
+      "fixture": "timeout",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "facebook_dm",
+        "resultado": "incierto_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    },
+    {
+      "canal": "facebook_dm",
+      "fixture": "incierto",
+      "salida": {
+        "modo": "simulacion",
+        "canal": "facebook_dm",
+        "resultado": "incierto_simulado",
+        "envios_reales": 0
+      },
+      "siguiente_intento": {
+        "modo": "simulacion",
+        "resultado": "sin_pendientes",
+        "envios_reales": 0
+      }
+    }
+  ]
+}

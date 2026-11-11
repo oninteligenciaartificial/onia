@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "bc1f5d1cb62651773abc121fba5212eb8e34f19f",
+  "criterio": "Bloqueante reproducido en memoria mediante tick: tras revisión con cambios y reapertura, harness_lote.py:547 guarda el SID del revisor (history[-1]) para reanudar. El harness retoma correctamente al ejecutor, pero recover exige igualdad con aquel SID (:427), deja la intención sin resolver y bloquea las pasadas posteriores. Guardar el SID del último ejecutor para reanudar y añadir una regresión del ciclo revisión→cambios→reapertura→retoma→conciliación. Las correcciones de cuota 115→125 segundos y cierre de ejecutor fallido pasaron comprobaciones con dobles en memoria. No pude reproducir la suite de 33 pruebas: el sandbox impide crear sus directorios temporales. Sintaxis y diff --check correctos; worktree sin cambios.",
+  "worktree_conservado": true
+}
