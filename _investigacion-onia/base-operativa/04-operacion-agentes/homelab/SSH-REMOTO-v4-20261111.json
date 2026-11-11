@@ -1,0 +1,33 @@
+{
+  "huella_verificada": true,
+  "conexion_1": {
+    "uid": 1001,
+    "grupos": [
+      1001
+    ],
+    "sin_capacidades": true,
+    "no_new_privs": true,
+    "seccomp": true,
+    "windows_ausente": true,
+    "host_root_ausente": true,
+    "interop_sin_entorno": true,
+    "modulos_vacios": true,
+    "/etc_escritura_denegada": true,
+    "/usr/lib/modules_escritura_denegada": true,
+    "socket_inet_denegado": true,
+    "herramientas": {
+      "python3": true,
+      "ffmpeg": true,
+      "git": true
+    },
+    "marca_creada": true
+  },
+  "conexion_2": {
+    "persistencia_entre_conexiones": true
+  },
+  "limites": [
+    "No prueba cierre de WSL/reinicio",
+    "No prueba ASR ni scheduler",
+    "No cambia límite de sesiones"
+  ]
+}
