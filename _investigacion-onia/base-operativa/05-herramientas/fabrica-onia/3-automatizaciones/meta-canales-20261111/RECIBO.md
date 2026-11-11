@@ -1,0 +1,19 @@
+# Recibo del producto
+
+ID: `fabrica-automatizaciones-meta-canales-20261111`. Estado descriptivo: `para_revision`, sin autoridad sobre el JSON canónico. Rama asignada: `codex/ws-fabrica-automatizaciones-meta-canales-20261111`. Base: `de1d9ab8b31b62c47b4f4455b7e7ab0d930b3b6c`. Fecha: 11 noviembre 2026 UTC.
+
+Directora `desarrollar-y-verificar` anunciada en el catálogo y leída de su fuente canónica; reglas-comunes, boss-memoria, bitácora, decisiones, estado, orquestación/manifiesto y arquitectura leídos. No se cargaron apoyos ni se crearon hijos/sesiones adicionales. Sol high solicitado por el briefing; modelo/esfuerzo efectivos del runtime, cuota inicial/final y SID no observables desde esta interfaz: desconocidos, sin cifras inventadas. Una sesión ejecutora para esta entrega; total de intentos previos del harness desconocido. Revisión independiente a cargo de la coordinadora.
+
+Entregados motor puro, límites/verificación de webhook importable, persistencia privada de ensayo, cuatro fixtures de canal, cuatro resultados ficticios, pruebas y contratos exportables. Reutiliza oferta estructurada y patrón de controles de WhatsApp; se inspeccionaron ambos workflows inactivos existentes y el análisis de canales por su commit, sin modificarlos.
+
+Comprobación de la primera entrega `612a99bac419dde4c34eca0646d2a70ad14751e5`: **39/39 pruebas** correctas sin omisiones en Python 3.12.3; cuatro recorridos y 16 combinaciones de transporte simulados; consumidor del panel con un export, 12 documentos disponibles, 11 destinos de revisión y cero errores. Cero envíos reales. Sus archivos en `evidencia/` se conservan íntegros; no validan por sí solos esta corrección.
+
+Retoma por revisión independiente: recibido por stdin el dictamen `cambios` sobre `612a99bac419dde4c34eca0646d2a70ad14751e5`, coincidente con HEAD y rama remota al retomar; publicación del dictamen indicada por la coordinadora en `fd541b7`. El JSON de revisión no está en este checkout y no se reconstruyó ni modificó. Se reprodujo P2 en los cuatro canales y se corrigió `simulate_one`: antes de consumir el pendiente revalida la oferta y sus fuentes dentro de la transacción; si no son válidas, cancela sin registrar transporte y sin reintento. Ingesta y consumo comparten el tratamiento de fuentes ausentes/corruptas.
+
+Comprobación corregida: **44/44 pruebas**, sin omisiones, incluidas cinco regresiones nuevas; cuatro recorridos y 16 resultados ficticios repetidos. Comandos, reproducción, fallos anteriores a la corrección y resultados actuales en PRUEBAS.md y `evidencia/correccion-p2/`. El límite de sólo lectura del revisor le impidió crear DB temporales: era un límite de aquella revisión, no un fallo del producto. Esta ejecutora pudo ejecutar la suite con DB temporales privadas; no se atribuye esa ejecución al revisor. La corrección aún necesita dictamen independiente sobre el commit nuevo.
+
+No se tocaron panel, harness, registro/proyección canónicos ni otros productos. No hubo envío, gasto, acceso a credenciales reales, personas, QR, cobros o direcciones privadas, activación de n8n, callback, servicio ni despliegue. El conector real bloquea todos los envíos, incluso si se intenta habilitarlo en configuración.
+
+Límites y responsables: fuentes Meta inaccesibles y acceso privado por Operaciones/Sergio; transporte real/receptor pendientes de implementación revisada; contenido y prueba por canal pendientes de Contenido/Sergio; integración visual pendiente del escritor del panel. El contrato local pasa por un puente explícito porque el consumidor actual excluye automatizaciones de su lista. Ver CONTRATO-PANEL.md y ACTIVACION-PENDIENTE.md. No se declara ningún canal listo.
+
+El hash de entrega y la comprobación del push se informan al publicar la rama: un recibo dentro del mismo commit no puede contener su propio hash. El cierre, revisión independiente, aceptación e integración pertenecen a la coordinadora; no se ejecutan desde esta sesión.
