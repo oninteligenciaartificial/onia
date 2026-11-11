@@ -1,5 +1,15 @@
 # 1 · Guiones y calendario de contenido
 
+## Estado vigente · 11 nov UTC
+
+La tanda actual está en [guiones-tanda-20261111-v2](salida/guiones-tanda-20261111-v2/README.md), cotejada con los textos finales de Contenido y visible en el panel existente. Falta ensayo de voz, duración y aprobación editorial/publicación. Nombre, horarios y VIP se rigen por [DECISIONES-SERGIO](../DECISIONES-SERGIO-20261110.md).
+
+El detalle de cierre está en [CIERRE-VENTA-20261111.md](../CIERRE-VENTA-20261111.md).
+
+## Especificación original del 10 nov · histórica
+
+Lo siguiente conserva la propuesta inicial. Sus pendientes y pedidos se cotejan con el estado vigente y las decisiones actuales; no se vuelven a lanzar ni se reutilizan sus textos comerciales anteriores.
+
 Especificación para producir cinco videos al día y el calendario hasta el sábado 14. Boss arma esto; Contenido escribe; Codex no redacta los guiones.
 
 ## Qué hace

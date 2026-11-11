@@ -1,5 +1,15 @@
 # 4 · Chatbot de WhatsApp
 
+## Estado vigente · 11 nov UTC
+
+La vía elegida es Cloud API + n8n. Ya está el [adaptador local revisado](trabajos/fabrica-chatbot-whatsapp-20261110/ADAPTADOR.md), con persistencia, confirmación manual autenticada y pruebas locales. El workflow de despacho está inactivo y sin credencial; el workflow anterior de fixtures sigue siendo sólo ensayo. Faltan configuración privada, importación/conexión autorizadas y prueba real. Horarios/VIP/Meet están definidos en [DECISIONES-SERGIO](../DECISIONES-SERGIO-20261110.md); faltan los enlaces privados, no la decisión de plataforma.
+
+El detalle de cierre está en [CIERRE-VENTA-20261111.md](../CIERRE-VENTA-20261111.md).
+
+## Especificación original del 10 nov · histórica
+
+Lo siguiente conserva la propuesta inicial. Sus pendientes y pedidos se cotejan con el estado vigente y las decisiones actuales; no se vuelven a lanzar ni se reutilizan sus textos comerciales anteriores.
+
 Especificación del recorrido de venta: comentario NEGOCIO → información → inscripción pendiente → QR → Sergio verifica el pago a mano → acceso. Es el frente 1 del [plan al 13](../../../04-operacion-agentes/PLAN-LISTO-AL-13-20261110.md): sin este recorrido no hay ventas del workshop. Boss no configura WhatsApp ni n8n.
 
 ## Qué hace

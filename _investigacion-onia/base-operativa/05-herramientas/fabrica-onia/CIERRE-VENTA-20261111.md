@@ -34,3 +34,30 @@ No se acepta una tarea antigua por incorporar sus archivos. Los registros anteri
 Se conservan las seis fábricas y el panel existente. Venta del workshop y contenido son el frente inmediato. Meta Ads, venta de ONIA Platform y otros canales se mantienen identificados con sus requisitos; no forman un bloqueo artificial para corregir el circuito del workshop ni se presentan como construidos. No se crean nuevos bots, paneles o investigaciones de infraestructura.
 
 La operación posterior al 14 exige también que Boss pueda ejecutar los programas fijos con su acceso restringido. Tener el script en Git no prueba ese permiso ni su ejecución desde Boss: comprobar ese paso antes de declarar operación sin Codex.
+
+## Resultado de esta intervención
+
+La tabla inicial es el diagnóstico de entrada. El cierre actual es:
+
+| Entrega | Veredicto técnico | Pendiente operativo |
+|---|---|---|
+| Tanda T01–T05 v2 | Integrar: textos/hash cotejados, consulta en panel existente sin simular aprobación | Contenido/Sergio: ensayo, duración, CTA atendido, grabar y aprobar |
+| Editor y lote VPS | Integrar: ASR, B-roll, subtítulos, vertical/horizontal; reutiliza transcripción; revisión independiente buena tras corregir dos fallos | Boss aporta material privado; Contenido/Sergio revisan encuadre y audio; probar mando desde puente sin Codex |
+| WhatsApp | Integrar como preparado/deshabilitado: HMAC, persistencia, pagos manuales autenticados, referencias, VIP, BAJA, incertidumbre | Meta/número verificado; secretos/QR/media ID/Meet privados; HTTPS y WSGI; conectar n8n, aprobar textos/excepciones y probar de punta a punta |
+| n8n de despacho | Plantilla inactiva manual revisada localmente, credencial separada del operador | Importación y compatibilidad con instancia real; luego despacho periódico autorizado, no declarado instalado |
+| Coordinación Boss | Acuse publicado en 388043f del pedido de reunir entradas sin duplicar ejecutores | Boss debe completar esa coordinación en su chat principal; el acuse no acredita que ya encontró QR/número/Meet |
+
+Evidencia y comandos: [revisión independiente](../../04-operacion-agentes/evidencias/cierre-venta-20261111/REVISION-INDEPENDIENTE.md), [contenido](../../04-operacion-agentes/evidencias/cierre-venta-20261111/PRUEBAS-CONTENIDO.md) y [adaptador](4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/ADAPTADOR.md).
+
+### Lo necesario para abrir la venta
+
+1. Operaciones/Boss reúnen en privado número Meta verificado, acceso a la cuenta, QR correcto y tres enlaces Meet. Sergio informa qué está listo; no pegar claves ni QR en Git/chat.
+2. Codex conecta la preparación al entorno autorizado con esos datos; primero una prueba limitada con el número propio de Sergio. Comprobar información → modalidad/QR → captura sin acceso → confirmación manual → enlace real, además de duplicado, BAJA y fallo de envío. Sin pagar dinero para simular una compra y sin contactar clientes durante el ensayo. No confundir este paso pendiente con los tests locales ya ejecutados.
+3. Contenido/Sergio aprueban textos, tratamiento de pagos vencidos/VIP lleno y una pieza de venta; Sergio ensaya la práctica de Claude y graba. El CTA NEGOCIO necesita atención comprobada por su canal; la alternativa de enlace directo a WhatsApp sigue propuesta, no decisión tomada.
+4. Con el recorrido concreto verificado, Sergio autoriza la activación, el despacho recurrente y la publicación comercial. No se da por abierta la venta antes de ese paso.
+
+### Frentes que quedan abiertos, sin bloquear este cierre técnico
+
+IG/Facebook comentarios y DMs, WhatsApp de ONIA Platform y Meta Ads no tienen prueba real en este cierre; sus ofertas/permisos/formatos siguen pendientes. Los tipos de anuncios y guiones son lista abierta; esta tanda no demuestra cobertura de todos ni contiene un relato real del día del founder. Homelab y más de3 sesiones siguen pendientes por decisión de Sergio. La continuidad automática tras el14 requiere comprobar ejecución de scripts desde Boss antes del corte; no es requisito para usar hoy el editor desde Codex.
+
+No se han activado servicios/n8n ni enviado mensajes a clientes. La publicación de código/evidencia en GitHub y el aviso técnico a Boss no equivalen a publicación comercial.

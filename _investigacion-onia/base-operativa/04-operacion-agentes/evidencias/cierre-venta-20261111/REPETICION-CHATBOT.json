@@ -1,0 +1,29 @@
+{
+  "modo": "local_sin_red",
+  "comandos": [
+    {
+      "comando": [
+        "node",
+        "pruebas.cjs"
+      ],
+      "exit_code": 0,
+      "salida": "chatbot-node.txt"
+    },
+    {
+      "comando": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "pruebas_adaptador"
+      ],
+      "exit_code": 0,
+      "salida": "chatbot-python.txt"
+    }
+  ],
+  "hashes_recibo_comprobados": 14,
+  "meta_real_probado": false,
+  "n8n_importado": false,
+  "envios_reales": 0
+}
