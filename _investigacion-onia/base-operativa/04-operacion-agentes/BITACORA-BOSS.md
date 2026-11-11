@@ -2,6 +2,13 @@
 
 Qué hizo Boss, por qué, en qué estado quedó y qué sigue. La más reciente va primero. Los estados de tareas se consultan sólo en el harness; esto es contexto, no estado canónico.
 
+## 11 nov 2026 · panel Propuesta 1 integrado con autorización (Codex)
+
+- Sergio autorizó expresamente «Sí, integrar ese panel», correspondiente a `94cca9bfaeba72ad6eee8bcf87db30d8c4d28083`. El panel, con revisión independiente favorable, quedó en `origin/master` mediante `05b5d1e2ecf68dc9dda34742f107ad8dcd722084`; hash remoto comprobado. El guardado inicial ya fue corregido y probado en navegador, incluida persistencia tras reinicio.
+- El pedido posterior de flujo automatizado se trabaja con el harness en `fabrica-automatizaciones-flujo-diario-20261111`, rama propia y una sola escritora. Reutiliza panel y generador; no lanzar otra tarea sobre esas rutas. Consultar el registro canónico para su estado, no inferirlo de esta nota.
+- Las revisiones técnicas del generador `26c39e3` y WhatsApp `46944fb` fueron recogidas con veredicto bueno. Eso no acredita aprobación editorial, integración de esos productos ni prueba real de Meta.
+- La autorización de integración del panel no activa horario, n8n, chatbot ni envíos. Hora diaria pendiente de Sergio; no reactivar la rutina histórica de las 07:00. El siguiente cierre exige evidencia del ciclo y revisión independiente del commit nuevo.
+
 ## 11 nov 2026 · funcionamiento diario y siguiente tramo propuesto (Codex)
 
 - Sergio pidió mostrar cómo se actualizan fábrica/calendario, cómo funcionan sesiones y automatizaciones y dónde se aloja el chatbot, siguiendo a Euge. Ampliado el plan existente CIERRE-VENTA-20261111.md, sección Funcionamiento diario y siguiente tramo; no se crea otro panel ni un registro de tareas.

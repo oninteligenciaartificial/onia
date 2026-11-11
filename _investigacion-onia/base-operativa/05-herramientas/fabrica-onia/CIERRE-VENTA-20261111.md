@@ -4,7 +4,9 @@
 
 Sergio pidió terminar lo necesario para vender y ahora organizar panel, fábricas y sesiones. Se retoman las entregas existentes sin esperar al homelab. Este documento coordina requisitos y evidencia, no reemplaza estados del harness ni concede activación, envíos o cobros. El reparto de la intervención nocturna se conserva abajo como antecedente; la propuesta actual se detalla al final.
 
-**Después de la primera tanda:** las tres entregas están detenidas para revisión. El [dictamen de la coordinadora](../../04-operacion-agentes/evidencias/tanda-fabricas-20261111/REVISION-COORDINADORA-v1.md) identifica el fallo de guardado del panel y las pruebas locales de guiones/WhatsApp. La sección final **Funcionamiento diario y siguiente tramo** responde al pedido posterior de Sergio de mostrar cómo operará el conjunto. Es propuesta de continuidad; no acredita una segunda tanda, integración o recurrencia activada.
+**Actualización del panel, 11-nov:** Sergio eligió Propuesta 1 y autorizó explícitamente «Sí, integrar ese panel». La entrega `94cca9bfaeba72ad6eee8bcf87db30d8c4d28083`, con revisión independiente favorable, quedó integrada y verificada en `origin/master` mediante `05b5d1e2ecf68dc9dda34742f107ad8dcd722084`. Se corrigió el guardado y se comprobó su persistencia y el recorrido en navegador. Esto no activa servicios, ejecución por horario ni canales comerciales. El flujo diario se construye aparte en `fabrica-automatizaciones-flujo-diario-20261111`; su estado vivo se consulta en el harness.
+
+**Antecedente de la primera tanda:** el [dictamen de la coordinadora](../../04-operacion-agentes/evidencias/tanda-fabricas-20261111/REVISION-COORDINADORA-v1.md) conserva el fallo de guardado inicial del panel y las pruebas locales de guiones/WhatsApp. La sección final **Funcionamiento diario y siguiente tramo** describe la continuidad propuesta; sus pendientes deben cotejarse con el registro y las entregas posteriores, sin confundir construcción con recurrencia activada.
 
 ## Cadena que debe quedar completa
 
