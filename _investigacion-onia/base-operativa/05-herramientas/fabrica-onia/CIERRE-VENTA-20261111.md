@@ -187,3 +187,123 @@ Tres lugares como máximo, con rotación de ejecutores y revisores; un lugar esp
 IG/Facebook se prueba por canal y conserva el pendiente del CTA NEGOCIO. Si Sergio elige abrir primero por enlace directo a WhatsApp, se cambia de forma explícita la oferta/CTA y se prueba ese recorrido; no se da por hecho. Meta Ads y WhatsApp Platform quedan visibles como pendientes de su propio alcance. Homelab sigue como apoyo futuro cuando complete su diagnóstico; no aloja ahora el bot ni es condición para vender con el VPS. La ampliación de tres sesiones continúa pendiente.
 
 **Demostración de cierre propuesta:** Sergio abre el panel, ve entrar una noticia identificada, revisa un guion, guarda una corrección y la encuentra tras reiniciar. Luego ve el montaje de su grabación y recorre el bot con su número de prueba. Cada resultado tiene versión, evidencia y responsable; los pasos pendientes no aparecen como completados. Antes de llamar al sistema diario o continuo, comprobar también un disparo real por horario y recuperación tras reinicio sin duplicar trabajo.
+
+## Plan completo para operar desde el 12-nov — PROPUESTO, 11-nov 15:45 La Paz
+
+Pedido actual de Sergio: preparar el plan integral, estimar tiempos y trabajar mediante el harness sin pedirle un prompt por cada paso. Prioridades explícitas: cerebro corregible, guiones, anuncios Meta, contenido con IA, edición, WhatsApp y automatizaciones de Instagram/Facebook. Este pedido incorpora anuncios y contenido IA al desarrollo inmediato; sustituye su posición de espera en las propuestas anteriores. La publicación comercial y el gasto conservan sus permisos propios.
+
+Este bloque es una propuesta revisable. No registra ni lanza tareas, no activa servicios y no amplía por sí solo permisos. Se presenta en el chat antes de publicar el plan acordado en master. Los IDs nuevos que aparecen abajo son propuestos; no se describen como tareas ya registradas.
+
+### Punto de partida comprobado
+
+- Master contrastado: `6d81c694dd37a3738ee4c0d756fc081d079f9654`. Panel Propuesta 1 integrado. Flujo `9a4639f`, generador `26c39e3` y WhatsApp `46944fb` tienen dictámenes buenos, pero sus integraciones pendientes deben resolverse como parte del siguiente lote autorizado.
+- Cero sesiones vivas; cuota usada 18%, lectura `2026-11-11T19:39:04.466Z`. Muestra de VPS: 15.6 GiB RAM, 10.4 GiB disponibles; es una instantánea, no un ensayo de capacidad. No hay límite de seis altas ni reserva del 90%; siguen tres sesiones simultáneas, incluidos revisores.
+- La cadena real de guiones ya alcanzó revisión editorial con un escritor y un revisor, sin duplicados. Su código contiene un controlador diario específico, deshabilitado. Un despachador general de desarrollo desatendido aún no está implementado ni probado.
+- DESKTOP-0GGGNMF aparece online en el daemon Tailscale existente. Su usuario, aislamiento, conexión SSH y continuidad del worker no están aceptados. Falta ejecutar el diagnóstico PE revisado desde la PC y conciliar su resultado. La laptop queda excluida.
+- El catálogo del cerebro existente contiene 19 referentes y 23 patrones seleccionados. Se reutilizan catálogo, fichas y fuentes. Los errores del historial no se convierten en decisiones vigentes por volver a cargarlos.
+
+### Resultado que se construye y cómo se acepta
+
+| Apartado | Entrega concreta | Prueba de aceptación |
+|---|---|---|
+| Hoy y operación | Un panel privado en el VPS accesible desde el teléfono, con trabajos en curso, resultados, bloqueos, siguiente acción y última actualización real | Abrir desde un cliente autorizado; autenticar; revisar un resultado; reiniciar el servicio y conservar datos. El acceso local del desarrollador no acredita el del teléfono |
+| Cerebro | Buscador de decisiones, oferta, audiencia, voz de Sergio, referentes, procesos, ejemplos buenos/malos, fuentes y correcciones, con fecha y versión | Recuperar una decisión vigente, distinguirla de la sustituida y comprobar que el briefing de una tarea utiliza la versión correcta. Mostrar conocimiento documentado de OnIA, sin volcar secretos, conversaciones completas o instrucciones internas del proveedor |
+| Corrección en cualquier sección | Botón común para indicar qué está mal, cambio deseado y alcance; guardar original, propuesta, resultado y revisión | Corregir guion, anuncio, montaje y respuesta del bot con la misma mecánica; generar versión nueva; un formulario o dictamen antiguo no puede aprobarla. Las correcciones no se quedan sólo en una nota |
+| Guiones y calendario | Noticias primarias, ideas, cinco piezas diarias, variantes horizontal/vertical, locución, planos, CTA y calendario | Tanda real con fechas y oferta actuales; noticia repetida no duplica; fuente fallida se distingue de ausencia de novedades; revisión técnica y editorial separadas. El vlog diario no se edita |
+| Anuncios Meta y VSL | Objetivo, audiencia, ángulo, oferta, textos, guion, piezas, formato y destino; vista previa y variantes; VSL del workshop | Un paquete completo coherente con precio/horarios/CTA y versiones; formatos ampliables. Se distinguen borrador local, pieza exportada, anuncio creado y campaña activa. Sin testimonios o métricas inventados |
+| Contenido con IA | Cola de recursos, instrucciones, referencias, proveedor, crédito autorizado por pieza, resultado y procedencia; conexión con edición | Un recurso aprobado entra a la sala de montaje conservando origen e instrucciones. Preparación y generación real aparecen como etapas distintas. Higgsfield sólo se ejecuta con el sí vigente para esa pieza; no se presume que la suscripción incluya API o créditos ilimitados |
+| Edición y sala de montaje | Entrada de grabación/B-roll, transcripción reutilizable, cortes, subtítulos, formatos, comparación antes/después y motivo de cada cambio | Una tanda real de Sergio produce cinco piezas horizontales y cinco verticales; revisión perceptiva; corrección de una pieza sin repetir la transcripción ni sobrescribir el original. Registrar resolución/fps y tiempos medidos antes de prometer rendimientos |
+| WhatsApp del workshop | Conversación, ficha, QR privado, seguimiento permitido, pendientes de pago, confirmación manual de Sergio, acceso y soporte | Probar con interlocutor de ensayo autorizado: consulta, QR, captura que no concede acceso, confirmación, acceso, duplicado, BAJA, reinicio y envío incierto. Un envío incierto no se repite a ciegas |
+| Instagram y Facebook | Comentarios/NEGOCIO, DMs, derivación, registro y control humano | Prueba separada de comentario y DM en cada cuenta/canal, con IDs de recepción y respuesta; demostrar la derivación a venta. Un webhook sintético o WhatsApp funcionando no acredita IG/Facebook |
+| Métricas y continuidad | Piezas aprobadas/publicadas, consultas, pagos confirmados, pendientes y errores; materiales de clases y VIP | Contar sólo hechos registrados; reconciliar fechas de Calendar/Meet 13/14/16; materiales y acceso del lunes 16 disponibles sin depender de Codex |
+
+Se amplía Propuesta 1. Una sola sesión escribe la interfaz y sus componentes compartidos; cada productor entrega un contrato de datos. Anuncios y contenido IA son vistas del trabajo correspondiente dentro de las seis fábricas existentes, no seis bots nuevos. La revisión visual incluye móvil, estados vacíos/error, carga, guardado y accesibilidad básica, además de capturas.
+
+### Cómo se convierte una corrección en aprendizaje útil
+
+1. La corrección autenticada identifica objeto, versión y alcance. Lo que Sergio corrige directamente autoriza ese cambio dentro de su alcance; una inferencia del agente queda como propuesta.
+2. Se conserva el antes/después y se crea o retoma la tarea correspondiente con un ID estable. Se marcan los resultados dependientes que necesitan nueva revisión; una corrección de oferta no reescribe silenciosamente un video aprobado o publicado.
+3. Una sesión acotada aplica el cambio, otra revisa cuando corresponde y el panel muestra la versión nueva y la prueba. Si falta un dato, muestra responsable y siguiente acción.
+4. Una lección reutilizable actualiza la fuente existente de reglas/skills con ejemplo de aplicación y contraejemplo. Se comprueba el caso que falló y uno próximo donde la regla no debe aplicarse. No se agregan instrucciones a todas las sesiones ni se adopta una preferencia global por una corrección local.
+5. El cerebro distingue corrección registrada, aplicada y comprobada en una salida posterior. Es mejora de contexto y procedimientos, no reentrenamiento del modelo ni garantía de ausencia de errores.
+
+### Dos recorridos distintos en el mismo harness
+
+**Desarrollo del lote:** tarea autorizada y elegible → ejecutor → pruebas → commit de rama → cierre comprobado → revisor distinto → correcciones si hacen falta → aceptación técnica autorizada → integración secuencial → comprobación conjunta → siguiente dependencia. La aprobación del lote debe permitir estas transiciones técnicas completas para evitar pedir un sí por cada commit. Sólo dictámenes buenos del commit exacto permiten avanzar.
+
+**Operación diaria:** horario o entrada → fuente/cerebro → resultado → revisión → corrección → decisión editorial o comercial de Sergio. Estos recorridos persisten en el VPS; el chat no se promete como un proceso que continúa ejecutándose al terminar un turno.
+
+El despachador se añade al harness existente y usa su registro canónico, asignaciones, revisión esperada e índice global. Un manifiesto del lote referencia IDs, dependencias, rutas, criterios y permisos; no duplica estados. Un lock y eventos persistidos impiden doble despacho. Antes de actuar coteja autor, commit, SID y permiso vigente; un evento incierto se concilia antes de repetir.
+
+Propuesta de control: máximo tres sesiones globales; dos productores y un revisor rotativo. Si todavía no hay nada que revisar, el tercer lugar puede ejecutar una tarea corta independiente. No llenar los tres lugares con trabajos largos y dejar las revisiones esperando. Un único trabajo CPU pesado inicial; medir su impacto y no atribuir al homelab capacidad todavía no probada.
+
+El loop toma sólo tareas del lote aprobado. No inventa objetivos, no cambia sus permisos, no modifica su propia política activa y no consume cuota sólo para consultar el estado. Sol low para pasos simples; high para diseño, integración o fallos complejos; sin hijos, sin ultra ni compras implícitas. Registra modelo solicitado y observado por separado, cuotas fechadas, SID, intentos y entregas.
+
+Paradas propuestas: STOP o revocación, proveedor no disponible, cuota insuficiente/desconocida para un nuevo despacho, evidencia incierta, conflicto de rutas o necesidad de un permiso externo. Dos correcciones consecutivas sin progreso comprobable detienen sólo esa tarea y escalan el diagnóstico a la coordinadora; las otras siguen si son independientes. Esto no restaura topes diarios ni la reserva del 90%. Cambiar el ID no elude una parada.
+
+Antes de dejarlo desatendido: probar tarea terminada pero no cerrada, fin de revisor, evento duplicado, corte antes/después de lanzar, commit distinto al revisado, reinicio, agotamiento del proveedor y STOP. Guardar recibo y demostrar un avance real a la siguiente dependencia. Hasta entonces la coordinadora puede trabajar activamente con el harness, pero no se declara autonomía entre turnos.
+
+### Reparto de sesiones y rutas
+
+| Orden / trabajo | ID y propiedad propuesta | Dependencia |
+|---|---|---|
+| Integrar lo ya revisado y preparar acceso privado | Retomar flujo diario, generador y WhatsApp existentes; coordinadora integra uno a uno | Sí de alcance al lote; revisar estado actual antes de aceptar |
+| A: despachador de desarrollo | Nuevo propuesto `fabrica-codigo-continuidad-lote-20261111`; `05-herramientas/scripts/` y evidencia propia | Reutilizar diseño de carriles/recuperación; no reconstruir el harness |
+| B: cerebro, correcciones y panel | Retomar `cerebro-panel-usable-20261109`; panel y catálogo/documentos de cerebro expresamente asignados | Contratos pequeños acordados con productores; sólo B modifica UI |
+| C: revisión y trabajo editorial corto | Revisores distintos sobre cada entrega; mientras no haya entrega, VSL/anuncios/materiales en un encargo de marketing propuesto | Slots y rutas libres, sin escribir panel ni reglas comunes |
+| Venta y canales | Retomar `fabrica-chatbot-whatsapp-20261110`; después nuevo propuesto `fabrica-automatizaciones-meta-canales-20261111` bajo su subruta de automatizaciones | Cuenta/número, credenciales privadas y permisos del canal; contrato del panel |
+| Recursos IA y edición | Retomar `fabrica-edicion-video-20261110`; separar subrutas antes de delegar si hay más de un productor | Grabación/B-roll; generación Higgsfield por pieza autorizada |
+| Homelab | Retomar `homelab-conexion-20261109`; exclusivamente documentación/instalador asignados y PC de casa autorizada | Diagnóstico PE, aislamiento y SSH comprobados antes de recibir trabajo |
+
+Estos son trabajos lógicos, no siete sesiones concurrentes. Las tareas completadas liberan lugar para la siguiente elegible. Los bloqueos de Meta o una grabación no detienen cerebro, guiones, VSL o materiales. Antes del primer lanzamiento quedan registrados el ID, rutas exactas, herramientas/skills leídas, cuota actual, aceptación y comando real; no se inventa hoy un número de revisión futura.
+
+### VPS, homelab y Boss
+
+El VPS aloja el panel autenticado, datos privados, despacho y servicios de integración; los puntos de entrada externos se exponen con la autenticación/verificación correspondiente. El despliegue prepara recuperación y conserva originales. Se reutiliza el acceso existente si sirve, sin comprar dominio o hosting; comprobar la URL desde el teléfono es un requisito de entrega, no basta una captura del servidor.
+
+Homelab: ejecutar una vez el diagnóstico revisado mientras está online, corregir la causa comprobada y probar host key fijada, usuario aislado, ausencia de acceso a archivos Windows y continuidad. Tras aceptar el worker, destinarlo inicialmente a ASR/render y pruebas que requieran CPU; los bots siguen en el VPS. Si la PC cae, conservar el trabajo y conciliar su último estado antes de reenviarlo. No sumar recursos físicos equivale a ampliar cuota de modelos. La medición de más de tres sesiones continúa pendiente.
+
+Codex coordina este lote técnico. Boss puede reunir accesos y entradas mediante sus conectores autorizados; Contenido mantiene revisión editorial. No se crean bots nuevos y no se le entrega a cada ejecutor el historial entero: recibe el objetivo, decisiones vigentes, fuentes pertinentes y criterios de su tarea. Las tareas del VPS avanzan sin esperar a Boss cuando tienen sus entradas.
+
+### Estimación de entrega y alcance de esta noche
+
+Estimaciones de tiempo transcurrido desde la aprobación y el arranque, usando hasta tres lugares incluyendo revisión. No son tiempos sumables ni promesas de resultado; contemplan trabajo simultáneo y una ronda razonable de correcciones.
+
+| Hito | Estimación | Qué debe poder usarse |
+|---|---|---|
+| H0 | 45–90 min | Integraciones revisadas, acceso privado preparado y primera prueba del panel en su alojamiento |
+| H1 | 2–4 h | Despachador acotado probado, tanda/calendario y primera versión del cerebro con correcciones trazables |
+| H2, objetivo de esta noche | 6–8 h | Panel de operación, guiones revisables, paquete de anuncios/VSL, cola IA/edición y bandeja de ventas; cada sección muestra su capacidad real y pendiente |
+| H3 | 12–20 h de desarrollo/verificación transcurridos | Recorridos prioritarios completos con materiales reales y correcciones probadas, condicionado a entradas y accesos |
+
+WhatsApp/IG/Facebook en producción requieren pruebas reales y autorizaciones; no se promete su disponibilidad esta noche ni una fecha de revisión de Meta. La PC requiere diagnóstico; no se descuenta tiempo del plan suponiéndola ya utilizable. Render real se estima después de medir un clip representativo. La espera externa no se oculta dentro de H3.
+
+Si H2 se demora, se conserva como entrega útil el panel con cerebro/guiones y el circuito comercial que efectivamente haya pasado su prueba; los demás pasos quedan visibles con causa y responsable. No se cambian silenciosamente CTAs ni se afirma que la empresa está totalmente automatizada por tener todas las pestañas.
+
+Antes del corte de Codex: dejar scripts fijos, instrucciones operativas, guiones/materiales y clases del 13/14/16 preparados. Después del 14 pueden seguir panel, validaciones y programas fijos; redacción nueva y razonamiento requieren Contenido o un proveedor disponible, con gasto sólo autorizado. No se convierte una suscripción de Grok o Higgsfield en una API disponible por suponerlo.
+
+### Escalar hacia la operación de una persona
+
+Cada fábrica declara entrada, pasos, responsable, contrato de salida, revisión y permisos. Agregar un canal o formato reutiliza ese contrato y los componentes de revisión; no requiere otro panel ni una sesión permanentemente encendida. Código y decisiones compartibles viven en master; medios, clientes, pagos y credenciales quedan en almacenamiento privado con exportaciones saneadas.
+
+Primero se mide el recorrido de contenido a pago confirmado del workshop. Después se incorporan agenda/soporte, entrega de proyectos y seguimiento de clientes de OnIA Platform, y reportes de operación/finanzas a partir de datos reales. Esos frentes son la siguiente fase, no trabajo implícito dentro del lote de esta noche. Antes de aumentar concurrencia se mide VPS más worker aceptado; ese ensayo conserva su pendiente y no demora ventas.
+
+El criterio de avance es reducir intervenciones repetitivas de Sergio con pruebas observables: una corrección se aplica, un resultado recibe revisión, un mensaje tiene recepción comprobada y un pago lo confirma su dueño. Cantidad de bots, pestañas o sesiones no es una medida de que la empresa opere sola.
+
+### Una autorización de alcance y las entradas personales
+
+La aprobación propuesta cubre desarrollar este lote mediante el harness, sus correcciones y revisiones, aceptar e integrar resultados técnicos buenos en master, mejorar las skills aplicables con evidencia y desplegar el panel privado y su despachador probado en el VPS. Incluye integrar flujo `9a4639f` y generador revisado; los cambios posteriores dentro del mismo alcance requieren su revisión, no otro prompt de Sergio. Se registra el alcance de esa aprobación una vez y se conserva en cada tarea.
+
+Quedan como decisiones finales concretas: activar workflows/canales de n8n/Meta preparados, envíos de ensayo y operación con personas, publicaciones, presupuesto de anuncios y consumo Higgsfield por pieza. Se agrupan por canal con configuración y prueba concretas para que Sergio apruebe una vez el recorrido aplicable. No se solicita de nuevo autorización ya concedida dentro de su alcance.
+
+Entradas pendientes: hora de **entrega** de la tanda desde mañana (preguntada; iniciar el proceso con margen medido), número del workshop verificado en Meta (preguntado), acceso privado a QR/Meet/cuentas y grabación/B-roll. La PC está online; su diagnóstico se coordina por el acceso ya autorizado y Sergio acepta las tarjetas administrativas que le correspondan. Las contraseñas y códigos los introduce él.
+
+Criterio global de cierre: abrir desde el teléfono, corregir un dato del cerebro y ver su aplicación en una nueva pieza; revisar anuncio y recurso IA; procesar una grabación; completar un ensayo comercial por cada canal habilitado; reiniciar sin duplicados; mostrar evidencia, tareas pendientes y continuidad del día siguiente. Aprobar el plan no significa que estas comprobaciones ya pasaron.
+
+Referencias: lecturas existentes de los dos videos de Euge (`EUGE-VIDEO-BOSS-20261109.md` y `EUGE-VIDEO2-BOSS-20261109.md`), ejemplos/criterios concretos, pasos pequeños y carpeta persistente. Consulta técnica primaria: [ejemplos oficiales de Meta para WhatsApp](https://github.com/fbsamples/whatsapp-api-examples). Las páginas oficiales de Private Replies, Cloud API y Generate Preview devolvieron HTTP 429 en esta consulta; permisos, versión y disponibilidad efectiva quedan sujetos a cotejo en la implementación. No se tomaron artículos de terceros como garantía de acceso.
+
+## Autorización del lote y estrategias — 11 noviembre 2026
+
+Sergio aprobó: «Ok, vamos con el plan ve desarrollando te dejo», y agregó un apartado que arme estrategias documentadas para la venta actual y futuros proyectos/ventas. Queda autorizado el lote técnico presentado, incluida integración revisada y despliegue privado; se mantienen aprobaciones comerciales y gasto. El bloque anterior deja de ser sólo propuesta para ese alcance. Hora diaria y verificación Meta siguen pendientes.
+
+Estrategias: biblioteca versionada por proyecto con diagnóstico, evidencia/supuestos, audiencia, oferta, canal, recorrido de venta, acciones priorizadas, piezas, responsable, dependencias, métricas reales y revisión. Primera estrategia: workshop y objetivo de Bs 3000. Futuros proyectos quedan como propuestas evaluables, sin iniciar gastos ni desarrollar cada idea. Integrar su consulta/corrección al panel mediante contrato, con un solo escritor de UI.
