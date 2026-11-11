@@ -1,0 +1,2084 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Claude de 0 a 100: tu negocio con IA · Materiales</title><style>
+:root { color-scheme: light; font-family: "Atkinson Hyperlegible Next", Arial, sans-serif; color: #172a3a; background: #f4f6f8; line-height: 1.65; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header, main, footer { max-width: 1080px; margin: auto; padding: 24px; }
+header { padding-top: 40px; }
+h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.2; }
+h2 { font-size: 1.8rem; line-height: 1.3; }
+h3 { font-size: 1.35rem; line-height: 1.4; margin-top: 2rem; }
+h4, h5, h6 { font-size: 1.1rem; }
+a { color: #15558b; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:focus-visible, [tabindex]:focus-visible { outline: 3px solid #bf6200; outline-offset: 4px; }
+nav { display: flex; gap: 10px 20px; flex-wrap: wrap; padding: 16px 0; border-block: 1px solid #c6d0d8; }
+article { background: white; border: 1px solid #d1dbe1; border-radius: 8px; padding: 28px; margin-bottom: 32px; scroll-margin-top: 16px; }
+.file { margin-top: 0; font-size: .9rem; }
+p, li { overflow-wrap: anywhere; }
+.table-scroll { max-width: 100%; overflow-x: auto; margin: 18px 0; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { padding: 10px; border: 1px solid #c6d0d8; text-align: left; vertical-align: top; min-width: 100px; overflow-wrap: anywhere; }
+th { background: #e9f0f5; }
+pre { padding: 18px; background: #eef3f6; border-left: 4px solid #477899; white-space: pre-wrap; overflow-wrap: anywhere; }
+code { font-size: .95em; }
+blockquote { margin: 18px 0; padding: 4px 20px; border-left: 4px solid #7797b1; }
+li { margin-bottom: .5rem; }
+@media (max-width: 600px) { header, main, footer { padding: 16px; } article { padding: 16px; } th, td { padding: 8px; } }
+@media print { @page { size: A4; margin: 16mm; } :root { background: white; font-size: 10pt; } header nav, .file, .skip, footer { display: none; } header, main { padding: 0; max-width: none; } article { padding: 0; border: 0; margin: 0; break-before: page; } h2, h3, h4 { break-after: avoid; } pre, blockquote, tr { break-inside: avoid; } .table-scroll { overflow: visible; } table { font-size: 9pt; } th, td { min-width: 0; padding: 5px; } a { color: inherit; } }
+</style></head><body id="inicio"><header><a class="skip" href="#readme">Ir al contenido</a><h1>Claude de 0 a 100: tu negocio con IA</h1><p>Materiales de las tres clases · edición de lectura del 11 noviembre 2026</p><nav aria-label="Materiales"><a href="#readme">Inicio</a><a href="#oferta-vigente">Oferta</a><a href="#guia-docente">Guía docente</a><a href="#alumno-clase1">Plantilla 1</a><a href="#alumno-clase2">Plantilla 2</a><a href="#alumno-clase3">Plantilla 3</a><a href="#continuidad-sin-codex">Continuidad</a><a href="#ensayo-y-pendientes">Ensayo</a><a href="#vip-y-soporte">VIP y soporte</a><a href="#fuentes-y-reuso">Fuentes</a></nav></header><main><article id="readme" aria-label="Inicio">
+<p class="file"><a href="README.md" download>Guardar README.md</a></p>
+<h2>Claude de 0 a 100: tu negocio con IA</h2>
+<p>Materiales de las tres clases · preparación del 11 noviembre 2026 · para revisión editorial y ensayo de Sergio.</p>
+<p>Abrí <a href="#inicio">index.html</a> con doble clic para leer todo el paquete en un navegador sin conexión. Contiene las guías, ejercicios, ejemplos y procedimiento de continuidad. Para completar ejercicios, abrí una copia del Markdown correspondiente con un editor de texto, reemplazá los espacios y guardá con otro nombre. También podés copiar las tablas a tus notas o trabajar en papel. Los materiales funcionan sin modelos pagos.</p>
+<p>El HTML es una edición de lectura de estos Markdown al entregar. Para conservar tus respuestas, guardá tu copia de la plantilla Markdown o tus notas. Al editar un Markdown, consultá ese archivo para ver su versión actualizada. La lectura HTML permite imprimir con la función del navegador. La paginación y la apertura en el dispositivo de Sergio requieren la comprobación indicada en el recibo. Las referencias históricas de la sección Fuentes se consultan desde el repositorio completo. El contenido necesario para los ejercicios está incluido en esta carpeta y en el HTML.</p>
+<h3>Fechas vigentes</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Inicio"><table>
+<thead>
+<tr>
+<th>Clase</th>
+<th>Inicio en America/La_Paz, UTC−04:00</th>
+<th>Resultado de la práctica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 · Ordenar</td>
+<td>Viernes 13 noviembre 2026, 20:00</td>
+<td>Agenda revisada y decisión ante falta de tiempo</td>
+</tr>
+<tr>
+<td>2 · Vender</td>
+<td>Sábado 14 noviembre 2026, 14:00</td>
+<td>Mensaje de venta y respuesta a una objeción sustentados en una ficha</td>
+</tr>
+<tr>
+<td>3 · Automatizar</td>
+<td>Lunes 16 noviembre 2026, 20:00</td>
+<td>Procedimiento de una tarea repetida con controles de duplicado, confirmación y fallo</td>
+</tr>
+</tbody>
+</table></div>
+<p>Cada escaleta reserva 60 minutos y ofrece 30 opcionales. Son tiempos de diseño por ensayar. Sergio comunica la duración final y confirma los accesos privados de Google Meet. La clase del 16 se puede conducir con este paquete y un operador, siguiendo <a href="#continuidad-sin-codex">Continuidad</a>.</p>
+<h3>Archivos para usar</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Inicio"><table>
+<thead>
+<tr>
+<th>Material</th>
+<th>Para qué abrirlo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#oferta-vigente">Oferta vigente</a></td>
+<td>Comprobar nombre, fechas, precios, condiciones y recorrido</td>
+</tr>
+<tr>
+<td><a href="#guia-docente">Guía docente</a></td>
+<td>Preparación, explicación, escaletas, preguntas y cierres de las tres clases</td>
+</tr>
+<tr>
+<td><a href="#alumno-clase1">Plantilla de clase 1</a></td>
+<td>Pedidos A/B, agenda, extensión semanal, referencia y autoevaluación</td>
+</tr>
+<tr>
+<td><a href="#alumno-clase2">Plantilla de clase 2</a></td>
+<td>Ficha de producto ficticio, mensaje, objeción, ejemplo y autoevaluación</td>
+</tr>
+<tr>
+<td><a href="#alumno-clase3">Plantilla de clase 3</a></td>
+<td>Procedimiento, registro vacío, casos de excepción y ejemplo resuelto</td>
+</tr>
+<tr>
+<td><a href="#continuidad-sin-codex">Continuidad sin Codex</a></td>
+<td>Abrir archivos, conducir, guardar, recuperar y resolver contingencias</td>
+</tr>
+<tr>
+<td><a href="#ensayo-y-pendientes">Guion de ensayo</a></td>
+<td>Ensayar con cronómetro y registrar pendientes reales</td>
+</tr>
+<tr>
+<td><a href="#vip-y-soporte">VIP y soporte</a></td>
+<td>Guion propuesto de llamada y atención con alcance por validar</td>
+</tr>
+<tr>
+<td><a href="#fuentes-y-reuso">Inventario y fuentes</a></td>
+<td>Qué se recuperó del piloto, qué se extendió y qué evidencia respalda OnIA</td>
+</tr>
+<tr>
+<td><a href="RECIBO.md">Recibo de comprobaciones</a></td>
+<td>Resultados técnicos, alcance editorial y límites de la entrega</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Uso de ejemplos y aprobación</h3>
+<p>Todos los negocios, productos, consultas, identificadores y pagos de los ejercicios son ficticios. Las soluciones son referencias redactadas para practicar. La demostración real en Claude, el ensayo humano con alumno/observador y la validación operativa de OnIA siguen pendientes. Registrá el modo vivo o manual y la ayuda recibida en cada ejercicio.</p>
+<p>Sergio verifica el acceso que prevé usar, incluida la cuenta prestada mencionada en el encargo, su autorización de uso y sus capacidades efectivas. Cada asistente comprueba su propio acceso si practica con Claude. La cuota y la capacidad de la sala se comprueban con los titulares. Ante acceso insuficiente, se sigue el ejercicio manual y se registra generación propia pendiente.</p>
+<p>Contenido y Sergio revisan claridad y condiciones. La coordinadora obtiene la revisión independiente del commit, decide aceptación e integración. El estado de la tarea permanece en el registro del harness que conserva la coordinadora.</p>
+</article>
+<article id="oferta-vigente" aria-label="Oferta">
+<p class="file"><a href="OFERTA-VIGENTE.md" download>Guardar OFERTA-VIGENTE.md</a></p>
+<h2>Oferta vigente para conducir las clases</h2>
+<p>Corte del 11 noviembre 2026. Esta ficha aplica las decisiones vigentes y la estrategia integrada. Es una referencia docente preparada para revisión. <a href="#fuentes-y-reuso">Fuentes</a>.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Oferta"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Dato que debe conservar el facilitador</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nombre</td>
+<td>Claude de 0 a 100: tu negocio con IA</td>
+</tr>
+<tr>
+<td>Comprador propuesto</td>
+<td>Dueño u operador de pequeño negocio, principiante en IA</td>
+</tr>
+<tr>
+<td>Problema de trabajo</td>
+<td>Datos dispersos, pedidos genéricos y dificultad para verificar una respuesta</td>
+</tr>
+<tr>
+<td>Resultado didáctico</td>
+<td>Practicar pedir, revisar, corregir y guardar una agenda, un mensaje y un procedimiento repetible</td>
+</tr>
+<tr>
+<td>Entrega grupal</td>
+<td>Tres clases por Google Meet, ejercicios y plantillas de este paquete</td>
+</tr>
+<tr>
+<td>Precio grupal</td>
+<td>Bs 50</td>
+</tr>
+<tr>
+<td>Precio VIP</td>
+<td>Bs 150 como total de modalidad VIP, según el modelo de la estrategia vigente</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Cinco cupos totales y llamada privada de 30 minutos sobre el caso del negocio o personal</td>
+</tr>
+<tr>
+<td>Clase 1</td>
+<td>Viernes 13 noviembre 2026, 20:00, America/La_Paz</td>
+</tr>
+<tr>
+<td>Clase 2</td>
+<td>Sábado 14 noviembre 2026, 14:00, America/La_Paz</td>
+</tr>
+<tr>
+<td>Clase 3</td>
+<td>Lunes 16 noviembre 2026, 20:00, America/La_Paz</td>
+</tr>
+<tr>
+<td>Duración docente</td>
+<td>Base de 60 minutos, extensión opcional de 30. Finalización por confirmar con Sergio</td>
+</tr>
+<tr>
+<td>Cupos grupales</td>
+<td>Sin límite comercial fijado. Capacidad técnica de Meet por verificar</td>
+</tr>
+<tr>
+<td>Pago</td>
+<td>QR privado y confirmación manual de Sergio de cada pago</td>
+</tr>
+<tr>
+<td>Condición comercial registrada</td>
+<td>Cero devoluciones. Sergio valida y comunica las condiciones finales antes del pago</td>
+</tr>
+<tr>
+<td>Soporte decidido</td>
+<td>Grupos de WhatsApp privados o públicos más comunidad pública. Alcance, enlaces y disponibilidad por comprobar</td>
+</tr>
+<tr>
+<td>Requisitos de lectura</td>
+<td>Copia local del paquete y navegador o editor de texto. Papel como contingencia</td>
+</tr>
+<tr>
+<td>Práctica en Claude</td>
+<td>Acceso autorizado, dispositivo, conexión y capacidad efectiva comprobados por Sergio y cada participante</td>
+</tr>
+</tbody>
+</table></div>
+<p>Para el grupo, el aprendizaje se observa en las hojas guardadas y en las explicaciones del participante. Los ingresos del negocio, la demanda, la disponibilidad actual de VIP y el acceso efectivo de los asistentes requieren datos reales. El paquete permite practicar revisión manual si falta respuesta de un servicio.</p>
+<h3>Recorrido mínimo de la oferta</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Oferta"><table>
+<thead>
+<tr>
+<th>Entrada y acción</th>
+<th>Salida esperada</th>
+<th>Responsable y control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Persona solicita información en canal autorizado</td>
+<td>Recibe ficha y requisitos vigentes</td>
+<td>Atención designada por Sergio coteja edición y condiciones</td>
+</tr>
+<tr>
+<td>Elige modalidad y acepta condiciones</td>
+<td>Inscripción pendiente de pago en registro privado</td>
+<td>Sergio comprueba cupo VIP disponible y precio total</td>
+</tr>
+<tr>
+<td>Solicita pagar</td>
+<td>Recibe QR privado autorizado</td>
+<td>Operador registra pendiente. Una captura pasa a revisión de Sergio</td>
+</tr>
+<tr>
+<td>Sergio verifica movimiento, importe y referencia</td>
+<td>Pago confirmado o incidencia</td>
+<td>Confirmación individual, identificador de pago único y conciliación de duplicados</td>
+</tr>
+<tr>
+<td>Pago confirmado y sala conciliada</td>
+<td>Acceso privado entregado y recepción comprobada</td>
+<td>Operador verifica clases 13/14/16 y el inicio correcto de cada una</td>
+</tr>
+<tr>
+<td>Participa en clase</td>
+<td>Guarda ejercicio y pendiente de aprendizaje</td>
+<td>Sergio registra modo y ayuda, separados de asistencia y de pago</td>
+</tr>
+<tr>
+<td>Duda o solicitud de seguimiento</td>
+<td>Atención por el espacio acordado</td>
+<td>Soporte propuesto en su guía. BAJA detiene seguimiento comercial</td>
+</tr>
+</tbody>
+</table></div>
+<p>La operación del recorrido exige sus accesos y pruebas autorizadas. Los materiales se entregan para preparación docente. Los enlaces de sala, contactos, cobros y QR se conservan en los espacios privados correspondientes.</p>
+<h3>Comprobación antes de comunicar la oferta</h3>
+<ul>
+<li>[ ] Sergio cotejó nombre, fechas y zona con los eventos privados actuales.</li>
+<li>[ ] Sergio confirmó qué incluye la modalidad VIP y su precio total, siguiendo la ficha de estrategia.</li>
+<li>[ ] Operador comprobó capacidad de sala y requisitos reales de práctica.</li>
+<li>[ ] Sergio eligió duración a comunicar, condiciones finales y alcance de soporte.</li>
+<li>[ ] Existe una demostración real revisada para cada resultado que se presentará como capacidad disponible.</li>
+<li>[ ] Sergio autorizó la comunicación concreta y el canal tiene prueba del recorrido.</li>
+</ul>
+<p>Estado inicial de estas casillas en esta entrega, pendiente. Las casillas documentan el ensayo y la aprobación que deberán realizar los responsables.</p>
+</article>
+<article id="guia-docente" aria-label="Guía docente">
+<p class="file"><a href="GUIA-DOCENTE.md" download>Guardar GUIA-DOCENTE.md</a></p>
+<h2>Guía docente de las tres clases</h2>
+<p>Material preparado para Sergio. Los tiempos son estimados y el ensayo humano está pendiente. Cada clase tiene 60 minutos de base y 30 opcionales. El reloj empieza al iniciar la explicación, después de verificar sala y materiales. <a href="#ensayo-y-pendientes">Guion para ensayar</a>.</p>
+<h3>Preparación común</h3>
+<p>Abrí el HTML local, el archivo del alumno, notas vacías y un cronómetro. Tené a mano el ejemplo resuelto y una hoja de papel. Probá audio, compartir una sola ventana, volver a Meet y recuperar notas. Conservá una copia local del paquete en el dispositivo que usarás el 16.</p>
+<p>Sergio verifica acceso autorizado, cuenta prevista, capacidad y posibilidad de copiar texto en Claude. Cada participante que lo use comprueba su propio acceso. El encargo menciona cuenta prestada, cuya autorización y funcionamiento verifica Sergio con el titular antes de usarla. La práctica de revisión y guardado tiene alternativa manual en cada hoja.</p>
+<p>Al iniciar, decí «Todos los datos de hoy son ficticios. Vamos a escribir un pedido, revisar una respuesta y guardar lo que decidimos». Indicá que pueden trabajar en sus notas o papel. Para compartir, usá identificadores anónimos y casos inventados. Si alguien trae datos reales, pedile que los sustituya por datos ficticios antes de proyectarlos o pegarlos en un servicio.</p>
+<p>Propuesta de contingencia docente para ensayar con Sergio, tras unos 60 segundos sin respuesta útil, seguí con la referencia escrita y anotá demora y modo manual. En el bloque de generación, registrá generación propia pendiente. En las puestas en común, recogé hasta tres intervenciones de unos 30 segundos y conservá las demás preguntas para el cierre. Ajustá estos tiempos después del ensayo.</p>
+<h3>Clase 1 · Ordenar</h3>
+<p>Viernes 13 noviembre 2026, 20:00 America/La_Paz.</p>
+<p><strong>Resultado observable.</strong> El alumno guarda la ficha, una agenda con las restricciones comprobadas y una decisión pendiente cuando faltan diez minutos. Después aplica el mismo criterio a dos jornadas ficticias. Usá <a href="#alumno-clase1">la plantilla 1</a>.</p>
+<p><strong>Preparación específica.</strong> Leé el caso Las Palmeras y sus dos consignas. Sumá 105 minutos en A y 130 en B. Tené visible la muestra de agenda y ocultá la solución B mientras calculan. El primer bloque recupera la secuencia del piloto. <a href="#fuentes-y-reuso">Procedencia</a>.</p>
+<p><strong>Explicación breve para decir.</strong> «Un prompt es el pedido escrito que recibe Claude. Incluí qué querés, los datos y las restricciones. Para una agenda, comprobá cuánto dura cada tarea, qué horario es fijo y si dos actividades se pisan. Si falta tiempo, elegís qué cambiar antes de usar la propuesta. Guardá también esa decisión para poder retomar».</p>
+<h4>Escaleta base de 60 minutos</h4>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Guía docente"><table>
+<thead>
+<tr>
+<th>Minutos</th>
+<th>Sergio dice y hace</th>
+<th>Actividad y evidencia del alumno</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00–01</td>
+<td>«Vamos a ordenar una mañana ficticia y revisar el resultado antes de usarlo»</td>
+<td>Abre hoja 1 y reconoce objetivo</td>
+</tr>
+<tr>
+<td>01–02</td>
+<td>Muestra tareas, duraciones, proveedor y pausa fijos</td>
+<td>Señala una restricción</td>
+</tr>
+<tr>
+<td>02–03</td>
+<td>Envía A en el acceso verificado o abre muestra rotulada si falla</td>
+<td>Observa de dónde sale cada dato</td>
+</tr>
+<tr>
+<td>03–04</td>
+<td>Coteja una fila y pregunta por la pausa</td>
+<td>Contrasta duración y bloque fijo</td>
+</tr>
+<tr>
+<td>04–06</td>
+<td>Invita a enviar A o resolver con la ficha en notas</td>
+<td>Guarda su propuesta y una comprobación</td>
+</tr>
+<tr>
+<td>06–08</td>
+<td>Lee B, da tiempo para sumar antes de revelar clave</td>
+<td>Registra 130 requeridos, 120 disponibles, faltan 10</td>
+</tr>
+<tr>
+<td>08–09</td>
+<td>Pide guardar entrada, salida, revisión y pendiente, cerrar y reabrir</td>
+<td>Recupera su nota o registra ayuda</td>
+</tr>
+<tr>
+<td>09–10</td>
+<td>«¿Qué dato te hizo cambiar de opinión?»</td>
+<td>Una persona comparte hasta 20 segundos</td>
+</tr>
+<tr>
+<td>10–15</td>
+<td>Explica datos, restricciones, formato y revisión usando A</td>
+<td>Marca esas cuatro partes en el pedido</td>
+</tr>
+<tr>
+<td>15–25</td>
+<td>Guía revisión completa de A, pregunta por cada duración y límite</td>
+<td>Completa tabla de controles. En manual arma agenda por bloques</td>
+</tr>
+<tr>
+<td>25–35</td>
+<td>Pide corregir una discrepancia real o comparar con la referencia si todo cumple</td>
+<td>Guarda propuesta inicial y revisión, indicando fuente del cambio</td>
+</tr>
+<tr>
+<td>35–45</td>
+<td>Introduce la extensión de martes/miércoles ficticios</td>
+<td>Propone reparto de 140 minutos entre dos jornadas de 120</td>
+</tr>
+<tr>
+<td>45–52</td>
+<td>Hace intercambio de revisión con compañero o lectura propia</td>
+<td>Coteja fijos, suma y decisión sin mover un dato a escondidas</td>
+</tr>
+<tr>
+<td>52–57</td>
+<td>Pide guardar/reabrir trabajo y aplicar autoevaluación</td>
+<td>Clasifica cada criterio logrado, con ayuda o pendiente</td>
+</tr>
+<tr>
+<td>57–60</td>
+<td>Recoge una comprobación y una duda. «La próxima clase usa datos para escribir un mensaje»</td>
+<td>Conserva ejercicio y pendiente concreto</td>
+</tr>
+</tbody>
+</table></div>
+<h4>Extensión opcional de 30 minutos</h4>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Guía docente"><table>
+<thead>
+<tr>
+<th>Minutos</th>
+<th>Actividad</th>
+<th>Salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>60–70</td>
+<td>Modificar una duración en la extensión semanal y volver a sumar</td>
+<td>Nueva necesidad de tiempo y cambio explícito</td>
+</tr>
+<tr>
+<td>70–80</td>
+<td>Dos participantes explican su revisión de un horario</td>
+<td>Diferencia entre dato, propuesta y decisión documentada</td>
+</tr>
+<tr>
+<td>80–90</td>
+<td>Recuperar una nota ajena usando sólo lo guardado y resolver dudas</td>
+<td>Identificar el dato que faltaba para retomar</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Preguntas para facilitar.</strong> «¿Cuánto tiempo quedó libre?», «¿Qué bloque tiene que permanecer fijo?», «¿Dónde está el dato que justifica esa corrección?», «¿Qué decisión necesita el dueño?». Si B omite pausa o reduce inventario, señalá la restricción afectada y pedí revisión. Otra agenda válida en A es aceptable.</p>
+<p><strong>Cierre y contingencia.</strong> Usá la clave de la plantilla para revisar todas las restricciones, incluso sin servicio. Registrá por separado generación propia, revisión y recuperación. Si falta guardado, repetí la recuperación antes de marcarla lograda.</p>
+<h3>Clase 2 · Vender</h3>
+<p>Sábado 14 noviembre 2026, 14:00 America/La_Paz.</p>
+<p><strong>Resultado observable.</strong> El alumno guarda un mensaje de hasta 80 palabras, una respuesta a objeción y el control de cada dato contra una ficha ficticia. Usá <a href="#alumno-clase2">la plantilla 2</a>.</p>
+<p><strong>Preparación específica.</strong> Tené visible la ficha de Canasta Mañana. Practicá distinguir el precio ficticio Bs 35 del precio del workshop. Leé las dos situaciones de revisión, una frase inventada para corregir y la objeción sobre entrega a domicilio.</p>
+<p><strong>Explicación breve para decir.</strong> «Un mensaje necesita decir para quién es, qué ofrece, cuánto cuesta y cuál es el siguiente paso. La IA puede proponer cómo redactarlo. Revisá cada condición en la ficha antes de usarla. Cuando falta un dato, podés preguntarlo o dejarlo pendiente. Hoy guardamos borradores con un caso inventado».</p>
+<h4>Escaleta base de 60 minutos</h4>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Guía docente"><table>
+<thead>
+<tr>
+<th>Minutos</th>
+<th>Sergio dice y hace</th>
+<th>Actividad y evidencia del alumno</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00–05</td>
+<td>Recupera la clase 1 y muestra el resultado esperado</td>
+<td>Abre una nota con entrada, salida y revisión</td>
+</tr>
+<tr>
+<td>05–10</td>
+<td>Explica público, oferta, condiciones y acción usando la ficha</td>
+<td>Identifica Bs 35, retiro y confirmación</td>
+</tr>
+<tr>
+<td>10–18</td>
+<td>Copia el prompt de la hoja en el acceso verificado y revisa un dato de la respuesta</td>
+<td>Distingue dato de ficha de texto propuesto. En contingencia lee la referencia</td>
+</tr>
+<tr>
+<td>18–30</td>
+<td>Pide a todos redactar su mensaje con prompt o a mano</td>
+<td>Guarda mensaje de hasta 80 palabras</td>
+</tr>
+<tr>
+<td>30–38</td>
+<td>Muestra la frase de control «entrega gratis en toda la ciudad y quedan dos»</td>
+<td>Identifica ambas afirmaciones sin respaldo y las corrige</td>
+</tr>
+<tr>
+<td>38–46</td>
+<td>Presenta «¿Me lo llevan a casa sin costo?»</td>
+<td>Redacta respuesta usando sólo retiro y reserva por confirmar</td>
+</tr>
+<tr>
+<td>46–53</td>
+<td>Pide contrastar cada condición y leer una variante en voz alta</td>
+<td>Completa matriz dato/frase y registra revisión</td>
+</tr>
+<tr>
+<td>53–57</td>
+<td>Pide guardar, cerrar, reabrir y autoevaluar</td>
+<td>Recupera mensaje, respuesta y pendiente</td>
+</tr>
+<tr>
+<td>57–60</td>
+<td>«¿Qué promesa quitaste y por qué?»</td>
+<td>Comparte un cambio sustentado en ficha</td>
+</tr>
+</tbody>
+</table></div>
+<h4>Extensión opcional de 30 minutos</h4>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Guía docente"><table>
+<thead>
+<tr>
+<th>Minutos</th>
+<th>Actividad</th>
+<th>Salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>60–70</td>
+<td>Escribir variante de 40 palabras para un canal hipotético</td>
+<td>Borrador breve con precio, retiro y acción</td>
+</tr>
+<tr>
+<td>70–80</td>
+<td>Comparar dos variantes con la misma ficha</td>
+<td>Razón de claridad documentada, sin atribuir conversiones</td>
+</tr>
+<tr>
+<td>80–90</td>
+<td>Hacer intercambio de objeciones y recuperar archivo</td>
+<td>Respuesta revisada y pregunta pendiente</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Preguntas para facilitar.</strong> «¿Qué frase necesita un dato que falta?», «¿La respuesta ofrece algo fuera de ficha?», «¿La persona entiende qué debe hacer después?». El número de consultas o ventas sólo se registra cuando exista una medición real autorizada.</p>
+<p><strong>Cierre y contingencia.</strong> A mano, elegí una frase para público, otra para contenido/precio y otra para retiro/reserva. Cotejá el texto con el ejemplo. Conservá la etiqueta ficticio y marcá generación propia pendiente si se utilizó la muestra.</p>
+<h3>Clase 3 · Automatizar</h3>
+<p>Lunes 16 noviembre 2026, 20:00 America/La_Paz.</p>
+<p><strong>Resultado observable.</strong> El alumno guarda un procedimiento para registrar consultas y decidir el siguiente paso, con datos mínimos, responsable, regla de duplicado, confirmación manual, fallo incierto y recuperación. Usá <a href="#alumno-clase3">la plantilla 3</a>. El procedimiento se ensaya en papel o notas con cinco eventos ficticios.</p>
+<p><strong>Preparación específica.</strong> Conservá paquete y referencias locales antes del corte del 14. Leé la tabla de <a href="#fuentes-y-reuso">capacidades documentadas de OnIA</a>. Prepará una ventana saneada con el cuaderno local y el registro vacío de la hoja 3. Elegí una sola demostración real adicional después de ensayarla con Sergio. En este corte esa demo está pendiente.</p>
+<p><strong>Explicación breve para decir.</strong> «Para automatizar una tarea, describí cuándo empieza, qué datos recibe, qué pasos siguen y quién decide las excepciones. Conservá un identificador para reconocer lo repetido. Ante una captura, el estado sigue pendiente de revisión. Ante un envío incierto, comprobá qué pasó antes de repetir. Vamos a recorrer esos casos sobre un registro ficticio».</p>
+<h4>Escaleta base de 60 minutos</h4>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Guía docente"><table>
+<thead>
+<tr>
+<th>Minutos</th>
+<th>Sergio dice y hace</th>
+<th>Actividad y evidencia del alumno</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00–05</td>
+<td>Recupera mensajes de clase 2 y presenta una consulta repetida</td>
+<td>Abre registro vacío y reconoce entrada y salida</td>
+</tr>
+<tr>
+<td>05–12</td>
+<td>Explica disparador, datos, pasos, revisión, destino y excepción</td>
+<td>Escribe una tarea pequeña y su responsable</td>
+</tr>
+<tr>
+<td>12–20</td>
+<td>Presenta capacidades y pendientes de OnIA con el guion de abajo</td>
+<td>Etiqueta cada capacidad por evidencia y ensayo pendiente</td>
+</tr>
+<tr>
+<td>20–30</td>
+<td>Recorre E01 y E02 en el registro local mostrando consulta única</td>
+<td>Anota una consulta y un duplicado reconocido</td>
+</tr>
+<tr>
+<td>30–42</td>
+<td>Pide completar pasos, clave de duplicado y responsabilidad usando hoja</td>
+<td>Guarda procedimiento con datos mínimos. Claude sólo se usa si está disponible</td>
+</tr>
+<tr>
+<td>42–50</td>
+<td>Recorre captura, confirmación y envío incierto</td>
+<td>Mantiene control humano y deja salida incierta pendiente</td>
+</tr>
+<tr>
+<td>50–55</td>
+<td>Reinicia la lectura desde la última fila, con una persona como operador</td>
+<td>Retoma sin crear entrega duplicada y completa autoevaluación</td>
+</tr>
+<tr>
+<td>55–60</td>
+<td>Guarda procedimiento y cierre «¿Qué dato mirarías antes de repetir?»</td>
+<td>Recupera registro y una decisión pendiente</td>
+</tr>
+</tbody>
+</table></div>
+<h4>Presentación de OnIA durante 12–20</h4>
+<ol>
+<li>Mostrá el cuaderno abierto desde un archivo local y explicá cómo se recupera un ejercicio guardado.</li>
+<li>Explicá la cadena de OnIA con una entrada acotada, revisión y destino, según la evidencia inventariada. El panel y la cadena de guiones tienen ensayos documentados. Sergio verifica su disponibilidad antes de mostrarlos en vivo.</li>
+<li>Para edición, describí las pruebas locales documentadas de programas fijos y el ensayo con material real que queda pendiente.</li>
+<li>Para WhatsApp, indicá que el adaptador cuenta con pruebas locales documentadas. La recepción real, los medios privados, la confirmación y la entrega de acceso tienen comprobaciones propias pendientes. La confirmación de Sergio sobre verificación Meta se conserva con ese alcance.</li>
+<li>Explicá los pendientes de IG/Facebook y operación permanente desde la lista de brechas. Cerrá mostrando en la hoja dónde se registra una excepción.</li>
+</ol>
+<p>Si hay una demo real aprobada y ensayada, usá como máximo tres minutos de este bloque y registrá el resultado observado. Ante fallo, decí qué paso falló, conservá el pendiente y seguí en la hoja local. El resultado que se muestre en vivo debe corresponder al servicio y versión comprobados.</p>
+<h4>Extensión opcional de 30 minutos</h4>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Guía docente"><table>
+<thead>
+<tr>
+<th>Minutos</th>
+<th>Actividad</th>
+<th>Salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>60–70</td>
+<td>Agregar BAJA y una consulta sin dato de producto</td>
+<td>Flujo que detiene seguimiento y pide dato mínimo</td>
+</tr>
+<tr>
+<td>70–80</td>
+<td>Otro participante ejecuta el procedimiento sin explicación oral</td>
+<td>Pasos ambiguos marcados y versión corregida</td>
+</tr>
+<tr>
+<td>80–90</td>
+<td>Comparte una tarea futura y su prueba mínima</td>
+<td>Encargo propuesto con entrada, salida, responsable y condición de éxito</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Preguntas para facilitar.</strong> «¿Cómo sabés que ya llegó antes?», «¿Quién confirma el pago?», «¿Qué revisarías tras una interrupción?», «¿Qué evidencia falta antes de decir que funciona en el canal real?».</p>
+<p><strong>Cierre y contingencia.</strong> La plantilla permite completar todo el recorrido a mano y retomar desde una fila. La implementación en n8n/Meta exige otro trabajo con acceso y prueba autorizados. Guardá el procedimiento revisado y la lista concreta de verificaciones necesarias para implementarlo.</p>
+</article>
+<article id="alumno-clase1" aria-label="Plantilla 1">
+<p class="file"><a href="ALUMNO-CLASE1.md" download>Guardar ALUMNO-CLASE1.md</a></p>
+<h2>Clase 1 · Ordenar una mañana y dos jornadas</h2>
+<p>Plantilla editable. Guardá una copia como <code>clase1-mi-practica.md</code> y completá los espacios. También podés copiarla a notas o papel. Todos los datos de Las Palmeras son ficticios.</p>
+<p>ID anónimo de práctica ______. Fecha ______. Modo vivo / manual ______. Ayuda recibida y paso ______.</p>
+<h3>Resultado y preparación</h3>
+<p>Vas a guardar una agenda revisada, reconocer un exceso de diez minutos y proponer un reparto de tareas entre dos jornadas. Prepará notas y reloj. Para generación en Claude usá el acceso que hayas comprobado. Si falta respuesta, resolvé con la ficha y la referencia escrita, y anotá generación propia pendiente.</p>
+<h3>Ficha de Las Palmeras · caso ficticio</h3>
+<p>Una persona trabaja de 09:00 a 11:00, 120 minutos, realizando una actividad a la vez. Estos horarios pertenecen al caso.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 1"><table>
+<thead>
+<tr>
+<th>Actividad</th>
+<th>Duración</th>
+<th>Condición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revisar caja</td>
+<td>10 min</td>
+<td>Primera, desde 09:00</td>
+</tr>
+<tr>
+<td>Confirmar pedidos</td>
+<td>20 min</td>
+<td>Terminar hasta 10:00</td>
+</tr>
+<tr>
+<td>Contar inventario</td>
+<td>25 min</td>
+<td>Espacio libre de la mañana</td>
+</tr>
+<tr>
+<td>Preparar entregas</td>
+<td>15 min</td>
+<td>Terminar hasta 11:00</td>
+</tr>
+<tr>
+<td>Proveedor</td>
+<td>20 min</td>
+<td>Fijo 10:10–10:30</td>
+</tr>
+<tr>
+<td>Pausa</td>
+<td>15 min</td>
+<td>Fija 10:30–10:45</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Ejercicio guiado</h3>
+<ol>
+<li>Leé la ficha y señalá caja, proveedor y pausa. Sumá las seis duraciones antes de pedir una propuesta.</li>
+<li>Copiá A en tu chat verificado o construí una tabla a mano. Guardá la respuesta original y marcá su procedencia.</li>
+<li>Contrastá cada fila con la ficha y completá los controles de abajo. Si encontrás una discrepancia real, pedí que se corrija con el dato exacto.</li>
+<li>Copiá B en la misma conversación, o cambiá la duración en tus notas. Sumá otra vez y escribí qué decisión necesitás.</li>
+<li>Guardá entrada, salida, revisión y pendiente. Cerrá el archivo y volvé a abrirlo.</li>
+</ol>
+<h4>Pedido A · conservado del piloto</h4>
+<pre><code class="language-text">Ayudame a ordenar esta mañana de un negocio ficticio, Tienda Las Palmeras.
+Trabajo solo de 09:00 a 11:00. No puedo hacer dos cosas a la vez.
+Tareas: revisar caja 10 minutos, primero desde las 09:00;
+confirmar pedidos 20 minutos, terminar a más tardar a las 10:00;
+contar inventario 25 minutos; preparar entregas 15 minutos,
+terminar a más tardar a las 11:00.
+Bloques fijos: proveedor de 10:10 a 10:30 y pausa de 10:30 a 10:45.
+Devolvé una tabla con inicio, fin y actividad, incluidos los bloques fijos
+y el tiempo libre. Revisá duraciones, superposiciones y límites.
+No inventes tareas ni cambies los datos. Si no cabe todo, indicá cuánto
+tiempo falta y preguntame antes de recortar o mover algo fuera de la mañana.
+</code></pre>
+<h4>Mi agenda A</h4>
+<p>Procedencia de mi propuesta, respuesta real / escrita a mano / referencia ______.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 1"><table>
+<thead>
+<tr>
+<th>Inicio</th>
+<th>Fin</th>
+<th>Actividad</th>
+<th>Dato de la ficha comprobado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 1"><table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Mi evidencia y resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Caja primero, desde 09:00</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Pedidos terminan hasta 10:00</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Inventario dura 25 y entregas duran 15</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Proveedor ocupa 10:10–10:30</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Pausa ocupa 10:30–10:45</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Una actividad a la vez, termina hasta 11:00</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Total ocupado y tiempo libre</td>
+<td>______</td>
+</tr>
+</tbody>
+</table></div>
+<p>Si hay una discrepancia, completá con el dato de la ficha y conservá las dos versiones.</p>
+<pre><code class="language-text">En tu tabla, [actividad] aparece [horario/duración], pero la ficha dice [dato].
+Revisá esa diferencia y devolvé la propuesta corregida.
+</code></pre>
+<h4>Pedido B · conservado del piloto</h4>
+<pre><code class="language-text">El inventario ahora necesita 50 minutos en vez de 25.
+Mantené los demás datos. Revisá de nuevo el tiempo total disponible.
+Decime si cabe todo, cuánto tiempo falta o sobra y qué decisión necesitás
+que yo tome. No recortes tareas ni muevas los bloques fijos para hacerlo caber.
+</code></pre>
+<p>Tiempo requerido ______. Disponible ______. Diferencia ______.</p>
+<p>Decisión que le pediría al dueño ______. Restricción que comprobé ______.</p>
+<h3>Repartir dos jornadas · ampliación ficticia</h3>
+<p>Se inicia un ejercicio independiente del inventario de B. Martes y miércoles disponen cada uno de 09:00 a 11:00. Ambos tienen pausa fija 10:00–10:15. Una persona hace las siguientes tareas indivisibles, una por vez.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 1"><table>
+<thead>
+<tr>
+<th>Tarea</th>
+<th>Duración</th>
+<th>Condición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revisar pedidos</td>
+<td>20 min</td>
+<td>Martes, primera desde 09:00</td>
+</tr>
+<tr>
+<td>Preparar lote</td>
+<td>40 min</td>
+<td>Martes, después de revisar pedidos</td>
+</tr>
+<tr>
+<td>Inventario semanal</td>
+<td>45 min</td>
+<td>Miércoles</td>
+</tr>
+<tr>
+<td>Revisar precios</td>
+<td>35 min</td>
+<td>Cualquiera de los dos días</td>
+</tr>
+</tbody>
+</table></div>
+<ol>
+<li>Sumá tiempo disponible en ambas jornadas, descansos y tareas.</li>
+<li>Repartí las tareas respetando días, orden, pausa y duración completa.</li>
+<li>Si usás Claude, copiá la ficha y pedí tabla con día, inicio, fin y actividad. Revisá la propuesta con la misma lista de controles.</li>
+<li>Anotá qué tarea cambiarías primero si apareciera otra urgencia y qué decisión pedirías al dueño.</li>
+</ol>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 1"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Inicio</th>
+<th>Fin</th>
+<th>Tarea o espacio libre</th>
+<th>Comprobación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+</tbody>
+</table></div>
+<p>Agregá las filas que necesites. Total tareas ______. Pausas ______. Libre ______. Cambio que necesita decisión ______.</p>
+<h3>Referencia escrita · caso ficticio resuelto</h3>
+<p>Referencia docente redactada para comparar después de intentar el ejercicio. Una respuesta obtenida en vivo debe guardarse con su procedencia y revisión.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 1"><table>
+<thead>
+<tr>
+<th>Inicio</th>
+<th>Fin</th>
+<th>Actividad A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>09:00</td>
+<td>09:10</td>
+<td>Revisar caja</td>
+</tr>
+<tr>
+<td>09:10</td>
+<td>09:30</td>
+<td>Confirmar pedidos</td>
+</tr>
+<tr>
+<td>09:30</td>
+<td>09:55</td>
+<td>Contar inventario</td>
+</tr>
+<tr>
+<td>09:55</td>
+<td>10:10</td>
+<td>Tiempo libre</td>
+</tr>
+<tr>
+<td>10:10</td>
+<td>10:30</td>
+<td>Proveedor</td>
+</tr>
+<tr>
+<td>10:30</td>
+<td>10:45</td>
+<td>Pausa</td>
+</tr>
+<tr>
+<td>10:45</td>
+<td>11:00</td>
+<td>Preparar entregas</td>
+</tr>
+</tbody>
+</table></div>
+<p>A ocupa 10 + 20 + 25 + 15 + 20 + 15 = 105 minutos. Quedan 15 libres. B requiere 10 + 20 + 50 + 15 + 20 + 15 = 130 minutos frente a 120 disponibles. Faltan 10. La respuesta debe pedir una decisión sobre qué posponer, reducir o ampliar. Omitir la pausa o reducir inventario sin decisión incumple la ficha.</p>
+<p>En la ampliación, las tareas suman 140 minutos y las pausas 30. Hay 240 disponibles, quedan 70 libres. Una distribución válida es la siguiente.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 1"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Inicio</th>
+<th>Fin</th>
+<th>Actividad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Martes</td>
+<td>09:00</td>
+<td>09:20</td>
+<td>Revisar pedidos</td>
+</tr>
+<tr>
+<td>Martes</td>
+<td>09:20</td>
+<td>10:00</td>
+<td>Preparar lote</td>
+</tr>
+<tr>
+<td>Martes</td>
+<td>10:00</td>
+<td>10:15</td>
+<td>Pausa</td>
+</tr>
+<tr>
+<td>Martes</td>
+<td>10:15</td>
+<td>10:50</td>
+<td>Revisar precios</td>
+</tr>
+<tr>
+<td>Martes</td>
+<td>10:50</td>
+<td>11:00</td>
+<td>Tiempo libre</td>
+</tr>
+<tr>
+<td>Miércoles</td>
+<td>09:00</td>
+<td>09:45</td>
+<td>Inventario semanal</td>
+</tr>
+<tr>
+<td>Miércoles</td>
+<td>09:45</td>
+<td>10:00</td>
+<td>Tiempo libre</td>
+</tr>
+<tr>
+<td>Miércoles</td>
+<td>10:00</td>
+<td>10:15</td>
+<td>Pausa</td>
+</tr>
+<tr>
+<td>Miércoles</td>
+<td>10:15</td>
+<td>11:00</td>
+<td>Tiempo libre</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Autoevaluación y recuperación</h3>
+<p>Completá cada resultado con logrado, con ayuda o pendiente y agregá una evidencia concreta.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 1"><table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Resultado y evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Puedo escribir un pedido con datos y restricciones</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Contrasté todas las duraciones y bloques fijos de A</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Reconocí los 10 minutos que faltan en B y pedí una decisión</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Repartí las dos jornadas respetando días y pausas</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Guardé y reabrí entrada, respuesta, comprobación y pendiente</td>
+<td>______</td>
+</tr>
+</tbody>
+</table></div>
+<p>Archivo o nota donde lo guardé ______. Lo que pude recuperar ______. Próxima práctica pendiente ______.</p>
+<p>Para considerar completa la práctica de revisión, cada condición debe tener evidencia. Cuando hubo ayuda, registrá el paso y repetilo de forma independiente. Cuando se utilizó referencia manual, conservá el pendiente de generación propia junto con los logros de revisión.</p>
+</article>
+<article id="alumno-clase2" aria-label="Plantilla 2">
+<p class="file"><a href="ALUMNO-CLASE2.md" download>Guardar ALUMNO-CLASE2.md</a></p>
+<h2>Clase 2 · Preparar un mensaje de venta revisado</h2>
+<p>Plantilla editable. Guardá una copia como <code>clase2-mi-practica.md</code>. Completá espacios en editor, notas o papel. Todos los nombres, productos, condiciones y mensajes de este ejercicio son ficticios.</p>
+<p>ID anónimo ______. Fecha ______. Modo vivo / manual ______. Ayuda y paso ______.</p>
+<h3>Resultado y preparación</h3>
+<p>Vas a guardar un mensaje de hasta 80 palabras, una respuesta a una objeción y la comprobación de las condiciones. Tené visible la ficha y notas vacías. Si usás Claude, comprobá tu acceso. Ante fallo, escribí a mano usando la misma ficha y registrá generación propia pendiente.</p>
+<h3>Ficha de producto · caso ficticio Las Palmeras</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 2"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Dato disponible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Producto</td>
+<td>Canasta Mañana</td>
+</tr>
+<tr>
+<td>Contenido</td>
+<td>6 panes y 1 frasco de mermelada de 250 g</td>
+</tr>
+<tr>
+<td>Comprador propuesto</td>
+<td>Persona del barrio que busca resolver su desayuno</td>
+</tr>
+<tr>
+<td>Precio del producto ficticio</td>
+<td>Bs 35 por canasta</td>
+</tr>
+<tr>
+<td>Retiro</td>
+<td>En la tienda ficticia, de 08:00 a 10:00, previa confirmación</td>
+</tr>
+<tr>
+<td>Reserva</td>
+<td>Pedir cantidad deseada y franja de retiro. El negocio confirma disponibilidad</td>
+</tr>
+<tr>
+<td>Stock, descuentos y delivery</td>
+<td>Datos pendientes</td>
+</tr>
+<tr>
+<td>Prueba social y resultados</td>
+<td>Datos pendientes</td>
+</tr>
+</tbody>
+</table></div>
+<p>El precio Bs 35 corresponde a este producto inventado. La oferta del workshop está en su ficha docente.</p>
+<h3>Ejercicio guiado</h3>
+<ol>
+<li>Leé la ficha. Marcá producto, precio, retiro y acción de reserva.</li>
+<li>Escribí el mensaje con el pedido de abajo o a mano. Guardá la primera versión.</li>
+<li>Contrastá las condiciones de cada frase con la ficha. Conservá la revisión y el mensaje corregido.</li>
+<li>Revisá la frase de control y después respondé la objeción.</li>
+<li>Guardá entrada, versiones, comprobación y dato pendiente. Cerrá y reabrí tu nota.</li>
+</ol>
+<h4>Pedido para copiar</h4>
+<pre><code class="language-text">Escribí un borrador de mensaje de hasta 80 palabras para el negocio ficticio
+Las Palmeras. Público propuesto: personas del barrio que buscan resolver
+su desayuno. Producto Canasta Mañana: 6 panes y 1 frasco de mermelada de
+250 g, Bs 35 por canasta. Retiro en la tienda de 08:00 a 10:00,
+previa confirmación. Para reservar, pedir cantidad deseada y franja de
+retiro; el negocio confirma disponibilidad.
+Conservá estos datos. Stock, descuentos, delivery, testimonios y resultados
+están pendientes. Usá voseo claro, mencioná precio y retiro, y cerrá con
+una sola acción de reserva. Después del mensaje, listá los datos pendientes
+y relacioná cada condición del texto con la ficha para que pueda revisarla.
+</code></pre>
+<h4>Mi mensaje</h4>
+<p>Procedencia, respuesta real / escrito a mano / referencia ______.</p>
+<p>Versión inicial ______.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 2"><table>
+<thead>
+<tr>
+<th>Condición que aparece</th>
+<th>Frase del mensaje</th>
+<th>Dato de ficha que la respalda</th>
+<th>Corrección necesaria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contenido</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Precio</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Retiro</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Reserva y disponibilidad</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Otra afirmación</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+</tbody>
+</table></div>
+<p>Mensaje revisado ______. Número de palabras ______. Dato por pedir al dueño ______.</p>
+<h4>Frase de control · error ficticio preparado</h4>
+<p>«Entrega gratis en toda la ciudad y quedan dos canastas».</p>
+<p>Dato que falta para sostener cada afirmación ______. Corrección que haría ______.</p>
+<h4>Objeción ficticia</h4>
+<p>Una persona pregunta «¿Me lo llevan a casa sin costo?».</p>
+<pre><code class="language-text">Con la misma ficha ficticia de Las Palmeras, escribí una respuesta breve
+a «¿Me lo llevan a casa sin costo?». Indicá qué modalidad está confirmada
+y qué información falta para hablar de delivery. Ofrecé el siguiente paso
+de reserva de la ficha. Dejá los datos pendientes visibles para revisión.
+</code></pre>
+<p>Mi respuesta ______. Condición verificada ______. Información pendiente ______.</p>
+<h3>Referencia escrita · caso ficticio resuelto</h3>
+<p>Mensaje docente redactado con la ficha, para comparar después del intento.</p>
+<blockquote>
+<p>¿Buscás resolver el desayuno? En Las Palmeras tenemos la Canasta Mañana con 6 panes y un frasco de mermelada de 250 g por Bs 35. Retirá en la tienda de 08:00 a 10:00, previa confirmación. Escribinos cuántas canastas querés y en qué franja pasarías para que confirmemos disponibilidad.</p>
+</blockquote>
+<p>La referencia contiene 48 palabras contadas por espacios. Producto, contenido, precio, retiro y reserva se recuperan de la ficha. «Resolver el desayuno» expresa el uso propuesto del producto. Stock, descuento y delivery quedan pendientes de datos del dueño.</p>
+<p>Corrección de la frase de control, retirar la afirmación de delivery y la de escasez, y usar «Retiro en tienda de 08:00 a 10:00, previa confirmación. Escribinos cantidad y franja para confirmar disponibilidad».</p>
+<p>Respuesta docente a la objeción.</p>
+<blockquote>
+<p>Por ahora tenemos confirmado el retiro en tienda de 08:00 a 10:00, previa confirmación. La información de delivery está pendiente. Decinos cuántas canastas querés y en qué franja pasarías para confirmar disponibilidad.</p>
+</blockquote>
+<h3>Alternativa manual y extensión</h3>
+<p>En papel, escribí cuatro renglones con público/uso, contenido, precio/retiro y reserva. Subrayá cada dato de ficha y corregí cualquier condición que quede sin respaldo. Para practicar otra variante, reducí el mensaje a 40 palabras conservando precio, retiro y acción. Compará claridad con un compañero, registrando la razón de la elección.</p>
+<h3>Autoevaluación y recuperación</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 2"><table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Logrado / con ayuda / pendiente y evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Se entiende producto, contenido y público propuesto</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Precio Bs 35, retiro y confirmación coinciden con ficha</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Cada condición del mensaje tiene un dato de respaldo</td>
+<td>______</td>
+</tr>
+<tr>
+<td>El texto tiene hasta 80 palabras y una acción de reserva</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Corregí las dos afirmaciones de la frase de control</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Respondí la objeción conservando información pendiente</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Guardé y reabrí ficha, versiones, revisión y pendiente</td>
+<td>______</td>
+</tr>
+</tbody>
+</table></div>
+<p>Archivo o nota ______. Qué pude recuperar ______. Qué practicaré de nuevo ______.</p>
+<p>Completá la revisión cuando todas las condiciones tengan evidencia. Registrá ayuda y generación propia pendiente según el modo utilizado. El mensaje queda guardado como borrador ficticio de práctica.</p>
+</article>
+<article id="alumno-clase3" aria-label="Plantilla 3">
+<p class="file"><a href="ALUMNO-CLASE3.md" download>Guardar ALUMNO-CLASE3.md</a></p>
+<h2>Clase 3 · Describir y revisar una tarea repetida</h2>
+<p>Plantilla editable. Guardá una copia como <code>clase3-mi-practica.md</code> o trabajá en notas/papel. Negocio, personas, eventos, referencias y pagos de esta hoja son ficticios. La práctica se ejecuta leyendo y escribiendo un registro local.</p>
+<p>ID anónimo ______. Fecha ______. Modo vivo / manual ______. Ayuda y paso ______.</p>
+<h3>Resultado y preparación</h3>
+<p>Vas a guardar un procedimiento y probar qué pasa con una consulta repetida, una captura, una confirmación manual y una salida incierta. Tené la ficha, un registro vacío y una copia de la hoja. Podés pedir ayuda a Claude si tenés acceso verificado. El recorrido manual permite completar la revisión después del corte de Codex del 14.</p>
+<h3>Caso ficticio Las Palmeras</h3>
+<p>La tienda recibe consultas sobre Canasta Mañana, Bs 35. En este ejercicio se registra una consulta, luego una solicitud de reserva con cantidad y franja de retiro. El dueño confirma disponibilidad y, si hay pago, lo coteja manualmente. El operador prepara una confirmación de retiro cuando están confirmados disponibilidad y pago. El envío se ensaya anotando un estado en la hoja.</p>
+<p>Las claves y estados siguientes son una propuesta didáctica para probar a mano.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 3"><table>
+<thead>
+<tr>
+<th>Dato mínimo</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID de evento</td>
+<td>Reconocer la repetición exacta de una entrada</td>
+</tr>
+<tr>
+<td>ID de consulta</td>
+<td>Vincular eventos nuevos de la misma consulta</td>
+</tr>
+<tr>
+<td>Producto, cantidad y franja solicitada</td>
+<td>Comprobar qué se pide</td>
+</tr>
+<tr>
+<td>Disponibilidad y autor de confirmación</td>
+<td>Conservar la decisión del dueño</td>
+</tr>
+<tr>
+<td>Estado de pago y referencia ficticia</td>
+<td>Separar captura recibida de pago confirmado</td>
+</tr>
+<tr>
+<td>Estado de salida y referencia</td>
+<td>Distinguir preparada, entregada o incierta</td>
+</tr>
+<tr>
+<td>Última revisión y siguiente paso</td>
+<td>Retomar después de una interrupción</td>
+</tr>
+</tbody>
+</table></div>
+<p>Estados de consulta propuestos, abierta → reserva por confirmar → reserva confirmada → retiro pendiente. Una incidencia agrega un pendiente de revisión en el mismo registro. BAJA detiene el seguimiento comercial y conserva lo necesario para atender una incidencia de compra.</p>
+<h3>Ejercicio guiado</h3>
+<ol>
+<li>Escribí una frase que describa cuándo empieza y cuándo termina la tarea.</li>
+<li>Completá el procedimiento antes de mirar el ejemplo.</li>
+<li>Recorré los cinco eventos en orden, agregando una fila por revisión. Para E02, reconocé el evento repetido y conservá la consulta existente.</li>
+<li>Al llegar a una salida incierta, escribí qué evidencia tendría que comprobar el operador antes de repetirla.</li>
+<li>Cerrá la hoja y retomá desde la última fila. Guardá entrada, registro, procedimiento corregido y pendientes.</li>
+</ol>
+<h4>Mi procedimiento</h4>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 3"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Completar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tarea pequeña y resultado esperado</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Disparador de inicio</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Datos mínimos</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Dónde queda el registro local</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Clave para entrada duplicada</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Cómo vincular un evento nuevo a consulta existente</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Paso 1 de recepción y revisión</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Paso 2 de reserva y disponibilidad</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Paso 3 de confirmación manual</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Paso 4 de preparación y salida</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Responsable de cada decisión</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Qué hacer si falta un dato</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Qué hacer con captura recibida</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Qué hacer con envío incierto</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Qué hacer ante BAJA</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Cómo retomar tras corte</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Evidencia que consideraría éxito</td>
+<td>______</td>
+</tr>
+</tbody>
+</table></div>
+<h4>Pedido opcional para copiar</h4>
+<pre><code class="language-text">Ayudame a revisar un procedimiento manual del caso ficticio Las Palmeras.
+Recibimos consulta por Canasta Mañana, Bs 35. Pedimos cantidad y franja de
+retiro. El dueño confirma disponibilidad y coteja manualmente cada pago.
+El operador prepara la confirmación cuando disponibilidad y pago constan
+confirmados. Usamos ID de evento para repetidos e ID de consulta para
+vincular entradas nuevas. Una captura queda pendiente de revisión.
+Una salida incierta requiere comprobar el historial antes de repetir.
+BAJA detiene seguimiento comercial. Si falta cantidad o franja, pedir ese
+dato. Escribí pasos, datos mínimos, responsable, control de duplicados,
+tratamiento de fallos y evidencia de éxito. Dejá decisiones pendientes
+visibles. Vamos a probarlo escribiendo cinco eventos en un registro local.
+</code></pre>
+<h4>Cinco eventos ficticios para recorrer</h4>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 3"><table>
+<thead>
+<tr>
+<th>Turno</th>
+<th>Entrada de prueba</th>
+<th>Lo que decidí y por qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E01</td>
+<td>Evento EVT-F01, consulta CON-F01, una canasta para retiro 09:00–09:30. Dueño todavía pendiente</td>
+<td>______</td>
+</tr>
+<tr>
+<td>E02</td>
+<td>Llega otra vez EVT-F01 con exactamente los mismos datos</td>
+<td>______</td>
+</tr>
+<tr>
+<td>E03</td>
+<td>Evento EVT-F02 de CON-F01, llega captura por Bs 35. Dueño confirma disponibilidad, revisión de pago pendiente</td>
+<td>______</td>
+</tr>
+<tr>
+<td>E04</td>
+<td>Evento EVT-F03, dueño coteja manualmente Bs 35 y confirma pago con referencia ficticia PAG-F01</td>
+<td>______</td>
+</tr>
+<tr>
+<td>E05</td>
+<td>Operador intenta confirmar retiro, registra salida SAL-F01, la recepción queda incierta</td>
+<td>______</td>
+</tr>
+</tbody>
+</table></div>
+<h4>Mi registro vacío</h4>
+<p>Agregá filas según el recorrido. Conservá la versión anterior y la revisión más reciente de la misma consulta.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 3"><table>
+<thead>
+<tr>
+<th>Turno</th>
+<th>Evento / consulta</th>
+<th>Disponibilidad</th>
+<th>Pago / referencia</th>
+<th>Salida / referencia</th>
+<th>Autor de revisión</th>
+<th>Siguiente paso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+<tr>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+<td>______</td>
+</tr>
+</tbody>
+</table></div>
+<h4>Pruebas adicionales de la extensión</h4>
+<p>Una entrada nueva pide reservar y omite cantidad. Decisión ______.</p>
+<p>Otra entrada solicita BAJA del seguimiento. Decisión ______.</p>
+<p>Una interrupción cierra la hoja después de E05. Antes de seguir, leería ______. Evidencia que buscaría para SAL-F01 ______.</p>
+<h3>Referencia escrita · caso ficticio resuelto</h3>
+<p>Procedimiento docente propuesto para revisión manual.</p>
+<ol>
+<li>Operador busca ID de evento en el registro. Si ya consta, anota repetición y conserva la misma consulta. Para un evento nuevo, usa el ID de consulta existente o abre una consulta si corresponde.</li>
+<li>Verifica producto, cantidad y franja. Pide el dato mínimo faltante y espera. El dueño decide disponibilidad.</li>
+<li>Registra captura como pendiente de revisión. El dueño coteja movimiento, importe y referencia y anota su confirmación. Una referencia de pago ya usada se concilia antes de asociarla a otra consulta.</li>
+<li>Con disponibilidad y pago confirmados, el operador prepara una confirmación con cantidad/franja y un identificador de salida. Revisa si esa salida ya fue entregada o quedó incierta antes de ejecutar el siguiente paso.</li>
+<li>Registra resultado. Si el resultado queda incierto, consulta historial y evidencia de recepción. Si se acredita entrega, la marca entregada. Si se acredita fallo, prepara un reintento controlado conservando la referencia previa. Mientras falte evidencia, mantiene revisión pendiente.</li>
+<li>Ante corte, recupera la última versión y sus referencias. Ante BAJA, detiene seguimiento comercial y deja registrada la solicitud para el operador.</li>
+</ol>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 3"><table>
+<thead>
+<tr>
+<th>Turno</th>
+<th>Evento / consulta</th>
+<th>Disponibilidad</th>
+<th>Pago / referencia</th>
+<th>Salida / referencia</th>
+<th>Autor de revisión</th>
+<th>Siguiente paso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E01</td>
+<td>EVT-F01 / CON-F01</td>
+<td>Pendiente</td>
+<td>Pendiente</td>
+<td>Pendiente</td>
+<td>Operador ficticio</td>
+<td>Pedir confirmación al dueño</td>
+</tr>
+<tr>
+<td>E02</td>
+<td>Repetido EVT-F01 / CON-F01</td>
+<td>Pendiente</td>
+<td>Pendiente</td>
+<td>Pendiente</td>
+<td>Operador ficticio</td>
+<td>Mantener consulta única</td>
+</tr>
+<tr>
+<td>E03</td>
+<td>EVT-F02 / CON-F01</td>
+<td>Confirmada por dueño</td>
+<td>Captura, revisión pendiente</td>
+<td>Pendiente</td>
+<td>Dueño y operador ficticios</td>
+<td>Cotejo manual del pago</td>
+</tr>
+<tr>
+<td>E04</td>
+<td>EVT-F03 / CON-F01</td>
+<td>Confirmada</td>
+<td>Confirmado por dueño / PAG-F01</td>
+<td>Preparada / SAL-F01</td>
+<td>Dueño y operador ficticios</td>
+<td>Revisar e intentar salida una vez</td>
+</tr>
+<tr>
+<td>E05</td>
+<td>Intento local / CON-F01</td>
+<td>Confirmada</td>
+<td>Confirmado / PAG-F01</td>
+<td>Incierta / SAL-F01</td>
+<td>Operador ficticio</td>
+<td>Comprobar historial/recepción antes de decidir</td>
+</tr>
+</tbody>
+</table></div>
+<p>En el recorrido hay una consulta única, tres IDs de evento de entrada, una referencia de pago y una de salida. E05 es el resultado del intento local. La entrega permanece pendiente de evidencia. En la extensión, falta cantidad → pedir cantidad. BAJA → detener seguimiento comercial. Reinicio → leer E05 y comprobar SAL-F01 antes de actuar.</p>
+<h3>Autoevaluación y recuperación</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Plantilla 3"><table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Logrado / con ayuda / pendiente y evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identifiqué disparador, datos, pasos, responsable y salida</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Reconocí EVT-F01 repetido y conservé consulta única</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Captura quedó pendiente de confirmación manual</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Confirmación identificó dueño y PAG-F01</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Envío incierto quedó pendiente de evidencia antes de reintento</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Expliqué cómo retomar, pedir dato faltante y atender BAJA</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Guardé y reabrí procedimiento, registro y pendientes</td>
+<td>______</td>
+</tr>
+</tbody>
+</table></div>
+<p>Archivo o nota ______. Última fila recuperada ______. Próximo paso ______.</p>
+<p>La práctica de revisión queda completa cuando podés justificar cada decisión con el registro. La implementación futura necesita conexión autorizada, datos privados y pruebas del canal real. La demostración real de OnIA elegida por Sergio sigue pendiente en este corte. <a href="#fuentes-y-reuso">Capacidades documentadas y límites</a>.</p>
+</article>
+<article id="continuidad-sin-codex" aria-label="Continuidad">
+<p class="file"><a href="CONTINUIDAD-SIN-CODEX.md" download>Guardar CONTINUIDAD-SIN-CODEX.md</a></p>
+<h2>Conducir y recuperar las clases sin Codex</h2>
+<p>Procedimiento para Sergio u operador designado. Preparación en el dispositivo real pendiente de ensayo. Las tres plantillas tienen casos, consignas y referencias escritas para trabajar localmente.</p>
+<h3>Preparar la copia antes del corte del 14</h3>
+<ol>
+<li>Guardá esta carpeta completa en el dispositivo de clase y una segunda copia local disponible. Identificá la versión por el commit de entrega y el recibo. Conservá los Markdown junto con index.html.</li>
+<li>Desconectá temporalmente la red del dispositivo y abrí index.html con doble clic o con Abrir archivo del navegador. Entrá a cada clase desde el menú. Comprobá que aparecen las tablas, consignas y soluciones completas.</li>
+<li>Abrí ALUMNO-CLASE1.md con un editor de texto. Usá Guardar como para crear una copia con nombre propio. Escribí una respuesta de prueba, guardá, cerrá y reabrí. Repetí con las otras dos hojas si usás otra aplicación o dispositivo.</li>
+<li>Comprobá la función Imprimir del navegador. Si elegís guardar PDF, revisá vista previa, tablas y texto completo de los prompts. Tené papel con las fichas y ejemplos si necesitás una contingencia adicional.</li>
+<li>Volvé a conectar para probar Meet, audio, compartir ventana y recepción de acceso con la persona de ensayo autorizada. Sergio coteja en privado las tres fechas, horas y enlaces.</li>
+<li>Abrí la guía docente y el guion de ensayo, iniciá cronómetro y practicá los cambios de ventana. Guardá observaciones en una nota local del operador, usando ID anónimo de participante.</li>
+</ol>
+<p>Para entregar ejercicios a alumnos, el operador utiliza el canal y los destinatarios que Sergio haya autorizado. La copia de lectura HTML reúne contenido docente, respuestas y referencias. Las plantillas Markdown pueden compartirse individualmente durante la práctica según el plan del facilitador.</p>
+<h3>Abrir y conducir el lunes 16</h3>
+<ol>
+<li>Antes del inicio de las 20:00 La Paz, abrí la copia local de index.html, la sección de clase 3 y una copia de ALUMNO-CLASE3.md. Tené visible el registro vacío y la solución para el facilitador.</li>
+<li>Abrí Meet por el enlace privado previamente comprobado. Probá micrófono y compartí la ventana del cuaderno. Prepará el cronómetro de 60 minutos.</li>
+<li>Leé la apertura de clase 3. Mostrá capacidades de OnIA usando su evidencia y el estado de ensayo disponible ese día. Si mostrás un resultado real, indicá fecha, versión y qué recorrido fue comprobado.</li>
+<li>Recorré E01/E02 en una copia del registro, invitá a completar procedimiento y continuá E03/E04/E05. Cada persona puede usar notas, Markdown o papel.</li>
+<li>Ante fallo de Claude o de una demo externa, pasá a la referencia escrita y el recorrido manual. Anotá paso, demora y aprendizaje pendiente. Seguí con la revisión del registro.</li>
+<li>Cerrá con autoevaluación y recuperación de notas. Informá el espacio de soporte que Sergio haya confirmado. Registrá dudas por tema y próximo paso.</li>
+</ol>
+<h3>Contingencias operativas</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Continuidad"><table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>Procedimiento</th>
+<th>Qué conservar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Falta Claude o su cuota</td>
+<td>Clase 1 arma agenda con ficha, clase 2 escribe cuatro renglones, clase 3 recorre registro a mano</td>
+<td>Modo manual, revisión lograda y generación propia pendiente</td>
+</tr>
+<tr>
+<td>Falla una demo de OnIA</td>
+<td>Anotá paso y error visible, seguí con capacidades documentadas y plantilla local</td>
+<td>Fallo y verificación necesaria antes de volver a mostrarla</td>
+</tr>
+<tr>
+<td>Internet falla, archivos siguen disponibles</td>
+<td>Seguí preparación local. Operador recupera conectividad y consulta con Sergio cómo coordinar al grupo por el canal autorizado</td>
+<td>Hora del corte, última actividad y decisión de Sergio</td>
+</tr>
+<tr>
+<td>Meet o audio falla</td>
+<td>Operador revisa conexión/audio y relee enlace privado vigente. Sergio decide y comunica recuperación en el canal ya autorizado</td>
+<td>Incidencia, personas afectadas en registro privado y decisión</td>
+</tr>
+<tr>
+<td>HTML falla al abrir</td>
+<td>Elegí Abrir con navegador. Si persiste, abrí Markdown con editor o usá papel</td>
+<td>Archivo y aplicación que fallaron</td>
+</tr>
+<tr>
+<td>Una copia pierde cambios</td>
+<td>Recuperá último archivo guardado, identificá última fila y repetí guardado/apertura</td>
+<td>Qué se recuperó y qué debe reconstruirse</td>
+</tr>
+<tr>
+<td>Falta acceso de un participante</td>
+<td>Facilitá lectura manual de la ficha y revisión de muestra</td>
+<td>Ayuda concreta y práctica de generación pendiente</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Cierre y entrega al siguiente operador</h3>
+<p>Guardá fecha, clase, archivo usado, modo, bloque alcanzado, incidencias, ayuda y próximo paso. Pedí al siguiente operador que abra la última versión y explique dónde retomar. Conservá los resultados originales y las correcciones como versiones separadas. Datos personales y de pago van al registro privado de Sergio.</p>
+<p>Plantilla de nota de continuidad para completar localmente.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Continuidad"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Registro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fecha, hora y zona</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Clase y versión del paquete</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Último bloque realizado</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Archivo y última fila recuperable</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Modo y ayuda recibida</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Incidencia y evidencia saneada</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Pendiente, responsable y próxima acción</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Condición para retomar</td>
+<td>______</td>
+</tr>
+</tbody>
+</table></div>
+<p>Para nuevas respuestas después del corte se necesita un operador o un modelo efectivamente disponible. Este procedimiento conserva una vía manual para las tres clases. La disponibilidad real del dispositivo, de Meet y de cualquier proveedor se verifica en el ensayo.</p>
+</article>
+<article id="ensayo-y-pendientes" aria-label="Ensayo">
+<p class="file"><a href="ENSAYO-Y-PENDIENTES.md" download>Guardar ENSAYO-Y-PENDIENTES.md</a></p>
+<h2>Guion de ensayo y pendientes reales</h2>
+<p>Corte del 11 noviembre 2026. Ensayo humano, demostración real con Claude, demo real elegida de OnIA y aprobación editorial pendientes. Los campos vacíos se completan cuando cada comprobación ocurre. Esta hoja documenta preparación y resultados observados.</p>
+<h3>Antes de iniciar</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Ensayo"><table>
+<thead>
+<tr>
+<th>Comprobación</th>
+<th>Responsable</th>
+<th>Evidencia a registrar</th>
+<th>Estado inicial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cuenta prevista, incluida la prestada, con autorización y capacidad comprobadas</td>
+<td>Sergio con titular</td>
+<td>Fecha, dispositivo y resultado de una petición ficticia, sin identificadores de cuenta</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>Acceso propio de participante de ensayo</td>
+<td>Participante con Sergio</td>
+<td>Petición, respuesta, copiado y reapertura de notas</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>Eventos y enlaces Meet conciliados con 13/14/16</td>
+<td>Sergio/operador</td>
+<td>Cotejo privado de día, hora, zona y acceso recibido</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>Audio y compartir/volver a la sala</td>
+<td>Sergio y observador</td>
+<td>Resultado por dispositivo y ayuda requerida</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>Capacidad efectiva de Meet</td>
+<td>Sergio/operador</td>
+<td>Capacidad consultada en cuenta/sala y plan de asistencia acordado</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>Oferta, total VIP y alcance de soporte</td>
+<td>Sergio + Contenido</td>
+<td>Ficha y texto final elegidos, condición de comunicación</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>Apertura de copia local en dispositivo de clase</td>
+<td>Operador</td>
+<td>Lectura offline de todas las secciones, guardado y reapertura</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>Demo real elegida de OnIA</td>
+<td>Sergio/operador</td>
+<td>Versión, entrada ficticia, resultado, límites y contingencia</td>
+<td>Pendiente</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Ensayo del piloto · cronómetro de diez minutos</h3>
+<p>Usá la secuencia 00–10 de la guía docente, recuperada del piloto. Un observador anota tiempos y ayuda sin intervenir salvo que el participante lo pida.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Ensayo"><table>
+<thead>
+<tr>
+<th>Paso</th>
+<th>Evidencia esperada</th>
+<th>Tiempo real y resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Abrir ficha y reconocer una restricción</td>
+<td>Participante señala un bloque fijo</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Ver demostración A y contrastar una fila</td>
+<td>Entrada y respuesta real identificadas, o contingencia rotulada</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Enviar A o armar agenda manual</td>
+<td>Se conserva procedencia y revisión</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Cambiar a B y sumar</td>
+<td>Reconoce 130 frente a 120, faltan 10</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Guardar, cerrar y reabrir</td>
+<td>Recupera entrada, salida, control y decisión</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Explicar una comprobación y una duda</td>
+<td>Comprensión y ayuda visibles</td>
+<td>______</td>
+</tr>
+</tbody>
+</table></div>
+<p>Duración total real ______. Observador anónimo ______. Modo ______. Si supera diez minutos, anotá causa y ajuste propuesto conservando los pasos del ejercicio.</p>
+<h3>Ensayo de las tres clases</h3>
+<p>Para medir duración completa, ejecutá cada escaleta base con una persona de ensayo y el material que usarás en clase. Registrá los tiempos de todos los bloques en copia de la tabla de guía. Ensayar sólo un tramo permite evaluar ese tramo.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Ensayo"><table>
+<thead>
+<tr>
+<th>Clase</th>
+<th>Recorrido y evidencia que deben quedar</th>
+<th>Resultado por completar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Agenda A, suma B, reparto de dos jornadas, revisión completa, guardado/reapertura</td>
+<td>______</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mensaje ≤80 palabras, dos afirmaciones sin respaldo corregidas, objeción, matriz de datos, reapertura</td>
+<td>______</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Presentación de capacidades con límites, consulta única, captura pendiente, pago manual, salida incierta, retoma</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Contingencia</td>
+<td>Resolver a mano cada hoja con la red desconectada y recuperar la nota</td>
+<td>______</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>Recorrer guion propuesto con tarea ficticia y medir los cinco bloques</td>
+<td>______</td>
+</tr>
+</tbody>
+</table></div>
+<p>Para cada recorrido guardá fecha/hora/zona, versión, dispositivo, observador anónimo, tiempo real, pasos con ayuda, errores y correcciones. Conservá las respuestas reales separadas de las referencias escritas y repetí sólo los tramos afectados por cambios.</p>
+<h3>Tres revisiones con responsables propios</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Ensayo"><table>
+<thead>
+<tr>
+<th>Revisión</th>
+<th>Qué acredita</th>
+<th>Responsable y evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Técnica de archivos</td>
+<td>Enlaces, fuentes, aritmética, legibilidad/apertura según alcance del recibo</td>
+<td>Ejecutora documenta. Coordinadora solicita revisión independiente del commit</td>
+</tr>
+<tr>
+<td>Editorial y comercial</td>
+<td>Claridad, voseo, resultado enseñable, ficha de condiciones coherente</td>
+<td>Contenido + Sergio registran versión y cambios</td>
+</tr>
+<tr>
+<td>Ensayo y aprobación de uso</td>
+<td>Ejercicio observado, tiempos, capacidades efectivas y elección de demo</td>
+<td>Sergio decide uso en clase a partir de los resultados</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Brechas que quedan abiertas</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Ensayo"><table>
+<thead>
+<tr>
+<th>Brecha</th>
+<th>Responsable</th>
+<th>Próxima acción y condición de cierre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Demostraciones reales pendientes</td>
+<td>Sergio</td>
+<td>Enviar petición ficticia y revisar resultado, probar demo OnIA elegida y guardar evidencia saneada</td>
+</tr>
+<tr>
+<td>Ensayo humano y duración pendientes</td>
+<td>Sergio + observador</td>
+<td>Ejecutar escaletas con cronómetro, registrar ayuda, corregir y repetir tramos afectados</td>
+</tr>
+<tr>
+<td>Cuenta prevista y capacidades sin verificar en esta sesión</td>
+<td>Sergio con titular</td>
+<td>Comprobar autorización, acceso y resultado desde dispositivo de clase</td>
+</tr>
+<tr>
+<td>Acceso de alumnos y capacidad de sala</td>
+<td>Sergio/operador</td>
+<td>Comprobar sala/recepción y definir asistencia según capacidad real</td>
+</tr>
+<tr>
+<td>Eventos históricos requieren conciliación</td>
+<td>Sergio/operador</td>
+<td>Releer eventos privados y ajustar dentro de su autorización a 13/14/16 con horas vigentes</td>
+</tr>
+<tr>
+<td>Continuidad local del 16 sin prueba en dispositivo de Sergio</td>
+<td>Operador</td>
+<td>Abrir offline, guardar/reabrir cada plantilla y conducir recorrido manual</td>
+</tr>
+<tr>
+<td>Soporte y agenda VIP requieren concreción</td>
+<td>Sergio</td>
+<td>Elegir espacio/responsable/disponibilidad y coordinar llamadas privadas</td>
+</tr>
+<tr>
+<td>Revisión editorial y aprobación de uso</td>
+<td>Contenido + Sergio</td>
+<td>Revisar paquete y ejercicio ensayado, registrar versión aprobada</td>
+</tr>
+<tr>
+<td>Revisión independiente e integración</td>
+<td>Coordinadora</td>
+<td>Revisar commit publicado, recoger dictamen y completar aceptación/integración aplicables</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los fallos concretos de una ejecución se agregan a la copia local del ensayo con su resultado. Para corregir este paquete, la coordinadora conserva el mismo ID de encargo y asigna la retoma correspondiente.</p>
+</article>
+<article id="vip-y-soporte" aria-label="VIP y soporte">
+<p class="file"><a href="VIP-Y-SOPORTE.md" download>Guardar VIP-Y-SOPORTE.md</a></p>
+<h2>Guía propuesta de VIP y soporte</h2>
+<p>La decisión comercial vigente contempla Bs 150, cinco cupos y una llamada privada de 30 minutos sobre el caso del negocio o personal. Se usa Bs 150 como precio total de modalidad VIP, siguiendo la estrategia vigente. El guion siguiente es una propuesta de facilitación para que Sergio valide alcance y coordinación. <a href="#oferta-vigente">Ficha</a>.</p>
+<h3>Preparación de la llamada</h3>
+<p>Sergio confirma cupo y pago en su registro privado y acuerda el horario directamente. Pedí una tarea concreta y los datos mínimos necesarios, preferentemente anonimizados. Tené una copia de la plantilla de la clase pertinente y definí qué resultado cabe en la llamada.</p>
+<h3>Guion de 30 minutos</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de VIP y soporte"><table>
+<thead>
+<tr>
+<th>Minutos</th>
+<th>Actividad propuesta</th>
+<th>Evidencia buscada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00–05</td>
+<td>Preguntar objetivo, situación y resultado deseado</td>
+<td>Una tarea delimitada y sus datos disponibles</td>
+</tr>
+<tr>
+<td>05–10</td>
+<td>Elegir agenda, mensaje o procedimiento y formular pedido</td>
+<td>Ficha de trabajo escrita y restricciones</td>
+</tr>
+<tr>
+<td>10–20</td>
+<td>Construir una primera versión con acceso disponible o a mano</td>
+<td>Borrador y comprobación contra datos</td>
+</tr>
+<tr>
+<td>20–25</td>
+<td>Revisar una excepción y hacer un ajuste</td>
+<td>Corrección explicada y decisión pendiente</td>
+</tr>
+<tr>
+<td>25–30</td>
+<td>Guardar, reabrir y acordar un siguiente paso realizable</td>
+<td>Archivo recuperado y responsable identificado</td>
+</tr>
+</tbody>
+</table></div>
+<p>Si el caso necesita una integración o una intervención adicional, dejá una propuesta con alcance, dependencia y evidencia de cierre para la decisión posterior de Sergio. Si se usa contingencia manual, registrá lo practicado y el pendiente de generación o implementación.</p>
+<h3>Soporte propuesto</h3>
+<p>La decisión de Sergio contempla grupos de WhatsApp privados o públicos y comunidad pública después del workshop. Sergio debe confirmar el espacio, quién atiende, el alcance y la disponibilidad que comunicará. El operador registra consultas en el canal aprobado y agrupa dudas repetidas para preparar una respuesta revisada.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de VIP y soporte"><table>
+<thead>
+<tr>
+<th>Tipo de consulta</th>
+<th>Atención propuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Abrir o guardar plantilla</td>
+<td>Guiar con el procedimiento de continuidad y verificar recuperación</td>
+</tr>
+<tr>
+<td>Duda sobre un ejercicio</td>
+<td>Pedir el paso y un ejemplo ficticio, cotejar con ficha y referencia</td>
+</tr>
+<tr>
+<td>Acceso a cuenta o servicio</td>
+<td>Identificar fallo observable y derivar al titular para verificar acceso/capacidad</td>
+</tr>
+<tr>
+<td>Pago, cupo VIP o acceso a clase</td>
+<td>Derivar al registro privado y a la confirmación de Sergio</td>
+</tr>
+<tr>
+<td>Implementación en negocio real</td>
+<td>Registrar tarea, datos y alcance para decisión de Sergio</td>
+</tr>
+<tr>
+<td>BAJA de seguimiento</td>
+<td>Detener seguimiento comercial y registrar solicitud para el operador</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Pendientes para que Sergio comunique condiciones completas</h3>
+<ul>
+<li>[ ] Espacio y acceso de soporte comprobados.</li>
+<li>[ ] Responsable, disponibilidad y alcance de atención acordados.</li>
+<li>[ ] Horarios individuales VIP coordinados en privado.</li>
+<li>[ ] Materiales y requisitos de llamada comprobados en el dispositivo previsto.</li>
+<li>[ ] Texto final de condiciones revisado antes de comunicarlo.</li>
+</ul>
+<p>La agenda VIP, la duración del soporte, los tiempos de respuesta y la disponibilidad de grabaciones siguen pendientes de definición. La política registrada de cero devoluciones se conserva en la ficha comercial para validación y comunicación de Sergio antes del pago.</p>
+</article>
+<article id="fuentes-y-reuso" aria-label="Fuentes">
+<p class="file"><a href="FUENTES-Y-REUSO.md" download>Guardar FUENTES-Y-REUSO.md</a></p>
+<h2>Inventario y reutilización</h2>
+<p>Lectura local del 11 noviembre 2026 en HEAD inicial <code>4e6888288acc468d10abbe513823fb10c06fd9bd</code>. El inventario precedió a la redacción. La directora canónica preparar-oferta-y-embudo estaba anunciada en el catálogo y se leyó explícitamente. Se cotejó la selección marketing de orquestacion.json. Se usó esa misma skill como directora de área y del encargo.</p>
+<h3>Piloto recuperado</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Fuentes"><table>
+<thead>
+<tr>
+<th>Fuente</th>
+<th>Contenido que ya sirve</th>
+<th>Aplicación en este paquete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../kit-piloto-20261109/LEEME.md">LEEME del kit</a></td>
+<td>Apertura offline, mapa de siete láminas, hoja/guía y límites del ensayo</td>
+<td>Procedimiento de apertura local y preservación de límites</td>
+</tr>
+<tr>
+<td><a href="../kit-piloto-20261109/hoja.html">Hoja histórica</a></td>
+<td>Ficha Las Palmeras, A/B, agenda, muestra y registro de ayuda</td>
+<td>Plantilla 1, con A/B conservados literalmente</td>
+</tr>
+<tr>
+<td><a href="../kit-piloto-20261109/guia.html">Guía histórica</a></td>
+<td>Secuencia 0–10, corrección de error y observación</td>
+<td>Primeros diez minutos de la guía docente</td>
+</tr>
+<tr>
+<td><a href="../kit-piloto-20261109/laminas.html">Láminas históricas</a> e <a href="../kit-piloto-20261109/index.html">índice</a></td>
+<td>Siete apoyos visuales para pedir, revisar, ajustar y guardar</td>
+<td>Material complementario docente consultable en el repo</td>
+</tr>
+<tr>
+<td><a href="../kit-piloto-20261109/kit.css">CSS</a> y <a href="../kit-piloto-20261109/kit.js">JS</a></td>
+<td>Presentación, impresión, navegación y selección</td>
+<td>Se inventarió su función. La lectura nueva es HTML estático autocontenido</td>
+</tr>
+<tr>
+<td><a href="../noche-20261109/CLASE1-PRIMEROS10MIN.md">Piloto escrito</a></td>
+<td>Guion exacto de 10 minutos, restricciones, consignas y clave B</td>
+<td>Caso, consignas, agenda y apertura reutilizados</td>
+</tr>
+<tr>
+<td><a href="../kit-piloto-20261109/evidencia/host-02/comprobacion.json">Recibo histórico del host</a></td>
+<td>Comprobaciones del kit en aquel host y versión</td>
+<td>Antecedente del piloto. Esta entrega tiene un recibo propio</td>
+</tr>
+</tbody>
+</table></div>
+<p>El inventario halló también comprobadores y recibos históricos de texto/PDF y sus correcciones. La guía histórica conserva precios, fechas y pendientes de aquel corte. Para esta edición se aplica la ficha vigente. Las siete láminas y sus pies pertenecen al piloto histórico, por lo que el facilitador debe presentar las condiciones de esta edición desde el paquete actual.</p>
+<p>El primer piloto resolvía diez minutos de clase 1. Aquí se desarrollan los otros 50 minutos, una extensión semanal y las clases 2/3. Los ejercicios nuevos mantienen el negocio ficticio Las Palmeras y los controles de datos, revisión y recuperación. La clase 3 usa una práctica en papel de control de pedidos, con lectura honesta de las capacidades documentadas de OnIA.</p>
+<h3>Oferta, estrategia y permisos aplicados</h3>
+<ul>
+<li><a href="../../../05-herramientas/fabrica-onia/DECISIONES-SERGIO-20261110.md">Decisiones de Sergio</a>. Se aplicaron nombre final, Bs 50/Bs 150, cinco VIP, llamada de 30 minutos, pago manual, soporte y confirmación directa de clases 13/14/16. Las confirmaciones posteriores sobre Meta y tanda diaria conservan sus límites.</li>
+<li><a href="../../estrategias-operativas-20261111/ESTRATEGIA-WORKSHOP-v1.md">Estrategia del workshop</a> y <a href="../../estrategias-operativas-20261111/CONCILIACION-FUENTES.md">conciliación</a>. Integración referida por el encargo <code>19e2d7dc71db6c00c4e5c1e60239b9419b4f7bed</code>. Se reutilizan audiencia, promesa didáctica, ficha, recorrido y precio total VIP.</li>
+<li><a href="../../../05-herramientas/fabrica-onia/CIERRE-VENTA-20261111.md">CIERRE-VENTA</a>. Autorización del lote, preparación del curso y continuidad después del 14. Se cotejó la regla de cierre incorporada en <code>52fb1c829d5a74af4be46cd0e2556818e9502d9e</code>.</li>
+<li><a href="../../../04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md">Modelo de one man company</a>. Se recuperó la cadena entrada, trabajo acotado, revisión humana y destino, con Contenido como responsable editorial y Boss coordinando.</li>
+<li><a href="../../preparar-oferta-y-embudo/SKILL.md">Skill directora</a>. Oferta, demostración pendiente, recorrido, requisitos, responsables y compromisos delimitados.</li>
+</ul>
+<h3>Capacidades de OnIA que se pueden explicar</h3>
+<p>Este corte es documental. Sergio verifica nuevamente el resultado que vaya a mostrar antes de clase 3.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de Fuentes"><table>
+<thead>
+<tr>
+<th>Capacidad</th>
+<th>Evidencia recuperada</th>
+<th>Cómo presentarla y qué falta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Material de clase offline</td>
+<td>Kit del piloto y archivos de esta entrega</td>
+<td>Abrir el HTML local y explicar su función. Apertura en dispositivo del facilitador por ensayar</td>
+</tr>
+<tr>
+<td>Cerebro consultable y procedimientos</td>
+<td>Bitácora y punto de partida de CIERRE-VENTA</td>
+<td>Explicar recuperación de contexto con fuente y revisión. Consulta real elegida y pantalla saneada por preparar</td>
+</tr>
+<tr>
+<td>Panel y cadena de guiones</td>
+<td><a href="../../../04-operacion-agentes/BITACORA-BOSS.md">Bitácora</a>, panel integrado y ensayo real con escritora/revisora</td>
+<td>Explicar preparación y revisión editorial. Operación permanente y disponibilidad del 16 por comprobar</td>
+</tr>
+<tr>
+<td>Editor y programas fijos</td>
+<td><a href="../../../04-operacion-agentes/evidencias/cierre-venta-20261111/REVISION-INDEPENDIENTE.md">Revisión técnica de cierre de venta</a></td>
+<td>Hay pruebas locales documentadas de transcripción reutilizada, cortes y formatos. Material real de Sergio y ensayo perceptivo del recorrido por realizar</td>
+</tr>
+<tr>
+<td>Adaptador WhatsApp</td>
+<td>Misma revisión y auditoría actual de CIERRE-VENTA</td>
+<td>Preparación y pruebas locales documentadas. Meta/QR/Meet, envío, recepción, confirmación y acceso reales requieren su ensayo autorizado</td>
+</tr>
+<tr>
+<td>Instagram/Facebook y horario autónomo</td>
+<td>Brechas de CIERRE-VENTA y bitácora</td>
+<td>Describir sus pendientes y controles. Mostrar sólo evidencia del recorrido efectivamente probado</td>
+</tr>
+</tbody>
+</table></div>
+<p>Se propone mostrar en clase 3 el cuaderno abierto y recorrer manualmente una entrada, una revisión y una decisión. La demo de un servicio se elige sólo después del ensayo real correspondiente. Si falla, se guarda el fallo y se conduce la práctica manual. El caso ficticio resuelto permanece rotulado como referencia docente.</p>
+</article></main><footer><a href="#inicio">Volver al inicio</a> · <a href="RECIBO.md">Recibo de comprobaciones</a></footer></body></html>
