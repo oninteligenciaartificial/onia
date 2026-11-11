@@ -68,11 +68,15 @@ def attach(model, data):
         return
     cycle = cycles[-1]
     result = cycle['resultado']
+    review = cycle.get('revision_tecnica') or {}
+    reviewed = bool(result.get('commit') and review.get('verdict') == 'bueno'
+                    and review.get('commit') == result['commit']
+                    == (cycle.get('harness') or {}).get('commit'))
     scripts = []
     source = 'flujo/' + cycle['id'] + '/' + result['huella']
     for row in result['piezas']:
         script = {**row, 'origen': 'Resultado privado del ciclo ' + cycle['dia'],
-                  'integridad': 'pendiente_revision', 'revision_editorial': 'pendiente',
+                  'integridad': 'verificada' if reviewed else 'pendiente_revision', 'revision_editorial': 'pendiente',
                   'revision_tecnica': cycle.get('revision_tecnica'), 'version': result['version']}
         script['target'] = operacion.target(source, row['id'], row['titulo'], script.copy(), row['sha256'], model['targets'])
         scripts.append(script)

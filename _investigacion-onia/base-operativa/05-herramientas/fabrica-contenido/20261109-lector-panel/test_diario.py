@@ -73,6 +73,33 @@ class DailyPanelTests(unittest.TestCase):
         self.assertEqual(self.request('POST', '/revision', urlencode(fields), {'Origin': 'http://'+self.host,
                                   'Content-Type': 'application/x-www-form-urlencoded'})[0], 409)
 
+    def test_etiqueta_tecnica_exige_dictamen_del_mismo_commit_sin_aprobar_editorial(self):
+        # Pasar por HTTP comprueba también la etiqueta que ve Sergio.
+        good = copy.deepcopy(self.data)
+        cycle = good['ciclos'][0]
+        commit = cycle['resultado']['commit']
+        self.assertTrue(commit)
+        cycle['harness']['commit'] = commit
+        cycle['revision_tecnica'] = {'verdict': 'bueno', 'commit': commit}
+        for verdict, reviewed_commit, expected in (
+                ('bueno', commit, True), ('cambios', commit, False),
+                ('bueno', 'f' * 40, False), (None, None, False)):
+            with self.subTest(verdict=verdict, reviewed_commit=reviewed_commit):
+                current = copy.deepcopy(good)
+                current['ciclos'][0]['revision_tecnica'] = {'verdict': verdict, 'commit': reviewed_commit}
+                atomic(self.flow.root/'panel.json', current)
+                status, _, html = self.request('GET', '/')
+                self.assertEqual(status, 200)
+                # Las tarjetas usan esta clase y están al final, separadas del inspector.
+                cards = html.split('<article class="script"', 1)[1]
+                self.assertEqual('Técnicamente revisado' in cards, expected)
+                rows = self.app.model()['tanda']['guiones']
+                self.assertEqual(len(rows), 5)
+                for row in rows:
+                    self.assertEqual(row['integridad'] == 'verificada', expected)
+                    self.assertEqual(row['revision_editorial'], 'pendiente')
+                self.assertIn('sin aprobación de publicación', cards)
+
     def test_feed_fallido_conserva_ultimo_exito_y_no_renueva_fecha(self):
         self.request('GET', '/')
         expected = self.data['fuente_ultimo_exito']
