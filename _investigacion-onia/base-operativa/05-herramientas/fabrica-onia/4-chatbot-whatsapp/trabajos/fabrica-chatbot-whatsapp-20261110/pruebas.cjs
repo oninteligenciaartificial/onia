@@ -145,6 +145,12 @@ for (const [nombre, crear] of [['modulo', crearMotor], ['workflow', embebido.cre
     assert.throws(() => m.confirmarOperador(confirmacion(), 4000), /INSCRIPCION_NO_DISPONIBLE/);
     assert.equal(accesos(m), 0);
   });
+  test(nombre + ': vencimiento posterior a BAJA no emite mensajes', () => {
+    const m = motor(); pendiente(m);
+    m.recibirCliente(e('baja', {accion: 'baja'}), 2000);
+    assert.equal(m.vencer(e('tick-baja'), 1000 + TTL).nuevos.length, 0);
+    assert.equal(m.snapshot().clientes[cliente].cese, true);
+  });
   test(nombre + ': reloj viejo, identidad y datos reales rechazados', () => {
     const m = motor(); pendiente(m);
     assert.throws(() => m.recibirCliente(e('x', {accion: 'interes'}), 999), /RELOJ_INVALIDO/);
@@ -188,6 +194,8 @@ test('workflow: Code exacto y módulo dan el mismo recorrido y un solo acceso', 
 });
 test('decisiones actuales en mensajes, QR y acceso exclusivos de prueba', () => {
   const oferta = catalogo.oferta;
+  assert.equal(oferta.nombre, 'Claude de 0 a 100: tu negocio con IA');
+  assert.ok(catalogo.textos.informacion.includes(oferta.nombre));
   assert.deepEqual(oferta.clases, ['2026-11-12T21:00:00-04:00', '2026-11-13T21:00:00-04:00', '2026-11-14T14:00:00-04:00']);
   assert.equal(oferta.zona, 'America/La_Paz'); assert.equal(oferta.plataforma, 'Google Meet');
   assert.equal(oferta.grupal.cupos, null); assert.equal(oferta.vip.llamada_minutos, 30);
@@ -198,4 +206,47 @@ test('decisiones actuales en mensajes, QR y acceso exclusivos de prueba', () => 
     assert.doesNotMatch(n.parameters.jsCode, /\brequire\s*\(|\bfetch\s*\(|\bprocess\.|\$http|\$env/);
   assert.match(catalogo.textos.qr, /QR_FICTICIO_SIN_VALOR/);
   assert.match(catalogo.textos.confirmado, /ACCESO_FICTICIO_NO_VALIDO/);
+});
+
+test('despacho n8n: sólo trigger manual y petición privada sin guardar ejecuciones', () => {
+  const despacho = require('./workflow-despacho-n8n.json');
+  assert.equal(despacho.active, false);
+  assert.deepEqual(despacho.nodes.map(n => [n.type, n.typeVersion]), [
+    ['n8n-nodes-base.manualTrigger', 1],
+    ['n8n-nodes-base.httpRequest', 4.2]
+  ]);
+  const [manual, peticion] = despacho.nodes;
+  assert.deepEqual(despacho.connections, {
+    [manual.name]: {main: [[{node: peticion.name, type: 'main', index: 0}]]}
+  });
+  assert.deepEqual(despacho.settings, {
+    executionOrder: 'v1',
+    saveDataErrorExecution: 'none',
+    saveDataSuccessExecution: 'none',
+    saveManualExecutions: false,
+    saveExecutionProgress: false
+  });
+  assert.deepEqual(despacho.pinData, {});
+  assert.ok(despacho.nodes.every(n => !Object.hasOwn(n, 'credentials')));
+  assert.equal(peticion.retryOnFail, false);
+  const {url, ...parametros} = peticion.parameters;
+  assert.equal(typeof url, 'string');
+  assert.deepEqual(parametros, {
+    method: 'POST', authentication: 'genericCredentialType', genericAuthType: 'httpHeaderAuth',
+    sendBody: false, options: {redirect: {redirect: {followRedirects: false}}, timeout: 20000}
+  });
+});
+
+test('despacho n8n: URL de entorno obligatoria, ruta fija y sin destino en la exportación', () => {
+  const {url} = require('./workflow-despacho-n8n.json').nodes[1].parameters;
+  assert.match(url, /^=\{\{.*\}\}$/);
+  assert.doesNotMatch(url, /https?:\/\/|\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b/);
+  const expresion = url.slice(3, -2);
+  const resolver = $env => vm.runInNewContext(expresion, {$env}, {timeout: 1000});
+  assert.equal(resolver({}), '');
+  assert.equal(resolver({ONIA_CHATBOT_DISPATCH_BASE_URL: ''}), '');
+  for (const sufijo of ['', '/']) {
+    assert.equal(resolver({ONIA_CHATBOT_DISPATCH_BASE_URL: 'https://fixture.invalid' + sufijo}),
+      'https://fixture.invalid/operador/despachar');
+  }
 });

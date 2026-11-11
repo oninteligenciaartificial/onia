@@ -51,7 +51,7 @@ function crearMotor(catalogo, snapshot) {
     let resultado = 'procesado';
     if (canal === 'reloj') {
       for (const [cliente, c] of Object.entries(s.clientes)) {
-        if (c.estado === 'pendiente' && ahora >= c.vence) excepcion(cliente, 'PAGO_VENCIDO');
+        if (!c.cese && c.estado === 'pendiente' && ahora >= c.vence) excepcion(cliente, 'PAGO_VENCIDO');
       }
     } else if (canal === 'cliente') {
       const acciones = ['interes', 'inscribir', 'captura', 'ayuda', 'baja', 'desconocido'];

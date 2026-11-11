@@ -1,5 +1,9 @@
 # Alta esencial de onia-worker
 
+> Siguiente paso del corte PE: [diagnóstico y retoma v3](RETOMA-PE-20261111.md). Primero diagnóstico; no repetir v2 ni dar la PC por conectada.
+
+> **Último intento:** la retoma revisada también se detuvo; ver [ALTA-DETENIDA-v2-20261110.md](ALTA-DETENIDA-v2-20261110.md). Quedaron archivos nuevos y la cuenta cerrada. No repetir el alta inicial ni la retoma v2 sobre ese estado: falta diagnóstico y una retoma segura. Los documentos anteriores se conservan como historia. La prioridad vigente de Sergio es ingresos hasta14nov; no usar el homelab como capacidad disponible antes de verificarlo.
+
 9 noviembre 2026 · America/La_Paz. Preparación revisada para que Sergio la aplique **sólo en DESKTOP-0GGGNMF / Ubuntu WSL2**. No aplicada todavía. Estado canónico: [homelab-conexion-20261109](../tareas/homelab-conexion-20261109.json). Laptop DESKTOP-ENV6SDA excluida.
 
 ## Qué se comprobó

@@ -1,6 +1,6 @@
 # Chatbot workshop · paquete de ensayo local
 
-10 noviembre 2026. **Borrador técnico para revisión; no es una integración real.** El archivo [workflow-n8n.json](workflow-n8n.json) tiene `active=false` y sólo un disparador manual y dos nodos Code. No tiene webhook, credenciales, nodos HTTP ni envíos. No se importó a n8n ni se invocó Meta/n8n. Activarlo tampoco lo convertiría en un chatbot conectado: los adaptadores reales están pendientes.
+Retoma del 11 de noviembre de 2026. **Borrador técnico para revisión local.** El archivo [workflow-n8n.json](workflow-n8n.json) tiene `active=false` y sólo un disparador manual y dos nodos Code. No tiene webhook, credenciales, nodos HTTP ni envíos. El [workflow de despacho manual](workflow-despacho-n8n.json) se entrega inactivo y con destino y credencial por configurar en privado. No se importaron workflows ni se invocó Meta/n8n. Para la futura conexión existe un [adaptador HTTP/SQLite](ADAPTADOR.md) con envíos deshabilitados por defecto y pruebas simuladas.
 
 Se preparó el recorrido WhatsApp → ficha → inscripción pendiente → QR ficticio → aviso al operador → conciliación explícita → acceso ficticio. La captura sola permanece pendiente. Toda salida se guarda en una lista local, sin entregarse a nadie. Los textos son **borradores para Contenido**, sin aprobación editorial ni comercial. No hay ventas, cobros o accesos reales acreditados.
 
@@ -11,7 +11,7 @@ Requiere Node.js 20 disponible (comprobado con 20.20.2); sólo módulos incluido
 ```sh
 P=_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110
 node "$P/preparar.cjs"
-node --test "$P/pruebas.cjs"
+node "$P/pruebas.cjs"
 node "$P/ensayo.cjs"
 ```
 
@@ -22,17 +22,19 @@ node "$P/ensayo.cjs"
 | [mensajes.json](mensajes.json) | Oferta vigente y respuestas fijas; `aprobacion_editorial=false` |
 | [motor.cjs](motor.cjs) | Estados, referencia única, deduplicación, cupos, cese y normalización sintética Meta |
 | [fixtures.json](fixtures.json) | Recorrido sintético con imagen no descargable y señal separada del operador |
-| [pruebas.cjs](pruebas.cjs) | 40 pruebas; los contratos se repiten sobre el módulo y el código exacto del JSON |
+| [pruebas.cjs](pruebas.cjs) | 44 pruebas, con contratos del motor y validación local de la estructura del despacho |
+| [ADAPTADOR.md](ADAPTADOR.md) | Configuración privada, contrato HTTP y prueba local del adaptador |
 | [ESTADOS.md](ESTADOS.md) | Contrato de eventos, señales, almacenamiento y límites |
 | [FALTANTES.md](FALTANTES.md) | Entradas, responsables y condiciones para un encargo posterior de integración |
-| [evidencia/pruebas.tap](evidencia/pruebas.tap) | Salida de la comprobación local |
-| [evidencia/recorrido.json](evidencia/recorrido.json) | Resultado del JSON exacto ejecutado localmente |
-| [evidencia/manifest.json](evidencia/manifest.json) | Versiones, hashes y alcance comprobado |
-| [RECIBO.json](RECIBO.json) | Modelo/cuota conocidos o desconocidos, intento y entrega técnica |
+| [evidencia/pruebas.tap](evidencia/pruebas.tap) | Salida histórica de la comprobación inicial en fbc8747 |
+| [evidencia/recorrido.json](evidencia/recorrido.json) | Recorrido inicial ejecutado localmente en fbc8747 |
+| [evidencia/manifest.json](evidencia/manifest.json) | Versiones, hashes y alcance de la ejecución inicial en fbc8747 |
+| [RECIBO.json](RECIBO.json) | Recibo de la entrega inicial en fbc8747 |
+| [evidencia/retoma-20261111.json](evidencia/retoma-20261111.json) | Comprobación de la retoma con artefactos y pruebas actuales |
 
 ## Oferta aplicada y reutilización
 
-Prevalece [DECISIONES-SERGIO-20261110.md](../../../DECISIONES-SERGIO-20261110.md): jueves 12 y viernes 13 a las 21:00; sábado 14 a las 14:00, `America/La_Paz`, Google Meet. Grupo Bs 50 sin cupo fijado; VIP Bs 150, cinco cupos, llamada de 30 minutos. No confundir los horarios del ejercicio del kit con los del workshop. No prometer plaza VIP al inscribirse: se comprueba al confirmar. Condiciones de devolución y soporte siguen pendientes.
+Prevalece [DECISIONES-SERGIO-20261110.md](../../../DECISIONES-SERGIO-20261110.md): jueves 12 y viernes 13 a las 21:00; sábado 14 a las 14:00, `America/La_Paz`, Google Meet. Grupo Bs 50 sin cupo fijado; VIP Bs 150, cinco cupos, llamada de 30 minutos. No confundir los horarios del ejercicio del kit con los del workshop. No prometer plaza VIP al inscribirse: se comprueba al confirmar. Sergio decidió cero devoluciones y soporte en grupos de WhatsApp y comunidad pública. Falta acordar el manejo de excepciones y el canal humano concreto.
 
 Se reutilizó la [fábrica4](../../README.md) para el recorrido, mensajes fijos y control humano del pago; sus pendientes históricos sobre horario/VIP quedaron sustituidos en este paquete. Se reutilizó [oferta y recorrido](../../../../../01-negocio/workshop-20261108/noche-20261109/OFERTA-Y-RECORRIDO.md) para distinguir interés, inscripción, conciliación y acceso con cuenta propia.
 

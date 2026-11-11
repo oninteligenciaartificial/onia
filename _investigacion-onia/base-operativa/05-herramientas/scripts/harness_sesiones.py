@@ -39,11 +39,14 @@ def operation(root, dry_run=False):
 
 
 @contextmanager
-def registry_lock(root):
+def registry_lock(root, nonblocking=False):
     root.mkdir(parents=True, exist_ok=True, mode=0o700)
     path = private_path(root, '.harness.lock')
     with path.open('a') as stream:
-        fcntl.flock(stream, fcntl.LOCK_EX)
+        try:
+            fcntl.flock(stream, fcntl.LOCK_EX | (fcntl.LOCK_NB if nonblocking else 0))
+        except BlockingIOError:
+            raise ValueError("Registro ocupado; reintentar sin iniciar otra sesion.") from None
         yield
 
 
@@ -219,10 +222,41 @@ def session_update(root, base, ident, attempt, **values):
     return row
 
 
-def check_capacity(rows, task_id, base, routes, role):
+def question_group_alive(slot):
+    group = slot.get('pid')
+    if not group:
+        return False
+    for path in Path('/proc').iterdir():
+        if not path.name.isdigit():
+            continue
+        try:
+            if path.stat().st_uid != os.getuid():
+                continue
+            fields = (path/'stat').read_text().rsplit(')',1)[1].split()
+            if fields[0] != 'Z' and int(fields[2]) == group:
+                return True
+        except (FileNotFoundError, ProcessLookupError, PermissionError):
+            continue
+    return False
+
+
+def question_slots(root):
+    if root is None:
+        return 0
+    import harness_boss as boss
+    import time
+    count = 0
+    for path in private_path(root, 'preguntas-slots').glob('*.json'):
+        slot = boss.private_read(path)
+        if slot.get('estado') == 'respondiendo' and (alive(slot) or question_group_alive(slot) or time.time() < slot['vence']):
+            count += 1
+    return count
+
+
+def check_capacity(rows, task_id, base, routes, role, root=None):
     live = [(b, r, s) for b, r in rows for s in r['sesiones']
             if alive(s) or (s['dry_run'] and s['estado'] == 'simulada')]
-    if len(live) >= 3:
+    if len(live) + question_slots(root) >= 3:
         raise ValueError('Máximo 3 sesiones vivas; esperar antes de lanzar una cuarta.')
     for location, row, session in live:
         if row['id'] == task_id:
@@ -403,7 +437,7 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
                 raise ValueError('Falta session id recuperable; conservar log, no relanzar desde cero.')
             if resume and (alive(previous) or previous['estado'] == 'simulada'):
                 raise ValueError('La sesión sigue viva; no puede reanudarse simultáneamente.')
-        check_capacity(rows, ident, base, assignment['rutas'], role)
+        check_capacity(rows, ident, base, assignment['rutas'], role, root=root)
         if not dry_run and not shutil.which('codex'):
             raise ValueError('Codex no está disponible en PATH; no se creó worktree.')
         repo = repo_for(base)

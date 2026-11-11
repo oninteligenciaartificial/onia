@@ -116,13 +116,33 @@ def quota_snapshot():
     return {'fecha': stamp.isoformat(), 'used_percent': used}
 
 
+def quota_limit(config):
+    """Política privada del operador; nunca recibida por solicitudes de Boss."""
+    if 'politica_cuota' not in config:
+        return 90
+    selected = config['politica_cuota']
+    if not isinstance(selected, dict) or set(selected) != {'max_usado', 'autorizacion_sergio'}:
+        raise boss.Rejected('politica_cuota_invalida')
+    limit, approval = selected['max_usado'], selected['autorizacion_sergio']
+    if (type(limit) not in (int, float) or not 0 < limit <= 100
+            or not isinstance(approval, str) or not approval.strip() or len(approval) > 2000):
+        raise boss.Rejected('politica_cuota_invalida')
+    return limit
+
+
+def check_quota(config):
+    limit = quota_limit(config)
+    sample = quota_snapshot()
+    if sample['used_percent'] >= limit:
+        raise boss.Rejected('tope_cuota_90' if limit == 90 else 'tope_cuota_configurado')
+    return sample
+
+
 def check_launch(config, grant):
     if not grant.get('delegada'):
         return
     policy(config, grant.get('fabrica'))
-    sample = quota_snapshot()
-    if sample['used_percent'] >= 90:
-        raise boss.Rejected('tope_cuota_90')
+    check_quota(config)
 
 
 def grant_for(row, factory, effort, authorization):
@@ -233,9 +253,8 @@ def handle(config, value, config_path):
             if not ident.startswith(prefix) or ident in trabajo.all_ids(base):
                 raise boss.Rejected('id_existente_o_fuera_de_fabrica')
             today = datetime.now(timezone.utc).date().isoformat()
-            events = [boss.private_read(f) for f in (root/'altas').glob('*.json')]
-            if sum(e.get('fecha_dia') == today for e in events) >= 6:
-                raise boss.Rejected('limite_seis_altas_diarias')
+            # La fecha se conserva como evidencia, no como cupo de admisión.
+            # Registrar no ejecuta: cuota y concurrencia se verifican al lanzar.
             reservation = root/'altas'/(ident+'.json')
             if reservation.exists():
                 raise boss.Rejected('id_reservado_conciliar')
@@ -257,7 +276,7 @@ def handle(config, value, config_path):
                         'Especificación de fábrica: '+ROOT+folder+'/README.md',
                         'Permiso delegado por Sergio, coordinado por Boss; modelo Sol6.1 '+value['esfuerzo']+'. '
                         'Dos intentos totales (ejecutora y revisora); no repetir para simular éxito. '
-                        'Al menos 10% de cuota semanal reservada; no lanzar con muestra desconocida. '
+                        'Admisión según política privada de cuota autorizada; muestra desconocida bloquea. '
                         'Guiones: borradores para Contenido, no aprobación editorial. Edición: '
                         'FFmpeg disponible y ASR en ~/asr/venv, no depender de /opt con permisos cerrados. '
                         'Prueba sintética breve sin instalar ni descargar modelos; registrar límites de validación.'])

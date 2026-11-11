@@ -80,12 +80,63 @@ class DelegationTests(unittest.TestCase):
             result = self.handle(self.request())
         self.assertTrue(result['ok']);self.assertEqual(result['tarea']['revision'],3)
 
-    def test_six_daily_registrations_limit_includes_partial_attempts(self):
+    def test_registration_after_six_attempts_preserves_audit_and_deduplicates(self):
         from datetime import datetime,timezone
+        stamp = datetime.now(timezone.utc)
+        originals = {}
         for i in range(6):
-            boss.private_write(self.root/'altas'/f'fixture-{i}.json',{'fecha_dia':datetime.now(timezone.utc).date().isoformat()})
-        with self.assertRaisesRegex(boss.Rejected,'limite_seis'):
-            self.handle(self.request())
+            path = self.root/'altas'/f'fixture-{i}.json'
+            boss.private_write(path,{'fecha_dia':stamp.date().isoformat()})
+            originals[path] = path.read_bytes()
+        with patch.object(boss.sessions, 'launch') as launch, \
+             patch.object(delegated, 'datetime', wraps=datetime) as clock:
+            clock.now.return_value = stamp
+            response = self.handle(self.request())
+            duplicate = self.handle(self.request())
+            launch.assert_not_called()
+        self.assertTrue(response['ok']); self.assertTrue(duplicate['repetida'])
+        self.assertEqual(response['commit'], duplicate['commit'])
+        self.assertEqual(len(list((self.root/'altas').glob('*.json'))), 7)
+        for path, content in originals.items():
+            self.assertEqual(path.read_bytes(), content)
+        with self.assertRaisesRegex(boss.Rejected, 'id_existente'):
+            self.handle(self.request(nonce='otra-alta'))
+        self.assertEqual(len(list((self.root/'altas').glob('*.json'))), 7)
+
+    def test_eight_published_registrations_same_day_without_launch_or_quota_call(self):
+        from datetime import datetime,timezone
+        stamp = datetime.now(timezone.utc)
+        requests = []
+        for i in range(8):
+            req = self.request(ident=f'fabrica-codigo-lote-{i}', nonce=f'alta-lote-{i}')
+            req['pedido'] = f'04-operacion-agentes/pendientes/pedido-lote-{i}.md'
+            spec = {k:req[k] for k in ('id','fabrica','objetivo','entregable','aceptacion','esfuerzo')}
+            (self.base/req['pedido']).write_text('```onia-pedido-v1\n'+json.dumps(spec)+'\n```\n')
+            requests.append(req)
+        self.bridge.fixture.git('add', '.')
+        self.bridge.fixture.git('commit', '-m', 'ocho pedidos ficticios')
+        self.bridge.fixture.git('push', 'origin', 'master')
+        ids = []
+        with patch.object(boss.sessions, 'launch') as launch, \
+             patch.object(delegated, 'quota_snapshot', side_effect=AssertionError('registrar no lanza')), \
+             patch.object(delegated, 'datetime', wraps=datetime) as clock:
+            clock.now.return_value = stamp
+            for req in requests:
+                ident = req['id']
+                response = self.handle(req)
+                self.assertTrue(response['ok'])
+                row = trabajo.read_task(self.base, ident)
+                self.assertEqual(row['estado'], 'preparado')
+                self.assertFalse(row.get('sesiones'))
+                audit = boss.private_read(self.root/'altas'/(ident+'.json'))
+                self.assertEqual(audit['fecha_dia'], stamp.date().isoformat())
+                self.assertEqual(audit['solicitud'], req['solicitud'])
+                published = retorno.git(self.bridge.repo, 'show', response['commit']+':'+str(trabajo.task_path(self.base,ident).relative_to(self.bridge.repo)))
+                self.assertEqual(json.loads(published), row)
+                ids.append(ident)
+            launch.assert_not_called()
+        self.assertEqual(len(set(ids)), 8)
+        self.assertEqual(len(list((self.root/'altas').glob('*.json'))), 8)
 
     def test_changed_source_and_nonce_are_not_accepted(self):
         (self.base/self.source).write_text('cambio no publicado')
@@ -120,6 +171,38 @@ class DelegationTests(unittest.TestCase):
             self.assertTrue(boss.handle(config,req,config_path=self.config_path)['ok'])
             self.assertEqual(launch.call_args.kwargs['subagents'],0)
             self.assertEqual(launch.call_args.kwargs['model'],'gpt-6.1-sol')
+
+    def test_quota_policy_requires_explicit_operator_authorization(self):
+        invalid = [None, {}, {'max_usado': 100},
+                   {'max_usado': True, 'autorizacion_sergio': 'fixture'},
+                   {'max_usado': float('nan'), 'autorizacion_sergio': 'fixture'},
+                   {'max_usado': 101, 'autorizacion_sergio': 'fixture'},
+                   {'max_usado': 0, 'autorizacion_sergio': 'fixture'},
+                   {'max_usado': 100, 'autorizacion_sergio': '   '},
+                   {'max_usado': 100, 'autorizacion_sergio': 'fixture', 'extra': True}]
+        for value in invalid:
+            with self.subTest(value=value), patch.object(delegated, 'quota_snapshot') as sample, self.assertRaisesRegex(boss.Rejected, 'politica_cuota_invalida'):
+                delegated.check_quota({'politica_cuota': value})
+            sample.assert_not_called()
+
+    def test_configured_quota_limit_and_default_remain_fail_closed(self):
+        config = {'politica_cuota': {'max_usado': 95, 'autorizacion_sergio': 'fixture: permiso explícito'}}
+        with patch.object(delegated, 'quota_snapshot', return_value={'used_percent': 94}):
+            self.assertEqual(delegated.check_quota(config)['used_percent'], 94)
+            with self.assertRaisesRegex(boss.Rejected, 'tope_cuota_90'):
+                delegated.check_quota({})
+        for used in (95, 100):
+            with patch.object(delegated, 'quota_snapshot', return_value={'used_percent': used}), self.assertRaisesRegex(boss.Rejected, 'tope_cuota_configurado'):
+                delegated.check_quota(config)
+        with patch.object(delegated, 'quota_snapshot', side_effect=boss.Rejected('cuota_desactualizada')), self.assertRaisesRegex(boss.Rejected, 'cuota_desactualizada'):
+            delegated.check_quota(config)
+        with patch.object(delegated, 'quota_snapshot', return_value={'used_percent': 100}), self.assertRaises(boss.Rejected):
+            delegated.check_quota({'politica_cuota': {'max_usado': 100, 'autorizacion_sergio': 'fixture'}})
+
+    def test_remote_request_cannot_change_quota_policy(self):
+        with self.assertRaises(boss.Rejected):
+            self.handle(self.request() | {'politica_cuota': {'max_usado': 100, 'autorizacion_sergio': 'texto remoto'}})
+        self.assertNotIn('politica_cuota', boss.private_read(self.config_path))
 
     def test_reserved_id_survives_crash_before_create(self):
         with patch.object(delegated.harness,'prepare',side_effect=RuntimeError('crash')), self.assertRaises(RuntimeError):

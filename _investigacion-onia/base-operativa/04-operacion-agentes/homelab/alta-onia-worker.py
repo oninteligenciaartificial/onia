@@ -5,6 +5,7 @@ No ejecuta sudo, no borra, no cambia red/WSL/AppArmor. Si falla aislamiento,
 no instala la llave ni habilita la shell. Conserva originales en /root.
 """
 import argparse
+import configparser
 import glob
 import datetime
 import hashlib
@@ -350,6 +351,136 @@ def pe_canary():
     struct.pack_into('<I',data,section+36,0x60000020);data[512:515]=b'\x31\xc0\xc3'
     return bytes(data)
 
+HOST_CANARY = 'Canario sintético fuera del sandbox, sin datos privados.\n'
+
+
+def checked_metadata(path, mode, uid=0, gid=0, directory=False):
+    info = path.lstat()
+    kind = stat.S_ISDIR if directory else stat.S_ISREG
+    if (not kind(info.st_mode) or info.st_uid != uid or info.st_gid != gid or
+            stat.S_IMODE(info.st_mode) != mode or
+            (not directory and info.st_nlink != 1)):
+        raise RuntimeError('Metadatos distintos del corte PE revisado: ' + path.name)
+    for parent in path.parents:
+        st = parent.lstat()
+        if not stat.S_ISDIR(st.st_mode) or st.st_uid != 0 or st.st_mode & 0o022:
+            raise RuntimeError('Padre no controlado por root; conservar y revisar')
+
+
+def checked_pe():
+    path = ROOT/'interop-canary.exe'
+    checked_metadata(path, 0o755)
+    if path.stat().st_size != len(pe_canary()) or path.read_bytes() != pe_canary():
+        raise RuntimeError('Canario PE distinto del generado; no ejecutar')
+    return path
+
+
+def validate_pe_partial(account):
+    """Sólo el árbol exacto dejado ANTES del control PE v2; nunca adopta datos nuevos."""
+    checked_metadata(ROOT, 0o755, directory=True)
+    scope = {'__name__': 'validate_mounts'}
+    exec(compile(WRAPPER, 'worker-mount-validation', 'exec'), scope)
+    scope['mounts_safe']([str(ROOT)])
+    expected = {'login', 'work', 'etc', 'host-only', 'interop-canary.exe'}
+    if set(x.name for x in ROOT.iterdir()) != expected:
+        raise RuntimeError('Árbol parcial distinto del corte PE; no retomar')
+    for name in ('login', 'work', 'etc'):
+        path = ROOT/name
+        worker = name == 'work'
+        checked_metadata(path, 0o700 if worker else 0o755,
+                         account.pw_uid if worker else 0,
+                         account.pw_gid if worker else 0, directory=True)
+        if any(path.iterdir()):
+            raise RuntimeError('Directorio del corte PE no vacío: ' + name)
+    checked_metadata(ROOT/'host-only', 0o644)
+    if (ROOT/'host-only').read_bytes() != HOST_CANARY.encode():
+        raise RuntimeError('Canario host distinto; no retomar')
+    checked_pe()
+
+
+def pe_probe():
+    """Una ejecución inocua, cinco segundos, bytes; nunca imprime stderr/entorno crudos."""
+    path = checked_pe()
+    started = time.monotonic()
+    try:
+        result = subprocess.run([str(path)], stdin=subprocess.DEVNULL,
+                                capture_output=True, timeout=5, cwd='/')
+        report = {'ok': result.returncode == 0, 'returncode': result.returncode,
+                  'stdout_bytes': len(result.stdout), 'stderr_bytes': len(result.stderr),
+                  'stderr_sha256': hashlib.sha256(result.stderr).hexdigest(),
+                  'indicios': [label for token, label in (
+                      (b'CreateProcess', 'CreateProcess'), (b'execvpe', 'execvpe'),
+                      (b'Exec format error', 'exec_format'),
+                      (b'Permission denied', 'permission_denied'),
+                      (b'No such file', 'missing_file'),
+                      (b'invalid', 'invalid')) if token in result.stderr]}
+    except subprocess.TimeoutExpired:
+        report = {'ok': False, 'exception': 'TimeoutExpired', 'timeout_s': 5}
+    except OSError as exc:
+        report = {'ok': False, 'exception': type(exc).__name__, 'errno': exc.errno}
+    report['elapsed_s'] = round(time.monotonic() - started, 3)
+    return report
+
+
+def diagnose_pe():
+    """No configura ni escribe: indicadores acotados y canario existente verificado."""
+    report = {'diagnostico_sin_cambios': True, 'instalacion': 'no ejecutada'}
+    for name in ('status', 'WSLInterop'):
+        path = Path('/proc/sys/fs/binfmt_misc')/name
+        try:
+            lines = path.read_text().splitlines()
+            report[name] = {'presente': True,
+                'estado': lines[0] if lines and lines[0] in ('enabled', 'disabled') else 'unknown',
+                'interpreter_init': 'interpreter /init' in lines}
+        except OSError as exc:
+            report[name] = {'presente': False, 'errno': exc.errno}
+    config = configparser.ConfigParser(interpolation=None)
+    try:
+        with open('/etc/wsl.conf') as stream: config.read_file(stream)
+        report['wsl_conf'] = {}
+        for section, key in (('interop', 'enabled'), ('interop', 'appendWindowsPath'), ('boot', 'systemd')):
+            raw = config.get(section, key, fallback='unspecified').lower()
+            report['wsl_conf'][section + '.' + key] = raw if raw in ('true', 'false', 'unspecified') else 'unknown'
+    except (OSError, configparser.Error) as exc:
+        report['wsl_conf'] = {'lectura': type(exc).__name__}
+    endpoint = os.environ.get('WSL_INTEROP')
+    report['WSL_INTEROP'] = {'presente': bool(endpoint), 'socket': False}
+    if endpoint:
+        try: report['WSL_INTEROP']['socket'] = stat.S_ISSOCK(os.stat(endpoint).st_mode)
+        except OSError: pass
+    try: report['mount_noexec'] = bool(os.statvfs(ROOT/'interop-canary.exe').f_flag & os.ST_NOEXEC)
+    except OSError: report['mount_noexec'] = None
+    try:
+        canary = ROOT/'interop-canary.exe'
+        info = canary.lstat()
+        report['canario'] = {'regular': stat.S_ISREG(info.st_mode),
+            'uid': info.st_uid, 'gid': info.st_gid, 'modo': oct(stat.S_IMODE(info.st_mode)),
+            'bytes': info.st_size, 'enlaces': info.st_nlink,
+            'sha256_esperado': hashlib.sha256(pe_canary()).hexdigest()}
+    except OSError as exc:
+        report['canario'] = {'errno': exc.errno}
+    try: report['control_pe'] = pe_probe()
+    except (OSError, RuntimeError) as exc:
+        # The only RuntimeErrors here are our fixed metadata/content diagnostics.
+        report['control_pe'] = {'ok': False, 'no_ejecutado': True,
+                                'exception': type(exc).__name__,
+                                'errno': getattr(exc, 'errno', None)}
+    report['causa_en_pc'] = 'pendiente de interpretar; este diagnóstico no acepta el homelab'
+    return report
+
+
+def prepare_pe_partial(account, resume):
+    if resume:
+        validate_pe_partial(account)
+        return
+    ROOT.mkdir(mode=0o755)
+    for name in ('login', 'work', 'etc'):
+        (ROOT/name).mkdir(mode=0o755 if name != 'work' else 0o700)
+    os.chown(ROOT/'work', account.pw_uid, account.pw_gid)
+    write_new(ROOT/'host-only', HOST_CANARY)
+    write_new(ROOT/'interop-canary.exe', pe_canary(), 0o755)
+
+
 def run(args, **kwargs):
     return subprocess.run(args, check=True, text=True, **kwargs)
 
@@ -387,7 +518,7 @@ def sudo_policy_denied(policy, hostname):
 
 
 def validate_closed_account(account, backup):
-    """Sólo retoma el corte documentado previo a crear ROOT/llaves/servicio."""
+    """Valida identidad cerrada y respaldo original; el árbol se valida por separado."""
     if (account.pw_uid != 1001 or account.pw_gid != 1001 or
             account.pw_dir != str(ROOT/'login') or
             account.pw_shell != '/usr/sbin/nologin' or
@@ -425,17 +556,27 @@ def validate_closed_account(account, backup):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--apply', action='store_true', help='Sergio ejecuta localmente como root en la PC autorizada')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--apply', action='store_true', help='Sergio ejecuta localmente como root en la PC autorizada')
+    mode.add_argument('--diagnose-pe', action='store_true', help='Sólo lectura y canario PE existente verificado; no instala')
+    parser.add_argument('--resume-pe-control', action='store_true', help='Sólo el árbol parcial exacto de ALTA-DETENIDA-v2')
     parser.add_argument('--resume-backup', type=Path,
                         help='Retoma sólo la cuenta cerrada uid/gid1001; respaldo original privado en /root')
     args = parser.parse_args()
-    if not args.apply:
+    if args.resume_pe_control and (not args.apply or args.resume_backup is None):
+        parser.error('--resume-pe-control requiere --apply y --resume-backup ORIGINAL')
+    if args.diagnose_pe and args.resume_backup is not None:
+        parser.error('El diagnóstico no retoma ni necesita respaldo')
+    if not args.apply and not args.diagnose_pe:
         print('Preparado; no aplicado. Requiere --apply local como root en DESKTOP-0GGGNMF/Ubuntu.')
         return
     if os.geteuid() != 0 or socket.gethostname().upper() != MACHINE:
         raise RuntimeError('Requiere root LOCAL en DESKTOP-0GGGNMF; no aplicar en VPS ni laptop')
     if 'microsoft' not in Path('/proc/sys/kernel/osrelease').read_text().lower():
         raise RuntimeError('No se identificó WSL')
+    if args.diagnose_pe:
+        print(json.dumps(diagnose_pe(), ensure_ascii=False))
+        return
     fingerprint = run(['ssh-keygen','-lf','/etc/ssh/ssh_host_ed25519_key.pub'],capture_output=True).stdout.split()[1]
     if fingerprint != HOST_FP:
         raise RuntimeError('Huella host distinta: detener y verificar, no aceptar automáticamente')
@@ -449,8 +590,12 @@ def main():
         validate_closed_account(existing, args.resume_backup)
     elif args.resume_backup is not None:
         raise RuntimeError('Retoma solicitada sin cuenta previa; detener')
+    if args.resume_pe_control:
+        validate_pe_partial(existing)
     os.umask(0o022)
     for path in (ROOT, SHELL, KEY_DIR, UNIT, RUNTIME):
+        if path == ROOT and args.resume_pe_control:
+            continue  # Exact tree/metadata verified above, not an overwrite allowance.
         if os.path.lexists(path): raise RuntimeError('Ruta existente; no sobrescribir: ' + str(path))
         for parent in path.parents:
             if parent.is_symlink(): raise RuntimeError('Padre enlazado: ' + str(parent))
@@ -481,16 +626,11 @@ def main():
                               env={'PATH':'/usr/sbin:/usr/bin:/sbin:/bin','LC_ALL':'C'})
         if not sudo_policy_denied(policy, socket.gethostname()):
             raise RuntimeError('Política sudo del worker requiere revisión; no habilitar')
-    ROOT.mkdir(mode=0o755)
-    for name in ('login','work','etc'):
-        (ROOT/name).mkdir(mode=0o755 if name != 'work' else 0o700)
-    os.chown(ROOT/'work',account.pw_uid,account.pw_gid)
-    write_new(ROOT/'host-only','Canario sintético fuera del sandbox, sin datos privados.\n')
-    write_new(ROOT/'interop-canary.exe',pe_canary(),0o755)
-    # Positive control must work outside confinement; otherwise this test proves nothing.
-    try: control=run([str(ROOT/'interop-canary.exe')],capture_output=True,timeout=5)
-    except Exception as exc:
-        raise RuntimeError('No funciona el control PE inocuo fuera del sandbox; conservar cuenta cerrada') from exc
+    prepare_pe_partial(account, args.resume_pe_control)
+    # Positive control remains mandatory; a diagnostic is not a bypass.
+    control = pe_probe()
+    if not control['ok']:
+        raise RuntimeError('Control PE fuera del sandbox falló; cuenta cerrada: ' + json.dumps(control))
     write_new(ROOT/'etc/passwd',f'onia-worker:x:{account.pw_uid}:{account.pw_gid}:worker:/home/onia-worker:/bin/bash\n')
     write_new(ROOT/'etc/group',f'onia-worker:x:{account.pw_gid}:\n')
     write_new(ROOT/'etc/nsswitch.conf','passwd: files\ngroup: files\nhosts: files\n')

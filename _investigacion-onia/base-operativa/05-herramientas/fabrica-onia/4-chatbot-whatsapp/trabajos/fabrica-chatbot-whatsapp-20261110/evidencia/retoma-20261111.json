@@ -1,0 +1,82 @@
+{
+  "fecha_utc": "2026-11-11T02:15:11+00:00",
+  "entrega_inicial_recuperada": "fbc8747",
+  "modo": "local_sintetico",
+  "versiones": {
+    "node": "v20.20.2",
+    "python": "Python 3.12.3"
+  },
+  "pruebas_node": {
+    "comando": "node pruebas.cjs",
+    "tests": 44,
+    "pass": 44,
+    "fail": 0,
+    "skipped": 0
+  },
+  "pruebas_python": {
+    "comando": "python3 -B -m unittest -v pruebas_adaptador",
+    "tests": 14,
+    "pass": 14,
+    "fail": 0,
+    "casos": [
+      "test_baja_cancela_pendientes_y_vencimiento_no_recontacta",
+      "test_batch_dedup_y_reapertura_con_base_privada",
+      "test_challenge_y_token_incorrecto",
+      "test_credencial_de_n8n_no_confirma_pagos",
+      "test_envios_deshabilitados_con_cualquiera_de_las_dos_guardas",
+      "test_firma_de_bytes_crudos_antes_de_parsear",
+      "test_flujo_salida_de_ficha_qr_captura_acceso",
+      "test_numero_ajeno_en_batch_no_persiste_eventos_validos",
+      "test_referencia_canonica_no_se_reutiliza",
+      "test_seis_confirmaciones_vip_concurrentes",
+      "test_senales_del_cliente_y_firma_meta_no_autentican_pago",
+      "test_timeout_persistido_no_reenvia_tras_reinicio",
+      "test_transporte_graph_coteja_ruta_cuerpo_y_respuesta",
+      "test_vencimiento_y_ventana_de_atencion_son_distintos"
+    ],
+    "fixtures": "Bases SQLite ficticias conservadas en carpeta privada en /tmp"
+  },
+  "recorrido_fixture": {
+    "accesos_ficticios": 1,
+    "workflow_activo": false
+  },
+  "efectos_externos": {
+    "meta_invocado": false,
+    "n8n_invocado": false,
+    "workflow_importado": false,
+    "servidor_iniciado": false,
+    "envios_reales": 0,
+    "pagos_reales": 0,
+    "gastos": 0
+  },
+  "limites": [
+    "HTTP WSGI en memoria y transporte simulado",
+    "Sin prueba de número, credencial, entrega o importación externa",
+    "Sin aprobación editorial o comercial"
+  ],
+  "archivos_sha256": {
+    "README.md": "53b4c48930e74b1f0f135caaae3cf53533f5efc1b4ff0eb2d4f187ec2aff49c6",
+    "ADAPTADOR.md": "fe618636362eef229f39db4bf2eaf7ee4016d366cfe7734b6e092168353e46cd",
+    "ESTADOS.md": "b0172c27002b76949eae09a00d8b33e050739c6e782f80ce97763ba77f7180cc",
+    "FALTANTES.md": "d5933638ad74dc3f60c8352c8a42518a139c73da6b9e1f4673ca30cc00a5cdd8",
+    "adaptador.py": "5721ef3a15c642fee060c4f9dccbfadb7cb361d3030af6cbadf8a9f76f248643",
+    "pruebas_adaptador.py": "3293c00f14da220a9a33be5d3cab6144501724717e32c929d6d4c9cc1fababe1",
+    "mensajes.json": "6865b1ca24bdb20a7b657e3a81bf50e69a39811075fb3bbd12d1ceffca1de7ad",
+    "motor.cjs": "a4436cc3fde80be3911a30a881c4aa79afe62c703db6b168895383a200a44304",
+    "pruebas.cjs": "311f9a17a7ac2ac96853b01936cd1b139cf0721aebba31c31f8de395e01ddd83",
+    "workflow-n8n.json": "72f2a525ed1c19df09848f51e1462504efcbf13c434365684749786742ab3c47",
+    "ensayo.cjs": "ee7e56d75be51371a9b895c4d4739889a9c430dcd0bd4288f020355abfb11fde",
+    "preparar.cjs": "564ac31393ead178a72f3d9ff9ad98a114907a1a8ed4deefa519151fb055bc4f",
+    "fixtures.json": "36cd7d1434ec28e0c30aaea057b38a7242ee1125aba54883e8e68ae02b06a8f9",
+    "workflow-despacho-n8n.json": "62567c0267b82c2725091ecfa6c7ddc9e6c86f65ef2b82964d928dcf36e39b49"
+  },
+  "workflow_despacho": {
+    "activo": false,
+    "importado": false,
+    "validacion": "estructura y URL evaluadas localmente",
+    "versiones_nodos": {
+      "manualTrigger": 1,
+      "httpRequest": 4.2
+    }
+  }
+}

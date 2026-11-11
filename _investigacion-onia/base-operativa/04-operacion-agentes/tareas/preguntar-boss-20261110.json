@@ -1,0 +1,214 @@
+{
+  "schema": 2,
+  "id": "preguntar-boss-20261110",
+  "revision": 5,
+  "compartible": true,
+  "objetivo": "Agregar preguntar al puente con respuesta textual sobre fuentes del repo, sin shell ni escritura,120s,20/dia y cupo global temporal.",
+  "estado": "aceptado",
+  "proximo_paso": "Boss usa preguntar por onia-harness-v1 con id_pregunta/texto; conserva bitacora como contexto y harness como fuente unica de estados.",
+  "resultado": "Operacion preguntar publicada e instalada; AGENTS lee bitacora y decisiones primero.",
+  "comprobacion": "200 tests (199pass,1skip), pilotos real/canario/replay y sandbox directo correctos; diez hashes runtime cotejados.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/USO-Y-LIMITES.md",
+      "sha256": "175c4af0770735f44672da3b80fcc2def6ee22aa3b80e062fd14acb75e028717",
+      "bytes": 5320
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/PRUEBAS-v1.json",
+      "sha256": "e13192d868155219d5e944bfc6b4cd170ea3ce5f58ef4ca1ea15dd2dd3ffb57b",
+      "bytes": 3426
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/REVISION-INDEPENDIENTE-v1.md",
+      "sha256": "3672e19afa8e3487a23416aaa588322967a6ef579a83d01b978486930375ee77",
+      "bytes": 1184
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/ACTIVACION-v1.json",
+      "sha256": "198dcdc2b3ceae18b92c757522b962a6c3ebeadc5058fa9c6569c91e3ba2d9b6",
+      "bytes": 1511
+    }
+  ],
+  "actualizado": "2026-11-10T21:06:29.633063+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-10T21:06:29.416391+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/preguntar-boss-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-10T21:06:29.571589+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/preguntar-boss-20261110.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "codex-coordinador-preguntar",
+        "rutas": [
+          "04-operacion-agentes/evidencias/preguntar-boss-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T21:06:29.571578+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-10T21:06:29.585621+00:00",
+      "estado": "para_revision",
+      "resultado": "Operacion preguntar publicada e instalada; AGENTS lee bitacora y decisiones primero.",
+      "comprobacion": "200 tests (199pass,1skip), pilotos real/canario/replay y sandbox directo correctos; diez hashes runtime cotejados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/USO-Y-LIMITES.md",
+          "sha256": "175c4af0770735f44672da3b80fcc2def6ee22aa3b80e062fd14acb75e028717",
+          "bytes": 5320
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/PRUEBAS-v1.json",
+          "sha256": "e13192d868155219d5e944bfc6b4cd170ea3ce5f58ef4ca1ea15dd2dd3ffb57b",
+          "bytes": 3426
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/REVISION-INDEPENDIENTE-v1.md",
+          "sha256": "3672e19afa8e3487a23416aaa588322967a6ef579a83d01b978486930375ee77",
+          "bytes": 1184
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/ACTIVACION-v1.json",
+          "sha256": "198dcdc2b3ceae18b92c757522b962a6c3ebeadc5058fa9c6569c91e3ba2d9b6",
+          "bytes": 1511
+        }
+      ],
+      "proximo_paso": "Aceptar dictamen independiente y comunicar protocolo a Boss.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "codex-coordinador-preguntar",
+        "rutas": [
+          "04-operacion-agentes/evidencias/preguntar-boss-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T21:06:29.571578+00:00"
+      }
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-10T21:06:29.608314+00:00",
+      "estado": "para_revision",
+      "resultado": "Operacion preguntar publicada e instalada; AGENTS lee bitacora y decisiones primero.",
+      "comprobacion": "200 tests (199pass,1skip), pilotos real/canario/replay y sandbox directo correctos; diez hashes runtime cotejados.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/USO-Y-LIMITES.md",
+          "sha256": "175c4af0770735f44672da3b80fcc2def6ee22aa3b80e062fd14acb75e028717",
+          "bytes": 5320
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/PRUEBAS-v1.json",
+          "sha256": "e13192d868155219d5e944bfc6b4cd170ea3ce5f58ef4ca1ea15dd2dd3ffb57b",
+          "bytes": 3426
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/REVISION-INDEPENDIENTE-v1.md",
+          "sha256": "3672e19afa8e3487a23416aaa588322967a6ef579a83d01b978486930375ee77",
+          "bytes": 1184
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/ACTIVACION-v1.json",
+          "sha256": "198dcdc2b3ceae18b92c757522b962a6c3ebeadc5058fa9c6569c91e3ba2d9b6",
+          "bytes": 1511
+        }
+      ],
+      "proximo_paso": "Aceptar dictamen independiente y comunicar protocolo a Boss.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "codex-coordinador-preguntar",
+        "rutas": [
+          "04-operacion-agentes/evidencias/preguntar-boss-20261110"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-10T21:06:29.571578+00:00"
+      },
+      "cierre": {
+        "tipo": "coordinacion_manual_sin_sesion_harness",
+        "commit": "6896ac62c7fc1950475ed720492c4b2f2ca773e6",
+        "ramas_origin": [
+          "origin/master"
+        ],
+        "dry_run": false,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/ACTIVACION-v1.json",
+          "sha256": "198dcdc2b3ceae18b92c757522b962a6c3ebeadc5058fa9c6569c91e3ba2d9b6",
+          "bytes": 1511
+        }
+      },
+      "revision_independiente": {
+        "tipo": "revision_nativa_independiente",
+        "veredicto": "bueno",
+        "revisor": "revision_puente_boss",
+        "commit": "6896ac62c7fc1950475ed720492c4b2f2ca773e6",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/REVISION-INDEPENDIENTE-v1.md",
+          "sha256": "3672e19afa8e3487a23416aaa588322967a6ef579a83d01b978486930375ee77",
+          "bytes": 1184
+        }
+      }
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/preguntar-boss-20261110.md",
+    "sha256": "afc2f6a4d2ee6af8b80fba8c13641b732a9374d7a0d4cd8c00ee9633b651930c",
+    "bytes": 2846,
+    "contenido": "# Encargo preguntar-boss-20261110\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nAgregar preguntar al puente con respuesta textual sobre fuentes del repo, sin shell ni escritura,120s,20/dia y cupo global temporal.\n\n## Entregable\n\nOperacion instalada y probada, logs privados pregunta/respuesta, AGENTS y guia publicados.\n\n## Criterio de aceptación\n\nSol low; fuentes bitacora/decisiones primero; limite20/dia y120s; idempotencia; cupo compartido; sandbox deniega lectura externa y escritura; revision distinta y commit remoto.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- 04-operacion-agentes/evidencias/preguntar-boss-20261110/USO-Y-LIMITES.md\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/preguntar-boss-20261110.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": {
+    "revisor": "revision_puente_boss",
+    "criterio": "Revision independiente favorable tras corregir privacidad/timeout; pruebas unitarias y reales acreditan el alcance declarado.",
+    "fecha": "2026-11-10T21:06:29.633045+00:00"
+  },
+  "asignacion": {
+    "responsable": "codex-coordinador-preguntar",
+    "rutas": [
+      "04-operacion-agentes/evidencias/preguntar-boss-20261110"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-10T21:06:29.571578+00:00"
+  },
+  "cierre": {
+    "tipo": "coordinacion_manual_sin_sesion_harness",
+    "commit": "6896ac62c7fc1950475ed720492c4b2f2ca773e6",
+    "ramas_origin": [
+      "origin/master"
+    ],
+    "dry_run": false,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/ACTIVACION-v1.json",
+      "sha256": "198dcdc2b3ceae18b92c757522b962a6c3ebeadc5058fa9c6569c91e3ba2d9b6",
+      "bytes": 1511
+    }
+  },
+  "revision_independiente": {
+    "tipo": "revision_nativa_independiente",
+    "veredicto": "bueno",
+    "revisor": "revision_puente_boss",
+    "commit": "6896ac62c7fc1950475ed720492c4b2f2ca773e6",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/preguntar-boss-20261110/REVISION-INDEPENDIENTE-v1.md",
+      "sha256": "3672e19afa8e3487a23416aaa588322967a6ef579a83d01b978486930375ee77",
+      "bytes": 1184
+    }
+  }
+}

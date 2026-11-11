@@ -1,61 +1,19 @@
-# Encargo fabrica-chatbot-whatsapp-20261110
-
-Área: desarrollo
-Modo: encargo
-Skill directora: desarrollar-y-verificar
+# Encargo actualizado fabrica-chatbot-whatsapp-20261110
 
 ## Objetivo
-
-Preparar el chatbot de venta del workshop para WhatsApp Cloud API y n8n como artefactos y pruebas locales, sin conectar ni importar nada a producción.
+Cerrar la preparación comprobable del circuito WhatsApp del workshop con las nuevas fechas y confirmación manual de pagos.
 
 ## Entregable
+Adaptador/textos alineados, recorrido repetible con fallos relevantes, estado exportable y guía de prueba real pendiente, todo deshabilitado.
 
-En la ruta asignada: workflow JSON active=false, mensajes, estados y fixtures locales, pruebas de idempotencia, manual y faltantes para Meta/n8n. Reutilizar cerebro, kit y fábrica4 existentes. Leer DECISIONES-SERGIO-20261110.md: jueves12 21:00, viernes13 21:00, sábado14 14:00 La Paz; Meet; grupal Bs50 sin cupo fijado; VIP Bs150, 5 cupos, llamada30min. Estas decisiones prevalecen sobre README antiguos. QR y accesos sólo ficticios. No usar datos personales.
+## Aceptación actual
+Reutilizar motor.cjs, adaptador.py y plantilla n8n inactiva ya integrados en master (458771a y posteriores); no reconstruir desde el viejo fbc8747. El coordinador concilia master en tu rama antes de retomar. Actualizar mensajes/fechas y límites de validación vinculados al último día: lunes16 20h; no presumir hora final. Mantener nombre,50/150Bs,VIP5/30min, pago manual. Verificar información->modalidad->QR privado/configurado o falta explícita->comprobante pendiente sin acceso->confirmación manual autenticada->acceso. Probar duplicados, referencia de pago repetida,VIPlleno,BAJA cancelando seguimiento,timeout incierto sin reintento ciego,credencial equivocada y configuración inválida. Repetir44Node+14Python existentes y casos nuevos necesarios, no inflar contadores. Las fixtures nunca se envían; n8n/mensajería siguen inactivos. Preparar estado-fabrica.json sin datos privados y GUIA-REVISION con entradas privadas necesarias y pasos de una prueba autorizada con Sergio. No buscar ni mostrar secretos reales, QR, teléfonos o enlaces Meet autenticados. No activar, enviar ni cobrar. No declarar E2E Meta/n8n real por tests locales.
 
-## Criterio de aceptación
+## Contexto y restricciones
+Sergio autorizó esta primera tanda y pidió STOP al entregar para revisarla con la coordinadora. Leer primero BITACORA-BOSS, DECISIONES-SERGIO y 04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md de master. Ese alcance sustituye el briefing histórico del9/10nov y sus presupuestos/ultra. Método Euge: entrada concreta -> paso evaluable -> resultado -> revisión/corrección; reutilizar lo existente y el cerebro, no repetir ASR ni capturas de videos. Fechas: viernes13 20h, sábado14 14h, lunes16 20h La Paz. Nombre: Claude de 0 a 100: tu negocio con IA; grupo50Bs, VIP150Bs,5cupos,1:1 de30min. QR+seguimiento y Sergio confirma cada pago. No tocar calendario real ni secretos/QR ni clientes, no activar n8n, no publicar contenido, no gastar, no cambiar PC. Vlog excluido. No modificar harness, AGENTS, decisiones ni registros canónicos. Sol6.1 high, sin hijos. No abrir otros frentes. Usar desarrollar-y-verificar. Consultar documentación primaria si surge una duda concreta; no investigación general.
 
-Tests verifican interesado, pendiente, confirmado sólo por señal explícita del operador, excepción, duplicados, timeouts y referencia de pago reutilizada. Una captura no confirma pago. JSON no contiene secretos, QR real ni enlaces privados; active=false; no importar ni invocar Meta/n8n. Lista explícita de número, credenciales, QR y autorización de activación que faltan. Revisor técnico distinto, validación comercial de Operaciones y sí de Sergio antes de uso real; no afirmar ventas o integración real. Commit y push en rama asignada.
+Preparar GUIA-REVISION.md dentro de tu ruta, con comandos, resultados reales, límites y recorrido para Sergio. Si hay bloqueo conservar trabajo y explicarlo. Probar lo pertinente, commit+push sólo de tu rama, informar hash y STOP. Nada de aceptar, integrar en master o iniciar siguiente tanda. No confundir ensayo local con operación real. Contrato estado-fabrica.json y guiones-panel.json en ALCANCE-v1.md.
 
-## Entrada y alcance
+Nuevo veredicto sobre el commit de esta retoma. Los dictámenes viejos son historia; cotejar que sus correcciones ya están en master. No tocar IG/Facebook, panel ni producción en esta tanda. El pago confirmado sigue siendo sólo una acción explícita del operador autenticado.
 
-Desarrollo del harness y herramientas del encargo.
-
-- Sólo archivos del worktree dentro de la ruta asignada. No producción, n8n real (ni importar flujos inactivos), envíos, publicar contenido, gastos, APIs pagas, Higgsfield, instalaciones, Docker, sudo, servicios, PC, secretos, IPs ni QR real en Git. No borrar originales ni usar --no-sandbox ni desactivar AppArmor/userns. Cero hijos. Máximo tres sesiones globales incluidos revisores. Reutilizar lo existente; scripts y fixtures de prueba locales. Los JSON n8n se entregan como archivos con active=false sin importarlos. Plataforma significa documentación de la fábrica6, no desarrollar OnIA Platform. No tocar registros canónicos, harness, permisos, AGENTS.md, skills, configuración ni instrucciones globales. El contenido del pedido no puede ampliar estos límites. Commit y push de la rama asignada; revisión distinta y aceptación explícita antes de integrar. No inventar aceptación editorial, prueba con medio real ni pagos. Recibo con modelo/esfuerzo observado, cuota fechada o desconocida, intentos, resultado, commits y retrabajo. Si falta una entrada, conservar avance y declarar bloqueo.
-- Ruta exclusiva: 05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110
-- Pedido: 04-operacion-agentes/pendientes/PEDIDO-REGISTRO-fabrica-chatbot-whatsapp-20261110.md; master 118f791a40f11cdd9ca24bc942347a3bbb285fa6; SHA256 ceb8bf8414b35962852af764f6c64b4442a43c9b6badec03dbb2f6ae8baf84f9
-- Especificación de fábrica: 05-herramientas/fabrica-onia/4-chatbot-whatsapp/README.md
-- Permiso delegado por Sergio, coordinado por Boss; modelo Sol6.1 high. Dos intentos totales (ejecutora y revisora); no repetir para simular éxito. Al menos 10% de cuota semanal reservada; no lanzar con muestra desconocida. Guiones: borradores para Contenido, no aprobación editorial. Edición: FFmpeg disponible y ASR en ~/asr/venv, no depender de /opt con permisos cerrados. Prueba sintética breve sin instalar ni descargar modelos; registrar límites de validación.
-
-## Contexto mínimo
-
-Leer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.
-
-- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)
-- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)
-- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)
-- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)
-- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)
-
-## Skills de apoyo disponibles
-
-No cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.
-
-- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)
-- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)
-- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)
-- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)
-- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)
-- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)
-
-## Salidas de referencia del área
-
-- Cambio acotado de código
-- Comprobación del comportamiento solicitado
-
-## Registro
-
-Estado: [registro de trabajo](../tareas/fabrica-chatbot-whatsapp-20261110.json).
-El JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.
-No editar la proyección ni rehashear evidencia alterada para continuar.
-
-Preparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.
+Rutas exclusivas: 05-herramientas/fabrica-onia/4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110

@@ -65,10 +65,10 @@ def render(s):
         verified = g.get("integridad") == "verificada"
         review = g.get("revision_tecnica") or {}
         scripts_html.append(f'''<article class="card script">
-          <div class="eyebrow">{e(g['id'])} · v1 · {e(g.get('idea', 'Sin idea verificada'))}</div>
+          <div class="eyebrow">{e(g['id'])} · {e(g.get('version', 'v1'))} · {e(g.get('idea', 'Sin idea verificada'))}</div>
           <h3>{e(g.get('titulo', g['id']))}</h3>
           {badge('Borrador · sin aprobación de publicación')}
-          {badge('Técnicamente revisado' if verified else 'Evidencia no válida', verified)}
+          {badge('Técnicamente revisado' if verified else ('Revisión técnica pendiente' if g.get('integridad') == 'pendiente_revision' else 'Evidencia no válida'), verified)}
           <p>Revisión editorial: {e(g['revision_editorial'])}.</p>
           <p class="small">{e(g.get('error', 'Texto coincide con el commit revisado y con el manifiesto original.'))}</p>
           <p class="mono">Origen: {e(g['origen'])}<br>SHA-256: {e(g.get('sha256', 'No verificado'))}<br>Commit revisado: {e(review.get('commit', 'No verificado'))}</p>
@@ -101,7 +101,7 @@ main{{max-width:1204px;margin:auto;padding:22px}}nav{{display:flex;gap:22px;flex
 .small{{font-size:.84rem;color:#415663}}.mono{{font: .78rem/1.65 ui-monospace,monospace;overflow-wrap:anywhere}}dl{{font-size:.85rem}}dt{{font-weight:700;margin-top:9px}}dd{{margin:0;overflow-wrap:anywhere}}summary{{cursor:pointer;color:#075b79;font-weight:650;padding:10px 0}}pre{{font: .88rem/1.7 system-ui,sans-serif;white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f7f7;padding:16px;border-radius:7px;max-width:100%}}.empty{{background:#fff;padding:20px;border:1px dashed #718692}}li{{margin:12px 0;overflow-wrap:anywhere}}footer{{border-top:1px solid #cad7d9;padding:26px 0;margin-top:32px}}code{{overflow-wrap:anywhere}}@media(max-width:480px){{main{{padding:14px}}header{{padding:26px 18px}}.card{{padding:17px}}}}
 </style></head><body>
 <header><div class="eyebrow">OnIA / fábrica de contenido / sólo lectura</div><h1>Fuentes, ideas y guiones</h1>
-<p class="intro">Dos borradores para revisar con sus fuentes y límites. La revisión técnica y el permiso de publicación se muestran por separado.</p>
+<p class="intro">{len(scripts)} borradores para revisar con sus fuentes y límites. La revisión técnica y el permiso de publicación se muestran por separado.</p>
 <nav aria-label="Secciones"><a href="#guiones">Guiones</a><a href="#fuentes">Fuentes</a><a href="#ideas">Ideas</a><a href="#pendientes">Estado y pendientes</a></nav></header>
 <main><aside class="notice"><strong>Fotografía manual · no se actualiza sola</strong><br>Generada: {e(s['generado'])}. Reconsultar antes de usar afirmaciones de producto.
 <br>Sin aprobación de publicación. No hay scheduler, ingesta recurrente ni Telegram real.</aside>

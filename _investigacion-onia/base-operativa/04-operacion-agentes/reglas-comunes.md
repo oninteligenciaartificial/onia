@@ -59,6 +59,8 @@ Los worktrees no aíslan servicios, cuentas ni conectores externos. No ampliar p
 
 ## Continuidad y cierre
 
+Para Boss/Grokbot rige además [REGLAS-BOSS.md](REGLAS-BOSS.md), procedimiento autorizado por Sergio el 10/11/2026 para recuperar contexto, distinguir estados/evidencia y cerrar el recorrido de avisos y revisión. Reemplaza las formulaciones históricas incompatibles sobre ese procedimiento; no modifica permisos, límites ni el registro canónico del harness. No cambia las instrucciones de Codex ni acredita que la app o una rutina de Boss lo hayan cargado.
+
 Las tareas compartibles usan un único registro canónico versionado y evidencia saneada. Los registros privados permanecen en `operacion/`, ignorada por Git; no son una entrega entre VMs. No publicar datos personales, credenciales, sesiones de cuenta ni medios privados. Las rutas y hashes no sustituyen la disponibilidad del archivo en el destino.
 
 Una entrega lista para revisión no equivale a aceptación. Cotejar evidencia y criterio antes de aceptar; registrar resultado, comprobación, límites y próximo paso. Preservar las evidencias anteriores y rechazar una revisión obsoleta, un briefing alterado o evidencia corrupta. Git, commits y publicación se realizan dentro del encargo autorizado; ningún CLI sincroniza por sí solo las máquinas.

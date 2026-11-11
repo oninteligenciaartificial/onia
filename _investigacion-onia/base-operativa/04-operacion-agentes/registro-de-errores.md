@@ -560,3 +560,44 @@ Al contrastar la propuesta de Boss se volcó una respuesta de listado completa d
 - Publicación final: el scanner integral marcó un patrón de dirección preexistente en el historial inmutable del ID homelab, ya en master; no se imprimió ni se agregó una dirección. Se comprobó el diff nuevo y todas las evidencias nuevas, sin alterar historia ni debilitar el scanner del puente. Una copia posterior dependiente quedó sin lista al fallar el preflight; se detuvo sin escribir y se repitió tras comprobar la causa.
 
 - El push del recibo del webhook coincidió con el acuse4e0a456 publicado por Boss y se rechazó por avance remoto. Se hizo fetch y merge normal conservando ambos; evidencia `evidencias/delegacion-boss-20261110/RECEPCION-CONFIRMADA-v1.md`. La respuesta de Boss acredita lectura, pero su rutina no tenía SSH: no confundirla con prueba de lanzamiento.
+
+
+## 10 noviembre2026 · operación preguntar del puente
+
+- Test de timeout inicial falló porque el ejecutable ficticio intentó `sleep` con un PATH de fixture sin ese comando; se corrigió a ruta absoluta, sin cambiar el supervisor para acomodar la prueba. Las15 pruebas dirigidas finales pasan.
+- Revisión previa detectó duplicación de auth.json por consulta y búsqueda demasiado amplia de archivos. Se corrigió antes de habilitar: autenticación compartida del CLI sin copias, lista literal de documentos .md, campos sensibles JSON filtrados, errores estáticos, fuentes obligatorias inválidas bloqueadas, deadline antes de spawn y muerte del CLI si cae supervisor. No se publicó ni devolvió ninguna credencial.
+- Pilotos1–3 fallaron en4–9s y liberaron cupo: deshabilitar Code Mode host rompía una dependencia interna del CLI. Al principio el evento `item.error` fue clasificado erróneamente como herramienta inesperada; un diagnóstico saneado identificó la causa. Se habilitó sólo ese motor interno ya instalado, conservando shell/apps/plugins/web/escritura apagados. Pilotos4–5 respondieron en5,791s y7,476s; repetición usó cache. Los intentos fallidos cuentan para20/día y se conserva su evidencia.
+- Prueba directa del sandbox: `codex sandbox linux --help` usó una sintaxis antigua y falló antes de ejecutar; el comando vigente es `codex sandbox -P perfil`. El perfil mínimo no incluía la carpeta del propio binario de Codex y bwrap no podía reejecutarlo. Se añadió únicamente lectura de esa carpeta; la comprobación real negó lectura del canario externo y escritura dentro del cwd. Sin cambios de AppArmor, userns, app-server ni servicios.
+- La salida de un modelo sobre sus propias herramientas no prueba su catálogo. Se documentan flags/configuración y pruebas observadas; no se afirma ausencia de toda herramienta interna ni modelo efectivo por un banner.
+- Preflight de publicación: el scanner confundió el patrón literal del detector de claves privadas con una clave real; se separó el literal sin cambiar la expresión compilada. También señaló una dirección histórica ya en master: se validó sólo el diff nuevo y se preservó la historia, sin imprimirla ni agregar datos privados.
+- La prueba dirigida posterior al ajuste literal se invocó primero desde la raíz sin ruta de módulos y falló al importar; se repitió desde scripts y pasó. No fue un fallo del detector; fijar workdir explícito en comandos de unittest.
+
+
+## 10 noviembre 2026 — cupo diario de Boss y validación del arreglo
+
+- Qué pasó: seis registros del mismo día UTC impedían admitir otro pedido autorizado aunque registrar no lanza sesiones. Sergio pidió retirar ese cupo. Causa: condición fija en `harness_delegacion.handle`; no era un límite del proveedor ni una medición del VPS. Evidencia: [regresión sobre el código anterior](evidencias/delegacion-sin-cupo-20261110/regresion-base-v2.txt), ambos casos rechazan por `limite_seis_altas_diarias`. Corrección: conservar reserva/fecha/idempotencia y separar admisión de controles al lanzar; séptima y octava altas verificadas sin Codex real.
+- Durante la validación, el primer fixture de ocho pedidos intentó publicar cada siguiente fuente desde un HEAD que el publicador privado no avanza; el push ficticio fue rechazado. Se corrigió publicando las ocho fuentes antes de registrar, conservando los controles de Git. No fue un fallo adicional del puente.
+- Hubo consultas a nombres de archivo/módulo supuestos que no existían (`instalar-puente-boss.py`, un `CIERRE.md`, `test_harness_retorno`) y un parche rechazado por usar una línea incompleta. No cambiaron archivos operativos. Se corrigió enumerando las rutas reales con `rg --files`, cotejando el párrafo completo y usando la suite de retorno incluida en los tests existentes. Evitar nombres inferidos antes de consultar el inventario.
+- Validación final: [160 tests, cero fallos/errores](evidencias/delegacion-sin-cupo-20261110/tests-v2.txt); reloj fijado en los casos de altas diarias para evitar fallo espurio al cruzar medianoche. Los ensayos iniciales se conservaron en el directorio privado de evidencia temporal, sin borrar originales.
+- El commit se detuvo por identidad Git ausente; tampoco había identidad configurada en el checkout coordinador para copiar. Se estableció una identidad técnica explícita `OnIA Codex Worker` sólo en el clone temporal, sin configuración global ni atribución humana. Comprobar la existencia de la identidad antes de inferirla o copiarla.
+
+## 10/11/2026 · cierre instalado y preparación de ensayo
+
+- Primer intento de cuatro tests sobre la release produjo cuatro errores porque el fixture deducía BASE desde la carpeta de release, sin metadatos del repo. Se corrigió sólo la ubicación del fixture; los cuatro casos pasaron con módulos instalados. El runtime usa base explícita de configuración, que no se modificó.
+- Una lectura posterior usó cwd incorrecto y no encontró un archivo relativo; se repitió con el checkout explícito. No hubo edición por ese fallo.
+- Se preparó un piloto de cinco consultas antes de validar que el control de cuota pudiera respetar el presupuesto autorizado. El revisor detectó cuota compartida/retrasada y ruta de salida insuficientemente validada del wrapper. No se lanzó ni instaló; se revocó la variante. Lección: validar primero la admisión por presupuesto y el supervisor, sin prometer una capacidad o techo todavía no demostrados. [Recibo](evidencias/delegacion-sin-cupo-20261110/INSTALACION.md).
+
+## 10/11/2026 · publicación tras recoger dictámenes
+
+El puente publicó dos revisiones en master mientras el checkout documental mantenía una referencia remota anterior. El push atómico fue rechazado sin publicar ninguna de sus ramas. Se recuperaron e integraron los commits remotos preservando todo el historial. Comprobación preventiva: después de una operación del puente que publica, actualizar origin/master antes del siguiente push del coordinador.
+
+## 10/11/2026 · publicación del nuevo corte de homelab
+
+Al conciliar el informe de Boss6fdcd74, el registro privado pasó de r9 a r10 en_espera. Publicar fue rechazado por contenido_no_compartible: el briefing y dos preflights heredados contienen direcciones loopback. No se imprimieron sus valores, no se relajó el filtro y no se forzó la publicación. La nueva evidencia y el registro se conservan en el VPS; master conserva r9. La conciliación y el informe de Boss quedan enlazados en el buzón. Resolver el saneamiento con evidencia original conservada cuando se retome homelab; no bloquear por ello la aplicación de cuota ni ingresos independientes.
+
+
+## Corte PE del homelab · 11 noviembre 2026 UTC
+
+Boss reportó el segundo corte del alta: cuenta cerrada y árbol parcial creado. El código ocultaba la excepción bajo un mensaje único y la retoma anterior rechazaba toda ruta existente. Se prepara diagnóstico saneado sin configuración y retoma del inventario exacto, conservando control PE obligatorio. No inferir que interop está desactivada ni que un cambio local ya funcionó. Ver homelab/RETOMA-PE-20261111.md. Durante los tests, el nuevo control de montajes rechazó correctamente el /tmp separado del sandbox: se corrigió el fixture para simular mountinfo explícito, sin relajar el control real.
+
+Corrección de revisión independiente: el comando nuevo se escribió inicialmente con `python3 -B`; eso no aísla importaciones del directorio Descargas. Antes de publicarlo en master o ejecutarlo, se corrigió a `/usr/bin/python3 -I -B` en diagnóstico y retoma. El SHA del script no cambia.

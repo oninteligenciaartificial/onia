@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "fbc874789c118defc08450b99decfb9513d87a61",
+  "criterio": "Fallo reproducido en motor.cjs:54, también en el código embebido del workflow: inscripción en t=1000 → BAJA en t=2000 → vencer en t=86401000 genera un mensaje de excepción dirigido al cliente pese a cese=true. Contradice ESTADOS.md y el mensaje de baja. Suprimir las salidas al cliente tras el cese y agregar una prueba BAJA→timeout en ambas variantes; regenerar JSON y evidencia.\nLas 40 pruebas existentes pasan; hashes y recorrido guardado coinciden. Cubren interés, pendiente, confirmación explícita, captura insuficiente, excepciones, duplicados, vencimiento y referencia reutilizada. Oferta vigente correcta; active=false, QR/acceso ficticios y sin secretos detectados. Manual y faltantes explicitan número, credenciales, QR, validación de Operaciones y autorización de Sergio. Publicación acreditada por el recibo de cierre suministrado. La validación es local: no acredita integración ni uso real. Revisión realizada sin modificar archivos ni aceptar la tarea.",
+  "worktree_conservado": true
+}

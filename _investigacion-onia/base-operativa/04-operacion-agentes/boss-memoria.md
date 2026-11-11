@@ -195,3 +195,7 @@ Sergio aclara que sólo había PC→VPS; el puerto2222 no fue creado ni reconoci
 
 
 9nov ~18:55 America/La_Paz: Investigación del término one man company y diseño de la fábrica de contenido (definición = los dos videos de Euge; meta ≥5 videos/día con rampa; Contenido dueño editorial; sin agente Grok nuevo). Este archivo es la fuente única del modelo; complementa y no edita EMPRESA-UNIPERSONAL.md (contrato de tareas/sesiones) ni el reparto aprobado Boss↔Codex. Incluye plan, sin ejecutar, del análisis de cuentas/perfil según el proceso de idea ganadora. [ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md](ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md).
+
+## 11 nov UTC · cierre técnico para venta (registrado por Codex)
+
+Sergio priorizó vender hasta el14. Se integran entregas existentes: guiones/panel a83eb0c, lote corregido f7dc1f1 y chatbot preparado/deshabilitado458771a. Evidencia y pendientes en `05-herramientas/fabrica-onia/CIERRE-VENTA-20261111.md`. El editor necesitó corregir hashes del B-roll entre formatos y recibos de preflight; revisor distinto repitió y aprobó. El chatbot anterior era un simulador: se conserva como tal y se añade adaptador real preparado, sin afirmar conexión activa. Boss acusó el pedido de reunir Meta/QR/Meet en388043f, sin confirmar aún que los reunió. No cerrar tareas antiguas ni dar por probados IG/FB/n8n/Meta por los tests locales. Homelab y más de3 sesiones siguen pendientes, no bloquean trabajar en VPS.

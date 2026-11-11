@@ -1,0 +1,122 @@
+# Cierre de fábrica para vender · 11 noviembre 2026 UTC
+
+**Actualización del Q&A del 11-nov:** rigen las [confirmaciones directas de Sergio](DECISIONES-SERGIO-20261110.md#confirmaciones-directas-en-codex--11-nov-2026). Clases viernes 13 a las 20:00, sábado 14 a las 14:00 y lunes 16 a las 20:00, La Paz. Cobrador = QR y seguimiento con confirmación manual de Sergio. VSL confirmada. Los materiales y eventos con fechas anteriores deben corregirse antes de usarlos.
+
+Sergio pidió terminar lo necesario para vender y ahora organizar panel, fábricas y sesiones. Se retoman las entregas existentes sin esperar al homelab. Este documento coordina requisitos y evidencia, no reemplaza estados del harness ni concede activación, envíos o cobros. El reparto de la intervención nocturna se conserva abajo como antecedente; la propuesta actual se detalla al final.
+
+## Cadena que debe quedar completa
+
+Contenido revisa guiones → Sergio ensaya y graba una tanda → Boss mueve a cola privada → script transcribe una vez y monta vertical/horizontal → Contenido y Sergio revisan → Sergio publica → consulta comercial → ficha y QR privado → Sergio verifica el movimiento → acceso a Meet → clase y soporte → medición de pagos reales.
+
+La llamada a comentar NEGOCIO requiere un responsable o una automatización del canal comprobada. WhatsApp conectado por sí solo no responde comentarios ni DMs de Instagram/Facebook. No cambiar silenciosamente los CTAs. Propuesta para reducir dependencias si Sergio la elige: entrada directa a WhatsApp desde enlace de perfil; no aplicada ni publicada.
+
+## Qué existe y qué bloquea uso real
+
+| Requisito | Evidencia al arrancar | Próximo responsable / condición de cierre |
+|---|---|---|
+| Oferta única | DECISIONES-SERGIO: Claude de 0 a 100: tu negocio con IA; Bs50/Bs150; horario confirmado en Q&A del 11-nov | Cotejar todos los mensajes, guiones, bot y Calendar con esa fuente; corregir versiones vigentes, conservar evidencia histórica |
+| Cinco guiones | Entrega 0a710ac, textos finales de Contenido; falta revisión del conjunto e incorporación al circuito de consulta | Codex integra técnicamente; Contenido/Sergio validan ensayo, duración y CTA |
+| Montaje | Entrega 9c9a8a0; prueba sintética y ASR disponibles | Codex completa lote y formatos; Boss aporta crudo, Contenido/Sergio verifican resultado real |
+| WhatsApp | fbc8747 es ensayo: QR/acceso ficticios, workflow manual sin webhook ni envíos; revisión formal cambios | Codex corrige BAJA/timeout y prepara adaptador; revisor distinto comprueba. No activar ese JSON de ensayo |
+| Número Meta y credenciales | Estado actual desconocido; faltante documentado, sin prueba real | Sergio verifica número; Operaciones comprueba acceso y configuración privada. No pegar secretos en chat/Git |
+| QR y Meet | No localizados en las entregas; búsqueda de Calendar por workshop sin resultados (no demuestra ausencia) | Sergio/Operaciones localizan y verifican medios privados, destino e importe |
+| Comentarios/DMs IG y Facebook | Análisis documental, sin recepción/respuesta real demostrada | Boss/Operaciones identifican cuentas y permisos; prueba autorizada por canal. No declarar listo con una prueba de WhatsApp |
+| Pago y acceso | Debe haber confirmación manual autenticada, referencia única y cupos VIP | Codex prueba lógica y persistencia; Sergio valida recorrido real con número de prueba y datos privados |
+| Clase y entrega | Kit de primera práctica y primeros10min existentes; ensayo real de Claude pendiente | Sergio ensaya ejercicio, comprueba Meet/materiales y acceso a Claude; Contenido/Operaciones cierran soporte |
+| Publicación/activación | Sin autorización nueva para acciones externas en este pedido de construcción | Entregar resultado concreto revisado y pedir sólo la activación/prueba externa necesaria |
+
+## Coordinación de la intervención nocturna (antecedente)
+
+Codex directo trabaja sobre código y documentación de integración. Un colaborador técnico tiene escritura exclusiva del paquete WhatsApp; Codex conserva edición, integración y comprobaciones. Boss no debe lanzar en paralelo otro ejecutor sobre estas rutas: puede reunir entradas privadas y revisión editorial con Operaciones/Contenido. La reserva de cuota90 está retirada; sigue máximo3 y >3 pendiente. Última muestra al arranque: 96% usado, 2026-11-11T01:55:50.291UTC; no implica saldo extra.
+
+No se acepta una tarea antigua por incorporar sus archivos. Los registros anteriores conservan su revisión y dictamen; se publicará el commit y evidencia de las correcciones nuevas. Un test local no se etiqueta como prueba real de Meta, n8n o venta.
+
+## Estructura de OnIA
+
+Se conservan las seis fábricas y el panel existente. Venta del workshop y contenido son el frente inmediato. Meta Ads, venta de ONIA Platform y otros canales se mantienen identificados con sus requisitos; no forman un bloqueo artificial para corregir el circuito del workshop ni se presentan como construidos. No se crean nuevos bots, paneles o investigaciones de infraestructura.
+
+La operación posterior al 14 exige también que Boss pueda ejecutar los programas fijos con su acceso restringido. Tener el script en Git no prueba ese permiso ni su ejecución desde Boss: comprobar ese paso antes de declarar operación sin Codex.
+
+## Resultado de esta intervención
+
+La tabla inicial es el diagnóstico de entrada. El cierre actual es:
+
+| Entrega | Veredicto técnico | Pendiente operativo |
+|---|---|---|
+| Tanda T01–T05 v2 | Integrar: textos/hash cotejados, consulta en panel existente sin simular aprobación | Contenido/Sergio: ensayo, duración, CTA atendido, grabar y aprobar |
+| Editor y lote VPS | Integrar: ASR, B-roll, subtítulos, vertical/horizontal; reutiliza transcripción; revisión independiente buena tras corregir dos fallos | Boss aporta material privado; Contenido/Sergio revisan encuadre y audio; probar mando desde puente sin Codex |
+| WhatsApp | Integrar como preparado/deshabilitado: HMAC, persistencia, pagos manuales autenticados, referencias, VIP, BAJA, incertidumbre | Meta/número verificado; secretos/QR/media ID/Meet privados; HTTPS y WSGI; conectar n8n, aprobar textos/excepciones y probar de punta a punta |
+| n8n de despacho | Plantilla inactiva manual revisada localmente, credencial separada del operador | Importación y compatibilidad con instancia real; luego despacho periódico autorizado, no declarado instalado |
+| Coordinación Boss | Acuse publicado en 388043f del pedido de reunir entradas sin duplicar ejecutores | Boss debe completar esa coordinación en su chat principal; el acuse no acredita que ya encontró QR/número/Meet |
+
+Evidencia y comandos: [revisión independiente](../../04-operacion-agentes/evidencias/cierre-venta-20261111/REVISION-INDEPENDIENTE.md), [contenido](../../04-operacion-agentes/evidencias/cierre-venta-20261111/PRUEBAS-CONTENIDO.md) y [adaptador](4-chatbot-whatsapp/trabajos/fabrica-chatbot-whatsapp-20261110/ADAPTADOR.md).
+
+### Lo necesario para abrir la venta
+
+1. Operaciones/Boss reúnen en privado número Meta verificado, acceso a la cuenta, QR correcto y tres enlaces Meet. Sergio informa qué está listo; no pegar claves ni QR en Git/chat.
+2. Codex conecta la preparación al entorno autorizado con esos datos; primero una prueba limitada con el número propio de Sergio. Comprobar información → modalidad/QR → captura sin acceso → confirmación manual → enlace real, además de duplicado, BAJA y fallo de envío. Sin pagar dinero para simular una compra y sin contactar clientes durante el ensayo. No confundir este paso pendiente con los tests locales ya ejecutados.
+3. Contenido/Sergio aprueban textos, tratamiento de pagos vencidos/VIP lleno y una pieza de venta; Sergio ensaya la práctica de Claude y graba. El CTA NEGOCIO necesita atención comprobada por su canal; la alternativa de enlace directo a WhatsApp sigue propuesta, no decisión tomada.
+4. Con el recorrido concreto verificado, Sergio autoriza la activación, el despacho recurrente y la publicación comercial. No se da por abierta la venta antes de ese paso.
+
+### Frentes que quedan abiertos, sin bloquear este cierre técnico
+
+IG/Facebook comentarios y DMs, WhatsApp de ONIA Platform y Meta Ads no tienen prueba real en este cierre; sus ofertas/permisos/formatos siguen pendientes. Los tipos de anuncios y guiones son lista abierta; esta tanda no demuestra cobertura de todos ni contiene un relato real del día del founder. Homelab y más de3 sesiones siguen pendientes por decisión de Sergio. La continuidad automática tras el14 requiere comprobar ejecución de scripts desde Boss antes del corte; no es requisito para usar hoy el editor desde Codex.
+
+No se han activado servicios/n8n ni enviado mensajes a clientes. La publicación de código/evidencia en GitHub y el aviso técnico a Boss no equivalen a publicación comercial.
+
+## Propuesta de sesiones tras el Q&A del 11-nov — no lanzada
+
+### Método aprendido de los videos
+
+Se releyó íntegramente el contenido hablado disponible de ambos videos, usando las transcripciones ya conservadas, sin repetir ASR ni extraer más fotogramas. No se acredita un nuevo visionado o escucha continua.
+
+- [Video 1, desde 16:14](https://www.youtube.com/watch?v=JuAQILH7dkQ&t=974s): atomizar hasta un resultado evaluable; definir qué hace bueno a cada resultado antes de producirlo. Desde 20:34: entrada, pasos, salida, medición y aprendizaje. Desde 24:08: sala de montaje con versiones, fallos visibles y correcciones.
+- [Video 2, desde 8:06](https://www.youtube.com/watch?v=xPJbP9yZE1I&t=486s): contexto pertinente y ejemplos; desde 14:04, herramientas/instrucciones/memoria persistente; desde 24:30, especialistas por paso y disparadores por archivo u horario.
+- Aplicación: cerebro selecciona fuentes y criterios → tarea pequeña → resultado → revisión independiente → decisión humana cuando corresponda → evidencia y corrección reutilizable. Aprender significa conservar una corrección y comprobarla en otra pieza; no entrenar pesos ni convertir opiniones de personas simuladas en ventas reales.
+- Reutilizar cerebro, panel, editor y harness de OnIA. Las máquinas, modelos y servicios pagados de Euge no son requisitos ni permisos para OnIA.
+
+### Coordinación y contexto
+
+Propuesto: Codex coordina este frente directamente con el harness; Boss puede reunir entradas privadas o aportar revisión editorial si está disponible. La bitácora nueva informa otros agentes usando onia-llm: eso no prueba que sus ejecuciones estén registradas en el harness. Antes de lanzar, comprobar actividad y asignaciones para evitar dos coordinaciones o consumos no contabilizados.
+
+Cada sesión recibe objetivo, decisiones vigentes, fuentes seleccionadas del cerebro, entrega exacta, rutas exclusivas, dependencias y criterios de aceptación. Lee BITACORA-BOSS y DECISIONES primero; no carga indiscriminadamente todo el historial. El registro canónico del harness decide el estado, la bitácora da contexto y Git conserva entregas.
+
+Consulta del registro canónico a 2026-11-11T12:12:15Z: ninguna sesión viva en esa base. No es una auditoría de procesos de todas las otras máquinas. Cuota informada por el proveedor: 1% usado a 12:11:58Z, ventana semanal y reinicio 18-nov 12:05:02Z. Sustituye para esta planificación la muestra anterior de 98%; causa del cambio y continuidad de la suscripción no comprobadas. Leer de nuevo antes de lanzar; no prometer gasto o capacidad futura con esa muestra.
+
+### Primera tanda: tres resultados independientes
+
+| Lugar | Sesión y reutilización | Escritura exclusiva | Entrega y prueba de aceptación |
+|---|---|---|---|
+| 1 | Panel operativo; retomar cerebro-panel-usable-20261109 después de actualizar su alcance | 05-herramientas/fabrica-contenido/20261109-lector-panel/ | Ampliar panel existente: fábricas, pasos, resultado, revisión, bloqueos y calendario. Primer recorrido reproducible con una tarea y una corrección persistida; distinguir datos de prueba del estado real. No anunciar producción ni conexión real antes de probarlas. |
+| 2 | Guiones y calendario; nuevo resultado propuesto guiones-tanda-automatizada-20261111; reutilizar cerebro y tanda v2 | 05-herramientas/fabrica-onia/1-guiones-calendario/ | Generador/procedimiento con noticias fechadas y enlazadas, ideas filtradas y cinco guiones útiles, calendario, CTA atendible y marca personal. Versiones nuevas con horarios actuales; si falta noticia verificable, evergreen identificado. Ensayar una tanda diaria de cinco ideas/piezas con variantes horizontal y vertical; una corrección debe reflejarse en la siguiente salida sin perder el original. La recurrencia automática no queda probada con esa tanda local. |
+| 3 | Cierre de venta; retomar fabrica-chatbot-whatsapp-20261110 con nueva entrega y revisión | 05-herramientas/fabrica-onia/4-chatbot-whatsapp/ | Reusar adaptador y pruebas. Corregir fechas y el límite temporal de configuración que dependía del sábado 14; preparar QR/seguimiento/confirmación manual/acceso. Verificar duplicados, BAJA, pago no confirmado y fallo incierto. La prueba real depende de datos privados y autorización concreta; los tests locales no la sustituyen. |
+
+No son tareas registradas o sesiones en ejecución por aparecer en esta tabla. El coordinador reserva rutas en el registro antes de escribir y resuelve reservas antiguas sin aceptar entregas por accidente. Los documentos compartidos de decisiones y estado quedan con un único escritor: el coordinador. Los productores consumen un contrato de datos pequeño acordado antes del arranque; no se editan mutuamente los archivos.
+
+Sol6.1 high para implementación y revisión técnica complejas; low para tandas de texto acotadas, inventarios y consultas. Sin hijos por defecto ni ultra nuevo. Cada lanzamiento declara modelo, esfuerzo y recibo observado; usar tres lugares no significa abrir otros agentes fuera del contador.
+
+### Rotación y cierre de cada resultado
+
+1. Consultar registro, permisos, cuota y dependencias; reutilizar el ID existente cuando sea el mismo objetivo. Preparar/actualizar briefing y asignar rutas. No usar dry-run sobre un ID que se vaya a lanzar después.
+2. Lanzar o reanudar una ejecutora con revisión esperada vigente, modelo explícito y autenticación incluida; comandos y sintaxis en ORQUESTACION.md. Máximo tres sesiones principales vivas, contando revisores; la coordinadora de este chat también consume cuota aunque no sea una sesión CLI registrada.
+3. Al terminar, verificar proceso, commit y rama remota. Una entrega no localizada no se etiqueta como fallida ni se relanza hasta conciliar el resultado.
+4. Cerrar con conservación del worktree. El primer lugar liberado recibe un revisor distinto sobre el commit exacto; recoger mediante revisar --recoger --conservar-worktree. Fin de ejecutor y fin de revisor son eventos diferentes; no repetir cerrar al terminar el revisor.
+5. Si pide cambios, retomar la misma tarea y revisar el commit nuevo. Sólo con dictamen bueno vigente y autoridad aplicable, aceptar e integrar de a una a master; comprobar el conjunto y el hash remoto. No equiparar aceptación técnica a autorización comercial.
+6. Guardar siguiente acción concreta y desbloquear la siguiente sesión preparada. Durante esta operación el coordinador hace el despacho; no se acredita una cola automática o actividad entre turnos por escribir este plan.
+
+Si un frente espera una credencial o una grabación, conserva el bloqueo visible y libera su lugar para trabajo independiente. Una pregunta de Sergio no cancela las tareas. No prometer que nunca faltará información: toda falta debe tener responsable, siguiente paso y prueba de cierre.
+
+### Siguientes sesiones en lugares liberados
+
+La enumeración no es una cola rígida. Tras la revisión pendiente, VSL, materiales del curso y conciliación de horarios tienen prioridad en el primer lugar compatible que se libere por su fecha de uso y el corte del 14; no esperan al homelab ni a terminar toda la sala de montaje. Codex coordina la comprobación de Calendar/Meet con acceso de lectura; Boss/Calendario pueden aportar los enlaces privados. Los cambios de eventos se aplican dentro de la autorización correspondiente y se releen después; no se da por corregido Calendar por corregir este archivo.
+
+- **Sala de montaje:** retomar fabrica-edicion-video-20261110 para conectar lote existente al contrato del panel, comparar original/versión y registrar motivos. Autor de editor escribe sólo 2-edicion-video; autor de panel incorpora UI por separado. Probar una grabación real de la tanda de cinco guiones de Sergio: cinco piezas en horizontal y cinco en vertical, una sola transcripción de la tanda y una corrección solicitada. Distinguir esa aceptación de lote de la recurrencia diaria todavía no comprobada. El vlog queda excluido. Falta esa grabación y la validación perceptiva.
+- **VSL, anuncios y curso/VIP:** derivar de oferta, cerebro y guiones actuales el video de venta, piezas y ejercicios/materiales de las clases. Sin promesas o testimonios inventados. Ensayar duración y demostración real; Sergio graba y decide publicación. Lista abierta de formatos, sin compra de Higgsfield o pauta implícita.
+- **Instagram/Facebook y n8n:** reutilizar análisis existente, comprobar permisos de las cuentas y construir comentarios/DMs → conversación comercial como entregas por canal. Cada canal tiene prueba propia; WhatsApp no los valida. Configurar y activar lo real sólo con autorización aplicable.
+- **Homelab:** mantener homelab-conexion-20261109. Cuando DESKTOP-0GGGNMF esté disponible, ejecutar el diagnóstico PE ya revisado una vez y seguir su resultado. Después probar usuario aislado, acceso y trabajo real. La PC apoyará procesamiento cuando esté comprobada; edición actual sigue en el VPS. Laptop excluida y ampliación sobre tres sesiones pendiente.
+
+Meta Ads y WhatsApp de ONIA Platform siguen visibles en la estructura, con sus requisitos, y no se presentan como operativos ni bloquean vender este workshop. No confundir terminar una primera cadena de ingresos con automatizar toda la empresa.
+
+### Lo que debe sobrevivir al 14
+
+Preparar antes del corte guiones/procedimientos, VSL y materiales, clases y enlaces con horario correcto, scripts fijos y forma probada de ejecutarlos, y acceso/soporte para el lunes 16. Un programa fijo puede continuar sin Codex; investigar noticias nuevas, escribir con un LLM o decidir excepciones necesita un operador o modelo efectivamente disponible. No se presume sustituto pagado ni servicio autónomo por tener instrucciones guardadas.

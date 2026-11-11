@@ -1,59 +1,19 @@
-# Encargo cerebro-panel-usable-20261109
-
-Área: desarrollo
-Modo: encargo
-Skill directora: desarrollar-y-verificar
+# Encargo actualizado cerebro-panel-usable-20261109
 
 ## Objetivo
-
-Entregar cerebro operativo consultable y panel de contenido usable por Sergio para el workshop.
+Ampliar el panel existente con fábricas y revisión persistente de resultados para preparar la venta del workshop.
 
 ## Entregable
+Panel utilizable con pasos, cerebro, calendario, entregas, bloqueos y corrección persistida; GUIA-REVISION, pruebas y preview.
 
-Entrada privada en navegador con cerebro, ideas, guiones, fuentes, estado, próximo paso y faltantes; guía de tres pasos.
+## Aceptación actual
+Ampliar el panel Python/HTML existente, conservar lector/tanda y sus garantías de procedencia. No crear otro panel ni rehacer el cerebro. Navegación por las seis fábricas (estado real o pendiente claro), pasos y evidencias de cada resultado, calendario con fechas vigentes, vista de una tanda y acceso al cerebro. Consumir contratos existentes y onia-fabrica-estado-v1 mediante rutas explícitas validadas. Permitir registrar una observación/corrección local con versión, motivo y estado pendiente; persistir sin perder original, sin tocar el harness ni fingir aprobación. Un servidor temporal local para pruebas es válido; no instalar servicio permanente. Guardar datos de operación fuera de Git; fixtures sintéticos claramente marcados. Probar recorrido completo de una tarea y corrección, reinicio/persistencia, entradas inválidas/escape de rutas/XSS, desktop+móvil si herramientas existentes permiten. Conservar panel22/tanda3 o justificar cualquier cambio. Dar preview abrible y explicar dependencias no conectadas.
 
-## Criterio de aceptación
+## Contexto y restricciones
+Sergio autorizó esta primera tanda y pidió STOP al entregar para revisarla con la coordinadora. Leer primero BITACORA-BOSS, DECISIONES-SERGIO y 04-operacion-agentes/evidencias/tanda-fabricas-20261111/ALCANCE-v1.md de master. Ese alcance sustituye el briefing histórico del9/10nov y sus presupuestos/ultra. Método Euge: entrada concreta -> paso evaluable -> resultado -> revisión/corrección; reutilizar lo existente y el cerebro, no repetir ASR ni capturas de videos. Fechas: viernes13 20h, sábado14 14h, lunes16 20h La Paz. Nombre: Claude de 0 a 100: tu negocio con IA; grupo50Bs, VIP150Bs,5cupos,1:1 de30min. QR+seguimiento y Sergio confirma cada pago. No tocar calendario real ni secretos/QR ni clientes, no activar n8n, no publicar contenido, no gastar, no cambiar PC. Vlog excluido. No modificar harness, AGENTS, decisiones ni registros canónicos. Sol6.1 high, sin hijos. No abrir otros frentes. Usar desarrollar-y-verificar. Consultar documentación primaria si surge una duda concreta; no investigación general.
 
-Cumplir PLAN.md, tope2puntos y recibos obligatorios; revisor distinto ultra; esperar sí antes de implementar.
+Preparar GUIA-REVISION.md dentro de tu ruta, con comandos, resultados reales, límites y recorrido para Sergio. Si hay bloqueo conservar trabajo y explicarlo. Probar lo pertinente, commit+push sólo de tu rama, informar hash y STOP. Nada de aceptar, integrar en master o iniciar siguiente tanda. No confundir ensayo local con operación real. Contrato estado-fabrica.json y guiones-panel.json en ALCANCE-v1.md.
 
-## Entrada y alcance
+Reutilizar 03-referentes/cerebro-operativo/20261109, lector.py, panel.py y tanda.py. Salida editorial v2 es ejemplo histórico; no modificarla. Los otros productores trabajan en paralelo; probar contratos con fixtures etiquetados y admitir sus exports cuando existan. Mostrar fuente/fecha, no inferir un estado vivo. La sala audiovisual completa y los canales reales quedan para pasos posteriores; sólo estructura y recorrido real local de esta tanda.
 
-Desarrollo del harness y herramientas del encargo.
-
-- Plan vigente: 04-operacion-agentes/evidencias/cerebro-panel-usable-20261109/PLAN.md
-- No ejecutar ni lanzar antes del sí de Sergio. Sólo planificación autorizada ahora.
-- Reusar entregas aceptadas; sin producción/n8n/envíos/compras/borrados/publicación de contenido.
-
-## Contexto mínimo
-
-Leer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.
-
-- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)
-- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)
-- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)
-- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)
-- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)
-
-## Skills de apoyo disponibles
-
-No cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.
-
-- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)
-- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)
-- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)
-- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)
-- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)
-- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)
-
-## Salidas de referencia del área
-
-- Cambio acotado de código
-- Comprobación del comportamiento solicitado
-
-## Registro
-
-Estado: [registro de trabajo](../tareas/cerebro-panel-usable-20261109.json).
-El JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.
-No editar la proyección ni rehashear evidencia alterada para continuar.
-
-Preparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.
+Rutas exclusivas: 05-herramientas/fabrica-contenido/20261109-lector-panel

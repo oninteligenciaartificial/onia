@@ -1,5 +1,9 @@
 # Ejecutar y retomar encargos
 
+## Registro delegado sin cupo diario · 10 noviembre 2026
+
+La [actualización del puente](evidencias/delegacion-sin-cupo-20261110/USO-Y-LIMITES.md) elimina el máximo de seis altas por día: Boss puede registrar nuevos pedidos autorizados sin esperar al corte UTC. Registrar no lanza ni programa sesiones. Conserva permisos, deduplicación, rutas, cuota y tres sesiones simultáneas; medir una ampliación es otro resultado, aún no acreditado. Consultar el recibo de instalación para distinguir código publicado de versión activa.
+
 ## Reparto vigente · 9 noviembre 2026 · America/La_Paz
 
 Rige el [acuerdo final de Sergio](REPARTO-CODEX-GROKBOT-20261109.md): ventas orgánicas del workshop hasta el 14 a cargo de Boss + Contenido; Codex sólo técnica por PEDIDO autorizado y HOMELAB esencial. Modelo gpt-6.1-sol, low/simple, high/diseño o fallo difícil, ultra sólo si Sergio lo pide. Harness = única fuente de estados; cola-boss = buzón, HECHO no es aceptación, PEDIDO no autoriza. No existe despachador automático. Esta actualización prevalece sobre repartos y ejemplos históricos incompatibles.
@@ -181,3 +185,8 @@ Una retoma recibe resultado, comprobación y próximo paso del registro actual, 
 `cerrar ID --conservar-worktree` conserva el checkout completo (incluidos medios privados no seguidos), exige HEAD igual al commit remoto de entrega y archivos versionados sin cambios. Los archivos locales conservados no se incorporan a Git ni al snapshot del revisor. `revisar ID --recoger --conservar-worktree` conserva también el checkout de revisión y registra esa decisión en el recibo. Ambos conservan las validaciones existentes de identidad, commit y veredicto; el comportamiento predeterminado anterior se mantiene si no se usa la opción. En encargos que exigen no borrar archivos se usa esta opción.
 
 El límite de tres sesiones principales está fijado en `harness_sesiones.check_capacity`, contando ejecutoras y revisoras vivas del registro compartido `~/operacion`. Dos coordinadoras con esa carpeta comparten tres cupos, incluso entre bases indexadas. Los hijos no entran en ese contador; deben tener límites explícitos. No es un límite general del servicio Codex ni una cuota adicional por coordinadora. Otra carpeta de operación eludiría el registro; las reglas de OnIA exigen una única carpeta. El valor procede del encargo inicial de Sergio, no de un benchmark que demuestre capacidad máxima del VPS. Cambiarlo requiere una modificación y ensayo propios, no duplicar registros.
+
+
+## Consulta breve por el puente · 10 noviembre2026
+
+`onia-harness-v1` incorpora `preguntar` con `id_pregunta` y `texto`: Sol6.1 low, lectura de fragmentos saneados de master, sin shell ni herramientas externas,120s y20/día La Paz. Comparte los tres cupos mientras responde. [Contrato, logs y límites](evidencias/preguntar-boss-20261110/USO-Y-LIMITES.md). No crea tareas ni equivale a revisión/aceptación.

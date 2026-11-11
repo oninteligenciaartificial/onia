@@ -1,5 +1,15 @@
 # 2 · Edición de video
 
+## Estado vigente · 11 nov UTC
+
+Ya existe [el editor](trabajos/fabrica-edicion-video-20261110/README.md) y [el lote de dos formatos](trabajos/fabrica-edicion-video-20261110/LOTE.md), con revisión técnica independiente y pruebas sintéticas en el VPS. Falta material real y comprobar la ejecución autónoma desde el acceso de Boss.
+
+El detalle de cierre está en [CIERRE-VENTA-20261111.md](../CIERRE-VENTA-20261111.md).
+
+## Especificación original del 10 nov · histórica
+
+Lo siguiente conserva la propuesta inicial. Sus pendientes y pedidos se cotejan con el estado vigente y las decisiones actuales; no se vuelven a lanzar ni se reutilizan sus textos comerciales anteriores.
+
 Especificación de la cadena que convierte la tanda grabada en cortes 9:16 con subtítulos, listos para que Sergio revise. Corre en el VPS. Boss no la configura: Codex la implementa cuando Sergio lo autorice (frente 3 del [plan al 13](../../../04-operacion-agentes/PLAN-LISTO-AL-13-20261110.md)).
 
 ## Qué hace

@@ -1,0 +1,30 @@
+{
+  "fecha_utc": "2026-11-11T01:54:31.053442+00:00",
+  "commit_revisado": "517e970",
+  "instalador_sha256": "3e6406591fa37c8518c42f5a4cc3e7e83885285e5836621988911b66d1e656be",
+  "revisor_independiente": "/root/revision_puente_boss",
+  "modelo_efectivo_revisor": "unknown",
+  "cuota_revisor": "unknown",
+  "veredicto": "bueno para ejecutar el diagnóstico; retoma condicionada a control_pe.ok=true en la PC",
+  "comando_pruebas": "python3 -m unittest discover -s _investigacion-onia/base-operativa/04-operacion-agentes/homelab -p test_alta_onia_worker.py -v",
+  "salida_observada": [
+    "Ran 22 tests in 0.188s",
+    "OK (skipped=1)"
+  ],
+  "correctas": 21,
+  "omitidas": 1,
+  "motivo_omision": "Integración bwrap requiere ONIA_TEST_BWRAP=1; no se habilitó",
+  "repeticion_revisor": "21 correctas y 1 omitida; confirmada en sesión independiente",
+  "correccion_revision": "Comandos root aislados con /usr/bin/python3 -I -B, cotejados en 517e970",
+  "limites": [
+    "No se ejecutó en la PC",
+    "Causa del fallo PE no confirmada",
+    "SSH remoto y persistencia WSL pendientes",
+    "No se habilitó cuenta, llave ni servicio",
+    "No se cambió el máximo de 3 sesiones"
+  ],
+  "cuota_observada_al_preparar": {
+    "used_percent": 95,
+    "fecha_utc": "2026-11-11T01:47:08.862000+00:00"
+  }
+}

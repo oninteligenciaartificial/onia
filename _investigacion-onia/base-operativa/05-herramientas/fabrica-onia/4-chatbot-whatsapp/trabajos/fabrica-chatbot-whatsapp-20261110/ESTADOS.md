@@ -1,5 +1,7 @@
 # Contrato local de estados y eventos
 
+Este documento describe el motor de fixtures. El contrato de la retoma HTTP/SQLite está en [ADAPTADOR.md](ADAPTADOR.md).
+
 Los estados pertenecen a clientes sintéticos, no al harness. `snapshot.version=1` conserva `clientes`, `referencias`, `vistos`, `salida`, `auditoria` y `reloj`. El llamador puede serializar y restaurar ese objeto para un ensayo; el workflow manual empieza vacío en cada ejecución. No hay persistencia entre ejecuciones de n8n implementada.
 
 | Estado previo | Entrada | Resultado / salida preparada |

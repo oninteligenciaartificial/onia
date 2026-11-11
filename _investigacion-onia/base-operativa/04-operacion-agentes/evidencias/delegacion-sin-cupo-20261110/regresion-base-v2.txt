@@ -1,0 +1,43 @@
+test_registration_after_six_attempts_preserves_audit_and_deduplicates (test_harness_delegacion.DelegationTests.test_registration_after_six_attempts_preserves_audit_and_deduplicates) ... ERROR
+test_eight_published_registrations_same_day_without_launch_or_quota_call (test_harness_delegacion.DelegationTests.test_eight_published_registrations_same_day_without_launch_or_quota_call) ... ERROR
+
+======================================================================
+ERROR: test_registration_after_six_attempts_preserves_audit_and_deduplicates (test_harness_delegacion.DelegationTests.test_registration_after_six_attempts_preserves_audit_and_deduplicates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/onia-sin-cupo-diario-20261110-q5l61f1h/_investigacion-onia/base-operativa/05-herramientas/scripts/test_harness_delegacion.py", line 94, in test_registration_after_six_attempts_preserves_audit_and_deduplicates
+    response = self.handle(self.request())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/onia-sin-cupo-diario-20261110-q5l61f1h/_investigacion-onia/base-operativa/05-herramientas/scripts/test_harness_delegacion.py", line 40, in handle
+    return boss.handle(self.config, req, config_path=self.config_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/onia-sin-cupo-diario-20261110-q5l61f1h/_investigacion-onia/base-operativa/05-herramientas/scripts/harness_boss.py", line 212, in handle
+    return harness_delegacion.handle(config, value, config_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/onia-sin-cupo-diario-20261110-q5l61f1h/_investigacion-onia/base-operativa/05-herramientas/scripts/harness_delegacion.py", line 238, in handle
+    reservation = root/'altas'/(ident+'.json')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+harness_boss.Rejected: limite_seis_altas_diarias
+
+======================================================================
+ERROR: test_eight_published_registrations_same_day_without_launch_or_quota_call (test_harness_delegacion.DelegationTests.test_eight_published_registrations_same_day_without_launch_or_quota_call)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/onia-sin-cupo-diario-20261110-q5l61f1h/_investigacion-onia/base-operativa/05-herramientas/scripts/test_harness_delegacion.py", line 126, in test_eight_published_registrations_same_day_without_launch_or_quota_call
+    response = self.handle(req)
+               ^^^^^^^^^^^^^^^^
+  File "/tmp/onia-sin-cupo-diario-20261110-q5l61f1h/_investigacion-onia/base-operativa/05-herramientas/scripts/test_harness_delegacion.py", line 40, in handle
+    return boss.handle(self.config, req, config_path=self.config_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/onia-sin-cupo-diario-20261110-q5l61f1h/_investigacion-onia/base-operativa/05-herramientas/scripts/harness_boss.py", line 212, in handle
+    return harness_delegacion.handle(config, value, config_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/onia-sin-cupo-diario-20261110-q5l61f1h/_investigacion-onia/base-operativa/05-herramientas/scripts/harness_delegacion.py", line 238, in handle
+    reservation = root/'altas'/(ident+'.json')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+harness_boss.Rejected: limite_seis_altas_diarias
+
+----------------------------------------------------------------------
+Ran 2 tests in 3.696s
+
+FAILED (errors=2)
