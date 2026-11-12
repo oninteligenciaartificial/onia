@@ -1,0 +1,10 @@
+Commit c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc.
+Sesión de comprobación en el host, sin detener ni iniciar unidades.
+PID 1 systemd, gestor del UID coordinador con Linger=yes.
+Un solo tailscaled vivo, UID propietario y ejecutable esperado. Cgroup de una sesión SSH previa y PPID 1. Sin unidad Tailscale registrada para ese daemon.
+python3 -B preparar.py --pid PID_PRIVADO --salida PREPARACION_PRIVADA
+Salida 0. Unidad privada generada desde el daemon real con argv y cwd idénticos, mismo binario, estado y socket.
+systemd-analyze --user verify UNIDAD_GENERADA
+Salida 0 sin diagnósticos. Guard ejecutado frente al daemon vivo devolvió 1, por lo que evita un arranque duplicado.
+Inventario de unidades y timers systemd de sistema y usuario, archivos de rutas efectivas, cron accesible y arranques de sesión sin competidor. Sin crontab ni trabajos at del usuario. Spool de otros usuarios inaccesible.
+Paquete original y recibo privado se conservaron en operación. Sólo se leyeron metadatos. No se abrió estado ni entorno. No se instaló, habilitó, inició, detuvo ni reinició el daemon.
