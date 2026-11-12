@@ -1,0 +1,327 @@
+{
+  "schema": 2,
+  "id": "workshop-n8n-ruta-real-noche-20261111",
+  "revision": 7,
+  "compartible": true,
+  "objetivo": "Reducir a un paso verificable el salto del ensayo aislado a la prueba con la instancia real de n8n.",
+  "estado": "en_curso",
+  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-12T03:39:32.504410+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-12T03:36:04.205018+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/workshop-n8n-ruta-real-noche-20261111.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-12T03:36:04.489819+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/workshop-n8n-ruta-real-noche-20261111.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-workshop-n8n-ruta-real-noche-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ruta-n8n-real-20261112"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:36:04.489807+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-12T03:39:09.057710+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-workshop-n8n-ruta-real-noche-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ruta-n8n-real-20261112"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:36:04.489807+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-workshop-n8n-ruta-real-noche-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-workshop-n8n-ruta-real-noche-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-n8n-ruta-real-noche-20261111.jsonl",
+          "log_rel": "logs/workshop-n8n-ruta-real-noche-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-n8n-ruta-real-noche-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ruta-n8n-real-20261112"
+          ],
+          "dry_run": false,
+          "commit_base": "a24bd8ec3729668cb33faf7a6e5be71496d13a10",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-n8n-ruta-real-noche-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:39:08.984179+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-n8n-ruta-real-noche-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-n8n-ruta-real-noche-20261111.git/worktrees/onia-ws-workshop-n8n-ruta-real-noche-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-12T03:39:09.249716+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-workshop-n8n-ruta-real-noche-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ruta-n8n-real-20261112"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:36:04.489807+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-workshop-n8n-ruta-real-noche-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 22194,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219396457",
+          "rama": "codex/ws-workshop-n8n-ruta-real-noche-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-n8n-ruta-real-noche-20261111.jsonl",
+          "log_rel": "logs/workshop-n8n-ruta-real-noche-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-n8n-ruta-real-noche-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ruta-n8n-real-20261112"
+          ],
+          "dry_run": false,
+          "commit_base": "a24bd8ec3729668cb33faf7a6e5be71496d13a10",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-n8n-ruta-real-noche-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:39:08.984179+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-n8n-ruta-real-noche-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-n8n-ruta-real-noche-20261111.git/worktrees/onia-ws-workshop-n8n-ruta-real-noche-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-12T03:39:09.530205+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-workshop-n8n-ruta-real-noche-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ruta-n8n-real-20261112"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:36:04.489807+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-workshop-n8n-ruta-real-noche-20261111",
+          "pid": 22211,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219396485",
+          "supervisor_pid": 22194,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219396457",
+          "rama": "codex/ws-workshop-n8n-ruta-real-noche-20261111",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-n8n-ruta-real-noche-20261111.jsonl",
+          "log_rel": "logs/workshop-n8n-ruta-real-noche-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-n8n-ruta-real-noche-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ruta-n8n-real-20261112"
+          ],
+          "dry_run": false,
+          "commit_base": "a24bd8ec3729668cb33faf7a6e5be71496d13a10",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-n8n-ruta-real-noche-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:39:08.984179+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-n8n-ruta-real-noche-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-n8n-ruta-real-noche-20261111.git/worktrees/onia-ws-workshop-n8n-ruta-real-noche-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-12T03:39:10.267106+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-workshop-n8n-ruta-real-noche-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ruta-n8n-real-20261112"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:36:04.489807+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-workshop-n8n-ruta-real-noche-20261111",
+          "pid": 22211,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219396485",
+          "supervisor_pid": 22194,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219396457",
+          "rama": "codex/ws-workshop-n8n-ruta-real-noche-20261111",
+          "session_id": "01a1cdd6-8356-73c2-b16a-c3c3dfae8a2e",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-n8n-ruta-real-noche-20261111.jsonl",
+          "log_rel": "logs/workshop-n8n-ruta-real-noche-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-n8n-ruta-real-noche-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ruta-n8n-real-20261112"
+          ],
+          "dry_run": false,
+          "commit_base": "a24bd8ec3729668cb33faf7a6e5be71496d13a10",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-n8n-ruta-real-noche-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:39:08.984179+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-n8n-ruta-real-noche-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-n8n-ruta-real-noche-20261111.git/worktrees/onia-ws-workshop-n8n-ruta-real-noche-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/workshop-n8n-ruta-real-noche-20261111.md",
+    "sha256": "a5eb684a67fe8e94777e54acb6da7c73b409979ccf0415417e99bc48fad66c13",
+    "bytes": 3869,
+    "contenido": "# Encargo workshop-n8n-ruta-real-noche-20261111\n\nÁrea: automatizaciones\nModo: encargo\nSkill directora: automatizar-n8n\n\n## Objetivo\n\nReducir a un paso verificable el salto del ensayo aislado a la prueba con la instancia real de n8n.\n\n## Entregable\n\nReusar el ensayo aprobado de n8n 2.43.7 (ensayo-n8n-20261111, 0e1c66b), ensayo-vps-20261111 y workflow-despacho-n8n.json. Cotejar sólo en lectura la versión/topología y alcance disponibles de la instancia real, con recursos ya autorizados y sin revelar información privada. Entregar la ruta privada concreta entre el runtime n8n y el adaptador, o la comprobación que la bloquea si falta acceso al namespace. Preparar el primer ensayo manual del MISMO workflow: copia inactiva, credencial dispatcher separada de operador, origen permitido, una ejecución 409 con envíos deshabilitados y reversión. Si hay entorno aislado propio, comprobar la parte nueva con datos ficticios y puerto loopback libre; no repetir la instalación grande o el ensayo completo ya aprobado. Cotejar expresiones/credenciales, contadores y no exponer /operador. Dejar una sola acción de Sergio/administrador cuando sea indispensable, con opción concreta y verificación posterior. No tocar instancia real, Docker, firewall, credenciales o Meta, no activar ni conectar Instagram/Facebook, no enviar, cobrar o gastar. Sólo commit/push de rama asignada.\n\n## Criterio de aceptación\n\nUn resultado nuevo y verificable sobre la conectividad real, o bloqueo reproducible y siguiente paso preciso; ensayo y rollback con referencia al artefacto aprobado. Distinguir privado, simulado y confirmado.\n\n## Entrada y alcance\n\nUn evento y resultado definido para la instancia existente de n8n.\n\n- Sin entradas adicionales indicadas.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [05-herramientas/accesos.md](../../05-herramientas/accesos.md)\n- [05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md](../../05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Flujo n8n con referencias a credenciales\n- Pruebas y manejo de fallos\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/workshop-n8n-ruta-real-noche-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "ejecutor-workshop-n8n-ruta-real-noche-20261111",
+    "rutas": [
+      "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ruta-n8n-real-20261112"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-12T03:36:04.489807+00:00"
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "ejecutor-workshop-n8n-ruta-real-noche-20261111",
+      "pid": 22211,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219396485",
+      "supervisor_pid": 22194,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219396457",
+      "rama": "codex/ws-workshop-n8n-ruta-real-noche-20261111",
+      "session_id": "01a1cdd6-8356-73c2-b16a-c3c3dfae8a2e",
+      "estado": "ejecutando",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/workshop-n8n-ruta-real-noche-20261111.jsonl",
+      "log_rel": "logs/workshop-n8n-ruta-real-noche-20261111.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-n8n-ruta-real-noche-20261111",
+      "rutas": [
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ruta-n8n-real-20261112"
+      ],
+      "dry_run": false,
+      "commit_base": "a24bd8ec3729668cb33faf7a6e5be71496d13a10",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/workshop-n8n-ruta-real-noche-20261111.1.briefing.txt",
+      "inicio": "2026-11-12T03:39:08.984179+00:00",
+      "rc": null,
+      "ultimo_evento": "item.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/workshop-n8n-ruta-real-noche-20261111.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/workshop-n8n-ruta-real-noche-20261111.git/worktrees/onia-ws-workshop-n8n-ruta-real-noche-20261111",
+      "perfil_permisos": "harness-git"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": null
+}
