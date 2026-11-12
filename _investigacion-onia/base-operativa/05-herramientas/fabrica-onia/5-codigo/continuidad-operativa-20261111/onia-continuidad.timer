@@ -1,0 +1,11 @@
+[Unit]
+Description=ONIA: continuidad entre chats
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+AccuracySec=1s
+Persistent=true
+Unit=onia-continuidad.service
+
+[Install]
+WantedBy=timers.target

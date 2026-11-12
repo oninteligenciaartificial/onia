@@ -1,0 +1,23 @@
+..............................................................................................................................................................................................................................................E........................................s.........................................
+======================================================================
+ERROR: test_private_git_rejects_worktree_symlink_with_same_basename (test_harness_sesiones.SessionTests.test_private_git_rejects_worktree_symlink_with_same_basename)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111/_investigacion-onia/base-operativa/05-herramientas/scripts/test_harness_sesiones.py", line 834, in test_private_git_rejects_worktree_symlink_with_same_basename
+    session = self.wait_finished()['sesiones'][0]
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111/_investigacion-onia/base-operativa/05-herramientas/scripts/test_harness_sesiones.py", line 167, in wait_finished
+    and sessions.process_start(session['supervisor_pid']) == session['supervisor_inicio'])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111/_investigacion-onia/base-operativa/05-herramientas/scripts/harness_sesiones.py", line 96, in process_start
+    fields = Path('/proc', str(pid), 'stat').read_text().rsplit(')', 1)[1].split()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1030, in read_text
+    return f.read()
+           ^^^^^^^^
+ProcessLookupError: [Errno 3] No such process
+
+----------------------------------------------------------------------
+Ran 321 tests in 125.836s
+
+FAILED (errors=1, skipped=1)
