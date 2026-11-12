@@ -1,0 +1,118 @@
+{
+  "lote": "piloto-orquestacion-20261112",
+  "manifiesto_sha256": "ea7b17a2cbef9d97a9ca3f8ece367e418608789e072ba105c0bb866fa822aed1",
+  "journal_sha256": "0126737463d547af7aebfc97b838d9dda33b2b85af7112a1cd05a4f2ec211fda",
+  "operaciones": [
+    {
+      "id": "piloto-orquestacion-evidencia-20261112",
+      "op": "lanzar",
+      "fecha": "2026-11-12T00:11:59.516128+00:00",
+      "revision": 7
+    },
+    {
+      "id": "piloto-orquestacion-tests-20261112",
+      "op": "lanzar",
+      "fecha": "2026-11-12T00:12:31.678830+00:00",
+      "revision": 7
+    },
+    {
+      "id": "piloto-orquestacion-evidencia-20261112",
+      "op": "cerrar",
+      "fecha": "2026-11-12T00:19:37.556773+00:00",
+      "revision": 9
+    },
+    {
+      "id": "piloto-orquestacion-tests-20261112",
+      "op": "cerrar",
+      "fecha": "2026-11-12T00:20:06.549213+00:00",
+      "revision": 9
+    },
+    {
+      "id": "piloto-orquestacion-evidencia-20261112",
+      "op": "revisar",
+      "fecha": "2026-11-12T00:21:47.124887+00:00",
+      "revision": 14
+    },
+    {
+      "id": "piloto-orquestacion-tests-20261112",
+      "op": "revisar",
+      "fecha": "2026-11-12T00:22:55.766560+00:00",
+      "revision": 14
+    },
+    {
+      "id": "piloto-orquestacion-evidencia-20261112",
+      "op": "recoger",
+      "fecha": "2026-11-12T00:22:56.743080+00:00",
+      "revision": 16
+    },
+    {
+      "id": "piloto-orquestacion-tests-20261112",
+      "op": "recoger",
+      "fecha": "2026-11-12T00:22:59.332445+00:00",
+      "revision": 15
+    }
+  ],
+  "tareas": [
+    {
+      "id": "piloto-orquestacion-evidencia-20261112",
+      "estado": "aceptado",
+      "commit": "53070425cd06798df78c8c16a39d203c952efb20",
+      "revision": 18,
+      "veredicto": "bueno",
+      "sesiones": [
+        {
+          "session_id": "01a1cd18-b05f-7e40-91b4-e04e10516ed7",
+          "rol": "ejecutor",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "inicio": "2026-11-12T00:11:48.425989+00:00",
+          "rc": 0,
+          "estado": "cerrada"
+        },
+        {
+          "session_id": "01a1cd21-8637-7450-aa99-de2393ced186",
+          "rol": "revisor",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "inicio": "2026-11-12T00:21:26.897424+00:00",
+          "rc": 0,
+          "estado": "finalizada"
+        }
+      ]
+    },
+    {
+      "id": "piloto-orquestacion-tests-20261112",
+      "estado": "aceptado",
+      "commit": "0e31d7dd67f5500aa3402ca990978035de908de7",
+      "revision": 17,
+      "veredicto": "bueno",
+      "sesiones": [
+        {
+          "session_id": "01a1cd19-13f9-7dd3-91ce-432ef6b87174",
+          "rol": "ejecutor",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "inicio": "2026-11-12T00:12:13.702618+00:00",
+          "rc": 0,
+          "estado": "cerrada"
+        },
+        {
+          "session_id": "01a1cd21-e38d-7622-83a8-7135a817a51e",
+          "rol": "revisor",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "inicio": "2026-11-12T00:21:51.364572+00:00",
+          "rc": 0,
+          "estado": "finalizada"
+        }
+      ]
+    }
+  ],
+  "observaciones": [
+    "Dos ejecutores simultáneos",
+    "Pasada adicional sin avance ni duplicados",
+    "Revisión separada de cada commit",
+    "Aceptación e integración ejecutadas por coordinadora",
+    "No prueba recurrencia nocturna, caída del proceso ni reparto automático al homelab"
+  ]
+}
