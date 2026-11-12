@@ -1,16 +1,22 @@
 {
   "schema": 2,
   "id": "onia-continuidad-operativa-20261111",
-  "revision": 7,
+  "revision": 21,
   "compartible": true,
   "objetivo": "Cerrar la brecha de continuidad entre chats con una programación operativa instalable del despachador de lotes que ya está en el VPS.",
-  "estado": "en_curso",
-  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
-  "resultado": "",
-  "comprobacion": "",
-  "verificacion": "pendiente",
-  "evidencias": [],
-  "actualizado": "2026-11-12T03:04:31.462710+00:00",
+  "estado": "aceptado",
+  "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+  "resultado": "Temporizador único de usuario y adaptador de pasadas para manifiestos previamente aprobados.",
+  "comprobacion": "Rama remota exacta y diff limpio. Salidas de pruebas del adaptador y suite de regresión incluidas en la entrega, con systemd-analyze verify, persistencia de supervisor sintético y protección frente a duplicados. La validación de puesta en marcha corresponde al VPS tras revisión.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+      "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+      "bytes": 317
+    }
+  ],
+  "actualizado": "2026-11-12T03:22:42.062883+00:00",
   "historial": [
     {
       "revision": 1,
@@ -269,6 +275,1266 @@
       ],
       "cierre": null,
       "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-12T03:04:31.462710+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-12T03:10:59.000405+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": null,
+          "ultimo_evento": "item.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-12T03:12:16.530290+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-12T03:14:59.066131+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": null,
+          "ultimo_evento": "item.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-12T03:17:23.120282+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-12T03:19:32.623036+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:19:32.614115+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-12T03:20:13.643856+00:00",
+      "estado": "para_revision",
+      "resultado": "Temporizador único de usuario y adaptador de pasadas para manifiestos previamente aprobados.",
+      "comprobacion": "Rama remota exacta y diff limpio. Salidas de pruebas del adaptador y suite de regresión incluidas en la entrega, con systemd-analyze verify, persistencia de supervisor sintético y protección frente a duplicados. La validación de puesta en marcha corresponde al VPS tras revisión.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:19:32.614115+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+        "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-operativa-20261111"
+        ],
+        "fecha": "2026-11-12T03:20:13.625233+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-12T03:20:18.490610+00:00",
+      "estado": "para_revision",
+      "resultado": "Temporizador único de usuario y adaptador de pasadas para manifiestos previamente aprobados.",
+      "comprobacion": "Rama remota exacta y diff limpio. Salidas de pruebas del adaptador y suite de regresión incluidas en la entrega, con systemd-analyze verify, persistencia de supervisor sintético y protección frente a duplicados. La validación de puesta en marcha corresponde al VPS tras revisión.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:19:32.614115+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-operativa-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:20:18.473430+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c140cca9c6b9e11c52ded90b0e986c480f8d2cace531d36ba27b24f0227a1158",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+        "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-operativa-20261111"
+        ],
+        "fecha": "2026-11-12T03:20:13.625233+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-12T03:20:18.725009+00:00",
+      "estado": "para_revision",
+      "resultado": "Temporizador único de usuario y adaptador de pasadas para manifiestos previamente aprobados.",
+      "comprobacion": "Rama remota exacta y diff limpio. Salidas de pruebas del adaptador y suite de regresión incluidas en la entrega, con systemd-analyze verify, persistencia de supervisor sintético y protección frente a duplicados. La validación de puesta en marcha corresponde al VPS tras revisión.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:19:32.614115+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-operativa-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 4151223,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219283404",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:20:18.473430+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c140cca9c6b9e11c52ded90b0e986c480f8d2cace531d36ba27b24f0227a1158",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+        "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-operativa-20261111"
+        ],
+        "fecha": "2026-11-12T03:20:13.625233+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 16,
+      "actualizado": "2026-11-12T03:20:18.938886+00:00",
+      "estado": "para_revision",
+      "resultado": "Temporizador único de usuario y adaptador de pasadas para manifiestos previamente aprobados.",
+      "comprobacion": "Rama remota exacta y diff limpio. Salidas de pruebas del adaptador y suite de regresión incluidas en la entrega, con systemd-analyze verify, persistencia de supervisor sintético y protección frente a duplicados. La validación de puesta en marcha corresponde al VPS tras revisión.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:19:32.614115+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-operativa-20261111",
+          "pid": 4151225,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219283426",
+          "supervisor_pid": 4151223,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219283404",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:20:18.473430+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c140cca9c6b9e11c52ded90b0e986c480f8d2cace531d36ba27b24f0227a1158",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+        "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-operativa-20261111"
+        ],
+        "fecha": "2026-11-12T03:20:13.625233+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 17,
+      "actualizado": "2026-11-12T03:20:19.680676+00:00",
+      "estado": "para_revision",
+      "resultado": "Temporizador único de usuario y adaptador de pasadas para manifiestos previamente aprobados.",
+      "comprobacion": "Rama remota exacta y diff limpio. Salidas de pruebas del adaptador y suite de regresión incluidas en la entrega, con systemd-analyze verify, persistencia de supervisor sintético y protección frente a duplicados. La validación de puesta en marcha corresponde al VPS tras revisión.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:19:32.614115+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-operativa-20261111",
+          "pid": 4151225,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219283426",
+          "supervisor_pid": 4151223,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219283404",
+          "rama": "(detached)",
+          "session_id": "01a1cdc5-42ff-7d82-9185-5f06e60523a1",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:20:18.473430+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c140cca9c6b9e11c52ded90b0e986c480f8d2cace531d36ba27b24f0227a1158",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+        "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-operativa-20261111"
+        ],
+        "fecha": "2026-11-12T03:20:13.625233+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 18,
+      "actualizado": "2026-11-12T03:21:13.243333+00:00",
+      "estado": "para_revision",
+      "resultado": "Temporizador único de usuario y adaptador de pasadas para manifiestos previamente aprobados.",
+      "comprobacion": "Rama remota exacta y diff limpio. Salidas de pruebas del adaptador y suite de regresión incluidas en la entrega, con systemd-analyze verify, persistencia de supervisor sintético y protección frente a duplicados. La validación de puesta en marcha corresponde al VPS tras revisión.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:19:32.614115+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-operativa-20261111",
+          "pid": 4151225,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219283426",
+          "supervisor_pid": 4151223,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219283404",
+          "rama": "(detached)",
+          "session_id": "01a1cdc5-42ff-7d82-9185-5f06e60523a1",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:20:18.473430+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c140cca9c6b9e11c52ded90b0e986c480f8d2cace531d36ba27b24f0227a1158",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:21:13.230831+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+        "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-operativa-20261111"
+        ],
+        "fecha": "2026-11-12T03:20:13.625233+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 19,
+      "actualizado": "2026-11-12T03:22:41.695235+00:00",
+      "estado": "para_revision",
+      "resultado": "Temporizador único de usuario y adaptador de pasadas para manifiestos previamente aprobados.",
+      "comprobacion": "Rama remota exacta y diff limpio. Salidas de pruebas del adaptador y suite de regresión incluidas en la entrega, con systemd-analyze verify, persistencia de supervisor sintético y protección frente a duplicados. La validación de puesta en marcha corresponde al VPS tras revisión.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:19:32.614115+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-operativa-20261111",
+          "pid": 4151225,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219283426",
+          "supervisor_pid": 4151223,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219283404",
+          "rama": "(detached)",
+          "session_id": "01a1cdc5-42ff-7d82-9185-5f06e60523a1",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:20:18.473430+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c140cca9c6b9e11c52ded90b0e986c480f8d2cace531d36ba27b24f0227a1158",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:21:13.230831+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+        "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-operativa-20261111"
+        ],
+        "fecha": "2026-11-12T03:20:13.625233+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+        "criterio": "Entrega cotejada con la base y los criterios: alcance limitado, temporizador persistente único, pasadas acotadas, controles canónicos conservados y rollback concreto. Evidencia aportada: 13/13 pruebas, validación de unidades, recuperación, STOP, cuota y ausencia de duplicados. Comprobé sintaxis, renderizado y diff limpio; no repetí pruebas que requieren escritura. Regresión general con carrera preexistente documentada. Activación y validación real en VPS pendientes de la coordinadora.",
+        "worktree_conservado": true,
+        "revisor": "revisor-onia-continuidad-operativa-20261111",
+        "session_id": "01a1cdc5-42ff-7d82-9185-5f06e60523a1",
+        "entrega_sha256": "c140cca9c6b9e11c52ded90b0e986c480f8d2cace531d36ba27b24f0227a1158",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/revision-2-85bbcc4b.json",
+          "sha256": "3604f4b298617d21e29b9558fea2c24df82fd5495d06241a970fbac3a1339a80",
+          "bytes": 630
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/revision-2-85bbcc4b.json",
+          "sha256": "3604f4b298617d21e29b9558fea2c24df82fd5495d06241a970fbac3a1339a80",
+          "bytes": 630
+        }
+      ]
+    },
+    {
+      "revision": 20,
+      "actualizado": "2026-11-12T03:22:42.037294+00:00",
+      "estado": "aceptado",
+      "resultado": "Temporizador único de usuario y adaptador de pasadas para manifiestos previamente aprobados.",
+      "comprobacion": "Rama remota exacta y diff limpio. Salidas de pruebas del adaptador y suite de regresión incluidas en la entrega, con systemd-analyze verify, persistencia de supervisor sintético y protección frente a duplicados. La validación de puesta en marcha corresponde al VPS tras revisión.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+      "aceptacion": {
+        "revisor": "revisor-onia-continuidad-operativa-20261111",
+        "criterio": "Entrega cotejada con la base y los criterios: alcance limitado, temporizador persistente único, pasadas acotadas, controles canónicos conservados y rollback concreto. Evidencia aportada: 13/13 pruebas, validación de unidades, recuperación, STOP, cuota y ausencia de duplicados. Comprobé sintaxis, renderizado y diff limpio; no repetí pruebas que requieren escritura. Regresión general con carrera preexistente documentada. Activación y validación real en VPS pendientes de la coordinadora.",
+        "fecha": "2026-11-12T03:22:42.037275+00:00"
+      },
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.423724+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-operativa-20261111",
+          "pid": 4085075,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186766",
+          "supervisor_pid": 4085061,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
+          "rama": "codex/ws-onia-continuidad-operativa-20261111",
+          "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:11.729787+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:19:32.614115+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-operativa-20261111",
+          "pid": 4151225,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219283426",
+          "supervisor_pid": 4151223,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219283404",
+          "rama": "(detached)",
+          "session_id": "01a1cdc5-42ff-7d82-9185-5f06e60523a1",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:20:18.473430+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "c140cca9c6b9e11c52ded90b0e986c480f8d2cace531d36ba27b24f0227a1158",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:21:13.230831+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+        "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-operativa-20261111"
+        ],
+        "fecha": "2026-11-12T03:20:13.625233+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+          "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+        "criterio": "Entrega cotejada con la base y los criterios: alcance limitado, temporizador persistente único, pasadas acotadas, controles canónicos conservados y rollback concreto. Evidencia aportada: 13/13 pruebas, validación de unidades, recuperación, STOP, cuota y ausencia de duplicados. Comprobé sintaxis, renderizado y diff limpio; no repetí pruebas que requieren escritura. Regresión general con carrera preexistente documentada. Activación y validación real en VPS pendientes de la coordinadora.",
+        "worktree_conservado": true,
+        "revisor": "revisor-onia-continuidad-operativa-20261111",
+        "session_id": "01a1cdc5-42ff-7d82-9185-5f06e60523a1",
+        "entrega_sha256": "c140cca9c6b9e11c52ded90b0e986c480f8d2cace531d36ba27b24f0227a1158",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/revision-2-85bbcc4b.json",
+          "sha256": "3604f4b298617d21e29b9558fea2c24df82fd5495d06241a970fbac3a1339a80",
+          "bytes": 630
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/revision-2-85bbcc4b.json",
+          "sha256": "3604f4b298617d21e29b9558fea2c24df82fd5495d06241a970fbac3a1339a80",
+          "bytes": 630
+        }
+      ]
     }
   ],
   "briefing": {
@@ -277,15 +1543,12 @@
     "bytes": 4451,
     "contenido": "# Encargo onia-continuidad-operativa-20261111\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nCerrar la brecha de continuidad entre chats con una programación operativa instalable del despachador de lotes que ya está en el VPS.\n\n## Entregable\n\nEntregá en tu ruta un único temporizador persistente de usuario y el adaptador mínimo necesario para ejecutar periódicamente los manifiestos habilitados y aprobados por la coordinadora. Reutilizá harness_lote.py, sus journals y locks, no otro registro ni escritor. La lista debe fijar manifiesto/hash, operación y observaciones opcionales por lote, con orden explícito, límite de tiempo y un paso acotado por pasada. Continuar los otros lotes cuando un lote esté detenido, expirado o bloqueado; cero trabajo elegible debe quedar visible, sin relanzar ni duplicar. Reutilizar cuota-codex y tres cupos globales. Mantener cierre/aceptación/merge/despliegue según las comprobaciones canónicas y autorizaciones existentes; distinguir qué avanza automáticamente y qué espera una evidencia o decisión. Diseñar registro breve y legible por lote, incluyendo próxima acción, evidencia y fallos, sin secretos. Si se puede autocerrar un commit con la API existente, sólo sobre prueba explícita de exactitud, diff limitado y artefacto esperado; priorizá instalar y probar la ruta ya aceptada de observaciones y recogida, no reescribir harness ni inventar aceptaciones. Documentar operación y rollback concretos. Probar sin tocar datos reales ni activar servicios permanentes, con unidades y trabajo sintético, incluyendo recuperación, pausa por STOP, cuota y ausencia de duplicados; si el entorno no deja systemd, validar las unidades y dejar comando listo al coordinador. Usuario autorizó puesta en marcha revisada. No operar n8n/Meta/externos, gastar, usar sudo ni cambiar otros servicios. Sólo commit/push rama asignada.\n\n## Criterio de aceptación\n\nPlantilla/instalación reproducible y pasadas con evidencia, alcance aprobado y trazabilidad. Permite al coordinador habilitarla en VPS tras revisión, y funciona sin el chat abierto dentro del manifiesto y cuota. Controles existentes intactos.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sin entradas adicionales indicadas.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/onia-continuidad-operativa-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
   },
-  "aceptacion": null,
-  "asignacion": {
-    "responsable": "ejecutor-onia-continuidad-operativa-20261111",
-    "rutas": [
-      "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
-    ],
-    "revision_base": 1,
-    "fecha": "2026-11-12T03:04:00.423724+00:00"
+  "aceptacion": {
+    "revisor": "revisor-onia-continuidad-operativa-20261111",
+    "criterio": "Entrega cotejada con la base y los criterios: alcance limitado, temporizador persistente único, pasadas acotadas, controles canónicos conservados y rollback concreto. Evidencia aportada: 13/13 pruebas, validación de unidades, recuperación, STOP, cuota y ausencia de duplicados. Comprobé sintaxis, renderizado y diff limpio; no repetí pruebas que requieren escritura. Regresión general con carrera preexistente documentada. Activación y validación real en VPS pendientes de la coordinadora.",
+    "fecha": "2026-11-12T03:22:42.037275+00:00"
   },
+  "asignacion": null,
   "sesiones": [
     {
       "intento": 1,
@@ -297,7 +1560,7 @@
       "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219186739",
       "rama": "codex/ws-onia-continuidad-operativa-20261111",
       "session_id": "01a1cdb6-8386-7d22-8ed5-97fe66a51ce0",
-      "estado": "ejecutando",
+      "estado": "cerrada",
       "operacion": "/home/onia-codex-worker/operacion",
       "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.jsonl",
       "log_rel": "logs/onia-continuidad-operativa-20261111.jsonl",
@@ -311,17 +1574,88 @@
       "reanuda": null,
       "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.1.briefing.txt",
       "inicio": "2026-11-12T03:04:11.729787+00:00",
-      "rc": null,
-      "ultimo_evento": "item.completed",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
       "modelo": "gpt-6.1-sol",
       "esfuerzo": "high",
       "auth_chatgpt": true,
       "subagentes_maximos": 0,
       "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git",
       "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-operativa-20261111.git/worktrees/onia-ws-onia-continuidad-operativa-20261111",
-      "perfil_permisos": "harness-git"
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-12T03:19:32.614115+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "revisor",
+      "responsable": "revisor-onia-continuidad-operativa-20261111",
+      "pid": 4151225,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219283426",
+      "supervisor_pid": 4151223,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219283404",
+      "rama": "(detached)",
+      "session_id": "01a1cdc5-42ff-7d82-9185-5f06e60523a1",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+      "log_rel": "logs/onia-continuidad-operativa-20261111.revision-2.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-operativa-20261111-revision-2",
+      "rutas": [
+        "05-herramientas/fabrica-onia/5-codigo/continuidad-operativa-20261111"
+      ],
+      "dry_run": false,
+      "commit_base": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.briefing.txt",
+      "inicio": "2026-11-12T03:20:18.473430+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "c140cca9c6b9e11c52ded90b0e986c480f8d2cace531d36ba27b24f0227a1158",
+      "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-operativa-20261111.2.veredicto.json",
+      "fin": "2026-11-12T03:21:13.230831+00:00"
     }
   ],
-  "revision_independiente": null,
-  "cierre": null
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+    "criterio": "Entrega cotejada con la base y los criterios: alcance limitado, temporizador persistente único, pasadas acotadas, controles canónicos conservados y rollback concreto. Evidencia aportada: 13/13 pruebas, validación de unidades, recuperación, STOP, cuota y ausencia de duplicados. Comprobé sintaxis, renderizado y diff limpio; no repetí pruebas que requieren escritura. Regresión general con carrera preexistente documentada. Activación y validación real en VPS pendientes de la coordinadora.",
+    "worktree_conservado": true,
+    "revisor": "revisor-onia-continuidad-operativa-20261111",
+    "session_id": "01a1cdc5-42ff-7d82-9185-5f06e60523a1",
+    "entrega_sha256": "c140cca9c6b9e11c52ded90b0e986c480f8d2cace531d36ba27b24f0227a1158",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/revision-2-85bbcc4b.json",
+      "sha256": "3604f4b298617d21e29b9558fea2c24df82fd5495d06241a970fbac3a1339a80",
+      "bytes": 630
+    }
+  },
+  "cierre": {
+    "commit": "a3c2c3f838fde980f6d97f63655db61932113b3a",
+    "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+    "ramas_origin": [
+      "origin/codex/ws-onia-continuidad-operativa-20261111"
+    ],
+    "fecha": "2026-11-12T03:20:13.625233+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "worktree_conservado": true,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/cierre-r12-3aec1fd2.json",
+      "sha256": "206a2adf62661492bd273ab9ab8bb488b2fc87083e83b5213abdf0876f20e8a0",
+      "bytes": 317
+    }
+  },
+  "evidencias_revision": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/onia-continuidad-operativa-20261111/revision-2-85bbcc4b.json",
+      "sha256": "3604f4b298617d21e29b9558fea2c24df82fd5495d06241a970fbac3a1339a80",
+      "bytes": 630
+    }
+  ]
 }
