@@ -188,6 +188,62 @@ class SessionTests(unittest.TestCase):
                               'Entrega lista', 'Prueba sintética correcta', dry,
                               retain_worktree=retain_worktree)
 
+    def test_trial_four_synthetic_launches_fifth_blocked_and_sigterm(self):
+        import harness_ensayo as trial
+        from test_harness_ensayo import install_trial, write_state
+        ids = ['ensayo-' + str(i) for i in range(5)]
+        for ident in ids:
+            self.prepare(ident)
+        value = install_trial(self.op, self.base, ids)
+        release = self.root / 'release-trial'
+        try:
+            with patch.dict(os.environ, {'HARNESS_TEST_RELEASE': str(release)}):
+                for ident in ids[:4]:
+                    write_state(self.op, value)
+                    self.launch(ident, model='gpt-6.1-sol', effort='high', auth_chatgpt=True, subagents=0)
+                with self.assertRaisesRegex(ValueError, 'Máximo 4'):
+                    self.launch(ids[4], model='gpt-6.1-sol', effort='high', auth_chatgpt=True)
+                self.assertEqual(len(trial.live_sessions(sessions.indexed_rows(self.op, self.base))), 4)
+                for ident in ids[:4]:
+                    self.assertEqual(self.row(ident)['sesiones'][-1]['ensayo_sha256'], trial.digest(value))
+                result = trial.stop(self.op)
+                self.assertEqual(result['estado'], 'parado')
+        finally:
+            release.touch()
+            for ident in ids[:4]:
+                if self.row(ident).get('sesiones'):
+                    self.wait_finished(ident)
+        self.assertTrue(all(Path(self.row(i)['sesiones'][0]['worktree']).exists() for i in ids[:4]))
+        self.assertTrue(all(Path(self.row(i)['sesiones'][0]['log']).exists() for i in ids[:4]))
+
+    def test_trial_enforces_model_auth_and_no_children_before_creating_worktree(self):
+        from test_harness_ensayo import install_trial
+        self.prepare()
+        install_trial(self.op, self.base, ['toy'])
+        for options in [{'model': 'otro', 'effort': 'high', 'auth_chatgpt': True},
+                        {'model': 'gpt-6.1-sol', 'effort': 'low', 'auth_chatgpt': True},
+                        {'model': 'gpt-6.1-sol', 'effort': 'high', 'subagents': 1, 'auth_chatgpt': True},
+                        {'model': 'gpt-6.1-sol', 'effort': 'high'}]:
+            with self.subTest(options=options), self.assertRaisesRegex(ValueError, 'Sol high'):
+                self.launch(**options)
+        self.assertFalse((self.op / 'git/toy.git').exists())
+
+    def test_trial_revalidates_after_git_and_before_registration(self):
+        import harness_ensayo as trial
+        from test_harness_ensayo import install_trial
+        self.prepare()
+        install_trial(self.op, self.base, ['toy'])
+        with patch.object(trial, 'revalidate', side_effect=ValueError('ensayo_STOP')), \
+                patch.object(sessions.subprocess, 'Popen') as popen:
+            # Reutiliza el camino simulado sólo para evitar Git en esta comprobación.
+            with patch.object(sessions, 'repo_for', return_value=self.repo), \
+                    patch.object(sessions, 'create_private_git', return_value=(self.op / 'git/toy.git', 'a' * 40)), \
+                    patch.object(sessions, 'validate_private_git'), patch.object(sessions, 'link_skills'):
+                with self.assertRaisesRegex(ValueError, 'STOP'):
+                    self.launch(model='gpt-6.1-sol', effort='high', auth_chatgpt=True)
+            self.assertFalse(self.row().get('sesiones'))
+            popen.assert_not_called()
+
     def test_dry_run_entire_flow_and_fourth_rejected_without_subprocess(self):
         for i in range(4):
             self.prepare('toy-' + str(i))
