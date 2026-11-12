@@ -48,8 +48,11 @@ def write_state(root, value, **changes):
     state = {'estado': 'listo', 'politica_sha256': trial.digest(value), 'fecha': time.time(),
              'pid': os.getpid(), 'pid_inicio': sessions.process_start(os.getpid()),
              'cuota': deepcopy(value['cuota_inicial']), 'recursos': resource_sample()}
-    state.update(changes)
     path = root / trial.DIRECTORY
+    if not (path / 'procesos.json').exists():
+        private.private_write(path / 'procesos.json', {'politica_sha256': trial.digest(value), 'procesos': []})
+    state['procesos_sha256'] = trial.digest(private.private_read(path / 'procesos.json'))
+    state.update(changes)
     state['recibo'] = trial.receipt(path, dict(state, evento='muestra'))
     private.private_write(path / 'estado.json', state)
     return state
@@ -293,6 +296,7 @@ class TrialTests(unittest.TestCase):
             self.capacity([])
 
     def test_stop_missing_inventory_never_claims_stopped(self):
+        (self.path / "procesos.json").unlink()
         with patch.object(trial, 'inventory', return_value=([], [], [])), \
                 patch.object(trial, 'terminate') as terminate:
             with self.assertRaisesRegex(ValueError, 'inventario_incompleto'):
@@ -312,8 +316,28 @@ class TrialTests(unittest.TestCase):
                 trial.stop(self.op)
             terminate.assert_not_called()
 
+    def test_admission_missing_or_altered_inventory_blocks(self):
+        p = self.path / 'procesos.json'
+        p.unlink()
+        with self.assertRaises(OSError):
+            self.capacity([])
+        private.private_write(p, {'politica_sha256': self.tag, 'procesos': [{'pid': 0}]})
+        with self.assertRaisesRegex(ValueError, 'inventario_alterado'):
+            self.capacity([])
+
+    def test_stop_both_documents_lost_after_sample_blocks(self):
+        (self.path / 'procesos.json').unlink()
+        (self.path / 'estado.json').unlink()
+        with patch.object(trial, 'inventory', return_value=([], [], [])), \
+                patch.object(trial, 'terminate') as terminate:
+            with self.assertRaisesRegex(ValueError, 'inventario_perdido'):
+                trial.stop(self.op)
+            terminate.assert_not_called()
+        self.assertTrue((self.path / 'STOP').exists())
+        self.assertFalse((self.path / 'fin.json').exists())
+
     def test_stop_corrupt_inventory_sends_no_signal(self):
-        private.private_write(self.path / 'procesos.json', {'politica_sha256': self.tag, 'procesos': []})
+        private.private_write(self.path / 'procesos.json', {'politica_sha256': self.tag, 'procesos': [{'pid': 0}]})
         with patch.object(trial, 'inventory', return_value=([], [], [])), \
                 patch.object(trial, 'terminate') as terminate:
             with self.assertRaisesRegex(ValueError, 'inventario_alterado'):
@@ -485,6 +509,9 @@ for line in sys.stdin:
 
     def test_monitor_error_sets_stop_without_enabling_fourth(self):
         (self.path / 'estado.json').unlink()
+        (self.path / 'procesos.json').unlink()
+        for receipt in self.path.glob('recibo-*.json'):
+            receipt.unlink()
         with patch.object(trial, 'read_quota', side_effect=ValueError('cuota_desconocida')), \
                 patch.object(trial, 'inventory', return_value=([], [], [])):
             self.assertEqual(trial.monitor(self.op)['estado'], 'parado')

@@ -143,6 +143,9 @@ def health(root, value, now=None):
     require(digest(recorded) == reference['sha256'] and recorded == dict(current, evento='muestra'),
             'estado_alterado')
     require(current.get('politica_sha256') == digest(value), 'politica_alterada')
+    journal = read(path / 'procesos.json')
+    require(journal.get('politica_sha256') == digest(value)
+            and current.get('procesos_sha256') == digest(journal), 'inventario_alterado')
     require(current.get('estado') == 'listo', 'monitor_bloqueado')
     fresh(current.get('fecha'), RESOURCE_TTL, now)
     pid = current.get('pid')
@@ -429,6 +432,9 @@ def stop(root, reason='fin_operador', trusted=None):
         has_journal = os.path.lexists(path / 'procesos.json')
         has_state = os.path.lexists(path / 'estado.json')
         require(has_journal == has_state, 'inventario_incompleto')
+        if not has_journal:
+            require(not any(read(p).get('evento') == 'muestra'
+                            for p in path.glob('recibo-*.json')), 'inventario_perdido')
         journal = read(path / 'procesos.json') if has_journal else {}
         if has_journal:
             require(journal.get('politica_sha256') == digest(value), 'inventario_alterado')
