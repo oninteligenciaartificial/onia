@@ -347,6 +347,34 @@ for line in sys.stdin:
         fake.chmod(0o700)
         return fake
 
+    def test_primary_only_rpc_and_window_changes(self):
+        fake = self.fake_app_server()
+        fake.write_text(fake.read_text().replace("result = {'rateLimitsByLimitId': {'codex': windows}}",
+                        "windows['secondary'] = None; result = {'rateLimitsByLimitId': {'codex': windows}}"))
+        with patch.dict(os.environ, {'PATH': str(self.root) + ':' + os.environ['PATH']}):
+            sample = trial.read_quota()
+        self.assertEqual(set(sample['ventanas']), {'primary'})
+        trial.quota_budget(sample, sample, time.time())
+        changed = deepcopy(sample)
+        changed['ventanas']['primary']['usedPercent'] += 2
+        with self.assertRaisesRegex(ValueError, 'presupuesto'):
+            trial.quota_budget(sample, changed, time.time())
+        changed = deepcopy(sample)
+        changed['ventanas']['secondary'] = deepcopy(changed['ventanas']['primary'])
+        for initial, current in [(sample, changed), (changed, sample)]:
+            with self.assertRaisesRegex(ValueError, 'ventana_cambiada'):
+                trial.quota_budget(initial, current, time.time())
+
+    def test_quota_response_rejects_missing_or_malformed_primary(self):
+        now = time.time()
+        primary = quota_sample(now)['ventanas']['primary']
+        for limits in [{}, {'primary': None}, {'primary': primary, 'secondary': {}},
+                       {'primary': primary, 'secondary': False}]:
+            with self.subTest(limits=limits), self.assertRaises(ValueError):
+                trial.quota_response({'rateLimits': limits}, now)
+        for limits in [{'primary': primary}, {'primary': primary, 'secondary': None}]:
+            self.assertEqual(set(trial.quota_response({'rateLimits': limits}, now)['ventanas']), {'primary'})
+
     def test_quota_rpc_readonly_with_synthetic_app_server(self):
         self.fake_app_server()
         with patch.dict(os.environ, {'PATH': str(self.root) + ':' + os.environ['PATH']}):

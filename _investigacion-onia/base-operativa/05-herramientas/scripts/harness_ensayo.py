@@ -95,7 +95,7 @@ def quota(value, now):
     require(isinstance(value, dict) and set(value) == {'fecha', 'ventanas'}, 'cuota_desconocida')
     fresh(value['fecha'], QUOTA_TTL, now)
     windows = value['ventanas']
-    require(isinstance(windows, dict) and set(windows) == {'primary', 'secondary'}, 'cuota_desconocida')
+    require(isinstance(windows, dict) and set(windows) in ({'primary'}, {'primary', 'secondary'}), 'cuota_desconocida')
     for window in windows.values():
         require(isinstance(window, dict) and set(window) == {'usedPercent', 'windowDurationMins', 'resetsAt'},
                 'cuota_desconocida')
@@ -107,6 +107,7 @@ def quota(value, now):
 
 def quota_budget(initial, current, now):
     quota(current, now)
+    require(set(initial['ventanas']) == set(current['ventanas']), 'ventana_cambiada')
     for name, before in initial['ventanas'].items():
         after = current['ventanas'][name]
         require(all(before[k] == after[k] for k in ('windowDurationMins', 'resetsAt')),
@@ -191,6 +192,27 @@ def revalidate(root, base, ident, tag):
     health(root, value)
 
 
+def quota_response(result, now):
+    """Primary is required; providers may omit or null the secondary window."""
+    require(isinstance(result, dict), 'cuota_desconocida')
+    by_id = result.get('rateLimitsByLimitId')
+    if by_id:
+        require(isinstance(by_id, dict), 'cuota_desconocida')
+        limits = by_id.get('codex')
+    else:
+        limits = result.get('rateLimits')
+    require(isinstance(limits, dict), 'cuota_desconocida')
+    windows = {}
+    for key in ('primary', 'secondary'):
+        window = limits.get(key)
+        if key == 'secondary' and window is None:
+            continue
+        require(isinstance(window, dict), 'cuota_desconocida')
+        windows[key] = {field: window.get(field)
+                        for field in ('usedPercent', 'windowDurationMins', 'resetsAt')}
+    return quota({'fecha': now, 'ventanas': windows}, now)
+
+
 def read_quota(deadline=None, stop_path=None):
     """RPC de sólo lectura cotejado con /tmp/onia-read-quota-rpc.py.
 
@@ -237,11 +259,7 @@ def read_quota(deadline=None, stop_path=None):
         rpc(1, 'initialize', {'clientInfo': {'name': 'onia_quota_readonly', 'version': '1.0'}})
         rpc(None, 'initialized', {})
         result = rpc(2, 'account/rateLimits/read', {'excludeResetCreditDetails': True})
-        limits = result.get('rateLimitsByLimitId') or {'codex': result['rateLimits']}
-        windows = {key: {field: limits['codex'][key].get(field)
-                        for field in ('usedPercent', 'windowDurationMins', 'resetsAt')}
-                   for key in ('primary', 'secondary')}
-        return quota({'fecha': time.time(), 'ventanas': windows}, time.time())
+        return quota_response(result, time.time())
     finally:
         selector.close()
         try:
