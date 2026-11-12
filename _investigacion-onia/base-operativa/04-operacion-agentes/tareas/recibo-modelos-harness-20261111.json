@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "id": "recibo-modelos-harness-20261111",
-  "revision": 23,
+  "revision": 33,
   "compartible": true,
   "objetivo": "Agrega recibos de modelos observados a partir de los rollouts del harness.",
-  "estado": "para_revision",
-  "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+  "estado": "aceptado",
+  "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
   "resultado": "Recibo saneado de perfiles observados; fuente 74c01ce.",
   "comprobacion": "Salida real de 18 pruebas sobre 74c01ce adjunta a la tarea.",
   "verificacion": "correcta",
@@ -26,7 +26,7 @@
       "bytes": 313
     }
   ],
-  "actualizado": "2026-11-12T02:16:40.596859+00:00",
+  "actualizado": "2026-11-12T02:18:03.063941+00:00",
   "historial": [
     {
       "revision": 1,
@@ -1851,6 +1851,1704 @@
           "bytes": 717
         }
       ]
+    },
+    {
+      "revision": 23,
+      "actualizado": "2026-11-12T02:16:40.596859+00:00",
+      "estado": "para_revision",
+      "resultado": "Recibo saneado de perfiles observados; fuente 74c01ce.",
+      "comprobacion": "Salida real de 18 pruebas sobre 74c01ce adjunta a la tarea.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r11-e344b779.json",
+          "sha256": "021172ed4c6ebc76d31352bb31c2c0e83d4116168dcecf6a85f220465e6192f9",
+          "bytes": 313
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/PRUEBAS-coordinadora.txt",
+          "sha256": "5cfbf3d547a1f183b4e98264887e6bc697193629973af8ef0a6d1258c85953d0",
+          "bytes": 2385
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:13:39.826343+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-modelos-20261111",
+          "pid": 3941677,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886645",
+          "supervisor_pid": 3941665,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886625",
+          "rama": "(detached)",
+          "session_id": "01a1cd88-b79a-7950-aa18-d2b62b5ef352",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:14:10.725662+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "12c51daf3f74e0fbb3d67c9f302080bc60042509341a4072fd38b6f61c3b1386",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.veredicto.json",
+          "fin": "2026-11-12T02:14:55.773723+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+        "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+        "ramas_origin": [
+          "origin/codex/ws-recibo-modelos-harness-20261111"
+        ],
+        "fecha": "2026-11-12T02:16:40.581189+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-2-02c999dc.json",
+          "sha256": "7014b83aa72b2fc106edb049fc89735e68ad8af6799f052327940be257658e01",
+          "bytes": 717
+        }
+      ]
+    },
+    {
+      "revision": 24,
+      "actualizado": "2026-11-12T02:16:45.645638+00:00",
+      "estado": "para_revision",
+      "resultado": "Recibo saneado de perfiles observados; fuente 74c01ce.",
+      "comprobacion": "Salida real de 18 pruebas sobre 74c01ce adjunta a la tarea.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r11-e344b779.json",
+          "sha256": "021172ed4c6ebc76d31352bb31c2c0e83d4116168dcecf6a85f220465e6192f9",
+          "bytes": 313
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/PRUEBAS-coordinadora.txt",
+          "sha256": "5cfbf3d547a1f183b4e98264887e6bc697193629973af8ef0a6d1258c85953d0",
+          "bytes": 2385
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:13:39.826343+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-modelos-20261111",
+          "pid": 3941677,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886645",
+          "supervisor_pid": 3941665,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886625",
+          "rama": "(detached)",
+          "session_id": "01a1cd88-b79a-7950-aa18-d2b62b5ef352",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:14:10.725662+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "12c51daf3f74e0fbb3d67c9f302080bc60042509341a4072fd38b6f61c3b1386",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.veredicto.json",
+          "fin": "2026-11-12T02:14:55.773723+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-con-evidencia-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-3",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T02:16:45.622516+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "068f89e65dc4485037f270c1124c41b5c6c8b494209a047ebbbc4cf94235087e",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+        "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+        "ramas_origin": [
+          "origin/codex/ws-recibo-modelos-harness-20261111"
+        ],
+        "fecha": "2026-11-12T02:16:40.581189+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-2-02c999dc.json",
+          "sha256": "7014b83aa72b2fc106edb049fc89735e68ad8af6799f052327940be257658e01",
+          "bytes": 717
+        }
+      ]
+    },
+    {
+      "revision": 25,
+      "actualizado": "2026-11-12T02:16:45.888530+00:00",
+      "estado": "para_revision",
+      "resultado": "Recibo saneado de perfiles observados; fuente 74c01ce.",
+      "comprobacion": "Salida real de 18 pruebas sobre 74c01ce adjunta a la tarea.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r11-e344b779.json",
+          "sha256": "021172ed4c6ebc76d31352bb31c2c0e83d4116168dcecf6a85f220465e6192f9",
+          "bytes": 313
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/PRUEBAS-coordinadora.txt",
+          "sha256": "5cfbf3d547a1f183b4e98264887e6bc697193629973af8ef0a6d1258c85953d0",
+          "bytes": 2385
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:13:39.826343+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-modelos-20261111",
+          "pid": 3941677,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886645",
+          "supervisor_pid": 3941665,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886625",
+          "rama": "(detached)",
+          "session_id": "01a1cd88-b79a-7950-aa18-d2b62b5ef352",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:14:10.725662+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "12c51daf3f74e0fbb3d67c9f302080bc60042509341a4072fd38b6f61c3b1386",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.veredicto.json",
+          "fin": "2026-11-12T02:14:55.773723+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-con-evidencia-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 3959964,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902121",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-3",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T02:16:45.622516+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "068f89e65dc4485037f270c1124c41b5c6c8b494209a047ebbbc4cf94235087e",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+        "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+        "ramas_origin": [
+          "origin/codex/ws-recibo-modelos-harness-20261111"
+        ],
+        "fecha": "2026-11-12T02:16:40.581189+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-2-02c999dc.json",
+          "sha256": "7014b83aa72b2fc106edb049fc89735e68ad8af6799f052327940be257658e01",
+          "bytes": 717
+        }
+      ]
+    },
+    {
+      "revision": 26,
+      "actualizado": "2026-11-12T02:16:46.100427+00:00",
+      "estado": "para_revision",
+      "resultado": "Recibo saneado de perfiles observados; fuente 74c01ce.",
+      "comprobacion": "Salida real de 18 pruebas sobre 74c01ce adjunta a la tarea.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r11-e344b779.json",
+          "sha256": "021172ed4c6ebc76d31352bb31c2c0e83d4116168dcecf6a85f220465e6192f9",
+          "bytes": 313
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/PRUEBAS-coordinadora.txt",
+          "sha256": "5cfbf3d547a1f183b4e98264887e6bc697193629973af8ef0a6d1258c85953d0",
+          "bytes": 2385
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:13:39.826343+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-modelos-20261111",
+          "pid": 3941677,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886645",
+          "supervisor_pid": 3941665,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886625",
+          "rama": "(detached)",
+          "session_id": "01a1cd88-b79a-7950-aa18-d2b62b5ef352",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:14:10.725662+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "12c51daf3f74e0fbb3d67c9f302080bc60042509341a4072fd38b6f61c3b1386",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.veredicto.json",
+          "fin": "2026-11-12T02:14:55.773723+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-con-evidencia-20261111",
+          "pid": 3959966,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902141",
+          "supervisor_pid": 3959964,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902121",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-3",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T02:16:45.622516+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "068f89e65dc4485037f270c1124c41b5c6c8b494209a047ebbbc4cf94235087e",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+        "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+        "ramas_origin": [
+          "origin/codex/ws-recibo-modelos-harness-20261111"
+        ],
+        "fecha": "2026-11-12T02:16:40.581189+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-2-02c999dc.json",
+          "sha256": "7014b83aa72b2fc106edb049fc89735e68ad8af6799f052327940be257658e01",
+          "bytes": 717
+        }
+      ]
+    },
+    {
+      "revision": 27,
+      "actualizado": "2026-11-12T02:16:46.832685+00:00",
+      "estado": "para_revision",
+      "resultado": "Recibo saneado de perfiles observados; fuente 74c01ce.",
+      "comprobacion": "Salida real de 18 pruebas sobre 74c01ce adjunta a la tarea.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r11-e344b779.json",
+          "sha256": "021172ed4c6ebc76d31352bb31c2c0e83d4116168dcecf6a85f220465e6192f9",
+          "bytes": 313
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/PRUEBAS-coordinadora.txt",
+          "sha256": "5cfbf3d547a1f183b4e98264887e6bc697193629973af8ef0a6d1258c85953d0",
+          "bytes": 2385
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:13:39.826343+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-modelos-20261111",
+          "pid": 3941677,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886645",
+          "supervisor_pid": 3941665,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886625",
+          "rama": "(detached)",
+          "session_id": "01a1cd88-b79a-7950-aa18-d2b62b5ef352",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:14:10.725662+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "12c51daf3f74e0fbb3d67c9f302080bc60042509341a4072fd38b6f61c3b1386",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.veredicto.json",
+          "fin": "2026-11-12T02:14:55.773723+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-con-evidencia-20261111",
+          "pid": 3959966,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902141",
+          "supervisor_pid": 3959964,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902121",
+          "rama": "(detached)",
+          "session_id": "01a1cd8b-14e6-7131-8e38-10990344a50c",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-3",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T02:16:45.622516+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "068f89e65dc4485037f270c1124c41b5c6c8b494209a047ebbbc4cf94235087e",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+        "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+        "ramas_origin": [
+          "origin/codex/ws-recibo-modelos-harness-20261111"
+        ],
+        "fecha": "2026-11-12T02:16:40.581189+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-2-02c999dc.json",
+          "sha256": "7014b83aa72b2fc106edb049fc89735e68ad8af6799f052327940be257658e01",
+          "bytes": 717
+        }
+      ]
+    },
+    {
+      "revision": 28,
+      "actualizado": "2026-11-12T02:16:50.351715+00:00",
+      "estado": "para_revision",
+      "resultado": "Recibo saneado de perfiles observados; fuente 74c01ce.",
+      "comprobacion": "Salida real de 18 pruebas sobre 74c01ce adjunta a la tarea.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r11-e344b779.json",
+          "sha256": "021172ed4c6ebc76d31352bb31c2c0e83d4116168dcecf6a85f220465e6192f9",
+          "bytes": 313
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/PRUEBAS-coordinadora.txt",
+          "sha256": "5cfbf3d547a1f183b4e98264887e6bc697193629973af8ef0a6d1258c85953d0",
+          "bytes": 2385
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:13:39.826343+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-modelos-20261111",
+          "pid": 3941677,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886645",
+          "supervisor_pid": 3941665,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886625",
+          "rama": "(detached)",
+          "session_id": "01a1cd88-b79a-7950-aa18-d2b62b5ef352",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:14:10.725662+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "12c51daf3f74e0fbb3d67c9f302080bc60042509341a4072fd38b6f61c3b1386",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.veredicto.json",
+          "fin": "2026-11-12T02:14:55.773723+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-con-evidencia-20261111",
+          "pid": 3959966,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902141",
+          "supervisor_pid": 3959964,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902121",
+          "rama": "(detached)",
+          "session_id": "01a1cd8b-14e6-7131-8e38-10990344a50c",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-3",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T02:16:45.622516+00:00",
+          "rc": null,
+          "ultimo_evento": "turn.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "068f89e65dc4485037f270c1124c41b5c6c8b494209a047ebbbc4cf94235087e",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+        "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+        "ramas_origin": [
+          "origin/codex/ws-recibo-modelos-harness-20261111"
+        ],
+        "fecha": "2026-11-12T02:16:40.581189+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-2-02c999dc.json",
+          "sha256": "7014b83aa72b2fc106edb049fc89735e68ad8af6799f052327940be257658e01",
+          "bytes": 717
+        }
+      ]
+    },
+    {
+      "revision": 29,
+      "actualizado": "2026-11-12T02:16:59.027247+00:00",
+      "estado": "para_revision",
+      "resultado": "Recibo saneado de perfiles observados; fuente 74c01ce.",
+      "comprobacion": "Salida real de 18 pruebas sobre 74c01ce adjunta a la tarea.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r11-e344b779.json",
+          "sha256": "021172ed4c6ebc76d31352bb31c2c0e83d4116168dcecf6a85f220465e6192f9",
+          "bytes": 313
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/PRUEBAS-coordinadora.txt",
+          "sha256": "5cfbf3d547a1f183b4e98264887e6bc697193629973af8ef0a6d1258c85953d0",
+          "bytes": 2385
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:13:39.826343+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-modelos-20261111",
+          "pid": 3941677,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886645",
+          "supervisor_pid": 3941665,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886625",
+          "rama": "(detached)",
+          "session_id": "01a1cd88-b79a-7950-aa18-d2b62b5ef352",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:14:10.725662+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "12c51daf3f74e0fbb3d67c9f302080bc60042509341a4072fd38b6f61c3b1386",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.veredicto.json",
+          "fin": "2026-11-12T02:14:55.773723+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-con-evidencia-20261111",
+          "pid": 3959966,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902141",
+          "supervisor_pid": 3959964,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902121",
+          "rama": "(detached)",
+          "session_id": "01a1cd8b-14e6-7131-8e38-10990344a50c",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-3",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T02:16:45.622516+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "068f89e65dc4485037f270c1124c41b5c6c8b494209a047ebbbc4cf94235087e",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+        "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+        "ramas_origin": [
+          "origin/codex/ws-recibo-modelos-harness-20261111"
+        ],
+        "fecha": "2026-11-12T02:16:40.581189+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-2-02c999dc.json",
+          "sha256": "7014b83aa72b2fc106edb049fc89735e68ad8af6799f052327940be257658e01",
+          "bytes": 717
+        }
+      ]
+    },
+    {
+      "revision": 30,
+      "actualizado": "2026-11-12T02:17:24.116005+00:00",
+      "estado": "para_revision",
+      "resultado": "Recibo saneado de perfiles observados; fuente 74c01ce.",
+      "comprobacion": "Salida real de 18 pruebas sobre 74c01ce adjunta a la tarea.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r11-e344b779.json",
+          "sha256": "021172ed4c6ebc76d31352bb31c2c0e83d4116168dcecf6a85f220465e6192f9",
+          "bytes": 313
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/PRUEBAS-coordinadora.txt",
+          "sha256": "5cfbf3d547a1f183b4e98264887e6bc697193629973af8ef0a6d1258c85953d0",
+          "bytes": 2385
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:13:39.826343+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-modelos-20261111",
+          "pid": 3941677,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886645",
+          "supervisor_pid": 3941665,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886625",
+          "rama": "(detached)",
+          "session_id": "01a1cd88-b79a-7950-aa18-d2b62b5ef352",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:14:10.725662+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "12c51daf3f74e0fbb3d67c9f302080bc60042509341a4072fd38b6f61c3b1386",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.veredicto.json",
+          "fin": "2026-11-12T02:14:55.773723+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-con-evidencia-20261111",
+          "pid": 3959966,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902141",
+          "supervisor_pid": 3959964,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902121",
+          "rama": "(detached)",
+          "session_id": "01a1cd8b-14e6-7131-8e38-10990344a50c",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-3",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T02:16:45.622516+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "068f89e65dc4485037f270c1124c41b5c6c8b494209a047ebbbc4cf94235087e",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.veredicto.json",
+          "fin": "2026-11-12T02:17:24.088547+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+        "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+        "ramas_origin": [
+          "origin/codex/ws-recibo-modelos-harness-20261111"
+        ],
+        "fecha": "2026-11-12T02:16:40.581189+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-2-02c999dc.json",
+          "sha256": "7014b83aa72b2fc106edb049fc89735e68ad8af6799f052327940be257658e01",
+          "bytes": 717
+        }
+      ]
+    },
+    {
+      "revision": 31,
+      "actualizado": "2026-11-12T02:18:02.710590+00:00",
+      "estado": "para_revision",
+      "resultado": "Recibo saneado de perfiles observados; fuente 74c01ce.",
+      "comprobacion": "Salida real de 18 pruebas sobre 74c01ce adjunta a la tarea.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r11-e344b779.json",
+          "sha256": "021172ed4c6ebc76d31352bb31c2c0e83d4116168dcecf6a85f220465e6192f9",
+          "bytes": 313
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/PRUEBAS-coordinadora.txt",
+          "sha256": "5cfbf3d547a1f183b4e98264887e6bc697193629973af8ef0a6d1258c85953d0",
+          "bytes": 2385
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:13:39.826343+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-modelos-20261111",
+          "pid": 3941677,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886645",
+          "supervisor_pid": 3941665,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886625",
+          "rama": "(detached)",
+          "session_id": "01a1cd88-b79a-7950-aa18-d2b62b5ef352",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:14:10.725662+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "12c51daf3f74e0fbb3d67c9f302080bc60042509341a4072fd38b6f61c3b1386",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.veredicto.json",
+          "fin": "2026-11-12T02:14:55.773723+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-con-evidencia-20261111",
+          "pid": 3959966,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902141",
+          "supervisor_pid": 3959964,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902121",
+          "rama": "(detached)",
+          "session_id": "01a1cd8b-14e6-7131-8e38-10990344a50c",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-3",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T02:16:45.622516+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "068f89e65dc4485037f270c1124c41b5c6c8b494209a047ebbbc4cf94235087e",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.veredicto.json",
+          "fin": "2026-11-12T02:17:24.088547+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+        "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+        "ramas_origin": [
+          "origin/codex/ws-recibo-modelos-harness-20261111"
+        ],
+        "fecha": "2026-11-12T02:16:40.581189+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+        "criterio": "Diff contra fadc567 limitado a las dos rutas asignadas. Cumple stdlib, lectura del directorio explícito, selección de padres y descendientes, exclusión de contextos heredados, confirmación por thread_id y turn_id, tratamiento sin uso confirmado y JSON saneado. Leída la evidencia adjunta de 18 pruebas aprobadas y publicación en la rama asignada. La reproducción local quedó impedida por el sandbox sin directorio temporal escribible. Revisión estática sin defectos identificados. Sin cambios en archivos ni consulta de registros reales.",
+        "worktree_conservado": true,
+        "revisor": "revisor-recibo-con-evidencia-20261111",
+        "session_id": "01a1cd8b-14e6-7131-8e38-10990344a50c",
+        "entrega_sha256": "068f89e65dc4485037f270c1124c41b5c6c8b494209a047ebbbc4cf94235087e",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-3-1abe3133.json",
+          "sha256": "5f2b53ba0159be384f653d858d767a2836cff7de11292c22d6ba3dd66e7eb25b",
+          "bytes": 679
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-2-02c999dc.json",
+          "sha256": "7014b83aa72b2fc106edb049fc89735e68ad8af6799f052327940be257658e01",
+          "bytes": 717
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-3-1abe3133.json",
+          "sha256": "5f2b53ba0159be384f653d858d767a2836cff7de11292c22d6ba3dd66e7eb25b",
+          "bytes": 679
+        }
+      ]
+    },
+    {
+      "revision": 32,
+      "actualizado": "2026-11-12T02:18:03.003218+00:00",
+      "estado": "aceptado",
+      "resultado": "Recibo saneado de perfiles observados; fuente 74c01ce.",
+      "comprobacion": "Salida real de 18 pruebas sobre 74c01ce adjunta a la tarea.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r11-e344b779.json",
+          "sha256": "021172ed4c6ebc76d31352bb31c2c0e83d4116168dcecf6a85f220465e6192f9",
+          "bytes": 313
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/PRUEBAS-coordinadora.txt",
+          "sha256": "5cfbf3d547a1f183b4e98264887e6bc697193629973af8ef0a6d1258c85953d0",
+          "bytes": 2385
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      ],
+      "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+      "aceptacion": {
+        "revisor": "revisor-recibo-con-evidencia-20261111",
+        "criterio": "Recibo saneado y 18 casos verificados sobre la entrega exacta.",
+        "fecha": "2026-11-12T02:18:03.003198+00:00"
+      },
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:13:39.826343+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-modelos-20261111",
+          "pid": 3941677,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886645",
+          "supervisor_pid": 3941665,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218886625",
+          "rama": "(detached)",
+          "session_id": "01a1cd88-b79a-7950-aa18-d2b62b5ef352",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:14:10.725662+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "12c51daf3f74e0fbb3d67c9f302080bc60042509341a4072fd38b6f61c3b1386",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.veredicto.json",
+          "fin": "2026-11-12T02:14:55.773723+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-recibo-con-evidencia-20261111",
+          "pid": 3959966,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902141",
+          "supervisor_pid": 3959964,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902121",
+          "rama": "(detached)",
+          "session_id": "01a1cd8b-14e6-7131-8e38-10990344a50c",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-3",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T02:16:45.622516+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "068f89e65dc4485037f270c1124c41b5c6c8b494209a047ebbbc4cf94235087e",
+          "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.veredicto.json",
+          "fin": "2026-11-12T02:17:24.088547+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+        "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+        "ramas_origin": [
+          "origin/codex/ws-recibo-modelos-harness-20261111"
+        ],
+        "fecha": "2026-11-12T02:16:40.581189+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r22-b9da5bff.json",
+          "sha256": "2e8502050f55ca8d477234af08af710f51faf7b274b5efb6f06339f73ed847fa",
+          "bytes": 313
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+        "criterio": "Diff contra fadc567 limitado a las dos rutas asignadas. Cumple stdlib, lectura del directorio explícito, selección de padres y descendientes, exclusión de contextos heredados, confirmación por thread_id y turn_id, tratamiento sin uso confirmado y JSON saneado. Leída la evidencia adjunta de 18 pruebas aprobadas y publicación en la rama asignada. La reproducción local quedó impedida por el sandbox sin directorio temporal escribible. Revisión estática sin defectos identificados. Sin cambios en archivos ni consulta de registros reales.",
+        "worktree_conservado": true,
+        "revisor": "revisor-recibo-con-evidencia-20261111",
+        "session_id": "01a1cd8b-14e6-7131-8e38-10990344a50c",
+        "entrega_sha256": "068f89e65dc4485037f270c1124c41b5c6c8b494209a047ebbbc4cf94235087e",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-3-1abe3133.json",
+          "sha256": "5f2b53ba0159be384f653d858d767a2836cff7de11292c22d6ba3dd66e7eb25b",
+          "bytes": 679
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-2-02c999dc.json",
+          "sha256": "7014b83aa72b2fc106edb049fc89735e68ad8af6799f052327940be257658e01",
+          "bytes": 717
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-3-1abe3133.json",
+          "sha256": "5f2b53ba0159be384f653d858d767a2836cff7de11292c22d6ba3dd66e7eb25b",
+          "bytes": 679
+        }
+      ]
     }
   ],
   "briefing": {
@@ -1859,16 +3557,12 @@
     "bytes": 776,
     "contenido": "# recibo-modelos-harness-20261111\n\nLeé AGENTS y reglas. Implementá una herramienta stdlib de sólo lectura para un directorio de rollouts JSONL indicado por operador, dada una lista de SIDs padre. Leer session_meta para parent_thread_id y agent_path, turn_context para modelo/esfuerzo y token_usage_record para confirmar turno propio por thread_id y turn_id, sin contar contextos heredados. Aceptar logs sin token_usage_record: declarar no observado o diferenciar contexto de uso confirmado. Salida JSON saneada sólo IDs de hilos, padre, modelo, esfuerzo y alcance. No imprimir prompts, secretos o rutas privadas. Tests pequeños con fixtures propios; no inspecciones ni subas registros reales. Ejecutá pruebas, commit y push sólo a tu rama. Cero hijos, sin producción.\n"
   },
-  "aceptacion": null,
-  "asignacion": {
-    "responsable": "ejecutor-recibo-modelos-harness-20261111",
-    "rutas": [
-      "05-herramientas/scripts/perfiles_observados.py",
-      "05-herramientas/scripts/test_perfiles_observados.py"
-    ],
-    "revision_base": 1,
-    "fecha": "2026-11-12T02:10:30.474020+00:00"
+  "aceptacion": {
+    "revisor": "revisor-recibo-con-evidencia-20261111",
+    "criterio": "Recibo saneado y 18 casos verificados sobre la entrega exacta.",
+    "fecha": "2026-11-12T02:18:03.003198+00:00"
   },
+  "asignacion": null,
   "sesiones": [
     {
       "intento": 1,
@@ -1941,9 +3635,58 @@
       "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.schema.json",
       "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.2.veredicto.json",
       "fin": "2026-11-12T02:14:55.773723+00:00"
+    },
+    {
+      "intento": 3,
+      "rol": "revisor",
+      "responsable": "revisor-recibo-con-evidencia-20261111",
+      "pid": 3959966,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902141",
+      "supervisor_pid": 3959964,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218902121",
+      "rama": "(detached)",
+      "session_id": "01a1cd8b-14e6-7131-8e38-10990344a50c",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+      "log_rel": "logs/recibo-modelos-harness-20261111.revision-3.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111-revision-3",
+      "rutas": [
+        "05-herramientas/scripts/perfiles_observados.py",
+        "05-herramientas/scripts/test_perfiles_observados.py"
+      ],
+      "dry_run": false,
+      "commit_base": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.briefing.txt",
+      "inicio": "2026-11-12T02:16:45.622516+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "068f89e65dc4485037f270c1124c41b5c6c8b494209a047ebbbc4cf94235087e",
+      "schema": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.3.veredicto.json",
+      "fin": "2026-11-12T02:17:24.088547+00:00"
     }
   ],
-  "revision_independiente": null,
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+    "criterio": "Diff contra fadc567 limitado a las dos rutas asignadas. Cumple stdlib, lectura del directorio explícito, selección de padres y descendientes, exclusión de contextos heredados, confirmación por thread_id y turn_id, tratamiento sin uso confirmado y JSON saneado. Leída la evidencia adjunta de 18 pruebas aprobadas y publicación en la rama asignada. La reproducción local quedó impedida por el sandbox sin directorio temporal escribible. Revisión estática sin defectos identificados. Sin cambios en archivos ni consulta de registros reales.",
+    "worktree_conservado": true,
+    "revisor": "revisor-recibo-con-evidencia-20261111",
+    "session_id": "01a1cd8b-14e6-7131-8e38-10990344a50c",
+    "entrega_sha256": "068f89e65dc4485037f270c1124c41b5c6c8b494209a047ebbbc4cf94235087e",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-3-1abe3133.json",
+      "sha256": "5f2b53ba0159be384f653d858d767a2836cff7de11292c22d6ba3dd66e7eb25b",
+      "bytes": 679
+    }
+  },
   "cierre": {
     "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
     "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
@@ -1965,6 +3708,11 @@
       "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-2-02c999dc.json",
       "sha256": "7014b83aa72b2fc106edb049fc89735e68ad8af6799f052327940be257658e01",
       "bytes": 717
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/revision-3-1abe3133.json",
+      "sha256": "5f2b53ba0159be384f653d858d767a2836cff7de11292c22d6ba3dd66e7eb25b",
+      "bytes": 679
     }
   ]
 }
