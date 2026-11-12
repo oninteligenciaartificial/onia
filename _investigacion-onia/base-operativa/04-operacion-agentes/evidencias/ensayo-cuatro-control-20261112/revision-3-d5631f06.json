@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "f404b7baed668d430ffc20dfefd3d9edd62f32b8",
+  "criterio": "Dos fallos reproducidos en memoria, sin activar políticas ni enviar señales reales: (1) harness_ensayo.py:131-154: health no verifica procesos.json; con tres sesiones vivas admite la cuarta aunque el inventario falte o esté alterado. Debe comprobar integridad, permisos y presencia antes de admitir. (2) harness_ensayo.py:429-445: si faltan tanto estado.json como procesos.json después de un monitor previo, fin devuelve parado y escribe cierre exitoso. Debe distinguir preparación sin monitor de pérdida de documentos y bloquear esta última. Añadir regresiones para ambos fallos. Evidencia versionada 31/31 leída; sintaxis 6/6, diff --check y dos pruebas en memoria correctos. La suite con temporales no pudo reproducirse por el sandbox de sólo lectura.",
+  "worktree_conservado": true
+}
