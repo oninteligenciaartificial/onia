@@ -68,6 +68,8 @@ Retomar comienza por la vista breve; consultar historial o --completo sólo cuan
 
 Delegar partes independientes con objetivo, entradas, entregable, comprobación y archivos asignados. Cada archivo y configuración tiene un único escritor. Los subagentes internos y los chats persistentes son mecanismos distintos; comprobar herramientas y autorización para cada uno. Un mensaje de “terminado” no sustituye la evidencia.
 
+La sesión ejecutora prepara su entorno y corre el encargo. La coordinadora verifica dependencias, comprueba la entrega e integra según el dictamen. Antes de asignar una ruta con conflicto, comprobar el estado y las sesiones del encargo que la reservó. Si ya terminó o quedó pospuesto y corresponde liberarla, hacerlo con la revisión esperada y el actor responsable.
+
 Centralizar preguntas y decisiones en el chat de coordinación del encargo. Las autorizaciones nativas pueden quedar ancladas al chat que invoca la herramienta; no prometer moverlas ni accionarlas por Sergio. La existencia de un chat o una preferencia móvil no acredita push o programación.
 
 El ejecutor prepara evidencia y deja `para_revision` únicamente con comprobación declarada correcta. El revisor coteja el resultado con la aceptación y usa `aceptar` de forma explícita. Cada mutación exige la revisión esperada; si cambió, retomar y reconciliar antes de escribir. Los nombres de revisor y comprobaciones son declaraciones auditables, no autenticación ni garantía automática de calidad.
@@ -81,6 +83,8 @@ Seguir [CONTINUIDAD](../05-herramientas/cloud/CONTINUIDAD.md) para comandos, rec
 Conservar evidencia por revisión sin sobrescribirla. Ante alteración o pérdida, recuperar los bytes originales desde la entrega publicada; no recalcular hashes para ocultar el fallo. Si se interrumpió la proyección del briefing, `recuperar` puede reconstruir sólo el Markdown ausente desde el JSON íntegro. Un lock abandonado requiere verificar primero que ya no haya un escritor activo.
 
 Actualizar [ESTADO](../00-MAPA/ESTADO.md) cuando cambien capacidades o hitos, con evidencia y límites. No reescribir la historia como si una prueba anterior validara el código actual. La [guía móvil](../05-herramientas/cloud/MOVIL.md) explica el acceso; el uso real del teléfono se acredita por separado.
+
+Para cerrar por el despachador, cotejar el commit de la entrega. Registrar la comprobación con el hash canónico del manifiesto y la fecha de observación. En una prueba de continuidad, observar el efecto de una pasada y verificar que la siguiente reconozca el estado sin repetirlo. Si el criterio exige acceso desde un cliente, ejecución en un servicio real o persistencia tras reinicio, comprobar en ese entorno. [Casos de continuidad y venta](registro-de-errores.md#continuidad-y-venta-del-workshop--turno-del-11-al-12-de-noviembre-de-2026).
 
 Aplicar mejorar-sistema a correcciones observadas, evaluar-catalogo-skills a selección de candidatos y continuidad-de-trabajo a traspasos. Esta mejora de instrucciones no crea un scheduler ni entrenamiento del modelo.
 
