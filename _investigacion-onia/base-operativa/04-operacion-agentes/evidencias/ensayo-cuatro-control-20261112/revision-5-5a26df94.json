@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "6e1d8d375dfd9024d41e384f7e2133987ba7bb62",
+  "criterio": "P1 — harness_ensayo.py:496–511: el monitor activo sobrescribe inventario y estado sin verificar su integridad anterior. Reproducido en memoria: alterar procesos.json, estado.json o el recibo vigente bloquea health(), pero el siguiente ciclo publica documentos nuevos y health() vuelve a permitir admisión sin STOP. Incumple el rechazo de datos alterados. Validar los documentos anteriores antes de reemplazarlos, conservar la evidencia y mantener el bloqueo ante alteración o pérdida; añadir regresiones durante la ejecución del monitor. Leída evidencia de 34/34; comprobados independientemente tres tests sin escritura, sintaxis de seis archivos y diff --check. Suite completa no reproducida por el entorno de sólo lectura. Sin activar ensayo ni modificar archivos.",
+  "worktree_conservado": true
+}
