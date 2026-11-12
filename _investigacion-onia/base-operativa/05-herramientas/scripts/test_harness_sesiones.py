@@ -8,7 +8,7 @@ import sys
 import tempfile
 import time
 import unittest
-from unittest.mock import patch
+from unittest.mock import mock_open, patch
 
 import harness
 import harness_sesiones as sessions
@@ -100,6 +100,25 @@ assert git('ls-remote', 'origin', 'refs/heads/' + branch).split()[0] == head
 assert not git('status', '--porcelain')
 print(json.dumps({'type': 'turn.completed'}), flush=True)
 '''
+
+
+class ProcessStartTests(unittest.TestCase):
+    def test_process_disappears_after_stat_is_opened(self):
+        reader = mock_open()
+        reader.return_value.read.side_effect = ProcessLookupError(3, 'No such process')
+        with patch.object(Path, 'open', reader):
+            self.assertIsNone(sessions.process_start(12345))
+            self.assertFalse(sessions.alive({'pid': 12345, 'pid_inicio': 'boot:123'}))
+        self.assertEqual(reader.return_value.read.call_count, 2)
+
+    def test_other_os_errors_propagate(self):
+        for error in (PermissionError(13, 'Permission denied'), OSError(5, 'Input/output error')):
+            with self.subTest(error=type(error).__name__):
+                reader = mock_open()
+                reader.return_value.read.side_effect = error
+                with patch.object(Path, 'open', reader), self.assertRaises(type(error)) as raised:
+                    sessions.process_start(12345)
+                self.assertIs(raised.exception, error)
 
 
 class SessionTests(unittest.TestCase):
