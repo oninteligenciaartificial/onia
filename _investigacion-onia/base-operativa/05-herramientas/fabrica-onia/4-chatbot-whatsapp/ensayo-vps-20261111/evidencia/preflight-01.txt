@@ -1,0 +1,11 @@
+Comando (desde la raíz del checkout):
+python3 -B _investigacion-onia/base-operativa/05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-vps-20261111/comprobar.py
+
+Salida de stderr del primer intento, antes de iniciar ningún proceso HTTP:
+  File "<checkout>/_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-vps-20261111/comprobar.py", line 128
+    [payload_qr["type"], payload_qr["image"]["id"])
+                                                  ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '['
+
+Código de salida: 1. Se sustituyó únicamente la raíz absoluta por <checkout>.
+Corrección: cerrar la lista del valor observado antes de cerrar cotejar().
