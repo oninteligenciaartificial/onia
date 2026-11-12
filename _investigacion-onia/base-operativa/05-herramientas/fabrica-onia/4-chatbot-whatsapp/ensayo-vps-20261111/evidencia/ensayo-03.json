@@ -1,0 +1,758 @@
+{
+  "fecha_utc": "2026-11-12T02:48:44.321511+00:00",
+  "modo": "HTTP_loopback_y_TLS_nginx_temporal",
+  "python": "3.12.3",
+  "n8n_invocado": false,
+  "graph_invocado": false,
+  "envios_reales": 0,
+  "pagos_reales": 0,
+  "reloj_ficticio": 1794441600,
+  "casos": [
+    {
+      "caso": "bind exclusivamente loopback",
+      "esperado": "127.0.0.1",
+      "observado": "127.0.0.1"
+    },
+    {
+      "caso": "bandera de envío deshabilitada",
+      "esperado": false,
+      "observado": false
+    },
+    {
+      "caso": "permisos directorio/config/SQLite",
+      "esperado": [
+        448,
+        384,
+        384
+      ],
+      "observado": [
+        448,
+        384,
+        384
+      ]
+    },
+    {
+      "caso": "challenge exacto con ceros",
+      "esperado": [
+        200,
+        "00123"
+      ],
+      "observado": [
+        200,
+        "00123"
+      ]
+    },
+    {
+      "caso": "token incorrecto",
+      "esperado": 403,
+      "observado": 403
+    },
+    {
+      "caso": "challenge repetido",
+      "esperado": 403,
+      "observado": 403
+    },
+    {
+      "caso": "HMAC de bytes con espacios y UTF-8",
+      "esperado": [
+        200,
+        {
+          "nuevos": 2
+        }
+      ],
+      "observado": [
+        200,
+        {
+          "nuevos": 2
+        }
+      ]
+    },
+    {
+      "caso": "entrada repetida",
+      "esperado": [
+        200,
+        {
+          "nuevos": 0
+        }
+      ],
+      "observado": [
+        200,
+        {
+          "nuevos": 0
+        }
+      ]
+    },
+    {
+      "caso": "reeserializar con firma anterior se rechaza",
+      "esperado": [
+        403,
+        {
+          "error": "FIRMA_RECHAZADA"
+        }
+      ],
+      "observado": [
+        403,
+        {
+          "error": "FIRMA_RECHAZADA"
+        }
+      ]
+    },
+    {
+      "caso": "firma ausente",
+      "esperado": 403,
+      "observado": 403
+    },
+    {
+      "caso": "JSON inválido aun con HMAC válida",
+      "esperado": 400,
+      "observado": 400
+    },
+    {
+      "caso": "lote mixto no se escribe parcialmente",
+      "esperado": 400,
+      "observado": 400
+    },
+    {
+      "caso": "phone_number_id ajeno",
+      "esperado": 403,
+      "observado": 403
+    },
+    {
+      "caso": "rechazos no agregan vistos",
+      "esperado": [
+        [
+          2
+        ]
+      ],
+      "observado": [
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "caso": "info encolada una sola vez",
+      "esperado": [
+        [
+          1
+        ]
+      ],
+      "observado": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "caso": "inscripción GRUPAL",
+      "esperado": [
+        200,
+        {
+          "nuevos": 1
+        }
+      ],
+      "observado": [
+        200,
+        {
+          "nuevos": 1
+        }
+      ]
+    },
+    {
+      "caso": "estado pendiente",
+      "esperado": [
+        [
+          "pendiente",
+          "grupal"
+        ]
+      ],
+      "observado": [
+        [
+          "pendiente",
+          "grupal"
+        ]
+      ]
+    },
+    {
+      "caso": "QR encolado único",
+      "esperado": [
+        [
+          1
+        ]
+      ],
+      "observado": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "caso": "QR simulado renderizado por adaptador",
+      "esperado": [
+        "image",
+        "000001"
+      ],
+      "observado": [
+        "image",
+        "000001"
+      ]
+    },
+    {
+      "caso": "captura recibida",
+      "esperado": [
+        200,
+        {
+          "nuevos": 1
+        }
+      ],
+      "observado": [
+        200,
+        {
+          "nuevos": 1
+        }
+      ]
+    },
+    {
+      "caso": "captura conserva pendiente",
+      "esperado": [
+        [
+          "pendiente",
+          "COMPROBANTE_NO_VERIFICADO"
+        ]
+      ],
+      "observado": [
+        [
+          "pendiente",
+          "COMPROBANTE_NO_VERIFICADO"
+        ]
+      ]
+    },
+    {
+      "caso": "captura no genera acceso",
+      "esperado": [
+        [
+          0
+        ]
+      ],
+      "observado": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "caso": "operador sin autenticación",
+      "esperado": 401,
+      "observado": 401
+    },
+    {
+      "caso": "dispatcher no revisa pagos",
+      "esperado": 401,
+      "observado": 401
+    },
+    {
+      "caso": "bandeja privada autenticada",
+      "esperado": [
+        200,
+        "COMPROBANTE_NO_VERIFICADO"
+      ],
+      "observado": [
+        200,
+        "COMPROBANTE_NO_VERIFICADO"
+      ]
+    },
+    {
+      "caso": "dispatcher no confirma",
+      "esperado": 401,
+      "observado": 401
+    },
+    {
+      "caso": "conciliación incompleta",
+      "esperado": [
+        409,
+        {
+          "resultado": "CONCILIACION_INCOMPLETA"
+        }
+      ],
+      "observado": [
+        409,
+        {
+          "resultado": "CONCILIACION_INCOMPLETA"
+        }
+      ]
+    },
+    {
+      "caso": "confirmación manual simulada",
+      "esperado": [
+        200,
+        {
+          "resultado": "confirmado"
+        }
+      ],
+      "observado": [
+        200,
+        {
+          "resultado": "confirmado"
+        }
+      ]
+    },
+    {
+      "caso": "confirmación repetida",
+      "esperado": [
+        200,
+        {
+          "resultado": "ya_confirmado"
+        }
+      ],
+      "observado": [
+        200,
+        {
+          "resultado": "ya_confirmado"
+        }
+      ]
+    },
+    {
+      "caso": "acceso encolado único",
+      "esperado": [
+        [
+          1
+        ]
+      ],
+      "observado": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "caso": "acceso renderizado con tres enlaces ficticios",
+      "esperado": 3,
+      "observado": 3
+    },
+    {
+      "caso": "despacho rechazado: sin credencial",
+      "esperado": [
+        409,
+        {
+          "error": "ENVIOS_DESHABILITADOS"
+        }
+      ],
+      "observado": [
+        409,
+        {
+          "error": "ENVIOS_DESHABILITADOS"
+        }
+      ]
+    },
+    {
+      "caso": "despacho rechazado: operador",
+      "esperado": [
+        409,
+        {
+          "error": "ENVIOS_DESHABILITADOS"
+        }
+      ],
+      "observado": [
+        409,
+        {
+          "error": "ENVIOS_DESHABILITADOS"
+        }
+      ]
+    },
+    {
+      "caso": "despacho rechazado: dispatcher",
+      "esperado": [
+        409,
+        {
+          "error": "ENVIOS_DESHABILITADOS"
+        }
+      ],
+      "observado": [
+        409,
+        {
+          "error": "ENVIOS_DESHABILITADOS"
+        }
+      ]
+    },
+    {
+      "caso": "ninguna salida aceptada ni incierta",
+      "esperado": [
+        [
+          0
+        ]
+      ],
+      "observado": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "caso": "adaptador primer proceso termina limpiamente",
+      "esperado": 0,
+      "observado": 0
+    },
+    {
+      "caso": "guardia de egreso primer proceso",
+      "esperado": [
+        0,
+        0
+      ],
+      "observado": [
+        0,
+        0
+      ]
+    },
+    {
+      "caso": "duplicado tras reinicio",
+      "esperado": [
+        200,
+        {
+          "nuevos": 0
+        }
+      ],
+      "observado": [
+        200,
+        {
+          "nuevos": 0
+        }
+      ]
+    },
+    {
+      "caso": "acceso único tras reinicio",
+      "esperado": [
+        [
+          1
+        ]
+      ],
+      "observado": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "caso": "creación de certificado ficticio",
+      "esperado": 0,
+      "observado": 0
+    },
+    {
+      "caso": "nginx -t del archivo propio",
+      "esperado": 0,
+      "observado": 0
+    },
+    {
+      "caso": "challenge por TLS con certificado verificado",
+      "esperado": [
+        200,
+        "00123"
+      ],
+      "observado": [
+        200,
+        "00123"
+      ]
+    },
+    {
+      "caso": "HMAC de bytes conservados por nginx",
+      "esperado": [
+        200,
+        {
+          "nuevos": 1
+        }
+      ],
+      "observado": [
+        200,
+        {
+          "nuevos": 1
+        }
+      ]
+    },
+    {
+      "caso": "replay por proxy",
+      "esperado": [
+        200,
+        {
+          "nuevos": 0
+        }
+      ],
+      "observado": [
+        200,
+        {
+          "nuevos": 0
+        }
+      ]
+    },
+    {
+      "caso": "bytes alterados por proxy se rechazan",
+      "esperado": 403,
+      "observado": 403
+    },
+    {
+      "caso": "proxy rechaza PUT",
+      "esperado": 405,
+      "observado": 405
+    },
+    {
+      "caso": "proxy aísla /operador/revisar",
+      "esperado": 404,
+      "observado": 404
+    },
+    {
+      "caso": "proxy aísla /operador/confirmar",
+      "esperado": 404,
+      "observado": 404
+    },
+    {
+      "caso": "proxy aísla /operador/despachar",
+      "esperado": 404,
+      "observado": 404
+    },
+    {
+      "caso": "proxy aísla /meta/../operador/revisar",
+      "esperado": 404,
+      "observado": 404
+    },
+    {
+      "caso": "proxy aísla /meta%2f..%2foperador%2frevisar",
+      "esperado": 404,
+      "observado": 404
+    },
+    {
+      "caso": "proxy aísla //operador/revisar",
+      "esperado": 404,
+      "observado": 404
+    },
+    {
+      "caso": "proxy aísla /meta/operador/revisar",
+      "esperado": 404,
+      "observado": 404
+    },
+    {
+      "caso": "proxy aísla /meta/",
+      "esperado": 404,
+      "observado": 404
+    },
+    {
+      "caso": "proxy aísla /",
+      "esperado": 404,
+      "observado": 404
+    },
+    {
+      "caso": "proxy bloquea POST /operador/confirmar",
+      "esperado": 404,
+      "observado": 404
+    },
+    {
+      "caso": "proxy bloquea POST /operador/despachar",
+      "esperado": 404,
+      "observado": 404
+    },
+    {
+      "caso": "operador sigue disponible sólo por origen privado",
+      "esperado": 200,
+      "observado": 200
+    },
+    {
+      "caso": "workflow inactivo",
+      "esperado": false,
+      "observado": false
+    },
+    {
+      "caso": "sólo trigger manual y HTTP Request",
+      "esperado": [
+        "n8n-nodes-base.manualTrigger",
+        "n8n-nodes-base.httpRequest"
+      ],
+      "observado": [
+        "n8n-nodes-base.manualTrigger",
+        "n8n-nodes-base.httpRequest"
+      ]
+    },
+    {
+      "caso": "despacho POST sin cuerpo ni reintento",
+      "esperado": [
+        "POST",
+        false,
+        false
+      ],
+      "observado": [
+        "POST",
+        false,
+        false
+      ]
+    },
+    {
+      "caso": "sin redirecciones",
+      "esperado": false,
+      "observado": false
+    },
+    {
+      "caso": "credenciales sin vincular",
+      "esperado": false,
+      "observado": false
+    },
+    {
+      "caso": "origen privado parametrizado",
+      "esperado": true,
+      "observado": true
+    },
+    {
+      "caso": "no guarda ejecuciones manuales",
+      "esperado": false,
+      "observado": false
+    },
+    {
+      "caso": "nginx temporal termina limpiamente",
+      "esperado": 0,
+      "observado": 0
+    },
+    {
+      "caso": "adaptador retoma termina limpiamente",
+      "esperado": 0,
+      "observado": 0
+    },
+    {
+      "caso": "guardia de egreso retoma",
+      "esperado": [
+        0,
+        0
+      ],
+      "observado": [
+        0,
+        0
+      ]
+    },
+    {
+      "caso": "ninguna credencial en logs",
+      "esperado": false,
+      "observado": false
+    },
+    {
+      "caso": "ningún listener propio queda abierto",
+      "esperado": [
+        false,
+        false
+      ],
+      "observado": [
+        false,
+        false
+      ]
+    },
+    {
+      "caso": "rechazo de arranque: envíos habilitados",
+      "esperado": 2,
+      "observado": 2
+    },
+    {
+      "caso": "rechazo de arranque: reloj con config distinta",
+      "esperado": 2,
+      "observado": 2
+    },
+    {
+      "caso": "flag de envío inexistente",
+      "esperado": 2,
+      "observado": 2
+    }
+  ],
+  "comandos_internos": [
+    {
+      "nombre": "adaptador",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "<entrega>/arrancar.py",
+        "--config",
+        "<temporal>/config.json",
+        "--puerto",
+        "0",
+        "--reloj-ficticio"
+      ]
+    },
+    {
+      "nombre": "adaptador-retoma",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "<entrega>/arrancar.py",
+        "--config",
+        "<temporal>/config.json",
+        "--puerto",
+        "0",
+        "--reloj-ficticio"
+      ]
+    },
+    {
+      "nombre": "certificado_ficticio",
+      "argv": [
+        "/usr/bin/openssl",
+        "req",
+        "-x509",
+        "-newkey",
+        "rsa:2048",
+        "-nodes",
+        "-days",
+        "1",
+        "-keyout",
+        "<temporal>/fixture.key",
+        "-out",
+        "<temporal>/fixture.crt",
+        "-subj",
+        "/CN=ensayo.invalid",
+        "-addext",
+        "subjectAltName=IP:127.0.0.1,DNS:ensayo.invalid"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ".....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*....+............+...+....+...+.................+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*..........+...........+...+...+.......+..+.............+..+.+..............+.........+....+...+.........+.....+....+......+.....+....+..+.........+......+.........+.........+....+.....+.......+...+...........+.+......+........+.+...+......+.....+.+......+...+..+...+.......+..+..........+..+....+.....+.........+.+..+...............+....+...+......+.....+......+.........+.+......+.....+...+.........+............+...............+.+.........+.....+......+..........+...............+..+......................+.....+.+............+...........+......+..........+...+.....+......+.........+...+...+.+.....+.+...+.....+..........+..............+.............+............+..+.+..+.+..............+...............+.......+...+..+..................+.+.....+......+..........+.........+..+.........+....+..+....+...+..+..........+........+.+.....+....+..+.+..+.+......+......+..............+.+..+.......+.....+......+...+....+.....+...+....+........+.+..+...+.+...........+.......+......+..............+...+.......+........+.........+....+..+.........+..........+........+.+.....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n.+.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*...........+..+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.........+............+..+.+..+............+.+..+.......+......+.....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n-----\n"
+    },
+    {
+      "nombre": "nginx_sintaxis",
+      "argv": [
+        "/usr/sbin/nginx",
+        "-p",
+        "<temporal>/",
+        "-c",
+        "<temporal>/nginx.conf",
+        "-e",
+        "stderr",
+        "-t"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": "nginx: the configuration file <temporal>/nginx.conf syntax is ok\nnginx: configuration file <temporal>/nginx.conf test is successful\n"
+    },
+    {
+      "nombre": "nginx",
+      "argv": [
+        "/usr/sbin/nginx",
+        "-p",
+        "<temporal>/",
+        "-c",
+        "<temporal>/nginx.conf",
+        "-e",
+        "stderr"
+      ]
+    },
+    {
+      "nombre": "adaptador_salida",
+      "stdout_stderr": "{\"evento\": \"listo\", \"host\": \"127.0.0.1\", \"puerto\": 45545, \"envios_habilitados\": false, \"reloj_ficticio\": true}\n{\"evento\": \"detenido\", \"conexiones_salientes_intentadas\": 0, \"transporte_invocado\": 0}\n"
+    },
+    {
+      "nombre": "adaptador-retoma_salida",
+      "stdout_stderr": "{\"evento\": \"listo\", \"host\": \"127.0.0.1\", \"puerto\": 44451, \"envios_habilitados\": false, \"reloj_ficticio\": true}\n{\"evento\": \"detenido\", \"conexiones_salientes_intentadas\": 0, \"transporte_invocado\": 0}\n"
+    },
+    {
+      "nombre": "nginx_salida",
+      "stdout_stderr": ""
+    }
+  ],
+  "resultado": "correcto",
+  "procesos_propios_vivos": 0,
+  "total_casos": 73,
+  "sha256_fuentes_reutilizadas": {
+    "adaptador.py": "92ddea050c87d281ad74a9a6bf86a79d1039989c4d2f9887846fded3d4a0cbfc",
+    "motor.cjs": "a4436cc3fde80be3911a30a881c4aa79afe62c703db6b168895383a200a44304",
+    "mensajes.json": "47586b58a0136cedc83126b0eee955468496ca64a1e24e01839c1462f9a619f7",
+    "workflow-despacho-n8n.json": "62567c0267b82c2725091ecfa6c7ddc9e6c86f65ef2b82964d928dcf36e39b49"
+  }
+}
