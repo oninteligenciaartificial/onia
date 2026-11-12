@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "5d2f9f994f98f2f61a7aa0549d78f28b95d32781",
+  "criterio": "P1 en harness_ensayo.py, líneas 480–508. Si desaparece estado.json después de una muestra, monitor permite reiniciarse y sobrescribe procesos.json partiendo de un inventario vacío. Reproduje en memoria que descarta una identidad todavía viva y vuelve a habilitar la admisión. Debe bloquear ante documentos incompletos o evidencia de un monitor anterior, conservar el inventario y añadir esta regresión. Sintaxis de seis archivos y 18 controles en memoria correctos. La suite de 33 pruebas quedó impedida por la creación de temporales en el sandbox de sólo lectura. Worktree limpio.",
+  "worktree_conservado": true
+}
