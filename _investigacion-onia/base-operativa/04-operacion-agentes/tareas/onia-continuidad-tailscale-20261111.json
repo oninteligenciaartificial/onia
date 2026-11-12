@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "id": "onia-continuidad-tailscale-20261111",
-  "revision": 18,
+  "revision": 27,
   "compartible": true,
   "objetivo": "Cerrar la dependencia de arranque manual del Tailscale del VPS que comparten panel y homelab.",
-  "estado": "para_revision",
-  "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+  "estado": "aceptado",
+  "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
   "resultado": "Unidad del commit exacto con comprobación real del host adjunta.",
   "comprobacion": "COTEJO-HOST.txt. Ningún cambio aplicado al daemon o gestor.",
   "verificacion": "correcta",
@@ -26,7 +26,7 @@
       "bytes": 317
     }
   ],
-  "actualizado": "2026-11-12T03:28:21.711798+00:00",
+  "actualizado": "2026-11-12T03:30:29.115001+00:00",
   "historial": [
     {
       "revision": 1,
@@ -1403,6 +1403,1500 @@
           "bytes": 757
         }
       ]
+    },
+    {
+      "revision": 18,
+      "actualizado": "2026-11-12T03:28:21.711798+00:00",
+      "estado": "para_revision",
+      "resultado": "Unidad del commit exacto con comprobación real del host adjunta.",
+      "comprobacion": "COTEJO-HOST.txt. Ningún cambio aplicado al daemon o gestor.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r8-849d582c.json",
+          "sha256": "9b40b358c3ba2f39f3634ad195c5f5a011678fba660f5d7bd65be984ce469318",
+          "bytes": 317
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/COTEJO-HOST.txt",
+          "sha256": "0ff2a2495099f6430bdab6766ebf5edd6d46af0e2614e9cabbc8d0af5d71fbc2",
+          "bytes": 1095
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:13:12.881485+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+          "pid": 4121053,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241512",
+          "supervisor_pid": 4121021,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241486",
+          "rama": "codex/ws-onia-continuidad-tailscale-20261111",
+          "session_id": "01a1cdbe-dd9a-7af2-9f94-ce42cd884b88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:13:19.280661+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git/worktrees/onia-ws-onia-continuidad-tailscale-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:18:12.948307+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4165474,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306163",
+          "supervisor_pid": 4165445,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306140",
+          "rama": "(detached)",
+          "session_id": "01a1cdc8-bb40-7dc3-b725-1a33762a28e3",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-2",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:24:05.806746+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "327cfaf4aba1b8743ea819384cb402638b87ce8929ad8802048d37abc6d1caec",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:24:40.432262+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+        "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-tailscale-20261111"
+        ],
+        "fecha": "2026-11-12T03:28:21.695027+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-2-51fb7357.json",
+          "sha256": "75c1a17ea9241e324fd6b66d748eae75c38f680783122e5e3512e274cbd456bd",
+          "bytes": 757
+        }
+      ]
+    },
+    {
+      "revision": 19,
+      "actualizado": "2026-11-12T03:29:05.046175+00:00",
+      "estado": "para_revision",
+      "resultado": "Unidad del commit exacto con comprobación real del host adjunta.",
+      "comprobacion": "COTEJO-HOST.txt. Ningún cambio aplicado al daemon o gestor.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r8-849d582c.json",
+          "sha256": "9b40b358c3ba2f39f3634ad195c5f5a011678fba660f5d7bd65be984ce469318",
+          "bytes": 317
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/COTEJO-HOST.txt",
+          "sha256": "0ff2a2495099f6430bdab6766ebf5edd6d46af0e2614e9cabbc8d0af5d71fbc2",
+          "bytes": 1095
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:13:12.881485+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+          "pid": 4121053,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241512",
+          "supervisor_pid": 4121021,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241486",
+          "rama": "codex/ws-onia-continuidad-tailscale-20261111",
+          "session_id": "01a1cdbe-dd9a-7af2-9f94-ce42cd884b88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:13:19.280661+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git/worktrees/onia-ws-onia-continuidad-tailscale-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:18:12.948307+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4165474,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306163",
+          "supervisor_pid": 4165445,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306140",
+          "rama": "(detached)",
+          "session_id": "01a1cdc8-bb40-7dc3-b725-1a33762a28e3",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-2",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:24:05.806746+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "327cfaf4aba1b8743ea819384cb402638b87ce8929ad8802048d37abc6d1caec",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:24:40.432262+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-3",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T03:29:05.019564+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "7beaa8a4c2dec150229847da7f20d7bd296f88419b7edafb03bb207f3d590690",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+        "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-tailscale-20261111"
+        ],
+        "fecha": "2026-11-12T03:28:21.695027+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-2-51fb7357.json",
+          "sha256": "75c1a17ea9241e324fd6b66d748eae75c38f680783122e5e3512e274cbd456bd",
+          "bytes": 757
+        }
+      ]
+    },
+    {
+      "revision": 20,
+      "actualizado": "2026-11-12T03:29:05.299590+00:00",
+      "estado": "para_revision",
+      "resultado": "Unidad del commit exacto con comprobación real del host adjunta.",
+      "comprobacion": "COTEJO-HOST.txt. Ningún cambio aplicado al daemon o gestor.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r8-849d582c.json",
+          "sha256": "9b40b358c3ba2f39f3634ad195c5f5a011678fba660f5d7bd65be984ce469318",
+          "bytes": 317
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/COTEJO-HOST.txt",
+          "sha256": "0ff2a2495099f6430bdab6766ebf5edd6d46af0e2614e9cabbc8d0af5d71fbc2",
+          "bytes": 1095
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:13:12.881485+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+          "pid": 4121053,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241512",
+          "supervisor_pid": 4121021,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241486",
+          "rama": "codex/ws-onia-continuidad-tailscale-20261111",
+          "session_id": "01a1cdbe-dd9a-7af2-9f94-ce42cd884b88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:13:19.280661+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git/worktrees/onia-ws-onia-continuidad-tailscale-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:18:12.948307+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4165474,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306163",
+          "supervisor_pid": 4165445,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306140",
+          "rama": "(detached)",
+          "session_id": "01a1cdc8-bb40-7dc3-b725-1a33762a28e3",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-2",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:24:05.806746+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "327cfaf4aba1b8743ea819384cb402638b87ce8929ad8802048d37abc6d1caec",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:24:40.432262+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 4188482,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336061",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-3",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T03:29:05.019564+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "7beaa8a4c2dec150229847da7f20d7bd296f88419b7edafb03bb207f3d590690",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+        "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-tailscale-20261111"
+        ],
+        "fecha": "2026-11-12T03:28:21.695027+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-2-51fb7357.json",
+          "sha256": "75c1a17ea9241e324fd6b66d748eae75c38f680783122e5e3512e274cbd456bd",
+          "bytes": 757
+        }
+      ]
+    },
+    {
+      "revision": 21,
+      "actualizado": "2026-11-12T03:29:05.516322+00:00",
+      "estado": "para_revision",
+      "resultado": "Unidad del commit exacto con comprobación real del host adjunta.",
+      "comprobacion": "COTEJO-HOST.txt. Ningún cambio aplicado al daemon o gestor.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r8-849d582c.json",
+          "sha256": "9b40b358c3ba2f39f3634ad195c5f5a011678fba660f5d7bd65be984ce469318",
+          "bytes": 317
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/COTEJO-HOST.txt",
+          "sha256": "0ff2a2495099f6430bdab6766ebf5edd6d46af0e2614e9cabbc8d0af5d71fbc2",
+          "bytes": 1095
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:13:12.881485+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+          "pid": 4121053,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241512",
+          "supervisor_pid": 4121021,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241486",
+          "rama": "codex/ws-onia-continuidad-tailscale-20261111",
+          "session_id": "01a1cdbe-dd9a-7af2-9f94-ce42cd884b88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:13:19.280661+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git/worktrees/onia-ws-onia-continuidad-tailscale-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:18:12.948307+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4165474,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306163",
+          "supervisor_pid": 4165445,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306140",
+          "rama": "(detached)",
+          "session_id": "01a1cdc8-bb40-7dc3-b725-1a33762a28e3",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-2",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:24:05.806746+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "327cfaf4aba1b8743ea819384cb402638b87ce8929ad8802048d37abc6d1caec",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:24:40.432262+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4188486,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336083",
+          "supervisor_pid": 4188482,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336061",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-3",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T03:29:05.019564+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "7beaa8a4c2dec150229847da7f20d7bd296f88419b7edafb03bb207f3d590690",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+        "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-tailscale-20261111"
+        ],
+        "fecha": "2026-11-12T03:28:21.695027+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-2-51fb7357.json",
+          "sha256": "75c1a17ea9241e324fd6b66d748eae75c38f680783122e5e3512e274cbd456bd",
+          "bytes": 757
+        }
+      ]
+    },
+    {
+      "revision": 22,
+      "actualizado": "2026-11-12T03:29:07.351347+00:00",
+      "estado": "para_revision",
+      "resultado": "Unidad del commit exacto con comprobación real del host adjunta.",
+      "comprobacion": "COTEJO-HOST.txt. Ningún cambio aplicado al daemon o gestor.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r8-849d582c.json",
+          "sha256": "9b40b358c3ba2f39f3634ad195c5f5a011678fba660f5d7bd65be984ce469318",
+          "bytes": 317
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/COTEJO-HOST.txt",
+          "sha256": "0ff2a2495099f6430bdab6766ebf5edd6d46af0e2614e9cabbc8d0af5d71fbc2",
+          "bytes": 1095
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:13:12.881485+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+          "pid": 4121053,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241512",
+          "supervisor_pid": 4121021,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241486",
+          "rama": "codex/ws-onia-continuidad-tailscale-20261111",
+          "session_id": "01a1cdbe-dd9a-7af2-9f94-ce42cd884b88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:13:19.280661+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git/worktrees/onia-ws-onia-continuidad-tailscale-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:18:12.948307+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4165474,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306163",
+          "supervisor_pid": 4165445,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306140",
+          "rama": "(detached)",
+          "session_id": "01a1cdc8-bb40-7dc3-b725-1a33762a28e3",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-2",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:24:05.806746+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "327cfaf4aba1b8743ea819384cb402638b87ce8929ad8802048d37abc6d1caec",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:24:40.432262+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4188486,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336083",
+          "supervisor_pid": 4188482,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336061",
+          "rama": "(detached)",
+          "session_id": "01a1cdcd-4be7-7da3-989b-96743ddae3ce",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-3",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T03:29:05.019564+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "7beaa8a4c2dec150229847da7f20d7bd296f88419b7edafb03bb207f3d590690",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+        "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-tailscale-20261111"
+        ],
+        "fecha": "2026-11-12T03:28:21.695027+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-2-51fb7357.json",
+          "sha256": "75c1a17ea9241e324fd6b66d748eae75c38f680783122e5e3512e274cbd456bd",
+          "bytes": 757
+        }
+      ]
+    },
+    {
+      "revision": 23,
+      "actualizado": "2026-11-12T03:29:28.398609+00:00",
+      "estado": "para_revision",
+      "resultado": "Unidad del commit exacto con comprobación real del host adjunta.",
+      "comprobacion": "COTEJO-HOST.txt. Ningún cambio aplicado al daemon o gestor.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r8-849d582c.json",
+          "sha256": "9b40b358c3ba2f39f3634ad195c5f5a011678fba660f5d7bd65be984ce469318",
+          "bytes": 317
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/COTEJO-HOST.txt",
+          "sha256": "0ff2a2495099f6430bdab6766ebf5edd6d46af0e2614e9cabbc8d0af5d71fbc2",
+          "bytes": 1095
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:13:12.881485+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+          "pid": 4121053,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241512",
+          "supervisor_pid": 4121021,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241486",
+          "rama": "codex/ws-onia-continuidad-tailscale-20261111",
+          "session_id": "01a1cdbe-dd9a-7af2-9f94-ce42cd884b88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:13:19.280661+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git/worktrees/onia-ws-onia-continuidad-tailscale-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:18:12.948307+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4165474,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306163",
+          "supervisor_pid": 4165445,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306140",
+          "rama": "(detached)",
+          "session_id": "01a1cdc8-bb40-7dc3-b725-1a33762a28e3",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-2",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:24:05.806746+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "327cfaf4aba1b8743ea819384cb402638b87ce8929ad8802048d37abc6d1caec",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:24:40.432262+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4188486,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336083",
+          "supervisor_pid": 4188482,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336061",
+          "rama": "(detached)",
+          "session_id": "01a1cdcd-4be7-7da3-989b-96743ddae3ce",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-3",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T03:29:05.019564+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "7beaa8a4c2dec150229847da7f20d7bd296f88419b7edafb03bb207f3d590690",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+        "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-tailscale-20261111"
+        ],
+        "fecha": "2026-11-12T03:28:21.695027+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-2-51fb7357.json",
+          "sha256": "75c1a17ea9241e324fd6b66d748eae75c38f680783122e5e3512e274cbd456bd",
+          "bytes": 757
+        }
+      ]
+    },
+    {
+      "revision": 24,
+      "actualizado": "2026-11-12T03:29:49.611308+00:00",
+      "estado": "para_revision",
+      "resultado": "Unidad del commit exacto con comprobación real del host adjunta.",
+      "comprobacion": "COTEJO-HOST.txt. Ningún cambio aplicado al daemon o gestor.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r8-849d582c.json",
+          "sha256": "9b40b358c3ba2f39f3634ad195c5f5a011678fba660f5d7bd65be984ce469318",
+          "bytes": 317
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/COTEJO-HOST.txt",
+          "sha256": "0ff2a2495099f6430bdab6766ebf5edd6d46af0e2614e9cabbc8d0af5d71fbc2",
+          "bytes": 1095
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:13:12.881485+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+          "pid": 4121053,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241512",
+          "supervisor_pid": 4121021,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241486",
+          "rama": "codex/ws-onia-continuidad-tailscale-20261111",
+          "session_id": "01a1cdbe-dd9a-7af2-9f94-ce42cd884b88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:13:19.280661+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git/worktrees/onia-ws-onia-continuidad-tailscale-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:18:12.948307+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4165474,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306163",
+          "supervisor_pid": 4165445,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306140",
+          "rama": "(detached)",
+          "session_id": "01a1cdc8-bb40-7dc3-b725-1a33762a28e3",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-2",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:24:05.806746+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "327cfaf4aba1b8743ea819384cb402638b87ce8929ad8802048d37abc6d1caec",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:24:40.432262+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4188486,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336083",
+          "supervisor_pid": 4188482,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336061",
+          "rama": "(detached)",
+          "session_id": "01a1cdcd-4be7-7da3-989b-96743ddae3ce",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-3",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T03:29:05.019564+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "7beaa8a4c2dec150229847da7f20d7bd296f88419b7edafb03bb207f3d590690",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.veredicto.json",
+          "fin": "2026-11-12T03:29:49.592586+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+        "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-tailscale-20261111"
+        ],
+        "fecha": "2026-11-12T03:28:21.695027+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": null,
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-2-51fb7357.json",
+          "sha256": "75c1a17ea9241e324fd6b66d748eae75c38f680783122e5e3512e274cbd456bd",
+          "bytes": 757
+        }
+      ]
+    },
+    {
+      "revision": 25,
+      "actualizado": "2026-11-12T03:30:04.650186+00:00",
+      "estado": "para_revision",
+      "resultado": "Unidad del commit exacto con comprobación real del host adjunta.",
+      "comprobacion": "COTEJO-HOST.txt. Ningún cambio aplicado al daemon o gestor.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r8-849d582c.json",
+          "sha256": "9b40b358c3ba2f39f3634ad195c5f5a011678fba660f5d7bd65be984ce469318",
+          "bytes": 317
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/COTEJO-HOST.txt",
+          "sha256": "0ff2a2495099f6430bdab6766ebf5edd6d46af0e2614e9cabbc8d0af5d71fbc2",
+          "bytes": 1095
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:13:12.881485+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+          "pid": 4121053,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241512",
+          "supervisor_pid": 4121021,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241486",
+          "rama": "codex/ws-onia-continuidad-tailscale-20261111",
+          "session_id": "01a1cdbe-dd9a-7af2-9f94-ce42cd884b88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:13:19.280661+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git/worktrees/onia-ws-onia-continuidad-tailscale-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:18:12.948307+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4165474,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306163",
+          "supervisor_pid": 4165445,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306140",
+          "rama": "(detached)",
+          "session_id": "01a1cdc8-bb40-7dc3-b725-1a33762a28e3",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-2",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:24:05.806746+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "327cfaf4aba1b8743ea819384cb402638b87ce8929ad8802048d37abc6d1caec",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:24:40.432262+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4188486,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336083",
+          "supervisor_pid": 4188482,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336061",
+          "rama": "(detached)",
+          "session_id": "01a1cdcd-4be7-7da3-989b-96743ddae3ce",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-3",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T03:29:05.019564+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "7beaa8a4c2dec150229847da7f20d7bd296f88419b7edafb03bb207f3d590690",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.veredicto.json",
+          "fin": "2026-11-12T03:29:49.592586+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+        "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-tailscale-20261111"
+        ],
+        "fecha": "2026-11-12T03:28:21.695027+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+        "criterio": "Entrega cotejada con la base y COTEJO-HOST.txt: conserva daemon, argumentos, UID, cwd, estado y socket; acredita Linger, sintaxis y protección contra duplicados. Documenta dependencias, habilitación sin interrumpir, comprobaciones privadas panel/SSH, handoff y rollback. Sin activación ni cambios al servicio. Cinco pruebas reproducidas; dos limitadas por temporales prohibidos en este sandbox, con evidencia previa favorable. diff --check limpio. La validación tras reinicio queda expresamente pendiente y fuera del encargo.",
+        "worktree_conservado": true,
+        "revisor": "revisor-onia-continuidad-tailscale-20261111",
+        "session_id": "01a1cdcd-4be7-7da3-989b-96743ddae3ce",
+        "entrega_sha256": "7beaa8a4c2dec150229847da7f20d7bd296f88419b7edafb03bb207f3d590690",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-3-35def9df.json",
+          "sha256": "5e2da6c2d2e78f92963c3b85561c661e6be7f0d84e1c4fafeee3502ca80e4d60",
+          "bytes": 661
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-2-51fb7357.json",
+          "sha256": "75c1a17ea9241e324fd6b66d748eae75c38f680783122e5e3512e274cbd456bd",
+          "bytes": 757
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-3-35def9df.json",
+          "sha256": "5e2da6c2d2e78f92963c3b85561c661e6be7f0d84e1c4fafeee3502ca80e4d60",
+          "bytes": 661
+        }
+      ]
+    },
+    {
+      "revision": 26,
+      "actualizado": "2026-11-12T03:30:29.069575+00:00",
+      "estado": "aceptado",
+      "resultado": "Unidad del commit exacto con comprobación real del host adjunta.",
+      "comprobacion": "COTEJO-HOST.txt. Ningún cambio aplicado al daemon o gestor.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r8-849d582c.json",
+          "sha256": "9b40b358c3ba2f39f3634ad195c5f5a011678fba660f5d7bd65be984ce469318",
+          "bytes": 317
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/COTEJO-HOST.txt",
+          "sha256": "0ff2a2495099f6430bdab6766ebf5edd6d46af0e2614e9cabbc8d0af5d71fbc2",
+          "bytes": 1095
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      ],
+      "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+      "aceptacion": {
+        "revisor": "revisor-onia-continuidad-tailscale-20261111",
+        "criterio": "Entrega cotejada con la base y COTEJO-HOST.txt: conserva daemon, argumentos, UID, cwd, estado y socket; acredita Linger, sintaxis y protección contra duplicados. Documenta dependencias, habilitación sin interrumpir, comprobaciones privadas panel/SSH, handoff y rollback. Sin activación ni cambios al servicio. Cinco pruebas reproducidas; dos limitadas por temporales prohibidos en este sandbox, con evidencia previa favorable. diff --check limpio. La validación tras reinicio queda expresamente pendiente y fuera del encargo.",
+        "fecha": "2026-11-12T03:30:29.069554+00:00"
+      },
+      "asignacion": {
+        "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:13:12.881485+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
+          "pid": 4121053,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241512",
+          "supervisor_pid": 4121021,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219241486",
+          "rama": "codex/ws-onia-continuidad-tailscale-20261111",
+          "session_id": "01a1cdbe-dd9a-7af2-9f94-ce42cd884b88",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:13:19.280661+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-continuidad-tailscale-20261111.git/worktrees/onia-ws-onia-continuidad-tailscale-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:18:12.948307+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4165474,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306163",
+          "supervisor_pid": 4165445,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219306140",
+          "rama": "(detached)",
+          "session_id": "01a1cdc8-bb40-7dc3-b725-1a33762a28e3",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-2",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:24:05.806746+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "327cfaf4aba1b8743ea819384cb402638b87ce8929ad8802048d37abc6d1caec",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:24:40.432262+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-onia-continuidad-tailscale-20261111",
+          "pid": 4188486,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336083",
+          "supervisor_pid": 4188482,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336061",
+          "rama": "(detached)",
+          "session_id": "01a1cdcd-4be7-7da3-989b-96743ddae3ce",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-3",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.briefing.txt",
+          "inicio": "2026-11-12T03:29:05.019564+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "7beaa8a4c2dec150229847da7f20d7bd296f88419b7edafb03bb207f3d590690",
+          "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.veredicto.json",
+          "fin": "2026-11-12T03:29:49.592586+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+        "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
+        "ramas_origin": [
+          "origin/codex/ws-onia-continuidad-tailscale-20261111"
+        ],
+        "fecha": "2026-11-12T03:28:21.695027+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/cierre-r17-c7ef9ee5.json",
+          "sha256": "9cdc37209b374c0eaec4f07dd60b73879b58dfb0ea66f5afe6417342b700473c",
+          "bytes": 317
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+        "criterio": "Entrega cotejada con la base y COTEJO-HOST.txt: conserva daemon, argumentos, UID, cwd, estado y socket; acredita Linger, sintaxis y protección contra duplicados. Documenta dependencias, habilitación sin interrumpir, comprobaciones privadas panel/SSH, handoff y rollback. Sin activación ni cambios al servicio. Cinco pruebas reproducidas; dos limitadas por temporales prohibidos en este sandbox, con evidencia previa favorable. diff --check limpio. La validación tras reinicio queda expresamente pendiente y fuera del encargo.",
+        "worktree_conservado": true,
+        "revisor": "revisor-onia-continuidad-tailscale-20261111",
+        "session_id": "01a1cdcd-4be7-7da3-989b-96743ddae3ce",
+        "entrega_sha256": "7beaa8a4c2dec150229847da7f20d7bd296f88419b7edafb03bb207f3d590690",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-3-35def9df.json",
+          "sha256": "5e2da6c2d2e78f92963c3b85561c661e6be7f0d84e1c4fafeee3502ca80e4d60",
+          "bytes": 661
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-2-51fb7357.json",
+          "sha256": "75c1a17ea9241e324fd6b66d748eae75c38f680783122e5e3512e274cbd456bd",
+          "bytes": 757
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-3-35def9df.json",
+          "sha256": "5e2da6c2d2e78f92963c3b85561c661e6be7f0d84e1c4fafeee3502ca80e4d60",
+          "bytes": 661
+        }
+      ]
     }
   ],
   "briefing": {
@@ -1411,15 +2905,12 @@
     "bytes": 3623,
     "contenido": "# Encargo onia-continuidad-tailscale-20261111\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nCerrar la dependencia de arranque manual del Tailscale del VPS que comparten panel y homelab.\n\n## Entregable\n\nComprobá si el daemon userspace actual tiene arranque persistente. Usá sólo metadatos y argumentos necesarios, sin abrir/publicar credenciales, estado, IPs o identidad. Si no lo tiene, prepará en tu ruta una unidad systemd de usuario y procedimiento reversible para supervisar exactamente el mismo daemon/estado/socket, sin duplicarlo ni cambiar Tailscale Serve, red o ACL. Cotejá Linger, propiedad del proceso, dependencias de panel y cola, sintaxis de la unidad. Dejá preparación para habilitar al arranque sin reiniciar el VPS ni interrumpir la sesión actual; incluir cómo detectar instancia ya activa, verificar panel/SSH y conciliar handoff posterior. Prueba sintética acotada si es posible. No instalar/activar, cortar/reiniciar daemon real, tocar Windows, sudo o conexión externa. Sólo commit/push rama asignada.\n\n## Criterio de aceptación\n\nUnidad de usuario verificable para el arranque tras reinicio, con mismos argumentos, estado, usuario y socket. Cotejo privado antes y después y rollback reproducibles. Sin reinicio efectivo, configuración externa ni cambios en servicio activo durante el encargo.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sin entradas adicionales indicadas.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/onia-continuidad-tailscale-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
   },
-  "aceptacion": null,
-  "asignacion": {
-    "responsable": "ejecutor-onia-continuidad-tailscale-20261111",
-    "rutas": [
-      "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
-    ],
-    "revision_base": 1,
-    "fecha": "2026-11-12T03:13:12.881485+00:00"
+  "aceptacion": {
+    "revisor": "revisor-onia-continuidad-tailscale-20261111",
+    "criterio": "Entrega cotejada con la base y COTEJO-HOST.txt: conserva daemon, argumentos, UID, cwd, estado y socket; acredita Linger, sintaxis y protección contra duplicados. Documenta dependencias, habilitación sin interrumpir, comprobaciones privadas panel/SSH, handoff y rollback. Sin activación ni cambios al servicio. Cinco pruebas reproducidas; dos limitadas por temporales prohibidos en este sandbox, con evidencia previa favorable. diff --check limpio. La validación tras reinicio queda expresamente pendiente y fuera del encargo.",
+    "fecha": "2026-11-12T03:30:29.069554+00:00"
   },
+  "asignacion": null,
   "sesiones": [
     {
       "intento": 1,
@@ -1490,9 +2981,57 @@
       "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.schema.json",
       "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.2.veredicto.json",
       "fin": "2026-11-12T03:24:40.432262+00:00"
+    },
+    {
+      "intento": 3,
+      "rol": "revisor",
+      "responsable": "revisor-onia-continuidad-tailscale-20261111",
+      "pid": 4188486,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336083",
+      "supervisor_pid": 4188482,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219336061",
+      "rama": "(detached)",
+      "session_id": "01a1cdcd-4be7-7da3-989b-96743ddae3ce",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+      "log_rel": "logs/onia-continuidad-tailscale-20261111.revision-3.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-continuidad-tailscale-20261111-revision-3",
+      "rutas": [
+        "04-operacion-agentes/homelab/continuidad-tailscale-20261111"
+      ],
+      "dry_run": false,
+      "commit_base": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.briefing.txt",
+      "inicio": "2026-11-12T03:29:05.019564+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "7beaa8a4c2dec150229847da7f20d7bd296f88419b7edafb03bb207f3d590690",
+      "schema": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/onia-continuidad-tailscale-20261111.3.veredicto.json",
+      "fin": "2026-11-12T03:29:49.592586+00:00"
     }
   ],
-  "revision_independiente": null,
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
+    "criterio": "Entrega cotejada con la base y COTEJO-HOST.txt: conserva daemon, argumentos, UID, cwd, estado y socket; acredita Linger, sintaxis y protección contra duplicados. Documenta dependencias, habilitación sin interrumpir, comprobaciones privadas panel/SSH, handoff y rollback. Sin activación ni cambios al servicio. Cinco pruebas reproducidas; dos limitadas por temporales prohibidos en este sandbox, con evidencia previa favorable. diff --check limpio. La validación tras reinicio queda expresamente pendiente y fuera del encargo.",
+    "worktree_conservado": true,
+    "revisor": "revisor-onia-continuidad-tailscale-20261111",
+    "session_id": "01a1cdcd-4be7-7da3-989b-96743ddae3ce",
+    "entrega_sha256": "7beaa8a4c2dec150229847da7f20d7bd296f88419b7edafb03bb207f3d590690",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-3-35def9df.json",
+      "sha256": "5e2da6c2d2e78f92963c3b85561c661e6be7f0d84e1c4fafeee3502ca80e4d60",
+      "bytes": 661
+    }
+  },
   "cierre": {
     "commit": "c0763d9422ac1fbb9172b51f5f8bc77cfbd35cfc",
     "commit_base": "da755793568cb03eab82fbbd6c4954f8776a981d",
@@ -1514,6 +3053,11 @@
       "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-2-51fb7357.json",
       "sha256": "75c1a17ea9241e324fd6b66d748eae75c38f680783122e5e3512e274cbd456bd",
       "bytes": 757
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/onia-continuidad-tailscale-20261111/revision-3-35def9df.json",
+      "sha256": "5e2da6c2d2e78f92963c3b85561c661e6be7f0d84e1c4fafeee3502ca80e4d60",
+      "bytes": 661
     }
   ]
 }
