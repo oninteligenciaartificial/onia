@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "cc77ee16fa05f1609d6d0e56b8f108d63326e5ab",
+  "criterio": "[P1] En 05-herramientas/scripts/harness_ensayo.py:429-434, fin acepta procesos.json ausente o vacío y omite cotejar estado.json. Puede declarar «parado» perdiendo las identidades de descendientes previamente registrados que sobrevivan a su padre. Debe conservar STOP y declarar bloqueo cuando falte el inventario publicado; agregar prueba de regresión. Reproducido con dobles en memoria, sin señales reales. Sintaxis y diff --check correctos; tres pruebas sin archivos pasaron. La suite de 29 casos no pudo ejecutarse por falta de directorios temporales escribibles. La evidencia adjunta contiene el cierre, pero no los resultados detallados de las suites declaradas. No activar el ensayo hasta corregir y aportar evidencia vigente.",
+  "worktree_conservado": true
+}
