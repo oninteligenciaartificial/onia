@@ -1,0 +1,13 @@
+# Retoma de continuidad sin consola
+
+Estado observado por Sergio: tarea Ready, salida 3221225786 (0xC000013A), WSL detenido. Acción exacta v1 confirmada, token Interactive/Limited, sin límite temporal, tres reinicios de un minuto y sin bloqueo por batería. La causa exacta del evento de control no está demostrada; v2 elimina la dependencia de una aplicación de consola como lanzador. No se promete éxito antes del ensayo real.
+
+REPARAR-CONTINUIDAD-WSL-v2.ps1 requiere Windows PowerShell5.1 de64bits en la PC autorizada. Verifica la acción exacta anterior y principal; si está Running o difiere, se detiene. Guarda XML privado en una carpeta nueva bajo LocalAppData y compila localmente un ejecutable .NET WindowsApplication. No descarga binarios ni instala dependencias. El lanzador GUI ejecuta wsl.exe con UseShellExecute=false y CreateNoWindow=true y espera su finalización, guardando hora/código de salida o tipo de excepción, sin datos de entorno. El proceso Linux es únicamente sleep infinity como onia-worker.
+
+Sólo reemplaza la acción de la tarea existente después de compilar y comprobar de nuevo que el XML/estado no cambiaron. Conserva usuario, disparador, restricciones y reintentos. No cambia protecciones, suspensión, firewall ni ejecuta como SYSTEM/root. No desinstala ni borra. Si compilación/registro/arranque es rechazado, conservar evidencia y no desactivar antivirus/ExecutionPolicy. No hay ejecución de este script Windows desde VPS: el worker no puede administrar Windows.
+
+Verificación disponible: revisión estática contra la acción recibida y APIs de Microsoft; VPS sin PowerShell/.NET de Windows, no se afirma compilación ni prueba local. El ensayo decisivo sigue pendiente: tarea Running, cerrar terminales, 90s sin conectar y comprobar SSH desde VPS. Luego comprobar proceso de espera y contenido persistente; reinicio/logoff son pruebas separadas. Sigue cubriendo sólo la sesión Windows iniciada, con PC despierta.
+
+Reversión: detener/inhabilitar sólo esta tarea después de drenar trabajos; conservar directorio y XML. Para restaurar la acción original, usar el XML privado después de comprobar ruta y propietario; no hacer importación ni eliminación automática. Si se detiene la tarea, verificar también si quedó el sleep hijo antes de afirmar apagado completo.
+
+Fuentes: https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.processstartinfo.createnowindow y https://devblogs.microsoft.com/powershell/how-to-write-a-console-application-in-powershell-with-add-type/ . El soporte OutputType WindowsApplication corresponde a Windows PowerShell5.1; PowerShell7 no es compatible para esta operación.
