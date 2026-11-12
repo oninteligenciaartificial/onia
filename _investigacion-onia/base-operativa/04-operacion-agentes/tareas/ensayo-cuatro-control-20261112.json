@@ -1,0 +1,42 @@
+{
+  "schema": 2,
+  "id": "ensayo-cuatro-control-20261112",
+  "revision": 2,
+  "compartible": true,
+  "objetivo": "Preparar excepción temporal medida para ensayo de cuatro sesiones sin cambiar límite normal.",
+  "estado": "preparado",
+  "proximo_paso": "Implementar, probar y entregar para revisión.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-12T00:21:14.644750+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-12T00:21:14.340730+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Implementar, probar y entregar para revisión.",
+      "aceptacion": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/ensayo-cuatro-control-20261112.md",
+    "sha256": "2e7acf88757a1ef82a77708f7fc4f5095b94b470456ce4275e78f38e0595a1d3",
+    "bytes": 1561,
+    "contenido": "# Ensayo temporal de cuatro sesiones\nSergio autorizó probar cuatro y optimizar Ubuntu/WSL manteniendo Windows. Aplicar desarrollar-y-verificar. Reutilizar harness_sesiones.py y pruebas. No otro harness.\nImplementar política PRIVADA opcional de cuatro, tres por defecto, contando preguntas/revisores globalmente. Sólo IDs/base autorizados, vencimiento máximo30min, permisos/propietario/symlinks controlados, monitor vivo PID+inicio, recursos y cuota frescos. Rechazar quinta, colisiones, ajenos, datos caducos, inválidos o STOP. No env var de bypass.\nMonitor/CLI acotado: CPU/RAM/PSI/swap, recibos, admisión fail-closed por saturación/STOP/caducidad/cuota desconocida. Presupuesto ensayo máximo2 puntos desde lectura fresca. Lector del operador en /tmp/onia-read-quota-rpc.py, leer código si hace falta, no imprimir privados. Parar sólo procesos del lote con PID+inicio comprobados y SIGTERM, conservar logs/worktrees; no matar PID reciclado ni procesos ajenos. Si no es seguro declarar bloqueo sin habilitar cuarta.\nTests de límites, quinta, expiración, cuota/recursos caducos, PID reciclado, datos alterados, colisiones y parada. No prueba real ni activar política ni servicios. No modificar PC ni producción.\nEscribir sólo 05-herramientas/scripts (incluida guía ENSAYO-CUATRO.md). No modificar registro/briefing. Entregar comandos claros para preparación/monitor/fin y despliegue sin pisar checkout sucio. Commit/push rama propia. Sol high cero hijos. Revisión independiente antes de ensayo real. Una entrega acotada, sin proveedores pagos.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "ejecutor-capacidad-20261112",
+    "rutas": [
+      "05-herramientas/scripts"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-12T00:21:14.644731+00:00"
+  }
+}
