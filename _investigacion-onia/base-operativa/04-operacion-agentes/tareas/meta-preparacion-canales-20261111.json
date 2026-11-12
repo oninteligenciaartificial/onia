@@ -1,16 +1,22 @@
 {
   "schema": 2,
   "id": "meta-preparacion-canales-20261111",
-  "revision": 6,
+  "revision": 18,
   "compartible": true,
   "objetivo": "Preparar la conexión técnica de Instagram y Facebook para NEGOCIO, en paralelo a WhatsApp, reutilizando los adaptadores ya aceptados.",
-  "estado": "en_curso",
-  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
-  "resultado": "",
-  "comprobacion": "",
-  "verificacion": "pendiente",
-  "evidencias": [],
-  "actualizado": "2026-11-12T02:40:14.493288+00:00",
+  "estado": "aceptado",
+  "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+  "resultado": "Preflight local de Instagram y Facebook con simulación de cuatro rutas.",
+  "comprobacion": "git show --check limpio y rama remota exacta. 44 pruebas unitarias y preflight.py --ensayo correctos. La conexión real espera ensayo WhatsApp y precondiciones por canal.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+      "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+      "bytes": 315
+    }
+  ],
+  "actualizado": "2026-11-12T02:55:30.931320+00:00",
   "historial": [
     {
       "revision": 1,
@@ -212,6 +218,1208 @@
       ],
       "cierre": null,
       "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-12T02:40:14.493288+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-meta-preparacion-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:35.082876+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-meta-preparacion-canales-20261111",
+          "pid": 4020827,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042872",
+          "supervisor_pid": 4020815,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042844",
+          "rama": "codex/ws-meta-preparacion-canales-20261111",
+          "session_id": "01a1cda0-8efd-7582-9807-c1c95511d90e",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:40:12.814138+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git/worktrees/onia-ws-meta-preparacion-canales-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-12T02:40:56.666678+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-meta-preparacion-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:35.082876+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-meta-preparacion-canales-20261111",
+          "pid": 4020827,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042872",
+          "supervisor_pid": 4020815,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042844",
+          "rama": "codex/ws-meta-preparacion-canales-20261111",
+          "session_id": "01a1cda0-8efd-7582-9807-c1c95511d90e",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:40:12.814138+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git/worktrees/onia-ws-meta-preparacion-canales-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-12T02:45:26.419081+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-meta-preparacion-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:35.082876+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-meta-preparacion-canales-20261111",
+          "pid": 4020827,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042872",
+          "supervisor_pid": 4020815,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042844",
+          "rama": "codex/ws-meta-preparacion-canales-20261111",
+          "session_id": "01a1cda0-8efd-7582-9807-c1c95511d90e",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:40:12.814138+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git/worktrees/onia-ws-meta-preparacion-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:45:26.408574+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-12T02:52:23.274257+00:00",
+      "estado": "para_revision",
+      "resultado": "Preflight local de Instagram y Facebook con simulación de cuatro rutas.",
+      "comprobacion": "git show --check limpio y rama remota exacta. 44 pruebas unitarias y preflight.py --ensayo correctos. La conexión real espera ensayo WhatsApp y precondiciones por canal.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-meta-preparacion-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:35.082876+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-meta-preparacion-canales-20261111",
+          "pid": 4020827,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042872",
+          "supervisor_pid": 4020815,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042844",
+          "rama": "codex/ws-meta-preparacion-canales-20261111",
+          "session_id": "01a1cda0-8efd-7582-9807-c1c95511d90e",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:40:12.814138+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git/worktrees/onia-ws-meta-preparacion-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:45:26.408574+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+        "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+        "ramas_origin": [
+          "origin/codex/ws-meta-preparacion-canales-20261111"
+        ],
+        "fecha": "2026-11-12T02:52:23.265766+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-12T02:52:34.169653+00:00",
+      "estado": "para_revision",
+      "resultado": "Preflight local de Instagram y Facebook con simulación de cuatro rutas.",
+      "comprobacion": "git show --check limpio y rama remota exacta. 44 pruebas unitarias y preflight.py --ensayo correctos. La conexión real espera ensayo WhatsApp y precondiciones por canal.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-meta-preparacion-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:35.082876+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-meta-preparacion-canales-20261111",
+          "pid": 4020827,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042872",
+          "supervisor_pid": 4020815,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042844",
+          "rama": "codex/ws-meta-preparacion-canales-20261111",
+          "session_id": "01a1cda0-8efd-7582-9807-c1c95511d90e",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:40:12.814138+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git/worktrees/onia-ws-meta-preparacion-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:45:26.408574+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-preparacion-canales-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:52:34.141482+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2a11ca80f435c53788899f2035eef65c858cc027781cf87cd96ade66f290379",
+          "schema": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+        "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+        "ramas_origin": [
+          "origin/codex/ws-meta-preparacion-canales-20261111"
+        ],
+        "fecha": "2026-11-12T02:52:23.265766+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-12T02:52:34.405524+00:00",
+      "estado": "para_revision",
+      "resultado": "Preflight local de Instagram y Facebook con simulación de cuatro rutas.",
+      "comprobacion": "git show --check limpio y rama remota exacta. 44 pruebas unitarias y preflight.py --ensayo correctos. La conexión real espera ensayo WhatsApp y precondiciones por canal.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-meta-preparacion-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:35.082876+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-meta-preparacion-canales-20261111",
+          "pid": 4020827,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042872",
+          "supervisor_pid": 4020815,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042844",
+          "rama": "codex/ws-meta-preparacion-canales-20261111",
+          "session_id": "01a1cda0-8efd-7582-9807-c1c95511d90e",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:40:12.814138+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git/worktrees/onia-ws-meta-preparacion-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:45:26.408574+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-preparacion-canales-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 4054908,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116972",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:52:34.141482+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2a11ca80f435c53788899f2035eef65c858cc027781cf87cd96ade66f290379",
+          "schema": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+        "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+        "ramas_origin": [
+          "origin/codex/ws-meta-preparacion-canales-20261111"
+        ],
+        "fecha": "2026-11-12T02:52:23.265766+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-12T02:52:34.629888+00:00",
+      "estado": "para_revision",
+      "resultado": "Preflight local de Instagram y Facebook con simulación de cuatro rutas.",
+      "comprobacion": "git show --check limpio y rama remota exacta. 44 pruebas unitarias y preflight.py --ensayo correctos. La conexión real espera ensayo WhatsApp y precondiciones por canal.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-meta-preparacion-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:35.082876+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-meta-preparacion-canales-20261111",
+          "pid": 4020827,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042872",
+          "supervisor_pid": 4020815,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042844",
+          "rama": "codex/ws-meta-preparacion-canales-20261111",
+          "session_id": "01a1cda0-8efd-7582-9807-c1c95511d90e",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:40:12.814138+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git/worktrees/onia-ws-meta-preparacion-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:45:26.408574+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-preparacion-canales-20261111",
+          "pid": 4054910,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116995",
+          "supervisor_pid": 4054908,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116972",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:52:34.141482+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2a11ca80f435c53788899f2035eef65c858cc027781cf87cd96ade66f290379",
+          "schema": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+        "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+        "ramas_origin": [
+          "origin/codex/ws-meta-preparacion-canales-20261111"
+        ],
+        "fecha": "2026-11-12T02:52:23.265766+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-12T02:52:35.340995+00:00",
+      "estado": "para_revision",
+      "resultado": "Preflight local de Instagram y Facebook con simulación de cuatro rutas.",
+      "comprobacion": "git show --check limpio y rama remota exacta. 44 pruebas unitarias y preflight.py --ensayo correctos. La conexión real espera ensayo WhatsApp y precondiciones por canal.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-meta-preparacion-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:35.082876+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-meta-preparacion-canales-20261111",
+          "pid": 4020827,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042872",
+          "supervisor_pid": 4020815,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042844",
+          "rama": "codex/ws-meta-preparacion-canales-20261111",
+          "session_id": "01a1cda0-8efd-7582-9807-c1c95511d90e",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:40:12.814138+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git/worktrees/onia-ws-meta-preparacion-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:45:26.408574+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-preparacion-canales-20261111",
+          "pid": 4054910,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116995",
+          "supervisor_pid": 4054908,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116972",
+          "rama": "(detached)",
+          "session_id": "01a1cdab-ddca-7f22-b2eb-29b6c2de3678",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:52:34.141482+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2a11ca80f435c53788899f2035eef65c858cc027781cf87cd96ade66f290379",
+          "schema": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+        "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+        "ramas_origin": [
+          "origin/codex/ws-meta-preparacion-canales-20261111"
+        ],
+        "fecha": "2026-11-12T02:52:23.265766+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-12T02:53:12.837024+00:00",
+      "estado": "para_revision",
+      "resultado": "Preflight local de Instagram y Facebook con simulación de cuatro rutas.",
+      "comprobacion": "git show --check limpio y rama remota exacta. 44 pruebas unitarias y preflight.py --ensayo correctos. La conexión real espera ensayo WhatsApp y precondiciones por canal.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-meta-preparacion-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:35.082876+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-meta-preparacion-canales-20261111",
+          "pid": 4020827,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042872",
+          "supervisor_pid": 4020815,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042844",
+          "rama": "codex/ws-meta-preparacion-canales-20261111",
+          "session_id": "01a1cda0-8efd-7582-9807-c1c95511d90e",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:40:12.814138+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git/worktrees/onia-ws-meta-preparacion-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:45:26.408574+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-preparacion-canales-20261111",
+          "pid": 4054910,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116995",
+          "supervisor_pid": 4054908,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116972",
+          "rama": "(detached)",
+          "session_id": "01a1cdab-ddca-7f22-b2eb-29b6c2de3678",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:52:34.141482+00:00",
+          "rc": null,
+          "ultimo_evento": "item.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2a11ca80f435c53788899f2035eef65c858cc027781cf87cd96ade66f290379",
+          "schema": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+        "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+        "ramas_origin": [
+          "origin/codex/ws-meta-preparacion-canales-20261111"
+        ],
+        "fecha": "2026-11-12T02:52:23.265766+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-12T02:53:30.710406+00:00",
+      "estado": "para_revision",
+      "resultado": "Preflight local de Instagram y Facebook con simulación de cuatro rutas.",
+      "comprobacion": "git show --check limpio y rama remota exacta. 44 pruebas unitarias y preflight.py --ensayo correctos. La conexión real espera ensayo WhatsApp y precondiciones por canal.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-meta-preparacion-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:35.082876+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-meta-preparacion-canales-20261111",
+          "pid": 4020827,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042872",
+          "supervisor_pid": 4020815,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042844",
+          "rama": "codex/ws-meta-preparacion-canales-20261111",
+          "session_id": "01a1cda0-8efd-7582-9807-c1c95511d90e",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:40:12.814138+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git/worktrees/onia-ws-meta-preparacion-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:45:26.408574+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-preparacion-canales-20261111",
+          "pid": 4054910,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116995",
+          "supervisor_pid": 4054908,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116972",
+          "rama": "(detached)",
+          "session_id": "01a1cdab-ddca-7f22-b2eb-29b6c2de3678",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:52:34.141482+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2a11ca80f435c53788899f2035eef65c858cc027781cf87cd96ade66f290379",
+          "schema": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-12T02:53:30.697450+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+        "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+        "ramas_origin": [
+          "origin/codex/ws-meta-preparacion-canales-20261111"
+        ],
+        "fecha": "2026-11-12T02:52:23.265766+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 16,
+      "actualizado": "2026-11-12T02:55:07.992668+00:00",
+      "estado": "para_revision",
+      "resultado": "Preflight local de Instagram y Facebook con simulación de cuatro rutas.",
+      "comprobacion": "git show --check limpio y rama remota exacta. 44 pruebas unitarias y preflight.py --ensayo correctos. La conexión real espera ensayo WhatsApp y precondiciones por canal.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-meta-preparacion-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:35.082876+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-meta-preparacion-canales-20261111",
+          "pid": 4020827,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042872",
+          "supervisor_pid": 4020815,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042844",
+          "rama": "codex/ws-meta-preparacion-canales-20261111",
+          "session_id": "01a1cda0-8efd-7582-9807-c1c95511d90e",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:40:12.814138+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git/worktrees/onia-ws-meta-preparacion-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:45:26.408574+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-preparacion-canales-20261111",
+          "pid": 4054910,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116995",
+          "supervisor_pid": 4054908,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116972",
+          "rama": "(detached)",
+          "session_id": "01a1cdab-ddca-7f22-b2eb-29b6c2de3678",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:52:34.141482+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2a11ca80f435c53788899f2035eef65c858cc027781cf87cd96ade66f290379",
+          "schema": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-12T02:53:30.697450+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+        "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+        "ramas_origin": [
+          "origin/codex/ws-meta-preparacion-canales-20261111"
+        ],
+        "fecha": "2026-11-12T02:52:23.265766+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+        "criterio": "Cumple el alcance: cuatro rutas con dependencias y brechas separadas, fuentes inaccesibles declaradas, ensayo existente reutilizado y evidencia saneada con hashes coincidentes. Conserva idempotencia y ensayo WhatsApp independiente, previo a la derivación. Sólo cambia la ruta asignada; no duplica ni modifica el adaptador. Preflight básico y git show --check correctos. Evidencia guardada: 44 pruebas y 16 casos de transporte; su repetición quedó bloqueada por la prohibición de crear temporales en este sandbox. No acredita conexión real ni permisos vigentes.",
+        "worktree_conservado": true,
+        "revisor": "revisor-meta-preparacion-canales-20261111",
+        "session_id": "01a1cdab-ddca-7f22-b2eb-29b6c2de3678",
+        "entrega_sha256": "a2a11ca80f435c53788899f2035eef65c858cc027781cf87cd96ade66f290379",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/revision-2-88551a0a.json",
+          "sha256": "4a247119ce7713c90c9788e7b64857997a073ddcf2dc44d555ff5f7c3aafd10b",
+          "bytes": 699
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/revision-2-88551a0a.json",
+          "sha256": "4a247119ce7713c90c9788e7b64857997a073ddcf2dc44d555ff5f7c3aafd10b",
+          "bytes": 699
+        }
+      ]
+    },
+    {
+      "revision": 17,
+      "actualizado": "2026-11-12T02:55:30.886571+00:00",
+      "estado": "aceptado",
+      "resultado": "Preflight local de Instagram y Facebook con simulación de cuatro rutas.",
+      "comprobacion": "git show --check limpio y rama remota exacta. 44 pruebas unitarias y preflight.py --ensayo correctos. La conexión real espera ensayo WhatsApp y precondiciones por canal.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      ],
+      "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+      "aceptacion": {
+        "revisor": "revisor-meta-preparacion-canales-20261111",
+        "criterio": "Cumple el alcance: cuatro rutas con dependencias y brechas separadas, fuentes inaccesibles declaradas, ensayo existente reutilizado y evidencia saneada con hashes coincidentes. Conserva idempotencia y ensayo WhatsApp independiente, previo a la derivación. Sólo cambia la ruta asignada; no duplica ni modifica el adaptador. Preflight básico y git show --check correctos. Evidencia guardada: 44 pruebas y 16 casos de transporte; su repetición quedó bloqueada por la prohibición de crear temporales en este sandbox. No acredita conexión real ni permisos vigentes.",
+        "fecha": "2026-11-12T02:55:30.886552+00:00"
+      },
+      "asignacion": {
+        "responsable": "ejecutor-meta-preparacion-canales-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:35.082876+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-meta-preparacion-canales-20261111",
+          "pid": 4020827,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042872",
+          "supervisor_pid": 4020815,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042844",
+          "rama": "codex/ws-meta-preparacion-canales-20261111",
+          "session_id": "01a1cda0-8efd-7582-9807-c1c95511d90e",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:40:12.814138+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git/worktrees/onia-ws-meta-preparacion-canales-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:45:26.408574+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-meta-preparacion-canales-20261111",
+          "pid": 4054910,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116995",
+          "supervisor_pid": 4054908,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116972",
+          "rama": "(detached)",
+          "session_id": "01a1cdab-ddca-7f22-b2eb-29b6c2de3678",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_rel": "logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:52:34.141482+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "a2a11ca80f435c53788899f2035eef65c858cc027781cf87cd96ade66f290379",
+          "schema": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.veredicto.json",
+          "fin": "2026-11-12T02:53:30.697450+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+        "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+        "ramas_origin": [
+          "origin/codex/ws-meta-preparacion-canales-20261111"
+        ],
+        "fecha": "2026-11-12T02:52:23.265766+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+          "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+          "bytes": 315
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+        "criterio": "Cumple el alcance: cuatro rutas con dependencias y brechas separadas, fuentes inaccesibles declaradas, ensayo existente reutilizado y evidencia saneada con hashes coincidentes. Conserva idempotencia y ensayo WhatsApp independiente, previo a la derivación. Sólo cambia la ruta asignada; no duplica ni modifica el adaptador. Preflight básico y git show --check correctos. Evidencia guardada: 44 pruebas y 16 casos de transporte; su repetición quedó bloqueada por la prohibición de crear temporales en este sandbox. No acredita conexión real ni permisos vigentes.",
+        "worktree_conservado": true,
+        "revisor": "revisor-meta-preparacion-canales-20261111",
+        "session_id": "01a1cdab-ddca-7f22-b2eb-29b6c2de3678",
+        "entrega_sha256": "a2a11ca80f435c53788899f2035eef65c858cc027781cf87cd96ade66f290379",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/revision-2-88551a0a.json",
+          "sha256": "4a247119ce7713c90c9788e7b64857997a073ddcf2dc44d555ff5f7c3aafd10b",
+          "bytes": 699
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/revision-2-88551a0a.json",
+          "sha256": "4a247119ce7713c90c9788e7b64857997a073ddcf2dc44d555ff5f7c3aafd10b",
+          "bytes": 699
+        }
+      ]
     }
   ],
   "briefing": {
@@ -220,15 +1428,12 @@
     "bytes": 3464,
     "contenido": "# Encargo meta-preparacion-canales-20261111\n\nÁrea: automatizaciones\nModo: encargo\nSkill directora: automatizar-n8n\n\n## Objetivo\n\nPreparar la conexión técnica de Instagram y Facebook para NEGOCIO, en paralelo a WhatsApp, reutilizando los adaptadores ya aceptados.\n\n## Entregable\n\nUn preflight de sólo lectura reproducible en ruta propia que indique qué está disponible y qué falta en cada una de las cuatro rutas IG comentario/DM y FB comentario/DM. Separar contrato local, requisitos de cuenta, credencial/permisos/versiones y ensayo por canal. Usar documentación oficial y evidencias previas, declarar datos inaccesibles. Ejecutar el ensayo local existente y conservar resultado saneado. Entregar un orden de conexión seguro que preserve idempotencia y derivación al enlace WhatsApp después del ensayo de éste. Sin API real, secretos, mensajes, publicación, instalación, cambios de cuenta/n8n ni gasto.\n\n## Criterio de aceptación\n\nCuatro rutas y su dependencia real, artefactos y prueba reproducible; ninguna promesa de permisos/ventanas sin evidencia. No duplicar motor, no editar carpeta del adaptador existente y no condicionar el primer ensayo WhatsApp a IG/FB. Sólo commit/push de la rama asignada.\n\n## Entrada y alcance\n\nUn evento y resultado definido para la instancia existente de n8n.\n\n- Sin entradas adicionales indicadas.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [05-herramientas/accesos.md](../../05-herramientas/accesos.md)\n- [05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md](../../05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Flujo n8n con referencias a credenciales\n- Pruebas y manejo de fallos\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/meta-preparacion-canales-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
   },
-  "aceptacion": null,
-  "asignacion": {
-    "responsable": "ejecutor-meta-preparacion-canales-20261111",
-    "rutas": [
-      "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
-    ],
-    "revision_base": 1,
-    "fecha": "2026-11-12T02:39:35.082876+00:00"
+  "aceptacion": {
+    "revisor": "revisor-meta-preparacion-canales-20261111",
+    "criterio": "Cumple el alcance: cuatro rutas con dependencias y brechas separadas, fuentes inaccesibles declaradas, ensayo existente reutilizado y evidencia saneada con hashes coincidentes. Conserva idempotencia y ensayo WhatsApp independiente, previo a la derivación. Sólo cambia la ruta asignada; no duplica ni modifica el adaptador. Preflight básico y git show --check correctos. Evidencia guardada: 44 pruebas y 16 casos de transporte; su repetición quedó bloqueada por la prohibición de crear temporales en este sandbox. No acredita conexión real ni permisos vigentes.",
+    "fecha": "2026-11-12T02:55:30.886552+00:00"
   },
+  "asignacion": null,
   "sesiones": [
     {
       "intento": 1,
@@ -240,7 +1445,7 @@
       "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219042844",
       "rama": "codex/ws-meta-preparacion-canales-20261111",
       "session_id": "01a1cda0-8efd-7582-9807-c1c95511d90e",
-      "estado": "ejecutando",
+      "estado": "cerrada",
       "operacion": "/home/onia-codex-worker/operacion",
       "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.jsonl",
       "log_rel": "logs/meta-preparacion-canales-20261111.jsonl",
@@ -254,17 +1459,88 @@
       "reanuda": null,
       "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.1.briefing.txt",
       "inicio": "2026-11-12T02:40:12.814138+00:00",
-      "rc": null,
-      "ultimo_evento": "thread.started",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
       "modelo": "gpt-6.1-sol",
       "esfuerzo": "low",
       "auth_chatgpt": true,
       "subagentes_maximos": 0,
       "git_repo": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git",
       "git_dir": "/home/onia-codex-worker/operacion/git/meta-preparacion-canales-20261111.git/worktrees/onia-ws-meta-preparacion-canales-20261111",
-      "perfil_permisos": "harness-git"
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-12T02:45:26.408574+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "revisor",
+      "responsable": "revisor-meta-preparacion-canales-20261111",
+      "pid": 4054910,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116995",
+      "supervisor_pid": 4054908,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219116972",
+      "rama": "(detached)",
+      "session_id": "01a1cdab-ddca-7f22-b2eb-29b6c2de3678",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+      "log_rel": "logs/meta-preparacion-canales-20261111.revision-2.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-meta-preparacion-canales-20261111-revision-2",
+      "rutas": [
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-preparacion-20261111"
+      ],
+      "dry_run": false,
+      "commit_base": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.briefing.txt",
+      "inicio": "2026-11-12T02:52:34.141482+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "a2a11ca80f435c53788899f2035eef65c858cc027781cf87cd96ade66f290379",
+      "schema": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/meta-preparacion-canales-20261111.2.veredicto.json",
+      "fin": "2026-11-12T02:53:30.697450+00:00"
     }
   ],
-  "revision_independiente": null,
-  "cierre": null
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+    "criterio": "Cumple el alcance: cuatro rutas con dependencias y brechas separadas, fuentes inaccesibles declaradas, ensayo existente reutilizado y evidencia saneada con hashes coincidentes. Conserva idempotencia y ensayo WhatsApp independiente, previo a la derivación. Sólo cambia la ruta asignada; no duplica ni modifica el adaptador. Preflight básico y git show --check correctos. Evidencia guardada: 44 pruebas y 16 casos de transporte; su repetición quedó bloqueada por la prohibición de crear temporales en este sandbox. No acredita conexión real ni permisos vigentes.",
+    "worktree_conservado": true,
+    "revisor": "revisor-meta-preparacion-canales-20261111",
+    "session_id": "01a1cdab-ddca-7f22-b2eb-29b6c2de3678",
+    "entrega_sha256": "a2a11ca80f435c53788899f2035eef65c858cc027781cf87cd96ade66f290379",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/revision-2-88551a0a.json",
+      "sha256": "4a247119ce7713c90c9788e7b64857997a073ddcf2dc44d555ff5f7c3aafd10b",
+      "bytes": 699
+    }
+  },
+  "cierre": {
+    "commit": "46b2b1f49b38efa345445f8bfcc2d2c1da98bbf7",
+    "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+    "ramas_origin": [
+      "origin/codex/ws-meta-preparacion-canales-20261111"
+    ],
+    "fecha": "2026-11-12T02:52:23.265766+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "worktree_conservado": true,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/cierre-r8-3aeecac6.json",
+      "sha256": "51019629e70a2931b9170b563c0a455b6625f1f189631205b467e824ad2b412f",
+      "bytes": 315
+    }
+  },
+  "evidencias_revision": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/meta-preparacion-canales-20261111/revision-2-88551a0a.json",
+      "sha256": "4a247119ce7713c90c9788e7b64857997a073ddcf2dc44d555ff5f7c3aafd10b",
+      "bytes": 699
+    }
+  ]
 }
