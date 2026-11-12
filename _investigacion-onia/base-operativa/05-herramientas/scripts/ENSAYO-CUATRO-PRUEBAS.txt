@@ -1,0 +1,36 @@
+test_cli_invalid_symlink_is_blocked_without_private_path (test_harness_ensayo.TrialTests.test_cli_invalid_symlink_is_blocked_without_private_path) ... ok
+test_collisions_and_duplicate_ids (test_harness_ensayo.TrialTests.test_collisions_and_duplicate_ids) ... ok
+test_default_three_and_no_environment_bypass (test_harness_ensayo.TrialTests.test_default_three_and_no_environment_bypass) ... ok
+test_duplicate_question_id_is_rejected (test_harness_ensayo.TrialTests.test_duplicate_question_id_is_rejected) ... ok
+test_expiration_maximum_and_invalid_data (test_harness_ensayo.TrialTests.test_expiration_maximum_and_invalid_data) ... ok
+test_foreground_monitor_cli_sigterm_and_private_output (test_harness_ensayo.TrialTests.test_foreground_monitor_cli_sigterm_and_private_output) ... ok
+test_fourth_admitted_with_global_reviewer_and_fifth_rejected (test_harness_ensayo.TrialTests.test_fourth_admitted_with_global_reviewer_and_fifth_rejected) ... ok
+test_freshness_exact_boundaries (test_harness_ensayo.TrialTests.test_freshness_exact_boundaries) ... ok
+test_invalid_question_slot_blocks_globally (test_harness_ensayo.TrialTests.test_invalid_question_slot_blocks_globally) ... ok
+test_missing_policy_and_state_fail_closed (test_harness_ensayo.TrialTests.test_missing_policy_and_state_fail_closed) ... ok
+test_monitor_error_sets_stop_without_enabling_fourth (test_harness_ensayo.TrialTests.test_monitor_error_sets_stop_without_enabling_fourth) ... ok
+test_monitor_publishes_receipts_and_stops_at_budget (test_harness_ensayo.TrialTests.test_monitor_publishes_receipts_and_stops_at_budget) ... ok
+test_operation_directory_owner_only_writes_and_private_policy (test_harness_ensayo.TrialTests.test_operation_directory_owner_only_writes_and_private_policy) ... ok
+test_permissions_owner_symlinks_and_hardlinks (test_harness_ensayo.TrialTests.test_permissions_owner_symlinks_and_hardlinks) ... ok
+test_pid_recycled_and_foreign_owner_never_signaled (test_harness_ensayo.TrialTests.test_pid_recycled_and_foreign_owner_never_signaled) ... ok
+test_policy_state_and_receipt_tampering (test_harness_ensayo.TrialTests.test_policy_state_and_receipt_tampering) ... ok
+test_prepare_fresh_read_and_no_overwrite_or_activation (test_harness_ensayo.TrialTests.test_prepare_fresh_read_and_no_overwrite_or_activation) ... ok
+test_primary_only_rpc_and_window_changes (test_harness_ensayo.TrialTests.test_primary_only_rpc_and_window_changes) ... ok
+test_question_reservation_counts_with_reviewer_globally (test_harness_ensayo.TrialTests.test_question_reservation_counts_with_reviewer_globally) ... ok
+test_quota_response_rejects_missing_or_malformed_primary (test_harness_ensayo.TrialTests.test_quota_response_rejects_missing_or_malformed_primary) ... ok
+test_quota_rpc_readonly_with_synthetic_app_server (test_harness_ensayo.TrialTests.test_quota_rpc_readonly_with_synthetic_app_server) ... ok
+test_quota_stale_unknown_rollover_and_two_point_budget (test_harness_ensayo.TrialTests.test_quota_stale_unknown_rollover_and_two_point_budget) ... ok
+test_resource_sampler_uses_cpu_and_swap_differences (test_harness_ensayo.TrialTests.test_resource_sampler_uses_cpu_and_swap_differences) ... ok
+test_resources_stale_future_invalid_and_saturation (test_harness_ensayo.TrialTests.test_resources_stale_future_invalid_and_saturation) ... ok
+test_stop_corrupt_inventory_sends_no_signal (test_harness_ensayo.TrialTests.test_stop_corrupt_inventory_sends_no_signal) ... ok
+test_stop_missing_inventory_never_claims_stopped (test_harness_ensayo.TrialTests.test_stop_missing_inventory_never_claims_stopped) ... ok
+test_stop_missing_or_dead_monitor_blocks (test_harness_ensayo.TrialTests.test_stop_missing_or_dead_monitor_blocks) ... ok
+test_stop_only_owned_batch_and_preserves_logs (test_harness_ensayo.TrialTests.test_stop_only_owned_batch_and_preserves_logs) ... ok
+test_stop_tampered_state_receipt_sends_no_signal (test_harness_ensayo.TrialTests.test_stop_tampered_state_receipt_sends_no_signal) ... ok
+test_stop_with_live_reserved_question_reports_blocked (test_harness_ensayo.TrialTests.test_stop_with_live_reserved_question_reports_blocked) ... ok
+test_unauthorized_base_id_and_foreign_live_session (test_harness_ensayo.TrialTests.test_unauthorized_base_id_and_foreign_live_session) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 2.922s
+
+OK

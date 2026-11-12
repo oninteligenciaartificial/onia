@@ -276,6 +276,9 @@ class TrialTests(unittest.TestCase):
     def test_stop_only_owned_batch_and_preserves_logs(self):
         owned, other = self.child(), self.child()
         item = {'pid': owned.pid, 'pid_inicio': sessions.process_start(owned.pid)}
+        journal = {'politica_sha256': self.tag, 'procesos': [item]}
+        private.private_write(self.path / 'procesos.json', journal)
+        write_state(self.op, self.value, procesos_sha256=trial.digest(journal))
         log = self.path / 'log-sintetico'
         log.write_text('conservar')
         with patch.object(trial, 'inventory', side_effect=lambda *_:
@@ -288,6 +291,26 @@ class TrialTests(unittest.TestCase):
         self.assertEqual(log.read_text(), 'conservar')
         with self.assertRaisesRegex(ValueError, 'STOP'):
             self.capacity([])
+
+    def test_stop_missing_inventory_never_claims_stopped(self):
+        with patch.object(trial, 'inventory', return_value=([], [], [])), \
+                patch.object(trial, 'terminate') as terminate:
+            with self.assertRaisesRegex(ValueError, 'inventario_incompleto'):
+                trial.stop(self.op)
+            terminate.assert_not_called()
+        self.assertTrue((self.path / 'STOP').exists())
+        self.assertFalse((self.path / 'fin.json').exists())
+
+    def test_stop_tampered_state_receipt_sends_no_signal(self):
+        journal = {'politica_sha256': self.tag, 'procesos': []}
+        private.private_write(self.path / 'procesos.json', journal)
+        state = write_state(self.op, self.value, procesos_sha256=trial.digest(journal))
+        private.private_write(self.path / state['recibo']['archivo'], {'alterado': True})
+        with patch.object(trial, 'inventory', return_value=([], [], [])), \
+                patch.object(trial, 'terminate') as terminate:
+            with self.assertRaisesRegex(ValueError, 'estado_alterado'):
+                trial.stop(self.op)
+            terminate.assert_not_called()
 
     def test_stop_corrupt_inventory_sends_no_signal(self):
         private.private_write(self.path / 'procesos.json', {'politica_sha256': self.tag, 'procesos': []})
@@ -433,6 +456,9 @@ for line in sys.stdin:
         self.assertNotIn(str(self.op), output.getvalue())
 
     def test_stop_with_live_reserved_question_reports_blocked(self):
+        journal = {'politica_sha256': self.tag, 'procesos': []}
+        private.private_write(self.path / 'procesos.json', journal)
+        write_state(self.op, self.value, procesos_sha256=trial.digest(journal))
         slot = {'supervisor_pid': os.getpid(), 'supervisor_inicio': sessions.process_start(os.getpid())}
         with patch.object(trial, 'inventory', return_value=([], [], [slot])), \
                 patch.object(trial.time, 'monotonic', side_effect=[0, 6]):

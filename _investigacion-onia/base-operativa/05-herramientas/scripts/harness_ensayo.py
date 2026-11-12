@@ -426,11 +426,23 @@ def stop(root, reason='fin_operador', trusted=None):
         preparation = read(path / 'preparacion.json')
         require(preparation.get('politica_sha256') == digest(value), 'politica_alterada')
         _, _, owned = inventory(root, value)
-        journal = read(path / 'procesos.json') if (path / 'procesos.json').exists() else {}
-        require(not journal or journal.get('politica_sha256') == digest(value), 'inventario_alterado')
-        if journal:
+        has_journal = os.path.lexists(path / 'procesos.json')
+        has_state = os.path.lexists(path / 'estado.json')
+        require(has_journal == has_state, 'inventario_incompleto')
+        journal = read(path / 'procesos.json') if has_journal else {}
+        if has_journal:
+            require(journal.get('politica_sha256') == digest(value), 'inventario_alterado')
             state = read(path / 'estado.json')
             require(state.get('procesos_sha256') == digest(journal), 'inventario_alterado')
+            reference = state.pop('recibo', None)
+            require(isinstance(reference, dict) and set(reference) == {'archivo', 'sha256'}
+                    and isinstance(reference['archivo'], str)
+                    and Path(reference['archivo']).name == reference['archivo']
+                    and reference['archivo'].startswith('recibo-'), 'recibo_invalido')
+            recorded = read(path / reference['archivo'])
+            require(digest(recorded) == reference['sha256']
+                    and recorded == dict(state, evento='muestra')
+                    and state.get('politica_sha256') == digest(value), 'estado_alterado')
         items = (trusted or []) + journal.get('procesos', []) + process_tree(owned)
         unique = {(item['pid'], item['pid_inicio']): item for item in items}
         receipt(path, {'evento': 'intencion_SIGTERM', 'motivo': reason, 'fecha': time.time(),
