@@ -118,3 +118,5 @@ Segunda revisión (f404b7b): cambios. Se añadió cotejo del inventario en admis
 Tercera revisión (5d2f9f9): cambios. Se bloquea reinicio del monitor cuando existe inventario, estado o un recibo de muestra previo, incluso con estado perdido. Se conserva inventario y no se consulta RPC ni habilita admisión. Suite vigente34/34 con regresión para pérdida de estado y pérdida de ambos documentos. No se activó la política real.
 
 Cuarta revisión (6e1d8d3): cambios. El monitor en curso coteja mediante health el estado, inventario y recibo anterior bajo el lock, antes de reemplazar cualquier documento. Alteraciones de cualquiera de los tres conservan evidencia y STOP; las tres regresiones durante monitor están incluidas. Suite vigente37/37. No se activó ensayo real.
+
+Quinta revisión (02044e8): cambios. El supervisor revalida después de Git, antes de crear bootstrap y antes de abrir su compuerta. Si se rechaza después de crear el hijo bloqueado, cierra la compuerta, espera su salida y registra fallo; no ejecuta Codex. Regresión en memoria para vencimiento en ambos puntos; 38/38 específicas y4/4 integración vigentes. Ensayo real sigue sin activar.

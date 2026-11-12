@@ -1,6 +1,6 @@
 """Ensayo completamente local. Sin RPC real, cuota real ni sesiones de modelos."""
 from copy import deepcopy
-from contextlib import redirect_stdout
+from contextlib import redirect_stdout, ExitStack, nullcontext
 import io
 import json
 import os
@@ -593,6 +593,47 @@ for line in sys.stdin:
             self.assertEqual(trial.monitor(self.op)['estado'], 'parado')
         self.assertTrue(list(self.path.glob('recibo-*.json')))
         self.assertTrue((self.path / 'STOP').exists())
+
+
+class WorkerExpiryTests(unittest.TestCase):
+    def test_expiry_after_git_or_before_gate_never_executes_codex(self):
+        for fail_at in [2, 3]:
+            with self.subTest(check=fail_at), ExitStack() as stack:
+                session = {'intento': 1, 'dry_run': False, 'estado': 'iniciando',
+                           'supervisor_pid': os.getpid(), 'ensayo_sha256': 'permiso',
+                           'git_repo': '/virtual/git', 'briefing': '/virtual/briefing',
+                           'log': '/virtual/log', 'worktree': '/virtual/worktree'}
+                writes = []
+                class Gate(io.BytesIO):
+                    def write(self, data):
+                        writes.append(data)
+                        return super().write(data)
+                def mock(obj, name, **kwargs):
+                    return stack.enter_context(patch.object(obj, name, **kwargs))
+                mock(sessions, 'registry_lock', side_effect=lambda *_: nullcontext())
+                mock(sessions.trabajo, 'read_task', return_value={'sesiones': [session]})
+                mock(trial, 'revalidate', side_effect=[None] * (fail_at - 1) + [ValueError('ensayo_vencido')])
+                mock(sessions, 'validate_private_git')
+                mock(sessions.shutil, 'which', return_value='/fake/codex')
+                mock(Path, 'open', side_effect=lambda *a, **k: io.BytesIO())
+                mock(sessions.os, 'pipe', return_value=(101, 102))
+                mock(sessions.os, 'fdopen', side_effect=lambda *a, **k: Gate())
+                mock(sessions.os, 'close')
+                spawn = mock(sessions.subprocess, 'Popen')
+                spawn.return_value.pid = 12345
+                spawn.return_value.wait.return_value = 125
+                mock(sessions, 'command', return_value=['/fake/codex'])
+                mock(sessions, 'child_environment', return_value={})
+                update = mock(sessions, 'session_update')
+                mock(sessions, 'process_start', return_value='boot:123')
+                self.assertEqual(sessions._worker(Path('/base'), 'uno', Path('/virtual/op'), 1), 126)
+                self.assertEqual(writes, [])
+                self.assertEqual(update.call_args.kwargs['estado'], 'fallida')
+                if fail_at == 2:
+                    spawn.assert_not_called()
+                else:
+                    spawn.assert_called_once()
+                    spawn.return_value.wait.assert_called_once_with(timeout=5)
 
 
 if __name__ == '__main__':

@@ -661,6 +661,7 @@ def _worker(base, ident, root, attempt):
         if not codex:
             session_update(root, base, ident, attempt, estado='fallida', rc=127, fin=trabajo.now())
             return 127
+        child = None
         try:
             with Path(session['briefing']).open('rb') as prompt, Path(session['log']).open('ab') as output, \
                     private_path(root, f'logs/{ident}.{attempt}.stderr.log').open('xb') as errors:
@@ -672,6 +673,8 @@ def _worker(base, ident, root, attempt):
                                  'ready=os.read(fd,1); os.close(fd); '
                                  'ready == b"1" or sys.exit(125); '
                                  'os.execvp(sys.argv[2],sys.argv[2:])')
+                    if session.get('ensayo_sha256'):
+                        trial.revalidate(root, base, ident, session['ensayo_sha256'])
                     child = subprocess.Popen([sys.executable, '-c', bootstrap, str(gate_read),
                         *command(session, codex)], stdin=prompt, stdout=output, stderr=errors,
                         cwd=session['worktree'], close_fds=True, pass_fds=(gate_read,),
@@ -680,12 +683,17 @@ def _worker(base, ident, root, attempt):
                         gate_write = None
                         session_update(root, base, ident, attempt, pid=child.pid,
                                        pid_inicio=process_start(child.pid), estado='ejecutando')
+                        if session.get('ensayo_sha256'):
+                            trial.revalidate(root, base, ident, session['ensayo_sha256'])
                         gate.write(b'1')
                 finally:
                     os.close(gate_read)
                     if gate_write is not None:
                         os.close(gate_write)
-        except OSError:
+        except (OSError, ValueError):
+            # La compuerta cerrada deja salir al bootstrap sin ejecutar Codex.
+            if child is not None:
+                child.wait(timeout=5)
             session_update(root, base, ident, attempt, estado='fallida', rc=126, fin=trabajo.now())
             return 126
     last_sid = None

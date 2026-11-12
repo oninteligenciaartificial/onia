@@ -36,8 +36,20 @@ test_stop_only_owned_batch_and_preserves_logs (test_harness_ensayo.TrialTests.te
 test_stop_tampered_state_receipt_sends_no_signal (test_harness_ensayo.TrialTests.test_stop_tampered_state_receipt_sends_no_signal) ... ok
 test_stop_with_live_reserved_question_reports_blocked (test_harness_ensayo.TrialTests.test_stop_with_live_reserved_question_reports_blocked) ... ok
 test_unauthorized_base_id_and_foreign_live_session (test_harness_ensayo.TrialTests.test_unauthorized_base_id_and_foreign_live_session) ... ok
+test_expiry_after_git_or_before_gate_never_executes_codex (test_harness_ensayo.WorkerExpiryTests.test_expiry_after_git_or_before_gate_never_executes_codex) ... ok
 
 ----------------------------------------------------------------------
-Ran 37 tests in 5.280s
+Ran 38 tests in 4.506s
+
+OK
+
+Comando: python3 -B -m unittest -v (cuatro métodos de integración indicados abajo)
+test_trial_four_synthetic_launches_fifth_blocked_and_sigterm (test_harness_sesiones.SessionTests.test_trial_four_synthetic_launches_fifth_blocked_and_sigterm) ... ok
+test_trial_enforces_model_auth_and_no_children_before_creating_worktree (test_harness_sesiones.SessionTests.test_trial_enforces_model_auth_and_no_children_before_creating_worktree) ... ok
+test_trial_revalidates_after_git_and_before_registration (test_harness_sesiones.SessionTests.test_trial_revalidates_after_git_and_before_registration) ... ok
+test_trial_question_is_tagged_and_stop_before_runner_blocks (test_harness_preguntas.QuestionTests.test_trial_question_is_tagged_and_stop_before_runner_blocks) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 4.093s
 
 OK
