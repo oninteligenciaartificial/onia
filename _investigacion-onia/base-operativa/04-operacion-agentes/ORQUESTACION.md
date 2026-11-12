@@ -18,11 +18,9 @@ Al pedir revisión, adjuntar al commit exacto el comando y la salida saneada de 
 
 ## Reparto del 9 noviembre 2026 · antecedente
 
-Rige el [acuerdo final de Sergio](REPARTO-CODEX-GROKBOT-20261109.md): ventas orgánicas del workshop hasta el 14 a cargo de Boss + Contenido; Codex sólo técnica por PEDIDO autorizado y HOMELAB esencial. Modelo gpt-6.1-sol, low/simple, high/diseño o fallo difícil, ultra sólo si Sergio lo pide. Harness = única fuente de estados; cola-boss = buzón, HECHO no es aceptación, PEDIDO no autoriza. No existe despachador automático. Esta actualización prevalece sobre repartos y ejemplos históricos incompatibles.
+El [acuerdo del 9/11](REPARTO-CODEX-GROKBOT-20261109.md) asignaba ingresos orgánicos a Boss + Contenido y tareas técnicas autorizadas a Codex. En ese corte aún no existía el despachador. Se conserva como procedencia; sus roles y afirmaciones de capacidad no prevalecen sobre la entrada vigente del 12/11 ni sobre decisiones posteriores de Sergio.
 
-En cada lanzamiento y retoma pasar modelo/esfuerzo explícitos y registrar solicitado/observado del mismo SID, también en revisores/hijos autorizados. `--ignore-user-config` impide depender del default personal. Los ejemplos antiguos ultra pertenecen a encargos específicos; no son autorización para repetirlos. No se cambia el límite tres ni se implementa scheduler en este acuerdo.
-
-Aplicar [reglas-comunes](reglas-comunes.md), [ESTADO](../00-MAPA/ESTADO.md) y el encargo actual. Un coordinador integra y un responsable ejecuta cada tarea; otro puede revisar sin editar. El reparto de chats de fechas anteriores está en [SESIONES](SESIONES.md), como procedencia. No obliga a despachar cada tarea Cloud a áreas locales. El CLI conserva la preparación y recuperación del registro único y ahora lanza/reanuda procesos `codex exec` en worktrees separados, con hasta tres sesiones vivas, cierre comprobado en origin y revisión independiente. No crea chats del escritorio, scheduler ni servicios; no mide cuota ni amplía permisos externos.
+En lanzamiento y retoma pasar modelo/esfuerzo explícitos y distinguir solicitado/observado del mismo SID. Los ejemplos históricos ultra no autorizan repetirlos. Consultar el registro canónico del harness y los permisos del encargo; la preparación de contexto no inicia servicios ni acredita recurrencia. Las tres sesiones principales y las pausas existentes se conservan.
 
 ## Entrada y selección
 
