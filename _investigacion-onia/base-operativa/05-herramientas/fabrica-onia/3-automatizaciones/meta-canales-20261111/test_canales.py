@@ -398,16 +398,18 @@ class ChannelsTest(unittest.TestCase):
         for destination in ("https://example.invalid", "http://wa.me/10000000000", "https://wa.me/10000000000?token=x", "$(x)"):
             self.assert_rejected("DESTINO_PRIVADO_INVALIDO", lambda: a.validate_config({**self.cfg, "whatsapp_destino": destination}))
 
-    def test_panel_consumer_contract_and_existing_allowlist_limit(self):
+    def test_panel_consumer_contract_uses_native_allowlist(self):
         import puente_panel
         result = puente_panel.consume()
         self.assertEqual(result["estado"], "para_revision")
         self.assertEqual(result["exports_consumidos"], 1)
+        self.assertEqual(result["entradas_faltantes"], 4)
         self.assertTrue(result["documentos_disponibles"])
         self.assertFalse(result["errores_modelo"])
         self.assertFalse(result["ui_publicada"])
-        self.assertEqual(result["lector_sin_puente"], "rechazado_por_lista_de_productores")
-        self.assertNotIn("automatizaciones", puente_panel.reader().PRODUCERS)
+        self.assertEqual(result["lector_sin_puente"], "admitido")
+        self.assertEqual(puente_panel.reader().PRODUCERS["automatizaciones"],
+                         str(puente_panel.ROOT.relative_to(puente_panel.BASE)))
 
     def test_each_channel_late_injection_identity_and_baja(self):
         for index, scenario in enumerate(self.scenarios):

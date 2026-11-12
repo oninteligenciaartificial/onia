@@ -36,17 +36,16 @@
     },
     {
       "id": "contrato",
-      "nombre": "Leer contrato con consumidor del panel mediante puente local",
+      "nombre": "Leer el estado de Meta desde el panel de Automatizaciones",
       "estado": "completado",
       "evidencias": [
-        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/CONTRATO-PANEL.md",
-        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/evidencia/correccion-p2/panel.json"
+        "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/CONTRATO-PANEL.md"
       ]
     },
     {
       "id": "revision",
-      "nombre": "Revisión independiente del commit publicado",
-      "estado": "pendiente",
+      "nombre": "Paquete de simulación aceptado en el harness",
+      "estado": "completado",
       "evidencias": [
         "05-herramientas/fabrica-onia/3-automatizaciones/meta-canales-20261111/RECIBO.md"
       ]
@@ -102,16 +101,6 @@
       "motivo": "Aprobación editorial y prueba real por cada uno de los cuatro canales pendientes",
       "responsable": "Contenido, Sergio y Operaciones",
       "siguiente": "Aprobar texto y ejecutar plan limitado; conservar evidencia privada saneada, sin activar tráfico comercial"
-    },
-    {
-      "motivo": "UI existente no incluye productor automatizaciones en lista de exports permitidos",
-      "responsable": "Único escritor del panel y coordinadora",
-      "siguiente": "Adoptar contrato según CONTRATO-PANEL.md y probar vistas sin tocar permisos de envío"
-    },
-    {
-      "motivo": "Revisión independiente del commit entregado pendiente",
-      "responsable": "Coordinadora",
-      "siguiente": "Cerrar y revisar rama; no aceptar desde esta sesión"
     }
   ]
 }

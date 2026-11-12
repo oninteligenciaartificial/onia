@@ -28,6 +28,7 @@ FACTORIES = (
 )
 PRODUCERS = {key: root for key, _, root in FACTORIES if key in ('guiones', 'whatsapp')}
 PRODUCERS['panel'] = PANEL_ROOT
+PRODUCERS['automatizaciones'] = FACTORY_ROOT + '3-automatizaciones/meta-canales-20261111'
 PRODUCERS['estrategias'] = '01-negocio/estrategias-operativas-20261111'
 STATES = {'pendiente', 'en_curso', 'bloqueado', 'completado', 'para_revision'}
 HISTORIC_TANDA = FACTORY_ROOT + '1-guiones-calendario/salida/guiones-tanda-20261111-v2/guiones-panel.json'

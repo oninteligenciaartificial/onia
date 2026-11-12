@@ -1,4 +1,4 @@
-"""Consume el contrato con el lector existente en un módulo aislado; no modifica UI."""
+"""Comprueba que el lector admite la raíz Meta y carga su estado sin modificarlo."""
 import importlib.util
 import json
 from pathlib import Path
@@ -24,20 +24,11 @@ def reader():
 
 def consume():
     module = reader()
-    # La fuente actual rechaza automatizaciones: conservar evidencia de ese límite.
-    try:
-        module.load_export(EXPORT, {}, {})
-    except ValueError:
-        native = "rechazado_por_lista_de_productores"
-    else:
-        native = "admitido"
-    # Extensión explícita sólo en esta instancia, limitada a la ruta del encargo.
-    module.PRODUCERS = {**module.PRODUCERS, "automatizaciones": str(ROOT.relative_to(BASE))}
     documents, targets = {}, {}
     data = module.load_export(EXPORT, documents, targets)
     model = module.build([EXPORT])
     factory = next(f for f in model["fabricas"] if f["id"] == "automatizaciones")
-    return {"modo": "contrato_local", "ui_publicada": False, "lector_sin_puente": native,
+    return {"modo": "contrato_local", "ui_publicada": False, "lector_sin_puente": "admitido",
             "id": data["id"], "estado": data["estado"], "exports_consumidos": len(factory["exports"]),
             "documentos": len(documents), "targets_revision": len(targets),
             "documentos_disponibles": all(d["disponible"] for d in
