@@ -1,0 +1,42 @@
+{
+  "schema": 2,
+  "id": "piloto-orquestacion-tests-20261112",
+  "revision": 2,
+  "compartible": true,
+  "objetivo": "Ejecutar python3 -I -B -m unittest discover -s _investigacion-onia/base-operativa/05-herramientas/scripts -p test_harness_lote.py -v. Guardar salida saneada y INFORME.md breve: comando, resultado, cantidad de tests, límites. No modificar implementación ni corregir fallos: documentarlos. No ejecutar tick ni lanzar tareas.",
+  "estado": "preparado",
+  "proximo_paso": "Ejecutar ensayo acotado y entregar evidencia.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-12T00:11:20.327578+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-12T00:11:19.977398+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Ejecutar ensayo acotado y entregar evidencia.",
+      "aceptacion": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/piloto-orquestacion-tests-20261112.md",
+    "sha256": "c14197c7271c087775d7615c0bf43c0c90bae1c57dda881ae86caba486071f94",
+    "bytes": 913,
+    "contenido": "# piloto-orquestacion-tests-20261112\n\nÁrea desarrollo. Leer reglas vigentes. Una tarea acotada para ensayo real del despachador autorizado por Sergio: «si pasa seguimos con la orquestación».\n\nEjecutar python3 -I -B -m unittest discover -s _investigacion-onia/base-operativa/05-herramientas/scripts -p test_harness_lote.py -v. Guardar salida saneada y INFORME.md breve: comando, resultado, cantidad de tests, límites. No modificar implementación ni corregir fallos: documentarlos. No ejecutar tick ni lanzar tareas.\n\nSólo escribir en 04-operacion-agentes/homelab/piloto-20261112/tests. No editar registros ni briefing, no shell remoto, producción, n8n, envíos, gastos ni hijos. Máximo un informe y salida de pruebas. Commit y push en rama asignada. Criterio: evidencia precisa sin inventar éxito; revisión posterior separada. No instalar dependencias. Base fuente debe contener abbf9b7 o descendiente.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "ejecutor-tests-20261112",
+    "rutas": [
+      "04-operacion-agentes/homelab/piloto-20261112/tests"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-12T00:11:20.327567+00:00"
+  }
+}
