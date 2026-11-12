@@ -1,0 +1,16 @@
+[Unit]
+Description=ONIA: pasada acotada de lotes aprobados
+
+[Service]
+Type=oneshot
+WorkingDirectory=@REPO@
+Environment=PATH=@CODEX_BIN@:/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONDONTWRITEBYTECODE=1
+UMask=0077
+KillMode=process
+TimeoutStartSec=10min
+TimeoutStopSec=10s
+ExecStart=/usr/bin/python3 -B @ADAPTADOR@ --repo @REPO@ --lista @LISTA@
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=onia-continuidad
