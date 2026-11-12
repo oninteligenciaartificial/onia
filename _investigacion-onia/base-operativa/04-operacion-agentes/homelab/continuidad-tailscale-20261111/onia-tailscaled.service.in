@@ -1,0 +1,19 @@
+[Unit]
+Description=Daemon userspace existente de Tailscale
+StartLimitIntervalSec=120
+StartLimitBurst=3
+
+[Service]
+Type=exec
+WorkingDirectory=@CWD@
+ExecCondition=/usr/bin/python3 @GUARD@
+ExecStart=@EXEC@
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=30
+UMask=0077
+StandardOutput=null
+StandardError=null
+
+[Install]
+WantedBy=default.target
