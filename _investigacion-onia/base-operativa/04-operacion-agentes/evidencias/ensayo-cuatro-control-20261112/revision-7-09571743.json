@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "49d9a7403afbcb0583f464ac8c5f4d6fd77f4571",
+  "criterio": "Dos bloqueos reproducidos en memoria: (1) harness_ensayo.py:426: fin espera sin límite el lock global, retenido durante operaciones Git; mientras espera no escribe STOP ni envía SIGTERM, comprometiendo la parada acotada y el presupuesto. (2) harness_sesiones.py:244: un slot respondiendo con vencimiento pasado y sin identidades de proceso se acepta y desaparece del contador; con tres sesiones permite admitir otra pese a una ocupación desconocida. Debe rechazar ese registro incompleto. Faltan regresiones para ambos casos. Alcance y sintaxis correctos; pasa la prueba de caducidad del supervisor. Las otras 37 pruebas específicas no pudieron reproducirse porque el sandbox impide crear temporales. No se modificaron archivos ni se activó el ensayo.",
+  "worktree_conservado": true
+}
