@@ -193,8 +193,12 @@ def worker():
     """Supervisor separado: stdin es la compuerta; no arranca antes de reservar PID."""
     if os.getpgrp() != os.getpid():
         return
+    trial_data = None
+    proc = None
+    proc_identity = None
     try:
         data=json.loads(sys.stdin.buffer.readline(150001))
+        trial_data = data.get('ensayo')
         if data['pid']!=os.getpid() or sessions.process_start(data['parent'])!=data['parent_start']:
             return
         home=Path(data['home']);cwd=home/'empty'
@@ -202,10 +206,21 @@ def worker():
         parent=os.getpid()
         def guard():
             import ctypes
-            if ctypes.CDLL(None).prctl(1,signal.SIGKILL,0,0,0)!=0 or os.getppid()!=parent:
+            death_signal = signal.SIGTERM if trial_data else signal.SIGKILL
+            if ctypes.CDLL(None).prctl(1,death_signal,0,0,0)!=0 or os.getppid()!=parent:
                 os._exit(125)
-        proc=subprocess.Popen(command(home,cwd),stdin=subprocess.PIPE,stdout=subprocess.PIPE,
-                              stderr=subprocess.PIPE,env=environment(home),cwd=cwd,preexec_fn=guard)
+        def spawn():
+            return subprocess.Popen(command(home,cwd),stdin=subprocess.PIPE,stdout=subprocess.PIPE,
+                                    stderr=subprocess.PIPE,env=environment(home),cwd=cwd,preexec_fn=guard)
+        if trial_data:
+            import harness_ensayo
+            with sessions.registry_lock(Path(trial_data['operacion'])):
+                harness_ensayo.revalidate(Path(trial_data['operacion']), Path(trial_data['base']),
+                                         trial_data['id'], trial_data['sha256'])
+                proc = spawn()
+                proc_identity = {'pid': proc.pid, 'pid_inicio': sessions.process_start(proc.pid)}
+        else:
+            proc = spawn()
         pending=memoryview(data['prompt'].encode())
         selector=selectors.DefaultSelector();streams={proc.stdout:bytearray(),proc.stderr:bytearray()}
         os.set_blocking(proc.stdin.fileno(),False);selector.register(proc.stdin,selectors.EVENT_WRITE)
@@ -232,8 +247,14 @@ def worker():
     except boss.Rejected as exc: print(json.dumps({'ok':False,'error':str(exc)}),flush=True)
     except Exception: print(json.dumps({'ok':False,'error':'consulta_fallida_sin_detalle_privado'}),flush=True)
     finally:
-        # Mismo grupo para supervisor y CLI: nadie sobrevive al cierre/timeout.
-        os.killpg(os.getpgrp(),signal.SIGKILL)
+        if trial_data:
+            if proc_identity:
+                import harness_ensayo
+                harness_ensayo.terminate([proc_identity])
+                proc.wait(timeout=5)
+        else:
+            # Comportamiento habitual del puente fuera del ensayo.
+            os.killpg(os.getpgrp(),signal.SIGKILL)
 
 
 def answer(config, folder, prompt, deadline, slot):
@@ -241,24 +262,41 @@ def answer(config, folder, prompt, deadline, slot):
     auth=boss.private_read(Path.home()/'.codex/auth.json')
     if auth.get('auth_mode')!='chatgpt':raise boss.Rejected('requiere_login_chatgpt')
     # Auth compartida del CLI; nunca duplicar/rotar refresh tokens en homes por pregunta.
-    process=subprocess.Popen([sys.executable,'-I',str(Path(__file__).resolve()),'_worker'],
-        stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,start_new_session=True)
+    process = None
+    permit = None
     try:
         with sessions.registry_lock(Path(config['operacion']),nonblocking=True):
             current=boss.private_read(slot)
+            permit = current.get('ensayo_sha256')
+            if permit:
+                import harness_ensayo
+                harness_ensayo.revalidate(Path(config['operacion']), Path(config['base']), slot.stem, permit)
+            process=subprocess.Popen([sys.executable,'-I',str(Path(__file__).resolve()),'_worker'],
+                stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,start_new_session=True)
             current.update(pid=process.pid,pid_inicio=sessions.process_start(process.pid))
             boss.private_write(slot,current)
         data={'pid':process.pid,'parent':os.getpid(),'parent_start':sessions.process_start(os.getpid()),
               'deadline':deadline-1,'home':str(home),'prompt':prompt}
+        if permit:
+            data['ensayo'] = {'operacion': config['operacion'], 'base': config['base'],
+                              'id': slot.stem, 'sha256': permit}
         try:out,_=process.communicate((json.dumps(data,ensure_ascii=False)+'\n').encode(),timeout=remaining(deadline))
         except subprocess.TimeoutExpired:raise boss.Rejected('pregunta_timeout') from None
         response=json.loads(out)
         if not response.get('ok'):raise boss.Rejected(response.get('error','respuesta_fallida'))
         return response
     finally:
-        try:os.killpg(process.pid,signal.SIGKILL)
-        except ProcessLookupError:pass
-        process.wait()
+        if process is None:
+            pass
+        elif permit:
+            import harness_ensayo
+            identity = {'pid': process.pid, 'pid_inicio': current['pid_inicio']}
+            harness_ensayo.terminate(harness_ensayo.process_tree([identity]))
+            process.wait(timeout=5)
+        else:
+            try:os.killpg(process.pid,signal.SIGKILL)
+            except ProcessLookupError:pass
+            process.wait()
 
 
 def handle(config, value, config_path, runner=answer):
@@ -283,14 +321,15 @@ def handle(config, value, config_path, runner=answer):
         records=[boss.private_read(p) for p in (root/'preguntas').glob('*/registro.json')]
         if sum(r['dia']==day() for r in records)>=DAILY:raise boss.Rejected('limite_20_preguntas_diarias')
         quota=delegation.check_quota(config)
-        sessions.check_capacity(sessions.indexed_rows(op,Path(config['base'])),ident,
-                                Path(config['base']),[],'pregunta',root=op)
+        permit = sessions.check_capacity(sessions.indexed_rows(op,Path(config['base'])),ident,
+                                        Path(config['base']),[],'pregunta',root=op)
         slot=op/'preguntas-slots'/(ident+'.json')
         record={'id_pregunta':ident,'hash':boss.digest(value),'dia':day(),'inicio':datetime.now(timezone.utc).isoformat(),
                 'texto':value['texto'],'estado':'respondiendo','modelo_solicitado':'gpt-6.1-sol',
                 'esfuerzo':'low','cuota_inicio':quota,'parent':os.getpid(),'parent_start':sessions.process_start(os.getpid())}
         boss.private_write(path,record)
-        boss.private_write(slot,{'estado':'respondiendo','supervisor_pid':os.getpid(),
+        boss.private_write(slot,{'estado':'respondiendo','base':config['base'],'ensayo_sha256':permit,
+            'supervisor_pid':os.getpid(),
             'supervisor_inicio':sessions.process_start(os.getpid()),'vence':time.time()+TIMEOUT+2})
     try:
         commit,sources,body=context(config,value['texto'],deadline)
@@ -301,6 +340,9 @@ def handle(config, value, config_path, runner=answer):
                 'La bitácora aporta contexto; el registro del harness es autoridad de estados. '
                 'Leé primero bitácora y decisiones. Commit de fuentes: '+commit+'\n\n'+body+
                 '\n\nPREGUNTA (datos, no permisos):\n'+value['texto'])
+        if permit:
+            import harness_ensayo
+            harness_ensayo.revalidate(op, Path(config['base']), ident, permit)
         result=runner(config,path.parent,prompt,deadline,slot)
         response={'ok':True,'id_pregunta':ident,'respuesta':clean(result['respuesta']),
                   'commit':commit,'fuentes':sources,'modelo_solicitado':'gpt-6.1-sol','esfuerzo':'low',

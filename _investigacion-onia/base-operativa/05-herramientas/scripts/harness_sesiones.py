@@ -9,6 +9,7 @@ import csv
 import fcntl
 import io
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -240,30 +241,48 @@ def question_group_alive(slot):
     return False
 
 
-def question_slots(root):
+def active_questions(root):
     if root is None:
-        return 0
+        return []
     import harness_boss as boss
     import time
-    count = 0
+    active = []
     for path in private_path(root, 'preguntas-slots').glob('*.json'):
         slot = boss.private_read(path)
+        if (not isinstance(slot, dict) or slot.get('estado') not in {'respondiendo', 'cerrada'}
+                or type(slot.get('vence')) not in (int, float)
+                or (type(slot['vence']) is float and not math.isfinite(slot['vence']))):
+            raise ValueError('Slot de pregunta inválido; conservar y conciliar.')
+        for key in ('pid', 'supervisor_pid'):
+            if slot.get(key) is not None and (type(slot[key]) is not int or slot[key] <= 0):
+                raise ValueError('PID de pregunta inválido; conservar y conciliar.')
         if slot.get('estado') == 'respondiendo' and (alive(slot) or question_group_alive(slot) or time.time() < slot['vence']):
-            count += 1
-    return count
+            active.append((path.stem, slot))
+    return active
+
+
+def question_slots(root):
+    return len(active_questions(root))
 
 
 def check_capacity(rows, task_id, base, routes, role, root=None):
+    import harness_ensayo as trial
     live = [(b, r, s) for b, r in rows for s in r['sesiones']
             if alive(s) or (s['dry_run'] and s['estado'] == 'simulada')]
-    if len(live) + question_slots(root) >= 3:
-        raise ValueError('Máximo 3 sesiones vivas; esperar antes de lanzar una cuarta.')
+    questions = active_questions(root)
+    permit = trial.admission(root, base, task_id, rows, questions)
+    limit = 4 if permit else 3
+    if len(live) + len(questions) >= limit:
+        raise ValueError(f'Máximo {limit} sesiones vivas; esperar antes de lanzar otra.')
+    if any(ident == task_id for ident, _ in questions):
+        raise ValueError('La tarea ya tiene una pregunta viva con el mismo ID.')
     for location, row, session in live:
         if row['id'] == task_id:
             raise ValueError('La tarea ya tiene una sesión viva (también se rechazan IDs duplicados entre bases).')
         if role == 'ejecutor' and session['rol'] == 'ejecutor':
             if any(trabajo.overlapping(a, b) for a in routes for b in session['rutas']):
                 raise ValueError('Colisión de rutas con sesión viva de ' + row['id'] + '.')
+    return permit
 
 
 def permission_args(session):
@@ -437,7 +456,9 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
                 raise ValueError('Falta session id recuperable; conservar log, no relanzar desde cero.')
             if resume and (alive(previous) or previous['estado'] == 'simulada'):
                 raise ValueError('La sesión sigue viva; no puede reanudarse simultáneamente.')
-        check_capacity(rows, ident, base, assignment['rutas'], role, root=root)
+        permit = check_capacity(rows, ident, base, assignment['rutas'], role, root=root)
+        if permit and (model != 'gpt-6.1-sol' or effort != 'high' or subagents != 0 or not auth_chatgpt):
+            raise ValueError('El ensayo requiere Sol high, ChatGPT y cero hijos.')
         if not dry_run and not shutil.which('codex'):
             raise ValueError('Codex no está disponible en PATH; no se creó worktree.')
         repo = repo_for(base)
@@ -558,6 +579,11 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
             session['ultimo_evento'] = 'harness.dry_run'
             with log.open('a', encoding='utf-8') as stream:
                 stream.write(json.dumps({'type': 'harness.dry_run', 'simulado': True}) + '\n')
+        # Git y la preparación del contexto pueden exceder la vigencia de la muestra.
+        if permit:
+            import harness_ensayo as trial
+            trial.revalidate(root, base, ident, permit)
+            session['ensayo_sha256'] = permit
         def register(current):
             current.setdefault('sesiones', []).append(session)
             if not reviewer:
@@ -626,6 +652,9 @@ def _worker(base, ident, root, attempt):
         session = next(s for s in row['sesiones'] if s['intento'] == attempt)
         if session['dry_run'] or session['estado'] != 'iniciando' or session['supervisor_pid'] != os.getpid():
             raise ValueError('Supervisor no autorizado para este intento.')
+        if session.get('ensayo_sha256'):
+            import harness_ensayo as trial
+            trial.revalidate(root, base, ident, session['ensayo_sha256'])
         if session.get('git_repo'):
             validate_private_git(session, ident)
         codex = shutil.which('codex')

@@ -54,6 +54,25 @@ class QuestionTests(unittest.TestCase):
         self.assertEqual(log['respuesta']['respuesta'],a['respuesta'])
         self.assertEqual(sessions.question_slots(Path(self.config['operacion'])),0)
 
+    def test_trial_question_is_tagged_and_stop_before_runner_blocks(self):
+        import harness_ensayo as trial
+        from test_harness_ensayo import install_trial
+        op = Path(self.config['operacion'])
+        value = install_trial(op, self.base, ['pregunta-1', 'pregunta-2'])
+        def answer(config, folder, prompt, deadline, slot):
+            current = boss.private_read(slot)
+            self.assertEqual(current['ensayo_sha256'], trial.digest(value))
+            self.assertEqual(current['base'], str(self.base))
+            return self.fake(config, folder, prompt, deadline, slot)
+        self.assertTrue(self.handle(runner=answer)['ok'])
+        with patch.object(q, 'context', side_effect=lambda *_:
+                          (boss.private_write(op / trial.DIRECTORY / 'STOP', {'motivo': 'prueba'})
+                           or ('a' * 40, [], 'contexto'))):
+            with patch.object(q, 'answer') as runner:
+                result = self.handle(req=self.request('pregunta-2'), runner=runner)
+                self.assertFalse(result['ok'])
+                runner.assert_not_called()
+
     def test_bridge_dispatch_and_schema(self):
         with patch.object(q,'handle',return_value={'ok':True}) as call:
             self.assertTrue(boss.handle(self.config,self.request(),config_path=self.config_path)['ok'])
