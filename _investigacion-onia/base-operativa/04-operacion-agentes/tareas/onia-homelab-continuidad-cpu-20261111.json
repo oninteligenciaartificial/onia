@@ -1,0 +1,327 @@
+{
+  "schema": 2,
+  "id": "onia-homelab-continuidad-cpu-20261111",
+  "revision": 7,
+  "compartible": true,
+  "objetivo": "Dejar instalable la recurrencia de la cola CPU del homelab ya probada, como frente independiente del despachador de Codex.",
+  "estado": "en_curso",
+  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-12T03:04:31.481401+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-12T03:04:00.493638+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/onia-homelab-continuidad-cpu-20261111.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-12T03:04:00.911190+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/onia-homelab-continuidad-cpu-20261111.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-homelab-continuidad-cpu-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-cola-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.911171+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-12T03:04:19.816817+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-homelab-continuidad-cpu-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-cola-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.911171+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-homelab-continuidad-cpu-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-onia-homelab-continuidad-cpu-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-homelab-continuidad-cpu-20261111.jsonl",
+          "log_rel": "logs/onia-homelab-continuidad-cpu-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-homelab-continuidad-cpu-20261111",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-cola-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-homelab-continuidad-cpu-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:19.765904+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-homelab-continuidad-cpu-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-homelab-continuidad-cpu-20261111.git/worktrees/onia-ws-onia-homelab-continuidad-cpu-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-12T03:04:20.021747+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-homelab-continuidad-cpu-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-cola-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.911171+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-homelab-continuidad-cpu-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 4085727,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219187534",
+          "rama": "codex/ws-onia-homelab-continuidad-cpu-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-homelab-continuidad-cpu-20261111.jsonl",
+          "log_rel": "logs/onia-homelab-continuidad-cpu-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-homelab-continuidad-cpu-20261111",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-cola-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-homelab-continuidad-cpu-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:19.765904+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-homelab-continuidad-cpu-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-homelab-continuidad-cpu-20261111.git/worktrees/onia-ws-onia-homelab-continuidad-cpu-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-12T03:04:20.272853+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-homelab-continuidad-cpu-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-cola-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.911171+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-homelab-continuidad-cpu-20261111",
+          "pid": 4085782,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219187560",
+          "supervisor_pid": 4085727,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219187534",
+          "rama": "codex/ws-onia-homelab-continuidad-cpu-20261111",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-homelab-continuidad-cpu-20261111.jsonl",
+          "log_rel": "logs/onia-homelab-continuidad-cpu-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-homelab-continuidad-cpu-20261111",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-cola-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-homelab-continuidad-cpu-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:19.765904+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-homelab-continuidad-cpu-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-homelab-continuidad-cpu-20261111.git/worktrees/onia-ws-onia-homelab-continuidad-cpu-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-12T03:04:20.957764+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-homelab-continuidad-cpu-20261111",
+        "rutas": [
+          "04-operacion-agentes/homelab/continuidad-cola-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:04:00.911171+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-homelab-continuidad-cpu-20261111",
+          "pid": 4085782,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219187560",
+          "supervisor_pid": 4085727,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219187534",
+          "rama": "codex/ws-onia-homelab-continuidad-cpu-20261111",
+          "session_id": "01a1cdb6-a1ce-7e93-bf39-541ec0faea5a",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-homelab-continuidad-cpu-20261111.jsonl",
+          "log_rel": "logs/onia-homelab-continuidad-cpu-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-homelab-continuidad-cpu-20261111",
+          "rutas": [
+            "04-operacion-agentes/homelab/continuidad-cola-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-homelab-continuidad-cpu-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:04:19.765904+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-homelab-continuidad-cpu-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-homelab-continuidad-cpu-20261111.git/worktrees/onia-ws-onia-homelab-continuidad-cpu-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/onia-homelab-continuidad-cpu-20261111.md",
+    "sha256": "428eef04cf53155063f587e49744628d7f50f2aa1c4fa3193ba72fb79caf9cf8",
+    "bytes": 3606,
+    "contenido": "# Encargo onia-homelab-continuidad-cpu-20261111\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nDejar instalable la recurrencia de la cola CPU del homelab ya probada, como frente independiente del despachador de Codex.\n\n## Entregable\n\nReutilizá cola_homelab.py y el contrato SSH validado. En ruta propia, entregá unidad/timer de usuario acotado, esquema de instalación reversible y evidencia de programación en un temporal con tarea sintética y segunda pasada vacía; si el sandbox impide systemd o la prueba real, validar unidad/fixtures y dejar comando de verificación al coordinador. Conservar un render activo, almacenamiento privado, hash, recuperación del mismo ID, backoff/offline y parada por archivo; no encolar trabajo real ni tocar Windows, permisos, Tailscale, servicios persistentes, clientes, publicación o gasto. Comprobar opción de funcionamiento con cola vacía sin SSH. Dar seguimiento a qué falta para admitir render/ASR real, sin implementar nuevas capacidades. Si se puede, validar sintaxis local; no sudo. Sólo commit/push rama asignada.\n\n## Criterio de aceptación\n\nUnidades listas para activar en VPS tras revisión. Comandos, resultados y condiciones de parada; respeta la cola existente y el aislamiento. Sin sesiones repetidas, sin nuevo acceso a la PC ni nuevos perfiles.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sin entradas adicionales indicadas.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/onia-homelab-continuidad-cpu-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "ejecutor-onia-homelab-continuidad-cpu-20261111",
+    "rutas": [
+      "04-operacion-agentes/homelab/continuidad-cola-20261111"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-12T03:04:00.911171+00:00"
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "ejecutor-onia-homelab-continuidad-cpu-20261111",
+      "pid": 4085782,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219187560",
+      "supervisor_pid": 4085727,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219187534",
+      "rama": "codex/ws-onia-homelab-continuidad-cpu-20261111",
+      "session_id": "01a1cdb6-a1ce-7e93-bf39-541ec0faea5a",
+      "estado": "ejecutando",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/onia-homelab-continuidad-cpu-20261111.jsonl",
+      "log_rel": "logs/onia-homelab-continuidad-cpu-20261111.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-homelab-continuidad-cpu-20261111",
+      "rutas": [
+        "04-operacion-agentes/homelab/continuidad-cola-20261111"
+      ],
+      "dry_run": false,
+      "commit_base": "60522f59f3222674cc6c9d7f9364c022c60a3a65",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/onia-homelab-continuidad-cpu-20261111.1.briefing.txt",
+      "inicio": "2026-11-12T03:04:19.765904+00:00",
+      "rc": null,
+      "ultimo_evento": "item.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/onia-homelab-continuidad-cpu-20261111.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/onia-homelab-continuidad-cpu-20261111.git/worktrees/onia-ws-onia-homelab-continuidad-cpu-20261111",
+      "perfil_permisos": "harness-git"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": null
+}
