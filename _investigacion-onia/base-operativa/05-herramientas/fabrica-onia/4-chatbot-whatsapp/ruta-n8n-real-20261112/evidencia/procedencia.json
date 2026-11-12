@@ -1,0 +1,97 @@
+{
+  "fecha_utc": "2026-11-12T03:47:57.973347+00:00",
+  "base_sesion": "a24bd8ec3729668cb33faf7a6e5be71496d13a10",
+  "fuentes": [
+    {
+      "ruta": "trabajos/fabrica-chatbot-whatsapp-20261110/workflow-despacho-n8n.json",
+      "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+      "sha256": "62567c0267b82c2725091ecfa6c7ddc9e6c86f65ef2b82964d928dcf36e39b49",
+      "coincide_commit_referencia": true
+    },
+    {
+      "ruta": "trabajos/fabrica-chatbot-whatsapp-20261110/adaptador.py",
+      "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+      "sha256": "92ddea050c87d281ad74a9a6bf86a79d1039989c4d2f9887846fded3d4a0cbfc",
+      "coincide_commit_referencia": true
+    },
+    {
+      "ruta": "trabajos/fabrica-chatbot-whatsapp-20261110/mensajes.json",
+      "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+      "sha256": "47586b58a0136cedc83126b0eee955468496ca64a1e24e01839c1462f9a619f7",
+      "coincide_commit_referencia": true
+    },
+    {
+      "ruta": "ensayo-vps-20261111/arrancar.py",
+      "commit": "241f49a39c7593ff60e5e8d59ed40a152faf9ff6",
+      "sha256": "71e3c4f716c82bd87ca076f139ee1e5a5d96b24789635904900983e821f8ff28",
+      "coincide_commit_referencia": true
+    },
+    {
+      "ruta": "ensayo-vps-20261111/comun.py",
+      "commit": "241f49a39c7593ff60e5e8d59ed40a152faf9ff6",
+      "sha256": "0b888fa0b408bd430e98909f5e2e1211e43e7c41305f767d3a3a0ebcbbcd046f",
+      "coincide_commit_referencia": true
+    },
+    {
+      "ruta": "ensayo-vps-20261111/fixture.py",
+      "commit": "241f49a39c7593ff60e5e8d59ed40a152faf9ff6",
+      "sha256": "71e3bf711f1bf06c1ba61b9a68643c6497b35923e903207c2c8fc0e9e6208837",
+      "coincide_commit_referencia": true
+    },
+    {
+      "ruta": "ensayo-n8n-20261111/ensayar.py",
+      "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+      "sha256": "4d2eb0debba3cef271cb51f15f95be9658577ba4e9503824bce0f68e96166cd2",
+      "coincide_commit_referencia": true
+    },
+    {
+      "ruta": "ensayo-n8n-20261111/evidencia/ejecucion-01/recibo.json",
+      "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+      "sha256": "1e64133e1be51a67c0d404b9af6a2ac3420b8061cef9cf6242d2910161a57a46",
+      "coincide_commit_referencia": true
+    }
+  ],
+  "archivos_entrega": [
+    {
+      "ruta": "README.md",
+      "sha256": "0ff2ad583ada011de0811fb44fc29ce8fc320ad55bb02df0ebab10f51ae87fee"
+    },
+    {
+      "ruta": "comprobar.py",
+      "sha256": "99e70f7be15c699b762155f9475b885a7017bf201597ad5841c20c9a4f03b512"
+    },
+    {
+      "ruta": "cotejar.py",
+      "sha256": "fc77fc0004aae7f667963088392b16db60ac44d0827885b6d9b44d8cbaa8bbb2"
+    },
+    {
+      "ruta": "diagnostico-runtime.cjs",
+      "sha256": "52c083ca600b21f616ac2a42564de0ea1747637a0ac722c6fadd4d34723a428f"
+    },
+    {
+      "ruta": "evidencia/ensayo-nuevo-01.json",
+      "sha256": "e79fd443d0b3d111bbf10070c8712406bdc4b98d87ecf1eb1cbc189a62b6a764"
+    },
+    {
+      "ruta": "evidencia/ensayo-nuevo-02.json",
+      "sha256": "c35ece8956c537f1a0b6a69d2a65759d8f87ed2cb0934c2914217d98cff0f0f0"
+    },
+    {
+      "ruta": "evidencia/lectura-real-01.json",
+      "sha256": "058a1efcc232c6deb889aab6e3e60412d42586a9ab2474ba0927f3c5feafbf21"
+    },
+    {
+      "ruta": "preparar.py",
+      "sha256": "c4c78404ab1b63adeaf621f41b880b08476c20ff89c2207ac80757a33fc06c8c"
+    }
+  ],
+  "ejecucion_vigente": "evidencia/ensayo-nuevo-02.json",
+  "ensayo_01": "Primera comprobación previa al filtro comm y lectura selectiva del entorno del runtime. Se conserva sin alteración.",
+  "preflight_procedencia": "Primer cotejo usó 0e1c66b para arrancar.py, ausente en ese árbol. Se corrigió la referencia a 241f49a, ya citada en el ensayo aprobado. Sin evidencia previa alterada.",
+  "catalogo_skill_directora": "anunciada",
+  "skill_leida": "05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md",
+  "modelo_exacto_observado": null,
+  "esfuerzo_observado": null,
+  "cuota_inicial": null,
+  "cuota_final": null
+}

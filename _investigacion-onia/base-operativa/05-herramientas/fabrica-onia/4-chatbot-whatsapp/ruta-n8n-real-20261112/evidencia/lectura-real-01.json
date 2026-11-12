@@ -1,0 +1,40 @@
+{
+  "fecha_utc": "2026-11-12T03:44:28.162368+00:00",
+  "api_key_disponible": false,
+  "procesos_n8n_visibles": [],
+  "procesos_no_inspeccionables": 0,
+  "cap_sys_admin": false,
+  "cap_sys_ptrace": false,
+  "consultas": [
+    {
+      "ruta": "/healthz",
+      "metodo": "GET",
+      "clave_disponible": false,
+      "http": 200
+    },
+    {
+      "ruta": "/rest/settings",
+      "metodo": "GET",
+      "clave_disponible": false,
+      "http": 200,
+      "version": null,
+      "modo_ejecucion": null,
+      "env_bloqueado": null
+    },
+    {
+      "ruta": "/api/v1/workflows?limit=1&excludePinnedData=true",
+      "metodo": "GET",
+      "clave_disponible": false,
+      "http": 401
+    },
+    {
+      "ruta": "/api/v1/discover",
+      "metodo": "GET",
+      "clave_disponible": false,
+      "http": 401
+    }
+  ],
+  "version_actual_confirmada": null,
+  "ruta_privada_confirmada": false,
+  "modificaciones_remotas": 0
+}

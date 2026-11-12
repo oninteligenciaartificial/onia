@@ -1,0 +1,138 @@
+{
+  "fecha_utc": "2026-11-12T03:46:51.624997+00:00",
+  "alcance": "simulado_loopback",
+  "controles": [
+    {
+      "nombre": "fuente_aprobada_intacta",
+      "correcto": true
+    },
+    {
+      "nombre": "expresion_original_cinco_entradas",
+      "correcto": true
+    },
+    {
+      "nombre": "arranque_acotado_disponible",
+      "correcto": true
+    },
+    {
+      "nombre": "loopback_efimero_envios_apagados",
+      "correcto": true
+    },
+    {
+      "nombre": "mismo_workflow_solo_nombre_url_referencia",
+      "correcto": true
+    },
+    {
+      "nombre": "inactivo_sin_id_importable_ni_secretos",
+      "correcto": true
+    },
+    {
+      "nombre": "copia_privada_0600",
+      "correcto": true
+    },
+    {
+      "nombre": "no_sobrescribe_copia",
+      "correcto": true
+    },
+    {
+      "nombre": "rechazo_credencial_dispatcher_id_8",
+      "correcto": true
+    },
+    {
+      "nombre": "rechazo_origen_permitido_9",
+      "correcto": true
+    },
+    {
+      "nombre": "rechazo_origen_privado_10",
+      "correcto": true
+    },
+    {
+      "nombre": "diagnostico_emite_json_saneado",
+      "correcto": true
+    },
+    {
+      "nombre": "get_reconoce_adaptador",
+      "correcto": true
+    },
+    {
+      "nombre": "no_atribuye_namespace_n8n_al_fixture",
+      "correcto": true
+    },
+    {
+      "nombre": "diagnostico_emite_json_saneado",
+      "correcto": true
+    },
+    {
+      "nombre": "diagnostico_rechaza_origen_no_permitido",
+      "correcto": true
+    },
+    {
+      "nombre": "diagnostico_emite_json_saneado",
+      "correcto": true
+    },
+    {
+      "nombre": "diagnostico_rechaza_destino_no_privado",
+      "correcto": true
+    },
+    {
+      "nombre": "unico_post_409_sin_envios",
+      "correcto": true
+    },
+    {
+      "nombre": "salida_pendiente_conservada",
+      "correcto": true
+    },
+    {
+      "nombre": "cierre_sin_transporte_ni_egreso",
+      "correcto": true
+    },
+    {
+      "nombre": "diagnostico_emite_json_saneado",
+      "correcto": true
+    },
+    {
+      "nombre": "no_sigue_redireccion_operador",
+      "correcto": true
+    },
+    {
+      "nombre": "temporal_eliminado",
+      "correcto": true
+    },
+    {
+      "nombre": "listeners_propios_cerrados",
+      "correcto": true
+    }
+  ],
+  "ejecuciones_n8n_nuevas": 0,
+  "post_despacho": 1,
+  "diagnostico_simulado": {
+    "fecha_utc": "2026-11-12T03:46:51.897Z",
+    "runtime": [],
+    "node": "v20.20.2",
+    "ejecuciones_workflow": 0,
+    "conectividad": {
+      "metodo": "GET",
+      "ruta": "/operador/despachar",
+      "http": 404,
+      "respuesta_adaptador": true,
+      "direccion_privada": true,
+      "redirecciones_seguidas": 0,
+      "credencial_enviada": false,
+      "ruta_disponible": true
+    },
+    "resultado": "bloqueado"
+  },
+  "salidas_antes": {
+    "pendiente": 1
+  },
+  "salidas_despues": {
+    "pendiente": 1
+  },
+  "adaptador_cierre": {
+    "evento": "detenido",
+    "conexiones_salientes_intentadas": 0,
+    "transporte_invocado": 0
+  },
+  "resultado": "correcto",
+  "procesos_propios_vivos": 0
+}
