@@ -1,0 +1,44 @@
+{
+  "schema": 2,
+  "id": "despachador-hijos-20261111",
+  "revision": 2,
+  "compartible": true,
+  "objetivo": "Incorpora límite de subagentes por ejecutora al manifiesto y recuperación.",
+  "estado": "preparado",
+  "proximo_paso": "Ejecutar el encargo y publicar pruebas para revisión.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-12T02:10:28.107980+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-12T02:10:27.805757+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Ejecutar el encargo y publicar pruebas para revisión.",
+      "aceptacion": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/despachador-hijos-20261111.md",
+    "sha256": "5a21b6341c33942d1f4c8831b09141876ee1cae10c8abaaaefde4350eff9ab27",
+    "bytes": 1099,
+    "contenido": "# despachador-hijos-20261111\n\nLeé AGENTS y reglas. Primero invocá exactamente un subagente de lectura para localizar en harness_lote.py los puntos de lanzar, reanudar, fingerprint/recovery y cómo simular una interrupción después de despachar. Usá el perfil predeterminado Luna High; si la interfaz expone modelo/esfuerzo, pedí gpt-6-luna high. El hijo sólo analiza y devuelve rutas/líneas, no edita y no crea hijos. Esperá y anotá el hilo que devuelve la herramienta si está visible. Vos implementás. Manifiesto permite subagentes_maximos entero estricto 0/1/2 por ejecutora, defecto cero, revisión cero. Conservar en launch/resume y cotejar al reconocer intención/efecto ya registrado. Compatibilidad con lotes viejos de cero. Prueba de reinicio tras lanzar una ejecutora con un hijo, recuperar mismo intento y no duplicar; pruebas de límites, retoma y revisión. Preservar autorizaciones, contador 3, logs y scheduler. Ejecutá suite local y commit/push sólo tu rama asignada. No actives timers ni realices nuevos lanzamientos fuera de tu subagente nativo. No toques producción.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "ejecutor-despachador-hijos-20261111",
+    "rutas": [
+      "05-herramientas/scripts/harness_lote.py",
+      "05-herramientas/scripts/test_harness_lote.py",
+      "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-12T02:10:28.107963+00:00"
+  }
+}
