@@ -1,0 +1,54 @@
+{
+  "espera_sin_conexiones_s": 90,
+  "terminales_cerradas_reportado_por_sergio": true,
+  "ssh": {
+    "huella_verificada": true,
+    "conexion_1": {
+      "uid": 1001,
+      "grupos": [
+        1001
+      ],
+      "sin_capacidades": true,
+      "no_new_privs": true,
+      "seccomp": true,
+      "windows_ausente": true,
+      "host_root_ausente": true,
+      "interop_sin_entorno": true,
+      "modulos_vacios": true,
+      "/etc_escritura_denegada": true,
+      "/usr/lib/modules_escritura_denegada": true,
+      "socket_inet_denegado": true,
+      "herramientas": {
+        "python3": true,
+        "ffmpeg": true,
+        "git": true
+      },
+      "marca_creada": true
+    },
+    "conexion_2": {
+      "persistencia_entre_conexiones": true
+    },
+    "limites": [
+      "No prueba cierre de WSL/reinicio",
+      "No prueba ASR ni scheduler",
+      "No cambia límite de sesiones"
+    ]
+  },
+  "render": {
+    "ok": true,
+    "duracion_s": 2,
+    "fotogramas": 48,
+    "resolucion": "640x360",
+    "hilos": 2,
+    "tiempo_render_s": 0.754,
+    "bytes": 177670,
+    "sha256": "3f830ed502fff99e0e77e85e89e6f091cc31905883e51899e7c974a5eda62906",
+    "archivo_conservado": "piloto-render-452ded969caa421fb4d0ead8d2e3065e/muestra.mp4",
+    "limite": "Muestra sintetica, no benchmark ni video comercial"
+  },
+  "limites": [
+    "No prueba reinicio, logout o suspensión Windows",
+    "No acredita scheduler distribuido",
+    "No aumenta limite de tres sesiones"
+  ]
+}
