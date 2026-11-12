@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "id": "ensayo-cuatro-control-20261112",
-  "revision": 74,
+  "revision": 75,
   "compartible": true,
   "objetivo": "Preparar excepción temporal medida para ensayo de cuatro sesiones sin cambiar límite normal.",
   "estado": "para_revision",
@@ -51,7 +51,7 @@
       "bytes": 333
     }
   ],
-  "actualizado": "2026-11-12T02:19:13.111311+00:00",
+  "actualizado": "2026-11-12T03:22:12.496346+00:00",
   "historial": [
     {
       "revision": 1,
@@ -18360,6 +18360,464 @@
           "bytes": 892
         }
       ]
+    },
+    {
+      "revision": 74,
+      "actualizado": "2026-11-12T02:19:13.111311+00:00",
+      "estado": "para_revision",
+      "resultado": "Corrección de custodia 876778e publicada; revisión formal pendiente.",
+      "comprobacion": "220 tests del harness, revisión independiente 137/137; preflight real cerrado; STOP real conservó cero residuales.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/cierre-r7-acd0e03b.json",
+          "sha256": "e31ca0f8140e58cc4f15c73f3dd0dcb762fb1532ad3c9a0c9d99b36f4eeccf00",
+          "bytes": 312
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/cierre-r15-927fd2c8.json",
+          "sha256": "10ec2cb876b4d102dba0c14f5d17841df7385e99fc228aa05e45ff6b033035e3",
+          "bytes": 312
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/cierre-r23-837682ef.json",
+          "sha256": "7df235325b3de514126929315c51d86651f580fab17a7f01aa191ee7e1145340",
+          "bytes": 312
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/cierre-r31-8c00ca77.json",
+          "sha256": "06c7c5414467f8d4aea2b16b0d8e0c7f40814d74930d107f47093b482e0425f5",
+          "bytes": 312
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/cierre-r39-ce7cc15e.json",
+          "sha256": "888da9dfb6be1939d0caf966557f98b7dc73f4cf9b7663f8e0c3d5f2f7b0b6b3",
+          "bytes": 312
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/cierre-r47-c605c16c.json",
+          "sha256": "32c756540cf9880682574d7abf8c29f3ccaca8a80395d47e15b835fae5ddb5a4",
+          "bytes": 312
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/cierre-r55-f442bdb1.json",
+          "sha256": "01c407faa2bd314efaf239b51a2b1576e156d242b60b5922e816e79546124b91",
+          "bytes": 312
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/cierre-r66-93b497ea.json",
+          "sha256": "0ed7d33a13ed282bdb476574c34040d50f8353530dd122524a623f870df613e7",
+          "bytes": 333
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-capacidad-20261112",
+        "rutas": [
+          "05-herramientas/scripts/ENSAYO-CUATRO.md",
+          "05-herramientas/scripts/harness_ensayo.py",
+          "05-herramientas/scripts/harness_preguntas.py",
+          "05-herramientas/scripts/harness_sesiones.py",
+          "05-herramientas/scripts/test_harness_ensayo.py"
+        ],
+        "revision_base": 64,
+        "fecha": "2026-11-12T02:10:32.806602+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-capacidad-20261112",
+          "pid": 3535712,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218209869",
+          "supervisor_pid": 3535621,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218209774",
+          "rama": "codex/ws-ensayo-cuatro-control-20261112",
+          "session_id": "01a1cd21-7331-78a0-92a9-388d9046aa26",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.jsonl",
+          "log_rel": "logs/ensayo-cuatro-control-20261112.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-ensayo-cuatro-control-20261112",
+          "rutas": [
+            "05-herramientas/scripts"
+          ],
+          "dry_run": false,
+          "commit_base": "ab9f7ebbcde0331877fc4fb6160769218d30c2c1",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.1.briefing.txt",
+          "inicio": "2026-11-12T00:21:22.160993+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/ensayo-cuatro-control-20261112.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/ensayo-cuatro-control-20261112.git/worktrees/onia-ws-ensayo-cuatro-control-20261112",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T00:45:36.201083+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-capacidad-20261112",
+          "pid": 3642451,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218363412",
+          "supervisor_pid": 3642449,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218363389",
+          "rama": "(detached)",
+          "session_id": "01a1cd38-e0ee-7441-8de3-7e7f238a5da8",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.revision-2.jsonl",
+          "log_rel": "logs/ensayo-cuatro-control-20261112.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-ensayo-cuatro-control-20261112-revision-2",
+          "rutas": [
+            "05-herramientas/scripts"
+          ],
+          "dry_run": false,
+          "commit_base": "cc77ee16fa05f1609d6d0e56b8f108d63326e5ab",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.2.briefing.txt",
+          "inicio": "2026-11-12T00:46:58.343063+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "24795180fe3e2d03a6afde2c98155033025887b5af13c112999a2925fd921e54",
+          "schema": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.2.veredicto.json",
+          "fin": "2026-11-12T00:50:03.245284+00:00"
+        },
+        {
+          "intento": 3,
+          "rol": "revisor",
+          "responsable": "revisor-capacidad-v2-20261112",
+          "pid": 3654907,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218392997",
+          "supervisor_pid": 3654884,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218392977",
+          "rama": "(detached)",
+          "session_id": "01a1cd3d-64e4-7790-9b96-8068a4ef8b7d",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.revision-3.jsonl",
+          "log_rel": "logs/ensayo-cuatro-control-20261112.revision-3.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-ensayo-cuatro-control-20261112-revision-3",
+          "rutas": [
+            "05-herramientas/scripts"
+          ],
+          "dry_run": false,
+          "commit_base": "f404b7baed668d430ffc20dfefd3d9edd62f32b8",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.3.briefing.txt",
+          "inicio": "2026-11-12T00:51:54.244260+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "f25eb56a85af391de877423a90122a47354a0513c09825f3545b234ec855eb74",
+          "schema": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.3.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.3.veredicto.json",
+          "fin": "2026-11-12T00:54:48.759816+00:00"
+        },
+        {
+          "intento": 4,
+          "rol": "revisor",
+          "responsable": "revisor-capacidad-v3-20261112",
+          "pid": 3667922,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218423748",
+          "supervisor_pid": 3667920,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218423703",
+          "rama": "(detached)",
+          "session_id": "01a1cd42-181d-7b53-93a6-e8f0b8844477",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.revision-4.jsonl",
+          "log_rel": "logs/ensayo-cuatro-control-20261112.revision-4.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-ensayo-cuatro-control-20261112-revision-4",
+          "rutas": [
+            "05-herramientas/scripts"
+          ],
+          "dry_run": false,
+          "commit_base": "5d2f9f994f98f2f61a7aa0549d78f28b95d32781",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.4.briefing.txt",
+          "inicio": "2026-11-12T00:57:01.402553+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "7eee17b0108c7c8449aeec614b5af419aa24a80f390d4a59858f8f524add8139",
+          "schema": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.4.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.4.veredicto.json",
+          "fin": "2026-11-12T00:59:54.563969+00:00"
+        },
+        {
+          "intento": 5,
+          "rol": "revisor",
+          "responsable": "revisor-capacidad-v4-20261112",
+          "pid": 3678566,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218447401",
+          "supervisor_pid": 3678516,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218447301",
+          "rama": "(detached)",
+          "session_id": "01a1cd45-b347-78a1-9b8f-5a5704543297",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.revision-5.jsonl",
+          "log_rel": "logs/ensayo-cuatro-control-20261112.revision-5.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-ensayo-cuatro-control-20261112-revision-5",
+          "rutas": [
+            "05-herramientas/scripts"
+          ],
+          "dry_run": false,
+          "commit_base": "6e1d8d375dfd9024d41e384f7e2133987ba7bb62",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.5.briefing.txt",
+          "inicio": "2026-11-12T01:00:57.167349+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "796991ccb724dc699e2d4360a1d6223ed5d4bd257101f9e50b9366f8e88b05f4",
+          "schema": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.5.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.5.veredicto.json",
+          "fin": "2026-11-12T01:03:05.995663+00:00"
+        },
+        {
+          "intento": 6,
+          "rol": "revisor",
+          "responsable": "revisor-capacidad-v5-20261112",
+          "pid": 3689036,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218471025",
+          "supervisor_pid": 3688986,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218470995",
+          "rama": "(detached)",
+          "session_id": "01a1cd49-4cf3-7ab2-8b74-43134e2c81c3",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.revision-6.jsonl",
+          "log_rel": "logs/ensayo-cuatro-control-20261112.revision-6.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-ensayo-cuatro-control-20261112-revision-6",
+          "rutas": [
+            "05-herramientas/scripts"
+          ],
+          "dry_run": false,
+          "commit_base": "02044e8af77cfbb9d696a826a33fa02d302116dd",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.6.briefing.txt",
+          "inicio": "2026-11-12T01:04:54.335440+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "808eb94b0a8bd994d5a6e5911c8221ef08c604dba53d586e57567ffa74dd0e90",
+          "schema": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.6.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.6.veredicto.json",
+          "fin": "2026-11-12T01:08:46.449558+00:00"
+        },
+        {
+          "intento": 7,
+          "rol": "revisor",
+          "responsable": "revisor-capacidad-v6-20261112",
+          "pid": 3702998,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218503697",
+          "supervisor_pid": 3702977,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218503657",
+          "rama": "(detached)",
+          "session_id": "01a1cd4e-492d-7d71-a1cb-546a432b4fbb",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.revision-7.jsonl",
+          "log_rel": "logs/ensayo-cuatro-control-20261112.revision-7.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-ensayo-cuatro-control-20261112-revision-7",
+          "rutas": [
+            "05-herramientas/scripts"
+          ],
+          "dry_run": false,
+          "commit_base": "49d9a7403afbcb0583f464ac8c5f4d6fd77f4571",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.7.briefing.txt",
+          "inicio": "2026-11-12T01:10:20.948375+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "461839b2ebf7a9b6a00dd9fe84e23e9d492b3c703368717e82a8ff039f5d2028",
+          "schema": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.7.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.7.veredicto.json",
+          "fin": "2026-11-12T01:13:05.862801+00:00"
+        },
+        {
+          "intento": 8,
+          "rol": "revisor",
+          "responsable": "revisor-capacidad-v7-20261112",
+          "pid": 3723338,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218548060",
+          "supervisor_pid": 3723327,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218548025",
+          "rama": "(detached)",
+          "session_id": "01a1cd55-0dff-7ab3-a694-fdfe825027fb",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.revision-8.jsonl",
+          "log_rel": "logs/ensayo-cuatro-control-20261112.revision-8.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-ensayo-cuatro-control-20261112-revision-8",
+          "rutas": [
+            "05-herramientas/scripts"
+          ],
+          "dry_run": false,
+          "commit_base": "24a9af01ba516c1bf1a6821ba88a16203790c070",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.8.briefing.txt",
+          "inicio": "2026-11-12T01:17:44.625446+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "e82954ee7c23c7eb60275785f4fdcef422aa92e4c808ef42d4c6cb58ed837fc5",
+          "schema": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.8.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.8.veredicto.json",
+          "fin": "2026-11-12T01:22:12.813391+00:00"
+        },
+        {
+          "intento": 9,
+          "rol": "revisor",
+          "responsable": "revisor-custodia-tanda-tres-20261111",
+          "pid": 3932002,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218866394",
+          "supervisor_pid": 3931933,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218866342",
+          "rama": "(detached)",
+          "session_id": "01a1cd85-a10c-7df2-adb6-822a008364fc",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.revision-9.jsonl",
+          "log_rel": "logs/ensayo-cuatro-control-20261112.revision-9.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-ensayo-cuatro-control-20261112-revision-9",
+          "rutas": [
+            "05-herramientas/scripts/ENSAYO-CUATRO.md",
+            "05-herramientas/scripts/harness_ensayo.py",
+            "05-herramientas/scripts/harness_preguntas.py",
+            "05-herramientas/scripts/harness_sesiones.py",
+            "05-herramientas/scripts/test_harness_ensayo.py"
+          ],
+          "dry_run": false,
+          "commit_base": "876778e2c9f0ca0c9f5dfc8425c6aa38f16a1f87",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.9.briefing.txt",
+          "inicio": "2026-11-12T02:10:47.773836+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "32547ff0deb68c52922f331181f0b25238b70dc36d575b0456f57c083eda1d40",
+          "schema": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.9.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/ensayo-cuatro-control-20261112.9.veredicto.json",
+          "fin": "2026-11-12T02:18:15.921380+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "876778e2c9f0ca0c9f5dfc8425c6aa38f16a1f87",
+        "commit_base": "ab9f7ebbcde0331877fc4fb6160769218d30c2c1",
+        "ramas_origin": [
+          "origin/codex/ws-ensayo-cuatro-control-20261112",
+          "origin/master"
+        ],
+        "fecha": "2026-11-12T02:10:34.503177+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/cierre-r66-93b497ea.json",
+          "sha256": "0ed7d33a13ed282bdb476574c34040d50f8353530dd122524a623f870df613e7",
+          "bytes": 333
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "cambios",
+        "commit": "876778e2c9f0ca0c9f5dfc8425c6aa38f16a1f87",
+        "criterio": "Falta evidencia verificable vigente: los recibos adjuntos acreditan cierres Git, pero no los 220/137 tests ni el preflight/STOP declarados. ENSAYO-CUATRO-PRUEBAS.txt conserva resultados anteriores de 41/17 pruebas. Pasaron 41 comprobaciones independientes en memoria y la prueba de compuertas; la suite integrada quedó impedida por el sandbox sin temporales escribibles. Adjuntar comandos, salidas y recibos saneados vinculados al commit exacto, usando pruebas sintéticas y sin activar el ensayo real. Worktree limpio; sin ediciones ni aceptación.",
+        "worktree_conservado": true,
+        "revisor": "revisor-custodia-tanda-tres-20261111",
+        "session_id": "01a1cd85-a10c-7df2-adb6-822a008364fc",
+        "entrega_sha256": "32547ff0deb68c52922f331181f0b25238b70dc36d575b0456f57c083eda1d40",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/revision-9-273c6c41.json",
+          "sha256": "e6fef9ac9967697299be591d5df781807249358aef25460b275f22f30b1ff685",
+          "bytes": 684
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/revision-2-a7d92554.json",
+          "sha256": "797c556a178a1f01c3a5c14de9b3999a062dee3605f164d8ccc414c64db03295",
+          "bytes": 871
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/revision-3-d5631f06.json",
+          "sha256": "5266628d13842fd768f1aea33fe628c418862dc8fe072833f26055fe57bed75b",
+          "bytes": 898
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/revision-4-b7003076.json",
+          "sha256": "7c0bf7aa89ad3625d191bdae6a95b45abf713b223af60d378a82de3953f291b6",
+          "bytes": 727
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/revision-5-5a26df94.json",
+          "sha256": "e0a124da965d8828e5004ecf0be563ba39ef9c60070bfb7b2390aa911d743ad5",
+          "bytes": 911
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/revision-6-8cc8a5cb.json",
+          "sha256": "9e7587371639c59aa75b36813c75dc6152501e530d566c34c0fa5d17b70191c3",
+          "bytes": 799
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/revision-7-09571743.json",
+          "sha256": "81641eec6c385dea13c06e3bffeda57a09ad67a022223f4ca9f9e97d842c27bb",
+          "bytes": 890
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/revision-8-51a6274b.json",
+          "sha256": "d03379560039457a6b182a830a567b41add1ce5afb700203cce081edc06ae93c",
+          "bytes": 892
+        },
+        {
+          "archivo": "04-operacion-agentes/evidencias/ensayo-cuatro-control-20261112/revision-9-273c6c41.json",
+          "sha256": "e6fef9ac9967697299be591d5df781807249358aef25460b275f22f30b1ff685",
+          "bytes": 684
+        }
+      ]
     }
   ],
   "briefing": {
@@ -18369,18 +18827,7 @@
     "contenido": "# Ensayo temporal de cuatro sesiones\nSergio autorizó probar cuatro y optimizar Ubuntu/WSL manteniendo Windows. Aplicar desarrollar-y-verificar. Reutilizar harness_sesiones.py y pruebas. No otro harness.\nImplementar política PRIVADA opcional de cuatro, tres por defecto, contando preguntas/revisores globalmente. Sólo IDs/base autorizados, vencimiento máximo30min, permisos/propietario/symlinks controlados, monitor vivo PID+inicio, recursos y cuota frescos. Rechazar quinta, colisiones, ajenos, datos caducos, inválidos o STOP. No env var de bypass.\nMonitor/CLI acotado: CPU/RAM/PSI/swap, recibos, admisión fail-closed por saturación/STOP/caducidad/cuota desconocida. Presupuesto ensayo máximo2 puntos desde lectura fresca. Lector del operador en /tmp/onia-read-quota-rpc.py, leer código si hace falta, no imprimir privados. Parar sólo procesos del lote con PID+inicio comprobados y SIGTERM, conservar logs/worktrees; no matar PID reciclado ni procesos ajenos. Si no es seguro declarar bloqueo sin habilitar cuarta.\nTests de límites, quinta, expiración, cuota/recursos caducos, PID reciclado, datos alterados, colisiones y parada. No prueba real ni activar política ni servicios. No modificar PC ni producción.\nEscribir sólo 05-herramientas/scripts (incluida guía ENSAYO-CUATRO.md). No modificar registro/briefing. Entregar comandos claros para preparación/monitor/fin y despliegue sin pisar checkout sucio. Commit/push rama propia. Sol high cero hijos. Revisión independiente antes de ensayo real. Una entrega acotada, sin proveedores pagos.\n"
   },
   "aceptacion": null,
-  "asignacion": {
-    "responsable": "ejecutor-capacidad-20261112",
-    "rutas": [
-      "05-herramientas/scripts/ENSAYO-CUATRO.md",
-      "05-herramientas/scripts/harness_ensayo.py",
-      "05-herramientas/scripts/harness_preguntas.py",
-      "05-herramientas/scripts/harness_sesiones.py",
-      "05-herramientas/scripts/test_harness_ensayo.py"
-    ],
-    "revision_base": 64,
-    "fecha": "2026-11-12T02:10:32.806602+00:00"
-  },
+  "asignacion": null,
   "sesiones": [
     {
       "intento": 1,
