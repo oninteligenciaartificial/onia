@@ -1,16 +1,27 @@
 {
   "schema": 2,
   "id": "despachador-hijos-20261111",
-  "revision": 2,
+  "revision": 14,
   "compartible": true,
   "objetivo": "Incorpora límite de subagentes por ejecutora al manifiesto y recuperación.",
-  "estado": "preparado",
-  "proximo_paso": "Ejecutar el encargo y publicar pruebas para revisión.",
-  "resultado": "",
-  "comprobacion": "",
-  "verificacion": "pendiente",
-  "evidencias": [],
-  "actualizado": "2026-11-12T02:10:28.107980+00:00",
+  "estado": "para_revision",
+  "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+  "resultado": "Entrega exacta 03b23daec252f638b704508d62731775f2438e29 con comprobaciones adjuntas.",
+  "comprobacion": "Ver PRUEBAS-coordinadora.txt incluido en el prompt de revisión.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/despachador-hijos-20261111/PRUEBAS-coordinadora.txt",
+      "sha256": "096400cd3f9cc184b6a0ff3ca45432dfc6455da20dffe4a511a1a5d0093cf763",
+      "bytes": 6740
+    },
+    {
+      "archivo": "04-operacion-agentes/evidencias/despachador-hijos-20261111/cierre-r13-779b4b87.json",
+      "sha256": "e4e6492957a9c92914f93935bcfa41f1e65d797aadf033f39525a4340eb6290f",
+      "bytes": 308
+    }
+  ],
+  "actualizado": "2026-11-12T02:19:06.609379+00:00",
   "historial": [
     {
       "revision": 1,
@@ -22,6 +33,728 @@
       "evidencias": [],
       "proximo_paso": "Ejecutar el encargo y publicar pruebas para revisión.",
       "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-12T02:10:28.107980+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Ejecutar el encargo y publicar pruebas para revisión.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-despachador-hijos-20261111",
+        "rutas": [
+          "05-herramientas/scripts/harness_lote.py",
+          "05-herramientas/scripts/test_harness_lote.py",
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:28.107963+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-12T02:10:43.034436+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-despachador-hijos-20261111",
+        "rutas": [
+          "05-herramientas/scripts/harness_lote.py",
+          "05-herramientas/scripts/test_harness_lote.py",
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:28.107963+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-despachador-hijos-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-despachador-hijos-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.jsonl",
+          "log_rel": "logs/despachador-hijos-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-despachador-hijos-20261111",
+          "rutas": [
+            "05-herramientas/scripts/harness_lote.py",
+            "05-herramientas/scripts/test_harness_lote.py",
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:42.943254+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "modelo_subagentes_predeterminado": "gpt-6-luna",
+          "esfuerzo_subagentes_predeterminado": "high",
+          "git_repo": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git/worktrees/onia-ws-despachador-hijos-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-12T02:10:43.251489+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-despachador-hijos-20261111",
+        "rutas": [
+          "05-herramientas/scripts/harness_lote.py",
+          "05-herramientas/scripts/test_harness_lote.py",
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:28.107963+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-despachador-hijos-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 3931603,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865857",
+          "rama": "codex/ws-despachador-hijos-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.jsonl",
+          "log_rel": "logs/despachador-hijos-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-despachador-hijos-20261111",
+          "rutas": [
+            "05-herramientas/scripts/harness_lote.py",
+            "05-herramientas/scripts/test_harness_lote.py",
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:42.943254+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "modelo_subagentes_predeterminado": "gpt-6-luna",
+          "esfuerzo_subagentes_predeterminado": "high",
+          "git_repo": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git/worktrees/onia-ws-despachador-hijos-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-12T02:10:43.514172+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-despachador-hijos-20261111",
+        "rutas": [
+          "05-herramientas/scripts/harness_lote.py",
+          "05-herramientas/scripts/test_harness_lote.py",
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:28.107963+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-despachador-hijos-20261111",
+          "pid": 3931616,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865884",
+          "supervisor_pid": 3931603,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865857",
+          "rama": "codex/ws-despachador-hijos-20261111",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.jsonl",
+          "log_rel": "logs/despachador-hijos-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-despachador-hijos-20261111",
+          "rutas": [
+            "05-herramientas/scripts/harness_lote.py",
+            "05-herramientas/scripts/test_harness_lote.py",
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:42.943254+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "modelo_subagentes_predeterminado": "gpt-6-luna",
+          "esfuerzo_subagentes_predeterminado": "high",
+          "git_repo": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git/worktrees/onia-ws-despachador-hijos-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-12T02:10:48.396047+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-despachador-hijos-20261111",
+        "rutas": [
+          "05-herramientas/scripts/harness_lote.py",
+          "05-herramientas/scripts/test_harness_lote.py",
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:28.107963+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-despachador-hijos-20261111",
+          "pid": 3931616,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865884",
+          "supervisor_pid": 3931603,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865857",
+          "rama": "codex/ws-despachador-hijos-20261111",
+          "session_id": "01a1cd85-8cde-7730-9da2-a0d8cc523a30",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.jsonl",
+          "log_rel": "logs/despachador-hijos-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-despachador-hijos-20261111",
+          "rutas": [
+            "05-herramientas/scripts/harness_lote.py",
+            "05-herramientas/scripts/test_harness_lote.py",
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:42.943254+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "modelo_subagentes_predeterminado": "gpt-6-luna",
+          "esfuerzo_subagentes_predeterminado": "high",
+          "git_repo": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git/worktrees/onia-ws-despachador-hijos-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-12T02:10:58.592579+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-despachador-hijos-20261111",
+        "rutas": [
+          "05-herramientas/scripts/harness_lote.py",
+          "05-herramientas/scripts/test_harness_lote.py",
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:28.107963+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-despachador-hijos-20261111",
+          "pid": 3931616,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865884",
+          "supervisor_pid": 3931603,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865857",
+          "rama": "codex/ws-despachador-hijos-20261111",
+          "session_id": "01a1cd85-8cde-7730-9da2-a0d8cc523a30",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.jsonl",
+          "log_rel": "logs/despachador-hijos-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-despachador-hijos-20261111",
+          "rutas": [
+            "05-herramientas/scripts/harness_lote.py",
+            "05-herramientas/scripts/test_harness_lote.py",
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:42.943254+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "modelo_subagentes_predeterminado": "gpt-6-luna",
+          "esfuerzo_subagentes_predeterminado": "high",
+          "git_repo": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git/worktrees/onia-ws-despachador-hijos-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-12T02:12:00.508588+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-despachador-hijos-20261111",
+        "rutas": [
+          "05-herramientas/scripts/harness_lote.py",
+          "05-herramientas/scripts/test_harness_lote.py",
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:28.107963+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-despachador-hijos-20261111",
+          "pid": 3931616,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865884",
+          "supervisor_pid": 3931603,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865857",
+          "rama": "codex/ws-despachador-hijos-20261111",
+          "session_id": "01a1cd85-8cde-7730-9da2-a0d8cc523a30",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.jsonl",
+          "log_rel": "logs/despachador-hijos-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-despachador-hijos-20261111",
+          "rutas": [
+            "05-herramientas/scripts/harness_lote.py",
+            "05-herramientas/scripts/test_harness_lote.py",
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:42.943254+00:00",
+          "rc": null,
+          "ultimo_evento": "item.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "modelo_subagentes_predeterminado": "gpt-6-luna",
+          "esfuerzo_subagentes_predeterminado": "high",
+          "git_repo": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git/worktrees/onia-ws-despachador-hijos-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-12T02:12:09.391455+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-despachador-hijos-20261111",
+        "rutas": [
+          "05-herramientas/scripts/harness_lote.py",
+          "05-herramientas/scripts/test_harness_lote.py",
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:28.107963+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-despachador-hijos-20261111",
+          "pid": 3931616,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865884",
+          "supervisor_pid": 3931603,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865857",
+          "rama": "codex/ws-despachador-hijos-20261111",
+          "session_id": "01a1cd85-8cde-7730-9da2-a0d8cc523a30",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.jsonl",
+          "log_rel": "logs/despachador-hijos-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-despachador-hijos-20261111",
+          "rutas": [
+            "05-herramientas/scripts/harness_lote.py",
+            "05-herramientas/scripts/test_harness_lote.py",
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:42.943254+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "modelo_subagentes_predeterminado": "gpt-6-luna",
+          "esfuerzo_subagentes_predeterminado": "high",
+          "git_repo": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git/worktrees/onia-ws-despachador-hijos-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-12T02:13:45.772114+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-despachador-hijos-20261111",
+        "rutas": [
+          "05-herramientas/scripts/harness_lote.py",
+          "05-herramientas/scripts/test_harness_lote.py",
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:28.107963+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-despachador-hijos-20261111",
+          "pid": 3931616,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865884",
+          "supervisor_pid": 3931603,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865857",
+          "rama": "codex/ws-despachador-hijos-20261111",
+          "session_id": "01a1cd85-8cde-7730-9da2-a0d8cc523a30",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.jsonl",
+          "log_rel": "logs/despachador-hijos-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-despachador-hijos-20261111",
+          "rutas": [
+            "05-herramientas/scripts/harness_lote.py",
+            "05-herramientas/scripts/test_harness_lote.py",
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:42.943254+00:00",
+          "rc": null,
+          "ultimo_evento": "item.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "modelo_subagentes_predeterminado": "gpt-6-luna",
+          "esfuerzo_subagentes_predeterminado": "high",
+          "git_repo": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git/worktrees/onia-ws-despachador-hijos-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-12T02:13:54.450336+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-despachador-hijos-20261111",
+        "rutas": [
+          "05-herramientas/scripts/harness_lote.py",
+          "05-herramientas/scripts/test_harness_lote.py",
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:28.107963+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-despachador-hijos-20261111",
+          "pid": 3931616,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865884",
+          "supervisor_pid": 3931603,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865857",
+          "rama": "codex/ws-despachador-hijos-20261111",
+          "session_id": "01a1cd85-8cde-7730-9da2-a0d8cc523a30",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.jsonl",
+          "log_rel": "logs/despachador-hijos-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-despachador-hijos-20261111",
+          "rutas": [
+            "05-herramientas/scripts/harness_lote.py",
+            "05-herramientas/scripts/test_harness_lote.py",
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:42.943254+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "modelo_subagentes_predeterminado": "gpt-6-luna",
+          "esfuerzo_subagentes_predeterminado": "high",
+          "git_repo": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git/worktrees/onia-ws-despachador-hijos-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-12T02:17:28.162030+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-despachador-hijos-20261111",
+        "rutas": [
+          "05-herramientas/scripts/harness_lote.py",
+          "05-herramientas/scripts/test_harness_lote.py",
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:28.107963+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-despachador-hijos-20261111",
+          "pid": 3931616,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865884",
+          "supervisor_pid": 3931603,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865857",
+          "rama": "codex/ws-despachador-hijos-20261111",
+          "session_id": "01a1cd85-8cde-7730-9da2-a0d8cc523a30",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.jsonl",
+          "log_rel": "logs/despachador-hijos-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-despachador-hijos-20261111",
+          "rutas": [
+            "05-herramientas/scripts/harness_lote.py",
+            "05-herramientas/scripts/test_harness_lote.py",
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:42.943254+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "modelo_subagentes_predeterminado": "gpt-6-luna",
+          "esfuerzo_subagentes_predeterminado": "high",
+          "git_repo": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git/worktrees/onia-ws-despachador-hijos-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:17:28.146944+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-12T02:19:04.958853+00:00",
+      "estado": "en_curso",
+      "resultado": "Evidencia adjunta al commit exacto 03b23da.",
+      "comprobacion": "Comprobaciones reproducibles conservadas en evidencia adjunta.",
+      "verificacion": "pendiente",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/despachador-hijos-20261111/PRUEBAS-coordinadora.txt",
+          "sha256": "096400cd3f9cc184b6a0ff3ca45432dfc6455da20dffe4a511a1a5d0093cf763",
+          "bytes": 6740
+        }
+      ],
+      "proximo_paso": "Cierre y revisión independiente.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-despachador-hijos-20261111",
+        "rutas": [
+          "05-herramientas/scripts/harness_lote.py",
+          "05-herramientas/scripts/test_harness_lote.py",
+          "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:28.107963+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-despachador-hijos-20261111",
+          "pid": 3931616,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865884",
+          "supervisor_pid": 3931603,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865857",
+          "rama": "codex/ws-despachador-hijos-20261111",
+          "session_id": "01a1cd85-8cde-7730-9da2-a0d8cc523a30",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.jsonl",
+          "log_rel": "logs/despachador-hijos-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-despachador-hijos-20261111",
+          "rutas": [
+            "05-herramientas/scripts/harness_lote.py",
+            "05-herramientas/scripts/test_harness_lote.py",
+            "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:42.943254+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 1,
+          "modelo_subagentes_predeterminado": "gpt-6-luna",
+          "esfuerzo_subagentes_predeterminado": "high",
+          "git_repo": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git/worktrees/onia-ws-despachador-hijos-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:17:28.146944+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -40,5 +773,63 @@
     ],
     "revision_base": 1,
     "fecha": "2026-11-12T02:10:28.107963+00:00"
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "ejecutor-despachador-hijos-20261111",
+      "pid": 3931616,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865884",
+      "supervisor_pid": 3931603,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218865857",
+      "rama": "codex/ws-despachador-hijos-20261111",
+      "session_id": "01a1cd85-8cde-7730-9da2-a0d8cc523a30",
+      "estado": "cerrada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.jsonl",
+      "log_rel": "logs/despachador-hijos-20261111.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-despachador-hijos-20261111",
+      "rutas": [
+        "05-herramientas/scripts/harness_lote.py",
+        "05-herramientas/scripts/test_harness_lote.py",
+        "05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md"
+      ],
+      "dry_run": false,
+      "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/despachador-hijos-20261111.1.briefing.txt",
+      "inicio": "2026-11-12T02:10:42.943254+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 1,
+      "modelo_subagentes_predeterminado": "gpt-6-luna",
+      "esfuerzo_subagentes_predeterminado": "high",
+      "git_repo": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/despachador-hijos-20261111.git/worktrees/onia-ws-despachador-hijos-20261111",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-12T02:17:28.146944+00:00"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": {
+    "commit": "03b23daec252f638b704508d62731775f2438e29",
+    "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+    "ramas_origin": [
+      "origin/codex/ws-despachador-hijos-20261111"
+    ],
+    "fecha": "2026-11-12T02:19:06.594149+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "worktree_conservado": true,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/despachador-hijos-20261111/cierre-r13-779b4b87.json",
+      "sha256": "e4e6492957a9c92914f93935bcfa41f1e65d797aadf033f39525a4340eb6290f",
+      "bytes": 308
+    }
   }
 }
