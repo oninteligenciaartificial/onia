@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "entorno": "Fixture local inscrita con Git privado, remoto local y binario sintético de confianza",
+  "fecha_utc": "2026-11-12T03:58:43.403970+00:00",
+  "procedencia_expectativas": "Texto fijo Entrega de juguete seguido de salto de línea, conocido por la coordinadora de prueba",
+  "tarea": "toy",
+  "manifiesto_sha256": "11a7c881a16e45dd0837a5aafc2349628428a17b82fd7358a90b6f1b49526cd7",
+  "perfil_sha256": "982d3d23fcc7421caa596684f817e7efdd6eb59454c8d1cf4697596896ded6c8",
+  "commit_base": "ad75d6ba631b051935c0b109ad359e3476b07e2f",
+  "commit_entrega": "f46b762eac1ecf2988e7a73b629ca7a76193d7f8",
+  "observacion": {
+    "manifiesto_sha256": "11a7c881a16e45dd0837a5aafc2349628428a17b82fd7358a90b6f1b49526cd7",
+    "perfil_sha256": "982d3d23fcc7421caa596684f817e7efdd6eb59454c8d1cf4697596896ded6c8",
+    "fecha": "2026-11-12T04:00:00+00:00",
+    "cierres": {
+      "toy": {
+        "commit": "f46b762eac1ecf2988e7a73b629ca7a76193d7f8",
+        "verificacion": "correcta",
+        "resultado": "Artefactos Git cotejados mecánicamente en el commit fijado.",
+        "comprobacion": "git-artefactos-v1 perfil_sha256=982d3d23fcc7421caa596684f817e7efdd6eb59454c8d1cf4697596896ded6c8 artefactos_sha256=ecc961598c9827fa6c33f522d21f8a843345ffa1fe13be0b0243459ab8150ba9 cantidad=1"
+      }
+    },
+    "fallos": []
+  },
+  "sesiones": [
+    {
+      "rol": "ejecutor",
+      "responsable": "executor",
+      "sid": "ba4d7e4f-6675-4467-b352-9bd575500ab6",
+      "intento": 1,
+      "modelo_solicitado": "gpt-6.1-sol",
+      "esfuerzo_solicitado": "low",
+      "modelo_observado": null,
+      "esfuerzo_observado": null,
+      "subagentes_maximos": 0
+    },
+    {
+      "rol": "revisor",
+      "responsable": "reviewer",
+      "sid": "922dfaa7-87f5-48e4-92f6-d74cf1446d8f",
+      "intento": 2,
+      "modelo_solicitado": "gpt-6.1-sol",
+      "esfuerzo_solicitado": "low",
+      "modelo_observado": null,
+      "esfuerzo_observado": null,
+      "subagentes_maximos": 0
+    }
+  ],
+  "efectos": [
+    "cerrar",
+    "revisar",
+    "recoger"
+  ],
+  "conteos": {
+    "cerrar": 1,
+    "revisar": 1,
+    "recoger": 1
+  },
+  "repeticiones_posteriores_sin_avance": 3,
+  "estado_final": "para_revision",
+  "aceptacion": null,
+  "veredicto_sintetico": "bueno",
+  "revision_commit": "f46b762eac1ecf2988e7a73b629ca7a76193d7f8",
+  "master_fixture": "ad75d6ba631b051935c0b109ad359e3476b07e2f",
+  "master_final": "ad75d6ba631b051935c0b109ad359e3476b07e2f",
+  "origin_master_final": "ad75d6ba631b051935c0b109ad359e3476b07e2f",
+  "cuota_real_inicial": null,
+  "cuota_real_final": null,
+  "proveedor_y_cuota": "Sustituidos por la fixture",
+  "archivos_sha256": {
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/5-codigo/cierre-tecnico-nocturno-20261112/cierre_tecnico.py": "81b153e3eaeb9577b7737b8cdab2d08e5f56ffbc583df2bfc8f7ec9549008070",
+    "_investigacion-onia/base-operativa/05-herramientas/fabrica-onia/5-codigo/cierre-tecnico-nocturno-20261112/test_cierre_tecnico.py": "6459348e7aaf4d94701518e2966b186d420506195f53c8e94f2c47c0a128078f",
+    "_investigacion-onia/base-operativa/05-herramientas/scripts/harness_lote.py": "2c5e6dd941e4262c9ef75aaf7e686c282a076a150ce39b0d37be559450d1e65e",
+    "_investigacion-onia/base-operativa/05-herramientas/scripts/harness_sesiones.py": "9e5d1125a4d98b4e73cbaa9ae901335c05b6c45cbd749438102071ffcf932b1c"
+  }
+}
