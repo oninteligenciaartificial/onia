@@ -678,10 +678,14 @@ def _worker(base, ident, root, attempt):
                                  'ready=os.read(fd,1); os.close(fd); '
                                  'ready == b"1" or sys.exit(125); '
                                  'os.execvp(sys.argv[2],sys.argv[2:])')
+                    argv = command(session, codex)
                     if session.get('ensayo_sha256'):
                         trial.revalidate(root, base, ident, session['ensayo_sha256'])
-                    child = subprocess.Popen([sys.executable, '-c', bootstrap, str(gate_read),
-                        *command(session, codex)], stdin=prompt, stdout=output, stderr=errors,
+                        argv = trial.custody_command(root, base, ident, session['ensayo_sha256'],
+                                                     argv, gate_read=gate_read)
+                    else:
+                        argv = [sys.executable, '-c', bootstrap, str(gate_read), *argv]
+                    child = subprocess.Popen(argv, stdin=prompt, stdout=output, stderr=errors,
                         cwd=session['worktree'], close_fds=True, pass_fds=(gate_read,),
                         env=child_environment(session))
                     with os.fdopen(gate_write, 'wb') as gate:

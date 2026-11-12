@@ -1,4 +1,5 @@
 """Consultas acotadas del puente: contexto Git, Sol low, sin herramientas externas."""
+from contextlib import ExitStack
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 import hashlib
@@ -195,7 +196,8 @@ def worker():
         return
     trial_data = None
     proc = None
-    proc_identity = None
+    owner = None
+    custody = ExitStack()
     try:
         data=json.loads(sys.stdin.buffer.readline(150001))
         trial_data = data.get('ensayo')
@@ -214,11 +216,14 @@ def worker():
                                     stderr=subprocess.PIPE,env=environment(home),cwd=cwd,preexec_fn=guard)
         if trial_data:
             import harness_ensayo
+            owner = custody.enter_context(
+                harness_ensayo.Custody(Path(trial_data['operacion']), trial_data['sha256']))
             with sessions.registry_lock(Path(trial_data['operacion'])):
                 harness_ensayo.revalidate(Path(trial_data['operacion']), Path(trial_data['base']),
                                          trial_data['id'], trial_data['sha256'])
-                proc = spawn()
-                proc_identity = {'pid': proc.pid, 'pid_inicio': sessions.process_start(proc.pid)}
+                if owner.stopping:
+                    raise boss.Rejected('pregunta_interrumpida')
+                owner.child = proc = spawn()
         else:
             proc = spawn()
         pending=memoryview(data['prompt'].encode())
@@ -227,7 +232,7 @@ def worker():
         for stream in streams:
             os.set_blocking(stream.fileno(),False);selector.register(stream,selectors.EVENT_READ)
         while selector.get_map():
-            if (time.monotonic()>=data['deadline'] or
+            if ((owner and owner.stopping) or time.monotonic()>=data['deadline'] or
                     sessions.process_start(data['parent'])!=data['parent_start']):
                 raise boss.Rejected('pregunta_timeout_o_desconexion')
             for key,_ in selector.select(.15):
@@ -243,15 +248,13 @@ def worker():
         rc=proc.wait(timeout=max(.1,data['deadline']-time.monotonic()))
         if rc:raise boss.Rejected('respuesta_fallida')
         result=extract(streams[proc.stdout].decode(errors='replace'),streams[proc.stderr].decode(errors='replace'))
+        custody.close()
         print(json.dumps({'ok':True,**result}),flush=True)
     except boss.Rejected as exc: print(json.dumps({'ok':False,'error':str(exc)}),flush=True)
     except Exception: print(json.dumps({'ok':False,'error':'consulta_fallida_sin_detalle_privado'}),flush=True)
     finally:
         if trial_data:
-            if proc_identity:
-                import harness_ensayo
-                harness_ensayo.terminate([proc_identity])
-                proc.wait(timeout=5)
+            custody.close()
         else:
             # Comportamiento habitual del puente fuera del ensayo.
             os.killpg(os.getpgrp(),signal.SIGKILL)
@@ -282,6 +285,8 @@ def answer(config, folder, prompt, deadline, slot):
                               'id': slot.stem, 'sha256': permit}
         try:out,_=process.communicate((json.dumps(data,ensure_ascii=False)+'\n').encode(),timeout=remaining(deadline))
         except subprocess.TimeoutExpired:raise boss.Rejected('pregunta_timeout') from None
+        if permit and process.returncode:
+            raise boss.Rejected('pregunta_sin_cierre_de_custodia')
         response=json.loads(out)
         if not response.get('ok'):raise boss.Rejected(response.get('error','respuesta_fallida'))
         return response

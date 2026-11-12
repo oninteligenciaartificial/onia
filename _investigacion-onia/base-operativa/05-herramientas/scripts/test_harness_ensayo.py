@@ -295,6 +295,118 @@ class TrialTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'STOP'):
             self.capacity([])
 
+    def test_detached_auxiliary_drained_between_monitor_samples(self):
+        other = self.child()
+        observed = self.root / 'auxiliary.json'
+        command = """import json, os, sys, time
+from pathlib import Path
+if os.fork() == 0:
+    os.setsid()
+    if os.fork() == 0:
+        Path(sys.argv[1]).write_text(json.dumps({
+            "pid": os.getpid(), "sid": os.getsid(0),
+            "start": Path('/proc/self/stat').read_text().rsplit(')', 1)[1].split()[19],
+        }))
+        time.sleep(10)
+    os._exit(0)
+while not Path(sys.argv[1]).exists():
+    time.sleep(0.01)
+"""
+        wrapped = trial.custody_command(self.op, self.base, 'uno', self.tag,
+                                        [sys.executable, '-c', command, str(observed)])
+        with subprocess.Popen(wrapped, start_new_session=True) as worker:
+            owner = {'pid': worker.pid, 'pid_inicio': sessions.process_start(worker.pid)}
+            self.assertEqual(worker.wait(timeout=6), 0)
+        aux = json.loads(observed.read_text())
+        self.assertNotEqual(aux['sid'], owner['pid'])
+        self.assertNotEqual(sessions.process_start(aux['pid']),
+                            owner['pid_inicio'].rsplit(':', 1)[0] + ':' + aux['start'])
+        rows = self.rows(1)
+        rows[0][1]['sesiones'][0].update(owner, estado='finalizada')
+        with patch.object(sessions, 'indexed_rows', return_value=rows):
+            result = trial.stop(self.op)
+        self.assertEqual(result['estado'], 'parado')
+        self.assertEqual(result['custodias_sin_cierre'], 0)
+        self.assertIsNone(other.poll())
+
+    def test_closed_bootstrap_gate_records_drain_without_starting_model(self):
+        observed = self.root / 'model-started'
+        gate_read, gate_write = os.pipe()
+        try:
+            argv = [sys.executable, '-c', 'from pathlib import Path; import sys; Path(sys.argv[1]).touch()',
+                    str(observed)]
+            wrapped = trial.custody_command(self.op, self.base, 'uno', self.tag, argv, gate_read)
+            with subprocess.Popen(wrapped, pass_fds=(gate_read,)) as worker:
+                owner = {'pid': worker.pid, 'pid_inicio': sessions.process_start(worker.pid)}
+                os.close(gate_write)
+                gate_write = None
+                self.assertEqual(worker.wait(timeout=6), 125)
+        finally:
+            os.close(gate_read)
+            if gate_write is not None:
+                os.close(gate_write)
+        self.assertFalse(observed.exists())
+        rows = self.rows(1)
+        rows[0][1]['sesiones'][0].update(owner, estado='fallida')
+        self.assertEqual(trial.pending_custodies(self.op, self.value, rows), [])
+
+    def test_trial_question_worker_records_drain_before_reply(self):
+        home = self.root / 'home'
+        (home / 'empty').mkdir(parents=True)
+        fake = """import json, sys
+sys.stdin.read()
+print(json.dumps({"type": "item.completed", "item": {"type": "agent_message", "text": "Prueba"}}))
+print(json.dumps({"type": "turn.completed"}))
+"""
+        bootstrap = """import sys
+sys.path.insert(0, sys.argv[1])
+import harness_preguntas as questions
+questions.command = lambda *_: [sys.executable, '-c', sys.argv[2]]
+questions.worker()
+"""
+        wrapped = [sys.executable, '-B', '-c', bootstrap, str(Path(trial.__file__).parent), fake]
+        with subprocess.Popen(wrapped, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                              stderr=subprocess.PIPE, text=True, start_new_session=True) as worker:
+            owner = {'pid': worker.pid, 'pid_inicio': sessions.process_start(worker.pid)}
+            data = dict(pid=worker.pid, parent=os.getpid(), parent_start=sessions.process_start(os.getpid()),
+                        deadline=time.monotonic() + 5, home=str(home), prompt='Prueba',
+                        ensayo={'operacion': str(self.op), 'base': str(self.base),
+                                'id': 'uno', 'sha256': self.tag})
+            output, error = worker.communicate(json.dumps(data) + '\n', timeout=7)
+            self.assertEqual(worker.returncode, 0, error)
+        self.assertEqual(json.loads(output)['respuesta'], 'Prueba')
+        proof = trial.read(trial.custody_path(self.op, trial.custody_identity(owner, self.tag)))
+        self.assertEqual(proof['estado'], 'drenada')
+
+    def test_finished_attempt_missing_proof_keeps_stop(self):
+        child = subprocess.Popen([sys.executable, '-c', 'pass'])
+        owner = {'pid': child.pid, 'pid_inicio': sessions.process_start(child.pid)}
+        child.wait(timeout=3)
+        rows = self.rows(1)
+        rows[0][1]['sesiones'][0].update(owner, estado='finalizada')
+        other = self.child()
+        with self.assertRaisesRegex(ValueError, 'custodia_sin_cierre'):
+            self.capacity(rows)
+        with patch.object(sessions, 'indexed_rows', return_value=rows):
+            result = trial.stop(self.op)
+        self.assertEqual(result['estado'], 'bloqueado')
+        self.assertEqual(result['SIGTERM'], 0)
+        self.assertEqual(result['custodias_sin_cierre'], 1)
+        self.assertTrue((self.path / 'STOP').exists())
+        self.assertIsNone(other.poll())
+
+    def test_closed_question_missing_proof_keeps_stop(self):
+        child = subprocess.Popen([sys.executable, '-c', 'pass'])
+        owner = {'pid': child.pid, 'pid_inicio': sessions.process_start(child.pid)}
+        child.wait(timeout=3)
+        private.private_write(self.op / 'preguntas-slots/uno.json',
+                              dict(owner, estado='cerrada', vence=time.time() - 10,
+                                   base=str(self.base), ensayo_sha256=self.tag))
+        with patch.object(sessions, 'indexed_rows', return_value=[]):
+            result = trial.stop(self.op)
+        self.assertEqual(result['estado'], 'bloqueado')
+        self.assertEqual(result['custodias_sin_cierre'], 1)
+
     def test_stop_missing_inventory_never_claims_stopped(self):
         (self.path / "procesos.json").unlink()
         with patch.object(trial, 'inventory', return_value=([], [], [])), \

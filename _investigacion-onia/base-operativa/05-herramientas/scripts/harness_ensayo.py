@@ -4,6 +4,7 @@ No lanza sesiones. Las admisiones siguen pasando por harness_sesiones.
 """
 from contextlib import contextmanager, ExitStack
 import argparse
+import ctypes
 import hashlib
 import json
 import math
@@ -186,6 +187,7 @@ def admission(root, base, ident, rows, questions):
     require(str(base) == value['base'] and ident in value['ids'], 'id_o_base_no_autorizado')
     health(root, value)
     members(value, rows, questions)
+    require_verified_owners(root, value, rows)
     return digest(value)
 
 
@@ -403,6 +405,153 @@ def terminate(items):
     return sent, skipped
 
 
+
+# Linux includes clone children with other exit signals in the wait proof.
+WAIT_ALL = 0x40000000
+
+
+def custody_path(root, identity):
+    return directory(root) / ('custodia-' + digest(identity) + '.json')
+
+
+def custody_identity(record, tag):
+    pid, start = record.get('pid'), record.get('pid_inicio')
+    require(type(pid) is int and pid > 1 and isinstance(start, str) and bool(start),
+            'identidad_custodia_invalida')
+    return {'pid': pid, 'pid_inicio': start, 'politica_sha256': tag}
+
+
+class Custody:
+    """Dedicated subreaper for one model process and its descendants."""
+
+    def __init__(self, root, tag):
+        self.root = root
+        self.identity = custody_identity(
+            {'pid': os.getpid(), 'pid_inicio': sessions.process_start(os.getpid())}, tag)
+        self.path = custody_path(root, self.identity)
+        self.child = None
+        self.stopping = False
+
+    def __enter__(self):
+        require(not os.path.lexists(self.path), 'custodia_existente')
+        # PR_SET_CHILD_SUBREAPER: even a double fork or setsid reparents here.
+        libc = ctypes.CDLL(None, use_errno=True)
+        if libc.prctl(36, 1, 0, 0, 0) != 0:
+            raise OSError(ctypes.get_errno(), 'PR_SET_CHILD_SUBREAPER')
+        signal.signal(signal.SIGTERM, self.request_stop)
+        private.private_write(self.path, dict(self.identity, estado='pendiente'))
+        return self
+
+    def request_stop(self, _signum, _frame):
+        self.stopping = True
+
+    def __exit__(self, _type, _value, _traceback):
+        try:
+            self.drain()
+        except Exception:
+            private.private_write(directory(self.root) / 'STOP',
+                                  {'motivo': 'custodia_sin_cierre', 'fecha': time.time()})
+            raise
+
+    def drain(self):
+        end = time.monotonic() + 3
+        sent = set()
+        while True:
+            # Popen must collect its own child's status before waitpid(-1).
+            if self.child is None or self.child.poll() is not None:
+                try:
+                    pid, _status = os.waitpid(-1, os.WNOHANG | WAIT_ALL)
+                except ChildProcessError:
+                    private.private_write(self.path, dict(self.identity, estado='drenada'))
+                    return
+                if pid:
+                    continue
+            require(time.monotonic() < end, 'descendientes_sin_drenar')
+            try:
+                children = [i for i in process_tree([self.identity])
+                            if i['pid'] != self.identity['pid']
+                            and (i['pid'], i['pid_inicio']) not in sent]
+            except ValueError as exc:
+                if str(exc) != 'ensayo_arbol_cambio':
+                    raise
+                children = []
+            terminated, _skipped = terminate(children)
+            sent.update((i['pid'], i['pid_inicio']) for i in terminated)
+            time.sleep(0.05)
+
+
+def run_in_custody(root, base, ident, tag, argv, gate_read=None):
+    with Custody(root, tag) as owner:
+        if gate_read is not None:
+            with os.fdopen(gate_read, 'rb', buffering=0) as gate:
+                if gate.read(1) != b'1':
+                    return 125
+        revalidate(root, base, ident, tag)
+        if owner.stopping:
+            return 143
+        owner.child = subprocess.Popen(argv)
+        while owner.child.poll() is None and not owner.stopping:
+            time.sleep(0.05)
+        return 143 if owner.stopping else owner.child.returncode
+
+
+def custody_command(root, base, ident, tag, argv, gate_read=None):
+    # Establish custody before waiting for the existing PID registration gate.
+    bootstrap = """import sys
+from pathlib import Path
+sys.path.insert(0, sys.argv[1])
+from harness_ensayo import run_in_custody
+root, base, ident, tag, gate = sys.argv[2:7]
+sys.exit(run_in_custody(Path(root), Path(base), ident, tag, sys.argv[7:],
+                        int(gate) if gate else None))
+"""
+    return [sys.executable, '-B', '-c', bootstrap, str(Path(__file__).resolve().parent),
+            str(root), str(base), ident, tag, '' if gate_read is None else str(gate_read), *argv]
+
+
+def pending_custodies(root, value, rows):
+    """Check historical attempts too. A dead PID without proof remains uncertain."""
+    tag = digest(value)
+    expected = {}
+    for base, row in rows:
+        if str(base) != value['base'] or row['id'] not in value['ids']:
+            continue
+        for record in row.get('sesiones', []):
+            if record.get('ensayo_sha256') == tag and record.get('pid') is not None:
+                identity = custody_identity(record, tag)
+                expected[digest(identity)] = identity
+
+    slots = sessions.private_path(root, 'preguntas-slots')
+    for ident in value['ids']:
+        path = slots / (ident + '.json')
+        if os.path.lexists(path):
+            record = read(path)
+            if record.get('ensayo_sha256') == tag and record.get('pid') is not None:
+                require(record.get('base') == value['base'], 'slot_ajeno')
+                identity = custody_identity(record, tag)
+                expected[digest(identity)] = identity
+
+    # Retain independent evidence if an attempt has left the active registry.
+    for path in directory(root).glob('custodia-*.json'):
+        record = read(path)
+        identity = custody_identity(record, tag)
+        require(path == custody_path(root, identity) and
+                record.get('politica_sha256') == tag and
+                record.get('estado') in {'pendiente', 'drenada'}, 'custodia_alterada')
+        key = digest(identity)
+        if record['estado'] == 'drenada':
+            expected.pop(key, None)
+        else:
+            expected[key] = identity
+    return list(expected.values())
+
+
+def require_verified_owners(root, value, rows):
+    for owner in pending_custodies(root, value, rows):
+        require(sessions.process_start(owner['pid']) == owner['pid_inicio'],
+                'custodia_sin_cierre')
+
+
 def inventory(root, value):
     rows = sessions.indexed_rows(root, Path(value['base']))
     questions = sessions.active_questions(root)
@@ -428,7 +577,7 @@ def stop(root, reason='fin_operador', trusted=None):
     value = policy(root, expired=True)
     preparation = read(path / 'preparacion.json')
     require(preparation.get('politica_sha256') == digest(value), 'politica_alterada')
-    _, _, owned = inventory(root, value)
+    rows, _, owned = inventory(root, value)
     has_journal = os.path.lexists(path / 'procesos.json')
     has_state = os.path.lexists(path / 'estado.json')
     require(has_journal == has_state, 'inventario_incompleto')
@@ -450,7 +599,12 @@ def stop(root, reason='fin_operador', trusted=None):
                 and recorded == dict(state, evento='muestra')
                 and state.get('politica_sha256') == digest(value), 'estado_alterado')
     items = (trusted or []) + journal.get('procesos', []) + process_tree(owned)
-    unique = {(item['pid'], item['pid_inicio']): item for item in items}
+    # A bootstrap without a receipt has not yet been able to start its model.
+    # Let it observe STOP and record the empty drain instead of killing it early.
+    starting = {(i['pid'], i['pid_inicio']) for i in pending_custodies(root, value, rows)
+                if not os.path.lexists(custody_path(root, i))}
+    unique = {(item['pid'], item['pid_inicio']): item for item in items
+              if (item['pid'], item['pid_inicio']) not in starting}
     receipt(path, {'evento': 'intencion_SIGTERM', 'motivo': reason, 'fecha': time.time(),
                    'procesos': list(unique.values())})
     sent, skipped = terminate(list(unique.values()))
@@ -465,12 +619,15 @@ def stop(root, reason='fin_operador', trusted=None):
         time.sleep(0.1)
         _, _, pending_members = inventory(root, value)
     remaining = [i for i in unique.values() if sessions.process_start(i['pid']) == i['pid_inicio']]
-    result = {'estado': 'bloqueado' if remaining or pending_members else 'parado', 'fecha': time.time(),
+    rows, _, pending_members = inventory(root, value)
+    unverified = pending_custodies(root, value, rows)
+    result = {'estado': 'bloqueado' if remaining or pending_members or unverified else 'parado',
+              'fecha': time.time(), 'custodias_sin_cierre': unverified,
               'pendientes': remaining, 'reservas_pendientes': len(pending_members),
               'politica_sha256': digest(value)}
     private.private_write(path / 'fin.json', result)
     return {'estado': result['estado'], 'SIGTERM': len(sent), 'pendientes': len(remaining),
-            'reservas_pendientes': len(pending_members)}
+            'reservas_pendientes': len(pending_members), 'custodias_sin_cierre': len(unverified)}
 
 
 @contextmanager
@@ -520,6 +677,7 @@ def monitor(root):
                                 and not os.path.lexists(path / 'procesos.json'), 'monitor_ya_iniciado')
                     rows, questions, owned = inventory(root, value)
                     members(value, rows, questions)
+                    require_verified_owners(root, value, rows)
                     tracked = {key: item for key, item in tracked.items()
                                if sessions.process_start(item['pid']) == item['pid_inicio']}
                     for item in process_tree(owned):
