@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "02044e8af77cfbb9d696a826a33fa02d302116dd",
+  "criterio": "P1 en harness_sesiones.py, líneas 655–683. El supervisor revalida antes de comprobar Git y abre después la compuerta sin volver a verificar vigencia, STOP ni frescura. Reproducción en memoria con vencimiento 101, validación inicial en 100 y Git terminado en 102 permitió Popen y gate.write en 102, devolviendo éxito. Revalidar inmediatamente antes de abrir la compuerta y agregar regresión con demora de Git, conservando y recolectando el hijo bloqueado ante rechazo. Sintaxis, diff --check y 14 comprobaciones puras correctos. Leída la evidencia declarada de 37 pruebas. Su repetición quedó impedida por la prohibición de crear temporales del sandbox.",
+  "worktree_conservado": true
+}
