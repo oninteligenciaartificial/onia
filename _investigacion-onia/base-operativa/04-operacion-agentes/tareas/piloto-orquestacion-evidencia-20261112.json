@@ -1,0 +1,42 @@
+{
+  "schema": 2,
+  "id": "piloto-orquestacion-evidencia-20261112",
+  "revision": 2,
+  "compartible": true,
+  "objetivo": "Revisar CONTINUIDAD-v2-RESULTADO-20261112.json y PRUEBA-RENDER-20261112.py de 04-operacion-agentes/homelab. Cotejar recibo con scripts y distinguir observación del coordinador de prueba propia. No ejecutar SSH ni escribir en homelab. Entregar INFORME.md breve con hallazgos concretos, límites y veredicto sobre la evidencia, NO aceptar homelab completo.",
+  "estado": "preparado",
+  "proximo_paso": "Ejecutar ensayo acotado y entregar evidencia.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-12T00:11:17.598326+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-12T00:11:17.331262+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Ejecutar ensayo acotado y entregar evidencia.",
+      "aceptacion": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/piloto-orquestacion-evidencia-20261112.md",
+    "sha256": "f3c00063b28d7e4e383a0fbea90fe08671a15aea2bfba55cf6ece3b69baee901",
+    "bytes": 952,
+    "contenido": "# piloto-orquestacion-evidencia-20261112\n\nÁrea desarrollo. Leer reglas vigentes. Una tarea acotada para ensayo real del despachador autorizado por Sergio: «si pasa seguimos con la orquestación».\n\nRevisar CONTINUIDAD-v2-RESULTADO-20261112.json y PRUEBA-RENDER-20261112.py de 04-operacion-agentes/homelab. Cotejar recibo con scripts y distinguir observación del coordinador de prueba propia. No ejecutar SSH ni escribir en homelab. Entregar INFORME.md breve con hallazgos concretos, límites y veredicto sobre la evidencia, NO aceptar homelab completo.\n\nSólo escribir en 04-operacion-agentes/homelab/piloto-20261112/evidencia. No editar registros ni briefing, no shell remoto, producción, n8n, envíos, gastos ni hijos. Máximo un informe y salida de pruebas. Commit y push en rama asignada. Criterio: evidencia precisa sin inventar éxito; revisión posterior separada. No instalar dependencias. Base fuente debe contener abbf9b7 o descendiente.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "ejecutor-evidencia-20261112",
+    "rutas": [
+      "04-operacion-agentes/homelab/piloto-20261112/evidencia"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-12T00:11:17.598307+00:00"
+  }
+}
