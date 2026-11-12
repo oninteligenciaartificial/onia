@@ -164,6 +164,9 @@ def validate_manifest(manifest):
         for key in ('actor', 'revisor', 'criterio'):
             trabajo.nonempty(task[key], key)
         require(task['actor'] != task['revisor'], 'Revisor igual al ejecutor.')
+        limit = task.get('subagentes_maximos', 0)
+        require(type(limit) is int and limit in (0, 1, 2),
+                'Subagentes máximos debe ser un entero de 0 a 2.')
         require(re.fullmatch(r'[0-9a-f]{64}', task['briefing_sha256']), 'Hash de briefing inválido.')
         require(isinstance(task['rutas'], list) and task['rutas'], 'Faltan rutas.')
         for route in task['rutas']:
@@ -205,7 +208,7 @@ def current_review(row):
 def fingerprint(row):
     """Evidencia estable del efecto, independiente de revisiones asíncronas de PID."""
     return {
-        'sesiones': [{key: s.get(key) for key in
+        'sesiones': [{key: s.get(key, 0) if key == 'subagentes_maximos' else s.get(key) for key in
                       ('intento', 'rol', 'session_id', 'reanuda', 'commit_base', 'entrega_sha256',
                        'modelo', 'esfuerzo', 'auth_chatgpt', 'responsable', 'operacion', 'dry_run', 'subagentes_maximos')}
                      for s in row.get('sesiones', [])],
@@ -279,7 +282,8 @@ class LocalHarness:
                                    approved=True, resume=op == 'reanudar',
                                    reviewer=task['revisor'] if op == 'revisar' else None,
                                    model=selected['modelo'], effort=selected['esfuerzo'],
-                                   auth_chatgpt=True, subagents=0)
+                                   auth_chatgpt=True,
+                                   subagents=0 if role == 'revisor' else task.get('subagentes_maximos', 0))
         if op == 'recoger':
             return sessions.collect_review(self.base, ident, self.operation, revision, retain_worktree=True)
         attestation = observation['cierres'][ident]
@@ -517,6 +521,7 @@ class Dispatcher:
                 old_attempts = {s['intento'] for s in before['sesiones']}
                 added = [s for s in after['sesiones'] if s['intento'] not in old_attempts]
                 expected = intent['perfil']
+                limit = intent.get('subagentes_maximos', 0)
                 if len(added) == 1:
                     session = added[0]
                     recognized = (session['rol'] == role and session['session_id']
@@ -525,7 +530,10 @@ class Dispatcher:
                                   and session['responsable'] == intent['responsable']
                                   and session['operacion'] == str(self.root) and not session['dry_run']
                                   and session['auth_chatgpt'] is True
-                                  and session['subagentes_maximos'] == 0
+                                  and type(limit) is int and limit in (0, 1, 2)
+                                  and type(session['subagentes_maximos']) is int
+                                  and session['subagentes_maximos'] == limit
+                                  and (role != 'revisor' or limit == 0)
                                   and (op != 'reanudar' or session['session_id'] == intent['sid'])
                                   and (role != 'revisor' or session['entrega_sha256'] == intent['entrega']))
             elif op == 'cerrar':
@@ -666,6 +674,7 @@ class Dispatcher:
                 intent = self.append('intencion', clave=uuid.uuid4().hex, id=ident, op=op,
                                      antes=fingerprint(row), revision=row['revision'],
                                      perfil=task['perfiles'][role], responsable=task['revisor'] if role == 'revisor' else task['actor'],
+                                     subagentes_maximos=0 if role == 'revisor' else task.get('subagentes_maximos', 0),
                                      entrega=trabajo.delivery_digest(row),
                                      sid=(task['reanudar_sid'] if op == 'reanudar' else history[-1].get('session_id') if history else None),
                                      commit=(observation.get('cierres', {}).get(ident, {}).get('commit') if op == 'cerrar'

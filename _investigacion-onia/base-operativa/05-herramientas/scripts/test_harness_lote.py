@@ -63,7 +63,8 @@ class MemoryHarness:
             session = dict(intento=len(current['sesiones']) + 1, rol=role,
                            session_id=str(uuid.uuid4()), estado='ejecutando', rc=None,
                            responsable=task['revisor'] if role == 'revisor' else task['actor'],
-                           operacion=str(self.operation), dry_run=False, subagentes_maximos=0,
+                           operacion=str(self.operation), dry_run=False,
+                           subagentes_maximos=0 if role == 'revisor' else task.get('subagentes_maximos', 0),
                            auth_chatgpt=True,
                            modelo=task['perfiles'][role]['modelo'], esfuerzo=task['perfiles'][role]['esfuerzo'],
                            rutas=task['rutas'], commit_base=(current.get('cierre') or {}).get('commit', 'a' * 40),
@@ -373,14 +374,67 @@ for method in ('initialize', 'initialized', 'account/rateLimits/read'):
         self.dispatcher().resolve_no_effect(intent['clave'], revision, path)
 
     def test_crash_after_dispatch_reconciles_sid_without_redispatch(self):
+        self.manifest['tareas'] = self.manifest['tareas'][:1]
+        self.manifest['tareas'][0]['subagentes_maximos'] = 1
+        self.save()
         self.adapter.after = lambda: (_ for _ in ()).throw(Crash())
         with self.assertRaises(Crash):
             self.tick()
         original = self.adapter.calls[0]
+        session = deepcopy(self.adapter.rows['uno']['sesiones'][0])
+        intent = next(e for e in self.dispatcher().events() if e['tipo'] == 'intencion')
+        self.assertEqual(intent['subagentes_maximos'], 1)
+        self.assertEqual(session['subagentes_maximos'], 1)
         self.adapter.after = None
         self.tick()
         self.assertEqual(self.adapter.calls.count(original), 1)
-        self.assertTrue(any(e['tipo'] == 'efecto' and e['recuperado'] for e in self.dispatcher().events()))
+        self.assertEqual(self.adapter.rows['uno']['sesiones'], [session])
+        effect, = [e for e in self.dispatcher().events() if e['tipo'] == 'efecto']
+        self.assertTrue(effect['recuperado'])
+        self.assertEqual(effect['clave'], intent['clave'])
+        self.assertEqual(effect['despues']['sesiones'][0]['session_id'], session['session_id'])
+        self.assertEqual(effect['despues']['sesiones'][0]['intento'], session['intento'])
+        self.assertEqual(effect['despues']['sesiones'][0]['subagentes_maximos'], 1)
+
+    def test_recovery_rejects_changed_subagents_even_after_manifest_reapproval(self):
+        self.manifest['tareas'] = self.manifest['tareas'][:1]
+        self.manifest['tareas'][0]['subagentes_maximos'] = 1
+        self.save()
+        self.adapter.after = lambda: (_ for _ in ()).throw(Crash())
+        with self.assertRaises(Crash):
+            self.tick()
+        self.adapter.after = None
+        self.manifest['tareas'][0]['subagentes_maximos'] = 2
+        self.adapter.rows['uno']['sesiones'][0]['subagentes_maximos'] = 2
+        self.save()
+        self.assert_blocked(self.tick(), 'Intención incierta')
+        self.assertEqual(len(self.adapter.calls), 1)
+        self.assertFalse(any(e['tipo'] == 'efecto' for e in self.dispatcher().events()))
+
+    def test_legacy_intent_and_session_without_subagents_recover_as_zero(self):
+        self.manifest['tareas'] = self.manifest['tareas'][:1]
+        self.save()
+        dispatcher = self.dispatcher()
+        append = dispatcher.append
+
+        def legacy_append(kind, **values):
+            values.pop('subagentes_maximos', None)
+            return append(kind, **values)
+
+        self.adapter.after = lambda: (_ for _ in ()).throw(Crash())
+        with patch.object(dispatcher, 'append', side_effect=legacy_append), self.assertRaises(Crash):
+            dispatcher.tick(self.observation_path)
+        self.adapter.after = None
+        session = self.adapter.rows['uno']['sesiones'][0]
+        session.pop('subagentes_maximos')
+        # Una intención histórica sin límite nunca acredita un hijo.
+        session['subagentes_maximos'] = 1
+        self.assert_blocked(self.tick(), 'Intención incierta')
+        session.pop('subagentes_maximos')
+        self.tick()
+        effect, = [e for e in self.dispatcher().events() if e['tipo'] == 'efecto']
+        self.assertEqual(effect['despues']['sesiones'][0]['subagentes_maximos'], 0)
+        self.assertEqual(len(self.adapter.calls), 1)
 
     def test_crash_after_collect_reconciles_exact_commit(self):
         self.review_ready()
@@ -439,6 +493,23 @@ for method in ('initialize', 'initialized', 'account/rateLimits/read'):
             with self.subTest(change=change), self.assertRaises(ValueError):
                 lote.validate_manifest(manifest)
 
+    def test_manifest_subagents_are_optional_strict_integers_zero_to_two(self):
+        original = deepcopy(self.manifest)
+        old_hash = lote.digest(self.manifest)
+        lote.validate_manifest(self.manifest)
+        self.assertEqual(self.manifest, original)
+        self.assertEqual(lote.digest(self.manifest), old_hash)
+        for value in (0, 1, 2):
+            with self.subTest(valid=value):
+                manifest = deepcopy(original)
+                manifest['tareas'][0]['subagentes_maximos'] = value
+                lote.validate_manifest(manifest)
+        for value in (True, False, -1, 3, 1.0, '1', None, [], {}):
+            with self.subTest(invalid=value), self.assertRaisesRegex(ValueError, 'Subagentes máximos'):
+                manifest = deepcopy(original)
+                manifest['tareas'][0]['subagentes_maximos'] = value
+                lote.validate_manifest(manifest)
+
     def test_changed_scope_blocks_only_affected_task(self):
         self.adapter.rows['uno']['briefing']['sha256'] = 'c' * 64
         result = self.tick()
@@ -457,6 +528,7 @@ for method in ('initialize', 'initialized', 'account/rateLimits/read'):
 
     def test_resume_needs_same_sid_and_auxiliary_process_attestation(self):
         self.manifest['tareas'][0]['prioridad'] = 10
+        self.manifest['tareas'][0]['subagentes_maximos'] = 2
         self.save()
         self.tick()
         row = self.adapter.rows['uno']
@@ -471,8 +543,34 @@ for method in ('initialize', 'initialized', 'account/rateLimits/read'):
         self.tick()
         self.assertEqual(self.adapter.calls[-1], ('reanudar', 'uno'))
         self.assertEqual(self.adapter.rows['uno']['sesiones'][-1]['session_id'], sid)
+        self.assertEqual([s['subagentes_maximos'] for s in row['sesiones']], [2, 2])
+        self.assertTrue(any(e['tipo'] == 'efecto' and e['op'] == 'reanudar'
+                            for e in self.dispatcher().events()))
+
+    def test_reviewer_stays_zero_and_recovery_rejects_a_child(self):
+        self.manifest['tareas'] = self.manifest['tareas'][:1]
+        self.manifest['tareas'][0]['subagentes_maximos'] = 2
+        self.save()
+        self.review_ready()
+        self.adapter.after = lambda: (_ for _ in ()).throw(Crash())
+        with self.assertRaises(Crash):
+            self.tick()
+        self.adapter.after = None
+        row = self.adapter.rows['uno']
+        self.assertEqual([s['subagentes_maximos'] for s in row['sesiones']], [2, 0])
+        intent = next(e for e in self.dispatcher().events() if e['tipo'] == 'intencion')
+        self.assertEqual(intent['subagentes_maximos'], 0)
+        row['sesiones'][-1]['subagentes_maximos'] = 1
+        self.assert_blocked(self.tick(), 'Intención incierta')
+        row['sesiones'][-1]['subagentes_maximos'] = 0
+        self.tick()
+        self.assertEqual(self.adapter.calls.count(('revisar', 'uno')), 1)
+        self.assertTrue(any(e['tipo'] == 'efecto' and e['op'] == 'revisar'
+                            for e in self.dispatcher().events()))
 
     def test_changes_review_reopen_resume_reconciles_executor_sid(self):
+        self.manifest['tareas'][0]['subagentes_maximos'] = 1
+        self.save()
         self.review_ready()
         self.tick()
         self.finish()
@@ -501,6 +599,7 @@ for method in ('initialize', 'initialized', 'account/rateLimits/read'):
         self.assertEqual(resumed[0]['sid'], sid)
         self.assertTrue(any(e['tipo'] == 'efecto' and e.get('recuperado') for e in resumed))
         self.assertEqual(self.adapter.calls.count(('reanudar', 'uno')), 1)
+        self.assertEqual(row['sesiones'][-1]['subagentes_maximos'], 1)
 
     def test_attempt_budget_and_global_three_slots(self):
         self.review_ready()
@@ -651,6 +750,24 @@ for method in ('initialize', 'initialized', 'account/rateLimits/read'):
             with self.assertRaisesRegex(ValueError, 'otro commit'):
                 adapter.invoke('cerrar', task, row, observation)
 
+    def test_local_adapter_passes_subagents_on_launch_resume_and_zero_on_review(self):
+        adapter = lote.LocalHarness.__new__(lote.LocalHarness)
+        adapter.base, adapter.operation = self.base, self.op
+        task = self.manifest['tareas'][0]
+        row = self.adapter.row('uno')
+        for limit in (None, 0, 1, 2):
+            if limit is not None:
+                task['subagentes_maximos'] = limit
+            for op in ('lanzar', 'reanudar', 'revisar'):
+                with self.subTest(limit=limit, op=op), patch.object(sessions, 'launch') as launch:
+                    adapter.invoke(op, task, row, {})
+                    kwargs = launch.call_args.kwargs
+                    self.assertEqual(kwargs['subagents'], 0 if op == 'revisar' else limit or 0)
+                    self.assertEqual(kwargs['resume'], op == 'reanudar')
+                    self.assertEqual(kwargs['reviewer'], task['revisor'] if op == 'revisar' else None)
+                    self.assertIs(kwargs['approved'], True)
+                    self.assertIs(kwargs['auth_chatgpt'], True)
+
     def test_provider_probe_uses_chatgpt_without_inherited_api_keys(self):
         adapter = lote.LocalHarness.__new__(lote.LocalHarness)
         result = SimpleNamespace(returncode=0, stdout='Logged in using ChatGPT', stderr='')
@@ -687,6 +804,7 @@ class NativeApiTests(unittest.TestCase):
                 perfiles={r: dict(modelo='gpt-6.1-sol', esfuerzo='high') for r in ('ejecutor', 'revisor')},
                 intentos_maximos={'ejecutor': 2, 'revisor': 1}))
         tasks[0]['prioridad'] = 10
+        tasks[0]['subagentes_maximos'] = 1
         manifest = dict(schema=1, id='nativo', habilitado=True, autorizacion='Fixture local autorizada',
             desde='2026-11-11T19:00:00Z', hasta='2026-11-11T21:00:00Z', base=str(fixture.base),
             operacion=str(fixture.op), repositorio=str(fixture.repo), proveedor='openai-chatgpt-incluido',
@@ -703,8 +821,23 @@ class NativeApiTests(unittest.TestCase):
             return lote.Dispatcher(manifest_path, fixture.op, lote.digest(manifest), adapter=adapter,
                                    clock=lambda: lote.timestamp(observation['fecha']))
 
-        dispatcher().tick(obs_path)
+        invoke = adapter.invoke
+
+        def crash_after_launch(op, *args):
+            invoke(op, *args)
+            raise Crash()
+
+        with patch.object(adapter, 'invoke', side_effect=crash_after_launch), self.assertRaises(Crash):
+            dispatcher().tick(obs_path)
         fixture.wait_finished('uno')
+        original = fixture.row('uno')['sesiones'][0]
+        self.assertEqual(original['subagentes_maximos'], 1)
+        restored = dispatcher()
+        self.assertEqual(restored.recover({'uno': fixture.row('uno')}), {})
+        effect, = [e for e in restored.events() if e['tipo'] == 'efecto']
+        self.assertEqual(effect['despues']['sesiones'][0]['session_id'], original['session_id'])
+        self.assertEqual(effect['despues']['sesiones'][0]['intento'], original['intento'])
+        self.assertEqual(len(fixture.row('uno')['sesiones']), 1)
         commit = fixture.deliver('uno')
         observation['cierres'] = {'uno': dict(commit=commit, resultado='Entrega sintética publicada',
             comprobacion='Archivo leído y Git limpio en fixture', verificacion='correcta')}
@@ -714,6 +847,7 @@ class NativeApiTests(unittest.TestCase):
         fixture.wait_finished('uno')
         dispatcher().tick(obs_path)
         reviewed = fixture.row('uno')
+        self.assertEqual([s['subagentes_maximos'] for s in reviewed['sesiones']], [1, 0])
         self.assertTrue(lote.current_review(reviewed))
         # Aceptación e integración son acciones explícitas de la coordinadora.
         trabajo.accept(fixture.base, 'uno', reviewed['revision'], 'reviewer', 'Fixture cotejada')

@@ -19,7 +19,8 @@ La [configuración entregada](manifiesto-deshabilitado.json) tiene `habilitado=f
 | `actor`, `revisor`, `briefing_sha256`, `rutas` | Alcance idéntico al canónico. El revisor es distinto del ejecutor |
 | `criterio` | Criterio para la aceptación explícita de la coordinadora |
 | `operaciones` | Subconjunto explícito de lanzar, reanudar, cerrar, revisar, recoger, aceptar, integrar y desplegar |
-| `perfiles` | Ejecutor y revisor con `gpt-6.1-sol`, esfuerzo low/high y cero hijos impuesto por código |
+| `perfiles` | Ejecutor y revisor con `gpt-6.1-sol`, esfuerzo low/high |
+| `tareas[].subagentes_maximos` | Opcional, entero estricto 0, 1 o 2 para la ejecutora; defecto cero. La revisión siempre usa cero |
 | `intentos_maximos` | Presupuesto entero positivo de sesiones canónicas por rol, incluyendo intentos anteriores al manifiesto |
 | `depende_de` | Pares de ID del mismo lote y commit exacto. Exige aceptación con revisión buena vigente y ascendencia comprobada mediante fetch de `origin/master` |
 | `prioridad` | Entero opcional, mayor primero dentro de una transición |
@@ -27,6 +28,10 @@ La [configuración entregada](manifiesto-deshabilitado.json) tiene `habilitado=f
 | `reintentar_revision_intento` | Número canónico explícito del intento revisor fallido que se permite reemplazar, tras conciliación |
 
 Las dependencias cíclicas, propias, inexistentes y duplicadas fallan en validación. Una asignación liberada tras aceptación se coteja con la última asignación conservada en el historial. Cambiar el alcance exige un manifiesto nuevamente contrastado con su autorización y un nuevo hash. Conservar el ID de lote, sus IDs de tarea, el journal y STOP durante correcciones y retomas.
+
+Para autorizar un hijo, añadir `"subagentes_maximos": 1` a la tarea, al mismo nivel que `perfiles`. El valor se pasa explícitamente tanto en `lanzar` como en `reanudar`; la retoma usa el límite del manifiesto aprobado. No acepta booleanos, decimales, cadenas, null ni valores fuera de 0–2. Omitir el campo conserva cero sin modificar el manifiesto ni su hash anterior. Cambiar este permiso requiere cotejar de nuevo la autorización y aprobar el nuevo hash.
+
+El lanzador existente limita hijos abiertos por ejecutora, impide nietos y configura Luna High como perfil predeterminado de los hijos. Cada hijo recibe archivos exclusivos; la ejecutora reúne, comprueba y publica. Los hijos no entran en el contador de tres sesiones principales, que sigue incluyendo ejecutoras y revisoras; no amplían cuota ni permisos externos.
 
 ## CLI
 
@@ -120,7 +125,7 @@ Cerrar requiere la comprobación explícita de ese commit en `cierres`. El módu
 
 Se utiliza `~/operacion/.lotes.lock` para serializar pasadas, seguido del lock global del harness durante sus operaciones. Cada API vuelve a cotejar la revisión esperada y el cupo bajo su lock. El journal está en `~/operacion/lotes/ID/journal.jsonl`, con permisos 0600, directorio 0700, fsync y cadena de hashes. Conserva intención previa, revisión, perfil solicitado, cuota fechada, SID esperado, digest de entrega, commit y efecto observado. El modelo observado permanece null hasta disponer de evidencia externa del runtime.
 
-Una caída tras persistir la sesión se concilia mediante intento, SID, rol, responsable, perfil, autenticación, operación y digest. Cierre y recogida se concilian mediante commit y SID exactos. Un SID todavía ausente mantiene la intención pendiente hasta la siguiente pasada. Un journal truncado exige preservar sus bytes y reconstruir su continuidad con evidencia de la coordinadora.
+Una caída tras persistir la sesión se concilia mediante intento, SID, rol, responsable, perfil, límite de hijos, autenticación, operación y digest. Cada intención conserva `subagentes_maximos` y la huella del efecto conserva el valor registrado por la sesión. La recuperación compara contra la intención original, incluso si se aprobó después otro manifiesto; una discrepancia conserva el bloqueo y no acredita el efecto. Las intenciones y sesiones históricas sin ese campo equivalen a cero; ninguna acredita hijos por omisión. Una revisión sólo se reconoce con cero. Cierre y recogida se concilian mediante commit y SID exactos. Un SID todavía ausente mantiene la intención pendiente hasta la siguiente pasada. Un journal truncado exige preservar sus bytes y reconstruir su continuidad con evidencia de la coordinadora.
 
 Una caída anterior al efecto deja incertidumbre sobre worktrees, logs y procesos parciales. Después de inspeccionarlos, la coordinadora puede declarar ausencia de efecto sobre la misma revisión canónica. Guardar evidencia privada con `clave`, `revision`, `sin_efecto_comprobado=true` y `comprobacion` concreta. El comando siguiente conserva su hash y permite reevaluar el mismo ID.
 
@@ -143,3 +148,19 @@ Se conserva la integración como acción de la coordinadora porque las API actua
 El lock de lotes serializa instancias de este módulo. El CLI manual conserva las garantías del harness. El lanzador compartido permite lanzar otro revisor de una entrega ya revisada mediante una llamada manual posterior. La coordinadora debe mantener un único escritor de las transiciones del lote y conciliar las intervenciones manuales antes del siguiente tick. El módulo comprueba las reservas locales completas y el harness comprueba conflictos de escritores vivos en todas las bases indexadas. Las reservas de asignaciones inactivas de otras bases y las credenciales externas disponibles para un ejecutor mantienen los límites del harness existente. La revisión del diff ocurre al cerrar, después del push de rama del ejecutor.
 
 La activación se acredita mediante el [ensayo acotado](ENSAYO-COORDINADORA.md) y revisión independiente del commit publicado. La entrega incluye configuración deshabilitada. La operación sostenida, la cuota real y el comportamiento real de Codex de esta versión requieren ese ensayo.
+
+## Comprobación del permiso de hijos · 12 noviembre 2026
+
+Encargo `despachador-hijos-20261111`: se invocó exactamente un subagente de lectura, con perfil solicitado `gpt-6-luna` / `high`, archivo exclusivo `harness_lote.py` y sin hijos ni ediciones. La herramienta devolvió `/root/lectura_harness_lote`; no expuso un SID adicional ni evidencia independiente del modelo/esfuerzo observado. Su informe localizó validación, launch/resume, fingerprint, recovery y el punto de corte posterior al despacho; la ejecutora implementó y comprobó los cambios.
+
+La suite `test_harness_lote.py` pasa 43 pruebas locales. Incluye corte posterior al lanzamiento con límite uno, reconstrucción del despachador, recuperación de la misma clave/intento/SID y ausencia de duplicados. El recorrido con Git local y ejecutable sintético también conserva el intento con límite uno hasta cierre y revisión con cero. Se comprueban límites estrictos, retoma con límite dos, recuperación de retoma con uno, compatibilidad histórica con cero y bloqueo ante discrepancias de permiso. El ejecutable sintético comprueba el contrato y los metadatos; no abre hijos nativos reales.
+
+La suite completa terminó con `Ran 303 tests`, `OK (skipped=1)`: 302 pasaron y se omitió la prueba de junctions que requiere Windows. `git diff --check` pasó. No se midió cuota inicial/final en esta sesión; esos valores quedan desconocidos.
+
+Comando reproducible desde la raíz del checkout:
+
+```bash
+python3 -B -m unittest discover -s _investigacion-onia/base-operativa/05-herramientas/scripts -p 'test_*.py'
+```
+
+No se activaron temporizadores, servicios ni lanzamientos reales del harness para esta comprobación. Producción y registro canónico del coordinador quedan fuera de este encargo. El cierre y la revisión independiente del commit corresponden al coordinador.
