@@ -1,0 +1,16 @@
+test_backoff_caps_at_300_seconds (test_continuidad.ContinuidadTest.test_backoff_caps_at_300_seconds) ... ok
+test_bad_hash_is_blocked_and_cli_fails_safely (test_continuidad.ContinuidadTest.test_bad_hash_is_blocked_and_cli_fails_safely) ... ok
+test_bundle_hashes_and_isolated_cli_and_no_overwrite (test_continuidad.ContinuidadTest.test_bundle_hashes_and_isolated_cli_and_no_overwrite) ... ok
+test_cli_explicit_no_ssh_overrides_environment (test_continuidad.ContinuidadTest.test_cli_explicit_no_ssh_overrides_environment) ... ok
+test_empty_without_ssh_configuration_or_process (test_continuidad.ContinuidadTest.test_empty_without_ssh_configuration_or_process) ... ok
+test_no_ssh_pending_backs_off_without_network (test_continuidad.ContinuidadTest.test_no_ssh_pending_backs_off_without_network) ... ok
+test_non_private_queue_rejected (test_continuidad.ContinuidadTest.test_non_private_queue_rejected) ... ok
+test_queue_and_worker_locks_remain_exclusive (test_continuidad.ContinuidadTest.test_queue_and_worker_locks_remain_exclusive) ... ok
+test_recovery_same_id_after_offline_lost_response_and_restart (test_continuidad.ContinuidadTest.test_recovery_same_id_after_offline_lost_response_and_restart) ... ok
+test_stop_checked_again_before_transport (test_continuidad.ContinuidadTest.test_stop_checked_again_before_transport) ... ok
+test_stop_including_broken_link_before_creating_queue (test_continuidad.ContinuidadTest.test_stop_including_broken_link_before_creating_queue) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.385s
+
+OK

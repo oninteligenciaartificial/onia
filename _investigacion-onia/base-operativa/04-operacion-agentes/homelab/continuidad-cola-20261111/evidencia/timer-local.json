@@ -1,0 +1,31 @@
+{
+  "estado": "probado",
+  "programador": "systemd-usuario-transitorio",
+  "transporte": "worker-local-sin-ssh",
+  "unidad": "onia-homelab-fixture-d4ed239027c7",
+  "eventos": [
+    {
+      "estado": "entregado",
+      "intentos": 1,
+      "sha256": "4bc21ec2b0e19126d41e4c00515535b0abf365a1af647e66fa6f7056b14f6a1e",
+      "bytes": 177685,
+      "reutilizado": false,
+      "instante_ns": 1794453073599866858
+    },
+    {
+      "estado": "sin_trabajo",
+      "instante_ns": 1794453075842875365
+    }
+  ],
+  "sha256": "4bc21ec2b0e19126d41e4c00515535b0abf365a1af647e66fa6f7056b14f6a1e",
+  "un_render": true,
+  "parada": {
+    "estado": "detenido"
+  },
+  "intervalo_ensayo_s": 2,
+  "intervalo_entrega_s": 60,
+  "unidades_al_final": {
+    ".timer": "inactive",
+    ".service": "inactive"
+  }
+}

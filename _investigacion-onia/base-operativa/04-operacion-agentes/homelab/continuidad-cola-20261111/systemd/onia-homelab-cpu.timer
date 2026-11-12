@@ -1,0 +1,12 @@
+[Unit]
+Description=Consultar la cola CPU un minuto después de cada pasada
+
+[Timer]
+OnActiveSec=15s
+OnUnitInactiveSec=60s
+AccuracySec=1s
+Unit=onia-homelab-cpu.service
+Persistent=false
+
+[Install]
+WantedBy=timers.target
