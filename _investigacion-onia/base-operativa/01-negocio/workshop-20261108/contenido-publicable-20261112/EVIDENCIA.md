@@ -1,0 +1,13 @@
+# Comprobación local · 12 noviembre 2026
+
+Entrega: workshop-contenido-publicable-noche-20261111. Base de sesión a24bd8ec3729668cb33faf7a6e5be71496d13a10; rama codex/ws-workshop-contenido-publicable-noche-20261111. Una ejecutora, cero hijos. Modelo identificado por el entorno como GPT-6; esfuerzo y cuota inicial/final no disponibles mediante esta sesión, no se infieren. Un intento de sesión; ajustes locales del generador, sin relanzamiento.
+
+Se ejecutó `python3 generar.py`: seis PNG RGB, cinco de 1080 × 1350 y uno de 1080 × 1920; seis SVG editables, manifiesto y vista conjunta. Pillow 10.2.0 y DejaVu Sans locales. Un primer control detectó la numeración demasiado cerca del borde inferior; se movió de y=1255 a y=1240 y se regeneró. Las aserciones finales verifican ancho y borde inferior de cada línea y separación de cuerpo/CTA. Mínimo 26 px en notas; cuerpo principal desde 38 px, cabeceras y CTA desde 29/35 px. Story deja contenido entre y=180 y aproximadamente y=1620 para revisión de interfaz real; no se verificó preview en la cuenta social.
+
+Inspección visual realizada con view_image sobre VISTA-CONJUNTA.jpg: las seis piezas completas, cada una a 360 px de ancho. Se leen títulos, cuenta, cinco campos, fechas, zona y precios; no se observan superposiciones ni textos cortados. Los avisos de ficción están visibles en ambas láminas del cálculo. Tipografía clara sobre verde oscuro. La inspección es propia, no una revisión independiente ni una prueba con lectores externos. No hay grabación, audio ni resultado real de Claude que verificar.
+
+Integridad: Pillow `Image.verify()` abre los seis PNG; ElementTree analiza los seis SVG. Comprobación de enlaces Markdown relativos y `git diff --check`. Dimensiones, fuente mínima y SHA256 de cada PNG en comprobacion.json. La vista conjunta es auxiliar y no una pieza para publicar.
+
+Cotejo editorial propio: nombre exacto; 13-nov 20:00, 14-nov 14:00, 16-nov 20:00, Caracas/La Paz; Bs 50 grupal, Bs 150 total VIP; cinco VIP totales y llamada privada de 30 minutos; disponibilidad por confirmar. Cuenta: 120−105=15; 50−25=25; 105+25=130; 130−120=10. Sin hora final, ventas, testimonios, cupos restantes ni URL/teléfono inventados. Sin cambios a guiones originales o registros canónicos.
+
+Retenidos: historia comercial y videos hasta revisión editorial y destino probado. Pendientes humanos: Sergio revisa y autoriza pieza/cuenta; Operaciones/Sergio comprueban canal NEGOCIO y salas vigentes, con ensayo del recorrido y atención manual si corresponde. No se llamó a servicios de imágenes, proveedores pagos o medios privados; no se publicó contenido ni se enviaron mensajes.
