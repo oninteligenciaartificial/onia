@@ -336,3 +336,12 @@ Las brechas de producto son trabajo del lote en curso, no condiciones para volve
 ### Confirmaciones recibidas y avance
 
 Sergio confirmó entrega diaria18:00LaPaz y número Meta verificado. Quedan por comprobar acceso API y ensayo real; no pedir de nuevo la hora ni la verificación al titular. La retoma del panel ya corre; el primer intento de iniciar fue rechazado sin lanzar por tener historial y se usó reanudar sobre el mismo ID. Estrategias recibió dictamen bueno67e8336; antes de su aceptación se concilian fuentes modificadas y estas nuevas confirmaciones, preservando prueba y versión anteriores. Meta-canales está preparado como fabrica-automatizaciones-meta-canales-20261111; no activo.
+
+
+## Preparación del arranque comercial · 11 de noviembre
+
+El foco es el workshop y su venta hasta el 14. El número verificado, el material del curso y los horarios acordados conservan sus fuentes. Hay un archivo privado de Meet en el VPS. Su presencia no prueba acceso desde una cuenta de prueba. Las comprobaciones locales de WhatsApp (44 Node y 16 Python) e IG/FB (44 Python) usan salidas simuladas. El panel ahora admite el export de Meta y muestra las dependencias de los cuatro canales.
+
+Para acceder al panel desde iPhone, la ruta propuesta usa Tailscale Serve con HTTPS y el módulo existente de acceso autenticado. El VPS reportó un iPhone asociado, desconectado en la muestra, y ningún dominio habilitado para certificados. Sergio debe consentir la emisión en la [consola DNS](https://login.tailscale.com/admin/dns). Tailscale documenta que el nombre DNS del dispositivo aparecerá en el registro público de certificados; el acceso al servicio sigue restringido a la red privada. Después se configura el origen exacto y se comprueba el acceso y el guardado desde su dispositivo. [Guía de certificados](https://tailscale.com/docs/how-to/set-up-https-certificates).
+
+El primer recorrido comercial para comprobar es el enlace directo a WhatsApp con un contacto controlado, QR privado, pago simulado confirmado por Sergio y acceso al Meet correcto. Requiere configurar en privado la app y el token de Meta, el medio QR y las credenciales de despacho, comprobar los tres enlaces y contar con autorización para ese envío de ensayo. IG y Facebook todavía requieren confirmar permisos/ventanas y completar el transporte por canal. Tras la prueba, Sergio decide la apertura comercial. El avance, resultado y siguiente acción quedan en el panel y en el registro existente.

@@ -1,5 +1,14 @@
 # Estado vigente de ONIA
 
+
+## Infraestructura y preparación de venta · 11 noviembre 2026
+
+- **Despacho:** el [piloto de dos tareas](../04-operacion-agentes/homelab/piloto-20261112/CIERRE-LOTE.json) llegó a integración. El [tick actualizado](../05-herramientas/fabrica-onia/5-codigo/continuidad-lote-20261111/README.md) obtiene cuota incluida de solo lectura; pasaron 38 casos y la unidad de ejemplo se verificó. La programación real requiere un manifiesto vigente con tareas aprobadas. Aceptación e integración siguen a cargo de la coordinadora.
+- **CPU local:** la [cola del homelab](../04-operacion-agentes/homelab/COLA-CPU.md) recuperó el mismo MP4 por SSH tras descartar una respuesta. El perfil comprobado es un render sintético de 2 s. La cola no acredita ASR ni recuperación después de suspender Windows.
+- **VPS:** dos intervalos de 8 y 12 s midieron entre 16,3 % y 20,1 % de CPU ejecutada, entre 66,9 % y 79,0 % ociosa y 9,7 GiB de RAM disponible. Swap ocupada de 3,5 GiB, sin entradas ni salidas durante las muestras. La CPU retenida por el hipervisor varió entre 4,8 % y 13,0 %. Chromium gráfico fue el mayor candidato de memoria, con 1,03 GiB PSS; su actividad debe comprobarse en la interfaz antes de cerrarlo. El panel consumió unos 20 MiB. El árbol activo de Codex y los contenedores se inventariaron sin detenerlos. Prioridad de recursos: VPS para coordinación y panel; usar la cola del homelab para los perfiles comprobados.
+- **Panel y venta:** el panel en loopback devolvió 200 y mantuvo 390 px de ancho en Chromium emulando móvil. Pasaron 57 pruebas del lector y 104 de canales simulados. El lector admite el export Meta por ruta explícita. Siguen pendientes HTTPS en Tailscale y prueba desde el iPhone, así como activos y ensayos reales por canal. Ver el [cierre de venta](../05-herramientas/fabrica-onia/CIERRE-VENTA-20261111.md).
+- **Modelos:** [medición y corrección](../04-operacion-agentes/registro-de-errores.md#coordinación-paralela-y-perfiles-medidos--11-de-noviembre-de-2026). Perfil por tarea al delegar y valor predeterminado Luna High en el lanzador cuando se habilitan hijos. Los registros observados y los argumentos solicitados se distinguen.
+
 ## Actualización de decisiones · 11 noviembre 2026
 
 Primera tanda entregada y detenida: [revisión de la coordinadora](../04-operacion-agentes/evidencias/tanda-fabricas-20261111/REVISION-COORDINADORA-v1.md). El panel necesita corregir el guardado; guiones y WhatsApp tienen pruebas locales, sin operación diaria/comercial acreditada. El [plan existente](../05-herramientas/fabrica-onia/CIERRE-VENTA-20261111.md#funcionamiento-diario-y-siguiente-tramo--propuesta-del-11-nov) explica el flujo y el próximo tramo propuesto. Los productos de esa tanda siguen en sus ramas para revisión; no hay segunda tanda activada por ese documento.
