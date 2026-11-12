@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+  "criterio": "Diff limitado a las dos rutas asignadas y diff --check limpio. La inspección confirma stdlib, lectura explícita, filtrado de herencia, cruce thread_id/turn_id y salida saneada. La referencia origin local contiene el commit. Falta evidencia verificable de las 18 pruebas declaradas. El recibo aportado acredita cierre y publicación, pero omite resultados de pruebas. Intenté reproducirlas y las 18 quedaron bloqueadas en setUp porque el sandbox de sólo lectura impide crear temporales. Adjuntar evidencia de ejecución satisfactoria sobre este commit para completar la revisión.",
+  "worktree_conservado": true
+}
