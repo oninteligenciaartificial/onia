@@ -19,3 +19,19 @@ El estado se guarda en `~/operacion/homelab/cola-cpu-v1` en el VPS. El MP4 se es
 - Se descartó deliberadamente la primera respuesta exitosa del SSH en un segundo ensayo real. Quedó en reintento sin MP4 en VPS. Una instancia nueva de la cola recuperó el archivo del mismo ID y lo verificó en el segundo intento, con los mismos bytes y hash. El corte se simuló en el cliente. Se conserva la evidencia privada de ambos ensayos.
 
 La primera operación admitida es `render-sintetico-v1`, con límites de tiempo y tamaño, y un render activo por worker. El uso con archivos de clientes requiere definir su entrada privada e inmutable, su perfil de procesamiento y el tamaño de transferencia. ASR, ejecución programada y pruebas de reinicio o suspensión de Windows siguen como pasos separados. El diseño de capacidad, leases y fallback entre máquinas está en [SCHEDULER](SCHEDULER.md).
+
+
+## Paso programado comprobado en el VPS
+
+El 11 de noviembre, un temporizador transitorio de usuario invocó una pasada con prioridad `Nice=10`. En un intento se entregó el mismo perfil H.264 de 177.670 bytes, con SHA `3f830ed502fff99e0e77e85e89e6f091cc31905883e51899e7c974a5eda62906`. Otro disparo sobre la misma cola devolvió `sin_trabajo` y se verificó el hash del archivo conservado. El trabajo ya entregado no vuelve a ejecutarse por el reloj.
+
+Para probar un disparo acotado desde este directorio, después de encolar en una raíz privada de ensayo:
+
+```sh
+systemd-run --user --unit=onia-homelab-ensayo-cola --on-active=2s \
+  --timer-property=AccuracySec=1s --property=Type=oneshot \
+  --property=TimeoutStartSec=80 --property=Nice=10 \
+  /usr/bin/python3 -B "$PWD/cola_homelab.py" --root "$HOME/operacion/homelab/cola-ensayo" tick
+```
+
+Usar un nombre de unidad nuevo si existe el anterior. En el primer disparo systemd ignoró `RuntimeMaxSec` con `Type=oneshot`; la repetición empleó `TimeoutStartSec`. Se validó el resultado desde el journal y el artefacto, ya que la unidad transitoria se descarga al acabar. La recurrencia permanente y la admisión de otros perfiles siguen pendientes.
