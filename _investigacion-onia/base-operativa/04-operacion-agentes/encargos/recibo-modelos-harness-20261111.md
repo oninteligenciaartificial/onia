@@ -1,0 +1,3 @@
+# recibo-modelos-harness-20261111
+
+Leé AGENTS y reglas. Implementá una herramienta stdlib de sólo lectura para un directorio de rollouts JSONL indicado por operador, dada una lista de SIDs padre. Leer session_meta para parent_thread_id y agent_path, turn_context para modelo/esfuerzo y token_usage_record para confirmar turno propio por thread_id y turn_id, sin contar contextos heredados. Aceptar logs sin token_usage_record: declarar no observado o diferenciar contexto de uso confirmado. Salida JSON saneada sólo IDs de hilos, padre, modelo, esfuerzo y alcance. No imprimir prompts, secretos o rutas privadas. Tests pequeños con fixtures propios; no inspecciones ni subas registros reales. Ejecutá pruebas, commit y push sólo a tu rama. Cero hijos, sin producción.
