@@ -1,16 +1,22 @@
 {
   "schema": 2,
   "id": "workshop-arranque-venta-20261111",
-  "revision": 7,
+  "revision": 13,
   "compartible": true,
   "objetivo": "Preparar arranque comercial accionable hasta el 14 con las piezas existentes.",
-  "estado": "en_curso",
-  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
-  "resultado": "",
-  "comprobacion": "",
-  "verificacion": "pendiente",
-  "evidencias": [],
-  "actualizado": "2026-11-12T02:23:15.675532+00:00",
+  "estado": "para_revision",
+  "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+  "resultado": "Paquete con orden de grabación, VSL, ensayo controlado y primera inscripción con pago confirmado por Sergio.",
+  "comprobacion": "Commit en rama remota, git show --check limpio y 18 destinos relativos comprobados. Dos documentos en la ruta asignada. Pendiente revisión del contenido, del ensayo y de las salas.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/workshop-arranque-venta-20261111/cierre-r8-1a3704b9.json",
+      "sha256": "0b5e330933747b12611403bf9db6427911a244a22f6d3eadf2f2ebaae42c930d",
+      "bytes": 314
+    }
+  ],
+  "actualizado": "2026-11-12T02:34:49.714293+00:00",
   "historial": [
     {
       "revision": 1,
@@ -269,6 +275,539 @@
       ],
       "cierre": null,
       "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-12T02:23:15.675532+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-workshop-arranque-venta-20261111",
+        "rutas": [
+          "01-negocio/workshop-20261108/arranque-venta-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:12:39.542108+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-workshop-arranque-venta-20261111",
+          "pid": 3976633,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218938913",
+          "supervisor_pid": 3976621,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218938892",
+          "rama": "codex/ws-workshop-arranque-venta-20261111",
+          "session_id": "01a1cd90-b189-7ff2-ab65-4ff56423382d",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.jsonl",
+          "log_rel": "logs/workshop-arranque-venta-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-arranque-venta-20261111",
+          "rutas": [
+            "01-negocio/workshop-20261108/arranque-venta-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c46d0c0403ef5eaa7596d0b3c590177a7a2b5309",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:22:53.351338+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git/worktrees/onia-ws-workshop-arranque-venta-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-12T02:27:53.670551+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-workshop-arranque-venta-20261111",
+        "rutas": [
+          "01-negocio/workshop-20261108/arranque-venta-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:12:39.542108+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-workshop-arranque-venta-20261111",
+          "pid": 3976633,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218938913",
+          "supervisor_pid": 3976621,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218938892",
+          "rama": "codex/ws-workshop-arranque-venta-20261111",
+          "session_id": "01a1cd90-b189-7ff2-ab65-4ff56423382d",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.jsonl",
+          "log_rel": "logs/workshop-arranque-venta-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-arranque-venta-20261111",
+          "rutas": [
+            "01-negocio/workshop-20261108/arranque-venta-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c46d0c0403ef5eaa7596d0b3c590177a7a2b5309",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:22:53.351338+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git/worktrees/onia-ws-workshop-arranque-venta-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:27:53.663494+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-12T02:34:44.143487+00:00",
+      "estado": "para_revision",
+      "resultado": "Paquete con orden de grabación, VSL, ensayo controlado y primera inscripción con pago confirmado por Sergio.",
+      "comprobacion": "Commit en rama remota, git show --check limpio y 18 destinos relativos comprobados. Dos documentos en la ruta asignada. Pendiente revisión del contenido, del ensayo y de las salas.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-arranque-venta-20261111/cierre-r8-1a3704b9.json",
+          "sha256": "0b5e330933747b12611403bf9db6427911a244a22f6d3eadf2f2ebaae42c930d",
+          "bytes": 314
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-workshop-arranque-venta-20261111",
+        "rutas": [
+          "01-negocio/workshop-20261108/arranque-venta-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:12:39.542108+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-workshop-arranque-venta-20261111",
+          "pid": 3976633,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218938913",
+          "supervisor_pid": 3976621,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218938892",
+          "rama": "codex/ws-workshop-arranque-venta-20261111",
+          "session_id": "01a1cd90-b189-7ff2-ab65-4ff56423382d",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.jsonl",
+          "log_rel": "logs/workshop-arranque-venta-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-arranque-venta-20261111",
+          "rutas": [
+            "01-negocio/workshop-20261108/arranque-venta-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c46d0c0403ef5eaa7596d0b3c590177a7a2b5309",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:22:53.351338+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git/worktrees/onia-ws-workshop-arranque-venta-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:27:53.663494+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "f9906c864f0f57b0242e5871a5677b5c24b38c4f",
+        "commit_base": "c46d0c0403ef5eaa7596d0b3c590177a7a2b5309",
+        "ramas_origin": [
+          "origin/codex/ws-workshop-arranque-venta-20261111"
+        ],
+        "fecha": "2026-11-12T02:34:44.132387+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-arranque-venta-20261111/cierre-r8-1a3704b9.json",
+          "sha256": "0b5e330933747b12611403bf9db6427911a244a22f6d3eadf2f2ebaae42c930d",
+          "bytes": 314
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-12T02:34:48.657382+00:00",
+      "estado": "para_revision",
+      "resultado": "Paquete con orden de grabación, VSL, ensayo controlado y primera inscripción con pago confirmado por Sergio.",
+      "comprobacion": "Commit en rama remota, git show --check limpio y 18 destinos relativos comprobados. Dos documentos en la ruta asignada. Pendiente revisión del contenido, del ensayo y de las salas.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-arranque-venta-20261111/cierre-r8-1a3704b9.json",
+          "sha256": "0b5e330933747b12611403bf9db6427911a244a22f6d3eadf2f2ebaae42c930d",
+          "bytes": 314
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-workshop-arranque-venta-20261111",
+        "rutas": [
+          "01-negocio/workshop-20261108/arranque-venta-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:12:39.542108+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-workshop-arranque-venta-20261111",
+          "pid": 3976633,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218938913",
+          "supervisor_pid": 3976621,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218938892",
+          "rama": "codex/ws-workshop-arranque-venta-20261111",
+          "session_id": "01a1cd90-b189-7ff2-ab65-4ff56423382d",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.jsonl",
+          "log_rel": "logs/workshop-arranque-venta-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-arranque-venta-20261111",
+          "rutas": [
+            "01-negocio/workshop-20261108/arranque-venta-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c46d0c0403ef5eaa7596d0b3c590177a7a2b5309",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:22:53.351338+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git/worktrees/onia-ws-workshop-arranque-venta-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:27:53.663494+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-workshop-arranque-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.revision-2.jsonl",
+          "log_rel": "logs/workshop-arranque-venta-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-arranque-venta-20261111-revision-2",
+          "rutas": [
+            "01-negocio/workshop-20261108/arranque-venta-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f9906c864f0f57b0242e5871a5677b5c24b38c4f",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:34:48.645228+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "00ed5d39e28d9a9cece6aa993c09d6df7975ee8410c8d7e124733d29c96e4142",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "f9906c864f0f57b0242e5871a5677b5c24b38c4f",
+        "commit_base": "c46d0c0403ef5eaa7596d0b3c590177a7a2b5309",
+        "ramas_origin": [
+          "origin/codex/ws-workshop-arranque-venta-20261111"
+        ],
+        "fecha": "2026-11-12T02:34:44.132387+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-arranque-venta-20261111/cierre-r8-1a3704b9.json",
+          "sha256": "0b5e330933747b12611403bf9db6427911a244a22f6d3eadf2f2ebaae42c930d",
+          "bytes": 314
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-12T02:34:48.841298+00:00",
+      "estado": "para_revision",
+      "resultado": "Paquete con orden de grabación, VSL, ensayo controlado y primera inscripción con pago confirmado por Sergio.",
+      "comprobacion": "Commit en rama remota, git show --check limpio y 18 destinos relativos comprobados. Dos documentos en la ruta asignada. Pendiente revisión del contenido, del ensayo y de las salas.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-arranque-venta-20261111/cierre-r8-1a3704b9.json",
+          "sha256": "0b5e330933747b12611403bf9db6427911a244a22f6d3eadf2f2ebaae42c930d",
+          "bytes": 314
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-workshop-arranque-venta-20261111",
+        "rutas": [
+          "01-negocio/workshop-20261108/arranque-venta-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:12:39.542108+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-workshop-arranque-venta-20261111",
+          "pid": 3976633,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218938913",
+          "supervisor_pid": 3976621,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218938892",
+          "rama": "codex/ws-workshop-arranque-venta-20261111",
+          "session_id": "01a1cd90-b189-7ff2-ab65-4ff56423382d",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.jsonl",
+          "log_rel": "logs/workshop-arranque-venta-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-arranque-venta-20261111",
+          "rutas": [
+            "01-negocio/workshop-20261108/arranque-venta-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c46d0c0403ef5eaa7596d0b3c590177a7a2b5309",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:22:53.351338+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git/worktrees/onia-ws-workshop-arranque-venta-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:27:53.663494+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-workshop-arranque-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 4006314,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219010416",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.revision-2.jsonl",
+          "log_rel": "logs/workshop-arranque-venta-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-arranque-venta-20261111-revision-2",
+          "rutas": [
+            "01-negocio/workshop-20261108/arranque-venta-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f9906c864f0f57b0242e5871a5677b5c24b38c4f",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:34:48.645228+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "00ed5d39e28d9a9cece6aa993c09d6df7975ee8410c8d7e124733d29c96e4142",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "f9906c864f0f57b0242e5871a5677b5c24b38c4f",
+        "commit_base": "c46d0c0403ef5eaa7596d0b3c590177a7a2b5309",
+        "ramas_origin": [
+          "origin/codex/ws-workshop-arranque-venta-20261111"
+        ],
+        "fecha": "2026-11-12T02:34:44.132387+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-arranque-venta-20261111/cierre-r8-1a3704b9.json",
+          "sha256": "0b5e330933747b12611403bf9db6427911a244a22f6d3eadf2f2ebaae42c930d",
+          "bytes": 314
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-12T02:34:49.018070+00:00",
+      "estado": "para_revision",
+      "resultado": "Paquete con orden de grabación, VSL, ensayo controlado y primera inscripción con pago confirmado por Sergio.",
+      "comprobacion": "Commit en rama remota, git show --check limpio y 18 destinos relativos comprobados. Dos documentos en la ruta asignada. Pendiente revisión del contenido, del ensayo y de las salas.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/workshop-arranque-venta-20261111/cierre-r8-1a3704b9.json",
+          "sha256": "0b5e330933747b12611403bf9db6427911a244a22f6d3eadf2f2ebaae42c930d",
+          "bytes": 314
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-workshop-arranque-venta-20261111",
+        "rutas": [
+          "01-negocio/workshop-20261108/arranque-venta-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:12:39.542108+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-workshop-arranque-venta-20261111",
+          "pid": 3976633,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218938913",
+          "supervisor_pid": 3976621,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218938892",
+          "rama": "codex/ws-workshop-arranque-venta-20261111",
+          "session_id": "01a1cd90-b189-7ff2-ab65-4ff56423382d",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.jsonl",
+          "log_rel": "logs/workshop-arranque-venta-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-arranque-venta-20261111",
+          "rutas": [
+            "01-negocio/workshop-20261108/arranque-venta-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "c46d0c0403ef5eaa7596d0b3c590177a7a2b5309",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:22:53.351338+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git/worktrees/onia-ws-workshop-arranque-venta-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:27:53.663494+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-workshop-arranque-20261111",
+          "pid": 4006316,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219010434",
+          "supervisor_pid": 4006314,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219010416",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.revision-2.jsonl",
+          "log_rel": "logs/workshop-arranque-venta-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-arranque-venta-20261111-revision-2",
+          "rutas": [
+            "01-negocio/workshop-20261108/arranque-venta-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f9906c864f0f57b0242e5871a5677b5c24b38c4f",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T02:34:48.645228+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "00ed5d39e28d9a9cece6aa993c09d6df7975ee8410c8d7e124733d29c96e4142",
+          "schema": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "f9906c864f0f57b0242e5871a5677b5c24b38c4f",
+        "commit_base": "c46d0c0403ef5eaa7596d0b3c590177a7a2b5309",
+        "ramas_origin": [
+          "origin/codex/ws-workshop-arranque-venta-20261111"
+        ],
+        "fecha": "2026-11-12T02:34:44.132387+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/workshop-arranque-venta-20261111/cierre-r8-1a3704b9.json",
+          "sha256": "0b5e330933747b12611403bf9db6427911a244a22f6d3eadf2f2ebaae42c930d",
+          "bytes": 314
+        }
+      },
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -297,7 +836,7 @@
       "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218938892",
       "rama": "codex/ws-workshop-arranque-venta-20261111",
       "session_id": "01a1cd90-b189-7ff2-ab65-4ff56423382d",
-      "estado": "ejecutando",
+      "estado": "cerrada",
       "operacion": "/home/onia-codex-worker/operacion",
       "log": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.jsonl",
       "log_rel": "logs/workshop-arranque-venta-20261111.jsonl",
@@ -311,17 +850,67 @@
       "reanuda": null,
       "briefing": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.1.briefing.txt",
       "inicio": "2026-11-12T02:22:53.351338+00:00",
-      "rc": null,
-      "ultimo_evento": "item.completed",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
       "modelo": "gpt-6.1-sol",
       "esfuerzo": "low",
       "auth_chatgpt": true,
       "subagentes_maximos": 0,
       "git_repo": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git",
       "git_dir": "/home/onia-codex-worker/operacion/git/workshop-arranque-venta-20261111.git/worktrees/onia-ws-workshop-arranque-venta-20261111",
-      "perfil_permisos": "harness-git"
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-12T02:27:53.663494+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "revisor",
+      "responsable": "revisor-workshop-arranque-20261111",
+      "pid": 4006316,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219010434",
+      "supervisor_pid": 4006314,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219010416",
+      "rama": "(detached)",
+      "session_id": "01a1cd9b-9afd-73b0-be14-dec8f85ae9ad",
+      "estado": "ejecutando",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.revision-2.jsonl",
+      "log_rel": "logs/workshop-arranque-venta-20261111.revision-2.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-workshop-arranque-venta-20261111-revision-2",
+      "rutas": [
+        "01-negocio/workshop-20261108/arranque-venta-20261111"
+      ],
+      "dry_run": false,
+      "commit_base": "f9906c864f0f57b0242e5871a5677b5c24b38c4f",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.2.briefing.txt",
+      "inicio": "2026-11-12T02:34:48.645228+00:00",
+      "rc": null,
+      "ultimo_evento": "thread.started",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "00ed5d39e28d9a9cece6aa993c09d6df7975ee8410c8d7e124733d29c96e4142",
+      "schema": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.2.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/workshop-arranque-venta-20261111.2.veredicto.json"
     }
   ],
   "revision_independiente": null,
-  "cierre": null
+  "cierre": {
+    "commit": "f9906c864f0f57b0242e5871a5677b5c24b38c4f",
+    "commit_base": "c46d0c0403ef5eaa7596d0b3c590177a7a2b5309",
+    "ramas_origin": [
+      "origin/codex/ws-workshop-arranque-venta-20261111"
+    ],
+    "fecha": "2026-11-12T02:34:44.132387+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "worktree_conservado": true,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/workshop-arranque-venta-20261111/cierre-r8-1a3704b9.json",
+      "sha256": "0b5e330933747b12611403bf9db6427911a244a22f6d3eadf2f2ebaae42c930d",
+      "bytes": 314
+    }
+  }
 }
