@@ -525,6 +525,45 @@ for line in sys.stdin:
             rpc.assert_not_called()
         self.assertFalse((self.path / 'estado.json').exists())
 
+    def check_monitor_tampering(self, document):
+        (self.path / 'estado.json').unlink()
+        (self.path / 'procesos.json').unlink()
+        for receipt in self.path.glob('recibo-*.json'):
+            receipt.unlink()
+        reads = []
+        targets = []
+        tampered = {'politica_sha256': self.tag, 'procesos': [], 'alterado': True}
+        def quota_reader(*args):
+            reads.append(1)
+            if len(reads) == 2:
+                target = self.path / document
+                if document == 'recibo':
+                    state = private.private_read(self.path / 'estado.json')
+                    target = self.path / state['recibo']['archivo']
+                targets.append(target)
+                private.private_write(target, tampered)
+            if len(reads) > 2:
+                raise AssertionError('El monitor no bloqueo la alteracion')
+            return deepcopy(self.value['cuota_inicial'])
+        with patch.object(trial, 'read_quota', side_effect=quota_reader), \
+                patch.object(trial, 'read_resources', side_effect=lambda: resource_sample()), \
+                patch.object(trial, 'inventory', return_value=([], [], [])), \
+                patch.object(trial.time, 'sleep'):
+            with self.assertRaises(ValueError):
+                trial.monitor(self.op)
+        self.assertEqual(private.private_read(targets[0]), tampered)
+        self.assertTrue((self.path / 'STOP').exists())
+        self.assertEqual(len(reads), 2)
+
+    def test_monitor_does_not_heal_tampered_inventory(self):
+        self.check_monitor_tampering('procesos.json')
+
+    def test_monitor_does_not_heal_tampered_state(self):
+        self.check_monitor_tampering('estado.json')
+
+    def test_monitor_does_not_heal_tampered_receipt(self):
+        self.check_monitor_tampering('recibo')
+
     def test_monitor_error_sets_stop_without_enabling_fourth(self):
         (self.path / 'estado.json').unlink()
         (self.path / 'procesos.json').unlink()

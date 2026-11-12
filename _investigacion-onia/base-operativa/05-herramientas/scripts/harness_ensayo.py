@@ -477,6 +477,7 @@ def stop(root, reason='fin_operador', trusted=None):
 def monitor(root):
     path = directory(root)
     tracked = {}
+    published = False
     with private.locked(path, nonblocking=True):
         value = policy(root)
         require(read(path / 'preparacion.json').get('politica_sha256') == digest(value), 'politica_alterada')
@@ -496,6 +497,11 @@ def monitor(root):
                 with sessions.registry_lock(root):
                     require(not os.path.lexists(path / 'STOP'), 'STOP')
                     require(digest(policy(root)) == digest(value), 'politica_alterada')
+                    if published:
+                        health(root, value)
+                    else:
+                        require(not os.path.lexists(path / 'estado.json')
+                                and not os.path.lexists(path / 'procesos.json'), 'monitor_ya_iniciado')
                     rows, questions, owned = inventory(root, value)
                     members(value, rows, questions)
                     tracked = {key: item for key, item in tracked.items()
@@ -509,6 +515,7 @@ def monitor(root):
                              'cuota': current_quota, 'recursos': sample, 'procesos_sha256': digest(journal)}
                     state['recibo'] = receipt(path, dict(state, evento='muestra'))
                     private.private_write(path / 'estado.json', state)
+                    published = True
                 # Espera corta para STOP y límite temporal, sin otro servicio.
                 for _ in range(50):
                     if os.path.lexists(path / 'STOP') or time.time() >= value['vence']:
