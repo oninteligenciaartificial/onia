@@ -1,0 +1,14 @@
+USAGE
+  $ n8n execute
+
+FLAGS
+  -h, --help      Show CLI help
+  --id <value>    id of the workflow to execute
+  --rawOutput     Outputs only JSON data, with no other text
+  --file <value>  DEPRECATED: Please use --id instead
+
+DESCRIPTION
+  Executes a given workflow
+
+EXAMPLES
+  $ n8n execute --id=5

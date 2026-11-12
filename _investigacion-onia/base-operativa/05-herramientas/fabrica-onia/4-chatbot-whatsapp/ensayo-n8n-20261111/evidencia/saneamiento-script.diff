@@ -1,0 +1,6 @@
+--- ensayar-ejecutado.py
++++ ensayar.py
+@@ -68,0 +69,3 @@
++        texto = re.sub(r'("resumeToken"\s*:\s*")[^"]+(")',
++                       r'\1<token-efimero-retirado>\2', texto)
++        texto = re.sub(r'/tmp/onia-n8n-ensayo-[^/\s"\\]+', "<runtime-temporal>", texto)

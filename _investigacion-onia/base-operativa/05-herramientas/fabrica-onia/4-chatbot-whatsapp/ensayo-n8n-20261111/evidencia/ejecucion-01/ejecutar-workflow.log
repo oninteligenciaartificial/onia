@@ -1,0 +1,319 @@
+n8n Task Broker ready on 127.0.0.1, port 5679
+Failed to start Python task runner in internal mode. because its virtual environment is missing from this system. Launching a Python runner in internal mode is intended only for debugging and is not recommended for production. Users are encouraged to deploy in external mode. See: https://docs.n8n.io/hosting/configuration/task-runners/#setting-up-external-mode
+[license SDK] Skipping renewal on init: renewOnInit is disabled in config
+[license SDK] Skipping renewal on init: license cert is not initialized
+Legacy aes-256-cbc encryption key not found; falling back to instance key
+Your request is invalid or could not be processed by the service
+409 - "{\"error\": \"ENVIOS_DESHABILITADOS\"}"
+AxiosError: Request failed with status code 409
+    at settle (<runtime-temporal>/install/node_modules/@n8n/backend-network/node_modules/axios/dist/node/axios.cjs:2530:12)
+    at ClientRequest.handleResponse (<runtime-temporal>/install/node_modules/@n8n/backend-network/node_modules/axios/dist/node/axios.cjs:4731:9)
+    at ClientRequest.wrapper (node:events:639:12)
+    at ClientRequest.emit (node:events:514:28)
+    at HTTPParser.parserOnIncomingClient (node:_http_client:979:27)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:125:17)
+    at Socket.socketOnData (node:_http_client:814:22)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:569:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:520:3)
+    at Axios.request (<runtime-temporal>/install/node_modules/@n8n/backend-network/node_modules/axios/dist/node/axios.cjs:6308:43)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at invokeAxios (<runtime-temporal>/install/node_modules/@n8n/backend-network/src/http/axios/invoke.ts:15:10)
+    at executeLegacyRequest (<runtime-temporal>/install/node_modules/@n8n/backend-network/src/http/legacy-request.ts:84:6)
+    at Object.requestLegacy (<runtime-temporal>/install/node_modules/@n8n/backend-network/src/http/outbound-http.ts:215:13)
+    at proxyRequestToAxios (<runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/node-execution-context/utils/request-helpers/legacy-request-adapter.ts:28:9)
+    at Object.request (<runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/node-execution-context/utils/request-helpers/factory.ts:167:11)
+
+Execution was NOT successful. See log message for details.
+Execution error:
+====================================
+{
+  "data": {
+    "version": 1,
+    "startData": {},
+    "resultData": {
+      "error": {
+        "level": "warning",
+        "shouldReport": true,
+        "description": "ENVIOS_DESHABILITADOS",
+        "tags": {},
+        "timestamp": 1794452707647,
+        "context": {
+          "itemIndex": 0,
+          "request": {
+            "headers": {
+              "**hidden**": "**hidden**",
+              "accept": "application/json,text/html,application/xhtml+xml,application/xml,text/*;q=0.9, image/*;q=0.8, */*;q=0.7"
+            },
+            "method": "POST",
+            "uri": "http://127.0.0.1:37167/operador/despachar",
+            "gzip": true,
+            "rejectUnauthorized": true,
+            "followRedirect": false,
+            "resolveWithFullResponse": true,
+            "sendCredentialsOnCrossOriginRedirect": true,
+            "followAllRedirects": false,
+            "timeout": 20000,
+            "encoding": null,
+            "json": false,
+            "useStream": true
+          }
+        },
+        "functionality": "regular",
+        "name": "NodeApiError",
+        "node": {
+          "parameters": {
+            "curlImport": "",
+            "method": "POST",
+            "url": "http://127.0.0.1:37167/operador/despachar",
+            "authentication": "genericCredentialType",
+            "genericAuthType": "httpHeaderAuth",
+            "provideSslCertificates": false,
+            "sendQuery": false,
+            "sendHeaders": false,
+            "sendBody": false,
+            "options": {
+              "redirect": {
+                "redirect": {
+                  "followRedirects": false
+                }
+              },
+              "timeout": 20000
+            },
+            "infoMessage": ""
+          },
+          "id": "d3c393fb-4453-4d32-8819-a8a64cb03e9c",
+          "name": "Despachar una salida",
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.2,
+          "position": [
+            520,
+            0
+          ],
+          "retryOnFail": false,
+          "credentials": {
+            "httpHeaderAuth": {
+              "id": "OniaWaCredFic001",
+              "name": "Credencial ficticia OnIA"
+            }
+          }
+        },
+        "messages": [
+          "409 - \"{\\\"error\\\": \\\"ENVIOS_DESHABILITADOS\\\"}\""
+        ],
+        "httpCode": "409",
+        "message": "Your request is invalid or could not be processed by the service",
+        "stack": "NodeApiError: Your request is invalid or could not be processed by the service\n    at ExecuteContext.execute (<runtime-temporal>/install/node_modules/n8n-nodes-base/nodes/HttpRequest/V3/HttpRequestV3.node.ts:892:16)\n    at WorkflowExecute.executeNode (<runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1154:8)\n    at WorkflowExecute.runNode (<runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1456:11)\n    at <runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:2377:27\n    at <runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:2858:11"
+      },
+      "runData": {
+        "Despacho manual": [
+          {
+            "startTime": 1794452707529,
+            "executionIndex": 0,
+            "source": [],
+            "hints": [],
+            "executionTime": 1,
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Despachar una salida": [
+          {
+            "startTime": 1794452707534,
+            "executionIndex": 1,
+            "source": [
+              {
+                "previousNode": "Despacho manual",
+                "previousNodeOutput": 0,
+                "previousNodeRun": 0
+              }
+            ],
+            "hints": [],
+            "executionTime": 146,
+            "executionStatus": "error",
+            "error": {
+              "level": "warning",
+              "shouldReport": true,
+              "description": "ENVIOS_DESHABILITADOS",
+              "tags": {},
+              "timestamp": 1794452707647,
+              "context": {
+                "itemIndex": 0,
+                "request": {
+                  "headers": {
+                    "**hidden**": "**hidden**",
+                    "accept": "application/json,text/html,application/xhtml+xml,application/xml,text/*;q=0.9, image/*;q=0.8, */*;q=0.7"
+                  },
+                  "method": "POST",
+                  "uri": "http://127.0.0.1:37167/operador/despachar",
+                  "gzip": true,
+                  "rejectUnauthorized": true,
+                  "followRedirect": false,
+                  "resolveWithFullResponse": true,
+                  "sendCredentialsOnCrossOriginRedirect": true,
+                  "followAllRedirects": false,
+                  "timeout": 20000,
+                  "encoding": null,
+                  "json": false,
+                  "useStream": true
+                }
+              },
+              "functionality": "regular",
+              "name": "NodeApiError",
+              "node": {
+                "parameters": {
+                  "curlImport": "",
+                  "method": "POST",
+                  "url": "http://127.0.0.1:37167/operador/despachar",
+                  "authentication": "genericCredentialType",
+                  "genericAuthType": "httpHeaderAuth",
+                  "provideSslCertificates": false,
+                  "sendQuery": false,
+                  "sendHeaders": false,
+                  "sendBody": false,
+                  "options": {
+                    "redirect": {
+                      "redirect": {
+                        "followRedirects": false
+                      }
+                    },
+                    "timeout": 20000
+                  },
+                  "infoMessage": ""
+                },
+                "id": "d3c393fb-4453-4d32-8819-a8a64cb03e9c",
+                "name": "Despachar una salida",
+                "type": "n8n-nodes-base.httpRequest",
+                "typeVersion": 4.2,
+                "position": [
+                  520,
+                  0
+                ],
+                "retryOnFail": false,
+                "credentials": {
+                  "httpHeaderAuth": {
+                    "id": "OniaWaCredFic001",
+                    "name": "Credencial ficticia OnIA"
+                  }
+                }
+              },
+              "messages": [
+                "409 - \"{\\\"error\\\": \\\"ENVIOS_DESHABILITADOS\\\"}\""
+              ],
+              "httpCode": "409",
+              "message": "Your request is invalid or could not be processed by the service",
+              "stack": "NodeApiError: Your request is invalid or could not be processed by the service\n    at ExecuteContext.execute (<runtime-temporal>/install/node_modules/n8n-nodes-base/nodes/HttpRequest/V3/HttpRequestV3.node.ts:892:16)\n    at WorkflowExecute.executeNode (<runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1154:8)\n    at WorkflowExecute.runNode (<runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1456:11)\n    at <runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:2377:27\n    at <runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:2858:11"
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Despachar una salida"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [
+        {
+          "node": {
+            "parameters": {
+              "curlImport": "",
+              "method": "POST",
+              "url": "http://127.0.0.1:37167/operador/despachar",
+              "authentication": "genericCredentialType",
+              "genericAuthType": "httpHeaderAuth",
+              "provideSslCertificates": false,
+              "sendQuery": false,
+              "sendHeaders": false,
+              "sendBody": false,
+              "options": {
+                "redirect": {
+                  "redirect": {
+                    "followRedirects": false
+                  }
+                },
+                "timeout": 20000
+              },
+              "infoMessage": ""
+            },
+            "id": "d3c393fb-4453-4d32-8819-a8a64cb03e9c",
+            "name": "Despachar una salida",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              520,
+              0
+            ],
+            "retryOnFail": false,
+            "credentials": {
+              "httpHeaderAuth": {
+                "id": "OniaWaCredFic001",
+                "name": "Credencial ficticia OnIA"
+              }
+            }
+          },
+          "data": {
+            "main": [
+              [
+                {
+                  "json": {},
+                  "pairedItem": {
+                    "item": 0
+                  }
+                }
+              ]
+            ]
+          },
+          "source": {
+            "main": [
+              {
+                "previousNode": "Despacho manual",
+                "previousNodeOutput": 0,
+                "previousNodeRun": 0
+              }
+            ]
+          }
+        }
+      ],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {},
+      "runtimeData": {
+        "version": 1,
+        "establishedAt": 1794452707528,
+        "source": "cli",
+        "triggerNode": {
+          "name": "Despacho manual",
+          "type": "n8n-nodes-base.manualTrigger"
+        }
+      }
+    },
+    "resumeToken": "<token-efimero-retirado>"
+  },
+  "mode": "cli",
+  "startedAt": "2026-11-12T03:05:07.512Z",
+  "stoppedAt": "2026-11-12T03:05:07.681Z",
+  "storedAt": "db",
+  "status": "error"
+}
+Error executing workflow. See log messages for details.
+
+Execution error:
+====================================
+Your request is invalid or could not be processed by the service
+NodeApiError: Your request is invalid or could not be processed by the service
+    at ExecuteContext.execute (<runtime-temporal>/install/node_modules/n8n-nodes-base/nodes/HttpRequest/V3/HttpRequestV3.node.ts:892:16)
+    at WorkflowExecute.executeNode (<runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1154:8)
+    at WorkflowExecute.runNode (<runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1456:11)
+    at <runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:2377:27
+    at <runtime-temporal>/install/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:2858:11
+Your request is invalid or could not be processed by the service
