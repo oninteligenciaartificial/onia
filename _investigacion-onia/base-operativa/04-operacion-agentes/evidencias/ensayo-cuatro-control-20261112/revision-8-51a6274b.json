@@ -1,0 +1,6 @@
+{
+  "veredicto": "cambios",
+  "commit": "24a9af01ba516c1bf1a6821ba88a16203790c070",
+  "criterio": "P1 en harness_ensayo.py, líneas 406–415 y 452–473. inventory excluye sesiones finalizadas y fin declara parado cuando su inventario queda vacío. Reproduje una sesión sintética que termina entre muestras dejando un auxiliar vivo sin registrar. fin devolvió parado, SIGTERM=0 y pendientes=0 mientras ese auxiliar seguía vivo. Debe conservar el bloqueo cuando la pertenencia o la integridad del inventario de procesos resulte incierta y añadir esta regresión. El auxiliar sintético quedó recolectado. Cinco controles independientes aprobados, AST válido y diff --check limpio. Suite completa pendiente de reproducción en un entorno que permita sus temporales. Revisión realizada en sólo lectura, con documentos de control simulados en memoria.",
+  "worktree_conservado": true
+}
