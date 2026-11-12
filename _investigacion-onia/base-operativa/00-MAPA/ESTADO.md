@@ -1,5 +1,9 @@
 # Estado vigente de ONIA
 
+## Corte de lectura · 12 noviembre 2026
+
+Para el trabajo actual usar el [directorio por área](ESTRUCTURA.md#directorio-de-fuentes-por-area--12-noviembre-2026) y las [prioridades y pausas](../04-operacion-agentes/PRIORIDADES-HASTA-14.md). Sergio pidió ordenar fuentes y continuar las correcciones; los cortes de abajo son observaciones fechadas, no inventario en vivo. El acceso al panel desde iPhone fue confirmado posteriormente por Sergio, según el [registro de continuidad y venta](../04-operacion-agentes/registro-de-errores.md#continuidad-y-venta-del-workshop--turno-del-11-al-12-de-noviembre-de-2026). Eso no acredita el nuevo diseño ni operación completa de las fábricas. No se midió cuota ni runtime al ordenar este índice.
+
 
 ## Infraestructura y preparación de venta · 11 noviembre 2026
 

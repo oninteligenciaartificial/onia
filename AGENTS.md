@@ -3,7 +3,7 @@
 Para encargos de Sergio y ONIA, la base vigente está en `_investigacion-onia/base-operativa/`.
 Primero leé `04-operacion-agentes/BITACORA-BOSS.md` y `05-herramientas/fabrica-onia/DECISIONES-SERGIO-20261110.md` allí; después `00-MAPA/ESTADO.md` y `04-operacion-agentes/reglas-comunes.md`, antes de continuar trabajo de ese sistema. La guía de carpetas es `00-MAPA/ESTRUCTURA.md`. Son referencias a una sola fuente; no copies sus reglas a cada proyecto.
 
-Las instrucciones actuales de Sergio prevalecen sobre propuestas históricas. ONIA-CENTRAL está excluido como fuente: no consultar ni importar sus reglas, skills o estados para este trabajo.
+Las instrucciones actuales de Sergio prevalecen sobre propuestas históricas. Por autorización de Sergio del 12/11, ONIA-CENTRAL y onia-harness pueden consultarse como antecedentes de conocimiento, con repo, ruta y revisión identificados. No importar automáticamente sus reglas, skills, permisos o estados. La base operativa vigente sigue siendo onia; consultar el directorio de fuentes de `_investigacion-onia/base-operativa/00-MAPA/ESTRUCTURA.md`.
 
 Consultá `privado/contexto.md` sólo si la tarea necesita datos personales, horarios o recursos de Sergio; no incluirlo en paquetes públicos. Para código del producto, leer además las instrucciones técnicas aplicables en onia-platform y cotejar el estado real antes de editar. No extender estas decisiones comerciales a proyectos ajenos al encargo.
 

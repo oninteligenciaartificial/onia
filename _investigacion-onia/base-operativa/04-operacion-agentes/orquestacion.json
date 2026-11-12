@@ -30,7 +30,9 @@
   "limite_modelos": "Política aprobada por Sergio 9/11/2026: Sol6.1 low para simple, high para diseño/fallos difíciles, ultra sólo bajo pedido explícito. Recomendaciones declarativas: no configuran runtime ni permisos. Registrar solicitado y observado por lanzamiento; fuente REPARTO-CODEX-GROKBOT-20261109.md.",
   "contexto_comun": [
     "00-MAPA/ESTADO.md",
-    "04-operacion-agentes/ORQUESTACION.md"
+    "04-operacion-agentes/ORQUESTACION.md",
+    "00-MAPA/ESTRUCTURA.md",
+    "04-operacion-agentes/PRIORIDADES-HASTA-14.md"
   ],
   "archivos_cloud": [
     "05-herramientas/cloud/install.sh",
@@ -72,7 +74,10 @@
         "tercero-marketing-humanizer"
       ],
       "contexto": [
-        "04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md"
+        "04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md",
+        "05-herramientas/fabrica-onia/DECISIONES-SERGIO-20261110.md",
+        "02-contenido/formatos-onia.md",
+        "03-referentes/cerebro-operativo/20261109/GUIA-APLICADA.md"
       ],
       "salidas": [
         "Oferta y recorrido de venta",
@@ -84,7 +89,9 @@
     "video": {
       "skill_directora": "producir-video",
       "contexto": [
-        "04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md"
+        "04-operacion-agentes/ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md",
+        "02-contenido/formatos-onia.md",
+        "05-herramientas/fabrica-onia/2-edicion-video/README.md"
       ],
       "salidas": [
         "Composición editable en HyperFrames",
@@ -103,7 +110,7 @@
     "desarrollo": {
       "skill_directora": "desarrollar-y-verificar",
       "contexto": [
-        "06-plataforma/arquitectura.md"
+        "05-herramientas/fabrica-onia/5-codigo/README.md"
       ],
       "salidas": [
         "Cambio acotado de código",

@@ -1,8 +1,12 @@
 # Reglas comunes de trabajo
 
+## Entrada vigente · 12 noviembre 2026
+
+Sergio autorizó ordenar fuentes y corregir el sistema existente, cuidando cuota. Recuperar primero la entrega y el criterio ya disponibles mediante [ESTRUCTURA](../00-MAPA/ESTRUCTURA.md#directorio-de-fuentes-por-area--12-noviembre-2026). Antes de proponer trabajo nuevo, identificar la fuente revisada, lo reutilizable y la brecha concreta. Si una fuente no cubre la necesidad, ampliar sólo esa parte. Las decisiones actuales prevalecen sobre el reparto histórico siguiente. Las pausas de infraestructura y permisos sensibles conservan sus condiciones; ordenar fuentes no los modifica.
+
 ## Instrucción vigente de Sergio · 12 de noviembre de 2026
 
-Hasta el 14 sólo se lanzan las tareas de [PRIORIDADES-HASTA-14.md](PRIORIDADES-HASTA-14.md) y en su orden. Codex produce guiones y piezas hasta el 13 inclusive. Esta instrucción prevalece ante discrepancias con el reparto o el procedimiento anterior.
+[PRIORIDADES-HASTA-14.md](PRIORIDADES-HASTA-14.md) conserva las prioridades y pausas acordadas. La autorización posterior de Sergio del 12/11 permite ordenar fuentes y corregir el sistema antes de continuar esos entregables; no reactiva los frentes congelados. Codex produce guiones y piezas hasta el 13 inclusive. Esta instrucción prevalece ante discrepancias con el reparto o el procedimiento anterior.
 
 - Trabajar un área por vez con Sergio. Primero enviar una tarjeta breve de preferencias y recoger sus respuestas. Preparar después una muestra chica y guardar el antes y el después con las correcciones de Sergio. Automatizar con n8n o código recién tras su «así». La única sesión paralela autorizada en este arranque prepara el panel «Hoy» y sigue la misma secuencia.
 - Cada encargo debe identificar archivo de salida, hora límite y prueba de uso. Una ronda de revisión reúne comentarios y la corrección correspondiente. Hay un máximo de dos rondas y después decide Sergio.
@@ -20,7 +24,7 @@ Sergio confirmó el 9/11/2026 [ONE-MAN-COMPANY-FABRICA-CONTENIDO-20261109.md](ON
 
 ## Alcance y autoridad
 
-- Usar el repositorio privado `oninteligenciaartificial/onia`, rama `master`, y el entorno Cloud `onia`. `onia-harness` queda como referencia conservada. ONIA Platform tiene su propio repositorio de producto. ONIA-CENTRAL está excluido: no consultar ni importar sus reglas, skills o estados.
+- Usar el repositorio privado `oninteligenciaartificial/onia`, rama `master`, y el entorno Cloud `onia`. `onia-harness` queda como referencia conservada. ONIA Platform tiene su propio repositorio de producto. ONIA-CENTRAL y onia-harness son antecedentes consultables por autorización de Sergio del 12/11. No importar automáticamente sus reglas, skills, permisos o estados; seleccionar fuentes desde 00-MAPA/ESTRUCTURA.md.
 - El repo conserva reglas, decisiones, estado y entregas compartibles. Notion es una proyección y Pages conserva medios/procedencia. Los chats coordinan; un mensaje no garantiza que otra sesión reciba el contexto.
 - Cada encargo delimita objetivo, responsable, entradas, resultado, permisos aplicables y aceptación. Una meta comercial, un reparto local o una autorización de infraestructura de otro encargo no amplía el actual. Consultar PLAN, SESIONES o la ficha pertinente cuando corresponda.
 - Incorporar herramientas por una necesidad concreta. Las preferencias económicas, compromisos y disponibilidad orientan los encargos que las necesitan; datos personales y horarios permanecen en privado. No extender decisiones de ONIA a proyectos ajenos.

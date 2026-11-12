@@ -33,6 +33,32 @@ class HarnessTests(unittest.TestCase):
         return harness.prepare(self.base, task_id, area, "Entregar una pieza",
                                "Video MP4", "Audio y dimensiones revisados", ["Material sintético"])
 
+    def test_marketing_recovers_existing_editorial_sources(self):
+        result = self.prepare("contenido-fuentes", "marketing")
+        brief = (self.base / result["briefing"]).read_text()
+        for source in ("00-MAPA/ESTRUCTURA.md", "PRIORIDADES-HASTA-14.md",
+                       "DECISIONES-SERGIO-20261110.md", "formatos-onia.md", "GUIA-APLICADA.md"):
+            self.assertIn(source, brief)
+        self.assertNotIn("06-plataforma/arquitectura.md", brief)
+        self.assertNotIn("catalogo.json", brief)
+
+    def test_development_does_not_load_platform_or_editorial_by_default(self):
+        result = self.prepare("codigo-fuentes", "desarrollo")
+        brief = (self.base / result["briefing"]).read_text()
+        self.assertIn("00-MAPA/ESTRUCTURA.md", brief)
+        self.assertIn("05-herramientas/fabrica-onia/5-codigo/README.md", brief)
+        self.assertNotIn("06-plataforma/arquitectura.md", brief)
+        self.assertNotIn("GUIA-APLICADA.md", brief)
+        product = self.prepare("producto-fuentes", "producto")
+        self.assertIn("06-plataforma/arquitectura.md",
+                      (self.base / product["briefing"]).read_text())
+
+    def test_missing_editorial_source_prevents_new_task(self):
+        (self.base / "03-referentes/cerebro-operativo/20261109/GUIA-APLICADA.md").unlink()
+        with self.assertRaisesRegex(ValueError, "Falta contexto"):
+            self.prepare("no-inventar-fuentes", "marketing")
+        self.assertFalse((self.base / "operacion").exists())
+
     def test_doctor_distinguishes_files_from_runtime(self):
         result = harness.doctor(self.base)
         self.assertTrue(result["ok"])

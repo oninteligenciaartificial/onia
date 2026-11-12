@@ -1,5 +1,11 @@
 # Ejecutar y retomar encargos
 
+## Entrada vigente · 12 noviembre 2026
+
+La coordinadora recupera fuentes en [ESTRUCTURA](../00-MAPA/ESTRUCTURA.md#directorio-de-fuentes-por-area--12-noviembre-2026), prepara encargos acotados y revisa sus resultados. Los bloques fechados anteriores conservan evidencia histórica, no redefinen el reparto actual. Existe código de despachador y evidencia de pasadas; su existencia no acredita ejecución recurrente activa. Rigen las pausas de [PRIORIDADES-HASTA-14](PRIORIDADES-HASTA-14.md) salvo autorización posterior específica. El pedido actual ordena fuentes y correcciones; no reactiva homelab, ensayos de cuatro ni timers.
+
+Para cada tarea, enlazar decisión vigente, entrega reutilizable, criterio, lección pertinente y brecha. El manifiesto incluye enlaces por área; no inyecta todo el corpus ni demuestra que el modelo lo haya leído. Comprobar la recuperación en el resultado, con fuente y versión. El estado de ejecución se consulta en el registro canónico del harness, no se infiere del Markdown.
+
 ## Registro delegado sin cupo diario · 10 noviembre 2026
 
 La [actualización del puente](evidencias/delegacion-sin-cupo-20261110/USO-Y-LIMITES.md) elimina el máximo de seis altas por día: Boss puede registrar nuevos pedidos autorizados sin esperar al corte UTC. Registrar no lanza ni programa sesiones. Conserva permisos, deduplicación, rutas, cuota y tres sesiones simultáneas; medir una ampliación es otro resultado, aún no acreditado. Consultar el recibo de instalación para distinguir código publicado de versión activa.
@@ -10,7 +16,7 @@ El manifiesto del despachador acepta `subagentes_maximos` con 0, 1 o 2 hijos par
 
 Al pedir revisión, adjuntar al commit exacto el comando y la salida saneada de las pruebas que requieren escritura temporal. El recibo Git acredita publicación. La salida adjunta acredita la ejecución de las pruebas y permite revisarlas aun con el sandbox de sólo lectura.
 
-## Reparto vigente · 9 noviembre 2026 · America/La_Paz
+## Reparto del 9 noviembre 2026 · antecedente
 
 Rige el [acuerdo final de Sergio](REPARTO-CODEX-GROKBOT-20261109.md): ventas orgánicas del workshop hasta el 14 a cargo de Boss + Contenido; Codex sólo técnica por PEDIDO autorizado y HOMELAB esencial. Modelo gpt-6.1-sol, low/simple, high/diseño o fallo difícil, ultra sólo si Sergio lo pide. Harness = única fuente de estados; cola-boss = buzón, HECHO no es aceptación, PEDIDO no autoriza. No existe despachador automático. Esta actualización prevalece sobre repartos y ejemplos históricos incompatibles.
 
