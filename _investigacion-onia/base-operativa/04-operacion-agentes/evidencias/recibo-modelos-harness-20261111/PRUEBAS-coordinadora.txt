@@ -1,0 +1,25 @@
+Commit 74c01ceeab5f3707155af158a98e678ce6bdf4c3
+Desde 05-herramientas/scripts: python3 -B -m unittest -v test_perfiles_observados
+test_argument_error_is_fixed (test_perfiles_observados.PerfilesTest.test_argument_error_is_fixed) ... ok
+test_child_inherited_context_excluded (test_perfiles_observados.PerfilesTest.test_child_inherited_context_excluded) ... ok
+test_confirmed_own_turn_and_read_only (test_perfiles_observados.PerfilesTest.test_confirmed_own_turn_and_read_only) ... ok
+test_duplicate_rollouts_deduplicate (test_perfiles_observados.PerfilesTest.test_duplicate_rollouts_deduplicate) ... ok
+test_explicit_child_context_without_usage (test_perfiles_observados.PerfilesTest.test_explicit_child_context_without_usage) ... ok
+test_foreign_sid_and_agent_path_are_excluded (test_perfiles_observados.PerfilesTest.test_foreign_sid_and_agent_path_are_excluded) ... ok
+test_invalid_parent_rejected (test_perfiles_observados.PerfilesTest.test_invalid_parent_rejected) ... ok
+test_invalid_sid_and_directory (test_perfiles_observados.PerfilesTest.test_invalid_sid_and_directory) ... ok
+test_malformed_json_and_errors_do_not_leak (test_perfiles_observados.PerfilesTest.test_malformed_json_and_errors_do_not_leak) ... ok
+test_metadata_conflict_rejected (test_perfiles_observados.PerfilesTest.test_metadata_conflict_rejected) ... ok
+test_missing_records_empty_and_unknown_sid (test_perfiles_observados.PerfilesTest.test_missing_records_empty_and_unknown_sid) ... ok
+test_nested_spawn_metadata (test_perfiles_observados.PerfilesTest.test_nested_spawn_metadata) ... ok
+test_no_usage_child_is_not_observed (test_perfiles_observados.PerfilesTest.test_no_usage_child_is_not_observed) ... ok
+test_sanitized_output (test_perfiles_observados.PerfilesTest.test_sanitized_output) ... ok
+test_symlinks_ignored (test_perfiles_observados.PerfilesTest.test_symlinks_ignored) ... ok
+test_transitive_descendants_multiple_parents_unrelated_excluded (test_perfiles_observados.PerfilesTest.test_transitive_descendants_multiple_parents_unrelated_excluded) ... ok
+test_usage_requires_both_identifiers (test_perfiles_observados.PerfilesTest.test_usage_requires_both_identifiers) ... ok
+test_wrapped_usage_and_multiple_profiles (test_perfiles_observados.PerfilesTest.test_wrapped_usage_and_multiple_profiles) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.013s
+
+OK
