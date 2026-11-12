@@ -1,6 +1,6 @@
 # Despachador de lotes
 
-Implementación invocable por la coordinadora mediante `05-herramientas/scripts/harness_lote.py`. Cada `tick` realiza como máximo una transición exitosa del harness y recorre una cantidad finita de candidatos. Los fallos de una tarea permiten evaluar las independientes. La coordinadora decide cuándo repetir el comando.
+Implementación invocable por la coordinadora mediante `05-herramientas/scripts/harness_lote.py`. Cada `tick` realiza como máximo una transición exitosa del harness y recorre una cantidad finita de candidatos. Los fallos de una tarea permiten evaluar las independientes. La misma pasada puede invocarse a mano o desde un temporizador del lote autorizado.
 
 ## Contrato
 
@@ -71,6 +71,46 @@ El archivo se relee antes de cada efecto. Debe corresponder al hash aprobado y t
 ```
 
 La coordinadora obtiene el saldo de una medición vigente del proveedor y conserva su procedencia privada. El módulo exige saldo positivo suficiente para el mínimo declarado y comprueba además `codex login status` con autenticación ChatGPT. Los lanzamientos fuerzan proveedor OpenAI y login ChatGPT y eliminan las variables de claves API heredadas mediante la API existente. Una observación ausente, caducada o de proveedor distinto bloquea nuevos despachos. Recoger y cerrar admiten saldo agotado, conservando el requisito de observación reciente.
+
+## Pasadas recurrentes con cuota directa
+
+La opción `tick --cuota-codex` consulta [`account/rateLimits/read` de Codex app-server](https://learn.chatgpt.com/docs/app-server#6-rate-limits-chatgpt) cuando encuentra un candidato a lanzar, reanudar o revisar. Sólo consulta la cuenta ya autenticada en el CLI con ChatGPT. Usa el porcentaje restante más bajo entre las ventanas activas de Codex, conserva la fuente y el reinicio más próximo en el journal y revalida ambos límites de frescura antes del efecto. Una consulta fallida o un saldo desconocido bloquean el despacho. Recoger un veredicto y cerrar una entrega comprobada pueden avanzar sin consultar la cuota.
+
+```bash
+python3 -B "$L" --manifiesto "$M" --aprobacion-sha256 HASH_APROBADO tick --cuota-codex
+python3 -B "$L" --manifiesto "$M" --aprobacion-sha256 HASH_APROBADO tick --cuota-codex --observaciones "$O"
+```
+
+Con cuota directa, el archivo de observaciones es opcional y aporta exclusivamente las declaraciones de cierre, retoma y revisión fallida. Si se configura, debe pertenecer al mismo manifiesto. Las declaraciones con más de 120 segundos se ignoran en este modo, por lo que no detienen otras tareas. Una declaración futura, un archivo ilegible o un hash distinto bloquean esa pasada. Actualizar declaraciones mediante reemplazo atómico para que el temporizador lea un JSON completo. El modo manual `tick --observaciones` conserva la validación original de todas las observaciones.
+
+Una vez revisado e integrado el código, la coordinadora puede preparar un timer de usuario para el mismo checkout, la operación global, el manifiesto exacto y su hash autorizado. Ejemplo de `onia-lote-ID.service` y `onia-lote-ID.timer`; sustituir `ID`, `HASH_APROBADO` y las rutas de la instancia. La ruta de `codex` en `PATH` debe ser la del usuario coordinador.
+
+```ini
+[Unit]
+ConditionPathExists=!%h/operacion/lotes/ID/STOP.json
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/repos/onia-coordinador
+Environment=PATH=%h/.local/bin:/usr/bin:/bin
+UMask=0077
+KillMode=process
+TimeoutStartSec=10min
+ExecStart=/usr/bin/python3 -B %h/repos/onia-coordinador/_investigacion-onia/base-operativa/05-herramientas/scripts/harness_lote.py --manifiesto %h/operacion/lote-aprobado.json --aprobacion-sha256 HASH_APROBADO tick --cuota-codex
+```
+
+```ini
+[Timer]
+OnCalendar=*-*-* *:*:00
+AccuracySec=1s
+Persistent=false
+Unit=onia-lote-ID.service
+
+[Install]
+WantedBy=timers.target
+```
+
+Si la instancia usa declaraciones, añadir `--observaciones %h/operacion/observaciones-lote.json` y preparar el archivo privado antes de activarla. Validar las dos unidades con `systemd-analyze --user verify` y cotejar el ejecutable, la hora y el usuario de la instancia. `KillMode=process` aplica el patrón del disparador diario existente para que la supervisora del harness sobreviva al terminar el servicio que inició la pasada. Comprobarlo en la primera activación autorizada. La vigencia y el hash se verifican en cada tick. Para cerrar la operación recurrente, detener y deshabilitar el timer de ese ID y revocar el lote si termina su autorización. Una sesión viva sigue registrada en el harness para su conciliación.
 
 Para retomar, añadir `retomas[ID]` con `sid`, `revision` y `auxiliares_terminados=true`. Para reemplazar una revisión fallida, añadir `revisiones[ID]` con `intento`, `revision` y `auxiliares_terminados=true`. La coordinadora verifica procesos auxiliares, rama, logs y archivos preservados antes de escribir esas declaraciones. El JSON y las declaraciones son entradas de confianza de la coordinadora. El porcentaje disponible permite admisión y requiere actualización durante el ensayo, con incertidumbre sobre el coste futuro de una sesión.
 

@@ -248,6 +248,79 @@ class BatchTests(unittest.TestCase):
         self.tick()
         self.assertEqual(self.adapter.calls[-1], ('recoger', 'uno'))
 
+    def test_recurring_tick_refreshes_quota_and_ignores_stale_attestation(self):
+        self.save(fecha='2026-11-11T19:00:00Z', restante_porcentaje=100,
+                  cierres={'uno': dict(commit='b' * 40, verificacion='correcta')})
+        readings = []
+
+        def quota():
+            readings.append(self.now)
+            return lote.codex_quota({'rateLimits': {'limitId': 'codex', 'primary': {
+                'usedPercent': 95 if len(readings) == 1 else 100, 'resetsAt': int(self.now) + 60}}}, self.now)
+
+        self.adapter.quota = quota
+        first = self.dispatcher().tick(self.observation_path, refresh_quota=True)
+        self.assertEqual(first['resultado'], 'avanzado')
+        intent = next(e for e in self.dispatcher().events() if e['tipo'] == 'intencion')
+        self.assertEqual(intent['cuota']['restante_porcentaje'], 5)
+        self.assertEqual(intent['cuota']['fuente'], 'account/rateLimits/read')
+        self.now += 30
+        second = self.dispatcher().tick(self.observation_path, refresh_quota=True)
+        self.assert_blocked(second, 'Cuota insuficiente')
+        self.assertEqual(len(self.adapter.calls), 1)
+        self.assertEqual(len(readings), 2)
+
+    def test_recurring_collect_without_quota_or_observation_file(self):
+        self.review_ready()
+        self.tick()
+        self.finish()
+        self.adapter.quota = lambda: self.fail('Recoger no necesita consulta al proveedor.')
+        self.dispatcher().tick(refresh_quota=True)
+        self.assertEqual(self.adapter.calls[-1], ('recoger', 'uno'))
+
+    def test_live_quota_reset_during_preflight_blocks_launch(self):
+        self.adapter.quota = lambda: lote.codex_quota({'rateLimits': {'limitId': 'codex',
+            'primary': {'usedPercent': 50, 'resetsAt': int(self.now) + 1}}}, self.now)
+
+        def slow_provider():
+            self.now += 2
+            return True
+
+        self.adapter.provider = slow_provider
+        result = self.dispatcher().tick(refresh_quota=True)
+        self.assert_blocked(result, 'Cuota de Codex caducada')
+        self.assertFalse(self.adapter.calls)
+        self.assertFalse(self.dispatcher().events())
+
+    def test_quota_rpc_uses_only_read_only_methods_and_tightest_window(self):
+        binary = self.root / 'codex'
+        binary.write_text("""#!/usr/bin/env python3
+import json
+import os
+import sys
+import time
+
+assert sys.argv[1:4] == ['app-server', '--listen', 'stdio://']
+assert not {'OPENAI_API_KEY', 'CODEX_API_KEY', 'OPENAI_BASE_URL'} & set(os.environ)
+for method in ('initialize', 'initialized', 'account/rateLimits/read'):
+    request = json.loads(sys.stdin.readline())
+    assert request['method'] == method
+    if 'id' in request:
+        reset = int(time.time()) + 120
+        limits = {'limitId': 'codex', 'primary': {'usedPercent': 55, 'resetsAt': reset},
+                  'secondary': {'usedPercent': 95, 'resetsAt': reset + 20}}
+        result = {'rateLimitsByLimitId': {'codex': limits}} if method != 'initialize' else {}
+        print(json.dumps({'id': request['id'], 'result': result}), flush=True)
+""")
+        binary.chmod(0o700)
+        with patch.dict(os.environ, {'PATH': str(self.root) + os.pathsep + os.environ['PATH'],
+                                     'OPENAI_API_KEY': 'synthetic', 'CODEX_API_KEY': 'synthetic',
+                                     'OPENAI_BASE_URL': 'https://example.invalid'}):
+            quota = lote.read_codex_quota()
+        self.assertEqual(quota['restante_porcentaje'], 5)
+        self.assertTrue(quota['disponible'])
+        self.assertFalse(quota['saldo_extra_autorizado'])
+
     def test_disabled_expired_bad_hash_and_revocation(self):
         self.manifest['habilitado'] = False
         self.save()

@@ -4,7 +4,7 @@ El journal conserva intenciones y efectos. Los estados se leen del registro
 canónico. La coordinadora conserva aceptación, integración y despliegue.
 """
 import argparse
-from contextlib import contextmanager
+from contextlib import contextmanager, suppress
 from datetime import datetime, timezone
 import fcntl
 import hashlib
@@ -12,7 +12,10 @@ import json
 import os
 from pathlib import Path
 import re
+import select
+import signal
 import subprocess
+import time
 import uuid
 
 import harness_sesiones as sessions
@@ -20,6 +23,7 @@ import trabajo
 
 OPS = {'lanzar', 'reanudar', 'cerrar', 'revisar', 'recoger', 'aceptar', 'integrar', 'desplegar'}
 DISPATCH = {'lanzar', 'reanudar', 'revisar'}
+OBSERVATION_MAX_AGE = 120
 
 
 def require(condition, message):
@@ -44,6 +48,92 @@ def read_json(path):
     path = Path(path).absolute()
     require(not any(p.is_symlink() for p in (path, *path.parents)), 'Ruta con enlace.')
     return json.loads(path.read_text(encoding='utf-8'))
+
+
+def codex_quota(result, now):
+    """Conservar sólo ventanas de cuota incluida, sin créditos ni datos de cuenta."""
+    by_id = result.get('rateLimitsByLimitId')
+    require(by_id is None or isinstance(by_id, dict), 'Ventanas de Codex inválidas.')
+    limits = by_id.get('codex') if by_id is not None else result.get('rateLimits')
+    require(isinstance(limits, dict) and limits.get('limitId') == 'codex',
+            'Ventanas de Codex no identificadas.')
+    remaining = []
+    resets = []
+    for name in ('primary', 'secondary'):
+        window = limits.get(name)
+        if name == 'secondary' and window is None:
+            continue
+        require(isinstance(window, dict), 'Ventana de cuota ausente.')
+        used, reset = window.get('usedPercent'), window.get('resetsAt')
+        require(type(used) in (int, float) and 0 <= used <= 100
+                and type(reset) is int and reset > now, 'Ventana de cuota inválida o vencida.')
+        remaining.append(100 - used)
+        resets.append(reset)
+    return {
+        'fecha': datetime.fromtimestamp(now, timezone.utc).isoformat(),
+        'fuente': 'account/rateLimits/read',
+        'proveedor': 'openai-chatgpt-incluido',
+        'disponible': limits.get('rateLimitReachedType') is None,
+        'saldo_extra_autorizado': False,
+        'restante_porcentaje': min(remaining),
+        'reinicio_mas_proximo': min(resets),
+    }
+
+
+def read_codex_quota():
+    """Consultar app-server por stdio con plazo total y sin iniciar turnos."""
+    command = ['codex', 'app-server', '--listen', 'stdio://',
+               '-c', 'forced_login_method="chatgpt"', '-c', 'model_provider="openai"']
+    with subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                          stderr=subprocess.DEVNULL, start_new_session=True,
+                          env=sessions.child_environment({'auth_chatgpt': True})) as process:
+        end = time.monotonic() + 20
+        buffer = b''
+        output_bytes = 0
+
+        def send(message):
+            process.stdin.write((json.dumps(message) + '\n').encode())
+            process.stdin.flush()
+
+        def receive(ident):
+            nonlocal buffer, output_bytes
+            while time.monotonic() < end:
+                if b'\n' not in buffer:
+                    readable, _, _ = select.select([process.stdout], [], [], max(0, end - time.monotonic()))
+                    require(bool(readable), 'Consulta de cuota vencida.')
+                    chunk = os.read(process.stdout.fileno(), 65536)
+                    output_bytes += len(chunk)
+                    require(chunk and output_bytes <= 262144, 'Respuesta de cuota interrumpida o excesiva.')
+                    buffer += chunk
+                    continue
+                line, buffer = buffer.split(b'\n', 1)
+                message = json.loads(line)
+                require(isinstance(message, dict), 'Respuesta de cuota inválida.')
+                if message.get('id') == ident:
+                    require('error' not in message and isinstance(message.get('result'), dict),
+                            'App-server rechazó la consulta de cuota.')
+                    return message['result']
+            raise ValueError('Consulta de cuota vencida.')
+
+        try:
+            send({'id': 1, 'method': 'initialize',
+                  'params': {'clientInfo': {'name': 'onia_lote', 'version': '1.0'}}})
+            receive(1)
+            send({'method': 'initialized'})
+            send({'id': 2, 'method': 'account/rateLimits/read',
+                  'params': {'excludeResetCreditDetails': True}})
+            return codex_quota(receive(2), time.time())
+        finally:
+            # El lanzador CLI y su binario comparten el grupo privado de esta consulta.
+            # Señalar antes de recolectar el PID impide confundir otro grupo posterior.
+            with suppress(ProcessLookupError):
+                os.killpg(process.pid, signal.SIGTERM)
+            try:
+                process.wait(timeout=3)
+            except subprocess.TimeoutExpired:
+                with suppress(ProcessLookupError):
+                    os.killpg(process.pid, signal.SIGKILL)
+                process.wait()
 
 
 def profile(value):
@@ -175,6 +265,10 @@ class LocalHarness:
         except (OSError, subprocess.TimeoutExpired):
             return False
         return result.returncode == 0 and 'Logged in using ChatGPT' in result.stdout + result.stderr
+
+    def quota(self):
+        require(self.provider(), 'Autenticación ChatGPT no comprobada.')
+        return read_codex_quota()
 
     def invoke(self, op, task, row, observation):
         ident, revision, actor = task['id'], row['revision'], task['actor']
@@ -346,16 +440,24 @@ class Dispatcher:
                 and task.get('reanudar_sid') == last['session_id'], 'Retoma requiere SID autorizado y conciliación.')
         return 'reanudar'
 
-    def observation(self, path):
+    def observation(self, path, *, ignore_stale=False):
+        if path is None:
+            return {}
         obs = read_json(path)
-        require(obs.get('manifiesto_sha256') == self.hash, 'Observación de otro manifiesto.')
-        require(0 <= self.clock() - timestamp(obs['fecha']) <= 120, 'Observación ausente, futura o caducada.')
+        require(isinstance(obs, dict) and obs.get('manifiesto_sha256') == self.hash,
+                'Observación de otro manifiesto.')
+        age = self.clock() - timestamp(obs['fecha'])
+        if ignore_stale and age > OBSERVATION_MAX_AGE:
+            return {}
+        require(0 <= age <= OBSERVATION_MAX_AGE, 'Observación ausente, futura o caducada.')
         return obs
 
-    def preflight(self, task, row, op, observation_path):
-        require(op in task['operaciones'], 'Operación sin autorización en manifiesto.')
+    def check_quota_freshness(self, quota):
+        require(0 <= self.clock() - timestamp(quota['fecha']) <= OBSERVATION_MAX_AGE
+                and self.clock() < quota['reinicio_mas_proximo'], 'Cuota de Codex caducada.')
+
+    def preflight(self, task, row, op, observation):
         self.dependencies(task, refresh=True)
-        observation = self.observation(observation_path)
         if op == 'recoger':
             require(row['sesiones'][-1]['responsable'] == task['revisor'], 'Revisión de otro responsable.')
         if op == 'cerrar':
@@ -493,7 +595,12 @@ class Dispatcher:
         return dict(manifiesto_sha256=self.hash, habilitado=self.manifest['habilitado'],
                     revocado=self.stop.exists(), tareas=result)
 
-    def tick(self, observation_path):
+    def tick(self, observation_path=None, *, refresh_quota=False):
+        require(observation_path is not None or refresh_quota, 'Faltan observaciones o --cuota-codex.')
+
+        def read_observation():
+            return self.observation(observation_path, ignore_stale=refresh_quota)
+
         with batch_lock(self.root):
             self.permitted(effect=True)
             self.adapter.reconcile([t['id'] for t in self.manifest['tareas']])
@@ -515,7 +622,7 @@ class Dispatcher:
                     continue
                 try:
                     require(ident not in unresolved, 'Intención incierta ' + unresolved.get(ident, '') + '. Conciliar SID/commit.')
-                    op = self.candidate(task, rows[ident], self.observation(observation_path))
+                    op = self.candidate(task, rows[ident], read_observation())
                     require(op not in DISPATCH or not self.stalled(ident, rows[ident]),
                             'Dos fallos sin progreso. Diagnóstico de coordinadora requerido.')
                     if op:
@@ -525,16 +632,32 @@ class Dispatcher:
             # Recoger/cerrar libera transiciones. Las revisiones preceden a nuevos productores.
             ranks = {'recoger': 0, 'cerrar': 1, 'revisar': 2, 'reanudar': 3, 'lanzar': 3}
             candidates.sort(key=lambda item: (ranks[item[0]], -item[1].get('prioridad', 0), item[1]['id']))
+            quota = None
+            quota_error = None
             for op, task, row in candidates:
                 ident = task['id']
                 try:
                     self.permitted(effect=True)
-                    observation = self.preflight(task, row, op, observation_path)
+                    require(op in task['operaciones'], 'Operación sin autorización en manifiesto.')
+                    raw_observation = read_observation()
+                    observation = raw_observation
+                    live_quota = refresh_quota and op in DISPATCH
+                    if live_quota:
+                        if quota is None and quota_error is None:
+                            try:
+                                quota = self.adapter.quota()
+                            except (ValueError, OSError, KeyError, TypeError, AttributeError):
+                                quota_error = 'No se pudo comprobar la cuota incluida de Codex.'
+                        require(quota_error is None, quota_error)
+                        observation = {**raw_observation, **quota}
+                    self.preflight(task, row, op, observation)
                     # Releer después de I/O externo. La API vuelve a cotejar la revisión bajo su lock.
                     current = self.row(task)
                     trabajo.expected(current, row['revision'])
                     self.permitted(effect=True)
-                    require(self.observation(observation_path) == observation, 'Observación cambió durante comprobaciones.')
+                    require(read_observation() == raw_observation, 'Observación cambió durante comprobaciones.')
+                    if live_quota:
+                        self.check_quota_freshness(quota)
                 except (ValueError, OSError, KeyError) as exc:
                     report.append(dict(id=ident, op=op, bloqueo=str(exc)))
                     continue
@@ -547,11 +670,14 @@ class Dispatcher:
                                      sid=(task['reanudar_sid'] if op == 'reanudar' else history[-1].get('session_id') if history else None),
                                      commit=(observation.get('cierres', {}).get(ident, {}).get('commit') if op == 'cerrar'
                                              else (row.get('cierre') or {}).get('commit')),
-                                     cuota={k: observation.get(k) for k in ('fecha', 'proveedor', 'restante_porcentaje')},
+                                     cuota={k: observation.get(k) for k in
+                                            ('fecha', 'proveedor', 'restante_porcentaje', 'fuente', 'reinicio_mas_proximo')},
                                      modelo_observado=None)
                 try:
                     self.permitted(effect=True)
-                    require(self.observation(observation_path) == observation, 'Observación cambió antes del efecto.')
+                    require(read_observation() == raw_observation, 'Observación cambió antes del efecto.')
+                    if live_quota:
+                        self.check_quota_freshness(quota)
                     self.adapter.invoke(op, task, row, observation)
                     after = self.row(task)
                     self.recover({**rows, ident: after})
@@ -611,7 +737,8 @@ def main(argv=None):
     sub.add_parser('hash')
     sub.add_parser('plan')
     tick = sub.add_parser('tick')
-    tick.add_argument('--observaciones', type=Path, required=True)
+    tick.add_argument('--observaciones', type=Path)
+    tick.add_argument('--cuota-codex', action='store_true', help='Consultar cuota incluida por app-server.')
     stop = sub.add_parser('revocar')
     stop.add_argument('--motivo', required=True)
     resolve = sub.add_parser('conciliar-sin-efecto')
@@ -627,7 +754,7 @@ def main(argv=None):
             if args.command == 'plan':
                 result = dispatcher.plan()
             elif args.command == 'tick':
-                result = dispatcher.tick(args.observaciones)
+                result = dispatcher.tick(args.observaciones, refresh_quota=args.cuota_codex)
             elif args.command == 'revocar':
                 result = dispatcher.revoke(args.motivo)
             else:
