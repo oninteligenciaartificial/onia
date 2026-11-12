@@ -1,16 +1,22 @@
 {
   "schema": 2,
   "id": "recibo-modelos-harness-20261111",
-  "revision": 2,
+  "revision": 12,
   "compartible": true,
   "objetivo": "Agrega recibos de modelos observados a partir de los rollouts del harness.",
-  "estado": "preparado",
-  "proximo_paso": "Ejecutar el encargo y publicar pruebas para revisión.",
-  "resultado": "",
-  "comprobacion": "",
-  "verificacion": "pendiente",
-  "evidencias": [],
-  "actualizado": "2026-11-12T02:10:30.474039+00:00",
+  "estado": "para_revision",
+  "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+  "resultado": "Entrega 74c01ce: genera recibos saneados de perfiles observados.",
+  "comprobacion": "18 casos reportados por ejecutora, commit de rama remoto; falta revisión independiente.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r11-e344b779.json",
+      "sha256": "021172ed4c6ebc76d31352bb31c2c0e83d4116168dcecf6a85f220465e6192f9",
+      "bytes": 313
+    }
+  ],
+  "actualizado": "2026-11-12T02:14:05.737620+00:00",
   "historial": [
     {
       "revision": 1,
@@ -22,6 +28,558 @@
       "evidencias": [],
       "proximo_paso": "Ejecutar el encargo y publicar pruebas para revisión.",
       "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-12T02:10:30.474039+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Ejecutar el encargo y publicar pruebas para revisión.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-12T02:10:57.211499+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-12T02:10:57.430685+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-12T02:10:58.008127+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-12T02:10:58.999599+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-12T02:10:59.421289+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-12T02:11:07.974881+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-12T02:13:28.487644+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": null,
+          "ultimo_evento": "item.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-12T02:13:37.260667+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-12T02:13:39.835868+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-recibo-modelos-harness-20261111",
+        "rutas": [
+          "05-herramientas/scripts/perfiles_observados.py",
+          "05-herramientas/scripts/test_perfiles_observados.py"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:10:30.474020+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-recibo-modelos-harness-20261111",
+          "pid": 3932561,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+          "supervisor_pid": 3932533,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+          "rama": "codex/ws-recibo-modelos-harness-20261111",
+          "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+          "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+          "rutas": [
+            "05-herramientas/scripts/perfiles_observados.py",
+            "05-herramientas/scripts/test_perfiles_observados.py"
+          ],
+          "dry_run": false,
+          "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:10:57.148809+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T02:13:39.826343+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
     }
   ],
   "briefing": {
@@ -39,5 +597,60 @@
     ],
     "revision_base": 1,
     "fecha": "2026-11-12T02:10:30.474020+00:00"
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "ejecutor-recibo-modelos-harness-20261111",
+      "pid": 3932561,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867332",
+      "supervisor_pid": 3932533,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:218867274",
+      "rama": "codex/ws-recibo-modelos-harness-20261111",
+      "session_id": "01a1cd85-c575-7ab3-96ae-afa6af9bb941",
+      "estado": "cerrada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.jsonl",
+      "log_rel": "logs/recibo-modelos-harness-20261111.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-recibo-modelos-harness-20261111",
+      "rutas": [
+        "05-herramientas/scripts/perfiles_observados.py",
+        "05-herramientas/scripts/test_perfiles_observados.py"
+      ],
+      "dry_run": false,
+      "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/recibo-modelos-harness-20261111.1.briefing.txt",
+      "inicio": "2026-11-12T02:10:57.148809+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/recibo-modelos-harness-20261111.git/worktrees/onia-ws-recibo-modelos-harness-20261111",
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-12T02:13:39.826343+00:00"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": {
+    "commit": "74c01ceeab5f3707155af158a98e678ce6bdf4c3",
+    "commit_base": "fadc56765aaeb7ed845c4e8c8cfc23834ca1f1d6",
+    "ramas_origin": [
+      "origin/codex/ws-recibo-modelos-harness-20261111"
+    ],
+    "fecha": "2026-11-12T02:14:05.725682+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "worktree_conservado": true,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/recibo-modelos-harness-20261111/cierre-r11-e344b779.json",
+      "sha256": "021172ed4c6ebc76d31352bb31c2c0e83d4116168dcecf6a85f220465e6192f9",
+      "bytes": 313
+    }
   }
 }
