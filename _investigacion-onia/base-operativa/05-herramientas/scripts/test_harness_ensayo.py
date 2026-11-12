@@ -157,7 +157,7 @@ class TrialTests(unittest.TestCase):
     def test_resources_stale_future_invalid_and_saturation(self):
         for key, value in [('fecha', time.time() - 16), ('fecha', time.time() + 5), ('cpu', 85),
                            ('ram_disponible', 19), ('psi_cpu', 20), ('psi_memoria', 10),
-                           ('psi_io', 10), ('swap_usado', 26), ('swap_paginas_s', 256),
+                           ('psi_io', 10), ('swap_usado', 101), ('swap_paginas_s', 256),
                            ('cpu', float('inf')), ('cpu', True)]:
             sample = resource_sample()
             sample[key] = value
@@ -169,6 +169,12 @@ class TrialTests(unittest.TestCase):
                     write_state(self.op, self.value, recursos=sample)
                     with self.assertRaises(ValueError):
                         self.capacity([])
+
+    def test_occupied_swap_without_pressure_does_not_block(self):
+        trial.resources(dict(resource_sample(), swap_usado=95), time.time())
+        for pressure in [{'swap_paginas_s': 256}, {'psi_memoria': 10}, {'ram_disponible': 19}]:
+            with self.subTest(pressure=pressure), self.assertRaisesRegex(ValueError, 'saturacion'):
+                trial.resources(dict(resource_sample(), swap_usado=95, **pressure), time.time())
 
     def test_quota_stale_unknown_rollover_and_two_point_budget(self):
         samples = [None, {}, dict(self.value['cuota_inicial'], fecha=time.time() - 61)]
@@ -395,6 +401,20 @@ questions.worker()
         self.assertTrue((self.path / 'STOP').exists())
         self.assertIsNone(other.poll())
 
+    def test_stop_rejects_custody_completion_without_independent_receipt(self):
+        other = self.child()
+        identity = trial.custody_identity(
+            {'pid': other.pid, 'pid_inicio': sessions.process_start(other.pid)}, self.tag)
+        path = trial.custody_path(self.op, identity)
+        private.private_write(path, dict(identity, estado='drenada'))
+        with patch.object(sessions, 'indexed_rows', return_value=[]), \
+                patch.object(trial, 'terminate') as terminate:
+            with self.assertRaisesRegex(ValueError, 'recibo_invalido'):
+                trial.stop(self.op)
+            terminate.assert_not_called()
+        self.assertTrue((self.path / 'STOP').exists())
+        self.assertIsNone(other.poll())
+
     def test_closed_question_missing_proof_keeps_stop(self):
         child = subprocess.Popen([sys.executable, '-c', 'pass'])
         owner = {'pid': child.pid, 'pid_inicio': sessions.process_start(child.pid)}
@@ -564,6 +584,42 @@ for line in sys.stdin:
             sample = trial.read_quota()
         self.assertEqual(sample['ventanas']['primary']['usedPercent'], 10)
         trial.quota(sample, time.time())
+
+    def test_quota_reader_drains_detached_helper_in_preflight_and_monitor(self):
+        fake = self.fake_app_server()
+        launcher = """import os
+from pathlib import Path
+aux = Path(os.environ['TEST_QUOTA_AUX'])
+if os.fork() == 0:
+    os.setsid()
+    if os.fork() == 0:
+        aux.write_text(json.dumps({
+            'pid': os.getpid(),
+            'start': Path('/proc/self/stat').read_text().rsplit(')', 1)[1].split()[19],
+        }))
+        time.sleep(10)
+    os._exit(0)
+while not aux.exists():
+    time.sleep(0.01)
+"""
+        fake.write_text(fake.read_text().replace('for line in sys.stdin:', launcher + 'for line in sys.stdin:'))
+        unrelated = self.child()
+        for name, stop_path in [('preflight', None), ('monitor', self.path / 'STOP')]:
+            with self.subTest(lectura=name):
+                observed = self.root / (name + '.json')
+                with patch.dict(os.environ, {'PATH': str(self.root) + ':' + os.environ['PATH'],
+                                             'TEST_QUOTA_AUX': str(observed)}):
+                    self.assertEqual(trial.read_quota(stop_path=stop_path)['ventanas']['primary']['usedPercent'], 10)
+                aux = json.loads(observed.read_text())
+                boot = sessions.process_start(os.getpid()).rsplit(':', 1)[0]
+                self.assertNotEqual(sessions.process_start(aux['pid']), boot + ':' + aux['start'])
+        proofs = list(self.path.glob('custodia-*.json'))
+        self.assertEqual(len(proofs), 1)
+        record = trial.read(proofs[0])
+        proof = trial.read_receipt(self.path, record['recibo'])
+        self.assertEqual(proof['evento'], 'custodia_echild')
+        self.assertEqual(trial.pending_custodies(self.op, self.value, []), [])
+        self.assertIsNone(unrelated.poll())
 
     def test_foreground_monitor_cli_sigterm_and_private_output(self):
         self.fake_app_server()

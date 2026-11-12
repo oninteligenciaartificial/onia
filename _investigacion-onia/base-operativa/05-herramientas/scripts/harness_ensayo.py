@@ -127,7 +127,7 @@ def resources(value, now):
     number(value['swap_paginas_s'])
     require(value['cpu'] < 85 and value['ram_disponible'] >= 20
             and value['psi_cpu'] < 20 and value['psi_memoria'] < 10 and value['psi_io'] < 10
-            and value['swap_usado'] <= 25 and value['swap_paginas_s'] < 256, 'saturacion')
+            and value['swap_paginas_s'] < 256, 'saturacion')
 
 
 def health(root, value, now=None):
@@ -136,14 +136,8 @@ def health(root, value, now=None):
     require(not os.path.lexists(path / 'STOP'), 'STOP')
     current = read(path / 'estado.json')
     require(read(path / 'preparacion.json').get('politica_sha256') == digest(value), 'politica_alterada')
-    reference = current.pop('recibo', None)
-    require(isinstance(reference, dict) and set(reference) == {'archivo', 'sha256'}
-            and isinstance(reference['archivo'], str)
-            and Path(reference['archivo']).name == reference['archivo']
-            and reference['archivo'].startswith('recibo-'), 'recibo_invalido')
-    recorded = read(path / reference['archivo'])
-    require(digest(recorded) == reference['sha256'] and recorded == dict(current, evento='muestra'),
-            'estado_alterado')
+    recorded = read_receipt(path, current.pop('recibo', None), changed='estado_alterado')
+    require(recorded == dict(current, evento='muestra'), 'estado_alterado')
     require(current.get('politica_sha256') == digest(value), 'politica_alterada')
     journal = read(path / 'procesos.json')
     require(journal.get('politica_sha256') == digest(value)
@@ -220,17 +214,47 @@ def quota_response(result, now):
 
 
 def read_quota(deadline=None, stop_path=None):
+    end = min(time.time() + 50, deadline if deadline is not None else float('inf'))
+    require(end > time.time(), 'rpc_timeout')
+    argv = subprocess_entry('quota_worker', [str(end), str(stop_path) if stop_path else ''])
+    process = subprocess.Popen(argv, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+    identity = {'pid': process.pid, 'pid_inicio': sessions.process_start(process.pid)}
+    try:
+        output, _ = process.communicate(timeout=max(0, end - time.time()) + 5)
+    finally:
+        try:
+            if process.poll() is None:
+                terminate([identity])
+                process.wait(timeout=5)
+        finally:
+            process.stdout.close()
+    require(process.returncode == 0, 'rpc_sin_drenaje_o_fallido')
+    return quota(json.loads(output), time.time())
+
+
+def quota_worker(deadline, stop):
+    stop_path = Path(stop) if stop else None
+    root = stop_path.parent.parent if stop_path else None
+    tag = digest(policy(root, expired=True)) if root else None
+    with Custody(root, tag) as owner:
+        value = read_quota_rpc(owner, float(deadline), stop_path)
+    print(json.dumps(value), flush=True)
+    return 0
+
+
+def read_quota_rpc(owner, deadline, stop_path):
     """RPC de sólo lectura cotejado con /tmp/onia-read-quota-rpc.py.
 
     Usar directamente el protocolo permite terminar por pidfd+SIGTERM incluso
     cuando vence el ensayo mientras el RPC espera. No ejecutar código de /tmp.
     """
     require(hasattr(os, 'pidfd_open') and hasattr(signal, 'pidfd_send_signal'), 'pidfd_no_disponible')
-    process = subprocess.Popen(['codex', 'app-server', '--listen', 'stdio://'],
+    require(stop_path is None or not os.path.lexists(stop_path), 'STOP')
+    require(not owner.stopping, 'cuota_interrumpida')
+    owner.child = process = subprocess.Popen(['codex', 'app-server', '--listen', 'stdio://'],
                                stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
                                env=sessions.child_environment({'auth_chatgpt': True}))
-    identity = {'pid': process.pid, 'pid_inicio': sessions.process_start(process.pid)}
-    end = min(time.time() + 50, deadline if deadline is not None else float('inf'))
+    end = deadline
     selector = selectors.DefaultSelector()
     selector.register(process.stdout, selectors.EVENT_READ)
     pending = b''
@@ -246,6 +270,7 @@ def read_quota(deadline=None, stop_path=None):
             return None
         while time.time() < end:
             require(stop_path is None or not os.path.lexists(stop_path), 'STOP')
+            require(not owner.stopping, 'cuota_interrumpida')
             if b'\n' not in pending:
                 if not selector.select(min(0.2, max(0, end - time.time()))):
                     continue
@@ -268,12 +293,8 @@ def read_quota(deadline=None, stop_path=None):
         return quota_response(result, time.time())
     finally:
         selector.close()
-        try:
-            terminate(process_tree([identity]))
-            process.wait(timeout=5)
-        finally:
-            process.stdin.close()
-            process.stdout.close()
+        process.stdin.close()
+        process.stdout.close()
 
 
 def counters():
@@ -422,24 +443,24 @@ def custody_identity(record, tag):
 
 
 class Custody:
-    """Dedicated subreaper for one model process and its descendants."""
+    """Dedicated subreaper for one executable and its descendants."""
 
     def __init__(self, root, tag):
-        self.root = root
         self.identity = custody_identity(
             {'pid': os.getpid(), 'pid_inicio': sessions.process_start(os.getpid())}, tag)
-        self.path = custody_path(root, self.identity)
+        self.path = custody_path(root, self.identity) if root else None
         self.child = None
         self.stopping = False
 
     def __enter__(self):
-        require(not os.path.lexists(self.path), 'custodia_existente')
+        require(self.path is None or not os.path.lexists(self.path), 'custodia_existente')
         # PR_SET_CHILD_SUBREAPER: even a double fork or setsid reparents here.
         libc = ctypes.CDLL(None, use_errno=True)
         if libc.prctl(36, 1, 0, 0, 0) != 0:
             raise OSError(ctypes.get_errno(), 'PR_SET_CHILD_SUBREAPER')
         signal.signal(signal.SIGTERM, self.request_stop)
-        private.private_write(self.path, dict(self.identity, estado='pendiente'))
+        if self.path is not None:
+            private.private_write(self.path, dict(self.identity, estado='pendiente'))
         return self
 
     def request_stop(self, _signum, _frame):
@@ -449,8 +470,9 @@ class Custody:
         try:
             self.drain()
         except Exception:
-            private.private_write(directory(self.root) / 'STOP',
-                                  {'motivo': 'custodia_sin_cierre', 'fecha': time.time()})
+            if self.path is not None:
+                private.private_write(self.path.parent / 'STOP',
+                                      {'motivo': 'custodia_sin_cierre', 'fecha': time.time()})
             raise
 
     def drain(self):
@@ -462,7 +484,9 @@ class Custody:
                 try:
                     pid, _status = os.waitpid(-1, os.WNOHANG | WAIT_ALL)
                 except ChildProcessError:
-                    private.private_write(self.path, dict(self.identity, estado='drenada'))
+                    if self.path is not None:
+                        reference = receipt(self.path.parent, dict(self.identity, evento='custodia_echild'))
+                        private.private_write(self.path, dict(self.identity, estado='drenada', recibo=reference))
                     return
                 if pid:
                     continue
@@ -495,18 +519,23 @@ def run_in_custody(root, base, ident, tag, argv, gate_read=None):
         return 143 if owner.stopping else owner.child.returncode
 
 
+def subprocess_entry(function, args):
+    bootstrap = """import sys
+sys.path.insert(0, sys.argv[1])
+import harness_ensayo
+sys.exit(getattr(harness_ensayo, sys.argv[2])(*sys.argv[3:]))
+"""
+    return [sys.executable, '-B', '-c', bootstrap, str(Path(__file__).resolve().parent), function, *args]
+
+
+def custody_worker(root, base, ident, tag, gate, *argv):
+    return run_in_custody(Path(root), Path(base), ident, tag, argv, int(gate) if gate else None)
+
+
 def custody_command(root, base, ident, tag, argv, gate_read=None):
     # Establish custody before waiting for the existing PID registration gate.
-    bootstrap = """import sys
-from pathlib import Path
-sys.path.insert(0, sys.argv[1])
-from harness_ensayo import run_in_custody
-root, base, ident, tag, gate = sys.argv[2:7]
-sys.exit(run_in_custody(Path(root), Path(base), ident, tag, sys.argv[7:],
-                        int(gate) if gate else None))
-"""
-    return [sys.executable, '-B', '-c', bootstrap, str(Path(__file__).resolve().parent),
-            str(root), str(base), ident, tag, '' if gate_read is None else str(gate_read), *argv]
+    return subprocess_entry('custody_worker',
+                            [str(root), str(base), ident, tag, '' if gate_read is None else str(gate_read), *argv])
 
 
 def pending_custodies(root, value, rows):
@@ -540,8 +569,11 @@ def pending_custodies(root, value, rows):
                 record.get('estado') in {'pendiente', 'drenada'}, 'custodia_alterada')
         key = digest(identity)
         if record['estado'] == 'drenada':
+            require(read_receipt(path.parent, record.get('recibo')) ==
+                    dict(identity, evento='custodia_echild'), 'custodia_alterada')
             expected.pop(key, None)
         else:
+            require(set(record) == set(identity) | {'estado'}, 'custodia_alterada')
             expected[key] = identity
     return list(expected.values())
 
@@ -570,6 +602,16 @@ def receipt(path, event):
     return {'archivo': name, 'sha256': digest(event)}
 
 
+def read_receipt(path, reference, *, changed='recibo_alterado'):
+    require(isinstance(reference, dict) and set(reference) == {'archivo', 'sha256'}
+            and isinstance(reference['archivo'], str)
+            and Path(reference['archivo']).name == reference['archivo']
+            and reference['archivo'].startswith('recibo-'), 'recibo_invalido')
+    recorded = read(path / reference['archivo'])
+    require(digest(recorded) == reference['sha256'], changed)
+    return recorded
+
+
 def stop(root, reason='fin_operador', trusted=None):
     path = directory(root)
     # STOP no espera a Git ni al lock global. Lee snapshots atómicos; no modifica el registro del harness.
@@ -589,19 +631,14 @@ def stop(root, reason='fin_operador', trusted=None):
         require(journal.get('politica_sha256') == digest(value), 'inventario_alterado')
         state = read(path / 'estado.json')
         require(state.get('procesos_sha256') == digest(journal), 'inventario_alterado')
-        reference = state.pop('recibo', None)
-        require(isinstance(reference, dict) and set(reference) == {'archivo', 'sha256'}
-                and isinstance(reference['archivo'], str)
-                and Path(reference['archivo']).name == reference['archivo']
-                and reference['archivo'].startswith('recibo-'), 'recibo_invalido')
-        recorded = read(path / reference['archivo'])
-        require(digest(recorded) == reference['sha256']
-                and recorded == dict(state, evento='muestra')
+        recorded = read_receipt(path, state.pop('recibo', None), changed='estado_alterado')
+        require(recorded == dict(state, evento='muestra')
                 and state.get('politica_sha256') == digest(value), 'estado_alterado')
-    items = (trusted or []) + journal.get('procesos', []) + process_tree(owned)
+    pending = pending_custodies(root, value, rows)
+    items = (trusted or []) + journal.get('procesos', []) + process_tree(owned + pending)
     # A bootstrap without a receipt has not yet been able to start its model.
     # Let it observe STOP and record the empty drain instead of killing it early.
-    starting = {(i['pid'], i['pid_inicio']) for i in pending_custodies(root, value, rows)
+    starting = {(i['pid'], i['pid_inicio']) for i in pending
                 if not os.path.lexists(custody_path(root, i))}
     unique = {(item['pid'], item['pid_inicio']): item for item in items
               if (item['pid'], item['pid_inicio']) not in starting}
@@ -611,16 +648,14 @@ def stop(root, reason='fin_operador', trusted=None):
     receipt(path, {'evento': 'SIGTERM', 'motivo': reason, 'fecha': time.time(),
                    'enviados': sent, 'omitidos': skipped})
     deadline = time.monotonic() + 5
-    pending_members = owned
-    while (any(sessions.process_start(i['pid']) == i['pid_inicio'] for i in unique.values())
-           or pending_members):
-        if time.monotonic() >= deadline:
+    while True:
+        rows, _, pending_members = inventory(root, value)
+        unverified = pending_custodies(root, value, rows)
+        remaining = [i for i in unique.values() if sessions.process_start(i['pid']) == i['pid_inicio']]
+        custody_alive = any(sessions.process_start(i['pid']) == i['pid_inicio'] for i in unverified)
+        if not (remaining or pending_members or custody_alive) or time.monotonic() >= deadline:
             break
         time.sleep(0.1)
-        _, _, pending_members = inventory(root, value)
-    remaining = [i for i in unique.values() if sessions.process_start(i['pid']) == i['pid_inicio']]
-    rows, _, pending_members = inventory(root, value)
-    unverified = pending_custodies(root, value, rows)
     result = {'estado': 'bloqueado' if remaining or pending_members or unverified else 'parado',
               'fecha': time.time(), 'custodias_sin_cierre': unverified,
               'pendientes': remaining, 'reservas_pendientes': len(pending_members),
