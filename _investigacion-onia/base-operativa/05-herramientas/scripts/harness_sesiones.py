@@ -256,6 +256,11 @@ def active_questions(root):
         for key in ('pid', 'supervisor_pid'):
             if slot.get(key) is not None and (type(slot[key]) is not int or slot[key] <= 0):
                 raise ValueError('PID de pregunta inválido; conservar y conciliar.')
+        if slot['estado'] == 'respondiendo' and time.time() >= slot['vence']:
+            if not any(type(slot.get(pid)) is int and isinstance(slot.get(start), str)
+                       and bool(slot[start]) for pid, start in
+                       [('pid', 'pid_inicio'), ('supervisor_pid', 'supervisor_inicio')]):
+                raise ValueError('Slot de pregunta vencido sin identidad; conservar y conciliar.')
         if slot.get('estado') == 'respondiendo' and (alive(slot) or question_group_alive(slot) or time.time() < slot['vence']):
             active.append((path.stem, slot))
     return active

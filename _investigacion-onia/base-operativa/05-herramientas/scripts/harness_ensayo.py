@@ -2,6 +2,7 @@
 
 No lanza sesiones. Las admisiones siguen pasando por harness_sesiones.
 """
+from contextlib import contextmanager, ExitStack
 import argparse
 import hashlib
 import json
@@ -422,40 +423,39 @@ def receipt(path, event):
 
 def stop(root, reason='fin_operador', trusted=None):
     path = directory(root)
-    # STOP precede cualquier lectura de estado y cualquier señal.
-    with sessions.registry_lock(root):
-        private.private_write(path / 'STOP', {'motivo': reason, 'fecha': time.time()})
-        value = policy(root, expired=True)
-        preparation = read(path / 'preparacion.json')
-        require(preparation.get('politica_sha256') == digest(value), 'politica_alterada')
-        _, _, owned = inventory(root, value)
-        has_journal = os.path.lexists(path / 'procesos.json')
-        has_state = os.path.lexists(path / 'estado.json')
-        require(has_journal == has_state, 'inventario_incompleto')
-        if not has_journal:
-            require(not any(read(p).get('evento') == 'muestra'
-                            for p in path.glob('recibo-*.json')), 'inventario_perdido')
-        journal = read(path / 'procesos.json') if has_journal else {}
-        if has_journal:
-            require(journal.get('politica_sha256') == digest(value), 'inventario_alterado')
-            state = read(path / 'estado.json')
-            require(state.get('procesos_sha256') == digest(journal), 'inventario_alterado')
-            reference = state.pop('recibo', None)
-            require(isinstance(reference, dict) and set(reference) == {'archivo', 'sha256'}
-                    and isinstance(reference['archivo'], str)
-                    and Path(reference['archivo']).name == reference['archivo']
-                    and reference['archivo'].startswith('recibo-'), 'recibo_invalido')
-            recorded = read(path / reference['archivo'])
-            require(digest(recorded) == reference['sha256']
-                    and recorded == dict(state, evento='muestra')
-                    and state.get('politica_sha256') == digest(value), 'estado_alterado')
-        items = (trusted or []) + journal.get('procesos', []) + process_tree(owned)
-        unique = {(item['pid'], item['pid_inicio']): item for item in items}
-        receipt(path, {'evento': 'intencion_SIGTERM', 'motivo': reason, 'fecha': time.time(),
-                       'procesos': list(unique.values())})
-        sent, skipped = terminate(list(unique.values()))
-        receipt(path, {'evento': 'SIGTERM', 'motivo': reason, 'fecha': time.time(),
-                       'enviados': sent, 'omitidos': skipped})
+    # STOP no espera a Git ni al lock global. Lee snapshots atómicos; no modifica el registro del harness.
+    private.private_write(path / 'STOP', {'motivo': reason, 'fecha': time.time()})
+    value = policy(root, expired=True)
+    preparation = read(path / 'preparacion.json')
+    require(preparation.get('politica_sha256') == digest(value), 'politica_alterada')
+    _, _, owned = inventory(root, value)
+    has_journal = os.path.lexists(path / 'procesos.json')
+    has_state = os.path.lexists(path / 'estado.json')
+    require(has_journal == has_state, 'inventario_incompleto')
+    if not has_journal:
+        require(not any(read(p).get('evento') == 'muestra'
+                        for p in path.glob('recibo-*.json')), 'inventario_perdido')
+    journal = read(path / 'procesos.json') if has_journal else {}
+    if has_journal:
+        require(journal.get('politica_sha256') == digest(value), 'inventario_alterado')
+        state = read(path / 'estado.json')
+        require(state.get('procesos_sha256') == digest(journal), 'inventario_alterado')
+        reference = state.pop('recibo', None)
+        require(isinstance(reference, dict) and set(reference) == {'archivo', 'sha256'}
+                and isinstance(reference['archivo'], str)
+                and Path(reference['archivo']).name == reference['archivo']
+                and reference['archivo'].startswith('recibo-'), 'recibo_invalido')
+        recorded = read(path / reference['archivo'])
+        require(digest(recorded) == reference['sha256']
+                and recorded == dict(state, evento='muestra')
+                and state.get('politica_sha256') == digest(value), 'estado_alterado')
+    items = (trusted or []) + journal.get('procesos', []) + process_tree(owned)
+    unique = {(item['pid'], item['pid_inicio']): item for item in items}
+    receipt(path, {'evento': 'intencion_SIGTERM', 'motivo': reason, 'fecha': time.time(),
+                   'procesos': list(unique.values())})
+    sent, skipped = terminate(list(unique.values()))
+    receipt(path, {'evento': 'SIGTERM', 'motivo': reason, 'fecha': time.time(),
+                   'enviados': sent, 'omitidos': skipped})
     deadline = time.monotonic() + 5
     pending_members = owned
     while (any(sessions.process_start(i['pid']) == i['pid_inicio'] for i in unique.values())
@@ -463,8 +463,7 @@ def stop(root, reason='fin_operador', trusted=None):
         if time.monotonic() >= deadline:
             break
         time.sleep(0.1)
-        with sessions.registry_lock(root):
-            _, _, pending_members = inventory(root, value)
+        _, _, pending_members = inventory(root, value)
     remaining = [i for i in unique.values() if sessions.process_start(i['pid']) == i['pid_inicio']]
     result = {'estado': 'bloqueado' if remaining or pending_members else 'parado', 'fecha': time.time(),
               'pendientes': remaining, 'reservas_pendientes': len(pending_members),
@@ -472,6 +471,23 @@ def stop(root, reason='fin_operador', trusted=None):
     private.private_write(path / 'fin.json', result)
     return {'estado': result['estado'], 'SIGTERM': len(sent), 'pendientes': len(remaining),
             'reservas_pendientes': len(pending_members)}
+
+
+@contextmanager
+def monitor_registry(root, expires):
+    end = time.monotonic() + 5
+    with ExitStack() as stack:
+        while True:
+            require(time.time() < expires and time.monotonic() < end, 'registro_ocupado_o_vencido')
+            require(not os.path.lexists(Path(root) / DIRECTORY / 'STOP'), 'STOP')
+            try:
+                stack.enter_context(sessions.registry_lock(root, nonblocking=True))
+                break
+            except ValueError as exc:
+                if not str(exc).startswith('Registro ocupado'):
+                    raise
+                time.sleep(0.05)
+        yield
 
 
 def monitor(root):
@@ -494,7 +510,7 @@ def monitor(root):
                 now = time.time()
                 quota_budget(value['cuota_inicial'], current_quota, now)
                 resources(sample, now)
-                with sessions.registry_lock(root):
+                with monitor_registry(root, value['vence']):
                     require(not os.path.lexists(path / 'STOP'), 'STOP')
                     require(digest(policy(root)) == digest(value), 'politica_alterada')
                     if published:

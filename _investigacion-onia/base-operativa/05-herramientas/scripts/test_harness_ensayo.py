@@ -336,6 +336,30 @@ class TrialTests(unittest.TestCase):
         self.assertTrue((self.path / 'STOP').exists())
         self.assertFalse((self.path / 'fin.json').exists())
 
+    def test_monitor_registry_wait_is_bounded(self):
+        with patch.object(sessions, 'registry_lock', side_effect=ValueError('Registro ocupado')) as lock, \
+                patch.object(trial.time, 'monotonic', side_effect=[0, 0, 6]), \
+                patch.object(trial.time, 'sleep'):
+            with self.assertRaisesRegex(ValueError, 'registro_ocupado_o_vencido'):
+                with trial.monitor_registry(self.op, time.time() + 30):
+                    self.fail('No debe entrar al lock ocupado')
+            lock.assert_called_once_with(self.op, nonblocking=True)
+
+    def test_stop_busy_registry_writes_stop_without_waiting(self):
+        with patch.object(sessions, 'registry_lock', side_effect=ValueError('Registro ocupado')) as lock, \
+                patch.object(trial, 'inventory', return_value=([], [], [])), \
+                patch.object(trial, 'terminate', return_value=([], [])):
+            self.assertEqual(trial.stop(self.op)['estado'], 'parado')
+            lock.assert_not_called()
+        self.assertTrue((self.path / 'STOP').exists())
+
+
+    def test_expired_question_without_identity_never_frees_capacity(self):
+        private.private_write(self.op / 'preguntas-slots/tres.json',
+                              {'estado': 'respondiendo', 'vence': time.time() - 1})
+        with self.assertRaisesRegex(ValueError, 'vencido sin identidad'):
+            self.capacity(self.rows(3))
+
     def test_stop_corrupt_inventory_sends_no_signal(self):
         private.private_write(self.path / 'procesos.json', {'politica_sha256': self.tag, 'procesos': [{'pid': 0}]})
         with patch.object(trial, 'inventory', return_value=([], [], [])), \
