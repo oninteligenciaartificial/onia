@@ -1,0 +1,42 @@
+{
+  "schema": 2,
+  "id": "ensayo-cuatro-e-20261112",
+  "revision": 2,
+  "compartible": true,
+  "objetivo": "Verificar la suite de preguntas durante ensayo de concurrencia.",
+  "estado": "preparado",
+  "proximo_paso": "Correr suite y documentar salida.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-12T02:07:47.819130+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-12T02:07:47.549393+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Correr suite y documentar salida.",
+      "aceptacion": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/ensayo-cuatro-e-20261112.md",
+    "sha256": "96ccd4349e4f1fb14dd732cfb8dc2da1782b761e4ac45063911897fbfefc8ea8",
+    "bytes": 648,
+    "contenido": "# ensayo-cuatro-e-20261112\nEjecutar una vez la suite existente de preguntas como trabajo independiente del ensayo:\npython3 -I -B -m unittest discover -s _investigacion-onia/base-operativa/05-herramientas/scripts -p test_harness_preguntas.py -v\nLeer AGENTS y reglas de ONIA. Escribir sólo INFORME.md y salida.txt en 04-operacion-agentes/homelab/ensayo-cuatro-20261112/e, con comando, commit, cantidad de pruebas y límites. Conservar fallos sin modificar implementación. No lanzar otras sesiones ni tocar servicios, PC o Meta. Sol high, cero hijos. Commit y push de la rama asignada. Entregar cuando termine la suite, sin esperar artificialmente.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "ejecutor-cuatro-e",
+    "rutas": [
+      "04-operacion-agentes/homelab/ensayo-cuatro-20261112/e"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-12T02:07:47.819113+00:00"
+  }
+}
