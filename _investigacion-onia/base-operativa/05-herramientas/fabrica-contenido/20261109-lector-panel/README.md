@@ -1,5 +1,11 @@
 # Lector manual y panel de consulta de la fábrica
 
+## Entregables del workshop
+
+En el servidor con acceso privado configurado, `/` y `/#hoy` abren los accesos de guiones, montaje, WhatsApp y carrusel. Los guiones históricos conservan fecha y estado editorial. El flujo programado y las revisiones siguen en Fábricas y Correcciones. Las muestras de montaje y la conversación de WhatsApp usan datos de ensayo.
+
+El operador coloca archivos verificados en `entregas` dentro de `--datos`, en el mismo usuario del servicio y sin escritura de grupo/otros. Nombres admitidos: `montaje-vertical.mp4`, `montaje-horizontal.mp4`, `whatsapp-demo.txt` y `guiones-hoy.md` en UTF-8, `whatsapp-workflow.json` con `"active": false`, `guiones.zip` y `carrusel.zip`. Instalar por reemplazo atómico. Los archivos ausentes no generan un enlace. Los ZIP y el JSON se descargan, el MP4 admite un rango y el texto se muestra escapado. No se admiten rutas proporcionadas por el visitante, symlinks, archivos fuera de tamaño ni acceso sin autenticar.
+
 ## Cerebro, correcciones y estrategias
 
 La [GUIA-CEREBRO](GUIA-CEREBRO.md) contiene el recorrido actual, aplicación a versiones locales pendientes, contrato de estrategias y preparación del acceso privado. Abrir el [preview de esta retoma](evidencia/correccion-cerebro-20261111/preview/panel.html). Las secciones siguientes conservan las entregas anteriores.

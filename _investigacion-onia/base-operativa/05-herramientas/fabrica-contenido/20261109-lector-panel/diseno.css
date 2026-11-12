@@ -449,6 +449,44 @@ p+p {
 .main-content>.screen:target,.main-content>.screen:has(:target) {
   display:block
 }
+.panel-entregas:not(:has(:target)) #fabricas {
+  display:none
+}
+.panel-entregas:not(:has(:target)) #hoy {
+  display:block
+}
+.panel-entregas:not(:has(:target)) .nav-fabricas {
+  background:transparent;
+  font-weight:400
+}
+.panel-entregas:not(:has(:target)) .nav-hoy {
+  background:#f6e9cf;
+  font-weight:700
+}
+.panel-entregas:not(:has(:target)) .work-grid,body:has(#hoy:target,#montaje:target) .work-grid {
+  grid-template-columns:minmax(0,1fr)
+}
+.panel-entregas:not(:has(:target)) .inspector,body:has(#hoy:target,#montaje:target) .inspector {
+  display:none
+}
+.delivery-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,275px),1fr));
+  gap:14px;
+  margin:16px 0
+}
+.delivery-grid>.info-card {
+  margin:0
+}
+.delivery-actions {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px 14px
+}
+.delivery-actions>.button {
+  margin:0
+}
 .factory-details {
   display:none;
   margin-top:24px

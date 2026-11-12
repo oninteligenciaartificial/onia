@@ -191,6 +191,50 @@ def classes(operation):
     <p class="class-workshop">Claude de 0 a 100: tu negocio con IA<small>Hora de La Paz</small></p><div class="class-times">{times}</div></div>'''
 
 
+def delivery_links(available, entries):
+    return ''.join(f'<a class="button" href="/entrega?id={key}">{e(label)}</a>'
+                   for key, label in entries if key in available)
+
+
+def montage_files(available):
+    links = delivery_links(available, [('montaje-vertical', 'Abrir MP4 vertical'),
+                                       ('montaje-horizontal', 'Abrir MP4 horizontal')])
+    if not links:
+        return '<p>Las muestras todavía no están en esta instalación.</p>'
+    return '<p>Muestra generada con material de ensayo. La grabación de Sergio sigue pendiente.</p><div class="delivery-actions">' + links + '</div>'
+
+
+def today_deliveries(snapshot, operation, day):
+    available = operation.get('entregas', set())
+    scripts = snapshot.get('guiones', [])
+    batch_date = snapshot.get('fecha_tanda')
+    if scripts:
+        label = f'{len(scripts)} guiones · {e(batch_date or "fecha pendiente")}'
+        if batch_date and batch_date != day:
+            label = 'Tanda de respaldo · ' + label + '. La tanda automática de hoy sigue pendiente'
+        label = f'<p>{label}. Revisión editorial pendiente.</p>'
+        guiones = ''.join(f'<a class="secondary-link" href="#guion-{e(g["id"])}">{e(g["id"])}</a>' for g in scripts)
+    else:
+        label, guiones = '<p>Tanda pendiente de reconciliar.</p>', ''
+    guiones = delivery_links(available, [('guiones-hoy', 'Abrir tanda manual del 12 nov')]) + guiones
+    guiones += delivery_links(available, [('guiones', 'Descargar guiones de respaldo')])
+    whatsapp = delivery_links(available, [('whatsapp-demo', 'Ver conversación de prueba'),
+                                          ('whatsapp-workflow', 'Descargar workflow inactivo')])
+    content = delivery_links(available, [('carrusel', 'Descargar láminas y copy')])
+    if not content:
+        content = '<a class="secondary-link" href="https://github.com/oninteligenciaartificial/onia/tree/731bdd3/_investigacion-onia/base-operativa/01-negocio/workshop-20261108/contenido-publicable-20261112">Abrir láminas y copy en el repositorio</a>'
+    return f'''<h1>Entregables del workshop</h1>
+    <div class="delivery-grid">
+      <article class="info-card"><h2>Guiones</h2>{label}<div class="delivery-actions">{guiones}</div></article>
+      <article class="info-card"><h2>Montaje</h2>{montage_files(available)}</article>
+      <article class="info-card"><h2>WhatsApp y n8n</h2><p>Ensayo aislado con datos ficticios y cero envíos.
+      La conexión en n8n real sigue pendiente.</p><div class="delivery-actions">{whatsapp}</div>
+      <a class="secondary-link" href="#detalle-whatsapp">Ver el recorrido y el bloqueo</a></article>
+      <article class="info-card"><h2>Carrusel</h2><p>Cinco láminas con copy y texto alternativo.</p>
+      <div class="delivery-actions">{content}</div></article>
+    </div>'''
+
+
 def render(snapshot, operation, session=None):
     generated = datetime.fromisoformat(operation['generado']).astimezone(ZoneInfo('America/La_Paz'))
     weekdays = ('Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo')
@@ -223,17 +267,14 @@ def render(snapshot, operation, session=None):
     daily_script = '<script>' + diario.script() + '</script>' if script_hash else ''
     html = f'''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="referrer" content="same-origin"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; font-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action '{'self' if session else 'none'}'{script_policy}">
-    <title>ONIA · Fábricas y revisión</title><style>{styles()}</style></head><body>
-    <header class="topbar"><a class="brand" href="#fabricas"><strong>ONIA</strong><span class="slash">/</span><span>Fábricas</span></a>
+    <title>ONIA · Fábricas y revisión</title><style>{styles()}</style></head><body{' class="panel-entregas"' if 'entregas' in operation else ''}>
+    <header class="topbar"><a class="brand" href="#hoy"><strong>ONIA</strong><span class="slash">/</span><span>Fábricas</span></a>
     <time class="snapshot-date" datetime="{e(operation['generado'])}">{e(date_label)}</time><span class="context-label">Consulta local · fuentes fechadas</span></header>
     <div class="app-layout"><aside class="sidebar"><nav aria-label="Secciones">{navigation}</nav></aside>
     <main class="workspace">{saved}{errors}<div class="work-grid"><div class="main-content">
     <section class="screen" id="fabricas">{title}{daily_html}{factory_rows(operation)}{factory_details(operation, session)}</section>
-    <section class="screen" id="hoy"><h1>Hoy</h1><p class="subtitle">Preparar la revisión del workshop</p>
-    <article class="info-card"><h3>Tanda en consulta</h3><p>{len(snapshot.get('guiones', []))} borradores para revisar</p>{historical}
-    <a class="button" href="#guiones">Abrir guiones {icon('chevron-right')}</a></article>
-    <article class="info-card"><h3>Decisiones y pendientes</h3><p>QR y seguimiento. Sergio confirma cada pago.</p>
-    <a class="secondary-link" href="#pendientes">Ver entregas y bloqueos</a></article></section>
+    <section class="screen" id="hoy">{today_deliveries(snapshot, operation, generated.date().isoformat())}
+    <a class="secondary-link" href="#pendientes">Ver bloqueos y revisiones</a></section>
     <section class="screen" id="guiones"><h1>Guiones en revisión</h1><p class="subtitle">Texto, fuentes y correcciones locales</p>{historical}
     {script_cards(snapshot, operation, session)}<a class="secondary-link" href="#fabricas">{icon('arrow-left')}Volver a fábricas</a></section>
     <section class="screen" id="calendario"><h1>Calendario</h1><p class="subtitle">Workshop · America/La_Paz</p>
@@ -246,9 +287,8 @@ def render(snapshot, operation, session=None):
     <section class="screen" id="estrategias"><h1>Estrategias</h1><p class="subtitle">Estrategia actual y propuestas futuras</p>{vistas_cerebro.strategies(operation, session)}</section>
     <section class="screen" id="capacidades"><h1>Anuncios, VSL, IA y canales</h1>{vistas_cerebro.capabilities(operation)}</section>
     <section class="screen" id="correcciones"><h1>Correcciones y versiones</h1>{vistas_cerebro.corrections(operation, session)}</section>
-    <section class="screen" id="montaje"><h1>Sala de montaje</h1><p class="subtitle">Preparación y requisitos de edición</p>
-    <article class="info-card"><h3>Recorrido audiovisual pendiente</h3><p>Falta conectar la grabación y los resultados del editor a esta vista.</p>
-    <p>La revisión de audio, encuadre y variantes horizontal/vertical corresponde a los siguientes pasos.</p>
+    <section class="screen" id="montaje"><h1>Sala de montaje</h1>
+    <article class="info-card"><h2>Cortes de muestra</h2>{montage_files(operation.get('entregas', set()))}
     <a class="button" href="#detalle-edicion">Ver pasos de edición {icon('chevron-right')}</a></article></section>
     <section class="screen" id="fuentes"><h1>Fuentes</h1><article class="info-card"><p>La procedencia de cada guion está en su texto y sus detalles de versión.</p>
     <a class="button" href="#guiones">Abrir textos y fuentes</a>{provenance('<p>' + e(operation.get('tanda_ruta', 'Paquete pendiente')) + '</p>')}</article></section>

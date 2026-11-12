@@ -229,14 +229,15 @@ class PrivateAccessTests(unittest.TestCase):
         self.thread.join(timeout=5)
         self.http.server_close()
 
-    def request(self,path='/',auth=True,host='panel.example.invalid',extra=None):
+    def request(self,path='/',auth=True,host='panel.example.invalid',extra=None,binary=False):
         headers={'Host':host}
         if auth:headers['Authorization']=self.authorization
         headers.update(extra or {})
         conn=http.client.HTTPConnection('127.0.0.1',self.http.server_port,timeout=10)
         conn.request('GET',path,headers=headers)
         response=conn.getresponse()
-        result=response.status,response.read().decode()
+        body=response.read()
+        result=response.status,body if binary else body.decode()
         conn.close()
         return result
 
@@ -249,6 +250,41 @@ class PrivateAccessTests(unittest.TestCase):
         self.assertNotIn(self.password,self.request()[1])
         self.assertEqual(self.request('/solicitud?id=unknown',auth=False)[0],401)
         self.assertEqual(self.request('/documento?id=unknown',auth=False)[0],401)
+
+    def test_delivery_routes_guarded_and_montage_range(self):
+        folder=self.app.reviews.path.parent/'entregas'
+        folder.mkdir(mode=0o700)
+        vertical=folder/'montaje-vertical.mp4'
+        vertical.write_bytes(b'abcdefgh')
+        (folder/'montaje-horizontal.mp4').symlink_to(vertical)
+        (folder/'whatsapp-demo.txt').write_text('<script>alert(1)</script>')
+        (folder/'whatsapp-workflow.json').write_text('{"active":true}')
+        (folder/'guiones-hoy.md').write_text('# Cinco borradores')
+        for path in folder.iterdir():
+            if not path.is_symlink():
+                path.chmod(0o600)
+        status, home = self.request()
+        self.assertEqual(status, 200)
+        self.assertIn('class="panel-entregas"', home)
+        self.assertIn('/entrega?id=montaje-vertical', home, 'Video ausente de la portada')
+        self.assertIn('/entrega?id=guiones-hoy', home)
+        self.assertNotIn('/entrega?id=montaje-horizontal', home)
+        self.assertNotIn('/entrega?id=whatsapp-workflow', home)
+        self.assertEqual(self.request('/entrega?id=montaje-vertical',auth=False)[0],401)
+        self.assertEqual(self.request('/entrega?id=montaje-vertical',host='evil.invalid')[0],403)
+        self.assertEqual(self.request('/entrega?id=montaje-vertical',extra={'Range':'bytes=1-3'},binary=True),(206,b'bcd'))
+        self.assertEqual(self.request('/entrega?id=montaje-vertical',extra={'Range':'bytes=8-'},binary=True),(416,b''))
+        self.assertEqual(self.request('/entrega?id=montaje-horizontal')[0],404)
+        self.assertEqual(self.request('/entrega?id=../acceso.json')[0],404)
+        self.assertEqual(self.request('/entrega?id=montaje-vertical&id=montaje-vertical')[0],404)
+        self.assertEqual(self.request('/entrega?id=whatsapp-workflow')[0],404)
+        (folder/'whatsapp-workflow.json').write_text('{"active":false}')
+        self.assertEqual(self.request('/entrega?id=whatsapp-workflow'),(200,'{"active":false}'))
+        self.assertIn('&lt;script&gt;',self.request('/entrega?id=whatsapp-demo')[1])
+        self.assertIn('# Cinco borradores',self.request('/entrega?id=guiones-hoy')[1])
+        folder.rename(folder.with_name('fuera'))
+        folder.symlink_to(folder.with_name('fuera'),target_is_directory=True)
+        self.assertEqual(self.request('/entrega?id=whatsapp-demo')[0],404)
 
     def test_credential_permissions_symlinks_and_http_origin_rejected(self):
         os.chmod(self.config,0o644)

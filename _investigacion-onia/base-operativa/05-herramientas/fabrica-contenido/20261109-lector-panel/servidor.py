@@ -16,6 +16,7 @@ import panel
 import cerebro
 import correcciones
 import acceso
+import entregas
 
 
 class Application:
@@ -48,6 +49,8 @@ class Application:
         if daily:
             diario.attach(model, daily)
         model['daily_stale'] = self.daily_stale
+        if self.access:
+            model['entregas'] = entregas.available(self.reviews.path.parent)
         cerebro.attach(model)
         self.corrections.attach(model)
         model['histories'] = {}
@@ -149,6 +152,75 @@ def handler_for(app):
         def authenticated(self):
             return not app.access or app.access.authenticated(self.headers.get('Authorization'))
 
+        def delivery(self, query):
+            if not app.access:
+                return self.send(403, 'Entrega disponible con acceso privado configurado')
+            if set(query) != {'id'} or len(query['id']) != 1 or query['id'][0] not in entregas.FILES:
+                return self.send(404, 'Entrega desconocida')
+            key = query['id'][0]
+            try:
+                with entregas.opened(app.reviews.path.parent, key) as (source, size, name, mime):
+                    if mime == 'text/plain':
+                        raw = source.read(size + 1)
+                        operacion.require(len(raw) == size, 'Entrega cambió')
+                        title = 'Ensayo de WhatsApp' if key == 'whatsapp-demo' else 'Tanda manual del 12 nov'
+                        scope = ('Datos ficticios. Despacho y envíos desactivados.' if key == 'whatsapp-demo'
+                                 else 'Tanda manual. Borradores para revisión editorial.')
+                        body = ('<!doctype html><html lang="es"><meta charset="utf-8">'
+                                '<meta name="viewport" content="width=device-width,initial-scale=1">'
+                                f'<title>{title}</title><style>body{{font:16px/1.6 system-ui;max-width:850px;'
+                                'margin:20px auto;padding:16px}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style>'
+                                f'<a href="/#hoy">Volver a entregables</a><h1>{title}</h1>'
+                                f'<p>{scope}</p><pre>'
+                                + panel.e(raw.decode('utf-8')) + '</pre></html>')
+                        return self.send(200, body)
+                    return self.delivery_file(source, size, name, mime)
+            except (OSError, ValueError, RecursionError):
+                return self.send(404, 'Entrega no disponible')
+
+        def delivery_file(self, source, size, name, mime):
+            media = mime == 'video/mp4'
+            requested = self.headers.get_all('Range')
+            partial = media and requested is not None
+            start, end = 0, size - 1
+            if partial:
+                try:
+                    if len(requested) != 1:
+                        raise ValueError('Se admite un rango')
+                    start, end = entregas.byte_range(requested[0], size)
+                except ValueError:
+                    self.send_response(416)
+                    self.send_header('Content-Range', f'bytes */{size}')
+                    self.send_header('Cache-Control', 'no-store')
+                    self.send_header('Content-Length', '0')
+                    self.end_headers()
+                    return
+            remaining = end - start + 1
+            try:
+                self.connection.settimeout(10)
+                self.send_response(206 if partial else 200)
+                self.send_header('Content-Type', mime)
+                self.send_header('Content-Length', str(remaining))
+                self.send_header('Cache-Control', 'no-store')
+                self.send_header('X-Content-Type-Options', 'nosniff')
+                media_policy = "; media-src 'self'" if media else ''
+                self.send_header('Content-Security-Policy', "default-src 'none'; frame-ancestors 'none'" + media_policy)
+                self.send_header('Content-Disposition', f'{"inline" if media else "attachment"}; filename="{name}"')
+                if media:
+                    self.send_header('Accept-Ranges', 'bytes')
+                if partial:
+                    self.send_header('Content-Range', f'bytes {start}-{end}/{size}')
+                self.end_headers()
+                source.seek(start)
+                while remaining:
+                    chunk = source.read(min(remaining, 64 * 1024))
+                    if not chunk:
+                        break
+                    self.wfile.write(chunk)
+                    remaining -= len(chunk)
+            except OSError:
+                self.close_connection = True
+
         def do_GET(self):
             if not self.local_request():
                 return self.send(403, 'Host local inválido')
@@ -158,6 +230,8 @@ def handler_for(app):
                 route = urlsplit(self.path)
                 operacion.require(not route.scheme and not route.netloc, 'Ruta inválida')
                 query = parse_qs(route.query, keep_blank_values=True, max_num_fields=8, errors='strict')
+                if route.path == '/entrega':
+                    return self.delivery(query)
                 if route.path in ('/version','/solicitud'):
                     operacion.require(set(query) == {'id'} and len(query['id']) == 1, 'Identificador inválido')
                     if route.path == '/solicitud':
