@@ -1,0 +1,42 @@
+{
+  "schema": 2,
+  "id": "workshop-arranque-venta-20261111",
+  "revision": 2,
+  "compartible": true,
+  "objetivo": "Preparar arranque comercial accionable hasta el 14 con las piezas existentes.",
+  "estado": "preparado",
+  "proximo_paso": "Despachar tras comprobar tres cupos y delegación.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-12T02:12:39.542122+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-12T02:12:39.295615+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Despachar tras comprobar tres cupos y delegación.",
+      "aceptacion": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/workshop-arranque-venta-20261111.md",
+    "sha256": "aabd19c7561c6c0f905374dbe5f1a7a9fd7c9479bd2564024b9144fcd47ca0a2",
+    "bytes": 1273,
+    "contenido": "# Arranque de venta del workshop\nPrepará la operación para que Sergio/Boss/Contenido puedan comenzar hasta el 14, reutilizando ESTRATEGIA-WORKSHOP-v1, PIEZAS-v1 (incluye VSL), la oferta vigente, guiones v3, decisiones y CIERRE-VENTA. No reescribas ni dupliques esos archivos. Entrega exclusivamente en 01-negocio/workshop-20261108/arranque-venta-20261111 un paquete corto de ejecución que seleccione qué grabar/publicar primero, el orden del día, responsables y acciones por momento, con enlaces a las piezas exactas y una lista de comprobación de la primera inscripción. Revisá que clase 1 viernes 13 20:00, clase 2 sábado 14 14:00, clase 3 lunes 16 20:00 (Caracas/La Paz), 50 BOB grupo, 150 VIP 5 cupos y pago manual coincidan con decisión vigente. Identificá explícitamente quién confirma el pago y cómo se coteja acceso; no inventes ventas ni entrada de leads. Dejá recorrido listo para ensayo con contacto controlado y alternativa manual para Sergio si el canal aún no está conectado. Criterio: paquete accionable para aprobar y usar, fuentes exactas, sin secretos, tiempos falsos ni promesa de apertura automática. Ejecutá comprobaciones proporcionales, commit y push sólo en tu rama. Cero hijos. No publicar, enviar, activar Meta/n8n, ni gastar.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "ejecutor-workshop-arranque-venta-20261111",
+    "rutas": [
+      "01-negocio/workshop-20261108/arranque-venta-20261111"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-12T02:12:39.542108+00:00"
+  }
+}
