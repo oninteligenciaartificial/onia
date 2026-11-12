@@ -1,0 +1,327 @@
+{
+  "schema": 2,
+  "id": "onia-cierre-tecnico-nocturno-20261111",
+  "revision": 7,
+  "compartible": true,
+  "objetivo": "Preparar el cierre automático optativo de entregas técnicas con comprobaciones deterministas, para que el timer pueda iniciar la revisión sin el chat.",
+  "estado": "en_curso",
+  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-12T03:47:22.905652+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-12T03:40:16.798358+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/onia-cierre-tecnico-nocturno-20261111.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-12T03:40:17.094659+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/onia-cierre-tecnico-nocturno-20261111.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-cierre-tecnico-nocturno-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/cierre-tecnico-nocturno-20261112"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:40:17.094644+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-12T03:47:08.794743+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-cierre-tecnico-nocturno-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/cierre-tecnico-nocturno-20261112"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:40:17.094644+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-cierre-tecnico-nocturno-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-onia-cierre-tecnico-nocturno-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-cierre-tecnico-nocturno-20261111.jsonl",
+          "log_rel": "logs/onia-cierre-tecnico-nocturno-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-cierre-tecnico-nocturno-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/cierre-tecnico-nocturno-20261112"
+          ],
+          "dry_run": false,
+          "commit_base": "731bdd3b51ce8e4bb9f4e3de36a5db8916778dde",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-cierre-tecnico-nocturno-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:47:08.726358+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-cierre-tecnico-nocturno-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-cierre-tecnico-nocturno-20261111.git/worktrees/onia-ws-onia-cierre-tecnico-nocturno-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-12T03:47:09.067003+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-cierre-tecnico-nocturno-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/cierre-tecnico-nocturno-20261112"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:40:17.094644+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-cierre-tecnico-nocturno-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 44717,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219444439",
+          "rama": "codex/ws-onia-cierre-tecnico-nocturno-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-cierre-tecnico-nocturno-20261111.jsonl",
+          "log_rel": "logs/onia-cierre-tecnico-nocturno-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-cierre-tecnico-nocturno-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/cierre-tecnico-nocturno-20261112"
+          ],
+          "dry_run": false,
+          "commit_base": "731bdd3b51ce8e4bb9f4e3de36a5db8916778dde",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-cierre-tecnico-nocturno-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:47:08.726358+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-cierre-tecnico-nocturno-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-cierre-tecnico-nocturno-20261111.git/worktrees/onia-ws-onia-cierre-tecnico-nocturno-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-12T03:47:09.365533+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-cierre-tecnico-nocturno-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/cierre-tecnico-nocturno-20261112"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:40:17.094644+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-cierre-tecnico-nocturno-20261111",
+          "pid": 44729,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219444468",
+          "supervisor_pid": 44717,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219444439",
+          "rama": "codex/ws-onia-cierre-tecnico-nocturno-20261111",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-cierre-tecnico-nocturno-20261111.jsonl",
+          "log_rel": "logs/onia-cierre-tecnico-nocturno-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-cierre-tecnico-nocturno-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/cierre-tecnico-nocturno-20261112"
+          ],
+          "dry_run": false,
+          "commit_base": "731bdd3b51ce8e4bb9f4e3de36a5db8916778dde",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-cierre-tecnico-nocturno-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:47:08.726358+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-cierre-tecnico-nocturno-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-cierre-tecnico-nocturno-20261111.git/worktrees/onia-ws-onia-cierre-tecnico-nocturno-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-12T03:47:10.356086+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-onia-cierre-tecnico-nocturno-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/5-codigo/cierre-tecnico-nocturno-20261112"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T03:40:17.094644+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-onia-cierre-tecnico-nocturno-20261111",
+          "pid": 44729,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219444468",
+          "supervisor_pid": 44717,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219444439",
+          "rama": "codex/ws-onia-cierre-tecnico-nocturno-20261111",
+          "session_id": "01a1cddd-d60f-75a0-9349-c8478fb34e71",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/onia-cierre-tecnico-nocturno-20261111.jsonl",
+          "log_rel": "logs/onia-cierre-tecnico-nocturno-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-cierre-tecnico-nocturno-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/5-codigo/cierre-tecnico-nocturno-20261112"
+          ],
+          "dry_run": false,
+          "commit_base": "731bdd3b51ce8e4bb9f4e3de36a5db8916778dde",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/onia-cierre-tecnico-nocturno-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T03:47:08.726358+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/onia-cierre-tecnico-nocturno-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/onia-cierre-tecnico-nocturno-20261111.git/worktrees/onia-ws-onia-cierre-tecnico-nocturno-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/onia-cierre-tecnico-nocturno-20261111.md",
+    "sha256": "4a2f15656eb05cb1c7442e3b2699c2f6196dbb3efe98ef7ebe9d22e7a0263ef0",
+    "bytes": 4057,
+    "contenido": "# Encargo onia-cierre-tecnico-nocturno-20261111\n\nÁrea: desarrollo\nModo: encargo\nSkill directora: desarrollar-y-verificar\n\n## Objetivo\n\nPreparar el cierre automático optativo de entregas técnicas con comprobaciones deterministas, para que el timer pueda iniciar la revisión sin el chat.\n\n## Entregable\n\nReusar el timer y contrato de harness_lote.py aprobados, la declaración cierres[ID] y su validación, sin editar runtime existente. En ruta exclusiva, prepará un verificador de evidencia acotado y un adaptador opcional que genere observación fresca sólo cuando el manifiesto/commit y el perfil de comprobación estén explícitamente fijados por la coordinadora. Usar perfil de lectura de objetos Git y artefactos esperados con tamaño, ruta y hash, o pruebas fijas de confianza; nunca ejecutar comandos o código indicados en la entrega, usar credenciales nuevas, inferir aceptación, editar master, redeplegar o publicar contenido. Conservar la autoridad de h.close, diff/rutas, locks y journals, 3 cupos, STOP y revisora distinta. Demostrar sin red externa con fixtures un caso de cierre y revisión, un commit no elegible, evidencia falsa o vencida, y reintento sin duplicar. Un resultado que necesita criterio editorial, credenciales o efecto externo permanece para decisión humana. Entregá cómo activar y revertir en VPS tras revisión. No activar servicio permanente, gastar ni tocar producción, WhatsApp, Instagram, Facebook o n8n. Sólo commit/push rama asignada.\n\n## Criterio de aceptación\n\nDemostrar con una tarea sintética inscrita que evidencia mecánica independiente del productor permite cerrar el commit exacto, lanzar una revisión distinta y recoger una vez. Fallos quedan visibles sin publicar ni aceptar. Plan de activación reversible y prueba de no duplicación.\n\n## Entrada y alcance\n\nDesarrollo del harness y herramientas del encargo.\n\n- Sin entradas adicionales indicadas.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [06-plataforma/arquitectura.md](../../06-plataforma/arquitectura.md)\n- [05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md](../../05-herramientas/compartibles/skills/desarrollar-y-verificar/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Cambio acotado de código\n- Comprobación del comportamiento solicitado\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/onia-cierre-tecnico-nocturno-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "ejecutor-onia-cierre-tecnico-nocturno-20261111",
+    "rutas": [
+      "05-herramientas/fabrica-onia/5-codigo/cierre-tecnico-nocturno-20261112"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-12T03:40:17.094644+00:00"
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "ejecutor-onia-cierre-tecnico-nocturno-20261111",
+      "pid": 44729,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219444468",
+      "supervisor_pid": 44717,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219444439",
+      "rama": "codex/ws-onia-cierre-tecnico-nocturno-20261111",
+      "session_id": "01a1cddd-d60f-75a0-9349-c8478fb34e71",
+      "estado": "ejecutando",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/onia-cierre-tecnico-nocturno-20261111.jsonl",
+      "log_rel": "logs/onia-cierre-tecnico-nocturno-20261111.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-onia-cierre-tecnico-nocturno-20261111",
+      "rutas": [
+        "05-herramientas/fabrica-onia/5-codigo/cierre-tecnico-nocturno-20261112"
+      ],
+      "dry_run": false,
+      "commit_base": "731bdd3b51ce8e4bb9f4e3de36a5db8916778dde",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/onia-cierre-tecnico-nocturno-20261111.1.briefing.txt",
+      "inicio": "2026-11-12T03:47:08.726358+00:00",
+      "rc": null,
+      "ultimo_evento": "item.started",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/onia-cierre-tecnico-nocturno-20261111.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/onia-cierre-tecnico-nocturno-20261111.git/worktrees/onia-ws-onia-cierre-tecnico-nocturno-20261111",
+      "perfil_permisos": "harness-git"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": null
+}
