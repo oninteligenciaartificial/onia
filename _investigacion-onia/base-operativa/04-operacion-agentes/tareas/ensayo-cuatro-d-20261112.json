@@ -1,0 +1,42 @@
+{
+  "schema": 2,
+  "id": "ensayo-cuatro-d-20261112",
+  "revision": 2,
+  "compartible": true,
+  "objetivo": "Ejecutar suite test_harness_ensayo.py y conservar evidencia durante ensayo concurrente.",
+  "estado": "preparado",
+  "proximo_paso": "Ejecutar suite acotada.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-12T00:57:12.679468+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-12T00:57:12.354714+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Ejecutar suite acotada.",
+      "aceptacion": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/ensayo-cuatro-d-20261112.md",
+    "sha256": "4a8376a64ce42a8f642650f9b08d814942830e585bd3d6cab8400d5e099d84c8",
+    "bytes": 954,
+    "contenido": "# ensayo-cuatro-d-20261112\nEnsayo real de cuatro sesiones autorizado por Sergio. Una tarea acotada, Sol high, cero hijos. Leer reglas/skill desarrollar-y-verificar. Ejecutar una vez desde repo: python3 -I -B -m unittest discover -s _investigacion-onia/base-operativa/05-herramientas/scripts -p test_harness_ensayo.py -v. Sólo escribir INFORME.md y salida.txt en 04-operacion-agentes/homelab/ensayo-cuatro-20261112/d. Informe máximo30 líneas, comando exacto, salida saneada, cantidad pasa/falla/omitida, commit fuente y límites. No cambiar implementación, configuración ni registros; no corregir fallos ni crear más pruebas. No hacer SSH/producción/red externa/descargas ni lanzar sesiones. Los tests usan sus fixtures; si sandbox bloquea informar sin omitir a escondidas. No afirmar capacidad por tests: coordinación mide concurrencia. Commit y push rama asignada. Entregar al terminar sin esperar artificialmente. Revisión posterior separada.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "ejecutor-cuatro-d",
+    "rutas": [
+      "04-operacion-agentes/homelab/ensayo-cuatro-20261112/d"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-12T00:57:12.679449+00:00"
+  }
+}
