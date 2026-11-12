@@ -441,6 +441,9 @@ for line in sys.stdin:
         private.private_write(self.path / 'politica.json', self.value)
         private.private_write(self.path / 'preparacion.json', {'politica_sha256': trial.digest(self.value)})
         (self.path / 'estado.json').unlink()
+        (self.path / 'procesos.json').unlink()
+        for receipt in self.path.glob('recibo-*.json'):
+            receipt.unlink()
         wrapper = self.root / 'monitor_fixture.py'
         sample = resource_sample()
         sample.pop('fecha')
@@ -507,6 +510,21 @@ for line in sys.stdin:
             with self.assertRaises(ValueError):
                 trial.prepare(self.root / 'invalido', self.base, self.ids, duration)
 
+    def test_monitor_never_restarts_after_lost_state(self):
+        journal = (self.path / 'procesos.json').read_bytes()
+        (self.path / 'estado.json').unlink()
+        with patch.object(trial, 'read_quota') as rpc:
+            with self.assertRaisesRegex(ValueError, 'monitor_ya_iniciado'):
+                trial.monitor(self.op)
+            rpc.assert_not_called()
+        self.assertEqual((self.path / 'procesos.json').read_bytes(), journal)
+        (self.path / 'procesos.json').unlink()
+        with patch.object(trial, 'read_quota') as rpc:
+            with self.assertRaisesRegex(ValueError, 'monitor_ya_iniciado'):
+                trial.monitor(self.op)
+            rpc.assert_not_called()
+        self.assertFalse((self.path / 'estado.json').exists())
+
     def test_monitor_error_sets_stop_without_enabling_fourth(self):
         (self.path / 'estado.json').unlink()
         (self.path / 'procesos.json').unlink()
@@ -521,6 +539,9 @@ for line in sys.stdin:
 
     def test_monitor_publishes_receipts_and_stops_at_budget(self):
         (self.path / 'estado.json').unlink()
+        (self.path / 'procesos.json').unlink()
+        for receipt in self.path.glob('recibo-*.json'):
+            receipt.unlink()
         exceeded = deepcopy(self.value['cuota_inicial'])
         exceeded['ventanas']['primary']['usedPercent'] += 2
         def wait(_):

@@ -480,7 +480,10 @@ def monitor(root):
     with private.locked(path, nonblocking=True):
         value = policy(root)
         require(read(path / 'preparacion.json').get('politica_sha256') == digest(value), 'politica_alterada')
-        require(not (path / 'estado.json').exists(), 'monitor_ya_iniciado')
+        require(not os.path.lexists(path / 'estado.json')
+                and not os.path.lexists(path / 'procesos.json')
+                and not any(read(p).get('evento') == 'muestra'
+                            for p in path.glob('recibo-*.json')), 'monitor_ya_iniciado')
         try:
             while True:
                 require(not os.path.lexists(path / 'STOP'), 'STOP')

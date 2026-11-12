@@ -11,6 +11,7 @@ test_freshness_exact_boundaries (test_harness_ensayo.TrialTests.test_freshness_e
 test_invalid_question_slot_blocks_globally (test_harness_ensayo.TrialTests.test_invalid_question_slot_blocks_globally) ... ok
 test_missing_policy_and_state_fail_closed (test_harness_ensayo.TrialTests.test_missing_policy_and_state_fail_closed) ... ok
 test_monitor_error_sets_stop_without_enabling_fourth (test_harness_ensayo.TrialTests.test_monitor_error_sets_stop_without_enabling_fourth) ... ok
+test_monitor_never_restarts_after_lost_state (test_harness_ensayo.TrialTests.test_monitor_never_restarts_after_lost_state) ... ok
 test_monitor_publishes_receipts_and_stops_at_budget (test_harness_ensayo.TrialTests.test_monitor_publishes_receipts_and_stops_at_budget) ... ok
 test_operation_directory_owner_only_writes_and_private_policy (test_harness_ensayo.TrialTests.test_operation_directory_owner_only_writes_and_private_policy) ... ok
 test_permissions_owner_symlinks_and_hardlinks (test_harness_ensayo.TrialTests.test_permissions_owner_symlinks_and_hardlinks) ... ok
@@ -34,11 +35,11 @@ test_stop_with_live_reserved_question_reports_blocked (test_harness_ensayo.Trial
 test_unauthorized_base_id_and_foreign_live_session (test_harness_ensayo.TrialTests.test_unauthorized_base_id_and_foreign_live_session) ... ok
 
 ----------------------------------------------------------------------
-Ran 33 tests in 4.828s
+Ran 34 tests in 2.363s
 
 OK
 
-Integración: python3 -B -m unittest -v (los cuatro métodos completos indicados abajo)
+Integración anterior al bloqueo adicional de reinicio del monitor:
 test_trial_four_synthetic_launches_fifth_blocked_and_sigterm (test_harness_sesiones.SessionTests.test_trial_four_synthetic_launches_fifth_blocked_and_sigterm) ... ok
 test_trial_enforces_model_auth_and_no_children_before_creating_worktree (test_harness_sesiones.SessionTests.test_trial_enforces_model_auth_and_no_children_before_creating_worktree) ... ok
 test_trial_revalidates_after_git_and_before_registration (test_harness_sesiones.SessionTests.test_trial_revalidates_after_git_and_before_registration) ... ok
