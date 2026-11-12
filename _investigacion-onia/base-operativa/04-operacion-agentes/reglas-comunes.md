@@ -1,6 +1,14 @@
 # Reglas comunes de trabajo
 
-## Reparto vigente · 9 noviembre 2026 · America/La_Paz
+## Instrucción vigente de Sergio · 12 de noviembre de 2026
+
+Hasta el 14 sólo se lanzan las tareas de [PRIORIDADES-HASTA-14.md](PRIORIDADES-HASTA-14.md) y en su orden. Codex produce guiones y piezas hasta el 13 inclusive. Esta instrucción prevalece ante discrepancias con el reparto o el procedimiento anterior.
+
+- Trabajar un área por vez con Sergio. Primero enviar una tarjeta breve de preferencias y recoger sus respuestas. Preparar después una muestra chica y guardar el antes y el después con las correcciones de Sergio. Automatizar con n8n o código recién tras su «así». La única sesión paralela autorizada en este arranque prepara el panel «Hoy» y sigue la misma secuencia.
+- Cada encargo debe identificar archivo de salida, hora límite y prueba de uso. Una ronda de revisión reúne comentarios y la corrección correspondiente. Hay un máximo de dos rondas y después decide Sergio.
+- Registrar «aceptado» sólo cuando Sergio diga explícitamente que esa versión se puede usar o grabar. Conservar su decisión junto a la versión y la prueba de uso. Un dictamen técnico acredita la revisión correspondiente.
+
+## Reparto del 9 de noviembre de 2026 · America/La_Paz
 
 Rige el [acuerdo final de Sergio](REPARTO-CODEX-GROKBOT-20261109.md): ventas orgánicas del workshop hasta el 14 a cargo de Boss + Contenido; Codex sólo técnica por PEDIDO autorizado y HOMELAB esencial. Modelo gpt-6.1-sol, low/simple, high/diseño o fallo difícil, ultra sólo si Sergio lo pide. Harness = única fuente de estados; cola-boss = buzón, HECHO no es aceptación, PEDIDO no autoriza. El despachador tuvo un [piloto de dos tareas aceptadas](homelab/piloto-20261112/CIERRE-LOTE.json). Verificar la recurrencia en el estado del servicio antes de darla por operativa. Esta actualización prevalece sobre repartos y ejemplos históricos incompatibles.
 
@@ -55,7 +63,7 @@ Antes de lanzar, el coordinador presenta y deja comprobado: (1) qué existe en e
 
 Una tarea por sesión y un worktree por sesión, con rama propia para el ejecutor. Máximo tres sesiones vivas del harness en el VPS, incluyendo revisores. Un archivo tiene un solo escritor; asignar rutas antes de lanzar y conservar el índice común `~/operacion/sesiones.tsv`. Usar siempre la misma carpeta de operación y el mismo checkout coordinador: las rutas reservadas son relativas a `base-operativa`. No cambiar las asignaciones mientras una sesión trabaje. El coordinador conserva el JSON canónico; los ejecutores reciben el briefing y entregan cambios en su worktree. Los ejecutores nuevos conservan metadatos Git privados por tarea y publican su propia rama desde un perfil acotado del sandbox. No conceder escritura al Git compartido de otros checkouts; el coordinador comprueba, revisa e integra lo publicado.
 
-El revisor debe ser una sesión distinta del ejecutor y trabaja en sólo lectura sobre el commit publicado. Su veredicto debe corresponder a esa entrega; sólo un veredicto bueno permite `aceptar`. Integrar de a una tarea y comprobar el resultado combinado. GitHub (`oninteligenciaartificial/onia`, `master`) es la fuente central: nada está terminado hasta que el commit esté en `origin/master`. `para_revision` sólo acredita publicación en alguna rama de origin y aceptación sigue siendo un paso explícito.
+El revisor debe ser una sesión distinta del ejecutor y trabaja en sólo lectura sobre el commit publicado. Su veredicto debe corresponder a esa entrega. El estado «aceptado» requiere la decisión explícita de Sergio indicada arriba. Integrar de a una tarea y comprobar el resultado combinado. GitHub (`oninteligenciaartificial/onia`, `master`) es la fuente central: nada está terminado hasta que el commit esté en `origin/master`. `para_revision` sólo acredita publicación en alguna rama de origin y aceptación sigue siendo un paso explícito.
 
 Los worktrees no aíslan servicios, cuentas ni conectores externos. No ampliar permisos de producción, n8n, publicaciones, mensajes, cobros o gastos por lanzar una sesión.
 
