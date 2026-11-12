@@ -1,0 +1,40 @@
+{
+  "fecha_utc": "2026-11-12T03:11:16.135450+00:00",
+  "python": "3.12.3",
+  "systemd": "systemd 255 (255.4-1ubuntu8.18)",
+  "checks": [
+    {
+      "check": "tests-continuidad",
+      "returncode": 0
+    },
+    {
+      "check": "tests-cola-original",
+      "returncode": 0
+    },
+    {
+      "check": "sintaxis-python-ast",
+      "archivos": [
+        "ensayo_timer.py",
+        "pasada.py",
+        "preparar.py",
+        "test_continuidad.py",
+        "cola_homelab.py",
+        "worker_render.py"
+      ],
+      "resultado": "ok"
+    },
+    {
+      "check": "systemd-analyze-user-verify-runtime-temporal",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "check": "timer-transitorio-local",
+      "returncode": 0,
+      "recibo": "timer-local.json"
+    }
+  ],
+  "ssh_ejecutado": false,
+  "servicio_permanente_activado": false
+}
