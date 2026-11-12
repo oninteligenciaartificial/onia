@@ -381,7 +381,7 @@ questions.worker()
             output, error = worker.communicate(json.dumps(data) + '\n', timeout=7)
             self.assertEqual(worker.returncode, 0, error)
         self.assertEqual(json.loads(output)['respuesta'], 'Prueba')
-        proof = trial.read(trial.custody_path(self.op, trial.custody_identity(owner, self.tag)))
+        proof = trial.read(trial.custody_path(self.path, trial.custody_identity(owner, self.tag)))
         self.assertEqual(proof['estado'], 'drenada')
 
     def test_finished_attempt_missing_proof_keeps_stop(self):
@@ -405,15 +405,30 @@ questions.worker()
         other = self.child()
         identity = trial.custody_identity(
             {'pid': other.pid, 'pid_inicio': sessions.process_start(other.pid)}, self.tag)
-        path = trial.custody_path(self.op, identity)
+        path = trial.custody_path(self.path, identity)
         private.private_write(path, dict(identity, estado='drenada'))
-        with patch.object(sessions, 'indexed_rows', return_value=[]), \
+        rows = self.rows(1)
+        rows[0][1]['sesiones'][0].update(pid=other.pid, pid_inicio=identity['pid_inicio'])
+        with patch.object(sessions, 'indexed_rows', return_value=rows), \
                 patch.object(trial, 'terminate') as terminate:
             with self.assertRaisesRegex(ValueError, 'recibo_invalido'):
                 trial.stop(self.op)
             terminate.assert_not_called()
         self.assertTrue((self.path / 'STOP').exists())
         self.assertIsNone(other.poll())
+
+    def test_unregistered_custody_cannot_authorize_a_signal(self):
+        other = self.child()
+        identity = trial.custody_identity(
+            {'pid': other.pid, 'pid_inicio': sessions.process_start(other.pid)}, self.tag)
+        private.private_write(trial.custody_path(self.path, identity), dict(identity, estado='pendiente'))
+        with patch.object(sessions, 'indexed_rows', return_value=[]), \
+                patch.object(trial, 'terminate') as terminate:
+            with self.assertRaisesRegex(ValueError, 'custodia_sin_registro'):
+                trial.stop(self.op)
+            terminate.assert_not_called()
+        self.assertIsNone(other.poll())
+        self.assertTrue((self.path / 'STOP').exists())
 
     def test_closed_question_missing_proof_keeps_stop(self):
         child = subprocess.Popen([sys.executable, '-c', 'pass'])
@@ -555,7 +570,7 @@ for line in sys.stdin:
         fake.write_text(fake.read_text().replace("result = {'rateLimitsByLimitId': {'codex': windows}}",
                         "windows['secondary'] = None; result = {'rateLimitsByLimitId': {'codex': windows}}"))
         with patch.dict(os.environ, {'PATH': str(self.root) + ':' + os.environ['PATH']}):
-            sample = trial.read_quota()
+            sample = trial.read_quota(preflight_root=self.op)
         self.assertEqual(set(sample['ventanas']), {'primary'})
         trial.quota_budget(sample, sample, time.time())
         changed = deepcopy(sample)
@@ -581,7 +596,7 @@ for line in sys.stdin:
     def test_quota_rpc_readonly_with_synthetic_app_server(self):
         self.fake_app_server()
         with patch.dict(os.environ, {'PATH': str(self.root) + ':' + os.environ['PATH']}):
-            sample = trial.read_quota()
+            sample = trial.read_quota(preflight_root=self.op)
         self.assertEqual(sample['ventanas']['primary']['usedPercent'], 10)
         trial.quota(sample, time.time())
 
@@ -609,7 +624,8 @@ while not aux.exists():
                 observed = self.root / (name + '.json')
                 with patch.dict(os.environ, {'PATH': str(self.root) + ':' + os.environ['PATH'],
                                              'TEST_QUOTA_AUX': str(observed)}):
-                    self.assertEqual(trial.read_quota(stop_path=stop_path)['ventanas']['primary']['usedPercent'], 10)
+                    sample = trial.read_quota(stop_path=stop_path, preflight_root=self.op)
+                    self.assertEqual(sample['ventanas']['primary']['usedPercent'], 10)
                 aux = json.loads(observed.read_text())
                 boot = sessions.process_start(os.getpid()).rsplit(':', 1)[0]
                 self.assertNotEqual(sessions.process_start(aux['pid']), boot + ':' + aux['start'])
@@ -620,6 +636,85 @@ while not aux.exists():
         self.assertEqual(proof['evento'], 'custodia_echild')
         self.assertEqual(trial.pending_custodies(self.op, self.value, []), [])
         self.assertIsNone(unrelated.poll())
+
+    def test_lost_quota_custody_cannot_hide_a_live_auxiliary(self):
+        fake = self.root / 'codex'
+        fake.write_text('#!' + sys.executable + '\n' + """import json, os, sys, time
+from pathlib import Path
+
+def identity():
+    boot = Path('/proc/sys/kernel/random/boot_id').read_text().strip()
+    start = Path('/proc/self/stat').read_text().rsplit(')', 1)[1].split()[19]
+    return dict(pid=os.getpid(), pid_inicio=boot + ':' + start)
+
+# Verify that the RPC subprocess cannot have started without independent registration.
+scope = Path(os.environ['TEST_QUOTA_SCOPE'])
+assert list(scope.glob('cuota-*.json'))
+assert list(scope.glob('custodia-*.json'))
+app_server = identity()
+if os.fork() == 0:
+    os.setsid()
+    if os.fork() == 0:
+        Path(os.environ['TEST_QUOTA_OBSERVED']).write_text(json.dumps([app_server, identity()]))
+        time.sleep(15)
+    os._exit(0)
+time.sleep(15)
+""")
+        fake.chmod(0o700)
+        preflight = self.root / 'preflight-operacion'
+        preflight.mkdir(mode=0o700)
+        for phase, scope in [('monitor', self.path), ('preflight', preflight / trial.QUOTA_PREFLIGHT)]:
+            with self.subTest(phase=phase):
+                observed = self.root / (phase + '-aux.json')
+                code = """import sys, time
+from pathlib import Path
+sys.path.insert(0, sys.argv[1])
+import harness_ensayo as trial
+scope, phase = Path(sys.argv[2]), sys.argv[3]
+if phase == 'monitor':
+    trial.read_quota(time.time() + 8, scope / 'STOP')
+else:
+    trial.read_quota(time.time() + 8, preflight_root=scope.parent)
+"""
+                env = dict(os.environ, PATH=str(self.root) + ':' + os.environ['PATH'],
+                           TEST_QUOTA_SCOPE=str(scope), TEST_QUOTA_OBSERVED=str(observed))
+                argv = [sys.executable, '-B', '-c', code, str(Path(trial.__file__).parent),
+                        str(scope), phase]
+                with subprocess.Popen(argv, env=env, stderr=subprocess.DEVNULL) as reader:
+                    spawned = []
+                    try:
+                        end = time.monotonic() + 5
+                        while not observed.exists() or not observed.stat().st_size:
+                            self.assertLess(time.monotonic(), end)
+                            self.assertIsNone(reader.poll())
+                            time.sleep(0.02)
+                        spawned = json.loads(observed.read_text())
+                        registration = trial.read(next(scope.glob('cuota-*.json')))
+                        tag = registration['politica_sha256']
+                        identity = trial.custody_identity(registration, tag)
+                        fd = os.pidfd_open(identity['pid'])
+                        try:
+                            self.assertEqual(sessions.process_start(identity['pid']), identity['pid_inicio'])
+                            signal.pidfd_send_signal(fd, signal.SIGKILL)
+                        finally:
+                            os.close(fd)
+                        self.assertNotEqual(reader.wait(timeout=6), 0)
+                        trial.custody_path(scope, identity).unlink()
+                        auxiliary = spawned[-1]
+                        self.assertEqual(sessions.process_start(auxiliary['pid']), auxiliary['pid_inicio'])
+                        if phase == 'monitor':
+                            with patch.object(sessions, 'indexed_rows', return_value=[]):
+                                result = trial.stop(self.op)
+                            self.assertEqual(result['estado'], 'bloqueado')
+                            self.assertEqual(result['custodias_sin_cierre'], 1)
+                            self.assertTrue((self.path / 'STOP').exists())
+                        else:
+                            with self.assertRaisesRegex(ValueError, 'preflight_sin_drenaje'):
+                                trial.prepare(preflight, self.base, ['uno'], 20)
+                            self.assertFalse((preflight / trial.DIRECTORY).exists())
+                        self.assertEqual(sessions.process_start(auxiliary['pid']), auxiliary['pid_inicio'])
+                    finally:
+                        trial.terminate(spawned)
 
     def test_foreground_monitor_cli_sigterm_and_private_output(self):
         self.fake_app_server()

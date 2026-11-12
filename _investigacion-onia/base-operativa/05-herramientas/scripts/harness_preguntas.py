@@ -217,7 +217,8 @@ def worker():
         if trial_data:
             import harness_ensayo
             owner = custody.enter_context(
-                harness_ensayo.Custody(Path(trial_data['operacion']), trial_data['sha256']))
+                harness_ensayo.Custody(harness_ensayo.directory(Path(trial_data['operacion'])),
+                                       trial_data['sha256']))
             with sessions.registry_lock(Path(trial_data['operacion'])):
                 harness_ensayo.revalidate(Path(trial_data['operacion']), Path(trial_data['base']),
                                          trial_data['id'], trial_data['sha256'])

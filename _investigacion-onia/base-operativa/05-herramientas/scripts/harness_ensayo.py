@@ -22,6 +22,7 @@ import harness_boss as private
 import harness_sesiones as sessions
 
 DIRECTORY = 'ensayo-cuatro'
+QUOTA_PREFLIGHT = 'ensayo-cuatro-preflight'
 RESOURCE_TTL = 15
 QUOTA_TTL = 60
 MAX_DURATION = 1800
@@ -213,31 +214,63 @@ def quota_response(result, now):
     return quota({'fecha': now, 'ventanas': windows}, now)
 
 
-def read_quota(deadline=None, stop_path=None):
+def read_quota(deadline=None, stop_path=None, *, preflight_root=None):
     end = min(time.time() + 50, deadline if deadline is not None else float('inf'))
     require(end > time.time(), 'rpc_timeout')
-    argv = subprocess_entry('quota_worker', [str(end), str(stop_path) if stop_path else ''])
-    process = subprocess.Popen(argv, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
-    identity = {'pid': process.pid, 'pid_inicio': sessions.process_start(process.pid)}
+    if stop_path:
+        stop_path = Path(stop_path)
+        root = stop_path.parent.parent
+        path = directory(root)
+        tag = digest(policy(root, expired=True))
+    else:
+        require(preflight_root is not None, 'preflight_raiz_requerida')
+        path = private.no_links(Path(preflight_root) / QUOTA_PREFLIGHT)
+        path.mkdir(mode=0o700, exist_ok=True)
+        info = path.stat()
+        require(stat.S_ISDIR(info.st_mode) and info.st_uid == os.getuid()
+                and info.st_mode & 0o077 == 0, 'preflight_no_privado')
+        tag = QUOTA_PREFLIGHT
+        require(not os.path.lexists(path / 'STOP')
+                and not pending_custody_files(path, tag, {}), 'preflight_sin_drenaje')
+
+    gate_read, gate_write = os.pipe()
+    process = None
+    identity = None
     try:
+        with os.fdopen(gate_read, 'rb', buffering=0) as gate_in, \
+                os.fdopen(gate_write, 'wb', buffering=0) as gate_out:
+            argv = subprocess_entry('quota_worker', [str(end), str(stop_path) if stop_path else '',
+                                                     str(path), tag, str(gate_read)])
+            process = subprocess.Popen(argv, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+                                       pass_fds=(gate_in.fileno(),))
+            identity = custody_identity(
+                {'pid': process.pid, 'pid_inicio': sessions.process_start(process.pid)}, tag)
+            private.private_write(quota_registration(path, identity),
+                                  dict(identity, evento='lector_cuota_registrado'))
+            gate_out.write(b'1')
         output, _ = process.communicate(timeout=max(0, end - time.time()) + 5)
     finally:
-        try:
-            if process.poll() is None:
-                terminate([identity])
-                process.wait(timeout=5)
-        finally:
-            process.stdout.close()
+        if process is not None:
+            try:
+                if process.poll() is None:
+                    if identity is not None:
+                        terminate([identity])
+                    process.wait(timeout=5)
+            finally:
+                process.stdout.close()
     require(process.returncode == 0, 'rpc_sin_drenaje_o_fallido')
     return quota(json.loads(output), time.time())
 
 
-def quota_worker(deadline, stop):
-    stop_path = Path(stop) if stop else None
-    root = stop_path.parent.parent if stop_path else None
-    tag = digest(policy(root, expired=True)) if root else None
-    with Custody(root, tag) as owner:
-        value = read_quota_rpc(owner, float(deadline), stop_path)
+def quota_worker(deadline, stop, scope, tag, gate):
+    with os.fdopen(int(gate), 'rb', buffering=0) as gate_in:
+        if gate_in.read(1) != b'1':
+            return 125
+    path = Path(scope)
+    with Custody(path, tag) as owner:
+        require(read(quota_registration(path, owner.identity)) ==
+                dict(owner.identity, evento='lector_cuota_registrado'), 'lector_cuota_sin_registro')
+        value = read_quota_rpc(owner, float(deadline), Path(stop) if stop else None)
     print(json.dumps(value), flush=True)
     return 0
 
@@ -340,7 +373,7 @@ def prepare(root, base, ids, duration):
         for ident in ids:
             private.checked_id(ident)
         require(private.no_links(base) == base and base.is_dir(), 'base_invalida')
-        initial = read_quota()
+        initial = read_quota(preflight_root=root)
         now = time.time()
         value = {'schema': 1, 'lote': uuid.uuid4().hex, 'base': str(base), 'ids': ids,
                  'inicio': now, 'vence': now + duration, 'presupuesto': BUDGET,
@@ -431,8 +464,12 @@ def terminate(items):
 WAIT_ALL = 0x40000000
 
 
-def custody_path(root, identity):
-    return directory(root) / ('custodia-' + digest(identity) + '.json')
+def custody_path(path, identity):
+    return path / ('custodia-' + digest(identity) + '.json')
+
+
+def quota_registration(path, identity):
+    return path / ('cuota-' + digest(identity) + '.json')
 
 
 def custody_identity(record, tag):
@@ -445,22 +482,21 @@ def custody_identity(record, tag):
 class Custody:
     """Dedicated subreaper for one executable and its descendants."""
 
-    def __init__(self, root, tag):
+    def __init__(self, path, tag):
         self.identity = custody_identity(
             {'pid': os.getpid(), 'pid_inicio': sessions.process_start(os.getpid())}, tag)
-        self.path = custody_path(root, self.identity) if root else None
+        self.path = custody_path(path, self.identity)
         self.child = None
         self.stopping = False
 
     def __enter__(self):
-        require(self.path is None or not os.path.lexists(self.path), 'custodia_existente')
+        require(not os.path.lexists(self.path), 'custodia_existente')
         # PR_SET_CHILD_SUBREAPER: even a double fork or setsid reparents here.
         libc = ctypes.CDLL(None, use_errno=True)
         if libc.prctl(36, 1, 0, 0, 0) != 0:
             raise OSError(ctypes.get_errno(), 'PR_SET_CHILD_SUBREAPER')
         signal.signal(signal.SIGTERM, self.request_stop)
-        if self.path is not None:
-            private.private_write(self.path, dict(self.identity, estado='pendiente'))
+        private.private_write(self.path, dict(self.identity, estado='pendiente'))
         return self
 
     def request_stop(self, _signum, _frame):
@@ -470,9 +506,8 @@ class Custody:
         try:
             self.drain()
         except Exception:
-            if self.path is not None:
-                private.private_write(self.path.parent / 'STOP',
-                                      {'motivo': 'custodia_sin_cierre', 'fecha': time.time()})
+            private.private_write(self.path.parent / 'STOP',
+                                  {'motivo': 'custodia_sin_cierre', 'fecha': time.time()})
             raise
 
     def drain(self):
@@ -484,9 +519,8 @@ class Custody:
                 try:
                     pid, _status = os.waitpid(-1, os.WNOHANG | WAIT_ALL)
                 except ChildProcessError:
-                    if self.path is not None:
-                        reference = receipt(self.path.parent, dict(self.identity, evento='custodia_echild'))
-                        private.private_write(self.path, dict(self.identity, estado='drenada', recibo=reference))
+                    reference = receipt(self.path.parent, dict(self.identity, evento='custodia_echild'))
+                    private.private_write(self.path, dict(self.identity, estado='drenada', recibo=reference))
                     return
                 if pid:
                     continue
@@ -505,7 +539,7 @@ class Custody:
 
 
 def run_in_custody(root, base, ident, tag, argv, gate_read=None):
-    with Custody(root, tag) as owner:
+    with Custody(directory(root), tag) as owner:
         if gate_read is not None:
             with os.fdopen(gate_read, 'rb', buffering=0) as gate:
                 if gate.read(1) != b'1':
@@ -560,22 +594,34 @@ def pending_custodies(root, value, rows):
                 identity = custody_identity(record, tag)
                 expected[digest(identity)] = identity
 
-    # Retain independent evidence if an attempt has left the active registry.
-    for path in directory(root).glob('custodia-*.json'):
+    return pending_custody_files(directory(root), tag, expected)
+
+
+def pending_custody_files(folder, tag, expected):
+    for path in folder.glob('cuota-*.json'):
         record = read(path)
         identity = custody_identity(record, tag)
-        require(path == custody_path(root, identity) and
+        require(path == quota_registration(folder, identity)
+                and record == dict(identity, evento='lector_cuota_registrado'), 'lector_cuota_alterado')
+        expected[digest(identity)] = identity
+
+    pending = dict(expected)
+    for path in folder.glob('custodia-*.json'):
+        record = read(path)
+        identity = custody_identity(record, tag)
+        key = digest(identity)
+        require(path == custody_path(folder, identity) and
                 record.get('politica_sha256') == tag and
                 record.get('estado') in {'pendiente', 'drenada'}, 'custodia_alterada')
-        key = digest(identity)
+        # A receipt cannot grant process ownership by itself.
+        require(expected.get(key) == identity, 'custodia_sin_registro')
         if record['estado'] == 'drenada':
-            require(read_receipt(path.parent, record.get('recibo')) ==
+            require(read_receipt(folder, record.get('recibo')) ==
                     dict(identity, evento='custodia_echild'), 'custodia_alterada')
-            expected.pop(key, None)
+            pending.pop(key, None)
         else:
             require(set(record) == set(identity) | {'estado'}, 'custodia_alterada')
-            expected[key] = identity
-    return list(expected.values())
+    return list(pending.values())
 
 
 def require_verified_owners(root, value, rows):
@@ -639,7 +685,7 @@ def stop(root, reason='fin_operador', trusted=None):
     # A bootstrap without a receipt has not yet been able to start its model.
     # Let it observe STOP and record the empty drain instead of killing it early.
     starting = {(i['pid'], i['pid_inicio']) for i in pending
-                if not os.path.lexists(custody_path(root, i))}
+                if not os.path.lexists(custody_path(path, i))}
     unique = {(item['pid'], item['pid_inicio']): item for item in items
               if (item['pid'], item['pid_inicio']) not in starting}
     receipt(path, {'evento': 'intencion_SIGTERM', 'motivo': reason, 'fecha': time.time(),
