@@ -1,0 +1,327 @@
+{
+  "schema": 2,
+  "id": "whatsapp-ensayo-vps-20261111",
+  "revision": 7,
+  "compartible": true,
+  "objetivo": "Preparar y comprobar en el VPS el ensayo local HTTP de inscripción WhatsApp del workshop reutilizando el adaptador aceptado y su workflow inactivo.",
+  "estado": "en_curso",
+  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+  "resultado": "",
+  "comprobacion": "",
+  "verificacion": "pendiente",
+  "evidencias": [],
+  "actualizado": "2026-11-12T02:40:05.276164+00:00",
+  "historial": [
+    {
+      "revision": 1,
+      "actualizado": "2026-11-12T02:39:34.353014+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/whatsapp-ensayo-vps-20261111.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null
+    },
+    {
+      "revision": 2,
+      "actualizado": "2026-11-12T02:39:34.686301+00:00",
+      "estado": "preparado",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Leer 04-operacion-agentes/encargos/whatsapp-ensayo-vps-20261111.md y ejecutar el encargo dentro de su alcance.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-vps-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-vps-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:34.686288+00:00"
+      }
+    },
+    {
+      "revision": 3,
+      "actualizado": "2026-11-12T02:39:49.548931+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-vps-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-vps-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:34.686288+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-vps-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "codex/ws-whatsapp-ensayo-vps-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-vps-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-vps-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-vps-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-vps-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-vps-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:39:49.494577+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-vps-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-vps-20261111.git/worktrees/onia-ws-whatsapp-ensayo-vps-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 4,
+      "actualizado": "2026-11-12T02:39:49.753604+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-vps-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-vps-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:34.686288+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-vps-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 4019164,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219040508",
+          "rama": "codex/ws-whatsapp-ensayo-vps-20261111",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-vps-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-vps-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-vps-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-vps-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-vps-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:39:49.494577+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-vps-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-vps-20261111.git/worktrees/onia-ws-whatsapp-ensayo-vps-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 5,
+      "actualizado": "2026-11-12T02:39:49.998933+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-vps-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-vps-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:34.686288+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-vps-20261111",
+          "pid": 4019198,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219040532",
+          "supervisor_pid": 4019164,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219040508",
+          "rama": "codex/ws-whatsapp-ensayo-vps-20261111",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-vps-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-vps-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-vps-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-vps-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-vps-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:39:49.494577+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-vps-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-vps-20261111.git/worktrees/onia-ws-whatsapp-ensayo-vps-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 6,
+      "actualizado": "2026-11-12T02:39:51.486082+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-vps-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-vps-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:39:34.686288+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-vps-20261111",
+          "pid": 4019198,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219040532",
+          "supervisor_pid": 4019164,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219040508",
+          "rama": "codex/ws-whatsapp-ensayo-vps-20261111",
+          "session_id": "01a1cda0-32b2-7640-8989-e4a4b8d28fc7",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-vps-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-vps-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-vps-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-vps-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-vps-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:39:49.494577+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-vps-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-vps-20261111.git/worktrees/onia-ws-whatsapp-ensayo-vps-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    }
+  ],
+  "briefing": {
+    "archivo": "04-operacion-agentes/encargos/whatsapp-ensayo-vps-20261111.md",
+    "sha256": "8c5edf68e7b2aa340ac613ce025c92742a9a2ee40b1543388250f1844059b6d5",
+    "bytes": 3394,
+    "contenido": "# Encargo whatsapp-ensayo-vps-20261111\n\nÁrea: automatizaciones\nModo: encargo\nSkill directora: automatizar-n8n\n\n## Objetivo\n\nPreparar y comprobar en el VPS el ensayo local HTTP de inscripción WhatsApp del workshop reutilizando el adaptador aceptado y su workflow inactivo.\n\n## Entregable\n\nUn arranque reproducible para staging en loopback y una comprobación ejecutable de challenge, firma de bytes, entrada repetida, QR simulado, captura pendiente, confirmación manual simulada y acceso; despacho real deshabilitado. Usar únicamente datos ficticios y temporal propio. Preparar receta HTTPS de sólo /meta, operador privado, cableado del workflow existente y lista mínima de parámetros privados para el ensayo externo. No instalar/activar servicios, configurar Meta, modificar n8n, publicar, enviar, gastar ni tocar rutas ajenas. No duplicar el adaptador ni el motor.\n\n## Criterio de aceptación\n\nComandos y salidas conservados; el proceso local termina y ningún caso toca Graph; demostrar rechazo de despacho y aislamiento de operador respecto del proxy propuesto. Precisar quién valida cada entrada externa. Sólo commit/push de la rama asignada.\n\n## Entrada y alcance\n\nUn evento y resultado definido para la instancia existente de n8n.\n\n- Sin entradas adicionales indicadas.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [05-herramientas/accesos.md](../../05-herramientas/accesos.md)\n- [05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md](../../05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Flujo n8n con referencias a credenciales\n- Pruebas y manejo de fallos\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/whatsapp-ensayo-vps-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
+  },
+  "aceptacion": null,
+  "asignacion": {
+    "responsable": "ejecutor-whatsapp-ensayo-vps-20261111",
+    "rutas": [
+      "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-vps-20261111"
+    ],
+    "revision_base": 1,
+    "fecha": "2026-11-12T02:39:34.686288+00:00"
+  },
+  "sesiones": [
+    {
+      "intento": 1,
+      "rol": "ejecutor",
+      "responsable": "ejecutor-whatsapp-ensayo-vps-20261111",
+      "pid": 4019198,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219040532",
+      "supervisor_pid": 4019164,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219040508",
+      "rama": "codex/ws-whatsapp-ensayo-vps-20261111",
+      "session_id": "01a1cda0-32b2-7640-8989-e4a4b8d28fc7",
+      "estado": "ejecutando",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-vps-20261111.jsonl",
+      "log_rel": "logs/whatsapp-ensayo-vps-20261111.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-vps-20261111",
+      "rutas": [
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-vps-20261111"
+      ],
+      "dry_run": false,
+      "commit_base": "889eae37a129b9aa701358c3e97806efc26aebd0",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-vps-20261111.1.briefing.txt",
+      "inicio": "2026-11-12T02:39:49.494577+00:00",
+      "rc": null,
+      "ultimo_evento": "item.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "high",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-vps-20261111.git",
+      "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-vps-20261111.git/worktrees/onia-ws-whatsapp-ensayo-vps-20261111",
+      "perfil_permisos": "harness-git"
+    }
+  ],
+  "revision_independiente": null,
+  "cierre": null
+}
