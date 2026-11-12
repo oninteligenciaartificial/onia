@@ -4,6 +4,12 @@
 
 La [actualización del puente](evidencias/delegacion-sin-cupo-20261110/USO-Y-LIMITES.md) elimina el máximo de seis altas por día: Boss puede registrar nuevos pedidos autorizados sin esperar al corte UTC. Registrar no lanza ni programa sesiones. Conserva permisos, deduplicación, rutas, cuota y tres sesiones simultáneas; medir una ampliación es otro resultado, aún no acreditado. Consultar el recibo de instalación para distinguir código publicado de versión activa.
 
+## Tanda verificada de tres cupos · 11 noviembre 2026
+
+El manifiesto del despachador acepta `subagentes_maximos` con 0, 1 o 2 hijos para la ejecutora. Por defecto se usa 0 y la revisora siempre corre con 0. El despacho recurrente se puede programar mediante pasadas acotadas. En el workshop quedó comprobado el despacho manual por pasada y su repetición sin duplicados. [Recibo de la tanda](evidencias/tanda-tres-modelos-20261111/RECIBO.md)
+
+Al pedir revisión, adjuntar al commit exacto el comando y la salida saneada de las pruebas que requieren escritura temporal. El recibo Git acredita publicación. La salida adjunta acredita la ejecución de las pruebas y permite revisarlas aun con el sandbox de sólo lectura.
+
 ## Reparto vigente · 9 noviembre 2026 · America/La_Paz
 
 Rige el [acuerdo final de Sergio](REPARTO-CODEX-GROKBOT-20261109.md): ventas orgánicas del workshop hasta el 14 a cargo de Boss + Contenido; Codex sólo técnica por PEDIDO autorizado y HOMELAB esencial. Modelo gpt-6.1-sol, low/simple, high/diseño o fallo difícil, ultra sólo si Sergio lo pide. Harness = única fuente de estados; cola-boss = buzón, HECHO no es aceptación, PEDIDO no autoriza. No existe despachador automático. Esta actualización prevalece sobre repartos y ejemplos históricos incompatibles.
