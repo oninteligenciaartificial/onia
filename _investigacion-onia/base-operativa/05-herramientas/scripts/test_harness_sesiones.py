@@ -617,13 +617,15 @@ class SessionTests(unittest.TestCase):
         launched = self.launch(subagents=1, model='gpt-6.1-sol', effort='high')
         self.assertIn('agents.max_concurrent_threads_per_session=1', launched['comando'])
         self.assertIn('agents.max_depth=1', launched['comando'])
-        self.assertIn('agents.default_subagent_model="gpt-6.1-sol"', launched['comando'])
+        self.assertIn('agents.default_subagent_model="gpt-6-luna"', launched['comando'])
         self.assertIn('agents.default_subagent_reasoning_effort="high"', launched['comando'])
         first = self.wait_finished()['sesiones'][-1]
         resumed = self.launch(resume=True)
         self.assertIn('agents.enabled=true', resumed['comando'])
         second = self.wait_finished()['sesiones'][-1]
         self.assertEqual(second['subagentes_maximos'], 1)
+        self.assertEqual(second['modelo_subagentes_predeterminado'], 'gpt-6-luna')
+        self.assertEqual(second['esfuerzo_subagentes_predeterminado'], 'high')
         self.assertEqual(second['session_id'], first['session_id'])
         disabled = self.launch(resume=True, subagents=0)
         self.assertIn('agents.enabled=false', disabled['comando'])

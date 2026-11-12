@@ -78,6 +78,10 @@ Actualizar [ESTADO](../00-MAPA/ESTADO.md) cuando cambien capacidades o hitos, co
 
 Aplicar mejorar-sistema a correcciones observadas, evaluar-catalogo-skills a selección de candidatos y continuidad-de-trabajo a traspasos. Esta mejora de instrucciones no crea un scheduler ni entrenamiento del modelo.
 
+Cuando una prueba, revisión o corrección de Sergio cambie qué forma de trabajar da mejor resultado, conservar la diferencia y su evidencia en el registro existente. Si es una mejora reutilizable, corregir en la misma entrega la fuente que la próxima sesión consulta: código o prueba para una falla de infraestructura, ficha o criterio vigente para el cerebro, y regla o skill para la forma de trabajar. Indicar qué se comparó, qué cambió y qué sigue sin comprobar. Si la corrección afecta una acción externa, dejarla preparada dentro de los permisos vigentes.
+
+En un lote con frentes independientes, asignar rutas exclusivas a subagentes y mantener una sola coordinadora para reunir resultados. Pedir al revisor los hallazgos reproducibles del alcance juntos, corregirlos en bloque y probar la versión corregida. Si un defecto exige cambiar el diseño, acotar ese frente y seguir con las entregas independientes. Medir entregas verificadas, retrabajo o tiempo comparable cuando haya base para hacerlo. Los casos de [ensayo de cuatro](tareas/ensayo-cuatro-control-20261112.json) y [piloto del despachador](homelab/piloto-20261112/CIERRE-LOTE.json) aportan antecedentes para esa decisión.
+
 ## Comandos del lanzador VPS (fase 1, 8 de noviembre)
 
 Requiere Linux, Python 3.10+, Git y Codex CLI autenticado en el usuario actual. Implementación sin dependencias Python externas. `harness_sesiones.py` es el módulo interno de `harness.py`; todas las transiciones utilizan `trabajo.py`, su revisión esperada, historial y evidencia. No es otra cola.

@@ -316,6 +316,10 @@ def create_private_git(repo, root, ident, branch, worktree):
     return owner, commit
 
 
+DEFAULT_CHILD_MODEL = 'gpt-6-luna'
+DEFAULT_CHILD_EFFORT = 'high'
+
+
 def command(session, codex='codex'):
     review = session['rol'] == 'revisor'
     isolated = bool(session.get('git_repo')) and not review
@@ -344,11 +348,9 @@ def command(session, codex='codex'):
              '-c', 'features.multi_agent_v2=false']
     if limit:
         args += ['-c', 'agents.max_concurrent_threads_per_session=' + str(limit),
-                 '-c', 'agents.max_depth=1']
-        if session.get('modelo'):
-            args += ['-c', 'agents.default_subagent_model=' + json.dumps(session['modelo'])]
-        if session.get('esfuerzo'):
-            args += ['-c', 'agents.default_subagent_reasoning_effort=' + json.dumps(session['esfuerzo'])]
+                 '-c', 'agents.max_depth=1',
+                 '-c', 'agents.default_subagent_model=' + json.dumps(DEFAULT_CHILD_MODEL),
+                 '-c', 'agents.default_subagent_reasoning_effort=' + json.dumps(DEFAULT_CHILD_EFFORT)]
     if session.get('reanuda'):
         args += ['resume', session['reanuda']]
     return args + ['-']
@@ -490,6 +492,9 @@ def launch(base, ident, root, revision, actor, approved=False, dry_run=False, re
                        briefing=str(prompt_file), inicio=trabajo.now(), rc=None, ultimo_evento=None,
                        modelo=model, esfuerzo=effort, auth_chatgpt=auth_chatgpt,
                        subagentes_maximos=subagents)
+        if subagents:
+            session.update(modelo_subagentes_predeterminado=DEFAULT_CHILD_MODEL,
+                           esfuerzo_subagentes_predeterminado=DEFAULT_CHILD_EFFORT)
         if git_owner:
             session.update(git_repo=str(git_owner), git_dir=str(git_owner / 'worktrees' / worktree.name),
                            perfil_permisos='harness-git')

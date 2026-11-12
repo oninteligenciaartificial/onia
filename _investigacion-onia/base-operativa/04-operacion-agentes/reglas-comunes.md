@@ -2,7 +2,7 @@
 
 ## Reparto vigente · 9 noviembre 2026 · America/La_Paz
 
-Rige el [acuerdo final de Sergio](REPARTO-CODEX-GROKBOT-20261109.md): ventas orgánicas del workshop hasta el 14 a cargo de Boss + Contenido; Codex sólo técnica por PEDIDO autorizado y HOMELAB esencial. Modelo gpt-6.1-sol, low/simple, high/diseño o fallo difícil, ultra sólo si Sergio lo pide. Harness = única fuente de estados; cola-boss = buzón, HECHO no es aceptación, PEDIDO no autoriza. No existe despachador automático. Esta actualización prevalece sobre repartos y ejemplos históricos incompatibles.
+Rige el [acuerdo final de Sergio](REPARTO-CODEX-GROKBOT-20261109.md): ventas orgánicas del workshop hasta el 14 a cargo de Boss + Contenido; Codex sólo técnica por PEDIDO autorizado y HOMELAB esencial. Modelo gpt-6.1-sol, low/simple, high/diseño o fallo difícil, ultra sólo si Sergio lo pide. Harness = única fuente de estados; cola-boss = buzón, HECHO no es aceptación, PEDIDO no autoriza. El despachador tuvo un [piloto de dos tareas aceptadas](homelab/piloto-20261112/CIERRE-LOTE.json). Verificar la recurrencia en el estado del servicio antes de darla por operativa. Esta actualización prevalece sobre repartos y ejemplos históricos incompatibles.
 
 Consolidación autorizada por Sergio el 6 de noviembre de 2026, America/Caracas. Esta es la única fuente de reglas generales de ONIA. Las instrucciones actuales del usuario prevalecen. Las versiones anteriores se conservan con bytes y hashes en [histórico](../99-archivo/2026-11-06/consolidacion-harness/HISTORICO.md); se consultan por encargo, no como una cola que deba ejecutarse al iniciar.
 
@@ -34,6 +34,8 @@ Una skill dirige cada encargo según [ORQUESTACION](ORQUESTACION.md) y [orquesta
 Antes de ensayar un candidato, consultar fuentes primarias sobre la capacidad relevante, licencia, compatibilidad, recursos y fallos; recuperar sólo la lección pertinente del [registro de errores](registro-de-errores.md). Declarar incertidumbre, hipótesis, control y resultado que cambiaría la decisión. No encadenar pruebas por disponibilidad ni repetir un fallo excluyente sin condiciones distintas. Una prueba justificada puede resolver incertidumbre y dar un resultado negativo legítimo. Esto no exige permiso por cada comando.
 
 Utilizar subagentes de forma proactiva para partes independientes con entradas y entregables claros. Cada archivo o configuración tiene un único escritor a la vez; otro agente puede revisar. Mantener un punto de coordinación por proyecto y un responsable por tarea, según el reparto del encargo. No abrir un chat por skill ni ejecutar todas las áreas por defecto.
+
+Elegir modelo y esfuerzo de cada subagente según su tarea y fijarlos al lanzar, para evitar heredar el esfuerzo de la coordinadora. Usar Luna High para exploración, inventarios y comprobaciones acotadas cuando esté disponible. Usar Sol Low o High según la complejidad de la implementación o revisión. Al medir una tanda, cotejar perfil solicitado y modelo/esfuerzo observados por hilo y turno, incluidas otras sesiones con registros disponibles. Los perfiles de revisión automática se informan aparte de los subagentes delegados para trabajo.
 
 Para esta consolidación, Codex ejecuta con subagentes nativos y Paperclip sólo refleja el seguimiento. No habilitar agentes externos, servicios persistentes ni gasto adicional para suplir fallos del encargo.
 
