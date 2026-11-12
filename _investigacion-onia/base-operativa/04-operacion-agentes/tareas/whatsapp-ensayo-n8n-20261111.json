@@ -1,16 +1,22 @@
 {
   "schema": 2,
   "id": "whatsapp-ensayo-n8n-20261111",
-  "revision": 7,
+  "revision": 18,
   "compartible": true,
   "objetivo": "Ensayar el workflow real n8n de despacho de WhatsApp con runtime y base de datos efímeros, sin activar canales.",
-  "estado": "en_curso",
-  "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
-  "resultado": "",
-  "comprobacion": "",
-  "verificacion": "pendiente",
-  "evidencias": [],
-  "actualizado": "2026-11-12T02:58:08.707852+00:00",
+  "estado": "aceptado",
+  "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+  "resultado": "Ensayo de n8n aislado con un POST y 409 esperado.",
+  "comprobacion": "Rama remota exacta y diff limpio. El recibo registra n8n 2.43.7, ejecución manual única, una petición 409 ENVIOS_DESHABILITADOS, cero envíos, transporte y procesos residuales. Saneamiento posterior de logs declarado, sin repetir la ejecución.",
+  "verificacion": "correcta",
+  "evidencias": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+      "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+      "bytes": 310
+    }
+  ],
+  "actualizado": "2026-11-12T03:12:31.824114+00:00",
   "historial": [
     {
       "revision": 1,
@@ -269,6 +275,1095 @@
       ],
       "cierre": null,
       "revision_independiente": null
+    },
+    {
+      "revision": 7,
+      "actualizado": "2026-11-12T02:58:08.707852+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:57:57.207783+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4068541,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150208",
+          "supervisor_pid": 4068507,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150179",
+          "rama": "codex/ws-whatsapp-ensayo-n8n-20261111",
+          "session_id": "01a1cdb0-ef8f-7743-b66a-6cbf0ff9eac3",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:58:06.117718+00:00",
+          "rc": null,
+          "ultimo_evento": "turn.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git/worktrees/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 8,
+      "actualizado": "2026-11-12T02:58:42.947723+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:57:57.207783+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4068541,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150208",
+          "supervisor_pid": 4068507,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150179",
+          "rama": "codex/ws-whatsapp-ensayo-n8n-20261111",
+          "session_id": "01a1cdb0-ef8f-7743-b66a-6cbf0ff9eac3",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:58:06.117718+00:00",
+          "rc": null,
+          "ultimo_evento": "item.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git/worktrees/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "perfil_permisos": "harness-git"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 9,
+      "actualizado": "2026-11-12T03:10:21.333668+00:00",
+      "estado": "en_curso",
+      "resultado": "",
+      "comprobacion": "",
+      "verificacion": "pendiente",
+      "evidencias": [],
+      "proximo_paso": "Comprobar estado, commit y push; luego cerrar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:57:57.207783+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4068541,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150208",
+          "supervisor_pid": 4068507,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150179",
+          "rama": "codex/ws-whatsapp-ensayo-n8n-20261111",
+          "session_id": "01a1cdb0-ef8f-7743-b66a-6cbf0ff9eac3",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:58:06.117718+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git/worktrees/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:10:21.302734+00:00"
+        }
+      ],
+      "cierre": null,
+      "revision_independiente": null
+    },
+    {
+      "revision": 10,
+      "actualizado": "2026-11-12T03:11:21.419341+00:00",
+      "estado": "para_revision",
+      "resultado": "Ensayo de n8n aislado con un POST y 409 esperado.",
+      "comprobacion": "Rama remota exacta y diff limpio. El recibo registra n8n 2.43.7, ejecución manual única, una petición 409 ENVIOS_DESHABILITADOS, cero envíos, transporte y procesos residuales. Saneamiento posterior de logs declarado, sin repetir la ejecución.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:57:57.207783+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4068541,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150208",
+          "supervisor_pid": 4068507,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150179",
+          "rama": "codex/ws-whatsapp-ensayo-n8n-20261111",
+          "session_id": "01a1cdb0-ef8f-7743-b66a-6cbf0ff9eac3",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:58:06.117718+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git/worktrees/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:10:21.302734+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+        "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+        "ramas_origin": [
+          "origin/codex/ws-whatsapp-ensayo-n8n-20261111"
+        ],
+        "fecha": "2026-11-12T03:11:21.410292+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 11,
+      "actualizado": "2026-11-12T03:11:25.876141+00:00",
+      "estado": "para_revision",
+      "resultado": "Ensayo de n8n aislado con un POST y 409 esperado.",
+      "comprobacion": "Rama remota exacta y diff limpio. El recibo registra n8n 2.43.7, ejecución manual única, una petición 409 ENVIOS_DESHABILITADOS, cero envíos, transporte y procesos residuales. Saneamiento posterior de logs declarado, sin repetir la ejecución.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:57:57.207783+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4068541,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150208",
+          "supervisor_pid": 4068507,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150179",
+          "rama": "codex/ws-whatsapp-ensayo-n8n-20261111",
+          "session_id": "01a1cdb0-ef8f-7743-b66a-6cbf0ff9eac3",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:58:06.117718+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git/worktrees/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:10:21.302734+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-whatsapp-ensayo-n8n-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": null,
+          "supervisor_inicio": null,
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "0e1c66b79a6464c5a736457536785f2153503530",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:11:25.866858+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "38545127f0c653227eabeff61026d8f5e063e9633f10dac32c979f8e408f9582",
+          "schema": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+        "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+        "ramas_origin": [
+          "origin/codex/ws-whatsapp-ensayo-n8n-20261111"
+        ],
+        "fecha": "2026-11-12T03:11:21.410292+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 12,
+      "actualizado": "2026-11-12T03:11:26.063788+00:00",
+      "estado": "para_revision",
+      "resultado": "Ensayo de n8n aislado con un POST y 409 esperado.",
+      "comprobacion": "Rama remota exacta y diff limpio. El recibo registra n8n 2.43.7, ejecución manual única, una petición 409 ENVIOS_DESHABILITADOS, cero envíos, transporte y procesos residuales. Saneamiento posterior de logs declarado, sin repetir la ejecución.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:57:57.207783+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4068541,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150208",
+          "supervisor_pid": 4068507,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150179",
+          "rama": "codex/ws-whatsapp-ensayo-n8n-20261111",
+          "session_id": "01a1cdb0-ef8f-7743-b66a-6cbf0ff9eac3",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:58:06.117718+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git/worktrees/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:10:21.302734+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-whatsapp-ensayo-n8n-20261111",
+          "pid": null,
+          "pid_inicio": null,
+          "supervisor_pid": 4112330,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219230139",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "iniciando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "0e1c66b79a6464c5a736457536785f2153503530",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:11:25.866858+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "38545127f0c653227eabeff61026d8f5e063e9633f10dac32c979f8e408f9582",
+          "schema": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+        "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+        "ramas_origin": [
+          "origin/codex/ws-whatsapp-ensayo-n8n-20261111"
+        ],
+        "fecha": "2026-11-12T03:11:21.410292+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 13,
+      "actualizado": "2026-11-12T03:11:26.276873+00:00",
+      "estado": "para_revision",
+      "resultado": "Ensayo de n8n aislado con un POST y 409 esperado.",
+      "comprobacion": "Rama remota exacta y diff limpio. El recibo registra n8n 2.43.7, ejecución manual única, una petición 409 ENVIOS_DESHABILITADOS, cero envíos, transporte y procesos residuales. Saneamiento posterior de logs declarado, sin repetir la ejecución.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:57:57.207783+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4068541,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150208",
+          "supervisor_pid": 4068507,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150179",
+          "rama": "codex/ws-whatsapp-ensayo-n8n-20261111",
+          "session_id": "01a1cdb0-ef8f-7743-b66a-6cbf0ff9eac3",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:58:06.117718+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git/worktrees/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:10:21.302734+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4112363,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219230160",
+          "supervisor_pid": 4112330,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219230139",
+          "rama": "(detached)",
+          "session_id": null,
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "0e1c66b79a6464c5a736457536785f2153503530",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:11:25.866858+00:00",
+          "rc": null,
+          "ultimo_evento": null,
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "38545127f0c653227eabeff61026d8f5e063e9633f10dac32c979f8e408f9582",
+          "schema": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+        "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+        "ramas_origin": [
+          "origin/codex/ws-whatsapp-ensayo-n8n-20261111"
+        ],
+        "fecha": "2026-11-12T03:11:21.410292+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 14,
+      "actualizado": "2026-11-12T03:11:27.003262+00:00",
+      "estado": "para_revision",
+      "resultado": "Ensayo de n8n aislado con un POST y 409 esperado.",
+      "comprobacion": "Rama remota exacta y diff limpio. El recibo registra n8n 2.43.7, ejecución manual única, una petición 409 ENVIOS_DESHABILITADOS, cero envíos, transporte y procesos residuales. Saneamiento posterior de logs declarado, sin repetir la ejecución.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:57:57.207783+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4068541,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150208",
+          "supervisor_pid": 4068507,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150179",
+          "rama": "codex/ws-whatsapp-ensayo-n8n-20261111",
+          "session_id": "01a1cdb0-ef8f-7743-b66a-6cbf0ff9eac3",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:58:06.117718+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git/worktrees/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:10:21.302734+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4112363,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219230160",
+          "supervisor_pid": 4112330,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219230139",
+          "rama": "(detached)",
+          "session_id": "01a1cdbd-221a-7022-83d7-eded33743eb1",
+          "estado": "ejecutando",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "0e1c66b79a6464c5a736457536785f2153503530",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:11:25.866858+00:00",
+          "rc": null,
+          "ultimo_evento": "thread.started",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "38545127f0c653227eabeff61026d8f5e063e9633f10dac32c979f8e408f9582",
+          "schema": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.veredicto.json"
+        }
+      ],
+      "cierre": {
+        "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+        "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+        "ramas_origin": [
+          "origin/codex/ws-whatsapp-ensayo-n8n-20261111"
+        ],
+        "fecha": "2026-11-12T03:11:21.410292+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 15,
+      "actualizado": "2026-11-12T03:12:05.736483+00:00",
+      "estado": "para_revision",
+      "resultado": "Ensayo de n8n aislado con un POST y 409 esperado.",
+      "comprobacion": "Rama remota exacta y diff limpio. El recibo registra n8n 2.43.7, ejecución manual única, una petición 409 ENVIOS_DESHABILITADOS, cero envíos, transporte y procesos residuales. Saneamiento posterior de logs declarado, sin repetir la ejecución.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:57:57.207783+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4068541,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150208",
+          "supervisor_pid": 4068507,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150179",
+          "rama": "codex/ws-whatsapp-ensayo-n8n-20261111",
+          "session_id": "01a1cdb0-ef8f-7743-b66a-6cbf0ff9eac3",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:58:06.117718+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git/worktrees/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:10:21.302734+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4112363,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219230160",
+          "supervisor_pid": 4112330,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219230139",
+          "rama": "(detached)",
+          "session_id": "01a1cdbd-221a-7022-83d7-eded33743eb1",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "0e1c66b79a6464c5a736457536785f2153503530",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:11:25.866858+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "38545127f0c653227eabeff61026d8f5e063e9633f10dac32c979f8e408f9582",
+          "schema": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:12:05.725451+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+        "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+        "ramas_origin": [
+          "origin/codex/ws-whatsapp-ensayo-n8n-20261111"
+        ],
+        "fecha": "2026-11-12T03:11:21.410292+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": null
+    },
+    {
+      "revision": 16,
+      "actualizado": "2026-11-12T03:12:31.427446+00:00",
+      "estado": "para_revision",
+      "resultado": "Ensayo de n8n aislado con un POST y 409 esperado.",
+      "comprobacion": "Rama remota exacta y diff limpio. El recibo registra n8n 2.43.7, ejecución manual única, una petición 409 ENVIOS_DESHABILITADOS, cero envíos, transporte y procesos residuales. Saneamiento posterior de logs declarado, sin repetir la ejecución.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Lanzar revisor distinto; recoger veredicto antes de aceptar.",
+      "aceptacion": null,
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:57:57.207783+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4068541,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150208",
+          "supervisor_pid": 4068507,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150179",
+          "rama": "codex/ws-whatsapp-ensayo-n8n-20261111",
+          "session_id": "01a1cdb0-ef8f-7743-b66a-6cbf0ff9eac3",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:58:06.117718+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git/worktrees/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:10:21.302734+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4112363,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219230160",
+          "supervisor_pid": 4112330,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219230139",
+          "rama": "(detached)",
+          "session_id": "01a1cdbd-221a-7022-83d7-eded33743eb1",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "0e1c66b79a6464c5a736457536785f2153503530",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:11:25.866858+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "38545127f0c653227eabeff61026d8f5e063e9633f10dac32c979f8e408f9582",
+          "schema": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:12:05.725451+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+        "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+        "ramas_origin": [
+          "origin/codex/ws-whatsapp-ensayo-n8n-20261111"
+        ],
+        "fecha": "2026-11-12T03:11:21.410292+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+        "criterio": "Evidencia coherente con todos los criterios. n8n 2.43.7, importación inactiva comprobada en SQLite, una ejecución manual y un POST con credencial ficticia, HTTP 409 ENVIOS_DESHABILITADOS, cero envíos y transporte, procesos y listeners cerrados. Constan 73 controles correctos y requisitos para la instancia real. Manifiesto íntegro, diff limpio y limitado a la ruta asignada. Saneamiento posterior documentado. Revisión por inspección de código y evidencia conservada, sin repetir la ejecución.",
+        "worktree_conservado": true,
+        "revisor": "revisor-whatsapp-ensayo-n8n-20261111",
+        "session_id": "01a1cdbd-221a-7022-83d7-eded33743eb1",
+        "entrega_sha256": "38545127f0c653227eabeff61026d8f5e063e9633f10dac32c979f8e408f9582",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/revision-2-e2610d4f.json",
+          "sha256": "59c2ac8f5b797d4e21f0e787e3cfe83dc89a8b0e2f49e4f80e48cd1ce7469692",
+          "bytes": 634
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/revision-2-e2610d4f.json",
+          "sha256": "59c2ac8f5b797d4e21f0e787e3cfe83dc89a8b0e2f49e4f80e48cd1ce7469692",
+          "bytes": 634
+        }
+      ]
+    },
+    {
+      "revision": 17,
+      "actualizado": "2026-11-12T03:12:31.789636+00:00",
+      "estado": "aceptado",
+      "resultado": "Ensayo de n8n aislado con un POST y 409 esperado.",
+      "comprobacion": "Rama remota exacta y diff limpio. El recibo registra n8n 2.43.7, ejecución manual única, una petición 409 ENVIOS_DESHABILITADOS, cero envíos, transporte y procesos residuales. Saneamiento posterior de logs declarado, sin repetir la ejecución.",
+      "verificacion": "correcta",
+      "evidencias": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      ],
+      "proximo_paso": "Encargo aceptado; conservar la evidencia. No iniciar nueva ejecución sin otro encargo.",
+      "aceptacion": {
+        "revisor": "revisor-whatsapp-ensayo-n8n-20261111",
+        "criterio": "Evidencia coherente con todos los criterios. n8n 2.43.7, importación inactiva comprobada en SQLite, una ejecución manual y un POST con credencial ficticia, HTTP 409 ENVIOS_DESHABILITADOS, cero envíos y transporte, procesos y listeners cerrados. Constan 73 controles correctos y requisitos para la instancia real. Manifiesto íntegro, diff limpio y limitado a la ruta asignada. Saneamiento posterior documentado. Revisión por inspección de código y evidencia conservada, sin repetir la ejecución.",
+        "fecha": "2026-11-12T03:12:31.789618+00:00"
+      },
+      "asignacion": {
+        "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+        "rutas": [
+          "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+        ],
+        "revision_base": 1,
+        "fecha": "2026-11-12T02:57:57.207783+00:00"
+      },
+      "sesiones": [
+        {
+          "intento": 1,
+          "rol": "ejecutor",
+          "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4068541,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150208",
+          "supervisor_pid": 4068507,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150179",
+          "rama": "codex/ws-whatsapp-ensayo-n8n-20261111",
+          "session_id": "01a1cdb0-ef8f-7743-b66a-6cbf0ff9eac3",
+          "estado": "cerrada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.1.briefing.txt",
+          "inicio": "2026-11-12T02:58:06.117718+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "high",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git",
+          "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git/worktrees/onia-ws-whatsapp-ensayo-n8n-20261111",
+          "perfil_permisos": "harness-git",
+          "fin": "2026-11-12T03:10:21.302734+00:00"
+        },
+        {
+          "intento": 2,
+          "rol": "revisor",
+          "responsable": "revisor-whatsapp-ensayo-n8n-20261111",
+          "pid": 4112363,
+          "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219230160",
+          "supervisor_pid": 4112330,
+          "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219230139",
+          "rama": "(detached)",
+          "session_id": "01a1cdbd-221a-7022-83d7-eded33743eb1",
+          "estado": "finalizada",
+          "operacion": "/home/onia-codex-worker/operacion",
+          "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_rel": "logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+          "log_offset": 0,
+          "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111-revision-2",
+          "rutas": [
+            "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+          ],
+          "dry_run": false,
+          "commit_base": "0e1c66b79a6464c5a736457536785f2153503530",
+          "reanuda": null,
+          "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.briefing.txt",
+          "inicio": "2026-11-12T03:11:25.866858+00:00",
+          "rc": 0,
+          "ultimo_evento": "turn.completed",
+          "modelo": "gpt-6.1-sol",
+          "esfuerzo": "low",
+          "auth_chatgpt": true,
+          "subagentes_maximos": 0,
+          "entrega_sha256": "38545127f0c653227eabeff61026d8f5e063e9633f10dac32c979f8e408f9582",
+          "schema": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.schema.json",
+          "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.veredicto.json",
+          "fin": "2026-11-12T03:12:05.725451+00:00"
+        }
+      ],
+      "cierre": {
+        "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+        "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+        "ramas_origin": [
+          "origin/codex/ws-whatsapp-ensayo-n8n-20261111"
+        ],
+        "fecha": "2026-11-12T03:11:21.410292+00:00",
+        "dry_run": false,
+        "intento": 1,
+        "worktree_conservado": true,
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+          "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+          "bytes": 310
+        }
+      },
+      "revision_independiente": {
+        "veredicto": "bueno",
+        "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+        "criterio": "Evidencia coherente con todos los criterios. n8n 2.43.7, importación inactiva comprobada en SQLite, una ejecución manual y un POST con credencial ficticia, HTTP 409 ENVIOS_DESHABILITADOS, cero envíos y transporte, procesos y listeners cerrados. Constan 73 controles correctos y requisitos para la instancia real. Manifiesto íntegro, diff limpio y limitado a la ruta asignada. Saneamiento posterior documentado. Revisión por inspección de código y evidencia conservada, sin repetir la ejecución.",
+        "worktree_conservado": true,
+        "revisor": "revisor-whatsapp-ensayo-n8n-20261111",
+        "session_id": "01a1cdbd-221a-7022-83d7-eded33743eb1",
+        "entrega_sha256": "38545127f0c653227eabeff61026d8f5e063e9633f10dac32c979f8e408f9582",
+        "evidencia": {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/revision-2-e2610d4f.json",
+          "sha256": "59c2ac8f5b797d4e21f0e787e3cfe83dc89a8b0e2f49e4f80e48cd1ce7469692",
+          "bytes": 634
+        }
+      },
+      "evidencias_revision": [
+        {
+          "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/revision-2-e2610d4f.json",
+          "sha256": "59c2ac8f5b797d4e21f0e787e3cfe83dc89a8b0e2f49e4f80e48cd1ce7469692",
+          "bytes": 634
+        }
+      ]
     }
   ],
   "briefing": {
@@ -277,15 +1372,12 @@
     "bytes": 4015,
     "contenido": "# Encargo whatsapp-ensayo-n8n-20261111\n\nÁrea: automatizaciones\nModo: encargo\nSkill directora: automatizar-n8n\n\n## Objetivo\n\nEnsayar el workflow real n8n de despacho de WhatsApp con runtime y base de datos efímeros, sin activar canales.\n\n## Entregable\n\nReutilizá workflow-despacho-n8n.json integrado y, en sólo lectura, el ensayo local 241f49a39c7593ff60e5e8d59ed40a152faf9ff6 del worktree ~/repos/onia-ws-whatsapp-ensayo-vps-20261111, con 73 controles reproducidos. La coordinadora dejó Node 24.22.3 y la instalación n8n 2.43.7 en curso en ~/operacion/n8n-ensayo-privado-W1TsVP, con ensayar.py como referencia privada, sólo lectura. Verificá instalación antes de repetir. Usá un temporal nuevo en /tmp para tu base N8N_USER_FOLDER y procesos propios; si hace falta adaptar el script, hacelo en tu ruta o temporal, sin escribir el runtime de otro. Contrastar CLI oficial. Importá copia inactiva con credencial ficticia y ejecutá una sola vez al adaptador en puerto loopback efímero, cuyo transporte permanece apagado. Confirmar versión, petición/credencial ficticia y respuesta del adaptador, sin secretos reales, n8n de producción, Meta, Graph, Instagram/Facebook, mensajes, cobros ni publicación. No usar sudo, no modificar Docker ni alterar reglas de seguridad. Reportar prerequisitos distintos para pasar a la instancia real. Si el runtime no está listo, diagnosticar un intento razonable y conservar salida saneada. Sólo commit/push rama asignada.\n\n## Criterio de aceptación\n\nComprobar importación inactiva y un único POST manual con credencial ficticia, HTTP 409 ENVIOS_DESHABILITADOS, cero envíos y procesos temporales cerrados. Si el runtime impide ejecutarlo, entregar bloqueo reproducible sin fingir el resultado. Sólo modificar ruta asignada.\n\n## Entrada y alcance\n\nUn evento y resultado definido para la instancia existente de n8n.\n\n- Sin entradas adicionales indicadas.\n\n## Contexto mínimo\n\nLeer sólo las fuentes enlazadas necesarias; rutas relativas a este briefing.\n\n- [04-operacion-agentes/reglas-comunes.md](../reglas-comunes.md)\n- [00-MAPA/ESTADO.md](../../00-MAPA/ESTADO.md)\n- [04-operacion-agentes/ORQUESTACION.md](../ORQUESTACION.md)\n- [05-herramientas/accesos.md](../../05-herramientas/accesos.md)\n- [05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md](../../05-herramientas/compartibles/skills/automatizar-n8n/SKILL.md)\n\n## Skills de apoyo disponibles\n\nNo cargarlas automáticamente. Usar sólo la pertinente para una parte delimitada del encargo; no reemplazan la skill directora elegida.\n\n- [tercero-matt-research](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/engineering/research/SKILL.md)\n- [tercero-matt-writing-agents](../../05-herramientas/compartibles/terceros/generales/matt-pocock/skills/productivity/writing-for-agents/SKILL.md)\n- [tercero-matt-handoff-onia](../../05-herramientas/compartibles/terceros/generales/matt-pocock/handoff-onia/SKILL.md)\n- [tercero-addy-context](../../05-herramientas/compartibles/terceros/generales/addy-osmani/skills/context-engineering/SKILL.md)\n- [tercero-superpowers-debug](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/systematic-debugging/SKILL.md)\n- [tercero-superpowers-verify](../../05-herramientas/compartibles/terceros/desarrollo/superpowers/skills/verification-before-completion/SKILL.md)\n\n## Salidas de referencia del área\n\n- Flujo n8n con referencias a credenciales\n- Pruebas y manejo de fallos\n\n## Registro\n\nEstado: [registro de trabajo](../tareas/whatsapp-ensayo-n8n-20261111.json).\nEl JSON conserva estado y briefing canónico; este Markdown es una proyección comprobable.\nNo editar la proyección ni rehashear evidencia alterada para continuar.\n\nPreparar/retomar sólo recuperan archivos y no crean agentes. Lanzar/reanudar/revisar ejecutan Codex únicamente con el sí aplicable de Sergio. --dry-run simula sin Codex ni red. El JSON es canónico; sesiones.tsv es un índice. No hay scheduler ni permisos implícitos para servicios externos.\n"
   },
-  "aceptacion": null,
-  "asignacion": {
-    "responsable": "ejecutor-whatsapp-ensayo-n8n-20261111",
-    "rutas": [
-      "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
-    ],
-    "revision_base": 1,
-    "fecha": "2026-11-12T02:57:57.207783+00:00"
+  "aceptacion": {
+    "revisor": "revisor-whatsapp-ensayo-n8n-20261111",
+    "criterio": "Evidencia coherente con todos los criterios. n8n 2.43.7, importación inactiva comprobada en SQLite, una ejecución manual y un POST con credencial ficticia, HTTP 409 ENVIOS_DESHABILITADOS, cero envíos y transporte, procesos y listeners cerrados. Constan 73 controles correctos y requisitos para la instancia real. Manifiesto íntegro, diff limpio y limitado a la ruta asignada. Saneamiento posterior documentado. Revisión por inspección de código y evidencia conservada, sin repetir la ejecución.",
+    "fecha": "2026-11-12T03:12:31.789618+00:00"
   },
+  "asignacion": null,
   "sesiones": [
     {
       "intento": 1,
@@ -297,7 +1389,7 @@
       "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219150179",
       "rama": "codex/ws-whatsapp-ensayo-n8n-20261111",
       "session_id": "01a1cdb0-ef8f-7743-b66a-6cbf0ff9eac3",
-      "estado": "ejecutando",
+      "estado": "cerrada",
       "operacion": "/home/onia-codex-worker/operacion",
       "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.jsonl",
       "log_rel": "logs/whatsapp-ensayo-n8n-20261111.jsonl",
@@ -311,17 +1403,88 @@
       "reanuda": null,
       "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.1.briefing.txt",
       "inicio": "2026-11-12T02:58:06.117718+00:00",
-      "rc": null,
-      "ultimo_evento": "turn.started",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
       "modelo": "gpt-6.1-sol",
       "esfuerzo": "high",
       "auth_chatgpt": true,
       "subagentes_maximos": 0,
       "git_repo": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git",
       "git_dir": "/home/onia-codex-worker/operacion/git/whatsapp-ensayo-n8n-20261111.git/worktrees/onia-ws-whatsapp-ensayo-n8n-20261111",
-      "perfil_permisos": "harness-git"
+      "perfil_permisos": "harness-git",
+      "fin": "2026-11-12T03:10:21.302734+00:00"
+    },
+    {
+      "intento": 2,
+      "rol": "revisor",
+      "responsable": "revisor-whatsapp-ensayo-n8n-20261111",
+      "pid": 4112363,
+      "pid_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219230160",
+      "supervisor_pid": 4112330,
+      "supervisor_inicio": "899d39f7-551f-428d-b1df-bbde3eec5534:219230139",
+      "rama": "(detached)",
+      "session_id": "01a1cdbd-221a-7022-83d7-eded33743eb1",
+      "estado": "finalizada",
+      "operacion": "/home/onia-codex-worker/operacion",
+      "log": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+      "log_rel": "logs/whatsapp-ensayo-n8n-20261111.revision-2.jsonl",
+      "log_offset": 0,
+      "worktree": "/home/onia-codex-worker/repos/onia-ws-whatsapp-ensayo-n8n-20261111-revision-2",
+      "rutas": [
+        "05-herramientas/fabrica-onia/4-chatbot-whatsapp/ensayo-n8n-20261111"
+      ],
+      "dry_run": false,
+      "commit_base": "0e1c66b79a6464c5a736457536785f2153503530",
+      "reanuda": null,
+      "briefing": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.briefing.txt",
+      "inicio": "2026-11-12T03:11:25.866858+00:00",
+      "rc": 0,
+      "ultimo_evento": "turn.completed",
+      "modelo": "gpt-6.1-sol",
+      "esfuerzo": "low",
+      "auth_chatgpt": true,
+      "subagentes_maximos": 0,
+      "entrega_sha256": "38545127f0c653227eabeff61026d8f5e063e9633f10dac32c979f8e408f9582",
+      "schema": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.schema.json",
+      "veredicto_archivo": "/home/onia-codex-worker/operacion/logs/whatsapp-ensayo-n8n-20261111.2.veredicto.json",
+      "fin": "2026-11-12T03:12:05.725451+00:00"
     }
   ],
-  "revision_independiente": null,
-  "cierre": null
+  "revision_independiente": {
+    "veredicto": "bueno",
+    "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+    "criterio": "Evidencia coherente con todos los criterios. n8n 2.43.7, importación inactiva comprobada en SQLite, una ejecución manual y un POST con credencial ficticia, HTTP 409 ENVIOS_DESHABILITADOS, cero envíos y transporte, procesos y listeners cerrados. Constan 73 controles correctos y requisitos para la instancia real. Manifiesto íntegro, diff limpio y limitado a la ruta asignada. Saneamiento posterior documentado. Revisión por inspección de código y evidencia conservada, sin repetir la ejecución.",
+    "worktree_conservado": true,
+    "revisor": "revisor-whatsapp-ensayo-n8n-20261111",
+    "session_id": "01a1cdbd-221a-7022-83d7-eded33743eb1",
+    "entrega_sha256": "38545127f0c653227eabeff61026d8f5e063e9633f10dac32c979f8e408f9582",
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/revision-2-e2610d4f.json",
+      "sha256": "59c2ac8f5b797d4e21f0e787e3cfe83dc89a8b0e2f49e4f80e48cd1ce7469692",
+      "bytes": 634
+    }
+  },
+  "cierre": {
+    "commit": "0e1c66b79a6464c5a736457536785f2153503530",
+    "commit_base": "f447413ed355a68078b4cfa2c44b6997647ceb67",
+    "ramas_origin": [
+      "origin/codex/ws-whatsapp-ensayo-n8n-20261111"
+    ],
+    "fecha": "2026-11-12T03:11:21.410292+00:00",
+    "dry_run": false,
+    "intento": 1,
+    "worktree_conservado": true,
+    "evidencia": {
+      "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/cierre-r9-d8957db8.json",
+      "sha256": "416f6c8a2b705d16263e6d3c5d58f623e7ca700ffbfbecc64a59b07972be0e5b",
+      "bytes": 310
+    }
+  },
+  "evidencias_revision": [
+    {
+      "archivo": "04-operacion-agentes/evidencias/whatsapp-ensayo-n8n-20261111/revision-2-e2610d4f.json",
+      "sha256": "59c2ac8f5b797d4e21f0e787e3cfe83dc89a8b0e2f49e4f80e48cd1ce7469692",
+      "bytes": 634
+    }
+  ]
 }
