@@ -1,0 +1,9 @@
+# Estado operativo comprobado y ensayo siguiente
+
+Fecha técnica UTC 12nov, noche del11nov en LaPaz. Sergio eligió conservar Windows y optimizar Ubuntu/WSL; migración Linux nativo queda para después, sin autorización de formateo. No se desinstalaron aplicaciones ni alteraron memoria/CPU/suspensión de Windows.
+
+Tras Running de continuidad v2 reportado por Sergio y terminales cerradas, coordinadora esperó90seg sin conectar. Dos conexiones SSH posteriores pasaron. Render sintético FFmpeg completó48fotogramas 640x360 en2seg de video con dos hilos solicitados. No confundir con benchmark ni SLA de producción. WSL observado:12procesadores lógicos, memoria total11215488KiB y disponible10621464KiB. CPU libre no es cuota adicional de Codex.
+
+El informe independiente del piloto señaló controles registrados pero no exigidos por el script anterior. Se añadió validate_controls (identidad/grupos, todos los booleanos y persistencia), cotejo explícito del known_hosts contra huella esperada, timestamps UTC, retornos y hash del script en recibo. 37casos del validador pasaron, incluidos negativos. Se repitió SSH real con el script corregido: OK. Render ahora exige un solo stream H264 y volvió a pasar. Recibos históricos se conservan y no se reinterpretan como si tuvieran estos checks nuevos.
+
+Pendientes: reinicio/logoff/suspensión Windows, recuperación de trabajos interrumpidos, ASR y cola CPU distribuida. Por ahora un trabajo pesado por vez, VPS coordina y homelab ejecuta por SSH. No se declara homelab completo/autónomo. Sergio autorizó ensayo de cuatro sesiones: tarea ensayo-cuatro-control-20261112 implementa excepción temporal medida y revisable. Cuatro todavía no habilitadas. Límite normal tres; máximo dos puntos de cuota para ensayo real. Política temporal con vencimiento, IDs autorizados, telemetría y parada debe pasar revisión antes de activar.

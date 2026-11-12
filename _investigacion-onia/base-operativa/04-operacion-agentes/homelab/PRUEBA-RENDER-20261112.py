@@ -8,7 +8,7 @@ cmd=['ffmpeg','-nostdin','-v','error','-f','lavfi','-i','testsrc2=size=640x360:r
 t=time.monotonic();r=subprocess.run(cmd,capture_output=True,timeout=30);elapsed=time.monotonic()-t
 if r.returncode:raise SystemExit('FFmpeg fallo rc='+str(r.returncode))
 r=subprocess.run(['ffprobe','-v','error','-show_entries','stream=codec_name,width,height,nb_frames:format=duration','-of','json',str(out)],capture_output=True,text=True,check=True,timeout=10)
-d=json.loads(r.stdout);assert d['streams'][0]['width']==640 and d['streams'][0]['height']==360 and d['streams'][0]['nb_frames']=='48'
+d=json.loads(r.stdout);assert len(d['streams'])==1 and d['streams'][0]['codec_name']=='h264';assert d['streams'][0]['width']==640 and d['streams'][0]['height']==360 and d['streams'][0]['nb_frames']=='48'
 assert abs(float(d['format']['duration'])-2)<0.1
 print(json.dumps({'ok':True,'duracion_s':2,'fotogramas':48,'resolucion':'640x360','hilos':2,'tiempo_render_s':round(elapsed,3),'bytes':out.stat().st_size,'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'archivo_conservado':str(out.relative_to(pathlib.Path.home())),'limite':'Muestra sintetica, no benchmark ni video comercial'}))
 '''
