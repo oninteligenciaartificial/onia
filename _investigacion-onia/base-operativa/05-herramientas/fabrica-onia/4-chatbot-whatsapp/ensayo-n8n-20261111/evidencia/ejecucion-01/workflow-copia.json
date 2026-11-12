@@ -1,0 +1,73 @@
+[
+  {
+    "name": "ONIA · Despacho privado de WhatsApp",
+    "active": false,
+    "nodes": [
+      {
+        "parameters": {},
+        "id": "e342837c-b629-4e2c-8c99-ad73824c9c57",
+        "name": "Despacho manual",
+        "type": "n8n-nodes-base.manualTrigger",
+        "typeVersion": 1,
+        "position": [
+          260,
+          0
+        ]
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "http://127.0.0.1:37167/operador/despachar",
+          "authentication": "genericCredentialType",
+          "genericAuthType": "httpHeaderAuth",
+          "sendBody": false,
+          "options": {
+            "redirect": {
+              "redirect": {
+                "followRedirects": false
+              }
+            },
+            "timeout": 20000
+          }
+        },
+        "id": "d3c393fb-4453-4d32-8819-a8a64cb03e9c",
+        "name": "Despachar una salida",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          520,
+          0
+        ],
+        "retryOnFail": false,
+        "credentials": {
+          "httpHeaderAuth": {
+            "id": "OniaWaCredFic001",
+            "name": "Credencial ficticia OnIA"
+          }
+        }
+      }
+    ],
+    "connections": {
+      "Despacho manual": {
+        "main": [
+          [
+            {
+              "node": "Despachar una salida",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "settings": {
+      "executionOrder": "v1",
+      "saveDataErrorExecution": "none",
+      "saveDataSuccessExecution": "none",
+      "saveManualExecutions": false,
+      "saveExecutionProgress": false
+    },
+    "pinData": {},
+    "id": "OniaWaEnsayo2026"
+  }
+]

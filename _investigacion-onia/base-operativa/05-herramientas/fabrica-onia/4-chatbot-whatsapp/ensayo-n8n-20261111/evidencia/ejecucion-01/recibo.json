@@ -1,0 +1,156 @@
+{
+  "fecha_utc": "2026-11-12T03:04:34.815724+00:00",
+  "resultado": "correcto",
+  "ejecuciones_manuales": 1,
+  "comandos": [
+    {
+      "nombre": "version",
+      "argv": [
+        "--version"
+      ],
+      "rc": 0
+    },
+    {
+      "nombre": "ayuda-import-credentials",
+      "argv": [
+        "import:credentials",
+        "--help"
+      ],
+      "rc": 0
+    },
+    {
+      "nombre": "ayuda-import-workflow",
+      "argv": [
+        "import:workflow",
+        "--help"
+      ],
+      "rc": 0
+    },
+    {
+      "nombre": "ayuda-execute",
+      "argv": [
+        "execute",
+        "--help"
+      ],
+      "rc": 0
+    },
+    {
+      "nombre": "importar-credencial",
+      "argv": [
+        "import:credentials",
+        "--input=<temporal>/credencial.json"
+      ],
+      "rc": 0
+    },
+    {
+      "nombre": "importar-workflow",
+      "argv": [
+        "import:workflow",
+        "--input=<temporal>/workflow.json"
+      ],
+      "rc": 0
+    },
+    {
+      "nombre": "ejecutar-workflow",
+      "argv": [
+        "execute",
+        "--id=OniaWaEnsayo2026"
+      ],
+      "rc": 1
+    }
+  ],
+  "peticiones": [
+    {
+      "metodo": "POST",
+      "ruta": "/operador/despachar",
+      "credencial_ficticia_correcta": true,
+      "cuerpo_vacio": true,
+      "destino_loopback": true,
+      "http": 409,
+      "respuesta": {
+        "error": "ENVIOS_DESHABILITADOS"
+      }
+    }
+  ],
+  "procesos": [
+    {
+      "nombre": "version",
+      "pid": 6,
+      "rc": 0
+    },
+    {
+      "nombre": "ayuda-import-credentials",
+      "pid": 13,
+      "rc": 0
+    },
+    {
+      "nombre": "ayuda-import-workflow",
+      "pid": 25,
+      "rc": 0
+    },
+    {
+      "nombre": "ayuda-execute",
+      "pid": 37,
+      "rc": 0
+    },
+    {
+      "nombre": "adaptador",
+      "pid": 49,
+      "rc": 0
+    },
+    {
+      "nombre": "importar-credencial",
+      "pid": 51,
+      "rc": 0
+    },
+    {
+      "nombre": "importar-workflow",
+      "pid": 63,
+      "rc": 0
+    },
+    {
+      "nombre": "ejecutar-workflow",
+      "pid": 77,
+      "rc": 1
+    }
+  ],
+  "envios_habilitados": false,
+  "secretos_reales": false,
+  "n8n_produccion": false,
+  "meta_invocada": false,
+  "workflow_fuente_sha256": "62567c0267b82c2725091ecfa6c7ddc9e6c86f65ef2b82964d928dcf36e39b49",
+  "node": "v24.22.3",
+  "n8n": "2.43.7",
+  "adaptador_inicio": {
+    "evento": "listo",
+    "host": "127.0.0.1",
+    "puerto": 41557,
+    "envios_habilitados": false,
+    "reloj_ficticio": true
+  },
+  "sqlite_antes": {
+    "active": 0,
+    "activeVersionId": null,
+    "total_workflows": 1,
+    "credencial_tipo": "httpHeaderAuth",
+    "credencial_cifrada": true
+  },
+  "ejecucion_rc": 1,
+  "sqlite_despues": {
+    "active": 0,
+    "activeVersionId": null,
+    "total_workflows": 1,
+    "credencial_tipo": "httpHeaderAuth",
+    "credencial_cifrada": true
+  },
+  "salidas_aceptadas_o_inciertas": 0,
+  "adaptador_cierre": {
+    "evento": "detenido",
+    "conexiones_salientes_intentadas": 0,
+    "transporte_invocado": 0
+  },
+  "procesos_propios_vivos": 0,
+  "listeners_propios_abiertos": [],
+  "hilo_puente_vivo": false,
+  "temporal_db_eliminado": true
+}

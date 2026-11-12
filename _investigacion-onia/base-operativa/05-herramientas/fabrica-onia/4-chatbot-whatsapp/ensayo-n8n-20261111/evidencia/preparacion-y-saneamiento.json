@@ -1,0 +1,61 @@
+{
+  "script_ejecutado_sha256": "72ae876b85954c3f7f3a39c260546498e21162089f5453900de6b4f05595cc49",
+  "scripts_referencia_privada_sha256": "6eb142583d9f609344db628036dc142ad5945bd79c09aff97055be9ef6554906",
+  "logs_derivados": [
+    {
+      "archivo": "ejecucion-01/ayuda-execute.log",
+      "sha256_salida_previa_al_saneamiento_final": "fef3d55b14ce92e834a3da2e2f8f2576edc0f3864dc13e68b0c28ad28121f856",
+      "ruta_original_privada": "<runtime-temporal>/logs-originales/ayuda-execute.log"
+    },
+    {
+      "archivo": "ejecucion-01/importar-credencial.log",
+      "sha256_salida_previa_al_saneamiento_final": "772adaa3d58ef2f588a8fe8f9b103666620aa11e3279de771ec3a7129ab9821f",
+      "ruta_original_privada": "<runtime-temporal>/logs-originales/importar-credencial.log"
+    },
+    {
+      "archivo": "ejecucion-01/ayuda-import-workflow.log",
+      "sha256_salida_previa_al_saneamiento_final": "ec53db103c1ad78fa5e1b79280353bedfc93b565b12cd483778a7a47efbac393",
+      "ruta_original_privada": "<runtime-temporal>/logs-originales/ayuda-import-workflow.log"
+    },
+    {
+      "archivo": "ejecucion-01/importar-workflow.log",
+      "sha256_salida_previa_al_saneamiento_final": "f708b6f4be86d5a450fafbc00dbd31a542a0646a50f4140bc171df9329aa3768",
+      "ruta_original_privada": "<runtime-temporal>/logs-originales/importar-workflow.log"
+    },
+    {
+      "archivo": "ejecucion-01/ejecutar-workflow.log",
+      "sha256_salida_previa_al_saneamiento_final": "8fcb1dfc1192e7344d1f3a5a36bcfcf326b8def8d7533cedc50cfef7c526d797",
+      "ruta_original_privada": "<runtime-temporal>/logs-originales/ejecutar-workflow.log"
+    },
+    {
+      "archivo": "ejecucion-01/ayuda-import-credentials.log",
+      "sha256_salida_previa_al_saneamiento_final": "5e24c3e323ea870111e0791a045b6219f9e3925bdf9801db97d54b4d251800ab",
+      "ruta_original_privada": "<runtime-temporal>/logs-originales/ayuda-import-credentials.log"
+    },
+    {
+      "archivo": "ejecucion-01/adaptador.log",
+      "sha256_salida_previa_al_saneamiento_final": "3852867289d35b374851cd90788d977fc99b10d194fe986c76b17704b1394e0a",
+      "ruta_original_privada": "<runtime-temporal>/logs-originales/adaptador.log"
+    },
+    {
+      "archivo": "ejecucion-01/version.log",
+      "sha256_salida_previa_al_saneamiento_final": "d909082de3b79bcf7dd9247e20fafed36fb7e94185797a0a8aab51feea4da0e1",
+      "ruta_original_privada": "<runtime-temporal>/logs-originales/version.log"
+    }
+  ],
+  "saneamiento_final": [
+    "Ruta temporal de instalaci\u00f3n sustituida",
+    "resumeToken generado por n8n retirado; instancia ef\u00edmera ya eliminada",
+    "Final de logs normalizado a una nueva l\u00ednea; copias originales previas conservadas con sus hashes"
+  ],
+  "instalacion": {
+    "node": "v24.22.3",
+    "n8n": "2.43.7",
+    "npm": "11.19.1",
+    "paquetes": 2130,
+    "returncode": 0,
+    "duracion_segundos": 277.31,
+    "politica_scripts_sin_modificar": true,
+    "package_lock_sha256": "a305c69bee6662fb4cfcba1ea579126a0f0017cb39ebd98ee0be62e19033a636"
+  }
+}
